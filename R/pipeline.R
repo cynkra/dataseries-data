@@ -30,11 +30,17 @@ fso_excel_dataset <- function(id, order_nr, topic = NULL) {
 
 DATA_DIR <- file.path(dirname(root), "data")
 
+# This run's skipped datasets (a transient fetch error skips one source and keeps
+# going). Recorded so main() can append them to the skip history log.
+.SKIPPED <- list()
+
 # Run one fetch, tag it with a topic, and keep going on failure (a transient
 # network error on one source must not lose the whole run).
 .try_fetch <- function(label, expr, topic = NULL) {
   ds <- tryCatch(force(expr), error = function(e) {
-    cat(sprintf("  SKIP %-22s %s\n", label, conditionMessage(e)))
+    msg <- conditionMessage(e)
+    cat(sprintf("  SKIP %-22s %s\n", label, msg))
+    .SKIPPED[[length(.SKIPPED) + 1L]] <<- list(id = label, error = msg)
     NULL
   })
   if (!is.null(ds) && !is.null(topic)) ds$meta$topic <- topic
@@ -142,6 +148,27 @@ main <- function() {
   }
   write_catalog(datasets, DATA_DIR)
   cat(sprintf("wrote catalog.json (%d datasets) -> %s\n", length(datasets), DATA_DIR))
+  append_skip_log(.SKIPPED, DATA_DIR)
+}
+
+# Append this run's skips to data/skips.jsonl (one JSON object per run that had at
+# least one skip; clean runs add nothing, so the file is a history of incident
+# days). R/health.R renders the recent tail into SKIPS.md. We deliberately do NOT
+# alarm on a skip -- a one-off fetch failure that fixes itself the next day is just
+# logged; only a dataset that STAYS stale crosses the health threshold and opens an
+# issue.
+append_skip_log <- function(skipped, out_dir) {
+  if (!length(skipped)) {
+    cat("no skips this run\n")
+    return(invisible())
+  }
+  rec <- list(
+    ts = format(Sys.time(), tz = "UTC", "%Y-%m-%dT%H:%M:%SZ"),
+    skipped = skipped
+  )
+  line <- jsonlite::toJSON(rec, auto_unbox = TRUE, null = "null")
+  cat(line, "\n", file = file.path(out_dir, "skips.jsonl"), append = TRUE, sep = "")
+  cat(sprintf("logged %d skip(s) -> skips.jsonl\n", length(skipped)))
 }
 
 main()
