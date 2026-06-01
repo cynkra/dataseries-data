@@ -13,3 +13,9 @@ __pycache__/
 
 # OS
 .DS_Store
+
+# Derived query cache — Parquet is BUILT from the committed CSVs at deploy/sync
+# time (faster columnar reads for the API/DuckDB), never committed. The CSVs are
+# the source of truth (and diff in git, giving us free revision history).
+# See docs/format-contract.md and dev/build_parquet.R.
+data/*.parquet
