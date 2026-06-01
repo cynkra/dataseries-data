@@ -5,7 +5,7 @@
     "item"
   ],
   "start": "1982-12-01",
-  "end": "2025-12-01",
+  "end": "2026-04-01",
   "title": {
     "en": "Consumer Price Index (LIK)"
   },
@@ -13,12 +13,12 @@
     "name": {
       "en": "Swiss Federal Statistical Office (FSO)"
     },
-    "url": "https://www.bfs.admin.ch/asset/de/su-d-05.02.67"
+    "url": "https://www.bfs.admin.ch/asset/de/su-d-05.02.66"
   },
   "license": "fso",
   "frequency": "monthly",
   "topic": "Prices",
-  "updated": "2026-01-08",
+  "updated": "2026-05-05",
   "dimensions": {
     "item": {
       "label": {
@@ -49,579 +49,687 @@
           },
           "data": true
         },
-        "100_1003": {
+        "100_1010": {
           "label": {
-            "en": "Rice"
+            "en": "Rice and cereal grains"
           },
           "data": true
         },
-        "100_1008": {
+        "100_1020": {
           "label": {
-            "en": "Flour and other cereals"
+            "en": "Flour"
           },
           "data": true
         },
-        "100_1014": {
+        "100_1030": {
           "label": {
             "en": "Bread, pastries and other baked products"
           },
           "data": true
         },
-        "100_1015": {
+        "100_1031": {
           "label": {
             "en": "Bread"
           },
           "data": true
         },
-        "100_1026": {
+        "100_1038": {
           "label": {
             "en": "Other bakery products"
           },
           "data": true
         },
-        "100_1027": {
+        "100_1039": {
           "label": {
             "en": "Small baked goods"
           },
           "data": true
         },
-        "100_1036": {
+        "100_1046": {
           "label": {
             "en": "Viennese pastries, pastry products"
           },
           "data": true
         },
-        "100_1048": {
+        "100_1055": {
           "label": {
             "en": "Biscuit/rusk products"
           },
           "data": true
         },
-        "100_1056": {
-          "label": {
-            "en": "Pizza and quiche"
-          },
-          "data": true
-        },
-        "100_1058": {
-          "label": {
-            "en": "Pasta"
-          },
-          "data": true
-        },
-        "100_1073": {
+        "100_1070": {
           "label": {
             "en": "Breakfast cereals"
           },
           "data": true
         },
-        "100_1065": {
+        "100_1080": {
+          "label": {
+            "en": "Pasta"
+          },
+          "data": true
+        },
+        "100_1090": {
           "label": {
             "en": "Other cereal products"
           },
           "data": true
         },
-        "100_1074": {
+        "100_1100": {
           "label": {
-            "en": "Meat, cold cuts and sausages"
+            "en": "Meat, meat products"
           },
           "data": true
         },
-        "100_1075": {
+        "100_1101": {
           "label": {
             "en": "Meat, fresh or frozen"
           },
           "data": true
         },
-        "100_1096": {
+        "100_1102": {
           "label": {
             "en": "Beef and veal"
           },
           "data": true
         },
-        "100_1076": {
+        "100_1103": {
           "label": {
             "en": "Beef"
           },
           "data": true
         },
-        "100_1088": {
+        "100_1114": {
           "label": {
             "en": "Veal"
           },
           "data": true
         },
-        "100_1097": {
+        "100_1130": {
           "label": {
             "en": "Pork"
           },
           "data": true
         },
-        "100_1107": {
+        "100_1140": {
           "label": {
             "en": "Lamb"
           },
           "data": true
         },
-        "100_1115": {
+        "100_1150": {
           "label": {
             "en": "Poultry"
           },
           "data": true
         },
-        "100_1133": {
+        "100_1170": {
           "label": {
             "en": "Other meat, fresh"
           },
           "data": true
         },
-        "100_1144": {
-          "label": {
-            "en": "Processed meat and sausages"
-          },
-          "data": true
-        },
-        "100_1145": {
-          "label": {
-            "en": "Sausages"
-          },
-          "data": true
-        },
-        "100_1170": {
-          "label": {
-            "en": "Cold cuts, other meat products and meat preparations"
-          },
-          "data": true
-        },
-        "100_1155": {
-          "label": {
-            "en": "Cold cuts and other meat products"
-          },
-          "data": true
-        },
-        "100_1168": {
-          "label": {
-            "en": "Preparations of raw meat ready to cook"
-          },
-          "data": true
-        },
-        "100_1179": {
-          "label": {
-            "en": "Fish and seafood"
-          },
-          "data": true
-        },
         "100_1180": {
           "label": {
-            "en": "Fresh fish"
-          },
-          "data": true
-        },
-        "100_1187": {
-          "label": {
-            "en": "Frozen fish"
-          },
-          "data": true
-        },
-        "100_1192": {
-          "label": {
-            "en": "Tinned fish and smoked fish"
-          },
-          "data": true
-        },
-        "100_1198": {
-          "label": {
-            "en": "Milk, cheese and eggs"
-          },
-          "data": true
-        },
-        "100_1199": {
-          "label": {
-            "en": "Milk and yoghurt"
+            "en": "Cold cuts, salted and dried meat"
           },
           "data": true
         },
         "100_1200": {
           "label": {
+            "en": "Offal"
+          },
+          "data": true
+        },
+        "100_1210": {
+          "label": {
+            "en": "Sausages and meat preparations"
+          },
+          "data": true
+        },
+        "100_1211": {
+          "label": {
+            "en": "Sausages"
+          },
+          "data": true
+        },
+        "100_1221": {
+          "label": {
+            "en": "Preparations of raw meat ready to cook"
+          },
+          "data": true
+        },
+        "100_1240": {
+          "label": {
+            "en": "Fish and seafood"
+          },
+          "data": true
+        },
+        "100_1241": {
+          "label": {
+            "en": "Fisch, fresh and frozen"
+          },
+          "data": true
+        },
+        "100_1242": {
+          "label": {
+            "en": "Fresh fish"
+          },
+          "data": true
+        },
+        "100_1250": {
+          "label": {
+            "en": "Frozen fish"
+          },
+          "data": true
+        },
+        "100_1260": {
+          "label": {
+            "en": "Canned fish and fish preparations"
+          },
+          "data": true
+        },
+        "100_1264": {
+          "label": {
+            "en": "Seafood"
+          },
+          "data": true
+        },
+        "100_1300": {
+          "label": {
+            "en": "Milk, cheese and eggs"
+          },
+          "data": true
+        },
+        "100_1301": {
+          "label": {
             "en": "Whole milk"
           },
           "data": true
         },
-        "100_1207": {
+        "100_1304": {
           "label": {
             "en": "Low fat milk"
           },
           "data": true
         },
-        "100_1247": {
-          "label": {
-            "en": "Yoghurt"
-          },
-          "data": true
-        },
-        "100_1212": {
-          "label": {
-            "en": "Cheese"
-          },
-          "data": true
-        },
-        "100_1218": {
-          "label": {
-            "en": "Hard and semi-hard cheese"
-          },
-          "data": true
-        },
-        "100_1230": {
-          "label": {
-            "en": "Fresh, soft and melted cheese"
-          },
-          "data": true
-        },
-        "100_1197": {
-          "label": {
-            "en": "Other milk products"
-          },
-          "data": true
-        },
-        "100_1246": {
-          "label": {
-            "en": "Drink and milk desserts"
-          },
-          "data": true
-        },
-        "100_1265": {
+        "100_1310": {
           "label": {
             "en": "Cream"
           },
           "data": true
         },
-        "100_1278": {
+        "100_1322": {
           "label": {
-            "en": "Eggs"
+            "en": "Plant-based milk"
           },
           "data": true
         },
-        "100_1284": {
+        "100_1330": {
           "label": {
-            "en": "Fats and edible oils"
+            "en": "Cheese"
           },
           "data": true
         },
-        "100_1285": {
+        "100_1331": {
           "label": {
-            "en": "Butter"
-          },
-          "data": true
-        },
-        "100_1293": {
-          "label": {
-            "en": "Margarine, fats, edible oils"
-          },
-          "data": true
-        },
-        "100_1294": {
-          "label": {
-            "en": "Margarine and edible fats"
-          },
-          "data": true
-        },
-        "100_1290": {
-          "label": {
-            "en": "Olive oil"
-          },
-          "data": true
-        },
-        "100_1291": {
-          "label": {
-            "en": "Other edible oils"
-          },
-          "data": true
-        },
-        "100_1305": {
-          "label": {
-            "en": "Fruit, vegetables, potatoes and mushrooms"
-          },
-          "data": true
-        },
-        "100_1306": {
-          "label": {
-            "en": "Fruits"
-          },
-          "data": true
-        },
-        "100_1307": {
-          "label": {
-            "en": "Fresh fruit"
-          },
-          "data": true
-        },
-        "100_1308": {
-          "label": {
-            "en": "Citrus fruit"
-          },
-          "data": true
-        },
-        "100_1316": {
-          "label": {
-            "en": "Stone fruit"
-          },
-          "data": true
-        },
-        "100_1325": {
-          "label": {
-            "en": "Pome fruit"
-          },
-          "data": true
-        },
-        "100_1333": {
-          "label": {
-            "en": "Bananas"
-          },
-          "data": true
-        },
-        "100_1335": {
-          "label": {
-            "en": "Tropical fruits"
+            "en": "Hard and semi-hard cheese"
           },
           "data": true
         },
         "100_1346": {
           "label": {
-            "en": "Berries"
+            "en": "Fresh, soft and melted cheese"
           },
           "data": true
         },
-        "100_1338": {
+        "100_1370": {
           "label": {
-            "en": "Melons and grapes"
+            "en": "Yoghurt and sour milk products"
           },
           "data": true
         },
-        "100_1358": {
+        "100_1380": {
           "label": {
-            "en": "Frozen fruit"
+            "en": "Drink and milk desserts"
           },
           "data": true
         },
-        "100_1347": {
+        "100_1390": {
           "label": {
-            "en": "Dried fruit and nuts"
-          },
-          "data": true
-        },
-        "100_1352": {
-          "label": {
-            "en": "Preserved fruit"
-          },
-          "data": true
-        },
-        "100_1359": {
-          "label": {
-            "en": "Vegetables, mushrooms and potatoes"
-          },
-          "data": true
-        },
-        "100_1360": {
-          "label": {
-            "en": "Vegetables and mushrooms"
-          },
-          "data": true
-        },
-        "100_1361": {
-          "label": {
-            "en": "Fruiting vegetables"
-          },
-          "data": true
-        },
-        "100_1369": {
-          "label": {
-            "en": "Root vegetables"
-          },
-          "data": true
-        },
-        "100_1379": {
-          "label": {
-            "en": "Salad vegetables"
-          },
-          "data": true
-        },
-        "100_1391": {
-          "label": {
-            "en": "Brassicas"
+            "en": "Eggs"
           },
           "data": true
         },
         "100_1400": {
           "label": {
-            "en": "Onions and leeks"
+            "en": "Fats and edible oils"
           },
           "data": true
         },
-        "100_1407": {
+        "100_1401": {
           "label": {
-            "en": "Other vegetables, aromatic herbs and mushrooms"
+            "en": "Vegetable cooking oils"
           },
           "data": true
         },
-        "100_1425": {
+        "100_1402": {
           "label": {
-            "en": "Preserved vegetables"
+            "en": "Olive oil"
           },
           "data": true
         },
-        "100_1423": {
+        "100_1404": {
           "label": {
-            "en": "Dried and tinned vegetables and mushrooms"
+            "en": "Other edible oils"
           },
           "data": true
         },
-        "100_1416": {
+        "100_1420": {
           "label": {
-            "en": "Potatoes and potatoes-based products"
+            "en": "Butter"
           },
           "data": true
         },
-        "100_1417": {
+        "100_1430": {
           "label": {
-            "en": "Potatoes"
+            "en": "Margarine and edible fats"
           },
           "data": true
         },
-        "100_1440": {
+        "100_1499": {
           "label": {
-            "en": "Potato products"
+            "en": "Fruit, vegetables, potatoes and mushrooms"
           },
           "data": true
         },
-        "100_1454": {
+        "100_1500": {
           "label": {
-            "en": "Crisps"
+            "en": "Fruit"
           },
           "data": true
         },
-        "100_1448": {
+        "100_1501": {
           "label": {
-            "en": "Sugar, jam, honey/other sugary foods"
+            "en": "Fresh fruit"
           },
           "data": true
         },
-        "100_1475": {
+        "100_1502": {
           "label": {
-            "en": "Sugar"
+            "en": "Tropical fruit"
           },
           "data": true
         },
-        "100_1449": {
+        "100_1503": {
           "label": {
-            "en": "Jam and honey"
-          },
-          "data": true
-        },
-        "100_1455": {
-          "label": {
-            "en": "Chocolate"
-          },
-          "data": true
-        },
-        "100_1461": {
-          "label": {
-            "en": "Sweets and chewing gum"
-          },
-          "data": true
-        },
-        "100_1468": {
-          "label": {
-            "en": "Ice-cream"
-          },
-          "data": true
-        },
-        "100_1481": {
-          "label": {
-            "en": "Other food products"
-          },
-          "data": true
-        },
-        "100_1478": {
-          "label": {
-            "en": "Sauces and condiments"
-          },
-          "data": true
-        },
-        "100_1486": {
-          "label": {
-            "en": "Salt, spices and culinary herbs"
-          },
-          "data": true
-        },
-        "100_1536": {
-          "label": {
-            "en": "Baby food"
+            "en": "Bananas"
           },
           "data": true
         },
         "100_1505": {
           "label": {
-            "en": "Ready-made foods"
+            "en": "Other tropical fruits"
           },
           "data": true
         },
-        "100_1491": {
+        "100_1520": {
           "label": {
-            "en": "Soups and other food products"
-          },
-          "data": true
-        },
-        "100_1517": {
-          "label": {
-            "en": "Non-alcoholic beverages (retail)"
-          },
-          "data": true
-        },
-        "100_1518": {
-          "label": {
-            "en": "Coffee, tea, cocoa and nutritional beverages"
+            "en": "Citrus fruit"
           },
           "data": true
         },
         "100_1530": {
           "label": {
+            "en": "Stone and pome fruit"
+          },
+          "data": true
+        },
+        "100_1531": {
+          "label": {
+            "en": "Stone fruit"
+          },
+          "data": true
+        },
+        "100_1537": {
+          "label": {
+            "en": "Pome fruit"
+          },
+          "data": true
+        },
+        "100_1550": {
+          "label": {
+            "en": "Berries"
+          },
+          "data": true
+        },
+        "100_1560": {
+          "label": {
+            "en": "Other fruit"
+          },
+          "data": true
+        },
+        "100_1570": {
+          "label": {
+            "en": "Frozen fruit"
+          },
+          "data": true
+        },
+        "100_1572": {
+          "label": {
+            "en": "Dried fruit"
+          },
+          "data": true
+        },
+        "100_1580": {
+          "label": {
+            "en": "Nuts"
+          },
+          "data": true
+        },
+        "100_1590": {
+          "label": {
+            "en": "Preserved fruit"
+          },
+          "data": true
+        },
+        "100_1600": {
+          "label": {
+            "en": "Vegetables, mushrooms and potatoes"
+          },
+          "data": true
+        },
+        "100_1601": {
+          "label": {
+            "en": "Fresh vegetables and mushrooms"
+          },
+          "data": true
+        },
+        "100_1602": {
+          "label": {
+            "en": "Leafy and stem vegetables"
+          },
+          "data": true
+        },
+        "100_1603": {
+          "label": {
+            "en": "Leafy vegetables"
+          },
+          "data": true
+        },
+        "100_1610": {
+          "label": {
+            "en": "Stem vegetables"
+          },
+          "data": true
+        },
+        "100_1620": {
+          "label": {
+            "en": "Fruiting vegetables"
+          },
+          "data": true
+        },
+        "100_1630": {
+          "label": {
+            "en": "Beans"
+          },
+          "data": true
+        },
+        "100_1632": {
+          "label": {
+            "en": "Root, bulb and other vegetables"
+          },
+          "data": true
+        },
+        "100_1633": {
+          "label": {
+            "en": "Root vegetables"
+          },
+          "data": true
+        },
+        "100_1639": {
+          "label": {
+            "en": "Onions and leeks"
+          },
+          "data": true
+        },
+        "100_1644": {
+          "label": {
+            "en": "Other vegetables and mushrooms"
+          },
+          "data": true
+        },
+        "100_1650": {
+          "label": {
+            "en": "Tubers"
+          },
+          "data": true
+        },
+        "100_1651": {
+          "label": {
+            "en": "Potatoes"
+          },
+          "data": true
+        },
+        "100_1660": {
+          "label": {
+            "en": "Dried vegetables and mushrooms"
+          },
+          "data": true
+        },
+        "100_1663": {
+          "label": {
+            "en": "Preserved vegetables"
+          },
+          "data": true
+        },
+        "100_1670": {
+          "label": {
+            "en": "Canned vegetables and potato-based products"
+          },
+          "data": true
+        },
+        "100_1671": {
+          "label": {
+            "en": "Dried and tinned vegetables and mushrooms"
+          },
+          "data": true
+        },
+        "100_1680": {
+          "label": {
+            "en": "Potato products"
+          },
+          "data": true
+        },
+        "100_1687": {
+          "label": {
+            "en": "Crisps"
+          },
+          "data": true
+        },
+        "100_1700": {
+          "label": {
+            "en": "Sugar, jams, honey, chocolate and other sweets"
+          },
+          "data": true
+        },
+        "100_1701": {
+          "label": {
+            "en": "Sugar"
+          },
+          "data": true
+        },
+        "100_1705": {
+          "label": {
+            "en": "Jam and honey"
+          },
+          "data": true
+        },
+        "100_1708": {
+          "label": {
+            "en": "Chocolate"
+          },
+          "data": true
+        },
+        "100_1720": {
+          "label": {
+            "en": "Ice-cream"
+          },
+          "data": true
+        },
+        "100_1730": {
+          "label": {
+            "en": "Sweets and chewing gum"
+          },
+          "data": true
+        },
+        "100_1800": {
+          "label": {
+            "en": "Other food products"
+          },
+          "data": true
+        },
+        "100_1801": {
+          "label": {
+            "en": "Pizzas and ready-made meals"
+          },
+          "data": true
+        },
+        "100_1802": {
+          "label": {
+            "en": "Pizzas and quiches"
+          },
+          "data": true
+        },
+        "100_1807": {
+          "label": {
+            "en": "Ready-made meals"
+          },
+          "data": true
+        },
+        "100_1840": {
+          "label": {
+            "en": "Baby food"
+          },
+          "data": true
+        },
+        "100_1850": {
+          "label": {
+            "en": "Salt, sauces and condiments"
+          },
+          "data": true
+        },
+        "100_1870": {
+          "label": {
+            "en": "Spices, culinary herbs, seeds and kernels"
+          },
+          "data": true
+        },
+        "100_1880": {
+          "label": {
+            "en": "Other food products"
+          },
+          "data": true
+        },
+        "100_1900": {
+          "label": {
+            "en": "Non-alcoholic beverages (retail)"
+          },
+          "data": true
+        },
+        "100_1901": {
+          "label": {
+            "en": "Fruit and vegetable juices"
+          },
+          "data": true
+        },
+        "100_1902": {
+          "label": {
+            "en": "Fruit and vegetable juices"
+          },
+          "data": true
+        },
+        "100_1909": {
+          "label": {
+            "en": "Coffee, tea, cocoa and nutritional beverages"
+          },
+          "data": true
+        },
+        "100_1910": {
+          "label": {
             "en": "Coffee (retail)"
           },
           "data": true
         },
-        "100_1532": {
+        "100_1911": {
           "label": {
-            "en": "Tea (retail)"
+            "en": "Coffee (retail)"
           },
           "data": true
         },
-        "100_1539": {
+        "100_1930": {
+          "label": {
+            "en": "Tea and iced tea (retail)"
+          },
+          "data": true
+        },
+        "100_1931": {
+          "label": {
+            "en": "Tea and iced tea (retail)"
+          },
+          "data": true
+        },
+        "100_1940": {
           "label": {
             "en": "Cocoa and chocolate powder"
           },
           "data": true
         },
-        "100_1544": {
+        "100_1941": {
           "label": {
-            "en": "Mineral waters, soft drinks and juices"
+            "en": "Cocoa and chocolate powder"
           },
           "data": true
         },
-        "100_1545": {
+        "100_1949": {
+          "label": {
+            "en": "Mineral waters and soft drinks"
+          },
+          "data": true
+        },
+        "100_1950": {
           "label": {
             "en": "Natural mineral water"
           },
           "data": true
         },
-        "100_1552": {
+        "100_1951": {
+          "label": {
+            "en": "Natural mineral water"
+          },
+          "data": true
+        },
+        "100_1960": {
           "label": {
             "en": "Soft drinks"
           },
           "data": true
         },
-        "100_1563": {
+        "100_1961": {
           "label": {
-            "en": "Fruit or vegetable juices"
+            "en": "Soft drinks"
+          },
+          "data": true
+        },
+        "100_1970": {
+          "label": {
+            "en": "Syrup and energy drinks"
+          },
+          "data": true
+        },
+        "100_1971": {
+          "label": {
+            "en": "Syrup and energy drinks"
           },
           "data": true
         },
@@ -637,91 +745,145 @@
           },
           "data": true
         },
-        "100_2002": {
+        "100_2100": {
           "label": {
             "en": "Spirits (retail)"
           },
           "data": true
         },
-        "100_2003": {
+        "100_2101": {
           "label": {
-            "en": "Spirits/brandies (retail)"
+            "en": "Spirits (retail)"
           },
           "data": true
         },
-        "100_2010": {
+        "100_2102": {
+          "label": {
+            "en": "Spirits and brandies"
+          },
+          "data": true
+        },
+        "100_2109": {
           "label": {
             "en": "Liqueurs and aperitifs"
           },
           "data": true
         },
-        "100_2017": {
+        "100_2200": {
+          "label": {
+            "en": "Wine (retail)"
+          },
+          "data": true
+        },
+        "100_2201": {
           "label": {
             "en": "Wine (Retail)"
           },
           "data": true
         },
-        "100_2018": {
+        "100_2202": {
           "label": {
             "en": "Red Wine"
           },
           "data": true
         },
-        "100_2019": {
+        "100_2203": {
           "label": {
             "en": "Swiss red wine"
           },
           "data": true
         },
-        "100_2031": {
+        "100_2208": {
           "label": {
             "en": "Foreign red wine"
           },
           "data": true
         },
-        "100_2045": {
+        "100_2214": {
           "label": {
             "en": "White wine"
           },
           "data": true
         },
-        "100_2046": {
+        "100_2215": {
           "label": {
             "en": "Swiss white wine"
           },
           "data": true
         },
-        "100_2056": {
+        "100_2219": {
           "label": {
             "en": "Foreign white wine"
           },
           "data": true
         },
-        "100_2058": {
+        "100_2221": {
+          "label": {
+            "en": "Wine-based aperitif drinks"
+          },
+          "data": true
+        },
+        "100_2223": {
           "label": {
             "en": "Sparkling wine"
           },
           "data": true
         },
-        "100_2064": {
+        "100_2300": {
           "label": {
             "en": "Beer (retail)"
           },
           "data": true
         },
-        "100_2075": {
+        "100_2301": {
+          "label": {
+            "en": "Beer (retail)"
+          },
+          "data": true
+        },
+        "100_2302": {
+          "label": {
+            "en": "Lagerbeer, blonde"
+          },
+          "data": true
+        },
+        "100_2307": {
+          "label": {
+            "en": "Special beer"
+          },
+          "data": true
+        },
+        "100_2310": {
+          "label": {
+            "en": "Alcohol-free beers"
+          },
+          "data": true
+        },
+        "100_2400": {
           "label": {
             "en": "Tobacco"
           },
           "data": true
         },
-        "100_2076": {
+        "100_2401": {
+          "label": {
+            "en": "Tobacco"
+          },
+          "data": true
+        },
+        "100_2402": {
           "label": {
             "en": "Cigarettes"
           },
           "data": true
         },
-        "100_2082": {
+        "100_2405": {
+          "label": {
+            "en": "Cigars and cigarillos"
+          },
+          "data": true
+        },
+        "100_2408": {
           "label": {
             "en": "Other tobaccos"
           },
@@ -745,199 +907,235 @@
           },
           "data": true
         },
-        "100_3003": {
+        "100_3100": {
+          "label": {
+            "en": "Men's and boys' clothing"
+          },
+          "data": true
+        },
+        "100_3101": {
           "label": {
             "en": "Men's clothing"
           },
           "data": true
         },
-        "100_3004": {
+        "100_3102": {
           "label": {
             "en": "Jackets for men"
           },
           "data": true
         },
-        "100_3015": {
+        "100_3105": {
           "label": {
             "en": "Men's suits"
           },
           "data": true
         },
-        "100_3020": {
+        "100_3108": {
           "label": {
             "en": "Men's trousers"
           },
           "data": true
         },
-        "100_3027": {
+        "100_3113": {
           "label": {
             "en": "Men's shirts"
           },
           "data": true
         },
-        "100_3033": {
+        "100_3116": {
           "label": {
             "en": "Men's knitwear"
           },
           "data": true
         },
-        "100_3041": {
+        "100_3123": {
           "label": {
             "en": "Men's underwear"
           },
           "data": true
         },
-        "100_3060": {
+        "100_3140": {
           "label": {
-            "en": "Women's clothing"
-          },
-          "data": true
-        },
-        "100_3061": {
-          "label": {
-            "en": "Women's coats and jackets"
-          },
-          "data": true
-        },
-        "100_3074": {
-          "label": {
-            "en": "Women's skirts and dresses"
-          },
-          "data": true
-        },
-        "100_3079": {
-          "label": {
-            "en": "Women's trousers"
-          },
-          "data": true
-        },
-        "100_3093": {
-          "label": {
-            "en": "Women's blouses"
-          },
-          "data": true
-        },
-        "100_3099": {
-          "label": {
-            "en": "Women's jumpers"
-          },
-          "data": true
-        },
-        "100_3106": {
-          "label": {
-            "en": "Women's underwear"
-          },
-          "data": true
-        },
-        "100_3125": {
-          "label": {
-            "en": "Children's clothing"
-          },
-          "data": true
-        },
-        "100_3126": {
-          "label": {
-            "en": "Children's jackets"
-          },
-          "data": true
-        },
-        "100_3134": {
-          "label": {
-            "en": "Children's trousers and skirts"
+            "en": "Boys' clothing"
           },
           "data": true
         },
         "100_3141": {
           "label": {
-            "en": "Children's knitwear"
+            "en": "Jackets, boys"
           },
           "data": true
         },
-        "100_3148": {
+        "100_3144": {
           "label": {
-            "en": "Babies' clothing"
+            "en": "Trousers, boys"
           },
           "data": true
         },
-        "100_3150": {
+        "100_3149": {
           "label": {
-            "en": "Children's underwear"
+            "en": "Knitwear, boys"
           },
           "data": true
         },
-        "100_3300": {
+        "100_3156": {
           "label": {
-            "en": "Sportswear"
+            "en": "Underwear, boys"
           },
           "data": true
         },
-        "100_3310": {
+        "100_3200": {
           "label": {
-            "en": "Winter sportswear"
+            "en": "Women's and girls' clothing"
           },
           "data": true
         },
-        "100_3320": {
+        "100_3201": {
           "label": {
-            "en": "Summer/year-round sportswear"
+            "en": "Women's clothing"
           },
           "data": true
         },
-        "100_3183": {
+        "100_3202": {
           "label": {
-            "en": "Clothing accessories"
+            "en": "Women's coats and jackets"
           },
           "data": true
         },
-        "100_3189": {
+        "100_3207": {
           "label": {
-            "en": "Dry-cleaning and repair of garments"
-          },
-          "data": true
-        },
-        "100_3190": {
-          "label": {
-            "en": "Garment alterations"
-          },
-          "data": true
-        },
-        "100_3198": {
-          "label": {
-            "en": "Dry cleaning"
-          },
-          "data": true
-        },
-        "100_3210": {
-          "label": {
-            "en": "Footwear including repairs"
+            "en": "Women's skirts and dresses"
           },
           "data": true
         },
         "100_3211": {
           "label": {
-            "en": "Footwear"
+            "en": "Women's trousers"
+          },
+          "data": true
+        },
+        "100_3217": {
+          "label": {
+            "en": "Women's blouses"
           },
           "data": true
         },
         "100_3220": {
           "label": {
+            "en": "Women's jumpers"
+          },
+          "data": true
+        },
+        "100_3226": {
+          "label": {
+            "en": "Women's underwear"
+          },
+          "data": true
+        },
+        "100_3250": {
+          "label": {
+            "en": "Girls' clothing"
+          },
+          "data": true
+        },
+        "100_3251": {
+          "label": {
+            "en": "Girls' jackets"
+          },
+          "data": true
+        },
+        "100_3254": {
+          "label": {
+            "en": "Trousers and skirts for girls"
+          },
+          "data": true
+        },
+        "100_3261": {
+          "label": {
+            "en": "Girls' knitwear"
+          },
+          "data": true
+        },
+        "100_3268": {
+          "label": {
+            "en": "Underwear for girls"
+          },
+          "data": true
+        },
+        "100_3300": {
+          "label": {
+            "en": "Babies' clothing"
+          },
+          "data": true
+        },
+        "100_3400": {
+          "label": {
+            "en": "Other clothing items"
+          },
+          "data": true
+        },
+        "100_3401": {
+          "label": {
+            "en": "Other clothing items"
+          },
+          "data": true
+        },
+        "100_3410": {
+          "label": {
+            "en": "Dry-cleaning and repair of garments"
+          },
+          "data": true
+        },
+        "100_3411": {
+          "label": {
+            "en": "Dry cleaning"
+          },
+          "data": true
+        },
+        "100_3420": {
+          "label": {
+            "en": "Garment alterations"
+          },
+          "data": true
+        },
+        "100_3500": {
+          "label": {
+            "en": "Footwear including repairs"
+          },
+          "data": true
+        },
+        "100_3501": {
+          "label": {
+            "en": "Footwear"
+          },
+          "data": true
+        },
+        "100_3502": {
+          "label": {
             "en": "Men's footwear"
           },
           "data": true
         },
-        "100_3212": {
+        "100_3520": {
           "label": {
             "en": "Women's footwear"
           },
           "data": true
         },
-        "100_3228": {
+        "100_3540": {
           "label": {
             "en": "Children's footwear"
           },
           "data": true
         },
-        "100_3237": {
+        "100_3570": {
+          "label": {
+            "en": "Shoe repair"
+          },
+          "data": true
+        },
+        "100_3571": {
           "label": {
             "en": "Shoe repairs"
           },
@@ -955,217 +1153,301 @@
           },
           "data": true
         },
-        "100_4002": {
+        "100_4100": {
           "label": {
-            "en": "Housing rental"
+            "en": "Actual rent paid"
           },
           "data": true
         },
-        "100_4004": {
+        "100_4101": {
+          "label": {
+            "en": "Rent of main residence"
+          },
+          "data": true
+        },
+        "100_4102": {
           "label": {
             "en": "Housing rentals (Rental index)"
           },
           "data": true
         },
-        "100_4008": {
+        "100_4110": {
           "label": {
-            "en": "Imputed rent for owner-occupied dwellings"
-          },
-          "data": true
-        },
-        "100_4005": {
-          "label": {
-            "en": "Rental of garages, parking spaces"
-          },
-          "data": true
-        },
-        "100_4009": {
-          "label": {
-            "en": "Regular dwelling repairs"
-          },
-          "data": true
-        },
-        "100_4010": {
-          "label": {
-            "en": "Dwelling repair products"
-          },
-          "data": true
-        },
-        "100_4020": {
-          "label": {
-            "en": "House maintenance services"
-          },
-          "data": true
-        },
-        "100_4025": {
-          "label": {
-            "en": "Plumbing services"
-          },
-          "data": true
-        },
-        "100_4026": {
-          "label": {
-            "en": "Electric installlation services"
-          },
-          "data": true
-        },
-        "100_4027": {
-          "label": {
-            "en": "Painting and plastering services"
-          },
-          "data": true
-        },
-        "100_4029": {
-          "label": {
-            "en": "Carpentry services"
-          },
-          "data": true
-        },
-        "100_4039": {
-          "label": {
-            "en": "Services for dwelling provision and maintenance"
-          },
-          "data": true
-        },
-        "100_4028": {
-          "label": {
-            "en": "Charges for dwelling provision"
-          },
-          "data": true
-        },
-        "100_4030": {
-          "label": {
-            "en": "Charges for household waste elimination"
-          },
-          "data": true
-        },
-        "100_4036": {
-          "label": {
-            "en": "Charges for water provision"
-          },
-          "data": true
-        },
-        "100_4042": {
-          "label": {
-            "en": "Charges for sewerage"
-          },
-          "data": true
-        },
-        "100_4047": {
-          "label": {
-            "en": "Maintenance and caretaking"
-          },
-          "data": true
-        },
-        "100_4049": {
-          "label": {
-            "en": "Energy"
-          },
-          "data": true
-        },
-        "100_4070": {
-          "label": {
-            "en": "Electricity"
-          },
-          "data": true
-        },
-        "100_4071": {
-          "label": {
-            "en": "Electricity, consumer type I"
-          },
-          "data": true
-        },
-        "100_4073": {
-          "label": {
-            "en": "Electricity, consumer type II"
-          },
-          "data": true
-        },
-        "100_4075": {
-          "label": {
-            "en": "Electricity, consumer type III"
-          },
-          "data": true
-        },
-        "100_4077": {
-          "label": {
-            "en": "Electricity, consumer type IV"
-          },
-          "data": true
-        },
-        "100_4079": {
-          "label": {
-            "en": "Electricity, consumer type V"
-          },
-          "data": true
-        },
-        "100_4081": {
-          "label": {
-            "en": "Electricity, consumer type VI"
-          },
-          "data": true
-        },
-        "100_4083": {
-          "label": {
-            "en": "Electricity, consumer type VII"
-          },
-          "data": true
-        },
-        "100_4050": {
-          "label": {
-            "en": "Gas"
-          },
-          "data": true
-        },
-        "100_4053": {
-          "label": {
-            "en": "Gas, consumer type II"
-          },
-          "data": true
-        },
-        "100_4055": {
-          "label": {
-            "en": "Gas, consumer type III"
-          },
-          "data": true
-        },
-        "100_4057": {
-          "label": {
-            "en": "Gas, consumer type IV"
-          },
-          "data": true
-        },
-        "100_4059": {
-          "label": {
-            "en": "Gas, consumer type V"
-          },
-          "data": true
-        },
-        "100_4090": {
-          "label": {
-            "en": "Heating oil"
+            "en": "Other actual rentals"
           },
           "data": true
         },
         "100_4111": {
           "label": {
+            "en": "Rental of garages, parking spaces"
+          },
+          "data": true
+        },
+        "100_4200": {
+          "label": {
+            "en": "Imputed rent"
+          },
+          "data": true
+        },
+        "100_4201": {
+          "label": {
+            "en": "Imputed rental for owner-occupied main residence"
+          },
+          "data": true
+        },
+        "100_4202": {
+          "label": {
+            "en": "Imputed rent for owner-occupied dwellings"
+          },
+          "data": true
+        },
+        "100_4300": {
+          "label": {
+            "en": "Regular dwelling repairs"
+          },
+          "data": true
+        },
+        "100_4301": {
+          "label": {
+            "en": "Material for dwelling repairs"
+          },
+          "data": true
+        },
+        "100_4302": {
+          "label": {
+            "en": "Material for dwelling repairs"
+          },
+          "data": true
+        },
+        "100_4320": {
+          "label": {
+            "en": "House maintenance services"
+          },
+          "data": true
+        },
+        "100_4321": {
+          "label": {
+            "en": "House maintenance services"
+          },
+          "data": true
+        },
+        "100_4322": {
+          "label": {
+            "en": "Plumbing services"
+          },
+          "data": true
+        },
+        "100_4324": {
+          "label": {
+            "en": "Electric installlation services"
+          },
+          "data": true
+        },
+        "100_4326": {
+          "label": {
+            "en": "Painting and plastering services"
+          },
+          "data": true
+        },
+        "100_4328": {
+          "label": {
+            "en": "Carpentry services"
+          },
+          "data": true
+        },
+        "100_4400": {
+          "label": {
+            "en": "Services for dwelling provision and maintenance"
+          },
+          "data": true
+        },
+        "100_4401": {
+          "label": {
+            "en": "Charges for water provision"
+          },
+          "data": true
+        },
+        "100_4402": {
+          "label": {
+            "en": "Charges for water provision"
+          },
+          "data": true
+        },
+        "100_4410": {
+          "label": {
+            "en": "Charges for household waste elimination"
+          },
+          "data": true
+        },
+        "100_4411": {
+          "label": {
+            "en": "Charges for household waste elimination"
+          },
+          "data": true
+        },
+        "100_4420": {
+          "label": {
+            "en": "Charges for wastewater treatment"
+          },
+          "data": true
+        },
+        "100_4421": {
+          "label": {
+            "en": "Charges for wastewater treatment"
+          },
+          "data": true
+        },
+        "100_4430": {
+          "label": {
+            "en": "Maintenance and caretaking"
+          },
+          "data": true
+        },
+        "100_4431": {
+          "label": {
+            "en": "Maintenance and caretaking"
+          },
+          "data": true
+        },
+        "100_4500": {
+          "label": {
+            "en": "Energy"
+          },
+          "data": true
+        },
+        "100_4501": {
+          "label": {
+            "en": "Electricity"
+          },
+          "data": true
+        },
+        "100_4502": {
+          "label": {
+            "en": "Electricity"
+          },
+          "data": true
+        },
+        "100_4503": {
+          "label": {
+            "en": "Electricity, consumption type1"
+          },
+          "data": true
+        },
+        "100_4505": {
+          "label": {
+            "en": "Electricity, consumption type 2"
+          },
+          "data": true
+        },
+        "100_4507": {
+          "label": {
+            "en": "Electricity, consumption type 3"
+          },
+          "data": true
+        },
+        "100_4509": {
+          "label": {
+            "en": "Electricity, consumption type 4"
+          },
+          "data": true
+        },
+        "100_4511": {
+          "label": {
+            "en": "Electricity, consumption type 5"
+          },
+          "data": true
+        },
+        "100_4513": {
+          "label": {
+            "en": "Electricity, consumption type 6"
+          },
+          "data": true
+        },
+        "100_4515": {
+          "label": {
+            "en": "Electricity, consumption type 7"
+          },
+          "data": true
+        },
+        "100_4520": {
+          "label": {
+            "en": "Gas"
+          },
+          "data": true
+        },
+        "100_4521": {
+          "label": {
+            "en": "Gas"
+          },
+          "data": true
+        },
+        "100_4522": {
+          "label": {
+            "en": "Gas, consumption type 2"
+          },
+          "data": true
+        },
+        "100_4524": {
+          "label": {
+            "en": "Gas, consumption type 3"
+          },
+          "data": true
+        },
+        "100_4526": {
+          "label": {
+            "en": "Gas, consumption type 4"
+          },
+          "data": true
+        },
+        "100_4528": {
+          "label": {
+            "en": "Gas, consumption type 5"
+          },
+          "data": true
+        },
+        "100_4540": {
+          "label": {
+            "en": "Heating oil"
+          },
+          "data": true
+        },
+        "100_4541": {
+          "label": {
+            "en": "Heating oil"
+          },
+          "data": true
+        },
+        "100_4550": {
+          "label": {
             "en": "Firewood"
           },
           "data": true
         },
-        "100_4110": {
+        "100_4551": {
+          "label": {
+            "en": "Firewood"
+          },
+          "data": true
+        },
+        "100_4552": {
           "label": {
             "en": "Wood pellets"
           },
           "data": true
         },
-        "100_4112": {
+        "100_4554": {
           "label": {
             "en": "Wood logs"
           },
           "data": true
         },
-        "100_4100": {
+        "100_4560": {
+          "label": {
+            "en": "District heating"
+          },
+          "data": true
+        },
+        "100_4561": {
           "label": {
             "en": "District heating"
           },
@@ -1177,235 +1459,289 @@
           },
           "data": true
         },
-        "100_5001": {
-          "label": {
-            "en": "Furniture, furnishings and floor coverings"
-          },
-          "data": true
-        },
-        "100_5002": {
-          "label": {
-            "en": "Furniture and furnishings"
-          },
-          "data": true
-        },
-        "100_5008": {
-          "label": {
-            "en": "Household furniture"
-          },
-          "data": true
-        },
-        "100_5003": {
-          "label": {
-            "en": "Living room and home office furniture"
-          },
-          "data": true
-        },
-        "100_5020": {
-          "label": {
-            "en": "Bedroom furniture"
-          },
-          "data": true
-        },
-        "100_5031": {
-          "label": {
-            "en": "Kitchen and dining room furniture"
-          },
-          "data": true
-        },
-        "100_5040": {
-          "label": {
-            "en": "Garden furniture"
-          },
-          "data": true
-        },
-        "100_5055": {
-          "label": {
-            "en": "Light fittings"
-          },
-          "data": true
-        },
-        "100_5050": {
-          "label": {
-            "en": "Furnishings"
-          },
-          "data": true
-        },
-        "100_5060": {
-          "label": {
-            "en": "Carpets and floor coverings"
-          },
-          "data": true
-        },
-        "100_5070": {
-          "label": {
-            "en": "Household textiles"
-          },
-          "data": true
-        },
-        "100_5090": {
-          "label": {
-            "en": "Curtains and curtain accessories"
-          },
-          "data": true
-        },
-        "100_5071": {
-          "label": {
-            "en": "Bed linen and accessories"
-          },
-          "data": true
-        },
-        "100_5085": {
-          "label": {
-            "en": "Household linen"
-          },
-          "data": true
-        },
         "100_5100": {
           "label": {
-            "en": "Household appliances"
+            "en": "Furniture, furnishings and lose carpets"
           },
           "data": true
         },
         "100_5101": {
           "label": {
-            "en": "Major household appliances"
+            "en": "Furniture and furnishings"
           },
           "data": true
         },
-        "100_5109": {
+        "100_5102": {
           "label": {
-            "en": "Refrigerators and freezers"
+            "en": "Household furniture"
           },
           "data": true
         },
-        "100_5110": {
+        "100_5103": {
           "label": {
-            "en": "Washing machines, dryers and dishwashers"
-          },
-          "data": true
-        },
-        "100_5111": {
-          "label": {
-            "en": "Cookers, ovens and barbecues"
-          },
-          "data": true
-        },
-        "100_5115": {
-          "label": {
-            "en": "Air conditioning units"
+            "en": "Living room and home office furniture"
           },
           "data": true
         },
         "100_5117": {
           "label": {
-            "en": "Cleaning devices"
+            "en": "Bedroom furniture"
           },
           "data": true
         },
-        "100_5120": {
+        "100_5124": {
           "label": {
-            "en": "Smaller electric household appliances"
+            "en": "Kitchen and dining room furniture"
           },
           "data": true
         },
         "100_5140": {
           "label": {
-            "en": "Glassware, tableware and household utensils"
+            "en": "Garden furniture"
           },
           "data": true
         },
         "100_5150": {
           "label": {
-            "en": "Glassware and tableware"
+            "en": "Lighting equipment"
           },
           "data": true
         },
-        "100_5165": {
+        "100_5160": {
           "label": {
-            "en": "Cutlery"
-          },
-          "data": true
-        },
-        "100_5139": {
-          "label": {
-            "en": "Non-electric kitchen and household equipment"
-          },
-          "data": true
-        },
-        "100_5141": {
-          "label": {
-            "en": "Kitchen utensils"
-          },
-          "data": true
-        },
-        "100_5170": {
-          "label": {
-            "en": "Other household equipment"
-          },
-          "data": true
-        },
-        "100_5180": {
-          "label": {
-            "en": "Tools, equipment and accessories for house and garden"
-          },
-          "data": true
-        },
-        "100_5181": {
-          "label": {
-            "en": "Motorized tools for DIY and garden"
+            "en": "Furnishing accessories and loose rugs"
           },
           "data": true
         },
         "100_5200": {
           "label": {
-            "en": "Tools for house and garden"
+            "en": "Household textiles"
           },
           "data": true
         },
         "100_5201": {
           "label": {
-            "en": "Non-motorized tools for house and garden"
+            "en": "Home textiles"
           },
           "data": true
         },
-        "100_5210": {
+        "100_5202": {
           "label": {
-            "en": "Equipment and other accessories for house and garden"
+            "en": "Curtains and curtain accessories"
           },
           "data": true
         },
         "100_5220": {
           "label": {
+            "en": "Bed linen and accessories"
+          },
+          "data": true
+        },
+        "100_5240": {
+          "label": {
+            "en": "Table and bathroom textiles"
+          },
+          "data": true
+        },
+        "100_5300": {
+          "label": {
+            "en": "Household appliances"
+          },
+          "data": true
+        },
+        "100_5301": {
+          "label": {
+            "en": "Major household appliances"
+          },
+          "data": true
+        },
+        "100_5302": {
+          "label": {
+            "en": "Kitchen appliances"
+          },
+          "data": true
+        },
+        "100_5303": {
+          "label": {
+            "en": "Refrigerators and freezers"
+          },
+          "data": true
+        },
+        "100_5307": {
+          "label": {
+            "en": "Dishwasher"
+          },
+          "data": true
+        },
+        "100_5309": {
+          "label": {
+            "en": "Cookers and ovens"
+          },
+          "data": true
+        },
+        "100_5320": {
+          "label": {
+            "en": "Laundry appliances"
+          },
+          "data": true
+        },
+        "100_5330": {
+          "label": {
+            "en": "Air conditioning units"
+          },
+          "data": true
+        },
+        "100_5336": {
+          "label": {
+            "en": "Cleaning equipment"
+          },
+          "data": true
+        },
+        "100_5340": {
+          "label": {
+            "en": "Small household appliances"
+          },
+          "data": true
+        },
+        "100_5341": {
+          "label": {
+            "en": "Small appliances for food preparation"
+          },
+          "data": true
+        },
+        "100_5350": {
+          "label": {
+            "en": "Small appliances for preparing drinks"
+          },
+          "data": true
+        },
+        "100_5360": {
+          "label": {
+            "en": "Other small household appliances"
+          },
+          "data": true
+        },
+        "100_5400": {
+          "label": {
+            "en": "Glassware, tableware and other household utensils"
+          },
+          "data": true
+        },
+        "100_5401": {
+          "label": {
+            "en": "Glassware, tableware and other household utensils"
+          },
+          "data": true
+        },
+        "100_5402": {
+          "label": {
+            "en": "Glassware and tableware"
+          },
+          "data": true
+        },
+        "100_5420": {
+          "label": {
+            "en": "Cutlery"
+          },
+          "data": true
+        },
+        "100_5430": {
+          "label": {
+            "en": "Non-electric kitchen and household equipment"
+          },
+          "data": true
+        },
+        "100_5431": {
+          "label": {
+            "en": "Kitchen utensils"
+          },
+          "data": true
+        },
+        "100_5440": {
+          "label": {
+            "en": "Other household equipment"
+          },
+          "data": true
+        },
+        "100_5500": {
+          "label": {
+            "en": "Tools, equipment and accessories for house and garden"
+          },
+          "data": true
+        },
+        "100_5501": {
+          "label": {
+            "en": "Motorized tools for DIY and garden"
+          },
+          "data": true
+        },
+        "100_5502": {
+          "label": {
+            "en": "Motorized tools for DIY and garden"
+          },
+          "data": true
+        },
+        "100_5520": {
+          "label": {
+            "en": "Tools for house and garden"
+          },
+          "data": true
+        },
+        "100_5521": {
+          "label": {
+            "en": "Non-motorized tools for house and garden"
+          },
+          "data": true
+        },
+        "100_5530": {
+          "label": {
+            "en": "Equipment and other accessories for house and garden"
+          },
+          "data": true
+        },
+        "100_5600": {
+          "label": {
             "en": "Routine household maintenance"
           },
           "data": true
         },
-        "100_5221": {
+        "100_5601": {
           "label": {
             "en": "Goods for routine household maintenance"
           },
           "data": true
         },
-        "100_5222": {
+        "100_5602": {
+          "label": {
+            "en": "Cleaning and washing materials"
+          },
+          "data": true
+        },
+        "100_5603": {
           "label": {
             "en": "Detergents and cleaning products"
           },
           "data": true
         },
-        "100_5250": {
+        "100_5622": {
           "label": {
             "en": "Cleaning articles"
           },
           "data": true
         },
-        "100_5260": {
+        "100_5640": {
           "label": {
             "en": "Household articles"
           },
           "data": true
         },
-        "100_5280": {
+        "100_5660": {
+          "label": {
+            "en": "Household cleaning services"
+          },
+          "data": true
+        },
+        "100_5661": {
           "label": {
             "en": "Household cleaning services"
           },
@@ -1417,105 +1753,183 @@
           },
           "data": true
         },
-        "100_6001": {
+        "100_6100": {
           "label": {
-            "en": "Medical products and appliances"
+            "en": "Medicines and medical products"
           },
           "data": true
         },
-        "100_6002": {
+        "100_6101": {
+          "label": {
+            "en": "Medicines and remedies"
+          },
+          "data": true
+        },
+        "100_6102": {
           "label": {
             "en": "Medicines"
           },
           "data": true
         },
-        "100_6070": {
+        "100_6104": {
+          "label": {
+            "en": "Herbal and homeopathic remedies"
+          },
+          "data": true
+        },
+        "100_6120": {
           "label": {
             "en": "Medical products"
           },
           "data": true
         },
-        "100_6016": {
+        "100_6121": {
+          "label": {
+            "en": "Diagnostic products"
+          },
+          "data": true
+        },
+        "100_6127": {
+          "label": {
+            "en": "Prevention and protection products"
+          },
+          "data": true
+        },
+        "100_6140": {
+          "label": {
+            "en": "Medical products for personal use"
+          },
+          "data": true
+        },
+        "100_6150": {
           "label": {
             "en": "Therapeutic devices"
           },
           "data": true
         },
-        "100_6017": {
+        "100_6151": {
           "label": {
             "en": "Glasses and contact lenses"
           },
           "data": true
         },
-        "100_6018": {
+        "100_6154": {
           "label": {
-            "en": "Hearing aids and other therapeutic devices"
+            "en": "Hearing aids"
           },
           "data": true
         },
-        "100_6030": {
+        "100_6156": {
           "label": {
-            "en": "Out-patient services"
+            "en": "Assistive products for mobility and daily living"
           },
           "data": true
         },
-        "100_6034": {
+        "100_6200": {
           "label": {
-            "en": "Medical services"
+            "en": "Outpatient healthcare services"
           },
           "data": true
         },
-        "100_6031": {
-          "label": {
-            "en": "Medical services at local surgery"
-          },
-          "data": true
-        },
-        "100_6035": {
-          "label": {
-            "en": "Out-patient medical services in hospitals"
-          },
-          "data": true
-        },
-        "100_6036": {
+        "100_6201": {
           "label": {
             "en": "Dental services"
           },
           "data": true
         },
-        "100_6051": {
+        "100_6202": {
           "label": {
-            "en": "Other medical services"
+            "en": "Dental services"
           },
           "data": true
         },
-        "100_6053": {
+        "100_6230": {
           "label": {
-            "en": "Laboratory analyses"
+            "en": "Medical services, physiotherapy and Spitex"
           },
           "data": true
         },
-        "100_6058": {
+        "100_6231": {
           "label": {
-            "en": "Paramedical services"
+            "en": "Medical services and physiotherapy"
           },
           "data": true
         },
-        "100_6062": {
+        "100_6232": {
+          "label": {
+            "en": "Medical services"
+          },
+          "data": true
+        },
+        "100_6233": {
+          "label": {
+            "en": "Medical services at local surgery"
+          },
+          "data": true
+        },
+        "100_6235": {
+          "label": {
+            "en": "Outpatient medical services in hospitals"
+          },
+          "data": true
+        },
+        "100_6237": {
           "label": {
             "en": "Physiotherapy"
           },
           "data": true
         },
-        "100_6063": {
+        "100_6250": {
           "label": {
-            "en": "Home care Spitex"
+            "en": "Medical care services Spitex"
           },
           "data": true
         },
-        "100_6059": {
+        "100_6300": {
+          "label": {
+            "en": "Inpatient medical services"
+          },
+          "data": true
+        },
+        "100_6301": {
+          "label": {
+            "en": "Inpatient hospital services"
+          },
+          "data": true
+        },
+        "100_6302": {
           "label": {
             "en": "In-patient hospital services"
+          },
+          "data": true
+        },
+        "100_6310": {
+          "label": {
+            "en": "Long-term inpatient care in retirement homes"
+          },
+          "data": true
+        },
+        "100_6311": {
+          "label": {
+            "en": "Long-term inpatient care in retirement homes"
+          },
+          "data": true
+        },
+        "100_6400": {
+          "label": {
+            "en": "Other medical services"
+          },
+          "data": true
+        },
+        "100_6401": {
+          "label": {
+            "en": "Medical laboratory services"
+          },
+          "data": true
+        },
+        "100_6402": {
+          "label": {
+            "en": "Medical laboratory services"
           },
           "data": true
         },
@@ -1531,337 +1945,499 @@
           },
           "data": true
         },
-        "100_7002": {
+        "100_7100": {
           "label": {
             "en": "Purchase of cars motorcycles, bicycles"
           },
           "data": true
         },
-        "100_7004": {
+        "100_7101": {
           "label": {
             "en": "Cars"
           },
           "data": true
         },
-        "100_7003": {
+        "100_7102": {
           "label": {
             "en": "New cars"
           },
           "data": true
         },
-        "100_7035": {
+        "100_7120": {
           "label": {
             "en": "Second-hand cars"
           },
           "data": true
         },
-        "100_7062": {
+        "100_7140": {
           "label": {
             "en": "Motorcycles"
           },
           "data": true
         },
-        "100_7071": {
+        "100_7141": {
+          "label": {
+            "en": "Motorcycles"
+          },
+          "data": true
+        },
+        "100_7150": {
           "label": {
             "en": "Bicycles and electric bicycles"
           },
           "data": true
         },
-        "100_7075": {
+        "100_7151": {
+          "label": {
+            "en": "Bicycles and electric bicycles"
+          },
+          "data": true
+        },
+        "100_7152": {
           "label": {
             "en": "Bicycles"
           },
           "data": true
         },
-        "100_7085": {
+        "100_7156": {
           "label": {
             "en": "Electric bicycles"
           },
           "data": true
         },
-        "100_7081": {
+        "100_7200": {
           "label": {
             "en": "Use and maintenance of cars, motorcycles, bicycles"
           },
           "data": true
         },
-        "100_7082": {
+        "100_7201": {
           "label": {
             "en": "Spare parts and accessories"
           },
           "data": true
         },
-        "100_7096": {
+        "100_7202": {
           "label": {
             "en": "Tyres"
           },
           "data": true
         },
-        "100_7083": {
+        "100_7220": {
           "label": {
             "en": "Spare parts"
           },
           "data": true
         },
-        "100_7094": {
+        "100_7240": {
           "label": {
             "en": "Vehicle accessories"
           },
           "data": true
         },
-        "100_7105": {
+        "100_7250": {
           "label": {
             "en": "Fuel"
           },
           "data": true
         },
-        "100_7111": {
+        "100_7251": {
           "label": {
             "en": "Diesel"
           },
           "data": true
         },
-        "100_7110": {
+        "100_7253": {
           "label": {
             "en": "Petrol"
           },
           "data": true
         },
-        "100_7120": {
+        "100_7257": {
+          "label": {
+            "en": "Electricity from public charging stations"
+          },
+          "data": true
+        },
+        "100_7260": {
           "label": {
             "en": "Maintenance and repair of private vehicles"
           },
           "data": true
         },
-        "100_7113": {
+        "100_7261": {
+          "label": {
+            "en": "Maintenance and repair of private vehicles"
+          },
+          "data": true
+        },
+        "100_7262": {
           "label": {
             "en": "Service and repairs of motorised vehicles"
           },
           "data": true
         },
-        "100_7128": {
+        "100_7264": {
           "label": {
             "en": "Bicycle maintenance"
           },
           "data": true
         },
-        "100_7130": {
+        "100_7270": {
           "label": {
             "en": "Other private vehicle services"
           },
           "data": true
         },
-        "100_7129": {
+        "100_7271": {
           "label": {
-            "en": "Hire of private means of transport and permanent parking spaces"
+            "en": "Parking fees and long-term parking spaces"
           },
           "data": true
         },
-        "100_7137": {
-          "label": {
-            "en": "Rent of permanent parking spaces"
-          },
-          "data": true
-        },
-        "100_7138": {
-          "label": {
-            "en": "Hire of private means of transport"
-          },
-          "data": true
-        },
-        "100_7131": {
+        "100_7272": {
           "label": {
             "en": "Parking fees"
           },
           "data": true
         },
-        "100_7140": {
+        "100_7275": {
+          "label": {
+            "en": "Rent of permanent parking spaces"
+          },
+          "data": true
+        },
+        "100_7280": {
           "label": {
             "en": "Taxes for private vehicles and driving school"
           },
           "data": true
         },
-        "100_7200": {
+        "100_7290": {
           "label": {
-            "en": "Transport services"
-          },
-          "data": true
-        },
-        "100_7201": {
-          "label": {
-            "en": "Public transport"
-          },
-          "data": true
-        },
-        "100_7210": {
-          "label": {
-            "en": "Public long distance transport"
-          },
-          "data": true
-        },
-        "100_7220": {
-          "label": {
-            "en": "Public regional transport"
-          },
-          "data": true
-        },
-        "100_7226": {
-          "label": {
-            "en": "Public transport abroad"
-          },
-          "data": true
-        },
-        "100_7320": {
-          "label": {
-            "en": "Taxi"
+            "en": "Car rental and car sharing"
           },
           "data": true
         },
         "100_7300": {
           "label": {
+            "en": "Passenger transport services"
+          },
+          "data": true
+        },
+        "100_7301": {
+          "label": {
+            "en": "Public long distance transport"
+          },
+          "data": true
+        },
+        "100_7302": {
+          "label": {
+            "en": "Public long distance transport"
+          },
+          "data": true
+        },
+        "100_7303": {
+          "label": {
+            "en": "Domestic long-distance public transport"
+          },
+          "data": true
+        },
+        "100_7305": {
+          "label": {
+            "en": "Public transport abroad"
+          },
+          "data": true
+        },
+        "100_7310": {
+          "label": {
+            "en": "Taxi"
+          },
+          "data": true
+        },
+        "100_7311": {
+          "label": {
+            "en": "Taxi"
+          },
+          "data": true
+        },
+        "100_7330": {
+          "label": {
             "en": "Air transport"
           },
           "data": true
         },
-        "100_7500": {
+        "100_7331": {
+          "label": {
+            "en": "International air transport"
+          },
+          "data": true
+        },
+        "100_7340": {
           "label": {
             "en": "Passenger transport by ship"
           },
           "data": true
         },
-        "100_8": {
+        "100_7341": {
           "label": {
-            "en": "Communications"
+            "en": "Passenger transport by ship"
           },
           "data": true
         },
-        "100_8001": {
+        "100_7350": {
+          "label": {
+            "en": "Intermodal passenger transport"
+          },
+          "data": true
+        },
+        "100_7351": {
+          "label": {
+            "en": "Regional public transport"
+          },
+          "data": true
+        },
+        "100_7400": {
+          "label": {
+            "en": "Transport services for goods"
+          },
+          "data": true
+        },
+        "100_7401": {
           "label": {
             "en": "Postal services"
           },
           "data": true
         },
-        "100_8006": {
+        "100_7402": {
           "label": {
-            "en": "Telecommunication equipment"
+            "en": "Letter post"
           },
           "data": true
         },
-        "100_8014": {
+        "100_7404": {
           "label": {
-            "en": "Telecommunication services"
+            "en": "Parcel post"
           },
           "data": true
         },
-        "100_8042": {
+        "100_7410": {
           "label": {
-            "en": "Fixed-line communication"
+            "en": "Delivery charges"
           },
           "data": true
         },
-        "100_8045": {
+        "100_7411": {
           "label": {
-            "en": "Combined offers for fixed-line and mobile communication"
+            "en": "Delivery charges"
           },
           "data": true
         },
-        "100_8018": {
+        "100_8": {
           "label": {
-            "en": "Mobile communication"
+            "en": "Information and communication"
           },
           "data": true
         },
-        "100_9": {
+        "100_8100": {
           "label": {
-            "en": "Recreation and culture"
+            "en": "Information and communication equipment"
           },
           "data": true
         },
-        "100_9001": {
+        "100_8120": {
           "label": {
-            "en": "Audiovisual, photographic and IT equipment"
+            "en": "Mobile phones"
           },
           "data": true
         },
-        "100_9002": {
+        "100_8121": {
           "label": {
-            "en": "Television sets and audiovisual appliances"
+            "en": "Mobile phones"
           },
           "data": true
         },
-        "100_9003": {
-          "label": {
-            "en": "Television sets"
-          },
-          "data": true
-        },
-        "100_9013": {
-          "label": {
-            "en": "Audiovisual appliances"
-          },
-          "data": true
-        },
-        "100_9029": {
-          "label": {
-            "en": "Photographic, cinematographic equipment and optical instruments"
-          },
-          "data": true
-        },
-        "100_9046": {
+        "100_8130": {
           "label": {
             "en": "Personal computers and accessories"
           },
           "data": true
         },
-        "100_9048": {
+        "100_8131": {
           "label": {
             "en": "Personal computers"
           },
           "data": true
         },
-        "100_9055": {
+        "100_8135": {
           "label": {
             "en": "IT peripherical devices and accessories"
           },
           "data": true
         },
-        "100_9064": {
+        "100_8150": {
+          "label": {
+            "en": "Television sets and audiovisual appliances"
+          },
+          "data": true
+        },
+        "100_8151": {
+          "label": {
+            "en": "Televisions and audiovisual equipment"
+          },
+          "data": true
+        },
+        "100_8152": {
+          "label": {
+            "en": "Television sets"
+          },
+          "data": true
+        },
+        "100_8154": {
+          "label": {
+            "en": "Audiovisual equipment"
+          },
+          "data": true
+        },
+        "100_8190": {
+          "label": {
+            "en": "Smartwatches and e-book readers"
+          },
+          "data": true
+        },
+        "100_8191": {
+          "label": {
+            "en": "Smartwatches and e-book readers"
+          },
+          "data": true
+        },
+        "100_8200": {
+          "label": {
+            "en": "Software for computers"
+          },
+          "data": true
+        },
+        "100_8201": {
+          "label": {
+            "en": "Software for computers"
+          },
+          "data": true
+        },
+        "100_8202": {
           "label": {
             "en": "Computer software"
           },
           "data": true
         },
-        "100_9085": {
+        "100_8300": {
           "label": {
-            "en": "Storage devices and contents"
+            "en": "Information and communication services"
           },
           "data": true
         },
-        "100_9091": {
+        "100_8320": {
           "label": {
-            "en": "Recorded media"
+            "en": "Mobile network communication"
           },
           "data": true
         },
-        "100_9090": {
+        "100_8321": {
           "label": {
-            "en": "Downloads"
+            "en": "Mobile communication"
           },
           "data": true
         },
-        "100_9120": {
+        "100_8340": {
+          "label": {
+            "en": "Combined offers for telecommunication"
+          },
+          "data": true
+        },
+        "100_8341": {
+          "label": {
+            "en": "Combined offers for telecommunication"
+          },
+          "data": true
+        },
+        "100_8342": {
+          "label": {
+            "en": "Wireline combined offers"
+          },
+          "data": true
+        },
+        "100_8346": {
+          "label": {
+            "en": "Wireline and wireless combined offers"
+          },
+          "data": true
+        },
+        "100_8350": {
           "label": {
             "en": "Radio and TV repair and installation"
           },
           "data": true
         },
-        "100_9150": {
+        "100_8351": {
           "label": {
-            "en": "Other durables for recreation and culture"
+            "en": "Radio and TV repair and installation"
           },
           "data": true
         },
-        "100_9151": {
+        "100_8390": {
+          "label": {
+            "en": "Reception of paid audiovisual content"
+          },
+          "data": true
+        },
+        "100_8391": {
+          "label": {
+            "en": "Reception of paid audiovisual content"
+          },
+          "data": true
+        },
+        "100_9": {
+          "label": {
+            "en": "Recreation, sport and culture"
+          },
+          "data": true
+        },
+        "100_9100": {
+          "label": {
+            "en": "Consumer durables for leisure"
+          },
+          "data": true
+        },
+        "100_9101": {
+          "label": {
+            "en": "Photographic and video equipment"
+          },
+          "data": true
+        },
+        "100_9102": {
+          "label": {
+            "en": "Cameras"
+          },
+          "data": true
+        },
+        "100_9108": {
+          "label": {
+            "en": "Photo accessories"
+          },
+          "data": true
+        },
+        "100_9120": {
+          "label": {
+            "en": "Other major durables for leisure"
+          },
+          "data": true
+        },
+        "100_9121": {
+          "label": {
+            "en": "Camper vans"
+          },
+          "data": true
+        },
+        "100_9123": {
           "label": {
             "en": "Recreational boats"
           },
@@ -1869,197 +2445,203 @@
         },
         "100_9200": {
           "label": {
-            "en": "Musical instruments"
+            "en": "Toys and sports equipment"
           },
           "data": true
         },
-        "100_9210": {
-          "label": {
-            "en": "Other items and equipment for recreation, gardens and pets"
-          },
-          "data": true
-        },
-        "100_9211": {
+        "100_9201": {
           "label": {
             "en": "Games, toys and hobbies"
           },
           "data": true
         },
-        "100_9216": {
+        "100_9202": {
           "label": {
             "en": "Game consoles and electronic games"
           },
           "data": true
         },
-        "100_9217": {
-          "label": {
-            "en": "Parlour games"
-          },
-          "data": true
-        },
-        "100_9218": {
+        "100_9210": {
           "label": {
             "en": "Toys"
           },
           "data": true
         },
-        "100_9230": {
+        "100_9220": {
           "label": {
             "en": "Sports and camping equipment"
           },
           "data": true
         },
-        "100_9228": {
+        "100_9221": {
           "label": {
-            "en": "Sports articles"
+            "en": "Sports equipment"
           },
           "data": true
         },
-        "100_9231": {
+        "100_9222": {
+          "label": {
+            "en": "Sporting goods"
+          },
+          "data": true
+        },
+        "100_9223": {
           "label": {
             "en": "Winter sports equipment"
           },
           "data": true
         },
-        "100_9250": {
+        "100_9233": {
           "label": {
             "en": "Summer/year-round sports articles"
           },
           "data": true
         },
-        "100_9252": {
+        "100_9250": {
+          "label": {
+            "en": "Sportswear"
+          },
+          "data": true
+        },
+        "100_9251": {
+          "label": {
+            "en": "Winter sportswear"
+          },
+          "data": true
+        },
+        "100_9268": {
+          "label": {
+            "en": "Summer and all-season sportswear"
+          },
+          "data": true
+        },
+        "100_9290": {
           "label": {
             "en": "Camping and outdoor articles"
           },
           "data": true
         },
-        "100_9245": {
+        "100_9300": {
           "label": {
-            "en": "Services for winter sports equipment"
+            "en": "Articles for gardens and pets"
           },
           "data": true
         },
-        "100_9300": {
+        "100_9301": {
           "label": {
             "en": "Plants, flowers and garden products"
           },
           "data": true
         },
-        "100_9304": {
+        "100_9302": {
           "label": {
             "en": "Garden products"
           },
           "data": true
         },
-        "100_9305": {
+        "100_9310": {
           "label": {
             "en": "Plants and flowers"
           },
           "data": true
         },
-        "100_9320": {
+        "100_9330": {
           "label": {
             "en": "Pet related products"
           },
           "data": true
         },
-        "100_9340": {
+        "100_9331": {
           "label": {
-            "en": "Veterinary services for pets"
-          },
-          "data": true
-        },
-        "100_9350": {
-          "label": {
-            "en": "Recreational and cultural services"
-          },
-          "data": true
-        },
-        "100_9351": {
-          "label": {
-            "en": "Sporting and recreational services"
-          },
-          "data": true
-        },
-        "100_9352": {
-          "label": {
-            "en": "Sporting events"
-          },
-          "data": true
-        },
-        "100_9399": {
-          "label": {
-            "en": "Sports and leisure activities"
+            "en": "Pet related products"
           },
           "data": true
         },
         "100_9400": {
           "label": {
-            "en": "Admission to sport facilities"
+            "en": "Recreational services"
+          },
+          "data": true
+        },
+        "100_9401": {
+          "label": {
+            "en": "Rental and subscriptions for games and hobby items"
+          },
+          "data": true
+        },
+        "100_9402": {
+          "label": {
+            "en": "Subscriptions for online games"
+          },
+          "data": true
+        },
+        "100_9410": {
+          "label": {
+            "en": "Services for winter sports equipment"
+          },
+          "data": true
+        },
+        "100_9411": {
+          "label": {
+            "en": "Services for winter sports equipment"
           },
           "data": true
         },
         "100_9420": {
           "label": {
-            "en": "Mountain railways, ski lifts"
+            "en": "Veterinary services for pets"
           },
           "data": true
         },
-        "100_9490": {
+        "100_9421": {
           "label": {
-            "en": "Leisure-time courses"
-          },
-          "data": true
-        },
-        "100_9435": {
-          "label": {
-            "en": "Culture and leisure services"
+            "en": "Veterinary services for pets"
           },
           "data": true
         },
         "100_9440": {
           "label": {
-            "en": "Cinema, theatre and concerts"
+            "en": "Sporting and recreational services"
           },
           "data": true
         },
-        "100_9436": {
+        "100_9441": {
           "label": {
-            "en": "Cinema"
+            "en": "Leisure-time courses"
           },
           "data": true
         },
         "100_9450": {
           "label": {
-            "en": "Theatre and concerts"
+            "en": "Sports activities"
           },
           "data": true
         },
-        "100_9463": {
+        "100_9451": {
           "label": {
-            "en": "Museums and zoos"
+            "en": "Admission to sport facilities"
           },
           "data": true
         },
-        "100_9465": {
+        "100_9458": {
           "label": {
-            "en": "Radio and tv reception"
-          },
-          "data": true
-        },
-        "100_9469": {
-          "label": {
-            "en": "Reception of paid audiovisual content"
-          },
-          "data": true
-        },
-        "100_9475": {
-          "label": {
-            "en": "Photographic services"
+            "en": "Mountain railways, skilifts"
           },
           "data": true
         },
         "100_9480": {
+          "label": {
+            "en": "Sporting events"
+          },
+          "data": true
+        },
+        "100_9490": {
+          "label": {
+            "en": "Games of chance"
+          },
+          "data": true
+        },
+        "100_9491": {
           "label": {
             "en": "Games of chance"
           },
@@ -2067,77 +2649,197 @@
         },
         "100_9500": {
           "label": {
-            "en": "Books, Newspapers and stationery"
+            "en": "Goods for culture"
           },
           "data": true
         },
         "100_9501": {
           "label": {
-            "en": "Books"
+            "en": "Musical instruments"
           },
           "data": true
         },
-        "100_9514": {
+        "100_9502": {
           "label": {
-            "en": "Fiction books"
-          },
-          "data": true
-        },
-        "100_9517": {
-          "label": {
-            "en": "School and educational books"
+            "en": "Musical instruments"
           },
           "data": true
         },
         "100_9520": {
           "label": {
+            "en": "Image and sound media"
+          },
+          "data": true
+        },
+        "100_9521": {
+          "label": {
+            "en": "Image and sound media"
+          },
+          "data": true
+        },
+        "100_9522": {
+          "label": {
+            "en": "Recorded media"
+          },
+          "data": true
+        },
+        "100_9600": {
+          "label": {
+            "en": "Culture services"
+          },
+          "data": true
+        },
+        "100_9601": {
+          "label": {
+            "en": "Cinema, theatre and concerts"
+          },
+          "data": true
+        },
+        "100_9602": {
+          "label": {
+            "en": "Cinema, theatre and concerts"
+          },
+          "data": true
+        },
+        "100_9603": {
+          "label": {
+            "en": "Cinema"
+          },
+          "data": true
+        },
+        "100_9605": {
+          "label": {
+            "en": "Theatre and concerts"
+          },
+          "data": true
+        },
+        "100_9620": {
+          "label": {
+            "en": "Museums and zoological gardens"
+          },
+          "data": true
+        },
+        "100_9621": {
+          "label": {
+            "en": "Museums and zoological gardens"
+          },
+          "data": true
+        },
+        "100_9630": {
+          "label": {
+            "en": "Photographic services"
+          },
+          "data": true
+        },
+        "100_9631": {
+          "label": {
+            "en": "Photographic services"
+          },
+          "data": true
+        },
+        "100_9700": {
+          "label": {
+            "en": "Books, Newspapers and stationery"
+          },
+          "data": true
+        },
+        "100_9701": {
+          "label": {
+            "en": "Books"
+          },
+          "data": true
+        },
+        "100_9702": {
+          "label": {
+            "en": "School and educational books"
+          },
+          "data": true
+        },
+        "100_9705": {
+          "label": {
+            "en": "Fiction books and other books"
+          },
+          "data": true
+        },
+        "100_9706": {
+          "label": {
+            "en": "Fiction books"
+          },
+          "data": true
+        },
+        "100_9709": {
+          "label": {
             "en": "Other books"
           },
           "data": true
         },
-        "100_9525": {
+        "100_9720": {
           "label": {
-            "en": "Daily newspapers and periodicals"
+            "en": "Newspapers and magazines"
           },
           "data": true
         },
-        "100_9526": {
+        "100_9721": {
           "label": {
-            "en": "Daily and periodical purchased individually"
+            "en": "Newspapers"
           },
           "data": true
         },
-        "100_9535": {
+        "100_9726": {
           "label": {
-            "en": "Daily and periodical subscriptions"
+            "en": "Magazines"
           },
           "data": true
         },
-        "100_9545": {
+        "100_9730": {
           "label": {
             "en": "Other printed matter"
           },
           "data": true
         },
-        "100_9555": {
+        "100_9731": {
+          "label": {
+            "en": "Other printed matter"
+          },
+          "data": true
+        },
+        "100_9740": {
           "label": {
             "en": "Writing and drawing materials"
           },
           "data": true
         },
-        "100_9569": {
+        "100_9741": {
+          "label": {
+            "en": "Writing and drawing materials"
+          },
+          "data": true
+        },
+        "100_9800": {
           "label": {
             "en": "Package holidays"
           },
           "data": true
         },
-        "100_9570": {
+        "100_9801": {
+          "label": {
+            "en": "Package holidays"
+          },
+          "data": true
+        },
+        "100_9802": {
+          "label": {
+            "en": "Package holidays"
+          },
+          "data": true
+        },
+        "100_9803": {
           "label": {
             "en": "International package holidays"
           },
           "data": true
         },
-        "100_9580": {
+        "100_9808": {
           "label": {
             "en": "Domestic package holidays"
           },
@@ -2149,33 +2851,93 @@
           },
           "data": true
         },
-        "100_10040": {
+        "100_10100": {
           "label": {
-            "en": "Basic academic and vocational education"
+            "en": "Primary education"
           },
           "data": true
         },
-        "100_10041": {
+        "100_10101": {
           "label": {
-            "en": "Compulsory education"
+            "en": "Primary education"
           },
           "data": true
         },
-        "100_10060": {
+        "100_10102": {
+          "label": {
+            "en": "Primary education"
+          },
+          "data": true
+        },
+        "100_10200": {
+          "label": {
+            "en": "Secondary education"
+          },
+          "data": true
+        },
+        "100_10201": {
+          "label": {
+            "en": "Secondary education"
+          },
+          "data": true
+        },
+        "100_10202": {
+          "label": {
+            "en": "Secondary education"
+          },
+          "data": true
+        },
+        "100_10300": {
           "label": {
             "en": "Post-compulsory education"
           },
           "data": true
         },
-        "100_10070": {
+        "100_10301": {
           "label": {
-            "en": "Higher vocational education and universities"
+            "en": "Post-compulsory education"
           },
           "data": true
         },
-        "100_10100": {
+        "100_10302": {
           "label": {
-            "en": "Life-long learning"
+            "en": "Post-compulsory education"
+          },
+          "data": true
+        },
+        "100_10400": {
+          "label": {
+            "en": "Higher vocational and university education"
+          },
+          "data": true
+        },
+        "100_10401": {
+          "label": {
+            "en": "Higher vocational and university education"
+          },
+          "data": true
+        },
+        "100_10402": {
+          "label": {
+            "en": "Higher vocational and university education"
+          },
+          "data": true
+        },
+        "100_10500": {
+          "label": {
+            "en": "Continuing education"
+          },
+          "data": true
+        },
+        "100_10501": {
+          "label": {
+            "en": "Continuing education"
+          },
+          "data": true
+        },
+        "100_10502": {
+          "label": {
+            "en": "Continuing education"
           },
           "data": true
         },
@@ -2185,337 +2947,487 @@
           },
           "data": true
         },
-        "100_11001": {
+        "100_11100": {
           "label": {
             "en": "Catering services"
           },
           "data": true
         },
-        "100_11013": {
+        "100_11101": {
           "label": {
             "en": "Restaurants, cafés and fast food"
           },
           "data": true
         },
-        "100_11002": {
+        "100_11102": {
           "label": {
-            "en": "Restaurants and  cafés"
-          },
-          "data": true
-        },
-        "100_11003": {
-          "label": {
-            "en": "Meals taken in restaurants and cafés"
-          },
-          "data": true
-        },
-        "100_11050": {
-          "label": {
-            "en": "Beverages in restaurants and cafés"
-          },
-          "data": true
-        },
-        "100_11051": {
-          "label": {
-            "en": "Alcoholic beverages"
-          },
-          "data": true
-        },
-        "100_11052": {
-          "label": {
-            "en": "Wine"
-          },
-          "data": true
-        },
-        "100_11070": {
-          "label": {
-            "en": "Beer"
-          },
-          "data": true
-        },
-        "100_11075": {
-          "label": {
-            "en": "Spirits, other alcoholic drinks"
-          },
-          "data": true
-        },
-        "100_11090": {
-          "label": {
-            "en": "Non-alcoholic beverages"
-          },
-          "data": true
-        },
-        "100_11091": {
-          "label": {
-            "en": "Coffee and tea"
+            "en": "Restaurants and cafés"
           },
           "data": true
         },
         "100_11103": {
           "label": {
-            "en": "Mineral water and soft drinks"
-          },
-          "data": true
-        },
-        "100_11110": {
-          "label": {
-            "en": "Self-service restaurants"
-          },
-          "data": true
-        },
-        "100_11129": {
-          "label": {
-            "en": "Fast food"
-          },
-          "data": true
-        },
-        "100_11130": {
-          "label": {
-            "en": "Fast food meals"
-          },
-          "data": true
-        },
-        "100_11140": {
-          "label": {
-            "en": "Fast food non-alcoholic beverages"
-          },
-          "data": true
-        },
-        "100_11145": {
-          "label": {
-            "en": "Fast food alcoholic beverages"
+            "en": "Meals taken in restaurants and cafés"
           },
           "data": true
         },
         "100_11150": {
           "label": {
-            "en": "Canteens"
+            "en": "Beverages in restaurants and cafés"
           },
           "data": true
         },
         "100_11151": {
           "label": {
-            "en": "Meals in canteens"
+            "en": "Alcoholic beverages"
           },
           "data": true
         },
-        "100_11160": {
+        "100_11152": {
           "label": {
-            "en": "Beverages in canteens"
+            "en": "Wine"
           },
           "data": true
         },
-        "100_11170": {
+        "100_11158": {
+          "label": {
+            "en": "Beer"
+          },
+          "data": true
+        },
+        "100_11163": {
+          "label": {
+            "en": "Spirits, other alcoholic drinks"
+          },
+          "data": true
+        },
+        "100_11180": {
+          "label": {
+            "en": "Non-alcoholic beverages"
+          },
+          "data": true
+        },
+        "100_11181": {
+          "label": {
+            "en": "Coffee and tea"
+          },
+          "data": true
+        },
+        "100_11185": {
+          "label": {
+            "en": "Mineral water and soft drinks"
+          },
+          "data": true
+        },
+        "100_11200": {
+          "label": {
+            "en": "Fast food and self-service restaurants"
+          },
+          "data": true
+        },
+        "100_11201": {
+          "label": {
+            "en": "Fast food"
+          },
+          "data": true
+        },
+        "100_11202": {
+          "label": {
+            "en": "Fast food meals"
+          },
+          "data": true
+        },
+        "100_11210": {
+          "label": {
+            "en": "Fast food non-alcoholic beverages"
+          },
+          "data": true
+        },
+        "100_11213": {
+          "label": {
+            "en": "Fast food alcoholic beverages"
+          },
+          "data": true
+        },
+        "100_11250": {
+          "label": {
+            "en": "Self-service restaurants"
+          },
+          "data": true
+        },
+        "100_11300": {
+          "label": {
+            "en": "Canteens"
+          },
+          "data": true
+        },
+        "100_11301": {
+          "label": {
+            "en": "Higher education and school canteens"
+          },
+          "data": true
+        },
+        "100_11302": {
+          "label": {
+            "en": "Meals in higher education and school canteens"
+          },
+          "data": true
+        },
+        "100_11306": {
+          "label": {
+            "en": "Bevande nelle mense delle scuole superiori"
+          },
+          "data": true
+        },
+        "100_11400": {
+          "label": {
+            "en": "Staff restaurants"
+          },
+          "data": true
+        },
+        "100_11401": {
+          "label": {
+            "en": "Meals in staff restaurants"
+          },
+          "data": true
+        },
+        "100_11404": {
+          "label": {
+            "en": "Drinks in staff restaurants"
+          },
+          "data": true
+        },
+        "100_11500": {
           "label": {
             "en": "Accommodation"
           },
           "data": true
         },
-        "100_11171": {
+        "100_11501": {
+          "label": {
+            "en": "Hotel and parahotel accomodation"
+          },
+          "data": true
+        },
+        "100_11502": {
           "label": {
             "en": "Hotels"
           },
           "data": true
         },
-        "100_11190": {
+        "100_11520": {
           "label": {
-            "en": "Supplementary accommodation"
+            "en": "Parahotel accommodation"
           },
           "data": true
         },
         "100_12": {
           "label": {
-            "en": "Other goods and services"
-          },
-          "data": true
-        },
-        "100_12001": {
-          "label": {
-            "en": "Personal care"
-          },
-          "data": true
-        },
-        "100_12003": {
-          "label": {
-            "en": "Hairdresser and beauty salon services"
-          },
-          "data": true
-        },
-        "100_12002": {
-          "label": {
-            "en": "Men's and children's hairdressers"
-          },
-          "data": true
-        },
-        "100_12004": {
-          "label": {
-            "en": "Women's hairdressers"
-          },
-          "data": true
-        },
-        "100_12010": {
-          "label": {
-            "en": "Cosmetic treatment"
-          },
-          "data": true
-        },
-        "100_12150": {
-          "label": {
-            "en": "Electrical appliances for personal care"
-          },
-          "data": true
-        },
-        "100_12021": {
-          "label": {
-            "en": "Personal hygiene articles"
-          },
-          "data": true
-        },
-        "100_12130": {
-          "label": {
-            "en": "Non-electrical appliances for personal care"
-          },
-          "data": true
-        },
-        "100_12022": {
-          "label": {
-            "en": "Toiletries"
-          },
-          "data": true
-        },
-        "100_12023": {
-          "label": {
-            "en": "Soaps and foam baths"
-          },
-          "data": true
-        },
-        "100_12040": {
-          "label": {
-            "en": "Hair-care products"
-          },
-          "data": true
-        },
-        "100_12055": {
-          "label": {
-            "en": "Dental-care products"
-          },
-          "data": true
-        },
-        "100_12070": {
-          "label": {
-            "en": "Beauty products and cosmetics"
-          },
-          "data": true
-        },
-        "100_12085": {
-          "label": {
-            "en": "Products for personal care"
-          },
-          "data": true
-        },
-        "100_12088": {
-          "label": {
-            "en": "Products for face care and make-up"
+            "en": "Insurance and financial services"
           },
           "data": true
         },
         "100_12100": {
           "label": {
-            "en": "Paper articles for personal hygiene"
-          },
-          "data": true
-        },
-        "100_12160": {
-          "label": {
-            "en": "Personal effects"
-          },
-          "data": true
-        },
-        "100_12140": {
-          "label": {
-            "en": "Jewellery"
-          },
-          "data": true
-        },
-        "100_12161": {
-          "label": {
-            "en": "Watches"
-          },
-          "data": true
-        },
-        "100_12170": {
-          "label": {
-            "en": "Luggage, bags and accessories"
-          },
-          "data": true
-        },
-        "100_12190": {
-          "label": {
-            "en": "Social protection services"
-          },
-          "data": true
-        },
-        "100_12500": {
-          "label": {
             "en": "Insurance"
           },
           "data": true
         },
-        "100_12501": {
-          "label": {
-            "en": "Household insurance (including private third-party insurance)"
-          },
-          "data": true
-        },
-        "100_12510": {
+        "100_12120": {
           "label": {
             "en": "Private health insurance"
           },
           "data": true
         },
-        "100_12520": {
+        "100_12121": {
           "label": {
-            "en": "Car insurance"
+            "en": "Private health insurance"
           },
           "data": true
         },
-        "100_12531": {
+        "100_12130": {
+          "label": {
+            "en": "Household insurance"
+          },
+          "data": true
+        },
+        "100_12131": {
+          "label": {
+            "en": "Household insurance"
+          },
+          "data": true
+        },
+        "100_12140": {
+          "label": {
+            "en": "Motor vehicle insurance"
+          },
+          "data": true
+        },
+        "100_12141": {
+          "label": {
+            "en": "Motor vehicle insurance"
+          },
+          "data": true
+        },
+        "100_12190": {
+          "label": {
+            "en": "Private liability insurance and legal protection"
+          },
+          "data": true
+        },
+        "100_12191": {
+          "label": {
+            "en": "Private liability insurance and legal protection"
+          },
+          "data": true
+        },
+        "100_12200": {
           "label": {
             "en": "Financial services"
           },
           "data": true
         },
-        "100_12534": {
+        "100_12201": {
+          "label": {
+            "en": "Financial services provided"
+          },
+          "data": true
+        },
+        "100_12202": {
+          "label": {
+            "en": "Financial services provided"
+          },
+          "data": true
+        },
+        "100_12203": {
           "label": {
             "en": "Bank account fees"
           },
           "data": true
         },
-        "100_12536": {
+        "100_12207": {
           "label": {
             "en": "Fees for securities accounts"
           },
           "data": true
         },
-        "100_12541": {
+        "100_13": {
+          "label": {
+            "en": "Other goods and services"
+          },
+          "data": true
+        },
+        "100_13100": {
+          "label": {
+            "en": "Personal care"
+          },
+          "data": true
+        },
+        "100_13101": {
+          "label": {
+            "en": "Electric body care appliances"
+          },
+          "data": true
+        },
+        "100_13102": {
+          "label": {
+            "en": "Electrical appliances for personal care"
+          },
+          "data": true
+        },
+        "100_13120": {
+          "label": {
+            "en": "Personal hygiene articles"
+          },
+          "data": true
+        },
+        "100_13121": {
+          "label": {
+            "en": "Personal hygiene articles"
+          },
+          "data": true
+        },
+        "100_13122": {
+          "label": {
+            "en": "Non-electrical appliances for personal care"
+          },
+          "data": true
+        },
+        "100_13130": {
+          "label": {
+            "en": "Soaps and foam baths"
+          },
+          "data": true
+        },
+        "100_13134": {
+          "label": {
+            "en": "Hair-care products"
+          },
+          "data": true
+        },
+        "100_13140": {
+          "label": {
+            "en": "Dental-care products"
+          },
+          "data": true
+        },
+        "100_13150": {
+          "label": {
+            "en": "Beauty products and cosmetics"
+          },
+          "data": true
+        },
+        "100_13151": {
+          "label": {
+            "en": "Products for personal care"
+          },
+          "data": true
+        },
+        "100_13161": {
+          "label": {
+            "en": "Products for face care and make-up"
+          },
+          "data": true
+        },
+        "100_13170": {
+          "label": {
+            "en": "Paper articles for personal hygiene"
+          },
+          "data": true
+        },
+        "100_13180": {
+          "label": {
+            "en": "Hairdresser and beauty salon services"
+          },
+          "data": true
+        },
+        "100_13181": {
+          "label": {
+            "en": "Hairdressers"
+          },
+          "data": true
+        },
+        "100_13182": {
+          "label": {
+            "en": "Hairdresser for men and children"
+          },
+          "data": true
+        },
+        "100_13186": {
+          "label": {
+            "en": "Women's hairdressers"
+          },
+          "data": true
+        },
+        "100_13190": {
+          "label": {
+            "en": "Cosmetic treatment"
+          },
+          "data": true
+        },
+        "100_13200": {
+          "label": {
+            "en": "Personal effects"
+          },
+          "data": true
+        },
+        "100_13201": {
+          "label": {
+            "en": "Jewellery and watches"
+          },
+          "data": true
+        },
+        "100_13202": {
+          "label": {
+            "en": "Jewellery and watches"
+          },
+          "data": true
+        },
+        "100_13203": {
+          "label": {
+            "en": "Jewellery"
+          },
+          "data": true
+        },
+        "100_13220": {
+          "label": {
+            "en": "Watches"
+          },
+          "data": true
+        },
+        "100_13250": {
+          "label": {
+            "en": "Travel equipment and accessories"
+          },
+          "data": true
+        },
+        "100_13251": {
+          "label": {
+            "en": "Travel equipment and accessories"
+          },
+          "data": true
+        },
+        "100_13300": {
+          "label": {
+            "en": "Care services"
+          },
+          "data": true
+        },
+        "100_13301": {
+          "label": {
+            "en": "Care services"
+          },
+          "data": true
+        },
+        "100_13302": {
+          "label": {
+            "en": "Childcare"
+          },
+          "data": true
+        },
+        "100_13320": {
+          "label": {
+            "en": "Home assistance (Spitex)"
+          },
+          "data": true
+        },
+        "100_13900": {
+          "label": {
+            "en": "Other goods and services"
+          },
+          "data": true
+        },
+        "100_13901": {
+          "label": {
+            "en": "Other goods and services"
+          },
+          "data": true
+        },
+        "100_13902": {
           "label": {
             "en": "Other Services"
           },
           "data": true
         },
-        "100_12543": {
+        "100_13903": {
           "label": {
             "en": "Official documents"
           },
           "data": true
         },
-        "100_12547": {
+        "100_13905": {
           "label": {
             "en": "Services of lawyers"
           },
           "data": true
         },
-        "100_12549": {
+        "100_13920": {
+          "label": {
+            "en": "Funeral services"
+          },
+          "data": true
+        },
+        "100_13930": {
           "label": {
             "en": "Advertisements"
           },
@@ -2553,13 +3465,13 @@
         },
         "110_116": {
           "label": {
-            "en": "Private Services"
+            "en": "Private services"
           },
           "data": true
         },
         "110_117": {
           "label": {
-            "en": "Public Services"
+            "en": "Public services"
           },
           "data": true
         },
@@ -2577,13 +3489,13 @@
         },
         "116_101": {
           "label": {
-            "en": "Health care"
+            "en": "Healthcare"
           },
           "data": true
         },
         "116_102": {
           "label": {
-            "en": "Index without health care"
+            "en": "Index without healthcare"
           },
           "data": true
         },

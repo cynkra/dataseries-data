@@ -1,9 +1,9 @@
 {
-  "checked": "2026-06-01 10:41 UTC",
+  "checked": "2026-06-01 11:12 UTC",
   "counts": {
-    "green": 47,
-    "amber": 2,
-    "red": 1,
+    "green": 50,
+    "amber": 0,
+    "red": 0,
     "unknown": 0,
     "total": 50
   },
@@ -181,8 +181,8 @@
       "end": "2026-05-15",
       "updated": null,
       "age_days": 17,
-      "threshold_days": 14,
-      "status": "amber"
+      "threshold_days": 35,
+      "status": "green"
     },
     {
       "id": "ch_snb_capweums",
@@ -412,8 +412,8 @@
       "end": "2026-02-01",
       "updated": null,
       "age_days": 120,
-      "threshold_days": 110,
-      "status": "amber"
+      "threshold_days": 150,
+      "status": "green"
     },
     {
       "id": "ch_snb_zikrepro",
@@ -508,11 +508,11 @@
       "title": "Consumer Price Index (LIK)",
       "source": "Swiss Federal Statistical Office (FSO)",
       "frequency": "monthly",
-      "end": "2025-12-01",
-      "updated": "2026-01-08",
-      "age_days": 182,
+      "end": "2026-04-01",
+      "updated": "2026-05-05",
+      "age_days": 61,
       "threshold_days": 110,
-      "status": "red"
+      "status": "green"
     },
     {
       "id": "ch_fso_ppi",

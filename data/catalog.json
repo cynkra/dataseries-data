@@ -915,9 +915,9 @@
     "license": "fso",
     "frequency": "monthly",
     "start": "1982-12-01",
-    "end": "2025-12-01",
-    "n_series": 443,
-    "updated": "2026-01-08",
+    "end": "2026-04-01",
+    "n_series": 595,
+    "updated": "2026-05-05",
     "load": "whole",
     "data": "ch_fso_cpi.csv",
     "meta": "ch_fso_cpi.json"
