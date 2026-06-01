@@ -36,12 +36,26 @@ fresh_days <- c(daily = 14, weekly = 21, monthly = 110, quarterly = 290, annual 
 DEFAULT_THRESHOLD <- 120L
 AMBER_FACTOR <- 1.5  # past `threshold` = ageing; past 1.5x = stale (likely broken)
 
-# Per-dataset overrides (id -> max fresh age in days), for cases the frequency
-# default gets wrong. Empty for now; add an entry when a dataset is known to be
-# slower/faster than its frequency implies (cleaner than relabelling its frequency).
-OVERRIDE <- c()
+# Second freshness signal: when a dataset carries a source publication date
+# (`updated`), a source that republished within ~one period is being maintained,
+# so it's fresh even if its latest *observation* is naturally old. This is what
+# keeps slow annual series (e.g. population: data dated period-start lags ~1.5y but
+# the file is republished yearly) green, while still flagging a source that has
+# genuinely gone quiet (e.g. CPI, frozen since the Dec-2025 rebasing).
+pub_fresh_days <- c(daily = 60, weekly = 60, monthly = 75, quarterly = 200, annual = 430)
+DEFAULT_PUB <- 120L
 
-score <- function(id, end_chr, frequency) {
+# Per-dataset overrides of the observation-age threshold (id -> max fresh age in
+# days), for datasets whose real cadence differs from their frequency label. The
+# SNB effective-FX and spot-rate cubes are genuinely *daily* but SNB publishes a
+# whole month of daily values at once, so the latest point is normally up to ~1
+# month old -- not stale. Cleaner than relabelling them monthly (they aren't).
+OVERRIDE <- c(
+  ch_snb_devwkieffid = 50L,
+  ch_snb_rendeiduebd = 50L
+)
+
+score <- function(id, end_chr, frequency, updated) {
   end <- suppressWarnings(as.Date(substr(end_chr %||% NA, 1, 10)))
   thr <- if (id %in% names(OVERRIDE)) as.integer(OVERRIDE[[id]])
          else as.integer(fresh_days[[frequency %||% ""]] %||% DEFAULT_THRESHOLD)
@@ -50,19 +64,28 @@ score <- function(id, end_chr, frequency) {
   }
   age <- as.integer(Sys.Date() - end)
   status <- if (age <= thr) "green" else if (age <= AMBER_FACTOR * thr) "amber" else "red"
+
+  # Publication-date fallback: a recently republished source is fresh regardless
+  # of how old its last observation is. Only ever upgrades toward green.
+  pub <- suppressWarnings(as.Date(substr(updated %||% NA, 1, 10)))
+  if (!is.na(pub) && status != "green") {
+    pthr <- as.integer(pub_fresh_days[[frequency %||% ""]] %||% DEFAULT_PUB)
+    if (as.integer(Sys.Date() - pub) <= pthr) status <- "green"
+  }
   list(age_days = age, threshold_days = thr, status = status)
 }
 
 catalog <- fromJSON(file.path(DATA, "catalog.json"), simplifyVector = FALSE)
 
 rows <- lapply(catalog, function(e) {
-  s <- score(e$id, e$end, e$frequency)
+  s <- score(e$id, e$end, e$frequency, e$updated)
   list(
     id        = e$id,
     title     = e$title$en %||% e$id,
     source    = e$source %||% NA_character_,
     frequency = e$frequency %||% NA_character_,
     end       = e$end %||% NA_character_,
+    updated   = e$updated %||% NA_character_,
     age_days  = s$age_days,
     threshold_days = s$threshold_days,
     status    = s$status

@@ -18,14 +18,11 @@ capchstocki	Financial markets	Swiss stock indices
 capweums	Financial markets	Securities turnover on the Swiss stock exchange
 concon	Business surveys	Consumer confidence
 devkum	Exchange rates	Foreign exchange rates – Month
-devlandm	Exchange rates	Foreign exchange rates, by country – Month
 devwkibiim	Exchange rates	Bilateral exchange rate indices – Monthly
 devwkieffid	Exchange rates	Effective exchange rate indices – Daily
 plimoinchq	Prices	Real estate price indices – total for Switzerland – by quarter
 plkoprinfla	Prices	Consumer prices – SNB and SFSO core inflation rates
 rendeiduebd	Interest rates	Spot interest rates on Swiss Confederation bonds, euro area government bonds and CHF bond issues for various borrower categories – Day
-rendoblid	Interest rates	Yields on bond issues – Day
-snbband	Money and banking	SNB target range
 snbbipo	Money and banking	Balance sheet items of the SNB
 snbiproga	SNB forecasts	SNB conditional inflation forecast
 snbiprogq	SNB forecasts	SNB conditional inflation forecast

@@ -4,9 +4,9 @@
     "title": {
       "en": "Labour market (registered unemployment, SECO)"
     },
-    "concept": null,
-    "canonical": null,
-    "featured": null,
+    "concept": "Labour / Unemployment",
+    "canonical": false,
+    "featured": "Unemployment",
     "topic": "Labour market",
     "source": "Swiss National Bank",
     "license": "snb",
@@ -24,8 +24,8 @@
     "title": {
       "en": "Employees, by economic activity"
     },
-    "concept": null,
-    "canonical": null,
+    "concept": "Labour / Employment / jobs",
+    "canonical": false,
     "featured": null,
     "topic": "Labour market",
     "source": "Swiss National Bank",
@@ -44,8 +44,8 @@
     "title": {
       "en": "Foreign trade by goods category"
     },
-    "concept": null,
-    "canonical": null,
+    "concept": "External sector / Foreign trade",
+    "canonical": true,
     "featured": null,
     "topic": "Foreign trade",
     "source": "Swiss National Bank",
@@ -64,8 +64,8 @@
     "title": {
       "en": "Switzerland’s international investment position – Overview – Quarter"
     },
-    "concept": null,
-    "canonical": null,
+    "concept": "External sector / International investment position",
+    "canonical": true,
     "featured": null,
     "topic": "Balance of payments",
     "source": "Swiss National Bank",
@@ -84,8 +84,8 @@
     "title": {
       "en": "Switzerland’s international investment position – Breakdown by currency – Quarter"
     },
-    "concept": null,
-    "canonical": null,
+    "concept": "External sector / International investment position",
+    "canonical": false,
     "featured": null,
     "topic": "Balance of payments",
     "source": "Swiss National Bank",
@@ -104,8 +104,8 @@
     "title": {
       "en": "Switzerland’s external debt – Quarter"
     },
-    "concept": null,
-    "canonical": null,
+    "concept": "External sector / International investment position",
+    "canonical": false,
     "featured": null,
     "topic": "Balance of payments",
     "source": "Swiss National Bank",
@@ -124,8 +124,8 @@
     "title": {
       "en": "Switzerland’s international investment position – Breakdown by sector – Quarter"
     },
-    "concept": null,
-    "canonical": null,
+    "concept": "External sector / International investment position",
+    "canonical": true,
     "featured": null,
     "topic": "Balance of payments",
     "source": "Swiss National Bank",
@@ -144,8 +144,8 @@
     "title": {
       "en": "Banks' balance sheet items by currency for selected bank categories – monthly"
     },
-    "concept": null,
-    "canonical": null,
+    "concept": "Money & banking / Banking & credit",
+    "canonical": true,
     "featured": null,
     "topic": "Banking",
     "source": "Swiss National Bank",
@@ -164,8 +164,8 @@
     "title": {
       "en": "Corporate loans, broken down by company size"
     },
-    "concept": null,
-    "canonical": null,
+    "concept": "Money & banking / Banking & credit",
+    "canonical": true,
     "featured": null,
     "topic": "Banking",
     "source": "Swiss National Bank",
@@ -184,8 +184,8 @@
     "title": {
       "en": "Mortgage loans and other domestic and foreign loans"
     },
-    "concept": null,
-    "canonical": null,
+    "concept": "Money & banking / Banking & credit",
+    "canonical": true,
     "featured": null,
     "topic": "Banking",
     "source": "Swiss National Bank",
@@ -204,8 +204,8 @@
     "title": {
       "en": "Domestic loans, broken down by economic sector and industry"
     },
-    "concept": null,
-    "canonical": null,
+    "concept": "Money & banking / Banking & credit",
+    "canonical": true,
     "featured": null,
     "topic": "Banking",
     "source": "Swiss National Bank",
@@ -224,8 +224,8 @@
     "title": {
       "en": "Swiss balance of payments – Financial account – Quarter"
     },
-    "concept": null,
-    "canonical": null,
+    "concept": "External sector / Balance of payments",
+    "canonical": true,
     "featured": null,
     "topic": "Balance of payments",
     "source": "Swiss National Bank",
@@ -244,8 +244,8 @@
     "title": {
       "en": "Swiss balance of payments – Current account – Quarter"
     },
-    "concept": null,
-    "canonical": null,
+    "concept": "External sector / Balance of payments",
+    "canonical": true,
     "featured": null,
     "topic": "Balance of payments",
     "source": "Swiss National Bank",
@@ -264,8 +264,8 @@
     "title": {
       "en": "Swiss balance of payments – Overview – Quarter"
     },
-    "concept": null,
-    "canonical": null,
+    "concept": "External sector / Balance of payments",
+    "canonical": false,
     "featured": null,
     "topic": "Balance of payments",
     "source": "Swiss National Bank",
@@ -284,8 +284,8 @@
     "title": {
       "en": "Swiss balance of payments – Current account services, by country – Quarter"
     },
-    "concept": null,
-    "canonical": null,
+    "concept": "External sector / Balance of payments",
+    "canonical": false,
     "featured": null,
     "topic": "Balance of payments",
     "source": "Swiss National Bank",
@@ -304,8 +304,8 @@
     "title": {
       "en": "Swiss stock indices"
     },
-    "concept": null,
-    "canonical": null,
+    "concept": "Financial markets / Swiss stock indices",
+    "canonical": true,
     "featured": null,
     "topic": "Financial markets",
     "source": "Swiss National Bank",
@@ -324,8 +324,8 @@
     "title": {
       "en": "Securities turnover on the Swiss stock exchange"
     },
-    "concept": null,
-    "canonical": null,
+    "concept": "Financial markets / Securities turnover",
+    "canonical": true,
     "featured": null,
     "topic": "Financial markets",
     "source": "Swiss National Bank",
@@ -344,8 +344,8 @@
     "title": {
       "en": "Consumer confidence"
     },
-    "concept": null,
-    "canonical": null,
+    "concept": "Business cycle & sentiment / Consumer confidence",
+    "canonical": true,
     "featured": null,
     "topic": "Business surveys",
     "source": "Swiss National Bank",
@@ -364,9 +364,9 @@
     "title": {
       "en": "Foreign exchange rates – Month"
     },
-    "concept": null,
-    "canonical": null,
-    "featured": null,
+    "concept": "Exchange rates / Bilateral FX",
+    "canonical": true,
+    "featured": "Exchange rates",
     "topic": "Exchange rates",
     "source": "Swiss National Bank",
     "license": "snb",
@@ -404,8 +404,8 @@
     "title": {
       "en": "Bilateral exchange rate indices – Monthly"
     },
-    "concept": null,
-    "canonical": null,
+    "concept": "Exchange rates / Bilateral FX",
+    "canonical": true,
     "featured": null,
     "topic": "Exchange rates",
     "source": "Swiss National Bank",
@@ -424,8 +424,8 @@
     "title": {
       "en": "Effective exchange rate indices – Daily"
     },
-    "concept": null,
-    "canonical": null,
+    "concept": "Exchange rates / Effective FX index",
+    "canonical": true,
     "featured": null,
     "topic": "Exchange rates",
     "source": "Swiss National Bank",
@@ -444,8 +444,8 @@
     "title": {
       "en": "Real estate price indices – total for Switzerland – by quarter"
     },
-    "concept": null,
-    "canonical": null,
+    "concept": "Prices / Real estate prices",
+    "canonical": true,
     "featured": null,
     "topic": "Prices",
     "source": "Swiss National Bank",
@@ -464,8 +464,8 @@
     "title": {
       "en": "Consumer prices – SNB and SFSO core inflation rates"
     },
-    "concept": null,
-    "canonical": null,
+    "concept": "Prices / Core inflation",
+    "canonical": true,
     "featured": null,
     "topic": "Prices",
     "source": "Swiss National Bank",
@@ -484,8 +484,8 @@
     "title": {
       "en": "Spot interest rates on Swiss Confederation bonds, euro area government bonds and CHF bond issues for various borrower categories – Day"
     },
-    "concept": null,
-    "canonical": null,
+    "concept": "Interest rates & yields / Bond yields",
+    "canonical": false,
     "featured": null,
     "topic": "Interest rates",
     "source": "Swiss National Bank",
@@ -544,8 +544,8 @@
     "title": {
       "en": "Balance sheet items of the SNB"
     },
-    "concept": null,
-    "canonical": null,
+    "concept": "Money & banking / Monetary aggregates",
+    "canonical": false,
     "featured": null,
     "topic": "Money and banking",
     "source": "Swiss National Bank",
@@ -564,8 +564,8 @@
     "title": {
       "en": "SNB conditional inflation forecast"
     },
-    "concept": null,
-    "canonical": null,
+    "concept": "SNB policy & forecasts / Conditional inflation forecast",
+    "canonical": true,
     "featured": null,
     "topic": "SNB forecasts",
     "source": "Swiss National Bank",
@@ -584,8 +584,8 @@
     "title": {
       "en": "SNB conditional inflation forecast"
     },
-    "concept": null,
-    "canonical": null,
+    "concept": "SNB policy & forecasts / Conditional inflation forecast",
+    "canonical": true,
     "featured": null,
     "topic": "SNB forecasts",
     "source": "Swiss National Bank",
@@ -604,8 +604,8 @@
     "title": {
       "en": "Business cycle signals"
     },
-    "concept": null,
-    "canonical": null,
+    "concept": "Business cycle & sentiment / Business cycle signals",
+    "canonical": true,
     "featured": null,
     "topic": "Business surveys",
     "source": "Swiss National Bank",
@@ -624,8 +624,8 @@
     "title": {
       "en": "Monetary base"
     },
-    "concept": null,
-    "canonical": null,
+    "concept": "Money & banking / Monetary aggregates",
+    "canonical": false,
     "featured": null,
     "topic": "Money and banking",
     "source": "Swiss National Bank",
@@ -644,8 +644,8 @@
     "title": {
       "en": "Monetary aggregates M1, M2 and M3"
     },
-    "concept": null,
-    "canonical": null,
+    "concept": "Money & banking / Monetary aggregates",
+    "canonical": true,
     "featured": null,
     "topic": "Money and banking",
     "source": "Swiss National Bank",
@@ -664,9 +664,9 @@
     "title": {
       "en": "Official interest rates"
     },
-    "concept": null,
-    "canonical": null,
-    "featured": null,
+    "concept": "Interest rates & yields / Policy & official rates",
+    "canonical": true,
+    "featured": "Policy rate",
     "topic": "Interest rates",
     "source": "Swiss National Bank",
     "license": "snb",
@@ -684,8 +684,8 @@
     "title": {
       "en": "E-money – loading and float"
     },
-    "concept": null,
-    "canonical": null,
+    "concept": "Payment systems / Payments & cash",
+    "canonical": false,
     "featured": null,
     "topic": "Payment systems",
     "source": "Swiss National Bank",
@@ -704,8 +704,8 @@
     "title": {
       "en": "Swiss Interbank Clearing (SIC) – payment transactions"
     },
-    "concept": null,
-    "canonical": null,
+    "concept": "Payment systems / Payments & cash",
+    "canonical": false,
     "featured": null,
     "topic": "Payment systems",
     "source": "Swiss National Bank",
@@ -724,8 +724,8 @@
     "title": {
       "en": "Payment cards and ATMs"
     },
-    "concept": null,
-    "canonical": null,
+    "concept": "Payment systems / Payments & cash",
+    "canonical": false,
     "featured": null,
     "topic": "Payment systems",
     "source": "Swiss National Bank",
@@ -744,8 +744,8 @@
     "title": {
       "en": "Payments and cash withdrawals"
     },
-    "concept": null,
-    "canonical": null,
+    "concept": "Payment systems / Payments & cash",
+    "canonical": false,
     "featured": null,
     "topic": "Payment systems",
     "source": "Swiss National Bank",
@@ -764,8 +764,8 @@
     "title": {
       "en": "Customer payments at banks – Outgoing payments, by type of order"
     },
-    "concept": null,
-    "canonical": null,
+    "concept": "Payment systems / Payments & cash",
+    "canonical": false,
     "featured": null,
     "topic": "Payment systems",
     "source": "Swiss National Bank",
@@ -784,8 +784,8 @@
     "title": {
       "en": "Interest rates on new loan agreements, by product and maturity"
     },
-    "concept": null,
-    "canonical": null,
+    "concept": "Interest rates & yields / Money-market rates",
+    "canonical": false,
     "featured": null,
     "topic": "Interest rates",
     "source": "Swiss National Bank",
@@ -804,8 +804,8 @@
     "title": {
       "en": "Published interest rates for new transactions"
     },
-    "concept": null,
-    "canonical": null,
+    "concept": "Interest rates & yields / Money-market rates",
+    "canonical": false,
     "featured": null,
     "topic": "Interest rates",
     "source": "Swiss National Bank",
@@ -824,8 +824,8 @@
     "title": {
       "en": "Money market rates"
     },
-    "concept": null,
-    "canonical": null,
+    "concept": "Interest rates & yields / Money-market rates",
+    "canonical": true,
     "featured": null,
     "topic": "Interest rates",
     "source": "Swiss National Bank",
@@ -847,9 +847,9 @@
       "fr": "Produit intérieur brut (PIB)",
       "it": "Prodotto interno lordo (PIL)"
     },
-    "concept": null,
-    "canonical": null,
-    "featured": null,
+    "concept": "National accounts / GDP (output, expenditure, income)",
+    "canonical": true,
+    "featured": "GDP",
     "topic": "National accounts",
     "source": "State Secretariat for Economic Affairs (SECO)",
     "license": "seco",
@@ -867,9 +867,9 @@
     "title": {
       "en": "KOF Economic Barometer"
     },
-    "concept": null,
-    "canonical": null,
-    "featured": null,
+    "concept": "Business cycle & sentiment / Leading barometer",
+    "canonical": true,
+    "featured": "KOF Barometer",
     "topic": "Business cycle",
     "source": "KOF Swiss Economic Institute",
     "license": "kof",
@@ -887,9 +887,9 @@
     "title": {
       "en": "Hotel sector: overnight stays by tourism region"
     },
-    "concept": null,
-    "canonical": null,
-    "featured": null,
+    "concept": "Tourism / Hotel overnight stays",
+    "canonical": true,
+    "featured": "Tourism",
     "topic": "Tourism",
     "source": "Swiss Federal Statistical Office (FSO)",
     "license": "fso",
@@ -907,8 +907,8 @@
     "title": {
       "en": "Jobs by economic division (quarterly)"
     },
-    "concept": null,
-    "canonical": null,
+    "concept": "Labour / Employment / jobs",
+    "canonical": true,
     "featured": null,
     "topic": "Labour",
     "source": "Swiss Federal Statistical Office (FSO)",
@@ -927,8 +927,8 @@
     "title": {
       "en": "Job vacancies by economic division"
     },
-    "concept": null,
-    "canonical": null,
+    "concept": "Labour / Job vacancies",
+    "canonical": true,
     "featured": null,
     "topic": "Labour",
     "source": "Swiss Federal Statistical Office (FSO)",
@@ -947,8 +947,8 @@
     "title": {
       "en": "Jobs by economic division and sex"
     },
-    "concept": null,
-    "canonical": null,
+    "concept": "Labour / Employment / jobs",
+    "canonical": false,
     "featured": null,
     "topic": "Labour",
     "source": "Swiss Federal Statistical Office (FSO)",
@@ -967,9 +967,9 @@
     "title": {
       "en": "Consumer Price Index (LIK)"
     },
-    "concept": null,
-    "canonical": null,
-    "featured": null,
+    "concept": "Prices / Consumer prices",
+    "canonical": true,
+    "featured": "Inflation",
     "topic": "Prices",
     "source": "Swiss Federal Statistical Office (FSO)",
     "license": "fso",
@@ -987,8 +987,8 @@
     "title": {
       "en": "Producer and Import Price Index"
     },
-    "concept": null,
-    "canonical": null,
+    "concept": "Prices / Producer & import prices",
+    "canonical": true,
     "featured": null,
     "topic": "Prices",
     "source": "Swiss Federal Statistical Office (FSO)",
@@ -1007,8 +1007,8 @@
     "title": {
       "en": "Swiss Wage Index"
     },
-    "concept": null,
-    "canonical": null,
+    "concept": "Labour / Wages",
+    "canonical": true,
     "featured": null,
     "topic": "Wages",
     "source": "Swiss Federal Statistical Office (FSO)",
@@ -1027,8 +1027,8 @@
     "title": {
       "en": "Permanent resident population"
     },
-    "concept": null,
-    "canonical": null,
+    "concept": "Population & demographics / Resident population",
+    "canonical": true,
     "featured": null,
     "topic": "Population",
     "source": "Swiss Federal Statistical Office (FSO)",
@@ -1047,8 +1047,8 @@
     "title": {
       "en": "Unemployment rate (ILO) by sex and nationality, Switzerland"
     },
-    "concept": null,
-    "canonical": null,
+    "concept": "Labour / Unemployment",
+    "canonical": false,
     "featured": null,
     "topic": "Labour",
     "source": "Swiss Federal Statistical Office (FSO)",

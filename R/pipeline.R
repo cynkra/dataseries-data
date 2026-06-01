@@ -126,12 +126,17 @@ DATASHEET_DIR <- file.path(dirname(root), "datasets")
 
 main <- function() {
   datasets <- build()
-  for (ds in datasets) {
-    # Curation (concept + canonical) is derived from the datasheet, the source of truth.
-    ds$meta <- modifyList(ds$meta, read_datasheet_meta(ds$id, DATASHEET_DIR))
-    write_dataset(ds, DATA_DIR)
+  # Index loop (not `for (ds in datasets)`): the datasheet merge must be written
+  # BACK into `datasets`, else write_catalog() below serializes the un-merged
+  # originals and concept/canonical/featured come out null in catalog.json.
+  for (i in seq_along(datasets)) {
+    # Curation (concept + canonical + featured) is derived from the datasheet, the source of truth.
+    datasets[[i]]$meta <- modifyList(datasets[[i]]$meta,
+                                     read_datasheet_meta(datasets[[i]]$id, DATASHEET_DIR))
+    write_dataset(datasets[[i]], DATA_DIR)
     cat(sprintf("wrote %-22s %7d rows, %4d series  [%s]\n",
-                ds$id, nrow(ds$data), n_series(ds$data), ds$meta$concept %||% "no datasheet"))
+                datasets[[i]]$id, nrow(datasets[[i]]$data), n_series(datasets[[i]]$data),
+                datasets[[i]]$meta$concept %||% "no datasheet"))
   }
   write_catalog(datasets, DATA_DIR)
   cat(sprintf("wrote catalog.json (%d datasets) -> %s\n", length(datasets), DATA_DIR))

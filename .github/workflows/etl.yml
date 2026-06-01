@@ -9,7 +9,9 @@ name: etl
 
 on:
   schedule:
-    - cron: "30 16 * * *"   # 16:30 UTC (~18:30 CET) — after European release windows. Tune freely.
+    - cron: "15 8 * * *"    # 08:15 UTC = 09:15 CET (winter) / 10:15 CEST (summer) — just after
+                            # the 09:00 Swiss-time release window (SECO/SNB/FSO/KOF). DST-safe:
+                            # always fires after 09:00 local. Tune freely.
   workflow_dispatch:          # manual "Run workflow" button
 
 permissions:
@@ -58,6 +60,50 @@ jobs:
             git commit -m "data: daily refresh ($(date -u +%F))"
             git push
           fi
+
+      # Soft alarm: a dataset has gone stale (red on the health board). Open or
+      # update ONE rolling issue listing the reds so it pings the maintainer, and
+      # close it automatically once everything is fresh again. Amber never alarms.
+      - name: Alert on stale datasets
+        if: success()
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require("fs");
+            const s = JSON.parse(fs.readFileSync("data/status.json", "utf8"));
+            const reds = s.datasets.filter(d => d.status === "red");
+            const { owner, repo } = context.repo;
+            const label = "data-stale";
+            const open = await github.rest.issues.listForRepo({
+              owner, repo, state: "open", labels: label, per_page: 1,
+            });
+            const existing = open.data[0];
+            if (reds.length === 0) {
+              if (existing) {
+                await github.rest.issues.createComment({
+                  owner, repo, issue_number: existing.number,
+                  body: "✅ All datasets fresh again — closing.",
+                });
+                await github.rest.issues.update({
+                  owner, repo, issue_number: existing.number, state: "closed",
+                });
+              }
+              return;
+            }
+            const lines = reds.map(d =>
+              `- 🔴 \`${d.id}\` — ${d.frequency}, last obs ${d.end} (${d.age_days} days old)`);
+            const title = `🔴 ${reds.length} dataset(s) stale`;
+            const body = [
+              `${reds.length} dataset(s) are stale as of ${s.checked}:`, "",
+              ...lines, "",
+              "Full board in `STATUS.md`. This issue updates daily and auto-closes when all are fresh.",
+              "", "cc @christophsax",
+            ].join("\n");
+            if (existing) {
+              await github.rest.issues.update({ owner, repo, issue_number: existing.number, title, body });
+            } else {
+              await github.rest.issues.create({ owner, repo, title, labels: [label], body });
+            }
 
       # Hard failure (dep install, R error, ...) => open or update ONE rolling issue,
       # so a broken pipeline can't rot silently. Per-source fetch errors don't reach
