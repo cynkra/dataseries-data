@@ -1,0 +1,92 @@
+name: etl
+
+# Daily scrape: re-fetch every source, rewrite data/ + catalog.json, recompute the
+# data-health dashboard, and commit the result back. This repo is PUBLIC, so the
+# GitHub-hosted runner is free (unmetered) — it consumes no Actions minutes.
+#
+# The daily commit doubles as the anti-rot heartbeat: GitHub auto-disables a
+# scheduled workflow after 60 days of repo inactivity, and committing keeps it alive.
+
+on:
+  schedule:
+    - cron: "30 16 * * *"   # 16:30 UTC (~18:30 CET) — after European release windows. Tune freely.
+  workflow_dispatch:          # manual "Run workflow" button
+
+permissions:
+  contents: write   # push refreshed data
+  issues: write     # open a failure issue (anti-rot alert)
+
+concurrency:
+  group: etl
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: r-lib/actions/setup-r@v2
+        with:
+          use-public-rspm: true   # pull Linux package binaries from P3M (no compilation)
+
+      - name: Install R dependencies
+        shell: Rscript {0}
+        run: |
+          # Binaries from P3M -> fast, no system-dep compilation. This repo is
+          # plain scripts (no DESCRIPTION), so install the list explicitly.
+          install.packages(c(
+            "arrow", "dplyr", "httr2", "jsonlite", "readr",
+            "readxl", "stringr", "tibble", "tidyr"
+          ))
+
+      - name: Run ETL
+        run: Rscript R/pipeline.R
+
+      - name: Compute data health
+        run: Rscript R/health.R
+
+      - name: Commit refreshed data + status
+        run: |
+          git config user.name  "dataseries-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data STATUS.md README.md
+          if git diff --cached --quiet; then
+            echo "No changes to commit."
+          else
+            git commit -m "data: daily refresh ($(date -u +%F))"
+            git push
+          fi
+
+      # Hard failure (dep install, R error, ...) => open or update ONE rolling issue,
+      # so a broken pipeline can't rot silently. Per-source fetch errors don't reach
+      # here (pipeline.R skips a bad source and keeps going) — those surface as the
+      # affected dataset going amber/red on the health dashboard instead.
+      - name: Open / refresh failure issue
+        if: failure()
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const { owner, repo } = context.repo;
+            const run = `${context.serverUrl}/${owner}/${repo}/actions/runs/${context.runId}`;
+            const body = [
+              `The daily ETL workflow **failed** (run ${context.runId}).`,
+              ``,
+              `Run log: ${run}`,
+              ``,
+              `Data files were **not** refreshed this cycle. Investigate the failing step.`,
+            ].join("\n");
+            const open = await github.rest.issues.listForRepo({
+              owner, repo, state: "open", labels: "etl-failure", per_page: 1,
+            });
+            if (open.data.length) {
+              await github.rest.issues.createComment({
+                owner, repo, issue_number: open.data[0].number, body,
+              });
+            } else {
+              await github.rest.issues.create({
+                owner, repo, title: "🔴 Daily ETL run is failing",
+                labels: ["etl-failure"], body,
+              });
+            }

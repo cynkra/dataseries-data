@@ -1,0 +1,542 @@
+{
+  "checked": "2026-06-01 08:21 UTC",
+  "counts": {
+    "green": 44,
+    "amber": 2,
+    "red": 7,
+    "unknown": 0,
+    "total": 53
+  },
+  "datasets": [
+    {
+      "id": "ch_snb_amarbma",
+      "title": "Labour market (registered unemployment, SECO)",
+      "source": "Swiss National Bank",
+      "frequency": "monthly",
+      "end": "2026-04-01",
+      "age_days": 61,
+      "threshold_days": 110,
+      "status": "green"
+    },
+    {
+      "id": "ch_snb_ambeschkla",
+      "title": "Employees, by economic activity",
+      "source": "Swiss National Bank",
+      "frequency": "quarterly",
+      "end": "2025-10-01",
+      "age_days": 243,
+      "threshold_days": 290,
+      "status": "green"
+    },
+    {
+      "id": "ch_snb_ausshawarm",
+      "title": "Foreign trade by goods category",
+      "source": "Swiss National Bank",
+      "frequency": "monthly",
+      "end": "2026-03-01",
+      "age_days": 92,
+      "threshold_days": 110,
+      "status": "green"
+    },
+    {
+      "id": "ch_snb_auvekomq",
+      "title": "Switzerland’s international investment position – Overview – Quarter",
+      "source": "Swiss National Bank",
+      "frequency": "quarterly",
+      "end": "2025-10-01",
+      "age_days": 243,
+      "threshold_days": 290,
+      "status": "green"
+    },
+    {
+      "id": "ch_snb_auvercurrq",
+      "title": "Switzerland’s international investment position – Breakdown by currency – Quarter",
+      "source": "Swiss National Bank",
+      "frequency": "quarterly",
+      "end": "2025-10-01",
+      "age_days": 243,
+      "threshold_days": 290,
+      "status": "green"
+    },
+    {
+      "id": "ch_snb_auverdeptq",
+      "title": "Switzerland’s external debt – Quarter",
+      "source": "Swiss National Bank",
+      "frequency": "quarterly",
+      "end": "2025-10-01",
+      "age_days": 243,
+      "threshold_days": 290,
+      "status": "green"
+    },
+    {
+      "id": "ch_snb_auversecq",
+      "title": "Switzerland’s international investment position – Breakdown by sector – Quarter",
+      "source": "Swiss National Bank",
+      "frequency": "quarterly",
+      "end": "2025-10-01",
+      "age_days": 243,
+      "threshold_days": 290,
+      "status": "green"
+    },
+    {
+      "id": "ch_snb_babilpobm",
+      "title": "Banks' balance sheet items by currency for selected bank categories – monthly",
+      "source": "Swiss National Bank",
+      "frequency": "monthly",
+      "end": "2026-03-01",
+      "age_days": 92,
+      "threshold_days": 110,
+      "status": "green"
+    },
+    {
+      "id": "ch_snb_bakredbetgrbm",
+      "title": "Corporate loans, broken down by company size",
+      "source": "Swiss National Bank",
+      "frequency": "monthly",
+      "end": "2026-03-01",
+      "age_days": 92,
+      "threshold_days": 110,
+      "status": "green"
+    },
+    {
+      "id": "ch_snb_bakredinausbm",
+      "title": "Mortgage loans and other domestic and foreign loans",
+      "source": "Swiss National Bank",
+      "frequency": "monthly",
+      "end": "2026-03-01",
+      "age_days": 92,
+      "threshold_days": 110,
+      "status": "green"
+    },
+    {
+      "id": "ch_snb_bakredsekbm",
+      "title": "Domestic loans, broken down by economic sector and industry",
+      "source": "Swiss National Bank",
+      "frequency": "monthly",
+      "end": "2026-03-01",
+      "age_days": 92,
+      "threshold_days": 110,
+      "status": "green"
+    },
+    {
+      "id": "ch_snb_bopcapbalq",
+      "title": "Swiss balance of payments – Financial account – Quarter",
+      "source": "Swiss National Bank",
+      "frequency": "quarterly",
+      "end": "2025-10-01",
+      "age_days": 243,
+      "threshold_days": 290,
+      "status": "green"
+    },
+    {
+      "id": "ch_snb_bopcurrq",
+      "title": "Swiss balance of payments – Current account – Quarter",
+      "source": "Swiss National Bank",
+      "frequency": "quarterly",
+      "end": "2025-10-01",
+      "age_days": 243,
+      "threshold_days": 290,
+      "status": "green"
+    },
+    {
+      "id": "ch_snb_bopoverq",
+      "title": "Swiss balance of payments – Overview – Quarter",
+      "source": "Swiss National Bank",
+      "frequency": "quarterly",
+      "end": "2025-10-01",
+      "age_days": 243,
+      "threshold_days": 290,
+      "status": "green"
+    },
+    {
+      "id": "ch_snb_bopservq",
+      "title": "Swiss balance of payments – Current account services, by country – Quarter",
+      "source": "Swiss National Bank",
+      "frequency": "quarterly",
+      "end": "2025-10-01",
+      "age_days": 243,
+      "threshold_days": 290,
+      "status": "green"
+    },
+    {
+      "id": "ch_snb_capchstocki",
+      "title": "Swiss stock indices",
+      "source": "Swiss National Bank",
+      "frequency": "daily",
+      "end": "2026-05-15",
+      "age_days": 17,
+      "threshold_days": 14,
+      "status": "amber"
+    },
+    {
+      "id": "ch_snb_capweums",
+      "title": "Securities turnover on the Swiss stock exchange",
+      "source": "Swiss National Bank",
+      "frequency": "monthly",
+      "end": "2026-04-01",
+      "age_days": 61,
+      "threshold_days": 110,
+      "status": "green"
+    },
+    {
+      "id": "ch_snb_concon",
+      "title": "Consumer confidence",
+      "source": "Swiss National Bank",
+      "frequency": "quarterly",
+      "end": "2026-04-01",
+      "age_days": 61,
+      "threshold_days": 290,
+      "status": "green"
+    },
+    {
+      "id": "ch_snb_devkum",
+      "title": "Foreign exchange rates – Month",
+      "source": "Swiss National Bank",
+      "frequency": "monthly",
+      "end": "2026-04-01",
+      "age_days": 61,
+      "threshold_days": 110,
+      "status": "green"
+    },
+    {
+      "id": "ch_snb_devlandm",
+      "title": "Foreign exchange rates, by country – Month",
+      "source": "Swiss National Bank",
+      "frequency": "monthly",
+      "end": "2018-03-01",
+      "age_days": 3014,
+      "threshold_days": 110,
+      "status": "red"
+    },
+    {
+      "id": "ch_snb_devwkibiim",
+      "title": "Bilateral exchange rate indices – Monthly",
+      "source": "Swiss National Bank",
+      "frequency": "monthly",
+      "end": "2026-04-01",
+      "age_days": 61,
+      "threshold_days": 110,
+      "status": "green"
+    },
+    {
+      "id": "ch_snb_devwkieffid",
+      "title": "Effective exchange rate indices – Daily",
+      "source": "Swiss National Bank",
+      "frequency": "daily",
+      "end": "2026-04-30",
+      "age_days": 32,
+      "threshold_days": 14,
+      "status": "red"
+    },
+    {
+      "id": "ch_snb_plimoinchq",
+      "title": "Real estate price indices – total for Switzerland – by quarter",
+      "source": "Swiss National Bank",
+      "frequency": "quarterly",
+      "end": "2026-01-01",
+      "age_days": 151,
+      "threshold_days": 290,
+      "status": "green"
+    },
+    {
+      "id": "ch_snb_plkoprinfla",
+      "title": "Consumer prices – SNB and SFSO core inflation rates",
+      "source": "Swiss National Bank",
+      "frequency": "monthly",
+      "end": "2026-04-01",
+      "age_days": 61,
+      "threshold_days": 110,
+      "status": "green"
+    },
+    {
+      "id": "ch_snb_rendeiduebd",
+      "title": "Spot interest rates on Swiss Confederation bonds, euro area government bonds and CHF bond issues for various borrower categories – Day",
+      "source": "Swiss National Bank",
+      "frequency": "daily",
+      "end": "2026-04-30",
+      "age_days": 32,
+      "threshold_days": 14,
+      "status": "red"
+    },
+    {
+      "id": "ch_snb_rendoblid",
+      "title": "Yields on bond issues – Day",
+      "source": "Swiss National Bank",
+      "frequency": "daily",
+      "end": "2025-07-31",
+      "age_days": 305,
+      "threshold_days": 14,
+      "status": "red"
+    },
+    {
+      "id": "ch_snb_snbband",
+      "title": "SNB target range",
+      "source": "Swiss National Bank",
+      "frequency": "daily",
+      "end": "2019-06-12",
+      "age_days": 2546,
+      "threshold_days": 14,
+      "status": "red"
+    },
+    {
+      "id": "ch_snb_snbbipo",
+      "title": "Balance sheet items of the SNB",
+      "source": "Swiss National Bank",
+      "frequency": "monthly",
+      "end": "2026-04-01",
+      "age_days": 61,
+      "threshold_days": 110,
+      "status": "green"
+    },
+    {
+      "id": "ch_snb_snbiproga",
+      "title": "SNB conditional inflation forecast",
+      "source": "Swiss National Bank",
+      "frequency": "annual",
+      "end": "2028-01-01",
+      "age_days": -579,
+      "threshold_days": 550,
+      "status": "green"
+    },
+    {
+      "id": "ch_snb_snbiprogq",
+      "title": "SNB conditional inflation forecast",
+      "source": "Swiss National Bank",
+      "frequency": "quarterly",
+      "end": "2028-10-01",
+      "age_days": -853,
+      "threshold_days": 290,
+      "status": "green"
+    },
+    {
+      "id": "ch_snb_snbkosiq",
+      "title": "Business cycle signals",
+      "source": "Swiss National Bank",
+      "frequency": "quarterly",
+      "end": "2026-01-01",
+      "age_days": 151,
+      "threshold_days": 290,
+      "status": "green"
+    },
+    {
+      "id": "ch_snb_snbmoba",
+      "title": "Monetary base",
+      "source": "Swiss National Bank",
+      "frequency": "monthly",
+      "end": "2026-04-01",
+      "age_days": 61,
+      "threshold_days": 110,
+      "status": "green"
+    },
+    {
+      "id": "ch_snb_snbmonagg",
+      "title": "Monetary aggregates M1, M2 and M3",
+      "source": "Swiss National Bank",
+      "frequency": "monthly",
+      "end": "2026-04-01",
+      "age_days": 61,
+      "threshold_days": 110,
+      "status": "green"
+    },
+    {
+      "id": "ch_snb_snboffzisa",
+      "title": "Official interest rates",
+      "source": "Swiss National Bank",
+      "frequency": "monthly",
+      "end": "2026-04-01",
+      "age_days": 61,
+      "threshold_days": 110,
+      "status": "green"
+    },
+    {
+      "id": "ch_snb_zavegelade",
+      "title": "E-money – loading and float",
+      "source": "Swiss National Bank",
+      "frequency": "monthly",
+      "end": "2026-03-01",
+      "age_days": 92,
+      "threshold_days": 110,
+      "status": "green"
+    },
+    {
+      "id": "ch_snb_zavesic",
+      "title": "Swiss Interbank Clearing (SIC) – payment transactions",
+      "source": "Swiss National Bank",
+      "frequency": "monthly",
+      "end": "2026-04-01",
+      "age_days": 61,
+      "threshold_days": 110,
+      "status": "green"
+    },
+    {
+      "id": "ch_snb_zavezaka",
+      "title": "Payment cards and ATMs",
+      "source": "Swiss National Bank",
+      "frequency": "monthly",
+      "end": "2026-03-01",
+      "age_days": 92,
+      "threshold_days": 110,
+      "status": "green"
+    },
+    {
+      "id": "ch_snb_zavezaluba",
+      "title": "Payments and cash withdrawals",
+      "source": "Swiss National Bank",
+      "frequency": "monthly",
+      "end": "2026-03-01",
+      "age_days": 92,
+      "threshold_days": 110,
+      "status": "green"
+    },
+    {
+      "id": "ch_snb_zavkuzaart",
+      "title": "Customer payments at banks – Outgoing payments, by type of order",
+      "source": "Swiss National Bank",
+      "frequency": "monthly",
+      "end": "2026-03-01",
+      "age_days": 92,
+      "threshold_days": 110,
+      "status": "green"
+    },
+    {
+      "id": "ch_snb_zikredlauf",
+      "title": "Interest rates on new loan agreements, by product and maturity",
+      "source": "Swiss National Bank",
+      "frequency": "monthly",
+      "end": "2026-02-01",
+      "age_days": 120,
+      "threshold_days": 110,
+      "status": "amber"
+    },
+    {
+      "id": "ch_snb_zikrepro",
+      "title": "Published interest rates for new transactions",
+      "source": "Swiss National Bank",
+      "frequency": "monthly",
+      "end": "2026-03-01",
+      "age_days": 92,
+      "threshold_days": 110,
+      "status": "green"
+    },
+    {
+      "id": "ch_snb_zimoma",
+      "title": "Money market rates",
+      "source": "Swiss National Bank",
+      "frequency": "monthly",
+      "end": "2026-04-01",
+      "age_days": 61,
+      "threshold_days": 110,
+      "status": "green"
+    },
+    {
+      "id": "ch_seco_gdp",
+      "title": "Gross domestic product (GDP)",
+      "source": "State Secretariat for Economic Affairs (SECO)",
+      "frequency": "quarterly",
+      "end": "2025-10-01",
+      "age_days": 243,
+      "threshold_days": 290,
+      "status": "green"
+    },
+    {
+      "id": "ch_kof_barometer",
+      "title": "KOF Economic Barometer",
+      "source": "KOF Swiss Economic Institute",
+      "frequency": "monthly",
+      "end": "2026-05-01",
+      "age_days": 31,
+      "threshold_days": 110,
+      "status": "green"
+    },
+    {
+      "id": "ch_fso_hesta",
+      "title": "Hotel sector: overnight stays by tourism region",
+      "source": "Swiss Federal Statistical Office (FSO)",
+      "frequency": "monthly",
+      "end": "2026-03-01",
+      "age_days": 92,
+      "threshold_days": 110,
+      "status": "green"
+    },
+    {
+      "id": "ch_fso_besta",
+      "title": "Jobs by economic division (quarterly)",
+      "source": "Swiss Federal Statistical Office (FSO)",
+      "frequency": "quarterly",
+      "end": "2026-01-01",
+      "age_days": 151,
+      "threshold_days": 290,
+      "status": "green"
+    },
+    {
+      "id": "ch_fso_vacancies",
+      "title": "Job vacancies by economic division",
+      "source": "Swiss Federal Statistical Office (FSO)",
+      "frequency": "quarterly",
+      "end": "2026-01-01",
+      "age_days": 151,
+      "threshold_days": 290,
+      "status": "green"
+    },
+    {
+      "id": "ch_fso_jobs_sex",
+      "title": "Jobs by economic division and sex",
+      "source": "Swiss Federal Statistical Office (FSO)",
+      "frequency": "quarterly",
+      "end": "2026-01-01",
+      "age_days": 151,
+      "threshold_days": 290,
+      "status": "green"
+    },
+    {
+      "id": "ch_fso_cpi",
+      "title": "Consumer Price Index (LIK)",
+      "source": "Swiss Federal Statistical Office (FSO)",
+      "frequency": "monthly",
+      "end": "2025-12-01",
+      "age_days": 182,
+      "threshold_days": 110,
+      "status": "red"
+    },
+    {
+      "id": "ch_fso_ppi",
+      "title": "Producer and Import Price Index",
+      "source": "Swiss Federal Statistical Office (FSO)",
+      "frequency": "monthly",
+      "end": "2026-04-01",
+      "age_days": 61,
+      "threshold_days": 110,
+      "status": "green"
+    },
+    {
+      "id": "ch_fso_wage_idx",
+      "title": "Swiss Wage Index",
+      "source": "Swiss Federal Statistical Office (FSO)",
+      "frequency": "annual",
+      "end": "2025-01-01",
+      "age_days": 516,
+      "threshold_days": 550,
+      "status": "green"
+    },
+    {
+      "id": "ch_fso_pop",
+      "title": "Permanent resident population",
+      "source": "Swiss Federal Statistical Office (FSO)",
+      "frequency": "annual",
+      "end": "2024-01-01",
+      "age_days": 882,
+      "threshold_days": 550,
+      "status": "red"
+    },
+    {
+      "id": "ch_fso_unemp_rate",
+      "title": "Unemployment rate (ILO) by sex and nationality, Switzerland",
+      "source": "Swiss Federal Statistical Office (FSO)",
+      "frequency": "monthly",
+      "end": "2026-03-01",
+      "age_days": 92,
+      "threshold_days": 110,
+      "status": "green"
+    }
+  ]
+}

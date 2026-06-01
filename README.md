@@ -46,3 +46,9 @@ but deferred — for now the ETL runs locally and the result is committed here.
 
 Code: MIT (or as set on the repo). Data: per-dataset, see each dataset's `license`
 field in its meta / `catalog.json`. Mirrors the upstream sources' terms.
+
+## Data health
+
+<!-- DATA-HEALTH:START -->
+**Data health** (updated 2026-06-01): 🟢 44 · 🟡 2 · 🔴 7 · ⚪ 0 of 53 datasets — see [STATUS.md](STATUS.md).
+<!-- DATA-HEALTH:END -->
