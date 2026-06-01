@@ -1,0 +1,188 @@
+{
+  "schema_version": "1.0",
+  "id": "ch_snb_zikredlauf",
+  "dim_order": [
+    "D0",
+    "D1",
+    "D2"
+  ],
+  "start": "2009-05-01",
+  "end": "2026-02-01",
+  "title": {
+    "en": "Interest rates on new loan agreements, by product and maturity"
+  },
+  "source": {
+    "name": {
+      "en": "Swiss National Bank"
+    },
+    "url": "https://data.snb.ch/en/topics/snb/cube/zikredlauf"
+  },
+  "license": "snb",
+  "frequency": "monthly",
+  "dimensions": {
+    "D0": {
+      "label": {
+        "en": "Product"
+      },
+      "levels": {
+        "FH": {
+          "label": {
+            "en": "Mortgages with fixed interest rates"
+          },
+          "data": true
+        },
+        "VHBB": {
+          "label": {
+            "en": "Mortgages with variable interest rates (linked to a base rate of interest)"
+          },
+          "data": true
+        },
+        "FI": {
+          "label": {
+            "en": "Investment loans with fixed interest rates"
+          },
+          "data": true
+        }
+      },
+      "hierarchy": {
+        "FH": [],
+        "VHBB": [],
+        "FI": []
+      }
+    },
+    "D1": {
+      "label": {
+        "en": "Maturity"
+      },
+      "levels": {
+        "L16M": {
+          "label": {
+            "en": "Maturity of over 1 month up to 6 months"
+          },
+          "data": true
+        },
+        "L6M1J": {
+          "label": {
+            "en": "Maturity of over 6 months up to 1 year"
+          },
+          "data": true
+        },
+        "L1J2J": {
+          "label": {
+            "en": "Maturity of over 1 year up to 2 years"
+          },
+          "data": true
+        },
+        "L23J": {
+          "label": {
+            "en": "Maturity of over 2 years up to 3 years"
+          },
+          "data": true
+        },
+        "L35J": {
+          "label": {
+            "en": "Maturity of over 3 years up to 5 years"
+          },
+          "data": true
+        },
+        "L57J": {
+          "label": {
+            "en": "Maturity of over 5 years up to 7 years"
+          },
+          "data": true
+        },
+        "L515J": {
+          "label": {
+            "en": "Maturity of over 5 years up to 15 years"
+          },
+          "data": true
+        },
+        "L710J": {
+          "label": {
+            "en": "Maturity of over 7 years up to 10 years"
+          },
+          "data": true
+        },
+        "L715J": {
+          "label": {
+            "en": "Maturity of over 7 years up to 15 years"
+          },
+          "data": true
+        },
+        "L1015J": {
+          "label": {
+            "en": "Maturity of over 10 years up to 15 years"
+          },
+          "data": true
+        }
+      },
+      "hierarchy": {
+        "L16M": [],
+        "L6M1J": [],
+        "L1J2J": [],
+        "L23J": [],
+        "L35J": [],
+        "L57J": [],
+        "L515J": [],
+        "L710J": [],
+        "L715J": [],
+        "L1015J": []
+      }
+    },
+    "D2": {
+      "label": {
+        "en": "Reference values"
+      },
+      "levels": {
+        "MP0": {
+          "label": {
+            "en": "Mean value in %"
+          },
+          "data": true
+        },
+        "25PQP": {
+          "label": {
+            "en": "25% quantile in %"
+          },
+          "data": true
+        },
+        "MP1": {
+          "label": {
+            "en": "Median in %"
+          },
+          "data": true
+        },
+        "75PQP": {
+          "label": {
+            "en": "75% quantile in %"
+          },
+          "data": true
+        },
+        "AK": {
+          "label": {
+            "en": "Number of loan agreements"
+          },
+          "data": true
+        }
+      },
+      "hierarchy": {
+        "MP0": [],
+        "25PQP": [],
+        "MP1": [],
+        "75PQP": [],
+        "AK": []
+      }
+    }
+  },
+  "topic": "Interest rates",
+  "default": {
+    "D0": "FH",
+    "D1": "L35J",
+    "D2": "MP1"
+  },
+  "concept": "Interest rates & yields / Money-market rates",
+  "canonical": false,
+  "split": "D1",
+  "single_select": ["D0", "D2"],
+  "default_transform": "level"
+}

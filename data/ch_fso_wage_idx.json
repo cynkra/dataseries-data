@@ -1,0 +1,132 @@
+{
+  "schema_version": "1.0",
+  "id": "ch_fso_wage_idx",
+  "dim_order": [
+    "sector",
+    "sex",
+    "measure",
+    "adjustment"
+  ],
+  "start": "1994-01-01",
+  "end": "2025-01-01",
+  "title": {
+    "en": "Swiss Wage Index"
+  },
+  "source": {
+    "name": {
+      "en": "Swiss Federal Statistical Office (FSO)"
+    },
+    "url": "https://www.bfs.admin.ch/asset/de/je-e-03.04.03.00.04"
+  },
+  "license": "fso",
+  "frequency": "annual",
+  "topic": "Wages",
+  "updated": "2026-04-21",
+  "dimensions": {
+    "sector": {
+      "label": {
+        "en": "Economic sector"
+      },
+      "levels": {
+        "bs0": {
+          "label": {
+            "en": "Total"
+          },
+          "data": true
+        },
+        "bf1": {
+          "label": {
+            "en": "Secondary sector"
+          },
+          "data": true
+        },
+        "f41": {
+          "label": {
+            "en": "Construction"
+          },
+          "data": true
+        },
+        "gs4": {
+          "label": {
+            "en": "Tertiary sector"
+          },
+          "data": true
+        }
+      }
+    },
+    "sex": {
+      "label": {
+        "en": "Sex"
+      },
+      "levels": {
+        "tot": {
+          "label": {
+            "en": "Total"
+          },
+          "data": true
+        },
+        "m": {
+          "label": {
+            "en": "Men"
+          },
+          "data": true
+        },
+        "f": {
+          "label": {
+            "en": "Women"
+          },
+          "data": true
+        }
+      }
+    },
+    "measure": {
+      "label": {
+        "en": "Measure"
+      },
+      "levels": {
+        "index": {
+          "label": {
+            "en": "Index (1993 = 100)"
+          },
+          "data": true
+        },
+        "change": {
+          "label": {
+            "en": "Variation in % compared with previous year"
+          },
+          "data": true
+        }
+      }
+    },
+    "adjustment": {
+      "label": {
+        "en": "Adjustment"
+      },
+      "levels": {
+        "nominal": {
+          "label": {
+            "en": "Nominal wage index"
+          },
+          "data": true
+        },
+        "real": {
+          "label": {
+            "en": "Real wage index"
+          },
+          "data": true
+        }
+      }
+    }
+  },
+  "default": {
+    "sector": "bs0",
+    "sex": "tot",
+    "measure": "index",
+    "adjustment": "real"
+  },
+  "concept": "Labour / Wages",
+  "canonical": true,
+  "split": "sector",
+  "single_select": ["sex", "measure", "adjustment"],
+  "default_transform": "level"
+}

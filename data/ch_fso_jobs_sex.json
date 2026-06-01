@@ -1,0 +1,185 @@
+{
+  "schema_version": "1.0",
+  "id": "ch_fso_jobs_sex",
+  "dim_order": [
+    "Grossregion",
+    "Wirtschaftssektor",
+    "Beschäftigungsgrad",
+    "Geschlecht"
+  ],
+  "start": "1995-07-01",
+  "end": "2026-01-01",
+  "title": {
+    "en": "Jobs by economic division and sex"
+  },
+  "source": {
+    "name": {
+      "en": "Swiss Federal Statistical Office (FSO)"
+    },
+    "url": "https://www.pxweb.bfs.admin.ch/pxweb/en/px-x-0602000000_102"
+  },
+  "license": "fso",
+  "frequency": "quarterly",
+  "dimensions": {
+    "Grossregion": {
+      "label": {
+        "en": "Major region"
+      },
+      "levels": {
+        "0": {
+          "label": {
+            "en": "Switzerland"
+          },
+          "data": true
+        },
+        "1": {
+          "label": {
+            "en": "Lake Geneva region"
+          },
+          "data": true
+        },
+        "2": {
+          "label": {
+            "en": "Espace Mittelland"
+          },
+          "data": true
+        },
+        "3": {
+          "label": {
+            "en": "North-Western Switzerland"
+          },
+          "data": true
+        },
+        "4": {
+          "label": {
+            "en": "Zurich Region"
+          },
+          "data": true
+        },
+        "5": {
+          "label": {
+            "en": "Eastern Switzerland"
+          },
+          "data": true
+        },
+        "6": {
+          "label": {
+            "en": "Central Switzerland"
+          },
+          "data": true
+        },
+        "7": {
+          "label": {
+            "en": "Ticino"
+          },
+          "data": true
+        }
+      }
+    },
+    "Wirtschaftssektor": {
+      "label": {
+        "en": "Economic sector"
+      },
+      "levels": {
+        "TOT": {
+          "label": {
+            "en": "Sectors 2-3"
+          },
+          "data": true
+        },
+        "2": {
+          "label": {
+            "en": "Sector 2"
+          },
+          "data": true
+        },
+        "3": {
+          "label": {
+            "en": "Sector 3"
+          },
+          "data": true
+        }
+      }
+    },
+    "Beschäftigungsgrad": {
+      "label": {
+        "en": "Employment rate"
+      },
+      "levels": {
+        "TOT": {
+          "label": {
+            "en": "Employment rate - total"
+          },
+          "data": true
+        },
+        "1": {
+          "label": {
+            "en": "Full time"
+          },
+          "data": true
+        },
+        "2": {
+          "label": {
+            "en": "Part time"
+          },
+          "data": true
+        },
+        "3": {
+          "label": {
+            "en": "Total, seasonally adjusted"
+          },
+          "data": true
+        },
+        "4": {
+          "label": {
+            "en": "Full time equivalents"
+          },
+          "data": true
+        },
+        "4.1": {
+          "label": {
+            "en": "Full time equivalents, seasonally adjusted"
+          },
+          "data": true
+        }
+      }
+    },
+    "Geschlecht": {
+      "label": {
+        "en": "Gender"
+      },
+      "levels": {
+        "TOT": {
+          "label": {
+            "en": "Gender - total"
+          },
+          "data": true
+        },
+        "1": {
+          "label": {
+            "en": "Man"
+          },
+          "data": true
+        },
+        "2": {
+          "label": {
+            "en": "Woman"
+          },
+          "data": true
+        }
+      }
+    }
+  },
+  "topic": "Labour",
+  "default": {
+    "Grossregion": "0",
+    "Wirtschaftssektor": "TOT",
+    "Beschäftigungsgrad": "TOT",
+    "Geschlecht": "TOT"
+  },
+  "concept": "Labour / Employment / jobs",
+  "canonical": false,
+  "split": "Geschlecht",
+  "single_select": ["Grossregion", "Wirtschaftssektor", "Beschäftigungsgrad"],
+  "default_transform": "level"
+}

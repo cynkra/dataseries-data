@@ -1,0 +1,153 @@
+{
+  "schema_version": "1.0",
+  "id": "ch_snb_zavezaka",
+  "dim_order": [
+    "D0"
+  ],
+  "start": "2005-01-01",
+  "end": "2026-03-01",
+  "title": {
+    "en": "Payment cards and ATMs"
+  },
+  "source": {
+    "name": {
+      "en": "Swiss National Bank"
+    },
+    "url": "https://data.snb.ch/en/topics/snb/cube/zavezaka"
+  },
+  "license": "snb",
+  "frequency": "monthly",
+  "dimensions": {
+    "D0": {
+      "label": {
+        "en": "Overview"
+      },
+      "levels": {
+        "D0_0": {
+          "label": {
+            "en": "Credit cards"
+          },
+          "data": false
+        },
+        "D0_0_0": {
+          "label": {
+            "en": "Number of cards"
+          },
+          "data": false
+        },
+        "T0": {
+          "label": {
+            "en": "Total"
+          },
+          "data": true
+        },
+        "DZ0": {
+          "label": {
+            "en": "Of which with contactless payment function"
+          },
+          "data": true
+        },
+        "D0_1": {
+          "label": {
+            "en": "Debit cards"
+          },
+          "data": false
+        },
+        "D0_1_0": {
+          "label": {
+            "en": "Number of cards"
+          },
+          "data": false
+        },
+        "T1": {
+          "label": {
+            "en": "Total"
+          },
+          "data": true
+        },
+        "DZ1": {
+          "label": {
+            "en": "of which with contactless payment function"
+          },
+          "data": true
+        },
+        "D0_2": {
+          "label": {
+            "en": "E-money"
+          },
+          "data": false
+        },
+        "D0_2_0": {
+          "label": {
+            "en": "Number of cards"
+          },
+          "data": false
+        },
+        "T2": {
+          "label": {
+            "en": "Total"
+          },
+          "data": true
+        },
+        "DZ2": {
+          "label": {
+            "en": "of which with contactless payment function"
+          },
+          "data": true
+        },
+        "D0_3": {
+          "label": {
+            "en": "Automated teller machines (ATMs)"
+          },
+          "data": false
+        },
+        "D0_3_0": {
+          "label": {
+            "en": "Number of ATMs"
+          },
+          "data": false
+        },
+        "T3": {
+          "label": {
+            "en": "Total"
+          },
+          "data": true
+        }
+      },
+      "hierarchy": {
+        "D0_0": {
+          "D0_0_0": {
+            "T0": [],
+            "DZ0": []
+          }
+        },
+        "D0_1": {
+          "D0_1_0": {
+            "T1": [],
+            "DZ1": []
+          }
+        },
+        "D0_2": {
+          "D0_2_0": {
+            "T2": [],
+            "DZ2": []
+          }
+        },
+        "D0_3": {
+          "D0_3_0": {
+            "T3": []
+          }
+        }
+      }
+    }
+  },
+  "topic": "Payment systems",
+  "default": {
+    "D0": "T0"
+  },
+  "concept": "Payment systems / Payments & cash",
+  "canonical": false,
+  "split": "D0",
+  "single_select": "(none; D0 is the only dimension)",
+  "default_transform": "level"
+}

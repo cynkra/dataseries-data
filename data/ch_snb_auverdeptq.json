@@ -1,0 +1,449 @@
+{
+  "schema_version": "1.0",
+  "id": "ch_snb_auverdeptq",
+  "dim_order": [
+    "D0"
+  ],
+  "start": "1999-10-01",
+  "end": "2025-10-01",
+  "title": {
+    "en": "Switzerland’s external debt – Quarter"
+  },
+  "source": {
+    "name": {
+      "en": "Swiss National Bank"
+    },
+    "url": "https://data.snb.ch/en/topics/snb/cube/auverdeptq"
+  },
+  "license": "snb",
+  "frequency": "quarterly",
+  "dimensions": {
+    "D0": {
+      "label": {
+        "en": "Overview"
+      },
+      "levels": {
+        "D0_0": {
+          "label": {
+            "en": "Total"
+          },
+          "data": false
+        },
+        "T0": {
+          "label": {
+            "en": "Total"
+          },
+          "data": true
+        },
+        "D0_0_1": {
+          "label": {
+            "en": "Breakdown by sector"
+          },
+          "data": false
+        },
+        "OH": {
+          "label": {
+            "en": "Public sector"
+          },
+          "data": true
+        },
+        "N": {
+          "label": {
+            "en": "Swiss National Bank"
+          },
+          "data": true
+        },
+        "B": {
+          "label": {
+            "en": "Banks"
+          },
+          "data": true
+        },
+        "US": {
+          "label": {
+            "en": "Other sectors"
+          },
+          "data": true
+        },
+        "D0_0_2": {
+          "label": {
+            "en": "Breakdown by maturity"
+          },
+          "data": false
+        },
+        "K": {
+          "label": {
+            "en": "Short-term"
+          },
+          "data": true
+        },
+        "L": {
+          "label": {
+            "en": "Long-term"
+          },
+          "data": true
+        },
+        "D0_1": {
+          "label": {
+            "en": "Public sector"
+          },
+          "data": false
+        },
+        "T1": {
+          "label": {
+            "en": "Total"
+          },
+          "data": true
+        },
+        "D0_1_1": {
+          "label": {
+            "en": "Short-term"
+          },
+          "data": false
+        },
+        "T2": {
+          "label": {
+            "en": "Total"
+          },
+          "data": true
+        },
+        "S0": {
+          "label": {
+            "en": "Debt securities"
+          },
+          "data": true
+        },
+        "V0": {
+          "label": {
+            "en": "Liabilities"
+          },
+          "data": true
+        },
+        "D0_1_2": {
+          "label": {
+            "en": "Long-term"
+          },
+          "data": false
+        },
+        "T3": {
+          "label": {
+            "en": "Total"
+          },
+          "data": true
+        },
+        "S1": {
+          "label": {
+            "en": "Debt securities"
+          },
+          "data": true
+        },
+        "V1": {
+          "label": {
+            "en": "Liabilities"
+          },
+          "data": true
+        },
+        "D0_2": {
+          "label": {
+            "en": "Swiss National Bank"
+          },
+          "data": false
+        },
+        "T4": {
+          "label": {
+            "en": "Total"
+          },
+          "data": true
+        },
+        "D0_2_1": {
+          "label": {
+            "en": "Short-term"
+          },
+          "data": false
+        },
+        "T5": {
+          "label": {
+            "en": "Total"
+          },
+          "data": true
+        },
+        "S2": {
+          "label": {
+            "en": "Debt securities"
+          },
+          "data": true
+        },
+        "V2": {
+          "label": {
+            "en": "Liabilities"
+          },
+          "data": true
+        },
+        "D0_2_2": {
+          "label": {
+            "en": "Long-term"
+          },
+          "data": false
+        },
+        "T6": {
+          "label": {
+            "en": "Total"
+          },
+          "data": true
+        },
+        "S3": {
+          "label": {
+            "en": "Debt securities"
+          },
+          "data": true
+        },
+        "V3": {
+          "label": {
+            "en": "Liabilities"
+          },
+          "data": true
+        },
+        "D0_3": {
+          "label": {
+            "en": "Banks"
+          },
+          "data": false
+        },
+        "T7": {
+          "label": {
+            "en": "Total"
+          },
+          "data": true
+        },
+        "D0_3_1": {
+          "label": {
+            "en": "Short-term"
+          },
+          "data": false
+        },
+        "T8": {
+          "label": {
+            "en": "Total"
+          },
+          "data": true
+        },
+        "S4": {
+          "label": {
+            "en": "Debt securities"
+          },
+          "data": false
+        },
+        "V4": {
+          "label": {
+            "en": "Liabilities"
+          },
+          "data": true
+        },
+        "D0_3_2": {
+          "label": {
+            "en": "Long-term"
+          },
+          "data": false
+        },
+        "T9": {
+          "label": {
+            "en": "Total"
+          },
+          "data": true
+        },
+        "S5": {
+          "label": {
+            "en": "Debt securities"
+          },
+          "data": true
+        },
+        "V5": {
+          "label": {
+            "en": "Liabilities"
+          },
+          "data": true
+        },
+        "D0_4": {
+          "label": {
+            "en": "Other sectors"
+          },
+          "data": false
+        },
+        "T10": {
+          "label": {
+            "en": "Total"
+          },
+          "data": true
+        },
+        "D0_4_1": {
+          "label": {
+            "en": "Short-term"
+          },
+          "data": false
+        },
+        "T11": {
+          "label": {
+            "en": "Total"
+          },
+          "data": true
+        },
+        "S6": {
+          "label": {
+            "en": "Debt securities"
+          },
+          "data": true
+        },
+        "V6": {
+          "label": {
+            "en": "Liabilities"
+          },
+          "data": true
+        },
+        "D0_4_2": {
+          "label": {
+            "en": "Long-term"
+          },
+          "data": false
+        },
+        "T12": {
+          "label": {
+            "en": "Total"
+          },
+          "data": true
+        },
+        "S7": {
+          "label": {
+            "en": "Debt securities"
+          },
+          "data": true
+        },
+        "V7": {
+          "label": {
+            "en": "Liabilities"
+          },
+          "data": true
+        },
+        "D0_5": {
+          "label": {
+            "en": "Direct investment loans"
+          },
+          "data": false
+        },
+        "D0_5_0": {
+          "label": {
+            "en": "Liabilities Total"
+          },
+          "data": false
+        },
+        "T13": {
+          "label": {
+            "en": "Total"
+          },
+          "data": true
+        },
+        "GTA": {
+          "label": {
+            "en": "Towards subsidiaries abroad"
+          },
+          "data": true
+        },
+        "GDA": {
+          "label": {
+            "en": "Towards direct investors abroad"
+          },
+          "data": true
+        },
+        "GSA": {
+          "label": {
+            "en": "Towards fellow companies abroad"
+          },
+          "data": true
+        }
+      },
+      "hierarchy": {
+        "D0_0": {
+          "T0": [],
+          "D0_0_1": {
+            "OH": [],
+            "N": [],
+            "B": [],
+            "US": []
+          },
+          "D0_0_2": {
+            "K": [],
+            "L": []
+          }
+        },
+        "D0_1": {
+          "T1": [],
+          "D0_1_1": {
+            "T2": [],
+            "S0": [],
+            "V0": []
+          },
+          "D0_1_2": {
+            "T3": [],
+            "S1": [],
+            "V1": []
+          }
+        },
+        "D0_2": {
+          "T4": [],
+          "D0_2_1": {
+            "T5": [],
+            "S2": [],
+            "V2": []
+          },
+          "D0_2_2": {
+            "T6": [],
+            "S3": [],
+            "V3": []
+          }
+        },
+        "D0_3": {
+          "T7": [],
+          "D0_3_1": {
+            "T8": [],
+            "S4": [],
+            "V4": []
+          },
+          "D0_3_2": {
+            "T9": [],
+            "S5": [],
+            "V5": []
+          }
+        },
+        "D0_4": {
+          "T10": [],
+          "D0_4_1": {
+            "T11": [],
+            "S6": [],
+            "V6": []
+          },
+          "D0_4_2": {
+            "T12": [],
+            "S7": [],
+            "V7": []
+          }
+        },
+        "D0_5": {
+          "D0_5_0": {
+            "T13": [],
+            "GTA": [],
+            "GDA": [],
+            "GSA": []
+          }
+        }
+      }
+    }
+  },
+  "topic": "Balance of payments",
+  "default": {
+    "D0": "T0"
+  },
+  "concept": "External sector / International investment position",
+  "canonical": false,
+  "split": "D0",
+  "single_select": [],
+  "default_transform": "level"
+}

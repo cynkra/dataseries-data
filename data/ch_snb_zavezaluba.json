@@ -1,0 +1,220 @@
+{
+  "schema_version": "1.0",
+  "id": "ch_snb_zavezaluba",
+  "dim_order": [
+    "D0",
+    "D1",
+    "D2",
+    "D3",
+    "D4"
+  ],
+  "start": "2005-01-01",
+  "end": "2026-03-01",
+  "title": {
+    "en": "Payments and cash withdrawals"
+  },
+  "source": {
+    "name": {
+      "en": "Swiss National Bank"
+    },
+    "url": "https://data.snb.ch/en/topics/snb/cube/zavezaluba"
+  },
+  "license": "snb",
+  "frequency": "monthly",
+  "dimensions": {
+    "D0": {
+      "label": {
+        "en": "Payments/Cash withdrawals "
+      },
+      "levels": {
+        "Z": {
+          "label": {
+            "en": "Payments"
+          },
+          "data": false
+        },
+        "ZT": {
+          "label": {
+            "en": "Total"
+          },
+          "data": true
+        },
+        "PG": {
+          "label": {
+            "en": "Card-present payments"
+          },
+          "data": false
+        },
+        "PGT": {
+          "label": {
+            "en": "Total"
+          },
+          "data": true
+        },
+        "PGKL": {
+          "label": {
+            "en": "Of which contactless"
+          },
+          "data": true
+        },
+        "DG": {
+          "label": {
+            "en": "Card-not-present payments"
+          },
+          "data": true
+        },
+        "B": {
+          "label": {
+            "en": "Cash withdrawals"
+          },
+          "data": false
+        },
+        "BT": {
+          "label": {
+            "en": "Total"
+          },
+          "data": true
+        },
+        "BE": {
+          "label": {
+            "en": "Of which enhanced coverage of cash withdrawals at card-issuing bank"
+          },
+          "data": true
+        }
+      },
+      "hierarchy": {
+        "Z": {
+          "ZT": [],
+          "PG": {
+            "PGT": [],
+            "PGKL": []
+          },
+          "DG": []
+        },
+        "B": {
+          "BT": [],
+          "BE": []
+        }
+      }
+    },
+    "D1": {
+      "label": {
+        "en": "Payment cards"
+      },
+      "levels": {
+        "K": {
+          "label": {
+            "en": "Credit cards"
+          },
+          "data": true
+        },
+        "D": {
+          "label": {
+            "en": "Debit cards"
+          },
+          "data": true
+        },
+        "EG": {
+          "label": {
+            "en": "E-money"
+          },
+          "data": true
+        }
+      },
+      "hierarchy": {
+        "K": [],
+        "D": [],
+        "EG": []
+      }
+    },
+    "D2": {
+      "label": {
+        "en": "Card origin"
+      },
+      "levels": {
+        "IZ": {
+          "label": {
+            "en": "Domestic payment cards"
+          },
+          "data": true
+        },
+        "AZ": {
+          "label": {
+            "en": "Foreign payment cards"
+          },
+          "data": true
+        }
+      },
+      "hierarchy": {
+        "IZ": [],
+        "AZ": []
+      }
+    },
+    "D3": {
+      "label": {
+        "en": "Place of transaction"
+      },
+      "levels": {
+        "II": {
+          "label": {
+            "en": "Domestic"
+          },
+          "data": true
+        },
+        "IA": {
+          "label": {
+            "en": "Foreign"
+          },
+          "data": true
+        }
+      },
+      "hierarchy": {
+        "II": [],
+        "IA": []
+      }
+    },
+    "D4": {
+      "label": {
+        "en": "Transactions and amount"
+      },
+      "levels": {
+        "TT": {
+          "label": {
+            "en": "Transactions in thousands"
+          },
+          "data": true
+        },
+        "BMF": {
+          "label": {
+            "en": "Amount in CHF millions"
+          },
+          "data": true
+        },
+        "BTF": {
+          "label": {
+            "en": "Amount per transaction in CHF"
+          },
+          "data": true
+        }
+      },
+      "hierarchy": {
+        "TT": [],
+        "BMF": [],
+        "BTF": []
+      }
+    }
+  },
+  "topic": "Payment systems",
+  "default": {
+    "D0": "ZT",
+    "D1": "D",
+    "D2": "IZ",
+    "D3": "II",
+    "D4": "BMF"
+  },
+  "concept": "Payment systems / Payments & cash",
+  "canonical": false,
+  "split": "D0",
+  "single_select": ["D1", "D2", "D3", "D4"],
+  "default_transform": "level"
+}

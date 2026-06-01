@@ -1,0 +1,428 @@
+{
+  "schema_version": "1.0",
+  "id": "ch_fso_besta",
+  "dim_order": [
+    "Wirtschaftsabteilung",
+    "Beschäftigungsgrad",
+    "Geschlecht"
+  ],
+  "start": "1991-07-01",
+  "end": "2026-01-01",
+  "title": {
+    "en": "Jobs by economic division (quarterly)"
+  },
+  "source": {
+    "name": {
+      "en": "Swiss Federal Statistical Office (FSO)"
+    },
+    "url": "https://www.pxweb.bfs.admin.ch/pxweb/en/px-x-0602000000_101"
+  },
+  "license": "fso",
+  "frequency": "quarterly",
+  "dimensions": {
+    "Wirtschaftsabteilung": {
+      "label": {
+        "en": "Economic division"
+      },
+      "levels": {
+        "5-96": {
+          "label": {
+            "en": "5-96 Total"
+          },
+          "data": true
+        },
+        "5-43": {
+          "label": {
+            "en": "5-43 SECTOR II"
+          },
+          "data": true
+        },
+        "5-9": {
+          "label": {
+            "en": "5-9 Mining and quarrying"
+          },
+          "data": true
+        },
+        "10-33": {
+          "label": {
+            "en": "10-33 Manufactury"
+          },
+          "data": true
+        },
+        "10-12": {
+          "label": {
+            "en": "10-12 Manufacture of food and tobacco products"
+          },
+          "data": true
+        },
+        "13-15": {
+          "label": {
+            "en": "13-15 Manufacture of textiles and apparel"
+          },
+          "data": true
+        },
+        "16-18": {
+          "label": {
+            "en": "16-18 Manufacture of wood and paper products, and printing"
+          },
+          "data": true
+        },
+        "19-20": {
+          "label": {
+            "en": "19-20 Manufacture of coke, chemicals and chemical products"
+          },
+          "data": true
+        },
+        "21": {
+          "label": {
+            "en": "21 Manufacture of pharmaceutical products"
+          },
+          "data": true
+        },
+        "22-23": {
+          "label": {
+            "en": "22-23 Manufacture of rubber and plastics products"
+          },
+          "data": true
+        },
+        "24-25": {
+          "label": {
+            "en": "24-25 Manufacture of metal products"
+          },
+          "data": true
+        },
+        "26": {
+          "label": {
+            "en": "26 Manufacture of computer, electronic and optical products, watches and clocks"
+          },
+          "data": true
+        },
+        "27": {
+          "label": {
+            "en": "27 Manufacture of electrical equipment"
+          },
+          "data": true
+        },
+        "28": {
+          "label": {
+            "en": "28 Manufacture of machinery and equipment n.e.c."
+          },
+          "data": true
+        },
+        "29-30": {
+          "label": {
+            "en": "29-30 Manufacture of transport equipment"
+          },
+          "data": true
+        },
+        "31-33": {
+          "label": {
+            "en": "31-33 Other manufacturing, repair and installation"
+          },
+          "data": true
+        },
+        "35": {
+          "label": {
+            "en": "35 Electricity, gas, steam and air-conditioning supply"
+          },
+          "data": true
+        },
+        "36-39": {
+          "label": {
+            "en": "36-39 Water supply, waste management"
+          },
+          "data": true
+        },
+        "41-43": {
+          "label": {
+            "en": "41-43 Construction"
+          },
+          "data": true
+        },
+        "41-42": {
+          "label": {
+            "en": "41-42 Construction of buildings and Civil engineering"
+          },
+          "data": true
+        },
+        "43": {
+          "label": {
+            "en": "43 Specialised construction activities"
+          },
+          "data": true
+        },
+        "45-96": {
+          "label": {
+            "en": "45-96 SECTOR III"
+          },
+          "data": true
+        },
+        "45-47": {
+          "label": {
+            "en": "45-47 Trade and repair of motor vehicles and motorcycles"
+          },
+          "data": true
+        },
+        "45": {
+          "label": {
+            "en": "45 Trade and repair of motor vehicles and motorcycles"
+          },
+          "data": true
+        },
+        "46": {
+          "label": {
+            "en": "46 Wholesale trade"
+          },
+          "data": true
+        },
+        "47": {
+          "label": {
+            "en": "47 Retail trade"
+          },
+          "data": true
+        },
+        "49-53": {
+          "label": {
+            "en": "49-53 Transport and stockage"
+          },
+          "data": true
+        },
+        "49": {
+          "label": {
+            "en": "49 Land transport and transport via pipelines"
+          },
+          "data": true
+        },
+        "50-51": {
+          "label": {
+            "en": "50-51 Water transport and Air transport"
+          },
+          "data": true
+        },
+        "52": {
+          "label": {
+            "en": "52 Warehousing and support activities for transportation"
+          },
+          "data": true
+        },
+        "53": {
+          "label": {
+            "en": "53 Postal and courier activities"
+          },
+          "data": true
+        },
+        "55-56": {
+          "label": {
+            "en": "55-56 Hotels and gastronomy"
+          },
+          "data": true
+        },
+        "55": {
+          "label": {
+            "en": "55 Accommodation"
+          },
+          "data": true
+        },
+        "56": {
+          "label": {
+            "en": "56 Food and beverage service activities"
+          },
+          "data": true
+        },
+        "58-63": {
+          "label": {
+            "en": "58-63 IT and communications"
+          },
+          "data": true
+        },
+        "58-60": {
+          "label": {
+            "en": "58-60 Publishing, audiovisual and broadcasting activities"
+          },
+          "data": true
+        },
+        "61": {
+          "label": {
+            "en": "61 Telecommunications"
+          },
+          "data": true
+        },
+        "62-63": {
+          "label": {
+            "en": "62-63 IT and other information services"
+          },
+          "data": true
+        },
+        "64-66": {
+          "label": {
+            "en": "64-66 Finance and assurance"
+          },
+          "data": true
+        },
+        "64": {
+          "label": {
+            "en": "64 Financial service activities"
+          },
+          "data": true
+        },
+        "65": {
+          "label": {
+            "en": "65 Insurance"
+          },
+          "data": true
+        },
+        "66": {
+          "label": {
+            "en": "66 Activities auxiliary to financial services and insurance activities"
+          },
+          "data": true
+        },
+        "68": {
+          "label": {
+            "en": "68 Real estate activities"
+          },
+          "data": true
+        },
+        "69-75": {
+          "label": {
+            "en": "69-75 Professional, scientific and technical activities"
+          },
+          "data": true
+        },
+        "69": {
+          "label": {
+            "en": "69 Legal and accounting activities"
+          },
+          "data": true
+        },
+        "70": {
+          "label": {
+            "en": "70 Activities of head offices, management consultancy activities"
+          },
+          "data": true
+        },
+        "71": {
+          "label": {
+            "en": "71 Architectural and engineering activities"
+          },
+          "data": true
+        },
+        "72": {
+          "label": {
+            "en": "72 Scientific research and development"
+          },
+          "data": true
+        },
+        "73-75": {
+          "label": {
+            "en": "73-75 Other professional, scientific and technical activities"
+          },
+          "data": true
+        },
+        "77-82": {
+          "label": {
+            "en": "77-82 Administrative and support service activities"
+          },
+          "data": true
+        },
+        "78": {
+          "label": {
+            "en": "78 Employment activities"
+          },
+          "data": true
+        },
+        "77+79-82": {
+          "label": {
+            "en": "77+79-82 Administrative and support service activities (without 78)"
+          },
+          "data": true
+        },
+        "84": {
+          "label": {
+            "en": "84 Public administration"
+          },
+          "data": true
+        },
+        "85": {
+          "label": {
+            "en": "85 Education"
+          },
+          "data": true
+        },
+        "86-88": {
+          "label": {
+            "en": "86-88 Health and social work activities"
+          },
+          "data": true
+        },
+        "86": {
+          "label": {
+            "en": "86 Human health activities"
+          },
+          "data": true
+        },
+        "87": {
+          "label": {
+            "en": "87 Residential care activities"
+          },
+          "data": true
+        },
+        "88": {
+          "label": {
+            "en": "88 Social work activities without accommodation"
+          },
+          "data": true
+        },
+        "90-93": {
+          "label": {
+            "en": "90-93 Arts, entertainment and recreation"
+          },
+          "data": true
+        },
+        "94-96": {
+          "label": {
+            "en": "94-96 Other service activities"
+          },
+          "data": true
+        }
+      }
+    },
+    "Beschäftigungsgrad": {
+      "label": {
+        "en": "Employment rate"
+      },
+      "levels": {
+        "TOT": {
+          "label": {
+            "en": "Employment rate - total"
+          },
+          "data": true
+        }
+      }
+    },
+    "Geschlecht": {
+      "label": {
+        "en": "Gender"
+      },
+      "levels": {
+        "TOT": {
+          "label": {
+            "en": "Gender - total"
+          },
+          "data": true
+        }
+      }
+    }
+  },
+  "topic": "Labour",
+  "default": {
+    "Wirtschaftsabteilung": "5-96",
+    "Beschäftigungsgrad": "TOT",
+    "Geschlecht": "TOT"
+  },
+  "concept": "Labour / Employment / jobs",
+  "canonical": true,
+  "split": "Wirtschaftsabteilung",
+  "single_select": ["Beschäftigungsgrad", "Geschlecht"],
+  "default_transform": "level"
+}

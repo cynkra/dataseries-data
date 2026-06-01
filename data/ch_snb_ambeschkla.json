@@ -1,0 +1,208 @@
+{
+  "schema_version": "1.0",
+  "id": "ch_snb_ambeschkla",
+  "dim_order": [
+    "D0",
+    "D1"
+  ],
+  "start": "1991-07-01",
+  "end": "2025-10-01",
+  "title": {
+    "en": "Employees, by economic activity"
+  },
+  "source": {
+    "name": {
+      "en": "Swiss National Bank"
+    },
+    "url": "https://data.snb.ch/en/topics/snb/cube/ambeschkla"
+  },
+  "license": "snb",
+  "frequency": "quarterly",
+  "dimensions": {
+    "D0": {
+      "label": {
+        "en": "Employees"
+      },
+      "levels": {
+        "VT": {
+          "label": {
+            "en": "Total"
+          },
+          "data": true
+        },
+        "V": {
+          "label": {
+            "en": "Full-time employees"
+          },
+          "data": true
+        },
+        "T": {
+          "label": {
+            "en": "Part-time employees"
+          },
+          "data": true
+        },
+        "IV": {
+          "label": {
+            "en": "In full-time equivalents"
+          },
+          "data": true
+        }
+      },
+      "hierarchy": {
+        "VT": [],
+        "V": [],
+        "T": [],
+        "IV": []
+      }
+    },
+    "D1": {
+      "label": {
+        "en": "Economic activity"
+      },
+      "levels": {
+        "D1_0": {
+          "label": {
+            "en": "Secondary and tertiary sectors"
+          },
+          "data": false
+        },
+        "T0": {
+          "label": {
+            "en": "Total"
+          },
+          "data": true
+        },
+        "D1_1": {
+          "label": {
+            "en": "Secondary sector"
+          },
+          "data": false
+        },
+        "T1": {
+          "label": {
+            "en": "Total"
+          },
+          "data": true
+        },
+        "VGHW": {
+          "label": {
+            "en": "Manufacturing"
+          },
+          "data": true
+        },
+        "BB": {
+          "label": {
+            "en": "Construction"
+          },
+          "data": true
+        },
+        "D1_2": {
+          "label": {
+            "en": "Tertiary sector"
+          },
+          "data": false
+        },
+        "T2": {
+          "label": {
+            "en": "Total"
+          },
+          "data": true
+        },
+        "HIRK": {
+          "label": {
+            "en": "Trading, maintenance and repair of motor vehicles"
+          },
+          "data": true
+        },
+        "GBG": {
+          "label": {
+            "en": "Hospitality/Accommodation and food service activities"
+          },
+          "data": true
+        },
+        "VL": {
+          "label": {
+            "en": "Transport, storage and warehousing"
+          },
+          "data": true
+        },
+        "EF": {
+          "label": {
+            "en": "Provision of financial services"
+          },
+          "data": true
+        },
+        "V": {
+          "label": {
+            "en": "Insurance"
+          },
+          "data": true
+        },
+        "GW": {
+          "label": {
+            "en": "Real estate activities"
+          },
+          "data": true
+        },
+        "EU": {
+          "label": {
+            "en": "Education"
+          },
+          "data": true
+        },
+        "GS": {
+          "label": {
+            "en": "Health and social work activities"
+          },
+          "data": true
+        },
+        "ED": {
+          "label": {
+            "en": "Other service activities"
+          },
+          "data": true
+        },
+        "OV": {
+          "label": {
+            "en": "Public administration"
+          },
+          "data": true
+        }
+      },
+      "hierarchy": {
+        "D1_0": {
+          "T0": []
+        },
+        "D1_1": {
+          "T1": [],
+          "VGHW": [],
+          "BB": []
+        },
+        "D1_2": {
+          "T2": [],
+          "HIRK": [],
+          "GBG": [],
+          "VL": [],
+          "EF": [],
+          "V": [],
+          "GW": [],
+          "EU": [],
+          "GS": [],
+          "ED": [],
+          "OV": []
+        }
+      }
+    }
+  },
+  "topic": "Labour market",
+  "default": {
+    "D0": "VT",
+    "D1": "T0"
+  },
+  "concept": "Labour / Employment / jobs",
+  "canonical": false,
+  "split": "D1",
+  "single_select": "D0",
+  "default_transform": "level"
+}

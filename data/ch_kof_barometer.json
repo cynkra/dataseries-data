@@ -1,0 +1,22 @@
+{
+  "schema_version": "1.0",
+  "id": "ch_kof_barometer",
+  "dim_order": [],
+  "start": "1991-01-01",
+  "end": "2026-05-01",
+  "title": {
+    "en": "KOF Economic Barometer"
+  },
+  "source": {
+    "name": {
+      "en": "KOF Swiss Economic Institute"
+    },
+    "url": "https://kof.ethz.ch/en/forecasts-and-indicators/indicators/kof-economic-barometer.html"
+  },
+  "license": "kof",
+  "frequency": "monthly",
+  "dimensions": {},
+  "topic": "Business cycle",
+  "concept": "Business cycle & sentiment / Leading barometer",
+  "canonical": true
+}

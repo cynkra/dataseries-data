@@ -1,0 +1,186 @@
+{
+  "schema_version": "1.0",
+  "id": "ch_snb_bakredinausbm",
+  "dim_order": [
+    "D0",
+    "D1",
+    "D2",
+    "D3"
+  ],
+  "start": "1985-06-01",
+  "end": "2026-03-01",
+  "title": {
+    "en": "Mortgage loans and other domestic and foreign loans"
+  },
+  "source": {
+    "name": {
+      "en": "Swiss National Bank"
+    },
+    "url": "https://data.snb.ch/en/topics/snb/cube/bakredinausbm"
+  },
+  "license": "snb",
+  "frequency": "monthly",
+  "dimensions": {
+    "D0": {
+      "label": {
+        "en": "Bank category"
+      },
+      "levels": {
+        "AV1": {
+          "label": {
+            "en": "Banks in Switzerland"
+          },
+          "data": true
+        },
+        "AV10": {
+          "label": {
+            "en": "Raiffeisen banks"
+          },
+          "data": true
+        },
+        "AV2": {
+          "label": {
+            "en": "Cantonal banks"
+          },
+          "data": true
+        },
+        "AV3": {
+          "label": {
+            "en": "Big banks"
+          },
+          "data": true
+        },
+        "AV4": {
+          "label": {
+            "en": "Regional and savings banks"
+          },
+          "data": true
+        }
+      },
+      "hierarchy": {
+        "AV1": [],
+        "AV10": [],
+        "AV2": [],
+        "AV3": [],
+        "AV4": []
+      }
+    },
+    "D1": {
+      "label": {
+        "en": "Domestic and foreign"
+      },
+      "levels": {
+        "T0": {
+          "label": {
+            "en": "Total domestic and foreign"
+          },
+          "data": true
+        },
+        "I": {
+          "label": {
+            "en": "Domestic"
+          },
+          "data": true
+        },
+        "A": {
+          "label": {
+            "en": "Foreign"
+          },
+          "data": true
+        }
+      },
+      "hierarchy": {
+        "T0": [],
+        "I": [],
+        "A": []
+      }
+    },
+    "D2": {
+      "label": {
+        "en": "Type of loan"
+      },
+      "levels": {
+        "T1": {
+          "label": {
+            "en": "Total loans"
+          },
+          "data": true
+        },
+        "H": {
+          "label": {
+            "en": "Mortgage loans"
+          },
+          "data": true
+        },
+        "K": {
+          "label": {
+            "en": "Other loans"
+          },
+          "data": false
+        },
+        "T2": {
+          "label": {
+            "en": "Total"
+          },
+          "data": true
+        },
+        "G": {
+          "label": {
+            "en": "secured"
+          },
+          "data": true
+        },
+        "U": {
+          "label": {
+            "en": "unsecured"
+          },
+          "data": true
+        }
+      },
+      "hierarchy": {
+        "T1": [],
+        "H": [],
+        "K": {
+          "T2": [],
+          "G": [],
+          "U": []
+        }
+      }
+    },
+    "D3": {
+      "label": {
+        "en": "Utilisation and credit lines"
+      },
+      "levels": {
+        "F": {
+          "label": {
+            "en": "Utilisation"
+          },
+          "data": true
+        },
+        "B": {
+          "label": {
+            "en": "Credit lines"
+          },
+          "data": true
+        }
+      },
+      "hierarchy": {
+        "F": [],
+        "B": []
+      }
+    }
+  },
+  "topic": "Banking",
+  "default": {
+    "D0": "AV1",
+    "D1": "T0",
+    "D2": "T1",
+    "D3": "F"
+  },
+  "concept": "Money & banking / Banking & credit",
+  "canonical": true,
+  "split": "D1",
+  "single_select": ["D0", "D2", "D3"],
+  "default_transform": "level"
+}

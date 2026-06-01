@@ -1,0 +1,183 @@
+{
+  "schema_version": "1.0",
+  "id": "ch_snb_plimoinchq",
+  "dim_order": [
+    "D0",
+    "D1"
+  ],
+  "start": "1970-01-01",
+  "end": "2026-01-01",
+  "title": {
+    "en": "Real estate price indices – total for Switzerland – by quarter"
+  },
+  "source": {
+    "name": {
+      "en": "Swiss National Bank"
+    },
+    "url": "https://data.snb.ch/en/topics/snb/cube/plimoinchq"
+  },
+  "license": "snb",
+  "frequency": "quarterly",
+  "dimensions": {
+    "D0": {
+      "label": {
+        "en": "Property type"
+      },
+      "levels": {
+        "D0_0": {
+          "label": {
+            "en": "Residential property prices"
+          },
+          "data": false
+        },
+        "EW": {
+          "label": {
+            "en": "Privately owned apartments"
+          },
+          "data": true
+        },
+        "EH": {
+          "label": {
+            "en": "Single-family houses"
+          },
+          "data": true
+        },
+        "MH": {
+          "label": {
+            "en": "Apartment buildings (residential investment property)"
+          },
+          "data": true
+        },
+        "D0_1": {
+          "label": {
+            "en": "Rents"
+          },
+          "data": false
+        },
+        "MW": {
+          "label": {
+            "en": "Rental housing units"
+          },
+          "data": true
+        },
+        "BF": {
+          "label": {
+            "en": "Office space"
+          },
+          "data": true
+        },
+        "GF": {
+          "label": {
+            "en": "Industrial and commercial space"
+          },
+          "data": true
+        },
+        "VF": {
+          "label": {
+            "en": "Retail space"
+          },
+          "data": true
+        }
+      },
+      "hierarchy": {
+        "D0_0": {
+          "EW": [],
+          "EH": [],
+          "MH": []
+        },
+        "D0_1": {
+          "MW": [],
+          "BF": [],
+          "GF": [],
+          "VF": []
+        }
+      }
+    },
+    "D1": {
+      "label": {
+        "en": "Data provider"
+      },
+      "levels": {
+        "D0_3": {
+          "label": {
+            "en": "Swiss Federal Statistical Office"
+          },
+          "data": false
+        },
+        "TP3": {
+          "label": {
+            "en": "Transaction price"
+          },
+          "data": true
+        },
+        "D0_1": {
+          "label": {
+            "en": "Fahrländer Partner"
+          },
+          "data": false
+        },
+        "TP1": {
+          "label": {
+            "en": "Transaction price"
+          },
+          "data": true
+        },
+        "D0_2": {
+          "label": {
+            "en": "IAZI"
+          },
+          "data": false
+        },
+        "TP2": {
+          "label": {
+            "en": "Transaction price"
+          },
+          "data": true
+        },
+        "D0_0": {
+          "label": {
+            "en": "Wüest Partner"
+          },
+          "data": false
+        },
+        "AP": {
+          "label": {
+            "en": "Asking price"
+          },
+          "data": true
+        },
+        "TP": {
+          "label": {
+            "en": "Transaction price"
+          },
+          "data": true
+        }
+      },
+      "hierarchy": {
+        "D0_3": {
+          "TP3": []
+        },
+        "D0_1": {
+          "TP1": []
+        },
+        "D0_2": {
+          "TP2": []
+        },
+        "D0_0": {
+          "AP": [],
+          "TP": []
+        }
+      }
+    }
+  },
+  "topic": "Prices",
+  "default": {
+    "D0": "EW",
+    "D1": "AP"
+  },
+  "concept": "Prices / Real estate prices",
+  "canonical": true,
+  "split": "D0",
+  "single_select": "D1",
+  "default_transform": "level"
+}

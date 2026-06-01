@@ -1,0 +1,469 @@
+{
+  "schema_version": "1.0",
+  "id": "ch_snb_bopcapbalq",
+  "dim_order": [
+    "D0",
+    "D1"
+  ],
+  "start": "1985-01-01",
+  "end": "2025-10-01",
+  "title": {
+    "en": "Swiss balance of payments – Financial account – Quarter"
+  },
+  "source": {
+    "name": {
+      "en": "Swiss National Bank"
+    },
+    "url": "https://data.snb.ch/en/topics/snb/cube/bopcapbalq"
+  },
+  "license": "snb",
+  "frequency": "quarterly",
+  "dimensions": {
+    "D0": {
+      "label": {
+        "en": "Accounting entry"
+      },
+      "levels": {
+        "NA": {
+          "label": {
+            "en": "Net acquisition of financial assets"
+          },
+          "data": true
+        },
+        "NP": {
+          "label": {
+            "en": "Net incurrence of liabilities"
+          },
+          "data": true
+        },
+        "S": {
+          "label": {
+            "en": "Net"
+          },
+          "data": true
+        }
+      },
+      "hierarchy": {
+        "NA": [],
+        "NP": [],
+        "S": []
+      }
+    },
+    "D1": {
+      "label": {
+        "en": "Component"
+      },
+      "levels": {
+        "T0": {
+          "label": {
+            "en": "Total"
+          },
+          "data": true
+        },
+        "D1_1": {
+          "label": {
+            "en": "Direct investment"
+          },
+          "data": false
+        },
+        "T1": {
+          "label": {
+            "en": "Total"
+          },
+          "data": true
+        },
+        "B0": {
+          "label": {
+            "en": "Equity capital"
+          },
+          "data": true
+        },
+        "RE": {
+          "label": {
+            "en": "Reinvestment of earnings"
+          },
+          "data": true
+        },
+        "K0": {
+          "label": {
+            "en": "Debt instruments"
+          },
+          "data": true
+        },
+        "D1_2": {
+          "label": {
+            "en": "Portfolio investment"
+          },
+          "data": false
+        },
+        "T2": {
+          "label": {
+            "en": "Total"
+          },
+          "data": true
+        },
+        "S0": {
+          "label": {
+            "en": "Debt securities"
+          },
+          "data": false
+        },
+        "T25": {
+          "label": {
+            "en": "Total"
+          },
+          "data": true
+        },
+        "KFR": {
+          "label": {
+            "en": "short-term"
+          },
+          "data": true
+        },
+        "LFR": {
+          "label": {
+            "en": "long-term"
+          },
+          "data": true
+        },
+        "D1_2_2": {
+          "label": {
+            "en": "Equity securities"
+          },
+          "data": false
+        },
+        "T3": {
+          "label": {
+            "en": "Total"
+          },
+          "data": true
+        },
+        "A": {
+          "label": {
+            "en": "Shares"
+          },
+          "data": true
+        },
+        "K1": {
+          "label": {
+            "en": "Collective investment schemes"
+          },
+          "data": true
+        },
+        "D1_3": {
+          "label": {
+            "en": "Other investment"
+          },
+          "data": false
+        },
+        "T4": {
+          "label": {
+            "en": "Total"
+          },
+          "data": true
+        },
+        "D1_3_1": {
+          "label": {
+            "en": "Currency and deposits"
+          },
+          "data": false
+        },
+        "T5": {
+          "label": {
+            "en": "Total"
+          },
+          "data": true
+        },
+        "N0": {
+          "label": {
+            "en": "Swiss National Bank"
+          },
+          "data": true
+        },
+        "B1": {
+          "label": {
+            "en": "Banks"
+          },
+          "data": false
+        },
+        "T55": {
+          "label": {
+            "en": "Total"
+          },
+          "data": true
+        },
+        "FGB": {
+          "label": {
+            "en": "Of which Amounts due from banks"
+          },
+          "data": true
+        },
+        "VGB": {
+          "label": {
+            "en": "Of which Amounts due to banks"
+          },
+          "data": true
+        },
+        "VGK": {
+          "label": {
+            "en": "Of which Amounts due to customers"
+          },
+          "data": true
+        },
+        "OH0": {
+          "label": {
+            "en": "Public sector"
+          },
+          "data": true
+        },
+        "US0": {
+          "label": {
+            "en": "Other sectors"
+          },
+          "data": true
+        },
+        "D1_3_2": {
+          "label": {
+            "en": "Loans"
+          },
+          "data": false
+        },
+        "T6": {
+          "label": {
+            "en": "Total"
+          },
+          "data": true
+        },
+        "N1": {
+          "label": {
+            "en": "Swiss National Bank"
+          },
+          "data": true
+        },
+        "B2": {
+          "label": {
+            "en": "Banks"
+          },
+          "data": false
+        },
+        "T65": {
+          "label": {
+            "en": "Total"
+          },
+          "data": true
+        },
+        "FGK": {
+          "label": {
+            "en": "Of which Amounts due from customers"
+          },
+          "data": true
+        },
+        "OH1": {
+          "label": {
+            "en": "Public sector"
+          },
+          "data": true
+        },
+        "US1": {
+          "label": {
+            "en": "Other sectors"
+          },
+          "data": true
+        },
+        "UNA": {
+          "label": {
+            "en": "Other net acquisition of financial assets"
+          },
+          "data": true
+        },
+        "UNP": {
+          "label": {
+            "en": "Other net incurrence of liabilities"
+          },
+          "data": true
+        },
+        "D1_4": {
+          "label": {
+            "en": "Reserve assets"
+          },
+          "data": false
+        },
+        "T7": {
+          "label": {
+            "en": "Total"
+          },
+          "data": true
+        },
+        "G": {
+          "label": {
+            "en": "Gold holdings"
+          },
+          "data": false
+        },
+        "RIWF": {
+          "label": {
+            "en": "Reserve position in the IMF"
+          },
+          "data": true
+        },
+        "S1": {
+          "label": {
+            "en": "Special Drawing Rights"
+          },
+          "data": true
+        },
+        "D1_4_4": {
+          "label": {
+            "en": "Foreign currency investments"
+          },
+          "data": false
+        },
+        "T8": {
+          "label": {
+            "en": "Total"
+          },
+          "data": true
+        },
+        "W0": {
+          "label": {
+            "en": "Securities"
+          },
+          "data": true
+        },
+        "BE": {
+          "label": {
+            "en": "Currency and deposits"
+          },
+          "data": true
+        },
+        "U": {
+          "label": {
+            "en": "Other positions"
+          },
+          "data": true
+        },
+        "KD": {
+          "label": {
+            "en": "Financial account (including derivatives)"
+          },
+          "data": true
+        },
+        "D1_6": {
+          "label": {
+            "en": "Financial account"
+          },
+          "data": false
+        },
+        "D0": {
+          "label": {
+            "en": "Direct investment"
+          },
+          "data": true
+        },
+        "P": {
+          "label": {
+            "en": "Portfolio investment"
+          },
+          "data": true
+        },
+        "D2": {
+          "label": {
+            "en": "Derivatives"
+          },
+          "data": true
+        },
+        "UI": {
+          "label": {
+            "en": "Other investment"
+          },
+          "data": true
+        },
+        "W1": {
+          "label": {
+            "en": "Reserve assets"
+          },
+          "data": true
+        }
+      },
+      "hierarchy": {
+        "T0": [],
+        "D1_1": {
+          "T1": [],
+          "B0": [],
+          "RE": [],
+          "K0": []
+        },
+        "D1_2": {
+          "T2": [],
+          "S0": {
+            "T25": [],
+            "KFR": [],
+            "LFR": []
+          },
+          "D1_2_2": {
+            "T3": [],
+            "A": [],
+            "K1": []
+          }
+        },
+        "D1_3": {
+          "T4": [],
+          "D1_3_1": {
+            "T5": [],
+            "N0": [],
+            "B1": {
+              "T55": [],
+              "FGB": [],
+              "VGB": [],
+              "VGK": []
+            },
+            "OH0": [],
+            "US0": []
+          },
+          "D1_3_2": {
+            "T6": [],
+            "N1": [],
+            "B2": {
+              "T65": [],
+              "FGK": []
+            },
+            "OH1": [],
+            "US1": []
+          },
+          "UNA": [],
+          "UNP": []
+        },
+        "D1_4": {
+          "T7": [],
+          "G": [],
+          "RIWF": [],
+          "S1": [],
+          "D1_4_4": {
+            "T8": [],
+            "W0": [],
+            "BE": []
+          },
+          "U": []
+        },
+        "KD": [],
+        "D1_6": {
+          "D0": [],
+          "P": [],
+          "D2": [],
+          "UI": [],
+          "W1": []
+        }
+      }
+    }
+  },
+  "topic": "Balance of payments",
+  "default": {
+    "D0": "S",
+    "D1": "T0"
+  },
+  "concept": "External sector / Balance of payments",
+  "canonical": true,
+  "split": "D1",
+  "single_select": "D0",
+  "default_transform": "level"
+}

@@ -1,0 +1,221 @@
+{
+  "schema_version": "1.0",
+  "id": "ch_snb_rendeiduebd",
+  "dim_order": [
+    "D0",
+    "D1"
+  ],
+  "start": "1988-01-04",
+  "end": "2026-04-30",
+  "title": {
+    "en": "Spot interest rates on Swiss Confederation bonds, euro area government bonds and CHF bond issues for various borrower categories – Day"
+  },
+  "source": {
+    "name": {
+      "en": "Swiss National Bank"
+    },
+    "url": "https://data.snb.ch/en/topics/snb/cube/rendeiduebd"
+  },
+  "license": "snb",
+  "frequency": "daily",
+  "dimensions": {
+    "D0": {
+      "label": {
+        "en": "Bond categories"
+      },
+      "levels": {
+        "D0_0": {
+          "label": {
+            "en": "Spot interest rates on Swiss Confederation bonds and euro area government bonds"
+          },
+          "data": false
+        },
+        "CHF": {
+          "label": {
+            "en": "CHF Swiss Confederation bond issues"
+          },
+          "data": true
+        },
+        "EUR": {
+          "label": {
+            "en": "Euro area government bonds"
+          },
+          "data": true
+        },
+        "D1_1": {
+          "label": {
+            "en": "Spot interest rates on CHF bond issues for various borrower categories"
+          },
+          "data": false
+        },
+        "KTA": {
+          "label": {
+            "en": "Cantons AAA, AA+"
+          },
+          "data": true
+        },
+        "KTB": {
+          "label": {
+            "en": "Cantons AA, AA-"
+          },
+          "data": true
+        },
+        "PFI": {
+          "label": {
+            "en": "Mortgage bond institutions"
+          },
+          "data": true
+        },
+        "GBA": {
+          "label": {
+            "en": "Commercial banks (incl. cantonal banks) AAA, AA+"
+          },
+          "data": true
+        },
+        "GBB": {
+          "label": {
+            "en": "Commercial banks (incl. cantonal banks) AA, AA-"
+          },
+          "data": true
+        },
+        "GBC": {
+          "label": {
+            "en": "Commercial banks (incl. cantonal banks) A+, A, A-"
+          },
+          "data": true
+        },
+        "IHA": {
+          "label": {
+            "en": "Manufacturing (incl. power plants) and trade A+, A, A-"
+          },
+          "data": true
+        },
+        "IHB": {
+          "label": {
+            "en": "Manufacturing (incl. power plants) and trade BBB+, BBB, BBB-"
+          },
+          "data": true
+        }
+      },
+      "hierarchy": {
+        "D0_0": {
+          "CHF": [],
+          "EUR": []
+        },
+        "D1_1": {
+          "KTA": [],
+          "KTB": [],
+          "PFI": [],
+          "GBA": [],
+          "GBB": [],
+          "GBC": [],
+          "IHA": [],
+          "IHB": []
+        }
+      }
+    },
+    "D1": {
+      "label": {
+        "en": "Maturity"
+      },
+      "levels": {
+        "1J": {
+          "label": {
+            "en": "1 year"
+          },
+          "data": true
+        },
+        "2J": {
+          "label": {
+            "en": "2 years"
+          },
+          "data": true
+        },
+        "3J": {
+          "label": {
+            "en": "3 years"
+          },
+          "data": true
+        },
+        "4J": {
+          "label": {
+            "en": "4 years"
+          },
+          "data": true
+        },
+        "5J": {
+          "label": {
+            "en": "5 years"
+          },
+          "data": true
+        },
+        "6J": {
+          "label": {
+            "en": "6 years"
+          },
+          "data": true
+        },
+        "7J": {
+          "label": {
+            "en": "7 years"
+          },
+          "data": true
+        },
+        "8J": {
+          "label": {
+            "en": "8 years"
+          },
+          "data": true
+        },
+        "9J": {
+          "label": {
+            "en": "9 years"
+          },
+          "data": true
+        },
+        "10J": {
+          "label": {
+            "en": "10 years"
+          },
+          "data": true
+        },
+        "20J": {
+          "label": {
+            "en": "20 years"
+          },
+          "data": true
+        },
+        "30J": {
+          "label": {
+            "en": "30 years"
+          },
+          "data": true
+        }
+      },
+      "hierarchy": {
+        "1J": [],
+        "2J": [],
+        "3J": [],
+        "4J": [],
+        "5J": [],
+        "6J": [],
+        "7J": [],
+        "8J": [],
+        "9J": [],
+        "10J": [],
+        "20J": [],
+        "30J": []
+      }
+    }
+  },
+  "topic": "Interest rates",
+  "default": {
+    "D0": "CHF",
+    "D1": "10J"
+  },
+  "concept": "Interest rates & yields / Bond yields",
+  "canonical": false,
+  "split": "D0",
+  "single_select": "D1",
+  "default_transform": "level"
+}

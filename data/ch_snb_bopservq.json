@@ -1,0 +1,624 @@
+{
+  "schema_version": "1.0",
+  "id": "ch_snb_bopservq",
+  "dim_order": [
+    "D0",
+    "D1",
+    "D2"
+  ],
+  "start": "2012-01-01",
+  "end": "2025-10-01",
+  "title": {
+    "en": "Swiss balance of payments – Current account services, by country – Quarter"
+  },
+  "source": {
+    "name": {
+      "en": "Swiss National Bank"
+    },
+    "url": "https://data.snb.ch/en/topics/snb/cube/bopservq"
+  },
+  "license": "snb",
+  "frequency": "quarterly",
+  "dimensions": {
+    "D0": {
+      "label": {
+        "en": "Countries"
+      },
+      "levels": {
+        "D0_0": {
+          "label": {
+            "en": "All countries"
+          },
+          "data": false
+        },
+        "T0": {
+          "label": {
+            "en": "Total"
+          },
+          "data": true
+        },
+        "D0_1": {
+          "label": {
+            "en": "Europe"
+          },
+          "data": false
+        },
+        "T1": {
+          "label": {
+            "en": "Total"
+          },
+          "data": true
+        },
+        "EU": {
+          "label": {
+            "en": "EU"
+          },
+          "data": true
+        },
+        "EU27": {
+          "label": {
+            "en": "EU27"
+          },
+          "data": true
+        },
+        "O": {
+          "label": {
+            "en": "Austria"
+          },
+          "data": true
+        },
+        "B0": {
+          "label": {
+            "en": "Belgium"
+          },
+          "data": true
+        },
+        "B1": {
+          "label": {
+            "en": "Bulgaria"
+          },
+          "data": true
+        },
+        "T2": {
+          "label": {
+            "en": "Czechia"
+          },
+          "data": true
+        },
+        "D1": {
+          "label": {
+            "en": "Germany"
+          },
+          "data": true
+        },
+        "D2": {
+          "label": {
+            "en": "Denmark"
+          },
+          "data": true
+        },
+        "S0": {
+          "label": {
+            "en": "Spain"
+          },
+          "data": true
+        },
+        "F0": {
+          "label": {
+            "en": "Finland"
+          },
+          "data": true
+        },
+        "F1": {
+          "label": {
+            "en": "France"
+          },
+          "data": true
+        },
+        "VK": {
+          "label": {
+            "en": "United Kingdom"
+          },
+          "data": true
+        },
+        "G": {
+          "label": {
+            "en": "Greece"
+          },
+          "data": true
+        },
+        "K0": {
+          "label": {
+            "en": "Croatia"
+          },
+          "data": true
+        },
+        "U": {
+          "label": {
+            "en": "Hungary"
+          },
+          "data": true
+        },
+        "I0": {
+          "label": {
+            "en": "Ireland"
+          },
+          "data": true
+        },
+        "I1": {
+          "label": {
+            "en": "Italy"
+          },
+          "data": true
+        },
+        "L": {
+          "label": {
+            "en": "Luxembourg"
+          },
+          "data": true
+        },
+        "N0": {
+          "label": {
+            "en": "Netherlands"
+          },
+          "data": true
+        },
+        "N1": {
+          "label": {
+            "en": "Norway"
+          },
+          "data": true
+        },
+        "P0": {
+          "label": {
+            "en": "Poland"
+          },
+          "data": true
+        },
+        "P1": {
+          "label": {
+            "en": "Portugal"
+          },
+          "data": true
+        },
+        "R": {
+          "label": {
+            "en": "Romania"
+          },
+          "data": true
+        },
+        "RF": {
+          "label": {
+            "en": "Russia"
+          },
+          "data": true
+        },
+        "S1": {
+          "label": {
+            "en": "Sweden"
+          },
+          "data": true
+        },
+        "S2": {
+          "label": {
+            "en": "Slovenia"
+          },
+          "data": true
+        },
+        "T3": {
+          "label": {
+            "en": "Turkey"
+          },
+          "data": true
+        },
+        "E": {
+          "label": {
+            "en": "Europe (not allocated)"
+          },
+          "data": true
+        },
+        "D0_2": {
+          "label": {
+            "en": "Africa"
+          },
+          "data": false
+        },
+        "T4": {
+          "label": {
+            "en": "Total"
+          },
+          "data": true
+        },
+        "RS": {
+          "label": {
+            "en": "South Africa"
+          },
+          "data": true
+        },
+        "D0_2_2": {
+          "label": {
+            "en": "North Africa"
+          },
+          "data": false
+        },
+        "T5": {
+          "label": {
+            "en": "Total"
+          },
+          "data": true
+        },
+        "A0": {
+          "label": {
+            "en": "Africa (not allocated)"
+          },
+          "data": true
+        },
+        "D0_3": {
+          "label": {
+            "en": "America"
+          },
+          "data": false
+        },
+        "T6": {
+          "label": {
+            "en": "Total"
+          },
+          "data": true
+        },
+        "K1": {
+          "label": {
+            "en": "Canada"
+          },
+          "data": true
+        },
+        "VS": {
+          "label": {
+            "en": "US"
+          },
+          "data": true
+        },
+        "M0": {
+          "label": {
+            "en": "Mexico"
+          },
+          "data": true
+        },
+        "B2": {
+          "label": {
+            "en": "Brazil"
+          },
+          "data": true
+        },
+        "C0": {
+          "label": {
+            "en": "Chile"
+          },
+          "data": true
+        },
+        "A1": {
+          "label": {
+            "en": "America (not allocated)"
+          },
+          "data": true
+        },
+        "D0_4": {
+          "label": {
+            "en": "Asia"
+          },
+          "data": false
+        },
+        "T7": {
+          "label": {
+            "en": "Total"
+          },
+          "data": true
+        },
+        "I2": {
+          "label": {
+            "en": "Israel"
+          },
+          "data": true
+        },
+        "AG": {
+          "label": {
+            "en": "Gulf Arabian countries"
+          },
+          "data": true
+        },
+        "C1": {
+          "label": {
+            "en": "China"
+          },
+          "data": true
+        },
+        "H": {
+          "label": {
+            "en": "Hong Kong SAR"
+          },
+          "data": true
+        },
+        "I3": {
+          "label": {
+            "en": "India"
+          },
+          "data": true
+        },
+        "J": {
+          "label": {
+            "en": "Japan"
+          },
+          "data": true
+        },
+        "M1": {
+          "label": {
+            "en": "Malaysia"
+          },
+          "data": true
+        },
+        "S3": {
+          "label": {
+            "en": "Singapore"
+          },
+          "data": true
+        },
+        "A2": {
+          "label": {
+            "en": "Asia (not allocated)"
+          },
+          "data": true
+        },
+        "D0_5": {
+          "label": {
+            "en": "Australia, Oceania and Polar regions"
+          },
+          "data": false
+        },
+        "T8": {
+          "label": {
+            "en": "Total"
+          },
+          "data": true
+        },
+        "A3": {
+          "label": {
+            "en": "Australia"
+          },
+          "data": true
+        },
+        "AOP": {
+          "label": {
+            "en": "Australia, Oceania and Polar regions (not allocated)"
+          },
+          "data": true
+        },
+        "D0_6": {
+          "label": {
+            "en": "Rest of the world (not allocated), international organisations"
+          },
+          "data": false
+        },
+        "T9": {
+          "label": {
+            "en": "Total"
+          },
+          "data": true
+        },
+        "D0_7": {
+          "label": {
+            "en": "All countries (excluding Rest of the world, international organisations)"
+          },
+          "data": false
+        },
+        "T10": {
+          "label": {
+            "en": "Total"
+          },
+          "data": true
+        }
+      },
+      "hierarchy": {
+        "D0_0": {
+          "T0": []
+        },
+        "D0_1": {
+          "T1": [],
+          "EU": [],
+          "EU27": [],
+          "O": [],
+          "B0": [],
+          "B1": [],
+          "T2": [],
+          "D1": [],
+          "D2": [],
+          "S0": [],
+          "F0": [],
+          "F1": [],
+          "VK": [],
+          "G": [],
+          "K0": [],
+          "U": [],
+          "I0": [],
+          "I1": [],
+          "L": [],
+          "N0": [],
+          "N1": [],
+          "P0": [],
+          "P1": [],
+          "R": [],
+          "RF": [],
+          "S1": [],
+          "S2": [],
+          "T3": [],
+          "E": []
+        },
+        "D0_2": {
+          "T4": [],
+          "RS": [],
+          "D0_2_2": {
+            "T5": []
+          },
+          "A0": []
+        },
+        "D0_3": {
+          "T6": [],
+          "K1": [],
+          "VS": [],
+          "M0": [],
+          "B2": [],
+          "C0": [],
+          "A1": []
+        },
+        "D0_4": {
+          "T7": [],
+          "I2": [],
+          "AG": [],
+          "C1": [],
+          "H": [],
+          "I3": [],
+          "J": [],
+          "M1": [],
+          "S3": [],
+          "A2": []
+        },
+        "D0_5": {
+          "T8": [],
+          "A3": [],
+          "AOP": []
+        },
+        "D0_6": {
+          "T9": []
+        },
+        "D0_7": {
+          "T10": []
+        }
+      }
+    },
+    "D1": {
+      "label": {
+        "en": "Component"
+      },
+      "levels": {
+        "DT": {
+          "label": {
+            "en": "Total for all services"
+          },
+          "data": true
+        },
+        "T0": {
+          "label": {
+            "en": "Transport"
+          },
+          "data": true
+        },
+        "T1": {
+          "label": {
+            "en": "Tourism"
+          },
+          "data": true
+        },
+        "V": {
+          "label": {
+            "en": "Insurance and pension services"
+          },
+          "data": true
+        },
+        "F": {
+          "label": {
+            "en": "Financial services"
+          },
+          "data": true
+        },
+        "L": {
+          "label": {
+            "en": "Licence fees"
+          },
+          "data": true
+        },
+        "TCI": {
+          "label": {
+            "en": "Telecommunications, computer and information services"
+          },
+          "data": true
+        },
+        "FE": {
+          "label": {
+            "en": "Research and development services"
+          },
+          "data": true
+        },
+        "B": {
+          "label": {
+            "en": "Consulting services"
+          },
+          "data": true
+        },
+        "THG": {
+          "label": {
+            "en": "Technical, trade-related, and other business services"
+          },
+          "data": true
+        },
+        "UD": {
+          "label": {
+            "en": "Other services"
+          },
+          "data": true
+        }
+      },
+      "hierarchy": {
+        "DT": [],
+        "T0": [],
+        "T1": [],
+        "V": [],
+        "F": [],
+        "L": [],
+        "TCI": [],
+        "FE": [],
+        "B": [],
+        "THG": [],
+        "UD": []
+      }
+    },
+    "D2": {
+      "label": {
+        "en": "Accounting entry"
+      },
+      "levels": {
+        "E": {
+          "label": {
+            "en": "Receipts"
+          },
+          "data": true
+        },
+        "A": {
+          "label": {
+            "en": "Expenses"
+          },
+          "data": true
+        },
+        "S": {
+          "label": {
+            "en": "Net"
+          },
+          "data": true
+        }
+      },
+      "hierarchy": {
+        "E": [],
+        "A": [],
+        "S": []
+      }
+    }
+  },
+  "topic": "Balance of payments",
+  "default": {
+    "D0": "T0",
+    "D1": "DT",
+    "D2": "S"
+  },
+  "concept": "External sector / Balance of payments",
+  "canonical": false,
+  "split": "D0",
+  "single_select": ["D1", "D2"],
+  "default_transform": "level"
+}

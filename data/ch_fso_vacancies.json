@@ -1,0 +1,185 @@
+{
+  "schema_version": "1.0",
+  "id": "ch_fso_vacancies",
+  "dim_order": [
+    "Offene Stellen",
+    "Wirtschaftsabteilung"
+  ],
+  "start": "1992-04-01",
+  "end": "2026-01-01",
+  "title": {
+    "en": "Job vacancies by economic division"
+  },
+  "source": {
+    "name": {
+      "en": "Swiss Federal Statistical Office (FSO)"
+    },
+    "url": "https://www.pxweb.bfs.admin.ch/pxweb/en/px-x-0602000000_103"
+  },
+  "license": "fso",
+  "frequency": "quarterly",
+  "dimensions": {
+    "Offene Stellen": {
+      "label": {
+        "en": "Job vacancies"
+      },
+      "levels": {
+        "1": {
+          "label": {
+            "en": "Job vacancies - total"
+          },
+          "data": true
+        },
+        "2": {
+          "label": {
+            "en": "Index (2nd quarter 2015 = 100)"
+          },
+          "data": true
+        },
+        "3": {
+          "label": {
+            "en": "Rate (in %)"
+          },
+          "data": true
+        }
+      }
+    },
+    "Wirtschaftsabteilung": {
+      "label": {
+        "en": "Economic division"
+      },
+      "levels": {
+        "5-96": {
+          "label": {
+            "en": "5-96 Total"
+          },
+          "data": true
+        },
+        "5-43": {
+          "label": {
+            "en": "5-43 SECTOR II"
+          },
+          "data": true
+        },
+        "10-33": {
+          "label": {
+            "en": "10-33 Manufactury"
+          },
+          "data": true
+        },
+        "24-25": {
+          "label": {
+            "en": "24-25 Manufacture of metal products"
+          },
+          "data": true
+        },
+        "26": {
+          "label": {
+            "en": "26 Manufacture of computer, electronic and optical products, watches and clocks"
+          },
+          "data": true
+        },
+        "28": {
+          "label": {
+            "en": "28 Manufacture of machinery and equipment n.e.c."
+          },
+          "data": true
+        },
+        "41-43": {
+          "label": {
+            "en": "41-43 Construction"
+          },
+          "data": true
+        },
+        "45-96": {
+          "label": {
+            "en": "45-96 SECTOR III"
+          },
+          "data": true
+        },
+        "45-47": {
+          "label": {
+            "en": "45-47 Trade and repair of motor vehicles and motorcycles"
+          },
+          "data": true
+        },
+        "49-53": {
+          "label": {
+            "en": "49-53 Transport and stockage"
+          },
+          "data": true
+        },
+        "55-56": {
+          "label": {
+            "en": "55-56 Hotels and gastronomy"
+          },
+          "data": true
+        },
+        "58-63": {
+          "label": {
+            "en": "58-63 IT and communications"
+          },
+          "data": true
+        },
+        "62-63": {
+          "label": {
+            "en": "62-63 IT and other information services"
+          },
+          "data": true
+        },
+        "64-66": {
+          "label": {
+            "en": "64-66 Finance and assurance"
+          },
+          "data": true
+        },
+        "68-75": {
+          "label": {
+            "en": "68-75 Real estate and scientific service activities"
+          },
+          "data": true
+        },
+        "77+79-82": {
+          "label": {
+            "en": "77+79-82 Administrative and support service activities (without 78)"
+          },
+          "data": true
+        },
+        "84": {
+          "label": {
+            "en": "84 Public administration"
+          },
+          "data": true
+        },
+        "85": {
+          "label": {
+            "en": "85 Education"
+          },
+          "data": true
+        },
+        "86-88": {
+          "label": {
+            "en": "86-88 Health and social work activities"
+          },
+          "data": true
+        },
+        "90-96": {
+          "label": {
+            "en": "90-96 Arts and amusement"
+          },
+          "data": true
+        }
+      }
+    }
+  },
+  "topic": "Labour",
+  "default": {
+    "Offene Stellen": "1",
+    "Wirtschaftsabteilung": "5-96"
+  },
+  "concept": "Labour / Job vacancies",
+  "canonical": true,
+  "split": "Wirtschaftsabteilung",
+  "single_select": "Offene Stellen",
+  "default_transform": "level"
+}

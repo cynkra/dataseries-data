@@ -1,0 +1,119 @@
+{
+  "schema_version": "1.0",
+  "id": "ch_snb_devwkieffid",
+  "dim_order": [
+    "D0",
+    "D1",
+    "D2"
+  ],
+  "start": "1999-01-01",
+  "end": "2026-04-30",
+  "title": {
+    "en": "Effective exchange rate indices – Daily"
+  },
+  "source": {
+    "name": {
+      "en": "Swiss National Bank"
+    },
+    "url": "https://data.snb.ch/en/topics/snb/cube/devwkieffid"
+  },
+  "license": "snb",
+  "frequency": "daily",
+  "dimensions": {
+    "D0": {
+      "label": {
+        "en": "Real/Nominal"
+      },
+      "levels": {
+        "N": {
+          "label": {
+            "en": "Nominal"
+          },
+          "data": true
+        },
+        "R": {
+          "label": {
+            "en": "Real"
+          },
+          "data": false
+        },
+        "K": {
+          "label": {
+            "en": "CPI-based"
+          },
+          "data": true
+        },
+        "P": {
+          "label": {
+            "en": "PPI-based"
+          },
+          "data": true
+        }
+      },
+      "hierarchy": {
+        "N": [],
+        "R": {
+          "K": [],
+          "P": []
+        }
+      }
+    },
+    "D1": {
+      "label": {
+        "en": "Index country group"
+      },
+      "levels": {
+        "G": {
+          "label": {
+            "en": "Overall index"
+          },
+          "data": true
+        },
+        "E": {
+          "label": {
+            "en": "Euro area index"
+          },
+          "data": true
+        }
+      },
+      "hierarchy": {
+        "G": [],
+        "E": []
+      }
+    },
+    "D2": {
+      "label": {
+        "en": "Index/Change"
+      },
+      "levels": {
+        "I": {
+          "label": {
+            "en": "Index"
+          },
+          "data": true
+        },
+        "V": {
+          "label": {
+            "en": "Day-on-day change in %"
+          },
+          "data": true
+        }
+      },
+      "hierarchy": {
+        "I": [],
+        "V": []
+      }
+    }
+  },
+  "topic": "Exchange rates",
+  "default": {
+    "D0": "K",
+    "D1": "G",
+    "D2": "I"
+  },
+  "concept": "Exchange rates / Effective FX index",
+  "canonical": true,
+  "split": "D1",
+  "single_select": ["D0", "D2"],
+  "default_transform": "level"
+}

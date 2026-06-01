@@ -1,0 +1,343 @@
+{
+  "schema_version": "1.0",
+  "id": "ch_snb_ausshawarm",
+  "dim_order": [
+    "D0",
+    "D1",
+    "D2"
+  ],
+  "start": "2012-01-01",
+  "end": "2026-03-01",
+  "title": {
+    "en": "Foreign trade by goods category"
+  },
+  "source": {
+    "name": {
+      "en": "Swiss National Bank"
+    },
+    "url": "https://data.snb.ch/en/topics/snb/cube/ausshawarm"
+  },
+  "license": "snb",
+  "frequency": "monthly",
+  "dimensions": {
+    "D0": {
+      "label": {
+        "en": "Overview"
+      },
+      "levels": {
+        "A": {
+          "label": {
+            "en": "Exports"
+          },
+          "data": true
+        },
+        "E": {
+          "label": {
+            "en": "Imports"
+          },
+          "data": true
+        },
+        "H": {
+          "label": {
+            "en": "Trade surplus/deficit"
+          },
+          "data": true
+        }
+      },
+      "hierarchy": {
+        "A": [],
+        "E": [],
+        "H": []
+      }
+    },
+    "D1": {
+      "label": {
+        "en": "Goods category"
+      },
+      "levels": {
+        "GT": {
+          "label": {
+            "en": "Total"
+          },
+          "data": true
+        },
+        "CHEM": {
+          "label": {
+            "en": "Chemical and pharmaceutical products"
+          },
+          "data": false
+        },
+        "C21": {
+          "label": {
+            "en": "Basic pharmaceutical products and pharmaceutical preparations"
+          },
+          "data": true
+        },
+        "C20": {
+          "label": {
+            "en": "Chemicals and chemical products"
+          },
+          "data": true
+        },
+        "ME": {
+          "label": {
+            "en": "Machinery, electronics and appliances"
+          },
+          "data": false
+        },
+        "C26": {
+          "label": {
+            "en": "Computer, electronic and optical products"
+          },
+          "data": true
+        },
+        "C28": {
+          "label": {
+            "en": "Machinery and equipment n.e.c."
+          },
+          "data": true
+        },
+        "C27": {
+          "label": {
+            "en": "Electrical equipment"
+          },
+          "data": true
+        },
+        "C2652": {
+          "label": {
+            "en": "Watches and clocks"
+          },
+          "data": true
+        },
+        "MET": {
+          "label": {
+            "en": "Metals and metal products"
+          },
+          "data": false
+        },
+        "C24": {
+          "label": {
+            "en": "Basic metals"
+          },
+          "data": true
+        },
+        "C25": {
+          "label": {
+            "en": "Fabricated metal products, except machinery and equipment"
+          },
+          "data": true
+        },
+        "NFG": {
+          "label": {
+            "en": "Food, beverages and tobacco"
+          },
+          "data": false
+        },
+        "A01": {
+          "label": {
+            "en": "Products of agriculture, hunting and related services"
+          },
+          "data": true
+        },
+        "A03": {
+          "label": {
+            "en": "Fish and other fishing products, aquaculture products, support services to fishing"
+          },
+          "data": true
+        },
+        "C10": {
+          "label": {
+            "en": "Food products"
+          },
+          "data": true
+        },
+        "C11": {
+          "label": {
+            "en": "Beverages"
+          },
+          "data": true
+        },
+        "C12": {
+          "label": {
+            "en": "Tobacco products"
+          },
+          "data": true
+        },
+        "FZ": {
+          "label": {
+            "en": "Vehicles"
+          },
+          "data": false
+        },
+        "C29": {
+          "label": {
+            "en": "Motor vehicles, trailers and semi-trailers"
+          },
+          "data": true
+        },
+        "C30": {
+          "label": {
+            "en": "Other transport equipment"
+          },
+          "data": true
+        },
+        "EN": {
+          "label": {
+            "en": "Energy sources"
+          },
+          "data": false
+        },
+        "B05": {
+          "label": {
+            "en": "Coal and lignite"
+          },
+          "data": true
+        },
+        "B06": {
+          "label": {
+            "en": "Crude petroleum and natural gas"
+          },
+          "data": true
+        },
+        "C19": {
+          "label": {
+            "en": "Coke and refined petroleum products"
+          },
+          "data": true
+        },
+        "D35": {
+          "label": {
+            "en": "Electricity, gas, steam and air conditioning supply"
+          },
+          "data": true
+        },
+        "TB": {
+          "label": {
+            "en": "Textiles, clothing and leather"
+          },
+          "data": false
+        },
+        "C13": {
+          "label": {
+            "en": "Textiles"
+          },
+          "data": true
+        },
+        "C14": {
+          "label": {
+            "en": "Wearing apparel"
+          },
+          "data": true
+        },
+        "C15": {
+          "label": {
+            "en": "Leather and related products of other materials"
+          },
+          "data": true
+        },
+        "C22": {
+          "label": {
+            "en": "Rubber and plastic products"
+          },
+          "data": true
+        },
+        "C17": {
+          "label": {
+            "en": "Paper and paper products"
+          },
+          "data": true
+        }
+      },
+      "hierarchy": {
+        "GT": [],
+        "CHEM": {
+          "C21": [],
+          "C20": []
+        },
+        "ME": {
+          "C26": [],
+          "C28": [],
+          "C27": []
+        },
+        "C2652": [],
+        "MET": {
+          "C24": [],
+          "C25": []
+        },
+        "NFG": {
+          "A01": [],
+          "A03": [],
+          "C10": [],
+          "C11": [],
+          "C12": []
+        },
+        "FZ": {
+          "C29": [],
+          "C30": []
+        },
+        "EN": {
+          "B05": [],
+          "B06": [],
+          "C19": [],
+          "D35": []
+        },
+        "TB": {
+          "C13": [],
+          "C14": [],
+          "C15": []
+        },
+        "C22": [],
+        "C17": []
+      }
+    },
+    "D2": {
+      "label": {
+        "en": "Value/Change"
+      },
+      "levels": {
+        "WMF": {
+          "label": {
+            "en": "Value, in CHF millions"
+          },
+          "data": true
+        },
+        "D2_1": {
+          "label": {
+            "en": "Change compared to the same month one year earlier in %"
+          },
+          "data": false
+        },
+        "N": {
+          "label": {
+            "en": "nominal"
+          },
+          "data": true
+        },
+        "R": {
+          "label": {
+            "en": "real"
+          },
+          "data": true
+        }
+      },
+      "hierarchy": {
+        "WMF": [],
+        "D2_1": {
+          "N": [],
+          "R": []
+        }
+      }
+    }
+  },
+  "topic": "Foreign trade",
+  "default": {
+    "D0": "A",
+    "D1": "GT",
+    "D2": "WMF"
+  },
+  "concept": "External sector / Foreign trade",
+  "canonical": true,
+  "split": "D1",
+  "single_select": ["D0", "D2"],
+  "default_transform": "level"
+}

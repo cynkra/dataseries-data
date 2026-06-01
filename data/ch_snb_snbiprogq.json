@@ -1,0 +1,865 @@
+{
+  "schema_version": "1.0",
+  "id": "ch_snb_snbiprogq",
+  "dim_order": [
+    "D0",
+    "D1"
+  ],
+  "start": "2001-01-01",
+  "end": "2028-10-01",
+  "title": {
+    "en": "SNB conditional inflation forecast"
+  },
+  "source": {
+    "name": {
+      "en": "Swiss National Bank"
+    },
+    "url": "https://data.snb.ch/en/topics/snb/cube/snbiprogq"
+  },
+  "license": "snb",
+  "frequency": "quarterly",
+  "dimensions": {
+    "D0": {
+      "label": {
+        "en": "Assessment of"
+      },
+      "levels": {
+        "2004": {
+          "label": {
+            "en": "2004"
+          },
+          "data": false
+        },
+        "J2004PL05P": {
+          "label": {
+            "en": "June 2004 (Forecast with Libor at 0.50%)"
+          },
+          "data": true
+        },
+        "S2004PL075P": {
+          "label": {
+            "en": "September 2004 (Forecast with Libor at 0.75%)"
+          },
+          "data": true
+        },
+        "D2004PL075P": {
+          "label": {
+            "en": "December 2004 (Forecast with Libor at 0.75%)"
+          },
+          "data": true
+        },
+        "2005": {
+          "label": {
+            "en": "2005"
+          },
+          "data": false
+        },
+        "M2005PL075P": {
+          "label": {
+            "en": "March 2005 (Forecast with Libor at 0.75%)"
+          },
+          "data": true
+        },
+        "J2005PL075P": {
+          "label": {
+            "en": "June 2005 (Forecast with Libor at 0.75%)"
+          },
+          "data": true
+        },
+        "S2005PL075P": {
+          "label": {
+            "en": "September 2005 (Forecast with Libor at 0.75%)"
+          },
+          "data": true
+        },
+        "D2005PL100P": {
+          "label": {
+            "en": "December 2005 (Forecast with Libor at 1.00%)"
+          },
+          "data": true
+        },
+        "2006": {
+          "label": {
+            "en": "2006"
+          },
+          "data": false
+        },
+        "M2006PL125P": {
+          "label": {
+            "en": "March 2006 (Forecast with Libor at 1.25%)"
+          },
+          "data": true
+        },
+        "J2006PL15P": {
+          "label": {
+            "en": "June 2006 (Forecast with Libor at 1.50%)"
+          },
+          "data": true
+        },
+        "S2006PL175P": {
+          "label": {
+            "en": "September 2006 (Forecast with Libor at 1.75%)"
+          },
+          "data": true
+        },
+        "D2006PL200P": {
+          "label": {
+            "en": "December 2006 (Forecast with Libor at 2.00%)"
+          },
+          "data": true
+        },
+        "2007": {
+          "label": {
+            "en": "2007"
+          },
+          "data": false
+        },
+        "M2007PL225P": {
+          "label": {
+            "en": "March 2007 (Forecast with Libor at 2.25%)"
+          },
+          "data": true
+        },
+        "J2007PL250P": {
+          "label": {
+            "en": "June 2007 (Forecast with Libor at 2.50%)"
+          },
+          "data": true
+        },
+        "S2007PL275P": {
+          "label": {
+            "en": "September 2007 (Forecast with Libor at 2.75%)"
+          },
+          "data": true
+        },
+        "D2007PL275P": {
+          "label": {
+            "en": "December 2007 (Forecast with Libor at 2.75%)"
+          },
+          "data": true
+        },
+        "2008": {
+          "label": {
+            "en": "2008"
+          },
+          "data": false
+        },
+        "M2008PL275P": {
+          "label": {
+            "en": "March 2008 (Forecast with Libor at 2.75%)"
+          },
+          "data": true
+        },
+        "J2008PL275P": {
+          "label": {
+            "en": "June 2008 (Forecast with Libor at 2.75%)"
+          },
+          "data": true
+        },
+        "S2008PL275P": {
+          "label": {
+            "en": "September 2008 (Forecast with Libor at 2.75%)"
+          },
+          "data": true
+        },
+        "D2008PL050P": {
+          "label": {
+            "en": "December 2008 (Forecast with Libor at 0.50%)"
+          },
+          "data": true
+        },
+        "2009": {
+          "label": {
+            "en": "2009"
+          },
+          "data": false
+        },
+        "M2009PL025P": {
+          "label": {
+            "en": "March 2009 (Forecast with Libor at 0.25%)"
+          },
+          "data": true
+        },
+        "J2009PL025P": {
+          "label": {
+            "en": "June 2009 (Forecast with Libor at 0.25%)"
+          },
+          "data": true
+        },
+        "S2009PL025P": {
+          "label": {
+            "en": "September 2009 (Forecast with Libor at 0.25%)"
+          },
+          "data": true
+        },
+        "D2009PL025P": {
+          "label": {
+            "en": "December 2009 (Forecast with Libor at 0.25%)"
+          },
+          "data": true
+        },
+        "2010": {
+          "label": {
+            "en": "2010"
+          },
+          "data": false
+        },
+        "M2010PL025P": {
+          "label": {
+            "en": "March 2010 (Forecast with Libor at 0.25%)"
+          },
+          "data": true
+        },
+        "J2010PL025P": {
+          "label": {
+            "en": "June 2010 (Forecast with Libor at 0.25%)"
+          },
+          "data": true
+        },
+        "S2010PL025P": {
+          "label": {
+            "en": "September 2010 (Forecast with Libor at 0.25%)"
+          },
+          "data": true
+        },
+        "D2010PL025P": {
+          "label": {
+            "en": "December 2010 (Forecast with Libor at 0.25%)"
+          },
+          "data": true
+        },
+        "2011": {
+          "label": {
+            "en": "2011"
+          },
+          "data": false
+        },
+        "M2011PL025P": {
+          "label": {
+            "en": "March 2011 (Forecast with Libor at 0.25%)"
+          },
+          "data": true
+        },
+        "J2011PL025P": {
+          "label": {
+            "en": "June 2011 (Forecast with Libor at 0.25%)"
+          },
+          "data": true
+        },
+        "S2011PL000P": {
+          "label": {
+            "en": "September 2011 (Forecast with Libor at 0.00%)"
+          },
+          "data": true
+        },
+        "D2011PL000P": {
+          "label": {
+            "en": "December 2011 (Forecast with Libor at 0.00%)"
+          },
+          "data": true
+        },
+        "2012": {
+          "label": {
+            "en": "2012"
+          },
+          "data": false
+        },
+        "M2012PL000P": {
+          "label": {
+            "en": "March 2012 (Forecast with Libor at 0.00%)"
+          },
+          "data": true
+        },
+        "J2012PL000P": {
+          "label": {
+            "en": "June 2012 (Forecast with Libor at 0.00%)"
+          },
+          "data": true
+        },
+        "S2012PL000P": {
+          "label": {
+            "en": "September 2012 (Forecast with Libor at 0.00%)"
+          },
+          "data": true
+        },
+        "D2012PL000P": {
+          "label": {
+            "en": "December 2012 (Forecast with Libor at 0.00%)"
+          },
+          "data": true
+        },
+        "2013": {
+          "label": {
+            "en": "2013"
+          },
+          "data": false
+        },
+        "M2013PL000P": {
+          "label": {
+            "en": "March 2013 (Forecast with Libor at 0.00%)"
+          },
+          "data": true
+        },
+        "J2013PL000P": {
+          "label": {
+            "en": "June 2013 (Forecast with Libor at 0.00%)"
+          },
+          "data": true
+        },
+        "S2013PL000P": {
+          "label": {
+            "en": "September 2013 (Forecast with Libor at 0.00%)"
+          },
+          "data": true
+        },
+        "D2013PL000P": {
+          "label": {
+            "en": "December 2013 (Forecast with Libor at 0.00%)"
+          },
+          "data": true
+        },
+        "2014": {
+          "label": {
+            "en": "2014"
+          },
+          "data": false
+        },
+        "M2014PL000P": {
+          "label": {
+            "en": "March 2014 (Forecast with Libor at 0.00%)"
+          },
+          "data": true
+        },
+        "J2014PL000P": {
+          "label": {
+            "en": "June 2014 (Forecast with Libor at 0.00%)"
+          },
+          "data": true
+        },
+        "S2014PL000P": {
+          "label": {
+            "en": "September 2014 (Forecast with Libor at 0.00%)"
+          },
+          "data": true
+        },
+        "D2014PL000P": {
+          "label": {
+            "en": "December 2014 (Forecast with Libor at 0.00%)"
+          },
+          "data": true
+        },
+        "2015": {
+          "label": {
+            "en": "2015"
+          },
+          "data": false
+        },
+        "M2015PL075P": {
+          "label": {
+            "en": "March 2015 (Forecast with Libor at -0.75%)"
+          },
+          "data": true
+        },
+        "J2015PL075P": {
+          "label": {
+            "en": "June 2015 (Forecast with Libor at -0.75%)"
+          },
+          "data": true
+        },
+        "S2015PL075P": {
+          "label": {
+            "en": "September 2015 (Forecast with Libor at -0.75%)"
+          },
+          "data": true
+        },
+        "D2015PL075P": {
+          "label": {
+            "en": "December 2015 (Forecast with Libor at -0.75%)"
+          },
+          "data": true
+        },
+        "2016": {
+          "label": {
+            "en": "2016"
+          },
+          "data": false
+        },
+        "M2016PL075P": {
+          "label": {
+            "en": "March 2016 (Forecast with Libor at -0.75%)"
+          },
+          "data": true
+        },
+        "J2016PL075P": {
+          "label": {
+            "en": "June 2016 (Forecast with Libor at -0.75%)"
+          },
+          "data": true
+        },
+        "S2016PL075P": {
+          "label": {
+            "en": "September 2016 (Forecast with Libor at -0.75%)"
+          },
+          "data": true
+        },
+        "D2016PL075P": {
+          "label": {
+            "en": "December 2016 (Forecast with Libor at -0.75%)"
+          },
+          "data": true
+        },
+        "2017": {
+          "label": {
+            "en": "2017"
+          },
+          "data": false
+        },
+        "M2017PL075P": {
+          "label": {
+            "en": "March 2017 (Forecast with Libor at -0.75%)"
+          },
+          "data": true
+        },
+        "J2017PL075P": {
+          "label": {
+            "en": "June 2017 (Forecast with Libor at -0.75%)"
+          },
+          "data": true
+        },
+        "S2017PL075P": {
+          "label": {
+            "en": "September 2017 (Forecast with Libor at -0.75%)"
+          },
+          "data": true
+        },
+        "D2017PL075P": {
+          "label": {
+            "en": "December 2017 (Forecast with Libor at -0.75%)"
+          },
+          "data": true
+        },
+        "2018": {
+          "label": {
+            "en": "2018"
+          },
+          "data": false
+        },
+        "M2018PL075P": {
+          "label": {
+            "en": "March 2018 (Forecast with Libor at -0.75%)"
+          },
+          "data": true
+        },
+        "J2018PL075P": {
+          "label": {
+            "en": "June 2018 (Forecast with Libor at -0.75%)"
+          },
+          "data": true
+        },
+        "S2018PL075P": {
+          "label": {
+            "en": "September 2018 (Forecast with Libor at -0.75%)"
+          },
+          "data": true
+        },
+        "D2018PL075P": {
+          "label": {
+            "en": "December 2018 (Forecast with Libor at -0.75%)"
+          },
+          "data": true
+        },
+        "2019": {
+          "label": {
+            "en": "2019"
+          },
+          "data": false
+        },
+        "M2019PL075P": {
+          "label": {
+            "en": "March 2019 (Forecast with Libor at -0.75%)"
+          },
+          "data": true
+        },
+        "J2019PL075P": {
+          "label": {
+            "en": "June 2019 (Forecast with SNB policy rate at -0.75%)"
+          },
+          "data": true
+        },
+        "S2019PL075P": {
+          "label": {
+            "en": "September 2019 (Forecast with SNB policy rate at -0.75%)"
+          },
+          "data": true
+        },
+        "D2019PP075P": {
+          "label": {
+            "en": "December 2019 (Forecast with SNB policy rate at -0.75%)"
+          },
+          "data": true
+        },
+        "2020": {
+          "label": {
+            "en": "2020"
+          },
+          "data": false
+        },
+        "M2020PP075P": {
+          "label": {
+            "en": "March 2020 (Forecast with SNB policy rate at -0.75%)"
+          },
+          "data": true
+        },
+        "J2020PP075P": {
+          "label": {
+            "en": "June 2020 (Forecast with SNB policy rate at -0.75%)"
+          },
+          "data": true
+        },
+        "S2020PP075P": {
+          "label": {
+            "en": "September 2020 (Forecast with SNB policy rate at -0.75%)"
+          },
+          "data": true
+        },
+        "D2020PP075P": {
+          "label": {
+            "en": "December 2020 (Forecast with SNB policy rate at -0.75%)"
+          },
+          "data": true
+        },
+        "2021": {
+          "label": {
+            "en": "2021"
+          },
+          "data": false
+        },
+        "M2021PP075P": {
+          "label": {
+            "en": "March 2021 (Forecast with SNB policy rate at -0.75%)"
+          },
+          "data": true
+        },
+        "J2021POFFP": {
+          "label": {
+            "en": "June 2021 (Forecast with SNB policy rate at -0.75%)"
+          },
+          "data": true
+        },
+        "S2021POFFP": {
+          "label": {
+            "en": "September 2021 (Forecast with SNB policy rate at -0.75%)"
+          },
+          "data": true
+        },
+        "D2021POFFP": {
+          "label": {
+            "en": "December 2021 (Forecast with SNB policy rate at -0.75%)"
+          },
+          "data": true
+        },
+        "2022": {
+          "label": {
+            "en": "2022"
+          },
+          "data": false
+        },
+        "M2022POFFP": {
+          "label": {
+            "en": "March 2022 (Forecast with SNB policy rate at -0.75%)"
+          },
+          "data": true
+        },
+        "J2022POFFP": {
+          "label": {
+            "en": "June 2022 (Forecast with SNB policy rate at -0.25%)"
+          },
+          "data": true
+        },
+        "S2022POFFP": {
+          "label": {
+            "en": "September 2022 (Forecast with SNB policy rate at 0.50%)"
+          },
+          "data": true
+        },
+        "D2022POFFP": {
+          "label": {
+            "en": "December 2022 (Forecast with SNB policy rate at 1.00%)"
+          },
+          "data": true
+        },
+        "2023": {
+          "label": {
+            "en": "2023"
+          },
+          "data": false
+        },
+        "M2023POFFP": {
+          "label": {
+            "en": "March 2023 (Forecast with SNB policy rate at 1.50%)"
+          },
+          "data": true
+        },
+        "J2023POFFP": {
+          "label": {
+            "en": "June 2023 (Forecast with SNB policy rate at 1.75%)"
+          },
+          "data": true
+        },
+        "S2023POFFP": {
+          "label": {
+            "en": "September 2023 (Forecast with SNB policy rate at 1.75%)"
+          },
+          "data": true
+        },
+        "D2023POFFP": {
+          "label": {
+            "en": "December 2023 (Forecast with SNB policy rate at 1.75%)"
+          },
+          "data": true
+        },
+        "2024": {
+          "label": {
+            "en": "2024"
+          },
+          "data": false
+        },
+        "M2024POFFP": {
+          "label": {
+            "en": "March 2024 (Forecast with SNB policy rate at 1.50%)"
+          },
+          "data": true
+        },
+        "J2024POFFP": {
+          "label": {
+            "en": "June 2024 (Forecast with SNB policy rate at 1.25%)"
+          },
+          "data": true
+        },
+        "S2024POFFP": {
+          "label": {
+            "en": "September 2024 (Forecast with SNB policy rate at 1.00%)"
+          },
+          "data": true
+        },
+        "D2024POFFP": {
+          "label": {
+            "en": "December 2024 (Forecast with SNB policy rate at 0.50%)"
+          },
+          "data": true
+        },
+        "2025": {
+          "label": {
+            "en": "2025"
+          },
+          "data": false
+        },
+        "M2025POFFP": {
+          "label": {
+            "en": "March 2025 (Forecast with SNB policy rate at 0.25%)"
+          },
+          "data": true
+        },
+        "J2025POFFP": {
+          "label": {
+            "en": "June 2025 (Forecast with SNB policy rate at 0.00%)"
+          },
+          "data": true
+        },
+        "S2025POFFP": {
+          "label": {
+            "en": "September 2025 (Forecast with SNB policy rate at 0.00%)"
+          },
+          "data": true
+        },
+        "D2025POFFP": {
+          "label": {
+            "en": "December 2025 (Forecast with SNB policy rate at 0.00%)"
+          },
+          "data": true
+        },
+        "2026": {
+          "label": {
+            "en": "2026"
+          },
+          "data": false
+        },
+        "M2026POFFP": {
+          "label": {
+            "en": "March 2026 (Forecast with SNB policy rate at 0.00%)"
+          },
+          "data": true
+        }
+      },
+      "hierarchy": {
+        "2004": {
+          "J2004PL05P": [],
+          "S2004PL075P": [],
+          "D2004PL075P": []
+        },
+        "2005": {
+          "M2005PL075P": [],
+          "J2005PL075P": [],
+          "S2005PL075P": [],
+          "D2005PL100P": []
+        },
+        "2006": {
+          "M2006PL125P": [],
+          "J2006PL15P": [],
+          "S2006PL175P": [],
+          "D2006PL200P": []
+        },
+        "2007": {
+          "M2007PL225P": [],
+          "J2007PL250P": [],
+          "S2007PL275P": [],
+          "D2007PL275P": []
+        },
+        "2008": {
+          "M2008PL275P": [],
+          "J2008PL275P": [],
+          "S2008PL275P": [],
+          "D2008PL050P": []
+        },
+        "2009": {
+          "M2009PL025P": [],
+          "J2009PL025P": [],
+          "S2009PL025P": [],
+          "D2009PL025P": []
+        },
+        "2010": {
+          "M2010PL025P": [],
+          "J2010PL025P": [],
+          "S2010PL025P": [],
+          "D2010PL025P": []
+        },
+        "2011": {
+          "M2011PL025P": [],
+          "J2011PL025P": [],
+          "S2011PL000P": [],
+          "D2011PL000P": []
+        },
+        "2012": {
+          "M2012PL000P": [],
+          "J2012PL000P": [],
+          "S2012PL000P": [],
+          "D2012PL000P": []
+        },
+        "2013": {
+          "M2013PL000P": [],
+          "J2013PL000P": [],
+          "S2013PL000P": [],
+          "D2013PL000P": []
+        },
+        "2014": {
+          "M2014PL000P": [],
+          "J2014PL000P": [],
+          "S2014PL000P": [],
+          "D2014PL000P": []
+        },
+        "2015": {
+          "M2015PL075P": [],
+          "J2015PL075P": [],
+          "S2015PL075P": [],
+          "D2015PL075P": []
+        },
+        "2016": {
+          "M2016PL075P": [],
+          "J2016PL075P": [],
+          "S2016PL075P": [],
+          "D2016PL075P": []
+        },
+        "2017": {
+          "M2017PL075P": [],
+          "J2017PL075P": [],
+          "S2017PL075P": [],
+          "D2017PL075P": []
+        },
+        "2018": {
+          "M2018PL075P": [],
+          "J2018PL075P": [],
+          "S2018PL075P": [],
+          "D2018PL075P": []
+        },
+        "2019": {
+          "M2019PL075P": [],
+          "J2019PL075P": [],
+          "S2019PL075P": [],
+          "D2019PP075P": []
+        },
+        "2020": {
+          "M2020PP075P": [],
+          "J2020PP075P": [],
+          "S2020PP075P": [],
+          "D2020PP075P": []
+        },
+        "2021": {
+          "M2021PP075P": [],
+          "J2021POFFP": [],
+          "S2021POFFP": [],
+          "D2021POFFP": []
+        },
+        "2022": {
+          "M2022POFFP": [],
+          "J2022POFFP": [],
+          "S2022POFFP": [],
+          "D2022POFFP": []
+        },
+        "2023": {
+          "M2023POFFP": [],
+          "J2023POFFP": [],
+          "S2023POFFP": [],
+          "D2023POFFP": []
+        },
+        "2024": {
+          "M2024POFFP": [],
+          "J2024POFFP": [],
+          "S2024POFFP": [],
+          "D2024POFFP": []
+        },
+        "2025": {
+          "M2025POFFP": [],
+          "J2025POFFP": [],
+          "S2025POFFP": [],
+          "D2025POFFP": []
+        },
+        "2026": {
+          "M2026POFFP": []
+        }
+      }
+    },
+    "D1": {
+      "label": {
+        "en": "Overview"
+      },
+      "levels": {
+        "BI": {
+          "label": {
+            "en": "Observed inflation"
+          },
+          "data": true
+        },
+        "P": {
+          "label": {
+            "en": "Forecast"
+          },
+          "data": true
+        }
+      },
+      "hierarchy": {
+        "BI": [],
+        "P": []
+      }
+    }
+  },
+  "topic": "SNB forecasts",
+  "default": {
+    "D0": "D2025POFFP",
+    "D1": "BI"
+  },
+  "concept": "SNB policy & forecasts / Conditional inflation forecast",
+  "canonical": true,
+  "split": "D0",
+  "single_select": "D1",
+  "default_transform": "level"
+}

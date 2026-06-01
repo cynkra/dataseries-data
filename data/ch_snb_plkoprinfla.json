@@ -1,0 +1,84 @@
+{
+  "schema_version": "1.0",
+  "id": "ch_snb_plkoprinfla",
+  "dim_order": [
+    "D0"
+  ],
+  "start": "1983-12-01",
+  "end": "2026-04-01",
+  "title": {
+    "en": "Consumer prices – SNB and SFSO core inflation rates"
+  },
+  "source": {
+    "name": {
+      "en": "Swiss National Bank"
+    },
+    "url": "https://data.snb.ch/en/topics/snb/cube/plkoprinfla"
+  },
+  "license": "snb",
+  "frequency": "monthly",
+  "dimensions": {
+    "D0": {
+      "label": {
+        "en": "Overview"
+      },
+      "levels": {
+        "D0_0": {
+          "label": {
+            "en": "SNB"
+          },
+          "data": false
+        },
+        "KGM": {
+          "label": {
+            "en": "Core inflation, trimmed mean"
+          },
+          "data": true
+        },
+        "D0_1": {
+          "label": {
+            "en": "SFSO"
+          },
+          "data": false
+        },
+        "K1": {
+          "label": {
+            "en": "Core inflation 1"
+          },
+          "data": true
+        },
+        "K2": {
+          "label": {
+            "en": "Core inflation 2"
+          },
+          "data": true
+        },
+        "TLK": {
+          "label": {
+            "en": "Inflation according to the national consumer price index"
+          },
+          "data": true
+        }
+      },
+      "hierarchy": {
+        "D0_0": {
+          "KGM": []
+        },
+        "D0_1": {
+          "K1": [],
+          "K2": [],
+          "TLK": []
+        }
+      }
+    }
+  },
+  "topic": "Prices",
+  "default": {
+    "D0": "KGM"
+  },
+  "concept": "Prices / Core inflation",
+  "canonical": true,
+  "split": "D0",
+  "single_select": "n/a (single dimension)",
+  "default_transform": "level"
+}

@@ -1,0 +1,440 @@
+{
+  "schema_version": "1.0",
+  "id": "ch_snb_bopcurrq",
+  "dim_order": [
+    "D0",
+    "D1"
+  ],
+  "start": "1983-01-01",
+  "end": "2025-10-01",
+  "title": {
+    "en": "Swiss balance of payments – Current account – Quarter"
+  },
+  "source": {
+    "name": {
+      "en": "Swiss National Bank"
+    },
+    "url": "https://data.snb.ch/en/topics/snb/cube/bopcurrq"
+  },
+  "license": "snb",
+  "frequency": "quarterly",
+  "dimensions": {
+    "D0": {
+      "label": {
+        "en": "Component"
+      },
+      "levels": {
+        "L0": {
+          "label": {
+            "en": "Current account"
+          },
+          "data": true
+        },
+        "D0_1": {
+          "label": {
+            "en": "Goods"
+          },
+          "data": false
+        },
+        "T0": {
+          "label": {
+            "en": "Total"
+          },
+          "data": true
+        },
+        "D0_1_1": {
+          "label": {
+            "en": "Foreign trade"
+          },
+          "data": false
+        },
+        "T1": {
+          "label": {
+            "en": "Total"
+          },
+          "data": true
+        },
+        "DAT1": {
+          "label": {
+            "en": "of which foreign trade total 1"
+          },
+          "data": true
+        },
+        "DGZ": {
+          "label": {
+            "en": "of which non-monetary gold"
+          },
+          "data": true
+        },
+        "D0_1_2": {
+          "label": {
+            "en": "Supplements to foreign trade"
+          },
+          "data": false
+        },
+        "T2": {
+          "label": {
+            "en": "Total"
+          },
+          "data": true
+        },
+        "H": {
+          "label": {
+            "en": "Additions"
+          },
+          "data": true
+        },
+        "V0": {
+          "label": {
+            "en": "Subtractions"
+          },
+          "data": true
+        },
+        "T3": {
+          "label": {
+            "en": "Merchanting"
+          },
+          "data": true
+        },
+        "D0_2": {
+          "label": {
+            "en": "Services"
+          },
+          "data": false
+        },
+        "T4": {
+          "label": {
+            "en": "Total"
+          },
+          "data": true
+        },
+        "T5": {
+          "label": {
+            "en": "Transport services"
+          },
+          "data": false
+        },
+        "T51": {
+          "label": {
+            "en": "Total"
+          },
+          "data": true
+        },
+        "T52": {
+          "label": {
+            "en": "Passengers"
+          },
+          "data": true
+        },
+        "T53": {
+          "label": {
+            "en": "Freight"
+          },
+          "data": true
+        },
+        "T54": {
+          "label": {
+            "en": "Other"
+          },
+          "data": true
+        },
+        "T6": {
+          "label": {
+            "en": "Tourism"
+          },
+          "data": true
+        },
+        "V1": {
+          "label": {
+            "en": "Insurance and pension services"
+          },
+          "data": true
+        },
+        "F": {
+          "label": {
+            "en": "Financial services"
+          },
+          "data": true
+        },
+        "L1": {
+          "label": {
+            "en": "Licence fees"
+          },
+          "data": true
+        },
+        "TCI": {
+          "label": {
+            "en": "Telecommunications, computer and information services"
+          },
+          "data": true
+        },
+        "FWRB": {
+          "label": {
+            "en": "Manufacturing services, maintenance and repair services, construction services"
+          },
+          "data": true
+        },
+        "FE": {
+          "label": {
+            "en": "Research and development services"
+          },
+          "data": true
+        },
+        "G": {
+          "label": {
+            "en": "Business services"
+          },
+          "data": true
+        },
+        "UD": {
+          "label": {
+            "en": "Other services"
+          },
+          "data": true
+        },
+        "D0_3": {
+          "label": {
+            "en": "Primary income"
+          },
+          "data": false
+        },
+        "T7": {
+          "label": {
+            "en": "Total"
+          },
+          "data": true
+        },
+        "A": {
+          "label": {
+            "en": "Labour income"
+          },
+          "data": true
+        },
+        "D0_3_2": {
+          "label": {
+            "en": "Investment income"
+          },
+          "data": false
+        },
+        "T8": {
+          "label": {
+            "en": "Total"
+          },
+          "data": true
+        },
+        "TDI": {
+          "label": {
+            "en": "Direct investment"
+          },
+          "data": false
+        },
+        "D": {
+          "label": {
+            "en": "Total"
+          },
+          "data": true
+        },
+        "DDIV": {
+          "label": {
+            "en": "Dividends"
+          },
+          "data": true
+        },
+        "DRE": {
+          "label": {
+            "en": "Reinvested earnings"
+          },
+          "data": true
+        },
+        "DZ": {
+          "label": {
+            "en": "Interest"
+          },
+          "data": true
+        },
+        "TP0": {
+          "label": {
+            "en": "Portfolio investment"
+          },
+          "data": false
+        },
+        "P0": {
+          "label": {
+            "en": "Total"
+          },
+          "data": true
+        },
+        "P0DP": {
+          "label": {
+            "en": "Equity securities"
+          },
+          "data": true
+        },
+        "P0ST": {
+          "label": {
+            "en": "Debt securities"
+          },
+          "data": true
+        },
+        "UI": {
+          "label": {
+            "en": "Other investment"
+          },
+          "data": true
+        },
+        "W": {
+          "label": {
+            "en": "Reserve assets"
+          },
+          "data": true
+        },
+        "D0_4": {
+          "label": {
+            "en": "Secondary income"
+          },
+          "data": false
+        },
+        "T9": {
+          "label": {
+            "en": "Total"
+          },
+          "data": true
+        },
+        "OH": {
+          "label": {
+            "en": "Public sector"
+          },
+          "data": true
+        },
+        "P1": {
+          "label": {
+            "en": "Private sector"
+          },
+          "data": false
+        },
+        "T91": {
+          "label": {
+            "en": "Total"
+          },
+          "data": true
+        },
+        "IM": {
+          "label": {
+            "en": "of which transfers by immigrants"
+          },
+          "data": true
+        },
+        "PMTWV": {
+          "label": {
+            "en": "Pro memoria Merchanting: Goods purchases/sales"
+          },
+          "data": true
+        }
+      },
+      "hierarchy": {
+        "L0": [],
+        "D0_1": {
+          "T0": [],
+          "D0_1_1": {
+            "T1": [],
+            "DAT1": [],
+            "DGZ": []
+          },
+          "D0_1_2": {
+            "T2": [],
+            "H": [],
+            "V0": []
+          },
+          "T3": []
+        },
+        "D0_2": {
+          "T4": [],
+          "T5": {
+            "T51": [],
+            "T52": [],
+            "T53": [],
+            "T54": []
+          },
+          "T6": [],
+          "V1": [],
+          "F": [],
+          "L1": [],
+          "TCI": [],
+          "FWRB": [],
+          "FE": [],
+          "G": [],
+          "UD": []
+        },
+        "D0_3": {
+          "T7": [],
+          "A": [],
+          "D0_3_2": {
+            "T8": [],
+            "TDI": {
+              "D": [],
+              "DDIV": [],
+              "DRE": [],
+              "DZ": []
+            },
+            "TP0": {
+              "P0": [],
+              "P0DP": [],
+              "P0ST": []
+            },
+            "UI": [],
+            "W": []
+          }
+        },
+        "D0_4": {
+          "T9": [],
+          "OH": [],
+          "P1": {
+            "T91": [],
+            "IM": []
+          }
+        },
+        "PMTWV": []
+      }
+    },
+    "D1": {
+      "label": {
+        "en": "Accounting entry"
+      },
+      "levels": {
+        "E": {
+          "label": {
+            "en": "Receipts"
+          },
+          "data": true
+        },
+        "A": {
+          "label": {
+            "en": "Expenses"
+          },
+          "data": true
+        },
+        "S": {
+          "label": {
+            "en": "Net"
+          },
+          "data": true
+        }
+      },
+      "hierarchy": {
+        "E": [],
+        "A": [],
+        "S": []
+      }
+    }
+  },
+  "topic": "Balance of payments",
+  "default": {
+    "D0": "L0",
+    "D1": "S"
+  },
+  "concept": "External sector / Balance of payments",
+  "canonical": true,
+  "split": "D0",
+  "single_select": "D1",
+  "default_transform": "level"
+}

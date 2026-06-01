@@ -1,0 +1,126 @@
+{
+  "schema_version": "1.0",
+  "id": "ch_snb_capweums",
+  "dim_order": [
+    "D0"
+  ],
+  "start": "1993-01-01",
+  "end": "2026-04-01",
+  "title": {
+    "en": "Securities turnover on the Swiss stock exchange"
+  },
+  "source": {
+    "name": {
+      "en": "Swiss National Bank"
+    },
+    "url": "https://data.snb.ch/en/topics/snb/cube/capweums"
+  },
+  "license": "snb",
+  "frequency": "monthly",
+  "dimensions": {
+    "D0": {
+      "label": {
+        "en": "Overview"
+      },
+      "levels": {
+        "D0_0": {
+          "label": {
+            "en": "Shares"
+          },
+          "data": false
+        },
+        "IT0": {
+          "label": {
+            "en": "Domestic securities"
+          },
+          "data": true
+        },
+        "AT0": {
+          "label": {
+            "en": "Foreign securities"
+          },
+          "data": true
+        },
+        "T0": {
+          "label": {
+            "en": "Total"
+          },
+          "data": true
+        },
+        "D0_1": {
+          "label": {
+            "en": "Bond issues"
+          },
+          "data": false
+        },
+        "IT1": {
+          "label": {
+            "en": "Domestic securities"
+          },
+          "data": true
+        },
+        "AT1": {
+          "label": {
+            "en": "Foreign securities"
+          },
+          "data": true
+        },
+        "T1": {
+          "label": {
+            "en": "Total"
+          },
+          "data": true
+        },
+        "A": {
+          "label": {
+            "en": "Investment funds"
+          },
+          "data": true
+        },
+        "SPO": {
+          "label": {
+            "en": "Structured products and options"
+          },
+          "data": true
+        },
+        "T2": {
+          "label": {
+            "en": "Total"
+          },
+          "data": true
+        },
+        "ISMIT": {
+          "label": {
+            "en": "Securities included in the SMI"
+          },
+          "data": true
+        }
+      },
+      "hierarchy": {
+        "D0_0": {
+          "IT0": [],
+          "AT0": [],
+          "T0": []
+        },
+        "D0_1": {
+          "IT1": [],
+          "AT1": [],
+          "T1": []
+        },
+        "A": [],
+        "SPO": [],
+        "T2": [],
+        "ISMIT": []
+      }
+    }
+  },
+  "topic": "Financial markets",
+  "default": {
+    "D0": "T2"
+  },
+  "concept": "Financial markets / Securities turnover",
+  "canonical": true,
+  "split": "D0",
+  "single_select": "(none; single dimension)",
+  "default_transform": "level"
+}

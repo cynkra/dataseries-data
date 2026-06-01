@@ -1,0 +1,454 @@
+{
+  "schema_version": "1.0",
+  "id": "ch_snb_bopoverq",
+  "dim_order": [
+    "D0"
+  ],
+  "start": "1985-01-01",
+  "end": "2025-10-01",
+  "title": {
+    "en": "Swiss balance of payments – Overview – Quarter"
+  },
+  "source": {
+    "name": {
+      "en": "Swiss National Bank"
+    },
+    "url": "https://data.snb.ch/en/topics/snb/cube/bopoverq"
+  },
+  "license": "snb",
+  "frequency": "quarterly",
+  "dimensions": {
+    "D0": {
+      "label": {
+        "en": "Component"
+      },
+      "levels": {
+        "D0_0": {
+          "label": {
+            "en": "Current account"
+          },
+          "data": false
+        },
+        "S0": {
+          "label": {
+            "en": "Net"
+          },
+          "data": true
+        },
+        "E0": {
+          "label": {
+            "en": "Receipts"
+          },
+          "data": true
+        },
+        "A0": {
+          "label": {
+            "en": "Expenses"
+          },
+          "data": true
+        },
+        "D0_0_3": {
+          "label": {
+            "en": "Goods and services"
+          },
+          "data": false
+        },
+        "S1": {
+          "label": {
+            "en": "Net"
+          },
+          "data": true
+        },
+        "E1": {
+          "label": {
+            "en": "Receipts"
+          },
+          "data": true
+        },
+        "A1": {
+          "label": {
+            "en": "Expenses"
+          },
+          "data": true
+        },
+        "D0_0_3_3": {
+          "label": {
+            "en": "Goods"
+          },
+          "data": false
+        },
+        "S2": {
+          "label": {
+            "en": "Net"
+          },
+          "data": true
+        },
+        "E2": {
+          "label": {
+            "en": "Receipts"
+          },
+          "data": true
+        },
+        "A2": {
+          "label": {
+            "en": "Expenses"
+          },
+          "data": true
+        },
+        "D0_0_3_4": {
+          "label": {
+            "en": "Services"
+          },
+          "data": false
+        },
+        "S3": {
+          "label": {
+            "en": "Net"
+          },
+          "data": true
+        },
+        "E3": {
+          "label": {
+            "en": "Receipts"
+          },
+          "data": true
+        },
+        "A3": {
+          "label": {
+            "en": "Expenses"
+          },
+          "data": true
+        },
+        "D0_0_4": {
+          "label": {
+            "en": "Primary income"
+          },
+          "data": false
+        },
+        "S4": {
+          "label": {
+            "en": "Net"
+          },
+          "data": true
+        },
+        "E4": {
+          "label": {
+            "en": "Receipts"
+          },
+          "data": true
+        },
+        "A4": {
+          "label": {
+            "en": "Expenses"
+          },
+          "data": true
+        },
+        "D0_0_4_3": {
+          "label": {
+            "en": "Labour income"
+          },
+          "data": false
+        },
+        "S5": {
+          "label": {
+            "en": "Net"
+          },
+          "data": true
+        },
+        "E5": {
+          "label": {
+            "en": "Receipts"
+          },
+          "data": true
+        },
+        "A5": {
+          "label": {
+            "en": "Expenses"
+          },
+          "data": true
+        },
+        "D0_0_4_4": {
+          "label": {
+            "en": "Investment income"
+          },
+          "data": false
+        },
+        "S6": {
+          "label": {
+            "en": "Net"
+          },
+          "data": true
+        },
+        "E6": {
+          "label": {
+            "en": "Receipts"
+          },
+          "data": true
+        },
+        "A6": {
+          "label": {
+            "en": "Expenses"
+          },
+          "data": true
+        },
+        "D0_0_5": {
+          "label": {
+            "en": "Secondary income"
+          },
+          "data": false
+        },
+        "S7": {
+          "label": {
+            "en": "Net"
+          },
+          "data": true
+        },
+        "E7": {
+          "label": {
+            "en": "Receipts"
+          },
+          "data": true
+        },
+        "A7": {
+          "label": {
+            "en": "Expenses"
+          },
+          "data": true
+        },
+        "D0_1": {
+          "label": {
+            "en": "Capital account"
+          },
+          "data": false
+        },
+        "S8": {
+          "label": {
+            "en": "Net"
+          },
+          "data": true
+        },
+        "E8": {
+          "label": {
+            "en": "Receipts"
+          },
+          "data": true
+        },
+        "A8": {
+          "label": {
+            "en": "Expenses"
+          },
+          "data": true
+        },
+        "D0_2": {
+          "label": {
+            "en": "Financial account (excluding derivatives)"
+          },
+          "data": false
+        },
+        "S9": {
+          "label": {
+            "en": "Net"
+          },
+          "data": true
+        },
+        "NA0": {
+          "label": {
+            "en": "Net acquisition of financial assets"
+          },
+          "data": true
+        },
+        "NP0": {
+          "label": {
+            "en": "Net incurrence of liabilities"
+          },
+          "data": true
+        },
+        "D0_2_3": {
+          "label": {
+            "en": "Direct investment"
+          },
+          "data": false
+        },
+        "S10": {
+          "label": {
+            "en": "Net"
+          },
+          "data": true
+        },
+        "NA1": {
+          "label": {
+            "en": "Net acquisition of financial assets"
+          },
+          "data": true
+        },
+        "NP1": {
+          "label": {
+            "en": "Net incurrence of liabilities"
+          },
+          "data": true
+        },
+        "D0_2_4": {
+          "label": {
+            "en": "Portfolio investment"
+          },
+          "data": false
+        },
+        "S11": {
+          "label": {
+            "en": "Net"
+          },
+          "data": true
+        },
+        "NA2": {
+          "label": {
+            "en": "Net acquisition of financial assets"
+          },
+          "data": true
+        },
+        "NP2": {
+          "label": {
+            "en": "Net incurrence of liabilities"
+          },
+          "data": true
+        },
+        "D0_2_5": {
+          "label": {
+            "en": "Other investment"
+          },
+          "data": false
+        },
+        "S12": {
+          "label": {
+            "en": "Net"
+          },
+          "data": true
+        },
+        "NA3": {
+          "label": {
+            "en": "Net acquisition of financial assets"
+          },
+          "data": true
+        },
+        "NP3": {
+          "label": {
+            "en": "Net incurrence of liabilities"
+          },
+          "data": true
+        },
+        "D0_2_6": {
+          "label": {
+            "en": "Reserve assets"
+          },
+          "data": false
+        },
+        "S13": {
+          "label": {
+            "en": "Net"
+          },
+          "data": true
+        },
+        "D0_3": {
+          "label": {
+            "en": "Derivatives"
+          },
+          "data": false
+        },
+        "S14": {
+          "label": {
+            "en": "Net"
+          },
+          "data": true
+        },
+        "SD": {
+          "label": {
+            "en": "Statistical difference"
+          },
+          "data": true
+        }
+      },
+      "hierarchy": {
+        "D0_0": {
+          "S0": [],
+          "E0": [],
+          "A0": [],
+          "D0_0_3": {
+            "S1": [],
+            "E1": [],
+            "A1": [],
+            "D0_0_3_3": {
+              "S2": [],
+              "E2": [],
+              "A2": []
+            },
+            "D0_0_3_4": {
+              "S3": [],
+              "E3": [],
+              "A3": []
+            }
+          },
+          "D0_0_4": {
+            "S4": [],
+            "E4": [],
+            "A4": [],
+            "D0_0_4_3": {
+              "S5": [],
+              "E5": [],
+              "A5": []
+            },
+            "D0_0_4_4": {
+              "S6": [],
+              "E6": [],
+              "A6": []
+            }
+          },
+          "D0_0_5": {
+            "S7": [],
+            "E7": [],
+            "A7": []
+          }
+        },
+        "D0_1": {
+          "S8": [],
+          "E8": [],
+          "A8": []
+        },
+        "D0_2": {
+          "S9": [],
+          "NA0": [],
+          "NP0": [],
+          "D0_2_3": {
+            "S10": [],
+            "NA1": [],
+            "NP1": []
+          },
+          "D0_2_4": {
+            "S11": [],
+            "NA2": [],
+            "NP2": []
+          },
+          "D0_2_5": {
+            "S12": [],
+            "NA3": [],
+            "NP3": []
+          },
+          "D0_2_6": {
+            "S13": []
+          }
+        },
+        "D0_3": {
+          "S14": []
+        },
+        "SD": []
+      }
+    }
+  },
+  "topic": "Balance of payments",
+  "default": {
+    "D0": "S0"
+  },
+  "concept": "External sector / Balance of payments",
+  "canonical": false,
+  "split": "D0",
+  "single_select": "n/a (single-dimension cube; D0 is the only dimension)",
+  "default_transform": "level"
+}

@@ -1,0 +1,198 @@
+{
+  "schema_version": "1.0",
+  "id": "ch_snb_zavkuzaart",
+  "dim_order": [
+    "D0",
+    "D1",
+    "D2"
+  ],
+  "start": "2012-03-01",
+  "end": "2026-03-01",
+  "title": {
+    "en": "Customer payments at banks – Outgoing payments, by type of order"
+  },
+  "source": {
+    "name": {
+      "en": "Swiss National Bank"
+    },
+    "url": "https://data.snb.ch/en/topics/snb/cube/zavkuzaart"
+  },
+  "license": "snb",
+  "frequency": "monthly",
+  "dimensions": {
+    "D0": {
+      "label": {
+        "en": "Outgoing payments"
+      },
+      "levels": {
+        "T": {
+          "label": {
+            "en": "Total"
+          },
+          "data": true
+        },
+        "ZIB": {
+          "label": {
+            "en": "Payments between resident banks"
+          },
+          "data": true
+        },
+        "ZAB": {
+          "label": {
+            "en": "Payments involving a non-resident bank"
+          },
+          "data": true
+        }
+      },
+      "hierarchy": {
+        "T": [],
+        "ZIB": [],
+        "ZAB": []
+      }
+    },
+    "D1": {
+      "label": {
+        "en": "Type of order"
+      },
+      "levels": {
+        "T": {
+          "label": {
+            "en": "Total"
+          },
+          "data": true
+        },
+        "UEB": {
+          "label": {
+            "en": "Transfers"
+          },
+          "data": false
+        },
+        "UEB_T": {
+          "label": {
+            "en": "Total"
+          },
+          "data": true
+        },
+        "UEB_PBA": {
+          "label": {
+            "en": "Paper-based"
+          },
+          "data": false
+        },
+        "UEB_PBA_T": {
+          "label": {
+            "en": "Total"
+          },
+          "data": true
+        },
+        "UEB_NPB": {
+          "label": {
+            "en": "Non-paper-based"
+          },
+          "data": false
+        },
+        "UEB_NPB_T": {
+          "label": {
+            "en": "Total"
+          },
+          "data": true
+        },
+        "UEB_NPB_EBA": {
+          "label": {
+            "en": "eBanking"
+          },
+          "data": true
+        },
+        "UEB_NPB_DKA": {
+          "label": {
+            "en": "Direct channels"
+          },
+          "data": true
+        },
+        "UEB_NPB_DAA": {
+          "label": {
+            "en": "Standing order"
+          },
+          "data": true
+        },
+        "UEB_NPB_U": {
+          "label": {
+            "en": "Other transfer types"
+          },
+          "data": true
+        },
+        "LAS": {
+          "label": {
+            "en": "Direct debits"
+          },
+          "data": true
+        },
+        "UZE": {
+          "label": {
+            "en": "Other outgoing payments"
+          },
+          "data": true
+        }
+      },
+      "hierarchy": {
+        "T": [],
+        "UEB": {
+          "UEB_T": [],
+          "UEB_PBA": {
+            "UEB_PBA_T": []
+          },
+          "UEB_NPB": {
+            "UEB_NPB_T": [],
+            "UEB_NPB_EBA": [],
+            "UEB_NPB_DKA": [],
+            "UEB_NPB_DAA": [],
+            "UEB_NPB_U": []
+          }
+        },
+        "LAS": [],
+        "UZE": []
+      }
+    },
+    "D2": {
+      "label": {
+        "en": "Transactions and amount"
+      },
+      "levels": {
+        "ATA": {
+          "label": {
+            "en": "Transactions in thousands"
+          },
+          "data": true
+        },
+        "BET": {
+          "label": {
+            "en": "Amount in CHF thousands"
+          },
+          "data": true
+        },
+        "BPT": {
+          "label": {
+            "en": "Amount per transaction in CHF"
+          },
+          "data": true
+        }
+      },
+      "hierarchy": {
+        "ATA": [],
+        "BET": [],
+        "BPT": []
+      }
+    }
+  },
+  "topic": "Payment systems",
+  "default": {
+    "D0": "T",
+    "D1": "T",
+    "D2": "BET"
+  },
+  "concept": "Payment systems / Payments & cash",
+  "canonical": false,
+  "split": "D1",
+  "single_select": ["D0", "D2"],
+  "default_transform": "level"
+}

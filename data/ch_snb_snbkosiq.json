@@ -1,0 +1,216 @@
+{
+  "schema_version": "1.0",
+  "id": "ch_snb_snbkosiq",
+  "dim_order": [
+    "D0"
+  ],
+  "start": "2011-01-01",
+  "end": "2026-01-01",
+  "title": {
+    "en": "Business cycle signals"
+  },
+  "source": {
+    "name": {
+      "en": "Swiss National Bank"
+    },
+    "url": "https://data.snb.ch/en/topics/snb/cube/snbkosiq"
+  },
+  "license": "snb",
+  "frequency": "quarterly",
+  "dimensions": {
+    "D0": {
+      "label": {
+        "en": "Overview"
+      },
+      "levels": {
+        "UVJQ": {
+          "label": {
+            "en": "Turnover compared to year-back quarter (Index)"
+          },
+          "data": true
+        },
+        "UVQ": {
+          "label": {
+            "en": "Turnover compared to previous quarter (Index)"
+          },
+          "data": true
+        },
+        "KA": {
+          "label": {
+            "en": "Capacity utilisation (Index)"
+          },
+          "data": true
+        },
+        "BS": {
+          "label": {
+            "en": "Procurement difficulties (Index)"
+          },
+          "data": true
+        },
+        "EML": {
+          "label": {
+            "en": "Stock of purchased materials (Index)"
+          },
+          "data": true
+        },
+        "ML": {
+          "label": {
+            "en": "Margin situation (Index)"
+          },
+          "data": true
+        },
+        "NM": {
+          "label": {
+            "en": "Sustainability of margins (Index)"
+          },
+          "data": true
+        },
+        "KVK": {
+          "label": {
+            "en": "Lending conditions (Index)"
+          },
+          "data": true
+        },
+        "LS": {
+          "label": {
+            "en": "Liquidity situation (Index)"
+          },
+          "data": true
+        },
+        "PK": {
+          "label": {
+            "en": "Staff shortages (Index)"
+          },
+          "data": true
+        },
+        "RS": {
+          "label": {
+            "en": "Recruitment difficulties (Index)"
+          },
+          "data": true
+        },
+        "LELJ": {
+          "label": {
+            "en": "Wage increases for current year (%)"
+          },
+          "data": true
+        },
+        "LEFJ": {
+          "label": {
+            "en": "Wage increases for next year (%)"
+          },
+          "data": true
+        },
+        "UERW": {
+          "label": {
+            "en": "Expected turnover (Index)"
+          },
+          "data": true
+        },
+        "UEG": {
+          "label": {
+            "en": "Uncertainty about the development of business (Index)"
+          },
+          "data": true
+        },
+        "BERW": {
+          "label": {
+            "en": "Expected employment (Index)"
+          },
+          "data": true
+        },
+        "EPE": {
+          "label": {
+            "en": "Expected change in purchase prices (Index)"
+          },
+          "data": true
+        },
+        "VPE": {
+          "label": {
+            "en": "Expected change in sales prices (Index)"
+          },
+          "data": true
+        },
+        "AI": {
+          "label": {
+            "en": "Planned equipment investment (Index)"
+          },
+          "data": true
+        },
+        "BI": {
+          "label": {
+            "en": "Planned construction investment (Index)"
+          },
+          "data": true
+        },
+        "EPNV": {
+          "label": {
+            "en": "Expected change in price level (Index)"
+          },
+          "data": true
+        },
+        "IERW": {
+          "label": {
+            "en": "Expected inflation (%)"
+          },
+          "data": false
+        },
+        "IERWM": {
+          "label": {
+            "en": "In 6 to 12 months"
+          },
+          "data": true
+        },
+        "IERWJ": {
+          "label": {
+            "en": "In 3 to 5 years"
+          },
+          "data": true
+        },
+        "F25": {
+          "label": {
+            "en": "Developments in sales prices compared to the year-back quarter (index)"
+          },
+          "data": true
+        }
+      },
+      "hierarchy": {
+        "UVJQ": [],
+        "UVQ": [],
+        "KA": [],
+        "BS": [],
+        "EML": [],
+        "ML": [],
+        "NM": [],
+        "KVK": [],
+        "LS": [],
+        "PK": [],
+        "RS": [],
+        "LELJ": [],
+        "LEFJ": [],
+        "UERW": [],
+        "UEG": [],
+        "BERW": [],
+        "EPE": [],
+        "VPE": [],
+        "AI": [],
+        "BI": [],
+        "EPNV": [],
+        "IERW": {
+          "IERWM": [],
+          "IERWJ": []
+        },
+        "F25": []
+      }
+    }
+  },
+  "topic": "Business surveys",
+  "default": {
+    "D0": "KA"
+  },
+  "concept": "Business cycle & sentiment / Business cycle signals",
+  "canonical": true,
+  "split": "D0",
+  "single_select": "(none; single dimension)",
+  "default_transform": "level"
+}

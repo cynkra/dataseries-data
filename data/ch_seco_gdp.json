@@ -1,0 +1,912 @@
+{
+  "schema_version": "1.0",
+  "id": "ch_seco_gdp",
+  "dim_order": [
+    "type",
+    "structure",
+    "seas_adj"
+  ],
+  "start": "1980-01-01",
+  "end": "2025-10-01",
+  "title": {
+    "en": "Gross domestic product (GDP)",
+    "de": "Bruttoninlandprodukt (BIP)",
+    "fr": "Produit intérieur brut (PIB)",
+    "it": "Prodotto interno lordo (PIL)"
+  },
+  "source": {
+    "name": {
+      "en": "State Secretariat for Economic Affairs (SECO)",
+      "de": "Staatssekretariat für Wirtschaft (SECO)",
+      "fr": "Secrétariat d'Etat à l'économie (SECO)",
+      "it": "Segretaria di Stato dell'economia (SECO)"
+    },
+    "url": "https://www.seco.admin.ch/seco/en/home/wirtschaftslage---wirtschaftspolitik/Wirtschaftslage/bip-quartalsschaetzungen-/daten.html"
+  },
+  "license": "seco",
+  "frequency": "quarterly",
+  "dimensions": {
+    "type": {
+      "label": {
+        "en": "Nominal, real or growth contribution",
+        "de": "Nominal, real oder Wachstumsbeitrag",
+        "fr": "Valeurs nominales, réelles ou contribution à la croissance",
+        "it": "Valori nominali, reali o contributo alla crescita"
+      },
+      "levels": {
+        "nom": {
+          "label": {
+            "en": "Nominal",
+            "de": "Nominal",
+            "fr": "Valeurs nominales",
+            "it": "Valori nominali"
+          },
+          "data": true
+        },
+        "real": {
+          "label": {
+            "en": "Real",
+            "de": "Real",
+            "fr": "Valeurs réelles",
+            "it": "Valori reali"
+          },
+          "data": true
+        },
+        "gc_q": {
+          "label": {
+            "en": "Contribution to real q-o-q GDP growth",
+            "de": "Beitrag zum realen BIP-Wachstum gegenüber dem Vorquartal",
+            "fr": "Contribution à la croissance du PIB réel par rapport au trimestre précédent",
+            "it": "Contributo alla crescita del PIL reale rispetto al trimestre precedente"
+          },
+          "data": true
+        },
+        "gc_y": {
+          "label": {
+            "en": "Contribution to real y-o-y GDP growth",
+            "de": "Beitrag zum realen BIP-Wachstum gegenüber dem Vorjahr",
+            "fr": "Contribution à la croissance du PIB réel par rapport à l'année précédente",
+            "it": "Contributo alla crescita del PIL reale rispetto all'anno precedente"
+          },
+          "data": true
+        }
+      }
+    },
+    "structure": {
+      "label": {
+        "en": "Section",
+        "de": "Rubrik",
+        "fr": "Section",
+        "it": "Sezione"
+      },
+      "levels": {
+        "gdp": {
+          "label": {
+            "en": "Gross domestic product at market prices, B1GQ",
+            "de": "Bruttoinlandprodukt zu Marktpreisen, B1GQ",
+            "fr": "Produit intérieur brut au prix du marché, B1GQ",
+            "it": "Prodotto interno lordo, B1GQ"
+          },
+          "data": true
+        },
+        "production": {
+          "label": {
+            "en": "Production approach",
+            "de": "Produktionsseite",
+            "fr": "Approche par la production",
+            "it": "Approccio della produzione"
+          },
+          "data": false
+        },
+        "gva": {
+          "label": {
+            "en": "Gross value added before adjustments, B1G",
+            "de": "Bruttowertschöpfung vor Berichtigungen, B1G",
+            "fr": "Valeur ajoutée brute avant ajustements, B1G",
+            "it": "Valore aggiunto lordo prima degli aggiustamenti, B1G"
+          },
+          "data": true
+        },
+        "agric": {
+          "label": {
+            "en": "Agriculture, forestry and fishing (noga 01-03)",
+            "de": "Landwirtschaft, Forstwirtschaft, Fischerei (Noga 01-03)",
+            "fr": "Agriculture, sylviculture et pêche (Noga 01-03)",
+            "it": "Agricoltura, silvicoltura e pesca (Noga 01-03)"
+          },
+          "data": true
+        },
+        "mining": {
+          "label": {
+            "en": "Mining and quarrying (noga 05-09)",
+            "de": "Bergbau, Gewinnung von Steinen und Erden (Noga 05-09)",
+            "fr": "Industries extractives (Noga 05-09)",
+            "it": "Attività estrattive (Noga 05-09)"
+          },
+          "data": true
+        },
+        "manu": {
+          "label": {
+            "en": "Manufacturing (noga 10-33)",
+            "de": "Verarbeitendes Gewerbe (Noga 10-33)",
+            "fr": "Industrie manufacturière (Noga 10-33)",
+            "it": "Attività manifatturiere (Noga 10-33)"
+          },
+          "data": true
+        },
+        "chem_pharm": {
+          "label": {
+            "en": "Manufacturing of chemicals and pharmaceuticals (noga 19-21)",
+            "de": "Chemische und pharmazeutische Erzeugnisse (Noga 19-21)",
+            "fr": "Industrie chimique et pharmaceutique (Noga 19-21)",
+            "it": "Industria chimica e farmaceutica (Noga 19-21)"
+          },
+          "data": true
+        },
+        "manu_other": {
+          "label": {
+            "en": "Other manufacturing (noga 10-18, 22-33)",
+            "de": "Sonstiges verarbeitendes Gewerbe (Noga 10-18, 22-33)",
+            "fr": "Autres industries manufacturières (Noga 10-18, 22-33)",
+            "it": "Altre attività manifatturiere (Noga 10-18, 22-33)"
+          },
+          "data": true
+        },
+        "energy": {
+          "label": {
+            "en": "Energy production and distribution (noga 35)",
+            "de": "Energieversorgung  (Noga 35)",
+            "fr": "Production et distribution d'énergie (Noga 35)",
+            "it": "Produzione e distribuzione di energia (Noga 35)"
+          },
+          "data": true
+        },
+        "disp": {
+          "label": {
+            "en": "Water supply, waste management (noga 36-39)",
+            "de": "Wasser, Abwasser, Abfall  (Noga 36-39)",
+            "fr": "Eau, gestion des déchets (Noga 36-39)",
+            "it": "Acqua, trattamento dei rifiuti (Noga 36-39)"
+          },
+          "data": true
+        },
+        "constr": {
+          "label": {
+            "en": "Construction (noga 41-43)",
+            "de": "Baugewerbe (Noga 41-43)",
+            "fr": "Construction (Noga 41-43)",
+            "it": "Costruzioni (Noga 41-43)"
+          },
+          "data": true
+        },
+        "trade": {
+          "label": {
+            "en": "Trade, repair of motor vehicles (noga 45-47)",
+            "de": "Handel, Reparatur von Motorfahrzeugen (Noga 45-47)",
+            "fr": "Commerce; réparation d’automobiles (Noga 45-47)",
+            "it": "Commercio, riparazione di autoveicoli (Noga 45-47)"
+          },
+          "data": true
+        },
+        "trade_retail": {
+          "label": {
+            "en": "Retail trade (noga 47)",
+            "de": "Detailhandel (Noga 47)",
+            "fr": "Commerce de détail (Noga 47)",
+            "it": "Commercio al dettaglio (Noga 47)"
+          },
+          "data": true
+        },
+        "transport": {
+          "label": {
+            "en": "Transportation and storage (noga 49-53)",
+            "de": "Verkehr und Lagerei (Noga 49-53)",
+            "fr": "Transports et entreposage (Noga 49-53)",
+            "it": "Trasporto e magazzinaggio (Noga 49-53)"
+          },
+          "data": true
+        },
+        "hotel": {
+          "label": {
+            "en": "Accomodation, food services (noga 55-56)",
+            "de": "Gastgewerbe (Noga 55-56)",
+            "fr": "Hébergement et restauration (Noga 55-56)",
+            "it": "Alloggio e ristorazione (Noga 55-56)"
+          },
+          "data": true
+        },
+        "comm": {
+          "label": {
+            "en": "Information and communication (noga 58-63)",
+            "de": "Information und Kommunikation (Noga 58-63)",
+            "fr": "Information et communication (Noga 58-63)",
+            "it": "Servizi di informazione e comunicazione (Noga 58-63)"
+          },
+          "data": true
+        },
+        "findl": {
+          "label": {
+            "en": "Financial and insurance activities (noga 64-66)",
+            "de": "Erbringung von Finanz- und Versicherungsdiensten (Noga 64-66)",
+            "fr": "Activités financières et d’assurance (Noga 64-66)",
+            "it": "Attività finanziarie e assicurative (Noga 64-66)"
+          },
+          "data": true
+        },
+        "finance": {
+          "label": {
+            "en": "Financial service activities (noga 64)",
+            "de": "Finanzdienstleistungen (Noga 64)",
+            "fr": "Activités financières (Noga 64)",
+            "it": "Attività finanziarie (Noga 64)"
+          },
+          "data": true
+        },
+        "insur": {
+          "label": {
+            "en": "Insurance service activities (noga 65)",
+            "de": "Versicherungsdienstleistungen (Noga 65)",
+            "fr": "Activités d’assurance (Noga 65)",
+            "it": "Attività assicurative (Noga 65)"
+          },
+          "data": true
+        },
+        "b_serv": {
+          "label": {
+            "en": "Business services (noga 68-75, 77-82)",
+            "de": "Unternehmensnahe Dienstleistungen (Noga 68-75, 77-82)",
+            "fr": "Services aux entreprises (Noga 68-75, 77-82)",
+            "it": "Servizi alle imprese (Noga 68-75, 77-82)"
+          },
+          "data": true
+        },
+        "admin": {
+          "label": {
+            "en": "Public administration (noga 84)",
+            "de": "Öffentliche Verwaltung (Noga 84)",
+            "fr": "Administrations publiques",
+            "it": "Amministrazione pubblica (Noga 84)"
+          },
+          "data": true
+        },
+        "edu": {
+          "label": {
+            "en": "Education (noga 85)",
+            "de": "Erziehung und Unterricht (Noga 85)",
+            "fr": "Enseignement (Noga 85)",
+            "it": "Istruzione (Noga 85)"
+          },
+          "data": true
+        },
+        "health": {
+          "label": {
+            "en": "Human health and social work activities (noga 86-88)",
+            "de": "Gesundheits- und Sozialwesen (Noga 86-88)",
+            "fr": "Santé humaine et activités sociales (Noga 86-88)",
+            "it": "Sanità e assistenza sociale (Noga 86-88)"
+          },
+          "data": true
+        },
+        "entertain": {
+          "label": {
+            "en": "Arts, entertainment and recreation (noga 90-93)",
+            "de": "Kunst, Unterhaltung, Erholung (Noga 90-93)",
+            "fr": "Arts, spectacles, activités récréatives (Noga 90-93)",
+            "it": "Arte, spettacoli, attività ricreative  (Noga 90-93)"
+          },
+          "data": true
+        },
+        "other_serv": {
+          "label": {
+            "en": "Other service activities (noga 94-96)",
+            "de": "Sonstige Dienstleistungen (Noga 94-96)",
+            "fr": "Autres activités de services (Noga 94-96)",
+            "it": "Altre attività di servizi (Noga 94-96)"
+          },
+          "data": true
+        },
+        "hh_prod": {
+          "label": {
+            "en": "Household production (noga 97-98)",
+            "de": "Produktion privater Haushalte (Noga 97-98)",
+            "fr": "Production des ménages (Noga 97-98)",
+            "it": "Produzione delle economie domestiche (Noga 97-98)"
+          },
+          "data": true
+        },
+        "adj": {
+          "label": {
+            "en": "Adjustments",
+            "de": "Berichtigungen",
+            "fr": "Ajustements",
+            "it": "Aggiustamenti"
+          },
+          "data": true
+        },
+        "tax_pr": {
+          "label": {
+            "en": "Taxes on products,  D21",
+            "de": "Gütersteuern,  D21",
+            "fr": "Impôts sur les produits, D21",
+            "it": "Imposte sui prodotti, D21"
+          },
+          "data": true
+        },
+        "subs_pr": {
+          "label": {
+            "en": "Subsidies on products, D31",
+            "de": "Gütersubventionen, D31",
+            "fr": "Subventions sur les produits, D31",
+            "it": "Sovvenzioni ai prodotti, D31"
+          },
+          "data": true
+        },
+        "expenditure": {
+          "label": {
+            "en": "Expenditure approach",
+            "de": "Nachfrageseite",
+            "fr": "Approche par la dépense",
+            "it": "Approccio della spesa"
+          },
+          "data": false
+        },
+        "demand_dom": {
+          "label": {
+            "en": "Domestic demand, P3_P5",
+            "de": "Inlandnachfrage, P3_P5",
+            "fr": "Demande intérieure, P3_P5",
+            "it": "Domanda interna, P3_P5"
+          },
+          "data": true
+        },
+        "cons": {
+          "label": {
+            "en": "Final consumption expenditure, P3",
+            "de": "Konsumausgaben, P3",
+            "fr": "Dépenses de consommation finale, P3",
+            "it": "Spesa per consumi finali, P3"
+          },
+          "data": true
+        },
+        "cons_priv": {
+          "label": {
+            "en": "Final consumption expenditure, households and NPISH,  P31_S14_S15",
+            "de": "Konsumausgaben, private Haushalte und POOE,  P31_S14_S15",
+            "fr": "Dépenses de consommation finale, ménages et ISBLSM,  P31_S14_S15",
+            "it": "Spesa per consumi finali, economie domestiche e ISLED, P31_S14_S15"
+          },
+          "data": true
+        },
+        "cons_gov": {
+          "label": {
+            "en": "Final consumption expenditure of general government, P3_S13",
+            "de": "Konsumausgaben des Staates, P3_S13",
+            "fr": "Dépenses de consommation finale des administrations publiques, P3_S13",
+            "it": "Spesa per consumi finali, amministrazioni pubbliche, P3_S13"
+          },
+          "data": true
+        },
+        "inv": {
+          "label": {
+            "en": "Investment, P5",
+            "de": "Bruttoinvestitionen, P5",
+            "fr": "Investissements, P5",
+            "it": "Investimenti, P5"
+          },
+          "data": true
+        },
+        "inv_gfcf": {
+          "label": {
+            "en": "Gross fixed capital formation, P51G",
+            "de": "Bruttoanlageinvestitionen, P51G",
+            "fr": "Formation brute de capital fixe, P51G",
+            "it": "Investimenti fissi lordi, P51G"
+          },
+          "data": true
+        },
+        "inv_constr": {
+          "label": {
+            "en": "Investment in construction, P5111_N111_112G",
+            "de": "Bauinvestitionen, P5111_N111_112G",
+            "fr": "Investissements dans la construction, P5111_N111_112G",
+            "it": "Costruzione, P5111_N111_112G"
+          },
+          "data": true
+        },
+        "inv_fixed": {
+          "label": {
+            "en": "Investment in fixed assets and software, P5111_N113T117G",
+            "de": "Ausrüstungsinvestitionen, P5111_N113T117G",
+            "fr": "Investissements en biens d'équipement, P5111_N113T117G",
+            "it": "Beni di equipaggiamento, P5111_N113T117G"
+          },
+          "data": true
+        },
+        "stocks": {
+          "label": {
+            "en": "Changes in inventories, statistical discrepancy,  P52_YA0",
+            "de": "Vorratsveränderungen, statistische Abweichungen,  P52_YA0",
+            "fr": "Variation des stocks et divergence statistique,  P52_YA0",
+            "it": "Variazione delle scorte e divergenze statistiche, P52_YA0"
+          },
+          "data": true
+        },
+        "v_net": {
+          "label": {
+            "en": "Acquisitions less disposals of valuables, P53",
+            "de": "Nettozugang an Wertsachen, P53",
+            "fr": "Acquisitions moins cessions d'objets de valeur, P53",
+            "it": "Acquisizioni meno cessioni di oggetti di valore, P53"
+          },
+          "data": true
+        },
+        "trade_balance": {
+          "label": {
+            "en": "External balance of goods and services, B11",
+            "de": "Handelsbilanz, Waren und Dienstleistungen, B11",
+            "fr": "Balance commerciale, biens et services, B11",
+            "it": "Bilancia commerciale, beni e servizi, B11"
+          },
+          "data": true
+        },
+        "exp": {
+          "label": {
+            "en": "Exports of goods and services, P6",
+            "de": "Exporte, Waren und Dienstleistungen, P6",
+            "fr": "Exportations de biens et de services, P6",
+            "it": "Esportazioni di beni e servizi, P6"
+          },
+          "data": true
+        },
+        "exp_good": {
+          "label": {
+            "en": "Exports of goods, P61",
+            "de": "Warenexporte, P61",
+            "fr": "Exportations de biens, P61",
+            "it": "Esportazioni di beni, P61"
+          },
+          "data": true
+        },
+        "exp_good_ex_g": {
+          "label": {
+            "en": "Exports of goods excluding non-monetary gold, P61XF11",
+            "de": "Warenexporte ohne Nichtwährungsgold, P61XF11",
+            "fr": "Exportations de biens sans or non monétaire, P61XF11",
+            "it": "Esportazioni di beni senza oro non monetario, P61XF11"
+          },
+          "data": true
+        },
+        "exp_good_ex_vm": {
+          "label": {
+            "en": "Exports of goods excluding valuables and merchanting",
+            "de": "Warenexporte ohne Wertsachen und Transithandel",
+            "fr": "Exportations de biens sans objets de valeur et commerce de transit",
+            "it": "Esportazioni di beni senza oggetti di valore e commercio di transito"
+          },
+          "data": true
+        },
+        "exp_serv": {
+          "label": {
+            "en": "Exports of services, P62",
+            "de": "Dienstleistungsexporte, P62",
+            "fr": "Exportations de services, P62",
+            "it": "Esportazioni di servizi, P62"
+          },
+          "data": true
+        },
+        "imp": {
+          "label": {
+            "en": "Imports of goods and services, P7",
+            "de": "Importe, Waren und Dienstleistungen, P7",
+            "fr": "Importations de biens et services, P7",
+            "it": "Importazioni di beni e servizi, P7"
+          },
+          "data": true
+        },
+        "imp_good": {
+          "label": {
+            "en": "Imports of goods,  P71",
+            "de": "Warenimporte,  P71",
+            "fr": "Importations de biens, P71",
+            "it": "Importazioni di beni, P71"
+          },
+          "data": true
+        },
+        "imp_good_ex_g": {
+          "label": {
+            "en": "Imports of goods excluding non-monetary gold, P71XF11",
+            "de": "Warenimporte ohne nicht-monetäres Gold, P71XF11",
+            "fr": "Importations de biens sans or non monétaire, P71XF11",
+            "it": "Importazioni di beni senza oro non monetario, P71XF11"
+          },
+          "data": true
+        },
+        "imp_good_ex_v": {
+          "label": {
+            "en": "Imports of goods excluding valuables",
+            "de": "Warenimporte ohne Wertsachen",
+            "fr": "Importations de biens sans objets de valeur",
+            "it": "Importazioni di beni senza oggetti di valore"
+          },
+          "data": true
+        },
+        "imp_serv": {
+          "label": {
+            "en": "Imports of services,  P72",
+            "de": "Dienstleistungsimport,  P72",
+            "fr": "Importations de services, P72",
+            "it": "Importazioni di servizi, P72"
+          },
+          "data": true
+        },
+        "demand": {
+          "label": {
+            "en": "Final consumption expenditure, gross capital formation and exports (total demand), P3_P51G_P6",
+            "de": "Konsumausgaben, Bruttoanlageinvestitionen und Exporte (Gesamtnachfrage), P3_P51G_P6",
+            "fr": "Dépenses de consommation finale, formation brute de capital fixe et exportations (demande totale), P3_P51G_P6",
+            "it": "Spesa per consumi finali, investimenti fissi lordi, esportazioni (domanda globale), P3_P51G_P6"
+          },
+          "data": true
+        },
+        "demand_dom_fin": {
+          "label": {
+            "en": "Final domestic demand P3_P51G",
+            "de": "Inländische Endnachfrage, P3_P51G",
+            "fr": "Demande intérieure finale, P3_P51G",
+            "it": "Domanda interna finale, P3_P51G"
+          },
+          "data": true
+        },
+        "exp_ex_v": {
+          "label": {
+            "en": "Exports of goods and services excluding valuables",
+            "de": "Waren- und Dienstleistungsexporte, ohne Wertsachen",
+            "fr": "Exportations de biens et de services sans objets de valeur",
+            "it": "Esportazioni di beni e servizi senza oggetti di valore"
+          },
+          "data": true
+        },
+        "exp_good_ex_v": {
+          "label": {
+            "en": "Exports of goods excluding valuables",
+            "de": "Warenexporte, ohne Wertsachen",
+            "fr": "Exportations de biens sans objets de valeur",
+            "it": "Esportazioni di beni senza oggetti di valore"
+          },
+          "data": true
+        },
+        "imp_ex_v": {
+          "label": {
+            "en": "Imports of goods and services excluding valuables",
+            "de": "Waren- und Dienstleistungsimporte, ohne Wertsachen",
+            "fr": "Importations de biens et de services sans objets de valeur",
+            "it": "Importazioni di beni e servizi senza oggetti di valore"
+          },
+          "data": true
+        },
+        "income": {
+          "label": {
+            "en": "Income approach",
+            "de": "Einkommensseite",
+            "fr": "Approche par le revenu",
+            "it": "Approccio del reddito"
+          },
+          "data": false
+        },
+        "ce": {
+          "label": {
+            "en": "Compensation of employees, D1",
+            "de": "Arbeitnehmerentgelt, D1",
+            "fr": "Rémunération des salariés, D1",
+            "it": "Redditi da lavoro dipendente, D1"
+          },
+          "data": true
+        },
+        "nos": {
+          "label": {
+            "en": "Net operating surplus and net mixed income, B2_B3N",
+            "de": "Nettobetriebsüberschuss und Nettoselbständigeneinkommen, B2_B3N",
+            "fr": "Excédent net d'exploitation et revenu mixte net, B2_B3N",
+            "it": "Risultato di gestione netto e reddito misto netto, B2_B3N"
+          },
+          "data": true
+        },
+        "depr": {
+          "label": {
+            "en": "Consumption of fixed capital, P51C",
+            "de": "Abschreibungen, P51C",
+            "fr": "Consommation de capital fixe, P51C",
+            "it": "Ammortamenti (consumo di capitale fisso), P51C"
+          },
+          "data": true
+        },
+        "tax": {
+          "label": {
+            "en": "Taxes on production and imports, D2",
+            "de": "Produktions- und Importabgaben, D2",
+            "fr": "Impôts sur la production et les importations, D2",
+            "it": "Imposte sulla produzione e sulle importazioni, D2"
+          },
+          "data": true
+        },
+        "subs": {
+          "label": {
+            "en": "Subsidies, D3",
+            "de": "Subventionen, D3",
+            "fr": "Subventions, D3",
+            "it": "Sovvenzioni, D3"
+          },
+          "data": true
+        },
+        "gni": {
+          "label": {
+            "en": "Gross national income, B5GQ",
+            "de": "Bruttonationaleinkommen, B5GQ",
+            "fr": "Revenu national brut, B5GQ",
+            "it": "Reddito nazionale lordo, B5GQ"
+          },
+          "data": true
+        },
+        "ce_rec": {
+          "label": {
+            "en": "Compensation of employees received from the rest of the world, D1r",
+            "de": "Arbeitnehmerentgelt aus der übrigen Welt, D1r",
+            "fr": "Rémunération des salariés reçue du reste du monde, D1r",
+            "it": "Redditi da lavoro dipendente ricevuti dal resto del mondo, D1r"
+          },
+          "data": true
+        },
+        "ce_paid": {
+          "label": {
+            "en": "Compensation of employees paid to the rest of the world, D1p",
+            "de": "Arbeitnehmerentgelt an die übrige Welt, D1p",
+            "fr": "Rémunération des salariés versée au reste du monde, D1p",
+            "it": "Redditi da lavoro dipendente versati al resto del mondo, D1p"
+          },
+          "data": true
+        },
+        "tax_rec": {
+          "label": {
+            "en": "Taxes on production and imports received from the rest of the world, D2r",
+            "de": "Produktions- und Importabgaben aus der übrigen Welt, D2r",
+            "fr": "Impôts sur la production et les importations reçus du reste du monde, D2r",
+            "it": "Imposte sulla produzione e sulle importazioni ricevute dal resto del mondo, D2r"
+          },
+          "data": true
+        },
+        "pi_rec": {
+          "label": {
+            "en": "Property income received from the rest of the world, D4r",
+            "de": "Vermögenseinkommen aus der übrigen Welt, D4r",
+            "fr": "Revenus de la propriété reçus du reste du monde, D4r",
+            "it": "Redditi da capitale ricevuti dal resto del mondo, D4r"
+          },
+          "data": true
+        },
+        "pi_paid": {
+          "label": {
+            "en": "Property income paid to the rest of the world, D4p",
+            "de": "Vermögenseinkommen an die übrigen Welt, D4p",
+            "fr": "Revenus de la propriété versés au reste du monde, D4p",
+            "it": "Redditi da capitale versati al resto del mondo, D4p"
+          },
+          "data": true
+        },
+        "gdi": {
+          "label": {
+            "en": "Gross disposable income, B6G",
+            "de": "Verfügbares Bruttoeinkommen, B6G",
+            "fr": "Revenu disponible brut, B6G",
+            "it": "Reddito disponibile lordo, B6G"
+          },
+          "data": true
+        },
+        "tr_rec": {
+          "label": {
+            "en": "Current transfers receivable from the rest of the world, D5r_D6r_D7r",
+            "de": "Laufende Transfers aus dem Rest der übrigen Welt,D5r_D6r_D7r",
+            "fr": "Transferts courants à recevoir du reste du monde, D5r_D6r_D7r",
+            "it": "Trasferimenti correnti ricevuti dal resto del mondo, D5r_D6r_D7r"
+          },
+          "data": true
+        },
+        "tr_paid": {
+          "label": {
+            "en": "Current transfers payable to the rest of the world, D5p_D6p_D7p",
+            "de": "Laufende Transfers an die übrige Welt, D5p_D6p_D7p",
+            "fr": "Transferts courants à payer au reste du monde, D5p_D6p_D7p",
+            "it": "Trasferimenti correnti versati al resto del mondo, D5p_D6p_D7p"
+          },
+          "data": true
+        }
+      },
+      "hierarchy": {
+        "gdp": {
+          "production": {
+            "gva": {
+              "agric": {},
+              "mining": {},
+              "manu": {
+                "chem_pharm": {},
+                "manu_other": {}
+              },
+              "energy": {},
+              "disp": {},
+              "constr": {},
+              "trade": {
+                "trade_retail": {}
+              },
+              "transport": {},
+              "hotel": {},
+              "comm": {},
+              "findl": {
+                "finance": {},
+                "insur": {}
+              },
+              "b_serv": {},
+              "admin": {},
+              "edu": {},
+              "health": {},
+              "entertain": {},
+              "other_serv": {},
+              "hh_prod": {}
+            },
+            "adj": {
+              "tax_pr": {},
+              "subs_pr": {}
+            }
+          },
+          "expenditure": {
+            "demand_dom": {
+              "cons": {
+                "cons_priv": {},
+                "cons_gov": {}
+              },
+              "inv": {
+                "inv_gfcf": {
+                  "inv_constr": {},
+                  "inv_fixed": {}
+                },
+                "stocks": {},
+                "v_net": {}
+              }
+            },
+            "trade_balance": {
+              "exp": {
+                "exp_good": {
+                  "exp_good_ex_g": {},
+                  "exp_good_ex_vm": {}
+                },
+                "exp_serv": {}
+              },
+              "imp": {
+                "imp_good": {
+                  "imp_good_ex_g": {},
+                  "imp_good_ex_v": {}
+                },
+                "imp_serv": {}
+              }
+            },
+            "demand": {
+              "demand_dom_fin": {},
+              "exp_ex_v": {
+                "exp_good_ex_v": {}
+              },
+              "imp_ex_v": {}
+            }
+          },
+          "income": {
+            "ce": {},
+            "nos": {},
+            "depr": {},
+            "tax": {},
+            "subs": {},
+            "gni": {
+              "ce_rec": {},
+              "ce_paid": {},
+              "tax_rec": {},
+              "pi_rec": {},
+              "pi_paid": {}
+            },
+            "gdi": {
+              "tr_rec": {},
+              "tr_paid": {}
+            }
+          }
+        }
+      }
+    },
+    "seas_adj": {
+      "label": {
+        "en": "Seasonal Adjustment",
+        "de": "Saisonbereinigung",
+        "fr": "Désaisonnalisation",
+        "it": "Destagionalizzazione"
+      },
+      "levels": {
+        "na": {
+          "label": {
+            "en": "Not seasonally adjusted",
+            "de": "Nicht saison- oder kalenderbereinigt",
+            "fr": "Données brutes",
+            "it": "Dati grezzi"
+          },
+          "data": true
+        },
+        "csa": {
+          "label": {
+            "en": "Seasonally and calendar adjusted",
+            "de": "Saison- und kalenderbereinigt",
+            "fr": "Données corrigées des influences saisonnières et des effets calendaires",
+            "it": "Dati destagionalizzati e corretti dagli effetti di calendario"
+          },
+          "data": true
+        },
+        "nasa": {
+          "label": {
+            "en": "Sports event adjusted",
+            "de": "Sportevent-bereinigt",
+            "fr": "Données corrigées des effets des événements sportifs",
+            "it": "Dati destagionalizzati, corretti per gli effetti degli eventi sportivi"
+          },
+          "data": true
+        },
+        "cssa": {
+          "label": {
+            "en": "Seasonally, calendar and sports event adjusted",
+            "de": "Saison-, kalender- und Sportevent-bereinigt",
+            "fr": "Données corrigées des influences saisonnières, des effets calendaires et des effets des événements sportifs",
+            "it": "Dati destagionalizzati, corretti per gli effetti di calendario e degli eventi sportivi"
+          },
+          "data": true
+        }
+      }
+    }
+  },
+  "units": {
+    "type": {
+      "nom": {
+        "en": "Swiss Francs, at current prices",
+        "de": "Schweizer Franken, zu laufenden Preisen",
+        "fr": "Francs suisses, aux prix courants",
+        "it": "Franchi, a prezzi correnti"
+      },
+      "real": {
+        "en": "Swiss Francs, chain-linked volumes, reference year 2020",
+        "de": "Schweizer Franken, verkettete reale Werte, Referenzjahr 2020",
+        "fr": "Francs suisses, valeurs réelles chainées, année de réference 2020",
+        "it": "Franchi svizzeri, valori concatenati, anno di referenza 2020"
+      },
+      "gc_q": {
+        "en": "Percentage points",
+        "de": "Prozentpunkte",
+        "fr": "Points de pourcentage",
+        "it": "Punti percentuali"
+      },
+      "gc_y": {
+        "en": "Percentage points",
+        "de": "Prozentpunkte",
+        "fr": "Points de pourcentage",
+        "it": "Punti percentuali"
+      }
+    }
+  },
+  "updated": "2026-02-23 16:51:17",
+  "notes": {
+    "en": "Swiss quarterly national accounts data. Production, expenditure and income approach. Nominal and real values. Seasonally and calendar adjusted data as well as unadjusted data.",
+    "de": "Daten der vierteljährlichen Volkswirtschaftlichen Gesamtrechnung der Schweiz. Produktions-, Ausgaben- und Einkommensseite des BIP. Saison- und kalenderbereinigte Daten sowie unbereinigte Daten.",
+    "fr": "Données des comptes nationaux trimestriels suisses. Approche de la production, de la dépense et du revenu. Données nominales et réelles. Données corrigées des variations saisonnières et du calendrier ainsi que données non corrigées.",
+    "it": "Dati della contabilità nazionale trimestrale svizzera. Approccio della produzione, delle spese e del reddito. Valori nominali e reali. Dati destagionalizzati e corretti per gli effetti di calendario e dati non corretti."
+  },
+  "topic": "National accounts",
+  "default": {
+    "type": "real",
+    "structure": "gdp",
+    "seas_adj": "csa"
+  },
+  "concept": "National accounts / GDP (output, expenditure, income)",
+  "canonical": true,
+  "split": "structure",
+  "single_select": ["type", "seas_adj"],
+  "default_transform": "level"
+}

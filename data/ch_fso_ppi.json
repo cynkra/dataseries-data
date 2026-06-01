@@ -1,0 +1,81 @@
+{
+  "schema_version": "1.0",
+  "id": "ch_fso_ppi",
+  "dim_order": [
+    "base"
+  ],
+  "start": "1963-01-01",
+  "end": "2026-04-01",
+  "title": {
+    "en": "Producer and Import Price Index"
+  },
+  "source": {
+    "name": {
+      "en": "Swiss Federal Statistical Office (FSO)"
+    },
+    "url": "https://www.bfs.admin.ch/asset/de/su-q-05.04.03.01-ppi-ipp"
+  },
+  "license": "fso",
+  "frequency": "monthly",
+  "topic": "Prices",
+  "updated": "2026-05-12",
+  "dimensions": {
+    "base": {
+      "label": {
+        "en": "Index base"
+      },
+      "levels": {
+        "1963": {
+          "label": {
+            "en": "Base 1963 (1963 = 100)"
+          },
+          "data": true
+        },
+        "1993": {
+          "label": {
+            "en": "Base 1993 (May 1993 = 100)"
+          },
+          "data": true
+        },
+        "2003": {
+          "label": {
+            "en": "Base 2003 (May 2003 = 100)"
+          },
+          "data": true
+        },
+        "2010": {
+          "label": {
+            "en": "Base 2010 (Dec 2010 = 100)"
+          },
+          "data": true
+        },
+        "2015": {
+          "label": {
+            "en": "Base 2015 (Dec 2015 = 100)"
+          },
+          "data": true
+        },
+        "2020": {
+          "label": {
+            "en": "Base 2020 (Dec 2020 = 100)"
+          },
+          "data": true
+        },
+        "2025": {
+          "label": {
+            "en": "Base 2025 (Dec 2025 = 100)"
+          },
+          "data": true
+        }
+      }
+    }
+  },
+  "default": {
+    "base": "2020"
+  },
+  "concept": "Prices / Producer & import prices",
+  "canonical": true,
+  "split": "base",
+  "single_select": [],
+  "default_transform": "yoy"
+}

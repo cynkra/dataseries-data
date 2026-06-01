@@ -1,0 +1,105 @@
+{
+  "schema_version": "1.0",
+  "id": "ch_fso_pop",
+  "dim_order": [
+    "item"
+  ],
+  "start": "1861-01-01",
+  "end": "2024-01-01",
+  "title": {
+    "en": "Permanent resident population"
+  },
+  "source": {
+    "name": {
+      "en": "Swiss Federal Statistical Office (FSO)"
+    },
+    "url": "https://www.bfs.admin.ch/asset/de/su-d-01.02.04.05"
+  },
+  "license": "fso",
+  "frequency": "annual",
+  "topic": "Population",
+  "updated": "2025-08-27",
+  "dimensions": {
+    "item": {
+      "label": {
+        "en": "Demographic component"
+      },
+      "levels": {
+        "pop_stock_jan": {
+          "label": {
+            "en": "Population on 1 January"
+          },
+          "data": true
+        },
+        "live_births": {
+          "label": {
+            "en": "Live births"
+          },
+          "data": true
+        },
+        "deaths": {
+          "label": {
+            "en": "Deaths"
+          },
+          "data": true
+        },
+        "birth_surplus": {
+          "label": {
+            "en": "Excess of births over deaths"
+          },
+          "data": true
+        },
+        "immigration": {
+          "label": {
+            "en": "Immigration"
+          },
+          "data": true
+        },
+        "emigration": {
+          "label": {
+            "en": "Emigration"
+          },
+          "data": true
+        },
+        "migration_bal": {
+          "label": {
+            "en": "Net migration"
+          },
+          "data": true
+        },
+        "naturalisation": {
+          "label": {
+            "en": "Acquisition of Swiss citizenship"
+          },
+          "data": true
+        },
+        "adjustments": {
+          "label": {
+            "en": "Adjustments"
+          },
+          "data": true
+        },
+        "pop_stock_dec": {
+          "label": {
+            "en": "Population on 31 December"
+          },
+          "data": true
+        },
+        "change_abs": {
+          "label": {
+            "en": "Absolute change"
+          },
+          "data": true
+        }
+      }
+    }
+  },
+  "default": {
+    "item": "pop_stock_jan"
+  },
+  "concept": "Population & demographics / Resident population",
+  "canonical": true,
+  "split": "item",
+  "single_select": [],
+  "default_transform": "level"
+}

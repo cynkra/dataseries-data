@@ -1,0 +1,210 @@
+{
+  "schema_version": "1.0",
+  "id": "ch_snb_zavesic",
+  "dim_order": [
+    "D0"
+  ],
+  "start": "1987-07-01",
+  "end": "2026-04-01",
+  "title": {
+    "en": "Swiss Interbank Clearing (SIC) – payment transactions"
+  },
+  "source": {
+    "name": {
+      "en": "Swiss National Bank"
+    },
+    "url": "https://data.snb.ch/en/topics/snb/cube/zavesic"
+  },
+  "license": "snb",
+  "frequency": "monthly",
+  "dimensions": {
+    "D0": {
+      "label": {
+        "en": "Overview"
+      },
+      "levels": {
+        "D0_0": {
+          "label": {
+            "en": "Transactions, turnover, turnover ratio"
+          },
+          "data": false
+        },
+        "D0_0_0": {
+          "label": {
+            "en": "Number of transactions"
+          },
+          "data": false
+        },
+        "T0": {
+          "label": {
+            "en": "Total"
+          },
+          "data": true
+        },
+        "MT0": {
+          "label": {
+            "en": "Daily maximum"
+          },
+          "data": true
+        },
+        "DA0": {
+          "label": {
+            "en": "Average per working day"
+          },
+          "data": true
+        },
+        "D0_0_1": {
+          "label": {
+            "en": "Turnover in CHF million"
+          },
+          "data": false
+        },
+        "T1": {
+          "label": {
+            "en": "Total"
+          },
+          "data": true
+        },
+        "MT1": {
+          "label": {
+            "en": "Daily maximum"
+          },
+          "data": true
+        },
+        "DA1": {
+          "label": {
+            "en": "Average per working day"
+          },
+          "data": true
+        },
+        "D0_0_2": {
+          "label": {
+            "en": "Turnover ratio"
+          },
+          "data": false
+        },
+        "MT2": {
+          "label": {
+            "en": "Daily maximum"
+          },
+          "data": true
+        },
+        "DA2": {
+          "label": {
+            "en": "Average per working day"
+          },
+          "data": true
+        },
+        "D0_1": {
+          "label": {
+            "en": "By size of payments"
+          },
+          "data": false
+        },
+        "D0_1_0": {
+          "label": {
+            "en": "Number of transactions"
+          },
+          "data": false
+        },
+        "D0_1_0_0": {
+          "label": {
+            "en": "Size of payments (in CHF)"
+          },
+          "data": false
+        },
+        "149990": {
+          "label": {
+            "en": "1–4,999"
+          },
+          "data": true
+        },
+        "50009999990": {
+          "label": {
+            "en": "5,000–999,999"
+          },
+          "data": true
+        },
+        "1MM0": {
+          "label": {
+            "en": "1 million and larger"
+          },
+          "data": true
+        },
+        "D0_1_1": {
+          "label": {
+            "en": "Turnover in CHF million"
+          },
+          "data": false
+        },
+        "D0_1_1_0": {
+          "label": {
+            "en": "Size of payments (in CHF)"
+          },
+          "data": false
+        },
+        "149991": {
+          "label": {
+            "en": "1–4,999"
+          },
+          "data": true
+        },
+        "50009999991": {
+          "label": {
+            "en": "5,000–999,999"
+          },
+          "data": true
+        },
+        "1MM1": {
+          "label": {
+            "en": "1 million and larger"
+          },
+          "data": true
+        }
+      },
+      "hierarchy": {
+        "D0_0": {
+          "D0_0_0": {
+            "T0": [],
+            "MT0": [],
+            "DA0": []
+          },
+          "D0_0_1": {
+            "T1": [],
+            "MT1": [],
+            "DA1": []
+          },
+          "D0_0_2": {
+            "MT2": [],
+            "DA2": []
+          }
+        },
+        "D0_1": {
+          "D0_1_0": {
+            "D0_1_0_0": {
+              "149990": [],
+              "50009999990": [],
+              "1MM0": []
+            }
+          },
+          "D0_1_1": {
+            "D0_1_1_0": {
+              "149991": [],
+              "50009999991": [],
+              "1MM1": []
+            }
+          }
+        }
+      }
+    }
+  },
+  "topic": "Payment systems",
+  "default": {
+    "D0": "T0"
+  },
+  "concept": "Payment systems / Payments & cash",
+  "canonical": false,
+  "split": "D0",
+  "single_select": "(none; D0 is the only dimension)",
+  "default_transform": "level"
+}

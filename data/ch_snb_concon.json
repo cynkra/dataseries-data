@@ -1,0 +1,124 @@
+{
+  "schema_version": "1.0",
+  "id": "ch_snb_concon",
+  "dim_order": [
+    "D0"
+  ],
+  "start": "1972-10-01",
+  "end": "2026-04-01",
+  "title": {
+    "en": "Consumer confidence"
+  },
+  "source": {
+    "name": {
+      "en": "Swiss National Bank"
+    },
+    "url": "https://data.snb.ch/en/topics/snb/cube/concon"
+  },
+  "license": "snb",
+  "frequency": "quarterly",
+  "dimensions": {
+    "D0": {
+      "label": {
+        "en": "Overview"
+      },
+      "levels": {
+        "VW": {
+          "label": {
+            "en": "Past economic situation"
+          },
+          "data": true
+        },
+        "EW": {
+          "label": {
+            "en": "Economic outlook"
+          },
+          "data": true
+        },
+        "VP": {
+          "label": {
+            "en": "Past price situation"
+          },
+          "data": true
+        },
+        "EP": {
+          "label": {
+            "en": "Price outlook, 12 months"
+          },
+          "data": true
+        },
+        "SA": {
+          "label": {
+            "en": "Job security situation"
+          },
+          "data": true
+        },
+        "EA": {
+          "label": {
+            "en": "Unemployment outlook"
+          },
+          "data": true
+        },
+        "VL": {
+          "label": {
+            "en": "Past financial situation"
+          },
+          "data": true
+        },
+        "EL": {
+          "label": {
+            "en": "Financial outlook"
+          },
+          "data": true
+        },
+        "ASSS": {
+          "label": {
+            "en": "Current savings / debt situation"
+          },
+          "data": true
+        },
+        "ZA": {
+          "label": {
+            "en": "Moment to make major purchases"
+          },
+          "data": true
+        },
+        "ESSS": {
+          "label": {
+            "en": "Savings / debt outlook"
+          },
+          "data": true
+        },
+        "NIK": {
+          "label": {
+            "en": "Consumer sentiment index"
+          },
+          "data": true
+        }
+      },
+      "hierarchy": {
+        "VW": [],
+        "EW": [],
+        "VP": [],
+        "EP": [],
+        "SA": [],
+        "EA": [],
+        "VL": [],
+        "EL": [],
+        "ASSS": [],
+        "ZA": [],
+        "ESSS": [],
+        "NIK": []
+      }
+    }
+  },
+  "topic": "Business surveys",
+  "default": {
+    "D0": "NIK"
+  },
+  "concept": "Business cycle & sentiment / Consumer confidence",
+  "canonical": true,
+  "split": "D0",
+  "single_select": "(none; single dimension)",
+  "default_transform": "level"
+}

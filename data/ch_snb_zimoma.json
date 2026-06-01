@@ -1,0 +1,315 @@
+{
+  "schema_version": "1.0",
+  "id": "ch_snb_zimoma",
+  "dim_order": [
+    "D0"
+  ],
+  "start": "1972-01-01",
+  "end": "2026-04-01",
+  "title": {
+    "en": "Money market rates"
+  },
+  "source": {
+    "name": {
+      "en": "Swiss National Bank"
+    },
+    "url": "https://data.snb.ch/en/topics/snb/cube/zimoma"
+  },
+  "license": "snb",
+  "frequency": "monthly",
+  "dimensions": {
+    "D0": {
+      "label": {
+        "en": "Overview"
+      },
+      "levels": {
+        "D0_0": {
+          "label": {
+            "en": "Switzerland"
+          },
+          "data": false
+        },
+        "D0_0_0": {
+          "label": {
+            "en": "CHF"
+          },
+          "data": false
+        },
+        "1DSARON": {
+          "label": {
+            "en": "SARON"
+          },
+          "data": false
+        },
+        "SARON": {
+          "label": {
+            "en": "1 day"
+          },
+          "data": true
+        },
+        "TOMN": {
+          "label": {
+            "en": "Call money rate (Tomorrow next)"
+          },
+          "data": false
+        },
+        "1TGT": {
+          "label": {
+            "en": "1 day"
+          },
+          "data": true
+        },
+        "EGMBF": {
+          "label": {
+            "en": "Money market debt register claims of the Swiss Confederation"
+          },
+          "data": false
+        },
+        "EG3M": {
+          "label": {
+            "en": "3-month"
+          },
+          "data": true
+        },
+        "CHFLIB": {
+          "label": {
+            "en": "CHF LIBOR"
+          },
+          "data": false
+        },
+        "3M0": {
+          "label": {
+            "en": "3-month"
+          },
+          "data": true
+        },
+        "D0_1": {
+          "label": {
+            "en": "United States"
+          },
+          "data": false
+        },
+        "D0_1_1": {
+          "label": {
+            "en": "USD"
+          },
+          "data": false
+        },
+        "1DSOFR": {
+          "label": {
+            "en": "SOFR"
+          },
+          "data": false
+        },
+        "SOFR": {
+          "label": {
+            "en": "1-day"
+          },
+          "data": true
+        },
+        "D0_1_1_1": {
+          "label": {
+            "en": "USD LIBOR"
+          },
+          "data": false
+        },
+        "3M1": {
+          "label": {
+            "en": "3-month"
+          },
+          "data": true
+        },
+        "D0_2": {
+          "label": {
+            "en": "Japan"
+          },
+          "data": false
+        },
+        "D0_2_1": {
+          "label": {
+            "en": "JPY"
+          },
+          "data": false
+        },
+        "1DTONA": {
+          "label": {
+            "en": "TONA"
+          },
+          "data": false
+        },
+        "TONA": {
+          "label": {
+            "en": "1-day"
+          },
+          "data": true
+        },
+        "D0_2_1_1": {
+          "label": {
+            "en": "JPY LIBOR"
+          },
+          "data": false
+        },
+        "3M2": {
+          "label": {
+            "en": "3-month"
+          },
+          "data": true
+        },
+        "D0_3": {
+          "label": {
+            "en": "United Kingdom"
+          },
+          "data": false
+        },
+        "D0_3_1": {
+          "label": {
+            "en": "GBP"
+          },
+          "data": false
+        },
+        "1DSONIA": {
+          "label": {
+            "en": "SONIA"
+          },
+          "data": false
+        },
+        "SONIA": {
+          "label": {
+            "en": "1-day"
+          },
+          "data": true
+        },
+        "D0_3_1_1": {
+          "label": {
+            "en": "GBP LIBOR"
+          },
+          "data": false
+        },
+        "3M3": {
+          "label": {
+            "en": "3-month"
+          },
+          "data": true
+        },
+        "D0_4": {
+          "label": {
+            "en": "Euro area"
+          },
+          "data": false
+        },
+        "D0_4_1": {
+          "label": {
+            "en": "EUR"
+          },
+          "data": false
+        },
+        "1DESTR": {
+          "label": {
+            "en": "ESTR"
+          },
+          "data": false
+        },
+        "ESTR": {
+          "label": {
+            "en": "1-day"
+          },
+          "data": true
+        },
+        "1DEURIBOR": {
+          "label": {
+            "en": "EURIBOR"
+          },
+          "data": false
+        },
+        "EURIBOR": {
+          "label": {
+            "en": "3-month"
+          },
+          "data": true
+        },
+        "D0_4_1_1": {
+          "label": {
+            "en": "EUR LIBOR"
+          },
+          "data": false
+        },
+        "3M4": {
+          "label": {
+            "en": "3-month"
+          },
+          "data": true
+        }
+      },
+      "hierarchy": {
+        "D0_0": {
+          "D0_0_0": {
+            "1DSARON": {
+              "SARON": []
+            },
+            "TOMN": {
+              "1TGT": []
+            },
+            "EGMBF": {
+              "EG3M": []
+            },
+            "CHFLIB": {
+              "3M0": []
+            }
+          }
+        },
+        "D0_1": {
+          "D0_1_1": {
+            "1DSOFR": {
+              "SOFR": []
+            },
+            "D0_1_1_1": {
+              "3M1": []
+            }
+          }
+        },
+        "D0_2": {
+          "D0_2_1": {
+            "1DTONA": {
+              "TONA": []
+            },
+            "D0_2_1_1": {
+              "3M2": []
+            }
+          }
+        },
+        "D0_3": {
+          "D0_3_1": {
+            "1DSONIA": {
+              "SONIA": []
+            },
+            "D0_3_1_1": {
+              "3M3": []
+            }
+          }
+        },
+        "D0_4": {
+          "D0_4_1": {
+            "1DESTR": {
+              "ESTR": []
+            },
+            "1DEURIBOR": {
+              "EURIBOR": []
+            },
+            "D0_4_1_1": {
+              "3M4": []
+            }
+          }
+        }
+      }
+    }
+  },
+  "topic": "Interest rates",
+  "default": {
+    "D0": "1TGT"
+  },
+  "concept": "Interest rates & yields / Money-market rates",
+  "canonical": true,
+  "split": "D0",
+  "single_select": "(none; this cube has a single dimension)",
+  "default_transform": "level"
+}

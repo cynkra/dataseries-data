@@ -1,0 +1,309 @@
+{
+  "schema_version": "1.0",
+  "id": "ch_snb_devkum",
+  "dim_order": [
+    "D0",
+    "D1"
+  ],
+  "start": "1914-01-01",
+  "end": "2026-04-01",
+  "title": {
+    "en": "Foreign exchange rates – Month"
+  },
+  "source": {
+    "name": {
+      "en": "Swiss National Bank"
+    },
+    "url": "https://data.snb.ch/en/topics/snb/cube/devkum"
+  },
+  "license": "snb",
+  "frequency": "monthly",
+  "dimensions": {
+    "D0": {
+      "label": {
+        "en": "Monthly average/End of month"
+      },
+      "levels": {
+        "M0": {
+          "label": {
+            "en": "Monthly average"
+          },
+          "data": true
+        },
+        "M1": {
+          "label": {
+            "en": "End of month"
+          },
+          "data": true
+        }
+      },
+      "hierarchy": {
+        "M0": [],
+        "M1": []
+      }
+    },
+    "D1": {
+      "label": {
+        "en": "Currency"
+      },
+      "levels": {
+        "D1_0": {
+          "label": {
+            "en": "Europe"
+          },
+          "data": false
+        },
+        "EUR1": {
+          "label": {
+            "en": "EUR 1"
+          },
+          "data": true
+        },
+        "GBP1": {
+          "label": {
+            "en": "United Kingdom – GBP 1"
+          },
+          "data": true
+        },
+        "DKK100": {
+          "label": {
+            "en": "Denmark – DKK 100"
+          },
+          "data": true
+        },
+        "NOK100": {
+          "label": {
+            "en": "Norway – NOK 100"
+          },
+          "data": true
+        },
+        "CZK100": {
+          "label": {
+            "en": "Czech Republic – CZK 100"
+          },
+          "data": true
+        },
+        "HUF100": {
+          "label": {
+            "en": "Hungary – HUF 100"
+          },
+          "data": true
+        },
+        "PLN100": {
+          "label": {
+            "en": "Poland – PLN 100"
+          },
+          "data": true
+        },
+        "RUB1": {
+          "label": {
+            "en": "Russian Federation – RUB 1"
+          },
+          "data": true
+        },
+        "SEK100": {
+          "label": {
+            "en": "Sweden – SEK 100"
+          },
+          "data": true
+        },
+        "TRY100": {
+          "label": {
+            "en": "Turkey – TRY 100"
+          },
+          "data": true
+        },
+        "D1_1": {
+          "label": {
+            "en": "America"
+          },
+          "data": false
+        },
+        "USD1": {
+          "label": {
+            "en": "United States – USD 1"
+          },
+          "data": true
+        },
+        "CAD1": {
+          "label": {
+            "en": "Canada – CAD 1"
+          },
+          "data": true
+        },
+        "ARS1": {
+          "label": {
+            "en": "Argentina – ARS 1"
+          },
+          "data": true
+        },
+        "BRL100": {
+          "label": {
+            "en": "Brazil – BRL 100"
+          },
+          "data": true
+        },
+        "MXN100": {
+          "label": {
+            "en": "Mexico – MXN 100"
+          },
+          "data": true
+        },
+        "D1_2": {
+          "label": {
+            "en": "Africa"
+          },
+          "data": false
+        },
+        "ZAR1": {
+          "label": {
+            "en": "South Africa – ZAR 1"
+          },
+          "data": true
+        },
+        "D1_3": {
+          "label": {
+            "en": "Asia and Australia"
+          },
+          "data": false
+        },
+        "JPY100": {
+          "label": {
+            "en": "Japan – JPY 100"
+          },
+          "data": true
+        },
+        "AUD1": {
+          "label": {
+            "en": "Australia – AUD 1"
+          },
+          "data": true
+        },
+        "CNY100": {
+          "label": {
+            "en": "China – CNY 100"
+          },
+          "data": true
+        },
+        "HKD100": {
+          "label": {
+            "en": "Hong Kong – HKD 100"
+          },
+          "data": true
+        },
+        "KRW100": {
+          "label": {
+            "en": "Korea, Republic of (South Korea) – KRW 100"
+          },
+          "data": true
+        },
+        "MYR100": {
+          "label": {
+            "en": "Malaysia – MYR 100"
+          },
+          "data": true
+        },
+        "NZD1": {
+          "label": {
+            "en": "New Zealand – NZD 1"
+          },
+          "data": true
+        },
+        "SGD1": {
+          "label": {
+            "en": "Singapore – SGD 1"
+          },
+          "data": true
+        },
+        "THB100": {
+          "label": {
+            "en": "Thailand – THB 100"
+          },
+          "data": true
+        },
+        "D1_4": {
+          "label": {
+            "en": "SDR"
+          },
+          "data": false
+        },
+        "XDR1": {
+          "label": {
+            "en": "XDR 1"
+          },
+          "data": true
+        },
+        "D1_5": {
+          "label": {
+            "en": "USD Forward rates"
+          },
+          "data": false
+        },
+        "USD3M": {
+          "label": {
+            "en": "US Dollar 3-month forward rate (CHF per 1 USD)"
+          },
+          "data": true
+        },
+        "USD6M": {
+          "label": {
+            "en": "US Dollar 6-month forward rate (CHF per 1 USD)"
+          },
+          "data": true
+        }
+      },
+      "hierarchy": {
+        "D1_0": {
+          "EUR1": [],
+          "GBP1": [],
+          "DKK100": [],
+          "NOK100": [],
+          "CZK100": [],
+          "HUF100": [],
+          "PLN100": [],
+          "RUB1": [],
+          "SEK100": [],
+          "TRY100": []
+        },
+        "D1_1": {
+          "USD1": [],
+          "CAD1": [],
+          "ARS1": [],
+          "BRL100": [],
+          "MXN100": []
+        },
+        "D1_2": {
+          "ZAR1": []
+        },
+        "D1_3": {
+          "JPY100": [],
+          "AUD1": [],
+          "CNY100": [],
+          "HKD100": [],
+          "KRW100": [],
+          "MYR100": [],
+          "NZD1": [],
+          "SGD1": [],
+          "THB100": []
+        },
+        "D1_4": {
+          "XDR1": []
+        },
+        "D1_5": {
+          "USD3M": [],
+          "USD6M": []
+        }
+      }
+    }
+  },
+  "topic": "Exchange rates",
+  "default": {
+    "D0": "M0",
+    "D1": "USD1"
+  },
+  "concept": "Exchange rates / Bilateral FX",
+  "canonical": true,
+  "split": "D1",
+  "single_select": "D0",
+  "default_transform": "level"
+}

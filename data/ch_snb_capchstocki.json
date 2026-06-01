@@ -1,0 +1,162 @@
+{
+  "schema_version": "1.0",
+  "id": "ch_snb_capchstocki",
+  "dim_order": [
+    "D0"
+  ],
+  "start": "1989-01-03",
+  "end": "2026-05-15",
+  "title": {
+    "en": "Swiss stock indices"
+  },
+  "source": {
+    "name": {
+      "en": "Swiss National Bank"
+    },
+    "url": "https://data.snb.ch/en/topics/snb/cube/capchstocki"
+  },
+  "license": "snb",
+  "frequency": "daily",
+  "dimensions": {
+    "D0": {
+      "label": {
+        "en": "Overview"
+      },
+      "levels": {
+        "D0_0": {
+          "label": {
+            "en": "SPI Swiss Performance Index"
+          },
+          "data": false
+        },
+        "GDR": {
+          "label": {
+            "en": "Index total (including dividend reinvestment)"
+          },
+          "data": true
+        },
+        "SIX": {
+          "label": {
+            "en": "Breakdown by industry in accordance with SIX"
+          },
+          "data": false
+        },
+        "BA": {
+          "label": {
+            "en": "Banks"
+          },
+          "data": true
+        },
+        "FD": {
+          "label": {
+            "en": "Financial services"
+          },
+          "data": true
+        },
+        "VS": {
+          "label": {
+            "en": "Insurance"
+          },
+          "data": true
+        },
+        "NGT": {
+          "label": {
+            "en": "Food, beverages and tobacco"
+          },
+          "data": true
+        },
+        "GW": {
+          "label": {
+            "en": "Health care"
+          },
+          "data": true
+        },
+        "ICB": {
+          "label": {
+            "en": "Breakdown by industry in accordance with ICB"
+          },
+          "data": false
+        },
+        "B": {
+          "label": {
+            "en": "Banks"
+          },
+          "data": true
+        },
+        "F": {
+          "label": {
+            "en": "Financial services"
+          },
+          "data": true
+        },
+        "V": {
+          "label": {
+            "en": "Insurance"
+          },
+          "data": true
+        },
+        "NG": {
+          "label": {
+            "en": "Food and beverages"
+          },
+          "data": true
+        },
+        "G": {
+          "label": {
+            "en": "Health care"
+          },
+          "data": true
+        },
+        "N": {
+          "label": {
+            "en": "Registered shares"
+          },
+          "data": true
+        },
+        "IPS": {
+          "label": {
+            "en": "Bearer shares and participation certificates"
+          },
+          "data": true
+        },
+        "SMISMIDR": {
+          "label": {
+            "en": "SMI Swiss Market Index (excluding dividend reinvestment)"
+          },
+          "data": true
+        }
+      },
+      "hierarchy": {
+        "D0_0": {
+          "GDR": [],
+          "SIX": {
+            "BA": [],
+            "FD": [],
+            "VS": [],
+            "NGT": [],
+            "GW": []
+          },
+          "ICB": {
+            "B": [],
+            "F": [],
+            "V": [],
+            "NG": [],
+            "G": []
+          },
+          "N": [],
+          "IPS": []
+        },
+        "SMISMIDR": []
+      }
+    }
+  },
+  "topic": "Financial markets",
+  "default": {
+    "D0": "GDR"
+  },
+  "concept": "Financial markets / Swiss stock indices",
+  "canonical": true,
+  "split": "D0",
+  "single_select": "(none; single dimension)",
+  "default_transform": "level"
+}

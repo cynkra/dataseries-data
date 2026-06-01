@@ -1,0 +1,134 @@
+{
+  "schema_version": "1.0",
+  "id": "ch_snb_snbmoba",
+  "dim_order": [
+    "D0"
+  ],
+  "start": "1950-01-01",
+  "end": "2026-04-01",
+  "title": {
+    "en": "Monetary base"
+  },
+  "source": {
+    "name": {
+      "en": "Swiss National Bank"
+    },
+    "url": "https://data.snb.ch/en/topics/snb/cube/snbmoba"
+  },
+  "license": "snb",
+  "frequency": "monthly",
+  "dimensions": {
+    "D0": {
+      "label": {
+        "en": "Overview"
+      },
+      "levels": {
+        "D0_0": {
+          "label": {
+            "en": "Origination"
+          },
+          "data": false
+        },
+        "RF": {
+          "label": {
+            "en": "Relevant foreign currency positions"
+          },
+          "data": true
+        },
+        "W": {
+          "label": {
+            "en": "Securities portfolio"
+          },
+          "data": true
+        },
+        "G": {
+          "label": {
+            "en": "Money market transactions"
+          },
+          "data": true
+        },
+        "S0": {
+          "label": {
+            "en": "Other"
+          },
+          "data": true
+        },
+        "N0": {
+          "label": {
+            "en": "Monetary base"
+          },
+          "data": true
+        },
+        "D0_1": {
+          "label": {
+            "en": "Utilisation"
+          },
+          "data": false
+        },
+        "N1": {
+          "label": {
+            "en": "Banknotes in circulation"
+          },
+          "data": true
+        },
+        "GB": {
+          "label": {
+            "en": "Sight deposit accounts of domestic banks"
+          },
+          "data": true
+        },
+        "N2": {
+          "label": {
+            "en": "Monetary base"
+          },
+          "data": true
+        },
+        "D0_2": {
+          "label": {
+            "en": "Seasonally adjusted"
+          },
+          "data": false
+        },
+        "N3": {
+          "label": {
+            "en": "Monetary base"
+          },
+          "data": true
+        },
+        "S1": {
+          "label": {
+            "en": "Seasonal factor"
+          },
+          "data": true
+        }
+      },
+      "hierarchy": {
+        "D0_0": {
+          "RF": [],
+          "W": [],
+          "G": [],
+          "S0": [],
+          "N0": []
+        },
+        "D0_1": {
+          "N1": [],
+          "GB": [],
+          "N2": []
+        },
+        "D0_2": {
+          "N3": [],
+          "S1": []
+        }
+      }
+    }
+  },
+  "topic": "Money and banking",
+  "default": {
+    "D0": "N0"
+  },
+  "concept": "Money & banking / Monetary aggregates",
+  "canonical": false,
+  "split": "D0",
+  "single_select": [],
+  "default_transform": "level"
+}

@@ -1,0 +1,200 @@
+{
+  "schema_version": "1.0",
+  "id": "ch_snb_bakredbetgrbm",
+  "dim_order": [
+    "D0",
+    "D1",
+    "D2",
+    "D3"
+  ],
+  "start": "2002-01-01",
+  "end": "2026-03-01",
+  "title": {
+    "en": "Corporate loans, broken down by company size"
+  },
+  "source": {
+    "name": {
+      "en": "Swiss National Bank"
+    },
+    "url": "https://data.snb.ch/en/topics/snb/cube/bakredbetgrbm"
+  },
+  "license": "snb",
+  "frequency": "monthly",
+  "dimensions": {
+    "D0": {
+      "label": {
+        "en": "Bank category"
+      },
+      "levels": {
+        "AV1": {
+          "label": {
+            "en": "Banks in Switzerland"
+          },
+          "data": true
+        },
+        "AV10": {
+          "label": {
+            "en": "Raiffeisen banks"
+          },
+          "data": true
+        },
+        "AV2": {
+          "label": {
+            "en": "Cantonal banks"
+          },
+          "data": true
+        },
+        "AV3": {
+          "label": {
+            "en": "Big banks"
+          },
+          "data": true
+        },
+        "AV4": {
+          "label": {
+            "en": "Regional and savings banks"
+          },
+          "data": true
+        }
+      },
+      "hierarchy": {
+        "AV1": [],
+        "AV10": [],
+        "AV2": [],
+        "AV3": [],
+        "AV4": []
+      }
+    },
+    "D1": {
+      "label": {
+        "en": "Company size"
+      },
+      "levels": {
+        "KC5A": {
+          "label": {
+            "en": "Companies with up to 9 employees"
+          },
+          "data": true
+        },
+        "KC5B": {
+          "label": {
+            "en": "Companies with 10 to 49 employees"
+          },
+          "data": true
+        },
+        "KC5C": {
+          "label": {
+            "en": "Companies with 50 to 249 employes"
+          },
+          "data": true
+        },
+        "KC5D": {
+          "label": {
+            "en": "Companies with 250 employees and more"
+          },
+          "data": true
+        },
+        "KC5E": {
+          "label": {
+            "en": "Public sector entities"
+          },
+          "data": true
+        }
+      },
+      "hierarchy": {
+        "KC5A": [],
+        "KC5B": [],
+        "KC5C": [],
+        "KC5D": [],
+        "KC5E": []
+      }
+    },
+    "D2": {
+      "label": {
+        "en": "Type of loan"
+      },
+      "levels": {
+        "T1": {
+          "label": {
+            "en": "Total loans"
+          },
+          "data": true
+        },
+        "H": {
+          "label": {
+            "en": "Mortgage loans"
+          },
+          "data": true
+        },
+        "K": {
+          "label": {
+            "en": "Other loans"
+          },
+          "data": false
+        },
+        "T2": {
+          "label": {
+            "en": "Total"
+          },
+          "data": true
+        },
+        "G": {
+          "label": {
+            "en": "secured"
+          },
+          "data": true
+        },
+        "U": {
+          "label": {
+            "en": "unsecured"
+          },
+          "data": true
+        }
+      },
+      "hierarchy": {
+        "T1": [],
+        "H": [],
+        "K": {
+          "T2": [],
+          "G": [],
+          "U": []
+        }
+      }
+    },
+    "D3": {
+      "label": {
+        "en": "Utilisation and credit lines"
+      },
+      "levels": {
+        "F": {
+          "label": {
+            "en": "Utilisation"
+          },
+          "data": true
+        },
+        "B": {
+          "label": {
+            "en": "Credit lines"
+          },
+          "data": true
+        }
+      },
+      "hierarchy": {
+        "F": [],
+        "B": []
+      }
+    }
+  },
+  "topic": "Banking",
+  "default": {
+    "D0": "AV1",
+    "D1": "KC5A",
+    "D2": "T1",
+    "D3": "F"
+  },
+  "concept": "Money & banking / Banking & credit",
+  "canonical": true,
+  "split": "D1",
+  "single_select": ["D0", "D2", "D3"],
+  "default_transform": "level"
+}

@@ -1,0 +1,252 @@
+{
+  "schema_version": "1.0",
+  "id": "ch_snb_snbbipo",
+  "dim_order": [
+    "D0"
+  ],
+  "start": "1996-12-01",
+  "end": "2026-04-01",
+  "title": {
+    "en": "Balance sheet items of the SNB"
+  },
+  "source": {
+    "name": {
+      "en": "Swiss National Bank"
+    },
+    "url": "https://data.snb.ch/en/topics/snb/cube/snbbipo"
+  },
+  "license": "snb",
+  "frequency": "monthly",
+  "dimensions": {
+    "D0": {
+      "label": {
+        "en": "Overview"
+      },
+      "levels": {
+        "D0_0": {
+          "label": {
+            "en": "Assets"
+          },
+          "data": false
+        },
+        "GFG": {
+          "label": {
+            "en": "Gold holdings and claims from gold transactions"
+          },
+          "data": true
+        },
+        "D": {
+          "label": {
+            "en": "Foreign currency investments"
+          },
+          "data": true
+        },
+        "RIWF": {
+          "label": {
+            "en": "Reserve position in the IMF"
+          },
+          "data": true
+        },
+        "IZ": {
+          "label": {
+            "en": "International payment instruments"
+          },
+          "data": true
+        },
+        "W": {
+          "label": {
+            "en": "Monetary assistance loans"
+          },
+          "data": true
+        },
+        "FRGSF": {
+          "label": {
+            "en": "Claims from CHF repo transactions"
+          },
+          "data": true
+        },
+        "FRGUSD": {
+          "label": {
+            "en": "Claims from USD repo transactions"
+          },
+          "data": true
+        },
+        "GSGSF": {
+          "label": {
+            "en": "Balances from swap transactions against CHF"
+          },
+          "data": true
+        },
+        "IG": {
+          "label": {
+            "en": "Domestic money market claims"
+          },
+          "data": true
+        },
+        "GD": {
+          "label": {
+            "en": "Secured loans"
+          },
+          "data": true
+        },
+        "FI": {
+          "label": {
+            "en": "Amounts due from domestic correspondents"
+          },
+          "data": true
+        },
+        "WSF": {
+          "label": {
+            "en": "CHF securities"
+          },
+          "data": true
+        },
+        "DS": {
+          "label": {
+            "en": "Loan to stabilisation fund"
+          },
+          "data": true
+        },
+        "UA": {
+          "label": {
+            "en": "Other assets"
+          },
+          "data": true
+        },
+        "T0": {
+          "label": {
+            "en": "Total"
+          },
+          "data": true
+        },
+        "D0_1": {
+          "label": {
+            "en": "Liabilities"
+          },
+          "data": false
+        },
+        "N": {
+          "label": {
+            "en": "Banknotes in circulation"
+          },
+          "data": true
+        },
+        "GB": {
+          "label": {
+            "en": "Sight deposits of domestic banks"
+          },
+          "data": true
+        },
+        "VB": {
+          "label": {
+            "en": "Amounts due to the Confederation"
+          },
+          "data": true
+        },
+        "GBI": {
+          "label": {
+            "en": "Sight deposits of foreign banks and institutions"
+          },
+          "data": true
+        },
+        "US": {
+          "label": {
+            "en": "Other sight liabilities"
+          },
+          "data": true
+        },
+        "VRGSF": {
+          "label": {
+            "en": "Liabilities from CHF repo transactions"
+          },
+          "data": true
+        },
+        "ES": {
+          "label": {
+            "en": "SNB debt certificates"
+          },
+          "data": true
+        },
+        "UT": {
+          "label": {
+            "en": "Other time liabilities"
+          },
+          "data": true
+        },
+        "VF": {
+          "label": {
+            "en": "Foreign currency liabilities"
+          },
+          "data": true
+        },
+        "AIWFS": {
+          "label": {
+            "en": "Counterpart of special drawing rights allocated by the IMF"
+          },
+          "data": true
+        },
+        "SP": {
+          "label": {
+            "en": "Other liabilities"
+          },
+          "data": true
+        },
+        "RE": {
+          "label": {
+            "en": "Provisions and equity capital"
+          },
+          "data": true
+        },
+        "T1": {
+          "label": {
+            "en": "Total"
+          },
+          "data": true
+        }
+      },
+      "hierarchy": {
+        "D0_0": {
+          "GFG": [],
+          "D": [],
+          "RIWF": [],
+          "IZ": [],
+          "W": [],
+          "FRGSF": [],
+          "FRGUSD": [],
+          "GSGSF": [],
+          "IG": [],
+          "GD": [],
+          "FI": [],
+          "WSF": [],
+          "DS": [],
+          "UA": [],
+          "T0": []
+        },
+        "D0_1": {
+          "N": [],
+          "GB": [],
+          "VB": [],
+          "GBI": [],
+          "US": [],
+          "VRGSF": [],
+          "ES": [],
+          "UT": [],
+          "VF": [],
+          "AIWFS": [],
+          "SP": [],
+          "RE": [],
+          "T1": []
+        }
+      }
+    }
+  },
+  "topic": "Money and banking",
+  "default": {
+    "D0": "T0"
+  },
+  "concept": "Money & banking / Monetary aggregates",
+  "canonical": false,
+  "split": "D0",
+  "single_select": "(none; single dimension)",
+  "default_transform": "level"
+}

@@ -1,0 +1,137 @@
+{
+  "schema_version": "1.0",
+  "id": "ch_fso_hesta",
+  "dim_order": [
+    "Tourismusregion",
+    "Indikator"
+  ],
+  "start": "2005-01-01",
+  "end": "2026-03-01",
+  "title": {
+    "en": "Hotel sector: overnight stays by tourism region"
+  },
+  "source": {
+    "name": {
+      "en": "Swiss Federal Statistical Office (FSO)"
+    },
+    "url": "https://www.pxweb.bfs.admin.ch/pxweb/en/px-x-1003020000_103"
+  },
+  "license": "fso",
+  "frequency": "monthly",
+  "dimensions": {
+    "Tourismusregion": {
+      "label": {
+        "en": "Tourist region"
+      },
+      "levels": {
+        "8100": {
+          "label": {
+            "en": "Switzerland"
+          },
+          "data": true
+        },
+        "1": {
+          "label": {
+            "en": "Graubünden"
+          },
+          "data": true
+        },
+        "2": {
+          "label": {
+            "en": "Eastern Switzerland"
+          },
+          "data": true
+        },
+        "3": {
+          "label": {
+            "en": "Zurich Region"
+          },
+          "data": true
+        },
+        "4": {
+          "label": {
+            "en": "Lucerne / Lake Lucerne"
+          },
+          "data": true
+        },
+        "5": {
+          "label": {
+            "en": "Basel Region"
+          },
+          "data": true
+        },
+        "6": {
+          "label": {
+            "en": "Bern Region"
+          },
+          "data": true
+        },
+        "8": {
+          "label": {
+            "en": "Jura & Three-Lakes"
+          },
+          "data": true
+        },
+        "9": {
+          "label": {
+            "en": "Vaud"
+          },
+          "data": true
+        },
+        "10": {
+          "label": {
+            "en": "Geneva"
+          },
+          "data": true
+        },
+        "11": {
+          "label": {
+            "en": "Valais"
+          },
+          "data": true
+        },
+        "12": {
+          "label": {
+            "en": "Ticino"
+          },
+          "data": true
+        },
+        "13": {
+          "label": {
+            "en": "Fribourg Region"
+          },
+          "data": true
+        },
+        "14": {
+          "label": {
+            "en": "Aargau and Solothurn Region"
+          },
+          "data": true
+        }
+      }
+    },
+    "Indikator": {
+      "label": {
+        "en": "Indicator"
+      },
+      "levels": {
+        "2": {
+          "label": {
+            "en": "Overnight stays"
+          },
+          "data": true
+        }
+      }
+    }
+  },
+  "topic": "Tourism",
+  "default": {
+    "Tourismusregion": "8100",
+    "Indikator": "2"
+  },
+  "concept": "Tourism / Hotel overnight stays",
+  "canonical": true,
+  "split": "Tourismusregion",
+  "single_select": "Indikator",
+  "default_transform": "level"
+}

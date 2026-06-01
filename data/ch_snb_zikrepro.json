@@ -1,0 +1,662 @@
+{
+  "schema_version": "1.0",
+  "id": "ch_snb_zikrepro",
+  "dim_order": [
+    "D0",
+    "D1"
+  ],
+  "start": "1933-01-01",
+  "end": "2026-03-01",
+  "title": {
+    "en": "Published interest rates for new transactions"
+  },
+  "source": {
+    "name": {
+      "en": "Swiss National Bank"
+    },
+    "url": "https://data.snb.ch/en/topics/snb/cube/zikrepro"
+  },
+  "license": "snb",
+  "frequency": "monthly",
+  "dimensions": {
+    "D0": {
+      "label": {
+        "en": "Reference values"
+      },
+      "levels": {
+        "M": {
+          "label": {
+            "en": "Mean value"
+          },
+          "data": true
+        },
+        "025Q": {
+          "label": {
+            "en": "0.25 quantile"
+          },
+          "data": true
+        },
+        "05Q": {
+          "label": {
+            "en": "Median"
+          },
+          "data": true
+        },
+        "075Q": {
+          "label": {
+            "en": "0.75 quantile"
+          },
+          "data": true
+        }
+      },
+      "hierarchy": {
+        "M": [],
+        "025Q": [],
+        "05Q": [],
+        "075Q": []
+      }
+    },
+    "D1": {
+      "label": {
+        "en": "Products"
+      },
+      "levels": {
+        "D1_HYP": {
+          "label": {
+            "en": "Mortgages"
+          },
+          "data": false
+        },
+        "MV": {
+          "label": {
+            "en": "Variable mortgages"
+          },
+          "data": true
+        },
+        "FVZ": {
+          "label": {
+            "en": "With fixed interest rates"
+          },
+          "data": false
+        },
+        "FVZ_LZJ": {
+          "label": {
+            "en": "Maturity, in years"
+          },
+          "data": false
+        },
+        "11": {
+          "label": {
+            "en": "1"
+          },
+          "data": true
+        },
+        "20": {
+          "label": {
+            "en": "2"
+          },
+          "data": true
+        },
+        "30": {
+          "label": {
+            "en": "3"
+          },
+          "data": true
+        },
+        "40": {
+          "label": {
+            "en": "4"
+          },
+          "data": true
+        },
+        "50": {
+          "label": {
+            "en": "5"
+          },
+          "data": true
+        },
+        "60": {
+          "label": {
+            "en": "6"
+          },
+          "data": true
+        },
+        "70": {
+          "label": {
+            "en": "7"
+          },
+          "data": true
+        },
+        "80": {
+          "label": {
+            "en": "8"
+          },
+          "data": true
+        },
+        "9": {
+          "label": {
+            "en": "9"
+          },
+          "data": true
+        },
+        "10": {
+          "label": {
+            "en": "10"
+          },
+          "data": true
+        },
+        "HYP_11": {
+          "label": {
+            "en": "11"
+          },
+          "data": true
+        },
+        "HYP_12": {
+          "label": {
+            "en": "12"
+          },
+          "data": true
+        },
+        "HYP_13": {
+          "label": {
+            "en": "13"
+          },
+          "data": true
+        },
+        "HYP_14": {
+          "label": {
+            "en": "14"
+          },
+          "data": true
+        },
+        "HYP_15": {
+          "label": {
+            "en": "15"
+          },
+          "data": true
+        },
+        "FGM": {
+          "label": {
+            "en": "Linked to money market interest rates"
+          },
+          "data": false
+        },
+        "FGM_SAR": {
+          "label": {
+            "en": "With SARON-linked rates"
+          },
+          "data": false
+        },
+        "LZ_SAR": {
+          "label": {
+            "en": "Maturity, in years"
+          },
+          "data": false
+        },
+        "SARJ03": {
+          "label": {
+            "en": "3"
+          },
+          "data": true
+        },
+        "SARJ05": {
+          "label": {
+            "en": "5"
+          },
+          "data": true
+        },
+        "SARJOBD": {
+          "label": {
+            "en": "Unlimited"
+          },
+          "data": true
+        },
+        "LIB": {
+          "label": {
+            "en": "With Libor-linked rates"
+          },
+          "data": false
+        },
+        "LIB_LZJ": {
+          "label": {
+            "en": "Maturity, in years"
+          },
+          "data": false
+        },
+        "LIB_LZJ_3": {
+          "label": {
+            "en": "3"
+          },
+          "data": false
+        },
+        "LIB_LZJ_3_LZM": {
+          "label": {
+            "en": "Libor maturity in months"
+          },
+          "data": false
+        },
+        "31": {
+          "label": {
+            "en": "3"
+          },
+          "data": true
+        },
+        "61": {
+          "label": {
+            "en": "6"
+          },
+          "data": true
+        },
+        "LIB_LZJ_3_12": {
+          "label": {
+            "en": "12"
+          },
+          "data": true
+        },
+        "LIB_LZJ_5": {
+          "label": {
+            "en": "5"
+          },
+          "data": false
+        },
+        "LIB_LZJ_5_LZM": {
+          "label": {
+            "en": "Libor maturity in months"
+          },
+          "data": false
+        },
+        "32": {
+          "label": {
+            "en": "3"
+          },
+          "data": true
+        },
+        "62": {
+          "label": {
+            "en": "6"
+          },
+          "data": true
+        },
+        "LIB_LZJ_5_12": {
+          "label": {
+            "en": "12"
+          },
+          "data": true
+        },
+        "LIB_LZJ_UNBFR": {
+          "label": {
+            "en": "Unlimited"
+          },
+          "data": false
+        },
+        "LIB_LZJ_UNBFR_LZM": {
+          "label": {
+            "en": "Libor maturity in months"
+          },
+          "data": false
+        },
+        "LIB_LZJ_UNBFR_3": {
+          "label": {
+            "en": "3"
+          },
+          "data": true
+        },
+        "LIB_LZJ_UNBFR_6": {
+          "label": {
+            "en": "6"
+          },
+          "data": true
+        },
+        "LIB_LZJ_UNBFR_12": {
+          "label": {
+            "en": "12"
+          },
+          "data": true
+        },
+        "D1_BKK": {
+          "label": {
+            "en": "Consumer credit lending"
+          },
+          "data": true
+        },
+        "D1_PHA": {
+          "label": {
+            "en": "Private clients"
+          },
+          "data": false
+        },
+        "S0": {
+          "label": {
+            "en": "Payment accounts without withdrawal restrictions"
+          },
+          "data": true
+        },
+        "PHA_UEB": {
+          "label": {
+            "en": "Payment accounts with withdrawal restrictions"
+          },
+          "data": true
+        },
+        "S1": {
+          "label": {
+            "en": "Savings deposits"
+          },
+          "data": true
+        },
+        "GVG": {
+          "label": {
+            "en": "Tied pension provision"
+          },
+          "data": false
+        },
+        "GVG_F2S": {
+          "label": {
+            "en": "Vested benefits accounts (pillar 2)"
+          },
+          "data": true
+        },
+        "GVG_S3A": {
+          "label": {
+            "en": "Tied pension provision (pillar 3a)"
+          },
+          "data": true
+        },
+        "D1_FIK": {
+          "label": {
+            "en": "Corporate clients"
+          },
+          "data": false
+        },
+        "FIK_ASI": {
+          "label": {
+            "en": "Payment accounts without withdrawal restrictions"
+          },
+          "data": true
+        },
+        "D1_3": {
+          "label": {
+            "en": "Term deposits (minimal amount equal to CHF 100,000)"
+          },
+          "data": false
+        },
+        "D1_3_LZM": {
+          "label": {
+            "en": "Maturity, in months"
+          },
+          "data": false
+        },
+        "13": {
+          "label": {
+            "en": "1"
+          },
+          "data": true
+        },
+        "33": {
+          "label": {
+            "en": "3"
+          },
+          "data": true
+        },
+        "63": {
+          "label": {
+            "en": "6"
+          },
+          "data": true
+        },
+        "12": {
+          "label": {
+            "en": "12"
+          },
+          "data": true
+        },
+        "D1_5": {
+          "label": {
+            "en": "Term deposits"
+          },
+          "data": false
+        },
+        "D1_5_LZM": {
+          "label": {
+            "en": "Maturity, in years"
+          },
+          "data": false
+        },
+        "D1_5_2": {
+          "label": {
+            "en": "2"
+          },
+          "data": true
+        },
+        "D1_5_3": {
+          "label": {
+            "en": "3"
+          },
+          "data": true
+        },
+        "D1_5_4": {
+          "label": {
+            "en": "4"
+          },
+          "data": true
+        },
+        "D1_5_5": {
+          "label": {
+            "en": "5"
+          },
+          "data": true
+        },
+        "D1_5_6": {
+          "label": {
+            "en": "6"
+          },
+          "data": true
+        },
+        "D1_5_7": {
+          "label": {
+            "en": "7"
+          },
+          "data": true
+        },
+        "D1_5_8": {
+          "label": {
+            "en": "8"
+          },
+          "data": true
+        },
+        "D1_5_9": {
+          "label": {
+            "en": "9"
+          },
+          "data": true
+        },
+        "D1_5_10": {
+          "label": {
+            "en": "10"
+          },
+          "data": true
+        },
+        "D1_4": {
+          "label": {
+            "en": "Cash bonds"
+          },
+          "data": false
+        },
+        "D1_4_LZM": {
+          "label": {
+            "en": "Maturity, in years"
+          },
+          "data": false
+        },
+        "21": {
+          "label": {
+            "en": "2"
+          },
+          "data": true
+        },
+        "34": {
+          "label": {
+            "en": "3"
+          },
+          "data": true
+        },
+        "41": {
+          "label": {
+            "en": "4"
+          },
+          "data": true
+        },
+        "51": {
+          "label": {
+            "en": "5"
+          },
+          "data": true
+        },
+        "64": {
+          "label": {
+            "en": "6"
+          },
+          "data": true
+        },
+        "71": {
+          "label": {
+            "en": "7"
+          },
+          "data": true
+        },
+        "81": {
+          "label": {
+            "en": "8"
+          },
+          "data": true
+        },
+        "D1_4_9": {
+          "label": {
+            "en": "9"
+          },
+          "data": true
+        },
+        "D1_4_10": {
+          "label": {
+            "en": "10"
+          },
+          "data": true
+        }
+      },
+      "hierarchy": {
+        "D1_HYP": {
+          "MV": [],
+          "FVZ": {
+            "FVZ_LZJ": {
+              "11": [],
+              "20": [],
+              "30": [],
+              "40": [],
+              "50": [],
+              "60": [],
+              "70": [],
+              "80": [],
+              "9": [],
+              "10": [],
+              "HYP_11": [],
+              "HYP_12": [],
+              "HYP_13": [],
+              "HYP_14": [],
+              "HYP_15": []
+            }
+          },
+          "FGM": {
+            "FGM_SAR": {
+              "LZ_SAR": {
+                "SARJ03": [],
+                "SARJ05": [],
+                "SARJOBD": []
+              }
+            },
+            "LIB": {
+              "LIB_LZJ": {
+                "LIB_LZJ_3": {
+                  "LIB_LZJ_3_LZM": {
+                    "31": [],
+                    "61": [],
+                    "LIB_LZJ_3_12": []
+                  }
+                },
+                "LIB_LZJ_5": {
+                  "LIB_LZJ_5_LZM": {
+                    "32": [],
+                    "62": [],
+                    "LIB_LZJ_5_12": []
+                  }
+                },
+                "LIB_LZJ_UNBFR": {
+                  "LIB_LZJ_UNBFR_LZM": {
+                    "LIB_LZJ_UNBFR_3": [],
+                    "LIB_LZJ_UNBFR_6": [],
+                    "LIB_LZJ_UNBFR_12": []
+                  }
+                }
+              }
+            }
+          }
+        },
+        "D1_BKK": [],
+        "D1_PHA": {
+          "S0": [],
+          "PHA_UEB": [],
+          "S1": [],
+          "GVG": {
+            "GVG_F2S": [],
+            "GVG_S3A": []
+          }
+        },
+        "D1_FIK": {
+          "FIK_ASI": []
+        },
+        "D1_3": {
+          "D1_3_LZM": {
+            "13": [],
+            "33": [],
+            "63": [],
+            "12": []
+          }
+        },
+        "D1_5": {
+          "D1_5_LZM": {
+            "D1_5_2": [],
+            "D1_5_3": [],
+            "D1_5_4": [],
+            "D1_5_5": [],
+            "D1_5_6": [],
+            "D1_5_7": [],
+            "D1_5_8": [],
+            "D1_5_9": [],
+            "D1_5_10": []
+          }
+        },
+        "D1_4": {
+          "D1_4_LZM": {
+            "21": [],
+            "34": [],
+            "41": [],
+            "51": [],
+            "64": [],
+            "71": [],
+            "81": [],
+            "D1_4_9": [],
+            "D1_4_10": []
+          }
+        }
+      }
+    }
+  },
+  "topic": "Interest rates",
+  "default": {
+    "D0": "M",
+    "D1": "MV"
+  },
+  "concept": "Interest rates & yields / Money-market rates",
+  "canonical": false,
+  "split": "D1",
+  "single_select": "D0",
+  "default_transform": "level"
+}

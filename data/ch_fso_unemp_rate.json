@@ -1,0 +1,84 @@
+{
+  "schema_version": "1.0",
+  "id": "ch_fso_unemp_rate",
+  "dim_order": [
+    "origin",
+    "sex"
+  ],
+  "start": "1991-01-01",
+  "end": "2026-03-01",
+  "title": {
+    "en": "Unemployment rate (ILO) by sex and nationality, Switzerland"
+  },
+  "source": {
+    "name": {
+      "en": "Swiss Federal Statistical Office (FSO)"
+    },
+    "url": "https://www.bfs.admin.ch/asset/de/je-d-03.03.01.03"
+  },
+  "license": "fso",
+  "frequency": "monthly",
+  "topic": "Labour",
+  "updated": "2026-05-18",
+  "dimensions": {
+    "origin": {
+      "label": {
+        "en": "Nationality"
+      },
+      "levels": {
+        "tot": {
+          "label": {
+            "en": "Total"
+          },
+          "data": true
+        },
+        "ch": {
+          "label": {
+            "en": "Swiss nationals"
+          },
+          "data": true
+        },
+        "ex": {
+          "label": {
+            "en": "Foreign nationals"
+          },
+          "data": true
+        }
+      }
+    },
+    "sex": {
+      "label": {
+        "en": "Sex"
+      },
+      "levels": {
+        "tot": {
+          "label": {
+            "en": "Total"
+          },
+          "data": true
+        },
+        "men": {
+          "label": {
+            "en": "Men"
+          },
+          "data": true
+        },
+        "wom": {
+          "label": {
+            "en": "Women"
+          },
+          "data": true
+        }
+      }
+    }
+  },
+  "default": {
+    "origin": "tot",
+    "sex": "tot"
+  },
+  "concept": "Labour / Unemployment",
+  "canonical": false,
+  "split": "origin",
+  "single_select": "sex",
+  "default_transform": "level"
+}

@@ -1,0 +1,483 @@
+{
+  "schema_version": "1.0",
+  "id": "ch_snb_devwkibiim",
+  "dim_order": [
+    "D0",
+    "D1",
+    "D2"
+  ],
+  "start": "1973-01-01",
+  "end": "2026-04-01",
+  "title": {
+    "en": "Bilateral exchange rate indices – Monthly"
+  },
+  "source": {
+    "name": {
+      "en": "Swiss National Bank"
+    },
+    "url": "https://data.snb.ch/en/topics/snb/cube/devwkibiim"
+  },
+  "license": "snb",
+  "frequency": "monthly",
+  "dimensions": {
+    "D0": {
+      "label": {
+        "en": "Real/Nominal"
+      },
+      "levels": {
+        "N": {
+          "label": {
+            "en": "Nominal"
+          },
+          "data": true
+        },
+        "R": {
+          "label": {
+            "en": "Real"
+          },
+          "data": false
+        },
+        "K": {
+          "label": {
+            "en": "CPI-based"
+          },
+          "data": true
+        },
+        "P": {
+          "label": {
+            "en": "PPI-based"
+          },
+          "data": true
+        }
+      },
+      "hierarchy": {
+        "N": [],
+        "R": {
+          "K": [],
+          "P": []
+        }
+      }
+    },
+    "D1": {
+      "label": {
+        "en": "Countries"
+      },
+      "levels": {
+        "EG": {
+          "label": {
+            "en": "Egypt"
+          },
+          "data": true
+        },
+        "AR": {
+          "label": {
+            "en": "Argentina"
+          },
+          "data": true
+        },
+        "AU": {
+          "label": {
+            "en": "Australia"
+          },
+          "data": true
+        },
+        "BE": {
+          "label": {
+            "en": "Belgium"
+          },
+          "data": true
+        },
+        "BR": {
+          "label": {
+            "en": "Brazil"
+          },
+          "data": true
+        },
+        "BG": {
+          "label": {
+            "en": "Bulgaria"
+          },
+          "data": true
+        },
+        "CL": {
+          "label": {
+            "en": "Chile"
+          },
+          "data": true
+        },
+        "CN": {
+          "label": {
+            "en": "China"
+          },
+          "data": true
+        },
+        "DK": {
+          "label": {
+            "en": "Denmark"
+          },
+          "data": true
+        },
+        "DE": {
+          "label": {
+            "en": "Germany"
+          },
+          "data": true
+        },
+        "EE": {
+          "label": {
+            "en": "Estonia"
+          },
+          "data": true
+        },
+        "FI": {
+          "label": {
+            "en": "Finland"
+          },
+          "data": true
+        },
+        "FR": {
+          "label": {
+            "en": "France"
+          },
+          "data": true
+        },
+        "GR": {
+          "label": {
+            "en": "Greece"
+          },
+          "data": true
+        },
+        "HK": {
+          "label": {
+            "en": "Hong Kong"
+          },
+          "data": true
+        },
+        "IN": {
+          "label": {
+            "en": "India"
+          },
+          "data": true
+        },
+        "IE": {
+          "label": {
+            "en": "Ireland"
+          },
+          "data": true
+        },
+        "ILS": {
+          "label": {
+            "en": "Israel"
+          },
+          "data": true
+        },
+        "IT": {
+          "label": {
+            "en": "Italy"
+          },
+          "data": true
+        },
+        "JP": {
+          "label": {
+            "en": "Japan"
+          },
+          "data": true
+        },
+        "JO": {
+          "label": {
+            "en": "Jordan"
+          },
+          "data": true
+        },
+        "CA": {
+          "label": {
+            "en": "Canada"
+          },
+          "data": true
+        },
+        "KR": {
+          "label": {
+            "en": "South Korea"
+          },
+          "data": true
+        },
+        "HR": {
+          "label": {
+            "en": "Croatia"
+          },
+          "data": true
+        },
+        "LV": {
+          "label": {
+            "en": "Latvia"
+          },
+          "data": true
+        },
+        "LT": {
+          "label": {
+            "en": "Lithuania"
+          },
+          "data": true
+        },
+        "LU": {
+          "label": {
+            "en": "Luxembourg"
+          },
+          "data": true
+        },
+        "MY": {
+          "label": {
+            "en": "Malaysia"
+          },
+          "data": true
+        },
+        "MT": {
+          "label": {
+            "en": "Malta"
+          },
+          "data": true
+        },
+        "MX": {
+          "label": {
+            "en": "Mexico"
+          },
+          "data": true
+        },
+        "NZ": {
+          "label": {
+            "en": "New Zealand"
+          },
+          "data": true
+        },
+        "NL": {
+          "label": {
+            "en": "Netherlands"
+          },
+          "data": true
+        },
+        "NO": {
+          "label": {
+            "en": "Norway"
+          },
+          "data": true
+        },
+        "AT": {
+          "label": {
+            "en": "Austria"
+          },
+          "data": true
+        },
+        "PE": {
+          "label": {
+            "en": "Peru"
+          },
+          "data": true
+        },
+        "PH": {
+          "label": {
+            "en": "Philippines"
+          },
+          "data": true
+        },
+        "PL": {
+          "label": {
+            "en": "Poland"
+          },
+          "data": true
+        },
+        "PT": {
+          "label": {
+            "en": "Portugal"
+          },
+          "data": true
+        },
+        "RO": {
+          "label": {
+            "en": "Romania"
+          },
+          "data": true
+        },
+        "RU": {
+          "label": {
+            "en": "Russian Federation"
+          },
+          "data": true
+        },
+        "SA": {
+          "label": {
+            "en": "Saudi Arabia"
+          },
+          "data": true
+        },
+        "SE": {
+          "label": {
+            "en": "Sweden"
+          },
+          "data": true
+        },
+        "SG": {
+          "label": {
+            "en": "Singapore"
+          },
+          "data": true
+        },
+        "SK": {
+          "label": {
+            "en": "Slovakia"
+          },
+          "data": true
+        },
+        "SI": {
+          "label": {
+            "en": "Slovenia"
+          },
+          "data": true
+        },
+        "ES": {
+          "label": {
+            "en": "Spain"
+          },
+          "data": true
+        },
+        "ZA": {
+          "label": {
+            "en": "South Africa"
+          },
+          "data": true
+        },
+        "TH": {
+          "label": {
+            "en": "Thailand"
+          },
+          "data": true
+        },
+        "CZ": {
+          "label": {
+            "en": "Czech Republic"
+          },
+          "data": true
+        },
+        "TR": {
+          "label": {
+            "en": "Turkey"
+          },
+          "data": true
+        },
+        "HU": {
+          "label": {
+            "en": "Hungary"
+          },
+          "data": true
+        },
+        "GB": {
+          "label": {
+            "en": "United Kingdom"
+          },
+          "data": true
+        },
+        "US": {
+          "label": {
+            "en": "United States of America"
+          },
+          "data": true
+        },
+        "CY": {
+          "label": {
+            "en": "Cyprus"
+          },
+          "data": true
+        }
+      },
+      "hierarchy": {
+        "EG": [],
+        "AR": [],
+        "AU": [],
+        "BE": [],
+        "BR": [],
+        "BG": [],
+        "CL": [],
+        "CN": [],
+        "DK": [],
+        "DE": [],
+        "EE": [],
+        "FI": [],
+        "FR": [],
+        "GR": [],
+        "HK": [],
+        "IN": [],
+        "IE": [],
+        "ILS": [],
+        "IT": [],
+        "JP": [],
+        "JO": [],
+        "CA": [],
+        "KR": [],
+        "HR": [],
+        "LV": [],
+        "LT": [],
+        "LU": [],
+        "MY": [],
+        "MT": [],
+        "MX": [],
+        "NZ": [],
+        "NL": [],
+        "NO": [],
+        "AT": [],
+        "PE": [],
+        "PH": [],
+        "PL": [],
+        "PT": [],
+        "RO": [],
+        "RU": [],
+        "SA": [],
+        "SE": [],
+        "SG": [],
+        "SK": [],
+        "SI": [],
+        "ES": [],
+        "ZA": [],
+        "TH": [],
+        "CZ": [],
+        "TR": [],
+        "HU": [],
+        "GB": [],
+        "US": [],
+        "CY": []
+      }
+    },
+    "D2": {
+      "label": {
+        "en": "Index/Change"
+      },
+      "levels": {
+        "I": {
+          "label": {
+            "en": "Index"
+          },
+          "data": true
+        },
+        "V": {
+          "label": {
+            "en": "Change from the corresponding month of the previous year in %"
+          },
+          "data": true
+        }
+      },
+      "hierarchy": {
+        "I": [],
+        "V": []
+      }
+    }
+  },
+  "topic": "Exchange rates",
+  "default": {
+    "D0": "K",
+    "D1": "US",
+    "D2": "I"
+  },
+  "concept": "Exchange rates / Bilateral FX",
+  "canonical": true,
+  "split": "D1",
+  "single_select": ["D0", "D2"],
+  "default_transform": "level"
+}

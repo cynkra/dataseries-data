@@ -1,0 +1,166 @@
+{
+  "schema_version": "1.0",
+  "id": "ch_snb_snboffzisa",
+  "dim_order": [
+    "D0"
+  ],
+  "start": "2000-01-01",
+  "end": "2026-04-01",
+  "title": {
+    "en": "Official interest rates"
+  },
+  "source": {
+    "name": {
+      "en": "Swiss National Bank"
+    },
+    "url": "https://data.snb.ch/en/topics/snb/cube/snboffzisa"
+  },
+  "license": "snb",
+  "frequency": "monthly",
+  "dimensions": {
+    "D0": {
+      "label": {
+        "en": "Overview"
+      },
+      "levels": {
+        "D0_0": {
+          "label": {
+            "en": "Switzerland"
+          },
+          "data": false
+        },
+        "LZ": {
+          "label": {
+            "en": "SNB policy rate"
+          },
+          "data": true
+        },
+        "D0_0_0": {
+          "label": {
+            "en": "SNB target range for the 3-month Libor rate in CHF"
+          },
+          "data": false
+        },
+        "UG0": {
+          "label": {
+            "en": "Lower limit"
+          },
+          "data": true
+        },
+        "OG0": {
+          "label": {
+            "en": "Upper limit"
+          },
+          "data": true
+        },
+        "D0_1": {
+          "label": {
+            "en": "United States"
+          },
+          "data": false
+        },
+        "D0_1_0": {
+          "label": {
+            "en": "Fed target range"
+          },
+          "data": false
+        },
+        "UG1": {
+          "label": {
+            "en": "Lower limit"
+          },
+          "data": true
+        },
+        "OG1": {
+          "label": {
+            "en": "Upper limit"
+          },
+          "data": true
+        },
+        "D0_2": {
+          "label": {
+            "en": "Euro area/ECB"
+          },
+          "data": false
+        },
+        "H": {
+          "label": {
+            "en": "Main refinancing rate"
+          },
+          "data": true
+        },
+        "SRF": {
+          "label": {
+            "en": "Marginal Lending Facility"
+          },
+          "data": true
+        },
+        "EF": {
+          "label": {
+            "en": "Deposit Facility"
+          },
+          "data": true
+        },
+        "D0_3": {
+          "label": {
+            "en": "United Kingdom"
+          },
+          "data": false
+        },
+        "L0": {
+          "label": {
+            "en": "Bank of England - Bank rate"
+          },
+          "data": true
+        },
+        "D0_4": {
+          "label": {
+            "en": "Japan"
+          },
+          "data": false
+        },
+        "L1": {
+          "label": {
+            "en": "Bank of Japan - Uncollateralized overnight call rate"
+          },
+          "data": true
+        }
+      },
+      "hierarchy": {
+        "D0_0": {
+          "LZ": [],
+          "D0_0_0": {
+            "UG0": [],
+            "OG0": []
+          }
+        },
+        "D0_1": {
+          "D0_1_0": {
+            "UG1": [],
+            "OG1": []
+          }
+        },
+        "D0_2": {
+          "H": [],
+          "SRF": [],
+          "EF": []
+        },
+        "D0_3": {
+          "L0": []
+        },
+        "D0_4": {
+          "L1": []
+        }
+      }
+    }
+  },
+  "topic": "Interest rates",
+  "default": {
+    "D0": "LZ"
+  },
+  "concept": "Interest rates & yields / Policy & official rates",
+  "canonical": true,
+  "split": "D0",
+  "single_select": [],
+  "default_transform": "level"
+}

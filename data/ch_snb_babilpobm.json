@@ -1,0 +1,411 @@
+{
+  "schema_version": "1.0",
+  "id": "ch_snb_babilpobm",
+  "dim_order": [
+    "D0",
+    "INLANDAUSLAND",
+    "WAEHRUNG",
+    "BANKENGRUPPE"
+  ],
+  "start": "1987-12-01",
+  "end": "2026-03-01",
+  "title": {
+    "en": "Banks' balance sheet items by currency for selected bank categories – monthly"
+  },
+  "source": {
+    "name": {
+      "en": "Swiss National Bank"
+    },
+    "url": "https://data.snb.ch/en/topics/snb/cube/babilpobm"
+  },
+  "license": "snb",
+  "frequency": "monthly",
+  "dimensions": {
+    "D0": {
+      "label": {
+        "en": "Balance sheet items"
+      },
+      "levels": {
+        "AKT": {
+          "label": {
+            "en": "Assets"
+          },
+          "data": false
+        },
+        "FMI": {
+          "label": {
+            "en": "Liquid assets"
+          },
+          "data": true
+        },
+        "FBA": {
+          "label": {
+            "en": "Amounts due from banks"
+          },
+          "data": true
+        },
+        "WFG": {
+          "label": {
+            "en": "Amounts due from securities financing transactions"
+          },
+          "data": true
+        },
+        "FKU": {
+          "label": {
+            "en": "Amounts due from customers"
+          },
+          "data": true
+        },
+        "HYP": {
+          "label": {
+            "en": "Mortgage loans"
+          },
+          "data": true
+        },
+        "HGE": {
+          "label": {
+            "en": "Trading portfolio assets"
+          },
+          "data": true
+        },
+        "WBW": {
+          "label": {
+            "en": "Positive replacement values of derivative financial instruments"
+          },
+          "data": true
+        },
+        "FFV": {
+          "label": {
+            "en": "Other financial instruments at fair value"
+          },
+          "data": true
+        },
+        "FAN": {
+          "label": {
+            "en": "Financial investments"
+          },
+          "data": true
+        },
+        "REA": {
+          "label": {
+            "en": "Accrued income and prepaid expenses"
+          },
+          "data": true
+        },
+        "BET": {
+          "label": {
+            "en": "Participations"
+          },
+          "data": true
+        },
+        "SAN": {
+          "label": {
+            "en": "Tangible fixed assets"
+          },
+          "data": true
+        },
+        "IMW": {
+          "label": {
+            "en": "Intangible assets"
+          },
+          "data": true
+        },
+        "SON": {
+          "label": {
+            "en": "Other assets"
+          },
+          "data": true
+        },
+        "NVW": {
+          "label": {
+            "en": "Non-eligible value adjustments according to transitional provisions (negative item)"
+          },
+          "data": true
+        },
+        "NEG": {
+          "label": {
+            "en": "Capital not paid in"
+          },
+          "data": true
+        },
+        "TOT": {
+          "label": {
+            "en": "Total assets"
+          },
+          "data": true
+        },
+        "PAS": {
+          "label": {
+            "en": "Liabilities"
+          },
+          "data": false
+        },
+        "VBA": {
+          "label": {
+            "en": "Amounts due to banks"
+          },
+          "data": true
+        },
+        "WFG1": {
+          "label": {
+            "en": "Liabilities from securities financing transactions"
+          },
+          "data": true
+        },
+        "VKE": {
+          "label": {
+            "en": "Amounts due in respect of customer deposits"
+          },
+          "data": true
+        },
+        "HGE1": {
+          "label": {
+            "en": "Trading portfolio liabilities"
+          },
+          "data": true
+        },
+        "WBW1": {
+          "label": {
+            "en": "Negative replacement values of derivative financial instruments"
+          },
+          "data": true
+        },
+        "FFV1": {
+          "label": {
+            "en": "Liabilities from other financial instruments at fair value"
+          },
+          "data": true
+        },
+        "KOB": {
+          "label": {
+            "en": "Cash bonds"
+          },
+          "data": true
+        },
+        "APF": {
+          "label": {
+            "en": "Bond issues and central mortgage institution loans"
+          },
+          "data": true
+        },
+        "REA1": {
+          "label": {
+            "en": "Accrued expenses and deferred income"
+          },
+          "data": true
+        },
+        "SON1": {
+          "label": {
+            "en": "Other liabilities"
+          },
+          "data": true
+        },
+        "RUE": {
+          "label": {
+            "en": "Provisions"
+          },
+          "data": true
+        },
+        "RAB": {
+          "label": {
+            "en": "Reserves for general banking risks"
+          },
+          "data": true
+        },
+        "GKA": {
+          "label": {
+            "en": "Bank capital"
+          },
+          "data": true
+        },
+        "KRE": {
+          "label": {
+            "en": "Statutory capital reserve"
+          },
+          "data": true
+        },
+        "GRE": {
+          "label": {
+            "en": "Statutory earnings reserve"
+          },
+          "data": true
+        },
+        "FGR": {
+          "label": {
+            "en": "Voluntary retained earnings reserves"
+          },
+          "data": true
+        },
+        "EKA": {
+          "label": {
+            "en": "Own shares (negative item)"
+          },
+          "data": true
+        },
+        "GVO": {
+          "label": {
+            "en": "Profit carried forward / loss carried forward"
+          },
+          "data": true
+        },
+        "GEV": {
+          "label": {
+            "en": "Profit / loss (result of the period)"
+          },
+          "data": true
+        },
+        "TOT1": {
+          "label": {
+            "en": "Total liabilities"
+          },
+          "data": true
+        }
+      },
+      "hierarchy": {
+        "AKT": {
+          "FMI": [],
+          "FBA": [],
+          "WFG": [],
+          "FKU": [],
+          "HYP": [],
+          "HGE": [],
+          "WBW": [],
+          "FFV": [],
+          "FAN": [],
+          "REA": [],
+          "BET": [],
+          "SAN": [],
+          "IMW": [],
+          "SON": [],
+          "NVW": [],
+          "NEG": [],
+          "TOT": []
+        },
+        "PAS": {
+          "VBA": [],
+          "WFG1": [],
+          "VKE": [],
+          "HGE1": [],
+          "WBW1": [],
+          "FFV1": [],
+          "KOB": [],
+          "APF": [],
+          "REA1": [],
+          "SON1": [],
+          "RUE": [],
+          "RAB": [],
+          "GKA": [],
+          "KRE": [],
+          "GRE": [],
+          "FGR": [],
+          "EKA": [],
+          "GVO": [],
+          "GEV": [],
+          "TOT1": []
+        }
+      }
+    },
+    "INLANDAUSLAND": {
+      "label": {
+        "en": "Domestic and foreign"
+      },
+      "levels": {
+        "T": {
+          "label": {
+            "en": "Total domestic and foreign"
+          },
+          "data": true
+        },
+        "I": {
+          "label": {
+            "en": "Domestic"
+          },
+          "data": true
+        },
+        "A": {
+          "label": {
+            "en": "Foreign"
+          },
+          "data": true
+        }
+      },
+      "hierarchy": {
+        "T": [],
+        "I": [],
+        "A": []
+      }
+    },
+    "WAEHRUNG": {
+      "label": {
+        "en": "Currency"
+      },
+      "levels": {
+        "T": {
+          "label": {
+            "en": "All currencies"
+          },
+          "data": true
+        },
+        "CHF": {
+          "label": {
+            "en": "Swiss franc"
+          },
+          "data": true
+        },
+        "EUR": {
+          "label": {
+            "en": "Euro"
+          },
+          "data": true
+        },
+        "USD": {
+          "label": {
+            "en": "US dollar"
+          },
+          "data": true
+        }
+      },
+      "hierarchy": {
+        "T": [],
+        "CHF": [],
+        "EUR": [],
+        "USD": []
+      }
+    },
+    "BANKENGRUPPE": {
+      "label": {
+        "en": "Bank category"
+      },
+      "levels": {
+        "A40": {
+          "label": {
+            "en": "All banks"
+          },
+          "data": true
+        },
+        "G15": {
+          "label": {
+            "en": "Big banks"
+          },
+          "data": true
+        }
+      },
+      "hierarchy": {
+        "A40": [],
+        "G15": []
+      }
+    }
+  },
+  "topic": "Banking",
+  "default": {
+    "D0": "TOT",
+    "INLANDAUSLAND": "T",
+    "WAEHRUNG": "T",
+    "BANKENGRUPPE": "A40"
+  },
+  "concept": "Money & banking / Banking & credit",
+  "canonical": true,
+  "split": "D0",
+  "single_select": ["INLANDAUSLAND", "WAEHRUNG", "BANKENGRUPPE"],
+  "default_transform": "level"
+}

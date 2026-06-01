@@ -1,0 +1,127 @@
+{
+  "schema_version": "1.0",
+  "id": "ch_snb_amarbma",
+  "dim_order": [
+    "D0"
+  ],
+  "start": "1948-01-01",
+  "end": "2026-04-01",
+  "title": {
+    "en": "Labour market (registered unemployment, SECO)"
+  },
+  "source": {
+    "name": {
+      "en": "Swiss National Bank"
+    },
+    "url": "https://data.snb.ch/en/topics/snb/cube/amarbma"
+  },
+  "license": "snb",
+  "frequency": "monthly",
+  "dimensions": {
+    "D0": {
+      "label": {
+        "en": "Overview"
+      },
+      "levels": {
+        "K": {
+          "label": {
+            "en": "Workers affected by short-time working"
+          },
+          "data": true
+        },
+        "D0_1": {
+          "label": {
+            "en": "Registered unemployed"
+          },
+          "data": false
+        },
+        "T0": {
+          "label": {
+            "en": "Total"
+          },
+          "data": true
+        },
+        "S0": {
+          "label": {
+            "en": "Seasonally adjusted"
+          },
+          "data": true
+        },
+        "D0_2": {
+          "label": {
+            "en": "Jobless rate"
+          },
+          "data": false
+        },
+        "T1": {
+          "label": {
+            "en": "Total"
+          },
+          "data": true
+        },
+        "S1": {
+          "label": {
+            "en": "Seasonally adjusted"
+          },
+          "data": true
+        },
+        "D0_3": {
+          "label": {
+            "en": "Notified job vacancies"
+          },
+          "data": false
+        },
+        "T2": {
+          "label": {
+            "en": "Total"
+          },
+          "data": true
+        },
+        "S2": {
+          "label": {
+            "en": "Seasonally adjusted"
+          },
+          "data": true
+        },
+        "RS": {
+          "label": {
+            "en": "Registered job seekers"
+          },
+          "data": true
+        },
+        "E": {
+          "label": {
+            "en": "Labour force"
+          },
+          "data": true
+        }
+      },
+      "hierarchy": {
+        "K": [],
+        "D0_1": {
+          "T0": [],
+          "S0": []
+        },
+        "D0_2": {
+          "T1": [],
+          "S1": []
+        },
+        "D0_3": {
+          "T2": [],
+          "S2": []
+        },
+        "RS": [],
+        "E": []
+      }
+    }
+  },
+  "topic": "Labour market",
+  "default": {
+    "D0": "T0"
+  },
+  "concept": "Labour / Unemployment",
+  "canonical": false,
+  "split": "D0",
+  "single_select": "(none; D0 is the only dimension)",
+  "default_transform": "level"
+}

@@ -1,0 +1,160 @@
+{
+  "schema_version": "1.0",
+  "id": "ch_snb_auversecq",
+  "dim_order": [
+    "D0",
+    "D1",
+    "D2"
+  ],
+  "start": "1985-01-01",
+  "end": "2025-10-01",
+  "title": {
+    "en": "Switzerland’s international investment position – Breakdown by sector – Quarter"
+  },
+  "source": {
+    "name": {
+      "en": "Swiss National Bank"
+    },
+    "url": "https://data.snb.ch/en/topics/snb/cube/auversecq"
+  },
+  "license": "snb",
+  "frequency": "quarterly",
+  "dimensions": {
+    "D0": {
+      "label": {
+        "en": "Accounting entry"
+      },
+      "levels": {
+        "A": {
+          "label": {
+            "en": "Assets"
+          },
+          "data": true
+        },
+        "P": {
+          "label": {
+            "en": "Liabilities"
+          },
+          "data": true
+        },
+        "N": {
+          "label": {
+            "en": "Net international investment position"
+          },
+          "data": true
+        }
+      },
+      "hierarchy": {
+        "A": [],
+        "P": [],
+        "N": []
+      }
+    },
+    "D1": {
+      "label": {
+        "en": "Sector"
+      },
+      "levels": {
+        "T": {
+          "label": {
+            "en": "Total"
+          },
+          "data": true
+        },
+        "N": {
+          "label": {
+            "en": "Swiss National Bank"
+          },
+          "data": true
+        },
+        "B": {
+          "label": {
+            "en": "Banks"
+          },
+          "data": true
+        },
+        "OH": {
+          "label": {
+            "en": "Public sector"
+          },
+          "data": true
+        },
+        "US": {
+          "label": {
+            "en": "Other sectors"
+          },
+          "data": true
+        }
+      },
+      "hierarchy": {
+        "T": [],
+        "N": [],
+        "B": [],
+        "OH": [],
+        "US": []
+      }
+    },
+    "D2": {
+      "label": {
+        "en": "Component"
+      },
+      "levels": {
+        "T": {
+          "label": {
+            "en": "Total"
+          },
+          "data": true
+        },
+        "D1": {
+          "label": {
+            "en": "Direct investment"
+          },
+          "data": true
+        },
+        "P": {
+          "label": {
+            "en": "Portfolio investment"
+          },
+          "data": true
+        },
+        "D0": {
+          "label": {
+            "en": "Derivatives"
+          },
+          "data": true
+        },
+        "UI": {
+          "label": {
+            "en": "Other investment"
+          },
+          "data": true
+        },
+        "W": {
+          "label": {
+            "en": "Reserve assets"
+          },
+          "data": true
+        }
+      },
+      "hierarchy": {
+        "T": [],
+        "D1": [],
+        "P": [],
+        "D0": [],
+        "UI": [],
+        "W": []
+      }
+    }
+  },
+  "topic": "Balance of payments",
+  "default": {
+    "D0": "N",
+    "D1": "T",
+    "D2": "T"
+  },
+  "concept": "External sector / International investment position",
+  "canonical": true,
+  "split": "D1",
+  "single_select": ["D0", "D2"],
+  "default_transform": "level"
+}

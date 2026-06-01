@@ -1,0 +1,73 @@
+# Jobs by economic division (quarterly)
+
+- **id**: ch_fso_besta
+- **concept**: Labour / Employment / jobs
+- **canonical**: yes
+- **source**: Swiss Federal Statistical Office (FSO)
+- **license**: fso (free reuse, attribution required)
+- **frequency**: quarterly
+- **coverage**: 1991-07 .. 2026-01
+- **series**: 60
+- **updated**: not published (live PX-Web pull; latest observation 2026Q1)
+
+## What is special
+BESTA, the FSO employment statistics: the number of jobs in Switzerland by
+economic division (NOGA), quarterly back to 1991. This is the canonical Swiss
+employment series. Its defining feature is the **deep division hierarchy**: 60
+NOGA aggregates from the grand total `5-96` down through sectors (`5-43` Sector
+II, `45-96` Sector III) to individual two-digit divisions (e.g. `21`
+Pharmaceuticals, `64` Financial services, `86` Human health). This lets you read
+the structural shift of the Swiss economy (manufacturing flat, health and
+business services up) off one table. CONCEPT-UNIVERSE flags an overlap with SNB
+`ambeschkla` (employees by activity); BESTA is chosen as canonical because it is
+the FSO authoritative jobs series with the finer NOGA breakdown.
+
+## Access
+- **type**: FSO PX-Web (json-stat2)
+- **endpoint / table id**: `px-x-0602000000_101` (node; real table at
+  `.../px-x-0602000000_101/px-x-0602000000_101.px`)
+- **call**: `fso_fetch("ch_fso_besta", "px-x-0602000000_101", besta_query,
+  quarter_col = "Quartal", chunk_by = "Quartal", chunk_size = 40L)` with an
+  explicit query (not `fso_fetch_auto`).
+
+## Parsing recipe
+- The full cube is ~60 divisions x 10 employment-rate levels x 3 sexes x ~139
+  quarters (~250k cells), far over the 5000-cell cap. The query takes the
+  **headline slice**: `Wirtschaftsabteilung` = all, `Beschäftigungsgrad` = item
+  `TOT`, `Geschlecht` = item `TOT`, `Quartal` = all.
+- Even the headline slice (60 x 139) exceeds the cap, so the call **chunks by
+  `Quartal`** in groups of 40 quarters; each chunk is a separate POST and the
+  parts are `rbind`-ed back together. Dimensions/metadata are stable across
+  chunks.
+- Time is a single `Quartal` code like `1991Q3`; `.fso_make_date` maps quarter q
+  to month `(q-1)*3+1` and emits a first-of-quarter ISO `date`
+  (Q1->01, Q2->04, Q3->07, Q4->10), frequency quarterly.
+- Dimension **codes are German** even on `/en/` (`Wirtschaftsabteilung`,
+  `Beschäftigungsgrad`, `Geschlecht`, `Quartal`); kept as stored column values.
+
+## Dimensions
+- `Wirtschaftsabteilung` (Economic division): 60 NOGA codes. `5-96` = total;
+  `5-43` Sector II, `45-96` Sector III; `10-33` Manufacturing and its parts
+  (`21` Pharmaceuticals, `26` Watches/electronics, ...); `41-43` Construction;
+  service divisions `45`..`96`. Range codes like `10-12` are aggregates of the
+  contained two-digit divisions.
+- `Beschäftigungsgrad` (Employment rate): only `TOT` (total) is fetched.
+- `Geschlecht` (Gender): only `TOT` (total) is fetched.
+
+## Display
+- **split**: Wirtschaftsabteilung
+- **single-select**: Beschäftigungsgrad, Geschlecht
+- **default**: Wirtschaftsabteilung=5-96, Beschäftigungsgrad=TOT, Geschlecht=TOT
+- **transform**: level
+- **seasonal adjustment**: n/a (no seasonal-adjustment dimension; only the total
+  employment-rate, total-sex slice is fetched)
+
+## Caveats / simplifications
+- Only the total-level, total-sex slice is captured. The full-time/part-time and
+  men/women breakdowns of this exact table are dropped here; the sex breakdown
+  lives in the sibling dataset `ch_fso_jobs_sex` (table `_102`).
+- No `updated` date is published by the API; latest quarter stands in.
+
+## Provenance
+Script: `R/source_fso.R::fso_fetch` (explicit chunked query built in
+`R/pipeline.R`). Datasheet authored 2026-06-01.
