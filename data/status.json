@@ -1,11 +1,11 @@
 {
-  "checked": "2026-06-01 15:56 UTC",
+  "checked": "2026-06-01 16:15 UTC",
   "counts": {
-    "green": 51,
+    "green": 52,
     "amber": 0,
     "red": 0,
     "unknown": 0,
-    "total": 51
+    "total": 52
   },
   "datasets": [
     {
@@ -567,6 +567,17 @@
       "updated": null,
       "age_days": 151,
       "threshold_days": 290,
+      "status": "green"
+    },
+    {
+      "id": "ch_ffa_finances",
+      "title": "Public finances: general government main aggregates",
+      "source": "Federal Finance Administration (FFA)",
+      "frequency": "annual",
+      "end": "2029-01-01",
+      "updated": "2025-03-18",
+      "age_days": -945,
+      "threshold_days": 550,
       "status": "green"
     }
   ]

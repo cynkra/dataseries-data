@@ -121,12 +121,17 @@
   "concept": "Labour / Wages",
   "canonical": true,
   "split": "sector",
-  "single_select": ["sex", "measure", "adjustment"],
+  "single_select": [
+    "sex",
+    "measure",
+    "adjustment"
+  ],
   "default_transform": "level",
   "default": {
     "sector": "bs0",
     "sex": "tot",
     "measure": "index",
     "adjustment": "real"
-  }
+  },
+  "fetched_utc": "2026-06-01 07:15:00"
 }

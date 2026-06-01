@@ -80,5 +80,6 @@
   "default": {
     "origin": "tot",
     "sex": "tot"
-  }
+  },
+  "fetched_utc": "2026-06-01 07:15:00"
 }

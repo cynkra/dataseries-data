@@ -311,5 +311,6 @@
   "default_transform": "level",
   "default": {
     "D0": "1TGT"
-  }
+  },
+  "fetched_utc": "2026-06-01 07:15:00"
 }

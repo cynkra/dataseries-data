@@ -109,11 +109,15 @@
   "concept": "Exchange rates / Effective FX index",
   "canonical": true,
   "split": "D1",
-  "single_select": ["D0", "D2"],
+  "single_select": [
+    "D0",
+    "D2"
+  ],
   "default_transform": "level",
   "default": {
     "D1": "G",
     "D0": "K",
     "D2": "I"
-  }
+  },
+  "fetched_utc": "2026-06-01 07:15:00"
 }

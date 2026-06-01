@@ -15,7 +15,7 @@ root <- tryCatch(
 )
 for (f in c("dates.R", "http.R", "io.R", "source_snb.R", "source_kof.R",
             "source_fso.R", "source_fso_excel.R", "source_fso_excel_sets.R",
-            "source_fso_sdmx.R", "source_seco.R")) {
+            "source_fso_sdmx.R", "source_seco.R", "source_ffa.R")) {
   source(file.path(root, f))
 }
 
@@ -105,6 +105,14 @@ build <- function() {
                                 noga_keep = .SDMX_PRODUCTION_NOGA),
                  "Domestic economy"))
 
+  # FFA / EFV: general-government public finances (FS + GFS model headline
+  # aggregates — revenue, expenditure, balance, gross/net debt, debt-to-GDP), annual,
+  # by government level. From opendata.swiss (CKAN) -> data.finance.admin.ch CSV.
+  add(.try_fetch("ch_ffa_finances",
+                 ffa_fetch("ch_ffa_finances",
+                           title = list(en = "Public finances: general government main aggregates")),
+                 "Public finances"))
+
   # KOF: the Economic Barometer (single monthly series).
   add(.try_fetch("ch_kof_barometer",
                  kof_fetch("ch.kof.barometer", title = list(en = "KOF Economic Barometer")),
@@ -174,7 +182,9 @@ main <- function() {
     # Curation (concept + canonical + featured) is derived from the datasheet, the source of truth.
     datasets[[i]]$meta <- modifyList(datasets[[i]]$meta,
                                      read_datasheet_meta(datasets[[i]]$id, DATASHEET_DIR))
-    write_dataset(datasets[[i]], DATA_DIR)
+    # Capture the return: write_dataset() stamps meta$fetched_utc, which
+    # write_catalog() below reads into the catalog "fetched" field.
+    datasets[[i]] <- write_dataset(datasets[[i]], DATA_DIR)
     cat(sprintf("wrote %-22s %7d rows, %4d series  [%s]\n",
                 datasets[[i]]$id, nrow(datasets[[i]]$data), n_series(datasets[[i]]$data),
                 datasets[[i]]$meta$concept %||% "no datasheet"))

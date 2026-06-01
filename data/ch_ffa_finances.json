@@ -1,0 +1,312 @@
+{
+  "schema_version": "1.0",
+  "id": "ch_ffa_finances",
+  "dim_order": [
+    "level",
+    "model",
+    "indicator",
+    "estimate"
+  ],
+  "start": "1990-01-01",
+  "end": "2029-01-01",
+  "title": {
+    "en": "Public finances: general government main aggregates"
+  },
+  "source": {
+    "name": {
+      "en": "Federal Finance Administration (FFA)"
+    },
+    "url": "https://opendata.swiss/en/dataset/hauptaggregate-und-prognosen-im-fs-und-gfs-modell"
+  },
+  "license": "opendata.swiss terms of use (open use, attribution required: Federal Finance Administration FFA)",
+  "frequency": "annual",
+  "dimensions": {
+    "level": {
+      "label": {
+        "en": "Government level"
+      },
+      "levels": {
+        "staat": {
+          "label": {
+            "en": "General government"
+          },
+          "data": true
+        },
+        "bund": {
+          "label": {
+            "en": "Confederation"
+          },
+          "data": true
+        },
+        "ktn": {
+          "label": {
+            "en": "Cantons"
+          },
+          "data": true
+        },
+        "gdn": {
+          "label": {
+            "en": "Communes"
+          },
+          "data": true
+        },
+        "sv": {
+          "label": {
+            "en": "Social security funds"
+          },
+          "data": true
+        },
+        "bund_ktn_gdn": {
+          "label": {
+            "en": "Confederation, cantons and communes"
+          },
+          "data": true
+        }
+      }
+    },
+    "model": {
+      "label": {
+        "en": "Accounting model"
+      },
+      "levels": {
+        "fs": {
+          "label": {
+            "en": "FS model (financial statistics)"
+          },
+          "data": true
+        },
+        "gfs": {
+          "label": {
+            "en": "GFS model (Maastricht / SNA basis)"
+          },
+          "data": true
+        }
+      }
+    },
+    "indicator": {
+      "label": {
+        "en": "Indicator"
+      },
+      "levels": {
+        "einnahmen": {
+          "label": {
+            "en": "Receipts"
+          },
+          "data": true
+        },
+        "ausgaben": {
+          "label": {
+            "en": "Expenditure"
+          },
+          "data": true
+        },
+        "saldo": {
+          "label": {
+            "en": "Balance"
+          },
+          "data": true
+        },
+        "einnahmen_ord": {
+          "label": {
+            "en": "Ordinary receipts"
+          },
+          "data": true
+        },
+        "ausgaben_ord": {
+          "label": {
+            "en": "Ordinary expenditure"
+          },
+          "data": true
+        },
+        "saldo_ord": {
+          "label": {
+            "en": "Ordinary balance"
+          },
+          "data": true
+        },
+        "ertrag": {
+          "label": {
+            "en": "Revenue"
+          },
+          "data": true
+        },
+        "aufwand": {
+          "label": {
+            "en": "Expenses"
+          },
+          "data": true
+        },
+        "fiskalertrag": {
+          "label": {
+            "en": "Fiscal revenue (taxes)"
+          },
+          "data": true
+        },
+        "bruttoschuld_fs": {
+          "label": {
+            "en": "Gross debt"
+          },
+          "data": true
+        },
+        "nettoschulden_fs": {
+          "label": {
+            "en": "Net debt"
+          },
+          "data": true
+        },
+        "maastricht_schuld": {
+          "label": {
+            "en": "Gross debt (Maastricht)"
+          },
+          "data": true
+        },
+        "nettoschuld": {
+          "label": {
+            "en": "Net debt"
+          },
+          "data": true
+        },
+        "defizit_ueberschuss": {
+          "label": {
+            "en": "Deficit / surplus"
+          },
+          "data": true
+        },
+        "nettozugang_sachvermoegen": {
+          "label": {
+            "en": "Net acquisition of non-financial assets"
+          },
+          "data": true
+        },
+        "aktiven": {
+          "label": {
+            "en": "Assets"
+          },
+          "data": true
+        },
+        "fremdkapital": {
+          "label": {
+            "en": "Liabilities"
+          },
+          "data": true
+        },
+        "eigenkapital": {
+          "label": {
+            "en": "Equity / net worth"
+          },
+          "data": true
+        },
+        "bip": {
+          "label": {
+            "en": "Gross domestic product"
+          },
+          "data": true
+        },
+        "fiskalquote": {
+          "label": {
+            "en": "Fiscal ratio (tax-to-GDP)"
+          },
+          "data": true
+        },
+        "einnahmenquote": {
+          "label": {
+            "en": "Receipts-to-GDP ratio"
+          },
+          "data": true
+        },
+        "staatsquote": {
+          "label": {
+            "en": "Expenditure-to-GDP ratio"
+          },
+          "data": true
+        },
+        "bruttoschuldenquote": {
+          "label": {
+            "en": "Gross-debt-to-GDP ratio (Maastricht)"
+          },
+          "data": true
+        },
+        "schuldenquote": {
+          "label": {
+            "en": "Debt-to-GDP ratio"
+          },
+          "data": true
+        },
+        "nettoschuldenquote": {
+          "label": {
+            "en": "Net-debt-to-GDP ratio"
+          },
+          "data": true
+        }
+      }
+    },
+    "estimate": {
+      "label": {
+        "en": "Estimate type"
+      },
+      "levels": {
+        "Financial statements": {
+          "label": {
+            "en": "Financial statements (actual)"
+          },
+          "data": true
+        },
+        "Provisional financial statements": {
+          "label": {
+            "en": "Provisional financial statements"
+          },
+          "data": true
+        },
+        "Survey financial statements": {
+          "label": {
+            "en": "Survey financial statements"
+          },
+          "data": true
+        },
+        "Survey budget": {
+          "label": {
+            "en": "Survey budget"
+          },
+          "data": true
+        },
+        "Budget/financial plans": {
+          "label": {
+            "en": "Budget / financial plans"
+          },
+          "data": true
+        },
+        "Forecasts": {
+          "label": {
+            "en": "Forecasts"
+          },
+          "data": true
+        },
+        "Data available": {
+          "label": {
+            "en": "Data available"
+          },
+          "data": true
+        }
+      }
+    }
+  },
+  "units": {
+    "en": "CHF million (levels) / share of GDP, 0-1 (ratios)"
+  },
+  "updated": "2025-03-18",
+  "notes": {
+    "en": "Headline general-government finance aggregates from the FFA FS- and GFS-model dashboard. Level figures are in CHF million; the *quote (ratio) indicators are expressed as a share of GDP on a 0-1 scale. Years beyond the latest financial statement are budget / financial-plan or forecast figures (see the estimate dimension)."
+  },
+  "topic": "Public finances",
+  "concept": "Public finances / Government finance",
+  "canonical": true,
+  "split": "indicator",
+  "single_select": ["level", "model", "estimate"],
+  "default_transform": "level",
+  "default": {
+    "level": "staat",
+    "model": "gfs",
+    "indicator": "bruttoschuldenquote"
+  },
+  "fetched_utc": "2026-06-01 16:13:09"
+}

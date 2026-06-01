@@ -109,6 +109,12 @@ write_dataset <- function(ds, out_dir) {
   # back to the most-observations heuristic only when the datasheet doesn't say.
   if (is.null(ds$meta$default)) ds$meta$default <- default_selection(data, dc)
 
+  # When WE last wrote this dataset to disk (UTC), independent of the source's own
+  # publish date (`updated`). Lets "last fetched" work for every dataset, incl. the
+  # SNB cubes whose source carries no usable publish timestamp. Stamped into ds$meta
+  # so catalog_entry(ds) on the same in-memory object picks it up too.
+  ds$meta$fetched_utc <- format(Sys.time(), tz = "UTC", "%Y-%m-%d %H:%M:%S")
+
   span <- range(data$date)
   meta <- c(
     list(
@@ -145,6 +151,7 @@ catalog_entry <- function(ds) {
     end = as.character(span[2]),
     n_series = n_series(ds$data),
     updated = m$updated %||% NA_character_,
+    fetched = m$fetched_utc %||% NA_character_,
     load = m$load %||% "whole",
     data = paste0(ds$id, ".csv"),
     meta = paste0(ds$id, ".json")

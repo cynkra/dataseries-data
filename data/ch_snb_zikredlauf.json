@@ -178,11 +178,15 @@
   "concept": "Interest rates & yields / Money-market rates",
   "canonical": false,
   "split": "D1",
-  "single_select": ["D0", "D2"],
+  "single_select": [
+    "D0",
+    "D2"
+  ],
   "default_transform": "level",
   "default": {
     "D0": "FH",
     "D1": "L35J",
     "D2": "MP1"
-  }
+  },
+  "fetched_utc": "2026-06-01 07:15:00"
 }
