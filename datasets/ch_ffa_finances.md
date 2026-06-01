@@ -84,6 +84,9 @@ budget / forecast.
 - **single-select**: level, model, estimate
 - **default**: level=staat, model=gfs, indicator=bruttoschuldenquote
 - **transform**: level
+- **percent-levels**: fiskalquote, einnahmenquote, staatsquote, bruttoschuldenquote, schuldenquote, nettoschuldenquote
+  <these indicator levels are a share of GDP on a 0–1 scale; the app renders them
+  as a percentage (× 100, % axis) when they alone are plotted in the level view>
 - **seasonal adjustment**: n/a (annual data).
 
 ## Caveats / simplifications

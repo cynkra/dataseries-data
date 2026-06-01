@@ -42,6 +42,8 @@ read_datasheet_meta <- function(id, datasheet_dir) {
   if (!is.null(ss)) out$single_select <- trimws(strsplit(ss, ",")[[1]])
   tr <- pick("transform")
   if (!is.null(tr)) out$default_transform <- tr
+  pl <- pick("percent-levels")   # split-dim levels stored as a 0-1 share -> app shows as %
+  if (!is.null(pl)) out$percent_levels <- trimws(strsplit(pl, ",")[[1]])
   def <- pick("default")
   if (!is.null(def)) {
     kv <- list()

@@ -303,10 +303,11 @@
   "split": "indicator",
   "single_select": ["level", "model", "estimate"],
   "default_transform": "level",
+  "percent_levels": ["fiskalquote", "einnahmenquote", "staatsquote", "bruttoschuldenquote", "schuldenquote", "nettoschuldenquote"],
   "default": {
     "level": "staat",
     "model": "gfs",
     "indicator": "bruttoschuldenquote"
   },
-  "fetched_utc": "2026-06-01 16:13:09"
+  "fetched_utc": "2026-06-01 16:33:57"
 }
