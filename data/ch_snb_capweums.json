@@ -115,12 +115,12 @@
     }
   },
   "topic": "Financial markets",
-  "default": {
-    "D0": "T2"
-  },
   "concept": "Financial markets / Securities turnover",
   "canonical": true,
   "split": "D0",
   "single_select": "(none; single dimension)",
-  "default_transform": "level"
+  "default_transform": "level",
+  "default": {
+    "D0": "T2"
+  }
 }

@@ -2686,12 +2686,13 @@
       }
     }
   },
-  "default": {
-    "item": "100_100"
-  },
   "concept": "Prices / Consumer prices",
   "canonical": true,
+  "featured": "Inflation",
   "split": "item",
   "single_select": [],
-  "default_transform": "yoy"
+  "default_transform": "yoy",
+  "default": {
+    "item": "100_100"
+  }
 }

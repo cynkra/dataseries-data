@@ -422,13 +422,13 @@
     }
   },
   "topic": "Exchange rates",
-  "default": {
-    "D0": "R",
-    "D1": "T0"
-  },
   "concept": "Exchange rates / Bilateral FX",
   "canonical": true,
   "split": "D1",
   "single_select": "D0",
-  "default_transform": "level"
+  "default_transform": "level",
+  "default": {
+    "D1": "T0",
+    "D0": "R"
+  }
 }

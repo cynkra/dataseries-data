@@ -853,13 +853,13 @@
     }
   },
   "topic": "SNB forecasts",
-  "default": {
-    "D0": "D2025POFFP",
-    "D1": "P"
-  },
   "concept": "SNB policy & forecasts / Conditional inflation forecast",
   "canonical": true,
   "split": "D0",
   "single_select": "D1",
-  "default_transform": "level"
+  "default_transform": "level",
+  "default": {
+    "D0": "D2025POFFP",
+    "D1": "P"
+  }
 }

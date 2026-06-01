@@ -457,13 +457,13 @@
     }
   },
   "topic": "Balance of payments",
-  "default": {
-    "D0": "S",
-    "D1": "T0"
-  },
   "concept": "External sector / Balance of payments",
   "canonical": true,
   "split": "D1",
   "single_select": "D0",
-  "default_transform": "level"
+  "default_transform": "level",
+  "default": {
+    "D1": "T0",
+    "D0": "S"
+  }
 }

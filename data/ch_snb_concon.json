@@ -113,12 +113,12 @@
     }
   },
   "topic": "Business surveys",
-  "default": {
-    "D0": "NIK"
-  },
   "concept": "Business cycle & sentiment / Consumer confidence",
   "canonical": true,
   "split": "D0",
   "single_select": "(none; single dimension)",
-  "default_transform": "level"
+  "default_transform": "level",
+  "default": {
+    "D0": "NIK"
+  }
 }

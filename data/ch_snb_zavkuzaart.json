@@ -185,14 +185,14 @@
     }
   },
   "topic": "Payment systems",
-  "default": {
-    "D0": "T",
-    "D1": "T",
-    "D2": "BET"
-  },
   "concept": "Payment systems / Payments & cash",
   "canonical": false,
   "split": "D1",
   "single_select": ["D0", "D2"],
-  "default_transform": "level"
+  "default_transform": "level",
+  "default": {
+    "D0": "T",
+    "D1": "T",
+    "D2": "BET"
+  }
 }

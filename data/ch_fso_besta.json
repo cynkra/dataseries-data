@@ -415,14 +415,14 @@
     }
   },
   "topic": "Labour",
-  "default": {
-    "Wirtschaftsabteilung": "5-96",
-    "Beschäftigungsgrad": "TOT",
-    "Geschlecht": "TOT"
-  },
   "concept": "Labour / Employment / jobs",
   "canonical": true,
   "split": "Wirtschaftsabteilung",
   "single_select": ["Beschäftigungsgrad", "Geschlecht"],
-  "default_transform": "level"
+  "default_transform": "level",
+  "default": {
+    "Wirtschaftsabteilung": "5-96",
+    "Beschäftigungsgrad": "TOT",
+    "Geschlecht": "TOT"
+  }
 }

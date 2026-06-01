@@ -4,6 +4,9 @@
     "title": {
       "en": "Labour market (registered unemployment, SECO)"
     },
+    "concept": null,
+    "canonical": null,
+    "featured": null,
     "topic": "Labour market",
     "source": "Swiss National Bank",
     "license": "snb",
@@ -14,16 +17,16 @@
     "updated": null,
     "load": "whole",
     "data": "ch_snb_amarbma.csv",
-    "meta": "ch_snb_amarbma.json",
-    "concept": "Labour / Unemployment",
-    "canonical": false,
-    "featured": "Unemployment"
+    "meta": "ch_snb_amarbma.json"
   },
   {
     "id": "ch_snb_ambeschkla",
     "title": {
       "en": "Employees, by economic activity"
     },
+    "concept": null,
+    "canonical": null,
+    "featured": null,
     "topic": "Labour market",
     "source": "Swiss National Bank",
     "license": "snb",
@@ -34,16 +37,16 @@
     "updated": null,
     "load": "whole",
     "data": "ch_snb_ambeschkla.csv",
-    "meta": "ch_snb_ambeschkla.json",
-    "concept": "Labour / Employment / jobs",
-    "canonical": false,
-    "featured": null
+    "meta": "ch_snb_ambeschkla.json"
   },
   {
     "id": "ch_snb_ausshawarm",
     "title": {
       "en": "Foreign trade by goods category"
     },
+    "concept": null,
+    "canonical": null,
+    "featured": null,
     "topic": "Foreign trade",
     "source": "Swiss National Bank",
     "license": "snb",
@@ -54,16 +57,16 @@
     "updated": null,
     "load": "whole",
     "data": "ch_snb_ausshawarm.csv",
-    "meta": "ch_snb_ausshawarm.json",
-    "concept": "External sector / Foreign trade",
-    "canonical": true,
-    "featured": null
+    "meta": "ch_snb_ausshawarm.json"
   },
   {
     "id": "ch_snb_auvekomq",
     "title": {
       "en": "Switzerland’s international investment position – Overview – Quarter"
     },
+    "concept": null,
+    "canonical": null,
+    "featured": null,
     "topic": "Balance of payments",
     "source": "Swiss National Bank",
     "license": "snb",
@@ -74,16 +77,16 @@
     "updated": null,
     "load": "whole",
     "data": "ch_snb_auvekomq.csv",
-    "meta": "ch_snb_auvekomq.json",
-    "concept": "External sector / International investment position",
-    "canonical": true,
-    "featured": null
+    "meta": "ch_snb_auvekomq.json"
   },
   {
     "id": "ch_snb_auvercurrq",
     "title": {
       "en": "Switzerland’s international investment position – Breakdown by currency – Quarter"
     },
+    "concept": null,
+    "canonical": null,
+    "featured": null,
     "topic": "Balance of payments",
     "source": "Swiss National Bank",
     "license": "snb",
@@ -94,16 +97,16 @@
     "updated": null,
     "load": "whole",
     "data": "ch_snb_auvercurrq.csv",
-    "meta": "ch_snb_auvercurrq.json",
-    "concept": "External sector / International investment position",
-    "canonical": false,
-    "featured": null
+    "meta": "ch_snb_auvercurrq.json"
   },
   {
     "id": "ch_snb_auverdeptq",
     "title": {
       "en": "Switzerland’s external debt – Quarter"
     },
+    "concept": null,
+    "canonical": null,
+    "featured": null,
     "topic": "Balance of payments",
     "source": "Swiss National Bank",
     "license": "snb",
@@ -114,16 +117,16 @@
     "updated": null,
     "load": "whole",
     "data": "ch_snb_auverdeptq.csv",
-    "meta": "ch_snb_auverdeptq.json",
-    "concept": "External sector / International investment position",
-    "canonical": false,
-    "featured": null
+    "meta": "ch_snb_auverdeptq.json"
   },
   {
     "id": "ch_snb_auversecq",
     "title": {
       "en": "Switzerland’s international investment position – Breakdown by sector – Quarter"
     },
+    "concept": null,
+    "canonical": null,
+    "featured": null,
     "topic": "Balance of payments",
     "source": "Swiss National Bank",
     "license": "snb",
@@ -134,16 +137,16 @@
     "updated": null,
     "load": "whole",
     "data": "ch_snb_auversecq.csv",
-    "meta": "ch_snb_auversecq.json",
-    "concept": "External sector / International investment position",
-    "canonical": true,
-    "featured": null
+    "meta": "ch_snb_auversecq.json"
   },
   {
     "id": "ch_snb_babilpobm",
     "title": {
       "en": "Banks' balance sheet items by currency for selected bank categories – monthly"
     },
+    "concept": null,
+    "canonical": null,
+    "featured": null,
     "topic": "Banking",
     "source": "Swiss National Bank",
     "license": "snb",
@@ -154,16 +157,16 @@
     "updated": null,
     "load": "whole",
     "data": "ch_snb_babilpobm.csv",
-    "meta": "ch_snb_babilpobm.json",
-    "concept": "Money & banking / Banking & credit",
-    "canonical": true,
-    "featured": null
+    "meta": "ch_snb_babilpobm.json"
   },
   {
     "id": "ch_snb_bakredbetgrbm",
     "title": {
       "en": "Corporate loans, broken down by company size"
     },
+    "concept": null,
+    "canonical": null,
+    "featured": null,
     "topic": "Banking",
     "source": "Swiss National Bank",
     "license": "snb",
@@ -174,16 +177,16 @@
     "updated": null,
     "load": "whole",
     "data": "ch_snb_bakredbetgrbm.csv",
-    "meta": "ch_snb_bakredbetgrbm.json",
-    "concept": "Money & banking / Banking & credit",
-    "canonical": true,
-    "featured": null
+    "meta": "ch_snb_bakredbetgrbm.json"
   },
   {
     "id": "ch_snb_bakredinausbm",
     "title": {
       "en": "Mortgage loans and other domestic and foreign loans"
     },
+    "concept": null,
+    "canonical": null,
+    "featured": null,
     "topic": "Banking",
     "source": "Swiss National Bank",
     "license": "snb",
@@ -194,16 +197,16 @@
     "updated": null,
     "load": "whole",
     "data": "ch_snb_bakredinausbm.csv",
-    "meta": "ch_snb_bakredinausbm.json",
-    "concept": "Money & banking / Banking & credit",
-    "canonical": true,
-    "featured": null
+    "meta": "ch_snb_bakredinausbm.json"
   },
   {
     "id": "ch_snb_bakredsekbm",
     "title": {
       "en": "Domestic loans, broken down by economic sector and industry"
     },
+    "concept": null,
+    "canonical": null,
+    "featured": null,
     "topic": "Banking",
     "source": "Swiss National Bank",
     "license": "snb",
@@ -214,16 +217,16 @@
     "updated": null,
     "load": "whole",
     "data": "ch_snb_bakredsekbm.csv",
-    "meta": "ch_snb_bakredsekbm.json",
-    "concept": "Money & banking / Banking & credit",
-    "canonical": true,
-    "featured": null
+    "meta": "ch_snb_bakredsekbm.json"
   },
   {
     "id": "ch_snb_bopcapbalq",
     "title": {
       "en": "Swiss balance of payments – Financial account – Quarter"
     },
+    "concept": null,
+    "canonical": null,
+    "featured": null,
     "topic": "Balance of payments",
     "source": "Swiss National Bank",
     "license": "snb",
@@ -234,16 +237,16 @@
     "updated": null,
     "load": "whole",
     "data": "ch_snb_bopcapbalq.csv",
-    "meta": "ch_snb_bopcapbalq.json",
-    "concept": "External sector / Balance of payments",
-    "canonical": true,
-    "featured": null
+    "meta": "ch_snb_bopcapbalq.json"
   },
   {
     "id": "ch_snb_bopcurrq",
     "title": {
       "en": "Swiss balance of payments – Current account – Quarter"
     },
+    "concept": null,
+    "canonical": null,
+    "featured": null,
     "topic": "Balance of payments",
     "source": "Swiss National Bank",
     "license": "snb",
@@ -254,16 +257,16 @@
     "updated": null,
     "load": "whole",
     "data": "ch_snb_bopcurrq.csv",
-    "meta": "ch_snb_bopcurrq.json",
-    "concept": "External sector / Balance of payments",
-    "canonical": true,
-    "featured": null
+    "meta": "ch_snb_bopcurrq.json"
   },
   {
     "id": "ch_snb_bopoverq",
     "title": {
       "en": "Swiss balance of payments – Overview – Quarter"
     },
+    "concept": null,
+    "canonical": null,
+    "featured": null,
     "topic": "Balance of payments",
     "source": "Swiss National Bank",
     "license": "snb",
@@ -274,16 +277,16 @@
     "updated": null,
     "load": "whole",
     "data": "ch_snb_bopoverq.csv",
-    "meta": "ch_snb_bopoverq.json",
-    "concept": "External sector / Balance of payments",
-    "canonical": false,
-    "featured": null
+    "meta": "ch_snb_bopoverq.json"
   },
   {
     "id": "ch_snb_bopservq",
     "title": {
       "en": "Swiss balance of payments – Current account services, by country – Quarter"
     },
+    "concept": null,
+    "canonical": null,
+    "featured": null,
     "topic": "Balance of payments",
     "source": "Swiss National Bank",
     "license": "snb",
@@ -294,16 +297,16 @@
     "updated": null,
     "load": "whole",
     "data": "ch_snb_bopservq.csv",
-    "meta": "ch_snb_bopservq.json",
-    "concept": "External sector / Balance of payments",
-    "canonical": false,
-    "featured": null
+    "meta": "ch_snb_bopservq.json"
   },
   {
     "id": "ch_snb_capchstocki",
     "title": {
       "en": "Swiss stock indices"
     },
+    "concept": null,
+    "canonical": null,
+    "featured": null,
     "topic": "Financial markets",
     "source": "Swiss National Bank",
     "license": "snb",
@@ -314,16 +317,16 @@
     "updated": null,
     "load": "whole",
     "data": "ch_snb_capchstocki.csv",
-    "meta": "ch_snb_capchstocki.json",
-    "concept": "Financial markets / Swiss stock indices",
-    "canonical": true,
-    "featured": null
+    "meta": "ch_snb_capchstocki.json"
   },
   {
     "id": "ch_snb_capweums",
     "title": {
       "en": "Securities turnover on the Swiss stock exchange"
     },
+    "concept": null,
+    "canonical": null,
+    "featured": null,
     "topic": "Financial markets",
     "source": "Swiss National Bank",
     "license": "snb",
@@ -334,16 +337,16 @@
     "updated": null,
     "load": "whole",
     "data": "ch_snb_capweums.csv",
-    "meta": "ch_snb_capweums.json",
-    "concept": "Financial markets / Securities turnover",
-    "canonical": true,
-    "featured": null
+    "meta": "ch_snb_capweums.json"
   },
   {
     "id": "ch_snb_concon",
     "title": {
       "en": "Consumer confidence"
     },
+    "concept": null,
+    "canonical": null,
+    "featured": null,
     "topic": "Business surveys",
     "source": "Swiss National Bank",
     "license": "snb",
@@ -354,16 +357,16 @@
     "updated": null,
     "load": "whole",
     "data": "ch_snb_concon.csv",
-    "meta": "ch_snb_concon.json",
-    "concept": "Business cycle & sentiment / Consumer confidence",
-    "canonical": true,
-    "featured": null
+    "meta": "ch_snb_concon.json"
   },
   {
     "id": "ch_snb_devkum",
     "title": {
       "en": "Foreign exchange rates – Month"
     },
+    "concept": null,
+    "canonical": null,
+    "featured": null,
     "topic": "Exchange rates",
     "source": "Swiss National Bank",
     "license": "snb",
@@ -374,16 +377,16 @@
     "updated": null,
     "load": "whole",
     "data": "ch_snb_devkum.csv",
-    "meta": "ch_snb_devkum.json",
-    "concept": "Exchange rates / Bilateral FX",
-    "canonical": true,
-    "featured": "Exchange rates"
+    "meta": "ch_snb_devkum.json"
   },
   {
     "id": "ch_snb_devlandm",
     "title": {
       "en": "Foreign exchange rates, by country – Month"
     },
+    "concept": null,
+    "canonical": null,
+    "featured": null,
     "topic": "Exchange rates",
     "source": "Swiss National Bank",
     "license": "snb",
@@ -394,16 +397,16 @@
     "updated": null,
     "load": "whole",
     "data": "ch_snb_devlandm.csv",
-    "meta": "ch_snb_devlandm.json",
-    "concept": "Exchange rates / Bilateral FX",
-    "canonical": true,
-    "featured": null
+    "meta": "ch_snb_devlandm.json"
   },
   {
     "id": "ch_snb_devwkibiim",
     "title": {
       "en": "Bilateral exchange rate indices – Monthly"
     },
+    "concept": null,
+    "canonical": null,
+    "featured": null,
     "topic": "Exchange rates",
     "source": "Swiss National Bank",
     "license": "snb",
@@ -414,16 +417,16 @@
     "updated": null,
     "load": "whole",
     "data": "ch_snb_devwkibiim.csv",
-    "meta": "ch_snb_devwkibiim.json",
-    "concept": "Exchange rates / Bilateral FX",
-    "canonical": true,
-    "featured": null
+    "meta": "ch_snb_devwkibiim.json"
   },
   {
     "id": "ch_snb_devwkieffid",
     "title": {
       "en": "Effective exchange rate indices – Daily"
     },
+    "concept": null,
+    "canonical": null,
+    "featured": null,
     "topic": "Exchange rates",
     "source": "Swiss National Bank",
     "license": "snb",
@@ -434,16 +437,16 @@
     "updated": null,
     "load": "whole",
     "data": "ch_snb_devwkieffid.csv",
-    "meta": "ch_snb_devwkieffid.json",
-    "concept": "Exchange rates / Effective FX index",
-    "canonical": true,
-    "featured": null
+    "meta": "ch_snb_devwkieffid.json"
   },
   {
     "id": "ch_snb_plimoinchq",
     "title": {
       "en": "Real estate price indices – total for Switzerland – by quarter"
     },
+    "concept": null,
+    "canonical": null,
+    "featured": null,
     "topic": "Prices",
     "source": "Swiss National Bank",
     "license": "snb",
@@ -454,16 +457,16 @@
     "updated": null,
     "load": "whole",
     "data": "ch_snb_plimoinchq.csv",
-    "meta": "ch_snb_plimoinchq.json",
-    "concept": "Prices / Real estate prices",
-    "canonical": true,
-    "featured": null
+    "meta": "ch_snb_plimoinchq.json"
   },
   {
     "id": "ch_snb_plkoprinfla",
     "title": {
       "en": "Consumer prices – SNB and SFSO core inflation rates"
     },
+    "concept": null,
+    "canonical": null,
+    "featured": null,
     "topic": "Prices",
     "source": "Swiss National Bank",
     "license": "snb",
@@ -474,16 +477,16 @@
     "updated": null,
     "load": "whole",
     "data": "ch_snb_plkoprinfla.csv",
-    "meta": "ch_snb_plkoprinfla.json",
-    "concept": "Prices / Core inflation",
-    "canonical": true,
-    "featured": null
+    "meta": "ch_snb_plkoprinfla.json"
   },
   {
     "id": "ch_snb_rendeiduebd",
     "title": {
       "en": "Spot interest rates on Swiss Confederation bonds, euro area government bonds and CHF bond issues for various borrower categories – Day"
     },
+    "concept": null,
+    "canonical": null,
+    "featured": null,
     "topic": "Interest rates",
     "source": "Swiss National Bank",
     "license": "snb",
@@ -494,16 +497,16 @@
     "updated": null,
     "load": "whole",
     "data": "ch_snb_rendeiduebd.csv",
-    "meta": "ch_snb_rendeiduebd.json",
-    "concept": "Interest rates & yields / Bond yields",
-    "canonical": false,
-    "featured": null
+    "meta": "ch_snb_rendeiduebd.json"
   },
   {
     "id": "ch_snb_rendoblid",
     "title": {
       "en": "Yields on bond issues – Day"
     },
+    "concept": null,
+    "canonical": null,
+    "featured": null,
     "topic": "Interest rates",
     "source": "Swiss National Bank",
     "license": "snb",
@@ -514,16 +517,16 @@
     "updated": null,
     "load": "whole",
     "data": "ch_snb_rendoblid.csv",
-    "meta": "ch_snb_rendoblid.json",
-    "concept": "Interest rates & yields / Bond yields",
-    "canonical": true,
-    "featured": null
+    "meta": "ch_snb_rendoblid.json"
   },
   {
     "id": "ch_snb_snbband",
     "title": {
       "en": "SNB target range"
     },
+    "concept": null,
+    "canonical": null,
+    "featured": null,
     "topic": "Money and banking",
     "source": "Swiss National Bank",
     "license": "snb",
@@ -534,16 +537,16 @@
     "updated": null,
     "load": "whole",
     "data": "ch_snb_snbband.csv",
-    "meta": "ch_snb_snbband.json",
-    "concept": "Money & banking / Monetary aggregates",
-    "canonical": false,
-    "featured": null
+    "meta": "ch_snb_snbband.json"
   },
   {
     "id": "ch_snb_snbbipo",
     "title": {
       "en": "Balance sheet items of the SNB"
     },
+    "concept": null,
+    "canonical": null,
+    "featured": null,
     "topic": "Money and banking",
     "source": "Swiss National Bank",
     "license": "snb",
@@ -554,16 +557,16 @@
     "updated": null,
     "load": "whole",
     "data": "ch_snb_snbbipo.csv",
-    "meta": "ch_snb_snbbipo.json",
-    "concept": "Money & banking / Monetary aggregates",
-    "canonical": false,
-    "featured": null
+    "meta": "ch_snb_snbbipo.json"
   },
   {
     "id": "ch_snb_snbiproga",
     "title": {
       "en": "SNB conditional inflation forecast"
     },
+    "concept": null,
+    "canonical": null,
+    "featured": null,
     "topic": "SNB forecasts",
     "source": "Swiss National Bank",
     "license": "snb",
@@ -574,16 +577,16 @@
     "updated": null,
     "load": "whole",
     "data": "ch_snb_snbiproga.csv",
-    "meta": "ch_snb_snbiproga.json",
-    "concept": "SNB policy & forecasts / Conditional inflation forecast",
-    "canonical": true,
-    "featured": null
+    "meta": "ch_snb_snbiproga.json"
   },
   {
     "id": "ch_snb_snbiprogq",
     "title": {
       "en": "SNB conditional inflation forecast"
     },
+    "concept": null,
+    "canonical": null,
+    "featured": null,
     "topic": "SNB forecasts",
     "source": "Swiss National Bank",
     "license": "snb",
@@ -594,16 +597,16 @@
     "updated": null,
     "load": "whole",
     "data": "ch_snb_snbiprogq.csv",
-    "meta": "ch_snb_snbiprogq.json",
-    "concept": "SNB policy & forecasts / Conditional inflation forecast",
-    "canonical": true,
-    "featured": null
+    "meta": "ch_snb_snbiprogq.json"
   },
   {
     "id": "ch_snb_snbkosiq",
     "title": {
       "en": "Business cycle signals"
     },
+    "concept": null,
+    "canonical": null,
+    "featured": null,
     "topic": "Business surveys",
     "source": "Swiss National Bank",
     "license": "snb",
@@ -614,16 +617,16 @@
     "updated": null,
     "load": "whole",
     "data": "ch_snb_snbkosiq.csv",
-    "meta": "ch_snb_snbkosiq.json",
-    "concept": "Business cycle & sentiment / Business cycle signals",
-    "canonical": true,
-    "featured": null
+    "meta": "ch_snb_snbkosiq.json"
   },
   {
     "id": "ch_snb_snbmoba",
     "title": {
       "en": "Monetary base"
     },
+    "concept": null,
+    "canonical": null,
+    "featured": null,
     "topic": "Money and banking",
     "source": "Swiss National Bank",
     "license": "snb",
@@ -634,16 +637,16 @@
     "updated": null,
     "load": "whole",
     "data": "ch_snb_snbmoba.csv",
-    "meta": "ch_snb_snbmoba.json",
-    "concept": "Money & banking / Monetary aggregates",
-    "canonical": false,
-    "featured": null
+    "meta": "ch_snb_snbmoba.json"
   },
   {
     "id": "ch_snb_snbmonagg",
     "title": {
       "en": "Monetary aggregates M1, M2 and M3"
     },
+    "concept": null,
+    "canonical": null,
+    "featured": null,
     "topic": "Money and banking",
     "source": "Swiss National Bank",
     "license": "snb",
@@ -654,16 +657,16 @@
     "updated": null,
     "load": "whole",
     "data": "ch_snb_snbmonagg.csv",
-    "meta": "ch_snb_snbmonagg.json",
-    "concept": "Money & banking / Monetary aggregates",
-    "canonical": true,
-    "featured": null
+    "meta": "ch_snb_snbmonagg.json"
   },
   {
     "id": "ch_snb_snboffzisa",
     "title": {
       "en": "Official interest rates"
     },
+    "concept": null,
+    "canonical": null,
+    "featured": null,
     "topic": "Interest rates",
     "source": "Swiss National Bank",
     "license": "snb",
@@ -674,16 +677,16 @@
     "updated": null,
     "load": "whole",
     "data": "ch_snb_snboffzisa.csv",
-    "meta": "ch_snb_snboffzisa.json",
-    "concept": "Interest rates & yields / Policy & official rates",
-    "canonical": true,
-    "featured": "Policy rate"
+    "meta": "ch_snb_snboffzisa.json"
   },
   {
     "id": "ch_snb_zavegelade",
     "title": {
       "en": "E-money – loading and float"
     },
+    "concept": null,
+    "canonical": null,
+    "featured": null,
     "topic": "Payment systems",
     "source": "Swiss National Bank",
     "license": "snb",
@@ -694,16 +697,16 @@
     "updated": null,
     "load": "whole",
     "data": "ch_snb_zavegelade.csv",
-    "meta": "ch_snb_zavegelade.json",
-    "concept": "Payment systems / Payments & cash",
-    "canonical": false,
-    "featured": null
+    "meta": "ch_snb_zavegelade.json"
   },
   {
     "id": "ch_snb_zavesic",
     "title": {
       "en": "Swiss Interbank Clearing (SIC) – payment transactions"
     },
+    "concept": null,
+    "canonical": null,
+    "featured": null,
     "topic": "Payment systems",
     "source": "Swiss National Bank",
     "license": "snb",
@@ -714,16 +717,16 @@
     "updated": null,
     "load": "whole",
     "data": "ch_snb_zavesic.csv",
-    "meta": "ch_snb_zavesic.json",
-    "concept": "Payment systems / Payments & cash",
-    "canonical": false,
-    "featured": null
+    "meta": "ch_snb_zavesic.json"
   },
   {
     "id": "ch_snb_zavezaka",
     "title": {
       "en": "Payment cards and ATMs"
     },
+    "concept": null,
+    "canonical": null,
+    "featured": null,
     "topic": "Payment systems",
     "source": "Swiss National Bank",
     "license": "snb",
@@ -734,16 +737,16 @@
     "updated": null,
     "load": "whole",
     "data": "ch_snb_zavezaka.csv",
-    "meta": "ch_snb_zavezaka.json",
-    "concept": "Payment systems / Payments & cash",
-    "canonical": false,
-    "featured": null
+    "meta": "ch_snb_zavezaka.json"
   },
   {
     "id": "ch_snb_zavezaluba",
     "title": {
       "en": "Payments and cash withdrawals"
     },
+    "concept": null,
+    "canonical": null,
+    "featured": null,
     "topic": "Payment systems",
     "source": "Swiss National Bank",
     "license": "snb",
@@ -754,16 +757,16 @@
     "updated": null,
     "load": "whole",
     "data": "ch_snb_zavezaluba.csv",
-    "meta": "ch_snb_zavezaluba.json",
-    "concept": "Payment systems / Payments & cash",
-    "canonical": false,
-    "featured": null
+    "meta": "ch_snb_zavezaluba.json"
   },
   {
     "id": "ch_snb_zavkuzaart",
     "title": {
       "en": "Customer payments at banks – Outgoing payments, by type of order"
     },
+    "concept": null,
+    "canonical": null,
+    "featured": null,
     "topic": "Payment systems",
     "source": "Swiss National Bank",
     "license": "snb",
@@ -774,16 +777,16 @@
     "updated": null,
     "load": "whole",
     "data": "ch_snb_zavkuzaart.csv",
-    "meta": "ch_snb_zavkuzaart.json",
-    "concept": "Payment systems / Payments & cash",
-    "canonical": false,
-    "featured": null
+    "meta": "ch_snb_zavkuzaart.json"
   },
   {
     "id": "ch_snb_zikredlauf",
     "title": {
       "en": "Interest rates on new loan agreements, by product and maturity"
     },
+    "concept": null,
+    "canonical": null,
+    "featured": null,
     "topic": "Interest rates",
     "source": "Swiss National Bank",
     "license": "snb",
@@ -794,16 +797,16 @@
     "updated": null,
     "load": "whole",
     "data": "ch_snb_zikredlauf.csv",
-    "meta": "ch_snb_zikredlauf.json",
-    "concept": "Interest rates & yields / Money-market rates",
-    "canonical": false,
-    "featured": null
+    "meta": "ch_snb_zikredlauf.json"
   },
   {
     "id": "ch_snb_zikrepro",
     "title": {
       "en": "Published interest rates for new transactions"
     },
+    "concept": null,
+    "canonical": null,
+    "featured": null,
     "topic": "Interest rates",
     "source": "Swiss National Bank",
     "license": "snb",
@@ -814,16 +817,16 @@
     "updated": null,
     "load": "whole",
     "data": "ch_snb_zikrepro.csv",
-    "meta": "ch_snb_zikrepro.json",
-    "concept": "Interest rates & yields / Money-market rates",
-    "canonical": false,
-    "featured": null
+    "meta": "ch_snb_zikrepro.json"
   },
   {
     "id": "ch_snb_zimoma",
     "title": {
       "en": "Money market rates"
     },
+    "concept": null,
+    "canonical": null,
+    "featured": null,
     "topic": "Interest rates",
     "source": "Swiss National Bank",
     "license": "snb",
@@ -834,10 +837,7 @@
     "updated": null,
     "load": "whole",
     "data": "ch_snb_zimoma.csv",
-    "meta": "ch_snb_zimoma.json",
-    "concept": "Interest rates & yields / Money-market rates",
-    "canonical": true,
-    "featured": null
+    "meta": "ch_snb_zimoma.json"
   },
   {
     "id": "ch_seco_gdp",
@@ -847,26 +847,29 @@
       "fr": "Produit intérieur brut (PIB)",
       "it": "Prodotto interno lordo (PIL)"
     },
+    "concept": null,
+    "canonical": null,
+    "featured": null,
     "topic": "National accounts",
     "source": "State Secretariat for Economic Affairs (SECO)",
     "license": "seco",
     "frequency": "quarterly",
     "start": "1980-01-01",
-    "end": "2025-10-01",
+    "end": "2026-01-01",
     "n_series": 660,
-    "updated": "2026-02-23 16:51:17",
+    "updated": "2026-05-22 13:15:47",
     "load": "whole",
     "data": "ch_seco_gdp.csv",
-    "meta": "ch_seco_gdp.json",
-    "concept": "National accounts / GDP (output, expenditure, income)",
-    "canonical": true,
-    "featured": "GDP"
+    "meta": "ch_seco_gdp.json"
   },
   {
     "id": "ch_kof_barometer",
     "title": {
       "en": "KOF Economic Barometer"
     },
+    "concept": null,
+    "canonical": null,
+    "featured": null,
     "topic": "Business cycle",
     "source": "KOF Swiss Economic Institute",
     "license": "kof",
@@ -877,16 +880,16 @@
     "updated": null,
     "load": "whole",
     "data": "ch_kof_barometer.csv",
-    "meta": "ch_kof_barometer.json",
-    "concept": "Business cycle & sentiment / Leading barometer",
-    "canonical": true,
-    "featured": "KOF Barometer"
+    "meta": "ch_kof_barometer.json"
   },
   {
     "id": "ch_fso_hesta",
     "title": {
       "en": "Hotel sector: overnight stays by tourism region"
     },
+    "concept": null,
+    "canonical": null,
+    "featured": null,
     "topic": "Tourism",
     "source": "Swiss Federal Statistical Office (FSO)",
     "license": "fso",
@@ -897,16 +900,16 @@
     "updated": null,
     "load": "whole",
     "data": "ch_fso_hesta.csv",
-    "meta": "ch_fso_hesta.json",
-    "concept": "Tourism / Hotel overnight stays",
-    "canonical": true,
-    "featured": "Tourism"
+    "meta": "ch_fso_hesta.json"
   },
   {
     "id": "ch_fso_besta",
     "title": {
       "en": "Jobs by economic division (quarterly)"
     },
+    "concept": null,
+    "canonical": null,
+    "featured": null,
     "topic": "Labour",
     "source": "Swiss Federal Statistical Office (FSO)",
     "license": "fso",
@@ -917,16 +920,16 @@
     "updated": null,
     "load": "whole",
     "data": "ch_fso_besta.csv",
-    "meta": "ch_fso_besta.json",
-    "concept": "Labour / Employment / jobs",
-    "canonical": true,
-    "featured": null
+    "meta": "ch_fso_besta.json"
   },
   {
     "id": "ch_fso_vacancies",
     "title": {
       "en": "Job vacancies by economic division"
     },
+    "concept": null,
+    "canonical": null,
+    "featured": null,
     "topic": "Labour",
     "source": "Swiss Federal Statistical Office (FSO)",
     "license": "fso",
@@ -937,16 +940,16 @@
     "updated": null,
     "load": "whole",
     "data": "ch_fso_vacancies.csv",
-    "meta": "ch_fso_vacancies.json",
-    "concept": "Labour / Job vacancies",
-    "canonical": true,
-    "featured": null
+    "meta": "ch_fso_vacancies.json"
   },
   {
     "id": "ch_fso_jobs_sex",
     "title": {
       "en": "Jobs by economic division and sex"
     },
+    "concept": null,
+    "canonical": null,
+    "featured": null,
     "topic": "Labour",
     "source": "Swiss Federal Statistical Office (FSO)",
     "license": "fso",
@@ -957,16 +960,16 @@
     "updated": null,
     "load": "whole",
     "data": "ch_fso_jobs_sex.csv",
-    "meta": "ch_fso_jobs_sex.json",
-    "concept": "Labour / Employment / jobs",
-    "canonical": false,
-    "featured": null
+    "meta": "ch_fso_jobs_sex.json"
   },
   {
     "id": "ch_fso_cpi",
     "title": {
       "en": "Consumer Price Index (LIK)"
     },
+    "concept": null,
+    "canonical": null,
+    "featured": null,
     "topic": "Prices",
     "source": "Swiss Federal Statistical Office (FSO)",
     "license": "fso",
@@ -977,16 +980,16 @@
     "updated": "2026-01-08",
     "load": "whole",
     "data": "ch_fso_cpi.csv",
-    "meta": "ch_fso_cpi.json",
-    "concept": "Prices / Consumer prices",
-    "canonical": true,
-    "featured": "Inflation"
+    "meta": "ch_fso_cpi.json"
   },
   {
     "id": "ch_fso_ppi",
     "title": {
       "en": "Producer and Import Price Index"
     },
+    "concept": null,
+    "canonical": null,
+    "featured": null,
     "topic": "Prices",
     "source": "Swiss Federal Statistical Office (FSO)",
     "license": "fso",
@@ -997,16 +1000,16 @@
     "updated": "2026-05-12",
     "load": "whole",
     "data": "ch_fso_ppi.csv",
-    "meta": "ch_fso_ppi.json",
-    "concept": "Prices / Producer & import prices",
-    "canonical": true,
-    "featured": null
+    "meta": "ch_fso_ppi.json"
   },
   {
     "id": "ch_fso_wage_idx",
     "title": {
       "en": "Swiss Wage Index"
     },
+    "concept": null,
+    "canonical": null,
+    "featured": null,
     "topic": "Wages",
     "source": "Swiss Federal Statistical Office (FSO)",
     "license": "fso",
@@ -1017,16 +1020,16 @@
     "updated": "2026-04-21",
     "load": "whole",
     "data": "ch_fso_wage_idx.csv",
-    "meta": "ch_fso_wage_idx.json",
-    "concept": "Labour / Wages",
-    "canonical": true,
-    "featured": null
+    "meta": "ch_fso_wage_idx.json"
   },
   {
     "id": "ch_fso_pop",
     "title": {
       "en": "Permanent resident population"
     },
+    "concept": null,
+    "canonical": null,
+    "featured": null,
     "topic": "Population",
     "source": "Swiss Federal Statistical Office (FSO)",
     "license": "fso",
@@ -1037,16 +1040,16 @@
     "updated": "2025-08-27",
     "load": "whole",
     "data": "ch_fso_pop.csv",
-    "meta": "ch_fso_pop.json",
-    "concept": "Population & demographics / Resident population",
-    "canonical": true,
-    "featured": null
+    "meta": "ch_fso_pop.json"
   },
   {
     "id": "ch_fso_unemp_rate",
     "title": {
       "en": "Unemployment rate (ILO) by sex and nationality, Switzerland"
     },
+    "concept": null,
+    "canonical": null,
+    "featured": null,
     "topic": "Labour",
     "source": "Swiss Federal Statistical Office (FSO)",
     "license": "fso",
@@ -1057,9 +1060,6 @@
     "updated": "2026-05-18",
     "load": "whole",
     "data": "ch_fso_unemp_rate.csv",
-    "meta": "ch_fso_unemp_rate.json",
-    "concept": "Labour / Unemployment",
-    "canonical": false,
-    "featured": null
+    "meta": "ch_fso_unemp_rate.json"
   }
 ]

@@ -330,14 +330,14 @@
     }
   },
   "topic": "Foreign trade",
-  "default": {
-    "D0": "A",
-    "D1": "GT",
-    "D2": "WMF"
-  },
   "concept": "External sector / Foreign trade",
   "canonical": true,
   "split": "D1",
   "single_select": ["D0", "D2"],
-  "default_transform": "level"
+  "default_transform": "level",
+  "default": {
+    "D0": "A",
+    "D1": "GT",
+    "D2": "WMF"
+  }
 }

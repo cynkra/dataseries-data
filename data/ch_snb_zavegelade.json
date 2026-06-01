@@ -89,12 +89,12 @@
     }
   },
   "topic": "Payment systems",
-  "default": {
-    "D0": "BMF0"
-  },
   "concept": "Payment systems / Payments & cash",
   "canonical": false,
   "split": "D0",
   "single_select": [],
-  "default_transform": "level"
+  "default_transform": "level",
+  "default": {
+    "D0": "BMF0"
+  }
 }

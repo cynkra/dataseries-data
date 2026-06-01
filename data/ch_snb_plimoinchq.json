@@ -171,13 +171,13 @@
     }
   },
   "topic": "Prices",
-  "default": {
-    "D0": "EW",
-    "D1": "AP"
-  },
   "concept": "Prices / Real estate prices",
   "canonical": true,
   "split": "D0",
   "single_select": "D1",
-  "default_transform": "level"
+  "default_transform": "level",
+  "default": {
+    "D0": "EW",
+    "D1": "AP"
+  }
 }

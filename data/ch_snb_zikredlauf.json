@@ -175,14 +175,14 @@
     }
   },
   "topic": "Interest rates",
-  "default": {
-    "D0": "FH",
-    "D1": "L35J",
-    "D2": "MP1"
-  },
   "concept": "Interest rates & yields / Money-market rates",
   "canonical": false,
   "split": "D1",
   "single_select": ["D0", "D2"],
-  "default_transform": "level"
+  "default_transform": "level",
+  "default": {
+    "D0": "FH",
+    "D1": "L35J",
+    "D2": "MP1"
+  }
 }

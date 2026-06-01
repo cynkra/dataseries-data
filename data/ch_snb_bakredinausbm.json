@@ -172,15 +172,15 @@
     }
   },
   "topic": "Banking",
-  "default": {
-    "D0": "AV1",
-    "D1": "T0",
-    "D2": "T1",
-    "D3": "F"
-  },
   "concept": "Money & banking / Banking & credit",
   "canonical": true,
   "split": "D1",
   "single_select": ["D0", "D2", "D3"],
-  "default_transform": "level"
+  "default_transform": "level",
+  "default": {
+    "D1": "T0",
+    "D0": "AV1",
+    "D2": "T1",
+    "D3": "F"
+  }
 }

@@ -109,13 +109,13 @@
     }
   },
   "topic": "Money and banking",
-  "default": {
-    "D0": "B",
-    "D1": "GM3"
-  },
   "concept": "Money & banking / Monetary aggregates",
   "canonical": true,
   "split": "D1",
   "single_select": "D0",
-  "default_transform": "level"
+  "default_transform": "level",
+  "default": {
+    "D1": "GM3",
+    "D0": "B"
+  }
 }

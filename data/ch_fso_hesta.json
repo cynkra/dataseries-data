@@ -125,13 +125,14 @@
     }
   },
   "topic": "Tourism",
+  "concept": "Tourism / Hotel overnight stays",
+  "canonical": true,
+  "featured": "Tourism",
+  "split": "Tourismusregion",
+  "single_select": "Indikator",
+  "default_transform": "level",
   "default": {
     "Tourismusregion": "8100",
     "Indikator": "2"
-  },
-  "concept": "Tourism / Hotel overnight stays",
-  "canonical": true,
-  "split": "Tourismusregion",
-  "single_select": "Indikator",
-  "default_transform": "level"
+  }
 }

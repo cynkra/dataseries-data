@@ -116,12 +116,13 @@
     }
   },
   "topic": "Labour market",
-  "default": {
-    "D0": "T0"
-  },
   "concept": "Labour / Unemployment",
   "canonical": false,
+  "featured": "Unemployment",
   "split": "D0",
   "single_select": "(none; D0 is the only dimension)",
-  "default_transform": "level"
+  "default_transform": "level",
+  "default": {
+    "D0": "T0"
+  }
 }

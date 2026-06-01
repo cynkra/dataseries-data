@@ -1,5 +1,5 @@
 {
-  "checked": "2026-06-01 08:21 UTC",
+  "checked": "2026-06-01 08:42 UTC",
   "counts": {
     "green": 44,
     "amber": 2,
@@ -433,8 +433,8 @@
       "title": "Gross domestic product (GDP)",
       "source": "State Secretariat for Economic Affairs (SECO)",
       "frequency": "quarterly",
-      "end": "2025-10-01",
-      "age_days": 243,
+      "end": "2026-01-01",
+      "age_days": 151,
       "threshold_days": 290,
       "status": "green"
     },

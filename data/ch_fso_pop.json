@@ -94,12 +94,12 @@
       }
     }
   },
-  "default": {
-    "item": "pop_stock_jan"
-  },
   "concept": "Population & demographics / Resident population",
   "canonical": true,
   "split": "item",
   "single_select": [],
-  "default_transform": "level"
+  "default_transform": "level",
+  "default": {
+    "item": "pop_stock_jan"
+  }
 }

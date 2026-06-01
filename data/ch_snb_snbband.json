@@ -58,12 +58,12 @@
     }
   },
   "topic": "Money and banking",
-  "default": {
-    "D0": "OG"
-  },
   "concept": "Money & banking / Monetary aggregates",
   "canonical": false,
   "split": "D0",
   "single_select": "n/a (single dimension)",
-  "default_transform": "level"
+  "default_transform": "level",
+  "default": {
+    "D0": "OG"
+  }
 }

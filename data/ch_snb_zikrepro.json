@@ -650,13 +650,13 @@
     }
   },
   "topic": "Interest rates",
-  "default": {
-    "D0": "M",
-    "D1": "MV"
-  },
   "concept": "Interest rates & yields / Money-market rates",
   "canonical": false,
   "split": "D1",
   "single_select": "D0",
-  "default_transform": "level"
+  "default_transform": "level",
+  "default": {
+    "D0": "M",
+    "D1": "MV"
+  }
 }

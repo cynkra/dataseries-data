@@ -443,12 +443,12 @@
     }
   },
   "topic": "Balance of payments",
-  "default": {
-    "D0": "S0"
-  },
   "concept": "External sector / Balance of payments",
   "canonical": false,
   "split": "D0",
   "single_select": "n/a (single-dimension cube; D0 is the only dimension)",
-  "default_transform": "level"
+  "default_transform": "level",
+  "default": {
+    "D0": "S0"
+  }
 }

@@ -205,16 +205,16 @@
     }
   },
   "topic": "Payment systems",
+  "concept": "Payment systems / Payments & cash",
+  "canonical": false,
+  "split": "D0",
+  "single_select": ["D1", "D2", "D3", "D4"],
+  "default_transform": "level",
   "default": {
     "D0": "ZT",
     "D1": "D",
     "D2": "IZ",
     "D3": "II",
     "D4": "BMF"
-  },
-  "concept": "Payment systems / Payments & cash",
-  "canonical": false,
-  "split": "D0",
-  "single_select": ["D1", "D2", "D3", "D4"],
-  "default_transform": "level"
+  }
 }

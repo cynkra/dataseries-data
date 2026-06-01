@@ -73,12 +73,12 @@
     }
   },
   "topic": "Prices",
-  "default": {
-    "D0": "KGM"
-  },
   "concept": "Prices / Core inflation",
   "canonical": true,
   "split": "D0",
   "single_select": "n/a (single dimension)",
-  "default_transform": "level"
+  "default_transform": "level",
+  "default": {
+    "D0": "KGM"
+  }
 }

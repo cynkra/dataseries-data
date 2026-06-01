@@ -70,12 +70,12 @@
       }
     }
   },
-  "default": {
-    "base": "2020"
-  },
   "concept": "Prices / Producer & import prices",
   "canonical": true,
   "split": "base",
   "single_select": [],
-  "default_transform": "yoy"
+  "default_transform": "yoy",
+  "default": {
+    "base": "2020"
+  }
 }

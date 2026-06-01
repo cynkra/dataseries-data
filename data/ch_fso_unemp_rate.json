@@ -72,13 +72,13 @@
       }
     }
   },
-  "default": {
-    "origin": "tot",
-    "sex": "tot"
-  },
   "concept": "Labour / Unemployment",
   "canonical": false,
   "split": "origin",
   "single_select": "sex",
-  "default_transform": "level"
+  "default_transform": "level",
+  "default": {
+    "origin": "tot",
+    "sex": "tot"
+  }
 }

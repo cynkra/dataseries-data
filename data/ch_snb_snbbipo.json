@@ -241,12 +241,12 @@
     }
   },
   "topic": "Money and banking",
-  "default": {
-    "D0": "T0"
-  },
   "concept": "Money & banking / Monetary aggregates",
   "canonical": false,
   "split": "D0",
   "single_select": "(none; single dimension)",
-  "default_transform": "level"
+  "default_transform": "level",
+  "default": {
+    "D0": "T0"
+  }
 }

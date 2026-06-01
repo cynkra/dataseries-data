@@ -155,12 +155,13 @@
     }
   },
   "topic": "Interest rates",
-  "default": {
-    "D0": "LZ"
-  },
   "concept": "Interest rates & yields / Policy & official rates",
   "canonical": true,
+  "featured": "Policy rate",
   "split": "D0",
   "single_select": [],
-  "default_transform": "level"
+  "default_transform": "level",
+  "default": {
+    "D0": "LZ"
+  }
 }

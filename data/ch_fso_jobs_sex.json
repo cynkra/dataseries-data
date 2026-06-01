@@ -171,15 +171,15 @@
     }
   },
   "topic": "Labour",
-  "default": {
-    "Grossregion": "0",
-    "Wirtschaftssektor": "TOT",
-    "Beschäftigungsgrad": "TOT",
-    "Geschlecht": "TOT"
-  },
   "concept": "Labour / Employment / jobs",
   "canonical": false,
   "split": "Geschlecht",
   "single_select": ["Grossregion", "Wirtschaftssektor", "Beschäftigungsgrad"],
-  "default_transform": "level"
+  "default_transform": "level",
+  "default": {
+    "Geschlecht": "TOT",
+    "Grossregion": "0",
+    "Wirtschaftssektor": "TOT",
+    "Beschäftigungsgrad": "TOT"
+  }
 }

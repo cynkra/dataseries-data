@@ -118,15 +118,15 @@
       }
     }
   },
+  "concept": "Labour / Wages",
+  "canonical": true,
+  "split": "sector",
+  "single_select": ["sex", "measure", "adjustment"],
+  "default_transform": "level",
   "default": {
     "sector": "bs0",
     "sex": "tot",
     "measure": "index",
     "adjustment": "real"
-  },
-  "concept": "Labour / Wages",
-  "canonical": true,
-  "split": "sector",
-  "single_select": ["sex", "measure", "adjustment"],
-  "default_transform": "level"
+  }
 }

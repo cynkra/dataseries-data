@@ -173,13 +173,13 @@
     }
   },
   "topic": "Labour",
-  "default": {
-    "Offene Stellen": "1",
-    "Wirtschaftsabteilung": "5-96"
-  },
   "concept": "Labour / Job vacancies",
   "canonical": true,
   "split": "Wirtschaftsabteilung",
   "single_select": "Offene Stellen",
-  "default_transform": "level"
+  "default_transform": "level",
+  "default": {
+    "Wirtschaftsabteilung": "5-96",
+    "Offene Stellen": "1"
+  }
 }

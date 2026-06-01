@@ -231,12 +231,12 @@
     }
   },
   "topic": "Interest rates",
-  "default": {
-    "D0": "10J0"
-  },
   "concept": "Interest rates & yields / Bond yields",
   "canonical": true,
   "split": "D0",
   "single_select": "n/a (single dimension)",
-  "default_transform": "level"
+  "default_transform": "level",
+  "default": {
+    "D0": "10J0"
+  }
 }

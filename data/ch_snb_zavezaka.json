@@ -142,12 +142,12 @@
     }
   },
   "topic": "Payment systems",
-  "default": {
-    "D0": "T0"
-  },
   "concept": "Payment systems / Payments & cash",
   "canonical": false,
   "split": "D0",
   "single_select": "(none; D0 is the only dimension)",
-  "default_transform": "level"
+  "default_transform": "level",
+  "default": {
+    "D0": "T0"
+  }
 }
