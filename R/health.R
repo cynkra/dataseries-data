@@ -46,13 +46,18 @@ pub_fresh_days <- c(daily = 60, weekly = 60, monthly = 75, quarterly = 200, annu
 DEFAULT_PUB <- 120L
 
 # Per-dataset overrides of the observation-age threshold (id -> max fresh age in
-# days), for datasets whose real cadence differs from their frequency label. The
-# SNB effective-FX and spot-rate cubes are genuinely *daily* but SNB publishes a
-# whole month of daily values at once, so the latest point is normally up to ~1
-# month old -- not stale. Cleaner than relabelling them monthly (they aren't).
+# days), for datasets whose real cadence differs from their frequency label:
+#   devwkieffid/rendeiduebd : genuinely *daily*, but SNB publishes a whole month of
+#                             daily values at once -> latest point normally ~1mo old.
+#   zikredlauf : regular monthly, but SNB releases new-business lending rates with a
+#                ~3-4 month lag, so the latest month is normally ~4 months old.
+#   capchstocki : daily stock-index cube SNB refreshes with a ~2-week internal lag.
+# All verified against the live source cadence -- not stale, just slow-published.
 OVERRIDE <- c(
   ch_snb_devwkieffid = 50L,
-  ch_snb_rendeiduebd = 50L
+  ch_snb_rendeiduebd = 50L,
+  ch_snb_zikredlauf  = 150L,
+  ch_snb_capchstocki = 35L
 )
 
 score <- function(id, end_chr, frequency, updated) {
