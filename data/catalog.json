@@ -380,26 +380,6 @@
     "meta": "ch_snb_devkum.json"
   },
   {
-    "id": "ch_snb_devlandm",
-    "title": {
-      "en": "Foreign exchange rates, by country – Month"
-    },
-    "concept": null,
-    "canonical": null,
-    "featured": null,
-    "topic": "Exchange rates",
-    "source": "Swiss National Bank",
-    "license": "snb",
-    "frequency": "monthly",
-    "start": "1973-01-01",
-    "end": "2018-03-01",
-    "n_series": 93,
-    "updated": null,
-    "load": "whole",
-    "data": "ch_snb_devlandm.csv",
-    "meta": "ch_snb_devlandm.json"
-  },
-  {
     "id": "ch_snb_devwkibiim",
     "title": {
       "en": "Bilateral exchange rate indices – Monthly"
@@ -498,46 +478,6 @@
     "load": "whole",
     "data": "ch_snb_rendeiduebd.csv",
     "meta": "ch_snb_rendeiduebd.json"
-  },
-  {
-    "id": "ch_snb_rendoblid",
-    "title": {
-      "en": "Yields on bond issues – Day"
-    },
-    "concept": null,
-    "canonical": null,
-    "featured": null,
-    "topic": "Interest rates",
-    "source": "Swiss National Bank",
-    "license": "snb",
-    "frequency": "daily",
-    "start": "1988-01-04",
-    "end": "2025-07-31",
-    "n_series": 22,
-    "updated": null,
-    "load": "whole",
-    "data": "ch_snb_rendoblid.csv",
-    "meta": "ch_snb_rendoblid.json"
-  },
-  {
-    "id": "ch_snb_snbband",
-    "title": {
-      "en": "SNB target range"
-    },
-    "concept": null,
-    "canonical": null,
-    "featured": null,
-    "topic": "Money and banking",
-    "source": "Swiss National Bank",
-    "license": "snb",
-    "frequency": "daily",
-    "start": "2000-01-03",
-    "end": "2019-06-12",
-    "n_series": 3,
-    "updated": null,
-    "load": "whole",
-    "data": "ch_snb_snbband.csv",
-    "meta": "ch_snb_snbband.json"
   },
   {
     "id": "ch_snb_snbbipo",

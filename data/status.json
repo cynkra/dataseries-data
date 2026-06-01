@@ -1,11 +1,11 @@
 {
-  "checked": "2026-06-01 09:22 UTC",
+  "checked": "2026-06-01 10:41 UTC",
   "counts": {
-    "green": 44,
+    "green": 47,
     "amber": 2,
-    "red": 7,
+    "red": 1,
     "unknown": 0,
-    "total": 53
+    "total": 50
   },
   "datasets": [
     {
@@ -14,6 +14,7 @@
       "source": "Swiss National Bank",
       "frequency": "monthly",
       "end": "2026-04-01",
+      "updated": null,
       "age_days": 61,
       "threshold_days": 110,
       "status": "green"
@@ -24,6 +25,7 @@
       "source": "Swiss National Bank",
       "frequency": "quarterly",
       "end": "2025-10-01",
+      "updated": null,
       "age_days": 243,
       "threshold_days": 290,
       "status": "green"
@@ -34,6 +36,7 @@
       "source": "Swiss National Bank",
       "frequency": "monthly",
       "end": "2026-03-01",
+      "updated": null,
       "age_days": 92,
       "threshold_days": 110,
       "status": "green"
@@ -44,6 +47,7 @@
       "source": "Swiss National Bank",
       "frequency": "quarterly",
       "end": "2025-10-01",
+      "updated": null,
       "age_days": 243,
       "threshold_days": 290,
       "status": "green"
@@ -54,6 +58,7 @@
       "source": "Swiss National Bank",
       "frequency": "quarterly",
       "end": "2025-10-01",
+      "updated": null,
       "age_days": 243,
       "threshold_days": 290,
       "status": "green"
@@ -64,6 +69,7 @@
       "source": "Swiss National Bank",
       "frequency": "quarterly",
       "end": "2025-10-01",
+      "updated": null,
       "age_days": 243,
       "threshold_days": 290,
       "status": "green"
@@ -74,6 +80,7 @@
       "source": "Swiss National Bank",
       "frequency": "quarterly",
       "end": "2025-10-01",
+      "updated": null,
       "age_days": 243,
       "threshold_days": 290,
       "status": "green"
@@ -84,6 +91,7 @@
       "source": "Swiss National Bank",
       "frequency": "monthly",
       "end": "2026-03-01",
+      "updated": null,
       "age_days": 92,
       "threshold_days": 110,
       "status": "green"
@@ -94,6 +102,7 @@
       "source": "Swiss National Bank",
       "frequency": "monthly",
       "end": "2026-03-01",
+      "updated": null,
       "age_days": 92,
       "threshold_days": 110,
       "status": "green"
@@ -104,6 +113,7 @@
       "source": "Swiss National Bank",
       "frequency": "monthly",
       "end": "2026-03-01",
+      "updated": null,
       "age_days": 92,
       "threshold_days": 110,
       "status": "green"
@@ -114,6 +124,7 @@
       "source": "Swiss National Bank",
       "frequency": "monthly",
       "end": "2026-03-01",
+      "updated": null,
       "age_days": 92,
       "threshold_days": 110,
       "status": "green"
@@ -124,6 +135,7 @@
       "source": "Swiss National Bank",
       "frequency": "quarterly",
       "end": "2025-10-01",
+      "updated": null,
       "age_days": 243,
       "threshold_days": 290,
       "status": "green"
@@ -134,6 +146,7 @@
       "source": "Swiss National Bank",
       "frequency": "quarterly",
       "end": "2025-10-01",
+      "updated": null,
       "age_days": 243,
       "threshold_days": 290,
       "status": "green"
@@ -144,6 +157,7 @@
       "source": "Swiss National Bank",
       "frequency": "quarterly",
       "end": "2025-10-01",
+      "updated": null,
       "age_days": 243,
       "threshold_days": 290,
       "status": "green"
@@ -154,6 +168,7 @@
       "source": "Swiss National Bank",
       "frequency": "quarterly",
       "end": "2025-10-01",
+      "updated": null,
       "age_days": 243,
       "threshold_days": 290,
       "status": "green"
@@ -164,6 +179,7 @@
       "source": "Swiss National Bank",
       "frequency": "daily",
       "end": "2026-05-15",
+      "updated": null,
       "age_days": 17,
       "threshold_days": 14,
       "status": "amber"
@@ -174,6 +190,7 @@
       "source": "Swiss National Bank",
       "frequency": "monthly",
       "end": "2026-04-01",
+      "updated": null,
       "age_days": 61,
       "threshold_days": 110,
       "status": "green"
@@ -184,6 +201,7 @@
       "source": "Swiss National Bank",
       "frequency": "quarterly",
       "end": "2026-04-01",
+      "updated": null,
       "age_days": 61,
       "threshold_days": 290,
       "status": "green"
@@ -194,19 +212,10 @@
       "source": "Swiss National Bank",
       "frequency": "monthly",
       "end": "2026-04-01",
+      "updated": null,
       "age_days": 61,
       "threshold_days": 110,
       "status": "green"
-    },
-    {
-      "id": "ch_snb_devlandm",
-      "title": "Foreign exchange rates, by country – Month",
-      "source": "Swiss National Bank",
-      "frequency": "monthly",
-      "end": "2018-03-01",
-      "age_days": 3014,
-      "threshold_days": 110,
-      "status": "red"
     },
     {
       "id": "ch_snb_devwkibiim",
@@ -214,6 +223,7 @@
       "source": "Swiss National Bank",
       "frequency": "monthly",
       "end": "2026-04-01",
+      "updated": null,
       "age_days": 61,
       "threshold_days": 110,
       "status": "green"
@@ -224,9 +234,10 @@
       "source": "Swiss National Bank",
       "frequency": "daily",
       "end": "2026-04-30",
+      "updated": null,
       "age_days": 32,
-      "threshold_days": 14,
-      "status": "red"
+      "threshold_days": 50,
+      "status": "green"
     },
     {
       "id": "ch_snb_plimoinchq",
@@ -234,6 +245,7 @@
       "source": "Swiss National Bank",
       "frequency": "quarterly",
       "end": "2026-01-01",
+      "updated": null,
       "age_days": 151,
       "threshold_days": 290,
       "status": "green"
@@ -244,6 +256,7 @@
       "source": "Swiss National Bank",
       "frequency": "monthly",
       "end": "2026-04-01",
+      "updated": null,
       "age_days": 61,
       "threshold_days": 110,
       "status": "green"
@@ -254,29 +267,10 @@
       "source": "Swiss National Bank",
       "frequency": "daily",
       "end": "2026-04-30",
+      "updated": null,
       "age_days": 32,
-      "threshold_days": 14,
-      "status": "red"
-    },
-    {
-      "id": "ch_snb_rendoblid",
-      "title": "Yields on bond issues – Day",
-      "source": "Swiss National Bank",
-      "frequency": "daily",
-      "end": "2025-07-31",
-      "age_days": 305,
-      "threshold_days": 14,
-      "status": "red"
-    },
-    {
-      "id": "ch_snb_snbband",
-      "title": "SNB target range",
-      "source": "Swiss National Bank",
-      "frequency": "daily",
-      "end": "2019-06-12",
-      "age_days": 2546,
-      "threshold_days": 14,
-      "status": "red"
+      "threshold_days": 50,
+      "status": "green"
     },
     {
       "id": "ch_snb_snbbipo",
@@ -284,6 +278,7 @@
       "source": "Swiss National Bank",
       "frequency": "monthly",
       "end": "2026-04-01",
+      "updated": null,
       "age_days": 61,
       "threshold_days": 110,
       "status": "green"
@@ -294,6 +289,7 @@
       "source": "Swiss National Bank",
       "frequency": "annual",
       "end": "2028-01-01",
+      "updated": null,
       "age_days": -579,
       "threshold_days": 550,
       "status": "green"
@@ -304,6 +300,7 @@
       "source": "Swiss National Bank",
       "frequency": "quarterly",
       "end": "2028-10-01",
+      "updated": null,
       "age_days": -853,
       "threshold_days": 290,
       "status": "green"
@@ -314,6 +311,7 @@
       "source": "Swiss National Bank",
       "frequency": "quarterly",
       "end": "2026-01-01",
+      "updated": null,
       "age_days": 151,
       "threshold_days": 290,
       "status": "green"
@@ -324,6 +322,7 @@
       "source": "Swiss National Bank",
       "frequency": "monthly",
       "end": "2026-04-01",
+      "updated": null,
       "age_days": 61,
       "threshold_days": 110,
       "status": "green"
@@ -334,6 +333,7 @@
       "source": "Swiss National Bank",
       "frequency": "monthly",
       "end": "2026-04-01",
+      "updated": null,
       "age_days": 61,
       "threshold_days": 110,
       "status": "green"
@@ -344,6 +344,7 @@
       "source": "Swiss National Bank",
       "frequency": "monthly",
       "end": "2026-04-01",
+      "updated": null,
       "age_days": 61,
       "threshold_days": 110,
       "status": "green"
@@ -354,6 +355,7 @@
       "source": "Swiss National Bank",
       "frequency": "monthly",
       "end": "2026-03-01",
+      "updated": null,
       "age_days": 92,
       "threshold_days": 110,
       "status": "green"
@@ -364,6 +366,7 @@
       "source": "Swiss National Bank",
       "frequency": "monthly",
       "end": "2026-04-01",
+      "updated": null,
       "age_days": 61,
       "threshold_days": 110,
       "status": "green"
@@ -374,6 +377,7 @@
       "source": "Swiss National Bank",
       "frequency": "monthly",
       "end": "2026-03-01",
+      "updated": null,
       "age_days": 92,
       "threshold_days": 110,
       "status": "green"
@@ -384,6 +388,7 @@
       "source": "Swiss National Bank",
       "frequency": "monthly",
       "end": "2026-03-01",
+      "updated": null,
       "age_days": 92,
       "threshold_days": 110,
       "status": "green"
@@ -394,6 +399,7 @@
       "source": "Swiss National Bank",
       "frequency": "monthly",
       "end": "2026-03-01",
+      "updated": null,
       "age_days": 92,
       "threshold_days": 110,
       "status": "green"
@@ -404,6 +410,7 @@
       "source": "Swiss National Bank",
       "frequency": "monthly",
       "end": "2026-02-01",
+      "updated": null,
       "age_days": 120,
       "threshold_days": 110,
       "status": "amber"
@@ -414,6 +421,7 @@
       "source": "Swiss National Bank",
       "frequency": "monthly",
       "end": "2026-03-01",
+      "updated": null,
       "age_days": 92,
       "threshold_days": 110,
       "status": "green"
@@ -424,6 +432,7 @@
       "source": "Swiss National Bank",
       "frequency": "monthly",
       "end": "2026-04-01",
+      "updated": null,
       "age_days": 61,
       "threshold_days": 110,
       "status": "green"
@@ -434,6 +443,7 @@
       "source": "State Secretariat for Economic Affairs (SECO)",
       "frequency": "quarterly",
       "end": "2026-01-01",
+      "updated": "2026-05-22 13:15:47",
       "age_days": 151,
       "threshold_days": 290,
       "status": "green"
@@ -444,6 +454,7 @@
       "source": "KOF Swiss Economic Institute",
       "frequency": "monthly",
       "end": "2026-05-01",
+      "updated": null,
       "age_days": 31,
       "threshold_days": 110,
       "status": "green"
@@ -454,6 +465,7 @@
       "source": "Swiss Federal Statistical Office (FSO)",
       "frequency": "monthly",
       "end": "2026-03-01",
+      "updated": null,
       "age_days": 92,
       "threshold_days": 110,
       "status": "green"
@@ -464,6 +476,7 @@
       "source": "Swiss Federal Statistical Office (FSO)",
       "frequency": "quarterly",
       "end": "2026-01-01",
+      "updated": null,
       "age_days": 151,
       "threshold_days": 290,
       "status": "green"
@@ -474,6 +487,7 @@
       "source": "Swiss Federal Statistical Office (FSO)",
       "frequency": "quarterly",
       "end": "2026-01-01",
+      "updated": null,
       "age_days": 151,
       "threshold_days": 290,
       "status": "green"
@@ -484,6 +498,7 @@
       "source": "Swiss Federal Statistical Office (FSO)",
       "frequency": "quarterly",
       "end": "2026-01-01",
+      "updated": null,
       "age_days": 151,
       "threshold_days": 290,
       "status": "green"
@@ -494,6 +509,7 @@
       "source": "Swiss Federal Statistical Office (FSO)",
       "frequency": "monthly",
       "end": "2025-12-01",
+      "updated": "2026-01-08",
       "age_days": 182,
       "threshold_days": 110,
       "status": "red"
@@ -504,6 +520,7 @@
       "source": "Swiss Federal Statistical Office (FSO)",
       "frequency": "monthly",
       "end": "2026-04-01",
+      "updated": "2026-05-12",
       "age_days": 61,
       "threshold_days": 110,
       "status": "green"
@@ -514,6 +531,7 @@
       "source": "Swiss Federal Statistical Office (FSO)",
       "frequency": "annual",
       "end": "2025-01-01",
+      "updated": "2026-04-21",
       "age_days": 516,
       "threshold_days": 550,
       "status": "green"
@@ -524,9 +542,10 @@
       "source": "Swiss Federal Statistical Office (FSO)",
       "frequency": "annual",
       "end": "2024-01-01",
+      "updated": "2025-08-27",
       "age_days": 882,
       "threshold_days": 550,
-      "status": "red"
+      "status": "green"
     },
     {
       "id": "ch_fso_unemp_rate",
@@ -534,6 +553,7 @@
       "source": "Swiss Federal Statistical Office (FSO)",
       "frequency": "monthly",
       "end": "2026-03-01",
+      "updated": "2026-05-18",
       "age_days": 92,
       "threshold_days": 110,
       "status": "green"

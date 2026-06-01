@@ -50,5 +50,5 @@ field in its meta / `catalog.json`. Mirrors the upstream sources' terms.
 ## Data health
 
 <!-- DATA-HEALTH:START -->
-**Data health** (updated 2026-06-01): 🟢 44 · 🟡 2 · 🔴 7 · ⚪ 0 of 53 datasets — see [STATUS.md](STATUS.md).
+**Data health** (updated 2026-06-01): 🟢 47 · 🟡 2 · 🔴 1 · ⚪ 0 of 50 datasets — see [STATUS.md](STATUS.md).
 <!-- DATA-HEALTH:END -->
