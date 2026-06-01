@@ -92,7 +92,7 @@ fso_excel_ch_fso_cpi <- function(path, pubdate) {
     title = list(en = "Consumer Price Index (LIK)"),
     source = list(
       name = list(en = "Swiss Federal Statistical Office (FSO)"),
-      url  = "https://www.bfs.admin.ch/asset/de/su-d-05.02.67"
+      url  = "https://www.bfs.admin.ch/asset/de/su-d-05.02.66"
     ),
     license = "fso",
     frequency = "monthly",

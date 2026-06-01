@@ -113,7 +113,9 @@ build <- function() {
   # FSO Excel-asset datasets (not in PX-Web): the macro depth — CPI, producer/
   # import prices, wages, population, unemployment, GDP by expenditure. Each is a
   # DAM xlsx download parsed by a bespoke fso_excel_<id>() in source_fso_excel_sets.R.
-  add(.try_fetch("ch_fso_cpi",        fso_excel_dataset("ch_fso_cpi",        "su-d-05.02.67")))
+  # su-d-05.02.66 = LIK on the Dec-2025=100 base (full history since 1982). It
+  # superseded su-d-05.02.67 (Dec-2020=100), which FSO froze at the Dec-2025 rebasing.
+  add(.try_fetch("ch_fso_cpi",        fso_excel_dataset("ch_fso_cpi",        "su-d-05.02.66")))
   add(.try_fetch("ch_fso_ppi",        fso_excel_dataset("ch_fso_ppi",        "su-q-05.04.03.01-ppi-ipp")))
   add(.try_fetch("ch_fso_wage_idx",   fso_excel_dataset("ch_fso_wage_idx",   "je-e-03.04.03.00.04")))
   add(.try_fetch("ch_fso_pop",        fso_excel_dataset("ch_fso_pop",        "su-d-01.02.04.05")))
