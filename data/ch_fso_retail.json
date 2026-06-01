@@ -1,0 +1,232 @@
+{
+  "schema_version": "1.0",
+  "id": "ch_fso_retail",
+  "dim_order": [
+    "NOGA",
+    "ADJUSTMENT",
+    "INDICATOR_KE",
+    "UNIT_MEASURE"
+  ],
+  "start": "2000-01-01",
+  "end": "2026-04-01",
+  "title": {
+    "en": "Retail trade turnover (monthly)"
+  },
+  "source": {
+    "name": {
+      "en": "Swiss Federal Statistical Office (FSO)"
+    },
+    "url": "https://www.bfs.admin.ch/asset/en/DF_KEU_M1"
+  },
+  "license": "fso",
+  "frequency": "monthly",
+  "dimensions": {
+    "NOGA": {
+      "label": {
+        "en": "NOGA"
+      },
+      "levels": {
+        "47": {
+          "label": {
+            "en": "47 Retail trade"
+          },
+          "data": true
+        },
+        "4711": {
+          "label": {
+            "en": "4711 Retail sale in non-specialised stores with food, beverages or tobacco predominating"
+          },
+          "data": true
+        },
+        "4711_472": {
+          "label": {
+            "en": "4711_472 Retail sale of food, beverages and tobacco"
+          },
+          "data": true
+        },
+        "4719": {
+          "label": {
+            "en": "4719 Other retail sale in non-specialised stores"
+          },
+          "data": true
+        },
+        "4719_474-479": {
+          "label": {
+            "en": "4719_474-479 Retail sale of non-food (except fuel)"
+          },
+          "data": true
+        },
+        "472": {
+          "label": {
+            "en": "472 Retail sale of food, beverages and tobacco in specialised stores"
+          },
+          "data": true
+        },
+        "473": {
+          "label": {
+            "en": "473 Retail sale of automotive fuel in specialised stores"
+          },
+          "data": true
+        },
+        "474": {
+          "label": {
+            "en": "474 Retail sale of information and communication equipment in specialised stores"
+          },
+          "data": true
+        },
+        "475": {
+          "label": {
+            "en": "475 Retail sale of other household equipment in specialised stores"
+          },
+          "data": true
+        },
+        "476": {
+          "label": {
+            "en": "476 Retail sale of cultural and recreation goods in specialised stores"
+          },
+          "data": true
+        },
+        "477": {
+          "label": {
+            "en": "477 Retail sale of other goods in specialised stores"
+          },
+          "data": true
+        },
+        "478_479": {
+          "label": {
+            "en": "478_479 Retail sale via stalls and markets; Retail sale via mail order houses or via internet"
+          },
+          "data": true
+        },
+        "47P": {
+          "label": {
+            "en": "47P Class of goods of retail trade"
+          },
+          "data": true
+        },
+        "47P_Bekl": {
+          "label": {
+            "en": "47P_Bekl Clothing, footwear"
+          },
+          "data": true
+        },
+        "47P_Food": {
+          "label": {
+            "en": "47P_Food Food, beverages and tobacco"
+          },
+          "data": true
+        },
+        "47P_Treib": {
+          "label": {
+            "en": "47P_Treib Automotive fuel"
+          },
+          "data": true
+        },
+        "47P_UW": {
+          "label": {
+            "en": "47P_UW Remaining classes of goods (excluding fuel)"
+          },
+          "data": true
+        },
+        "47PxTreib": {
+          "label": {
+            "en": "47PxTreib Total retail sector without fuel"
+          },
+          "data": true
+        },
+        "47x473": {
+          "label": {
+            "en": "47x473 Total retail trade except fuel"
+          },
+          "data": true
+        }
+      }
+    },
+    "ADJUSTMENT": {
+      "label": {
+        "en": "ADJUSTMENT"
+      },
+      "levels": {
+        "N": {
+          "label": {
+            "en": "Neither seasonally adjusted nor calendar adjusted data"
+          },
+          "data": true
+        },
+        "W": {
+          "label": {
+            "en": "Calendar adjusted data, not seasonally adjusted"
+          },
+          "data": true
+        },
+        "Y": {
+          "label": {
+            "en": "Calendar and seasonally adjusted data"
+          },
+          "data": true
+        }
+      }
+    },
+    "INDICATOR_KE": {
+      "label": {
+        "en": "INDICATOR_KE"
+      },
+      "levels": {
+        "PTOT": {
+          "label": {
+            "en": "Production / Total turnover (real)"
+          },
+          "data": true
+        },
+        "UINL": {
+          "label": {
+            "en": "Domestic turnover (nominal)"
+          },
+          "data": true
+        },
+        "UTOT": {
+          "label": {
+            "en": "Total turnover (nominal)"
+          },
+          "data": true
+        }
+      }
+    },
+    "UNIT_MEASURE": {
+      "label": {
+        "en": "UNIT_MEASURE"
+      },
+      "levels": {
+        "IX": {
+          "label": {
+            "en": "Index"
+          },
+          "data": true
+        },
+        "VARM-12": {
+          "label": {
+            "en": "Change compared to same month last year"
+          },
+          "data": true
+        },
+        "VARM-1": {
+          "label": {
+            "en": "Change compared to previous month"
+          },
+          "data": true
+        }
+      }
+    }
+  },
+  "concept": "Domestic economy / Retail trade turnover",
+  "canonical": true,
+  "split": "NOGA",
+  "single_select": ["ADJUSTMENT", "INDICATOR_KE", "UNIT_MEASURE"],
+  "default_transform": "level",
+  "default": {
+    "NOGA": "47",
+    "ADJUSTMENT": "Y",
+    "INDICATOR_KE": "UTOT",
+    "UNIT_MEASURE": "IX"
+  }
+}

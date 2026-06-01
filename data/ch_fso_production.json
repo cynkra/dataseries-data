@@ -1,0 +1,178 @@
+{
+  "schema_version": "1.0",
+  "id": "ch_fso_production",
+  "dim_order": [
+    "NOGA",
+    "ADJUSTMENT",
+    "INDICATOR_KE",
+    "UNIT_MEASURE"
+  ],
+  "start": "1999-01-01",
+  "end": "2026-01-01",
+  "title": {
+    "en": "Industry & construction turnover (quarterly)"
+  },
+  "source": {
+    "name": {
+      "en": "Swiss Federal Statistical Office (FSO)"
+    },
+    "url": "https://www.bfs.admin.ch/asset/en/DF_KEU_Q1"
+  },
+  "license": "fso",
+  "frequency": "quarterly",
+  "dimensions": {
+    "NOGA": {
+      "label": {
+        "en": "NOGA"
+      },
+      "levels": {
+        "41": {
+          "label": {
+            "en": "41 Building construction"
+          },
+          "data": true
+        },
+        "41_43": {
+          "label": {
+            "en": "41_43 Construction of buildings and specialised construction activities"
+          },
+          "data": true
+        },
+        "42": {
+          "label": {
+            "en": "42 Civil engineering"
+          },
+          "data": true
+        },
+        "43": {
+          "label": {
+            "en": "43 Specialised construction activities"
+          },
+          "data": true
+        },
+        "B": {
+          "label": {
+            "en": "B MINING AND QUARRYING"
+          },
+          "data": true
+        },
+        "B-E": {
+          "label": {
+            "en": "B-E Industry"
+          },
+          "data": true
+        },
+        "C": {
+          "label": {
+            "en": "C MANUFACTURING"
+          },
+          "data": true
+        },
+        "D": {
+          "label": {
+            "en": "D ELECTRICITY, GAS, STEAM AND AIR-CONDITIONING SUPPLY"
+          },
+          "data": true
+        },
+        "F": {
+          "label": {
+            "en": "F CONSTRUCTION"
+          },
+          "data": true
+        }
+      }
+    },
+    "ADJUSTMENT": {
+      "label": {
+        "en": "ADJUSTMENT"
+      },
+      "levels": {
+        "N": {
+          "label": {
+            "en": "Neither seasonally adjusted nor calendar adjusted data"
+          },
+          "data": true
+        },
+        "W": {
+          "label": {
+            "en": "Calendar adjusted data, not seasonally adjusted"
+          },
+          "data": true
+        },
+        "Y": {
+          "label": {
+            "en": "Calendar and seasonally adjusted data"
+          },
+          "data": true
+        }
+      }
+    },
+    "INDICATOR_KE": {
+      "label": {
+        "en": "INDICATOR_KE"
+      },
+      "levels": {
+        "PTOT": {
+          "label": {
+            "en": "Production / Total turnover (real)"
+          },
+          "data": true
+        },
+        "UINL": {
+          "label": {
+            "en": "Domestic turnover (nominal)"
+          },
+          "data": true
+        },
+        "UTOT": {
+          "label": {
+            "en": "Total turnover (nominal)"
+          },
+          "data": true
+        },
+        "UEXP": {
+          "label": {
+            "en": "Foreign turnover (nominal)"
+          },
+          "data": true
+        }
+      }
+    },
+    "UNIT_MEASURE": {
+      "label": {
+        "en": "UNIT_MEASURE"
+      },
+      "levels": {
+        "IX": {
+          "label": {
+            "en": "Index"
+          },
+          "data": true
+        },
+        "VARQ-4": {
+          "label": {
+            "en": "Change compared to same quarter last year"
+          },
+          "data": true
+        },
+        "VARQ-1": {
+          "label": {
+            "en": "Change compared to previous quarter"
+          },
+          "data": true
+        }
+      }
+    }
+  },
+  "concept": "Domestic economy / Industry & construction turnover",
+  "canonical": true,
+  "split": "NOGA",
+  "single_select": ["ADJUSTMENT", "INDICATOR_KE", "UNIT_MEASURE"],
+  "default_transform": "level",
+  "default": {
+    "NOGA": "B-E",
+    "ADJUSTMENT": "Y",
+    "INDICATOR_KE": "PTOT",
+    "UNIT_MEASURE": "IX"
+  }
+}

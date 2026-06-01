@@ -15,9 +15,17 @@ root <- tryCatch(
 )
 for (f in c("dates.R", "http.R", "io.R", "source_snb.R", "source_kof.R",
             "source_fso.R", "source_fso_excel.R", "source_fso_excel_sets.R",
-            "source_seco.R")) {
+            "source_fso_sdmx.R", "source_seco.R")) {
   source(file.path(root, f))
 }
+
+# Curated NOGA slices of the CH1.KEU SDMX turnover flows (see datasheets):
+# retail = division 47; production = industry B-E (+ B/C/D) and construction F (41-43).
+.SDMX_RETAIL_NOGA <- c("47", "4711", "4711_472", "4719", "4719_474-479", "472",
+                       "473", "474", "475", "476", "477", "478_479", "47P",
+                       "47P_Bekl", "47P_Food", "47P_Treib", "47P_UW",
+                       "47PxTreib", "47x473")
+.SDMX_PRODUCTION_NOGA <- c("B-E", "B", "C", "D", "F", "41", "42", "43", "41_43")
 
 # Download an FSO Excel asset and run its bespoke parser, tagging the topic.
 # The per-dataset parsers live in source_fso_excel_sets.R.
@@ -71,6 +79,31 @@ build <- function() {
   # SECO: full GDP, swissdata format at source (rich multilingual + deep
   # production/expenditure/income hierarchy; the hardest UI case, ~107k rows).
   add(.try_fetch("ch_seco_gdp", seco_fetch("ch_seco_gdp"), "National accounts"))
+
+  # SECO: consumer sentiment survey, swissdata at source (back to 1972-Q4). This
+  # is the TRUE producer — it replaces the retired SNB re-export ch_snb_concon —
+  # and adds the seasonally-adjusted track SECO publishes alongside the raw balances.
+  ks_base <- paste0("https://www.seco.admin.ch/dam/seco/en/dokumente/",
+                    "Wirtschaft/Wirtschaftslage/Konsumentenstimmung/")
+  add(.try_fetch("ch_seco_concon",
+                 seco_fetch("ch_seco_concon",
+                            data_url = paste0(ks_base, "ks_q.csv.download.csv/ks_q.csv"),
+                            meta_url = paste0(ks_base, "ks_q_json.txt.download.txt/ks_q_json.txt")),
+                 "Business surveys"))
+
+  # FSO SDMX (CH1.KEU): turnover flows migrated off the dead PX-Web onto
+  # disseminate.stats.swiss. Retail = monthly DF_KEU_M1 (NOGA division 47);
+  # industry + construction = quarterly DF_KEU_Q1 (NOGA B-E + F, divisions 41-43).
+  add(.try_fetch("ch_fso_retail",
+                 fso_sdmx_fetch("ch_fso_retail", "CH1.KEU", "DF_KEU_M1", "1.0.0",
+                                title = list(en = "Retail trade turnover (monthly)"),
+                                noga_keep = .SDMX_RETAIL_NOGA),
+                 "Domestic economy"))
+  add(.try_fetch("ch_fso_production",
+                 fso_sdmx_fetch("ch_fso_production", "CH1.KEU", "DF_KEU_Q1", "1.0.0",
+                                title = list(en = "Industry & construction turnover (quarterly)"),
+                                noga_keep = .SDMX_PRODUCTION_NOGA),
+                 "Domestic economy"))
 
   # KOF: the Economic Barometer (single monthly series).
   add(.try_fetch("ch_kof_barometer",

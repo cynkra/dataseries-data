@@ -340,26 +340,6 @@
     "meta": "ch_snb_capweums.json"
   },
   {
-    "id": "ch_snb_concon",
-    "title": {
-      "en": "Consumer confidence"
-    },
-    "concept": "Business cycle & sentiment / Consumer confidence",
-    "canonical": true,
-    "featured": null,
-    "topic": "Business surveys",
-    "source": "Swiss National Bank",
-    "license": "snb",
-    "frequency": "quarterly",
-    "start": "1972-10-01",
-    "end": "2026-04-01",
-    "n_series": 12,
-    "updated": null,
-    "load": "whole",
-    "data": "ch_snb_concon.csv",
-    "meta": "ch_snb_concon.json"
-  },
-  {
     "id": "ch_snb_devkum",
     "title": {
       "en": "Foreign exchange rates – Month"
@@ -498,26 +478,6 @@
     "load": "whole",
     "data": "ch_snb_snbbipo.csv",
     "meta": "ch_snb_snbbipo.json"
-  },
-  {
-    "id": "ch_snb_snbiproga",
-    "title": {
-      "en": "SNB conditional inflation forecast"
-    },
-    "concept": "SNB policy & forecasts / Conditional inflation forecast",
-    "canonical": true,
-    "featured": null,
-    "topic": "SNB forecasts",
-    "source": "Swiss National Bank",
-    "license": "snb",
-    "frequency": "annual",
-    "start": "2004-01-01",
-    "end": "2028-01-01",
-    "n_series": 158,
-    "updated": null,
-    "load": "whole",
-    "data": "ch_snb_snbiproga.csv",
-    "meta": "ch_snb_snbiproga.json"
   },
   {
     "id": "ch_snb_snbiprogq",
@@ -915,9 +875,9 @@
     "license": "fso",
     "frequency": "monthly",
     "start": "1982-12-01",
-    "end": "2025-12-01",
-    "n_series": 443,
-    "updated": "2026-01-08",
+    "end": "2026-04-01",
+    "n_series": 595,
+    "updated": "2026-05-05",
     "load": "whole",
     "data": "ch_fso_cpi.csv",
     "meta": "ch_fso_cpi.json"
@@ -1001,5 +961,68 @@
     "load": "whole",
     "data": "ch_fso_unemp_rate.csv",
     "meta": "ch_fso_unemp_rate.json"
+  },
+  {
+    "id": "ch_seco_concon",
+    "title": {
+      "en": "Consumer sentiment index",
+      "de": "Konsumentenstimmungsindex",
+      "fr": "Indice du climat de consommation",
+      "it": "Indice del clima di fiducia dei consumatori"
+    },
+    "concept": "Business cycle & sentiment / Consumer confidence",
+    "canonical": true,
+    "featured": "Consumer confidence",
+    "topic": null,
+    "source": "State Secretariat for Economic Affairs (SECO)",
+    "license": "seco",
+    "frequency": "quarterly",
+    "start": "1972-10-01",
+    "end": "2026-04-01",
+    "n_series": 39,
+    "updated": "2026-05-05 13:27:13",
+    "load": "whole",
+    "data": "ch_seco_concon.csv",
+    "meta": "ch_seco_concon.json"
+  },
+  {
+    "id": "ch_fso_retail",
+    "title": {
+      "en": "Retail trade turnover (monthly)"
+    },
+    "concept": "Domestic economy / Retail trade turnover",
+    "canonical": true,
+    "featured": null,
+    "topic": null,
+    "source": "Swiss Federal Statistical Office (FSO)",
+    "license": "fso",
+    "frequency": "monthly",
+    "start": "2000-01-01",
+    "end": "2026-04-01",
+    "n_series": 342,
+    "updated": null,
+    "load": "whole",
+    "data": "ch_fso_retail.csv",
+    "meta": "ch_fso_retail.json"
+  },
+  {
+    "id": "ch_fso_production",
+    "title": {
+      "en": "Industry & construction turnover (quarterly)"
+    },
+    "concept": "Domestic economy / Industry & construction turnover",
+    "canonical": true,
+    "featured": null,
+    "topic": null,
+    "source": "Swiss Federal Statistical Office (FSO)",
+    "license": "fso",
+    "frequency": "quarterly",
+    "start": "1999-01-01",
+    "end": "2026-01-01",
+    "n_series": 174,
+    "updated": null,
+    "load": "whole",
+    "data": "ch_fso_production.csv",
+    "meta": "ch_fso_production.json"
   }
 ]

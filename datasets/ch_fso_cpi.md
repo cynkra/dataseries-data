@@ -7,16 +7,17 @@
 - **source**: Swiss Federal Statistical Office (FSO)
 - **license**: fso (free reuse, attribution required)
 - **frequency**: monthly
-- **coverage**: 1982-12 .. 2025-12
-- **series**: 443
-- **updated**: 2026-01-08
+- **coverage**: 1982-12 .. 2026-04
+- **series**: 595
+- **updated**: 2026-05-05
 
 ## What is special
 The Swiss headline inflation measure (Landesindex der Konsumentenpreise). This is
-the canonical CPI: it carries the **full position hierarchy**, 443 positions from
+the canonical CPI: it carries the **full position hierarchy**, 595 positions from
 the total index down to COICOP sub-baskets (food, housing, transport, ...), not
 just the headline total. It replaces the SNB re-export `plkopr` (which is only the
-total). Base period December 2020 = 100. History to December 1982.
+total). Base period December 2025 = 100 (asset `su-d-05.02.66`, which superseded
+the frozen Dec-2020=100 asset `su-d-05.02.67`). History to December 1982.
 
 ## Access
 - **type**: FSO DAM Excel asset

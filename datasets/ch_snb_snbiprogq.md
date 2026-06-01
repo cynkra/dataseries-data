@@ -2,7 +2,7 @@
 
 - **id**: ch_snb_snbiprogq
 - **concept**: SNB policy & forecasts / Conditional inflation forecast
-- **canonical**: yes (quarterly horizon; annual `ch_snb_snbiproga` kept alongside)
+- **canonical**: yes (sole canonical for this concept; an annual view is derived on demand by calendar-year averaging the quarterly forecast)
 - **source**: Swiss National Bank
 - **license**: snb (free reuse, attribution required)
 - **frequency**: quarterly
@@ -23,8 +23,13 @@ lets you align each historical forecast fan against the realised quarterly CPI i
 was later measured against. It also reaches further forward (end 2028-10) at quarterly
 steps. Values are future-dated by construction, since each vintage projects ahead.
 
-CONCEPT-UNIVERSE keeps both this and the annual `snbiproga` because they serve
-different horizons; this quarterly one is the higher-resolution forecast view.
+This is the single canonical cube for the conditional inflation forecast. The
+former annual cube `snbiproga` was dropped as redundant: its annual figures are
+just the calendar-year average of these quarterly forecasts (verified against the
+data — exact bar SNB rounding), and this quarterly cube is strictly richer (it
+also carries the observed `BI` path, starts earlier in 2001, and reaches further
+forward). An annual view, if needed, is derived on demand by year-averaging the
+quarterly `P` series rather than stored as a separate dataset.
 
 ## Access
 - **type**: SNB cube API

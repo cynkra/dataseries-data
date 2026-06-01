@@ -123,3 +123,17 @@ So the `license` key resolves to display text + terms:
 - FSO JSON-stat → does its `dimension.category.label` map cleanly into our `dimensions.levels.label`? German dimension codes — keep as codes, put German text in `label.de`, English in `label.en` where available.
 - Unit handling: SNB packs unit as one string ("In CHF millions / In percent"); SECO keys units by dimension level. Confirm a single `units` shape covers both.
 - Do we need a per-observation `status`/flag column in the CSV (estimated/provisional)? Defer unless a source forces it.
+
+## Storage & formats (what is the source of truth)
+
+Three artifacts per dataset, but only two are authoritative:
+
+- **`{id}.csv` — source of truth, committed.** The readable data product. Committed
+  to git, so each revision diffs and the change history is free.
+- **`{id}.json` — source of truth, committed.** The metadata sidecar, committed
+  alongside the CSV.
+- **`{id}.parquet` — DERIVED query cache, NOT committed.** Built from the CSV at
+  deploy / sync time for the DuckDB serving layer. A derivative, never the source of
+  truth, never committed.
+
+See [`principles.md`](principles.md) for the full curation rationale.

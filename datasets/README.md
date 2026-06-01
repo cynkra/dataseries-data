@@ -27,7 +27,7 @@ source of truth.
 # <Human title>
 
 - **id**: <ch_source_slug>
-- **concept**: <Group / Leaf from spec/CONCEPT-UNIVERSE.md>
+- **concept**: <Group / Leaf from ../docs/concepts.md>
 - **canonical**: yes | no (alternate for <concept>)
 - **featured**: <optional homepage label, e.g. "Inflation"; omit for non-featured>
   <only the handful of homepage example datasets carry this; drives the landing chips>
@@ -73,5 +73,6 @@ Script: `R/<file>::<function>`. Datasheet authored <date>; parser verified <date
 ```
 
 ## Index
-Generated alongside `catalog.json`. See `spec/CONCEPT-UNIVERSE.md` for the concept
-tree and canonical/alternate decisions.
+Generated alongside `catalog.json`. See [`../docs/concepts.md`](../docs/concepts.md)
+for the concept tree and canonical/alternate decisions, and
+[`../docs/principles.md`](../docs/principles.md) for the curation principles behind them.

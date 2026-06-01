@@ -1,11 +1,11 @@
 {
-  "checked": "2026-06-01 10:41 UTC",
+  "checked": "2026-06-01 15:56 UTC",
   "counts": {
-    "green": 47,
-    "amber": 2,
-    "red": 1,
+    "green": 51,
+    "amber": 0,
+    "red": 0,
     "unknown": 0,
-    "total": 50
+    "total": 51
   },
   "datasets": [
     {
@@ -181,8 +181,8 @@
       "end": "2026-05-15",
       "updated": null,
       "age_days": 17,
-      "threshold_days": 14,
-      "status": "amber"
+      "threshold_days": 35,
+      "status": "green"
     },
     {
       "id": "ch_snb_capweums",
@@ -193,17 +193,6 @@
       "updated": null,
       "age_days": 61,
       "threshold_days": 110,
-      "status": "green"
-    },
-    {
-      "id": "ch_snb_concon",
-      "title": "Consumer confidence",
-      "source": "Swiss National Bank",
-      "frequency": "quarterly",
-      "end": "2026-04-01",
-      "updated": null,
-      "age_days": 61,
-      "threshold_days": 290,
       "status": "green"
     },
     {
@@ -281,17 +270,6 @@
       "updated": null,
       "age_days": 61,
       "threshold_days": 110,
-      "status": "green"
-    },
-    {
-      "id": "ch_snb_snbiproga",
-      "title": "SNB conditional inflation forecast",
-      "source": "Swiss National Bank",
-      "frequency": "annual",
-      "end": "2028-01-01",
-      "updated": null,
-      "age_days": -579,
-      "threshold_days": 550,
       "status": "green"
     },
     {
@@ -412,8 +390,8 @@
       "end": "2026-02-01",
       "updated": null,
       "age_days": 120,
-      "threshold_days": 110,
-      "status": "amber"
+      "threshold_days": 150,
+      "status": "green"
     },
     {
       "id": "ch_snb_zikrepro",
@@ -508,11 +486,11 @@
       "title": "Consumer Price Index (LIK)",
       "source": "Swiss Federal Statistical Office (FSO)",
       "frequency": "monthly",
-      "end": "2025-12-01",
-      "updated": "2026-01-08",
-      "age_days": 182,
+      "end": "2026-04-01",
+      "updated": "2026-05-05",
+      "age_days": 61,
       "threshold_days": 110,
-      "status": "red"
+      "status": "green"
     },
     {
       "id": "ch_fso_ppi",
@@ -556,6 +534,39 @@
       "updated": "2026-05-18",
       "age_days": 92,
       "threshold_days": 110,
+      "status": "green"
+    },
+    {
+      "id": "ch_seco_concon",
+      "title": "Consumer sentiment index",
+      "source": "State Secretariat for Economic Affairs (SECO)",
+      "frequency": "quarterly",
+      "end": "2026-04-01",
+      "updated": "2026-05-05 13:27:13",
+      "age_days": 61,
+      "threshold_days": 290,
+      "status": "green"
+    },
+    {
+      "id": "ch_fso_retail",
+      "title": "Retail trade turnover (monthly)",
+      "source": "Swiss Federal Statistical Office (FSO)",
+      "frequency": "monthly",
+      "end": "2026-04-01",
+      "updated": null,
+      "age_days": 61,
+      "threshold_days": 110,
+      "status": "green"
+    },
+    {
+      "id": "ch_fso_production",
+      "title": "Industry & construction turnover (quarterly)",
+      "source": "Swiss Federal Statistical Office (FSO)",
+      "frequency": "quarterly",
+      "end": "2026-01-01",
+      "updated": null,
+      "age_days": 151,
+      "threshold_days": 290,
       "status": "green"
     }
   ]

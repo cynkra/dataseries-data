@@ -1,0 +1,247 @@
+{
+  "schema_version": "1.0",
+  "id": "ch_seco_concon",
+  "dim_order": [
+    "type",
+    "structure",
+    "seas_adj"
+  ],
+  "start": "1972-10-01",
+  "end": "2026-04-01",
+  "title": {
+    "en": "Consumer sentiment index",
+    "de": "Konsumentenstimmungsindex",
+    "fr": "Indice du climat de consommation",
+    "it": "Indice del clima di fiducia dei consumatori"
+  },
+  "source": {
+    "name": {
+      "en": "State Secretariat for Economic Affairs (SECO)",
+      "de": "Staatssekretariat für Wirtschaft (SECO)",
+      "fr": "Secrétariat d'Etat à l'économie (SECO)",
+      "it": "Segretaria di Stato dell'economia (SECO)"
+    },
+    "url": "https://www.seco.admin.ch/seco/de/home/wirtschaftslage---wirtschaftspolitik/Wirtschaftslage/konsumentenstimmung/daten-ab-1972.html"
+  },
+  "license": "seco",
+  "frequency": "quarterly",
+  "dimensions": {
+    "type": {
+      "label": {
+        "en": "Index or standard deviation",
+        "de": "Index oder Standardabweichung",
+        "fr": "Indice ou écart-type",
+        "it": "Indice o deviazione standard"
+      },
+      "levels": {
+        "index": {
+          "label": {
+            "en": "Index",
+            "de": "Index",
+            "fr": "Indice",
+            "it": "Indice"
+          },
+          "data": true
+        },
+        "sd": {
+          "label": {
+            "en": "Standard deviation",
+            "de": "Standardabweichung",
+            "fr": "Écart-type",
+            "it": "Deviazione standard"
+          },
+          "data": true
+        }
+      }
+    },
+    "structure": {
+      "label": {
+        "en": "Index",
+        "de": "Index",
+        "fr": "Indice",
+        "it": "Indice"
+      },
+      "levels": {
+        "ks_i63_index_q": {
+          "label": {
+            "en": "6.3 Consumer sentiment index",
+            "de": "6.3 Index der Konsumentenstimmung",
+            "fr": "6.3 Indice du climat de consommation",
+            "it": "6.3 Indice del clima di fiducia dei consumatori"
+          },
+          "data": true
+        },
+        "ks_i11_econ_hist_q": {
+          "label": {
+            "en": "1.1 Past economic situation",
+            "de": "1.1 Vergangene Wirtschaftsentwicklung",
+            "fr": "1.1 Situation économique générale passée",
+            "it": "1.1 Situazione economica negli ultimi mesi"
+          },
+          "data": true
+        },
+        "ks_i12_econ_exp_q": {
+          "label": {
+            "en": "1.2 Economic outlook",
+            "de": "1.2 Erwartete Wirtschaftsentwicklung",
+            "fr": "1.2 Situation économique générale à venir",
+            "it": "1.2 Situazione economica nei prossimi mesi"
+          },
+          "data": true
+        },
+        "ks_i21_price_hist_q": {
+          "label": {
+            "en": "2.1 Past price situation",
+            "de": "2.1 Vergangene Preisentwicklung",
+            "fr": "2.1 Évolution passée des prix",
+            "it": "2.1 Evoluzione dei prezzi negli ultimi mesi"
+          },
+          "data": true
+        },
+        "ks_i22_price_exp_q": {
+          "label": {
+            "en": "2.2 Price outlook, 12 months",
+            "de": "2.2 Erwartete Preisentwicklung, 12 Monate",
+            "fr": "2.2 Évolution des prix à venir, 12 mois",
+            "it": "2.2 Evoluzione futura dei prezzi, 12 mesi"
+          },
+          "data": true
+        },
+        "ks_i31_job_secure_q": {
+          "label": {
+            "en": "3.1 Job security situation",
+            "de": "3.1 Sicherheit der Arbeitsplätze",
+            "fr": "3.1 Sécurité de l'emploi",
+            "it": "3.1 Sicurezza degli impieghi"
+          },
+          "data": true
+        },
+        "ks_i32_unemp_exp_q": {
+          "label": {
+            "en": "3.2 Unemployment outlook",
+            "de": "3.2 Entwicklung der Arbeitslosenzahl",
+            "fr": "3.2 Évolution future du chômage",
+            "it": "3.2 Evoluzione della disoccupazione"
+          },
+          "data": true
+        },
+        "ks_i41_fin_pos_hist_q": {
+          "label": {
+            "en": "4.1 Past financial situation",
+            "de": "4.1 Vergangene finanzielle Lage",
+            "fr": "4.1 Situation financière passée",
+            "it": "4.1 Situazione finanziaria negli ultimi mesi"
+          },
+          "data": true
+        },
+        "ks_i42_fin_pos_exp_q": {
+          "label": {
+            "en": "4.2 Financial outlook",
+            "de": "4.2 Erwartete finanzielle Lage",
+            "fr": "4.2 Situation financière à venir",
+            "it": "4.2 Situazione finanziaria nei prossimi mesi"
+          },
+          "data": true
+        },
+        "ks_i51_save_q": {
+          "label": {
+            "en": "5.1 Current savings / debt situation",
+            "de": "5.1 Aktuelle Situation: Sparen / Schulden",
+            "fr": "5.1 Épargner / contracter des dettes : situation actuelle",
+            "it": "5.1 Risparmiare / nuovi debiti: situazione attuale"
+          },
+          "data": true
+        },
+        "ks_i52_spend_q": {
+          "label": {
+            "en": "5.2 Moment to make major purchases",
+            "de": "5.2 Zeitpunkt für grössere Anschaffungen",
+            "fr": "5.2 Moment favorable pour de grandes acquisitions",
+            "it": "5.2 Momento favorevole per grandi acquisti"
+          },
+          "data": true
+        },
+        "ks_i53_save_exp_q": {
+          "label": {
+            "en": "5.3 Savings / debt outlook",
+            "de": "5.3 Erwartete Situation: Sparen / Schulden",
+            "fr": "5.3 Épargner / contracter des dettes : prochains 12 mois",
+            "it": "5.3 Risparmiare / nuovi debiti: prossimi 12 mesi"
+          },
+          "data": true
+        },
+        "ks_i62_index_q": {
+          "label": {
+            "en": "Previous consumer sentiment index, 2009 - 2019 (incl. retropolation)",
+            "de": "Früherer Index der Konsumentenstimmung, 2009 - 2019 (inkl. Rückrechnung)",
+            "fr": "Précédent indice du climat de consommation, 2009 - 2019 (y compris rétropolation)",
+            "it": "Indice del clima di fiducia dei consumatori precedente, 2009 - 2019 (incl. retropolazione)"
+          },
+          "data": true
+        }
+      }
+    },
+    "seas_adj": {
+      "label": {
+        "en": "Seasonal Adjustment",
+        "de": "Saisonbereinigung",
+        "fr": "Désaisonnalisation",
+        "it": "Destagionalizzazione"
+      },
+      "levels": {
+        "na": {
+          "label": {
+            "en": "Not seasonally adjusted",
+            "de": "Nicht saison- oder kalenderbereinigt",
+            "fr": "Données brutes",
+            "it": "Dati grezzi"
+          },
+          "data": true
+        },
+        "csa": {
+          "label": {
+            "en": "Seasonally and calendar adjusted",
+            "de": "Saison- und kalenderbereinigt",
+            "fr": "Données corrigées des influences saisonnières et des effets calendaires",
+            "it": "Dati destagionalizzati e corretti dagli effetti di calendario"
+          },
+          "data": true
+        }
+      }
+    }
+  },
+  "units": {
+    "type": {
+      "index": {
+        "en": "Index",
+        "de": "Index",
+        "fr": "Indice",
+        "it": "Indice"
+      },
+      "sd": {
+        "en": "Standard deviation",
+        "de": "Standardabweichung",
+        "fr": "Écart-type",
+        "it": "Deviazione standard"
+      }
+    }
+  },
+  "updated": "2026-05-05 13:27:13",
+  "notes": {
+    "en": "Consumer Sentiment Survey. Seasonally and calender adjusted data as well as unadjusted data. The level of the historical data from 1972 to 2023 has been aligned with that of the current data from 2024. Further information can be found in the Methodology document.",
+    "de": "Konsumententsimmungsindex. Saison- und kalenderbereinigte Daten sowie unbereinigte Daten. Das Niveau der historischen Daten 1972-2023 wurde an jenes der aktuellen Daten ab 2024 angeglichen. Weitere Informationen sind im Methodik-Dokument zu finden.",
+    "fr": "Indice du climat de consommation. Données corrigées des variations saisonnières et du calendrier ainsi que données non corrigées. Le niveau des données historiques collectées entre 1972 et 2023 a été adapté à celui des données actuelles, relevées depuis 2024. Vous trouverez de plus amples informations dans le document méthodologique.",
+    "it": "Indice del clima di fiducia dei consumatori. Dati destagionalizzati e corretti per gli effetti di calendario e dati non corretti. Il livello dei dati storici 1972-2023 è stato adeguato a quello dei dati attuali, rilevati a partire dal 2024. Per maggiori informazioni leggere il documento sulla metodologia impiegata."
+  },
+  "concept": "Business cycle & sentiment / Consumer confidence",
+  "canonical": true,
+  "featured": "Consumer confidence",
+  "split": "structure",
+  "single_select": ["type", "seas_adj"],
+  "default_transform": "level",
+  "default": {
+    "structure": "ks_i63_index_q",
+    "type": "index",
+    "seas_adj": "csa"
+  }
+}
