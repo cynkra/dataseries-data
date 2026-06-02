@@ -5,27 +5,13 @@
 
 suppressPackageStartupMessages({ library(readxl); library(dplyr); library(tidyr); library(stringr) })
 
-# Fail-closed value anchor: assert that a known published cell value survives
-# parsing. These sheets pick values by row/column POSITION, so a column insert or
-# row reorder upstream would silently shift every series onto the wrong label. An
-# anchor on a stable, hand-verified figure turns that silent corruption into a
-# loud stop() -> .try_fetch skips the dataset (logged, flagged stale by health.R).
-# `...` are equality filters on the data columns identifying the single cell.
-.assert_anchor <- function(data, dataset, expect, ..., tol = NULL) {
-  flt <- list(...)
-  ok  <- rep(TRUE, nrow(data))
-  for (k in names(flt)) ok <- ok & (as.character(data[[k]]) == flt[[k]])
-  sel <- paste(names(flt), unlist(flt), sep = "=", collapse = ", ")
-  got <- data$value[ok]
-  if (length(got) != 1L)
-    stop(sprintf("%s: anchor {%s} matched %d rows, expected exactly 1 — sheet layout changed?",
-                 dataset, sel, length(got)), call. = FALSE)
-  if (is.null(tol)) tol <- abs(expect) * 1e-4 + 1e-6
-  if (is.na(got) || abs(got - expect) > tol)
-    stop(sprintf("%s: anchor {%s} = %s, expected %s — source columns/rows shifted; refusing to ship.",
-                 dataset, sel, got, expect), call. = FALSE)
-  invisible(TRUE)
-}
+# These bespoke sheet parsers anchor on column/row HEADER TEXT, never on fixed
+# positions, so an inserted column or reordered row can't silently shift values
+# onto the wrong label: a missing/renamed anchor fails loud (-> .try_fetch skips
+# the dataset, logged + flagged stale by health.R) instead of shipping garbage.
+# Header anchoring is also robust to value REVISIONS (seasonal re-runs, rebasing,
+# re-benchmarking) that a fixed value-check would false-fail on. The source-
+# agnostic structural net is io.R::validate_dataset.
 
 # ---- ch_fso_cpi (Prices) ----
 fso_excel_ch_fso_cpi <- function(path, pubdate) {
@@ -57,11 +43,18 @@ fso_excel_ch_fso_cpi <- function(path, pubdate) {
   ))
   body <- as.data.frame(body, stringsAsFactors = FALSE)
 
-  # column indices for the metadata fields we care about (positional, per layout)
-  # 1 Code, 12 Item_E (parent group), 13 PosTxt_E (position text)
-  code     <- body[[1]]
-  item_e   <- if (n_col >= 12) body[[12]] else NA_character_
-  postxt_e <- if (n_col >= 13) body[[13]] else NA_character_
+  # Locate the metadata columns by their HEADER NAME (row 4), not by position, so
+  # an inserted/reordered column can't silently mislabel the series.
+  hcol <- function(name) {
+    i <- which(hdr == name)
+    if (length(i) != 1L)
+      stop(sprintf("ch_fso_cpi: header '%s' matched %d columns (expected 1) — sheet layout changed?",
+                   name, length(i)), call. = FALSE)
+    i
+  }
+  code     <- body[[hcol("Code")]]      # position code (series key)
+  item_e   <- body[[hcol("Item_E")]]    # parent group (English)
+  postxt_e <- body[[hcol("PosTxt_E")]]  # position text (English)
 
   # keep only rows with a real position code, drop duplicates
   keep <- !is.na(code) & !duplicated(code)
@@ -220,43 +213,49 @@ fso_excel_ch_fso_wage_idx <- function(path, pubdate) {
     suppressWarnings(as.numeric(x))
   }
 
-  # The 6 data rows in each block are the components of the wage total, cut two
-  # non-crossing ways: by sex (Men/Women) and by sector (Secondary/Construction/
-  # Tertiary). The source carries no sex x sector cross product, so they live on a
-  # single `breakdown` dimension (one overlay axis) rather than two single-selects.
-  # Workbook row order: TOTAL, Men, Women, SECTOR 2, Construction, SECTOR 3.
-  breakdown_codes <- c("tot", "m", "f", "bf1", "f41", "gs4")
+  # The data rows are the components of the wage total, cut two non-crossing ways:
+  # by sex (Men/Women) and by sector (Secondary/Construction/Tertiary). They live on
+  # a single `breakdown` dimension. Each row is identified by its workbook LABEL
+  # (column 3), not its position, so an inserted/reordered row can't mislabel them.
+  label_to_code <- c("TOTAL" = "tot", "Men" = "m", "Women" = "f",
+                     "SECTOR 2" = "bf1", "Construction" = "f41", "SECTOR 3" = "gs4")
 
-  parse_block <- function(m, header_row, data_rows, measure_code) {
-    # Year header lives on header_row; value columns are those whose header
-    # parses to a 4-digit year. This automatically skips the NOGA02/NOGA08
-    # break columns (which contain code/label artifacts, not years).
-    hdr <- m[header_row, ]
-    yrs <- suppressWarnings(as.integer(round(num_eu(hdr))))
+  parse_block <- function(m, header_row, body_rows, measure_code) {
+    # value columns = header cells that parse to a 4-digit year (skips the
+    # NOGA02/NOGA08 break columns, which carry code/label artifacts, not years).
+    yrs <- suppressWarnings(as.integer(round(num_eu(m[header_row, ]))))
     col_idx <- which(!is.na(yrs) & yrs >= 1900 & yrs <= 2100)
     years   <- yrs[col_idx]
+    labs    <- trimws(m[body_rows, 3])
 
-    out <- list()
-    for (k in seq_along(data_rows)) {
-      rr   <- data_rows[k]
-      vals <- num_eu(m[rr, col_idx])
-      out[[k]] <- dplyr::tibble(
-        breakdown = breakdown_codes[k],
-        measure   = measure_code,
-        year      = years,
-        value     = vals
-      )
-    }
+    out <- lapply(names(label_to_code), function(lab) {
+      rr <- body_rows[match(lab, labs)]
+      if (is.na(rr))
+        stop(sprintf("ch_fso_wage_idx: row label '%s' missing from the %s block — sheet layout changed?",
+                     lab, measure_code), call. = FALSE)
+      dplyr::tibble(breakdown = label_to_code[[lab]], measure = measure_code,
+                    year = years, value = num_eu(m[rr, col_idx]))
+    })
     dplyr::bind_rows(out)
   }
 
   read_sheet <- function(sheet, adjustment_code) {
-    d <- readxl::read_excel(path, sheet = sheet, col_names = FALSE)
-    m <- as.matrix(d)
-    # Index block:  header row 4,  data rows 5:10
-    # Change block: header row 15, data rows 16:21
-    idx <- parse_block(m, 4, 5:10, "index")
-    chg <- parse_block(m, 15, 16:21, "change")
+    m <- as.matrix(readxl::read_excel(path, sheet = sheet, col_names = FALSE))
+    # The sheet stacks two blocks, each introduced by a "NOGA02" header row: the
+    # index (1993=100) first, then the year-on-year change. Anchor on those header
+    # rows instead of hardcoded row numbers.
+    hdr_rows <- which(trimws(m[, 1]) == "NOGA02")
+    if (length(hdr_rows) != 2L)
+      stop(sprintf("ch_fso_wage_idx: expected 2 NOGA02 header rows in sheet %s, found %d — layout changed?",
+                   sheet, length(hdr_rows)), call. = FALSE)
+    ends <- c(hdr_rows[2] - 1L, nrow(m))
+    idx <- parse_block(m, hdr_rows[1], (hdr_rows[1] + 1L):ends[1], "index")
+    chg <- parse_block(m, hdr_rows[2], (hdr_rows[2] + 1L):ends[2], "change")
+    # Loose, revision-proof sanity that the blocks are in the documented order
+    # (index ~100-150 vs change ~%): catches a block swap without pinning a value.
+    if (stats::median(idx$value, na.rm = TRUE) < 50)
+      stop(sprintf("ch_fso_wage_idx: first block in %s is not index-like (median %.1f) — blocks reordered?",
+                   sheet, stats::median(idx$value, na.rm = TRUE)), call. = FALSE)
     dplyr::mutate(dplyr::bind_rows(idx, chg), adjustment = adjustment_code)
   }
 
@@ -320,14 +319,6 @@ fso_excel_ch_fso_wage_idx <- function(path, pubdate) {
     )
   )
 
-  # Fail-closed: the 6 data rows map to breakdown levels by WORKBOOK ROW ORDER,
-  # so a row insert/reorder upstream would silently mislabel (e.g. Men<->Women).
-  # Anchor on the published Total nominal index at the span ends.
-  .assert_anchor(data, "ch_fso_wage_idx", 101.4525,
-                 breakdown = "tot", measure = "index", adjustment = "nominal", date = "1994-01-01")
-  .assert_anchor(data, "ch_fso_wage_idx", 141.9,
-                 breakdown = "tot", measure = "index", adjustment = "nominal", date = "2025-01-01")
-
   list(id = "ch_fso_wage_idx", data = data, meta = meta)
 }
 
@@ -335,21 +326,35 @@ fso_excel_ch_fso_wage_idx <- function(path, pubdate) {
 fso_excel_ch_fso_pop <- function(path, pubdate) {
   raw <- readxl::read_excel(path, sheet = 1, col_names = FALSE,
                             .name_repair = "minimal")
+  raw <- as.data.frame(raw, stringsAsFactors = FALSE)
 
-  # FSO puts the year in column 1 and demographic components across columns.
+  # Each component is anchored on a distinctive word in its German column header
+  # (the header band spans rows 2-5), not a fixed column number — so an inserted
+  # column can't silently shift the data. The source's `change_abs` / `in %`
+  # columns are intentionally not matched (the first is a trivial first difference
+  # we drop, the second a percentage). `pat` -> (code, English label).
   items <- list(
-    pop_stock_jan  = list(col = 2,  en = "Population on 1 January"),
-    live_births    = list(col = 3,  en = "Live births"),
-    deaths         = list(col = 4,  en = "Deaths"),
-    birth_surplus  = list(col = 5,  en = "Excess of births over deaths"),
-    immigration    = list(col = 6,  en = "Immigration"),
-    emigration     = list(col = 7,  en = "Emigration"),
-    migration_bal  = list(col = 8,  en = "Net migration"),
-    naturalisation = list(col = 9,  en = "Acquisition of Swiss citizenship"),
-    adjustments    = list(col = 10, en = "Adjustments"),
-    pop_stock_dec  = list(col = 11, en = "Population on 31 December"),
-    change_abs     = list(col = 12, en = "Absolute change")
+    pop_stock_jan  = list(pat = "Januar",        en = "Population on 1 January"),
+    live_births    = list(pat = "Lebend",        en = "Live births"),
+    deaths         = list(pat = "Todes",         en = "Deaths"),
+    birth_surplus  = list(pat = "schuss",        en = "Excess of births over deaths"),
+    immigration    = list(pat = "Einwanderung",  en = "Immigration"),
+    emigration     = list(pat = "Auswanderung",  en = "Emigration"),
+    migration_bal  = list(pat = "saldo",         en = "Net migration"),
+    naturalisation = list(pat = "Bürgerrecht", en = "Acquisition of Swiss citizenship"),
+    adjustments    = list(pat = "bereini",       en = "Adjustments"),
+    pop_stock_dec  = list(pat = "Dezember",      en = "Population on 31 December")
   )
+
+  hdr_band <- apply(raw[2:5, , drop = FALSE], 2,
+                    function(col) paste(stats::na.omit(col), collapse = " "))
+  col_of <- function(pat) {
+    hit <- grep(pat, hdr_band, ignore.case = TRUE)
+    if (length(hit) != 1L)
+      stop(sprintf("ch_fso_pop: header pattern '%s' matched %d columns (expected 1) — sheet layout changed?",
+                   pat, length(hit)), call. = FALSE)
+    hit
+  }
 
   # Identify data rows: column 1 holds a 4-digit year.
   yr <- suppressWarnings(as.integer(raw[[1]]))
@@ -367,23 +372,16 @@ fso_excel_ch_fso_pop <- function(path, pubdate) {
   }
 
   pieces <- lapply(names(items), function(code) {
-    col <- items[[code]]$col
-    vals <- parse_num(sub[[col]])
+    col <- col_of(items[[code]]$pat)
     tibble::tibble(
       item  = code,
       date  = as.Date(paste0(years, "-01-01")),
-      value = vals
+      value = parse_num(sub[[col]])
     )
   })
   data <- dplyr::bind_rows(pieces)
   data <- data[!is.na(data$value) & !is.na(data$date), , drop = FALSE]
   data <- dplyr::arrange(data, .data$item, .data$date)
-
-  # Fail-closed: every component is read from a FIXED column number, so a column
-  # insert upstream would silently shift them all. Anchor on an early (col 2) and
-  # a late (col 11) column so any shift is caught.
-  .assert_anchor(data, "ch_fso_pop", 7164444, item = "pop_stock_jan", date = "2000-01-01")
-  .assert_anchor(data, "ch_fso_pop", 7204055, item = "pop_stock_dec", date = "2000-01-01")
 
   levels <- lapply(names(items), function(code) {
     list(label = list(en = items[[code]]$en))
