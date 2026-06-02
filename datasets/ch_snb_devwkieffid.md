@@ -36,17 +36,22 @@ sparse and series-dependent.
 ## Dimensions
 - `D0` Real/Nominal: `N` nominal, `K` real CPI-based, `P` real PPI-based.
 - `D1` Index country group: `G` overall index, `E` euro-area index.
-- `D2` Index/Change: `I` index, `V` day-on-day change in %.
+
+The source's `D2` Index/Change dimension (`I` index, `V` day-on-day % change) is reduced
+to the index: `V` is exactly the app's day-on-day % change transform, derived from `I`.
+Keeping only `I` collapses `D2` away.
 
 ## Display
 - **split**: D1
-- **single-select**: D0, D2
-- **default**: D1=G, D0=K, D2=I
+- **single-select**: D0
+- **default**: D1=G, D0=K
 - **transform**: level
 - **seasonal adjustment**: n/a (SNB publishes no SA toggle for this cube)
 
 ## Caveats / simplifications
 - Daily, weekday-only dates; gaps on holidays are normal, not missing data.
+- The day-on-day change (`V`) is dropped, not stored: it is reproduced by the app's
+  % change toggle.
 - Drop `ch_snb_devwkieffim` (monthly) in favour of this daily cube.
 - SNB has no seasonal-adjustment toggle.
 

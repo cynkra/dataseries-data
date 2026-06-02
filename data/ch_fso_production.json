@@ -4,8 +4,7 @@
   "dim_order": [
     "NOGA",
     "ADJUSTMENT",
-    "INDICATOR_KE",
-    "UNIT_MEASURE"
+    "INDICATOR_KE"
   ],
   "start": "1999-01-01",
   "end": "2026-01-01",
@@ -137,47 +136,17 @@
           "data": true
         }
       }
-    },
-    "UNIT_MEASURE": {
-      "label": {
-        "en": "UNIT_MEASURE"
-      },
-      "levels": {
-        "IX": {
-          "label": {
-            "en": "Index"
-          },
-          "data": true
-        },
-        "VARQ-4": {
-          "label": {
-            "en": "Change compared to same quarter last year"
-          },
-          "data": true
-        },
-        "VARQ-1": {
-          "label": {
-            "en": "Change compared to previous quarter"
-          },
-          "data": true
-        }
-      }
     }
   },
   "concept": "Domestic economy / Industry & construction turnover",
   "canonical": true,
   "split": "NOGA",
-  "single_select": [
-    "ADJUSTMENT",
-    "INDICATOR_KE",
-    "UNIT_MEASURE"
-  ],
+  "single_select": ["ADJUSTMENT", "INDICATOR_KE"],
   "default_transform": "level",
   "default": {
     "NOGA": "B-E",
     "ADJUSTMENT": "Y",
-    "INDICATOR_KE": "PTOT",
-    "UNIT_MEASURE": "IX"
+    "INDICATOR_KE": "PTOT"
   },
-  "fetched_utc": "2026-06-01 15:55:09"
+  "fetched_utc": "2026-06-02 07:38:15"
 }

@@ -51,13 +51,15 @@ the FSO authoritative jobs series with the finer NOGA breakdown.
   (`21` Pharmaceuticals, `26` Watches/electronics, ...); `41-43` Construction;
   service divisions `45`..`96`. Range codes like `10-12` are aggregates of the
   contained two-digit divisions.
-- `Beschäftigungsgrad` (Employment rate): only `TOT` (total) is fetched.
-- `Geschlecht` (Gender): only `TOT` (total) is fetched.
+
+The source's `Beschäftigungsgrad` (Employment rate) and `Geschlecht` (Gender) columns
+only ever carry `TOT` here, so both are dropped: a one-option picker is pure noise. That
+leaves `Wirtschaftsabteilung` as the single dimension.
 
 ## Display
 - **split**: Wirtschaftsabteilung
-- **single-select**: Beschäftigungsgrad, Geschlecht
-- **default**: Wirtschaftsabteilung=5-96, Beschäftigungsgrad=TOT, Geschlecht=TOT
+- **single-select**:
+- **default**: Wirtschaftsabteilung=5-96
 - **transform**: level
 - **seasonal adjustment**: n/a (no seasonal-adjustment dimension; only the total
   employment-rate, total-sex slice is fetched)

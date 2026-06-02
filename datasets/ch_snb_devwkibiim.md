@@ -37,19 +37,21 @@ country-level `devlandm`. Defaults to CPI-based, Austria, index.
 - `D0` Real/Nominal: `N` nominal, `K` real CPI-based, `P` real PPI-based (`R` is the
   non-data parent of K/P).
 - `D1` Countries: ~54 ISO-style partner codes (`US`, `DE`, `JP`, `CN`, `GB`, ...).
-- `D2` Index/Change: `I` index, `V` change from the corresponding month a year
-  earlier, in %.
+
+The source's `D2` Index/Change dimension (`I` index, `V` YoY % change) is reduced to the
+index: `V` is exactly the app's YoY % transform, derived from `I`, so storing it would
+duplicate a button. Keeping only `I` collapses `D2` away.
 
 ## Display
 - **split**: D1
-- **single-select**: D0, D2
-- **default**: D1=US, D0=K, D2=I
+- **single-select**: D0
+- **default**: D1=US, D0=K
 - **transform**: level
 - **seasonal adjustment**: n/a (SNB publishes no SA toggle for this cube)
 
 ## Caveats / simplifications
-- Both index and YoY-change representations are retained; they are not independent
-  series, V is derived from I.
+- The YoY-change representation (`V`) is dropped, not stored: it is derived from the
+  index and reproduced on the fly by the app's YoY % toggle.
 - "Real" is two deflator variants (CPI vs PPI), not a single real series.
 - SNB has no seasonal-adjustment toggle.
 

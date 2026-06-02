@@ -2,9 +2,7 @@
   "schema_version": "1.0",
   "id": "ch_fso_besta",
   "dim_order": [
-    "Wirtschaftsabteilung",
-    "Beschäftigungsgrad",
-    "Geschlecht"
+    "Wirtschaftsabteilung"
   ],
   "start": "1991-07-01",
   "end": "2026-01-01",
@@ -386,47 +384,15 @@
           "data": true
         }
       }
-    },
-    "Beschäftigungsgrad": {
-      "label": {
-        "en": "Employment rate"
-      },
-      "levels": {
-        "TOT": {
-          "label": {
-            "en": "Employment rate - total"
-          },
-          "data": true
-        }
-      }
-    },
-    "Geschlecht": {
-      "label": {
-        "en": "Gender"
-      },
-      "levels": {
-        "TOT": {
-          "label": {
-            "en": "Gender - total"
-          },
-          "data": true
-        }
-      }
     }
   },
-  "topic": "Labour",
   "concept": "Labour / Employment / jobs",
   "canonical": true,
   "split": "Wirtschaftsabteilung",
-  "single_select": [
-    "Beschäftigungsgrad",
-    "Geschlecht"
-  ],
+  "single_select": [],
   "default_transform": "level",
   "default": {
-    "Wirtschaftsabteilung": "5-96",
-    "Beschäftigungsgrad": "TOT",
-    "Geschlecht": "TOT"
+    "Wirtschaftsabteilung": "5-96"
   },
-  "fetched_utc": "2026-06-01 07:15:00"
+  "fetched_utc": "2026-06-02 07:38:17"
 }

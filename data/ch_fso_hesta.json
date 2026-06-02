@@ -2,8 +2,7 @@
   "schema_version": "1.0",
   "id": "ch_fso_hesta",
   "dim_order": [
-    "Tourismusregion",
-    "Indikator"
+    "Tourismusregion"
   ],
   "start": "2005-01-01",
   "end": "2026-03-01",
@@ -109,31 +108,16 @@
           "data": true
         }
       }
-    },
-    "Indikator": {
-      "label": {
-        "en": "Indicator"
-      },
-      "levels": {
-        "2": {
-          "label": {
-            "en": "Overnight stays"
-          },
-          "data": true
-        }
-      }
     }
   },
-  "topic": "Tourism",
   "concept": "Tourism / Hotel overnight stays",
   "canonical": true,
   "featured": "Tourism",
   "split": "Tourismusregion",
-  "single_select": "Indikator",
+  "single_select": [],
   "default_transform": "level",
   "default": {
-    "Tourismusregion": "8100",
-    "Indikator": "2"
+    "Tourismusregion": "8100"
   },
-  "fetched_utc": "2026-06-01 07:15:00"
+  "fetched_utc": "2026-06-02 07:38:16"
 }

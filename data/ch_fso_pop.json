@@ -84,12 +84,6 @@
             "en": "Population on 31 December"
           },
           "data": true
-        },
-        "change_abs": {
-          "label": {
-            "en": "Absolute change"
-          },
-          "data": true
         }
       }
     }
@@ -102,5 +96,5 @@
   "default": {
     "item": "pop_stock_jan"
   },
-  "fetched_utc": "2026-06-01 07:15:00"
+  "fetched_utc": "2026-06-02 07:38:05"
 }

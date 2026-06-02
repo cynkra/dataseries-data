@@ -4,8 +4,7 @@
   "dim_order": [
     "NOGA",
     "ADJUSTMENT",
-    "INDICATOR_KE",
-    "UNIT_MEASURE"
+    "INDICATOR_KE"
   ],
   "start": "2000-01-01",
   "end": "2026-04-01",
@@ -191,47 +190,17 @@
           "data": true
         }
       }
-    },
-    "UNIT_MEASURE": {
-      "label": {
-        "en": "UNIT_MEASURE"
-      },
-      "levels": {
-        "IX": {
-          "label": {
-            "en": "Index"
-          },
-          "data": true
-        },
-        "VARM-12": {
-          "label": {
-            "en": "Change compared to same month last year"
-          },
-          "data": true
-        },
-        "VARM-1": {
-          "label": {
-            "en": "Change compared to previous month"
-          },
-          "data": true
-        }
-      }
     }
   },
   "concept": "Domestic economy / Retail trade turnover",
   "canonical": true,
   "split": "NOGA",
-  "single_select": [
-    "ADJUSTMENT",
-    "INDICATOR_KE",
-    "UNIT_MEASURE"
-  ],
+  "single_select": ["ADJUSTMENT", "INDICATOR_KE"],
   "default_transform": "level",
   "default": {
     "NOGA": "47",
     "ADJUSTMENT": "Y",
-    "INDICATOR_KE": "UTOT",
-    "UNIT_MEASURE": "IX"
+    "INDICATOR_KE": "UTOT"
   },
-  "fetched_utc": "2026-06-01 15:55:05"
+  "fetched_utc": "2026-06-02 07:38:12"
 }

@@ -50,12 +50,15 @@ table also carries arrivals, which this dataset deliberately omits.
   `5` Basel Region, `6` Bern Region, `8` Jura & Three-Lakes, `9` Vaud,
   `10` Geneva, `11` Valais, `12` Ticino, `13` Fribourg Region, `14` Aargau and
   Solothurn Region. (Codes 7 and any gaps are not present in the data.)
-- `Indikator` (Indicator): only `2` = overnight stays is fetched.
+
+The source's `Indikator` (Indicator) column only ever carries `2` (overnight stays)
+here, so it is dropped — a one-option picker is pure noise. "Overnight stays" is implied
+by the dataset title. That leaves `Tourismusregion` as the single dimension.
 
 ## Display
 - **split**: Tourismusregion
-- **single-select**: Indikator
-- **default**: Tourismusregion=8100, Indikator=2
+- **single-select**:
+- **default**: Tourismusregion=8100
 - **transform**: level
 - **seasonal adjustment**: n/a (raw overnight-stay counts; strong seasonal swing is
   intentionally left in the data)

@@ -35,7 +35,9 @@ naturalisations, absolute change).
 ## Dimensions
 - `item`: demographic component (population stock, live births, deaths, birth
   surplus, immigration, emigration, migration balance, naturalisations,
-  adjustments, absolute change, ...).
+  adjustments, ...). The source's `change_abs` ("absolute change") row is dropped —
+  it is the first difference of the population stock, a trivial and rarely-used
+  derivative the user can read straight off the stock series.
 
 ## Display
 - **split**: item
@@ -48,7 +50,7 @@ The single `item` dimension is the breakdown a user compares as lines. The headl
 default opens on the population stock on 1 January (`pop_stock_jan`), which spans the
 full 1861-2024 history and is the natural headline for a resident-population series,
 rather than the most-observations guess (`birth_surplus`). The flow components (births,
-deaths, migration, naturalisations, absolute change) are picked from the same list.
+deaths, migration, naturalisations) are picked from the same list.
 
 ## Caveats / simplifications
 - Per-cell drop of `...` means series have different start years; this is faithful

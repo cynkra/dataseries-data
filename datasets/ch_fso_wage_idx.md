@@ -7,7 +7,7 @@
 - **license**: fso (free reuse, attribution required)
 - **frequency**: annual
 - **coverage**: 1994 .. 2025
-- **series**: 24
+- **series**: 12
 - **updated**: 2026-04-21
 
 ## What is special
@@ -43,13 +43,16 @@ sector and sex. Captures wage development the SNB cubes do not carry at all.
   sex × sector cross product (men/women exist only for the Total sector), which is
   exactly why these are one dimension rather than two. Encoded as a hierarchy so
   the picker renders the "By sex" / "By sector" groups as headers.
-- `measure`: index / change (year-on-year %).
 - `adjustment`: nominal / real.
+
+The published `change` (year-on-year %) series is dropped: it is exactly the app's
+YoY % transform, recomputed on the fly from the index, so storing it would just
+duplicate a button. Keeping only the index collapses the former `measure` dimension.
 
 ## Display
 - **split**: breakdown
-- **single-select**: measure, adjustment
-- **default**: breakdown=tot, measure=index, adjustment=real
+- **single-select**: adjustment
+- **default**: breakdown=tot, adjustment=real
 - **transform**: level
 - **seasonal adjustment**: n/a (no SA dimension; this is an annual index)
 

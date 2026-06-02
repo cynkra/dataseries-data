@@ -38,6 +38,61 @@ fso_excel_dataset <- function(id, order_nr, topic = NULL) {
 
 DATA_DIR <- file.path(dirname(root), "data")
 
+# Redundant transform levels: series the app already reproduces on the fly from
+# the base series via its Level / %-change / YoY / Index toggle. Storing them as
+# dimension levels just duplicates a button, so we drop them at build time. Keyed
+# dataset -> dim -> codes to remove. When a drop leaves a dimension single-valued
+# (e.g. an "Index/Change" pair reduced to just the index), the whole dimension is
+# removed: its column drops out of the data and it disappears from dim_order,
+# single_select and default. The base level is always kept.
+REDUNDANT_LEVELS <- list(
+  ch_fso_wage_idx    = list(measure      = "change"),                 # YoY % vs previous year
+  ch_fso_production  = list(UNIT_MEASURE = c("VARQ-4", "VARQ-1")),    # YoY + quarter-on-quarter
+  ch_fso_retail      = list(UNIT_MEASURE = c("VARM-12", "VARM-1")),   # YoY + month-on-month
+  ch_fso_pop         = list(item         = "change_abs"),             # absolute first difference (rarely used)
+  ch_snb_devwkibiim  = list(D2           = "V"),                      # YoY % (Index/Change)
+  ch_snb_devwkieffid = list(D2           = "V"),                      # day-on-day % (Index/Change)
+  ch_snb_snbmonagg   = list(D0           = "VV"),                     # YoY % (Level/change)
+  ch_snb_plkopr      = list(D0           = "VVP")                     # YoY % = the CPI inflation rate
+)
+
+# Apply REDUNDANT_LEVELS to one built dataset: filter the data rows and prune the
+# matching meta levels. A no-op for datasets not in the table. Collapsing a now
+# single-valued dimension is left to drop_degenerate_dims (run right after), so
+# the two concerns stay separate. Runs after the datasheet merge.
+drop_redundant_levels <- function(ds) {
+  spec <- REDUNDANT_LEVELS[[ds$id]]
+  if (is.null(spec)) return(ds)
+  for (dn in names(spec)) {
+    if (!dn %in% names(ds$data)) next
+    codes <- spec[[dn]]
+    ds$data <- ds$data[!ds$data[[dn]] %in% codes, , drop = FALSE]
+    for (cd in codes) ds$meta$dimensions[[dn]]$levels[[cd]] <- NULL
+  }
+  ds
+}
+
+# Drop any dimension the data pins to a single value: a one-option picker carries
+# no choice, so it is pure noise. Removes the column + its dim meta, then cleans
+# up dangling split / single_select / default references. Catches both
+# pre-existing degenerate dims (e.g. a gender column that only ever carries
+# "total") and dims left single-valued after drop_redundant_levels collapses an
+# index/change pair down to just the index.
+drop_degenerate_dims <- function(ds) {
+  for (dn in dim_cols(ds$data)) {
+    if (length(unique(as.character(ds$data[[dn]]))) <= 1L) {
+      ds$data[[dn]] <- NULL
+      ds$meta$dimensions[[dn]] <- NULL
+    }
+  }
+  keep <- dim_cols(ds$data)
+  if (!is.null(ds$meta$split) && !ds$meta$split %in% keep) ds$meta$split <- NULL
+  ds$meta$single_select <- intersect(ds$meta$single_select, keep)
+  if (!is.null(ds$meta$default))
+    ds$meta$default <- ds$meta$default[names(ds$meta$default) %in% keep]
+  ds
+}
+
 # This run's skipped datasets (a transient fetch error skips one source and keeps
 # going). Recorded so main() can append them to the skip history log.
 .SKIPPED <- list()
@@ -182,6 +237,10 @@ main <- function() {
     # Curation (concept + canonical + featured) is derived from the datasheet, the source of truth.
     datasets[[i]]$meta <- modifyList(datasets[[i]]$meta,
                                      read_datasheet_meta(datasets[[i]]$id, DATASHEET_DIR))
+    # Drop levels the app reproduces via its transform toggle (see REDUNDANT_LEVELS),
+    # then drop any dimension thereby (or already) pinned to a single value.
+    datasets[[i]] <- drop_redundant_levels(datasets[[i]])
+    datasets[[i]] <- drop_degenerate_dims(datasets[[i]])
     # Capture the return: write_dataset() stamps meta$fetched_utc, which
     # write_catalog() below reads into the catalog "fetched" field.
     datasets[[i]] <- write_dataset(datasets[[i]], DATA_DIR)

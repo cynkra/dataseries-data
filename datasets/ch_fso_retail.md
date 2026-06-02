@@ -44,12 +44,16 @@ codes (`47`, `4711`, `472`, `473`, …, `47P*`).
   seasonally + calendar adjusted).
 - `INDICATOR_KE` — turnover concept (`UTOT` total nominal, `UINL` domestic, `UEXP`
   foreign, `PTOT` real production volume).
-- `UNIT_MEASURE` — result type (`IX` index, `VARM-12` year-on-year change, …).
+
+The flow also carries a `UNIT_MEASURE` dimension (`IX` index, `VARM-12` year-on-year
+change, `VARM-1` month-on-month change). We keep only the index `IX` and drop the two
+change levels — they are exactly the app's YoY % and month-on-month transforms,
+recomputed from the index — which collapses `UNIT_MEASURE` away entirely.
 
 ## Display
 - **split**: NOGA
-- **single-select**: ADJUSTMENT, INDICATOR_KE, UNIT_MEASURE
-- **default**: NOGA=47, ADJUSTMENT=Y, INDICATOR_KE=UTOT, UNIT_MEASURE=IX
+- **single-select**: ADJUSTMENT, INDICATOR_KE
+- **default**: NOGA=47, ADJUSTMENT=Y, INDICATOR_KE=UTOT
 - **transform**: level
 - **seasonal adjustment**: single-select on `ADJUSTMENT`; default to seasonally +
   calendar adjusted (`Y`); raw (`N`) and calendar-only (`W`) available as toggles.
@@ -58,8 +62,8 @@ codes (`47`, `4711`, `472`, `473`, …, `47P*`).
 - Only the retail division 47 NOGA codes are kept; the full `DF_KEU_M1` flow also
   carries the secondary sector and the rest of the tertiary sector (those live in
   `ch_fso_production` and could seed further datasets).
-- The flow mixes index levels and change rates in `UNIT_MEASURE`; the opening view
-  picks the index (`IX`).
+- The flow mixes index levels and change rates in `UNIT_MEASURE`; only the index
+  (`IX`) is kept, since the change rates duplicate the app's transform toggle.
 
 ## Provenance
 Script: `R/source_fso_sdmx.R::fso_sdmx_fetch` (wired in `R/pipeline.R`). Datasheet

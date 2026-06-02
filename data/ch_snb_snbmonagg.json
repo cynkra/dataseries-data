@@ -2,7 +2,6 @@
   "schema_version": "1.0",
   "id": "ch_snb_snbmonagg",
   "dim_order": [
-    "D0",
     "D1"
   ],
   "start": "1984-12-01",
@@ -19,29 +18,6 @@
   "license": "snb",
   "frequency": "monthly",
   "dimensions": {
-    "D0": {
-      "label": {
-        "en": "Level/change"
-      },
-      "levels": {
-        "B": {
-          "label": {
-            "en": "Level"
-          },
-          "data": true
-        },
-        "VV": {
-          "label": {
-            "en": "Change from the corresponding month of the previous year"
-          },
-          "data": true
-        }
-      },
-      "hierarchy": {
-        "B": [],
-        "VV": []
-      }
-    },
     "D1": {
       "label": {
         "en": "Monetary aggregates"
@@ -108,15 +84,13 @@
       }
     }
   },
-  "topic": "Money and banking",
   "concept": "Money & banking / Monetary aggregates",
   "canonical": true,
   "split": "D1",
-  "single_select": "D0",
+  "single_select": [],
   "default_transform": "level",
   "default": {
-    "D1": "GM3",
-    "D0": "B"
+    "D1": "GM3"
   },
-  "fetched_utc": "2026-06-01 07:15:00"
+  "fetched_utc": "2026-06-02 07:39:12"
 }

@@ -12,17 +12,18 @@
 
 ## What is special
 The headline Swiss monetary aggregates, monthly from 1984. This is the canonical
-money-supply series. It is the only cube in this group with two dimensions, which
-gives it a clean matrix shape: `D0` is level vs year-on-year change, `D1` is the
-component or aggregate. The components nest into the aggregates by construction:
+money-supply series. The source cube has two dimensions — `D0` level vs year-on-year
+change, `D1` the component or aggregate — but `D0` is dropped: its `VV` (year-on-year
+change) level is exactly the app's YoY % transform, derived from the `B` level, so
+keeping only `B` collapses `D0` away and leaves `D1` as the single dimension. The
+components nest into the aggregates by construction:
 currency in circulation + sight deposits + deposits in transaction accounts ->
 **M1**; M1 + savings deposits -> **M2**; M2 + time deposits -> **M3**. So the cube
 ships the building blocks (`B`, `S0`, `ET`, `S1`, `T`) and the three totals
-(`GM1`, `GM2`, `GM3`) side by side, each available as a CHF-million level (`B`) and
-as a year-over-year percentage change (`VV`). That 2x8 cross is exactly the 16
-stored series. Compared with `snbmoba` (base money, the central bank's own
-liabilities), these aggregates measure money held by the public, which is why this
-is the canonical aggregate and the base is the alternate.
+(`GM1`, `GM2`, `GM3`) side by side as CHF-million levels — 8 stored series. Compared
+with `snbmoba` (base money, the central bank's own liabilities), these aggregates
+measure money held by the public, which is why this is the canonical aggregate and
+the base is the alternate.
 
 ## Access
 - **type**: SNB cube API
@@ -35,28 +36,27 @@ is the canonical aggregate and the base is the alternate.
   `D0,D1` in order. Long tibble of `D0,D1,date,value`. Dates -> first of month.
   Drop null values. Sort by `D0,D1,date`.
 - `D0=B` rows are CHF-million levels; `D0=VV` rows are percentage changes vs the
-  same month a year earlier. Same `D1` code means different unit depending on `D0`.
+  same month a year earlier. We keep only `D0=B` and drop `D0=VV` (the app's YoY %
+  toggle reproduces it), then drop the now single-valued `D0` column.
 
 ## Dimensions
-- `D0` (Level/change): `B` level (CHF millions), `VV` change vs the corresponding
-  month of the previous year (%).
 - `D1` (Monetary aggregates): components `B` currency in circulation, `S0` sight
   deposits, `ET` deposits in transaction accounts, `S1` savings deposits, `T` time
-  deposits; aggregates `GM1` M1, `GM2` M2, `GM3` M3.
+  deposits; aggregates `GM1` M1, `GM2` M2, `GM3` M3. (The dropped `D0` dimension
+  separated level from year-on-year change; only the level is kept — see above.)
 
 ## Display
 - **split**: D1
-- **single-select**: D0
-- **default**: D1=GM3, D0=B
+- **single-select**:
+- **default**: D1=GM3
 - **transform**: level
 - **seasonal adjustment**: n/a (no seasonal-adjustment dimension). Opens on the
-  broadest aggregate M3 (`D1=GM3`) as a CHF-million level (`D0=B`) rather than the
-  year-on-year change (`D0=VV`); switch `D0` to `VV` for the growth-rate view.
+  broadest aggregate M3 (`D1=GM3`) as a CHF-million level; use the app's YoY %
+  toggle for the growth-rate view.
 
 ## Caveats / simplifications
-- The code `B` is overloaded: in `D0` it means "level", in `D1` it means "currency
-  in circulation". They are distinguished only by which dimension column they sit
-  in.
+- After dropping `D0`, the code `B` is unambiguous: it now only appears in `D1`
+  ("currency in circulation"). (In the source it doubled as the `D0` "level" code.)
 - Aggregates and their components are both present, so naive sums over `D1` would
   double count. The aggregation is definitional (M1 < M2 < M3), captured in the
   `D1` labels, not in a separate flag.

@@ -3,7 +3,6 @@
   "id": "ch_fso_wage_idx",
   "dim_order": [
     "breakdown",
-    "measure",
     "adjustment"
   ],
   "start": "1994-01-01",
@@ -91,25 +90,6 @@
         }
       }
     },
-    "measure": {
-      "label": {
-        "en": "Measure"
-      },
-      "levels": {
-        "index": {
-          "label": {
-            "en": "Index (1993 = 100)"
-          },
-          "data": true
-        },
-        "change": {
-          "label": {
-            "en": "Variation in % compared with previous year"
-          },
-          "data": true
-        }
-      }
-    },
     "adjustment": {
       "label": {
         "en": "Adjustment"
@@ -133,12 +113,11 @@
   "concept": "Labour / Wages",
   "canonical": true,
   "split": "breakdown",
-  "single_select": ["measure", "adjustment"],
+  "single_select": "adjustment",
   "default_transform": "level",
   "default": {
     "breakdown": "tot",
-    "measure": "index",
     "adjustment": "real"
   },
-  "fetched_utc": "2026-06-02 06:58:25"
+  "fetched_utc": "2026-06-02 07:38:05"
 }

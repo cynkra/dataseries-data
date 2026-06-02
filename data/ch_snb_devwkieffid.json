@@ -3,8 +3,7 @@
   "id": "ch_snb_devwkieffid",
   "dim_order": [
     "D0",
-    "D1",
-    "D2"
+    "D1"
   ],
   "start": "1999-01-01",
   "end": "2026-04-30",
@@ -80,44 +79,16 @@
         "G": [],
         "E": []
       }
-    },
-    "D2": {
-      "label": {
-        "en": "Index/Change"
-      },
-      "levels": {
-        "I": {
-          "label": {
-            "en": "Index"
-          },
-          "data": true
-        },
-        "V": {
-          "label": {
-            "en": "Day-on-day change in %"
-          },
-          "data": true
-        }
-      },
-      "hierarchy": {
-        "I": [],
-        "V": []
-      }
     }
   },
-  "topic": "Exchange rates",
   "concept": "Exchange rates / Effective FX index",
   "canonical": true,
   "split": "D1",
-  "single_select": [
-    "D0",
-    "D2"
-  ],
+  "single_select": "D0",
   "default_transform": "level",
   "default": {
     "D1": "G",
-    "D0": "K",
-    "D2": "I"
+    "D0": "K"
   },
-  "fetched_utc": "2026-06-01 07:15:00"
+  "fetched_utc": "2026-06-02 07:39:11"
 }

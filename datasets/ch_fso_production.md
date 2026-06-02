@@ -45,12 +45,16 @@ the secondary-sector section/division codes listed above.
   seasonally + calendar adjusted).
 - `INDICATOR_KE` — turnover concept (`UTOT` total nominal, `UINL` domestic, `UEXP`
   foreign, `PTOT` real production volume).
-- `UNIT_MEASURE` — result type (`IX` index, `VARQ-4` year-on-year change, …).
+
+The flow also carries a `UNIT_MEASURE` dimension (`IX` index, `VARQ-4` year-on-year
+change, `VARQ-1` quarter-on-quarter change). We keep only the index `IX` and drop the
+two change levels — they are exactly the app's YoY % and quarter-on-quarter transforms,
+recomputed from the index — which collapses `UNIT_MEASURE` away entirely.
 
 ## Display
 - **split**: NOGA
-- **single-select**: ADJUSTMENT, INDICATOR_KE, UNIT_MEASURE
-- **default**: NOGA=B-E, ADJUSTMENT=Y, INDICATOR_KE=PTOT, UNIT_MEASURE=IX
+- **single-select**: ADJUSTMENT, INDICATOR_KE
+- **default**: NOGA=B-E, ADJUSTMENT=Y, INDICATOR_KE=PTOT
 - **transform**: level
 - **seasonal adjustment**: single-select on `ADJUSTMENT`; default to seasonally +
   calendar adjusted (`Y`); raw (`N`) and calendar-only (`W`) available as toggles.

@@ -1,9 +1,7 @@
 {
   "schema_version": "1.0",
   "id": "ch_snb_plkopr",
-  "dim_order": [
-    "D0"
-  ],
+  "dim_order": [],
   "start": "1921-01-01",
   "end": "2026-04-01",
   "title": {
@@ -17,40 +15,12 @@
   },
   "license": "snb",
   "frequency": "monthly",
-  "dimensions": {
-    "D0": {
-      "label": {
-        "en": "Overview"
-      },
-      "levels": {
-        "LD2010100": {
-          "label": {
-            "en": "National index – December 2025 = 100"
-          },
-          "data": true
-        },
-        "VVP": {
-          "label": {
-            "en": "Change from the corresponding month of the previous year in %"
-          },
-          "data": true
-        }
-      },
-      "hierarchy": {
-        "LD2010100": [],
-        "VVP": []
-      }
-    }
-  },
-  "topic": "Prices",
+  "dimensions": {},
   "concept": "Prices / Consumer prices",
   "canonical": true,
   "featured": "Inflation",
-  "split": "D0",
-  "single_select": "n/a (single dimension)",
+  "single_select": [],
   "default_transform": "yoy",
-  "default": {
-    "D0": "LD2010100"
-  },
-  "fetched_utc": "2026-06-02 04:56:50"
+  "default": [],
+  "fetched_utc": "2026-06-02 07:39:13"
 }
