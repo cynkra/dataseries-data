@@ -441,6 +441,27 @@
     "meta": "ch_snb_plimoinchq.json"
   },
   {
+    "id": "ch_snb_plkopr",
+    "title": {
+      "en": "Consumer Price Index (LIK) – national index, long history"
+    },
+    "concept": "Prices / Consumer prices",
+    "canonical": true,
+    "featured": "Inflation",
+    "topic": "Prices",
+    "source": "Swiss National Bank",
+    "license": "snb",
+    "frequency": "monthly",
+    "start": "1921-01-01",
+    "end": "2026-04-01",
+    "n_series": 2,
+    "updated": null,
+    "fetched": "2026-06-02 04:56:50",
+    "load": "whole",
+    "data": "ch_snb_plkopr.csv",
+    "meta": "ch_snb_plkopr.json"
+  },
+  {
     "id": "ch_snb_plkoprinfla",
     "title": {
       "en": "Consumer prices – SNB and SFSO core inflation rates"
@@ -911,8 +932,7 @@
       "en": "Consumer Price Index (LIK)"
     },
     "concept": "Prices / Consumer prices",
-    "canonical": true,
-    "featured": "Inflation",
+    "canonical": false,
     "topic": "Prices",
     "source": "Swiss Federal Statistical Office (FSO)",
     "license": "fso",

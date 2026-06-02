@@ -41,7 +41,7 @@ kept and labelled; *dropped* series are removed from ingestion.
 ### Prices
 | Concept | Canonical | Freq | Alternates / notes | Dropped |
 |---|---|---|---|---|
-| Consumer prices (CPI) | `ch_fso_cpi` (FSO, 443 positions) | monthly | — | SNB `plkopr` |
+| Consumer prices (CPI) | SNB `plkopr` (headline total, since 1921) | monthly | `ch_fso_cpi` (FSO, 443 positions — detailed COICOP breakdown, since 1982) | — |
 | Core inflation | SNB `plkoprinfla` | monthly | analytical SNB/SFSO measure, not raw CPI — keep | — |
 | Producer & import prices | `ch_fso_ppi` (FSO) | monthly | base-year variants are one series | — |
 | Real estate prices | SNB `plimoinchq` | quarterly | no FSO equivalent in set | — |
@@ -117,7 +117,6 @@ kept and labelled; *dropped* series are removed from ingestion.
 
 **Dropped (pure format re-exports — canonical exists elsewhere):**
 - SNB `gdppn`, SNB `gdpap` → SECO `ch_seco_gdp` is canonical GDP.
-- SNB `plkopr` → FSO `ch_fso_cpi` is canonical CPI.
 - FSO `ch_fso_gdp_use` (annual expenditure) → redundant with the SECO quarterly
   expenditure breakdown (canonical), at lower frequency.
 
@@ -127,7 +126,13 @@ kept and labelled; *dropped* series are removed from ingestion.
 
 **Kept as labelled alternates (genuinely different definition):**
 - Unemployment: SNB `amarbma` (registered, SECO-origin) **and** FSO `ch_fso_unemp_rate` (ILO).
-- Inflation: FSO `ch_fso_cpi` (headline) **and** SNB `plkoprinfla` (core).
+- Inflation: SNB `plkoprinfla` (core) alongside the headline CPI.
+- Consumer prices: SNB `plkopr` (canonical — headline total back to **1921**)
+  **and** FSO `ch_fso_cpi` (the detailed 443-position COICOP basket, but only back
+  to 1982). The long headline beats the detailed-but-short asset for the canonical
+  slot; the FSO breakdown is kept as the labelled alternate. (Reversed 2026-06-02:
+  `plkopr` was previously dropped as a "pure re-export" — that call missed the
+  ~61 extra years of headline history the SNB chain carries.)
 
 **Kept overview cubes (carry unique aggregates the detail cubes lack):**
 - `ch_snb_bopoverq` — capital account + statistical difference.

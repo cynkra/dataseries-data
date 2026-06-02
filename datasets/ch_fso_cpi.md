@@ -2,8 +2,7 @@
 
 - **id**: ch_fso_cpi
 - **concept**: Prices / Consumer prices
-- **canonical**: yes
-- **featured**: Inflation
+- **canonical**: no (alternate for Consumer prices — the detailed basket breakdown)
 - **source**: Swiss Federal Statistical Office (FSO)
 - **license**: fso (free reuse, attribution required)
 - **frequency**: monthly
@@ -12,12 +11,15 @@
 - **updated**: 2026-05-05
 
 ## What is special
-The Swiss headline inflation measure (Landesindex der Konsumentenpreise). This is
-the canonical CPI: it carries the **full position hierarchy**, 595 positions from
-the total index down to COICOP sub-baskets (food, housing, transport, ...), not
-just the headline total. It replaces the SNB re-export `plkopr` (which is only the
-total). Base period December 2025 = 100 (asset `su-d-05.02.66`, which superseded
-the frozen Dec-2020=100 asset `su-d-05.02.67`). History to December 1982.
+The Swiss CPI (Landesindex der Konsumentenpreise) with the **full position
+hierarchy**: 595 positions from the total index down to COICOP sub-baskets (food,
+housing, transport, ...), not just the headline total. This is the **detailed
+alternate** to the canonical SNB headline series (`ch_snb_plkopr`): reach for this
+one when you want the basket breakdown, and for `ch_snb_plkopr` when you want the
+headline total or YoY inflation across the long history (the FSO asset only carries
+the hierarchy from December 1982, whereas the SNB chain reaches back to 1921). Base
+period December 2025 = 100 (asset `su-d-05.02.66`, which superseded the frozen
+Dec-2020=100 asset `su-d-05.02.67`). History to December 1982.
 
 ## Access
 - **type**: FSO DAM Excel asset
