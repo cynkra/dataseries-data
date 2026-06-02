@@ -15,7 +15,7 @@ root <- tryCatch(
 )
 for (f in c("dates.R", "http.R", "io.R", "source_snb.R", "source_kof.R",
             "source_fso.R", "source_fso_excel.R", "source_fso_excel_sets.R",
-            "source_fso_sdmx.R", "source_seco.R", "source_ffa.R")) {
+            "source_fso_sdmx.R", "source_seco.R", "source_ffa.R", "source_adecco.R")) {
   source(file.path(root, f))
 }
 
@@ -188,6 +188,10 @@ build <- function() {
   add(.try_fetch("ch_kof_barometer",
                  kof_fetch("ch.kof.barometer", title = list(en = "KOF Economic Barometer")),
                  "Business cycle"))
+
+  # University of Zurich / Adecco Group Swiss Job Market Index — a non-government
+  # provider; quarterly index of advertised job openings (leading labour indicator).
+  add(.try_fetch("ch_adecco_sjmi", adecco_fetch("ch_adecco_sjmi"), "Labour"))
 
   # FSO: hotel overnight stays by tourism region, monthly.
   fso_query <- list(

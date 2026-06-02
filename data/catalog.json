@@ -1116,5 +1116,26 @@
     "load": "whole",
     "data": "ch_ffa_finances.csv",
     "meta": "ch_ffa_finances.json"
+  },
+  {
+    "id": "ch_adecco_sjmi",
+    "title": {
+      "en": "Adecco Group Swiss Job Market Index"
+    },
+    "concept": "Labour / Job market",
+    "canonical": true,
+    "featured": null,
+    "topic": "Labour",
+    "source": "University of Zurich (Stellenmarkt-Monitor Schweiz)",
+    "license": "Stellenmarkt-Monitor Schweiz, University of Zurich (free use, attribution required; Adecco Group Swiss Job Market Index)",
+    "frequency": "quarterly",
+    "start": "2003-03-01",
+    "end": "2026-03-01",
+    "n_series": 5,
+    "updated": null,
+    "fetched": "2026-06-02 08:33:37",
+    "load": "whole",
+    "data": "ch_adecco_sjmi.csv",
+    "meta": "ch_adecco_sjmi.json"
   }
 ]

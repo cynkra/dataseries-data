@@ -1,0 +1,80 @@
+{
+  "schema_version": "1.0",
+  "id": "ch_adecco_sjmi",
+  "dim_order": [
+    "index"
+  ],
+  "start": "2003-03-01",
+  "end": "2026-03-01",
+  "title": {
+    "en": "Adecco Group Swiss Job Market Index"
+  },
+  "source": {
+    "name": {
+      "en": "University of Zurich (Stellenmarkt-Monitor Schweiz)"
+    },
+    "url": "https://www.stellenmarktmonitor.uzh.ch/de/indices/asjmi.html"
+  },
+  "license": "Stellenmarkt-Monitor Schweiz, University of Zurich (free use, attribution required; Adecco Group Swiss Job Market Index)",
+  "frequency": "quarterly",
+  "topic": "Labour",
+  "units": {
+    "en": "Index, Q1 2008 = 100"
+  },
+  "dimensions": {
+    "index": {
+      "label": {
+        "en": "Index"
+      },
+      "levels": {
+        "gesamt": {
+          "label": {
+            "en": "Total"
+          },
+          "data": true
+        },
+        "gesamt_sa": {
+          "label": {
+            "en": "Total, seasonally adjusted"
+          },
+          "data": true
+        },
+        "internet": {
+          "label": {
+            "en": "Internet job portals"
+          },
+          "data": true
+        },
+        "company": {
+          "label": {
+            "en": "Company websites"
+          },
+          "data": true
+        },
+        "press": {
+          "label": {
+            "en": "Press (newspapers)"
+          },
+          "data": true
+        }
+      },
+      "hierarchy": {
+        "gesamt": {
+          "internet": [],
+          "company": [],
+          "press": []
+        },
+        "gesamt_sa": []
+      }
+    }
+  },
+  "concept": "Labour / Job market",
+  "canonical": true,
+  "split": "index",
+  "single_select": [],
+  "default_transform": "level",
+  "default": {
+    "index": "gesamt"
+  },
+  "fetched_utc": "2026-06-02 08:33:37"
+}
