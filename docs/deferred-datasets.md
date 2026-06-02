@@ -32,30 +32,40 @@ than once. It is now written here and in `source-quirks.md` so it stops getting 
 
 ---
 
-## Deferred datasets (reachable — pending a fetcher/slice, except PMI)
+## Still deferred (verified 2026-06-02)
 
-| Dataset | Provider | How to actually get it (verified 2026-06-02) | Remaining work |
+| Dataset | Provider | Status / how to get it | Why still deferred |
 |---|---|---|---|
-| New vehicle registrations | FSO | **SDMX** agency `CH1.MFZ_IVS`, flow `DF_IVS_0_GENERAL_M` (monthly) / `DF_IVS_0_GENERAL` (annual). Live, current. | Generic SDMX fetcher (the existing one is hardcoded to the `CH1.KEU` dim set) + slice to Switzerland-total (full key is ~50MB). |
-| Vacant dwellings (Leerwohnungsziffer) | FSO | **SDMX** agency `CH1.LWZ`, flow `DF_LWZ_1`. Live. | Same generic SDMX fetcher; cube is ~2.5M rows at municipality level — slice to national total + total rooms/type. |
-| Construction investment (Bauinvestitionen) | FSO | **DAM Excel** order `je-d-09.04.01.27` (asset 35965030), via `fso_excel_download`. Live. | Bespoke parser: multi-sheet snapshot (one sheet/year, methodology break 2012-2013) — stitch the "Total" row across sheets. |
-| Industrial production **& orders** | FSO | Turnover already shipped (`ch_fso_production`, SDMX `CH1.KEU`). **Orders** not yet located — likely another SDMX flow under the production/`KEU` agency or a DAM asset. | Find the orders flow in the SDMX dataflow list (search "order"/"Auftrag"); orders is the valuable leading indicator. |
-| Employed persons (ETS / Erwerbstätige) | FSO | Not yet pinned. Check the SDMX dataflow list (likely a `DF_…` employment flow) before anything else. | Identify the flow, then slice. |
-| Purchasing Managers' Index (PMI) | procure.ch / UBS (was Credit Suisse) | **Genuinely closed** — no open file; headline only in press releases. The classic "Macrobond closed-data" case. | Scrape press releases or license a feed. Fragile + licensing-dubious; **not recommended.** This is the only truly-blocked one. |
+| Construction investment (Bauinvestitionen) | FSO | **Reachable** via DAM Excel order `je-d-09.04.01.27` (asset 35965030). A working multi-sheet stitch recipe exists (see below). | The **absolute-level series only runs 2005–2019** — the 5 newest workbook sheets publish *only* provisional YoY %-change, no levels. Shipping a series that ends 2019 is low value; revisit when FSO republishes absolute figures, or chain the published growth onto 2019. |
+| Industrial **order intake** (Auftragseingang/-bestand) | FSO | **Not on SDMX.** Exhaustively searched all 182 dataflows (order/Auftrag/intake/book/eingang/commande) — absent. Turnover *is* shipped (`ch_fso_production`). | Would need the STAT-TAB (dead from our env) or DAM Excel channel, or SECO/KOF survey. Do **not** re-search SDMX. |
+| Employed persons (ETS / Erwerbstätige) | FSO | **Not on SDMX.** Enumerated all 182 dataflows — the ILO employment headcount is absent. | Would need PX-Web (`source_fso.R`) or a DAM Excel asset. Do **not** re-search SDMX. |
+| Purchasing Managers' Index (PMI) | procure.ch / UBS | **Genuinely closed** — no open file; headline only in press releases. | Scrape press releases or license a feed. Fragile + licensing-dubious; **not recommended.** |
+
+### Construction stitch recipe (if/when wanted)
+DAM Excel `je-d-09.04.01.27`, one sheet per year-pair. Year = first 4 chars of the
+sheet name. Keep only sheets containing the literal `in Mio. Fr.` (the 2020-2021…
+2024-2025 sheets are %-change-only → drop). Locate columns by header text, never by
+index (layouts vary 13/25/5-col): `Tiefbau`/`Hochbau` group headers + the first
+`in Mio. Fr.` sub-header in each group (the second is Arbeitsvorrat/backlog — skip).
+National row = `col1 == "Total"`. Emit tiefbau / hochbau / total, CHF mn current
+prices. Methodology break alte→neue Erhebung at 2012/2013 (smooth, +4.5%; flag, no
+chaining needed). Verified extract: 2007 Total=47459.8, 2012=56268.3, 2013=58783.5,
+2019=61339.7.
 
 ---
 
 ## Recently un-deferred (added)
 
+- **New registrations of passenger cars by fuel** (`ch_fso_new_vehicles`) — added
+  2026-06-02. FSO **SDMX** `CH1.MFZ_IVS/DF_IVS_0_GENERAL_M`, national-total slice,
+  12 fuel series 2005–2026. See `datasets/ch_fso_new_vehicles.md`.
+- **Vacant dwellings** (`ch_fso_vacant_dwellings`) — added 2026-06-02. FSO **SDMX**
+  `CH1.LWZ/DF_LWZ_1`, vacancy rate + count, 1995–2025. See
+  `datasets/ch_fso_vacant_dwellings.md`.
 - **Adecco Group Swiss Job Market Index** (`ch_adecco_sjmi`) — added 2026-06-02. The
-  catalog's first **non-government provider** (University of Zurich
-  Stellenmarkt-Monitor). Scraped DAM `.xlsx`, fully reachable — see
-  `datasets/ch_adecco_sjmi.md`.
+  catalog's first **non-government provider** (UZH Stellenmarkt-Monitor). Scraped
+  DAM `.xlsx`. See `datasets/ch_adecco_sjmi.md`.
 
-## Next step to clear the FSO set
-
-The single highest-leverage move is a **generic SDMX fetcher** (generalize
-`R/source_fso_sdmx.R` beyond the `CH1.KEU` dimension set, parameterized by agency +
-flow + a national-total key filter). That unblocks vehicles and dwellings at once,
-and any future SDMX flow. Construction needs a separate bespoke Excel parser. Only
-PMI stays deferred for real.
+Both SDMX adds use the new sliced helper `R/source_fso_sdmx.R::sdmx_sliced` (a
+national-total key pull, since the full cubes are millions of rows) — the reusable
+pattern for any future large SDMX flow.
