@@ -198,10 +198,12 @@ fso_excel_ch_fso_wage_idx <- function(path, pubdate) {
     suppressWarnings(as.numeric(x))
   }
 
-  # Sector + sex assignment for the 6 data rows in each block
-  # (rows in workbook order: TOTAL, Men, Women, SECTOR 2, Construction, SECTOR 3)
-  sector_codes <- c("bs0", "bs0", "bs0", "bf1", "f41", "gs4")
-  sex_codes    <- c("tot", "m", "f", "tot", "tot", "tot")
+  # The 6 data rows in each block are the components of the wage total, cut two
+  # non-crossing ways: by sex (Men/Women) and by sector (Secondary/Construction/
+  # Tertiary). The source carries no sex x sector cross product, so they live on a
+  # single `breakdown` dimension (one overlay axis) rather than two single-selects.
+  # Workbook row order: TOTAL, Men, Women, SECTOR 2, Construction, SECTOR 3.
+  breakdown_codes <- c("tot", "m", "f", "bf1", "f41", "gs4")
 
   parse_block <- function(m, header_row, data_rows, measure_code) {
     # Year header lives on header_row; value columns are those whose header
@@ -217,11 +219,10 @@ fso_excel_ch_fso_wage_idx <- function(path, pubdate) {
       rr   <- data_rows[k]
       vals <- num_eu(m[rr, col_idx])
       out[[k]] <- dplyr::tibble(
-        sector  = sector_codes[k],
-        sex     = sex_codes[k],
-        measure = measure_code,
-        year    = years,
-        value   = vals
+        breakdown = breakdown_codes[k],
+        measure   = measure_code,
+        year      = years,
+        value     = vals
       )
     }
     dplyr::bind_rows(out)
@@ -243,8 +244,8 @@ fso_excel_ch_fso_wage_idx <- function(path, pubdate) {
   data <- dplyr::bind_rows(nominal, real)
   data <- dplyr::filter(data, !is.na(year), !is.na(value))
   data <- dplyr::mutate(data, date = as.Date(sprintf("%d-01-01", year)))
-  data <- dplyr::select(data, sector, sex, measure, adjustment, date, value)
-  data <- dplyr::arrange(data, adjustment, measure, sector, sex, date)
+  data <- dplyr::select(data, breakdown, measure, adjustment, date, value)
+  data <- dplyr::arrange(data, adjustment, measure, breakdown, date)
 
   meta <- list(
     title  = list(en = "Swiss Wage Index"),
@@ -257,21 +258,27 @@ fso_excel_ch_fso_wage_idx <- function(path, pubdate) {
     topic     = "Wages",
     updated   = as.character(pubdate),
     dimensions = list(
-      sector = list(
-        label = list(en = "Economic sector"),
+      # One overlay axis: the Total wage index and its two non-crossing cuts
+      # (by sex, by sector). Encoded as a hierarchy so the picker renders the
+      # "By sex" / "By sector" groups as headers and Men/Women can be overlaid
+      # in the same chart. Construction is nested under Secondary (sub-position).
+      breakdown = list(
+        label = list(en = "Breakdown"),
         levels = list(
-          bs0 = list(label = list(en = "Total")),
-          bf1 = list(label = list(en = "Secondary sector")),
-          f41 = list(label = list(en = "Construction")),
-          gs4 = list(label = list(en = "Tertiary sector"))
-        )
-      ),
-      sex = list(
-        label = list(en = "Sex"),
-        levels = list(
-          tot = list(label = list(en = "Total")),
-          m   = list(label = list(en = "Men")),
-          f   = list(label = list(en = "Women"))
+          tot       = list(label = list(en = "Total")),
+          by_sex    = list(label = list(en = "By sex")),
+          m         = list(label = list(en = "Men")),
+          f         = list(label = list(en = "Women")),
+          by_sector = list(label = list(en = "By sector")),
+          bf1       = list(label = list(en = "Secondary sector")),
+          f41       = list(label = list(en = "Construction")),
+          gs4       = list(label = list(en = "Tertiary sector"))
+        ),
+        hierarchy = list(
+          tot = list(
+            by_sex    = list(m = list(), f = list()),
+            by_sector = list(bf1 = list(f41 = list()), gs4 = list())
+          )
         )
       ),
       measure = list(

@@ -2,8 +2,7 @@
   "schema_version": "1.0",
   "id": "ch_fso_wage_idx",
   "dim_order": [
-    "sector",
-    "sex",
+    "breakdown",
     "measure",
     "adjustment"
   ],
@@ -23,16 +22,40 @@
   "topic": "Wages",
   "updated": "2026-04-21",
   "dimensions": {
-    "sector": {
+    "breakdown": {
       "label": {
-        "en": "Economic sector"
+        "en": "Breakdown"
       },
       "levels": {
-        "bs0": {
+        "tot": {
           "label": {
             "en": "Total"
           },
           "data": true
+        },
+        "by_sex": {
+          "label": {
+            "en": "By sex"
+          },
+          "data": false
+        },
+        "m": {
+          "label": {
+            "en": "Men"
+          },
+          "data": true
+        },
+        "f": {
+          "label": {
+            "en": "Women"
+          },
+          "data": true
+        },
+        "by_sector": {
+          "label": {
+            "en": "By sector"
+          },
+          "data": false
         },
         "bf1": {
           "label": {
@@ -52,30 +75,19 @@
           },
           "data": true
         }
-      }
-    },
-    "sex": {
-      "label": {
-        "en": "Sex"
       },
-      "levels": {
+      "hierarchy": {
         "tot": {
-          "label": {
-            "en": "Total"
+          "by_sex": {
+            "m": [],
+            "f": []
           },
-          "data": true
-        },
-        "m": {
-          "label": {
-            "en": "Men"
-          },
-          "data": true
-        },
-        "f": {
-          "label": {
-            "en": "Women"
-          },
-          "data": true
+          "by_sector": {
+            "bf1": {
+              "f41": []
+            },
+            "gs4": []
+          }
         }
       }
     },
@@ -120,18 +132,13 @@
   },
   "concept": "Labour / Wages",
   "canonical": true,
-  "split": "sector",
-  "single_select": [
-    "sex",
-    "measure",
-    "adjustment"
-  ],
+  "split": "breakdown",
+  "single_select": ["measure", "adjustment"],
   "default_transform": "level",
   "default": {
-    "sector": "bs0",
-    "sex": "tot",
+    "breakdown": "tot",
     "measure": "index",
     "adjustment": "real"
   },
-  "fetched_utc": "2026-06-01 07:15:00"
+  "fetched_utc": "2026-06-02 06:58:25"
 }

@@ -25,8 +25,8 @@ sector and sex. Captures wage development the SNB cubes do not carry at all.
   English, taken from the reference dimension tables.
 - Each sheet has two stacked blocks: an "Index 1993=100" block (header row 4, data
   rows 5-10) and a "Variation in % vs previous year" block (header row 15, data
-  rows 16-21). The 6 data rows per block map to sector x sex combinations:
-  TOTAL (both / men / women), SECTOR 2 (secondary), Construction, SECTOR 3 (tertiary).
+  rows 16-21). The 6 data rows per block map to the `breakdown` levels in workbook
+  order: TOTAL, Men, Women, SECTOR 2 (Secondary), Construction, SECTOR 3 (Tertiary).
 - **NOGA classification break handled robustly**: years 1994-2010 sit in columns
   4-20 (NOGA02 era), columns 21-23 hold NOGA08 artifacts (not data), years
   2011-2025 sit in columns 24-38 (NOGA08 era). The parser does **not** hardcode
@@ -36,17 +36,20 @@ sector and sex. Captures wage development the SNB cubes do not carry at all.
   (e.g. ` 133.3`) are stripped.
 
 ## Dimensions
-- `sector`: Total, Secondary, Construction, Tertiary (Construction is a sub-position
-  of Secondary; hierarchy not encoded in the flat dimension).
-- `sex`: both / men / women (the men/women split exists only for the Total sector,
-  matching the source).
+- `breakdown`: the Total wage index and its two non-crossing cuts, on one overlay
+  axis so men and women (or any sectors) can be shown in the same chart. Levels:
+  Total; **by sex** → Men, Women; **by sector** → Secondary, Construction (a
+  sub-position of Secondary, nested under it), Tertiary. The source carries no
+  sex × sector cross product (men/women exist only for the Total sector), which is
+  exactly why these are one dimension rather than two. Encoded as a hierarchy so
+  the picker renders the "By sex" / "By sector" groups as headers.
 - `measure`: index / change (year-on-year %).
 - `adjustment`: nominal / real.
 
 ## Display
-- **split**: sector
-- **single-select**: sex, measure, adjustment
-- **default**: sector=bs0, sex=tot, measure=index, adjustment=real
+- **split**: breakdown
+- **single-select**: measure, adjustment
+- **default**: breakdown=tot, measure=index, adjustment=real
 - **transform**: level
 - **seasonal adjustment**: n/a (no SA dimension; this is an annual index)
 
