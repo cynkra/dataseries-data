@@ -16,6 +16,7 @@ elsewhere ([`cynkra/dataseries`](https://github.com/cynkra/dataseries) for R,
 | `data/` | the data product — one `*.csv` + `*.json` (meta) + `*.parquet` per dataset, plus `catalog.json` |
 | `datasets/` | per-dataset datasheets (concept-first source of truth, Markdown) |
 | `docs/format-contract.md` | the swissdata-style data + meta contract that clients read against |
+| `docs/deferred-datasets.md` | datasets we considered but did **not** ingest, and the concrete reason (read before re-hunting a missing series) |
 
 ## The contract (what clients can rely on)
 
