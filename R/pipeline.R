@@ -53,13 +53,26 @@ REDUNDANT_LEVELS <- list(
   ch_snb_devwkibiim  = list(D2           = "V"),                      # YoY % (Index/Change)
   ch_snb_devwkieffid = list(D2           = "V"),                      # day-on-day % (Index/Change)
   ch_snb_snbmonagg   = list(D0           = "VV"),                     # YoY % (Level/change)
-  ch_snb_plkopr      = list(D0           = "VVP")                     # YoY % = the CPI inflation rate
+  ch_snb_plkopr      = list(D0           = "VVP"),                    # YoY % = the CPI inflation rate
+  # Trade by goods: D2 mixes the nominal value (WMF) with nominal (N) and real (R)
+  # YoY %-change leaves. N is exactly the YoY of WMF -> redundant; R (real, deflated)
+  # is genuine and kept, so D2 survives with {WMF value, R real change}.
+  ch_snb_ausshawarm  = list(D2           = "N")                       # nominal YoY % = YoY of WMF
 )
 
+# Recursively drop the given codes (keys) from a nested hierarchy tree.
+prune_hierarchy <- function(node, codes) {
+  if (!length(node)) return(node)
+  node <- node[!names(node) %in% codes]
+  for (k in names(node)) node[[k]] <- prune_hierarchy(node[[k]], codes)
+  node
+}
+
 # Apply REDUNDANT_LEVELS to one built dataset: filter the data rows and prune the
-# matching meta levels. A no-op for datasets not in the table. Collapsing a now
-# single-valued dimension is left to drop_degenerate_dims (run right after), so
-# the two concerns stay separate. Runs after the datasheet merge.
+# matching meta levels (and any hierarchy entries pointing at them). A no-op for
+# datasets not in the table. Collapsing a now single-valued dimension is left to
+# drop_degenerate_dims (run right after), so the two concerns stay separate. Runs
+# after the datasheet merge.
 drop_redundant_levels <- function(ds) {
   spec <- REDUNDANT_LEVELS[[ds$id]]
   if (is.null(spec)) return(ds)
@@ -68,6 +81,9 @@ drop_redundant_levels <- function(ds) {
     codes <- spec[[dn]]
     ds$data <- ds$data[!ds$data[[dn]] %in% codes, , drop = FALSE]
     for (cd in codes) ds$meta$dimensions[[dn]]$levels[[cd]] <- NULL
+    if (!is.null(ds$meta$dimensions[[dn]]$hierarchy))
+      ds$meta$dimensions[[dn]]$hierarchy <-
+        prune_hierarchy(ds$meta$dimensions[[dn]]$hierarchy, codes)
   }
   ds
 }

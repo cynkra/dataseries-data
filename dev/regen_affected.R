@@ -44,7 +44,8 @@ jobs <- list(
   function() snb_fetch("devwkibiim", title = list(en = title_of("devwkibiim"))),
   function() snb_fetch("devwkieffid", title = list(en = title_of("devwkieffid"))),
   function() snb_fetch("snbmonagg", title = list(en = title_of("snbmonagg"))),
-  function() snb_fetch("plkopr", title = list(en = title_of("plkopr")))
+  function() snb_fetch("plkopr", title = list(en = title_of("plkopr"))),
+  function() snb_fetch("ausshawarm", title = list(en = title_of("ausshawarm")))
 )
 
 for (thunk in jobs) {

@@ -307,12 +307,6 @@
           },
           "data": false
         },
-        "N": {
-          "label": {
-            "en": "nominal"
-          },
-          "data": true
-        },
         "R": {
           "label": {
             "en": "real"
@@ -323,25 +317,20 @@
       "hierarchy": {
         "WMF": [],
         "D2_1": {
-          "N": [],
           "R": []
         }
       }
     }
   },
-  "topic": "Foreign trade",
   "concept": "External sector / Foreign trade",
   "canonical": true,
   "split": "D1",
-  "single_select": [
-    "D0",
-    "D2"
-  ],
+  "single_select": ["D0", "D2"],
   "default_transform": "level",
   "default": {
     "D0": "A",
     "D1": "GT",
     "D2": "WMF"
   },
-  "fetched_utc": "2026-06-01 07:15:00"
+  "fetched_utc": "2026-06-02 08:13:38"
 }
