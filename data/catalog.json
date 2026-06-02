@@ -1137,5 +1137,47 @@
     "load": "whole",
     "data": "ch_adecco_sjmi.csv",
     "meta": "ch_adecco_sjmi.json"
+  },
+  {
+    "id": "ch_fso_new_vehicles",
+    "title": {
+      "en": "New registrations of passenger cars by fuel"
+    },
+    "concept": "Mobility / Vehicles",
+    "canonical": true,
+    "featured": null,
+    "topic": "Mobility",
+    "source": "Swiss Federal Statistical Office (FSO)",
+    "license": "fso",
+    "frequency": "monthly",
+    "start": "2005-01-01",
+    "end": "2026-04-01",
+    "n_series": 12,
+    "updated": null,
+    "fetched": "2026-06-02 09:19:36",
+    "load": "whole",
+    "data": "ch_fso_new_vehicles.csv",
+    "meta": "ch_fso_new_vehicles.json"
+  },
+  {
+    "id": "ch_fso_vacant_dwellings",
+    "title": {
+      "en": "Vacant dwellings"
+    },
+    "concept": "Construction and housing / Vacancy",
+    "canonical": true,
+    "featured": null,
+    "topic": "Construction and housing",
+    "source": "Swiss Federal Statistical Office (FSO)",
+    "license": "fso",
+    "frequency": "annual",
+    "start": "1995-01-01",
+    "end": "2025-01-01",
+    "n_series": 2,
+    "updated": null,
+    "fetched": "2026-06-02 09:19:37",
+    "load": "whole",
+    "data": "ch_fso_vacant_dwellings.csv",
+    "meta": "ch_fso_vacant_dwellings.json"
   }
 ]

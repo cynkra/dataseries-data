@@ -176,6 +176,11 @@ build <- function() {
                                 noga_keep = .SDMX_PRODUCTION_NOGA),
                  "Domestic economy"))
 
+  # FSO SDMX, sliced to the national total (cubes too large to pull whole):
+  # new car registrations by fuel (the EV-transition read) and vacant dwellings.
+  add(.try_fetch("ch_fso_new_vehicles",     fso_sdmx_new_vehicles(),     "Mobility"))
+  add(.try_fetch("ch_fso_vacant_dwellings", fso_sdmx_vacant_dwellings(), "Construction and housing"))
+
   # FFA / EFV: general-government public finances (FS + GFS model headline
   # aggregates — revenue, expenditure, balance, gross/net debt, debt-to-GDP), annual,
   # by government level. From opendata.swiss (CKAN) -> data.finance.admin.ch CSV.

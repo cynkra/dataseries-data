@@ -1,0 +1,129 @@
+{
+  "schema_version": "1.0",
+  "id": "ch_fso_new_vehicles",
+  "dim_order": [
+    "fuel"
+  ],
+  "start": "2005-01-01",
+  "end": "2026-04-01",
+  "title": {
+    "en": "New registrations of passenger cars by fuel"
+  },
+  "source": {
+    "name": {
+      "en": "Swiss Federal Statistical Office (FSO)"
+    },
+    "url": "https://www.bfs.admin.ch/asset/en/px-x-1103020200_120"
+  },
+  "license": "fso",
+  "frequency": "monthly",
+  "topic": "Mobility",
+  "units": {
+    "en": "Number of new registrations"
+  },
+  "dimensions": {
+    "fuel": {
+      "label": {
+        "en": "Fuel"
+      },
+      "levels": {
+        "_T": {
+          "label": {
+            "en": "Total"
+          },
+          "data": true
+        },
+        "PC": {
+          "label": {
+            "en": "Petrol"
+          },
+          "data": true
+        },
+        "PH": {
+          "label": {
+            "en": "Petrol hybrid (HEV)"
+          },
+          "data": true
+        },
+        "DC": {
+          "label": {
+            "en": "Diesel"
+          },
+          "data": true
+        },
+        "DH": {
+          "label": {
+            "en": "Diesel hybrid (HEV)"
+          },
+          "data": true
+        },
+        "HP": {
+          "label": {
+            "en": "Plug-in hybrid (petrol)"
+          },
+          "data": true
+        },
+        "HD": {
+          "label": {
+            "en": "Plug-in hybrid (diesel)"
+          },
+          "data": true
+        },
+        "EL": {
+          "label": {
+            "en": "Electric (BEV)"
+          },
+          "data": true
+        },
+        "FC": {
+          "label": {
+            "en": "Fuel cell (hydrogen)"
+          },
+          "data": true
+        },
+        "GA": {
+          "label": {
+            "en": "Gas"
+          },
+          "data": true
+        },
+        "_O": {
+          "label": {
+            "en": "Other"
+          },
+          "data": true
+        },
+        "NM": {
+          "label": {
+            "en": "No motor"
+          },
+          "data": true
+        }
+      },
+      "hierarchy": {
+        "_T": {
+          "PC": [],
+          "PH": [],
+          "DC": [],
+          "DH": [],
+          "HP": [],
+          "HD": [],
+          "EL": [],
+          "FC": [],
+          "GA": [],
+          "_O": [],
+          "NM": []
+        }
+      }
+    }
+  },
+  "concept": "Mobility / Vehicles",
+  "canonical": true,
+  "split": "fuel",
+  "single_select": [],
+  "default_transform": "level",
+  "default": {
+    "fuel": "_T"
+  },
+  "fetched_utc": "2026-06-02 09:19:36"
+}

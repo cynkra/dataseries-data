@@ -142,4 +142,84 @@ fso_sdmx_fetch <- function(dataset_id, agency, flow, version, title = NULL,
   list(id = dataset_id, data = data, meta = meta)
 }
 
+# ---- sliced SDMX (for cubes too big to pull whole) ---------------------------
+# fso_sdmx_fetch() above pulls an entire flow (fine for CH1.KEU). Other flows —
+# vehicle registrations, vacant dwellings — are millions of rows at canton/
+# municipality granularity, so we pull a single pre-sliced KEY pinned to the
+# national total instead. Returns a tidy data.frame of the requested dim columns
+# + date + value; the per-dataset wrapper selects the meaningful dim and attaches
+# meta. `key` is the dot-separated SDMX key in DSD dimension order ("" segment =
+# all of that dim).
+sdmx_sliced <- function(agency, flow, version, key, dim_cols) {
+  url  <- sprintf("%s/data/%s,%s,%s/%s?detail=dataonly", .SDMX_BASE, agency, flow, version, key)
+  resp <- .sdmx_get(url, "application/vnd.sdmx.data+csv")
+  raw  <- as.data.frame(readr::read_csv(resp_body_string(resp), show_col_types = FALSE,
+            col_types = readr::cols(.default = readr::col_character())))
+  stopifnot(all(c(dim_cols, "TIME_PERIOD", "OBS_VALUE") %in% names(raw)))
+  out <- raw[, dim_cols, drop = FALSE]
+  out$date  <- as.Date(to_iso(as.character(raw$TIME_PERIOD)))
+  out$value <- suppressWarnings(as.numeric(raw$OBS_VALUE))
+  out <- out[!is.na(out$value) & !is.na(out$date), , drop = FALSE]
+  out[order(out$date), , drop = FALSE]
+}
+
+# New registrations of passenger cars, national monthly, split by fuel (the
+# EV-transition overlay). Pinned: Switzerland total, owner total, NEW vehicles,
+# passenger cars. SDMX CH1.MFZ_IVS / DF_IVS_0_GENERAL_M.
+fso_sdmx_new_vehicles <- function(dataset_id = "ch_fso_new_vehicles") {
+  d <- sdmx_sliced("CH1.MFZ_IVS", "DF_IVS_0_GENERAL_M", "1.0.0", "_T._T.N.100..M",
+    c("UV_HGDE_KT", "UV_RV_OWNER_TYPE", "UV_RV_REGISTRATION_TYPE",
+      "UV_RV_VEHICLE_GROUP_AND_TYPE", "UV_RV_FUEL", "FREQ"))
+  data <- data.frame(fuel = d$UV_RV_FUEL, date = d$date, value = d$value, stringsAsFactors = FALSE)
+  data <- data[order(data$fuel, data$date), ]
+
+  fuel_lab <- c("_T" = "Total", PC = "Petrol", PH = "Petrol hybrid (HEV)",
+    DC = "Diesel", DH = "Diesel hybrid (HEV)", HP = "Plug-in hybrid (petrol)",
+    HD = "Plug-in hybrid (diesel)", EL = "Electric (BEV)", FC = "Fuel cell (hydrogen)",
+    GA = "Gas", "_O" = "Other", NM = "No motor")
+  fuel_lab <- fuel_lab[names(fuel_lab) %in% unique(data$fuel)]
+  levels <- setNames(lapply(unname(fuel_lab), function(l) list(label = list(en = l))), names(fuel_lab))
+  kids   <- setNames(lapply(setdiff(names(fuel_lab), "_T"), function(x) list()),
+                     setdiff(names(fuel_lab), "_T"))
+
+  meta <- list(
+    title  = list(en = "New registrations of passenger cars by fuel"),
+    source = list(name = list(en = "Swiss Federal Statistical Office (FSO)"),
+                  url  = "https://www.bfs.admin.ch/asset/en/px-x-1103020200_120"),
+    license = "fso", frequency = "monthly", topic = "Mobility",
+    units = list(en = "Number of new registrations"),
+    dimensions = list(fuel = list(
+      label = list(en = "Fuel"),
+      levels = levels,
+      hierarchy = list("_T" = kids)   # Total decomposes into the fuel types
+    ))
+  )
+  list(id = dataset_id, data = data, meta = meta)
+}
+
+# Vacant dwellings, national annual: count + the official vacancy rate
+# (Leerwohnungsziffer). SDMX CH1.LWZ / DF_LWZ_1, sliced to Switzerland total.
+fso_sdmx_vacant_dwellings <- function(dataset_id = "ch_fso_vacant_dwellings") {
+  d <- sdmx_sliced("CH1.LWZ", "DF_LWZ_1", "1.0.0", "8100._T._T.V+PC.A",
+    c("GR_KT_GDE", "WOHN_ANZAHL", "LEERWOHN_TYP", "MEASURE_DIMENSION", "FREQ"))
+  data <- data.frame(measure = d$MEASURE_DIMENSION, date = d$date, value = d$value,
+                     stringsAsFactors = FALSE)
+  data <- data[order(data$measure, data$date), ]
+
+  meta <- list(
+    title  = list(en = "Vacant dwellings"),
+    source = list(name = list(en = "Swiss Federal Statistical Office (FSO)"),
+                  url  = "https://www.bfs.admin.ch/asset/en/px-x-0902020100_104"),
+    license = "fso", frequency = "annual", topic = "Construction and housing",
+    dimensions = list(measure = list(
+      label = list(en = "Measure"),
+      levels = list(
+        PC = list(label = list(en = "Vacancy rate (%)")),
+        V  = list(label = list(en = "Vacant dwellings (number)"))
+      )
+    ))
+  )
+  list(id = dataset_id, data = data, meta = meta)
+}
+
 `%||%` <- function(a, b) if (is.null(a)) b else a
