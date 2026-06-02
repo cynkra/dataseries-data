@@ -91,6 +91,36 @@ n_series <- function(data) {
   nrow(dplyr::distinct(dplyr::select(data, dplyr::all_of(dc))))
 }
 
+# Structural contract check run on EVERY freshly-fetched dataset (via .try_fetch).
+# Fails LOUD on the signatures of a broken parse — empty data, NA/implausible
+# dates (e.g. an Excel serial-origin bug), non-numeric or all-NA values, or
+# duplicate (dims, date) keys (a cartesian/positional-parse explosion). A failure
+# skips just that dataset (logged in skips.jsonl, flagged stale by health.R)
+# instead of silently shipping wrong numbers. Dataset-specific VALUE anchors (the
+# defence against a silent column/row shift that keeps the shape intact) live in
+# the individual parsers; this is the source-agnostic safety net underneath them.
+validate_dataset <- function(ds) {
+  id  <- ds$id %||% "?"
+  d   <- ds$data
+  bad <- function(msg) stop(sprintf("validate_dataset(%s): %s", id, msg), call. = FALSE)
+  if (is.null(d) || !nrow(d))                  bad("no data rows")
+  if (!all(c("date", "value") %in% names(d)))  bad("missing date/value column")
+  if (!inherits(d$date, "Date"))               bad("date column is not a Date")
+  if (anyNA(d$date))                           bad("NA dates present")
+  if (!is.numeric(d$value))                    bad("value column is not numeric")
+  if (all(is.na(d$value)))                     bad("all values are NA")
+  rng <- range(d$date)
+  if (rng[1] < as.Date("1700-01-01") || rng[2] > as.Date("2100-01-01"))
+    bad(sprintf("implausible date range %s .. %s (date-parse / serial-origin bug?)", rng[1], rng[2]))
+  dc  <- dim_cols(d)
+  key <- if (length(dc))
+    do.call(paste, c(lapply(dc, function(c) as.character(d[[c]])), list(as.character(d$date)), sep = "\r"))
+  else as.character(d$date)
+  if (anyDuplicated(key))
+    bad(sprintf("%d duplicate (dims, date) rows (cartesian / positional-parse bug?)", sum(duplicated(key))))
+  invisible(ds)
+}
+
 write_dataset <- function(ds, out_dir) {
   if (!dir.exists(out_dir)) dir.create(out_dir, recursive = TRUE)
   dc <- dim_cols(ds$data)

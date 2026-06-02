@@ -116,7 +116,10 @@ drop_degenerate_dims <- function(ds) {
 # Run one fetch, tag it with a topic, and keep going on failure (a transient
 # network error on one source must not lose the whole run).
 .try_fetch <- function(label, expr, topic = NULL) {
-  ds <- tryCatch(force(expr), error = function(e) {
+  # force() the fetch AND validate it inside the same guard: a structural failure
+  # (or a parser's own fail-closed value-anchor stop()) skips this one dataset and
+  # is logged, rather than silently shipping a bad parse or halting the whole run.
+  ds <- tryCatch({ d <- force(expr); validate_dataset(d); d }, error = function(e) {
     msg <- conditionMessage(e)
     cat(sprintf("  SKIP %-22s %s\n", label, msg))
     .SKIPPED[[length(.SKIPPED) + 1L]] <<- list(id = label, error = msg)

@@ -5,6 +5,28 @@
 
 suppressPackageStartupMessages({ library(readxl); library(dplyr); library(tidyr); library(stringr) })
 
+# Fail-closed value anchor: assert that a known published cell value survives
+# parsing. These sheets pick values by row/column POSITION, so a column insert or
+# row reorder upstream would silently shift every series onto the wrong label. An
+# anchor on a stable, hand-verified figure turns that silent corruption into a
+# loud stop() -> .try_fetch skips the dataset (logged, flagged stale by health.R).
+# `...` are equality filters on the data columns identifying the single cell.
+.assert_anchor <- function(data, dataset, expect, ..., tol = NULL) {
+  flt <- list(...)
+  ok  <- rep(TRUE, nrow(data))
+  for (k in names(flt)) ok <- ok & (as.character(data[[k]]) == flt[[k]])
+  sel <- paste(names(flt), unlist(flt), sep = "=", collapse = ", ")
+  got <- data$value[ok]
+  if (length(got) != 1L)
+    stop(sprintf("%s: anchor {%s} matched %d rows, expected exactly 1 — sheet layout changed?",
+                 dataset, sel, length(got)), call. = FALSE)
+  if (is.null(tol)) tol <- abs(expect) * 1e-4 + 1e-6
+  if (is.na(got) || abs(got - expect) > tol)
+    stop(sprintf("%s: anchor {%s} = %s, expected %s — source columns/rows shifted; refusing to ship.",
+                 dataset, sel, got, expect), call. = FALSE)
+  invisible(TRUE)
+}
+
 # ---- ch_fso_cpi (Prices) ----
 fso_excel_ch_fso_cpi <- function(path, pubdate) {
   sheet <- "INDEX_m"
@@ -298,6 +320,14 @@ fso_excel_ch_fso_wage_idx <- function(path, pubdate) {
     )
   )
 
+  # Fail-closed: the 6 data rows map to breakdown levels by WORKBOOK ROW ORDER,
+  # so a row insert/reorder upstream would silently mislabel (e.g. Men<->Women).
+  # Anchor on the published Total nominal index at the span ends.
+  .assert_anchor(data, "ch_fso_wage_idx", 101.4525,
+                 breakdown = "tot", measure = "index", adjustment = "nominal", date = "1994-01-01")
+  .assert_anchor(data, "ch_fso_wage_idx", 141.9,
+                 breakdown = "tot", measure = "index", adjustment = "nominal", date = "2025-01-01")
+
   list(id = "ch_fso_wage_idx", data = data, meta = meta)
 }
 
@@ -348,6 +378,12 @@ fso_excel_ch_fso_pop <- function(path, pubdate) {
   data <- dplyr::bind_rows(pieces)
   data <- data[!is.na(data$value) & !is.na(data$date), , drop = FALSE]
   data <- dplyr::arrange(data, .data$item, .data$date)
+
+  # Fail-closed: every component is read from a FIXED column number, so a column
+  # insert upstream would silently shift them all. Anchor on an early (col 2) and
+  # a late (col 11) column so any shift is caught.
+  .assert_anchor(data, "ch_fso_pop", 7164444, item = "pop_stock_jan", date = "2000-01-01")
+  .assert_anchor(data, "ch_fso_pop", 7204055, item = "pop_stock_dec", date = "2000-01-01")
 
   levels <- lapply(names(items), function(code) {
     list(label = list(en = items[[code]]$en))
