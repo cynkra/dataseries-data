@@ -1,5 +1,5 @@
 {
-  "checked": "2026-06-02 04:56 UTC",
+  "checked": "2026-06-02 09:57 UTC",
   "counts": {
     "green": 53,
     "amber": 0,
@@ -200,9 +200,9 @@
       "title": "Foreign exchange rates – Month",
       "source": "Swiss National Bank",
       "frequency": "monthly",
-      "end": "2026-04-01",
+      "end": "2026-05-01",
       "updated": null,
-      "age_days": 62,
+      "age_days": 32,
       "threshold_days": 110,
       "status": "green"
     },
@@ -266,9 +266,9 @@
       "title": "Spot interest rates on Swiss Confederation bonds, euro area government bonds and CHF bond issues for various borrower categories – Day",
       "source": "Swiss National Bank",
       "frequency": "daily",
-      "end": "2026-04-30",
+      "end": "2026-05-29",
       "updated": null,
-      "age_days": 33,
+      "age_days": 4,
       "threshold_days": 50,
       "status": "green"
     },
@@ -409,9 +409,9 @@
       "title": "Published interest rates for new transactions",
       "source": "Swiss National Bank",
       "frequency": "monthly",
-      "end": "2026-03-01",
+      "end": "2026-04-01",
       "updated": null,
-      "age_days": 93,
+      "age_days": 62,
       "threshold_days": 110,
       "status": "green"
     },
@@ -420,9 +420,9 @@
       "title": "Money market rates",
       "source": "Swiss National Bank",
       "frequency": "monthly",
-      "end": "2026-04-01",
+      "end": "2026-05-01",
       "updated": null,
-      "age_days": 62,
+      "age_days": 32,
       "threshold_days": 110,
       "status": "green"
     },
@@ -435,6 +435,50 @@
       "updated": "2026-05-22 13:15:47",
       "age_days": 152,
       "threshold_days": 290,
+      "status": "green"
+    },
+    {
+      "id": "ch_seco_concon",
+      "title": "Consumer sentiment index",
+      "source": "State Secretariat for Economic Affairs (SECO)",
+      "frequency": "quarterly",
+      "end": "2026-04-01",
+      "updated": "2026-05-05 13:27:13",
+      "age_days": 62,
+      "threshold_days": 290,
+      "status": "green"
+    },
+    {
+      "id": "ch_fso_retail",
+      "title": "Retail trade turnover (monthly)",
+      "source": "Swiss Federal Statistical Office (FSO)",
+      "frequency": "monthly",
+      "end": "2026-04-01",
+      "updated": null,
+      "age_days": 62,
+      "threshold_days": 110,
+      "status": "green"
+    },
+    {
+      "id": "ch_fso_production",
+      "title": "Industry & construction turnover (quarterly)",
+      "source": "Swiss Federal Statistical Office (FSO)",
+      "frequency": "quarterly",
+      "end": "2026-01-01",
+      "updated": null,
+      "age_days": 152,
+      "threshold_days": 290,
+      "status": "green"
+    },
+    {
+      "id": "ch_ffa_finances",
+      "title": "Public finances: general government main aggregates",
+      "source": "Federal Finance Administration (FFA)",
+      "frequency": "annual",
+      "end": "2029-01-01",
+      "updated": "2025-03-18",
+      "age_days": -944,
+      "threshold_days": 550,
       "status": "green"
     },
     {
@@ -545,50 +589,6 @@
       "updated": "2026-05-18",
       "age_days": 93,
       "threshold_days": 110,
-      "status": "green"
-    },
-    {
-      "id": "ch_seco_concon",
-      "title": "Consumer sentiment index",
-      "source": "State Secretariat for Economic Affairs (SECO)",
-      "frequency": "quarterly",
-      "end": "2026-04-01",
-      "updated": "2026-05-05 13:27:13",
-      "age_days": 62,
-      "threshold_days": 290,
-      "status": "green"
-    },
-    {
-      "id": "ch_fso_retail",
-      "title": "Retail trade turnover (monthly)",
-      "source": "Swiss Federal Statistical Office (FSO)",
-      "frequency": "monthly",
-      "end": "2026-04-01",
-      "updated": null,
-      "age_days": 62,
-      "threshold_days": 110,
-      "status": "green"
-    },
-    {
-      "id": "ch_fso_production",
-      "title": "Industry & construction turnover (quarterly)",
-      "source": "Swiss Federal Statistical Office (FSO)",
-      "frequency": "quarterly",
-      "end": "2026-01-01",
-      "updated": null,
-      "age_days": 152,
-      "threshold_days": 290,
-      "status": "green"
-    },
-    {
-      "id": "ch_ffa_finances",
-      "title": "Public finances: general government main aggregates",
-      "source": "Federal Finance Administration (FFA)",
-      "frequency": "annual",
-      "end": "2029-01-01",
-      "updated": "2025-03-18",
-      "age_days": -944,
-      "threshold_days": 550,
       "status": "green"
     }
   ]

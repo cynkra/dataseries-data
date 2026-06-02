@@ -6,7 +6,7 @@
     "D1"
   ],
   "start": "1933-01-01",
-  "end": "2026-03-01",
+  "end": "2026-04-01",
   "title": {
     "en": "Published interest rates for new transactions"
   },
@@ -659,5 +659,5 @@
     "D0": "M",
     "D1": "MV"
   },
-  "fetched_utc": "2026-06-01 07:15:00"
+  "fetched_utc": "2026-06-02 09:57:20"
 }

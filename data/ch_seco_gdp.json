@@ -930,15 +930,12 @@
   "canonical": true,
   "featured": "GDP",
   "split": "structure",
-  "single_select": [
-    "type",
-    "seas_adj"
-  ],
+  "single_select": ["type", "seas_adj"],
   "default_transform": "level",
   "default": {
     "structure": "gdp",
     "type": "real",
     "seas_adj": "csa"
   },
-  "fetched_utc": "2026-06-01 08:43:22"
+  "fetched_utc": "2026-06-02 09:57:21"
 }

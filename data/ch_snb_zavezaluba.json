@@ -208,12 +208,7 @@
   "concept": "Payment systems / Payments & cash",
   "canonical": false,
   "split": "D0",
-  "single_select": [
-    "D1",
-    "D2",
-    "D3",
-    "D4"
-  ],
+  "single_select": ["D1", "D2", "D3", "D4"],
   "default_transform": "level",
   "default": {
     "D0": "ZT",
@@ -222,5 +217,5 @@
     "D3": "II",
     "D4": "BMF"
   },
-  "fetched_utc": "2026-06-01 07:15:00"
+  "fetched_utc": "2026-06-02 09:57:20"
 }

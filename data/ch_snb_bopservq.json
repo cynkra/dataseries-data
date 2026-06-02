@@ -614,15 +614,12 @@
   "concept": "External sector / Balance of payments",
   "canonical": false,
   "split": "D0",
-  "single_select": [
-    "D1",
-    "D2"
-  ],
+  "single_select": ["D1", "D2"],
   "default_transform": "level",
   "default": {
     "D0": "T0",
     "D1": "DT",
     "D2": "S"
   },
-  "fetched_utc": "2026-06-01 07:15:00"
+  "fetched_utc": "2026-06-02 09:57:19"
 }

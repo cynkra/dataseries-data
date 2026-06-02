@@ -174,11 +174,7 @@
   "concept": "Labour / Employment / jobs",
   "canonical": false,
   "split": "Geschlecht",
-  "single_select": [
-    "Grossregion",
-    "Wirtschaftssektor",
-    "Beschäftigungsgrad"
-  ],
+  "single_select": ["Grossregion", "Wirtschaftssektor", "Beschäftigungsgrad"],
   "default_transform": "level",
   "default": {
     "Geschlecht": "TOT",
@@ -186,5 +182,5 @@
     "Wirtschaftssektor": "TOT",
     "Beschäftigungsgrad": "TOT"
   },
-  "fetched_utc": "2026-06-01 07:15:00"
+  "fetched_utc": "2026-06-02 09:57:21"
 }

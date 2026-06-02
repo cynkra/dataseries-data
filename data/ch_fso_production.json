@@ -164,14 +164,11 @@
       }
     }
   },
+  "topic": "Domestic economy",
   "concept": "Domestic economy / Industry & construction turnover",
   "canonical": true,
   "split": "NOGA",
-  "single_select": [
-    "ADJUSTMENT",
-    "INDICATOR_KE",
-    "UNIT_MEASURE"
-  ],
+  "single_select": ["ADJUSTMENT", "INDICATOR_KE", "UNIT_MEASURE"],
   "default_transform": "level",
   "default": {
     "NOGA": "B-E",
@@ -179,5 +176,5 @@
     "INDICATOR_KE": "PTOT",
     "UNIT_MEASURE": "IX"
   },
-  "fetched_utc": "2026-06-01 15:55:09"
+  "fetched_utc": "2026-06-02 09:57:21"
 }
