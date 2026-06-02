@@ -1,0 +1,99 @@
+{
+  "schema_version": "1.0",
+  "id": "ch_fso_pop_detail",
+  "dim_order": [
+    "nationality",
+    "sex"
+  ],
+  "start": "2010-01-01",
+  "end": "2024-01-01",
+  "title": {
+    "en": "Permanent resident population by nationality and sex"
+  },
+  "source": {
+    "name": {
+      "en": "Swiss Federal Statistical Office (FSO)"
+    },
+    "url": "https://www.bfs.admin.ch/asset/en/px-x-0102010000_101"
+  },
+  "license": "fso",
+  "frequency": "annual",
+  "topic": "Population",
+  "units": {
+    "en": "Number of permanent residents (year-end stock)"
+  },
+  "dimensions": {
+    "nationality": {
+      "label": {
+        "en": "Nationality"
+      },
+      "levels": {
+        "_T": {
+          "label": {
+            "en": "Total"
+          },
+          "data": true
+        },
+        "1": {
+          "label": {
+            "en": "Swiss"
+          },
+          "data": true
+        },
+        "2": {
+          "label": {
+            "en": "Foreign"
+          },
+          "data": true
+        }
+      },
+      "hierarchy": {
+        "_T": {
+          "1": [],
+          "2": []
+        }
+      }
+    },
+    "sex": {
+      "label": {
+        "en": "Sex"
+      },
+      "levels": {
+        "_T": {
+          "label": {
+            "en": "Total"
+          },
+          "data": true
+        },
+        "1": {
+          "label": {
+            "en": "Male"
+          },
+          "data": true
+        },
+        "2": {
+          "label": {
+            "en": "Female"
+          },
+          "data": true
+        }
+      },
+      "hierarchy": {
+        "_T": {
+          "1": [],
+          "2": []
+        }
+      }
+    }
+  },
+  "concept": "Population and demographics / Resident population by nationality",
+  "canonical": false,
+  "split": "nationality",
+  "single_select": "sex",
+  "default_transform": "level",
+  "default": {
+    "nationality": "_T",
+    "sex": "_T"
+  },
+  "fetched_utc": "2026-06-02 19:40:58"
+}

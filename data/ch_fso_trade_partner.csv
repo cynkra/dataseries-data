@@ -1,0 +1,2368 @@
+flow,partner,level,date,value
+export,Africa,group,1990-01-01,1842
+export,Africa,group,1991-01-01,1872
+export,Africa,group,1992-01-01,1776
+export,Africa,group,1993-01-01,1805.543524
+export,Africa,group,1994-01-01,1786.853138
+export,Africa,group,1995-01-01,1764.940561
+export,Africa,group,1996-01-01,1769.069387
+export,Africa,group,1997-01-01,1771.411095
+export,Africa,group,1998-01-01,1901.005729
+export,Africa,group,1999-01-01,1914.525071
+export,Africa,group,2000-01-01,2081.180025
+export,Africa,group,2001-01-01,2141.754201
+export,Africa,group,2002-01-01,2272.714165
+export,Africa,group,2003-01-01,2027.271746
+export,Africa,group,2004-01-01,2260.393048
+export,Africa,group,2005-01-01,2239.640548
+export,Africa,group,2006-01-01,2775.570532
+export,Africa,group,2007-01-01,3151.677561
+export,Africa,group,2008-01-01,3502.35878
+export,Africa,group,2009-01-01,3610.711296
+export,Africa,group,2010-01-01,3432.220858
+export,Africa,group,2011-01-01,3264.02697
+export,Africa,group,2012-01-01,3421.95074
+export,Africa,group,2013-01-01,5048.319798
+export,Africa,group,2014-01-01,3966.903589
+export,Africa,group,2015-01-01,3350.253863
+export,Africa,group,2016-01-01,3392.574984
+export,Africa,group,2017-01-01,3487.809955
+export,Africa,group,2018-01-01,3683.976744
+export,Africa,group,2019-01-01,3758.4666
+export,Africa,group,2020-01-01,3440.027914
+export,Africa,group,2021-01-01,3497.909689
+export,Africa,group,2022-01-01,3631.330054
+export,Africa,group,2023-01-01,3408.341758
+export,Africa,group,2024-01-01,3476.195301
+export,Africa,group,2025-01-01,3079.117078
+export,Asia,group,1990-01-01,15650.43197
+export,Asia,group,1991-01-01,15137.502708
+export,Asia,group,1992-01-01,15914.802047
+export,Asia,group,1993-01-01,17824.813447
+export,Asia,group,1994-01-01,18154.714012
+export,Asia,group,1995-01-01,18525.873535
+export,Asia,group,1996-01-01,19423.536102
+export,Asia,group,1997-01-01,21364.749593
+export,Asia,group,1998-01-01,18076.821634
+export,Asia,group,1999-01-01,19674.652442
+export,Asia,group,2000-01-01,24161.054947
+export,Asia,group,2001-01-01,24046.480319
+export,Asia,group,2002-01-01,25654.961618
+export,Asia,group,2003-01-01,25514.51684
+export,Asia,group,2004-01-01,28305.352696
+export,Asia,group,2005-01-01,29486.128052
+export,Asia,group,2006-01-01,34233.410191
+export,Asia,group,2007-01-01,38987.128192
+export,Asia,group,2008-01-01,43011.838619
+export,Asia,group,2009-01-01,38791.353269
+export,Asia,group,2010-01-01,44068.175652
+export,Asia,group,2011-01-01,48218.87553
+export,Asia,group,2012-01-01,98533.093494
+export,Asia,group,2013-01-01,153769.065908
+export,Asia,group,2014-01-01,105620.801316
+export,Asia,group,2015-01-01,108289.99532
+export,Asia,group,2016-01-01,98653.364089
+export,Asia,group,2017-01-01,104851.445116
+export,Asia,group,2018-01-01,106659.055336
+export,Asia,group,2019-01-01,89610.547231
+export,Asia,group,2020-01-01,72376.703992
+export,Asia,group,2021-01-01,110212.920368
+export,Asia,group,2022-01-01,128143.378182
+export,Asia,group,2023-01-01,134309.994058
+export,Asia,group,2024-01-01,126407.439004
+export,Asia,group,2025-01-01,111818.248943
+export,Australia,country,1990-01-01,694
+export,Australia,country,1991-01-01,683
+export,Australia,country,1992-01-01,714
+export,Australia,country,1993-01-01,742.691058
+export,Australia,country,1994-01-01,842.778469
+export,Australia,country,1995-01-01,898.874002
+export,Australia,country,1996-01-01,834.671611
+export,Australia,country,1997-01-01,900.470995
+export,Australia,country,1998-01-01,879.857967
+export,Australia,country,1999-01-01,1006.575762
+export,Australia,country,2000-01-01,1054.490167
+export,Australia,country,2001-01-01,1101.158766
+export,Australia,country,2002-01-01,1055.336401
+export,Australia,country,2003-01-01,1049.714382
+export,Australia,country,2004-01-01,1286.987063
+export,Australia,country,2005-01-01,1431.373709
+export,Australia,country,2006-01-01,1646.067845
+export,Australia,country,2007-01-01,1981.94327
+export,Australia,country,2008-01-01,2127.039283
+export,Australia,country,2009-01-01,1972.899444
+export,Australia,country,2010-01-01,2178.524524
+export,Australia,country,2011-01-01,2498.635645
+export,Australia,country,2012-01-01,3068.848043
+export,Australia,country,2013-01-01,2908.768779
+export,Australia,country,2014-01-01,2544.695293
+export,Australia,country,2015-01-01,2416.647184
+export,Australia,country,2016-01-01,2337.844832
+export,Australia,country,2017-01-01,2433.536227
+export,Australia,country,2018-01-01,2746.623711
+export,Australia,country,2019-01-01,2608.505794
+export,Australia,country,2020-01-01,2172.255031
+export,Australia,country,2021-01-01,2218.81585
+export,Australia,country,2022-01-01,2583.899098
+export,Australia,country,2023-01-01,2544.642938
+export,Australia,country,2024-01-01,2481.622759
+export,Australia,country,2025-01-01,2450.475638
+export,Austria,country,1990-01-01,3266
+export,Austria,country,1991-01-01,3333
+export,Austria,country,1992-01-01,3365
+export,Austria,country,1993-01-01,3551.212782
+export,Austria,country,1994-01-01,3430.845737
+export,Austria,country,1995-01-01,3428.894646
+export,Austria,country,1996-01-01,3026.393006
+export,Austria,country,1997-01-01,3383.253417
+export,Austria,country,1998-01-01,3573.933887
+export,Austria,country,1999-01-01,3871.096371
+export,Austria,country,2000-01-01,4157.677589
+export,Austria,country,2001-01-01,4472.727582
+export,Austria,country,2002-01-01,4739.534714
+export,Austria,country,2003-01-01,4660.639685
+export,Austria,country,2004-01-01,4901.195545
+export,Austria,country,2005-01-01,5169.106699
+export,Austria,country,2006-01-01,5847.873229
+export,Austria,country,2007-01-01,6315.724854
+export,Austria,country,2008-01-01,5999.389275
+export,Austria,country,2009-01-01,5477.873332
+export,Austria,country,2010-01-01,6469.359082
+export,Austria,country,2011-01-01,6626.404119
+export,Austria,country,2012-01-01,8040.360389
+export,Austria,country,2013-01-01,8320.382282
+export,Austria,country,2014-01-01,7839.79626
+export,Austria,country,2015-01-01,7527.046819
+export,Austria,country,2016-01-01,7237.228094
+export,Austria,country,2017-01-01,8133.721518
+export,Austria,country,2018-01-01,7478.902969
+export,Austria,country,2019-01-01,6360.797688
+export,Austria,country,2020-01-01,7696.098259
+export,Austria,country,2021-01-01,9375.203973
+export,Austria,country,2022-01-01,10314.923948
+export,Austria,country,2023-01-01,9654.476695
+export,Austria,country,2024-01-01,7723.892974
+export,Austria,country,2025-01-01,9660.542376
+export,Belgium,country,1990-01-01,2032
+export,Belgium,country,1991-01-01,2067
+export,Belgium,country,1992-01-01,2516
+export,Belgium,country,1993-01-01,2347
+export,Belgium,country,1994-01-01,2367
+export,Belgium,country,1995-01-01,2155
+export,Belgium,country,1996-01-01,2332
+export,Belgium,country,1997-01-01,2614
+export,Belgium,country,1998-01-01,2601
+export,Belgium,country,1999-01-01,2443
+export,Belgium,country,2000-01-01,2579
+export,Belgium,country,2001-01-01,2713
+export,Belgium,country,2002-01-01,3017
+export,Belgium,country,2003-01-01,2758
+export,Belgium,country,2004-01-01,2856
+export,Belgium,country,2005-01-01,2932
+export,Belgium,country,2006-01-01,3238
+export,Belgium,country,2007-01-01,3922
+export,Belgium,country,2008-01-01,4187
+export,Belgium,country,2009-01-01,3890
+export,Belgium,country,2010-01-01,3874
+export,Belgium,country,2011-01-01,4224
+export,Belgium,country,2012-01-01,4991
+export,Belgium,country,2013-01-01,5397
+export,Belgium,country,2014-01-01,5852
+export,Belgium,country,2015-01-01,5608
+export,Belgium,country,2016-01-01,6093.785801
+export,Belgium,country,2017-01-01,4393.315484
+export,Belgium,country,2018-01-01,4393.976796
+export,Belgium,country,2019-01-01,4662.3062
+export,Belgium,country,2020-01-01,4254.20738
+export,Belgium,country,2021-01-01,4625.170431
+export,Belgium,country,2022-01-01,4804.225648
+export,Belgium,country,2023-01-01,5165.919826
+export,Belgium,country,2024-01-01,4879.301773
+export,Belgium,country,2025-01-01,4790.110627
+export,Brazil,country,1990-01-01,536
+export,Brazil,country,1991-01-01,507
+export,Brazil,country,1992-01-01,493
+export,Brazil,country,1993-01-01,545.932523
+export,Brazil,country,1994-01-01,702.309432
+export,Brazil,country,1995-01-01,804.135316
+export,Brazil,country,1996-01-01,908.354978
+export,Brazil,country,1997-01-01,1080.595787
+export,Brazil,country,1998-01-01,1228.770176
+export,Brazil,country,1999-01-01,1076.549586
+export,Brazil,country,2000-01-01,1262.042654
+export,Brazil,country,2001-01-01,1236.301219
+export,Brazil,country,2002-01-01,1104.752031
+export,Brazil,country,2003-01-01,1164.703445
+export,Brazil,country,2004-01-01,1250.816346
+export,Brazil,country,2005-01-01,1139.224863
+export,Brazil,country,2006-01-01,1460.062413
+export,Brazil,country,2007-01-01,1866.837789
+export,Brazil,country,2008-01-01,2408.592455
+export,Brazil,country,2009-01-01,1998.642146
+export,Brazil,country,2010-01-01,2317.216315
+export,Brazil,country,2011-01-01,2228.200958
+export,Brazil,country,2012-01-01,2352.394152
+export,Brazil,country,2013-01-01,2226.620423
+export,Brazil,country,2014-01-01,2088.893845
+export,Brazil,country,2015-01-01,2049.438675
+export,Brazil,country,2016-01-01,1911.031109
+export,Brazil,country,2017-01-01,2222.542637
+export,Brazil,country,2018-01-01,2617.086645
+export,Brazil,country,2019-01-01,2514.662093
+export,Brazil,country,2020-01-01,2110.186722
+export,Brazil,country,2021-01-01,2165.89705
+export,Brazil,country,2022-01-01,2406.823019
+export,Brazil,country,2023-01-01,2809.853421
+export,Brazil,country,2024-01-01,3133.093136
+export,Brazil,country,2025-01-01,3011.993844
+export,Canada,country,1990-01-01,709
+export,Canada,country,1991-01-01,703
+export,Canada,country,1992-01-01,707
+export,Canada,country,1993-01-01,692.3993
+export,Canada,country,1994-01-01,656.328989
+export,Canada,country,1995-01-01,759.58206499999994
+export,Canada,country,1996-01-01,809.757651
+export,Canada,country,1997-01-01,810.099666
+export,Canada,country,1998-01-01,872.587579
+export,Canada,country,1999-01-01,970.243306
+export,Canada,country,2000-01-01,1251.037816
+export,Canada,country,2001-01-01,1377.016341
+export,Canada,country,2002-01-01,1559.567284
+export,Canada,country,2003-01-01,1437.640006
+export,Canada,country,2004-01-01,1994.226685
+export,Canada,country,2005-01-01,2268.607321
+export,Canada,country,2006-01-01,2753.217703
+export,Canada,country,2007-01-01,2896.3312770000002
+export,Canada,country,2008-01-01,2418.810198
+export,Canada,country,2009-01-01,2515.716911
+export,Canada,country,2010-01-01,2891.168925
+export,Canada,country,2011-01-01,2772.096758
+export,Canada,country,2012-01-01,3514.595691
+export,Canada,country,2013-01-01,3522.451159
+export,Canada,country,2014-01-01,3428.34536
+export,Canada,country,2015-01-01,3508.782957
+export,Canada,country,2016-01-01,3470.020028
+export,Canada,country,2017-01-01,3582.453468
+export,Canada,country,2018-01-01,3860.294521
+export,Canada,country,2019-01-01,4457.585566
+export,Canada,country,2020-01-01,3871.145671
+export,Canada,country,2021-01-01,3813.959278
+export,Canada,country,2022-01-01,4128.284823
+export,Canada,country,2023-01-01,3964.245439
+export,Canada,country,2024-01-01,4081.545022
+export,Canada,country,2025-01-01,4363.149066
+export,Central and South America,group,1990-01-01,2180.313736
+export,Central and South America,group,1991-01-01,2408.624393
+export,Central and South America,group,1992-01-01,2721.350256
+export,Central and South America,group,1993-01-01,2703.941397
+export,Central and South America,group,1994-01-01,2885.11839
+export,Central and South America,group,1995-01-01,2536.206857
+export,Central and South America,group,1996-01-01,2844.061301
+export,Central and South America,group,1997-01-01,3455.637808
+export,Central and South America,group,1998-01-01,3926.775546
+export,Central and South America,group,1999-01-01,3834.566094
+export,Central and South America,group,2000-01-01,4430.562507
+export,Central and South America,group,2001-01-01,4655.170509
+export,Central and South America,group,2002-01-01,4292.301095
+export,Central and South America,group,2003-01-01,4057.856963
+export,Central and South America,group,2004-01-01,4170.156653
+export,Central and South America,group,2005-01-01,4185.809952
+export,Central and South America,group,2006-01-01,4869.405136
+export,Central and South America,group,2007-01-01,5823.208881
+export,Central and South America,group,2008-01-01,6361.512092
+export,Central and South America,group,2009-01-01,5471.911285
+export,Central and South America,group,2010-01-01,6106.333651
+export,Central and South America,group,2011-01-01,6211.026281
+export,Central and South America,group,2012-01-01,6807.97059
+export,Central and South America,group,2013-01-01,7215.121852
+export,Central and South America,group,2014-01-01,7084.161243
+export,Central and South America,group,2015-01-01,6781.612465
+export,Central and South America,group,2016-01-01,6406.191524
+export,Central and South America,group,2017-01-01,6736.395975
+export,Central and South America,group,2018-01-01,7131.953783
+export,Central and South America,group,2019-01-01,7027.669437
+export,Central and South America,group,2020-01-01,5846.611341
+export,Central and South America,group,2021-01-01,6266.488502
+export,Central and South America,group,2022-01-01,7171.109815
+export,Central and South America,group,2023-01-01,7588.592423
+export,Central and South America,group,2024-01-01,8187.298514
+export,Central and South America,group,2025-01-01,8430.491319
+export,China,country,1990-01-01,415
+export,China,country,1991-01-01,471
+export,China,country,1992-01-01,620
+export,China,country,1993-01-01,942.566868
+export,China,country,1994-01-01,863.34298
+export,China,country,1995-01-01,843.303586
+export,China,country,1996-01-01,887.745818
+export,China,country,1997-01-01,937.784877
+export,China,country,1998-01-01,809.097037
+export,China,country,1999-01-01,990.030713
+export,China,country,2000-01-01,1402.658194
+export,China,country,2001-01-01,1668.1578260000001
+export,China,country,2002-01-01,2070.38983
+export,China,country,2003-01-01,2485.116911
+export,China,country,2004-01-01,3106.988814
+export,China,country,2005-01-01,3466.775122
+export,China,country,2006-01-01,4105.468102
+export,China,country,2007-01-01,5419.432999
+export,China,country,2008-01-01,6111.485656
+export,China,country,2009-01-01,5501.079656
+export,China,country,2010-01-01,7467.020443
+export,China,country,2011-01-01,8840.970341
+export,China,country,2012-01-01,9307.09119
+export,China,country,2013-01-01,19453.329846
+export,China,country,2014-01-01,16858.517009
+export,China,country,2015-01-01,19264.201625
+export,China,country,2016-01-01,26769.479294
+export,China,country,2017-01-01,23964.069711
+export,China,country,2018-01-01,29586.646568
+export,China,country,2019-01-01,21436.831625
+export,China,country,2020-01-01,16363.134324
+export,China,country,2021-01-01,30221.210327
+export,China,country,2022-01-01,42115.180333
+export,China,country,2023-01-01,40594.960627
+export,China,country,2024-01-01,37276.492437
+export,China,country,2025-01-01,29584.443256
+export,EU,group,1990-01-01,51378.53454
+export,EU,group,1991-01-01,52518.258399
+export,EU,group,1992-01-01,55252.593567
+export,EU,group,1993-01-01,53636.087706
+export,EU,group,1994-01-01,55144.105415
+export,EU,group,1995-01-01,56381.448723
+export,EU,group,1996-01-01,56115.386275
+export,EU,group,1997-01-01,62574.277538
+export,EU,group,1998-01-01,67547.089867
+export,EU,group,1999-01-01,70691.887034
+export,EU,group,2000-01-01,76312.210043
+export,EU,group,2001-01-01,79806.118898
+export,EU,group,2002-01-01,82016.034724
+export,EU,group,2003-01-01,82458.511362
+export,EU,group,2004-01-01,88648.678222
+export,EU,group,2005-01-01,93891.343526
+export,EU,group,2006-01-01,105398.338275
+export,EU,group,2007-01-01,117633.79625
+export,EU,group,2008-01-01,120894.881758
+export,EU,group,2009-01-01,102821.043841
+export,EU,group,2010-01-01,107599.977499
+export,EU,group,2011-01-01,108740.684077
+export,EU,group,2012-01-01,119885.852257
+export,EU,group,2013-01-01,116395.913098
+export,EU,group,2014-01-01,115933.243656
+export,EU,group,2015-01-01,108016.17702
+export,EU,group,2016-01-01,112139.138577
+export,EU,group,2017-01-01,116736.351144
+export,EU,group,2018-01-01,124094.10453
+export,EU,group,2019-01-01,126801.560317
+export,EU,group,2020-01-01,122083.577226
+export,EU,group,2021-01-01,145289.216907
+export,EU,group,2022-01-01,156415.553532
+export,EU,group,2023-01-01,150917.665196
+export,EU,group,2024-01-01,159278.592663
+export,EU,group,2025-01-01,174362.094603
+export,Europe,group,1990-01-01,60001.15729
+export,Europe,group,1991-01-01,59801.658692
+export,Europe,group,1992-01-01,62330.397193
+export,Europe,group,1993-01-01,61119.579395
+export,Europe,group,1994-01-01,62658.663681
+export,Europe,group,1995-01-01,63355.826701
+export,Europe,group,1996-01-01,63609.338192
+export,Europe,group,1997-01-01,70481.482773
+export,Europe,group,1998-01-01,75870.476003
+export,Europe,group,1999-01-01,78479.063361
+export,Europe,group,2000-01-01,85426.362058
+export,Europe,group,2001-01-01,89330.594037
+export,Europe,group,2002-01-01,91237.350867
+export,Europe,group,2003-01-01,91390.350519
+export,Europe,group,2004-01-01,98739.300601
+export,Europe,group,2005-01-01,105602.14508
+export,Europe,group,2006-01-01,118217.330834
+export,Europe,group,2007-01-01,133075.347641
+export,Europe,group,2008-01-01,137527.257675
+export,Europe,group,2009-01-01,116042.035638
+export,Europe,group,2010-01-01,123984.26228
+export,Europe,group,2011-01-01,123683.123041
+export,Europe,group,2012-01-01,153408.117545
+export,Europe,group,2013-01-01,134120.995881
+export,Europe,group,2014-01-01,133458.196409
+export,Europe,group,2015-01-01,125069.732829
+export,Europe,group,2016-01-01,147545.612475
+export,Europe,group,2017-01-01,137289.443116
+export,Europe,group,2018-01-01,139474.249334
+export,Europe,group,2019-01-01,160031.254454
+export,Europe,group,2020-01-01,142680.575542
+export,Europe,group,2021-01-01,163772.777262
+export,Europe,group,2022-01-01,174304.288071
+export,Europe,group,2023-01-01,169075.793758
+export,Europe,group,2024-01-01,183663.290681
+export,Europe,group,2025-01-01,226692.245144
+export,France,country,1990-01-01,8748
+export,France,country,1991-01-01,8465
+export,France,country,1992-01-01,8726
+export,France,country,1993-01-01,8503.47912
+export,France,country,1994-01-01,8802.101742
+export,France,country,1995-01-01,9166.343208
+export,France,country,1996-01-01,9185.443758
+export,France,country,1997-01-01,9980.047126
+export,France,country,1998-01-01,10875.435512
+export,France,country,1999-01-01,11093.054347
+export,France,country,2000-01-01,11955.778589
+export,France,country,2001-01-01,12386.040447
+export,France,country,2002-01-01,13080.739265
+export,France,country,2003-01-01,12416.909016
+export,France,country,2004-01-01,13511.655978
+export,France,country,2005-01-01,14136.342863
+export,France,country,2006-01-01,15853.959004
+export,France,country,2007-01-01,17215.851017
+export,France,country,2008-01-01,18522.750345
+export,France,country,2009-01-01,15686.254086
+export,France,country,2010-01-01,15578.232174
+export,France,country,2011-01-01,14865.198978
+export,France,country,2012-01-01,21875.673825
+export,France,country,2013-01-01,19185.917275
+export,France,country,2014-01-01,17317.416057
+export,France,country,2015-01-01,16804.058826
+export,France,country,2016-01-01,17286.929533
+export,France,country,2017-01-01,17230.207626
+export,France,country,2018-01-01,19718.181907
+export,France,country,2019-01-01,19237.314307
+export,France,country,2020-01-01,15429.578093
+export,France,country,2021-01-01,17566.085173
+export,France,country,2022-01-01,20006.459988
+export,France,country,2023-01-01,18051.763469
+export,France,country,2024-01-01,18550.639784
+export,France,country,2025-01-01,26531.555155
+export,Germany,country,1990-01-01,19307
+export,Germany,country,1991-01-01,20907
+export,Germany,country,1992-01-01,21593
+export,Germany,country,1993-01-01,21400.696927
+export,Germany,country,1994-01-01,22440.443154
+export,Germany,country,1995-01-01,22912.458133
+export,Germany,country,1996-01-01,22334.860668
+export,Germany,country,1997-01-01,24695.908791
+export,Germany,country,1998-01-01,26286.511571
+export,Germany,country,1999-01-01,27230.62979
+export,Germany,country,2000-01-01,29174.148872
+export,Germany,country,2001-01-01,30013.883623
+export,Germany,country,2002-01-01,29042.987571
+export,Germany,country,2003-01-01,29224.14434
+export,Germany,country,2004-01-01,30922.228334
+export,Germany,country,2005-01-01,31691.779877
+export,Germany,country,2006-01-01,36396.295275
+export,Germany,country,2007-01-01,41919.853745
+export,Germany,country,2008-01-01,42549.43289
+export,Germany,country,2009-01-01,36059.339771
+export,Germany,country,2010-01-01,39277.571837
+export,Germany,country,2011-01-01,41956.367854
+export,Germany,country,2012-01-01,43893.45503
+export,Germany,country,2013-01-01,42047.239408
+export,Germany,country,2014-01-01,43439.619573
+export,Germany,country,2015-01-01,39660.811982
+export,Germany,country,2016-01-01,42734.187257
+export,Germany,country,2017-01-01,45165.719719
+export,Germany,country,2018-01-01,47251.104864
+export,Germany,country,2019-01-01,47685.331993
+export,Germany,country,2020-01-01,46080.759793
+export,Germany,country,2021-01-01,50612.953087
+export,Germany,country,2022-01-01,51029.857948
+export,Germany,country,2023-01-01,46041.136621
+export,Germany,country,2024-01-01,45218.315674
+export,Germany,country,2025-01-01,50452.296904
+export,Hong Kong,country,1990-01-01,2265
+export,Hong Kong,country,1991-01-01,2287
+export,Hong Kong,country,1992-01-01,2592
+export,Hong Kong,country,1993-01-01,2924.432207
+export,Hong Kong,country,1994-01-01,3160.379087
+export,Hong Kong,country,1995-01-01,2842.813732
+export,Hong Kong,country,1996-01-01,2696.817989
+export,Hong Kong,country,1997-01-01,3197.884013
+export,Hong Kong,country,1998-01-01,2564.634971
+export,Hong Kong,country,1999-01-01,2912.011223
+export,Hong Kong,country,2000-01-01,3841.476826
+export,Hong Kong,country,2001-01-01,4039.262098
+export,Hong Kong,country,2002-01-01,4766.110625
+export,Hong Kong,country,2003-01-01,4144.377235
+export,Hong Kong,country,2004-01-01,4236.989323
+export,Hong Kong,country,2005-01-01,4011.813463
+export,Hong Kong,country,2006-01-01,4693.67733
+export,Hong Kong,country,2007-01-01,5296.703779
+export,Hong Kong,country,2008-01-01,6219.067954
+export,Hong Kong,country,2009-01-01,5426.809696
+export,Hong Kong,country,2010-01-01,6534.91814
+export,Hong Kong,country,2011-01-01,7926.835882
+export,Hong Kong,country,2012-01-01,15178.222798
+export,Hong Kong,country,2013-01-01,47765.347773
+export,Hong Kong,country,2014-01-01,22156.82841
+export,Hong Kong,country,2015-01-01,24237.285406
+export,Hong Kong,country,2016-01-01,18290.724601
+export,Hong Kong,country,2017-01-01,15742.844199
+export,Hong Kong,country,2018-01-01,15670.392481
+export,Hong Kong,country,2019-01-01,9908.799681
+export,Hong Kong,country,2020-01-01,5957.849792
+export,Hong Kong,country,2021-01-01,9321.62017
+export,Hong Kong,country,2022-01-01,7065.627975
+export,Hong Kong,country,2023-01-01,13674.64873
+export,Hong Kong,country,2024-01-01,10758.075311
+export,Hong Kong,country,2025-01-01,6457.757552
+export,India,country,1990-01-01,393
+export,India,country,1991-01-01,310
+export,India,country,1992-01-01,358
+export,India,country,1993-01-01,404.799451
+export,India,country,1994-01-01,534.345994
+export,India,country,1995-01-01,659.578665
+export,India,country,1996-01-01,666.314487
+export,India,country,1997-01-01,590.999636
+export,India,country,1998-01-01,581.428243
+export,India,country,1999-01-01,511.75866
+export,India,country,2000-01-01,655.673941
+export,India,country,2001-01-01,655.69894
+export,India,country,2002-01-01,659.474216
+export,India,country,2003-01-01,758.832157
+export,India,country,2004-01-01,1034.377952
+export,India,country,2005-01-01,1387.316783
+export,India,country,2006-01-01,1887.349855
+export,India,country,2007-01-01,2303.828226
+export,India,country,2008-01-01,2406.619405
+export,India,country,2009-01-01,2155.435459
+export,India,country,2010-01-01,2563.810998
+export,India,country,2011-01-01,2983.37242
+export,India,country,2012-01-01,28713.416093
+export,India,country,2013-01-01,23980.063705
+export,India,country,2014-01-01,19341.715969
+export,India,country,2015-01-01,20613.245014
+export,India,country,2016-01-01,14325.394609
+export,India,country,2017-01-01,19510.809932
+export,India,country,2018-01-01,17446.128372
+export,India,country,2019-01-01,17946.806983
+export,India,country,2020-01-01,10851.963734
+export,India,country,2021-01-01,28706.455489
+export,India,country,2022-01-01,14301.27833
+export,India,country,2023-01-01,15073.841769
+export,India,country,2024-01-01,19890.478199
+export,India,country,2025-01-01,13206.174931
+export,Italy,country,1990-01-01,7850
+export,Italy,country,1991-01-01,7635
+export,Italy,country,1992-01-01,8058
+export,Italy,country,1993-01-01,7255.242371
+export,Italy,country,1994-01-01,7135.3842
+export,Italy,country,1995-01-01,7299.657249
+export,Italy,country,1996-01-01,7408.849029
+export,Italy,country,1997-01-01,8242.652758
+export,Italy,country,1998-01-01,8783.320982
+export,Italy,country,1999-01-01,9588.063935
+export,Italy,country,2000-01-01,10461.091189
+export,Italy,country,2001-01-01,11038.661277
+export,Italy,country,2002-01-01,12767.019519
+export,Italy,country,2003-01-01,12782.593055
+export,Italy,country,2004-01-01,13711.989811
+export,Italy,country,2005-01-01,14816.187826
+export,Italy,country,2006-01-01,16331.072653
+export,Italy,country,2007-01-01,17973.181236
+export,Italy,country,2008-01-01,18769.87968
+export,Italy,country,2009-01-01,15808.096469
+export,Italy,country,2010-01-01,15980.563662
+export,Italy,country,2011-01-01,16289.604923
+export,Italy,country,2012-01-01,16784.255487
+export,Italy,country,2013-01-01,16830.796559
+export,Italy,country,2014-01-01,16159.953203
+export,Italy,country,2015-01-01,14935.948054
+export,Italy,country,2016-01-01,14389.602468
+export,Italy,country,2017-01-01,15849.379949
+export,Italy,country,2018-01-01,16471.8759
+export,Italy,country,2019-01-01,16062.974753
+export,Italy,country,2020-01-01,14600.194085
+export,Italy,country,2021-01-01,18478.290942
+export,Italy,country,2022-01-01,24014.645545
+export,Italy,country,2023-01-01,24307.794339
+export,Italy,country,2024-01-01,24702.597395
+export,Italy,country,2025-01-01,24363.91581
+export,Japan,country,1990-01-01,4206
+export,Japan,country,1991-01-01,3767
+export,Japan,country,1992-01-01,3449
+export,Japan,country,1993-01-01,3221.029997
+export,Japan,country,1994-01-01,3713.071242
+export,Japan,country,1995-01-01,3845.228347
+export,Japan,country,1996-01-01,4109.078349
+export,Japan,country,1997-01-01,4448.485209
+export,Japan,country,1998-01-01,4387.178452
+export,Japan,country,1999-01-01,4852.839376
+export,Japan,country,2000-01-01,5767.229969
+export,Japan,country,2001-01-01,5383.07171
+export,Japan,country,2002-01-01,5182.525227
+export,Japan,country,2003-01-01,5408.938459
+export,Japan,country,2004-01-01,5722.286165
+export,Japan,country,2005-01-01,5892.0913
+export,Japan,country,2006-01-01,6726.368272
+export,Japan,country,2007-01-01,6729.654456
+export,Japan,country,2008-01-01,7057.980939
+export,Japan,country,2009-01-01,7147.490061
+export,Japan,country,2010-01-01,6734.61623
+export,Japan,country,2011-01-01,6658.054905
+export,Japan,country,2012-01-01,7170.550686
+export,Japan,country,2013-01-01,6425.261099
+export,Japan,country,2014-01-01,6394.424879
+export,Japan,country,2015-01-01,6592.004028
+export,Japan,country,2016-01-01,7510.953173
+export,Japan,country,2017-01-01,7467.462308
+export,Japan,country,2018-01-01,7764.933051
+export,Japan,country,2019-01-01,8136.035299
+export,Japan,country,2020-01-01,7056.824899
+export,Japan,country,2021-01-01,7716.913971
+export,Japan,country,2022-01-01,9378.142356
+export,Japan,country,2023-01-01,7682.300912
+export,Japan,country,2024-01-01,8170.331334
+export,Japan,country,2025-01-01,8015.253982
+export,Korea (South),country,1990-01-01,623
+export,Korea (South),country,1991-01-01,663
+export,Korea (South),country,1992-01-01,671
+export,Korea (South),country,1993-01-01,616.294528
+export,Korea (South),country,1994-01-01,917.750675
+export,Korea (South),country,1995-01-01,974.739296
+export,Korea (South),country,1996-01-01,1160.803899
+export,Korea (South),country,1997-01-01,1172.775402
+export,Korea (South),country,1998-01-01,551.983308
+export,Korea (South),country,1999-01-01,711.662097
+export,Korea (South),country,2000-01-01,1058.41008
+export,Korea (South),country,2001-01-01,1058.473548
+export,Korea (South),country,2002-01-01,1101.183164
+export,Korea (South),country,2003-01-01,1105.004181
+export,Korea (South),country,2004-01-01,1312.955798
+export,Korea (South),country,2005-01-01,1289.238318
+export,Korea (South),country,2006-01-01,1681.509345
+export,Korea (South),country,2007-01-01,1894.99859
+export,Korea (South),country,2008-01-01,1976.620689
+export,Korea (South),country,2009-01-01,1894.751313
+export,Korea (South),country,2010-01-01,2271.614367
+export,Korea (South),country,2011-01-01,2323.344216
+export,Korea (South),country,2012-01-01,2770.016893
+export,Korea (South),country,2013-01-01,2885.346344
+export,Korea (South),country,2014-01-01,2969.759911
+export,Korea (South),country,2015-01-01,2873.551061
+export,Korea (South),country,2016-01-01,2901.030671
+export,Korea (South),country,2017-01-01,3258.051781
+export,Korea (South),country,2018-01-01,3516.522882
+export,Korea (South),country,2019-01-01,3662.55894
+export,Korea (South),country,2020-01-01,2935.542029
+export,Korea (South),country,2021-01-01,3331.521154
+export,Korea (South),country,2022-01-01,3606.941899
+export,Korea (South),country,2023-01-01,3212.906777
+export,Korea (South),country,2024-01-01,3584.29536
+export,Korea (South),country,2025-01-01,3653.978138
+export,Netherlands,country,1990-01-01,2392
+export,Netherlands,country,1991-01-01,2396
+export,Netherlands,country,1992-01-01,2525
+export,Netherlands,country,1993-01-01,2558.420094
+export,Netherlands,country,1994-01-01,2553.594983
+export,Netherlands,country,1995-01-01,2588.9532599999998
+export,Netherlands,country,1996-01-01,2577.135047
+export,Netherlands,country,1997-01-01,2891.671611
+export,Netherlands,country,1998-01-01,3338.81682
+export,Netherlands,country,1999-01-01,3798.674063
+export,Netherlands,country,2000-01-01,4152.425477
+export,Netherlands,country,2001-01-01,4222.804405
+export,Netherlands,country,2002-01-01,4171.368457
+export,Netherlands,country,2003-01-01,4484.576101
+export,Netherlands,country,2004-01-01,4462.777442
+export,Netherlands,country,2005-01-01,5548.182762
+export,Netherlands,country,2006-01-01,6076.463459
+export,Netherlands,country,2007-01-01,6226.219894
+export,Netherlands,country,2008-01-01,6324.273341
+export,Netherlands,country,2009-01-01,5363.135659
+export,Netherlands,country,2010-01-01,5781.144615
+export,Netherlands,country,2011-01-01,5150.954946
+export,Netherlands,country,2012-01-01,5176.913983
+export,Netherlands,country,2013-01-01,5363.788076
+export,Netherlands,country,2014-01-01,5240.063641
+export,Netherlands,country,2015-01-01,4819.95634
+export,Netherlands,country,2016-01-01,5164.037843
+export,Netherlands,country,2017-01-01,5346.442527
+export,Netherlands,country,2018-01-01,5326.59955
+export,Netherlands,country,2019-01-01,6046.971721
+export,Netherlands,country,2020-01-01,6247.150528
+export,Netherlands,country,2021-01-01,6724.780063
+export,Netherlands,country,2022-01-01,6871.18868
+export,Netherlands,country,2023-01-01,6432.883452
+export,Netherlands,country,2024-01-01,6361.788327
+export,Netherlands,country,2025-01-01,6459.500887
+export,North America,group,1990-01-01,7708.883131
+export,North America,group,1991-01-01,7913.257533
+export,North America,group,1992-01-01,8553.049504
+export,North America,group,1993-01-01,8948.412942
+export,North America,group,1994-01-01,9339.645652
+export,North America,group,1995-01-01,8988.932492
+export,North America,group,1996-01-01,9948.868176
+export,North America,group,1997-01-01,12242.36013
+export,North America,group,1998-01-01,13242.156868
+export,North America,group,1999-01-01,15661.562651
+export,North America,group,2000-01-01,18693.126448
+export,North America,group,2001-01-01,17054.55252
+export,North America,group,2002-01-01,18252.236402
+export,North America,group,2003-01-01,16936.245485
+export,North America,group,2004-01-01,17801.17101
+export,North America,group,2005-01-01,19803.663634
+export,North America,group,2006-01-01,23262.616096
+export,North America,group,2007-01-01,22969.906051
+export,North America,group,2008-01-01,23205.483722
+export,North America,group,2009-01-01,21351.891634
+export,North America,group,2010-01-01,23455.281602
+export,North America,group,2011-01-01,24103.843584
+export,North America,group,2012-01-01,27427.24112
+export,North America,group,2013-01-01,28826.543735
+export,North America,group,2014-01-01,32265.310612
+export,North America,group,2015-01-01,33042.817323
+export,North America,group,2016-01-01,39843.338137
+export,North America,group,2017-01-01,39860.354537
+export,North America,group,2018-01-01,43933.149401
+export,North America,group,2019-01-01,48673.791557
+export,North America,group,2020-01-01,72715.650455
+export,North America,group,2021-01-01,61479.086863
+export,North America,group,2022-01-01,66547.781349
+export,North America,group,2023-01-01,60627.427537
+export,North America,group,2024-01-01,69382.996919
+export,North America,group,2025-01-01,108288.003947
+export,Oceania,group,1990-01-01,874
+export,Oceania,group,1991-01-01,813
+export,Oceania,group,1992-01-01,846
+export,Oceania,group,1993-01-01,886.67847
+export,Oceania,group,1994-01-01,1002.095216
+export,Oceania,group,1995-01-01,1064.601983
+export,Oceania,group,1996-01-01,993.882521
+export,Oceania,group,1997-01-01,1101.741452
+export,Oceania,group,1998-01-01,1037.303843
+export,Oceania,group,1999-01-01,1160.14397
+export,Oceania,group,2000-01-01,1222.626259
+export,Oceania,group,2001-01-01,1263.118882
+export,Oceania,group,2002-01-01,1213.048605
+export,Oceania,group,2003-01-01,1231.268302
+export,Oceania,group,2004-01-01,1480.139234
+export,Oceania,group,2005-01-01,1673.746164
+export,Oceania,group,2006-01-01,1857.734583
+export,Oceania,group,2007-01-01,2244.351122
+export,Oceania,group,2008-01-01,2375.619721
+export,Oceania,group,2009-01-01,2179.64806
+export,Oceania,group,2010-01-01,2437.528114
+export,Oceania,group,2011-01-01,2721.887626
+export,Oceania,group,2012-01-01,3359.829229
+export,Oceania,group,2013-01-01,3157.200053
+export,Oceania,group,2014-01-01,2783.51021
+export,Oceania,group,2015-01-01,2620.433487
+export,Oceania,group,2016-01-01,2566.919972
+export,Oceania,group,2017-01-01,2668.408193
+export,Oceania,group,2018-01-01,3003.374942
+export,Oceania,group,2019-01-01,2874.977157
+export,Oceania,group,2020-01-01,2402.01066
+export,Oceania,group,2021-01-01,2498.527129
+export,Oceania,group,2022-01-01,2870.209727
+export,Oceania,group,2023-01-01,2789.746606
+export,Oceania,group,2024-01-01,2716.302533
+export,Oceania,group,2025-01-01,2706.041912
+export,Poland,country,1990-01-01,304
+export,Poland,country,1991-01-01,407
+export,Poland,country,1992-01-01,416
+export,Poland,country,1993-01-01,401.216954
+export,Poland,country,1994-01-01,470.392484
+export,Poland,country,1995-01-01,559.139408
+export,Poland,country,1996-01-01,659.617125
+export,Poland,country,1997-01-01,837.667217
+export,Poland,country,1998-01-01,903.624317
+export,Poland,country,1999-01-01,1006.872575
+export,Poland,country,2000-01-01,1131.969005
+export,Poland,country,2001-01-01,1209.745361
+export,Poland,country,2002-01-01,1156.637794
+export,Poland,country,2003-01-01,1143.769402
+export,Poland,country,2004-01-01,1346.123793
+export,Poland,country,2005-01-01,1419.482791
+export,Poland,country,2006-01-01,1740.949024
+export,Poland,country,2007-01-01,2165.949615
+export,Poland,country,2008-01-01,2446.787508
+export,Poland,country,2009-01-01,1819.494586
+export,Poland,country,2010-01-01,2069.356663
+export,Poland,country,2011-01-01,1975.929452
+export,Poland,country,2012-01-01,1893.961163
+export,Poland,country,2013-01-01,2081.845284
+export,Poland,country,2014-01-01,2208.838518
+export,Poland,country,2015-01-01,2104.063215
+export,Poland,country,2016-01-01,2173.605318
+export,Poland,country,2017-01-01,2248.817543
+export,Poland,country,2018-01-01,2699.194533
+export,Poland,country,2019-01-01,2670.203428
+export,Poland,country,2020-01-01,2641.951262
+export,Poland,country,2021-01-01,2989.525869
+export,Poland,country,2022-01-01,2941.970993
+export,Poland,country,2023-01-01,3009.527146
+export,Poland,country,2024-01-01,3055.586953
+export,Poland,country,2025-01-01,3437.601847
+export,Russia,country,1992-01-01,267
+export,Russia,country,1993-01-01,327.170599
+export,Russia,country,1994-01-01,430.373201
+export,Russia,country,1995-01-01,364.920994
+export,Russia,country,1996-01-01,429.031778
+export,Russia,country,1997-01-01,592.770157
+export,Russia,country,1998-01-01,525.26868
+export,Russia,country,1999-01-01,354.74251400000003
+export,Russia,country,2000-01-01,555.66107
+export,Russia,country,2001-01-01,833.484126
+export,Russia,country,2002-01-01,885.021737
+export,Russia,country,2003-01-01,1079.06842
+export,Russia,country,2004-01-01,1211.989961
+export,Russia,country,2005-01-01,1555.265199
+export,Russia,country,2006-01-01,2245.330469
+export,Russia,country,2007-01-01,2926.431323
+export,Russia,country,2008-01-01,3180.174782
+export,Russia,country,2009-01-01,2131.247158
+export,Russia,country,2010-01-01,2689.819658
+export,Russia,country,2011-01-01,3011.490359
+export,Russia,country,2012-01-01,2963.671111
+export,Russia,country,2013-01-01,3142.730652
+export,Russia,country,2014-01-01,2908.150882
+export,Russia,country,2015-01-01,2304.672421
+export,Russia,country,2016-01-01,2017.584588
+export,Russia,country,2017-01-01,2260.689264
+export,Russia,country,2018-01-01,2522.702677
+export,Russia,country,2019-01-01,3118.542762
+export,Russia,country,2020-01-01,2808.4407419999998
+export,Russia,country,2021-01-01,3371.66424
+export,Russia,country,2022-01-01,3032.599837
+export,Russia,country,2023-01-01,2586.862326
+export,Russia,country,2024-01-01,2229.880233
+export,Russia,country,2025-01-01,2230.842227
+export,Saudi Arabia,country,1990-01-01,859
+export,Saudi Arabia,country,1991-01-01,964
+export,Saudi Arabia,country,1992-01-01,1093
+export,Saudi Arabia,country,1993-01-01,1491.323104
+export,Saudi Arabia,country,1994-01-01,1081.660407
+export,Saudi Arabia,country,1995-01-01,1188.606111
+export,Saudi Arabia,country,1996-01-01,901.013046
+export,Saudi Arabia,country,1997-01-01,1076.298497
+export,Saudi Arabia,country,1998-01-01,916.756289
+export,Saudi Arabia,country,1999-01-01,837.820152
+export,Saudi Arabia,country,2000-01-01,986.195386
+export,Saudi Arabia,country,2001-01-01,994.309788
+export,Saudi Arabia,country,2002-01-01,1333.355677
+export,Saudi Arabia,country,2003-01-01,1344.062339
+export,Saudi Arabia,country,2004-01-01,1113.205448
+export,Saudi Arabia,country,2005-01-01,1114.24949
+export,Saudi Arabia,country,2006-01-01,1225.817145
+export,Saudi Arabia,country,2007-01-01,1551.12307
+export,Saudi Arabia,country,2008-01-01,1661.193792
+export,Saudi Arabia,country,2009-01-01,1633.964564
+export,Saudi Arabia,country,2010-01-01,1631.942321
+export,Saudi Arabia,country,2011-01-01,1637.481783
+export,Saudi Arabia,country,2012-01-01,3660.523916
+export,Saudi Arabia,country,2013-01-01,4893.475558
+export,Saudi Arabia,country,2014-01-01,4586.516824
+export,Saudi Arabia,country,2015-01-01,4762.447976
+export,Saudi Arabia,country,2016-01-01,2767.07288
+export,Saudi Arabia,country,2017-01-01,1835.286657
+export,Saudi Arabia,country,2018-01-01,1940.554156
+export,Saudi Arabia,country,2019-01-01,1806.507256
+export,Saudi Arabia,country,2020-01-01,1614.445532
+export,Saudi Arabia,country,2021-01-01,2285.501191
+export,Saudi Arabia,country,2022-01-01,4808.213095
+export,Saudi Arabia,country,2023-01-01,6083.936066
+export,Saudi Arabia,country,2024-01-01,6447.979846
+export,Saudi Arabia,country,2025-01-01,5517.793667
+export,Singapore,country,1990-01-01,938
+export,Singapore,country,1991-01-01,797
+export,Singapore,country,1992-01-01,863
+export,Singapore,country,1993-01-01,1311.050428
+export,Singapore,country,1994-01-01,1235.021057
+export,Singapore,country,1995-01-01,1270.097554
+export,Singapore,country,1996-01-01,1445.65288
+export,Singapore,country,1997-01-01,1521.930853
+export,Singapore,country,1998-01-01,1090.620906
+export,Singapore,country,1999-01-01,1283.377022
+export,Singapore,country,2000-01-01,1599.491447
+export,Singapore,country,2001-01-01,1580.265766
+export,Singapore,country,2002-01-01,1530.164312
+export,Singapore,country,2003-01-01,1365.337466
+export,Singapore,country,2004-01-01,1500.749622
+export,Singapore,country,2005-01-01,1633.05493
+export,Singapore,country,2006-01-01,1846.985796
+export,Singapore,country,2007-01-01,2109.575319
+export,Singapore,country,2008-01-01,2292.438378
+export,Singapore,country,2009-01-01,2081.036506
+export,Singapore,country,2010-01-01,2900.268168
+export,Singapore,country,2011-01-01,3152.654079
+export,Singapore,country,2012-01-01,6574.895965
+export,Singapore,country,2013-01-01,11425.573992
+export,Singapore,country,2014-01-01,8319.425802
+export,Singapore,country,2015-01-01,7660.920237
+export,Singapore,country,2016-01-01,6436.023044
+export,Singapore,country,2017-01-01,7289.657765
+export,Singapore,country,2018-01-01,6682.354407
+export,Singapore,country,2019-01-01,6178.920092
+export,Singapore,country,2020-01-01,6357.716274
+export,Singapore,country,2021-01-01,7403.984118
+export,Singapore,country,2022-01-01,9874.329301
+export,Singapore,country,2023-01-01,7718.541427
+export,Singapore,country,2024-01-01,5690.874773
+export,Singapore,country,2025-01-01,5909.71293
+export,Spain,country,1990-01-01,1880
+export,Spain,country,1991-01-01,2073
+export,Spain,country,1992-01-01,2176
+export,Spain,country,1993-01-01,1859.907089
+export,Spain,country,1994-01-01,1900.70091
+export,Spain,country,1995-01-01,2023.22202
+export,Spain,country,1996-01-01,2202.225576
+export,Spain,country,1997-01-01,2703.431596
+export,Spain,country,1998-01-01,3213.797737
+export,Spain,country,1999-01-01,3492.689954
+export,Spain,country,2000-01-01,3772.792274
+export,Spain,country,2001-01-01,4353.149451
+export,Spain,country,2002-01-01,4546.969521
+export,Spain,country,2003-01-01,4903.834861
+export,Spain,country,2004-01-01,5975.91294
+export,Spain,country,2005-01-01,6595.231447
+export,Spain,country,2006-01-01,6972.654678
+export,Spain,country,2007-01-01,7574.060841
+export,Spain,country,2008-01-01,7387.542389
+export,Spain,country,2009-01-01,6527.676627
+export,Spain,country,2010-01-01,6371.648102
+export,Spain,country,2011-01-01,5797.004826
+export,Spain,country,2012-01-01,5510.07271
+export,Spain,country,2013-01-01,5345.991266
+export,Spain,country,2014-01-01,5846.160137
+export,Spain,country,2015-01-01,5384.802616
+export,Spain,country,2016-01-01,5572.134703
+export,Spain,country,2017-01-01,5794.349554
+export,Spain,country,2018-01-01,6851.62222
+export,Spain,country,2019-01-01,7825.395223
+export,Spain,country,2020-01-01,7529.761407
+export,Spain,country,2021-01-01,12626.131803
+export,Spain,country,2022-01-01,10159.929267
+export,Spain,country,2023-01-01,7721.706843
+export,Spain,country,2024-01-01,6840.737513
+export,Spain,country,2025-01-01,5879.724543
+export,Taiwan,country,1990-01-01,653
+export,Taiwan,country,1991-01-01,644
+export,Taiwan,country,1992-01-01,897
+export,Taiwan,country,1993-01-01,953.977248
+export,Taiwan,country,1994-01-01,975.227243
+export,Taiwan,country,1995-01-01,937.687829
+export,Taiwan,country,1996-01-01,930.513556
+export,Taiwan,country,1997-01-01,1084.995096
+export,Taiwan,country,1998-01-01,1223.207556
+export,Taiwan,country,1999-01-01,1328.056354
+export,Taiwan,country,2000-01-01,1527.204008
+export,Taiwan,country,2001-01-01,1307.708836
+export,Taiwan,country,2002-01-01,1188.212756
+export,Taiwan,country,2003-01-01,1331.794881
+export,Taiwan,country,2004-01-01,1491.305415
+export,Taiwan,country,2005-01-01,1346.023827
+export,Taiwan,country,2006-01-01,1457.357198
+export,Taiwan,country,2007-01-01,1563.577102
+export,Taiwan,country,2008-01-01,1613.939543
+export,Taiwan,country,2009-01-01,1191.896747
+export,Taiwan,country,2010-01-01,1536.321533
+export,Taiwan,country,2011-01-01,1808.397429
+export,Taiwan,country,2012-01-01,2028.393432
+export,Taiwan,country,2013-01-01,1940.344043
+export,Taiwan,country,2014-01-01,1874.306143
+export,Taiwan,country,2015-01-01,1903.421381
+export,Taiwan,country,2016-01-01,1869.005402
+export,Taiwan,country,2017-01-01,1875.091428
+export,Taiwan,country,2018-01-01,2061.941517
+export,Taiwan,country,2019-01-01,2061.395311
+export,Taiwan,country,2020-01-01,2371.541217
+export,Taiwan,country,2021-01-01,2442.910473
+export,Taiwan,country,2022-01-01,2528.324144
+export,Taiwan,country,2023-01-01,1943.311974
+export,Taiwan,country,2024-01-01,2629.546814
+export,Taiwan,country,2025-01-01,3209.905992
+export,Thailand,country,1990-01-01,569
+export,Thailand,country,1991-01-01,706
+export,Thailand,country,1992-01-01,724
+export,Thailand,country,1993-01-01,792.452834
+export,Thailand,country,1994-01-01,902.850826
+export,Thailand,country,1995-01-01,876.197309
+export,Thailand,country,1996-01-01,895.284532
+export,Thailand,country,1997-01-01,900.938045
+export,Thailand,country,1998-01-01,576.790405
+export,Thailand,country,1999-01-01,586.812717
+export,Thailand,country,2000-01-01,753.004636
+export,Thailand,country,2001-01-01,805.263109
+export,Thailand,country,2002-01-01,852.20077
+export,Thailand,country,2003-01-01,820.180471
+export,Thailand,country,2004-01-01,848.247592
+export,Thailand,country,2005-01-01,933.85746
+export,Thailand,country,2006-01-01,1033.15605
+export,Thailand,country,2007-01-01,1045.712373
+export,Thailand,country,2008-01-01,1169.116233
+export,Thailand,country,2009-01-01,928.406797
+export,Thailand,country,2010-01-01,1111.326133
+export,Thailand,country,2011-01-01,1134.274697
+export,Thailand,country,2012-01-01,5851.073567
+export,Thailand,country,2013-01-01,7469.226086
+export,Thailand,country,2014-01-01,2887.065859
+export,Thailand,country,2015-01-01,2714.243822
+export,Thailand,country,2016-01-01,2035.914041
+export,Thailand,country,2017-01-01,3563.646284
+export,Thailand,country,2018-01-01,3765.947853
+export,Thailand,country,2019-01-01,2102.103713
+export,Thailand,country,2020-01-01,1973.732445
+export,Thailand,country,2021-01-01,3920.385874
+export,Thailand,country,2022-01-01,6136.175255
+export,Thailand,country,2023-01-01,3742.685361
+export,Thailand,country,2024-01-01,4415.029424
+export,Thailand,country,2025-01-01,5101.841921
+export,Total,group,1990-01-01,88256.918814
+export,Total,group,1991-01-01,87946.535636
+export,Total,group,1992-01-01,92141.819726
+export,Total,group,1993-01-01,93288.969175
+export,Total,group,1994-01-01,95827.090089
+export,Total,group,1995-01-01,96236.382129
+export,Total,group,1996-01-01,98588.755679
+export,Total,group,1997-01-01,110417.382851
+export,Total,group,1998-01-01,114054.539623
+export,Total,group,1999-01-01,120724.513589
+export,Total,group,2000-01-01,136014.912244
+export,Total,group,2001-01-01,138491.670468
+export,Total,group,2002-01-01,142922.612752
+export,Total,group,2003-01-01,141157.509855
+export,Total,group,2004-01-01,152756.513242
+export,Total,group,2005-01-01,162991.13343
+export,Total,group,2006-01-01,185216.067372
+export,Total,group,2007-01-01,206251.619448
+export,Total,group,2008-01-01,215984.070609
+export,Total,group,2009-01-01,187447.551182
+export,Total,group,2010-01-01,203483.802157
+export,Total,group,2011-01-01,208202.783032
+export,Total,group,2012-01-01,292958.202718
+export,Total,group,2013-01-01,332137.247227
+export,Total,group,2014-01-01,285178.883379
+export,Total,group,2015-01-01,279154.845287
+export,Total,group,2016-01-01,298408.001181
+export,Total,group,2017-01-01,294893.856892
+export,Total,group,2018-01-01,303885.75954
+export,Total,group,2019-01-01,311976.706436
+export,Total,group,2020-01-01,299461.579904
+export,Total,group,2021-01-01,347727.709813
+export,Total,group,2022-01-01,382668.097198
+export,Total,group,2023-01-01,377799.89614
+export,Total,group,2024-01-01,393833.522952
+export,Total,group,2025-01-01,461014.148343
+export,Türkiye,country,1990-01-01,811
+export,Türkiye,country,1991-01-01,686
+export,Türkiye,country,1992-01-01,684
+export,Türkiye,country,1993-01-01,862.161213
+export,Türkiye,country,1994-01-01,583.37126
+export,Türkiye,country,1995-01-01,946.981234
+export,Türkiye,country,1996-01-01,1145.089132
+export,Türkiye,country,1997-01-01,1458.529322
+export,Türkiye,country,1998-01-01,1332.210838
+export,Türkiye,country,1999-01-01,1062.802162
+export,Türkiye,country,2000-01-01,1412.408663
+export,Türkiye,country,2001-01-01,1203.314649
+export,Türkiye,country,2002-01-01,1676.287377
+export,Türkiye,country,2003-01-01,1692.681747
+export,Türkiye,country,2004-01-01,1997.130357
+export,Türkiye,country,2005-01-01,2054.392663
+export,Türkiye,country,2006-01-01,2320.656546
+export,Türkiye,country,2007-01-01,2638.56236
+export,Türkiye,country,2008-01-01,2471.078125
+export,Türkiye,country,2009-01-01,1803.465598
+export,Türkiye,country,2010-01-01,2111.878877
+export,Türkiye,country,2011-01-01,2147.213624
+export,Türkiye,country,2012-01-01,4126.379352
+export,Türkiye,country,2013-01-01,8250.433818
+export,Türkiye,country,2014-01-01,4489.670932
+export,Türkiye,country,2015-01-01,2488.801957
+export,Türkiye,country,2016-01-01,2306.924045
+export,Türkiye,country,2017-01-01,6039.811178
+export,Türkiye,country,2018-01-01,2792.810545
+export,Türkiye,country,2019-01-01,3349.693807
+export,Türkiye,country,2020-01-01,5857.498563
+export,Türkiye,country,2021-01-01,2571.639209
+export,Türkiye,country,2022-01-01,12189.857648
+export,Türkiye,country,2023-01-01,14651.824837
+export,Türkiye,country,2024-01-01,8031.786728
+export,Türkiye,country,2025-01-01,10844.100821
+export,USA,country,1990-01-01,6976
+export,USA,country,1991-01-01,7153
+export,USA,country,1992-01-01,7787
+export,USA,country,1993-01-01,8212.06952
+export,USA,country,1994-01-01,8672.800045
+export,USA,country,1995-01-01,8223.781059
+export,USA,country,1996-01-01,9133.918676
+export,USA,country,1997-01-01,11418.140119
+export,USA,country,1998-01-01,12355.235661
+export,USA,country,1999-01-01,14678.050109
+export,USA,country,2000-01-01,17426.594984
+export,USA,country,2001-01-01,15660.237574
+export,USA,country,2002-01-01,16675.453944
+export,USA,country,2003-01-01,15442.360488
+export,USA,country,2004-01-01,15780.045151
+export,USA,country,2005-01-01,17513.225439
+export,USA,country,2006-01-01,20476.758935
+export,USA,country,2007-01-01,20056.839348
+export,USA,country,2008-01-01,20729.030882
+export,USA,country,2009-01-01,18775.668576
+export,USA,country,2010-01-01,20558.124562
+export,USA,country,2011-01-01,21326.728297
+export,USA,country,2012-01-01,23908.771757
+export,USA,country,2013-01-01,25301.070345
+export,USA,country,2014-01-01,28833.683299
+export,USA,country,2015-01-01,29515.666298
+export,USA,country,2016-01-01,36367.506256
+export,USA,country,2017-01-01,36273.681353
+export,USA,country,2018-01-01,40068.335955
+export,USA,country,2019-01-01,44212.75232
+export,USA,country,2020-01-01,68842.326817
+export,USA,country,2021-01-01,57661.702924
+export,USA,country,2022-01-01,62414.575138
+export,USA,country,2023-01-01,56660.103
+export,USA,country,2024-01-01,65297.168636
+export,USA,country,2025-01-01,103921.909833
+export,United Arab Emirates,country,1990-01-01,312
+export,United Arab Emirates,country,1991-01-01,346
+export,United Arab Emirates,country,1992-01-01,523
+export,United Arab Emirates,country,1993-01-01,459.806819
+export,United Arab Emirates,country,1994-01-01,487.250301
+export,United Arab Emirates,country,1995-01-01,434.282624
+export,United Arab Emirates,country,1996-01-01,515.03812
+export,United Arab Emirates,country,1997-01-01,609.622884
+export,United Arab Emirates,country,1998-01-01,625.459215
+export,United Arab Emirates,country,1999-01-01,591.538104
+export,United Arab Emirates,country,2000-01-01,679.10132
+export,United Arab Emirates,country,2001-01-01,825.625557
+export,United Arab Emirates,country,2002-01-01,1083.30762
+export,United Arab Emirates,country,2003-01-01,1004.031519
+export,United Arab Emirates,country,2004-01-01,1132.934867
+export,United Arab Emirates,country,2005-01-01,1402.453679
+export,United Arab Emirates,country,2006-01-01,1753.993154
+export,United Arab Emirates,country,2007-01-01,1970.955415
+export,United Arab Emirates,country,2008-01-01,2841.279517
+export,United Arab Emirates,country,2009-01-01,2225.866796
+export,United Arab Emirates,country,2010-01-01,2251.093127
+export,United Arab Emirates,country,2011-01-01,2785.892463
+export,United Arab Emirates,country,2012-01-01,5098.953957
+export,United Arab Emirates,country,2013-01-01,8601.235688
+export,United Arab Emirates,country,2014-01-01,5903.137608
+export,United Arab Emirates,country,2015-01-01,5093.419292
+export,United Arab Emirates,country,2016-01-01,4291.909335
+export,United Arab Emirates,country,2017-01-01,4045.905413
+export,United Arab Emirates,country,2018-01-01,4839.530115
+export,United Arab Emirates,country,2019-01-01,3739.6302
+export,United Arab Emirates,country,2020-01-01,2780.394647
+export,United Arab Emirates,country,2021-01-01,4229.454715
+export,United Arab Emirates,country,2022-01-01,5770.749946
+export,United Arab Emirates,country,2023-01-01,10013.888632
+export,United Arab Emirates,country,2024-01-01,9963.094699
+export,United Arab Emirates,country,2025-01-01,9606.921414
+export,United Kingdom,country,1990-01-01,6573
+export,United Kingdom,country,1991-01-01,5811
+export,United Kingdom,country,1992-01-01,6063
+export,United Kingdom,country,1993-01-01,6409.418342
+export,United Kingdom,country,1994-01-01,6360.128651
+export,United Kingdom,country,1995-01-01,5860.981947
+export,United Kingdom,country,1996-01-01,6208.207524
+export,United Kingdom,country,1997-01-01,6402.032641
+export,United Kingdom,country,1998-01-01,6751.167532
+export,United Kingdom,country,1999-01-01,6603.733394
+export,United Kingdom,country,2000-01-01,7688.630579
+export,United Kingdom,country,2001-01-01,7677.270196
+export,United Kingdom,country,2002-01-01,7288.724819
+export,United Kingdom,country,2003-01-01,6768.240031
+export,United Kingdom,country,2004-01-01,7676.792281
+export,United Kingdom,country,2005-01-01,8803.227519
+export,United Kingdom,country,2006-01-01,8954.279199
+export,United Kingdom,country,2007-01-01,10529.131983
+export,United Kingdom,country,2008-01-01,11116.288306
+export,United Kingdom,country,2009-01-01,9428.407783
+export,United Kingdom,country,2010-01-01,12033.354219
+export,United Kingdom,country,2011-01-01,9953.429158
+export,United Kingdom,country,2012-01-01,28280.588136
+export,United Kingdom,country,2013-01-01,12306.721523
+export,United Kingdom,country,2014-01-01,12636.320803
+export,United Kingdom,country,2015-01-01,13089.170329
+export,United Kingdom,country,2016-01-01,31976.316643
+export,United Kingdom,country,2017-01-01,16734.214676
+export,United Kingdom,country,2018-01-01,10987.345855
+export,United Kingdom,country,2019-01-01,28142.662245
+export,United Kingdom,country,2020-01-01,15784.318344
+export,United Kingdom,country,2021-01-01,12835.18628
+export,United Kingdom,country,2022-01-01,12708.40641
+export,United Kingdom,country,2023-01-01,13234.476451
+export,United Kingdom,country,2024-01-01,19819.867345
+export,United Kingdom,country,2025-01-01,47686.969562
+import,Africa,group,1990-01-01,1684.117125
+import,Africa,group,1991-01-01,1518.957102
+import,Africa,group,1992-01-01,1019.436656
+import,Africa,group,1993-01-01,1193.119784
+import,Africa,group,1994-01-01,1138.398588
+import,Africa,group,1995-01-01,1226.367631
+import,Africa,group,1996-01-01,1629.139481
+import,Africa,group,1997-01-01,1638.53741
+import,Africa,group,1998-01-01,1563.697579
+import,Africa,group,1999-01-01,1622.036927
+import,Africa,group,2000-01-01,2356.103339
+import,Africa,group,2001-01-01,2381.950891
+import,Africa,group,2002-01-01,2242.081989
+import,Africa,group,2003-01-01,2465.859954
+import,Africa,group,2004-01-01,2936.111945
+import,Africa,group,2005-01-01,3630.041646
+import,Africa,group,2006-01-01,4712.403984
+import,Africa,group,2007-01-01,3692.231883
+import,Africa,group,2008-01-01,4631.038587
+import,Africa,group,2009-01-01,3241.26858
+import,Africa,group,2010-01-01,2213.49216
+import,Africa,group,2011-01-01,2852.275165
+import,Africa,group,2012-01-01,11233.137359
+import,Africa,group,2013-01-01,10667.097819
+import,Africa,group,2014-01-01,9746.369481
+import,Africa,group,2015-01-01,7918.180295
+import,Africa,group,2016-01-01,9014.873945
+import,Africa,group,2017-01-01,8593.406972
+import,Africa,group,2018-01-01,10477.818782
+import,Africa,group,2019-01-01,12448.610592000001
+import,Africa,group,2020-01-01,13741.926522
+import,Africa,group,2021-01-01,14719.921083
+import,Africa,group,2022-01-01,19090.633072
+import,Africa,group,2023-01-01,16934.031306
+import,Africa,group,2024-01-01,17080.782981
+import,Africa,group,2025-01-01,22606.257968
+import,Asia,group,1990-01-01,9201.081597
+import,Asia,group,1991-01-01,9284.38542
+import,Asia,group,1992-01-01,9065.382479
+import,Asia,group,1993-01-01,8852.488247
+import,Asia,group,1994-01-01,8645.424612
+import,Asia,group,1995-01-01,8303.517827
+import,Asia,group,1996-01-01,8248.925175
+import,Asia,group,1997-01-01,9871.492226
+import,Asia,group,1998-01-01,11620.838558
+import,Asia,group,1999-01-01,10549.380236
+import,Asia,group,2000-01-01,12870.476089
+import,Asia,group,2001-01-01,11632.420516
+import,Asia,group,2002-01-01,11663.698484
+import,Asia,group,2003-01-01,11425.235671
+import,Asia,group,2004-01-01,12776.66904
+import,Asia,group,2005-01-01,14484.475166
+import,Asia,group,2006-01-01,16170.011993
+import,Asia,group,2007-01-01,18190.988235
+import,Asia,group,2008-01-01,19858.91837
+import,Asia,group,2009-01-01,19648.411328
+import,Asia,group,2010-01-01,23879.622038
+import,Asia,group,2011-01-01,23295.979587
+import,Asia,group,2012-01-01,53553.264581
+import,Asia,group,2013-01-01,36407.556642
+import,Asia,group,2014-01-01,39796.961917
+import,Asia,group,2015-01-01,44149.885231
+import,Asia,group,2016-01-01,67641.119667
+import,Asia,group,2017-01-01,63545.970886
+import,Asia,group,2018-01-01,56583.466985
+import,Asia,group,2019-01-01,66590.007652
+import,Asia,group,2020-01-01,73016.254252
+import,Asia,group,2021-01-01,62859.641543
+import,Asia,group,2022-01-01,77441.936571
+import,Asia,group,2023-01-01,79053.361749
+import,Asia,group,2024-01-01,76591.911234
+import,Asia,group,2025-01-01,112109.08964
+import,Austria,country,1990-01-01,3807.207221
+import,Austria,country,1991-01-01,3647.716056
+import,Austria,country,1992-01-01,3608.104967
+import,Austria,country,1993-01-01,3652.753125
+import,Austria,country,1994-01-01,3810.849574
+import,Austria,country,1995-01-01,3994.854205
+import,Austria,country,1996-01-01,3836.229788
+import,Austria,country,1997-01-01,4152.201045
+import,Austria,country,1998-01-01,4578.952649
+import,Austria,country,1999-01-01,4690.545036
+import,Austria,country,2000-01-01,4944.574022
+import,Austria,country,2001-01-01,5080.351969
+import,Austria,country,2002-01-01,5456.712549
+import,Austria,country,2003-01-01,5662.550062
+import,Austria,country,2004-01-01,6085.675567
+import,Austria,country,2005-01-01,7219.852596
+import,Austria,country,2006-01-01,7611.832978
+import,Austria,country,2007-01-01,8091.469753
+import,Austria,country,2008-01-01,7912.007675
+import,Austria,country,2009-01-01,7217.948857
+import,Austria,country,2010-01-01,7934.472881
+import,Austria,country,2011-01-01,7981.440649
+import,Austria,country,2012-01-01,7869.895836
+import,Austria,country,2013-01-01,8072.560565
+import,Austria,country,2014-01-01,8884.657344
+import,Austria,country,2015-01-01,7492.076094
+import,Austria,country,2016-01-01,7799.798112
+import,Austria,country,2017-01-01,7883.487426
+import,Austria,country,2018-01-01,8316.575695
+import,Austria,country,2019-01-01,8452.742803
+import,Austria,country,2020-01-01,8422.625504
+import,Austria,country,2021-01-01,9293.868488
+import,Austria,country,2022-01-01,11152.996873
+import,Austria,country,2023-01-01,9819.208
+import,Austria,country,2024-01-01,9469.912801
+import,Austria,country,2025-01-01,9457.451152
+import,Belgium,country,1990-01-01,3469
+import,Belgium,country,1991-01-01,3285
+import,Belgium,country,1992-01-01,3564
+import,Belgium,country,1993-01-01,3217
+import,Belgium,country,1994-01-01,3500
+import,Belgium,country,1995-01-01,3350
+import,Belgium,country,1996-01-01,3411
+import,Belgium,country,1997-01-01,4055
+import,Belgium,country,1998-01-01,3921
+import,Belgium,country,1999-01-01,3426.024434
+import,Belgium,country,2000-01-01,4144.687775
+import,Belgium,country,2001-01-01,4237.870104
+import,Belgium,country,2002-01-01,3945.368477
+import,Belgium,country,2003-01-01,4030.978924
+import,Belgium,country,2004-01-01,4249.507894
+import,Belgium,country,2005-01-01,4793.70751
+import,Belgium,country,2006-01-01,5628.824425
+import,Belgium,country,2007-01-01,5912.034118
+import,Belgium,country,2008-01-01,6252.040467
+import,Belgium,country,2009-01-01,4762.65404
+import,Belgium,country,2010-01-01,5126.751141
+import,Belgium,country,2011-01-01,5695.476788
+import,Belgium,country,2012-01-01,7955.021132
+import,Belgium,country,2013-01-01,5616.324831
+import,Belgium,country,2014-01-01,4612.483853
+import,Belgium,country,2015-01-01,4631.497544
+import,Belgium,country,2016-01-01,4801.213957
+import,Belgium,country,2017-01-01,4960.538292
+import,Belgium,country,2018-01-01,5084.977609
+import,Belgium,country,2019-01-01,5496.360514
+import,Belgium,country,2020-01-01,3778.118149
+import,Belgium,country,2021-01-01,4037.231554
+import,Belgium,country,2022-01-01,4559.533944
+import,Belgium,country,2023-01-01,4002.290064
+import,Belgium,country,2024-01-01,3722.918086
+import,Belgium,country,2025-01-01,3858.856205
+import,Central and South America,group,1990-01-01,1108.370947
+import,Central and South America,group,1991-01-01,1092.989424
+import,Central and South America,group,1992-01-01,1030.851548
+import,Central and South America,group,1993-01-01,1105.679069
+import,Central and South America,group,1994-01-01,1428.592784
+import,Central and South America,group,1995-01-01,1246.244738
+import,Central and South America,group,1996-01-01,1130.192451
+import,Central and South America,group,1997-01-01,1666.686208
+import,Central and South America,group,1998-01-01,1578.859372
+import,Central and South America,group,1999-01-01,1998.709174
+import,Central and South America,group,2000-01-01,2461.286339
+import,Central and South America,group,2001-01-01,2812.483088
+import,Central and South America,group,2002-01-01,2441.826921
+import,Central and South America,group,2003-01-01,1969.031751
+import,Central and South America,group,2004-01-01,1992.955845
+import,Central and South America,group,2005-01-01,2117.719118
+import,Central and South America,group,2006-01-01,2087.371538
+import,Central and South America,group,2007-01-01,2643.927694
+import,Central and South America,group,2008-01-01,2611.902202
+import,Central and South America,group,2009-01-01,2045.812294
+import,Central and South America,group,2010-01-01,2375.66465
+import,Central and South America,group,2011-01-01,2646.011763
+import,Central and South America,group,2012-01-01,13305.013993
+import,Central and South America,group,2013-01-01,11465.773859
+import,Central and South America,group,2014-01-01,10480.244388
+import,Central and South America,group,2015-01-01,10876.466654
+import,Central and South America,group,2016-01-01,12270.561712
+import,Central and South America,group,2017-01-01,9911.581812
+import,Central and South America,group,2018-01-01,9762.805197
+import,Central and South America,group,2019-01-01,10285.528764
+import,Central and South America,group,2020-01-01,9225.998252
+import,Central and South America,group,2021-01-01,10163.686092
+import,Central and South America,group,2022-01-01,12263.121434
+import,Central and South America,group,2023-01-01,11599.100357
+import,Central and South America,group,2024-01-01,12842.580686
+import,Central and South America,group,2025-01-01,13926.404344
+import,China,country,1990-01-01,418.658211
+import,China,country,1991-01-01,710.454257
+import,China,country,1992-01-01,875.149383
+import,China,country,1993-01-01,1083.553835
+import,China,country,1994-01-01,1144.390282
+import,China,country,1995-01-01,1075.46597
+import,China,country,1996-01-01,1204.18035
+import,China,country,1997-01-01,1562.202339
+import,China,country,1998-01-01,1682.393036
+import,China,country,1999-01-01,1799.994737
+import,China,country,2000-01-01,2300.549324
+import,China,country,2001-01-01,2257.664574
+import,China,country,2002-01-01,2215.581968
+import,China,country,2003-01-01,2422.992434
+import,China,country,2004-01-01,2840.898514
+import,China,country,2005-01-01,3378.352698
+import,China,country,2006-01-01,3931.392381
+import,China,country,2007-01-01,4782.222468
+import,China,country,2008-01-01,4995.788633
+import,China,country,2009-01-01,5160.955653
+import,China,country,2010-01-01,6085.569311
+import,China,country,2011-01-01,6309.613304
+import,China,country,2012-01-01,10377.814158
+import,China,country,2013-01-01,11430.578599
+import,China,country,2014-01-01,12172.168034
+import,China,country,2015-01-01,12392.22359
+import,China,country,2016-01-01,12315.121076
+import,China,country,2017-01-01,13110.14949
+import,China,country,2018-01-01,14436.621533
+import,China,country,2019-01-01,15050.500615
+import,China,country,2020-01-01,16580.53179
+import,China,country,2021-01-01,18088.380401
+import,China,country,2022-01-01,20582.735517
+import,China,country,2023-01-01,18408.154917
+import,China,country,2024-01-01,17869.140954
+import,China,country,2025-01-01,21579.036514
+import,Czech Republic,country,1993-01-01,158.619084
+import,Czech Republic,country,1994-01-01,196.060557
+import,Czech Republic,country,1995-01-01,249.949219
+import,Czech Republic,country,1996-01-01,267.829975
+import,Czech Republic,country,1997-01-01,332.668183
+import,Czech Republic,country,1998-01-01,408.052666
+import,Czech Republic,country,1999-01-01,461.50592
+import,Czech Republic,country,2000-01-01,604.245885
+import,Czech Republic,country,2001-01-01,672.20223
+import,Czech Republic,country,2002-01-01,848.460809
+import,Czech Republic,country,2003-01-01,893.311049
+import,Czech Republic,country,2004-01-01,986.048289
+import,Czech Republic,country,2005-01-01,1093.130158
+import,Czech Republic,country,2006-01-01,1395.457348
+import,Czech Republic,country,2007-01-01,1707.452387
+import,Czech Republic,country,2008-01-01,1813.178751
+import,Czech Republic,country,2009-01-01,1720.885027
+import,Czech Republic,country,2010-01-01,2132.671109
+import,Czech Republic,country,2011-01-01,2152.885961
+import,Czech Republic,country,2012-01-01,2226.297267
+import,Czech Republic,country,2013-01-01,2197.184223
+import,Czech Republic,country,2014-01-01,2294.926713
+import,Czech Republic,country,2015-01-01,2357.77048
+import,Czech Republic,country,2016-01-01,2279.423307
+import,Czech Republic,country,2017-01-01,2467.68309
+import,Czech Republic,country,2018-01-01,2576.157418
+import,Czech Republic,country,2019-01-01,2756.322826
+import,Czech Republic,country,2020-01-01,2507.407772
+import,Czech Republic,country,2021-01-01,2704.769792
+import,Czech Republic,country,2022-01-01,3024.53215
+import,Czech Republic,country,2023-01-01,3226.006708
+import,Czech Republic,country,2024-01-01,3028.37994
+import,Czech Republic,country,2025-01-01,3065.030666
+import,EU,group,1990-01-01,71024.326241
+import,EU,group,1991-01-01,68055.769089
+import,EU,group,1992-01-01,67840.06167
+import,EU,group,1993-01-01,65027.107878
+import,EU,group,1994-01-01,68191.730306
+import,EU,group,1995-01-01,71156.283155
+import,EU,group,1996-01-01,71211.762995
+import,EU,group,1997-01-01,78906.698522
+import,EU,group,1998-01-01,83209.920785
+import,EU,group,1999-01-01,88370.408606
+import,EU,group,2000-01-01,98031.476836
+import,EU,group,2001-01-01,102451.294399
+import,EU,group,2002-01-01,101205.406493
+import,EU,group,2003-01-01,103734.279272
+import,EU,group,2004-01-01,110693.647089
+import,EU,group,2005-01-01,119450.689194
+import,EU,group,2006-01-01,132444.34992
+import,EU,group,2007-01-01,145601.762846
+import,EU,group,2008-01-01,148514.347863
+import,EU,group,2009-01-01,125559.691369
+import,EU,group,2010-01-01,135057.263063
+import,EU,group,2011-01-01,137625.638004
+import,EU,group,2012-01-01,156340.921197
+import,EU,group,2013-01-01,143680.049703
+import,EU,group,2014-01-01,135909.132366
+import,EU,group,2015-01-01,125631.16753
+import,EU,group,2016-01-01,129680.21513
+import,EU,group,2017-01-01,137289.382438
+import,EU,group,2018-01-01,144753.797402
+import,EU,group,2019-01-01,147047.309701
+import,EU,group,2020-01-01,136209.053831
+import,EU,group,2021-01-01,145599.978737
+import,EU,group,2022-01-01,170851.984312
+import,EU,group,2023-01-01,169114.748352
+import,EU,group,2024-01-01,172654.732621
+import,EU,group,2025-01-01,191995.461988
+import,Europe,group,1990-01-01,77338.955053
+import,Europe,group,1991-01-01,74802.300661
+import,Europe,group,1992-01-01,74098.713732
+import,Europe,group,1993-01-01,72339.88693
+import,Europe,group,1994-01-01,75202.588716
+import,Europe,group,1995-01-01,77311.760596
+import,Europe,group,1996-01-01,78187.905401
+import,Europe,group,1997-01-01,87543.60459
+import,Europe,group,1998-01-01,92184.795949
+import,Europe,group,1999-01-01,97235.069816
+import,Europe,group,2000-01-01,110515.232705
+import,Europe,group,2001-01-01,115860.522935
+import,Europe,group,2002-01-01,109873.702605
+import,Europe,group,2003-01-01,110972.328372
+import,Europe,group,2004-01-01,118068.005326
+import,Europe,group,2005-01-01,127901.402262
+import,Europe,group,2006-01-01,141951.034545
+import,Europe,group,2007-01-01,155978.072917
+import,Europe,group,2008-01-01,157502.23808
+import,Europe,group,2009-01-01,133094.609695
+import,Europe,group,2010-01-01,143778.208617
+import,Europe,group,2011-01-01,145456.295606
+import,Europe,group,2012-01-01,173349.68018
+import,Europe,group,2013-01-01,213617.770385
+import,Europe,group,2014-01-01,170753.761148
+import,Europe,group,2015-01-01,159079.184388
+import,Europe,group,2016-01-01,150991.861755
+import,Europe,group,2017-01-01,158805.860769
+import,Europe,group,2018-01-01,172465.788577
+import,Europe,group,2019-01-01,165106.583593
+import,Europe,group,2020-01-01,154226.731476
+import,Europe,group,2021-01-01,181727.591648
+import,Europe,group,2022-01-01,183962.548766
+import,Europe,group,2023-01-01,180439.156128
+import,Europe,group,2024-01-01,182502.441677
+import,Europe,group,2025-01-01,203588.70778
+import,France,country,1990-01-01,10708.067508
+import,France,country,1991-01-01,10345.240407
+import,France,country,1992-01-01,9987.420694
+import,France,country,1993-01-01,9813.550068
+import,France,country,1994-01-01,10174.439538
+import,France,country,1995-01-01,10762.167718
+import,France,country,1996-01-01,11165.329257
+import,France,country,1997-01-01,12091.584701
+import,France,country,1998-01-01,12584.792462
+import,France,country,1999-01-01,14418.784803
+import,France,country,2000-01-01,14245.886317
+import,France,country,2001-01-01,14554.959746
+import,France,country,2002-01-01,14575.901357
+import,France,country,2003-01-01,15297.831097
+import,France,country,2004-01-01,15107.188932
+import,France,country,2005-01-01,15804.414772
+import,France,country,2006-01-01,17706.354853
+import,France,country,2007-01-01,18328.586686
+import,France,country,2008-01-01,18638.62217
+import,France,country,2009-01-01,15730.102936
+import,France,country,2010-01-01,15600.34607
+import,France,country,2011-01-01,15896.617396
+import,France,country,2012-01-01,22746.72262
+import,France,country,2013-01-01,19718.955289
+import,France,country,2014-01-01,16654.344921
+import,France,country,2015-01-01,16359.870086
+import,France,country,2016-01-01,16377.912507
+import,France,country,2017-01-01,17913.681233
+import,France,country,2018-01-01,19734.692696
+import,France,country,2019-01-01,18918.801531
+import,France,country,2020-01-01,16454.138486
+import,France,country,2021-01-01,17752.974499
+import,France,country,2022-01-01,22253.001079
+import,France,country,2023-01-01,19654.892088
+import,France,country,2024-01-01,19045.942041
+import,France,country,2025-01-01,21065.943471
+import,Germany,country,1990-01-01,32528.96137
+import,Germany,country,1991-01-01,31133.576191
+import,Germany,country,1992-01-01,30879.913151
+import,Germany,country,1993-01-01,29247.731326
+import,Germany,country,1994-01-01,30406.910824
+import,Germany,country,1995-01-01,31855.090866
+import,Germany,country,1996-01-01,30349.63936
+import,Germany,country,1997-01-01,33285.023103
+import,Germany,country,1998-01-01,35316.4192
+import,Germany,country,1999-01-01,37251.261627
+import,Germany,country,2000-01-01,40584.36718
+import,Germany,country,2001-01-01,42743.666057
+import,Germany,country,2002-01-01,41842.704503
+import,Germany,country,2003-01-01,42738.344503
+import,Germany,country,2004-01-01,46341.883863
+import,Germany,country,2005-01-01,49732.249533
+import,Germany,country,2006-01-01,56180.746433
+import,Germany,country,2007-01-01,62915.74005
+import,Germany,country,2008-01-01,65776.494181
+import,Germany,country,2009-01-01,55012.597698
+import,Germany,country,2010-01-01,58570.425337
+import,Germany,country,2011-01-01,59517.451861
+import,Germany,country,2012-01-01,60379.543739
+import,Germany,country,2013-01-01,55624.363082
+import,Germany,country,2014-01-01,54556.367649
+import,Germany,country,2015-01-01,49872.054142
+import,Germany,country,2016-01-01,51075.030949
+import,Germany,country,2017-01-01,54542.478616
+import,Germany,country,2018-01-01,56566.292701
+import,Germany,country,2019-01-01,57190.71969
+import,Germany,country,2020-01-01,53249.457791
+import,Germany,country,2021-01-01,57133.95114
+import,Germany,country,2022-01-01,66738.849015
+import,Germany,country,2023-01-01,59705.727058
+import,Germany,country,2024-01-01,59891.639443
+import,Germany,country,2025-01-01,63823.026207
+import,Hong Kong,country,1990-01-01,902.074432
+import,Hong Kong,country,1991-01-01,847.257913
+import,Hong Kong,country,1992-01-01,748.750651
+import,Hong Kong,country,1993-01-01,801.808667
+import,Hong Kong,country,1994-01-01,671.271711
+import,Hong Kong,country,1995-01-01,642.466563
+import,Hong Kong,country,1996-01-01,617.096895
+import,Hong Kong,country,1997-01-01,706.605249
+import,Hong Kong,country,1998-01-01,705.510179
+import,Hong Kong,country,1999-01-01,656.426575
+import,Hong Kong,country,2000-01-01,894.66277
+import,Hong Kong,country,2001-01-01,679.349778
+import,Hong Kong,country,2002-01-01,1082.220771
+import,Hong Kong,country,2003-01-01,917.233426
+import,Hong Kong,country,2004-01-01,1098.652159
+import,Hong Kong,country,2005-01-01,1674.314682
+import,Hong Kong,country,2006-01-01,1456.497927
+import,Hong Kong,country,2007-01-01,1185.403813
+import,Hong Kong,country,2008-01-01,1439.932701
+import,Hong Kong,country,2009-01-01,1141.658829
+import,Hong Kong,country,2010-01-01,1636.354508
+import,Hong Kong,country,2011-01-01,1750.328893
+import,Hong Kong,country,2012-01-01,2810.916474
+import,Hong Kong,country,2013-01-01,2008.655206
+import,Hong Kong,country,2014-01-01,2836.140189
+import,Hong Kong,country,2015-01-01,2610.01543
+import,Hong Kong,country,2016-01-01,8180.287845
+import,Hong Kong,country,2017-01-01,9229.188961
+import,Hong Kong,country,2018-01-01,3832.51111
+import,Hong Kong,country,2019-01-01,3801.622189
+import,Hong Kong,country,2020-01-01,11309.810175
+import,Hong Kong,country,2021-01-01,4246.834129
+import,Hong Kong,country,2022-01-01,3909.860538
+import,Hong Kong,country,2023-01-01,4353.909987
+import,Hong Kong,country,2024-01-01,5197.362491
+import,Hong Kong,country,2025-01-01,4550.30486
+import,Ireland,country,1990-01-01,567.657391
+import,Ireland,country,1991-01-01,529.475698
+import,Ireland,country,1992-01-01,690.194311
+import,Ireland,country,1993-01-01,778.387448
+import,Ireland,country,1994-01-01,887.143231
+import,Ireland,country,1995-01-01,855.606879
+import,Ireland,country,1996-01-01,1091.603677
+import,Ireland,country,1997-01-01,1849.622457
+import,Ireland,country,1998-01-01,2095.800911
+import,Ireland,country,1999-01-01,2336.641851
+import,Ireland,country,2000-01-01,3307.888498
+import,Ireland,country,2001-01-01,5328.291407
+import,Ireland,country,2002-01-01,5135.993446
+import,Ireland,country,2003-01-01,4796.110068
+import,Ireland,country,2004-01-01,4692.537337
+import,Ireland,country,2005-01-01,5652.437507
+import,Ireland,country,2006-01-01,4665.304429
+import,Ireland,country,2007-01-01,6035.85521
+import,Ireland,country,2008-01-01,4918.954798
+import,Ireland,country,2009-01-01,4241.153303
+import,Ireland,country,2010-01-01,5857.652059
+import,Ireland,country,2011-01-01,5882.975823
+import,Ireland,country,2012-01-01,6762.788286
+import,Ireland,country,2013-01-01,7059.625539
+import,Ireland,country,2014-01-01,7199.442612
+import,Ireland,country,2015-01-01,7010.519039
+import,Ireland,country,2016-01-01,7645.233018
+import,Ireland,country,2017-01-01,7729.245881
+import,Ireland,country,2018-01-01,8604.896593
+import,Ireland,country,2019-01-01,7544.162943
+import,Ireland,country,2020-01-01,4578.599266
+import,Ireland,country,2021-01-01,3851.868733
+import,Ireland,country,2022-01-01,4021.859363
+import,Ireland,country,2023-01-01,4770.499485
+import,Ireland,country,2024-01-01,3397.576489
+import,Ireland,country,2025-01-01,3521.825562
+import,Italy,country,1990-01-01,10158.452163
+import,Italy,country,1991-01-01,9490.828491
+import,Italy,country,1992-01-01,9247.658649
+import,Italy,country,1993-01-01,8784.539929
+import,Italy,country,1994-01-01,9160.143331
+import,Italy,country,1995-01-01,9573.225952
+import,Italy,country,1996-01-01,10375.357394
+import,Italy,country,1997-01-01,10813.215456
+import,Italy,country,1998-01-01,11187.277604
+import,Italy,country,1999-01-01,11625.774959
+import,Italy,country,2000-01-01,12950.323163
+import,Italy,country,2001-01-01,13315.467066
+import,Italy,country,2002-01-01,13569.148953
+import,Italy,country,2003-01-01,14076.379265
+import,Italy,country,2004-01-01,15848.286825
+import,Italy,country,2005-01-01,16530.134161
+import,Italy,country,2006-01-01,18704.645387
+import,Italy,country,2007-01-01,20844.955713
+import,Italy,country,2008-01-01,21671.467015
+import,Italy,country,2009-01-01,18074.408382
+import,Italy,country,2010-01-01,18698.876033
+import,Italy,country,2011-01-01,19198.352798
+import,Italy,country,2012-01-01,25970.2195
+import,Italy,country,2013-01-01,23060.605391
+import,Italy,country,2014-01-01,20709.856279
+import,Italy,country,2015-01-01,18763.954947
+import,Italy,country,2016-01-01,19469.421336
+import,Italy,country,2017-01-01,19819.133399
+import,Italy,country,2018-01-01,20805.98913
+import,Italy,country,2019-01-01,22235.287102
+import,Italy,country,2020-01-01,22200.427645
+import,Italy,country,2021-01-01,21995.039852
+import,Italy,country,2022-01-01,23704.508593
+import,Italy,country,2023-01-01,25556.202353
+import,Italy,country,2024-01-01,26758.55108
+import,Italy,country,2025-01-01,32243.314206
+import,Japan,country,1990-01-01,4245.957332
+import,Japan,country,1991-01-01,4127.900662
+import,Japan,country,1992-01-01,3982.274187
+import,Japan,country,1993-01-01,3469.469495
+import,Japan,country,1994-01-01,3130.554534
+import,Japan,country,1995-01-01,2984.956016
+import,Japan,country,1996-01-01,2607.767883
+import,Japan,country,1997-01-01,3077.54334
+import,Japan,country,1998-01-01,3082.191049
+import,Japan,country,1999-01-01,3437.700011
+import,Japan,country,2000-01-01,3925.480007
+import,Japan,country,2001-01-01,3390.846264
+import,Japan,country,2002-01-01,2739.227142
+import,Japan,country,2003-01-01,2845.769156
+import,Japan,country,2004-01-01,3046.609871
+import,Japan,country,2005-01-01,2918.110219
+import,Japan,country,2006-01-01,3104.830627
+import,Japan,country,2007-01-01,3503.287432
+import,Japan,country,2008-01-01,4170.193119
+import,Japan,country,2009-01-01,3596.989007
+import,Japan,country,2010-01-01,3680.910673
+import,Japan,country,2011-01-01,4144.008747
+import,Japan,country,2012-01-01,4730.507745
+import,Japan,country,2013-01-01,3753.306442
+import,Japan,country,2014-01-01,3659.669317
+import,Japan,country,2015-01-01,3483.333687
+import,Japan,country,2016-01-01,3954.448496
+import,Japan,country,2017-01-01,5994.608646
+import,Japan,country,2018-01-01,4668.990778
+import,Japan,country,2019-01-01,4526.369402
+import,Japan,country,2020-01-01,4989.214387
+import,Japan,country,2021-01-01,4893.319162
+import,Japan,country,2022-01-01,5720.324619
+import,Japan,country,2023-01-01,6888.844022
+import,Japan,country,2024-01-01,7095.794646
+import,Japan,country,2025-01-01,7898.613368
+import,Mexico,country,1990-01-01,54.372767
+import,Mexico,country,1991-01-01,63.467171
+import,Mexico,country,1992-01-01,44.136123
+import,Mexico,country,1993-01-01,53.188186
+import,Mexico,country,1994-01-01,73.286825
+import,Mexico,country,1995-01-01,94.190059
+import,Mexico,country,1996-01-01,93.442935
+import,Mexico,country,1997-01-01,67.625971
+import,Mexico,country,1998-01-01,139.795131
+import,Mexico,country,1999-01-01,176.670848
+import,Mexico,country,2000-01-01,191.119965
+import,Mexico,country,2001-01-01,169.195388
+import,Mexico,country,2002-01-01,190.464958
+import,Mexico,country,2003-01-01,223.435151
+import,Mexico,country,2004-01-01,184.566125
+import,Mexico,country,2005-01-01,136.394059
+import,Mexico,country,2006-01-01,117.857296
+import,Mexico,country,2007-01-01,169.474782
+import,Mexico,country,2008-01-01,234.200557
+import,Mexico,country,2009-01-01,394.380537
+import,Mexico,country,2010-01-01,493.304835
+import,Mexico,country,2011-01-01,549.887775
+import,Mexico,country,2012-01-01,1377.866975
+import,Mexico,country,2013-01-01,1831.279386
+import,Mexico,country,2014-01-01,1782.617905
+import,Mexico,country,2015-01-01,1689.98939
+import,Mexico,country,2016-01-01,968.312483
+import,Mexico,country,2017-01-01,1440.627783
+import,Mexico,country,2018-01-01,1264.032695
+import,Mexico,country,2019-01-01,933.183952
+import,Mexico,country,2020-01-01,1031.218953
+import,Mexico,country,2021-01-01,1483.495111
+import,Mexico,country,2022-01-01,2212.920041
+import,Mexico,country,2023-01-01,2569.26009
+import,Mexico,country,2024-01-01,2469.387558
+import,Mexico,country,2025-01-01,1852.787649
+import,Netherlands,country,1990-01-01,3966.18179
+import,Netherlands,country,1991-01-01,3899.43016
+import,Netherlands,country,1992-01-01,4114.809702
+import,Netherlands,country,1993-01-01,4051.627295
+import,Netherlands,country,1994-01-01,4333.276674
+import,Netherlands,country,1995-01-01,4338.279831
+import,Netherlands,country,1996-01-01,4576.984309
+import,Netherlands,country,1997-01-01,5727.96223
+import,Netherlands,country,1998-01-01,5803.206251
+import,Netherlands,country,1999-01-01,6077.065159
+import,Netherlands,country,2000-01-01,7893.702145
+import,Netherlands,country,2001-01-01,7650.323613
+import,Netherlands,country,2002-01-01,6712.586734
+import,Netherlands,country,2003-01-01,6555.555216
+import,Netherlands,country,2004-01-01,6989.622477
+import,Netherlands,country,2005-01-01,7551.512149
+import,Netherlands,country,2006-01-01,8322.410038
+import,Netherlands,country,2007-01-01,8831.492182
+import,Netherlands,country,2008-01-01,9021.926277
+import,Netherlands,country,2009-01-01,7648.477049
+import,Netherlands,country,2010-01-01,8312.494244
+import,Netherlands,country,2011-01-01,8027.782987
+import,Netherlands,country,2012-01-01,6390.952527
+import,Netherlands,country,2013-01-01,5939.693981
+import,Netherlands,country,2014-01-01,5579.250011
+import,Netherlands,country,2015-01-01,4971.235261
+import,Netherlands,country,2016-01-01,4974.012811
+import,Netherlands,country,2017-01-01,5220.543107
+import,Netherlands,country,2018-01-01,5403.288333
+import,Netherlands,country,2019-01-01,5522.654562
+import,Netherlands,country,2020-01-01,5071.655508
+import,Netherlands,country,2021-01-01,5408.604793
+import,Netherlands,country,2022-01-01,5595.773257
+import,Netherlands,country,2023-01-01,5892.836889
+import,Netherlands,country,2024-01-01,6221.137506
+import,Netherlands,country,2025-01-01,5214.001239
+import,North America,group,1990-01-01,7126.45248
+import,North America,group,1991-01-01,8156.3242980000005
+import,North America,group,1992-01-01,6893.986648
+import,North America,group,1993-01-01,6158.164283
+import,North America,group,1994-01-01,6005.254387
+import,North America,group,1995-01-01,6227.484387
+import,North America,group,1996-01-01,7262.280234
+import,North America,group,1997-01-01,9109.096203
+import,North America,group,1998-01-01,8630.591044
+import,North America,group,1999-01-01,8340.131671
+import,North America,group,2000-01-01,10894.58601
+import,North America,group,2001-01-01,8928.0410209999991
+import,North America,group,2002-01-01,9411.699422
+import,North America,group,2003-01-01,7899.484371
+import,North America,group,2004-01-01,7946.892476
+import,North America,group,2005-01-01,9150.921885
+import,North America,group,2006-01-01,11951.609078
+import,North America,group,2007-01-01,12419.373164
+import,North America,group,2008-01-01,12572.351555
+import,North America,group,2009-01-01,10590.723715
+import,North America,group,2010-01-01,10775.805448
+import,North America,group,2011-01-01,9705.52122
+import,North America,group,2012-01-01,25229.035734
+import,North America,group,2013-01-01,25400.431814
+import,North America,group,2014-01-01,21074.662664
+import,North America,group,2015-01-01,21123.918046
+import,North America,group,2016-01-01,25205.615207
+import,North America,group,2017-01-01,23181.324592
+import,North America,group,2018-01-01,22799.892074
+import,North America,group,2019-01-01,20117.666885
+import,North America,group,2020-01-01,21604.677516
+import,North America,group,2021-01-01,25409.822207
+import,North America,group,2022-01-01,44949.701107
+import,North America,group,2023-01-01,35739.979045
+import,North America,group,2024-01-01,34148.314411
+import,North America,group,2025-01-01,64780.225881
+import,Oceania,group,1990-01-01,151.959837
+import,Oceania,group,1991-01-01,176.833979
+import,Oceania,group,1992-01-01,222.043731
+import,Oceania,group,1993-01-01,180.351318
+import,Oceania,group,1994-01-01,187.673843
+import,Oceania,group,1995-01-01,167.884466
+import,Oceania,group,1996-01-01,205.535326
+import,Oceania,group,1997-01-01,257.471165
+import,Oceania,group,1998-01-01,267.737075
+import,Oceania,group,1999-01-01,311.668307
+import,Oceania,group,2000-01-01,304.485835
+import,Oceania,group,2001-01-01,273.863029
+import,Oceania,group,2002-01-01,260.917063
+import,Oceania,group,2003-01-01,254.790149
+import,Oceania,group,2004-01-01,275.524029
+import,Oceania,group,2005-01-01,259.922503
+import,Oceania,group,2006-01-01,275.708142
+import,Oceania,group,2007-01-01,291.693858
+import,Oceania,group,2008-01-01,344.029103
+import,Oceania,group,2009-01-01,377.338618
+import,Oceania,group,2010-01-01,413.43596
+import,Oceania,group,2011-01-01,583.710403
+import,Oceania,group,2012-01-01,873.538666
+import,Oceania,group,2013-01-01,835.665094
+import,Oceania,group,2014-01-01,652.858013
+import,Oceania,group,2015-01-01,624.297303
+import,Oceania,group,2016-01-01,1013.127591
+import,Oceania,group,2017-01-01,1533.397263
+import,Oceania,group,2018-01-01,1299.318509
+import,Oceania,group,2019-01-01,1509.718534
+import,Oceania,group,2020-01-01,1951.371542
+import,Oceania,group,2021-01-01,1623.267791
+import,Oceania,group,2022-01-01,3297.072836
+import,Oceania,group,2023-01-01,5185.187902
+import,Oceania,group,2024-01-01,4363.605855
+import,Oceania,group,2025-01-01,6212.751859
+import,Peru,country,1990-01-01,29.501748
+import,Peru,country,1991-01-01,27.9071
+import,Peru,country,1992-01-01,18.062756
+import,Peru,country,1993-01-01,16.649734
+import,Peru,country,1994-01-01,15.572904
+import,Peru,country,1995-01-01,15.437627
+import,Peru,country,1996-01-01,12.536674
+import,Peru,country,1997-01-01,17.134482
+import,Peru,country,1998-01-01,19.183636
+import,Peru,country,1999-01-01,19.097751
+import,Peru,country,2000-01-01,21.085145
+import,Peru,country,2001-01-01,16.622847
+import,Peru,country,2002-01-01,14.836694
+import,Peru,country,2003-01-01,19.833039
+import,Peru,country,2004-01-01,21.95419
+import,Peru,country,2005-01-01,23.147397
+import,Peru,country,2006-01-01,32.20138
+import,Peru,country,2007-01-01,36.214741
+import,Peru,country,2008-01-01,55.152694
+import,Peru,country,2009-01-01,40.77348
+import,Peru,country,2010-01-01,43.517723
+import,Peru,country,2011-01-01,46.796755
+import,Peru,country,2012-01-01,5101.234692
+import,Peru,country,2013-01-01,3137.393944
+import,Peru,country,2014-01-01,2641.855929
+import,Peru,country,2015-01-01,2962.800965
+import,Peru,country,2016-01-01,2937.866231
+import,Peru,country,2017-01-01,2688.922843
+import,Peru,country,2018-01-01,2257.497158
+import,Peru,country,2019-01-01,2282.767921
+import,Peru,country,2020-01-01,1704.481841
+import,Peru,country,2021-01-01,2087.349487
+import,Peru,country,2022-01-01,2426.618744
+import,Peru,country,2023-01-01,2179.384751
+import,Peru,country,2024-01-01,2711.230437
+import,Peru,country,2025-01-01,2661.137902
+import,Poland,country,1990-01-01,113.514318
+import,Poland,country,1991-01-01,119.80087
+import,Poland,country,1992-01-01,99.25932
+import,Poland,country,1993-01-01,106.325125
+import,Poland,country,1994-01-01,123.068459
+import,Poland,country,1995-01-01,167.937902
+import,Poland,country,1996-01-01,156.87184
+import,Poland,country,1997-01-01,185.782138
+import,Poland,country,1998-01-01,246.262953
+import,Poland,country,1999-01-01,269.043575
+import,Poland,country,2000-01-01,371.389634
+import,Poland,country,2001-01-01,403.420505
+import,Poland,country,2002-01-01,479.741276
+import,Poland,country,2003-01-01,515.040422
+import,Poland,country,2004-01-01,664.537017
+import,Poland,country,2005-01-01,818.230322
+import,Poland,country,2006-01-01,939.903773
+import,Poland,country,2007-01-01,1062.486368
+import,Poland,country,2008-01-01,1283.688183
+import,Poland,country,2009-01-01,1119.064604
+import,Poland,country,2010-01-01,1289.019508
+import,Poland,country,2011-01-01,1372.550496
+import,Poland,country,2012-01-01,1615.227627
+import,Poland,country,2013-01-01,1663.312658
+import,Poland,country,2014-01-01,1754.371341
+import,Poland,country,2015-01-01,1722.532876
+import,Poland,country,2016-01-01,1974.946306
+import,Poland,country,2017-01-01,2254.463518
+import,Poland,country,2018-01-01,2395.670403
+import,Poland,country,2019-01-01,2525.338593
+import,Poland,country,2020-01-01,2491.284148
+import,Poland,country,2021-01-01,2801.43889
+import,Poland,country,2022-01-01,3080.831495
+import,Poland,country,2023-01-01,3232.948477
+import,Poland,country,2024-01-01,3387.645024
+import,Poland,country,2025-01-01,3463.012511
+import,Russia,country,1992-01-01,336.988473
+import,Russia,country,1993-01-01,376.038593
+import,Russia,country,1994-01-01,497.923089
+import,Russia,country,1995-01-01,507.690924
+import,Russia,country,1996-01-01,372.960999
+import,Russia,country,1997-01-01,1066.612275
+import,Russia,country,1998-01-01,1322.082116
+import,Russia,country,1999-01-01,1676.64615
+import,Russia,country,2000-01-01,3843.514906
+import,Russia,country,2001-01-01,4768.899838
+import,Russia,country,2002-01-01,1560.580966
+import,Russia,country,2003-01-01,1202.806956
+import,Russia,country,2004-01-01,1041.985865
+import,Russia,country,2005-01-01,1023.067377
+import,Russia,country,2006-01-01,1873.005182
+import,Russia,country,2007-01-01,1550.71238
+import,Russia,country,2008-01-01,1054.330824
+import,Russia,country,2009-01-01,725.761768
+import,Russia,country,2010-01-01,1040.764807
+import,Russia,country,2011-01-01,891.446373
+import,Russia,country,2012-01-01,2889.011212
+import,Russia,country,2013-01-01,4389.002777
+import,Russia,country,2014-01-01,3037.172922
+import,Russia,country,2015-01-01,1596.242722
+import,Russia,country,2016-01-01,1642.722285
+import,Russia,country,2017-01-01,1335.705322
+import,Russia,country,2018-01-01,593.490766
+import,Russia,country,2019-01-01,452.411199
+import,Russia,country,2020-01-01,1257.115834
+import,Russia,country,2021-01-01,1369.655627
+import,Russia,country,2022-01-01,3780.493826
+import,Russia,country,2023-01-01,3566.699585
+import,Russia,country,2024-01-01,705.7632
+import,Russia,country,2025-01-01,915.340762
+import,Singapore,country,1990-01-01,273.482827
+import,Singapore,country,1991-01-01,159.370972
+import,Singapore,country,1992-01-01,193.476476
+import,Singapore,country,1993-01-01,227.896434
+import,Singapore,country,1994-01-01,250.181555
+import,Singapore,country,1995-01-01,197.900672
+import,Singapore,country,1996-01-01,222.973333
+import,Singapore,country,1997-01-01,185.699611
+import,Singapore,country,1998-01-01,1066.13485
+import,Singapore,country,1999-01-01,210.733327
+import,Singapore,country,2000-01-01,284.962658
+import,Singapore,country,2001-01-01,316.6554
+import,Singapore,country,2002-01-01,296.012718
+import,Singapore,country,2003-01-01,315.225901
+import,Singapore,country,2004-01-01,325.660924
+import,Singapore,country,2005-01-01,359.426441
+import,Singapore,country,2006-01-01,415.661085
+import,Singapore,country,2007-01-01,478.094125
+import,Singapore,country,2008-01-01,526.019503
+import,Singapore,country,2009-01-01,612.277019
+import,Singapore,country,2010-01-01,864.797665
+import,Singapore,country,2011-01-01,665.953421
+import,Singapore,country,2012-01-01,2101.579119
+import,Singapore,country,2013-01-01,1342.668991
+import,Singapore,country,2014-01-01,1566.79526
+import,Singapore,country,2015-01-01,1938.789662
+import,Singapore,country,2016-01-01,3444.107069
+import,Singapore,country,2017-01-01,2428.120097
+import,Singapore,country,2018-01-01,2675.181848
+import,Singapore,country,2019-01-01,2613.202957
+import,Singapore,country,2020-01-01,3831.444913
+import,Singapore,country,2021-01-01,4622.354787
+import,Singapore,country,2022-01-01,4380.553938
+import,Singapore,country,2023-01-01,3526.128874
+import,Singapore,country,2024-01-01,3375.165656
+import,Singapore,country,2025-01-01,2471.745497
+import,South Africa,country,1990-01-01,593.944003
+import,South Africa,country,1991-01-01,436.958493
+import,South Africa,country,1992-01-01,249.628818
+import,South Africa,country,1993-01-01,270.756597
+import,South Africa,country,1994-01-01,206.874929
+import,South Africa,country,1995-01-01,283.918254
+import,South Africa,country,1996-01-01,360.367661
+import,South Africa,country,1997-01-01,395.207436
+import,South Africa,country,1998-01-01,494.988477
+import,South Africa,country,1999-01-01,418.680924
+import,South Africa,country,2000-01-01,503.99482
+import,South Africa,country,2001-01-01,636.555085
+import,South Africa,country,2002-01-01,636.673616
+import,South Africa,country,2003-01-01,865.172464
+import,South Africa,country,2004-01-01,1013.703628
+import,South Africa,country,2005-01-01,1089.2246
+import,South Africa,country,2006-01-01,1260.782837
+import,South Africa,country,2007-01-01,1047.733265
+import,South Africa,country,2008-01-01,645.26223
+import,South Africa,country,2009-01-01,1653.115512
+import,South Africa,country,2010-01-01,761.917807
+import,South Africa,country,2011-01-01,1354.350718
+import,South Africa,country,2012-01-01,1936.333925
+import,South Africa,country,2013-01-01,1728.105726
+import,South Africa,country,2014-01-01,2175.233643
+import,South Africa,country,2015-01-01,2182.79622
+import,South Africa,country,2016-01-01,1117.010039
+import,South Africa,country,2017-01-01,1233.51328
+import,South Africa,country,2018-01-01,2272.241132
+import,South Africa,country,2019-01-01,2813.461618
+import,South Africa,country,2020-01-01,2347.026818
+import,South Africa,country,2021-01-01,3892.4748
+import,South Africa,country,2022-01-01,6119.532742
+import,South Africa,country,2023-01-01,3880.733009
+import,South Africa,country,2024-01-01,2940.573219
+import,South Africa,country,2025-01-01,5220.753437
+import,Spain,country,1990-01-01,1174.807482
+import,Spain,country,1991-01-01,1234.000111
+import,Spain,country,1992-01-01,1260.293495
+import,Spain,country,1993-01-01,1230.191686
+import,Spain,country,1994-01-01,1312.170304
+import,Spain,country,1995-01-01,1357.89348
+import,Spain,country,1996-01-01,1588.272584
+import,Spain,country,1997-01-01,1781.781487
+import,Spain,country,1998-01-01,1950.627685
+import,Spain,country,1999-01-01,2045.689302
+import,Spain,country,2000-01-01,2418.279032
+import,Spain,country,2001-01-01,2493.383657
+import,Spain,country,2002-01-01,2661.123777
+import,Spain,country,2003-01-01,3193.52808
+import,Spain,country,2004-01-01,3440.116135
+import,Spain,country,2005-01-01,3980.436676
+import,Spain,country,2006-01-01,4062.620767
+import,Spain,country,2007-01-01,4142.678773
+import,Spain,country,2008-01-01,3911.940804
+import,Spain,country,2009-01-01,3827.987866
+import,Spain,country,2010-01-01,4915.233545
+import,Spain,country,2011-01-01,5202.219806
+import,Spain,country,2012-01-01,6247.376156
+import,Spain,country,2013-01-01,5952.550671
+import,Spain,country,2014-01-01,4910.104757
+import,Spain,country,2015-01-01,4572.412003
+import,Spain,country,2016-01-01,5102.253929
+import,Spain,country,2017-01-01,5349.70963
+import,Spain,country,2018-01-01,5575.836795
+import,Spain,country,2019-01-01,6413.691424
+import,Spain,country,2020-01-01,7023.542283
+import,Spain,country,2021-01-01,8292.801958
+import,Spain,country,2022-01-01,9094.055008
+import,Spain,country,2023-01-01,9322.161309
+import,Spain,country,2024-01-01,7234.11607
+import,Spain,country,2025-01-01,6211.381667
+import,Sweden,country,1990-01-01,1853.51383
+import,Sweden,country,1991-01-01,1754.218605
+import,Sweden,country,1992-01-01,1609.210701
+import,Sweden,country,1993-01-01,1406.357392
+import,Sweden,country,1994-01-01,1580.823453
+import,Sweden,country,1995-01-01,1706.881396
+import,Sweden,country,1996-01-01,1560.848162
+import,Sweden,country,1997-01-01,1631.246687
+import,Sweden,country,1998-01-01,1667.221757
+import,Sweden,country,1999-01-01,1837.745919
+import,Sweden,country,2000-01-01,1914.601374
+import,Sweden,country,2001-01-01,1486.695128
+import,Sweden,country,2002-01-01,1514.856798
+import,Sweden,country,2003-01-01,1675.289325
+import,Sweden,country,2004-01-01,1676.076122
+import,Sweden,country,2005-01-01,1484.534425
+import,Sweden,country,2006-01-01,1769.963581
+import,Sweden,country,2007-01-01,1696.026335
+import,Sweden,country,2008-01-01,1688.65028
+import,Sweden,country,2009-01-01,1324.547833
+import,Sweden,country,2010-01-01,1421.061189
+import,Sweden,country,2011-01-01,1594.713841
+import,Sweden,country,2012-01-01,1816.203
+import,Sweden,country,2013-01-01,1919.426015
+import,Sweden,country,2014-01-01,1632.425415
+import,Sweden,country,2015-01-01,1596.863824
+import,Sweden,country,2016-01-01,1456.792937
+import,Sweden,country,2017-01-01,1586.925383
+import,Sweden,country,2018-01-01,1786.215689
+import,Sweden,country,2019-01-01,1600.830148
+import,Sweden,country,2020-01-01,1460.083248
+import,Sweden,country,2021-01-01,1507.816792
+import,Sweden,country,2022-01-01,1560.955437
+import,Sweden,country,2023-01-01,1776.895583
+import,Sweden,country,2024-01-01,1579.670737
+import,Sweden,country,2025-01-01,2257.471989
+import,Thailand,country,1990-01-01,374.883094
+import,Thailand,country,1991-01-01,361.961426
+import,Thailand,country,1992-01-01,495.490764
+import,Thailand,country,1993-01-01,517.965307
+import,Thailand,country,1994-01-01,514.378374
+import,Thailand,country,1995-01-01,479.461637
+import,Thailand,country,1996-01-01,551.64024
+import,Thailand,country,1997-01-01,559.969779
+import,Thailand,country,1998-01-01,584.471176
+import,Thailand,country,1999-01-01,541.590008
+import,Thailand,country,2000-01-01,605.126764
+import,Thailand,country,2001-01-01,601.613865
+import,Thailand,country,2002-01-01,612.633821
+import,Thailand,country,2003-01-01,625.02214
+import,Thailand,country,2004-01-01,658.269699
+import,Thailand,country,2005-01-01,723.031529
+import,Thailand,country,2006-01-01,800.666721
+import,Thailand,country,2007-01-01,1012.422924
+import,Thailand,country,2008-01-01,1008.837988
+import,Thailand,country,2009-01-01,783.358948
+import,Thailand,country,2010-01-01,880.729257
+import,Thailand,country,2011-01-01,922.811466
+import,Thailand,country,2012-01-01,4601.352906
+import,Thailand,country,2013-01-01,1557.854034
+import,Thailand,country,2014-01-01,1864.522272
+import,Thailand,country,2015-01-01,2477.655156
+import,Thailand,country,2016-01-01,4946.80658
+import,Thailand,country,2017-01-01,4294.044665
+import,Thailand,country,2018-01-01,2598.055064
+import,Thailand,country,2019-01-01,5561.956372
+import,Thailand,country,2020-01-01,7654.300022
+import,Thailand,country,2021-01-01,1751.944132
+import,Thailand,country,2022-01-01,3608.781361
+import,Thailand,country,2023-01-01,3684.703922
+import,Thailand,country,2024-01-01,3170.571663
+import,Thailand,country,2025-01-01,5622.449731
+import,Total,group,1990-01-01,96610.937039
+import,Total,group,1991-01-01,95031.790884
+import,Total,group,1992-01-01,92330.414794
+import,Total,group,1993-01-01,89829.689631
+import,Total,group,1994-01-01,92607.93293
+import,Total,group,1995-01-01,94483.259645
+import,Total,group,1996-01-01,96663.978068
+import,Total,group,1997-01-01,110086.887802
+import,Total,group,1998-01-01,115846.519577
+import,Total,group,1999-01-01,120056.996131
+import,Total,group,2000-01-01,139402.170317
+import,Total,group,2001-01-01,141889.28148
+import,Total,group,2002-01-01,135893.926484
+import,Total,group,2003-01-01,134986.730268
+import,Total,group,2004-01-01,143996.158661
+import,Total,group,2005-01-01,157544.48258
+import,Total,group,2006-01-01,177148.13928
+import,Total,group,2007-01-01,193216.287751
+import,Total,group,2008-01-01,197520.477897
+import,Total,group,2009-01-01,168998.16423
+import,Total,group,2010-01-01,183436.228873
+import,Total,group,2011-01-01,184539.793744
+import,Total,group,2012-01-01,277543.670513
+import,Total,group,2013-01-01,298394.295613
+import,Total,group,2014-01-01,252504.857611
+import,Total,group,2015-01-01,243771.931917
+import,Total,group,2016-01-01,266137.159877
+import,Total,group,2017-01-01,265571.542294
+import,Total,group,2018-01-01,273389.090124
+import,Total,group,2019-01-01,276058.11602
+import,Total,group,2020-01-01,273766.95956
+import,Total,group,2021-01-01,296503.930364
+import,Total,group,2022-01-01,341005.013786
+import,Total,group,2023-01-01,328950.816487
+import,Total,group,2024-01-01,327529.636844
+import,Total,group,2025-01-01,423223.437472
+import,Türkiye,country,1990-01-01,236.285986
+import,Türkiye,country,1991-01-01,224.746308
+import,Türkiye,country,1992-01-01,224.412078
+import,Türkiye,country,1993-01-01,214.910336
+import,Türkiye,country,1994-01-01,254.177098
+import,Türkiye,country,1995-01-01,252.335015
+import,Türkiye,country,1996-01-01,274.649304
+import,Türkiye,country,1997-01-01,319.612026
+import,Türkiye,country,1998-01-01,331.795219
+import,Türkiye,country,1999-01-01,373.652832
+import,Türkiye,country,2000-01-01,403.232437
+import,Türkiye,country,2001-01-01,439.127307
+import,Türkiye,country,2002-01-01,464.935694
+import,Türkiye,country,2003-01-01,442.064861
+import,Türkiye,country,2004-01-01,528.047133
+import,Türkiye,country,2005-01-01,616.505355
+import,Türkiye,country,2006-01-01,675.713125
+import,Türkiye,country,2007-01-01,859.346933
+import,Türkiye,country,2008-01-01,847.10138
+import,Türkiye,country,2009-01-01,694.938367
+import,Türkiye,country,2010-01-01,765.927002
+import,Türkiye,country,2011-01-01,773.640572
+import,Türkiye,country,2012-01-01,2239.617924
+import,Türkiye,country,2013-01-01,1363.392331
+import,Türkiye,country,2014-01-01,3323.064172
+import,Türkiye,country,2015-01-01,5770.270048
+import,Türkiye,country,2016-01-01,3010.510732
+import,Türkiye,country,2017-01-01,1581.344495
+import,Türkiye,country,2018-01-01,2379.999189
+import,Türkiye,country,2019-01-01,1655.58638
+import,Türkiye,country,2020-01-01,1798.610482
+import,Türkiye,country,2021-01-01,1997.517345
+import,Türkiye,country,2022-01-01,2004.340955
+import,Türkiye,country,2023-01-01,2202.887723
+import,Türkiye,country,2024-01-01,2134.432486
+import,Türkiye,country,2025-01-01,2945.669089
+import,USA,country,1990-01-01,5920.587976
+import,USA,country,1991-01-01,6971.382509
+import,USA,country,1992-01-01,5865.869436
+import,USA,country,1993-01-01,5580.953712
+import,USA,country,1994-01-01,5703.870405
+import,USA,country,1995-01-01,5843.386389
+import,USA,country,1996-01-01,6846.169588
+import,USA,country,1997-01-01,8657.110992
+import,USA,country,1998-01-01,7963.026911
+import,USA,country,1999-01-01,7701.451905
+import,USA,country,2000-01-01,10288.421422
+import,USA,country,2001-01-01,8381.676561
+import,USA,country,2002-01-01,8944.8031
+import,USA,country,2003-01-01,7356.611219
+import,USA,country,2004-01-01,7253.562003
+import,USA,country,2005-01-01,8328.013215
+import,USA,country,2006-01-01,10937.384233
+import,USA,country,2007-01-01,11211.407431
+import,USA,country,2008-01-01,11438.888173
+import,USA,country,2009-01-01,9759.361191
+import,USA,country,2010-01-01,9827.765736
+import,USA,country,2011-01-01,9163.152673
+import,USA,country,2012-01-01,23925.831047
+import,USA,country,2013-01-01,22660.716121
+import,USA,country,2014-01-01,19596.830388
+import,USA,country,2015-01-01,20095.059463
+import,USA,country,2016-01-01,24111.246773
+import,USA,country,2017-01-01,21279.749922
+import,USA,country,2018-01-01,20874.755141
+import,USA,country,2019-01-01,18882.746256
+import,USA,country,2020-01-01,19832.964513
+import,USA,country,2021-01-01,22228.259999
+import,USA,country,2022-01-01,37516.863387
+import,USA,country,2023-01-01,29726.625262
+import,USA,country,2024-01-01,26639.808317
+import,USA,country,2025-01-01,56629.247052
+import,United Arab Emirates,country,1990-01-01,54.788843
+import,United Arab Emirates,country,1991-01-01,23.38208
+import,United Arab Emirates,country,1992-01-01,10.40756
+import,United Arab Emirates,country,1993-01-01,13.991825
+import,United Arab Emirates,country,1994-01-01,36.211217
+import,United Arab Emirates,country,1995-01-01,12.011336
+import,United Arab Emirates,country,1996-01-01,22.6915
+import,United Arab Emirates,country,1997-01-01,17.855937
+import,United Arab Emirates,country,1998-01-01,15.052737
+import,United Arab Emirates,country,1999-01-01,56.769279
+import,United Arab Emirates,country,2000-01-01,109.74011900000001
+import,United Arab Emirates,country,2001-01-01,117.447525
+import,United Arab Emirates,country,2002-01-01,374.77438
+import,United Arab Emirates,country,2003-01-01,314.641597
+import,United Arab Emirates,country,2004-01-01,453.204037
+import,United Arab Emirates,country,2005-01-01,640.607079
+import,United Arab Emirates,country,2006-01-01,633.842446
+import,United Arab Emirates,country,2007-01-01,324.358169
+import,United Arab Emirates,country,2008-01-01,443.654795
+import,United Arab Emirates,country,2009-01-01,534.29579
+import,United Arab Emirates,country,2010-01-01,755.746506
+import,United Arab Emirates,country,2011-01-01,496.306879
+import,United Arab Emirates,country,2012-01-01,16273.623127
+import,United Arab Emirates,country,2013-01-01,2970.829513
+import,United Arab Emirates,country,2014-01-01,3036.51067
+import,United Arab Emirates,country,2015-01-01,3700.896663
+import,United Arab Emirates,country,2016-01-01,16085.455962
+import,United Arab Emirates,country,2017-01-01,9882.711989
+import,United Arab Emirates,country,2018-01-01,10169.357127
+import,United Arab Emirates,country,2019-01-01,14948.408587
+import,United Arab Emirates,country,2020-01-01,9488.457878
+import,United Arab Emirates,country,2021-01-01,7997.750289
+import,United Arab Emirates,country,2022-01-01,8848.82564
+import,United Arab Emirates,country,2023-01-01,9382.578161
+import,United Arab Emirates,country,2024-01-01,11552.651413
+import,United Arab Emirates,country,2025-01-01,39409.005157
+import,United Kingdom,country,1990-01-01,5083.02576
+import,United Kingdom,country,1991-01-01,5262.190675
+import,United Kingdom,country,1992-01-01,5335.568969
+import,United Kingdom,country,1993-01-01,6487.68199
+import,United Kingdom,country,1994-01-01,6139.784253
+import,United Kingdom,country,1995-01-01,5242.885192
+import,United Kingdom,country,1996-01-01,6208.103029
+import,United Kingdom,country,1997-01-01,7137.685652
+import,United Kingdom,country,1998-01-01,7233.024604
+import,United Kingdom,country,1999-01-01,6786.195973
+import,United Kingdom,country,2000-01-01,8129.17491
+import,United Kingdom,country,2001-01-01,8180.455686
+import,United Kingdom,country,2002-01-01,6602.754311
+import,United Kingdom,country,2003-01-01,5609.252853
+import,United Kingdom,country,2004-01-01,5842.145339
+import,United Kingdom,country,2005-01-01,6950.975488
+import,United Kingdom,country,2006-01-01,6942.800917
+import,United Kingdom,country,2007-01-01,8047.073387
+import,United Kingdom,country,2008-01-01,7231.648907
+import,United Kingdom,country,2009-01-01,6274.264407
+import,United Kingdom,country,2010-01-01,7120.426495
+import,United Kingdom,country,2011-01-01,6361.935903
+import,United Kingdom,country,2012-01-01,13130.009473
+import,United Kingdom,country,2013-01-01,64664.608922
+import,United Kingdom,country,2014-01-01,30890.406973
+import,United Kingdom,country,2015-01-01,31036.051003
+import,United Kingdom,country,2016-01-01,18747.386647
+import,United Kingdom,country,2017-01-01,19133.496158
+import,United Kingdom,country,2018-01-01,25979.946534
+import,United Kingdom,country,2019-01-01,16411.287203
+import,United Kingdom,country,2020-01-01,15554.917793
+import,United Kingdom,country,2021-01-01,33377.643038
+import,United Kingdom,country,2022-01-01,7865.813782
+import,United Kingdom,country,2023-01-01,6326.578436
+import,United Kingdom,country,2024-01-01,7656.981776
+import,United Kingdom,country,2025-01-01,9033.18128
+import,Uzbekistan,country,1992-01-01,8.317346
+import,Uzbekistan,country,1993-01-01,5.426817
+import,Uzbekistan,country,1994-01-01,12.337662
+import,Uzbekistan,country,1995-01-01,8.148404
+import,Uzbekistan,country,1996-01-01,10.960022
+import,Uzbekistan,country,1997-01-01,5.689674
+import,Uzbekistan,country,1998-01-01,4.848792
+import,Uzbekistan,country,1999-01-01,5.100604
+import,Uzbekistan,country,2000-01-01,3.459343
+import,Uzbekistan,country,2001-01-01,10.257555
+import,Uzbekistan,country,2002-01-01,5.585705
+import,Uzbekistan,country,2003-01-01,3.121417
+import,Uzbekistan,country,2004-01-01,1.627097
+import,Uzbekistan,country,2005-01-01,5.653866
+import,Uzbekistan,country,2006-01-01,5.656517
+import,Uzbekistan,country,2007-01-01,3.069605
+import,Uzbekistan,country,2008-01-01,12.810645
+import,Uzbekistan,country,2009-01-01,13.460184
+import,Uzbekistan,country,2010-01-01,34.176305
+import,Uzbekistan,country,2011-01-01,8.308738
+import,Uzbekistan,country,2012-01-01,509.097178
+import,Uzbekistan,country,2013-01-01,1426.139192
+import,Uzbekistan,country,2014-01-01,1224.266266
+import,Uzbekistan,country,2015-01-01,1800.648713
+import,Uzbekistan,country,2016-01-01,2802.389136
+import,Uzbekistan,country,2017-01-01,3618.828122
+import,Uzbekistan,country,2018-01-01,2425.59147
+import,Uzbekistan,country,2019-01-01,2593.150333
+import,Uzbekistan,country,2020-01-01,5.876162
+import,Uzbekistan,country,2021-01-01,2185.006353
+import,Uzbekistan,country,2022-01-01,4083.610605
+import,Uzbekistan,country,2023-01-01,7351.726123
+import,Uzbekistan,country,2024-01-01,5406.653883
+import,Uzbekistan,country,2025-01-01,3851.367447

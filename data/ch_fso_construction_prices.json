@@ -1,0 +1,61 @@
+{
+  "schema_version": "1.0",
+  "id": "ch_fso_construction_prices",
+  "dim_order": [
+    "worktype"
+  ],
+  "start": "1998-10-01",
+  "end": "2025-10-01",
+  "title": {
+    "en": "Construction Price Index"
+  },
+  "source": {
+    "name": {
+      "en": "Swiss Federal Statistical Office (FSO)"
+    },
+    "url": "https://www.bfs.admin.ch/asset/de/cc-t-05.05.01"
+  },
+  "license": "fso",
+  "frequency": "semi-annual",
+  "topic": "Prices",
+  "units": {
+    "en": "Index (October 2020 = 100)"
+  },
+  "updated": "2025-12-18",
+  "dimensions": {
+    "worktype": {
+      "label": {
+        "en": "Type of work"
+      },
+      "levels": {
+        "total": {
+          "label": {
+            "en": "Construction: Total"
+          },
+          "data": true
+        },
+        "hochbau": {
+          "label": {
+            "en": "Building construction (Hochbau)"
+          },
+          "data": true
+        },
+        "tiefbau": {
+          "label": {
+            "en": "Civil engineering (Tiefbau)"
+          },
+          "data": true
+        }
+      }
+    }
+  },
+  "concept": "Prices / Construction prices",
+  "canonical": true,
+  "split": "worktype",
+  "single_select": [],
+  "default_transform": "yoy",
+  "default": {
+    "worktype": "total"
+  },
+  "fetched_utc": "2026-06-02 19:40:59"
+}

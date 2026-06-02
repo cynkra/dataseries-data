@@ -322,6 +322,7 @@
       }
     }
   },
+  "topic": "Foreign trade",
   "concept": "External sector / Foreign trade",
   "canonical": true,
   "split": "D1",
@@ -332,5 +333,5 @@
     "D1": "GT",
     "D2": "WMF"
   },
-  "fetched_utc": "2026-06-02 08:13:38"
+  "fetched_utc": "2026-06-02 19:40:55"
 }

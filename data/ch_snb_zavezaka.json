@@ -145,10 +145,10 @@
   "concept": "Payment systems / Payments & cash",
   "canonical": false,
   "split": "D0",
-  "single_select": "(none; D0 is the only dimension)",
+  "single_select": [],
   "default_transform": "level",
   "default": {
     "D0": "T0"
   },
-  "fetched_utc": "2026-06-01 07:15:00"
+  "fetched_utc": "2026-06-02 19:40:57"
 }

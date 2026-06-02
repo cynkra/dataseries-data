@@ -138,6 +138,7 @@
       }
     }
   },
+  "topic": "Domestic economy",
   "concept": "Domestic economy / Industry & construction turnover",
   "canonical": true,
   "split": "NOGA",
@@ -148,5 +149,5 @@
     "ADJUSTMENT": "Y",
     "INDICATOR_KE": "PTOT"
   },
-  "fetched_utc": "2026-06-02 07:38:15"
+  "fetched_utc": "2026-06-02 19:40:58"
 }

@@ -33,4 +33,44 @@ kof_fetch <- function(key, title = NULL) {
   list(id = gsub(".", "_", key, fixed = TRUE), data = data, meta = meta)
 }
 
+# A KOF public OGD *set* (e.g. "ogd_ch.kof.esi") is a wide table: a `date` column
+# plus one column per KOF series key. Unlike the per-key /ts endpoint (which gates
+# most keys behind HTTP 412), the /sets endpoint is open for the curated OGD sets
+# (license CC BY). We pivot it to the standard long contract with one dimension
+# (`indicator`) carrying the series keys. Level labels are authored in the datasheet
+# (the metadata API is English-only).
+kof_set_fetch <- function(set, title = NULL, dim_name = "indicator",
+                          source_url = NULL) {
+  url <- sprintf(
+    "https://datenservice.kof.ethz.ch/api/v1/public/sets/%s?mime=csv", set
+  )
+  raw <- readr::read_csv(get_text(url), show_col_types = FALSE)
+  raw_periods <- as.character(raw$date)
+
+  data <- raw |>
+    tidyr::pivot_longer(cols = -date, names_to = dim_name, values_to = "value") |>
+    dplyr::mutate(date = as.Date(to_iso(as.character(date))),
+                  value = suppressWarnings(as.numeric(value))) |>
+    dplyr::filter(!is.na(value)) |>            # sets are wide+sparse: series start at different dates
+    dplyr::select(dplyr::all_of(c(dim_name, "date", "value"))) |>
+    dplyr::arrange(.data[[dim_name]], date)
+
+  keys <- sort(unique(data[[dim_name]]))
+  meta <- list(
+    title = title %||% setNames(list(set), "en"),
+    source = list(
+      name = list(en = "KOF Swiss Economic Institute"),
+      url = source_url %||% "https://kof.ethz.ch/en/forecasts-and-indicators/indicators.html"
+    ),
+    license = "kof",
+    frequency = infer_frequency(raw_periods),
+    dimensions = setNames(list(list(
+      label = list(en = dim_name),
+      levels = setNames(lapply(keys, function(k) list(label = list(en = k))), keys)
+    )), dim_name)
+  )
+  list(id = gsub("ogd_ch.kof.", "ch_kof_", set, fixed = TRUE),
+       data = data, meta = meta)
+}
+
 `%||%` <- function(a, b) if (is.null(a)) b else a

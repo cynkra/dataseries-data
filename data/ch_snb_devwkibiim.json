@@ -445,6 +445,7 @@
       }
     }
   },
+  "topic": "Exchange rates",
   "concept": "Exchange rates / Bilateral FX",
   "canonical": true,
   "split": "D1",
@@ -454,5 +455,5 @@
     "D1": "US",
     "D0": "K"
   },
-  "fetched_utc": "2026-06-02 07:38:55"
+  "fetched_utc": "2026-06-02 19:40:56"
 }

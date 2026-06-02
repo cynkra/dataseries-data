@@ -1,0 +1,141 @@
+{
+  "schema_version": "1.0",
+  "id": "ch_fso_services",
+  "dim_order": [
+    "NOGA",
+    "ADJUSTMENT",
+    "INDICATOR_KE"
+  ],
+  "start": "2021-01-01",
+  "end": "2026-01-01",
+  "title": {
+    "en": "Services-sector turnover (quarterly)"
+  },
+  "source": {
+    "name": {
+      "en": "Swiss Federal Statistical Office (FSO)"
+    },
+    "url": "https://www.bfs.admin.ch/asset/en/DF_KEU_Q1"
+  },
+  "license": "fso",
+  "frequency": "quarterly",
+  "dimensions": {
+    "NOGA": {
+      "label": {
+        "en": "NOGA"
+      },
+      "levels": {
+        "G": {
+          "label": {
+            "en": "G WHOLESALE AND RETAIL TRADE; REPAIR OF MOTOR VEHICLES AND MOTORCYCLES"
+          },
+          "data": true
+        },
+        "G-NxK": {
+          "label": {
+            "en": "G-NxK Tertiärer Sektor (ohne Erbringung von Finanz- und Versicherungsdienstleistungen)"
+          },
+          "data": true
+        },
+        "H": {
+          "label": {
+            "en": "H TRANSPORTATION AND STORAGE"
+          },
+          "data": true
+        },
+        "I": {
+          "label": {
+            "en": "I ACCOMMODATION AND FOOD SERVICE ACTIVITIES"
+          },
+          "data": true
+        },
+        "J": {
+          "label": {
+            "en": "J INFORMATION AND COMMUNICATION"
+          },
+          "data": true
+        },
+        "L": {
+          "label": {
+            "en": "L REAL ESTATE ACTIVITIES"
+          },
+          "data": true
+        },
+        "M": {
+          "label": {
+            "en": "M PROFESSIONAL, SCIENTIFIC AND TECHNICAL ACTIVITIES"
+          },
+          "data": true
+        },
+        "N": {
+          "label": {
+            "en": "N ADMINISTRATIVE AND SUPPORT SERVICE ACTIVITIES"
+          },
+          "data": true
+        }
+      }
+    },
+    "ADJUSTMENT": {
+      "label": {
+        "en": "ADJUSTMENT"
+      },
+      "levels": {
+        "N": {
+          "label": {
+            "en": "Neither seasonally adjusted nor calendar adjusted data"
+          },
+          "data": true
+        },
+        "W": {
+          "label": {
+            "en": "Calendar adjusted data, not seasonally adjusted"
+          },
+          "data": true
+        },
+        "Y": {
+          "label": {
+            "en": "Calendar and seasonally adjusted data"
+          },
+          "data": true
+        }
+      }
+    },
+    "INDICATOR_KE": {
+      "label": {
+        "en": "INDICATOR_KE"
+      },
+      "levels": {
+        "UEXP": {
+          "label": {
+            "en": "Foreign turnover (nominal)"
+          },
+          "data": true
+        },
+        "UINL": {
+          "label": {
+            "en": "Domestic turnover (nominal)"
+          },
+          "data": true
+        },
+        "UTOT": {
+          "label": {
+            "en": "Total turnover (nominal)"
+          },
+          "data": true
+        }
+      }
+    }
+  },
+  "topic": "Domestic economy",
+  "concept": "Domestic economy / Services turnover",
+  "canonical": true,
+  "split": "NOGA",
+  "single_select": ["ADJUSTMENT", "INDICATOR_KE"],
+  "default_transform": "level",
+  "default": {
+    "NOGA": "G-NxK",
+    "ADJUSTMENT": "Y",
+    "INDICATOR_KE": "UTOT"
+  },
+  "fetched_utc": "2026-06-02 19:40:58"
+}

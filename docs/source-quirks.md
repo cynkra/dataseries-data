@@ -19,6 +19,10 @@ canonical approach.
   downloaded CSV has meaningless headers — rename to semantic names from the
   dimension `name`.
 - **Shape matches the swissdata format**, so the SNB approach is sound.
+- **Discontinued cubes go stale silently.** The cube still serves data, just frozen.
+  `rendoblid` (daily bond par yields) stopped at 2025-07-31 (last published 2025-09-01);
+  the live bond-yield series is the spot cube `rendeiduebd` (canonical). Check the live
+  CSV `PublishingDate` header before trusting a cube as current.
 
 ## FSO
 
@@ -63,6 +67,16 @@ by how clean they are to ingest:
    `mbannert` cube ids are retired. **Don't** sink time here for a cube that 400s — go
    to channel 1 (SDMX). The data is there.
 
+### A fifth FSO channel: DAM masters that are already long CSVs
+Some DAM "cube" assets ship their master as a tidy, SDMX-style **long CSV** (one row
+per observation), not the row/column spreadsheets that need bespoke reshaping. For
+those, skip the sheet-parser machinery: resolve with `fso_asset_master(order)`,
+`download_binary` to a `.csv` tempfile, `read.csv(fileEncoding="UTF-8-BOM")` (they carry
+a BOM). `R/source_fso_dam_csv.R` holds these (`ch_fso_labour_productivity`, `ch_fso_ets`,
+`ch_fso_gfcf_detail`, `ch_fso_hours_worked`). Watch for a unit column carrying both
+levels and %-change leaves on the same key (`ch_fso_gfcf_detail`: filter `UNIT_MEAS==MCHF`)
+— they break (dims,date) uniqueness otherwise.
+
 ### Other FSO notes
 - We read FSO PX-Web via the **JSON-stat2 API** (clean, no extra dependency) rather
   than the old swissdata repo's binary `.px` + R `pxR` route. JSON-stat2 parses
@@ -84,3 +98,18 @@ by how clean they are to ingest:
   `1991-01` → `1991-01-01`, all ISO first-of-period.
 - A single-series source (e.g. KOF) yields zero dimension columns — just
   `date,value`. That is correct, not a bug.
+
+## Non-FSO open channels
+- **KOF — use the `sets` endpoint, not per-key `ts`.** `…/api/v1/public/ts?keys=` gates
+  most keys behind HTTP 412 (only `ch.kof.barometer` serves), but `…/api/v1/public/sets/<set>?mime=csv`
+  is open for the curated OGD sets (`ogd_ch.kof.esi`, `ogd_ch.kof.globalbaro`,
+  `ogd_ch.kof.bts_total`, …). `R/source_kof.R::kof_set_fetch` reads them (wide+sparse →
+  pivot long + drop NA). The COVID-era **weekly WBI is genuinely discontinued** (not gated).
+- **Eurostat (SDMX 2.1)** for EU-harmonised series with no clean Swiss-domain source
+  (e.g. HICP). `ec.europa.eu/eurostat/api/dissemination/sdmx/2.1/data/<flow>/<key>/?format=SDMX-CSV`,
+  `geo=CH`. Separate host/module from FSO SDMX → `R/source_eurostat.R`. Provenance must
+  say Eurostat, not FSO.
+- **BAZG Swiss-Impex monthly trade (by tariff × country, since 1988)** is the richer
+  upgrade path for `ch_fso_trade_partner`, but its OGD ZIP/CSV endpoints **502'd from this
+  build env** on every retry — annual FSO Excel (English assets) was used instead. Retry
+  the BAZG monthly channel later; if it works it supersedes the annual cut.

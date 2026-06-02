@@ -1,0 +1,325 @@
+{
+  "schema_version": "1.0",
+  "id": "ch_fso_trade_partner",
+  "dim_order": [
+    "flow",
+    "partner",
+    "level"
+  ],
+  "start": "1990-01-01",
+  "end": "2025-01-01",
+  "title": {
+    "en": "Foreign trade by partner country"
+  },
+  "source": {
+    "name": {
+      "en": "Swiss Federal Statistical Office (FSO) / Federal Office for Customs and Border Security (FOCBS)"
+    },
+    "url": "https://www.bfs.admin.ch/asset/en/36664830"
+  },
+  "license": "fso",
+  "frequency": "annual",
+  "topic": "External sector",
+  "units": {
+    "en": "CHF millions"
+  },
+  "updated": null,
+  "dimensions": {
+    "flow": {
+      "label": {
+        "en": "Trade flow"
+      },
+      "levels": {
+        "export": {
+          "label": {
+            "en": "Exports"
+          },
+          "data": true
+        },
+        "import": {
+          "label": {
+            "en": "Imports"
+          },
+          "data": true
+        }
+      }
+    },
+    "partner": {
+      "label": {
+        "en": "Partner country / region"
+      },
+      "levels": {
+        "Africa": {
+          "label": {
+            "en": "Africa"
+          },
+          "data": true
+        },
+        "Asia": {
+          "label": {
+            "en": "Asia"
+          },
+          "data": true
+        },
+        "Australia": {
+          "label": {
+            "en": "Australia"
+          },
+          "data": true
+        },
+        "Austria": {
+          "label": {
+            "en": "Austria"
+          },
+          "data": true
+        },
+        "Belgium": {
+          "label": {
+            "en": "Belgium"
+          },
+          "data": true
+        },
+        "Brazil": {
+          "label": {
+            "en": "Brazil"
+          },
+          "data": true
+        },
+        "Canada": {
+          "label": {
+            "en": "Canada"
+          },
+          "data": true
+        },
+        "Central and South America": {
+          "label": {
+            "en": "Central and South America"
+          },
+          "data": true
+        },
+        "China": {
+          "label": {
+            "en": "China"
+          },
+          "data": true
+        },
+        "EU": {
+          "label": {
+            "en": "EU"
+          },
+          "data": true
+        },
+        "Europe": {
+          "label": {
+            "en": "Europe"
+          },
+          "data": true
+        },
+        "France": {
+          "label": {
+            "en": "France"
+          },
+          "data": true
+        },
+        "Germany": {
+          "label": {
+            "en": "Germany"
+          },
+          "data": true
+        },
+        "Hong Kong": {
+          "label": {
+            "en": "Hong Kong"
+          },
+          "data": true
+        },
+        "India": {
+          "label": {
+            "en": "India"
+          },
+          "data": true
+        },
+        "Italy": {
+          "label": {
+            "en": "Italy"
+          },
+          "data": true
+        },
+        "Japan": {
+          "label": {
+            "en": "Japan"
+          },
+          "data": true
+        },
+        "Korea (South)": {
+          "label": {
+            "en": "Korea (South)"
+          },
+          "data": true
+        },
+        "Netherlands": {
+          "label": {
+            "en": "Netherlands"
+          },
+          "data": true
+        },
+        "North America": {
+          "label": {
+            "en": "North America"
+          },
+          "data": true
+        },
+        "Oceania": {
+          "label": {
+            "en": "Oceania"
+          },
+          "data": true
+        },
+        "Poland": {
+          "label": {
+            "en": "Poland"
+          },
+          "data": true
+        },
+        "Russia": {
+          "label": {
+            "en": "Russia"
+          },
+          "data": true
+        },
+        "Saudi Arabia": {
+          "label": {
+            "en": "Saudi Arabia"
+          },
+          "data": true
+        },
+        "Singapore": {
+          "label": {
+            "en": "Singapore"
+          },
+          "data": true
+        },
+        "Spain": {
+          "label": {
+            "en": "Spain"
+          },
+          "data": true
+        },
+        "Taiwan": {
+          "label": {
+            "en": "Taiwan"
+          },
+          "data": true
+        },
+        "Thailand": {
+          "label": {
+            "en": "Thailand"
+          },
+          "data": true
+        },
+        "Total": {
+          "label": {
+            "en": "Total"
+          },
+          "data": true
+        },
+        "Türkiye": {
+          "label": {
+            "en": "Türkiye"
+          },
+          "data": true
+        },
+        "USA": {
+          "label": {
+            "en": "USA"
+          },
+          "data": true
+        },
+        "United Arab Emirates": {
+          "label": {
+            "en": "United Arab Emirates"
+          },
+          "data": true
+        },
+        "United Kingdom": {
+          "label": {
+            "en": "United Kingdom"
+          },
+          "data": true
+        },
+        "Czech Republic": {
+          "label": {
+            "en": "Czech Republic"
+          },
+          "data": true
+        },
+        "Ireland": {
+          "label": {
+            "en": "Ireland"
+          },
+          "data": true
+        },
+        "Mexico": {
+          "label": {
+            "en": "Mexico"
+          },
+          "data": true
+        },
+        "Peru": {
+          "label": {
+            "en": "Peru"
+          },
+          "data": true
+        },
+        "South Africa": {
+          "label": {
+            "en": "South Africa"
+          },
+          "data": true
+        },
+        "Sweden": {
+          "label": {
+            "en": "Sweden"
+          },
+          "data": true
+        },
+        "Uzbekistan": {
+          "label": {
+            "en": "Uzbekistan"
+          },
+          "data": true
+        }
+      }
+    },
+    "level": {
+      "label": {
+        "en": "Aggregation level"
+      },
+      "levels": {
+        "group": {
+          "label": {
+            "en": "Continent / economic area"
+          },
+          "data": true
+        },
+        "country": {
+          "label": {
+            "en": "Individual country"
+          },
+          "data": true
+        }
+      }
+    }
+  },
+  "concept": "External sector / Foreign trade",
+  "canonical": true,
+  "split": "partner",
+  "single_select": ["flow", "level"],
+  "default_transform": "level",
+  "default": {
+    "flow": "export",
+    "partner": "Total",
+    "level": "group"
+  },
+  "fetched_utc": "2026-06-02 19:40:59"
+}

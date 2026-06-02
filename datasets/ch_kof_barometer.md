@@ -16,10 +16,13 @@ The headline Swiss leading indicator for the business cycle, published monthly
 near month-end. A single composite index built from a large basket of underlying
 predictors, designed to anticipate the year-over-year growth rate of Swiss GDP a
 few months ahead. Normalised so the long-run mean sits around 100; readings above
-100 signal above-average expected growth, below 100 the reverse. This is the only
-series in the catalog from KOF, and it is the only KOF key the public API will
-serve: every other KOF series returns HTTP 412. Plain one-column time series, no
-dimensions, monthly back to 1991.
+100 signal above-average expected growth, below 100 the reverse. Plain one-column
+time series, no dimensions, monthly back to 1991.
+
+Note: the per-key `ts` endpoint used here gates most keys behind HTTP 412, but the
+public **`sets`** endpoint is open for the curated OGD sets — see `ch_kof_esi`
+(`R/source_kof.R::kof_set_fetch`), which unlocks the wider open KOF family
+(`ogd_ch.kof.esi`, `ogd_ch.kof.globalbaro`, `ogd_ch.kof.bts_total`).
 
 ## Access
 - **type**: KOF API
@@ -42,8 +45,8 @@ None. The dataset is a single undifferentiated series (`dim_order` empty).
 ## Caveats / simplifications
 - The barometer is periodically re-based and re-estimated by KOF, so historical
   values can be revised across the whole back-series, not just recent months.
-- Only `ch.kof.barometer` is reachable on the public endpoint; the same fetcher
-  pointed at any other KOF key returns HTTP 412 and yields nothing.
+- The per-key `ts` fetcher used here only serves `ch.kof.barometer` (other keys 412);
+  the open `sets` endpoint (`kof_set_fetch`) serves the wider OGD family — see `ch_kof_esi`.
 - The level is index-like and unitless (mean ~100); it is not a percentage or a
   growth rate despite tracking expected GDP growth.
 

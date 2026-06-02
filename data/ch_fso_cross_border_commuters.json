@@ -1,0 +1,234 @@
+{
+  "schema_version": "1.0",
+  "id": "ch_fso_cross_border_commuters",
+  "dim_order": [
+    "canton"
+  ],
+  "start": "2002-07-01",
+  "end": "2026-01-01",
+  "title": {
+    "en": "Foreign cross-border commuters by canton of work"
+  },
+  "source": {
+    "name": {
+      "en": "Swiss Federal Statistical Office (FSO)"
+    },
+    "url": "https://www.bfs.admin.ch/asset/en/px-x-0302010000_101"
+  },
+  "license": "fso",
+  "frequency": "quarterly",
+  "topic": "Labour",
+  "units": {
+    "en": "Number of cross-border commuters (estimate)"
+  },
+  "dimensions": {
+    "canton": {
+      "label": {
+        "en": "Canton of work"
+      },
+      "levels": {
+        "_T": {
+          "label": {
+            "en": "Switzerland (total)"
+          },
+          "data": true
+        },
+        "1": {
+          "label": {
+            "en": "Zurich"
+          },
+          "data": true
+        },
+        "10": {
+          "label": {
+            "en": "Fribourg"
+          },
+          "data": true
+        },
+        "11": {
+          "label": {
+            "en": "Solothurn"
+          },
+          "data": true
+        },
+        "12": {
+          "label": {
+            "en": "Basel-Stadt"
+          },
+          "data": true
+        },
+        "13": {
+          "label": {
+            "en": "Basel-Landschaft"
+          },
+          "data": true
+        },
+        "14": {
+          "label": {
+            "en": "Schaffhausen"
+          },
+          "data": true
+        },
+        "15": {
+          "label": {
+            "en": "Appenzell A.Rh."
+          },
+          "data": true
+        },
+        "16": {
+          "label": {
+            "en": "Appenzell I.Rh."
+          },
+          "data": true
+        },
+        "17": {
+          "label": {
+            "en": "St. Gallen"
+          },
+          "data": true
+        },
+        "18": {
+          "label": {
+            "en": "Grisons"
+          },
+          "data": true
+        },
+        "19": {
+          "label": {
+            "en": "Aargau"
+          },
+          "data": true
+        },
+        "2": {
+          "label": {
+            "en": "Bern"
+          },
+          "data": true
+        },
+        "20": {
+          "label": {
+            "en": "Thurgau"
+          },
+          "data": true
+        },
+        "21": {
+          "label": {
+            "en": "Ticino"
+          },
+          "data": true
+        },
+        "22": {
+          "label": {
+            "en": "Vaud"
+          },
+          "data": true
+        },
+        "23": {
+          "label": {
+            "en": "Valais"
+          },
+          "data": true
+        },
+        "24": {
+          "label": {
+            "en": "Neuchatel"
+          },
+          "data": true
+        },
+        "25": {
+          "label": {
+            "en": "Geneva"
+          },
+          "data": true
+        },
+        "26": {
+          "label": {
+            "en": "Jura"
+          },
+          "data": true
+        },
+        "3": {
+          "label": {
+            "en": "Lucerne"
+          },
+          "data": true
+        },
+        "4": {
+          "label": {
+            "en": "Uri"
+          },
+          "data": true
+        },
+        "5": {
+          "label": {
+            "en": "Schwyz"
+          },
+          "data": true
+        },
+        "6": {
+          "label": {
+            "en": "Obwalden"
+          },
+          "data": true
+        },
+        "7": {
+          "label": {
+            "en": "Nidwalden"
+          },
+          "data": true
+        },
+        "8": {
+          "label": {
+            "en": "Glarus"
+          },
+          "data": true
+        },
+        "9": {
+          "label": {
+            "en": "Zug"
+          },
+          "data": true
+        }
+      },
+      "hierarchy": {
+        "_T": {
+          "1": [],
+          "10": [],
+          "11": [],
+          "12": [],
+          "13": [],
+          "14": [],
+          "15": [],
+          "16": [],
+          "17": [],
+          "18": [],
+          "19": [],
+          "2": [],
+          "20": [],
+          "21": [],
+          "22": [],
+          "23": [],
+          "24": [],
+          "25": [],
+          "26": [],
+          "3": [],
+          "4": [],
+          "5": [],
+          "6": [],
+          "7": [],
+          "8": [],
+          "9": []
+        }
+      }
+    }
+  },
+  "concept": "Labour / Cross-border commuters",
+  "canonical": true,
+  "split": "canton",
+  "single_select": [],
+  "default_transform": "level",
+  "default": {
+    "canton": "_T"
+  },
+  "fetched_utc": "2026-06-02 19:40:58"
+}

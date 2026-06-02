@@ -6,7 +6,7 @@
     "D1"
   ],
   "start": "1988-01-04",
-  "end": "2026-04-30",
+  "end": "2026-05-29",
   "title": {
     "en": "Spot interest rates on Swiss Confederation bonds, euro area government bonds and CHF bond issues for various borrower categories – Day"
   },
@@ -210,7 +210,7 @@
   },
   "topic": "Interest rates",
   "concept": "Interest rates & yields / Bond yields",
-  "canonical": false,
+  "canonical": true,
   "split": "D0",
   "single_select": "D1",
   "default_transform": "level",
@@ -218,5 +218,5 @@
     "D0": "CHF",
     "D1": "10J"
   },
-  "fetched_utc": "2026-06-01 07:15:00"
+  "fetched_utc": "2026-06-02 19:40:56"
 }

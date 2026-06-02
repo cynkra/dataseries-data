@@ -222,4 +222,84 @@ fso_sdmx_vacant_dwellings <- function(dataset_id = "ch_fso_vacant_dwellings") {
   list(id = dataset_id, data = data, meta = meta)
 }
 
+# Foreign cross-border commuters (Grenzgaenger), quarterly, by canton of work.
+# SDMX CH1.GGS / DF_GGS_1, DSD order NOGA.CNTRY.FREQ.SEX.WORK_CANTON; sliced to the
+# national total over NOGA/country/sex, leaving the 26-canton breakdown (+ _T total).
+# Model-based estimate, so values are NON-integer; do not round.
+fso_sdmx_cross_border_commuters <- function(dataset_id = "ch_fso_cross_border_commuters") {
+  d <- sdmx_sliced("CH1.GGS", "DF_GGS_1", "1.0.0", "_T._T.Q._T.",
+                   c("NOGA", "CNTRY", "FREQ", "SEX", "WORK_CANTON"))
+  data <- data.frame(canton = d$WORK_CANTON, date = d$date, value = d$value,
+                     stringsAsFactors = FALSE)
+  data <- data[order(data$canton, data$date), , drop = FALSE]
+
+  # Standard BFS canton numbering (1=ZH .. 26=JU); _T = Switzerland total.
+  canton_lab <- c(
+    "_T" = "Switzerland (total)",
+    "1" = "Zurich", "2" = "Bern", "3" = "Lucerne", "4" = "Uri", "5" = "Schwyz",
+    "6" = "Obwalden", "7" = "Nidwalden", "8" = "Glarus", "9" = "Zug",
+    "10" = "Fribourg", "11" = "Solothurn", "12" = "Basel-Stadt",
+    "13" = "Basel-Landschaft", "14" = "Schaffhausen", "15" = "Appenzell A.Rh.",
+    "16" = "Appenzell I.Rh.", "17" = "St. Gallen", "18" = "Grisons",
+    "19" = "Aargau", "20" = "Thurgau", "21" = "Ticino", "22" = "Vaud",
+    "23" = "Valais", "24" = "Neuchatel", "25" = "Geneva", "26" = "Jura"
+  )
+  present <- unique(as.character(data$canton))
+  lab <- vapply(present, function(c) unname(canton_lab[c]) %||% c, "")
+  levels <- setNames(lapply(lab, function(l) list(label = list(en = l))), present)
+  kids <- setdiff(present, "_T")
+
+  meta <- list(
+    title  = list(en = "Foreign cross-border commuters by canton of work"),
+    source = list(name = list(en = "Swiss Federal Statistical Office (FSO)"),
+                  url  = "https://www.bfs.admin.ch/asset/en/px-x-0302010000_101"),
+    license = "fso", frequency = "quarterly", topic = "Labour",
+    units = list(en = "Number of cross-border commuters (estimate)"),
+    dimensions = list(canton = list(
+      label = list(en = "Canton of work"),
+      levels = levels,
+      hierarchy = if (length(kids)) list("_T" = setNames(lapply(kids, function(x) list()), kids))
+    ))
+  )
+  list(id = dataset_id, data = data, meta = meta)
+}
+
+# Detailed permanent resident population by nationality x sex, annual (STATPOP).
+# SDMX CH1.STATPOP / DF_STATPOP_REGLING, DSD order
+# POPULATION_TYPE.REG_LING.NATIONALITY_CATEGORY.SEX.AGE.FREQ; sliced to permanent
+# residents, all language regions, age total, annual. Concept-distinct from
+# ch_fso_pop (the 1861- demographic balance) — this is the recent nationality/sex
+# stock. Value = year-end stock.
+fso_sdmx_pop_detail <- function(dataset_id = "ch_fso_pop_detail") {
+  d <- sdmx_sliced("CH1.STATPOP", "DF_STATPOP_REGLING", "1.0.0", "1._T..._T.A",
+                   c("POPULATION_TYPE", "REG_LING", "NATIONALITY_CATEGORY", "SEX", "AGE", "FREQ"))
+  data <- data.frame(nationality = d$NATIONALITY_CATEGORY, sex = d$SEX,
+                     date = d$date, value = d$value, stringsAsFactors = FALSE)
+  data <- data[order(data$nationality, data$sex, data$date), , drop = FALSE]
+
+  nat_lab <- c("_T" = "Total", "1" = "Swiss", "2" = "Foreign")
+  sex_lab <- c("_T" = "Total", "1" = "Male", "2" = "Female")
+  mk <- function(present, lab, label_en, total = "_T") {
+    keys <- intersect(c(total, setdiff(present, total)), present)
+    levels <- setNames(lapply(keys, function(c)
+      list(label = list(en = unname(lab[c]) %||% c))), keys)
+    kids <- setdiff(keys, total)
+    list(label = list(en = label_en), levels = levels,
+         hierarchy = if (length(kids)) setNames(list(setNames(lapply(kids, function(x) list()), kids)), total))
+  }
+
+  meta <- list(
+    title  = list(en = "Permanent resident population by nationality and sex"),
+    source = list(name = list(en = "Swiss Federal Statistical Office (FSO)"),
+                  url  = "https://www.bfs.admin.ch/asset/en/px-x-0102010000_101"),
+    license = "fso", frequency = "annual", topic = "Population",
+    units = list(en = "Number of permanent residents (year-end stock)"),
+    dimensions = list(
+      nationality = mk(unique(as.character(data$nationality)), nat_lab, "Nationality"),
+      sex         = mk(unique(as.character(data$sex)), sex_lab, "Sex")
+    )
+  )
+  list(id = dataset_id, data = data, meta = meta)
+}
+
 `%||%` <- function(a, b) if (is.null(a)) b else a

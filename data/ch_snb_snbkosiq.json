@@ -208,10 +208,10 @@
   "concept": "Business cycle & sentiment / Business cycle signals",
   "canonical": true,
   "split": "D0",
-  "single_select": "(none; single dimension)",
+  "single_select": [],
   "default_transform": "level",
   "default": {
     "D0": "KA"
   },
-  "fetched_utc": "2026-06-01 07:15:00"
+  "fetched_utc": "2026-06-02 19:40:57"
 }

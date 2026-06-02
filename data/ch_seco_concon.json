@@ -233,19 +233,17 @@
     "fr": "Indice du climat de consommation. Données corrigées des variations saisonnières et du calendrier ainsi que données non corrigées. Le niveau des données historiques collectées entre 1972 et 2023 a été adapté à celui des données actuelles, relevées depuis 2024. Vous trouverez de plus amples informations dans le document méthodologique.",
     "it": "Indice del clima di fiducia dei consumatori. Dati destagionalizzati e corretti per gli effetti di calendario e dati non corretti. Il livello dei dati storici 1972-2023 è stato adeguato a quello dei dati attuali, rilevati a partire dal 2024. Per maggiori informazioni leggere il documento sulla metodologia impiegata."
   },
+  "topic": "Business surveys",
   "concept": "Business cycle & sentiment / Consumer confidence",
   "canonical": true,
   "featured": "Consumer confidence",
   "split": "structure",
-  "single_select": [
-    "type",
-    "seas_adj"
-  ],
+  "single_select": ["type", "seas_adj"],
   "default_transform": "level",
   "default": {
     "structure": "ks_i63_index_q",
     "type": "index",
     "seas_adj": "csa"
   },
-  "fetched_utc": "2026-06-01 15:54:59"
+  "fetched_utc": "2026-06-02 19:40:58"
 }

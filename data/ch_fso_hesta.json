@@ -110,6 +110,7 @@
       }
     }
   },
+  "topic": "Tourism",
   "concept": "Tourism / Hotel overnight stays",
   "canonical": true,
   "featured": "Tourism",
@@ -119,5 +120,5 @@
   "default": {
     "Tourismusregion": "8100"
   },
-  "fetched_utc": "2026-06-02 07:38:16"
+  "fetched_utc": "2026-06-02 19:40:58"
 }

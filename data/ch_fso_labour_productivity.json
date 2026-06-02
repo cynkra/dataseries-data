@@ -1,0 +1,61 @@
+{
+  "schema_version": "1.0",
+  "id": "ch_fso_labour_productivity",
+  "dim_order": [
+    "indicator"
+  ],
+  "start": "1991-01-01",
+  "end": "2024-01-01",
+  "title": {
+    "en": "Labour productivity (GDP per hour worked, index)"
+  },
+  "source": {
+    "name": {
+      "en": "Swiss Federal Statistical Office (FSO)"
+    },
+    "url": "https://www.bfs.admin.ch/asset/en/ts-x-04.07.01.01"
+  },
+  "license": "fso",
+  "frequency": "annual",
+  "updated": "2025-09-29",
+  "units": {
+    "en": "Index (1991 = 100), chained volume (previous year's prices)"
+  },
+  "dimensions": {
+    "indicator": {
+      "label": {
+        "en": "Indicator"
+      },
+      "levels": {
+        "gdp": {
+          "label": {
+            "en": "Gross domestic product (volume)"
+          },
+          "data": true
+        },
+        "hours": {
+          "label": {
+            "en": "Actual hours worked"
+          },
+          "data": true
+        },
+        "productivity": {
+          "label": {
+            "en": "Labour productivity (GDP per hour worked)"
+          },
+          "data": true
+        }
+      }
+    }
+  },
+  "topic": "National accounts",
+  "concept": "National accounts / Labour productivity",
+  "canonical": true,
+  "split": "indicator",
+  "single_select": [],
+  "default_transform": "level",
+  "default": {
+    "indicator": "productivity"
+  },
+  "fetched_utc": "2026-06-02 19:40:59"
+}

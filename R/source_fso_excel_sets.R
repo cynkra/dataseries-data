@@ -518,3 +518,415 @@ fso_excel_ch_fso_unemp_rate <- function(path, pubdate) {
 
   list(id = "ch_fso_unemp_rate", data = data, meta = meta)
 }
+
+
+# ---- ch_fso_trade_partner (External sector) ----
+# Foreign trade by partner country: exports + imports, annual, CHF millions.
+# Two single-sheet FSO DAM Excel assets, pinned by asset id (the English masters):
+#   exports 36664830, imports 36664836.
+# The two workbooks have DIFFERENT column layouts (exports put countries in col2 and
+# continents/Total in col1; imports put every label flat in col1), so the parser does
+# NOT use which column a label sits in to decide country-vs-group. It anchors the
+# year-header row by content (>5 cells matching a 4-digit year), reads the data rows
+# below until the footnote/Source band, takes the label as col2-if-present-else-col1,
+# strips trailing footnote markers (digits + Unicode superscripts), and classifies
+# `level` by membership in a fixed continent/economic-area set — robust to either
+# layout, and fail-loud (the year-header / value anchors) if the sheets are re-cut.
+# Each cleaned label keys a `partner` dimension; `flow` = export/import. Self-contained
+# (downloads both asset masters itself) because it pins asset ids, not an order number.
+.TRADE_GROUPS <- c("Total", "Europe", "EU", "Asia", "North America",
+                   "Central and South America", "Africa", "Oceania")
+
+.trade_partner_sheet <- function(path, flow_code) {
+  raw <- suppressMessages(readxl::read_excel(
+    path, sheet = 1, col_names = FALSE, .name_repair = "minimal", col_types = "text"))
+  raw <- as.data.frame(raw, stringsAsFactors = FALSE)
+
+  # --- locate the year-header row by content (>5 four-digit-year cells) ---------
+  is_year <- function(x) grepl("^(19|20)[0-9]{2}$", trimws(x))
+  hdr_row <- NA_integer_
+  for (i in seq_len(nrow(raw)))
+    if (sum(is_year(as.character(raw[i, ])), na.rm = TRUE) > 5L) { hdr_row <- i; break }
+  if (is.na(hdr_row))
+    stop("ch_fso_trade_partner: no year-header row (>5 4-digit-year cells) — sheet layout changed?",
+         call. = FALSE)
+
+  hdr     <- trimws(as.character(raw[hdr_row, ]))
+  yr_cols <- which(is_year(hdr))
+  years   <- as.integer(hdr[yr_cols])
+
+  # --- data rows: below the header, stop at the footnote / Source band ----------
+  body <- raw[(hdr_row + 1L):nrow(raw), , drop = FALSE]
+  c1 <- trimws(as.character(body[[1]]))
+  c2 <- if (ncol(body) >= 2) trimws(as.character(body[[2]])) else rep(NA_character_, nrow(body))
+  c1[c1 == ""] <- NA; c2[c2 == ""] <- NA
+  stop_at <- which(!is.na(c1) & grepl("^(Source|Status|Enquir|Information|©)", c1))
+  end_row <- if (length(stop_at)) min(stop_at) - 1L else nrow(body)
+
+  # Drop trailing footnote markers (plain digits + Unicode superscripts) + space:
+  # "Total 1 2 4" -> "Total", "Belgium ³" -> "Belgium".
+  clean_label <- function(x) {
+    x <- gsub("[¹²³⁰-⁹]+", "", x)  # superscript digits
+    x <- gsub("[[:space:]]+[0-9 ]+$", "", x)               # trailing " 1 2 4"
+    trimws(x)
+  }
+
+  rows <- list()
+  for (r in seq_len(end_row)) {
+    raw_lab <- if (!is.na(c2[r])) c2[r] else c1[r]
+    if (is.na(raw_lab)) next
+    lab <- clean_label(raw_lab)
+    if (lab == "") next
+    vals <- suppressWarnings(as.numeric(
+      gsub("[ ']", "", gsub(",", ".", as.character(body[r, yr_cols])))))  # drops "...." / "" -> NA
+    if (all(is.na(vals))) next  # skips footnote-definition rows (no numeric year cells)
+    level <- if (lab %in% .TRADE_GROUPS) "group" else "country"
+    rows[[length(rows) + 1L]] <- tibble::tibble(
+      flow = flow_code, partner = lab, level = level, year = years, value = vals)
+  }
+  dplyr::bind_rows(rows)
+}
+
+fso_excel_ch_fso_trade_partner <- function(pubdate = NULL) {
+  base <- "https://dam-api.bfs.admin.ch/hub/api/dam/assets/%s/master"
+  ex_path <- tempfile(fileext = ".xlsx"); download_binary(sprintf(base, "36664830"), ex_path)
+  im_path <- tempfile(fileext = ".xlsx"); download_binary(sprintf(base, "36664836"), im_path)
+
+  long <- dplyr::bind_rows(
+    .trade_partner_sheet(ex_path, "export"),
+    .trade_partner_sheet(im_path, "import"))
+
+  data <- long %>%
+    dplyr::filter(!is.na(value), !is.na(year)) %>%
+    dplyr::transmute(
+      flow    = as.character(flow),
+      partner = as.character(partner),
+      level   = as.character(level),
+      date    = as.Date(sprintf("%d-01-01", year)),
+      value   = as.numeric(value)) %>%
+    dplyr::distinct(flow, partner, date, .keep_all = TRUE) %>%  # one row per flow x partner x year
+    dplyr::arrange(flow, partner, date)
+
+  # Value anchors: a silent column/row shift would move these off their labels.
+  anchor <- function(fl, pt, yr, want) {
+    got <- data$value[data$flow == fl & data$partner == pt &
+                        data$date == as.Date(sprintf("%d-01-01", yr))]
+    if (length(got) != 1L || abs(got - want) > 0.5)
+      stop(sprintf("ch_fso_trade_partner: anchor %s/%s/%d = %s, expected %.1f — layout changed?",
+                   fl, pt, yr, if (length(got)) sprintf("%.1f", got[1]) else "NA", want), call. = FALSE)
+  }
+  anchor("export", "Total",   2024, 393833.5)
+  anchor("export", "Germany", 2024, 45218.3)
+  anchor("export", "USA",     2024, 65297.2)
+  anchor("import", "Germany", 2024, 59891.6)
+
+  partners <- data %>% dplyr::distinct(partner, level)
+  partner_levels <- stats::setNames(
+    lapply(partners$partner, function(p) list(label = list(en = p))),
+    partners$partner)
+
+  meta <- list(
+    title = list(en = "Foreign trade by partner country"),
+    source = list(
+      name = list(en = "Swiss Federal Statistical Office (FSO) / Federal Office for Customs and Border Security (FOCBS)"),
+      url  = "https://www.bfs.admin.ch/asset/en/36664830"
+    ),
+    license   = "fso",
+    frequency = "annual",
+    topic     = "External sector",
+    units     = list(en = "CHF millions"),
+    updated   = if (is.null(pubdate)) NA_character_ else as.character(pubdate),
+    dimensions = list(
+      flow = list(
+        label = list(en = "Trade flow"),
+        levels = list(
+          export = list(label = list(en = "Exports")),
+          import = list(label = list(en = "Imports"))
+        )
+      ),
+      partner = list(
+        label  = list(en = "Partner country / region"),
+        levels = partner_levels
+      ),
+      level = list(
+        label = list(en = "Aggregation level"),
+        levels = list(
+          group   = list(label = list(en = "Continent / economic area")),
+          country = list(label = list(en = "Individual country"))
+        )
+      )
+    )
+  )
+
+  list(id = "ch_fso_trade_partner", data = as.data.frame(data), meta = meta)
+}
+
+# ---- ch_fso_gdp_region (National accounts) ----
+fso_excel_ch_fso_gdp_region <- function(path, pubdate) {
+
+  num_eu <- function(x) {
+    x <- as.character(x)
+    x[x %in% c("...", "…", "")] <- NA_character_
+    x <- gsub("'", "", x, fixed = TRUE)   # thousands separator
+    x <- gsub(" ", "", x)             # nbsp
+    x <- gsub(" ", "", x)                  # spaces
+    x <- gsub(",", ".", x, fixed = TRUE)   # decimal comma
+    suppressWarnings(as.numeric(x))
+  }
+
+  # Stable codes keyed on the workbook's English row label (column 1). The asset
+  # has two sheets — "GDP per canton" and "GDP per region" — each beginning with
+  # a current-price levels block, followed by "Change over previous year" blocks
+  # we ignore. Switzerland appears in BOTH sheets with identical values, so it is
+  # taken once (from the canton sheet) under its own `country` level. Zurich
+  # likewise appears as canton AND as greater region (identical values); the
+  # `level` dim keeps the two keys distinct (canton ZH vs region zurich) so they
+  # never collide and we never sum a canton into its own region.
+  canton_codes <- c(
+    "Zurich" = "ZH", "Berne" = "BE", "Lucerne" = "LU", "Uri" = "UR",
+    "Schwyz" = "SZ", "Obwalden" = "OW", "Nidwalden" = "NW", "Glarus" = "GL",
+    "Zug" = "ZG", "Fribourg" = "FR", "Solothurn" = "SO", "Basel-Stadt" = "BS",
+    "Basel-Landschaft" = "BL", "Schaffhausen" = "SH", "Appenzell A. Rh." = "AR",
+    "Appenzell I. Rh." = "AI", "St. Gallen" = "SG", "Graubünden" = "GR",
+    "Aargau" = "AG", "Thurgau" = "TG", "Ticino" = "TI", "Vaud" = "VD",
+    "Valais" = "VS", "Neuchâtel" = "NE", "Geneva" = "GE", "Jura" = "JU"
+  )
+  region_codes <- c(
+    "Lake Geneva Region"       = "leman",
+    "Espace Mittelland"        = "mittelland",
+    "Northwestern Switzerland" = "nw",
+    "Zurich"                   = "zurich",
+    "Eastern Switzerland"      = "east",
+    "Central Switzerland"      = "central",
+    "Ticino"                   = "ticino_r"
+  )
+
+  # Pull the current-price (block 1) levels out of one sheet, anchoring on header
+  # TEXT not fixed rows: `header_label` ("Canton"/"Region") locates the year
+  # header row; the value block starts after the "In CHF million" subheader and
+  # ends at the first blank col-1 cell (the gap before "Change over previous
+  # year"). An inserted/reordered row or renamed anchor fails loud.
+  read_block <- function(sheet, header_label) {
+    m <- as.data.frame(readxl::read_excel(
+      path, sheet = sheet, col_names = FALSE, col_types = "text",
+      .name_repair = "minimal"
+    ))
+    col1 <- trimws(as.character(m[[1]]))
+
+    hdr_row <- which(col1 == header_label)
+    if (length(hdr_row) != 1L)
+      stop(sprintf("ch_fso_gdp_region: header '%s' matched %d rows in sheet '%s' — layout changed?",
+                   header_label, length(hdr_row), sheet), call. = FALSE)
+
+    sub_row <- which(grepl("^In CHF million", col1))
+    sub_row <- sub_row[sub_row > hdr_row][1]
+    if (is.na(sub_row))
+      stop(sprintf("ch_fso_gdp_region: 'In CHF million' subheader missing in sheet '%s' — layout changed?",
+                   sheet), call. = FALSE)
+
+    # value columns = header cells (on hdr_row) that begin with a 4-digit year.
+    # The last year carries a 'p' suffix ("2022p"), so match the year out of the
+    # raw header text rather than coercing the whole cell to numeric.
+    hdr_vals <- as.character(m[hdr_row, ])
+    yr <- suppressWarnings(as.integer(stringr::str_match(hdr_vals, "^\\s*(\\d{4})")[, 2]))
+    col_idx <- which(!is.na(yr) & yr >= 1900 & yr <= 2100)
+    years <- yr[col_idx]
+    if (!length(col_idx))
+      stop(sprintf("ch_fso_gdp_region: no year columns found in sheet '%s' — layout changed?",
+                   sheet), call. = FALSE)
+
+    # data rows: from sub_row+1 down to the row before the first blank col-1 cell.
+    start <- sub_row + 1L
+    rest  <- col1[start:length(col1)]
+    blank <- which(is.na(rest) | rest == "")
+    end   <- if (length(blank)) start + blank[1] - 2L else length(col1)
+    rows  <- start:end
+
+    labs <- col1[rows]
+    out <- lapply(seq_along(rows), function(k) {
+      r <- rows[k]
+      tibble::tibble(label = labs[k], year = years, value = num_eu(m[r, col_idx]))
+    })
+    dplyr::bind_rows(out)
+  }
+
+  cant <- read_block("GDP per canton", "Canton")
+  regn <- read_block("GDP per region", "Region")
+
+  cant_lvl <- cant %>%
+    dplyr::filter(label %in% c(names(canton_codes), "Switzerland")) %>%
+    dplyr::mutate(
+      level  = dplyr::if_else(label == "Switzerland", "country", "canton"),
+      region = dplyr::if_else(label == "Switzerland", "ch", unname(canton_codes[label]))
+    )
+
+  regn_lvl <- regn %>%
+    dplyr::filter(label %in% names(region_codes)) %>%   # drop the duplicate Switzerland row
+    dplyr::mutate(level = "region", region = unname(region_codes[label]))
+
+  # Fail loud if any expected label went unmapped (a renamed/inserted row).
+  miss_c <- setdiff(c(names(canton_codes), "Switzerland"), cant$label)
+  miss_r <- setdiff(names(region_codes), regn$label)
+  if (length(miss_c) || length(miss_r))
+    stop(sprintf("ch_fso_gdp_region: unmapped labels (canton: %s | region: %s) — layout changed?",
+                 paste(miss_c, collapse = ", "), paste(miss_r, collapse = ", ")), call. = FALSE)
+
+  data <- dplyr::bind_rows(cant_lvl, regn_lvl) %>%
+    dplyr::filter(!is.na(value)) %>%
+    dplyr::transmute(
+      region = as.character(region),
+      level  = as.character(level),
+      date   = as.Date(sprintf("%d-01-01", year)),
+      value  = as.numeric(value)
+    ) %>%
+    dplyr::arrange(level, region, date)
+
+  region_levels <- c(
+    stats::setNames(
+      lapply(names(canton_codes), function(l) list(label = list(en = l))),
+      unname(canton_codes)
+    ),
+    list(ch = list(label = list(en = "Switzerland"))),
+    stats::setNames(
+      lapply(names(region_codes), function(l) list(label = list(en = l))),
+      unname(region_codes)
+    )
+  )
+
+  meta <- list(
+    title = list(en = "Regional gross domestic product (GDP), current prices"),
+    source = list(
+      name = list(en = "Swiss Federal Statistical Office (FSO)"),
+      url  = "https://www.bfs.admin.ch/asset/en/je-e-04.02.06.01"
+    ),
+    license   = "fso",
+    frequency = "annual",
+    topic     = "National accounts",
+    units     = list(en = "CHF million, at current prices"),
+    updated   = as.character(pubdate),
+    dimensions = list(
+      region = list(
+        label  = list(en = "Region"),
+        levels = region_levels
+      ),
+      level = list(
+        label = list(en = "Geographic level"),
+        levels = list(
+          country = list(label = list(en = "Switzerland (total)")),
+          region  = list(label = list(en = "Greater region")),
+          canton  = list(label = list(en = "Canton"))
+        )
+      )
+    )
+  )
+
+  list(id = "ch_fso_gdp_region", data = data, meta = meta)
+}
+
+# ---- ch_fso_construction_prices (Prices) ----
+fso_excel_ch_fso_construction_prices <- function(path, pubdate) {
+  # The Swiss Construction Price Index is a multi-base workbook (one sheet per
+  # index base: 1998 / 2010 / 2015 / 2020). We take the base-2020 sheet for the
+  # current levels (Oct 2020 = 100). The sheet is region-blocked: a <REG_nn> row
+  # opens each Greater-Region block, followed by its <OBJ_nn> work-type rows.
+  sheet <- "2020"
+
+  raw <- suppressMessages(readxl::read_excel(
+    path, sheet = sheet, col_names = FALSE, col_types = "text", .name_repair = "minimal"
+  ))
+  raw <- as.data.frame(raw, stringsAsFactors = FALSE)
+
+  tag1 <- trimws(as.character(raw[[1]]))   # <REG_nn> / <OBJ_nn> row tags
+
+  # --- date columns: anchor on the month name (row 5) + year (row 6), NEVER on a
+  # fixed column index. Reference months are October & April; map to first-of-month.
+  month_row <- as.character(unlist(raw[5, ], use.names = FALSE))
+  year_row  <- as.character(unlist(raw[6, ], use.names = FALSE))
+  # normalise potential non-breaking spaces before matching
+  month_row <- trimws(gsub(" ", " ", month_row))
+  mon <- ifelse(grepl("^Okt", month_row), 10L,
+         ifelse(grepl("^Apr", month_row),  4L, NA_integer_))
+  yr  <- suppressWarnings(as.integer(year_row))
+  date_cols <- which(!is.na(mon) & !is.na(yr) & yr >= 1900 & yr <= 2100)
+  if (!length(date_cols))
+    stop("ch_fso_construction_prices: no Oct/Apr date columns found in sheet 2020 — layout changed?",
+         call. = FALSE)
+  dates <- as.Date(sprintf("%04d-%02d-01", yr[date_cols], mon[date_cols]))
+
+  # --- scope to the Switzerland region block (<REG_01> .. next <REG_>) ---------
+  # The <OBJ_nn> work-type tags repeat in every regional block, so a row match
+  # must be confined to the Switzerland block or it would collide across regions.
+  reg_rows <- which(grepl("^<REG_", tag1))
+  r01 <- which(tag1 == "<REG_01>")
+  if (length(r01) != 1L)
+    stop("ch_fso_construction_prices: <REG_01> (Switzerland) marker not found exactly once — layout changed?",
+         call. = FALSE)
+  nxt <- reg_rows[reg_rows > r01]
+  block_end <- if (length(nxt)) min(nxt) - 1L else nrow(raw)
+  block <- (r01 + 1L):block_end
+
+  # --- three headline work-types matched by OBJ tag (Total / building / civil) -
+  worktypes <- list(
+    total   = list(tag = "<OBJ_02>", en = "Construction: Total"),
+    hochbau = list(tag = "<OBJ_03>", en = "Building construction (Hochbau)"),
+    tiefbau = list(tag = "<OBJ_13>", en = "Civil engineering (Tiefbau)")
+  )
+
+  parse_num <- function(x) {
+    x <- as.character(x)
+    x[x %in% c("...", "…", "")] <- NA_character_
+    x <- gsub("'", "", x, fixed = TRUE)        # thousands separator
+    x <- gsub(" ", "", x)                 # non-breaking space
+    x <- gsub(" ", "", x)                      # ordinary space
+    x <- gsub(",", ".", x, fixed = TRUE)       # decimal comma
+    suppressWarnings(as.numeric(x))
+  }
+
+  pieces <- lapply(names(worktypes), function(code) {
+    tag <- worktypes[[code]]$tag
+    rr <- block[which(tag1[block] == tag)]   # which() guards against NA rows in the block
+    if (length(rr) != 1L)
+      stop(sprintf("ch_fso_construction_prices: work-type %s matched %d rows in the Switzerland block (expected 1) — layout changed?",
+                   tag, length(rr)), call. = FALSE)
+    tibble::tibble(
+      worktype = code,
+      date     = dates,
+      value    = parse_num(as.character(unlist(raw[rr, date_cols], use.names = FALSE)))
+    )
+  })
+
+  data <- dplyr::bind_rows(pieces)
+  data <- data[!is.na(data$value) & !is.na(data$date), , drop = FALSE]
+  data <- dplyr::arrange(data, .data$worktype, .data$date)
+  data <- as.data.frame(data, stringsAsFactors = FALSE)
+
+  levels <- lapply(names(worktypes), function(code) {
+    list(label = list(en = worktypes[[code]]$en))
+  })
+  names(levels) <- names(worktypes)
+
+  list(
+    id   = "ch_fso_construction_prices",
+    data = data,
+    meta = list(
+      title  = list(en = "Construction Price Index"),
+      source = list(
+        name = list(en = "Swiss Federal Statistical Office (FSO)"),
+        url  = "https://www.bfs.admin.ch/asset/de/cc-t-05.05.01"
+      ),
+      license   = "fso",
+      # Semi-annual (Apr & Oct reference months); infer_frequency has no such
+      # bucket, so it is set manually here.
+      frequency = "semi-annual",
+      topic     = "Prices",
+      units     = list(en = "Index (October 2020 = 100)"),
+      updated   = as.character(pubdate),
+      dimensions = list(
+        worktype = list(
+          label  = list(en = "Type of work"),
+          levels = levels
+        )
+      )
+    )
+  )
+}

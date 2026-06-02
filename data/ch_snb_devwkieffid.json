@@ -81,6 +81,7 @@
       }
     }
   },
+  "topic": "Exchange rates",
   "concept": "Exchange rates / Effective FX index",
   "canonical": true,
   "split": "D1",
@@ -90,5 +91,5 @@
     "D1": "G",
     "D0": "K"
   },
-  "fetched_utc": "2026-06-02 07:39:11"
+  "fetched_utc": "2026-06-02 19:40:56"
 }

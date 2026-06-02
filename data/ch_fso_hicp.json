@@ -1,0 +1,137 @@
+{
+  "schema_version": "1.0",
+  "id": "ch_fso_hicp",
+  "dim_order": [
+    "coicop"
+  ],
+  "start": "2004-12-01",
+  "end": "2025-12-01",
+  "title": {
+    "en": "Harmonised Index of Consumer Prices (HICP)"
+  },
+  "source": {
+    "name": {
+      "en": "Eurostat"
+    },
+    "url": "https://ec.europa.eu/eurostat/databrowser/view/prc_hicp_midx/default/table"
+  },
+  "license": "eurostat",
+  "frequency": "monthly",
+  "units": {
+    "en": "Index (2015 = 100)"
+  },
+  "updated": "2026-02-06",
+  "dimensions": {
+    "coicop": {
+      "label": {
+        "en": "COICOP consumption purpose"
+      },
+      "levels": {
+        "CP00": {
+          "label": {
+            "en": "All-items HICP"
+          },
+          "data": true
+        },
+        "CP01": {
+          "label": {
+            "en": "Food and non-alcoholic beverages"
+          },
+          "data": true
+        },
+        "CP02": {
+          "label": {
+            "en": "Alcoholic beverages, tobacco and narcotics"
+          },
+          "data": true
+        },
+        "CP03": {
+          "label": {
+            "en": "Clothing and footwear"
+          },
+          "data": true
+        },
+        "CP04": {
+          "label": {
+            "en": "Housing, water, electricity, gas and other fuels"
+          },
+          "data": true
+        },
+        "CP05": {
+          "label": {
+            "en": "Furnishings, household equipment and routine household maintenance"
+          },
+          "data": true
+        },
+        "CP06": {
+          "label": {
+            "en": "Health"
+          },
+          "data": true
+        },
+        "CP07": {
+          "label": {
+            "en": "Transport"
+          },
+          "data": true
+        },
+        "CP08": {
+          "label": {
+            "en": "Communications"
+          },
+          "data": true
+        },
+        "CP09": {
+          "label": {
+            "en": "Recreation and culture"
+          },
+          "data": true
+        },
+        "CP10": {
+          "label": {
+            "en": "Education"
+          },
+          "data": true
+        },
+        "CP11": {
+          "label": {
+            "en": "Restaurants and hotels"
+          },
+          "data": true
+        },
+        "CP12": {
+          "label": {
+            "en": "Miscellaneous goods and services"
+          },
+          "data": true
+        }
+      },
+      "hierarchy": {
+        "CP00": {
+          "CP01": [],
+          "CP02": [],
+          "CP03": [],
+          "CP04": [],
+          "CP05": [],
+          "CP06": [],
+          "CP07": [],
+          "CP08": [],
+          "CP09": [],
+          "CP10": [],
+          "CP11": [],
+          "CP12": []
+        }
+      }
+    }
+  },
+  "topic": "Prices",
+  "concept": "Prices / Consumer prices",
+  "canonical": false,
+  "split": "coicop",
+  "single_select": [],
+  "default_transform": "yoy",
+  "default": {
+    "coicop": "CP00"
+  },
+  "fetched_utc": "2026-06-02 19:40:59"
+}

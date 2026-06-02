@@ -37,6 +37,9 @@ kept and labelled; *dropped* series are removed from ingestion.
 | Concept | Canonical | Freq | Alternates / notes | Dropped (re-export) |
 |---|---|---|---|---|
 | GDP (output, expenditure, income) | `ch_seco_gdp` (SECO) | quarterly | — | SNB `gdppn`, SNB `gdpap`, FSO `ch_fso_gdp_use` (redundant with SECO quarterly) |
+| Regional GDP | `ch_fso_gdp_region` (FSO) | annual | nominal, by canton + greater region; complements the national SECO GDP | — |
+| Investment (GFCF) detail | `ch_fso_gfcf_detail` (FSO) | annual | by institutional sector × asset type (construction/equipment); finer than the total-economy GFCF inside `ch_seco_gdp` | — |
+| Labour productivity | `ch_fso_labour_productivity` (FSO) | annual | GDP / hours / productivity, chained-volume index 1991=100 | — |
 
 ### Prices
 | Concept | Canonical | Freq | Alternates / notes | Dropped |
@@ -45,14 +48,27 @@ kept and labelled; *dropped* series are removed from ingestion.
 | Core inflation | SNB `plkoprinfla` | monthly | analytical SNB/SFSO measure, not raw CPI — keep | — |
 | Producer & import prices | `ch_fso_ppi` (FSO) | monthly | base-year variants are one series | — |
 | Real estate prices | SNB `plimoinchq` | quarterly | no FSO equivalent in set | — |
+| Harmonised CPI (HICP) | `ch_fso_hicp` (Eurostat) | monthly | EU-comparable index (2015=100); excludes owner-occupied housing + health-insurance premiums, so distinct from the LIK above | — |
+| Construction prices | `ch_fso_construction_prices` (FSO) | semi-annual | Baupreisindex — total / building (Hochbau) / civil engineering (Tiefbau) | — |
 
 ### Labour
 | Concept | Canonical | Freq | Alternates / notes | Dropped |
 |---|---|---|---|---|
 | Employment / jobs | `ch_fso_besta` (FSO, by division) | quarterly | breakdowns `ch_fso_jobs_sex`, `ch_fso_vacancies`; SNB `ambeschkla` is an SNB re-publication kept as a labelled alternate | — |
+| Employed persons (ETS) | `ch_fso_ets` (FSO) | quarterly | headcount on the domestic concept, by sector × sex — a distinct concept from BESTA *jobs* | — |
+| Hours worked | `ch_fso_hours_worked` (FSO) | annual | actual weekly + annual hours and total working volume (AVOL), by sex × working-time | — |
 | Job vacancies | `ch_fso_vacancies` (FSO) | quarterly | leading indicator | — |
+| Employment outlook | `ch_fso_besta_outlook` (FSO) | quarterly | forward-looking BESTA hiring-intent index (diffusion ratio around 1.0) | — |
+| Cross-border commuters | `ch_fso_cross_border_commuters` (FSO) | quarterly | foreign commuters by canton of work (model-based estimate) | — |
 | Unemployment | two alternates kept | monthly | SNB `amarbma` (registered, SECO-origin) **and** `ch_fso_unemp_rate` (ILO) — different definitions, both labelled | — |
 | Wages | `ch_fso_wage_idx` (FSO) | annual | nominal + real, by sector/sex | — |
+
+### Domestic economy
+| Concept | Canonical | Freq | Notes |
+|---|---|---|---|
+| Retail trade turnover | `ch_fso_retail` (FSO) | monthly | turnover index (FSO SDMX) |
+| Industry & construction turnover | `ch_fso_production` (FSO) | quarterly | secondary-sector turnover + production index |
+| Services turnover | `ch_fso_services` (FSO) | quarterly | tertiary sector — completes the retail + industry + services triad |
 
 ### Money & banking
 | Concept | Canonical | Freq | Notes |
@@ -65,7 +81,7 @@ kept and labelled; *dropped* series are removed from ingestion.
 |---|---|---|---|
 | Policy / official rates | SNB `snboffzisa` | — | |
 | Money-market rates | SNB `zimoma`, `zikredlauf`, `zikrepro` | — | |
-| Bond yields | SNB `rendoblid` (daily) | daily | drop `rendoblim` (monthly roll-up of daily); spot curve kept |
+| Bond yields | SNB `rendeiduebd` (daily spot rates) | daily | canonical = the live spot-rate cube (`CHF × 10J` = 10Y Confederation benchmark). `rendoblid` (par yields) was discontinued by the SNB (frozen 2025-07-31) and is **not** ingested — its CHF curve is covered here; `rendoblim` (monthly roll-up) also dropped |
 
 ### Exchange rates
 | Concept | Canonical | Freq | Notes |
@@ -78,12 +94,14 @@ kept and labelled; *dropped* series are removed from ingestion.
 |---|---|---|---|
 | Balance of payments | SNB `bop*q` | quarterly | current / financial / overview / services. The overview cube `ch_snb_bopoverq` is kept because it carries the capital account + statistical difference the detail cubes lack |
 | International investment position | SNB `auver*q`, `auvekomq` | quarterly | the overview cube `auvekomq` is kept for its deep IIP functional tree |
-| Foreign trade | SNB `ausshawarm` | — | by goods category |
+| Foreign trade | SNB `ausshawarm` (by goods) + `ch_fso_trade_partner` (by partner country) | — | goods category from the SNB cube; partner-country exports + imports (annual CHF mn) from the FSO/BAZG asset — complementary dimensions |
 
 ### Business cycle & sentiment
 | Concept | Canonical | Freq | Notes |
 |---|---|---|---|
 | Leading barometer | `ch_kof_barometer` (KOF) | monthly | the headline cyclical indicator |
+| Economic sentiment | `ch_kof_esi` (KOF) | monthly | survey sentiment composite, sibling to the barometer (two methodology vintages) |
+| Weekly economic activity | `ch_seco_wwa` (SECO) | weekly | high-frequency GDP-growth tracker (WEA); the catalog's only weekly series |
 | Consumer confidence | SNB `concon` (SECO-origin survey) | quarterly | attributed to SECO, its true producer |
 | Business cycle signals | SNB `snbkosiq` | quarterly | |
 
@@ -112,6 +130,7 @@ kept and labelled; *dropped* series are removed from ingestion.
 | Concept | Canonical | Freq | Notes |
 |---|---|---|---|
 | Resident population | `ch_fso_pop` (FSO) | annual | demographic balance back to 1861 |
+| Resident population by nationality | `ch_fso_pop_detail` (FSO) | annual | nationality × sex stock (STATPOP, 2010–); detail alternate to the headline balance |
 
 ## Deduplication decisions
 
@@ -121,7 +140,7 @@ kept and labelled; *dropped* series are removed from ingestion.
   expenditure breakdown (canonical), at lower frequency.
 
 **Dropped (native-frequency roll-up — higher frequency kept):**
-- SNB `rendoblim` (monthly bond yields) → keep `rendoblid` (daily).
+- SNB `rendoblim` (monthly bond yields) → dropped. The daily par-yield cube `rendoblid` was also dropped (the SNB discontinued it, frozen 2025-07-31); the live daily spot cube `rendeiduebd` is canonical for Bond yields.
 - SNB `devwkieffim` (monthly effective FX) → keep `devwkieffid` (daily).
 
 **Kept as labelled alternates (genuinely different definition):**

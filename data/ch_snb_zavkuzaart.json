@@ -188,15 +188,12 @@
   "concept": "Payment systems / Payments & cash",
   "canonical": false,
   "split": "D1",
-  "single_select": [
-    "D0",
-    "D2"
-  ],
+  "single_select": ["D0", "D2"],
   "default_transform": "level",
   "default": {
     "D0": "T",
     "D1": "T",
     "D2": "BET"
   },
-  "fetched_utc": "2026-06-01 07:15:00"
+  "fetched_utc": "2026-06-02 19:40:57"
 }

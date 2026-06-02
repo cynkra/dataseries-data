@@ -1,0 +1,51 @@
+{
+  "schema_version": "1.0",
+  "id": "ch_kof_esi",
+  "dim_order": [
+    "indicator"
+  ],
+  "start": "2007-04-01",
+  "end": "2026-05-01",
+  "title": {
+    "en": "KOF Economic Sentiment Index"
+  },
+  "source": {
+    "name": {
+      "en": "KOF Swiss Economic Institute"
+    },
+    "url": "https://kof.ethz.ch/en/forecasts-and-indicators/indicators/kof-economic-sentiment-indicator.html"
+  },
+  "license": "kof",
+  "frequency": "monthly",
+  "dimensions": {
+    "indicator": {
+      "label": {
+        "en": "indicator"
+      },
+      "levels": {
+        "ch.kof.esi.index": {
+          "label": {
+            "en": "ch.kof.esi.index"
+          },
+          "data": true
+        },
+        "ch.kof.esi.index.v2018": {
+          "label": {
+            "en": "ch.kof.esi.index.v2018"
+          },
+          "data": true
+        }
+      }
+    }
+  },
+  "topic": "Business cycle",
+  "concept": "Business cycle and sentiment / Sentiment composite",
+  "canonical": true,
+  "split": "indicator",
+  "single_select": [],
+  "default_transform": "level",
+  "default": {
+    "indicator": "ch.kof.esi.index.v2018"
+  },
+  "fetched_utc": "2026-06-02 19:40:58"
+}

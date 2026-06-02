@@ -15,7 +15,8 @@ root <- tryCatch(
 )
 for (f in c("dates.R", "http.R", "io.R", "source_snb.R", "source_kof.R",
             "source_fso.R", "source_fso_excel.R", "source_fso_excel_sets.R",
-            "source_fso_sdmx.R", "source_seco.R", "source_ffa.R", "source_adecco.R")) {
+            "source_fso_dam_csv.R", "source_fso_sdmx.R", "source_eurostat.R",
+            "source_seco.R", "source_ffa.R", "source_adecco.R")) {
   source(file.path(root, f))
 }
 
@@ -26,6 +27,8 @@ for (f in c("dates.R", "http.R", "io.R", "source_snb.R", "source_kof.R",
                        "47P_Bekl", "47P_Food", "47P_Treib", "47P_UW",
                        "47PxTreib", "47x473")
 .SDMX_PRODUCTION_NOGA <- c("B-E", "B", "C", "D", "F", "41", "42", "43", "41_43")
+# services = tertiary NOGA sections (same DF_KEU_Q1 flow as production, disjoint codes).
+.SDMX_SERVICES_NOGA <- c("G-NxK", "G", "H", "I", "J", "L", "M", "N")
 
 # Download an FSO Excel asset and run its bespoke parser, tagging the topic.
 # The per-dataset parsers live in source_fso_excel_sets.R.
@@ -48,6 +51,7 @@ DATA_DIR <- file.path(dirname(root), "data")
 REDUNDANT_LEVELS <- list(
   ch_fso_wage_idx    = list(measure      = "change"),                 # YoY % vs previous year
   ch_fso_production  = list(UNIT_MEASURE = c("VARQ-4", "VARQ-1")),    # YoY + quarter-on-quarter
+  ch_fso_services    = list(UNIT_MEASURE = c("VARQ-4", "VARQ-1")),    # YoY + quarter-on-quarter
   ch_fso_retail      = list(UNIT_MEASURE = c("VARM-12", "VARM-1")),   # YoY + month-on-month
   ch_fso_pop         = list(item         = "change_abs"),             # absolute first difference (rarely used)
   ch_snb_devwkibiim  = list(D2           = "V"),                      # YoY % (Index/Change)
@@ -178,11 +182,20 @@ build <- function() {
                                 title = list(en = "Industry & construction turnover (quarterly)"),
                                 noga_keep = .SDMX_PRODUCTION_NOGA),
                  "Domestic economy"))
+  add(.try_fetch("ch_fso_services",
+                 fso_sdmx_fetch("ch_fso_services", "CH1.KEU", "DF_KEU_Q1", "1.0.0",
+                                title = list(en = "Services-sector turnover (quarterly)"),
+                                noga_keep = .SDMX_SERVICES_NOGA),
+                 "Domestic economy"))
 
   # FSO SDMX, sliced to the national total (cubes too large to pull whole):
   # new car registrations by fuel (the EV-transition read) and vacant dwellings.
   add(.try_fetch("ch_fso_new_vehicles",     fso_sdmx_new_vehicles(),     "Mobility"))
   add(.try_fetch("ch_fso_vacant_dwellings", fso_sdmx_vacant_dwellings(), "Construction and housing"))
+  # FSO SDMX, sliced national: foreign cross-border commuters by canton (quarterly,
+  # model-based estimate) + permanent resident population by nationality x sex (annual).
+  add(.try_fetch("ch_fso_cross_border_commuters", fso_sdmx_cross_border_commuters(), "Labour"))
+  add(.try_fetch("ch_fso_pop_detail",             fso_sdmx_pop_detail(),             "Population"))
 
   # FFA / EFV: general-government public finances (FS + GFS model headline
   # aggregates — revenue, expenditure, balance, gross/net debt, debt-to-GDP), annual,
@@ -195,6 +208,13 @@ build <- function() {
   # KOF: the Economic Barometer (single monthly series).
   add(.try_fetch("ch_kof_barometer",
                  kof_fetch("ch.kof.barometer", title = list(en = "KOF Economic Barometer")),
+                 "Business cycle"))
+  # KOF Economic Sentiment Index (ESI), monthly, via the open OGD /sets endpoint
+  # (two methodology versions: pre-Brexit + standard 2018).
+  add(.try_fetch("ch_kof_esi",
+                 kof_set_fetch("ogd_ch.kof.esi",
+                               title = list(en = "KOF Economic Sentiment Index"),
+                               source_url = "https://kof.ethz.ch/en/forecasts-and-indicators/indicators/kof-economic-sentiment-indicator.html"),
                  "Business cycle"))
 
   # University of Zurich / Adecco Group Swiss Job Market Index — a non-government
@@ -239,6 +259,21 @@ build <- function() {
                  fso_fetch_auto("ch_fso_jobs_sex", "px-x-0602000000_102",
                                 title = list(en = "Jobs by economic division and sex")),
                  "Labour"))
+  # FSO BESTA employment-outlook index (forward-looking labour indicator), quarterly.
+  # The composite index (code 5), weighted by jobs (code 1); the two pinned dims drop
+  # out as degenerate, leaving Wirtschaftsabteilung (20 NOGA divisions).
+  besta_outlook_query <- list(
+    list(code = "Wirtschaftsabteilung", selection = list(filter = "all", values = list("*"))),
+    list(code = "Voraussichtliche Beschäftigungsentwicklung",
+         selection = list(filter = "item", values = list("5"))),
+    list(code = "Gewichtung", selection = list(filter = "item", values = list("1"))),
+    list(code = "Quartal", selection = list(filter = "all", values = list("*")))
+  )
+  add(.try_fetch("ch_fso_besta_outlook",
+                 fso_fetch("ch_fso_besta_outlook", "px-x-0602000000_105", besta_outlook_query,
+                           title = list(en = "Employment outlook index by economic division"),
+                           quarter_col = "Quartal"),
+                 "Labour"))
 
   # FSO Excel-asset datasets (not in PX-Web): the macro depth — CPI, producer/
   # import prices, wages, population, unemployment, GDP by expenditure. Each is a
@@ -250,6 +285,33 @@ build <- function() {
   add(.try_fetch("ch_fso_wage_idx",   fso_excel_dataset("ch_fso_wage_idx",   "je-e-03.04.03.00.04")))
   add(.try_fetch("ch_fso_pop",        fso_excel_dataset("ch_fso_pop",        "su-d-01.02.04.05")))
   add(.try_fetch("ch_fso_unemp_rate", fso_excel_dataset("ch_fso_unemp_rate", "je-d-03.03.01.03")))
+
+  # FSO DAM CSV-master assets (already-long CSVs, no sheet reshaping):
+  # labour productivity (index). The parsers fso_ets() / fso_gfcf_detail() /
+  # fso_hours_worked() are implemented and verified but HELD from the catalog
+  # pending a display rework (multi-dimension selector / ragged-tree polish) —
+  # re-enable here once the Display is sorted.
+  add(.try_fetch("ch_fso_labour_productivity", fso_labour_productivity(), "National accounts"))
+  # add(.try_fetch("ch_fso_ets",                 fso_ets(),                 "Labour"))            # HELD: split=sector/sex selector
+  # add(.try_fetch("ch_fso_gfcf_detail",         fso_gfcf_detail(),         "National accounts")) # HELD: ragged sector×asset tree
+  # add(.try_fetch("ch_fso_hours_worked",        fso_hours_worked(),        "Labour"))            # HELD: 3-dim display unreviewed
+
+  # FSO DAM Excel (bespoke sheet parsers): the construction price index + foreign
+  # trade by partner country (self-contained, pins the English-master asset ids).
+  # fso_excel_ch_fso_gdp_region() is implemented + verified but HELD pending a
+  # hierarchical region tree (CH → greater region → canton) instead of region×level.
+  # add(.try_fetch("ch_fso_gdp_region",
+  #                fso_excel_dataset("ch_fso_gdp_region", "je-e-04.02.06.01"), "National accounts")) # HELD
+  add(.try_fetch("ch_fso_construction_prices",
+                 fso_excel_dataset("ch_fso_construction_prices", "cc-t-05.05.01"), "Prices"))
+  add(.try_fetch("ch_fso_trade_partner", fso_excel_ch_fso_trade_partner(), "External sector"))
+
+  # Eurostat (NOT FSO): Swiss HICP, the EU-harmonised CPI (2015=100), all-items +
+  # 12 COICOP divisions. Concept-distinct from the national LIK (ch_fso_cpi).
+  add(.try_fetch("ch_fso_hicp", eurostat_hicp_fetch("ch_fso_hicp"), "Prices"))
+
+  # SECO Weekly Economic Activity index (WEA/WWA) — the catalog's first weekly series.
+  add(.try_fetch("ch_seco_wwa", seco_wwa_fetch("ch_seco_wwa"), "Business cycle"))
 
   datasets
 }

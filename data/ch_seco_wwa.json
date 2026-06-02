@@ -1,0 +1,55 @@
+{
+  "schema_version": "1.0",
+  "id": "ch_seco_wwa",
+  "dim_order": [
+    "structure"
+  ],
+  "start": "2005-01-03",
+  "end": "2026-05-11",
+  "title": {
+    "en": "Weekly Economic Activity index (WEA)"
+  },
+  "source": {
+    "name": {
+      "en": "State Secretariat for Economic Affairs (SECO)"
+    },
+    "url": "https://www.seco.admin.ch/seco/en/home/wirtschaftslage---wirtschaftspolitik/Wirtschaftslage/indikatoren/wwa.html"
+  },
+  "license": "seco",
+  "frequency": "weekly",
+  "dimensions": {
+    "structure": {
+      "label": {
+        "en": "Series"
+      },
+      "levels": {
+        "seco_wwa": {
+          "label": {
+            "en": "Index of weekly economic activity (WEA)"
+          },
+          "data": true
+        },
+        "seco_wwa_pre_covid": {
+          "label": {
+            "en": "WEA compared with the pre-crisis level (discontinued)"
+          },
+          "data": true
+        }
+      }
+    }
+  },
+  "units": {
+    "en": "Scaled to the rate of growth of real, seasonally, calendar and sport-event adjusted GDP versus the same quarter of the previous year (percent)"
+  },
+  "notes": "Weekly indicator published by SECO. The headline series (seco_wwa) runs from 2005; seco_wwa_pre_covid is a discontinued variant (2019-2022) measuring activity relative to the Q4 2019 level.",
+  "topic": "Business cycle",
+  "concept": "Business cycle / high-frequency activity tracker",
+  "canonical": true,
+  "split": "structure",
+  "single_select": "structure",
+  "default_transform": "level",
+  "default": {
+    "structure": "seco_wwa"
+  },
+  "fetched_utc": "2026-06-02 19:40:59"
+}

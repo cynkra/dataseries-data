@@ -386,6 +386,7 @@
       }
     }
   },
+  "topic": "Labour",
   "concept": "Labour / Employment / jobs",
   "canonical": true,
   "split": "Wirtschaftsabteilung",
@@ -394,5 +395,5 @@
   "default": {
     "Wirtschaftsabteilung": "5-96"
   },
-  "fetched_utc": "2026-06-02 07:38:17"
+  "fetched_utc": "2026-06-02 19:40:58"
 }

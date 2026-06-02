@@ -16,11 +16,12 @@
   "license": "snb",
   "frequency": "monthly",
   "dimensions": {},
+  "topic": "Prices",
   "concept": "Prices / Consumer prices",
   "canonical": true,
   "featured": "Inflation",
   "single_select": [],
   "default_transform": "yoy",
   "default": [],
-  "fetched_utc": "2026-06-02 07:39:13"
+  "fetched_utc": "2026-06-02 19:40:56"
 }

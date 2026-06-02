@@ -32,7 +32,8 @@ DATA  <- file.path(REPO, "data")
 #   annual    ~550d : annual series publish the prior year in the following spring.
 #   daily     ~14d  : business-day series; covers weekends/holidays/short outages.
 # Genuinely laggy or genuinely fast datasets can override per-id below.
-fresh_days <- c(daily = 14, weekly = 21, monthly = 110, quarterly = 290, annual = 550)
+fresh_days <- c(daily = 14, weekly = 21, monthly = 110, quarterly = 290,
+                `semi-annual` = 400, annual = 550)
 DEFAULT_THRESHOLD <- 120L
 AMBER_FACTOR <- 1.5  # past `threshold` = ageing; past 1.5x = stale (likely broken)
 
@@ -42,7 +43,8 @@ AMBER_FACTOR <- 1.5  # past `threshold` = ageing; past 1.5x = stale (likely brok
 # keeps slow annual series (e.g. population: data dated period-start lags ~1.5y but
 # the file is republished yearly) green, while still flagging a source that has
 # genuinely gone quiet (e.g. CPI, frozen since the Dec-2025 rebasing).
-pub_fresh_days <- c(daily = 60, weekly = 60, monthly = 75, quarterly = 200, annual = 430)
+pub_fresh_days <- c(daily = 60, weekly = 60, monthly = 75, quarterly = 200,
+                    `semi-annual` = 300, annual = 430)
 DEFAULT_PUB <- 120L
 
 # Per-dataset overrides of the observation-age threshold (id -> max fresh age in
@@ -52,12 +54,29 @@ DEFAULT_PUB <- 120L
 #   zikredlauf : regular monthly, but SNB releases new-business lending rates with a
 #                ~3-4 month lag, so the latest month is normally ~4 months old.
 #   capchstocki : daily stock-index cube SNB refreshes with a ~2-week internal lag.
-# All verified against the live source cadence -- not stale, just slow-published.
+#   gdp_region  : regional GDP is a slow product — FSO releases a reference year ~2-3y
+#                 late and only every ~1-2y (latest published = 2022, dated 2022-01-01,
+#                 released 2024-10; verified no newer EN/DE asset exists). So the latest
+#                 observation is normally ~4y old by its (year-start) date stamp.
+#   pop_detail  : STATPOP year-end population stock, but dated year-start (2024-01-01 =
+#                 end-2024) and carries no SDMX publish date to rescue it; reference year
+#                 Y publishes ~Aug Y+1, so the latest point is normally ~1.5-2.5y old.
+#   hicp        : Eurostat serves the Swiss HICP with a long lag (CH is non-EU); the
+#                 latest period available is normally ~3-6 months old (verified live:
+#                 Eurostat's newest CH point is 2025-12).
+#   seco_wwa    : weekly nowcast, but SECO publishes the latest week with a ~2-3 week
+#                 lag (and revises), so the newest point is normally ~3 weeks old.
+# All verified against the live source cadence -- not stale, just slow-published. The
+# 1.5x AMBER_FACTOR still flags a genuine stall well before these thresholds mislead.
 OVERRIDE <- c(
   ch_snb_devwkieffid = 50L,
   ch_snb_rendeiduebd = 50L,
   ch_snb_zikredlauf  = 150L,
-  ch_snb_capchstocki = 35L
+  ch_snb_capchstocki = 35L,
+  ch_fso_gdp_region  = 1700L,
+  ch_fso_pop_detail  = 950L,
+  ch_fso_hicp        = 210L,
+  ch_seco_wwa        = 35L
 )
 
 score <- function(id, end_chr, frequency, updated) {
