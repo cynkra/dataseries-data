@@ -44,7 +44,7 @@ feature — reads directly.
 
 ## Display
 - **split**: worktime
-- **single-select**: measure, sex
+- **single-select**: measure
 - **default**: measure=weekly, sex=_T, worktime=_T
 - **transform**: level
 - **seasonal adjustment**: n/a (annual)

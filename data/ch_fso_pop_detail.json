@@ -89,7 +89,7 @@
   "concept": "Population and demographics / Resident population by nationality",
   "canonical": false,
   "split": "nationality",
-  "single_select": "sex",
+  "single_select": [],
   "default_transform": "level",
   "default": {
     "nationality": "_T",

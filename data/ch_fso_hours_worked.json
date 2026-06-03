@@ -113,7 +113,7 @@
   "concept": "Labour market / Working time and working volume",
   "canonical": true,
   "split": "worktime",
-  "single_select": ["measure", "sex"],
+  "single_select": ["measure"],
   "default_transform": "level",
   "default": {
     "measure": "weekly",

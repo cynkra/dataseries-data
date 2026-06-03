@@ -33,7 +33,7 @@ foreign-population share — ~27.4% foreign in 2024.
 
 ## Display
 - **split**: nationality
-- **single-select**: sex
+- **single-select**:
 - **default**: nationality=_T, sex=_T
 - **transform**: level
 - **seasonal adjustment**: n/a
