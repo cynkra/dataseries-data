@@ -78,6 +78,11 @@ Field-by-field (what the website does with each):
 
 **Rich vs thin (the maintenance rule):** for **at-source** datasets the owner already ships rich labels/hierarchy (SECO does), keep them. For series **we collect**, fill only the cheap required fields and whatever the source hands us; do NOT hand-author hierarchies/translations we can't keep current. `hierarchy`, `units`, extra languages are all optional by design.
 
+**Declared hierarchies (the sanctioned exception):** a datasheet may add a `## Hierarchy` block when the source ships a dimension *flat that genuinely nests* — but only against a **stable, citable definition**, never a guess (see *Hierarchies: real containment only* in [`principles.md`](principles.md)). The pipeline (`R/hierarchy.R`, run after the datasheet merge) reads the block and writes `dimensions.{d}.hierarchy`. Grammar, under `## Hierarchy`:
+- an indented bullet tree (2 spaces per level); a bare code references an existing level; `@code: Label` declares a synthetic grouping header (`data: false`); an optional `dim: <name>` targets a non-split dimension. A declared tree **overrides** a flat/wrong source hierarchy; codes omitted from the tree are appended as top-level leaves so nothing vanishes.
+- or a single `- derive: <method>` line: `noga-range` (nest FSO NOGA range codes 5-96 ⊃ 5-43 ⊃ … by containment) or `under-root <CODE>` (reparent a flat-topped dimension under its total, e.g. the SNB goods cube under `GT`).
+- a `## Hierarchy` block with neither a tree nor a `derive:` is documentation only (e.g. CPI, whose tree is reconstructed in the parser from the FSO `Level` column) and leaves any source hierarchy intact.
+
 ## 3. `catalog.json` — the index (repo root)
 
 One array, one entry per dataset. This is all the homepage/search needs without opening any dataset.

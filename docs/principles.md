@@ -30,6 +30,29 @@ drills down from there. The opening view (the `## Display` block's `default`) is
 intuitive headline: the total, not an arbitrary sub-component. The detail is one
 click away, not the landing state.
 
+## Hierarchies: real containment only
+
+A breakdown dimension gets a tree (`dimensions.{d}.hierarchy`, rendered by the picker
+as drill-down) **only where the codes stand in genuine conceptual containment** — a
+parent that is the sum or superset of its children. There the tree is not decoration:
+it teaches how the concept works at a glance, where a flat list of 8–600 siblings hides
+it. M1 ⊂ M2 ⊂ M3, a NOGA total over its divisions, COICOP, Total → category → product —
+all earn a tree.
+
+Do **not** force nesting where it isn't real:
+- small flat dims (2–4 genuine peers) — a tree adds clicks, not meaning;
+- *alternative views* that aren't sub/super-sets — index rebasings, measure variants
+  (value vs YoY-change vs real), seasonal-adjustment tracks: these are siblings, keep
+  them flat (and usually single-select, not a breakdown);
+- any nesting we'd have to **invent** — if the parent isn't a real published aggregate
+  or a stable, documented definition, leave it flat.
+
+Most trees arrive from the source (the SNB cubes, SECO). When the source ships a
+concept **flat that genuinely nests** (the SNB money aggregates, or a "Total" listed as
+a *sibling* of its categories rather than their parent), declare the real structure in
+the datasheet's `## Hierarchy` block — but only against a stable definition we can cite,
+never a guess. The guardrail is *real containment only*; when in doubt, stay flat.
+
 ## No redundant overview datasets
 
 Do **not** create a separate "summary" or "overview" dataset when its headline is
