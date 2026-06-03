@@ -1,6 +1,7 @@
 # Jobs by economic division (quarterly)
 
 - **id**: ch_fso_besta
+- **title**: Jobs by economic division
 - **concept**: Labour / Employment / jobs
 - **canonical**: yes
 - **featured**: Employment

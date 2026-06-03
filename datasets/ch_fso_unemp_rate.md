@@ -1,6 +1,7 @@
 # Unemployment rate (ILO)
 
 - **id**: ch_fso_unemp_rate
+- **title**: Unemployment rate (ILO)
 - **concept**: Labour / Unemployment
 - **canonical**: no (alternate — ILO definition; the registered/SECO `ch_snb_amarbma` is canonical)
 - **source**: Swiss Federal Statistical Office (FSO)

@@ -9,7 +9,7 @@
   "start": "2010-01-01",
   "end": "2025-01-01",
   "title": {
-    "en": "Actual hours worked (annual working volume)"
+    "en": "Hours worked"
   },
   "source": {
     "name": {
@@ -113,9 +113,7 @@
   "concept": "Labour / Working time and working volume",
   "canonical": true,
   "split": "worktime",
-  "single_select": [
-    "measure"
-  ],
+  "single_select": "measure",
   "default_transform": "level",
   "default": {
     "measure": "weekly",

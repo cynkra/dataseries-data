@@ -1,6 +1,7 @@
 # Construction Price Index
 
 - **id**: ch_fso_construction_prices
+- **title**: Construction prices
 - **concept**: Prices / Construction prices
 - **canonical**: yes
 - **source**: Swiss Federal Statistical Office (FSO)

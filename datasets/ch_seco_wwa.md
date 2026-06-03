@@ -1,6 +1,7 @@
 # Weekly Economic Activity index (WEA)
 
 - **id**: ch_seco_wwa
+- **title**: Weekly economic activity (WEA)
 - **concept**: Business cycle & sentiment / High-frequency activity tracker
 - **canonical**: yes
 - **source**: State Secretariat for Economic Affairs (SECO)

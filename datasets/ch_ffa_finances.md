@@ -1,6 +1,7 @@
 # Public finances: general government main aggregates
 
 - **id**: ch_ffa_finances
+- **title**: Government finances
 - **concept**: National accounts / Government finance
 - **canonical**: yes
 

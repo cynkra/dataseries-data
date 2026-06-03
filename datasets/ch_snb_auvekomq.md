@@ -1,6 +1,7 @@
 # Switzerland's international investment position - Overview - Quarter
 
 - **id**: ch_snb_auvekomq
+- **title**: International investment position
 - **concept**: External sector / International investment position
 - **canonical**: yes (IIP overview; the by-currency `auvercurrq` and external-debt `auverdeptq` cuts are companions)
 - **source**: Swiss National Bank

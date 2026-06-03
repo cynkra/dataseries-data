@@ -1,6 +1,7 @@
 # Labour productivity (GDP per hour worked)
 
 - **id**: ch_fso_labour_productivity
+- **title**: Labour productivity
 - **concept**: National accounts / Labour productivity
 - **canonical**: yes
 - **source**: Swiss Federal Statistical Office (FSO)

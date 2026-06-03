@@ -1,6 +1,7 @@
 # Domestic loans, broken down by economic sector and industry (monthly)
 
 - **id**: ch_snb_bakredsekbm
+- **title**: Domestic loans by sector
 - **concept**: Money & banking / Banking & credit
 - **canonical**: yes
 - **source**: Swiss National Bank (SNB)

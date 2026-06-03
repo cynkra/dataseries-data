@@ -1,6 +1,7 @@
 # Foreign exchange rates – Month
 
 - **id**: ch_snb_devkum
+- **title**: Bilateral exchange rates
 - **concept**: Exchange rates / Bilateral FX
 - **canonical**: yes
 - **featured**: Exchange rates

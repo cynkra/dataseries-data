@@ -2,7 +2,7 @@
   {
     "id": "ch_snb_amarbma",
     "title": {
-      "en": "Labour market (registered unemployment, SECO)"
+      "en": "Registered unemployment"
     },
     "concept": "Labour / Unemployment",
     "canonical": true,
@@ -65,7 +65,7 @@
   {
     "id": "ch_snb_auvekomq",
     "title": {
-      "en": "Switzerland’s international investment position – Overview – Quarter"
+      "en": "International investment position"
     },
     "concept": "External sector / International investment position",
     "canonical": true,
@@ -86,7 +86,7 @@
   {
     "id": "ch_snb_auvercurrq",
     "title": {
-      "en": "Switzerland’s international investment position – Breakdown by currency – Quarter"
+      "en": "IIP by currency"
     },
     "concept": "External sector / International investment position",
     "canonical": false,
@@ -107,7 +107,7 @@
   {
     "id": "ch_snb_auverdeptq",
     "title": {
-      "en": "Switzerland’s external debt – Quarter"
+      "en": "External debt"
     },
     "concept": "External sector / International investment position",
     "canonical": false,
@@ -128,7 +128,7 @@
   {
     "id": "ch_snb_auversecq",
     "title": {
-      "en": "Switzerland’s international investment position – Breakdown by sector – Quarter"
+      "en": "IIP by sector"
     },
     "concept": "External sector / International investment position",
     "canonical": true,
@@ -149,7 +149,7 @@
   {
     "id": "ch_snb_babilpobm",
     "title": {
-      "en": "Banks' balance sheet items by currency for selected bank categories – monthly"
+      "en": "Bank balance sheets by currency"
     },
     "concept": "Money & banking / Banking & credit",
     "canonical": true,
@@ -170,7 +170,7 @@
   {
     "id": "ch_snb_bakredbetgrbm",
     "title": {
-      "en": "Corporate loans, broken down by company size"
+      "en": "Corporate loans by company size"
     },
     "concept": "Money & banking / Banking & credit",
     "canonical": true,
@@ -191,7 +191,7 @@
   {
     "id": "ch_snb_bakredinausbm",
     "title": {
-      "en": "Mortgage loans and other domestic and foreign loans"
+      "en": "Mortgage & other loans"
     },
     "concept": "Money & banking / Banking & credit",
     "canonical": true,
@@ -212,7 +212,7 @@
   {
     "id": "ch_snb_bakredsekbm",
     "title": {
-      "en": "Domestic loans, broken down by economic sector and industry"
+      "en": "Domestic loans by sector"
     },
     "concept": "Money & banking / Banking & credit",
     "canonical": true,
@@ -233,7 +233,7 @@
   {
     "id": "ch_snb_bopcapbalq",
     "title": {
-      "en": "Swiss balance of payments – Financial account – Quarter"
+      "en": "Balance of payments: financial account"
     },
     "concept": "External sector / Balance of payments",
     "canonical": true,
@@ -254,7 +254,7 @@
   {
     "id": "ch_snb_bopcurrq",
     "title": {
-      "en": "Swiss balance of payments – Current account – Quarter"
+      "en": "Balance of payments: current account"
     },
     "concept": "External sector / Balance of payments",
     "canonical": true,
@@ -275,7 +275,7 @@
   {
     "id": "ch_snb_bopoverq",
     "title": {
-      "en": "Swiss balance of payments – Overview – Quarter"
+      "en": "Balance of payments: overview"
     },
     "concept": "External sector / Balance of payments",
     "canonical": false,
@@ -296,7 +296,7 @@
   {
     "id": "ch_snb_bopservq",
     "title": {
-      "en": "Swiss balance of payments – Current account services, by country – Quarter"
+      "en": "Balance of payments: services"
     },
     "concept": "External sector / Balance of payments",
     "canonical": false,
@@ -338,7 +338,7 @@
   {
     "id": "ch_snb_capweums",
     "title": {
-      "en": "Securities turnover on the Swiss stock exchange"
+      "en": "Securities turnover"
     },
     "concept": "Financial markets / Securities turnover",
     "canonical": true,
@@ -359,7 +359,7 @@
   {
     "id": "ch_snb_devkum",
     "title": {
-      "en": "Foreign exchange rates – Month"
+      "en": "Bilateral exchange rates"
     },
     "concept": "Exchange rates / Bilateral FX",
     "canonical": true,
@@ -380,7 +380,7 @@
   {
     "id": "ch_snb_devwkibiim",
     "title": {
-      "en": "Bilateral exchange rate indices – Monthly"
+      "en": "Bilateral exchange-rate indices"
     },
     "concept": "Exchange rates / Bilateral FX",
     "canonical": true,
@@ -401,7 +401,7 @@
   {
     "id": "ch_snb_devwkieffid",
     "title": {
-      "en": "Effective exchange rate indices – Daily"
+      "en": "Effective exchange-rate index"
     },
     "concept": "Exchange rates / Effective FX index",
     "canonical": true,
@@ -422,7 +422,7 @@
   {
     "id": "ch_snb_plimoinchq",
     "title": {
-      "en": "Real estate price indices – total for Switzerland – by quarter"
+      "en": "Real estate prices"
     },
     "concept": "Prices / Real estate prices",
     "canonical": true,
@@ -443,7 +443,7 @@
   {
     "id": "ch_snb_plkopr",
     "title": {
-      "en": "Consumer Price Index (LIK) – national index, long history"
+      "en": "Consumer prices (CPI)"
     },
     "concept": "Prices / Consumer prices",
     "canonical": true,
@@ -464,7 +464,7 @@
   {
     "id": "ch_snb_plkoprinfla",
     "title": {
-      "en": "Consumer prices – SNB and SFSO core inflation rates"
+      "en": "Core inflation"
     },
     "concept": "Prices / Core inflation",
     "canonical": true,
@@ -485,7 +485,7 @@
   {
     "id": "ch_snb_rendeiduebd",
     "title": {
-      "en": "Spot interest rates on Swiss Confederation bonds, euro area government bonds and CHF bond issues for various borrower categories – Day"
+      "en": "Bond yields (spot rates)"
     },
     "concept": "Interest rates & yields / Bond yields",
     "canonical": true,
@@ -506,7 +506,7 @@
   {
     "id": "ch_snb_snbbipo",
     "title": {
-      "en": "Balance sheet items of the SNB"
+      "en": "SNB balance sheet"
     },
     "concept": "Money & banking / Monetary aggregates",
     "canonical": false,
@@ -527,7 +527,7 @@
   {
     "id": "ch_snb_snbiprogq",
     "title": {
-      "en": "SNB conditional inflation forecast"
+      "en": "Inflation forecast (SNB)"
     },
     "concept": "Prices / Inflation forecast",
     "canonical": true,
@@ -590,7 +590,7 @@
   {
     "id": "ch_snb_snbmonagg",
     "title": {
-      "en": "Monetary aggregates M1, M2 and M3"
+      "en": "Monetary aggregates (M1–M3)"
     },
     "concept": "Money & banking / Monetary aggregates",
     "canonical": true,
@@ -632,7 +632,7 @@
   {
     "id": "ch_snb_zavegelade",
     "title": {
-      "en": "E-money – loading and float"
+      "en": "E-money"
     },
     "concept": "Payment systems / Payments & cash",
     "canonical": false,
@@ -653,7 +653,7 @@
   {
     "id": "ch_snb_zavesic",
     "title": {
-      "en": "Swiss Interbank Clearing (SIC) – payment transactions"
+      "en": "Interbank clearing (SIC)"
     },
     "concept": "Payment systems / Payments & cash",
     "canonical": false,
@@ -716,7 +716,7 @@
   {
     "id": "ch_snb_zavkuzaart",
     "title": {
-      "en": "Customer payments at banks – Outgoing payments, by type of order"
+      "en": "Customer payments (outgoing)"
     },
     "concept": "Payment systems / Payments & cash",
     "canonical": false,
@@ -737,7 +737,7 @@
   {
     "id": "ch_snb_zikredlauf",
     "title": {
-      "en": "Interest rates on new loan agreements, by product and maturity"
+      "en": "New lending rates"
     },
     "concept": "Interest rates & yields / Money-market rates",
     "canonical": false,
@@ -758,7 +758,7 @@
   {
     "id": "ch_snb_zikrepro",
     "title": {
-      "en": "Published interest rates for new transactions"
+      "en": "Published interest rates"
     },
     "concept": "Interest rates & yields / Money-market rates",
     "canonical": false,
@@ -824,10 +824,7 @@
   {
     "id": "ch_seco_concon",
     "title": {
-      "en": "Consumer sentiment index",
-      "de": "Konsumentenstimmungsindex",
-      "fr": "Indice du climat de consommation",
-      "it": "Indice del clima di fiducia dei consumatori"
+      "en": "Consumer confidence"
     },
     "concept": "Business cycle & sentiment / Consumer confidence",
     "canonical": true,
@@ -848,7 +845,7 @@
   {
     "id": "ch_fso_retail",
     "title": {
-      "en": "Retail trade turnover (monthly)"
+      "en": "Retail trade turnover"
     },
     "concept": "Domestic economy / Retail trade turnover",
     "canonical": true,
@@ -869,7 +866,7 @@
   {
     "id": "ch_fso_production",
     "title": {
-      "en": "Industry & construction turnover (quarterly)"
+      "en": "Industry & construction turnover"
     },
     "concept": "Domestic economy / Industry & construction turnover",
     "canonical": true,
@@ -890,7 +887,7 @@
   {
     "id": "ch_fso_services",
     "title": {
-      "en": "Services-sector turnover (quarterly)"
+      "en": "Services turnover"
     },
     "concept": "Domestic economy / Services turnover",
     "canonical": true,
@@ -911,7 +908,7 @@
   {
     "id": "ch_fso_new_vehicles",
     "title": {
-      "en": "New registrations of passenger cars by fuel"
+      "en": "New car registrations by fuel"
     },
     "concept": "Domestic economy / New vehicle registrations",
     "canonical": true,
@@ -953,7 +950,7 @@
   {
     "id": "ch_fso_cross_border_commuters",
     "title": {
-      "en": "Foreign cross-border commuters by canton of work"
+      "en": "Cross-border commuters"
     },
     "concept": "Labour / Cross-border commuters",
     "canonical": true,
@@ -974,7 +971,7 @@
   {
     "id": "ch_fso_pop_detail",
     "title": {
-      "en": "Permanent resident population by nationality and sex"
+      "en": "Resident population by nationality"
     },
     "concept": "Population & demographics / Resident population by nationality",
     "canonical": false,
@@ -995,7 +992,7 @@
   {
     "id": "ch_ffa_finances",
     "title": {
-      "en": "Public finances: general government main aggregates"
+      "en": "Government finances"
     },
     "concept": "National accounts / Government finance",
     "canonical": true,
@@ -1079,7 +1076,7 @@
   {
     "id": "ch_fso_hesta",
     "title": {
-      "en": "Hotel sector: overnight stays by tourism region"
+      "en": "Hotel overnight stays"
     },
     "concept": "Domestic economy / Hotel overnight stays",
     "canonical": true,
@@ -1100,7 +1097,7 @@
   {
     "id": "ch_fso_besta",
     "title": {
-      "en": "Jobs by economic division (quarterly)"
+      "en": "Jobs by economic division"
     },
     "concept": "Labour / Employment / jobs",
     "canonical": true,
@@ -1121,7 +1118,7 @@
   {
     "id": "ch_fso_vacancies",
     "title": {
-      "en": "Job vacancies by economic division"
+      "en": "Job vacancies"
     },
     "concept": "Labour / Job vacancies",
     "canonical": true,
@@ -1163,7 +1160,7 @@
   {
     "id": "ch_fso_besta_outlook",
     "title": {
-      "en": "Employment outlook index by economic division"
+      "en": "Employment outlook"
     },
     "concept": "Labour / Employment outlook",
     "canonical": true,
@@ -1184,7 +1181,7 @@
   {
     "id": "ch_fso_cpi",
     "title": {
-      "en": "Consumer Price Index (LIK)"
+      "en": "Consumer prices (detailed basket)"
     },
     "concept": "Prices / Consumer prices",
     "canonical": false,
@@ -1205,7 +1202,7 @@
   {
     "id": "ch_fso_ppi",
     "title": {
-      "en": "Producer and Import Price Index"
+      "en": "Producer & import prices"
     },
     "concept": "Prices / Producer & import prices",
     "canonical": true,
@@ -1247,7 +1244,7 @@
   {
     "id": "ch_fso_pop",
     "title": {
-      "en": "Permanent resident population"
+      "en": "Resident population"
     },
     "concept": "Population & demographics / Resident population",
     "canonical": true,
@@ -1268,7 +1265,7 @@
   {
     "id": "ch_fso_unemp_rate",
     "title": {
-      "en": "Unemployment rate (ILO) by sex and nationality, Switzerland"
+      "en": "Unemployment rate (ILO)"
     },
     "concept": "Labour / Unemployment",
     "canonical": false,
@@ -1289,7 +1286,7 @@
   {
     "id": "ch_fso_labour_productivity",
     "title": {
-      "en": "Labour productivity (GDP per hour worked, index)"
+      "en": "Labour productivity"
     },
     "concept": "National accounts / Labour productivity",
     "canonical": true,
@@ -1310,7 +1307,7 @@
   {
     "id": "ch_fso_ets",
     "title": {
-      "en": "Employed persons by economic sector and sex (ETS, quarterly)"
+      "en": "Employed persons (ETS)"
     },
     "concept": "Labour / Employment / employed persons",
     "canonical": false,
@@ -1331,7 +1328,7 @@
   {
     "id": "ch_fso_gfcf_detail",
     "title": {
-      "en": "Gross fixed capital formation by institutional sector and asset type"
+      "en": "Investment (GFCF) detail"
     },
     "concept": "National accounts / Investment (gross fixed capital formation)",
     "canonical": false,
@@ -1352,7 +1349,7 @@
   {
     "id": "ch_fso_hours_worked",
     "title": {
-      "en": "Actual hours worked (annual working volume)"
+      "en": "Hours worked"
     },
     "concept": "Labour / Working time and working volume",
     "canonical": true,
@@ -1373,7 +1370,7 @@
   {
     "id": "ch_fso_gdp_region",
     "title": {
-      "en": "Regional gross domestic product (GDP), current prices"
+      "en": "Regional GDP"
     },
     "concept": "National accounts / Regional GDP",
     "canonical": true,
@@ -1394,7 +1391,7 @@
   {
     "id": "ch_fso_construction_prices",
     "title": {
-      "en": "Construction Price Index"
+      "en": "Construction prices"
     },
     "concept": "Prices / Construction prices",
     "canonical": true,
@@ -1436,7 +1433,7 @@
   {
     "id": "ch_fso_hicp",
     "title": {
-      "en": "Harmonised Index of Consumer Prices (HICP)"
+      "en": "Harmonised CPI (HICP)"
     },
     "concept": "Prices / Consumer prices",
     "canonical": false,
@@ -1457,7 +1454,7 @@
   {
     "id": "ch_seco_wwa",
     "title": {
-      "en": "Weekly Economic Activity index (WEA)"
+      "en": "Weekly economic activity (WEA)"
     },
     "concept": "Business cycle & sentiment / High-frequency activity tracker",
     "canonical": true,

@@ -1,6 +1,7 @@
 # Industry & construction turnover (quarterly)
 
 - **id**: ch_fso_production
+- **title**: Industry & construction turnover
 - **concept**: Domestic economy / Industry & construction turnover
 - **canonical**: yes
 

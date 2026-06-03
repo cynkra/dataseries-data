@@ -1,6 +1,7 @@
 # Foreign cross-border commuters by canton of work
 
 - **id**: ch_fso_cross_border_commuters
+- **title**: Cross-border commuters
 - **concept**: Labour / Cross-border commuters
 - **canonical**: yes
 - **source**: Swiss Federal Statistical Office (FSO)

@@ -9,7 +9,7 @@
   "start": "1999-01-01",
   "end": "2026-01-01",
   "title": {
-    "en": "Industry & construction turnover (quarterly)"
+    "en": "Industry & construction turnover"
   },
   "source": {
     "name": {
@@ -142,10 +142,7 @@
   "concept": "Domestic economy / Industry & construction turnover",
   "canonical": true,
   "split": "NOGA",
-  "single_select": [
-    "ADJUSTMENT",
-    "INDICATOR_KE"
-  ],
+  "single_select": ["ADJUSTMENT", "INDICATOR_KE"],
   "default_transform": "level",
   "default": {
     "NOGA": "B-E",

@@ -5,7 +5,7 @@
   "start": "1921-01-01",
   "end": "2026-04-01",
   "title": {
-    "en": "Consumer Price Index (LIK) – national index, long history"
+    "en": "Consumer prices (CPI)"
   },
   "source": {
     "name": {
@@ -20,8 +20,9 @@
   "concept": "Prices / Consumer prices",
   "canonical": true,
   "featured": "Inflation",
-  "single_select": [],
+  "single_select": "n/a",
   "default_transform": "yoy",
   "default": [],
-  "fetched_utc": "2026-06-03 04:57:38"
+  "fetched_utc": "2026-06-03 04:57:38",
+  "split": "n/a (single series)"
 }

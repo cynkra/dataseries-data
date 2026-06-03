@@ -40,6 +40,11 @@ read_datasheet_meta <- function(id, datasheet_dir) {
   if (!is.null(canon)) out$canonical <- grepl("^yes", tolower(canon))  # "no (alternate ...)" -> FALSE
   feat <- pick("featured")
   if (!is.null(feat)) out$featured <- feat  # homepage example label, e.g. "Inflation"
+  # Optional curated title: overrides the raw source title (which is often a verbose
+  # SNB/FSO cube name). Single source of truth, like `featured` — set it only where
+  # the source title needs cleaning up.
+  ttl <- pick("title")
+  if (!is.null(ttl)) out$title <- list(en = ttl)
 
   # Display block: presentation decisions the app derives from the datasheet
   # instead of guessing with code heuristics.

@@ -10,7 +10,7 @@
   "start": "2002-01-01",
   "end": "2026-03-01",
   "title": {
-    "en": "Corporate loans, broken down by company size"
+    "en": "Corporate loans by company size"
   },
   "source": {
     "name": {
@@ -189,11 +189,7 @@
   "concept": "Money & banking / Banking & credit",
   "canonical": true,
   "split": "D1",
-  "single_select": [
-    "D0",
-    "D2",
-    "D3"
-  ],
+  "single_select": ["D0", "D2", "D3"],
   "default_transform": "level",
   "default": {
     "D1": "KC5A",

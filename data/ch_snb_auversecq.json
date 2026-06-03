@@ -9,7 +9,7 @@
   "start": "1985-01-01",
   "end": "2025-10-01",
   "title": {
-    "en": "Switzerland’s international investment position – Breakdown by sector – Quarter"
+    "en": "IIP by sector"
   },
   "source": {
     "name": {
@@ -150,9 +150,7 @@
   "concept": "External sector / International investment position",
   "canonical": true,
   "split": "D1",
-  "single_select": [
-    "D0"
-  ],
+  "single_select": "D0",
   "default_transform": "level",
   "default": {
     "D0": "N",

@@ -1,6 +1,7 @@
 # Effective exchange rate indices – Daily
 
 - **id**: ch_snb_devwkieffid
+- **title**: Effective exchange-rate index
 - **concept**: Exchange rates / Effective FX index
 - **canonical**: yes
 - **source**: Swiss National Bank (SNB)

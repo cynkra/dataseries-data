@@ -8,7 +8,7 @@
   "start": "1985-01-01",
   "end": "2025-10-01",
   "title": {
-    "en": "Swiss balance of payments – Financial account – Quarter"
+    "en": "Balance of payments: financial account"
   },
   "source": {
     "name": {
@@ -460,9 +460,7 @@
   "concept": "External sector / Balance of payments",
   "canonical": true,
   "split": "D1",
-  "single_select": [
-    "D0"
-  ],
+  "single_select": "D0",
   "default_transform": "level",
   "default": {
     "D1": "T0",

@@ -9,7 +9,7 @@
   "start": "2000-01-01",
   "end": "2026-04-01",
   "title": {
-    "en": "Retail trade turnover (monthly)"
+    "en": "Retail trade turnover"
   },
   "source": {
     "name": {
@@ -196,10 +196,7 @@
   "concept": "Domestic economy / Retail trade turnover",
   "canonical": true,
   "split": "NOGA",
-  "single_select": [
-    "ADJUSTMENT",
-    "INDICATOR_KE"
-  ],
+  "single_select": ["ADJUSTMENT", "INDICATOR_KE"],
   "default_transform": "level",
   "default": {
     "NOGA": "47",

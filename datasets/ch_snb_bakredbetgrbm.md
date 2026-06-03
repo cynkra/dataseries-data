@@ -1,6 +1,7 @@
 # Corporate loans, broken down by company size (monthly)
 
 - **id**: ch_snb_bakredbetgrbm
+- **title**: Corporate loans by company size
 - **concept**: Money & banking / Banking & credit
 - **canonical**: yes
 - **source**: Swiss National Bank (SNB)

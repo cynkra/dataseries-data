@@ -1,6 +1,7 @@
 # Bilateral exchange rate indices – Monthly
 
 - **id**: ch_snb_devwkibiim
+- **title**: Bilateral exchange-rate indices
 - **concept**: Exchange rates / Bilateral FX
 - **canonical**: yes
 - **source**: Swiss National Bank (SNB)

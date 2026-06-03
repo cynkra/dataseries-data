@@ -9,7 +9,7 @@
   "start": "2009-05-01",
   "end": "2026-02-01",
   "title": {
-    "en": "Interest rates on new loan agreements, by product and maturity"
+    "en": "New lending rates"
   },
   "source": {
     "name": {
@@ -178,10 +178,7 @@
   "concept": "Interest rates & yields / Money-market rates",
   "canonical": false,
   "split": "D1",
-  "single_select": [
-    "D0",
-    "D2"
-  ],
+  "single_select": ["D0", "D2"],
   "default_transform": "level",
   "default": {
     "D0": "FH",

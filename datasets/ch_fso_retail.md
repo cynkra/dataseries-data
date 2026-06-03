@@ -1,6 +1,7 @@
 # Retail trade turnover (monthly)
 
 - **id**: ch_fso_retail
+- **title**: Retail trade turnover
 - **concept**: Domestic economy / Retail trade turnover
 - **canonical**: yes
 - **featured**: Retail trade

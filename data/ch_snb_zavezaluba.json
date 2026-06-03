@@ -208,12 +208,7 @@
   "concept": "Payment systems / Payments & cash",
   "canonical": false,
   "split": "D0",
-  "single_select": [
-    "D1",
-    "D2",
-    "D3",
-    "D4"
-  ],
+  "single_select": ["D1", "D2", "D3", "D4"],
   "default_transform": "level",
   "default": {
     "D0": "ZT",

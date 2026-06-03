@@ -1,6 +1,7 @@
 # Job vacancies by economic division
 
 - **id**: ch_fso_vacancies
+- **title**: Job vacancies
 - **concept**: Labour / Job vacancies
 - **canonical**: yes
 - **source**: Swiss Federal Statistical Office (FSO)

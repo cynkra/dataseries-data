@@ -1,6 +1,7 @@
 # Swiss balance of payments, financial account (quarterly)
 
 - **id**: ch_snb_bopcapbalq
+- **title**: Balance of payments: financial account
 - **concept**: External sector / Balance of payments
 - **canonical**: yes
 - **source**: Swiss National Bank (SNB)

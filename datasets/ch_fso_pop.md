@@ -1,6 +1,7 @@
 # Permanent resident population (demographic balance)
 
 - **id**: ch_fso_pop
+- **title**: Resident population
 - **concept**: Population & demographics / Resident population
 - **canonical**: yes
 - **featured**: Population

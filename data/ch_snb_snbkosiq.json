@@ -208,7 +208,7 @@
   "concept": "Business cycle & sentiment / Business cycle signals",
   "canonical": true,
   "split": "D0",
-  "single_select": [],
+  "single_select": "(none; single dimension)",
   "default_transform": "level",
   "default": {
     "D0": "KA"

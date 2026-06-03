@@ -7,7 +7,7 @@
   "start": "1985-01-01",
   "end": "2025-10-01",
   "title": {
-    "en": "Swiss balance of payments – Overview – Quarter"
+    "en": "Balance of payments: overview"
   },
   "source": {
     "name": {
@@ -446,7 +446,7 @@
   "concept": "External sector / Balance of payments",
   "canonical": false,
   "split": "D0",
-  "single_select": [],
+  "single_select": "n/a (single-dimension cube; D0 is the only dimension)",
   "default_transform": "level",
   "default": {
     "D0": "S0"

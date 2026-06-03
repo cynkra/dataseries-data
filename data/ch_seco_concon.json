@@ -9,7 +9,7 @@
   "start": "1972-10-01",
   "end": "2026-04-01",
   "title": {
-    "en": "Consumer sentiment index",
+    "en": "Consumer confidence",
     "de": "Konsumentenstimmungsindex",
     "fr": "Indice du climat de consommation",
     "it": "Indice del clima di fiducia dei consumatori"
@@ -238,10 +238,7 @@
   "canonical": true,
   "featured": "Consumer confidence",
   "split": "structure",
-  "single_select": [
-    "type",
-    "seas_adj"
-  ],
+  "single_select": ["type", "seas_adj"],
   "default_transform": "level",
   "default": {
     "structure": "ks_i63_index_q",

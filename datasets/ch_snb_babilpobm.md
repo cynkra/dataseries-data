@@ -1,6 +1,7 @@
 # Banks' balance sheet items by currency for selected bank categories (monthly)
 
 - **id**: ch_snb_babilpobm
+- **title**: Bank balance sheets by currency
 - **concept**: Money & banking / Banking & credit
 - **canonical**: yes
 - **source**: Swiss National Bank (SNB)

@@ -1,6 +1,7 @@
 # Employed persons by economic sector and sex (ETS)
 
 - **id**: ch_fso_ets
+- **title**: Employed persons (ETS)
 - **concept**: Labour / Employment / employed persons
 - **canonical**: no (alternate / sector-and-sex breakdown of the employment concept; `ch_fso_besta` is the headline)
 - **source**: Swiss Federal Statistical Office (FSO)

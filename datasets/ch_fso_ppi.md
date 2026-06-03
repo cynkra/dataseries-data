@@ -1,6 +1,7 @@
 # Producer and Import Price Index
 
 - **id**: ch_fso_ppi
+- **title**: Producer & import prices
 - **concept**: Prices / Producer & import prices
 - **canonical**: yes
 - **source**: Swiss Federal Statistical Office (FSO)

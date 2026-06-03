@@ -10,7 +10,7 @@
   "start": "1985-06-01",
   "end": "2026-03-01",
   "title": {
-    "en": "Domestic loans, broken down by economic sector and industry"
+    "en": "Domestic loans by sector"
   },
   "source": {
     "name": {
@@ -280,11 +280,7 @@
   "concept": "Money & banking / Banking & credit",
   "canonical": true,
   "split": "D3",
-  "single_select": [
-    "D0",
-    "D1",
-    "D2"
-  ],
+  "single_select": ["D0", "D1", "D2"],
   "default_transform": "level",
   "default": {
     "D3": "T1",

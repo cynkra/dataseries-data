@@ -1,6 +1,7 @@
 # E-money - loading and float
 
 - **id**: ch_snb_zavegelade
+- **title**: E-money
 - **concept**: Payment systems / Payments & cash
 - **canonical**: no (alternate within Payments & cash; one of several `ch_snb_zave*` payment series)
 - **source**: Swiss National Bank (SNB)

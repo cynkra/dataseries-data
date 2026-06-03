@@ -1,6 +1,7 @@
 # Consumer Price Index (LIK)
 
 - **id**: ch_fso_cpi
+- **title**: Consumer prices (detailed basket)
 - **concept**: Prices / Consumer prices
 - **canonical**: no (alternate for Consumer prices — the detailed basket breakdown)
 - **source**: Swiss Federal Statistical Office (FSO)

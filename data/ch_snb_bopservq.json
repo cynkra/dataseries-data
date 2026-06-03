@@ -9,7 +9,7 @@
   "start": "2012-01-01",
   "end": "2025-10-01",
   "title": {
-    "en": "Swiss balance of payments – Current account services, by country – Quarter"
+    "en": "Balance of payments: services"
   },
   "source": {
     "name": {
@@ -614,9 +614,7 @@
   "concept": "External sector / Balance of payments",
   "canonical": false,
   "split": "D0",
-  "single_select": [
-    "D2"
-  ],
+  "single_select": "D2",
   "default_transform": "level",
   "default": {
     "D0": "T0",

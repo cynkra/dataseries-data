@@ -7,7 +7,7 @@
   "start": "1948-01-01",
   "end": "2026-04-01",
   "title": {
-    "en": "Labour market (registered unemployment, SECO)"
+    "en": "Registered unemployment"
   },
   "source": {
     "name": {
@@ -120,10 +120,10 @@
   "canonical": true,
   "featured": "Unemployment",
   "split": "D0",
-  "single_select": [],
+  "single_select": "(none; D0 is the only dimension)",
   "default_transform": "level",
   "default": {
-    "D0": "T0"
+    "D0": "T1"
   },
   "fetched_utc": "2026-06-03 04:57:37"
 }

@@ -1,6 +1,7 @@
 # Monetary aggregates M1, M2 and M3
 
 - **id**: ch_snb_snbmonagg
+- **title**: Monetary aggregates (M1–M3)
 - **concept**: Money & banking / Monetary aggregates
 - **canonical**: yes
 - **featured**: Money supply

@@ -7,7 +7,7 @@
   "start": "1993-01-01",
   "end": "2026-04-01",
   "title": {
-    "en": "Securities turnover on the Swiss stock exchange"
+    "en": "Securities turnover"
   },
   "source": {
     "name": {
@@ -118,7 +118,7 @@
   "concept": "Financial markets / Securities turnover",
   "canonical": true,
   "split": "D0",
-  "single_select": [],
+  "single_select": "(none; single dimension)",
   "default_transform": "level",
   "default": {
     "D0": "T2"

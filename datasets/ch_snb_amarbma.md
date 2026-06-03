@@ -1,6 +1,7 @@
 # Labour market (registered unemployment, SECO)
 
 - **id**: ch_snb_amarbma
+- **title**: Registered unemployment
 - **concept**: Labour / Unemployment
 - **canonical**: yes (registered/SECO definition — the headline unemployment series; the ILO `ch_fso_unemp_rate` is the labelled alternate)
 - **featured**: Unemployment
@@ -46,7 +47,7 @@ under the same `D0` codes, so consumers must split by code before charting.
 ## Display
 - **split**: D0
 - **single-select**: (none; D0 is the only dimension)
-- **default**: D0=T0
+- **default**: D0=T1
 - **transform**: level
 - **seasonal adjustment**: encoded as codes inside D0 (S0/S1/S2 are the SA
   variants of registered unemployed / jobless rate / vacancies), not a separate

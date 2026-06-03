@@ -174,9 +174,7 @@
   "concept": "Labour / Employment / jobs",
   "canonical": false,
   "split": "Geschlecht",
-  "single_select": [
-    "Beschäftigungsgrad"
-  ],
+  "single_select": "Beschäftigungsgrad",
   "default_transform": "level",
   "default": {
     "Geschlecht": "TOT",

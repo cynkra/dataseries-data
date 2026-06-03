@@ -1,6 +1,7 @@
 # Consumer prices – SNB and SFSO core inflation rates
 
 - **id**: ch_snb_plkoprinfla
+- **title**: Core inflation
 - **concept**: Prices / Core inflation
 - **canonical**: yes
 - **source**: Swiss National Bank (SNB)

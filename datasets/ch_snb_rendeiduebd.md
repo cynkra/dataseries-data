@@ -1,6 +1,7 @@
 # Spot interest rates on Confederation, euro area and CHF issuer bonds (daily)
 
 - **id**: ch_snb_rendeiduebd
+- **title**: Bond yields (spot rates)
 - **concept**: Interest rates & yields / Bond yields
 - **canonical**: yes (the live Bond yields series; the older `rendoblid` par-yield cube was discontinued by the SNB — last data 2025-07-31)
 - **source**: Swiss National Bank

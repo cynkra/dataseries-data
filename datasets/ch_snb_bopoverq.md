@@ -1,6 +1,7 @@
 # Swiss balance of payments – Overview – Quarter
 
 - **id**: ch_snb_bopoverq
+- **title**: Balance of payments: overview
 - **concept**: External sector / Balance of payments
 - **canonical**: no (alternate for Balance of payments)
 - **source**: Swiss National Bank (SNB)

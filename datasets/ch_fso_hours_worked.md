@@ -1,6 +1,7 @@
 # Actual hours worked (annual working volume)
 
 - **id**: ch_fso_hours_worked
+- **title**: Hours worked
 - **concept**: Labour / Working time and working volume
 - **canonical**: yes
 - **source**: Swiss Federal Statistical Office (FSO)

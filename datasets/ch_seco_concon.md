@@ -1,6 +1,7 @@
 # Consumer sentiment index
 
 - **id**: ch_seco_concon
+- **title**: Consumer confidence
 - **concept**: Business cycle & sentiment / Consumer confidence
 - **canonical**: yes
 - **featured**: Consumer confidence

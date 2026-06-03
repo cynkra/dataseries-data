@@ -1,6 +1,7 @@
 # Hotel sector: overnight stays by tourism region
 
 - **id**: ch_fso_hesta
+- **title**: Hotel overnight stays
 - **concept**: Domestic economy / Hotel overnight stays
 - **canonical**: yes
 - **source**: Swiss Federal Statistical Office (FSO)

@@ -1,6 +1,7 @@
 # Mortgage loans and other domestic and foreign loans (monthly)
 
 - **id**: ch_snb_bakredinausbm
+- **title**: Mortgage & other loans
 - **concept**: Money & banking / Banking & credit
 - **canonical**: yes
 - **source**: Swiss National Bank (SNB)

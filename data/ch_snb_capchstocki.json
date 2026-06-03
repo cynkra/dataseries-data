@@ -154,7 +154,7 @@
   "concept": "Financial markets / Swiss stock indices",
   "canonical": true,
   "split": "D0",
-  "single_select": [],
+  "single_select": "(none; single dimension)",
   "default_transform": "level",
   "default": {
     "D0": "GDR"

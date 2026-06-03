@@ -1,6 +1,7 @@
 # Services-sector turnover (quarterly)
 
 - **id**: ch_fso_services
+- **title**: Services turnover
 - **concept**: Domestic economy / Services turnover
 - **canonical**: yes
 - **source**: Swiss Federal Statistical Office (FSO)

@@ -1,6 +1,7 @@
 # Securities turnover on the Swiss stock exchange
 
 - **id**: ch_snb_capweums
+- **title**: Securities turnover
 - **concept**: Financial markets / Securities turnover
 - **canonical**: yes
 - **source**: Swiss National Bank (SNB)

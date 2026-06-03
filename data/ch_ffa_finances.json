@@ -10,7 +10,7 @@
   "start": "1990-01-01",
   "end": "2029-01-01",
   "title": {
-    "en": "Public finances: general government main aggregates"
+    "en": "Government finances"
   },
   "source": {
     "name": {
@@ -301,20 +301,9 @@
   "concept": "National accounts / Government finance",
   "canonical": true,
   "split": "indicator",
-  "single_select": [
-    "level",
-    "model",
-    "estimate"
-  ],
+  "single_select": ["level", "model", "estimate"],
   "default_transform": "level",
-  "percent_levels": [
-    "fiskalquote",
-    "einnahmenquote",
-    "staatsquote",
-    "bruttoschuldenquote",
-    "schuldenquote",
-    "nettoschuldenquote"
-  ],
+  "percent_levels": ["fiskalquote", "einnahmenquote", "staatsquote", "bruttoschuldenquote", "schuldenquote", "nettoschuldenquote"],
   "default": {
     "level": "staat",
     "model": "gfs",

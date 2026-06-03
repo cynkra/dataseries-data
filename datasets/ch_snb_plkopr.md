@@ -1,6 +1,7 @@
 # Consumer Price Index (LIK) – national index, long history
 
 - **id**: ch_snb_plkopr
+- **title**: Consumer prices (CPI)
 - **concept**: Prices / Consumer prices
 - **canonical**: yes
 - **featured**: Inflation

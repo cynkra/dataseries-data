@@ -307,7 +307,7 @@
   "concept": "Interest rates & yields / Money-market rates",
   "canonical": true,
   "split": "D0",
-  "single_select": [],
+  "single_select": "(none; this cube has a single dimension)",
   "default_transform": "level",
   "default": {
     "D0": "1TGT"

@@ -1,6 +1,7 @@
 # Real estate price indices – total for Switzerland – by quarter
 
 - **id**: ch_snb_plimoinchq
+- **title**: Real estate prices
 - **concept**: Prices / Real estate prices
 - **canonical**: yes
 - **source**: Swiss National Bank (SNB)

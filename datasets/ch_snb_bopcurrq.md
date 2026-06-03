@@ -1,6 +1,7 @@
 # Swiss balance of payments – Current account – Quarter
 
 - **id**: ch_snb_bopcurrq
+- **title**: Balance of payments: current account
 - **concept**: External sector / Balance of payments
 - **canonical**: yes
 - **source**: Swiss National Bank (SNB)

@@ -9,7 +9,7 @@
   "start": "2012-03-01",
   "end": "2026-03-01",
   "title": {
-    "en": "Customer payments at banks – Outgoing payments, by type of order"
+    "en": "Customer payments (outgoing)"
   },
   "source": {
     "name": {
@@ -188,10 +188,7 @@
   "concept": "Payment systems / Payments & cash",
   "canonical": false,
   "split": "D1",
-  "single_select": [
-    "D0",
-    "D2"
-  ],
+  "single_select": ["D0", "D2"],
   "default_transform": "level",
   "default": {
     "D0": "T",

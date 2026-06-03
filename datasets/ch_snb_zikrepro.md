@@ -1,6 +1,7 @@
 # Published interest rates for new transactions
 
 - **id**: ch_snb_zikrepro
+- **title**: Published interest rates
 - **concept**: Interest rates & yields / Money-market rates
 - **canonical**: no (alternate; one of the three money-market-rate cubes `zimoma` / `zikredlauf` / `zikrepro`, this one is the published retail rates with the deepest product tree)
 - **source**: Swiss National Bank (SNB)

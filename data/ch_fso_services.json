@@ -9,7 +9,7 @@
   "start": "2021-01-01",
   "end": "2026-01-01",
   "title": {
-    "en": "Services-sector turnover (quarterly)"
+    "en": "Services turnover"
   },
   "source": {
     "name": {
@@ -130,10 +130,7 @@
   "concept": "Domestic economy / Services turnover",
   "canonical": true,
   "split": "NOGA",
-  "single_select": [
-    "ADJUSTMENT",
-    "INDICATOR_KE"
-  ],
+  "single_select": ["ADJUSTMENT", "INDICATOR_KE"],
   "default_transform": "level",
   "default": {
     "NOGA": "G-NxK",

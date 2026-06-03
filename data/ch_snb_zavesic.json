@@ -7,7 +7,7 @@
   "start": "1987-07-01",
   "end": "2026-04-01",
   "title": {
-    "en": "Swiss Interbank Clearing (SIC) – payment transactions"
+    "en": "Interbank clearing (SIC)"
   },
   "source": {
     "name": {
@@ -202,7 +202,7 @@
   "concept": "Payment systems / Payments & cash",
   "canonical": false,
   "split": "D0",
-  "single_select": [],
+  "single_select": "(none; D0 is the only dimension)",
   "default_transform": "level",
   "default": {
     "D0": "T0"

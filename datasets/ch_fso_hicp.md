@@ -1,6 +1,7 @@
 # Harmonised Index of Consumer Prices (HICP)
 
 - **id**: ch_fso_hicp
+- **title**: Harmonised CPI (HICP)
 - **concept**: Prices / Consumer prices
 - **canonical**: no (alternate for Consumer prices — the EU-harmonised methodology, for cross-country comparison)
 - **source**: Eurostat

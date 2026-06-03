@@ -7,7 +7,7 @@
   "start": "1983-12-01",
   "end": "2026-04-01",
   "title": {
-    "en": "Consumer prices – SNB and SFSO core inflation rates"
+    "en": "Core inflation"
   },
   "source": {
     "name": {
@@ -76,7 +76,7 @@
   "concept": "Prices / Core inflation",
   "canonical": true,
   "split": "D0",
-  "single_select": [],
+  "single_select": "n/a (single dimension)",
   "default_transform": "level",
   "default": {
     "D0": "KGM"

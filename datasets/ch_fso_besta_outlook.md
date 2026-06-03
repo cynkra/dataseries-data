@@ -1,6 +1,7 @@
 # Employment outlook index by economic division
 
 - **id**: ch_fso_besta_outlook
+- **title**: Employment outlook
 - **concept**: Labour / Employment outlook
 - **canonical**: yes
 - **source**: Swiss Federal Statistical Office (FSO)

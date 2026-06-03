@@ -1,6 +1,7 @@
 # Switzerland's external debt - Quarter
 
 - **id**: ch_snb_auverdeptq
+- **title**: External debt
 - **concept**: External sector / International investment position
 - **canonical**: no (external-debt cut of the IIP; companion to canonical overview `auvekomq`)
 - **source**: Swiss National Bank

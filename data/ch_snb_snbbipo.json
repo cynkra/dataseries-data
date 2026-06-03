@@ -7,7 +7,7 @@
   "start": "1996-12-01",
   "end": "2026-04-01",
   "title": {
-    "en": "Balance sheet items of the SNB"
+    "en": "SNB balance sheet"
   },
   "source": {
     "name": {
@@ -244,7 +244,7 @@
   "concept": "Money & banking / Monetary aggregates",
   "canonical": false,
   "split": "D0",
-  "single_select": [],
+  "single_select": "(none; single dimension)",
   "default_transform": "level",
   "default": {
     "D0": "T0"

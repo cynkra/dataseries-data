@@ -1,6 +1,7 @@
 # Regional GDP (cantons & greater regions)
 
 - **id**: ch_fso_gdp_region
+- **title**: Regional GDP
 - **concept**: National accounts / Regional GDP
 - **canonical**: yes
 - **source**: Swiss Federal Statistical Office (FSO)
