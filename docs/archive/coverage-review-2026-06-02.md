@@ -1,7 +1,7 @@
 > **SUPERSEDED (2026-06-03).** This is the point-in-time review that drove the
 > 56 → 70 expansion; kept as an audit trail. The **live** "what's in / what's still
-> open and why" status now lives in [`deferred-datasets.md`](deferred-datasets.md)
-> (registry) and [`concepts.md`](concepts.md) (taxonomy). Headline outcome: catalog
+> open and why" status now lives in [`deferred-datasets.md`](../deferred-datasets.md)
+> (registry) and [`concepts.md`](../concepts.md) (taxonomy). Headline outcome: catalog
 > complete at 70 for the open Swiss macro universe; only PMI and SIX VSMI/constituents
 > are genuinely closed (licensed), industrial orders has no open channel, and BAZG
 > *monthly* trade is open-but-deferred-for-size. Read those two docs, not this one,

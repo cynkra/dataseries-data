@@ -41,7 +41,7 @@ than once. It is now written here and in `source-quirks.md` so it stops getting 
 | LFS / SAKE labour-force **participation rate** (Erwerbsquote) | FSO | Open (DAM/SAKE), but a messier age-band layout. Hours/working-volume (`ch_fso_hours_worked`) is shipped; the activity-rate cut was skipped. | Low marginal value; add opportunistically. |
 | Purchasing Managers' Index (PMI) | procure.ch / UBS | **Genuinely closed (re-verified 2026-06-03).** No open CSV/API/SDMX exists — procure.ch/UBS publish PDFs stamped "educational/marketing" only; Yahoo/Investing/Trading-Economics show it on-page but forbid redistribution. The OECD/FRED "Swiss manufacturing confidence" series that *look* like a PMI are the **KOF business-tendency survey**, not the procure.ch PMI (and KOF is already shipped via `ch_kof_barometer` / `ch_kof_esi`). | Only path is a **licensing / partnership** with procure.ch/UBS — a business deal, not an open-data gap. Do not scrape PDFs. |
 | Swiss equity data beyond the SNB cube — **VSMI** volatility, SMIM, constituents, intraday, on-book EOD turnover | SIX | **Closed (re-verified 2026-06-03).** SIX index time series + constituents are license-gated (SIX Index Data Center / Exfeed, paid; trademark/IP controlled); every free mirror that returns machine-readable data (Yahoo `^SSMI`/`V3X.SW`, stooq, Investing) **prohibits redistribution**. The **open** equity slice — SMI, SPI total-return, SIX+ICB sector sub-indices, daily since 1989 — is **already shipped** via `ch_snb_capchstocki` (SNB open licence). | No redistributable channel for VSMI/SMIM/constituents. The open slice is already in; the rest needs a SIX licence. |
-| Foreign trade — **MONTHLY by commodity × partner country** (Swiss-Impex TN8 / CPA6) | BAZG / FOCBS | **OPEN (re-verified 2026-06-03; the earlier HTTP 502 was a transient outage).** opendata.swiss `waren-aussenhandel-nach-tarifnummer-land`; direct CSV-ZIP English masters at `https://ocean.nivel.bazg.admin.ch/open-data-reports/TN8_EXP_en/TN8_EXP_en.zip` (+ `TN8_IMP_en`), HTTP 200, updated 2026-06-02. Same `terms_by_ask` licence already accepted for `ch_fso_trade_partner`. | **Deferred for INGEST SIZE, not access** — each ZIP is ~0.5–0.7 GB (full TN8 8-digit tariff × country × month). Needs a sliced/aggregated ingest (CPA6 product classes × top partners, or monthly total-by-country), like the SDMX-sliced pattern, not a whole-cube pull. **Real added value** (monthly + the commodity dimension the annual `ch_fso_trade_partner` lacks) — the strongest remaining candidate to add. |
+| Foreign trade — **MONTHLY by commodity × partner country** (Swiss-Impex TN8 / CPA6) | BAZG / FOCBS | **OPEN (re-verified 2026-06-03; the earlier HTTP 502 was a transient outage).** opendata.swiss `waren-aussenhandel-nach-tarifnummer-land`; direct CSV-ZIP English masters at `https://ocean.nivel.bazg.admin.ch/open-data-reports/TN8_EXP_en/TN8_EXP_en.zip` (+ `TN8_IMP_en`), HTTP 200, updated 2026-06-02. Same `terms_by_ask` licence already accepted for `ch_fso_trade_partner`. | **PARKED — its own project, not a pipeline row (decided 2026-06-03).** Real value (monthly + the commodity×country cross the catalog lacks), but each ZIP is ~0.5–0.7 GB / millions of rows. A *sliced* ingest (monthly total-by-country, monthly total-by-CPA6) would fit the current flat-file/GitHub model cheaply — but the owner's preference is to store the **full** high-dimensional cube, which GitHub flat files cannot do. That needs (a) a proper data backend (DB / object-store + DuckDB-over-Parquet) as fast as the rest, served as a dataseries **extension**, and (b) a UI that solves **multi-dimensional cross-filtering** (commodity × country × time), which the current split + single-select model doesn't cover. Revisit as a standalone project. |
 
 ### Construction stitch recipe (if/when wanted)
 DAM Excel `je-d-09.04.01.27`, one sheet per year-pair. Year = first 4 chars of the
@@ -102,3 +102,31 @@ selector), `ch_fso_hours_worked` (split=worktime / measure+sex selectors) — la
 clean displays. The closed set (PMI, SIX/VSMI, industrial orders) was adversarially
 re-verified against web sources and **holds**; only **BAZG monthly trade** flipped from
 "502/closed" to "open, deferred for size" (see table).
+
+---
+
+## Not gaps — already covered inside rich datasets (do NOT re-add)
+
+These surfaced as "gaps" in title-level scans but are already shipped inside
+richly-dimensioned datasets. Recorded so they stop getting re-discovered:
+
+- **GDP by expenditure / production / income, GFCF, GNI** → `ch_seco_gdp` (68-code
+  `structure` tree, all three accounting views, quarterly 1980–).
+- **Government debt-to-GDP (Maastricht), gross/net debt** → `ch_ffa_finances` (default
+  view is the Maastricht debt ratio).
+- **Federal budget balance** → `ch_ffa_finances` (the `bund` saldo/ordinary balance).
+  Only the *structural* (debt-brake) balance is incremental — sibling EFV product if wanted.
+- **Industrial production volume index** → `ch_fso_production` (INDICATOR_KE=PTOT, the default).
+- **Construction investment (Hochbau/Tiefbau levels)** → `ch_fso_gfcf_detail`.
+- **FX / currency reserves** → `ch_snb_snbbipo` (foreign-currency investments is the default view).
+- **SARON** → a dimension of `ch_snb_zimoma`.
+
+## Surfacing / legibility backlog (UI, not ingestion)
+
+Data is present; these are presentation TODOs, not data gaps:
+
+- Expose **FX reserves** (`ch_snb_snbbipo`) and **SARON** (`ch_snb_zimoma`) as named
+  tiles so they're findable without knowing the host cube.
+- Make the dense single-datasets legible in the concept tree so they don't read as gaps:
+  `ch_seco_gdp`'s `structure` tree, `ch_ffa_finances`' model/indicator tree, and
+  `ch_fso_production`'s PTOT default.
