@@ -1,0 +1,815 @@
+{
+  "summary": "Live feasibility spikes for ~15 candidate Swiss econ series — actually fetch + parse + verify each, return a concrete integration recipe",
+  "agentCount": 16,
+  "logs": [],
+  "result": {
+    "spikes": [
+      {
+        "candidate": "Foreign trade by trading partner country (Swiss exports & imports by partner, annual, CHF mn)",
+        "concept": "External sector / Foreign trade by partner country",
+        "domain": "External sector",
+        "feasible": "yes-easy",
+        "access_verified": true,
+        "source_channel": "FSO DAM Excel (channel 2). Exports = order je-e-06.05.04, English asset id 36664830 (sheet \"T6.5.4_E\"); Imports = order je-e-06.05.03, English asset id 36664836 (sheet \"T 6.5.3_E\"). Fetched via https://dam-api.bfs.admin.ch/hub/api/dam/assets/{id}/master. Discovered through opendata.swiss CKAN packages ausfuhr-nach-handelspartnern-lander4 / einfuhr-nach-handelspartnern-lander4 (publisher: FSO). NOTE the richer monthly-since-1988 BAZG OGD CSV (https://www.bazg.admin.ch/dam/bazg/en/.../diffusion/Daten/Waren/ogd_*.zip, CKAN waren-aussenhandel-nach-*-land) returned HTTP 502 from this env on every retry — not used; FSO Excel is the proven working channel.",
+        "coverage": "Annual 1990-2025 (36 years per series). 2 flows (export, import) x ~26 partner countries + ~7 continent/region group rows = ~41 partner labels per flow; ~2,367 long rows total. Values in CHF millions, current prices. Source \"Status: 02.06.2026\" (refreshed today).",
+        "sample_values": [
+          {
+            "label": "Export to Total (all partners), CHF mn",
+            "date": "2024-01-01",
+            "value": "393833.5"
+          },
+          {
+            "label": "Export to Total, CHF mn",
+            "date": "2025-01-01",
+            "value": "461014.1"
+          },
+          {
+            "label": "Export to Germany, CHF mn",
+            "date": "2024-01-01",
+            "value": "45218.3"
+          },
+          {
+            "label": "Export to USA, CHF mn",
+            "date": "2024-01-01",
+            "value": "65297.2"
+          },
+          {
+            "label": "Export to USA, CHF mn (gold/pharma front-loading spike)",
+            "date": "2025-01-01",
+            "value": "103921.9"
+          },
+          {
+            "label": "Import from Germany, CHF mn",
+            "date": "2024-01-01",
+            "value": "59891.6"
+          },
+          {
+            "label": "Import from USA, CHF mn",
+            "date": "2025-01-01",
+            "value": "56629.2"
+          }
+        ],
+        "parse_recipe": "Reuse R/source_fso_excel.R::fso_excel_download (resolves order nr -> DAM asset -> xlsx) BUT pin the English asset ids 36664830 (exports) and 36664836 (imports) for clean English country labels (the bare order-number route resolves to the German asset). Each workbook is ONE sheet. Parse exactly like the construction-investment stitch (header-text anchored, never column index): (1) find the year-header row = the row with >5 cells matching ^(19|20)\\d{2}$; year columns = those cells, year ints become date = YYYY-01-01. (2) Data rows are below it until a row whose col1 starts with Source/Information/Status/State/(c). (3) Label = col2 if non-empty (a country) else col1 (a continent/EU group row); set level=\"country\" vs level=\"group\" accordingly so the website can hide/aggregate groups. (4) Strip trailing footnote markers from labels: gsub(\"\\\\s+[0-9 ]+$\",\"\",label) for ASCII plus also strip superscripts (Belgium has a U+00B3 \"3\" -> use gsub(\"[¹²³⁰-₟0-9 ]+$\",\"\")). (5) value = as.numeric of each year cell, drop NA (missing-data cells render as \"....\"). Add flow dimension (export/import) by parsing both workbooks and binding. Emit long: flow, partner, level, date (ISO), value. Verified end-to-end in /tmp/ds-spike/parse.R against exp_en.xlsx + imp_en.xlsx (all 8 sanity points exact).",
+        "recommended_id": "ch_fso_trade_partner",
+        "effort": "trivial-to-moderate: pure DAM-Excel single-sheet parse reusing fso_excel_download and the construction-stitch header-anchored pattern; ~40 lines. No SDMX slicing, no multi-sheet stitch. Moderate only because of label-cleanup (superscript footnotes) and deciding the group-vs-country flag + display.",
+        "gotchas": "LICENSE: opendata.swiss terms_by_ask = \"Open use. Must provide the source. Use for commercial purposes requires permission of the data owner\" (stat@bazg.admin.ch). Stronger than the plain FSO/OGD terms - record license=\"fso\" but add a per-dataset note that commercial use needs BAZG permission. METHODOLOGY BREAKS: footnotes mark 2002 (composition change), 2012, and esp. 2013 \"new method\" - same trade-statistics methodology break as ch_snb_ausshawarm; flag, do not chain. LEVELS not %-change (good - real absolute CHF values). The USA export 2025=103.9bn / Hong Kong 2012-13 surge / India 2012 spike are REAL (gold + pharma front-loading and trading-hub effects), not parse errors. Group rows (Europe/EU/Asia/...) overlap country rows - keep the level flag so totals aren't double-counted in any sum. Import file carries a few extra partners (Czech Republic, Ireland, Sweden, Mexico, Peru, Uzbekistan) absent from exports - partner set is asymmetric, do not assume identical keys across flows. The BAZG monthly OGD CSV (since 1988, by tariff x country) is the upgrade path if/when its DAM endpoint stops 502-ing - currently unreachable from build env. Display defaults: split=partner (multi-line, default Germany/USA/China + Total), single-select=flow (default export), level=level (current CHF mn), transform=level; offer yoy toggle.",
+        "notes": "Fills the missing PARTNER-COUNTRY dimension alongside existing trade-by-goods (ch_snb_ausshawarm) and by-intended-use. Authoritative producer = FOCBS/BAZG, published by FSO. Live-fetched and parsed in this session: /tmp/ds-spike/parse.R, /tmp/ds-spike/exp_en.xlsx, /tmp/ds-spike/imp_en.xlsx. English asset ids verified reachable (HTTP 200, ~29-32 KB each). Recommend adding to docs/deferred-datasets.md \"un-deferred\" list once built and noting the BAZG monthly CSV 502 in source-quirks.md."
+      },
+      {
+        "concept": "Employed persons (ETS / Erwerbstätige, Inlandkonzept) by economic sector and section, quarterly + annual",
+        "domain": "Labour",
+        "candidate": "FSO Employment Statistics (ETS) — Erwerbstätige (Inlandkonzept) nach Wirtschaftssektoren und Wirtschaftsabschnitten, durchschnittliche Quartals- und Jahreswerte",
+        "feasible": "yes-easy",
+        "access_verified": true,
+        "source_channel": "FSO DAM asset, order number ts-x-03.02.01.08 (master asset id 36461448). Resolved via dam-api.bfs.admin.ch and downloaded with the repo's own fso_excel_download(). NOTE: the master file is NOT xlsx — it is a UTF-8-BOM CSV (long format). Direct master URL: https://dam-api.bfs.admin.ch/hub/api/dam/assets/36461448/master . Human landing page: https://www.bfs.admin.ch/asset/de/ts-x-03.02.01.08",
+        "coverage": "Quarterly track: 1991-Q2 -> 2025-Q4 (1991-Q1 is an all-NA placeholder, dropped). 9591 quarterly long rows = 69 series (23 INDICATORS_HRCHY sector/section codes x 3 GENDER). Annual (FREQ Y) also present in the same file if wanted. Values are absolute persons (Inlandkonzept), not thousands.",
+        "sample_values": [
+          {
+            "label": "Total employed persons (P, both sexes), Q2 1991",
+            "date": "1991-04-01",
+            "value": "4042106"
+          },
+          {
+            "label": "Total employed persons (P, both sexes), Q3 2025",
+            "date": "2025-07-01",
+            "value": "5364070"
+          },
+          {
+            "label": "Total employed persons (P, both sexes), Q4 2025",
+            "date": "2025-10-01",
+            "value": "5391587"
+          },
+          {
+            "label": "Sector 1 agriculture (P_1, NOGA A), Q4 2025",
+            "date": "2025-10-01",
+            "value": "114804"
+          },
+          {
+            "label": "Sector 2 industry (P_2, NOGA B-F), Q4 2025",
+            "date": "2025-10-01",
+            "value": "1072715"
+          },
+          {
+            "label": "Sector 3 services (P_3, NOGA G-T), Q4 2025",
+            "date": "2025-10-01",
+            "value": "4204068"
+          }
+        ],
+        "parse_recipe": "Reuse R/source_fso_excel.R::fso_excel_download(\"ts-x-03.02.01.08\", target) to resolve+download (works as-is; returns path + pubdate from embargo=2026-03-17). DO NOT use readxl — the master is CSV: read with readr::read_csv(path) (13 cols: INDICATORS_HRCHY, INDICATORS_FR/DE, GENDER_FR/DE, DETAILS_FR/DE, PERIOD, FREQ, MEASURE_FR/DE, VALUE, STATUS). Because it is CSV not a bespoke sheet, write a small NEW parser fso_ts_ch_fso_ets() rather than reusing the header-anchored xlsx parsers in source_fso_excel_sets.R. Steps: (1) filter FREQ==\"Q\" for the quarterly dataset (FREQ Y rows are the annual averages — ship separately or drop). (2) PERIOD -> ISO date: 'YYYY-Qn' -> first-of-quarter via month=(n-1)*3+1, day 01. (3) sex = recode(GENDER_DE, Total->total, Männer->male, Frauen->female). (4) dimension cols: sector = INDICATORS_HRCHY (P / P_1 / P_2_1 ... hierarchy code, stable key) + sex; carry DETAILS_DE (NOGA-08 section letter, e.g. A, B-F, G-T) as the human-facing label. (5) value = VALUE; filter !is.na(value) (drops the 69 all-NA 1991-Q1 placeholder rows, which are exactly STATUS=='O'). Result is tidy long: sector, sex, date, value. Numbers are already numeric in the CSV — no European-format cleanup needed. Build meta dimension levels from distinct (INDICATORS_HRCHY, DETAILS_DE); EN labels are NOT in the file (only FR/DE) but DETAILS codes are language-neutral NOGA letters — hardcode EN section names (A=Agriculture, B-F=Industry/construction, G-T=Services, plus the 19 section letters) or set label to the NOGA code.",
+        "recommended_id": "ch_fso_ets",
+        "effort": "moderate — fetch+download is a one-liner reusing fso_excel_download; the only new work is a ~30-line CSV long-parser (no sheet anchoring, no number cleanup) plus hand-curated EN NOGA-section labels for the dimension meta.",
+        "notes": "This is the ILO employment headcount (Erwerbstätige, domestic concept) that the deferred registry flagged as 'Not on SDMX — would need PX-Web or a DAM Excel asset'. The DAM channel works and the suspected order number ts-x-03.02.01.08 was exactly right. Distinct from BESTA jobs (ch_fso besta). Recommend un-deferring: update docs/deferred-datasets.md (move the 'Employed persons (ETS)' row to 'Recently un-deferred') and add a quirk note that this DAM master is CSV not xlsx. Display defaults: line chart, primary series = P/total (headline total employed persons); secondary breakdown = the three sectors P_1/P_2/P_3; y-axis 'Persons'; quarterly frequency.",
+        "gotchas": "(1) Master asset is CSV (UTF-8 with BOM), NOT xlsx — readxl::excel_sheets() errors with 'zip file cannot be opened'. Use readr::read_csv. (2) The sibling order ts-x-03.02.01.08.01 (asset 36461451) also resolves but failed to download in this env — ignore it; .08 (asset 36461448) is the full series. (3) File mixes FREQ Q / A / Y in one column — must filter to one frequency or you double-count (annual averages alongside quarterly). (4) 1991-Q1 is an all-NA placeholder (STATUS=='O', n=69); !is.na(value) cleanly drops it so the levels series starts 1991-Q2. (5) Only FR + DE labels in source — no EN; NOGA section codes (DETAILS_DE) are neutral letters, so EN labels must be supplied by us. (6) License = FSO open (OPEN-BY-DEFAULT / use freely with source attribution 'Source: BFS'); same 'fso' license tag already used by ch_fso_cpi. (7) Values are absolute persons (headline ~5.39M Q4-2025), confirmed against the FSO ETS publication — not thousands, not index, real levels (no %-change-only problem like the construction-investment case)."
+      },
+      {
+        "candidate": "Construction investment (Bauinvestitionen) — annual current-price levels for Switzerland, split civil engineering (Tiefbau) / building construction (Hochbau) / Total.",
+        "concept": "Construction investment levels (CHF million, current prices), national total",
+        "domain": "Construction & housing",
+        "feasible": "yes-easy",
+        "access_verified": true,
+        "source_channel": "FSO DAM Excel, order nr je-d-09.04.01.27 -> master asset 35965030 (https://dam-api.bfs.admin.ch/hub/api/dam/assets/35965030/master). Resolve+download via R/source_fso_excel.R::fso_excel_download(\"je-d-09.04.01.27\"). Live pubdate 2025-07-17.",
+        "coverage": "Annual. National-total LEVELS (in Mio. Fr., current prices) for 2005..2023 = 19 years, 3 series (tiefbau, hochbau, total). One sheet per year-pair (20 sheets). The single newest sheet \"2024-2025 (neue Erhebung)\" is provisional YoY %-change ONLY (no levels) and is dropped, so the latest level is 2023.",
+        "sample_values": [
+          {
+            "label": "Total (Tiefbau+Hochbau), CHF mn",
+            "date": "2007-01-01",
+            "value": "47459.8"
+          },
+          {
+            "label": "Total, CHF mn",
+            "date": "2012-01-01",
+            "value": "56268.3"
+          },
+          {
+            "label": "Total, CHF mn (alte->neue Erhebung break)",
+            "date": "2013-01-01",
+            "value": "58783.5"
+          },
+          {
+            "label": "Total, CHF mn",
+            "date": "2019-01-01",
+            "value": "61339.7"
+          },
+          {
+            "label": "Total, CHF mn (NEW: now available, was deferred at 2019)",
+            "date": "2023-01-01",
+            "value": "61745.2"
+          },
+          {
+            "label": "Tiefbau / Hochbau split 2023, CHF mn",
+            "date": "2023-01-01",
+            "value": "tiefbau=11921.6 hochbau=49823.5"
+          }
+        ],
+        "parse_recipe": "Reuse R/source_fso_excel.R::fso_excel_download (order resolution + binary download + pubdate) and add ONE bespoke parser fso_excel_ch_fso_construction_inv(path, pubdate) in R/source_fso_excel_sets.R, anchored on HEADER TEXT (per repo convention). Steps per sheet: (1) skip any sheet whose top ~14 rows contain no \"Mio\" -> drops the provisional 2024-2025 %-only sheet. (2) year = as.integer(substr(trimws(sheet),1,4)) = the Investitionen year. (3) group cols: find the row (<=8) containing both literal \"Tiefbau\" and \"Hochbau\"; tief_col/hoch_col = their column positions. (4) unit row: among rows 1..12 pick the one with the MOST cells matching /Mio/ (>=2) — NOT the first match, because old 2005-2012 sheets carry the title line \"In Mio. Fr., zu laufenden Preisen\" on row 2 which is a false positive; the real per-column \"in Mio. Fr.\" sub-headers (rows 5 or 9) have 2-4 matches. (5) mio_cols = which cells in unit row match /Mio/; Tiefbau Investitionen value column = min(mio_cols >= tief_col), Hochbau = min(mio_cols >= hoch_col) — picking the FIRST \"in Mio. Fr.\" in each group selects Investitionen and skips the second one (Arbeitsvorrat/backlog). (6) Total data row = first row below unit row where any cell trimws==\"Total\" (col1 in 13-col sheets, col2 in 26-col 2007-2012 sheets — found by trim match, robust to the spacer-column shift). (7) parse_num: strip apostrophe thousands sep, comma->dot decimal, \"...\"->NA (same as fso_excel_ch_fso_cpi). (8) total = tiefbau+hochbau (verified internally consistent). Emit long: dim col `werk` in {tiefbau,hochbau,total}, date=YYYY-01-01 ISO, value=CHF mn. Meta dimensions$werk$levels with multilingual labels (de Tiefbau/Hochbau/Total, en Civil engineering/Building construction/Total). Verified vs repo's own known-good extract: 2007=47459.8, 2012=56268.3, 2013=58783.5, 2019=61339.7 all match to the decimal; full 2005-2023 series prototyped at /tmp/ds-spike/parse3.R.",
+        "recommended_id": "ch_fso_construction_inv",
+        "effort": "moderate — one bespoke header-anchored Excel parser (~50 lines) following the existing fso_excel_ch_fso_cpi pattern; download/asset-resolution + parse_num + datasheet are all reuse. No new dependency, no SDMX, no chaining. The only fiddly bit is the multi-layout header detection (13-col neue Erhebung vs 26-col 2007-2012 vs old-survey title-line false positive), already solved in the prototype.",
+        "gotchas": "1) DEFERRED NOTE IS NOW STALE: deferred-datasets.md (verified 2026-06-02) says levels stop at 2019 and 2020+ are %-only — FALSE for the current workbook (pub 2025-07-17). Levels now run through 2023; only the single newest sheet (2024-2025) is provisional %-only. NO need to chain growth onto a frozen 2019 level. Update both deferred-datasets.md and source-quirks.md when ingesting. 2) Methodology break alte Erhebung (<=2012) -> neue Erhebung (>=2013): the level jumps ~+4.5% at 2012/2013 (56268->58783); per the deferred recipe smooth/flag, no chaining needed — just flag in Display/caveats. 3) Annual only, and lagged ~18 months (2023 level published mid-2025); the level series always ends 2 years before pubdate because the most recent year is provisional %-only. 4) \"Total\" cell is in col1 for 13-col sheets but col2 for the 26-col 2007-2012 sheets (spacer columns) — must locate by trim match, never fixed index. 5) The workbook also contains Arbeitsvorrat (order backlog) and Anteile (shares) and a YoY % column per group — must pick the FIRST \"in Mio. Fr.\" per group to avoid emitting backlog as investment. 6) License: standard FSO terms (\"fso\" — free reuse, attribution required), same clause as every other FSO dataset in the catalog. 7) \"Total\" here = Tiefbau+Hochbau sum (verified); the FSO sheet's row label \"Total\" is the all-cantons total within each Bauwerk group, and tiefbau+hochbau gives national construction investment.",
+        "notes": "Prototype scripts left under /tmp/ds-spike/ (fetch.R, inspect.R, parse3.R is the working full parser). Datasheet should follow datasets/ch_fso_new_vehicles.md shape; frequency=annual, coverage 2005..2023, series=3. Display default: line chart of the three werk series (Total emphasized), CHF mn, with a vertical marker / caveat note at 2012-2013 for the methodology break. Recommend adding to the \"Recently un-deferred\" section of deferred-datasets.md once shipped."
+      },
+      {
+        "concept": "GDP by canton / regional GDP (Bruttoinlandsprodukt nach Grossregion und Kanton)",
+        "domain": "National accounts",
+        "candidate": "FSO regional GDP — GDP by greater region (7) and canton (26) + Switzerland, annual current-price levels in CHF mn",
+        "feasible": "yes-easy",
+        "access_verified": true,
+        "source_channel": "FSO DAM Excel. Order number je-d-04.02.06.01 (DE master) -> asset 32627391/master. Resolve via existing R/source_fso_excel.R::fso_asset_master(\"je-d-04.02.06.01\"). English labels: order je-e-04.02.06.01 -> asset 32627406. Discovered via opendata.swiss CKAN dataset id \"bruttoinlandsprodukt-bip-nach-grossregion-und-kanton5\". NOT on SDMX (enumerated all 182 disseminate.stats.swiss dataflows: no national-accounts/GDP/regional flow present).",
+        "coverage": "Annual 2008..2022 (latest year column \"2022p\", provisional), 15 years. 27 canton-level series (26 cantons + Switzerland) + 8 greater-region series (7 Grossregionen + Switzerland) = ~35 series across 2 levels. 525 non-NA long rows in the levels block. Published 2024-10-28.",
+        "sample_values": [
+          {
+            "label": "Zurich (canton), current prices, CHF mn",
+            "date": "2008",
+            "value": "135763.7"
+          },
+          {
+            "label": "Zurich (canton), current prices, CHF mn",
+            "date": "2022",
+            "value": "164494.8"
+          },
+          {
+            "label": "Geneva (canton), current prices, CHF mn",
+            "date": "2022",
+            "value": "61231.3"
+          },
+          {
+            "label": "Ticino (canton), current prices, CHF mn",
+            "date": "2022",
+            "value": "36083.6"
+          },
+          {
+            "label": "Switzerland total, current prices, CHF mn",
+            "date": "2022",
+            "value": "791087.2"
+          },
+          {
+            "label": "Lake Geneva Region (Genferseeregion), current prices, CHF mn",
+            "date": "2022",
+            "value": "147538.8"
+          }
+        ],
+        "parse_recipe": "Reuse R/source_fso_excel.R::fso_excel_download(\"je-d-04.02.06.01\") to get the master xlsx + pubdate (verified: asset 32627391, embargo 2024-10-28). Two sheets: \"BIP pro Kanton\" (93 rows) and \"BIP pro Grossregion\" (36 rows). Each sheet has THREE stacked blocks separated by a blank col1 row: (1) absolute LEVELS \"In ... CHF zu laufenden Preisen\", (2) YoY %-change current prices, (3) YoY %-change prior-year prices. Keep block 1 ONLY. Mechanical parse (anchored on HEADER TEXT, never index, per repo convention): read with col_names=FALSE; find header row where trimws(col1) == \"Kanton\" (or \"Grossregion\"); years live in that header row cols 2..N -> strip non-digits with gsub('[^0-9]','') to turn \"2022p\" into 2022, keep cols whose value is a 4-digit year; iterate rows from header+1 downward, BREAK on first blank/NA col1 (ends the levels block before the %-change blocks), SKIP the \"In ... CHF\" subheader row (grepl('^In .*CHF')); for each region row emit region-code + date=as.Date(YYYY-01-01) + value=as.numeric(cell). Tag canton sheet rows level='canton', region sheet rows level='greater_region'. Combine. Verified prototype in /tmp/ds-spike/parse.R produced 525 rows; both the 26-canton sum and the 7-region sum equal the Switzerland total 791087.2 mn for 2022 (exact), confirming correct slicing. Dimension codes: prefer BFS canton numbers / 2-letter abbrev (ZH,BE,...) by row position; greater regions get slugs (lake_geneva, espace_mittelland, nordwest, zurich, ostschweiz, zentralschweiz, ticino, CH). Multilingual labels: download the EN master (je-e-04.02.06.01, asset 32627406) once and map labels by identical row position (verified: same order, e.g. Zurich/Geneva/Ticino/Switzerland); FR/IT masters exist too (je-f-/je-i-) for full multilingual meta. New bespoke parser belongs in R/source_fso_excel_sets.R as fso_excel_gdp_region() returning list(id,data,meta).",
+        "recommended_id": "ch_fso_gdp_region",
+        "effort": "moderate: the fetch/resolve is trivial (existing DAM helper, single asset, two clean tabular sheets). The only real work is one bespoke per-sheet parser (3 stacked blocks -> keep block 1, break on blank row, skip units subheader) plus building the canton/region code+multilingual-label map from the EN/FR/IT master files. ~1 helper function modeled on existing fso_excel_* parsers.",
+        "gotchas": "(1) LEVELS ONLY in the first block — the 2nd/3rd blocks are %-change (current-price and prior-year-price/real growth) and must be dropped; the break-on-blank-row logic handles this, but a naive read_excel of the whole sheet would mix them. (2) Values are CURRENT-PRICE (nominal) levels only (\"zu laufenden Preisen\"); there is NO real/chained absolute level series in this file (real growth appears only as the %-change block). So this complements ch_seco_gdp (which has real/quarterly national GDP) as a nominal regional cut, not a real one. (3) Latest year is provisional (\"2022p\"); the series lags ~2 years (annual regional accounts are inherently late) — coverage ends 2022 as of the 2024-10-28 edition. (4) Both levels (canton + greater region) repeat \"Zurich\" and \"Switzerland\"; the level dimension disambiguates — do not dedupe across levels, and do not sum across the two levels. (5) License: FSO terms (use existing license='fso'); open and free. (6) opendata.swiss CKAN must be hit at ckan.opendata.swiss with a browser User-Agent (the bare opendata.swiss/api host 302-redirects). (7) Not on SDMX — do not re-search disseminate.stats.swiss for this; DAM Excel is the channel.",
+        "notes": "Display defaults: split=region (multi-select multi-line breakdown), single-select=level (canton vs greater_region) defaulting to canton, default view e.g. region in {ZH,BE,GE,VD} or top cantons, transform=level, units=CHF mn current prices, frequency=annual, topic='National accounts'. Fills a genuine gap: catalog has national GDP (ch_seco_gdp) but no regional cut. Scratch prototype: /tmp/ds-spike/parse.R; downloaded masters: /tmp/ds-spike/gdp_region.xlsx (DE), /tmp/ds-spike/gdp_en.xlsx (EN). Producer landing page (HTML, for canonical url): https://www.bfs.admin.ch/asset/en/je-e-04.02.06.01"
+      },
+      {
+        "concept": "Gross fixed capital formation / investment component detail",
+        "domain": "National accounts",
+        "candidate": "Gross fixed capital formation by institutional sector and asset type (FSO national accounts, annual levels in million CHF)",
+        "feasible": "yes-easy",
+        "access_verified": true,
+        "source_channel": "opendata.swiss CKAN id `bruttoanlageinvestitionen-nach-institutionellen-sektoren3` -> FSO DAM order `ts-x-04.02.05.02`, asset 36182144. Data CSV: https://dam-api.bfs.admin.ch/hub/api/dam/assets/36182144/master ; codelist appendix (ODS, all en/de/fr/it labels): https://dam-api.bfs.admin.ch/hub/api/dam/assets/36182144/appendix",
+        "coverage": "Annual 1995-2024 (30 years). Pulled live: 1086 MCHF-level rows = 9 institutional sectors x 5 asset classifications = 37 real sector-asset series (P51G total exists only for sector S1; sub-sectors carry the construction/equipment split). The file also carries AC and ACPP %-change units (3330 rows total) which we drop.",
+        "sample_values": [
+          {
+            "label": "Total economy (S1), Gross fixed capital formation total (P51G), MCHF",
+            "date": "2023",
+            "value": "224331.1"
+          },
+          {
+            "label": "Total economy (S1), Gross fixed capital formation total (P51G), MCHF",
+            "date": "2024",
+            "value": "225873.1"
+          },
+          {
+            "label": "Total economy (S1), Construction (P5111_N111_112G), MCHF",
+            "date": "2023",
+            "value": "66634.8"
+          },
+          {
+            "label": "Total economy (S1), Fixed assets and software / Ausruestungen (P5111_N113T117G), MCHF",
+            "date": "2023",
+            "value": "157696.2"
+          },
+          {
+            "label": "Total economy (S1), Building construction / Hochbau (6011), MCHF",
+            "date": "2023",
+            "value": "54715.2"
+          },
+          {
+            "label": "General government (S13), Civil engineering / Tiefbau (6010), MCHF",
+            "date": "2023",
+            "value": "6970.1"
+          }
+        ],
+        "parse_recipe": "New tiny module on the DAM-CSV channel (this is a single tidy long CSV, NOT the multi-sheet construction-investment Excel, so do NOT reuse the source_fso_excel per-sheet stitch). Steps: (1) curl/get the master CSV (UTF-8 BOM; read with col_types=cols(.default=col_character())). (2) filter UNIT_MEAS==\"MCHF\" to keep current-price levels (drop AC and ACPP which are %-change). (3) transmute sector=SECTOR, asset=CLASSIFICATION, date=as.Date(to_iso(PERIOD)) [reuse R/dates.R::to_iso; PERIOD is YYYY -> first-of-year], value=as.numeric(VALUE); drop NA values; arrange(sector,asset,date). (4) frequency via infer_frequency() -> \"annual\". (5) Build dimensions meta from the appendix ODS codelist sheets (SECTOR, CLASSIFICATION) which are already en/de/fr/it -> mirror the multilingual levels shape that .seco_dimensions builds; set asset hierarchy P51G -> {construction (P5111_N111_112G) -> {6011 Hochbau, 6010 Tiefbau}, equipment (P5111_N113T117G)} and sector hierarchy S1 -> {S11,S12(->S121T127,S12Q),S13(->S1314),S14,S15}. license=\"fso\". Verified end-to-end with /tmp/ds-spike/proto.R sourcing R/dates.R: 1086 rows, annual, 1995-2024, internal consistency holds (construction+equipment=224331.05=P51G total; Hochbau 54715.2 + Tiefbau 11919.6 = construction 66634.8).",
+        "recommended_id": "ch_fso_gfcf_detail",
+        "effort": "moderate: the fetch+parse is trivial (clean long CSV, reuse to_iso/infer_frequency), but writing the multilingual dimension+hierarchy meta from the appendix codelist sheets and choosing the asset/sector split dimension for the Display hint is the only real work. ~1 small new helper, no new dependency (ODS read via unzip+content.xml or hardcode the small fixed codelist).",
+        "gotchas": "(1) Confirms the deferred-datasets steer: GFCF detail is NOT on FSO SDMX (enumerated all 182 dataflows - no national-accounts/GFCF/P51 flow) and STAT-TAB is dead from this env; the live channel is opendata.swiss CKAN -> DAM CSV. (2) opendata.swiss redirects to ckan.opendata.swiss and needs a browser User-Agent (use the source_ffa.R UA pattern). (3) File mixes three UNIT_MEAS in one column - MUST filter to MCHF or you triple-count and mix levels with percentages (this is the trap the construction-investment dataset fell into; here the levels DO exist for the full 1995-2024 span, unlike construction which lost levels after 2019). (4) asset code \"Fixed assets and software\" (P5111_N113T117G) is labelled \"Ausruestungen/equipment\" in DE and is really equipment+IP/software, not just machinery; keep the FSO English label. (5) P51G total is published only for S1 (total economy); sub-sectors give construction+equipment that sum to their implicit total - 37 series not 45. (6) This is strictly MORE detailed than ch_seco_gdp, which already carries coarse inv_gfcf/inv_constr/inv_fixed (P51G/P5111_N111_112G/P5111_N113T117G) for the total economy only and NO institutional-sector or Hochbau/Tiefbau split - so the gap (by-sector + civil/building engineering split) is real and non-overlapping. (7) License = opendata.swiss terms_by (free reuse, attribution) = the repo's existing license:\"fso\". Display: line/area chart, default series = S1/P51G, split dimension = asset (has the natural hierarchy); sector as single-select.",
+        "notes": "Verified the SECO GDP cube via its live meta sidecar: its `structure` tree includes inv_gfcf (P51G), inv_constr (P5111_N111_112G), inv_fixed (P5111_N113T117G) but only at total-economy level and with no institutional-sector dimension and no building/civil-engineering split. So adding ch_fso_gfcf_detail does not duplicate ch_seco_gdp; it fills the by-sector + asset-subtype gap. Scratch proto + fetched files under /tmp/ds-spike/ (proto.R, gfcf_sector.csv, gfcf.ods/content.xml, sec.json). No repo files were modified."
+      },
+      {
+        "candidate": "Labour productivity (GDP per hour worked)",
+        "concept": "Labour productivity",
+        "domain": "National accounts",
+        "feasible": "yes-easy",
+        "access_verified": true,
+        "source_channel": "FSO DAM asset, order number ts-x-04.07.01.01, asset 36178401. CSV master: https://dam-api.bfs.admin.ch/hub/api/dam/assets/36178401/master (also reachable via existing fso_asset_master(\"ts-x-04.07.01.01\")). Discovered via opendata.swiss CKAN id arbeitsproduktivitat-nach-tatsachlichen-arbeitsstunden-zu-preisen-des-vorjahres6.",
+        "coverage": "Annual, 1991..2024 (34 years). 3 series/indicators: GDP, Actual hours worked, Productivity. 102 rows total. All values are index, base 1991=100, at previous year's prices (chained volume). Latest publish/embargo date 2025-09-29.",
+        "sample_values": [
+          {
+            "label": "Productivity index (1991=100)",
+            "date": "2000-01-01",
+            "value": "113.4605"
+          },
+          {
+            "label": "Productivity index (1991=100)",
+            "date": "2010-01-01",
+            "value": "127.4155"
+          },
+          {
+            "label": "Productivity index (1991=100)",
+            "date": "2019-01-01",
+            "value": "136.5920"
+          },
+          {
+            "label": "Productivity index (1991=100)",
+            "date": "2024-01-01",
+            "value": "146.0786"
+          },
+          {
+            "label": "GDP index (1991=100)",
+            "date": "2024-01-01",
+            "value": "VALUE present in CSV row INDICATOR=GDP, 2024"
+          },
+          {
+            "label": "Actual hours worked index (1991=100)",
+            "date": "1991-01-01",
+            "value": "100"
+          }
+        ],
+        "parse_recipe": "Reuse R/source_fso_excel.R::fso_asset_master(\"ts-x-04.07.01.01\") to resolve the asset, then grab the MASTER link (it is a CSV, not xlsx, for this asset) and download_binary() it. NOTE: this asset's master is .csv — either pass a .csv tempfile to download_binary or fetch the master URL directly. Parse is trivial (no bespoke sheet parser needed): read.csv(file, fileEncoding=\"UTF-8-BOM\"). Columns: PERIOD (year int), INDICATOR (one of \"GDP\",\"Actual hours worked\",\"Productivity\"), UNIT_MEA (constant \"Index\"), VALUE (numeric), OBS_STATUS (constant \"R\" = revised). Map INDICATOR to slugs gdp/hours/productivity, build date=as.Date(paste0(PERIOD,\"-01-01\")), value=as.numeric(VALUE). Drop UNIT_MEA (single value) and OBS_STATUS. Output tidy long: indicator, date, value (102 rows). pubdate from fso_asset_master()$pubdate -> meta$updated.",
+        "recommended_id": "ch_fso_labour_productivity",
+        "effort": "trivial — already tidy long CSV behind the existing DAM helper; no SDMX, no multi-sheet xlsx stitch, no cell caps. One new wrapper function alongside fso_sdmx/excel sets, ~15 lines. Build a datasheet datasets/ch_fso_labour_productivity.md.",
+        "gotchas": "1) The legacy \"duplicate idx (gdp/ahw/prd)\" error: all three indicators share UNIT_MEA=\"Index\", so any pivot keyed on UNIT collides. Key the dimension on INDICATOR, not on UNIT_MEA — this is why the clean structure works. 2) This master link is a CSV (most DAM masters are xlsx); set the tempfile extension to .csv when reusing fso_excel_download, or download the master URL directly. 3) UTF-8 BOM on the CSV — use fileEncoding=\"UTF-8-BOM\" (or strip BOM) so the first header isn't read as \"i..PERIOD\". 4) It is an INDEX (base 1991=100), NOT a level (CHF/hour) and NOT a %-change — frame the Display as level=index. Sibling datasets exist at current prices (je-d-04.07.04.04) and by branch/region if a levels/sector breakdown is later wanted, but the headline GDP-per-hour index is this one. 5) License = fso (BFS open terms, free, source attribution). Display defaults: split=indicator (multi-line: GDP, Actual hours worked, Productivity all comparable on 1991=100), default indicator=productivity, transform=index, frequency=annual, topic=\"National economy\"/\"National accounts\".",
+        "notes": "Headline series matches FSO web page title exactly: \"Labour productivity by actual hours worked at previous year's prices - 1991-2024\" (https://www.bfs.admin.ch/asset/en/ts-x-04.07.01.01). NOT on SDMX (disseminate.stats.swiss) — enumerated all 182 dataflows for productiv/produktiv/gdp/hour/arbeit, the productivity series is absent; DAM/CKAN is the channel. The three-indicator decomposition (output GDP vs input hours vs resulting productivity) is a nice self-explanatory chart. Multifactor productivity and capital productivity exist as separate CKAN datasets if the concept is later expanded. Recommend ingesting as canonical for \"Labour productivity\"."
+      },
+      {
+        "candidate": "Construction price index (Schweizerischer Baupreisindex)",
+        "concept": "Construction price index (Baupreisindex)",
+        "domain": "Prices",
+        "feasible": "yes-easy",
+        "access_verified": true,
+        "source_channel": "FSO DAM Excel asset, order number cc-t-05.05.01 -> current master asset 36269766 (embargo/publish 2025-12-18, the Oct 2025 release). Resolve via R/source_fso_excel.R::fso_excel_download(\"cc-t-05.05.01\"). Discovered through opendata.swiss CKAN (package \"schweizerischer-baupreisindex-...-multibasen-indexwerte-pro-grossregion-u1\"). NOT on SDMX (enumerated all 182 disseminate.stats.swiss dataflows; only construction-BUILDINGS cubes CH1.GWS exist, no price index) and PX-Web is dead from this env.",
+        "coverage": "Semi-annual (Oktober + April reference months), Oct 1998 .. Oct 2025 = 55 periods per series. Workbook = 8 regions (Schweiz + 7 major regions) x 16 work-types x 4 base years (sheets 1998/2010/2015/2020). Proposed catalog slice: Switzerland (REG_01), 3 headline work-types (Total / Hochbau / Tiefbau), base sheet \"2020\" (Oct 2020=100) = 3 series, 165 long rows. Could optionally expand to all 16 work-types or all 8 regions.",
+        "sample_values": [
+          {
+            "label": "Total (Baugewerbe) Switzerland, index Oct2020=100",
+            "date": "2025-10-01",
+            "value": "116.2"
+          },
+          {
+            "label": "Total (Baugewerbe) Switzerland",
+            "date": "2020-10-01",
+            "value": "100.0"
+          },
+          {
+            "label": "Total (Baugewerbe) Switzerland",
+            "date": "1998-10-01",
+            "value": "78.7"
+          },
+          {
+            "label": "Total (Baugewerbe) Switzerland",
+            "date": "2025-04-01",
+            "value": "115.8"
+          },
+          {
+            "label": "Civil engineering (Tiefbau) Switzerland",
+            "date": "2025-10-01",
+            "value": "115.9"
+          },
+          {
+            "label": "Building construction (Hochbau) Switzerland",
+            "date": "2025-10-01",
+            "value": "116.3"
+          }
+        ],
+        "parse_recipe": "Reuse R/source_fso_excel.R::fso_excel_download(\"cc-t-05.05.01\") to get the .xlsx + pubdate. Write a bespoke parser in source_fso_excel_sets.R (one function, like the existing CPI/wages parsers; anchor on HEADER TEXT/TAGS, not column index): (1) read sheet \"2020\" with col_names=FALSE (base Oct2020=100, newest base, full 1998-2025 history). (2) Header rows: row 5 = reference month word (contains \"Okt\"->10 else \"Apr\"->04), row 6 = 4-digit year; val_cols = which(row6 matches ^[0-9]{4}$); build date = as.Date(sprintf(\"%s-%s-01\", year, month)). (3) Column A carries stable tags <REG_nn> (region) and <OBJ_nn> (work-type); column B is the German label. The national block = rows strictly between tag \"<REG_01>\" (Schweiz) and the next \"<REG_\" row. (4) Within that block pick work-types by TAG (NOT label text -- the \"Baugewerbe : Total\" label contains a non-breaking space c2a0 before the colon): <OBJ_02>=Total, <OBJ_03>=Hochbau, <OBJ_13>=Tiefbau. (5) For each, as.numeric the val_cols cells (the literal \"...\" for missing -> NA, drop), emit long rows work/date/value. Do NOT call to_iso (dates are built directly); HARDCODE meta$frequency=\"semi-annual\" (infer_frequency has no semiannual bucket and would mislabel ~180-day gaps as \"annual\"). Verified working scratch: /tmp/ds-spike/parse.R against /tmp/ds-spike/copri_u1.xlsx.",
+        "recommended_id": "ch_fso_construction_prices",
+        "effort": "moderate -- one new bespoke per-sheet parser (~30 lines) in source_fso_excel_sets.R + wire into pipeline.R + datasheet. Download/resolve plumbing already exists (fso_excel_download). No new HTTP code. Harder than an SDMX add only because the sheet is row-and-column shaped, but the layout is regular and tag-anchored so no fragile index hunting.",
+        "gotchas": "1) Label encoding trap: \"Baugewerbe : Total\" has a non-breaking space (0xC2A0) before the colon -- match on the <OBJ_nn> tag in column A, never on label text. 2) Missing cells are the literal \"...\"/\"…\" string -> coerce to NA and drop (early periods for newer work-types like Renovation/Einfamilienhaus start ~2010). 3) Multibase workbook: 4 sheets (base 1998/2010/2015/2020 = Oktober each). Pick sheet \"2020\" for the current canonical base; the legacy dataseries id ch.fso.copri.idx2010 used the 2010 base -- a base re-reference is a level rescale, not a methodology break, but note it (don't splice sheets). 4) This is the construction OUTPUT PRICE index (Baupreisindex) -- distinct from PPI (producer/import prices) and from construction INVESTMENT (Bauinvestitionen, the deferred je-d-09.04.01.27 that is %-change-only after 2019). This one is FULL ABSOLUTE LEVELS through Oct 2025 -- no %-change-only problem. 5) Frequency is semi-annual (only Oct + Apr); represent as first-of-month (10-01 / 04-01). 6) Order cc-d-05.05.01 resolves to a STALE 2021 per-region asset -- use cc-t-05.05.01 for the current multibase national+regional file. 7) License = FSO (free reuse, attribution required), use license:\"fso\" like sibling FSO datasets.",
+        "notes": "Cross-checked against the FSO Oct-2025 press release (asset/en/36262132): headline 116.2 points base Oct2020=100, +0.3% half-year (Apr->Oct), +0.9% YoY. My parse: Total Oct2025=116.2 (exact), Apr2025=115.8 -> +0.35%~=0.3%, Oct2024=115.2 -> +0.87%~=0.9%. Base-period sanity: Total Oct2020=100.0 exactly. Display defaults: split=work (Total/Hochbau/Tiefbau nested under Total), default work=Total, transform=level (index points), seasonal adjustment n/a. Optional richer cut: keep all 16 work-types and/or add region dimension (REG_02..REG_08: Geneva-lake, Espace Mittelland, Northwest, Zurich, East, Central, Ticino) -- the same parser loops naturally over REG blocks. Recommend shipping national headline (3 series) first; this also UN-DEFERS a Prices-domain gap and is cleaner than the deferred Bauinvestitionen."
+      },
+      {
+        "concept": "Tertiary / services-sector turnover",
+        "domain": "Domestic economy",
+        "candidate": "FSO services-sector turnover (Umsatzstatistik Dienstleistungen) — tertiary-sector turnover indices, national level, quarterly",
+        "feasible": "yes-easy",
+        "access_verified": true,
+        "source_channel": "SDMX disseminate.stats.swiss — agency CH1.KEU, flow DF_KEU_Q1, version 1.0.0 (the SAME flow that already powers ch_fso_production). Data: GET https://disseminate.stats.swiss/rest/data/CH1.KEU,DF_KEU_Q1,1.0.0/all?detail=dataonly (Accept: application/vnd.sdmx.data+csv). Structure/labels: GET https://disseminate.stats.swiss/rest/dataflow/CH1.KEU/DF_KEU_Q1/1.0.0?references=all (Accept: application/vnd.sdmx.structure+json). Tertiary NOGA slice: G-NxK (tertiary excl. financial/insurance), G, H, I, J, L, M, N. Annual sibling DF_KEU_A1, monthly DF_KEU_M1 also exist for the same agency.",
+        "coverage": "Quarterly, 2021-Q1 .. 2026-Q1 (21 quarters) — verified live. Tertiary codes ONLY exist from 2021-Q1 (base 2021=100); the same flow carries secondary-sector codes back to 1999-Q1, but services turnover is a newer FSO product so the history is genuinely short. With the 8-NOGA tertiary slice: 132 distinct series (NOGA x ADJUSTMENT x INDICATOR_KE x UNIT_MEASURE), 2574 long rows. Dims observed: NOGA (8 tertiary), ADJUSTMENT (N raw / W calendar-adj / Y seasonally+calendar-adj), INDICATOR_KE (UTOT total, UINL domestic, UEXP foreign turnover, nominal), UNIT_MEASURE (IX index + VARQ-4 YoY + VARQ-1 QoQ change).",
+        "sample_values": [
+          {
+            "label": "Tertiary sector excl. finance/insurance (G-NxK), total turnover, raw index",
+            "date": "2026-01-01",
+            "value": "97.39"
+          },
+          {
+            "label": "Tertiary sector excl. finance/insurance (G-NxK), total turnover, raw index",
+            "date": "2025-10-01",
+            "value": "105.48"
+          },
+          {
+            "label": "Tertiary sector excl. finance/insurance (G-NxK), total turnover, raw index",
+            "date": "2021-01-01",
+            "value": "98.38"
+          },
+          {
+            "label": "Tertiary sector excl. finance/insurance (G-NxK), total turnover, seasonally+calendar-adjusted index (Y)",
+            "date": "2026-01-01",
+            "value": "100.48"
+          },
+          {
+            "label": "Tertiary sector excl. finance/insurance (G-NxK), total turnover, seasonally+calendar-adjusted index (Y)",
+            "date": "2025-07-01",
+            "value": "100.38"
+          }
+        ],
+        "parse_recipe": "Reuse R/source_fso_sdmx.R::fso_sdmx_fetch UNCHANGED — identical DSD to ch_fso_production. In R/pipeline.R add a tertiary NOGA slice constant (.SDMX_SERVICES_NOGA <- c(\"G-NxK\",\"G\",\"H\",\"I\",\"J\",\"L\",\"M\",\"N\")) and wire: fso_sdmx_fetch(\"ch_fso_services\",\"CH1.KEU\",\"DF_KEU_Q1\",\"1.0.0\", title=list(en=\"Services-sector turnover (quarterly)\"), noga_keep=.SDMX_SERVICES_NOGA). Then add ch_fso_services = list(UNIT_MEASURE = c(\"VARQ-4\",\"VARQ-1\")) to REDUNDANT_LEVELS so the app reproduces YoY/QoQ on the fly from the index (mirrors ch_fso_production exactly). The helper maps TIME_PERIOD (YYYY-Qn) to ISO first-of-period via R/dates.R::to_iso, drops FREQ, reads the four codelists (CL_NOGA_KE etc.) for English labels, and emits the tidy long contract (NOGA,ADJUSTMENT,INDICATOR_KE,UNIT_MEASURE,date,value) + dimensions meta. Verified: 2574 rows, 132 series, dates correct.",
+        "recommended_id": "ch_fso_services",
+        "effort": "trivial — zero new code; the SDMX helper, date parser, label-from-codelist logic, and REDUNDANT_LEVELS machinery all already exist and are proven on the identical DF_KEU_Q1 flow. Work is one NOGA constant + one fso_sdmx_fetch line in pipeline.R + one REDUNDANT_LEVELS entry + a datasheet (clone ch_fso_production.md). Display defaults: split=NOGA (multi-line breakdown over tertiary subsectors), single-select=ADJUSTMENT,INDICATOR_KE; default NOGA=G-NxK, INDICATOR_KE=UTOT, ADJUSTMENT=Y (seasonally+calendar-adjusted), transform=index. Same pattern as production.",
+        "gotchas": "1) SHORT HISTORY: tertiary codes start 2021-Q1 (only 21 quarters) — services turnover is a newer FSO release, not a fetch limitation; secondary-sector codes in the same flow go to 1999 but tertiary genuinely doesn't. Base year 2021=100. 2) The aggregate label for G-NxK comes back in GERMAN from the codelist name field ('Tertiärer Sektor (ohne...)') because that code's en name is missing — add a tiny label override in the datasheet/wrapper to 'Tertiary sector (excl. financial & insurance)'. Other codes (G,H,I,J,L,M,N) have clean English labels. 3) Levels are INDEX (2021=100), nominal turnover — NO absolute CHF turnover values published, only indices; that is the FSO product, not a parsing loss. 4) UNIT_MEASURE carries redundant VARQ-4/VARQ-1 change leaves that must be pruned via REDUNDANT_LEVELS (the app recomputes them) exactly like ch_fso_production. 5) FSO open-data license ('fso'), free and machine-readable. 6) read_csv emits a harmless duplicate-DATAFLOW-column rename warning (already tolerated for production/retail).",
+        "notes": "Complements the existing real-economy turnover set: ch_fso_retail (DF_KEU_M1, NOGA 47) + ch_fso_production (DF_KEU_Q1, secondary B-E/F) + this ch_fso_services (DF_KEU_Q1, tertiary G-NxK..N) cover all three sectors from one well-understood SDMX agency. Live fetch + parse verified end-to-end via /tmp/ds-spike/proto.R using the repo's own helpers (sourced R/http.R, R/dates.R, R/source_fso_sdmx.R). Optionally also offer the monthly flow DF_KEU_M1 for tertiary if FSO publishes monthly tertiary codes there (not checked — quarterly is the canonical services frequency)."
+      },
+      {
+        "candidate": "SAKE / LFS labour-force participation and hours worked",
+        "concept": "Actual hours worked (working volume): actual weekly / annual hours worked per employed person and total annual working volume, by sex, nationality and full/part-time, national level. SAKE/AVOL.",
+        "domain": "Labour",
+        "feasible": "yes-easy",
+        "access_verified": true,
+        "source_channel": "FSO DAM time-series CSV asset. Order number ts-x-03.02.03.01.02.01 -> resolves (via fso_asset_master) to asset 36577051, master = https://dam-api.bfs.admin.ch/hub/api/dam/assets/36577051/master (text/csv, SDMX-style). Discovered via opendata.swiss CKAN pkg tatsachliches-jahrliches-arbeitsvolumen-tatsachliche-jahresarbeitszeit-und-tatsachliche-wochent. NOT in the SDMX channel (disseminate.stats.swiss exposes only CH1.SAKE/DF_SAKE_TEILZEITGRUND part-time-reasons + CH1.SAKE_MOD_UA unpaid-work module; the headline participation/hours cuts are absent there).",
+        "coverage": "Annual 2010-2025 (16 years; includes 2025, pubdate 2026-05-21 = fresh). National-total slice = 45 series = SEX{_T,M,F} x NAT{_T,SW,FOR} x WORKTIME{_T,FT,PT,PT_I,PT_II} -> 720 rows, 0 NA. Source cube also carries NOGA1(15), SECTOR(4), EMP_STATUS(6), REGION(8) dims and 3 measures (VALUE=annual volume hrs, VALUE_Y=annual hrs/person, VALUE_W=weekly hrs/person); recipe keeps national totals + VALUE_W.",
+        "sample_values": [
+          {
+            "label": "Total (all employed), actual weekly hours",
+            "date": "2024",
+            "value": "30.94 h/week (FSO press: '30 hours 56 minutes')"
+          },
+          {
+            "label": "Total annual working volume, all employed",
+            "date": "2024",
+            "value": "8.117 billion hours (matches FSO '8.117 bn / +0.1%')"
+          },
+          {
+            "label": "Full-time, all employed, weekly hours",
+            "date": "2024",
+            "value": "39.92 h/week (FSO: full-time ~40h 4min)"
+          },
+          {
+            "label": "Part-time, all employed, weekly hours",
+            "date": "2024",
+            "value": "18.67 h/week"
+          },
+          {
+            "label": "Total weekly hours",
+            "date": "2025",
+            "value": "30.89 h/week"
+          },
+          {
+            "label": "Men, full-time, weekly hours",
+            "date": "2024",
+            "value": "40.52 h/week"
+          }
+        ],
+        "parse_recipe": "Reuse fso_excel_download(\"ts-x-03.02.03.01.02.01\") from R/source_fso_excel.R to resolve order nr -> master CSV and download. Then parse exactly like the SDMX-CSV path in R/source_fso_sdmx.R: readr::read_csv(col_types=cols(.default=col_character())); filter to national total (NOGA1=='_T' & SECTOR=='_T' & EMP_STATUS=='_T' & REGION=='_T'); transmute sex=SEX, nat=NAT, worktime=WORKTIME, date=as.Date(to_iso(TIME_PERIOD)) (R/dates.R already maps annual 'YYYY'->'YYYY-01-01'), value=as.numeric(VALUE_W); drop NA; arrange(sex,nat,worktime,date). frequency via infer_frequency(TIME_PERIOD) -> 'annual'. Hand-build dimension label maps (codelists are NOT in this CSV channel): sex{_T=Total,M=Men,F=Women}, nat{_T=Total,SW=Swiss,FOR=Foreign}, worktime{_T=Total,FT=Full-time,PT=Part-time,PT_I=Part-time I (50-89%),PT_II=Part-time II (<50%)}; mark _T as hierarchy parent like fso_sdmx_new_vehicles does. New parser fso_excel_ch_fso_hours_worked in R/source_fso_excel_sets.R returning list(id,data,meta). Optionally publish VALUE_Y (annual hrs/person) as a second measure dim instead of dropping it.",
+        "recommended_id": "ch_fso_hours_worked",
+        "effort": "moderate: download+parse is trivial (clean SDMX-style CSV, helpers already exist), but needs a hand-coded label map (codelists not shipped in this DAM CSV channel) and a choice of which measure(s) to publish. ~1 small parser fn mirroring an existing one.",
+        "gotchas": "(1) This is the AVOL 'actual hours worked' cube, NOT a participation/activity rate. The headline Erwerbsquote (economic activity rate, je-d-03.02.01.07.01.01 DAM Excel) is structured as single-year-of-age rows x multi-year PERIOD-BAND columns (1991-1995,...,2021-2023) -> NOT a clean annual time series, so I deliberately picked hours-worked instead; participation-RATE-as-time-series is a separate, messier task. (2) Part-time as a distinct concept is in SDMX (CH1.SAKE/DF_SAKE_TEILZEITGRUND, annual 2010-2025, fetch verified) if a part-time-reasons dataset is wanted later. (3) No codelists in this CSV asset -> dimension labels must be hand-maintained. (4) Asset id 36577051 is mutable on revision; address by order number ts-x-03.02.03.01.02.01, not the bare id. (5) Values are levels (hours), transform=level. (6) License: FSO open (free reuse, attribution) -> license:'fso' like ch_fso_unemp_rate. (7) Series breakdowns are marginals on a national-total cube; FT subdivides into PT only via the WORKTIME total, while PT_I+PT_II are children of PT -> set hierarchy carefully.",
+        "notes": "Display defaults: split=worktime (FT vs PT vs total as lines is the story), single-select=sex then nat, default sex=_T/nat=_T/worktime=_T (the 30.9h/week headline FSO quotes), transform=level, seasonal=n/a, units 'Hours per week'. topic='Work and income'. Complements existing ch_fso_unemp_rate (ILO unemployment from SAKE) without overlap. Scratch proof in /tmp/ds-spike/ (avol.csv, prototype.R). All sample values cross-checked against FSO's own 2024 working-volume press numbers (8.117bn hrs, 30h56min weekly, ~40h full-time)."
+      },
+      {
+        "candidate": "Cross-border commuters (Grenzgänger / GGS)",
+        "concept": "Cross-border commuters (Grenzgängerstatistik)",
+        "domain": "Labour",
+        "feasible": "yes-easy",
+        "access_verified": true,
+        "source_channel": "FSO SDMX (disseminate.stats.swiss). Agency CH1.GGS, flow DF_GGS_1, version 1.0.0. DSD dimension order: NOGA.CNTRY.FREQ.SEX.WORK_CANTON. National-total-by-canton slice key: _T._T.Q._T. (GET .../rest/data/CH1.GGS,DF_GGS_1,1.0.0/_T._T.Q._T.?detail=dataonly, Accept application/vnd.sdmx.data+csv). Five GGS flows exist (DF_GGS_1..6); DF_GGS_1 is the richest (canton x NOGA division x country of residence x sex).",
+        "coverage": "Quarterly, 2002-Q3 .. 2026-Q1 (95 quarters). Canton slice: 27 WORK_CANTON levels (26 cantons + _T total). Country-of-residence slice (other axis): 37 country levels. Verified live via curl + repo helper sdmx_sliced().",
+        "sample_values": [
+          {
+            "label": "Switzerland total",
+            "date": "2026-01-01",
+            "value": "413319.94"
+          },
+          {
+            "label": "Switzerland total",
+            "date": "2002-07-01",
+            "value": "164717.66"
+          },
+          {
+            "label": "Geneva (canton of work, code 25)",
+            "date": "2026-01-01",
+            "value": "118437.66"
+          },
+          {
+            "label": "Ticino (code 21)",
+            "date": "2026-01-01",
+            "value": "78561.49"
+          },
+          {
+            "label": "Vaud (code 22)",
+            "date": "2026-01-01",
+            "value": "45866.70"
+          },
+          {
+            "label": "By country of residence: France",
+            "date": "2026-01-01",
+            "value": "241088.69"
+          }
+        ],
+        "parse_recipe": "Reuse R/source_fso_sdmx.R::sdmx_sliced exactly as the new_vehicles/vacant_dwellings wrappers do. Add a wrapper fso_sdmx_cross_border_commuters(): call sdmx_sliced(\"CH1.GGS\",\"DF_GGS_1\",\"1.0.0\",\"_T._T.Q._T.\", c(\"NOGA\",\"CNTRY\",\"SEX\",\"WORK_CANTON\",\"FREQ\")) to get the canton breakdown (national totals over NOGA/CNTRY/SEX). Build data.frame(canton=d$WORK_CANTON, date=d$date, value=d$value). Quarterly TIME_PERIOD (YYYY-Qn) -> ISO first-of-period is already handled by to_iso() in R/dates.R (2002-Q3 -> 2002-07-01, verified). Resolve canton codes to names from codelist CL_HGDE_KT_added_QNEG_TOTAL (fetch structure with references=all; _T=Total, 1=Zurich .. 25=Geneva, 26=Jura standard BFS numbering) and attach as the dimension levels meta, mirroring the new_vehicles fuel_lab pattern (_T is the parent/total in a hierarchy). Filter !is.na(value) (helper already does). 2565 rows. If a second view is wanted, the same flow with key _T..Q._T._T gives the clean by-country-of-residence breakdown (37 countries).",
+        "recommended_id": "ch_fso_cross_border_commuters",
+        "effort": "trivial: identical shape to the two SDMX adds landed 2026-06-02 (new_vehicles, vacant_dwellings). One new wrapper in source_fso_sdmx.R + one datasheet. Only bespoke bit is the 26-canton label map (lift the codelist).",
+        "gotchas": "(1) Values are NON-INTEGER (e.g. 413319.94, Geneva 118437.66) - GGS is a model-based/estimated quarterly statistic, not a raw headcount; do NOT round in storage, label units as 'Number of cross-border commuters (estimate)'. (2) These are FOREIGN cross-border commuters of foreign nationality (definitional - title should say 'Foreign cross-border commuters'). (3) Key axis order is NOGA.CNTRY.FREQ.SEX.WORK_CANTON - getting it wrong silently returns the wrong slice (a sloppy key _T._T.Q..._T accidentally returns canton rows because two segments are left empty). (4) Every dimension has a _T total incl. CNTRY where CH=Switzerland is ALSO a code (257-code ISO list) - use _T not CH for the total. (5) FREQ codelist CL_FREQ has 34 codes; pin Q. (6) License = standard FSO open terms (use license: fso like all other FSO datasets); SDMX is the clean channel - do NOT touch PX-Web/STAT-TAB (dead from this env). (7) Legacy id was ch.fso.ggs; this is the SDMX successor.",
+        "notes": "Display defaults: split = canton (multi-line, multi-select; default-show top few: Geneva/Ticino/Vaud/Basel-Stadt or the _T total), no single-select dims needed for the canton view, transform = level, frequency = quarterly, topic = 'Work and income'. Alternative split = country of residence (FR/IT/DE/AT) is equally compelling and from the same flow if a second dataset or a switchable dimension is desired. Highly on-mission: cross-border commuters are a flagship 'hard-to-get, frequently-asked' Swiss labour series, quarterly, with a clean 2002->present run and an immediately recognizable geography (FR 241k, IT 92k, DE 67k; Geneva 118k, Ticino 78.5k)."
+      },
+      {
+        "concept": "Harmonised Index of Consumer Prices (HICP) — Switzerland",
+        "domain": "Prices",
+        "candidate": "FSO HICP (EU-comparable consumer price index for Switzerland), monthly index levels",
+        "feasible": "yes-easy",
+        "access_verified": true,
+        "source_channel": "Eurostat SDMX 2.1 REST. Agency ESTAT, flow PRC_HICP_MIDX (monthly index). Data URL: https://ec.europa.eu/eurostat/api/dissemination/sdmx/2.1/data/prc_hicp_midx/M.I15.{COICOP}.CH/?format=SDMX-CSV (geo=CH, unit=I15 i.e. 2015=100; I05 also live). COICOP labels from codelist: https://ec.europa.eu/eurostat/api/dissemination/sdmx/2.1/codelist/ESTAT/COICOP?format=TSV . NOT on FSO disseminate.stats.swiss (enumerated all 182 dataflows — no HICP/Harmonisiert/HVPI flow); FSO's own HICP page only links press releases. Eurostat is the authoritative open machine channel (FRED mirrors it as CP0000CHM086NEST).",
+        "coverage": "Monthly, 2004-12 .. 2025-12 (CH series starts Dec 2004; ~253 monthly obs per series). Verified pull of all-items + 12 COICOP divisions = 13 series, 3289 rows. Up to 368 COICOP categories available for CH if a deeper hierarchy is wanted (recommend the 13-series headline+division slice).",
+        "sample_values": [
+          {
+            "label": "All-items HICP (CP00), index 2015=100",
+            "date": "2025-12-01",
+            "value": "107.07"
+          },
+          {
+            "label": "All-items HICP (CP00)",
+            "date": "2004-12-01",
+            "value": "96.90"
+          },
+          {
+            "label": "Housing, water, electricity, gas (CP04)",
+            "date": "2025-12-01",
+            "value": "119.xx (level confirmed present)"
+          },
+          {
+            "label": "All-items HICP annual rate of change, Dec 2025 YoY",
+            "date": "2025-12",
+            "value": "+0.2% (matches FSO press release 'Average annual inflation of +0.2% in 2025', asset 36353838)"
+          },
+          {
+            "label": "All-items HICP annual average rate of change 2024",
+            "date": "2024",
+            "value": "1.1%"
+          }
+        ],
+        "parse_recipe": "New helper modeled on R/source_fso_sdmx.R's .sdmx_get pattern but pointed at Eurostat. Steps: (1) GET SDMX-CSV from prc_hicp_midx for M.I15.{CP00+CP01..CP12}.CH (request multiple COICOP via + in the key, one call). (2) readr::read_csv all-character (wrap literal body in I() to silence the readr 2.2 warning). (3) transmute item=coicop, date=as.Date(to_iso(TIME_PERIOD)) — REUSE R/dates.R::to_iso (handles YYYY-MM -> ISO first-of-month, already verified), value=as.numeric(OBS_VALUE), filter !is.na(value), arrange(item,date). (4) frequency via R/dates.R::infer_frequency (returns 'monthly', verified). (5) meta$dimensions$item$levels: pull COICOP codelist TSV once, map CP00->'All-items HICP', CP01..CP12 -> division labels (already extracted). Build levels list in the .sdmx_dimensions shape. (6) units = list(en='Index, 2015=100'). Use R/http.R retry wrapper (.with_retry / build httr2 request with req_timeout). Mirror the wrapper shape of fso_sdmx_new_vehicles (returns list(id, data, meta)).",
+        "recommended_id": "ch_fso_hicp",
+        "effort": "moderate — the fetch/parse itself is trivial (verified working in /tmp/ds-spike/prototype.R), but it introduces the FIRST Eurostat SDMX endpoint in the repo (existing source_fso_sdmx.R is hardcoded to disseminate.stats.swiss/CH1.KEU codelists), so it needs a small standalone fetcher rather than reusing fso_sdmx_fetch. ~40 lines.",
+        "gotchas": "(1) NOT a Swiss-domain source — id prefix ch_fso_ is by convention/concept but data is fetched from Eurostat (ESTAT); document provenance honestly (FSO compiles, Eurostat disseminates). (2) Distinct from ch_fso_cpi/ch_snb_plkopr: HICP excludes owner-occupied housing & health insurance premiums, EU methodology — note in 'What is special'. (3) Unit choice: I15 (2015=100) is current standard and live to 2025-12; a 2025=100 / ECOICOP-v2 re-reference is rolling in at Eurostat — pin unit=I15 explicitly and watch for it being superseded. (4) Levels only available from Dec 2004 (history shorter than LIK's 1982); for long inflation history keep ch_snb_plkopr. (5) Eurostat data may carry OBS_FLAG/CONF_STATUS columns — ignore. (6) License: Eurostat data is free reuse with attribution (cite both FSO as compiler and Eurostat as source). Display defaults: split=item, default item=CP00, transform=yoy, seasonal adjustment=n/a (HICP not seasonally adjusted).",
+        "notes": "Live fetch proven via curl and Rscript (/tmp/ds-spike/prototype.R ran clean: 13 series, monthly, 2004-12..2025-12). Sanity check passed: Eurostat CH all-items Dec-2025 YoY = +0.2% matches FSO press release asset 36353838. The richer 368-category COICOP tree is available if a hierarchy split is later wanted, but the 13-series headline+division slice keeps it small and meaningful. Sources: https://ec.europa.eu/eurostat/web/hicp/database ; https://www.bfs.admin.ch/bfs/en/home/statistics/prices/surveys/hvpi.html ; https://www.bfs.admin.ch/asset/en/36353838"
+      },
+      {
+        "candidate": "SECO Weekly Economic Activity index (WEA / WWA / Wöchentlicher Wirtschaftsaktivitätsindex)",
+        "concept": "Business cycle / Weekly economic activity (WEA) — a weekly experimental high-frequency tracker of Swiss real GDP growth",
+        "domain": "Business cycle",
+        "feasible": "yes-easy",
+        "access_verified": true,
+        "source_channel": "SECO DAM (admin.ch dokumente), swissdata-format long CSV. Data: https://www.seco.admin.ch/dam/seco/en/dokumente/Wirtschaft/Wirtschaftslage/indikatoren/wwa.csv.download.csv/wwa.csv (verified 200, 61496 bytes). Companion xlsx (info+data+beschriftung sheets, multilingual labels): https://www.seco.admin.ch/dam/seco/en/dokumente/Wirtschaft/Wirtschaftslage/indikatoren/wwa.xlsx.download.xlsx/wwa.xlsx (verified 200). Landing page: https://www.seco.admin.ch/seco/en/home/wirtschaftslage---wirtschaftspolitik/Wirtschaftslage/indikatoren/wwa.html . NOTE: unlike ch_seco_gdp there is NO _json.txt meta sidecar (both candidate _json/.json URLs return 404), so the seco_fetch passthrough cannot be reused unchanged — meta is hand-built from the xlsx beschriftung sheet.",
+        "coverage": "Weekly (Monday-dated, modal 7-day gap; ISO dates pass through to_iso unchanged, infer_frequency -> \"weekly\"). Two series via the `structure` dimension: seco_wwa (main WEA index) 2005-01-03 .. 2026-05-11, n=1112; seco_wwa_pre_covid (level vs pre-crisis Q4-2019) 2019-12-30 .. 2022-12-05, n=153. 1265 long rows after dropping 3 NA week-53 phantoms. type=index and seas_adj=csa are both constant (single value). Source publish date 27.05.2026 — actively maintained (full 2005+ revision on 2025-10-01).",
+        "sample_values": [
+          {
+            "label": "seco_wwa (WEA index, latest week)",
+            "date": "2026-05-11",
+            "value": "2.07064226892172"
+          },
+          {
+            "label": "seco_wwa (WEA index, first week)",
+            "date": "2005-01-03",
+            "value": "3.9011681763975"
+          },
+          {
+            "label": "seco_wwa (WEA index)",
+            "date": "2026-05-04",
+            "value": "2.60709116111002"
+          },
+          {
+            "label": "seco_wwa (WEA index, xlsx 2026 W20 cross-check matches CSV)",
+            "date": "2026-05-11",
+            "value": "2.07064226892172"
+          },
+          {
+            "label": "seco_wwa_pre_covid (vs Q4-2019 level, %)",
+            "date": "2022-12-05",
+            "value": "1.83759344889525"
+          },
+          {
+            "label": "seco_wwa_pre_covid (first week)",
+            "date": "2019-12-30",
+            "value": "0.241484342270624"
+          }
+        ],
+        "parse_recipe": "1) Download the long CSV with the repo helper get_csv / readr::read_csv (URL above). Columns arrive already tidy: structure,type,seas_adj,date,value. 2) filter(!is.na(value)) to drop the 3 ISO-week-53 phantom rows (Dec-28 in 2009/2015/2020). 3) mutate(date=as.Date(to_iso(as.character(date))) [no-op, dates already ISO], value=as.numeric(value)). 4) Drop the two constant columns type (always \"index\") and seas_adj (always \"csa\") per source-quirks \"drop single-value dimension columns\" — keep only structure,date,value. 5) arrange(structure,date). 6) frequency = infer_frequency(raw$date) -> \"weekly\" (already supported by R/dates.R, returns weekly for ~7-day median gap — no code change needed). 7) Build meta BY HAND (no JSON sidecar exists): one dimension `structure` with two levels seco_wwa and seco_wwa_pre_covid; harvest the multilingual (de/fr/it/en) labels from the xlsx `beschriftung` sheet (verified text e.g. en \"Index of weekly economic activity (WEA)\" / \"Weekly economic activity compared with the pre-crisis level\"; units: WEA = scaled to YoY growth rates of real, seasonally/calendar/sport-event-adjusted GDP; pre_covid = % difference to Q4 2019 level). Reuse pattern: closest existing helper is R/source_seco.R::seco_fetch (same DAM + swissdata long CSV shape) but write a sibling seco_wwa_fetch() that hand-builds meta$dimensions instead of remapping a sidecar; reuse R/http.R + R/dates.R::to_iso/infer_frequency + R/io.R writers unchanged.",
+        "recommended_id": "ch_seco_wwa",
+        "effort": "moderate (lighter than ch_seco_gdp). Data fetch + parse is trivial (clean long CSV, helpers already handle weekly). The only real work is hand-building the multilingual meta from the xlsx beschriftung sheet because the JSON sidecar that makes ch_seco_gdp a pure passthrough does NOT exist for WWA — so it needs a small bespoke seco_wwa_fetch() rather than reusing seco_fetch verbatim. ~1 short function + 1 datasheet.",
+        "gotchas": "1) NO JSON meta sidecar (the ch_seco_gdp pattern); _json.txt / .json URLs 404 — do not reuse seco_fetch as-is. 2) The values are NOT index levels — they are scaled YoY GDP growth rates (% points): seco_wwa is the weekly proxy for real GDP YoY growth, and seco_wwa_pre_covid is % difference vs the Q4-2019 level. Display transform must be `level` (the value IS already a rate; do NOT apply yoy). 3) Experimental statistic, subject to revision; full 2005+ rescaling happened 2025-10-01 (a methodology break — flag in caveats). 4) seco_wwa_pre_covid is a COVID-era legacy series that stops 2022-12-05 (discontinued); keep it as a non-default alternate, default to seco_wwa. 5) 3 NA rows on Dec-28 of 53-week years — must filter or the writer chokes. 6) type/seas_adj are constant — drop them. 7) Weekly dates are Mondays; do not collapse to monthly. 8) License: SECO terms = free reuse, attribution required (use existing repo license code `seco`); raw data not copyright-protected under Swiss OGD. Suggested Display: split=structure (multi-select), default structure=seco_wwa, transform=level, no seas_adj toggle (single value).",
+        "notes": "Live-verified in /tmp/ds-spike (curl + Rscript /tmp/ds-spike/parse.R, plus xlsx cross-check of 2026 W20=2.0706 against CSV 2026-05-11=2.07064). This is a genuinely hard-to-get, high-frequency, currently-maintained Swiss series — strong fit for the catalog mission and would be the first WEEKLY series in the catalog. Producer page to sanity-check against: https://www.seco.admin.ch/seco/en/home/wirtschaftslage---wirtschaftspolitik/Wirtschaftslage/indikatoren/wwa.html (chart shows the latest weekly WEA figure ~2% for mid-May 2026, matching value 2.07). Scratch scripts: /tmp/ds-spike/parse.R, /tmp/ds-spike/wwa.csv, /tmp/ds-spike/wwa.xlsx (NOT in repo)."
+      },
+      {
+        "concept": "KOF weekly economic barometer (WBI) + KOF sentiment composites",
+        "domain": "Business cycle",
+        "candidate": "KOF Economic Sentiment Index (ESI) — recommended substitute for the (unavailable) weekly WBI; plus Global Barometer and business-situation composites as siblings",
+        "feasible": "yes-easy",
+        "access_verified": true,
+        "source_channel": "KOF Datenservice public SETS endpoint (not the per-key ts endpoint): GET https://datenservice.kof.ethz.ch/api/v1/public/sets/{set}?mime=csv . Recommended set: `ogd_ch.kof.esi` (KOF Economic Sentiment Index). Discovery index: GET .../api/v1/public/collections (60 collections; filter is_public=true). Multilingual-ish labels: GET .../api/v1/public/metadata?keys=... (English only). Sibling public sets: `ogd_ch.kof.globalbaro`, `ogd_ch.kof.bts_total`/`bs_indicator`, `ogd_ch.kof.barometer`, `stringency_web`, `ch.kof.jobtracker`, tourism/consensus forecasts.",
+        "coverage": "ESI (`ogd_ch.kof.esi`): monthly, 2007-04 .. 2026-05, 230 periods, 2 series (ch.kof.esi.index = Pre-Brexit version; ch.kof.esi.index.v2018 = standard 2018 version) -> 460 tidy-long rows. Global Barometer (`ogd_ch.kof.globalbaro`): monthly, 1991-07 .. 2026-05, 2 series (coincident, leading), 838 rows. Business-situation (`ogd_ch.kof.bts_total`/`bs_indicator`): quarterly, 1973-02 .. 2026-05, ~9 sector balance series. All fetched live HTTP 200 this session.",
+        "sample_values": [
+          {
+            "label": "ESI standard v2018 (ch.kof.esi.index.v2018)",
+            "date": "2026-05-01",
+            "value": "96.68458"
+          },
+          {
+            "label": "ESI standard v2018 (ch.kof.esi.index.v2018)",
+            "date": "2026-04-01",
+            "value": "95.99571"
+          },
+          {
+            "label": "ESI Pre-Brexit (ch.kof.esi.index)",
+            "date": "2007-04-01",
+            "value": "117.03464"
+          },
+          {
+            "label": "ESI Pre-Brexit (ch.kof.esi.index)",
+            "date": "2026-05-01",
+            "value": "89.90479"
+          },
+          {
+            "label": "Global Barometer leading (ch.kof.globalbaro.leading)",
+            "date": "2026-05-01",
+            "value": "100.30206"
+          },
+          {
+            "label": "Global Barometer coincident (ch.kof.globalbaro.coincident)",
+            "date": "2026-05-01",
+            "value": "103.54593"
+          }
+        ],
+        "parse_recipe": "Generalize the existing single-series helper into a public-set helper. In R/source_kof.R add `kof_set_fetch(set, dim_name)`: (1) url <- sprintf(\".../api/v1/public/sets/%s?mime=csv\", set); (2) raw <- readr::read_csv(get_text(url)) — first col is `date`, remaining cols are the KOF series keys (wide layout); (3) capture raw_periods <- as.character(raw$date) for infer_frequency BEFORE reshaping; (4) date <- as.Date(to_iso(as.character(date))) (monthly \"2007-04\" -> \"2007-04-01\", to_iso already handles it); (5) tidyr::pivot_longer(cols=-date, names_to=dim_name, values_to=\"value\"); (6) filter(!is.na(value)) — the wide set is sparse where series start at different dates; (7) value <- as.numeric(value); arrange(dim, date). Verified verbatim in /tmp/ds-spike/prototype.R against /workspace/ds/dataseries-data/R/{http.R,dates.R} (get_text + to_iso + infer_frequency reused unchanged; infer_frequency correctly returns \"monthly\"). Build meta exactly like kof_fetch: license=\"kof\", source$name=KOF Swiss Economic Institute, source$url from the metadata endpoint (ESI: kof.ethz.ch/en/forecasts-and-indicators/indicators/kof-economic-sentiment-indicator.html). dimensions: one dim named e.g. \"indicator\" mapping the two raw keys to hardcoded multilingual labels (en/de/fr) in the datasheet — the metadata API only returns English (\"KOF Economic Sentiment Indicator for Switzerland, Pre-Brexit version\" / \"...for Switzerland\"), so author de/fr by hand like other datasheets.",
+        "recommended_id": "ch_kof_esi (sentiment index). Optional siblings: ch_kof_globalbaro, ch_kof_business_situation. Concept frontmatter: \"Business cycle & sentiment / Sentiment composite\". Display default: line chart, level (index, mean ~100, unitless), single dim \"indicator\" with 2 series both visible; reference line at 100.",
+        "effort": "trivial — pure additive: one new ~25-line helper kof_set_fetch in the existing R/source_kof.R reusing get_text/to_iso/infer_frequency, plus one datasheet. No new deps (dplyr/tidyr/readr already used). The wide->long pivot is the only new line vs the existing kof_fetch.",
+        "gotchas": "1) THE WEEKLY WBI IS GENUINELY UNAVAILABLE: every WBI-named ts key (ch.kof.wbi/wei/weekly/...) returns HTTP 412, and every WBI-named set 404s. KOF discontinued the COVID-era weekly indicator; it is not in any public set. Do not re-hunt it. 2) The existing ch_kof_barometer datasheet's claim \"barometer is the only open KOF key; every other returns 412\" is OUTDATED/WRONG at the channel level: it only tested /public/ts?keys=. The open channel is /public/sets/{name} — 30+ sets have is_public=true (verified via /public/collections). Individual ts keys are still gated (412), but the curated OGD sets are open. Worth a one-line correction to that datasheet/source-quirks.md. 3) Sets are WIDE and SPARSE (series have different start dates) — must filter NA after pivot_longer or you get spurious rows. 4) ESI has TWO methodology versions in one set (Pre-Brexit ch.kof.esi.index vs standard .v2018) — keep both as series, label the difference; not a level-vs-change issue (both are index levels). 5) Index is unitless (mean ~100), not a % or growth rate. 6) ESI/barometer are periodically re-based/re-estimated, so the whole back-series can revise (same caveat as the barometer). 7) License = CC BY (opendata.swiss terms_by / opendefinition cc-by, confirmed via ckan.opendata.swiss package_show resource rights) = the existing `kof` license id; redistribution OK with attribution. 8) bts_total/bs_indicator sector balances run back to 1973 quarterly but are diffusion balances (-100..+100), a different scale from the index composites — ship as a separate dataset, not mixed with ESI.",
+        "notes": "Recommendation: ship ch_kof_esi as the primary add (cleanest single sentiment composite, monthly, current through 2026-05, direct sibling to the barometer we already have). Optionally also ch_kof_globalbaro (monthly back to 1991) — both are 2-series, trivial. The bigger structural win is generalizing source_kof.R to the sets endpoint, which unlocks a whole family of open KOF data the catalog currently thinks is gated (tourism forecasts, consensus forecast, stringency index, jobtracker, business-situation by sector). Live-verified scratch at /tmp/ds-spike/prototype.R, raw sets at /tmp/ds-spike/set_*.csv, collections at /tmp/ds-spike/collections.json. Repo helpers reused unchanged: /workspace/ds/dataseries-data/R/http.R (get_text), /workspace/ds/dataseries-data/R/dates.R (to_iso, infer_frequency)."
+      },
+      {
+        "candidate": "Detailed / long population (popdet, BEVNAT) — Demographics",
+        "concept": "Detailed permanent resident population by nationality, sex and age (popdet); plus the BEVNAT natural-movement / vital stats (births, deaths, marriages). Recommend shipping the popdet detail; the BEVNAT vital flows are NOT additive (see gotchas).",
+        "domain": "Demographics",
+        "feasible": "yes-easy",
+        "access_verified": true,
+        "source_channel": "FSO SDMX (channel 1, disseminate.stats.swiss). Agency CH1.STATPOP, flow DF_STATPOP_REGLING, version 1.0.0. Data: GET /rest/data/CH1.STATPOP,DF_STATPOP_REGLING,1.0.0/{key}?detail=dataonly (Accept: application/vnd.sdmx.data+csv). DSD dims in order: POPULATION_TYPE.REG_LING.NATIONALITY_CATEGORY.SEX.AGE.FREQ. National nat-x-sex slice key = \"1._T..._T.A\" (permanent resident pop, all language regions, age total, annual). Structure+codelists: GET /rest/dataflow/CH1.STATPOP/DF_STATPOP_REGLING/latest?references=all (Accept: application/vnd.sdmx.structure+json).",
+        "coverage": "Annual, 2010-2024 (15 years, first-of-year ISO dates, value=stock on 31 Dec / 1 Jan). Sliced national nat-x-sex cube = 9 series (nationality {Total, Swiss, Foreign} x sex {Total, Male, Female}), 135 obs. The flow also carries a full AGE dimension (247 codes incl. single years 0-100+ and TOTAL) and REG_LING (language region) — a richer age-pyramid cube is available from the same flow by widening the key.",
+        "sample_values": [
+          {
+            "label": "Permanent resident population, Total nationality, both sexes",
+            "date": "2024-01-01",
+            "value": "9051029"
+          },
+          {
+            "label": "Permanent resident population, Foreign, both sexes",
+            "date": "2024-01-01",
+            "value": "2479888"
+          },
+          {
+            "label": "Permanent resident population, Swiss, Female",
+            "date": "2024-01-01",
+            "value": "3374688"
+          },
+          {
+            "label": "Permanent resident population, Total, both sexes",
+            "date": "2010-01-01",
+            "value": "7870134"
+          },
+          {
+            "label": "Marriages total (BEVNAT, separate flow, for reference only)",
+            "date": "2020-01-01",
+            "value": "35160"
+          }
+        ],
+        "parse_recipe": "Reuse R/source_fso_sdmx.R::sdmx_sliced verbatim (same pattern as fso_sdmx_new_vehicles / fso_sdmx_vacant_dwellings). Steps: (1) d <- sdmx_sliced(\"CH1.STATPOP\",\"DF_STATPOP_REGLING\",\"1.0.0\",\"1._T..._T.A\", c(\"POPULATION_TYPE\",\"REG_LING\",\"NATIONALITY_CATEGORY\",\"SEX\",\"AGE\",\"FREQ\")). (2) Build data.frame(nationality=d$NATIONALITY_CATEGORY, sex=d$SEX, date=d$date, value=d$value); sdmx_sliced already maps TIME_PERIOD via to_iso (annual YYYY -> YYYY-01-01) and coerces value to numeric, dropping NA. (3) Attach meta dimensions by hand from the codelists (small, fixed): nationality {_T=Total, 1=Swiss, 2=Foreign}, sex {_T=Total, 1=Male, 2=Female}; set hierarchy _T -> {1,2} for each. license=\"fso\", frequency=\"annual\", topic=\"Population\". (4) Display: split=nationality, single-select=sex, default nationality=_T & sex=_T, transform=level, seasonal adjustment n/a. Verified end-to-end live in /tmp/ds-spike/proto.R (sourced R/http.R + R/dates.R + R/source_fso_sdmx.R): 135 rows, 9 series, 2010-2024, Total 2024 = 9,051,029 (exact match to FSO press release 34447375). NOTE: this is concept-distinct from ch_fso_pop (which is the 1861- demographic BALANCE incl. births/deaths). To also add age detail, widen key to \"1._T._T._T..A\" and add an AGE dim (but that is ~100+ series; ship the headline nat-x-sex slice first).",
+        "recommended_id": "ch_fso_pop_detail",
+        "effort": "trivial — the exact sdmx_sliced helper and two prior datasheets (new_vehicles, vacant_dwellings) are a copy-paste template; only the key, dim names and small hand-coded label maps change. Live fetch + parse already proven.",
+        "gotchas": "1) Concept scope split: BEVNAT vital stats are NOT cleanly addable. The ONLY BEVNAT flow on SDMX is DF_BEVNAT_MARIAGES_1 (marriages), and even its national total runs just 2020-2024 (35160/36410/40938/37763/36769) — too short and 6-dim. Births/deaths long series live only on PX-Web/PC-Axis (STAT-TAB), which is DEAD from this build env per source-quirks.md — do NOT spelunk it. And births/deaths/birth-surplus back to 1861 are ALREADY shipped in ch_fso_pop (DAM Excel su-d-01.02.04.05). So vital stats add little; ship popdet only. 2) opendata.swiss CKAN API returned 403 to WebFetch (needs browser User-Agent per source_ffa.R) — used SDMX direct, fine. 3) NATIONALITY_CATEGORY also has codes 11/12 (Swiss with/without 2nd nationality) not requested by the \"1._T..._T\" key; the slice returns only _T/1/2 — verify if you widen. 4) REG_LING is pinned to _T (national); the flow is national-only at the language-region level, no canton dimension. 5) value is a stock (point-in-time) not a flow; label dates as reference-year stock. 6) FSO license: free reuse with attribution (license=\"fso\").",
+        "notes": "Recommended add: ch_fso_pop_detail = FSO SDMX CH1.STATPOP/DF_STATPOP_REGLING, national permanent-resident population by nationality x sex, 2010-2024 annual, 9 series, via sdmx_sliced (key \"1._T..._T.A\"). Verified live: Total 2024 = 9,051,029 matches FSO. Distinct from existing ch_fso_pop (the 1861- balance with births/deaths). The BEVNAT births/deaths part of the brief is a dead end on SDMX (only marriages, 2020-2024) and redundant with ch_fso_pop — document as deferred, don't chase PX-Web. Scratch proto at /tmp/ds-spike/proto.R."
+      },
+      {
+        "candidate": "BESTA employment-outlook indicator (Index der Beschäftigungsaussichten / Index of employment evolution prospects)",
+        "concept": "Employment-outlook / job-prospects leading indicator (BESTA business survey: net hiring intent over the next 3 months)",
+        "domain": "Labour",
+        "feasible": "yes-easy",
+        "access_verified": true,
+        "source_channel": "FSO PX-Web (JSON-stat2), table id px-x-0602000000_105 \"Businesses by employment prospects and economic divisions (selection) (in %)\". Real table at https://www.pxweb.bfs.admin.ch/api/v1/en/px-x-0602000000_105/px-x-0602000000_105.px . The outlook index = dimension `Voraussichtliche Beschäftigungsentwicklung` code `5` (\"Index of employment evolution prospects\"), weighting `Gewichtung` code `1` (weighted by number of jobs). Regional sibling = px-x-0602000000_106 (Grossregion, incl. Switzerland=0). Both reachable HTTP 200 from this env (PX-Web works for theme-0602 BESTA tables, same channel as the already-shipped ch_fso_besta/_101).",
+        "coverage": "Quarterly, 2004Q1 .. 2026Q1 (89 quarters). Sliced to the index (code 5) + jobs-weighting (code 1) across all 20 NOGA economic-division aggregates = 1780 obs, 20 series (well under PX-Web 5000-cell cap; no chunking needed). After dropping the two constant dims, one dimension column remains: Wirtschaftsabteilung (20 NOGA codes, identical hierarchy to ch_fso_besta).",
+        "sample_values": [
+          {
+            "label": "Total (5-96), employment-outlook index",
+            "date": "2026-01-01",
+            "value": "1.03"
+          },
+          {
+            "label": "Total (5-96), employment-outlook index",
+            "date": "2025-10-01",
+            "value": "1.03"
+          },
+          {
+            "label": "Total (5-96), employment-outlook index",
+            "date": "2025-07-01",
+            "value": "1.02"
+          },
+          {
+            "label": "Total (5-96), employment-outlook index",
+            "date": "2020-04-01",
+            "value": "1.01"
+          },
+          {
+            "label": "Total (5-96), employment-outlook index",
+            "date": "2004-01-01",
+            "value": "1.01"
+          },
+          {
+            "label": "Manufacturing (10-33), earliest",
+            "date": "2004-01-01",
+            "value": "1.03"
+          }
+        ],
+        "parse_recipe": "Reuse R/source_fso.R::fso_fetch exactly like ch_fso_besta (explicit query, no fso_fetch_auto). Add to R/pipeline.R next to the besta block:\n1) query = list(\n   list(code=\"Wirtschaftsabteilung\", selection=list(filter=\"all\", values=list(\"*\"))),\n   list(code=\"Voraussichtliche Beschäftigungsentwicklung\", selection=list(filter=\"item\", values=list(\"5\"))),\n   list(code=\"Gewichtung\", selection=list(filter=\"item\", values=list(\"1\"))),\n   list(code=\"Quartal\", selection=list(filter=\"all\", values=list(\"*\"))))\n2) fso_fetch(\"ch_fso_besta_outlook\", \"px-x-0602000000_105\", query, title=list(en=\"Employment outlook index by economic division\"), quarter_col=\"Quartal\"). No chunk_by needed (1780 < 5000 cells).\n3) .fso_make_date handles the single `Quartal` code (1991Q3-style) -> first-of-quarter ISO date (Q1->01,Q2->04,Q3->07,Q4->10), freq=quarterly. Verified working.\n4) The two pinned dims (`Voraussichtliche Beschäftigungsentwicklung`=5, `Gewichtung`=1) are constant -> drop them (same \"drop single-value dimension columns\" rule already applied to ch_fso_besta's Beschäftigungsgrad/Geschlecht), leaving Wirtschaftsabteilung as the sole dim. Whether to drop in fso_fetch or rely on write_dataset: ch_fso_besta documents the drop, so mirror its handling.\n5) Verified live in /tmp/ds-spike/besta_outlook_proto.R (output saved to /tmp/ds-spike/besta_outlook_res.rds): 1780 rows, 20 divisions, 2004-01-01..2026-01-01.",
+        "recommended_id": "ch_fso_besta_outlook",
+        "effort": "trivial — identical mechanics to the existing ch_fso_besta (same theme-0602 PX-Web cube family, same helper, same quarter handling, same constant-dim drop). One pipeline.R block + one datasheet. No new fetcher code. Slice is small so no chunking. ~30 min including datasheet.",
+        "gotchas": "- It is an INDEX not a level/count: values cluster tightly around 1.0 (observed range across all divisions 0.67-1.22; Total stays ~1.00-1.06). >1.0 = net hiring intent over next 3 months, <1.0 = net reduction. Display transform must be LEVEL (it is already a diffusion-style ratio); do NOT apply YoY %-change. Flag the 1.0 neutral line in Display.\n- NOT seasonally adjusted; no seasonal-adjustment dimension. Quarterly survey.\n- Table is \"(in %)\" titled, but code 5 is the composite index (ratio), while codes 1-4 are the underlying %-of-businesses (maintain/increase/decrease/non-response). We deliberately keep only code 5; if richer detail wanted later, codes 1-4 give the components.\n- Two weighting variants exist (Gewichtung 1=by jobs, 2=by businesses); we pin 1 (by jobs) to match BESTA headline convention. Document the choice.\n- COVID dip is muted at Total level (2020Q2=1.01) because the index is bounded near 1.0 — this is correct, not a data error (verified the Total trajectory).\n- PX-Web is flaky from this env for cubes we don't already ship, but this BESTA theme-0602 family IS reachable (verified _104.._108 all HTTP 200, and the _105 data fetch parsed). Do not assume the deferred-datasets PX-Web-dead-end note blocks this; it explicitly carves out the besta family as already-working.\n- License: standard FSO \"free reuse, attribution required\" (license:\"fso\"), same as all FSO datasets in the catalog. Latest value 1.03 (Q1 2026) cross-checked against the FSO Beschäftigungsbarometer press release.",
+        "notes": "Verified the headline value against FSO's own Q1 2026 Beschäftigungsbarometer release (\"employment prospects indicator rose slightly to 1.03\") — exact match to the fetched Total (5-96) 2026-01-01 = 1.03. This fills the legacy ch.fso.besta.outlook.* slot noted in docs/coverage-review-2026-06-02.md as a tolerable-drop to add opportunistically. Pairs naturally with ch_fso_besta (jobs) and ch_fso_vacancies as the forward-looking leading labour indicator. Display defaults: split=Wirtschaftsabteilung, default=5-96, transform=level, single-select none, seasonal adjustment n/a. Scratch scripts: /tmp/ds-spike/besta_outlook_proto.R and /tmp/ds-spike/meta_105.json (table metadata). No repo files were modified."
+      }
+    ],
+    "triage": {
+      "integration_order": [
+        {
+          "candidate": "Tertiary/services-sector turnover (FSO SDMX CH1.KEU/DF_KEU_Q1, tertiary NOGA)",
+          "tier": "integrate-now",
+          "recommended_id": "ch_fso_services",
+          "channel": "FSO SDMX disseminate.stats.swiss, agency CH1.KEU, flow DF_KEU_Q1 (same flow as ch_fso_production)",
+          "rationale": "Zero new code: identical DSD to ch_fso_production; one NOGA-slice constant + one fso_sdmx_fetch line + one REDUNDANT_LEVELS entry. Completes the sector-turnover triad (retail+secondary+tertiary). High macro value, trivial effort.",
+          "depends_on_or_overlaps": "Shares DF_KEU_Q1 flow with ch_fso_production but disjoint NOGA codes (tertiary G-N vs secondary B-F); no value overlap. Short history (2021-Q1, 2021=100)."
+        },
+        {
+          "candidate": "Cross-border commuters (Grenzgaenger / GGS)",
+          "tier": "integrate-now",
+          "recommended_id": "ch_fso_cross_border_commuters",
+          "channel": "FSO SDMX, agency CH1.GGS, flow DF_GGS_1, key _T._T.Q._T.",
+          "rationale": "sdmx_sliced template already proven on new_vehicles/vacant_dwellings; only a 26-canton label map is bespoke. Flagship hard-to-get quarterly labour series, clean 2002->2026 run. Macro-important, trivial.",
+          "depends_on_or_overlaps": "No overlap with any shipped dataset. Watch axis order NOGA.CNTRY.FREQ.SEX.WORK_CANTON; estimated (non-integer) values."
+        },
+        {
+          "candidate": "Detailed permanent resident population by nationality x sex (popdet / STATPOP)",
+          "tier": "integrate-now",
+          "recommended_id": "ch_fso_pop_detail",
+          "channel": "FSO SDMX, agency CH1.STATPOP, flow DF_STATPOP_REGLING, key 1._T..._T.A",
+          "rationale": "sdmx_sliced copy-paste; verified Total 2024 = 9,051,029 matches FSO. Adds nationality/sex stock detail the catalog lacks. Trivial.",
+          "depends_on_or_overlaps": "Concept-distinct from ch_fso_pop (the 1861- balance with births/deaths). BEVNAT vital flows are NOT addable (see verdict) and are redundant with ch_fso_pop."
+        },
+        {
+          "candidate": "Labour productivity (GDP per hour worked, index 1991=100)",
+          "tier": "integrate-now",
+          "recommended_id": "ch_fso_labour_productivity",
+          "channel": "FSO DAM CSV master, order ts-x-04.07.01.01 (asset 36178401)",
+          "rationale": "Already-tidy long CSV behind the existing fso_asset_master helper; ~15-line wrapper, no sheet stitch. Headline productivity decomposition (GDP/hours/productivity). Trivial.",
+          "depends_on_or_overlaps": "No overlap. Note master is CSV not xlsx (set .csv tempfile, UTF-8-BOM); key dimension on INDICATOR not UNIT_MEA."
+        },
+        {
+          "candidate": "KOF Economic Sentiment Index (ESI) + sets-endpoint generalization",
+          "tier": "integrate-now",
+          "recommended_id": "ch_kof_esi",
+          "channel": "KOF Datenservice public sets endpoint, set ogd_ch.kof.esi (CC BY)",
+          "rationale": "~25-line kof_set_fetch added to existing source_kof.R reusing get_text/to_iso; sibling to the barometer we already ship. The sets channel also unlocks a whole open KOF family (globalbaro, business-situation, jobtracker).",
+          "depends_on_or_overlaps": "Sibling to ch_kof_barometer, no value overlap. Corrects ch_kof_barometer datasheet's stale '412-only' claim (sets channel is open). Weekly WBI is genuinely discontinued -> do not chase."
+        },
+        {
+          "candidate": "BESTA employment-outlook index (Index der Beschaeftigungsaussichten)",
+          "tier": "integrate-now",
+          "recommended_id": "ch_fso_besta_outlook",
+          "channel": "FSO PX-Web table px-x-0602000000_105 (theme-0602 BESTA family, reachable)",
+          "rationale": "Identical mechanics to shipped ch_fso_besta (same fso_fetch, same quarter handling, same constant-dim drop); 1780 cells, no chunking. Fills the legacy besta.outlook slot; forward-looking labour leading indicator.",
+          "depends_on_or_overlaps": "Pairs with ch_fso_besta (jobs) / ch_fso_vacancies, no value overlap. Index near 1.0 -> transform=level not yoy. PX-Web works for the besta family specifically (carve-out from the PX-Web dead-end note)."
+        },
+        {
+          "candidate": "Foreign trade by trading-partner country (exports & imports by partner)",
+          "tier": "integrate-with-effort",
+          "recommended_id": "ch_fso_trade_partner",
+          "channel": "FSO DAM Excel, English assets 36664830 (exports) / 36664836 (imports)",
+          "rationale": "~40-line single-sheet header-anchored parse reusing fso_excel_download + the construction-stitch pattern; effort only from superscript-footnote label cleanup and the country-vs-group level flag. Fills the missing partner-country trade dimension.",
+          "depends_on_or_overlaps": "Complements ch_snb_ausshawarm (trade by goods) - different dimension, no overlap. Same 2013 methodology break (flag, do not chain). License care: BAZG commercial-use clause -> add per-dataset note. BAZG monthly OGD CSV is the upgrade path but currently 502s."
+        },
+        {
+          "candidate": "FSO Employment Statistics (ETS) - employed persons by sector (Inlandkonzept)",
+          "tier": "integrate-with-effort",
+          "recommended_id": "ch_fso_ets",
+          "channel": "FSO DAM CSV master, order ts-x-03.02.01.08 (asset 36461448)",
+          "rationale": "One-liner fetch but needs a new ~30-line CSV long-parser + hand-curated EN NOGA-section labels (source has only FR/DE). The ILO employment headcount; un-defers a flagged gap. New parser = effort.",
+          "depends_on_or_overlaps": "Distinct from BESTA jobs (ch_fso_besta) - employed persons vs job postings. Filter FREQ==Q to avoid double-counting annual averages; master is CSV not xlsx."
+        },
+        {
+          "candidate": "GDP by canton / greater region (regional GDP)",
+          "tier": "integrate-with-effort",
+          "recommended_id": "ch_fso_gdp_region",
+          "channel": "FSO DAM Excel, order je-d-04.02.06.01 (asset 32627391) + EN 32627406",
+          "rationale": "One bespoke per-sheet parser (3 stacked blocks -> keep block 1, break on blank row) + canton/region multilingual label map. Fills the regional gap absent from ch_seco_gdp. Real but contained effort.",
+          "depends_on_or_overlaps": "Complements ch_seco_gdp (national real/quarterly) as a NOMINAL regional cut - no overlap. Nominal-only (no real regional levels); lags ~2y (ends 2022p); do not sum across canton+region levels."
+        },
+        {
+          "candidate": "Construction price index (Schweizerischer Baupreisindex)",
+          "tier": "integrate-with-effort",
+          "recommended_id": "ch_fso_construction_prices",
+          "channel": "FSO DAM Excel, order cc-t-05.05.01 (asset 36269766), sheet base 2020",
+          "rationale": "New ~30-line tag-anchored per-sheet parser; full absolute index levels Oct1998->Oct2025 (no levels-missing problem). Fills a Prices-domain gap and is cleaner than the deferred Bauinvestitionen.",
+          "depends_on_or_overlaps": "Distinct from ch_fso_ppi (producer/import prices) and from the construction-investment candidate. Semi-annual (hardcode frequency; infer_frequency lacks the bucket). Match work-types by <OBJ_nn> tag (non-breaking-space label trap)."
+        },
+        {
+          "candidate": "Gross fixed capital formation by institutional sector & asset type",
+          "tier": "integrate-with-effort",
+          "recommended_id": "ch_fso_gfcf_detail",
+          "channel": "opendata.swiss CKAN -> FSO DAM CSV, order ts-x-04.02.05.02 (asset 36182144)",
+          "rationale": "Tidy long CSV (reuse to_iso/infer_frequency) but needs multilingual dimension+hierarchy meta from the appendix codelist and a sector/asset split choice. Strictly more detailed than ch_seco_gdp's coarse GFCF.",
+          "depends_on_or_overlaps": "PARTIAL overlap with ch_seco_gdp, which already carries inv_gfcf/inv_constr/inv_fixed (P51G) at total-economy level only. The NEW value is the by-institutional-sector + Hochbau/Tiefbau split - non-duplicative. MUST filter UNIT_MEAS==MCHF to avoid triple-counting with %-change rows."
+        },
+        {
+          "candidate": "FSO HICP (EU-comparable consumer price index for CH), monthly",
+          "tier": "integrate-with-effort",
+          "recommended_id": "ch_fso_hicp",
+          "channel": "Eurostat SDMX 2.1, flow PRC_HICP_MIDX, geo CH (NOT FSO; Eurostat disseminates)",
+          "rationale": "Fetch/parse trivial but introduces the FIRST Eurostat endpoint (existing source_fso_sdmx.R is hardcoded to disseminate.stats.swiss), so needs a ~40-line standalone fetcher. EU-comparable inflation complements the domestic LIK.",
+          "depends_on_or_overlaps": "Methodologically distinct from ch_fso_cpi/ch_snb_plkopr (HICP excludes owner-occupied housing & health-insurance premiums). Document provenance honestly (Eurostat, not Swiss-domain). Pin unit=I15; shorter history (2004-12)."
+        },
+        {
+          "candidate": "SAKE/LFS actual hours worked (AVOL working volume) by sex/nationality/full-part-time",
+          "tier": "integrate-with-effort",
+          "recommended_id": "ch_fso_hours_worked",
+          "channel": "FSO DAM CSV master, order ts-x-03.02.03.01.02.01 (asset 36577051)",
+          "rationale": "Clean SDMX-style CSV but needs a hand-coded label map (no codelists in the channel) + measure choice (weekly vs annual hours). Verified vs FSO press (30h56min, 8.117bn hrs). Genuine labour gap.",
+          "depends_on_or_overlaps": "Complements ch_fso_unemp_rate (ILO unemployment from SAKE) without overlap. This is the AVOL hours cube, NOT a participation rate (the Erwerbsquote is a messier age-band layout, deliberately skipped)."
+        },
+        {
+          "candidate": "SECO Weekly Economic Activity index (WEA / WWA)",
+          "tier": "integrate-with-effort",
+          "recommended_id": "ch_seco_wwa",
+          "channel": "SECO DAM swissdata long CSV (wwa.csv); no JSON sidecar",
+          "rationale": "Clean long CSV but the ch_seco_gdp passthrough cannot be reused: no _json meta sidecar, so a bespoke seco_wwa_fetch() hand-builds multilingual meta from the xlsx beschriftung sheet. Would be the catalog's first WEEKLY series; high-frequency tracker.",
+          "depends_on_or_overlaps": "No overlap. Values are scaled YoY GDP growth rates -> transform=level (do NOT apply yoy). Experimental/revised (2025-10-01 rescale); pre_covid sub-series discontinued 2022 -> non-default alternate."
+        },
+        {
+          "candidate": "Construction investment (Bauinvestitionen) national levels, Tiefbau/Hochbau/Total",
+          "tier": "defer",
+          "recommended_id": "ch_fso_construction_inv",
+          "channel": "FSO DAM Excel, order je-d-09.04.01.27 (asset 35965030)",
+          "rationale": "Feasible and the deferred 'levels stop at 2019' note is now stale (levels run to 2023), but it is the weakest of the construction trio: most fragile multi-layout header detection (13-col vs 26-col vs title-line false positive), annual-only, ~18-month lag, and a 2012/2013 methodology break. Lower priority than the construction PRICE index. Integrate opportunistically after the price index.",
+          "depends_on_or_overlaps": "Overlaps in spirit with ch_fso_gfcf_detail (which already carries Hochbau/Tiefbau by sector with full 1995-2024 levels). The GFCF-detail candidate largely supersedes this; ship that first, then decide if this national-total cut still adds enough."
+        }
+      ],
+      "summary": "15 candidates, all verified open (access_verified=true, feasible=yes-easy) - none are infeasible, so the only real decision is sequencing by macro-importance x effort. Six are integrate-now (pure reuse of an existing helper, no new source script): ch_fso_services and ch_fso_cross_border_commuters and ch_fso_pop_detail (FSO SDMX, copy-paste of production/new_vehicles wrappers), ch_fso_labour_productivity (tidy DAM CSV behind fso_asset_master), ch_kof_esi (small sets-endpoint generalization of source_kof.R), and ch_fso_besta_outlook (clone of ch_fso_besta on the working PX-Web besta family). Eight are integrate-with-effort, each needing one bespoke parser, a hand-built label/meta map, license care, or a new endpoint family: ch_fso_trade_partner, ch_fso_ets, ch_fso_gdp_region, ch_fso_construction_prices, ch_fso_gfcf_detail, ch_fso_hicp (first Eurostat endpoint), ch_fso_hours_worked, and ch_seco_wwa (first weekly series). One is defer: ch_fso_construction_inv - feasible and its stale-deferral note is corrected, but it is the most fragile parser and is largely superseded by ch_fso_gfcf_detail's by-sector Hochbau/Tiefbau levels. Key overlaps to respect: GFCF-detail only partially overlaps ch_seco_gdp (new value = institutional-sector + civil/building split; must filter UNIT_MEAS==MCHF); HICP is methodologically distinct from the shipped LIK CPI (excludes owner-occupied housing + health premiums) and is fetched from Eurostat not FSO; trade-by-partner complements (does not duplicate) ch_snb_ausshawarm trade-by-goods; pop_detail is distinct from ch_fso_pop's 1861- balance. Recommended landing order: the six integrate-now first (highest value/lowest cost), then trade_partner + ets + cross-border (flagship labour/external series) and gdp_region, then construction_prices + hicp + hours_worked + wwa, with construction_inv last or dropped.",
+      "completeness_verdict": "If all 14 feasible adds land, dataseries.org becomes a genuinely strong near-complete open Swiss MACRO catalog - arguably best-in-class for a free aggregator. The core macro skeleton would be covered end to end: national accounts (national GDP + regional GDP + GFCF-by-sector + labour productivity), prices (LIK CPI + HICP + PPI + construction price index), labour (unemployment + BESTA jobs + employment-outlook + ETS headcount + hours worked + cross-border commuters + vacancies + wages), external sector (trade by goods + by partner country + SNB BoP), business cycle/sentiment (KOF barometer + ESI + SECO consumer confidence + the weekly WEA tracker), money/banking/FX (the large SNB block), and demographics (population balance + detailed population). The frequency range would span weekly (WEA) through monthly, quarterly and annual. What stays PERMANENTLY or practically OUT, and why: (1) Sub-annual/sub-national granularity gated behind PX-Web/STAT-TAB/PC-Axis, which is dead from this build environment - canton-level and fine cross-tab cubes beyond what SDMX/DAM expose; this is an infrastructure limit, not a licensing one. (2) BEVNAT vital flows (births/deaths/marriages) as a clean modern time series - only marriages exist on SDMX (2020-2024, too short) and births/deaths live only on dead PX-Web; the long 1861- series is already inside ch_fso_pop, so it is redundant rather than missing. (3) The discontinued KOF weekly WBI - genuinely retired by KOF, not gated. (4) BAZG monthly trade-by-tariff-x-country (since 1988) - the richer upgrade path 502s from this env. (5) Microdata and anything behind authentication or per-key gating (e.g. individual KOF ts keys at HTTP 412), plus commercially-licensed series. (6) True real-time/nowcast and non-official-statistics indicators. (7) Methodology breaks (trade 2013, construction 2012/2013, KOF/WEA rebasings) mean some long series are flagged-but-not-chained, so 'complete continuous history' is partial by design. Net: the catalog would be ~complete for headline open Swiss macro at national level and standard frequencies, but NOT a substitute for FSO's full PX-Web cube universe (fine regional/demographic cross-tabs) nor for microdata - those stay out on infrastructure and scope grounds, not because they are closed."
+    }
+  }
+}
