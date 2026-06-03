@@ -48,7 +48,7 @@ populated combinations, not the full 3x5x6 grid.
 
 ## Display
 - **split**: D1
-- **single-select**: D2
+- **single-select**: D0
 - **default**: D0=N, D1=T, D2=T
 - **transform**: level
 - **seasonal adjustment**: n/a (SNB cube has no seasonal-adjustment dimension)

@@ -46,7 +46,7 @@ concept: same producer, the unique value is the geographic dimension.
 
 ## Display
 - **split**: D0
-- **single-select**: D1
+- **single-select**: D2
 - **default**: D0=T0, D1=DT, D2=S
 - **transform**: level
 - **seasonal adjustment**: n/a (SNB publishes raw values, no SA dimension)

@@ -51,7 +51,7 @@ net acquisition of assets, net incurrence of liabilities, and the net of the two
 
 ## Display
 - **split**: D1
-- **single-select**:
+- **single-select**: D0
 - **default**: D1=T0, D0=S
 - **transform**: level
 - **seasonal adjustment**: n/a (SNB publishes raw values, no SA dimension)

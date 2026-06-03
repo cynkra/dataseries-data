@@ -410,7 +410,7 @@
   "concept": "External sector / International investment position",
   "canonical": true,
   "split": "D1",
-  "single_select": [],
+  "single_select": ["D0"],
   "default_transform": "level",
   "default": {
     "D0": "N",

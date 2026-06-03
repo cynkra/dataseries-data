@@ -43,7 +43,7 @@ headline IIP story lives in `auvekomq`.
 
 ## Display
 - **split**: D2
-- **single-select**:
+- **single-select**: D1
 - **default**: D0=T, D1=N, D2=T
 - **transform**: level
 - **seasonal adjustment**: n/a (SNB cube has no seasonal-adjustment dimension)
