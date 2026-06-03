@@ -69,9 +69,9 @@ jobs:
 
       # Soft alarm: a dataset has gone stale (red on the health board). For each
       # red dataset, open (or refresh) ONE deduped issue labelled `data-health`,
-      # and auto-close any data-health issue whose dataset is fresh again. Amber
-      # never alarms. Runs even if the commit step had nothing to push, but never
-      # fails the data run — an alerting hiccup must not mask a good refresh.
+      # and auto-close any data-health issue whose dataset is fresh again. Runs
+      # even if the commit step had nothing to push, but never fails the data run
+      # — an alerting hiccup must not mask a good refresh.
       - name: Alert on stale datasets
         if: success()
         continue-on-error: true

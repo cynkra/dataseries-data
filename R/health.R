@@ -22,20 +22,22 @@ root <- tryCatch(
 REPO  <- dirname(root)
 DATA  <- file.path(REPO, "data")
 
-# Expected maximum age (days) of the latest observation before we worry, by
-# frequency. Tuned to real Swiss publication lag so normal cadence reads green and
-# only genuine staleness flags. Each datapoint is dated period-START, which adds
-# roughly one period to its apparent age on top of the source's own lag:
-#   monthly   ~110d : a monthly figure lands ~2 months late; March is the newest
-#                     point through ~end of June -> ~3 months old is still normal.
-#   quarterly ~290d : BoP/IIP & GDP lag ~2-3 quarters; ~9 months old is normal.
-#   annual    ~550d : annual series publish the prior year in the following spring.
-#   daily     ~14d  : business-day series; covers weekends/holidays/short outages.
+# Maximum age (days) of the latest observation before a dataset is flagged STALE,
+# by frequency. This number IS the alarm line: an `end` older than it trips red and
+# opens a data-health issue. It bakes in ~1.5x headroom over real Swiss publication
+# cadence, so normal lag stays green and only a genuine stall trips red -- there is
+# no separate "ageing" tier, just one threshold per dataset and no hidden multiplier.
+# Each datapoint is dated period-START, which adds roughly one period to its apparent
+# age on top of the source's own lag (normal-cadence age -> alarm line):
+#   monthly   165d : a monthly figure lands ~2 months late; ~3 months old is normal,
+#                    so we only flag past ~5.5 months of silence.
+#   quarterly 435d : BoP/IIP & GDP lag ~2-3 quarters; ~9 months normal, flag past ~14.
+#   annual    825d : annual series publish the prior year in the following spring.
+#   daily      21d : business-day series; covers weekends/holidays/short outages.
 # Genuinely laggy or genuinely fast datasets can override per-id below.
-fresh_days <- c(daily = 14, weekly = 21, monthly = 110, quarterly = 290,
-                `semi-annual` = 400, annual = 550)
-DEFAULT_THRESHOLD <- 120L
-AMBER_FACTOR <- 1.5  # past `threshold` = ageing; past 1.5x = stale (likely broken)
+fresh_days <- c(daily = 21, weekly = 32, monthly = 165, quarterly = 435,
+                `semi-annual` = 600, annual = 825)
+DEFAULT_THRESHOLD <- 180L
 
 # Second freshness signal: when a dataset carries a source publication date
 # (`updated`), a source that republished within ~one period is being maintained,
@@ -47,8 +49,9 @@ pub_fresh_days <- c(daily = 60, weekly = 60, monthly = 75, quarterly = 200,
                     `semi-annual` = 300, annual = 430)
 DEFAULT_PUB <- 120L
 
-# Per-dataset overrides of the observation-age threshold (id -> max fresh age in
-# days), for datasets whose real cadence differs from their frequency label:
+# Per-dataset overrides of the stale threshold (id -> alarm age in days), for
+# datasets whose real cadence differs from their frequency label. Each value is the
+# normal published age plus ~1.5x headroom (the same baked-in tolerance as above):
 #   devwkieffid/rendeiduebd : genuinely *daily*, but SNB publishes a whole month of
 #                             daily values at once -> latest point normally ~1mo old.
 #   zikredlauf : regular monthly, but SNB releases new-business lending rates with a
@@ -66,17 +69,16 @@ DEFAULT_PUB <- 120L
 #                 Eurostat's newest CH point is 2025-12).
 #   seco_wwa    : weekly nowcast, but SECO publishes the latest week with a ~2-3 week
 #                 lag (and revises), so the newest point is normally ~3 weeks old.
-# All verified against the live source cadence -- not stale, just slow-published. The
-# 1.5x AMBER_FACTOR still flags a genuine stall well before these thresholds mislead.
+# All verified against the live source cadence -- not stale, just slow-published.
 OVERRIDE <- c(
-  ch_snb_devwkieffid = 50L,
-  ch_snb_rendeiduebd = 50L,
-  ch_snb_zikredlauf  = 150L,
-  ch_snb_capchstocki = 35L,
-  ch_fso_gdp_region  = 1700L,
-  ch_fso_pop_detail  = 950L,
-  ch_fso_hicp        = 210L,
-  ch_seco_wwa        = 35L
+  ch_snb_devwkieffid = 75L,
+  ch_snb_rendeiduebd = 75L,
+  ch_snb_zikredlauf  = 225L,
+  ch_snb_capchstocki = 53L,
+  ch_fso_gdp_region  = 2550L,
+  ch_fso_pop_detail  = 1425L,
+  ch_fso_hicp        = 315L,
+  ch_seco_wwa        = 53L
 )
 
 score <- function(id, end_chr, frequency, updated) {
@@ -87,7 +89,7 @@ score <- function(id, end_chr, frequency, updated) {
     return(list(age_days = NA_integer_, threshold_days = thr, status = "unknown"))
   }
   age <- as.integer(Sys.Date() - end)
-  status <- if (age <= thr) "green" else if (age <= AMBER_FACTOR * thr) "amber" else "red"
+  status <- if (age <= thr) "green" else "red"
 
   # Publication-date fallback: a recently republished source is fresh regardless
   # of how old its last observation is. Only ever upgrades toward green.
@@ -119,7 +121,6 @@ rows <- lapply(catalog, function(e) {
 status_of <- vapply(rows, `[[`, "", "status")
 counts <- list(
   green   = sum(status_of == "green"),
-  amber   = sum(status_of == "amber"),
   red     = sum(status_of == "red"),
   unknown = sum(status_of == "unknown"),
   total   = length(rows)
@@ -135,15 +136,15 @@ writeLines(
 )
 
 # --- STATUS.md (human-readable traffic-light table) -------------------------
-emoji <- c(green = "\U0001F7E2", amber = "\U0001F7E1", red = "\U0001F534", unknown = "\U0026AA")
+emoji <- c(green = "\U0001F7E2", red = "\U0001F534", unknown = "\U0026AA")
 summary_line <- sprintf(
-  "%s %d fresh · %s %d ageing · %s %d stale · %s %d unknown — %d datasets",
-  emoji["green"], counts$green, emoji["amber"], counts$amber,
+  "%s %d fresh · %s %d stale · %s %d unknown — %d datasets",
+  emoji["green"], counts$green,
   emoji["red"], counts$red, emoji["unknown"], counts$unknown, counts$total
 )
 
-# Worst first: red, amber, unknown, green; within a group, oldest first.
-rank <- c(red = 0L, amber = 1L, unknown = 2L, green = 3L)
+# Worst first: red, unknown, green; within a group, oldest first.
+rank <- c(red = 0L, unknown = 1L, green = 2L)
 ord <- order(rank[status_of], -(vapply(rows, function(r) r$age_days %||% -Inf, numeric(1))))
 
 table_rows <- vapply(rows[ord], function(r) sprintf(
@@ -160,8 +161,8 @@ status_md <- c(
   summary_line,
   "",
   "A dataset is **\U0001F7E2 fresh** when its latest observation is within the expected",
-  "publication lag for its frequency, **\U0001F7E1 ageing** when moderately overdue, and",
-  "**\U0001F534 stale** when well past it — a likely source or scraper problem worth a look.",
+  "publication lag for its frequency, and **\U0001F534 stale** when past it — a likely",
+  "source or scraper problem worth a look.",
   "**\U0026AA unknown** means the catalog had no usable `end` date.",
   "",
   "| | Dataset | Title | Freq | Last obs | Age (days) |",
@@ -176,5 +177,5 @@ writeLines(status_md, file.path(REPO, "STATUS.md"))
 # data/uptime.csv, and is the single writer of the README block. This script's job is
 # just the per-dataset freshness detail: status.json + STATUS.md.
 
-cat(sprintf("health: %s\n  %d green / %d amber / %d red / %d unknown (of %d)\n",
-            checked, counts$green, counts$amber, counts$red, counts$unknown, counts$total))
+cat(sprintf("health: %s\n  %d green / %d red / %d unknown (of %d)\n",
+            checked, counts$green, counts$red, counts$unknown, counts$total))

@@ -6,7 +6,7 @@
 # `status` is "red" (stale), opens ONE deduped GitHub issue per dataset, labelled
 # `data-health`, titled "Data health: <id> is stale". If such an issue is already
 # open it is left alone (a short "still stale" comment is added). Any open
-# `data-health` issue whose dataset is no longer red (now green/amber, or gone from
+# `data-health` issue whose dataset is no longer red (now green, or gone from
 # the catalog) is closed automatically. When there are zero reds, no issue is
 # created — only stragglers get closed.
 #

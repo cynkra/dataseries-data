@@ -1,5 +1,7 @@
 # dataseries-data
 
+[![data health](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/cynkra/dataseries-data/main/data/badge.json)](STATUS.md)
+
 **The dataseries open-data product: source of truth for the Swiss economic data
 universe.** This repo holds the ETL that fetches the data, the data files
 themselves, the dataset catalog, and the format contract that clients depend on.
@@ -17,7 +19,7 @@ elsewhere ([`cynkra/dataseries`](https://github.com/cynkra/dataseries) for R,
 | `datasets/` | per-dataset datasheets (concept-first source of truth, Markdown) |
 | `docs/format-contract.md` | the swissdata-style data + meta contract that clients read against |
 | `docs/deferred-datasets.md` | datasets we considered but did **not** ingest, and the concrete reason (read before re-hunting a missing series) |
-| `STATUS.md` | per-dataset freshness board (🟢/🟡/🔴 per dataset) |
+| `STATUS.md` | per-dataset freshness board (🟢/🔴 per dataset) |
 | `UPTIME.md` | the two daily ETL metrics — run-through success + recently-updated — with the uptime trend (`data/uptime.csv` + `data/uptime.svg`) |
 
 ## The contract (what clients can rely on)
@@ -61,7 +63,7 @@ trend in [UPTIME.md](UPTIME.md)):
   `etl-skip` issue immediately.
 - **Recently updated** — is every dataset that's expected to update fresh? A dataset
   ageing past its threshold is the *lagging* signal and opens a `data-health` issue.
-  The per-dataset board (with the 🟡 ageing shade) lives in [STATUS.md](STATUS.md).
+  The per-dataset board (🟢 fresh / 🔴 stale) lives in [STATUS.md](STATUS.md).
 
 A hard workflow failure opens a rolling `etl-failure` issue.
 

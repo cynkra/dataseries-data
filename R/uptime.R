@@ -7,14 +7,15 @@
 #   recently_updated : is everything that's expected to update fresh? (green/red)
 #
 # A skip is the LEADING signal (a parser breaks the day a source changes format);
-# staleness is the LAGGING one (a source goes quiet without erroring). amber on the
-# per-dataset board does NOT make `recently_updated` red -- only a fully stale (red)
-# dataset does. The two are deliberately binary: an uptime metric wants a clean trip
-# line, and the immediate skip alarm now covers early warning.
+# staleness is the LAGGING one (a source goes quiet without erroring). Only a stale
+# (red) dataset makes `recently_updated` red. The two are deliberately binary: an
+# uptime metric wants a clean trip line, and the immediate skip alarm now covers
+# early warning.
 #
 # Reads  : data/run.json (R/pipeline.R) + data/status.json (R/health.R)
 # Writes : data/uptime.csv  (append/upsert one row per day -- the plottable history)
 #          data/uptime.svg  (committed status-timeline chart, no extra deps)
+#          data/badge.json  (shields.io endpoint badge: overall health, top of README)
 #          UPTIME.md         (rendered dashboard: verdicts, uptime %, recent table)
 #          README.md         (the <!-- DATA-HEALTH --> summary block)
 #
@@ -263,6 +264,21 @@ for (i in seq_len(nrow(recent))) {
     r$n_skipped, r$n_stale))
 }
 writeLines(md, file.path(REPO, "UPTIME.md"))
+
+# --- data/badge.json : shields.io endpoint badge (overall health, top of README) ---
+# One green-or-red verdict over BOTH metrics: green only when the scrape ran clean
+# AND nothing is stale. Read live by the shields badge at the top of the README.
+overall_green <- run_through == GREEN && recently_updated == GREEN
+badge_msg <- if (overall_green) "all green" else paste(c(
+  if (recently_updated == RED) sprintf("%d stale", length(red_ids)),
+  if (run_through == RED)      sprintf("%d skip(s)", length(skipped_ids))
+), collapse = ", ")
+writeLines(
+  toJSON(list(schemaVersion = 1L, label = "data health",
+              message = badge_msg, color = if (overall_green) "brightgreen" else "red"),
+          auto_unbox = TRUE),
+  file.path(DATA, "badge.json")
+)
 
 # --- README.md <!-- DATA-HEALTH --> block (uptime.R now owns it) -------------
 readme_path <- file.path(REPO, "README.md")
