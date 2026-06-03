@@ -1,7 +1,7 @@
 # Public finances: general government main aggregates
 
 - **id**: ch_ffa_finances
-- **concept**: Public finances / Government finance
+- **concept**: National accounts / Government finance
 - **canonical**: yes
 
 - **source**: Federal Finance Administration (FFA / Eidg. Finanzverwaltung EFV)

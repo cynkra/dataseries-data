@@ -2,7 +2,7 @@
 
 - **id**: ch_fso_unemp_rate
 - **concept**: Labour / Unemployment
-- **canonical**: no (alternate: ILO definition; see `ch_snb_amarbma` for registered)
+- **canonical**: no (alternate — ILO definition; the registered/SECO `ch_snb_amarbma` is canonical)
 - **source**: Swiss Federal Statistical Office (FSO)
 - **license**: fso (free reuse, attribution required)
 - **frequency**: monthly

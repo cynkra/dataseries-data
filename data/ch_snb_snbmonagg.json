@@ -84,7 +84,7 @@
       }
     }
   },
-  "topic": "Money and banking",
+  "topic": "Money & banking",
   "concept": "Money & banking / Monetary aggregates",
   "canonical": true,
   "split": "D1",
@@ -93,5 +93,6 @@
   "default": {
     "D1": "GM3"
   },
-  "fetched_utc": "2026-06-03 04:57:39"
+  "fetched_utc": "2026-06-03 04:57:39",
+  "featured": "Money supply"
 }

@@ -38,8 +38,8 @@
       }
     }
   },
-  "topic": "Business cycle",
-  "concept": "Business cycle and sentiment / Sentiment composite",
+  "topic": "Business cycle & sentiment",
+  "concept": "Business cycle & sentiment / Sentiment composite",
   "canonical": true,
   "split": "indicator",
   "single_select": [],

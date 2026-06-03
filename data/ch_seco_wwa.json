@@ -42,8 +42,8 @@
     "en": "Scaled to the rate of growth of real, seasonally, calendar and sport-event adjusted GDP versus the same quarter of the previous year (percent)"
   },
   "notes": "Weekly indicator published by SECO. The headline series (seco_wwa) runs from 2005; seco_wwa_pre_covid is a discontinued variant (2019-2022) measuring activity relative to the Q4 2019 level.",
-  "topic": "Business cycle",
-  "concept": "Business cycle / high-frequency activity tracker",
+  "topic": "Business cycle & sentiment",
+  "concept": "Business cycle & sentiment / High-frequency activity tracker",
   "canonical": true,
   "split": "structure",
   "single_select": "structure",

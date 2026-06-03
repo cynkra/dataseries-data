@@ -3,6 +3,7 @@
 - **id**: ch_fso_retail
 - **concept**: Domestic economy / Retail trade turnover
 - **canonical**: yes
+- **featured**: Retail trade
 
 - **source**: Swiss Federal Statistical Office (FSO)
 - **license**: fso

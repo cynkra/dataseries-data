@@ -1,7 +1,7 @@
 # SNB conditional inflation forecast (quarterly)
 
 - **id**: ch_snb_snbiprogq
-- **concept**: SNB policy & forecasts / Conditional inflation forecast
+- **concept**: Prices / Inflation forecast
 - **canonical**: yes (sole canonical for this concept; an annual view is derived on demand by calendar-year averaging the quarterly forecast)
 - **source**: Swiss National Bank
 - **license**: snb (free reuse, attribution required)

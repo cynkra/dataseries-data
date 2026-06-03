@@ -322,16 +322,20 @@
       }
     }
   },
-  "topic": "Foreign trade",
+  "topic": "External sector",
   "concept": "External sector / Foreign trade",
   "canonical": true,
   "split": "D1",
-  "single_select": ["D0", "D2"],
+  "single_select": [
+    "D0",
+    "D2"
+  ],
   "default_transform": "level",
   "default": {
     "D0": "A",
     "D1": "GT",
     "D2": "WMF"
   },
-  "fetched_utc": "2026-06-03 04:57:37"
+  "fetched_utc": "2026-06-03 04:57:37",
+  "featured": "Foreign trade"
 }

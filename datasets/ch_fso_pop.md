@@ -3,6 +3,7 @@
 - **id**: ch_fso_pop
 - **concept**: Population & demographics / Resident population
 - **canonical**: yes
+- **featured**: Population
 - **source**: Swiss Federal Statistical Office (FSO)
 - **license**: fso (free reuse, attribution required)
 - **frequency**: annual

@@ -17,7 +17,7 @@
   },
   "license": "fso",
   "frequency": "annual",
-  "topic": "Population",
+  "topic": "Population & demographics",
   "updated": "2025-08-27",
   "dimensions": {
     "item": {
@@ -96,5 +96,6 @@
   "default": {
     "item": "pop_stock_jan"
   },
-  "fetched_utc": "2026-06-03 04:57:41"
+  "fetched_utc": "2026-06-03 04:57:41",
+  "featured": "Population"
 }

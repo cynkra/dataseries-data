@@ -3,6 +3,7 @@
 - **id**: ch_snb_snbmonagg
 - **concept**: Money & banking / Monetary aggregates
 - **canonical**: yes
+- **featured**: Money supply
 - **source**: Swiss National Bank (SNB)
 - **license**: snb (free reuse, attribution required)
 - **frequency**: monthly

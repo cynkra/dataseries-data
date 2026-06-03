@@ -3,6 +3,7 @@
 - **id**: ch_snb_zimoma
 - **concept**: Interest rates & yields / Money-market rates
 - **canonical**: yes (the headline money-market-rate cube; `zikredlauf` and `zikrepro` are the lending/published-rate alternates under the same concept)
+- **featured**: SARON
 - **source**: Swiss National Bank (SNB)
 - **license**: snb (free reuse, attribution required)
 - **frequency**: monthly

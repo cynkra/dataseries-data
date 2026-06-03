@@ -16,9 +16,8 @@
   "license": "kof",
   "frequency": "monthly",
   "dimensions": {},
-  "topic": "Business cycle",
+  "topic": "Business cycle & sentiment",
   "concept": "Business cycle & sentiment / Leading barometer",
   "canonical": true,
-  "featured": "KOF Barometer",
   "fetched_utc": "2026-06-03 04:57:40"
 }

@@ -297,13 +297,24 @@
   "notes": {
     "en": "Headline general-government finance aggregates from the FFA FS- and GFS-model dashboard. Level figures are in CHF million; the *quote (ratio) indicators are expressed as a share of GDP on a 0-1 scale. Years beyond the latest financial statement are budget / financial-plan or forecast figures (see the estimate dimension)."
   },
-  "topic": "Public finances",
-  "concept": "Public finances / Government finance",
+  "topic": "National accounts",
+  "concept": "National accounts / Government finance",
   "canonical": true,
   "split": "indicator",
-  "single_select": ["level", "model", "estimate"],
+  "single_select": [
+    "level",
+    "model",
+    "estimate"
+  ],
   "default_transform": "level",
-  "percent_levels": ["fiskalquote", "einnahmenquote", "staatsquote", "bruttoschuldenquote", "schuldenquote", "nettoschuldenquote"],
+  "percent_levels": [
+    "fiskalquote",
+    "einnahmenquote",
+    "staatsquote",
+    "bruttoschuldenquote",
+    "schuldenquote",
+    "nettoschuldenquote"
+  ],
   "default": {
     "level": "staat",
     "model": "gfs",

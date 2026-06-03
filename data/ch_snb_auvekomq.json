@@ -406,11 +406,13 @@
       }
     }
   },
-  "topic": "Balance of payments",
+  "topic": "External sector",
   "concept": "External sector / International investment position",
   "canonical": true,
   "split": "D1",
-  "single_select": ["D0"],
+  "single_select": [
+    "D0"
+  ],
   "default_transform": "level",
   "default": {
     "D0": "N",

@@ -303,7 +303,7 @@
       }
     }
   },
-  "topic": "Interest rates",
+  "topic": "Interest rates & yields",
   "concept": "Interest rates & yields / Money-market rates",
   "canonical": true,
   "split": "D0",
@@ -312,5 +312,6 @@
   "default": {
     "D0": "1TGT"
   },
-  "fetched_utc": "2026-06-03 04:57:39"
+  "fetched_utc": "2026-06-03 04:57:39",
+  "featured": "SARON"
 }

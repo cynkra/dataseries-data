@@ -110,10 +110,12 @@
     }
   },
   "topic": "Labour",
-  "concept": "Labour market / Working time and working volume",
+  "concept": "Labour / Working time and working volume",
   "canonical": true,
   "split": "worktime",
-  "single_select": ["measure"],
+  "single_select": [
+    "measure"
+  ],
   "default_transform": "level",
   "default": {
     "measure": "weekly",

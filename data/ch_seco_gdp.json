@@ -930,7 +930,10 @@
   "canonical": true,
   "featured": "GDP",
   "split": "structure",
-  "single_select": ["type", "seas_adj"],
+  "single_select": [
+    "type",
+    "seas_adj"
+  ],
   "default_transform": "level",
   "default": {
     "structure": "gdp",

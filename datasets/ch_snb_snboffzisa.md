@@ -3,7 +3,6 @@
 - **id**: ch_snb_snboffzisa
 - **concept**: Interest rates & yields / Policy & official rates
 - **canonical**: yes
-- **featured**: Policy rate
 - **source**: Swiss National Bank (SNB)
 - **license**: snb (free reuse, attribution required)
 - **frequency**: monthly

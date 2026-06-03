@@ -1,7 +1,7 @@
 # KOF Economic Sentiment Index (ESI)
 
 - **id**: ch_kof_esi
-- **concept**: Business cycle and sentiment / Sentiment composite
+- **concept**: Business cycle & sentiment / Sentiment composite
 - **canonical**: yes
 - **source**: KOF Swiss Economic Institute
 - **license**: kof (CC BY, attribution required)

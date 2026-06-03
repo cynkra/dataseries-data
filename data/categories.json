@@ -1,0 +1,14 @@
+[
+  { "name": "National accounts", "blurb": "GDP, regional output, investment, productivity and public finances." },
+  { "name": "Prices", "blurb": "Consumer, producer, real-estate and construction prices, plus the inflation forecast." },
+  { "name": "Labour", "blurb": "Employment, unemployment, wages, vacancies, hours and the wider job market." },
+  { "name": "Business cycle & sentiment", "blurb": "Leading barometers, sentiment surveys and high-frequency activity." },
+  { "name": "Interest rates & yields", "blurb": "Policy, money-market and bond-market interest rates." },
+  { "name": "Exchange rates", "blurb": "Bilateral and effective Swiss franc exchange rates." },
+  { "name": "Financial markets", "blurb": "Swiss equity indices and securities turnover." },
+  { "name": "External sector", "blurb": "Foreign trade, balance of payments and the international investment position." },
+  { "name": "Money & banking", "blurb": "Monetary aggregates, the SNB balance sheet and bank credit." },
+  { "name": "Domestic economy", "blurb": "Turnover in industry, retail and services, plus tourism, vehicles and housing." },
+  { "name": "Population & demographics", "blurb": "Resident population, nationality breakdown and the demographic balance." },
+  { "name": "Payment systems", "blurb": "Cashless payments, cards, ATMs and interbank clearing." }
+]

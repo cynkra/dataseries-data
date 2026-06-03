@@ -3,6 +3,7 @@
 - **id**: ch_snb_ausshawarm
 - **concept**: External sector / Foreign trade
 - **canonical**: yes
+- **featured**: Foreign trade
 - **source**: Swiss National Bank
 - **license**: snb (free reuse, attribution required)
 - **frequency**: monthly

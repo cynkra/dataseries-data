@@ -396,11 +396,14 @@
       }
     }
   },
-  "topic": "Banking",
+  "topic": "Money & banking",
   "concept": "Money & banking / Banking & credit",
   "canonical": true,
   "split": "D0",
-  "single_select": ["INLANDAUSLAND", "BANKENGRUPPE"],
+  "single_select": [
+    "INLANDAUSLAND",
+    "BANKENGRUPPE"
+  ],
   "default_transform": "level",
   "default": {
     "D0": "TOT",

@@ -196,12 +196,16 @@
   "concept": "Domestic economy / Retail trade turnover",
   "canonical": true,
   "split": "NOGA",
-  "single_select": ["ADJUSTMENT", "INDICATOR_KE"],
+  "single_select": [
+    "ADJUSTMENT",
+    "INDICATOR_KE"
+  ],
   "default_transform": "level",
   "default": {
     "NOGA": "47",
     "ADJUSTMENT": "Y",
     "INDICATOR_KE": "UTOT"
   },
-  "fetched_utc": "2026-06-03 04:57:40"
+  "fetched_utc": "2026-06-03 04:57:40",
+  "featured": "Retail trade"
 }

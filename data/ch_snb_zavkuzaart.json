@@ -188,7 +188,10 @@
   "concept": "Payment systems / Payments & cash",
   "canonical": false,
   "split": "D1",
-  "single_select": ["D0", "D2"],
+  "single_select": [
+    "D0",
+    "D2"
+  ],
   "default_transform": "level",
   "default": {
     "D0": "T",

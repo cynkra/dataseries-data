@@ -18,7 +18,7 @@
   },
   "license": "fso",
   "frequency": "annual",
-  "topic": "Population",
+  "topic": "Population & demographics",
   "units": {
     "en": "Number of permanent residents (year-end stock)"
   },
@@ -86,7 +86,7 @@
       }
     }
   },
-  "concept": "Population and demographics / Resident population by nationality",
+  "concept": "Population & demographics / Resident population by nationality",
   "canonical": false,
   "split": "nationality",
   "single_select": [],

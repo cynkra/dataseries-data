@@ -17,7 +17,7 @@
   },
   "license": "fso",
   "frequency": "annual",
-  "topic": "Construction and housing",
+  "topic": "Domestic economy",
   "dimensions": {
     "measure": {
       "label": {
@@ -39,7 +39,7 @@
       }
     }
   },
-  "concept": "Construction and housing / Vacancy",
+  "concept": "Domestic economy / Vacant dwellings",
   "canonical": true,
   "split": "measure",
   "single_select": [],

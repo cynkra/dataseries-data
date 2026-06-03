@@ -17,7 +17,7 @@
   },
   "license": "fso",
   "frequency": "monthly",
-  "topic": "Mobility",
+  "topic": "Domestic economy",
   "units": {
     "en": "Number of new registrations"
   },
@@ -117,7 +117,7 @@
       }
     }
   },
-  "concept": "Mobility / Vehicles",
+  "concept": "Domestic economy / New vehicle registrations",
   "canonical": true,
   "split": "fuel",
   "single_select": [],

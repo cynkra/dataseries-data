@@ -110,10 +110,9 @@
       }
     }
   },
-  "topic": "Tourism",
-  "concept": "Tourism / Hotel overnight stays",
+  "topic": "Domestic economy",
+  "concept": "Domestic economy / Hotel overnight stays",
   "canonical": true,
-  "featured": "Tourism",
   "split": "Tourismusregion",
   "single_select": [],
   "default_transform": "level",

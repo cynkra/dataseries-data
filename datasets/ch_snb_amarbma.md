@@ -2,7 +2,7 @@
 
 - **id**: ch_snb_amarbma
 - **concept**: Labour / Unemployment
-- **canonical**: no (alternate for Unemployment; registered/SECO definition, kept alongside FSO `ch_fso_unemp_rate` ILO)
+- **canonical**: yes (registered/SECO definition — the headline unemployment series; the ILO `ch_fso_unemp_rate` is the labelled alternate)
 - **featured**: Unemployment
 - **source**: Swiss National Bank (data originate from SECO)
 - **license**: snb (free reuse, attribution required)

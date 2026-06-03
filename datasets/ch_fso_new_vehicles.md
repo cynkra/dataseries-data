@@ -1,7 +1,7 @@
 # New registrations of passenger cars by fuel
 
 - **id**: ch_fso_new_vehicles
-- **concept**: Mobility / Vehicles
+- **concept**: Domestic economy / New vehicle registrations
 - **canonical**: yes
 - **source**: Swiss Federal Statistical Office (FSO)
 - **license**: fso (free reuse, attribution required)

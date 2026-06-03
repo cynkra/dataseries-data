@@ -28,7 +28,14 @@ read_datasheet_meta <- function(id, datasheet_dir) {
   }
   out <- list()
   concept <- pick("concept")
-  if (!is.null(concept)) out$concept <- concept
+  if (!is.null(concept)) {
+    out$concept <- concept
+    # The website overview groups by the concept *Group* (the segment before the
+    # first "/"). `topic` is the same grouping on the detail page / in search, so
+    # we derive it from the concept here rather than keep a second, drift-prone
+    # source in the parser code. modifyList() lets this override the parser topic.
+    out$topic <- trimws(strsplit(concept, "/", fixed = TRUE)[[1]][1])
+  }
   canon <- pick("canonical")
   if (!is.null(canon)) out$canonical <- grepl("^yes", tolower(canon))  # "no (alternate ...)" -> FALSE
   feat <- pick("featured")

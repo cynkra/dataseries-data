@@ -142,7 +142,10 @@
   "concept": "Domestic economy / Industry & construction turnover",
   "canonical": true,
   "split": "NOGA",
-  "single_select": ["ADJUSTMENT", "INDICATOR_KE"],
+  "single_select": [
+    "ADJUSTMENT",
+    "INDICATOR_KE"
+  ],
   "default_transform": "level",
   "default": {
     "NOGA": "B-E",

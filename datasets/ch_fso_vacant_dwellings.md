@@ -1,7 +1,7 @@
 # Vacant dwellings
 
 - **id**: ch_fso_vacant_dwellings
-- **concept**: Construction and housing / Vacancy
+- **concept**: Domestic economy / Vacant dwellings
 - **canonical**: yes
 - **source**: Swiss Federal Statistical Office (FSO)
 - **license**: fso (free reuse, attribution required)

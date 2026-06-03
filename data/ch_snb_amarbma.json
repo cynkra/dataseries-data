@@ -115,9 +115,9 @@
       }
     }
   },
-  "topic": "Labour market",
+  "topic": "Labour",
   "concept": "Labour / Unemployment",
-  "canonical": false,
+  "canonical": true,
   "featured": "Unemployment",
   "split": "D0",
   "single_select": [],

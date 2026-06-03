@@ -3,6 +3,7 @@
 - **id**: ch_fso_besta
 - **concept**: Labour / Employment / jobs
 - **canonical**: yes
+- **featured**: Employment
 - **source**: Swiss Federal Statistical Office (FSO)
 - **license**: fso (free reuse, attribution required)
 - **frequency**: quarterly

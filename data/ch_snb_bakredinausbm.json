@@ -171,11 +171,15 @@
       }
     }
   },
-  "topic": "Banking",
+  "topic": "Money & banking",
   "concept": "Money & banking / Banking & credit",
   "canonical": true,
   "split": "D1",
-  "single_select": ["D0", "D2", "D3"],
+  "single_select": [
+    "D0",
+    "D2",
+    "D3"
+  ],
   "default_transform": "level",
   "default": {
     "D1": "T0",

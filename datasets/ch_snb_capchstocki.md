@@ -3,6 +3,7 @@
 - **id**: ch_snb_capchstocki
 - **concept**: Financial markets / Swiss stock indices
 - **canonical**: yes
+- **featured**: Stock market
 - **source**: Swiss National Bank (SNB)
 - **license**: snb (free reuse, attribution required)
 - **frequency**: daily
