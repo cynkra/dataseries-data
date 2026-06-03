@@ -325,6 +325,7 @@
   "topic": "External sector",
   "concept": "External sector / Foreign trade",
   "canonical": true,
+  "featured": "Foreign trade",
   "split": "D1",
   "single_select": ["D0", "D2"],
   "default_transform": "level",
@@ -333,6 +334,5 @@
     "D1": "GT",
     "D2": "WMF"
   },
-  "fetched_utc": "2026-06-03 04:57:37",
-  "featured": "Foreign trade"
+  "fetched_utc": "2026-06-03 10:08:26"
 }

@@ -118,10 +118,10 @@
   "concept": "Financial markets / Securities turnover",
   "canonical": true,
   "split": "D0",
-  "single_select": "(none; single dimension)",
+  "single_select": [],
   "default_transform": "level",
   "default": {
     "D0": "T2"
   },
-  "fetched_utc": "2026-06-03 04:57:38"
+  "fetched_utc": "2026-06-03 10:08:27"
 }

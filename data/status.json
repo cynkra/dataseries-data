@@ -1,5 +1,5 @@
 {
-  "checked": "2026-06-03 08:01 UTC",
+  "checked": "2026-06-03 10:08 UTC",
   "counts": {
     "green": 70,
     "red": 0,
@@ -771,9 +771,9 @@
       "title": "Weekly economic activity (WEA)",
       "source": "State Secretariat for Economic Affairs (SECO)",
       "frequency": "weekly",
-      "end": "2026-05-11",
+      "end": "2026-05-18",
       "updated": null,
-      "age_days": 23,
+      "age_days": 16,
       "threshold_days": 53,
       "status": "green"
     }

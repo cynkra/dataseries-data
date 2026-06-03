@@ -76,10 +76,10 @@
   "concept": "Prices / Core inflation",
   "canonical": true,
   "split": "D0",
-  "single_select": "n/a (single dimension)",
+  "single_select": [],
   "default_transform": "level",
   "default": {
     "D0": "KGM"
   },
-  "fetched_utc": "2026-06-03 04:57:38"
+  "fetched_utc": "2026-06-03 10:08:28"
 }

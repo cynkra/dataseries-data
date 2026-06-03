@@ -5,7 +5,7 @@
     "structure"
   ],
   "start": "2005-01-03",
-  "end": "2026-05-11",
+  "end": "2026-05-18",
   "title": {
     "en": "Weekly economic activity (WEA)"
   },
@@ -51,5 +51,5 @@
   "default": {
     "structure": "seco_wwa"
   },
-  "fetched_utc": "2026-06-03 04:57:41"
+  "fetched_utc": "2026-06-03 10:08:30"
 }

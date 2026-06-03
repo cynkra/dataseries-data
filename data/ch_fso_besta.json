@@ -389,12 +389,12 @@
   "topic": "Labour",
   "concept": "Labour / Employment / jobs",
   "canonical": true,
+  "featured": "Employment",
   "split": "Wirtschaftsabteilung",
   "single_select": [],
   "default_transform": "level",
   "default": {
     "Wirtschaftsabteilung": "5-96"
   },
-  "fetched_utc": "2026-06-03 04:57:40",
-  "featured": "Employment"
+  "fetched_utc": "2026-06-03 10:08:29"
 }

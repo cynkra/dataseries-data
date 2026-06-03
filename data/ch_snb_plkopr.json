@@ -20,9 +20,8 @@
   "concept": "Prices / Consumer prices",
   "canonical": true,
   "featured": "Inflation",
-  "single_select": "n/a",
+  "single_select": [],
   "default_transform": "yoy",
   "default": [],
-  "fetched_utc": "2026-06-03 04:57:38",
-  "split": "n/a (single series)"
+  "fetched_utc": "2026-06-03 10:08:28"
 }

@@ -87,12 +87,12 @@
   "topic": "Money & banking",
   "concept": "Money & banking / Monetary aggregates",
   "canonical": true,
+  "featured": "Money supply",
   "split": "D1",
   "single_select": [],
   "default_transform": "level",
   "default": {
     "D1": "GM3"
   },
-  "fetched_utc": "2026-06-03 04:57:39",
-  "featured": "Money supply"
+  "fetched_utc": "2026-06-03 10:08:28"
 }

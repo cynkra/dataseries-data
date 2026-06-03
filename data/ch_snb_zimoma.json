@@ -306,12 +306,12 @@
   "topic": "Interest rates & yields",
   "concept": "Interest rates & yields / Money-market rates",
   "canonical": true,
+  "featured": "SARON",
   "split": "D0",
-  "single_select": "(none; this cube has a single dimension)",
+  "single_select": [],
   "default_transform": "level",
   "default": {
     "D0": "1TGT"
   },
-  "fetched_utc": "2026-06-03 04:57:39",
-  "featured": "SARON"
+  "fetched_utc": "2026-06-03 10:08:29"
 }

@@ -120,10 +120,10 @@
   "canonical": true,
   "featured": "Unemployment",
   "split": "D0",
-  "single_select": "(none; D0 is the only dimension)",
+  "single_select": [],
   "default_transform": "level",
   "default": {
     "D0": "T1"
   },
-  "fetched_utc": "2026-06-03 04:57:37"
+  "fetched_utc": "2026-06-03 10:08:26"
 }

@@ -195,6 +195,7 @@
   "topic": "Domestic economy",
   "concept": "Domestic economy / Retail trade turnover",
   "canonical": true,
+  "featured": "Retail trade",
   "split": "NOGA",
   "single_select": ["ADJUSTMENT", "INDICATOR_KE"],
   "default_transform": "level",
@@ -203,6 +204,5 @@
     "ADJUSTMENT": "Y",
     "INDICATOR_KE": "UTOT"
   },
-  "fetched_utc": "2026-06-03 04:57:40",
-  "featured": "Retail trade"
+  "fetched_utc": "2026-06-03 10:08:29"
 }

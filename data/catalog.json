@@ -15,7 +15,7 @@
     "end": "2026-04-01",
     "n_series": 9,
     "updated": null,
-    "fetched": "2026-06-03 04:57:37",
+    "fetched": "2026-06-03 10:08:26",
     "load": "whole",
     "data": "ch_snb_amarbma.csv",
     "meta": "ch_snb_amarbma.json"
@@ -36,7 +36,7 @@
     "end": "2025-10-01",
     "n_series": 60,
     "updated": null,
-    "fetched": "2026-06-03 04:57:37",
+    "fetched": "2026-06-03 10:08:26",
     "load": "whole",
     "data": "ch_snb_ambeschkla.csv",
     "meta": "ch_snb_ambeschkla.json"
@@ -57,7 +57,7 @@
     "end": "2026-03-01",
     "n_series": 125,
     "updated": null,
-    "fetched": "2026-06-03 04:57:37",
+    "fetched": "2026-06-03 10:08:26",
     "load": "whole",
     "data": "ch_snb_ausshawarm.csv",
     "meta": "ch_snb_ausshawarm.json"
@@ -78,7 +78,7 @@
     "end": "2025-10-01",
     "n_series": 63,
     "updated": null,
-    "fetched": "2026-06-03 04:57:37",
+    "fetched": "2026-06-03 10:08:26",
     "load": "whole",
     "data": "ch_snb_auvekomq.csv",
     "meta": "ch_snb_auvekomq.json"
@@ -99,7 +99,7 @@
     "end": "2025-10-01",
     "n_series": 94,
     "updated": null,
-    "fetched": "2026-06-03 04:57:37",
+    "fetched": "2026-06-03 10:08:26",
     "load": "whole",
     "data": "ch_snb_auvercurrq.csv",
     "meta": "ch_snb_auvercurrq.json"
@@ -120,7 +120,7 @@
     "end": "2025-10-01",
     "n_series": 38,
     "updated": null,
-    "fetched": "2026-06-03 04:57:37",
+    "fetched": "2026-06-03 10:08:26",
     "load": "whole",
     "data": "ch_snb_auverdeptq.csv",
     "meta": "ch_snb_auverdeptq.json"
@@ -141,7 +141,7 @@
     "end": "2025-10-01",
     "n_series": 71,
     "updated": null,
-    "fetched": "2026-06-03 04:57:37",
+    "fetched": "2026-06-03 10:08:26",
     "load": "whole",
     "data": "ch_snb_auversecq.csv",
     "meta": "ch_snb_auversecq.json"
@@ -162,7 +162,7 @@
     "end": "2026-03-01",
     "n_series": 872,
     "updated": null,
-    "fetched": "2026-06-03 04:57:37",
+    "fetched": "2026-06-03 10:08:27",
     "load": "whole",
     "data": "ch_snb_babilpobm.csv",
     "meta": "ch_snb_babilpobm.json"
@@ -183,7 +183,7 @@
     "end": "2026-03-01",
     "n_series": 150,
     "updated": null,
-    "fetched": "2026-06-03 04:57:37",
+    "fetched": "2026-06-03 10:08:27",
     "load": "whole",
     "data": "ch_snb_bakredbetgrbm.csv",
     "meta": "ch_snb_bakredbetgrbm.json"
@@ -204,7 +204,7 @@
     "end": "2026-03-01",
     "n_series": 90,
     "updated": null,
-    "fetched": "2026-06-03 04:57:37",
+    "fetched": "2026-06-03 10:08:27",
     "load": "whole",
     "data": "ch_snb_bakredinausbm.csv",
     "meta": "ch_snb_bakredinausbm.json"
@@ -225,7 +225,7 @@
     "end": "2026-03-01",
     "n_series": 540,
     "updated": null,
-    "fetched": "2026-06-03 04:57:38",
+    "fetched": "2026-06-03 10:08:27",
     "load": "whole",
     "data": "ch_snb_bakredsekbm.csv",
     "meta": "ch_snb_bakredsekbm.json"
@@ -246,7 +246,7 @@
     "end": "2025-10-01",
     "n_series": 62,
     "updated": null,
-    "fetched": "2026-06-03 04:57:38",
+    "fetched": "2026-06-03 10:08:27",
     "load": "whole",
     "data": "ch_snb_bopcapbalq.csv",
     "meta": "ch_snb_bopcapbalq.json"
@@ -267,7 +267,7 @@
     "end": "2025-10-01",
     "n_series": 116,
     "updated": null,
-    "fetched": "2026-06-03 04:57:38",
+    "fetched": "2026-06-03 10:08:27",
     "load": "whole",
     "data": "ch_snb_bopcurrq.csv",
     "meta": "ch_snb_bopcurrq.json"
@@ -288,7 +288,7 @@
     "end": "2025-10-01",
     "n_series": 42,
     "updated": null,
-    "fetched": "2026-06-03 04:57:38",
+    "fetched": "2026-06-03 10:08:27",
     "load": "whole",
     "data": "ch_snb_bopoverq.csv",
     "meta": "ch_snb_bopoverq.json"
@@ -309,7 +309,7 @@
     "end": "2025-10-01",
     "n_series": 1755,
     "updated": null,
-    "fetched": "2026-06-03 04:57:38",
+    "fetched": "2026-06-03 10:08:27",
     "load": "whole",
     "data": "ch_snb_bopservq.csv",
     "meta": "ch_snb_bopservq.json"
@@ -330,7 +330,7 @@
     "end": "2026-05-15",
     "n_series": 14,
     "updated": null,
-    "fetched": "2026-06-03 04:57:38",
+    "fetched": "2026-06-03 10:08:27",
     "load": "whole",
     "data": "ch_snb_capchstocki.csv",
     "meta": "ch_snb_capchstocki.json"
@@ -351,7 +351,7 @@
     "end": "2026-04-01",
     "n_series": 10,
     "updated": null,
-    "fetched": "2026-06-03 04:57:38",
+    "fetched": "2026-06-03 10:08:27",
     "load": "whole",
     "data": "ch_snb_capweums.csv",
     "meta": "ch_snb_capweums.json"
@@ -372,7 +372,7 @@
     "end": "2026-05-01",
     "n_series": 54,
     "updated": null,
-    "fetched": "2026-06-03 04:57:38",
+    "fetched": "2026-06-03 10:08:27",
     "load": "whole",
     "data": "ch_snb_devkum.csv",
     "meta": "ch_snb_devkum.json"
@@ -393,7 +393,7 @@
     "end": "2026-04-01",
     "n_series": 162,
     "updated": null,
-    "fetched": "2026-06-03 04:57:38",
+    "fetched": "2026-06-03 10:08:28",
     "load": "whole",
     "data": "ch_snb_devwkibiim.csv",
     "meta": "ch_snb_devwkibiim.json"
@@ -414,7 +414,7 @@
     "end": "2026-04-30",
     "n_series": 6,
     "updated": null,
-    "fetched": "2026-06-03 04:57:38",
+    "fetched": "2026-06-03 10:08:28",
     "load": "whole",
     "data": "ch_snb_devwkieffid.csv",
     "meta": "ch_snb_devwkieffid.json"
@@ -435,7 +435,7 @@
     "end": "2026-01-01",
     "n_series": 17,
     "updated": null,
-    "fetched": "2026-06-03 04:57:38",
+    "fetched": "2026-06-03 10:08:28",
     "load": "whole",
     "data": "ch_snb_plimoinchq.csv",
     "meta": "ch_snb_plimoinchq.json"
@@ -456,7 +456,7 @@
     "end": "2026-04-01",
     "n_series": 1,
     "updated": null,
-    "fetched": "2026-06-03 04:57:38",
+    "fetched": "2026-06-03 10:08:28",
     "load": "whole",
     "data": "ch_snb_plkopr.csv",
     "meta": "ch_snb_plkopr.json"
@@ -477,7 +477,7 @@
     "end": "2026-04-01",
     "n_series": 4,
     "updated": null,
-    "fetched": "2026-06-03 04:57:38",
+    "fetched": "2026-06-03 10:08:28",
     "load": "whole",
     "data": "ch_snb_plkoprinfla.csv",
     "meta": "ch_snb_plkoprinfla.json"
@@ -498,7 +498,7 @@
     "end": "2026-05-29",
     "n_series": 48,
     "updated": null,
-    "fetched": "2026-06-03 04:57:39",
+    "fetched": "2026-06-03 10:08:28",
     "load": "whole",
     "data": "ch_snb_rendeiduebd.csv",
     "meta": "ch_snb_rendeiduebd.json"
@@ -519,7 +519,7 @@
     "end": "2026-04-01",
     "n_series": 28,
     "updated": null,
-    "fetched": "2026-06-03 04:57:39",
+    "fetched": "2026-06-03 10:08:28",
     "load": "whole",
     "data": "ch_snb_snbbipo.csv",
     "meta": "ch_snb_snbbipo.json"
@@ -540,7 +540,7 @@
     "end": "2028-10-01",
     "n_series": 176,
     "updated": null,
-    "fetched": "2026-06-03 04:57:39",
+    "fetched": "2026-06-03 10:08:28",
     "load": "whole",
     "data": "ch_snb_snbiprogq.csv",
     "meta": "ch_snb_snbiprogq.json"
@@ -561,7 +561,7 @@
     "end": "2026-01-01",
     "n_series": 24,
     "updated": null,
-    "fetched": "2026-06-03 04:57:39",
+    "fetched": "2026-06-03 10:08:28",
     "load": "whole",
     "data": "ch_snb_snbkosiq.csv",
     "meta": "ch_snb_snbkosiq.json"
@@ -582,7 +582,7 @@
     "end": "2026-04-01",
     "n_series": 10,
     "updated": null,
-    "fetched": "2026-06-03 04:57:39",
+    "fetched": "2026-06-03 10:08:28",
     "load": "whole",
     "data": "ch_snb_snbmoba.csv",
     "meta": "ch_snb_snbmoba.json"
@@ -603,7 +603,7 @@
     "end": "2026-04-01",
     "n_series": 8,
     "updated": null,
-    "fetched": "2026-06-03 04:57:39",
+    "fetched": "2026-06-03 10:08:28",
     "load": "whole",
     "data": "ch_snb_snbmonagg.csv",
     "meta": "ch_snb_snbmonagg.json"
@@ -624,7 +624,7 @@
     "end": "2026-04-01",
     "n_series": 10,
     "updated": null,
-    "fetched": "2026-06-03 04:57:39",
+    "fetched": "2026-06-03 10:08:28",
     "load": "whole",
     "data": "ch_snb_snboffzisa.csv",
     "meta": "ch_snb_snboffzisa.json"
@@ -645,7 +645,7 @@
     "end": "2026-03-01",
     "n_series": 4,
     "updated": null,
-    "fetched": "2026-06-03 04:57:39",
+    "fetched": "2026-06-03 10:08:28",
     "load": "whole",
     "data": "ch_snb_zavegelade.csv",
     "meta": "ch_snb_zavegelade.json"
@@ -666,7 +666,7 @@
     "end": "2026-04-01",
     "n_series": 14,
     "updated": null,
-    "fetched": "2026-06-03 04:57:39",
+    "fetched": "2026-06-03 10:08:28",
     "load": "whole",
     "data": "ch_snb_zavesic.csv",
     "meta": "ch_snb_zavesic.json"
@@ -687,7 +687,7 @@
     "end": "2026-03-01",
     "n_series": 7,
     "updated": null,
-    "fetched": "2026-06-03 04:57:39",
+    "fetched": "2026-06-03 10:08:28",
     "load": "whole",
     "data": "ch_snb_zavezaka.csv",
     "meta": "ch_snb_zavezaka.json"
@@ -708,7 +708,7 @@
     "end": "2026-03-01",
     "n_series": 113,
     "updated": null,
-    "fetched": "2026-06-03 04:57:39",
+    "fetched": "2026-06-03 10:08:28",
     "load": "whole",
     "data": "ch_snb_zavezaluba.csv",
     "meta": "ch_snb_zavezaluba.json"
@@ -729,7 +729,7 @@
     "end": "2026-03-01",
     "n_series": 90,
     "updated": null,
-    "fetched": "2026-06-03 04:57:39",
+    "fetched": "2026-06-03 10:08:28",
     "load": "whole",
     "data": "ch_snb_zavkuzaart.csv",
     "meta": "ch_snb_zavkuzaart.json"
@@ -750,7 +750,7 @@
     "end": "2026-02-01",
     "n_series": 105,
     "updated": null,
-    "fetched": "2026-06-03 04:57:39",
+    "fetched": "2026-06-03 10:08:28",
     "load": "whole",
     "data": "ch_snb_zikredlauf.csv",
     "meta": "ch_snb_zikredlauf.json"
@@ -771,7 +771,7 @@
     "end": "2026-04-01",
     "n_series": 228,
     "updated": null,
-    "fetched": "2026-06-03 04:57:39",
+    "fetched": "2026-06-03 10:08:29",
     "load": "whole",
     "data": "ch_snb_zikrepro.csv",
     "meta": "ch_snb_zikrepro.json"
@@ -792,7 +792,7 @@
     "end": "2026-05-01",
     "n_series": 13,
     "updated": null,
-    "fetched": "2026-06-03 04:57:39",
+    "fetched": "2026-06-03 10:08:29",
     "load": "whole",
     "data": "ch_snb_zimoma.csv",
     "meta": "ch_snb_zimoma.json"
@@ -816,7 +816,7 @@
     "end": "2026-01-01",
     "n_series": 660,
     "updated": "2026-05-22 13:15:47",
-    "fetched": "2026-06-03 04:57:39",
+    "fetched": "2026-06-03 10:08:29",
     "load": "whole",
     "data": "ch_seco_gdp.csv",
     "meta": "ch_seco_gdp.json"
@@ -824,7 +824,10 @@
   {
     "id": "ch_seco_concon",
     "title": {
-      "en": "Consumer confidence"
+      "en": "Consumer confidence",
+      "de": "Konsumentenstimmungsindex",
+      "fr": "Indice du climat de consommation",
+      "it": "Indice del clima di fiducia dei consumatori"
     },
     "concept": "Business cycle & sentiment / Consumer confidence",
     "canonical": true,
@@ -837,7 +840,7 @@
     "end": "2026-04-01",
     "n_series": 39,
     "updated": "2026-05-05 13:27:13",
-    "fetched": "2026-06-03 04:57:39",
+    "fetched": "2026-06-03 10:08:29",
     "load": "whole",
     "data": "ch_seco_concon.csv",
     "meta": "ch_seco_concon.json"
@@ -858,7 +861,7 @@
     "end": "2026-04-01",
     "n_series": 171,
     "updated": null,
-    "fetched": "2026-06-03 04:57:40",
+    "fetched": "2026-06-03 10:08:29",
     "load": "whole",
     "data": "ch_fso_retail.csv",
     "meta": "ch_fso_retail.json"
@@ -879,7 +882,7 @@
     "end": "2026-01-01",
     "n_series": 87,
     "updated": null,
-    "fetched": "2026-06-03 04:57:40",
+    "fetched": "2026-06-03 10:08:29",
     "load": "whole",
     "data": "ch_fso_production.csv",
     "meta": "ch_fso_production.json"
@@ -900,7 +903,7 @@
     "end": "2026-01-01",
     "n_series": 66,
     "updated": null,
-    "fetched": "2026-06-03 04:57:40",
+    "fetched": "2026-06-03 10:08:29",
     "load": "whole",
     "data": "ch_fso_services.csv",
     "meta": "ch_fso_services.json"
@@ -921,7 +924,7 @@
     "end": "2026-04-01",
     "n_series": 12,
     "updated": null,
-    "fetched": "2026-06-03 04:57:40",
+    "fetched": "2026-06-03 10:08:29",
     "load": "whole",
     "data": "ch_fso_new_vehicles.csv",
     "meta": "ch_fso_new_vehicles.json"
@@ -942,7 +945,7 @@
     "end": "2025-01-01",
     "n_series": 2,
     "updated": null,
-    "fetched": "2026-06-03 04:57:40",
+    "fetched": "2026-06-03 10:08:29",
     "load": "whole",
     "data": "ch_fso_vacant_dwellings.csv",
     "meta": "ch_fso_vacant_dwellings.json"
@@ -963,7 +966,7 @@
     "end": "2026-01-01",
     "n_series": 27,
     "updated": null,
-    "fetched": "2026-06-03 04:57:40",
+    "fetched": "2026-06-03 10:08:29",
     "load": "whole",
     "data": "ch_fso_cross_border_commuters.csv",
     "meta": "ch_fso_cross_border_commuters.json"
@@ -984,7 +987,7 @@
     "end": "2024-01-01",
     "n_series": 9,
     "updated": null,
-    "fetched": "2026-06-03 04:57:40",
+    "fetched": "2026-06-03 10:08:29",
     "load": "whole",
     "data": "ch_fso_pop_detail.csv",
     "meta": "ch_fso_pop_detail.json"
@@ -1005,7 +1008,7 @@
     "end": "2029-01-01",
     "n_series": 387,
     "updated": "2025-03-18",
-    "fetched": "2026-06-03 04:57:40",
+    "fetched": "2026-06-03 10:08:29",
     "load": "whole",
     "data": "ch_ffa_finances.csv",
     "meta": "ch_ffa_finances.json"
@@ -1026,7 +1029,7 @@
     "end": "2026-05-01",
     "n_series": 1,
     "updated": null,
-    "fetched": "2026-06-03 04:57:40",
+    "fetched": "2026-06-03 10:08:29",
     "load": "whole",
     "data": "ch_kof_barometer.csv",
     "meta": "ch_kof_barometer.json"
@@ -1047,7 +1050,7 @@
     "end": "2026-05-01",
     "n_series": 2,
     "updated": null,
-    "fetched": "2026-06-03 04:57:40",
+    "fetched": "2026-06-03 10:08:29",
     "load": "whole",
     "data": "ch_kof_esi.csv",
     "meta": "ch_kof_esi.json"
@@ -1068,7 +1071,7 @@
     "end": "2026-03-01",
     "n_series": 5,
     "updated": null,
-    "fetched": "2026-06-03 04:57:40",
+    "fetched": "2026-06-03 10:08:29",
     "load": "whole",
     "data": "ch_adecco_sjmi.csv",
     "meta": "ch_adecco_sjmi.json"
@@ -1089,7 +1092,7 @@
     "end": "2026-03-01",
     "n_series": 14,
     "updated": null,
-    "fetched": "2026-06-03 04:57:40",
+    "fetched": "2026-06-03 10:08:29",
     "load": "whole",
     "data": "ch_fso_hesta.csv",
     "meta": "ch_fso_hesta.json"
@@ -1110,7 +1113,7 @@
     "end": "2026-01-01",
     "n_series": 60,
     "updated": null,
-    "fetched": "2026-06-03 04:57:40",
+    "fetched": "2026-06-03 10:08:29",
     "load": "whole",
     "data": "ch_fso_besta.csv",
     "meta": "ch_fso_besta.json"
@@ -1131,7 +1134,7 @@
     "end": "2026-01-01",
     "n_series": 60,
     "updated": null,
-    "fetched": "2026-06-03 04:57:40",
+    "fetched": "2026-06-03 10:08:29",
     "load": "whole",
     "data": "ch_fso_vacancies.csv",
     "meta": "ch_fso_vacancies.json"
@@ -1152,7 +1155,7 @@
     "end": "2026-01-01",
     "n_series": 336,
     "updated": null,
-    "fetched": "2026-06-03 04:57:40",
+    "fetched": "2026-06-03 10:08:29",
     "load": "whole",
     "data": "ch_fso_jobs_sex.csv",
     "meta": "ch_fso_jobs_sex.json"
@@ -1173,7 +1176,7 @@
     "end": "2026-01-01",
     "n_series": 20,
     "updated": null,
-    "fetched": "2026-06-03 04:57:40",
+    "fetched": "2026-06-03 10:08:29",
     "load": "whole",
     "data": "ch_fso_besta_outlook.csv",
     "meta": "ch_fso_besta_outlook.json"
@@ -1194,7 +1197,7 @@
     "end": "2026-04-01",
     "n_series": 595,
     "updated": "2026-05-05",
-    "fetched": "2026-06-03 04:57:40",
+    "fetched": "2026-06-03 10:08:30",
     "load": "whole",
     "data": "ch_fso_cpi.csv",
     "meta": "ch_fso_cpi.json"
@@ -1215,7 +1218,7 @@
     "end": "2026-04-01",
     "n_series": 7,
     "updated": "2026-05-12",
-    "fetched": "2026-06-03 04:57:40",
+    "fetched": "2026-06-03 10:08:30",
     "load": "whole",
     "data": "ch_fso_ppi.csv",
     "meta": "ch_fso_ppi.json"
@@ -1236,7 +1239,7 @@
     "end": "2025-01-01",
     "n_series": 12,
     "updated": "2026-04-21",
-    "fetched": "2026-06-03 04:57:41",
+    "fetched": "2026-06-03 10:08:30",
     "load": "whole",
     "data": "ch_fso_wage_idx.csv",
     "meta": "ch_fso_wage_idx.json"
@@ -1257,7 +1260,7 @@
     "end": "2024-01-01",
     "n_series": 10,
     "updated": "2025-08-27",
-    "fetched": "2026-06-03 04:57:41",
+    "fetched": "2026-06-03 10:08:30",
     "load": "whole",
     "data": "ch_fso_pop.csv",
     "meta": "ch_fso_pop.json"
@@ -1278,7 +1281,7 @@
     "end": "2026-03-01",
     "n_series": 5,
     "updated": "2026-05-18",
-    "fetched": "2026-06-03 04:57:41",
+    "fetched": "2026-06-03 10:08:30",
     "load": "whole",
     "data": "ch_fso_unemp_rate.csv",
     "meta": "ch_fso_unemp_rate.json"
@@ -1299,7 +1302,7 @@
     "end": "2024-01-01",
     "n_series": 3,
     "updated": "2025-09-29",
-    "fetched": "2026-06-03 04:57:41",
+    "fetched": "2026-06-03 10:08:30",
     "load": "whole",
     "data": "ch_fso_labour_productivity.csv",
     "meta": "ch_fso_labour_productivity.json"
@@ -1320,7 +1323,7 @@
     "end": "2025-10-01",
     "n_series": 69,
     "updated": "2026-03-17",
-    "fetched": "2026-06-03 04:57:41",
+    "fetched": "2026-06-03 10:08:30",
     "load": "whole",
     "data": "ch_fso_ets.csv",
     "meta": "ch_fso_ets.json"
@@ -1341,7 +1344,7 @@
     "end": "2024-01-01",
     "n_series": 37,
     "updated": "2025-09-29",
-    "fetched": "2026-06-03 04:57:41",
+    "fetched": "2026-06-03 10:08:30",
     "load": "whole",
     "data": "ch_fso_gfcf_detail.csv",
     "meta": "ch_fso_gfcf_detail.json"
@@ -1362,7 +1365,7 @@
     "end": "2025-01-01",
     "n_series": 45,
     "updated": "2026-05-21",
-    "fetched": "2026-06-03 04:57:41",
+    "fetched": "2026-06-03 10:08:30",
     "load": "whole",
     "data": "ch_fso_hours_worked.csv",
     "meta": "ch_fso_hours_worked.json"
@@ -1383,7 +1386,7 @@
     "end": "2022-01-01",
     "n_series": 34,
     "updated": "2024-10-28",
-    "fetched": "2026-06-03 04:57:41",
+    "fetched": "2026-06-03 10:08:30",
     "load": "whole",
     "data": "ch_fso_gdp_region.csv",
     "meta": "ch_fso_gdp_region.json"
@@ -1404,7 +1407,7 @@
     "end": "2025-10-01",
     "n_series": 3,
     "updated": "2025-12-18",
-    "fetched": "2026-06-03 04:57:41",
+    "fetched": "2026-06-03 10:08:30",
     "load": "whole",
     "data": "ch_fso_construction_prices.csv",
     "meta": "ch_fso_construction_prices.json"
@@ -1425,7 +1428,7 @@
     "end": "2025-01-01",
     "n_series": 66,
     "updated": null,
-    "fetched": "2026-06-03 04:57:41",
+    "fetched": "2026-06-03 10:08:30",
     "load": "whole",
     "data": "ch_fso_trade_partner.csv",
     "meta": "ch_fso_trade_partner.json"
@@ -1446,7 +1449,7 @@
     "end": "2025-12-01",
     "n_series": 13,
     "updated": "2026-02-06",
-    "fetched": "2026-06-03 04:57:41",
+    "fetched": "2026-06-03 10:08:30",
     "load": "whole",
     "data": "ch_fso_hicp.csv",
     "meta": "ch_fso_hicp.json"
@@ -1464,10 +1467,10 @@
     "license": "seco",
     "frequency": "weekly",
     "start": "2005-01-03",
-    "end": "2026-05-11",
+    "end": "2026-05-18",
     "n_series": 2,
     "updated": null,
-    "fetched": "2026-06-03 04:57:41",
+    "fetched": "2026-06-03 10:08:30",
     "load": "whole",
     "data": "ch_seco_wwa.csv",
     "meta": "ch_seco_wwa.json"

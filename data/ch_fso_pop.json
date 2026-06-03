@@ -90,12 +90,12 @@
   },
   "concept": "Population & demographics / Resident population",
   "canonical": true,
+  "featured": "Population",
   "split": "item",
   "single_select": [],
   "default_transform": "level",
   "default": {
     "item": "pop_stock_jan"
   },
-  "fetched_utc": "2026-06-03 04:57:41",
-  "featured": "Population"
+  "fetched_utc": "2026-06-03 10:08:30"
 }

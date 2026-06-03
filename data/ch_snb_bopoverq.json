@@ -446,10 +446,10 @@
   "concept": "External sector / Balance of payments",
   "canonical": false,
   "split": "D0",
-  "single_select": "n/a (single-dimension cube; D0 is the only dimension)",
+  "single_select": [],
   "default_transform": "level",
   "default": {
     "D0": "S0"
   },
-  "fetched_utc": "2026-06-03 04:57:38"
+  "fetched_utc": "2026-06-03 10:08:27"
 }
