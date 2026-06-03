@@ -61,6 +61,14 @@ needed first).
   headline, so transform stays level rather than yoy. Pick R on D2 for the real
   change, or the YoY toggle on WMF for the nominal change.
 
+## Hierarchy
+SNB lists `GT Total` as a sibling of the goods groups; nest the groups (and the
+ungrouped goods C2652/C22/C17) under Total so the picker reads Total → category →
+product. The category nodes (CHEM, ME, MET, NFG, FZ, EN, TB) carry no series of their
+own in the SNB cube — only `GT` and the individual goods are published — so they stay
+non-selectable grouping headers, now correctly placed under Total.
+- derive: under-root GT
+
 ## Caveats / simplifications
 - Mixed semantics on `D2`: `WMF` is a CHF-million level, `R` is a real % change;
   do not aggregate across them. The redundant nominal change (`N`) is dropped — use

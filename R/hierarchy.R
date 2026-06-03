@@ -47,7 +47,7 @@ read_hierarchy_block <- function(lines) {
     d <- sub("^- \\*\\*dim\\*\\*:\\s*", "", ln)              # tolerate bold or plain
     m_dim <- regmatches(ln, regexec("^\\s*-?\\s*dim:\\s*(\\S+)", ln))[[1]]
     if (length(m_dim) == 2) { dim <- m_dim[2]; next }
-    m_der <- regmatches(ln, regexec("^\\s*-?\\s*derive:\\s*(\\S+)", ln))[[1]]
+    m_der <- regmatches(ln, regexec("^\\s*-?\\s*derive:\\s*(.+?)\\s*$", ln))[[1]]
     if (length(m_der) == 2) { derive <- m_der[2]; next }
     # a tree bullet: leading spaces set depth, then "- "
     m <- regmatches(ln, regexec("^( *)- (.+)$", ln))[[1]]
@@ -121,6 +121,25 @@ derive_noga_range <- function(codes) {
   assemble_tree(ok, setNames(parents, ok))
 }
 
+# Reparent a flat-topped dimension under a single total node. Some sources (the SNB
+# cubes) list the "Total" item as a SIBLING of the category groups rather than their
+# parent. `under-root <CODE>` nests every other top-level node — keeping its existing
+# subtree — beneath <CODE>, so the tree reads Total -> category -> product. Works on an
+# existing (source-supplied) hierarchy if present, else builds one level from the codes.
+reparent_under_root <- function(existing, codes, root) {
+  if (!nzchar(root %||% "")) stop("under-root: missing root code", call. = FALSE)
+  if (is.null(existing) || !length(existing)) {
+    if (!root %in% codes) stop(sprintf("under-root: root '%s' not a level", root), call. = FALSE)
+    kids <- list(); for (c in setdiff(codes, root)) kids[[c]] <- list()
+    out <- list(); out[[root]] <- kids; return(out)
+  }
+  if (!root %in% names(existing))
+    stop(sprintf("under-root: root '%s' not a top-level node", root), call. = FALSE)
+  kids <- existing[[root]]                       # keep the root's own children (if any)
+  for (k in names(existing)) if (k != root) kids[[k]] <- existing[[k]]
+  out <- list(); out[[root]] <- kids; out
+}
+
 # ---- shared tree assembly ---------------------------------------------------
 # Given codes and a code->parent map (NA parent = root), build the nested named list
 # preserving the input order of `codes` among siblings.
@@ -154,14 +173,19 @@ attach_hierarchy <- function(ds, datasheet_dir) {
     warning(sprintf("%s: hierarchy targets unknown dim '%s'", ds$id, dim %||% "<split>"))
     return(ds)
   }
-  if (!is.null(ds$meta$dimensions[[dim]]$hierarchy)) return(ds)  # source already provides it
+  existing <- ds$meta$dimensions[[dim]]$hierarchy
   levels <- ds$meta$dimensions[[dim]]$levels %||% list()
   codes <- names(levels)
 
   if (!is.null(spec$derive)) {
-    tree <- switch(spec$derive,
-      "noga-range" = derive_noga_range(codes),
-      stop(sprintf("%s: unknown hierarchy derive method '%s'", ds$id, spec$derive), call. = FALSE))
+    parts <- strsplit(spec$derive, "\\s+")[[1]]
+    method <- parts[1]; arg <- if (length(parts) > 1) parts[2] else NULL
+    tree <- switch(method,
+      "noga-range" = derive_noga_range(codes),                 # ignores any source tree
+      "under-root" = reparent_under_root(existing, codes, arg),
+      stop(sprintf("%s: unknown hierarchy derive method '%s'", ds$id, method), call. = FALSE))
+  } else if (!is.null(existing)) {
+    return(ds)                                                 # source already provides it; declaration is a no-op
   } else {
     # Register synthetic group labels, then validate the declared real codes.
     for (g in names(spec$groups))
