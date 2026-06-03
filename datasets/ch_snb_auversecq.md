@@ -1,7 +1,7 @@
 # Switzerland's international investment position by sector (quarterly)
 
 - **id**: ch_snb_auversecq
-- **title**: IIP by sector
+- **title**: Investment position by sector
 - **concept**: External sector / International investment position
 - **canonical**: yes
 - **source**: Swiss National Bank (SNB)

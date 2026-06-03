@@ -86,7 +86,7 @@
   {
     "id": "ch_snb_auvercurrq",
     "title": {
-      "en": "IIP by currency"
+      "en": "Investment position by currency"
     },
     "concept": "External sector / International investment position",
     "canonical": false,
@@ -128,7 +128,7 @@
   {
     "id": "ch_snb_auversecq",
     "title": {
-      "en": "IIP by sector"
+      "en": "Investment position by sector"
     },
     "concept": "External sector / International investment position",
     "canonical": true,

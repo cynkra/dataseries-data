@@ -45,8 +45,8 @@ titles <- list(
   ch_snb_capweums            = "Securities turnover",
   # External sector
   ch_snb_auvekomq            = "International investment position",
-  ch_snb_auvercurrq          = "IIP by currency",
-  ch_snb_auversecq           = "IIP by sector",
+  ch_snb_auvercurrq          = "Investment position by currency",
+  ch_snb_auversecq           = "Investment position by sector",
   ch_snb_auverdeptq          = "External debt",
   ch_snb_bopcurrq            = "Balance of payments: current account",
   ch_snb_bopcapbalq          = "Balance of payments: financial account",

@@ -1,7 +1,7 @@
 # Switzerland's international investment position - Breakdown by currency - Quarter
 
 - **id**: ch_snb_auvercurrq
-- **title**: IIP by currency
+- **title**: Investment position by currency
 - **concept**: External sector / International investment position
 - **canonical**: no (currency cut of the IIP; companion to canonical overview `auvekomq`)
 - **source**: Swiss National Bank

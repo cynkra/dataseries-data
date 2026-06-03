@@ -87,8 +87,8 @@ See [`docs/concepts.md`](docs/concepts.md) for the concept tree and canonical/al
 | `ch_fso_trade_partner` | Foreign trade by partner country | Swiss Federal Statistical Office (FSO) / Federal Office for Customs and Border Security (FOCBS) | annual | 1990-01-01..2025-01-01 | FSO (free reuse, attribution) |
 | `ch_snb_ausshawarm` | Foreign trade by goods category | Swiss National Bank | monthly | 2012-01-01..2026-03-01 | SNB (non-commercial, attribution) |
 | `ch_snb_auvekomq` | International investment position | Swiss National Bank | quarterly | 1985-01-01..2025-10-01 | SNB (non-commercial, attribution) |
-| `ch_snb_auversecq` | IIP by sector | Swiss National Bank | quarterly | 1985-01-01..2025-10-01 | SNB (non-commercial, attribution) |
-| `ch_snb_auvercurrq` | IIP by currency _(alt)_ | Swiss National Bank | quarterly | 1985-01-01..2025-10-01 | SNB (non-commercial, attribution) |
+| `ch_snb_auversecq` | Investment position by sector | Swiss National Bank | quarterly | 1985-01-01..2025-10-01 | SNB (non-commercial, attribution) |
+| `ch_snb_auvercurrq` | Investment position by currency _(alt)_ | Swiss National Bank | quarterly | 1985-01-01..2025-10-01 | SNB (non-commercial, attribution) |
 | `ch_snb_auverdeptq` | External debt _(alt)_ | Swiss National Bank | quarterly | 1999-10-01..2025-10-01 | SNB (non-commercial, attribution) |
 
 ## Business cycle & sentiment
