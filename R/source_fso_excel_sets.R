@@ -662,13 +662,14 @@ fso_excel_ch_fso_trade_partner <- function(pubdate = NULL) {
 }
 
 # ---- ch_fso_gdp_region (National accounts) ----
+
 fso_excel_ch_fso_gdp_region <- function(path, pubdate) {
 
   num_eu <- function(x) {
     x <- as.character(x)
     x[x %in% c("...", "…", "")] <- NA_character_
     x <- gsub("'", "", x, fixed = TRUE)   # thousands separator
-    x <- gsub(" ", "", x)             # nbsp
+    x <- gsub(" ", "", x)             # nbsp
     x <- gsub(" ", "", x)                  # spaces
     x <- gsub(",", ".", x, fixed = TRUE)   # decimal comma
     suppressWarnings(as.numeric(x))
@@ -678,10 +679,11 @@ fso_excel_ch_fso_gdp_region <- function(path, pubdate) {
   # has two sheets — "GDP per canton" and "GDP per region" — each beginning with
   # a current-price levels block, followed by "Change over previous year" blocks
   # we ignore. Switzerland appears in BOTH sheets with identical values, so it is
-  # taken once (from the canton sheet) under its own `country` level. Zurich
-  # likewise appears as canton AND as greater region (identical values); the
-  # `level` dim keeps the two keys distinct (canton ZH vs region zurich) so they
-  # never collide and we never sum a canton into its own region.
+  # taken once (from the canton sheet). Zurich/Ticino each appear as a one-canton
+  # greater region AND as the canton itself (identical values): the greater-region
+  # row keeps the region slug (zurich/ticino_r), the canton row keeps the 2-letter
+  # canton code (ZH/TI), and the region HIERARCHY nests the canton under it — both
+  # are real, data-bearing series, never grouping-only placeholders.
   canton_codes <- c(
     "Zurich" = "ZH", "Berne" = "BE", "Lucerne" = "LU", "Uri" = "UR",
     "Schwyz" = "SZ", "Obwalden" = "OW", "Nidwalden" = "NW", "Glarus" = "GL",
@@ -699,6 +701,18 @@ fso_excel_ch_fso_gdp_region <- function(path, pubdate) {
     "Eastern Switzerland"      = "east",
     "Central Switzerland"      = "central",
     "Ticino"                   = "ticino_r"
+  )
+
+  # Canton -> greater-region grouping (FSO / Eurostat NUTS-2). Drives the
+  # CH -> greater region -> canton hierarchy; every code here is data-bearing.
+  region_members <- list(
+    leman      = c("VD", "VS", "GE"),
+    mittelland = c("BE", "FR", "SO", "NE", "JU"),
+    nw         = c("BS", "BL", "AG"),
+    zurich     = c("ZH"),
+    east       = c("GL", "SH", "AR", "AI", "SG", "GR", "TG"),
+    central    = c("LU", "UR", "SZ", "OW", "NW", "ZG"),
+    ticino_r   = c("TI")
   )
 
   # Pull the current-price (block 1) levels out of one sheet, anchoring on header
@@ -724,9 +738,6 @@ fso_excel_ch_fso_gdp_region <- function(path, pubdate) {
       stop(sprintf("ch_fso_gdp_region: 'In CHF million' subheader missing in sheet '%s' — layout changed?",
                    sheet), call. = FALSE)
 
-    # value columns = header cells (on hdr_row) that begin with a 4-digit year.
-    # The last year carries a 'p' suffix ("2022p"), so match the year out of the
-    # raw header text rather than coercing the whole cell to numeric.
     hdr_vals <- as.character(m[hdr_row, ])
     yr <- suppressWarnings(as.integer(stringr::str_match(hdr_vals, "^\\s*(\\d{4})")[, 2]))
     col_idx <- which(!is.na(yr) & yr >= 1900 & yr <= 2100)
@@ -735,7 +746,6 @@ fso_excel_ch_fso_gdp_region <- function(path, pubdate) {
       stop(sprintf("ch_fso_gdp_region: no year columns found in sheet '%s' — layout changed?",
                    sheet), call. = FALSE)
 
-    # data rows: from sub_row+1 down to the row before the first blank col-1 cell.
     start <- sub_row + 1L
     rest  <- col1[start:length(col1)]
     blank <- which(is.na(rest) | rest == "")
@@ -753,16 +763,17 @@ fso_excel_ch_fso_gdp_region <- function(path, pubdate) {
   cant <- read_block("GDP per canton", "Canton")
   regn <- read_block("GDP per region", "Region")
 
+  # Switzerland (national total) + the 26 cantons from the canton sheet.
   cant_lvl <- cant %>%
     dplyr::filter(label %in% c(names(canton_codes), "Switzerland")) %>%
     dplyr::mutate(
-      level  = dplyr::if_else(label == "Switzerland", "country", "canton"),
       region = dplyr::if_else(label == "Switzerland", "ch", unname(canton_codes[label]))
     )
 
+  # The 7 greater regions from the region sheet (drop the duplicate Switzerland row).
   regn_lvl <- regn %>%
-    dplyr::filter(label %in% names(region_codes)) %>%   # drop the duplicate Switzerland row
-    dplyr::mutate(level = "region", region = unname(region_codes[label]))
+    dplyr::filter(label %in% names(region_codes)) %>%
+    dplyr::mutate(region = unname(region_codes[label]))
 
   # Fail loud if any expected label went unmapped (a renamed/inserted row).
   miss_c <- setdiff(c(names(canton_codes), "Switzerland"), cant$label)
@@ -775,21 +786,33 @@ fso_excel_ch_fso_gdp_region <- function(path, pubdate) {
     dplyr::filter(!is.na(value)) %>%
     dplyr::transmute(
       region = as.character(region),
-      level  = as.character(level),
       date   = as.Date(sprintf("%d-01-01", year)),
       value  = as.numeric(value)
     ) %>%
-    dplyr::arrange(level, region, date)
+    dplyr::arrange(region, date)
 
-  region_levels <- c(
-    stats::setNames(
-      lapply(names(canton_codes), function(l) list(label = list(en = l))),
-      unname(canton_codes)
-    ),
-    list(ch = list(label = list(en = "Switzerland"))),
-    stats::setNames(
-      lapply(names(region_codes), function(l) list(label = list(en = l))),
-      unname(region_codes)
+  # ---- one hierarchical `region` dimension: CH -> greater region -> canton ----
+  region_labels <- c(
+    list(ch = "Switzerland"),
+    stats::setNames(as.list(names(region_codes)), unname(region_codes)),
+    stats::setNames(as.list(names(canton_codes)), unname(canton_codes))
+  )
+  region_levels <- stats::setNames(
+    lapply(names(region_labels), function(cd) list(label = list(en = region_labels[[cd]]))),
+    names(region_labels)
+  )
+
+  # Nested tree. Every node is a real data-bearing series (CH total, each greater
+  # region, each canton) — none are grouping-only, so all are selectable.
+  region_hierarchy <- list(
+    ch = stats::setNames(
+      lapply(names(region_members), function(rg) {
+        stats::setNames(
+          lapply(region_members[[rg]], function(ct) list()),
+          region_members[[rg]]
+        )
+      }),
+      names(region_members)
     )
   )
 
@@ -806,24 +829,16 @@ fso_excel_ch_fso_gdp_region <- function(path, pubdate) {
     updated   = as.character(pubdate),
     dimensions = list(
       region = list(
-        label  = list(en = "Region"),
-        levels = region_levels
-      ),
-      level = list(
-        label = list(en = "Geographic level"),
-        levels = list(
-          country = list(label = list(en = "Switzerland (total)")),
-          region  = list(label = list(en = "Greater region")),
-          canton  = list(label = list(en = "Canton"))
-        )
+        label     = list(en = "Region"),
+        levels    = region_levels,
+        hierarchy = region_hierarchy
       )
     )
   )
 
-  list(id = "ch_fso_gdp_region", data = data, meta = meta)
+  list(id = "ch_fso_gdp_region", data = as.data.frame(data), meta = meta)
 }
 
-# ---- ch_fso_construction_prices (Prices) ----
 fso_excel_ch_fso_construction_prices <- function(path, pubdate) {
   # The Swiss Construction Price Index is a multi-base workbook (one sheet per
   # index base: 1998 / 2010 / 2015 / 2020). We take the base-2020 sheet for the

@@ -1,0 +1,124 @@
+{
+  "schema_version": "1.0",
+  "id": "ch_fso_hours_worked",
+  "dim_order": [
+    "sex",
+    "worktime",
+    "measure"
+  ],
+  "start": "2010-01-01",
+  "end": "2025-01-01",
+  "title": {
+    "en": "Actual hours worked (annual working volume)"
+  },
+  "source": {
+    "name": {
+      "en": "Swiss Federal Statistical Office (FSO)"
+    },
+    "url": "https://www.bfs.admin.ch/asset/en/ts-x-03.02.03.01.02.01"
+  },
+  "license": "fso",
+  "frequency": "annual",
+  "updated": "2026-05-21",
+  "dimensions": {
+    "measure": {
+      "label": {
+        "en": "Measure"
+      },
+      "levels": {
+        "weekly": {
+          "label": {
+            "en": "Usual hours worked per week per job"
+          },
+          "data": true
+        },
+        "annual": {
+          "label": {
+            "en": "Annual hours worked per job"
+          },
+          "data": true
+        },
+        "volume": {
+          "label": {
+            "en": "Annual volume of hours worked (total)"
+          },
+          "data": true
+        }
+      }
+    },
+    "sex": {
+      "label": {
+        "en": "Sex"
+      },
+      "levels": {
+        "_T": {
+          "label": {
+            "en": "Total"
+          },
+          "data": true
+        },
+        "M": {
+          "label": {
+            "en": "Men"
+          },
+          "data": true
+        },
+        "F": {
+          "label": {
+            "en": "Women"
+          },
+          "data": true
+        }
+      }
+    },
+    "worktime": {
+      "label": {
+        "en": "Working time"
+      },
+      "levels": {
+        "_T": {
+          "label": {
+            "en": "Total"
+          },
+          "data": true
+        },
+        "FT": {
+          "label": {
+            "en": "Full-time"
+          },
+          "data": true
+        },
+        "PT": {
+          "label": {
+            "en": "Part-time"
+          },
+          "data": true
+        },
+        "PT_I": {
+          "label": {
+            "en": "Part-time I (50-89%)"
+          },
+          "data": true
+        },
+        "PT_II": {
+          "label": {
+            "en": "Part-time II (under 50%)"
+          },
+          "data": true
+        }
+      }
+    }
+  },
+  "topic": "Labour",
+  "concept": "Labour market / Working time and working volume",
+  "canonical": true,
+  "split": "worktime",
+  "single_select": ["measure", "sex"],
+  "default_transform": "level",
+  "default": {
+    "measure": "weekly",
+    "sex": "_T",
+    "worktime": "_T"
+  },
+  "fetched_utc": "2026-06-03 04:57:41"
+}

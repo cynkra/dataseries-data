@@ -1,0 +1,237 @@
+{
+  "schema_version": "1.0",
+  "id": "ch_fso_ets",
+  "dim_order": [
+    "sector",
+    "sex"
+  ],
+  "start": "1991-04-01",
+  "end": "2025-10-01",
+  "title": {
+    "en": "Employed persons by economic sector and sex (ETS, quarterly)"
+  },
+  "source": {
+    "name": {
+      "en": "Swiss Federal Statistical Office (FSO)"
+    },
+    "url": "https://www.bfs.admin.ch/asset/en/ts-x-03.02.01.08"
+  },
+  "license": "fso",
+  "frequency": "quarterly",
+  "updated": "2026-03-17",
+  "units": {
+    "en": "Number of employed persons (domestic concept, quarterly average)"
+  },
+  "dimensions": {
+    "sector": {
+      "label": {
+        "en": "Economic sector"
+      },
+      "levels": {
+        "P": {
+          "label": {
+            "en": "Total"
+          },
+          "data": true
+        },
+        "P_1": {
+          "label": {
+            "en": "Sector 1: Agriculture, forestry and fishing"
+          },
+          "data": true
+        },
+        "P_1_1": {
+          "label": {
+            "en": "A Agriculture, forestry and fishing"
+          },
+          "data": true
+        },
+        "P_2": {
+          "label": {
+            "en": "Sector 2: Industry and construction"
+          },
+          "data": true
+        },
+        "P_2_1": {
+          "label": {
+            "en": "B-C Mining, quarrying and manufacturing"
+          },
+          "data": true
+        },
+        "P_2_2": {
+          "label": {
+            "en": "D Electricity, gas, steam and air conditioning supply"
+          },
+          "data": true
+        },
+        "P_2_3": {
+          "label": {
+            "en": "E Water supply; sewerage, waste management and remediation"
+          },
+          "data": true
+        },
+        "P_2_4": {
+          "label": {
+            "en": "F Construction"
+          },
+          "data": true
+        },
+        "P_3": {
+          "label": {
+            "en": "Sector 3: Services"
+          },
+          "data": true
+        },
+        "P_3_1": {
+          "label": {
+            "en": "G Wholesale and retail trade; repair of motor vehicles"
+          },
+          "data": true
+        },
+        "P_3_2": {
+          "label": {
+            "en": "H Transportation and storage"
+          },
+          "data": true
+        },
+        "P_3_3": {
+          "label": {
+            "en": "I Accommodation and food service activities"
+          },
+          "data": true
+        },
+        "P_3_4": {
+          "label": {
+            "en": "J Information and communication"
+          },
+          "data": true
+        },
+        "P_3_5": {
+          "label": {
+            "en": "K Financial and insurance activities"
+          },
+          "data": true
+        },
+        "P_3_6": {
+          "label": {
+            "en": "L Real estate activities"
+          },
+          "data": true
+        },
+        "P_3_7": {
+          "label": {
+            "en": "M Professional, scientific and technical activities"
+          },
+          "data": true
+        },
+        "P_3_8": {
+          "label": {
+            "en": "N Administrative and support service activities"
+          },
+          "data": true
+        },
+        "P_3_9": {
+          "label": {
+            "en": "O Public administration and defence; compulsory social security"
+          },
+          "data": true
+        },
+        "P_3_10": {
+          "label": {
+            "en": "P Education"
+          },
+          "data": true
+        },
+        "P_3_11": {
+          "label": {
+            "en": "Q Human health and social work activities"
+          },
+          "data": true
+        },
+        "P_3_12": {
+          "label": {
+            "en": "R Arts, entertainment and recreation"
+          },
+          "data": true
+        },
+        "P_3_13": {
+          "label": {
+            "en": "S Other service activities"
+          },
+          "data": true
+        },
+        "P_3_14": {
+          "label": {
+            "en": "T Activities of households as employers"
+          },
+          "data": true
+        }
+      },
+      "hierarchy": {
+        "P": {
+          "P_1": {
+            "P_1_1": []
+          },
+          "P_2": {
+            "P_2_1": [],
+            "P_2_2": [],
+            "P_2_3": [],
+            "P_2_4": []
+          },
+          "P_3": {
+            "P_3_1": [],
+            "P_3_2": [],
+            "P_3_3": [],
+            "P_3_4": [],
+            "P_3_5": [],
+            "P_3_6": [],
+            "P_3_7": [],
+            "P_3_8": [],
+            "P_3_9": [],
+            "P_3_10": [],
+            "P_3_11": [],
+            "P_3_12": [],
+            "P_3_13": [],
+            "P_3_14": []
+          }
+        }
+      }
+    },
+    "sex": {
+      "label": {
+        "en": "Sex"
+      },
+      "levels": {
+        "total": {
+          "label": {
+            "en": "Total"
+          },
+          "data": true
+        },
+        "male": {
+          "label": {
+            "en": "Men"
+          },
+          "data": true
+        },
+        "female": {
+          "label": {
+            "en": "Women"
+          },
+          "data": true
+        }
+      }
+    }
+  },
+  "topic": "Labour",
+  "concept": "Labour / Employment / employed persons",
+  "canonical": false,
+  "split": "sector",
+  "single_select": "sex",
+  "default_transform": "level",
+  "default": {
+    "sector": "P",
+    "sex": "total"
+  },
+  "fetched_utc": "2026-06-03 04:57:41"
+}

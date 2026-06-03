@@ -287,21 +287,18 @@ build <- function() {
   add(.try_fetch("ch_fso_unemp_rate", fso_excel_dataset("ch_fso_unemp_rate", "je-d-03.03.01.03")))
 
   # FSO DAM CSV-master assets (already-long CSVs, no sheet reshaping):
-  # labour productivity (index). The parsers fso_ets() / fso_gfcf_detail() /
-  # fso_hours_worked() are implemented and verified but HELD from the catalog
-  # pending a display rework (multi-dimension selector / ragged-tree polish) —
-  # re-enable here once the Display is sorted.
+  # labour productivity (index), employed persons (ETS), GFCF by sector/asset,
+  # actual hours worked (AVOL).
   add(.try_fetch("ch_fso_labour_productivity", fso_labour_productivity(), "National accounts"))
-  # add(.try_fetch("ch_fso_ets",                 fso_ets(),                 "Labour"))            # HELD: split=sector/sex selector
-  # add(.try_fetch("ch_fso_gfcf_detail",         fso_gfcf_detail(),         "National accounts")) # HELD: ragged sector×asset tree
-  # add(.try_fetch("ch_fso_hours_worked",        fso_hours_worked(),        "Labour"))            # HELD: 3-dim display unreviewed
+  add(.try_fetch("ch_fso_ets",                 fso_ets(),                 "Labour"))
+  add(.try_fetch("ch_fso_gfcf_detail",         fso_gfcf_detail(),         "National accounts"))
+  add(.try_fetch("ch_fso_hours_worked",        fso_hours_worked(),        "Labour"))
 
-  # FSO DAM Excel (bespoke sheet parsers): the construction price index + foreign
-  # trade by partner country (self-contained, pins the English-master asset ids).
-  # fso_excel_ch_fso_gdp_region() is implemented + verified but HELD pending a
-  # hierarchical region tree (CH → greater region → canton) instead of region×level.
-  # add(.try_fetch("ch_fso_gdp_region",
-  #                fso_excel_dataset("ch_fso_gdp_region", "je-e-04.02.06.01"), "National accounts")) # HELD
+  # FSO DAM Excel (bespoke sheet parsers): regional GDP (hierarchical CH → greater
+  # region → canton tree), the construction price index, and foreign trade by
+  # partner country (self-contained, pins the English-master asset ids).
+  add(.try_fetch("ch_fso_gdp_region",
+                 fso_excel_dataset("ch_fso_gdp_region", "je-e-04.02.06.01"), "National accounts"))
   add(.try_fetch("ch_fso_construction_prices",
                  fso_excel_dataset("ch_fso_construction_prices", "cc-t-05.05.01"), "Prices"))
   add(.try_fetch("ch_fso_trade_partner", fso_excel_ch_fso_trade_partner(), "External sector"))

@@ -1,0 +1,290 @@
+{
+  "schema_version": "1.0",
+  "id": "ch_fso_gdp_region",
+  "dim_order": [
+    "region"
+  ],
+  "start": "2008-01-01",
+  "end": "2022-01-01",
+  "title": {
+    "en": "Regional gross domestic product (GDP), current prices"
+  },
+  "source": {
+    "name": {
+      "en": "Swiss Federal Statistical Office (FSO)"
+    },
+    "url": "https://www.bfs.admin.ch/asset/en/je-e-04.02.06.01"
+  },
+  "license": "fso",
+  "frequency": "annual",
+  "topic": "National accounts",
+  "units": {
+    "en": "CHF million, at current prices"
+  },
+  "updated": "2024-10-28",
+  "dimensions": {
+    "region": {
+      "label": {
+        "en": "Region"
+      },
+      "levels": {
+        "ch": {
+          "label": {
+            "en": "Switzerland"
+          },
+          "data": true
+        },
+        "leman": {
+          "label": {
+            "en": "Lake Geneva Region"
+          },
+          "data": true
+        },
+        "mittelland": {
+          "label": {
+            "en": "Espace Mittelland"
+          },
+          "data": true
+        },
+        "nw": {
+          "label": {
+            "en": "Northwestern Switzerland"
+          },
+          "data": true
+        },
+        "zurich": {
+          "label": {
+            "en": "Zurich"
+          },
+          "data": true
+        },
+        "east": {
+          "label": {
+            "en": "Eastern Switzerland"
+          },
+          "data": true
+        },
+        "central": {
+          "label": {
+            "en": "Central Switzerland"
+          },
+          "data": true
+        },
+        "ticino_r": {
+          "label": {
+            "en": "Ticino"
+          },
+          "data": true
+        },
+        "ZH": {
+          "label": {
+            "en": "Zurich"
+          },
+          "data": true
+        },
+        "BE": {
+          "label": {
+            "en": "Berne"
+          },
+          "data": true
+        },
+        "LU": {
+          "label": {
+            "en": "Lucerne"
+          },
+          "data": true
+        },
+        "UR": {
+          "label": {
+            "en": "Uri"
+          },
+          "data": true
+        },
+        "SZ": {
+          "label": {
+            "en": "Schwyz"
+          },
+          "data": true
+        },
+        "OW": {
+          "label": {
+            "en": "Obwalden"
+          },
+          "data": true
+        },
+        "NW": {
+          "label": {
+            "en": "Nidwalden"
+          },
+          "data": true
+        },
+        "GL": {
+          "label": {
+            "en": "Glarus"
+          },
+          "data": true
+        },
+        "ZG": {
+          "label": {
+            "en": "Zug"
+          },
+          "data": true
+        },
+        "FR": {
+          "label": {
+            "en": "Fribourg"
+          },
+          "data": true
+        },
+        "SO": {
+          "label": {
+            "en": "Solothurn"
+          },
+          "data": true
+        },
+        "BS": {
+          "label": {
+            "en": "Basel-Stadt"
+          },
+          "data": true
+        },
+        "BL": {
+          "label": {
+            "en": "Basel-Landschaft"
+          },
+          "data": true
+        },
+        "SH": {
+          "label": {
+            "en": "Schaffhausen"
+          },
+          "data": true
+        },
+        "AR": {
+          "label": {
+            "en": "Appenzell A. Rh."
+          },
+          "data": true
+        },
+        "AI": {
+          "label": {
+            "en": "Appenzell I. Rh."
+          },
+          "data": true
+        },
+        "SG": {
+          "label": {
+            "en": "St. Gallen"
+          },
+          "data": true
+        },
+        "GR": {
+          "label": {
+            "en": "Graubünden"
+          },
+          "data": true
+        },
+        "AG": {
+          "label": {
+            "en": "Aargau"
+          },
+          "data": true
+        },
+        "TG": {
+          "label": {
+            "en": "Thurgau"
+          },
+          "data": true
+        },
+        "TI": {
+          "label": {
+            "en": "Ticino"
+          },
+          "data": true
+        },
+        "VD": {
+          "label": {
+            "en": "Vaud"
+          },
+          "data": true
+        },
+        "VS": {
+          "label": {
+            "en": "Valais"
+          },
+          "data": true
+        },
+        "NE": {
+          "label": {
+            "en": "Neuchâtel"
+          },
+          "data": true
+        },
+        "GE": {
+          "label": {
+            "en": "Geneva"
+          },
+          "data": true
+        },
+        "JU": {
+          "label": {
+            "en": "Jura"
+          },
+          "data": true
+        }
+      },
+      "hierarchy": {
+        "ch": {
+          "leman": {
+            "VD": [],
+            "VS": [],
+            "GE": []
+          },
+          "mittelland": {
+            "BE": [],
+            "FR": [],
+            "SO": [],
+            "NE": [],
+            "JU": []
+          },
+          "nw": {
+            "BS": [],
+            "BL": [],
+            "AG": []
+          },
+          "zurich": {
+            "ZH": []
+          },
+          "east": {
+            "GL": [],
+            "SH": [],
+            "AR": [],
+            "AI": [],
+            "SG": [],
+            "GR": [],
+            "TG": []
+          },
+          "central": {
+            "LU": [],
+            "UR": [],
+            "SZ": [],
+            "OW": [],
+            "NW": [],
+            "ZG": []
+          },
+          "ticino_r": {
+            "TI": []
+          }
+        }
+      }
+    }
+  },
+  "concept": "National accounts / Regional GDP",
+  "canonical": true,
+  "split": "region",
+  "default_transform": "level",
+  "default": {
+    "region": "ch"
+  },
+  "fetched_utc": "2026-06-03 04:57:41"
+}

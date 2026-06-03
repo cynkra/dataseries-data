@@ -1,0 +1,145 @@
+{
+  "schema_version": "1.0",
+  "id": "ch_fso_gfcf_detail",
+  "dim_order": [
+    "sector",
+    "asset"
+  ],
+  "start": "1995-01-01",
+  "end": "2024-01-01",
+  "title": {
+    "en": "Gross fixed capital formation by institutional sector and asset type"
+  },
+  "source": {
+    "name": {
+      "en": "Swiss Federal Statistical Office (FSO)"
+    },
+    "url": "https://www.bfs.admin.ch/asset/en/ts-x-04.02.05.02"
+  },
+  "license": "fso",
+  "frequency": "annual",
+  "updated": "2025-09-29",
+  "units": {
+    "en": "CHF million, current prices"
+  },
+  "dimensions": {
+    "sector": {
+      "label": {
+        "en": "Institutional sector"
+      },
+      "levels": {
+        "S1": {
+          "label": {
+            "en": "Total economy"
+          },
+          "data": true
+        },
+        "S11": {
+          "label": {
+            "en": "Non-financial corporations"
+          },
+          "data": true
+        },
+        "S12": {
+          "label": {
+            "en": "Financial corporations"
+          },
+          "data": true
+        },
+        "S121T127": {
+          "label": {
+            "en": "Financial institutions (other than S128 S129)"
+          },
+          "data": true
+        },
+        "S12Q": {
+          "label": {
+            "en": "Insurance corporations and pension funds"
+          },
+          "data": true
+        },
+        "S13": {
+          "label": {
+            "en": "General government"
+          },
+          "data": true
+        },
+        "S1314": {
+          "label": {
+            "en": "Social security funds"
+          },
+          "data": true
+        },
+        "S14": {
+          "label": {
+            "en": "Households"
+          },
+          "data": true
+        },
+        "S15": {
+          "label": {
+            "en": "Non-profit institutions serving households"
+          },
+          "data": true
+        }
+      }
+    },
+    "asset": {
+      "label": {
+        "en": "Asset type"
+      },
+      "levels": {
+        "P51G": {
+          "label": {
+            "en": "Gross fixed capital formation (total)"
+          },
+          "data": true
+        },
+        "P5111_N111_112G": {
+          "label": {
+            "en": "Construction"
+          },
+          "data": true
+        },
+        "6011": {
+          "label": {
+            "en": "Building construction"
+          },
+          "data": true
+        },
+        "6010": {
+          "label": {
+            "en": "Civil engineering"
+          },
+          "data": true
+        },
+        "P5111_N113T117G": {
+          "label": {
+            "en": "Equipment, fixed assets and software"
+          },
+          "data": true
+        }
+      },
+      "hierarchy": {
+        "P51G": {
+          "P5111_N111_112G": {
+            "6011": [],
+            "6010": []
+          },
+          "P5111_N113T117G": []
+        }
+      }
+    }
+  },
+  "topic": "National accounts",
+  "concept": "National accounts / Investment (gross fixed capital formation)",
+  "canonical": false,
+  "split": "sector",
+  "single_select": "asset",
+  "default_transform": "level",
+  "default": {
+    "sector": "S1",
+    "asset": "P5111_N111_112G"
+  },
+  "fetched_utc": "2026-06-03 04:57:41"
+}
