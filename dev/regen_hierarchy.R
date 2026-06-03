@@ -25,7 +25,9 @@ IDS <- c(
   "ch_snb_snbmonagg",   # override the flat SNB tree with the M1 ⊂ M2 ⊂ M3 nesting
   # under-root fixes from the hierarchy-review sweep (Total shipped as a sibling):
   "ch_snb_bakredsekbm", "ch_snb_auvercurrq", "ch_snb_auversecq", "ch_snb_auvekomq",
-  "ch_snb_bopcapbalq", "ch_snb_zavkuzaart", "ch_fso_hesta", "ch_snb_capweums"
+  "ch_snb_bopcapbalq", "ch_snb_zavkuzaart", "ch_fso_hesta", "ch_snb_capweums",
+  # non-split line dims with a Total-as-sibling (multi-dim blocks):
+  "ch_snb_ambeschkla", "ch_fso_jobs_sex", "ch_snb_bopservq"
 )
 
 # Re-emit JSON with the same key order / formatting write_dataset() uses.
@@ -38,11 +40,12 @@ for (id in IDS) {
   meta <- jsonlite::fromJSON(f, simplifyVector = FALSE)
   ds <- list(id = id, meta = meta)
   ds <- attach_hierarchy(ds, DATASHEET_DIR)
-  dim <- ds$meta$split
-  h <- ds$meta$dimensions[[dim]]$hierarchy
-  if (is.null(h)) { cat(sprintf("  %-24s NO hierarchy produced (check datasheet)\n", id)); next }
-  n_tree <- length(tree_codes(h)); n_lvl <- length(ds$meta$dimensions[[dim]]$levels)
+  # Report every dimension that carries a hierarchy (a datasheet may target the split
+  # AND a sibling line dim). Write whenever at least one tree is present.
+  hdims <- Filter(function(d) !is.null(ds$meta$dimensions[[d]]$hierarchy), names(ds$meta$dimensions))
+  if (!length(hdims)) { cat(sprintf("  %-24s NO hierarchy produced (check datasheet)\n", id)); next }
   write_meta_json(ds$meta, f)
-  cat(sprintf("  %-24s dim=%-20s tree_nodes=%3d levels=%3d\n", id, dim, n_tree, n_lvl))
+  parts <- vapply(hdims, function(d) sprintf("%s(%d)", d, length(tree_codes(ds$meta$dimensions[[d]]$hierarchy))), character(1))
+  cat(sprintf("  %-24s %s\n", id, paste(parts, collapse = " ")))
 }
 cat("done.\n")

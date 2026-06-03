@@ -38,19 +38,24 @@ read_hierarchy_block <- function(lines) {
   end <- if (length(nxt)) nxt[1] - 1L else length(lines)
   body <- lines[start:end]
 
-  dim <- NULL; derive <- NULL
-  groups <- character(0)
-  # stack[[depth+1]] holds the code whose children we are currently filling.
-  bullets <- list()  # collected (depth, code) in document order
+  # A block may carry MORE THAN ONE directive — one dimension can need a tree and a
+  # sibling line dimension another (e.g. an IIP cube split by component but also drawn
+  # by currency, both with a "Total" to reparent). A `dim:` line opens a new directive
+  # scoped to that dimension; anything before the first `dim:` is scoped to the split.
+  # Each directive is then a `derive:` line or an indented bullet tree. Returns a LIST
+  # of specs (possibly empty for a prose-only block); attach_hierarchy applies each.
+  specs <- list()
+  cur <- list(dim = NULL, derive = NULL, bullets = list(), groups = character(0))
+  flush <- function() {
+    if (!is.null(cur$derive) || length(cur$bullets)) specs[[length(specs) + 1L]] <<- cur
+  }
   for (ln in body) {
     if (!nzchar(trimws(ln))) next
-    d <- sub("^- \\*\\*dim\\*\\*:\\s*", "", ln)              # tolerate bold or plain
-    m_dim <- regmatches(ln, regexec("^\\s*-?\\s*dim:\\s*(\\S+)", ln))[[1]]
-    if (length(m_dim) == 2) { dim <- m_dim[2]; next }
+    m_dim <- regmatches(ln, regexec("^\\s*-?\\s*\\**dim\\**:\\s*(\\S+)", ln))[[1]]
+    if (length(m_dim) == 2) { flush(); cur <- list(dim = m_dim[2], derive = NULL, bullets = list(), groups = character(0)); next }
     m_der <- regmatches(ln, regexec("^\\s*-?\\s*derive:\\s*(.+?)\\s*$", ln))[[1]]
-    if (length(m_der) == 2) { derive <- m_der[2]; next }
-    # a tree bullet: leading spaces set depth, then "- "
-    m <- regmatches(ln, regexec("^( *)- (.+)$", ln))[[1]]
+    if (length(m_der) == 2) { cur$derive <- m_der[2]; next }
+    m <- regmatches(ln, regexec("^( *)- (.+)$", ln))[[1]]   # tree bullet: indent sets depth
     if (length(m) != 3) next
     depth <- nchar(m[2]) %/% 2L
     txt <- trimws(m[3])
@@ -58,20 +63,18 @@ read_hierarchy_block <- function(lines) {
       kv <- regmatches(txt, regexec("^@(\\S+?):\\s*(.+)$", txt))[[1]]
       if (length(kv) != 3)
         stop(sprintf("hierarchy: malformed group line '%s' (want '@code: Label')", txt), call. = FALSE)
-      code <- kv[2]; groups[[code]] <- kv[3]
-    } else {
-      code <- txt
-    }
-    bullets[[length(bullets) + 1L]] <- list(depth = depth, code = code)
+      code <- kv[2]; cur$groups[[code]] <- kv[3]
+    } else code <- txt
+    cur$bullets[[length(cur$bullets) + 1L]] <- list(depth = depth, code = code)
   }
-
-  if (!is.null(derive)) return(list(dim = dim, derive = derive))
-  if (!length(bullets)) return(if (is.null(dim)) NULL else list(dim = dim))
-
-  # Build the nested tree from the (depth, code) stream. We assemble bottom-up by
-  # tracking, per depth, the code currently open and accumulating its children.
-  tree <- build_tree_from_bullets(bullets)
-  list(dim = dim, tree = tree, groups = groups)
+  flush()
+  if (!length(specs)) return(NULL)
+  lapply(specs, function(s) {
+    out <- list(dim = s$dim)
+    if (!is.null(s$derive)) out$derive <- s$derive
+    else { out$tree <- build_tree_from_bullets(s$bullets); out$groups <- s$groups }
+    out
+  })
 }
 
 # Fold an ordered list of {depth, code} into a nested named list. A node's children
@@ -166,9 +169,14 @@ assemble_tree <- function(codes, parent) {
 attach_hierarchy <- function(ds, datasheet_dir) {
   f <- file.path(datasheet_dir, paste0(ds$id, ".md"))
   if (!file.exists(f)) return(ds)
-  spec <- read_hierarchy_block(readLines(f, warn = FALSE))
-  if (is.null(spec)) return(ds)
+  specs <- read_hierarchy_block(readLines(f, warn = FALSE))
+  if (is.null(specs)) return(ds)
+  for (spec in specs) ds <- apply_hierarchy_spec(ds, spec)
+  ds
+}
 
+# Apply one directive (a derive or a declared tree) to its target dimension.
+apply_hierarchy_spec <- function(ds, spec) {
   dim <- spec$dim %||% ds$meta$split
   if (is.null(dim) || is.null(ds$meta$dimensions[[dim]])) {
     warning(sprintf("%s: hierarchy targets unknown dim '%s'", ds$id, dim %||% "<split>"))

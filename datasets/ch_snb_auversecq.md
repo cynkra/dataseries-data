@@ -55,7 +55,11 @@ populated combinations, not the full 3x5x6 grid.
 - **seasonal adjustment**: n/a (SNB cube has no seasonal-adjustment dimension)
 
 ## Hierarchy
-`T Total` is the sum of the institutional sectors (SNB, banks, public, other), shipped as their sibling. Nest the sectors under it.
+Both line dimensions carry a `T Total` shipped as a flat sibling of its parts. Nest
+each under its total: the institutional-sector split (D1: SNB, banks, public, other)
+and the functional-component line dim (D2, IMF BPM6).
+- derive: under-root T
+- dim: D2
 - derive: under-root T
 
 ## Caveats / simplifications

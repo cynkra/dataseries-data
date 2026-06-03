@@ -52,6 +52,11 @@ concept: same producer, the unique value is the geographic dimension.
 - **transform**: level
 - **seasonal adjustment**: n/a (SNB publishes raw values, no SA dimension)
 
+## Hierarchy
+The service-component line dimension D1 carries a `DT Total for all services` shipped as a sibling of the individual services (transport, tourism, financial, …); nest them under the total.
+- dim: D1
+- derive: under-root DT
+
 ## Caveats / simplifications
 - Many partner x component x entry combinations are sparse; only non-null observations
   reach the CSV, so per-series spans vary. The country code `B` (Belgium) and component

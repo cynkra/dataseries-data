@@ -49,6 +49,11 @@ FSO jobs cube does not expose the same way. Values are in thousands of persons.
 - **transform**: level
 - **seasonal adjustment**: n/a (no SA dimension or SA codes)
 
+## Hierarchy
+The overview line dimension D0 carries a `VT Total` (employment level) shipped as a sibling of its sub-aggregates; nest them under it.
+- dim: D0
+- derive: under-root VT
+
 ## Caveats / simplifications
 - Code `V` is reused across dimensions (full-time in `D0`, insurance in `D1`); the
   dim id disambiguates, do not collapse on the bare code.

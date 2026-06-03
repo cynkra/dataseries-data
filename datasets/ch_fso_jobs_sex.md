@@ -64,6 +64,11 @@ three sector aggregates (total, Sector 2, Sector 3).
   `4.1` FTE SA); the opening view uses the non-adjusted total (`TOT`), the SA levels
   are available as toggles
 
+## Hierarchy
+`0 Switzerland` is the national total over the seven major regions, but FSO lists it as their sibling; nest the regions under Switzerland.
+- dim: Grossregion
+- derive: under-root 0
+
 ## Caveats / simplifications
 - Mixed measures share one `value` column: headcount levels and full-time-
   equivalent levels coexist under `Beschäftigungsgrad`, and two levels are

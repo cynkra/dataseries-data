@@ -50,7 +50,11 @@ headline IIP story lives in `auvekomq`.
 - **seasonal adjustment**: n/a (SNB cube has no seasonal-adjustment dimension)
 
 ## Hierarchy
-`T Total` is the published aggregate of the IIP functional components (IMF BPM6), shipped flat as a sibling. Nest the components under it.
+Both line dimensions carry a `T Total` that the source ships as a flat sibling of its
+parts. Nest each under its total: the functional-component split (D2, IMF BPM6) and the
+currency breakdown (D0: CHF / USD / EUR / other currencies / precious metals).
+- derive: under-root T
+- dim: D0
 - derive: under-root T
 
 ## Caveats / simplifications
