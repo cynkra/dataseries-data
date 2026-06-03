@@ -17,6 +17,8 @@ elsewhere ([`cynkra/dataseries`](https://github.com/cynkra/dataseries) for R,
 | `datasets/` | per-dataset datasheets (concept-first source of truth, Markdown) |
 | `docs/format-contract.md` | the swissdata-style data + meta contract that clients read against |
 | `docs/deferred-datasets.md` | datasets we considered but did **not** ingest, and the concrete reason (read before re-hunting a missing series) |
+| `STATUS.md` | per-dataset freshness board (🟢/🟡/🔴 per dataset) |
+| `UPTIME.md` | the two daily ETL metrics — run-through success + recently-updated — with the uptime trend (`data/uptime.csv` + `data/uptime.svg`) |
 
 ## The contract (what clients can rely on)
 
@@ -39,18 +41,34 @@ elsewhere ([`cynkra/dataseries`](https://github.com/cynkra/dataseries) for R,
 
 ## Updating the data
 
-Run the ETL (R) to refresh `data/` from source, then commit. Automation
-(GitHub Actions on a cron matched to each source's release calendar) is planned
-but deferred — for now the ETL runs locally and the result is committed here.
+A daily GitHub Action (`.github/workflows/etl.yml`) re-fetches every source, rewrites
+`data/` + `catalog.json`, recomputes health/uptime, and commits the result. You can
+also run it locally: `Rscript R/pipeline.R && Rscript R/health.R && Rscript R/uptime.R`,
+then commit.
 
 ## License
 
 Code: MIT (or as set on the repo). Data: per-dataset, see each dataset's `license`
 field in its meta / `catalog.json`. Mirrors the upstream sources' terms.
 
-## Data health
+## Monitoring
+
+Two binary metrics are recorded once per day (history in [`data/uptime.csv`](data/uptime.csv),
+trend in [UPTIME.md](UPTIME.md)):
+
+- **Run-through** — did the scrape complete with zero skips? A skip (a source failing
+  to fetch/parse) is the *leading* signal that a source changed format, and opens an
+  `etl-skip` issue immediately.
+- **Recently updated** — is every dataset that's expected to update fresh? A dataset
+  ageing past its threshold is the *lagging* signal and opens a `data-health` issue.
+  The per-dataset board (with the 🟡 ageing shade) lives in [STATUS.md](STATUS.md).
+
+A hard workflow failure opens a rolling `etl-failure` issue.
 
 <!-- DATA-HEALTH:START -->
-**Data health** (updated 2026-06-03): 🟢 70 · 🟡 0 · 🔴 0 · ⚪ 0 of 70 datasets — see [STATUS.md](STATUS.md).
-**Fetch skips:** none recorded — see [SKIPS.md](SKIPS.md).
+**ETL uptime** (run 2026-06-03):
+- 🟢 **Run-through** — clean (0 skips)
+- 🟢 **Recently updated** — 70 of 70 datasets fresh
+
+See [UPTIME.md](UPTIME.md) for the trend and [STATUS.md](STATUS.md) for the per-dataset board.
 <!-- DATA-HEALTH:END -->

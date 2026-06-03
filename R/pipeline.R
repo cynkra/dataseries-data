@@ -337,27 +337,33 @@ main <- function() {
   }
   write_catalog(datasets, DATA_DIR)
   cat(sprintf("wrote catalog.json (%d datasets) -> %s\n", length(datasets), DATA_DIR))
-  append_skip_log(.SKIPPED, DATA_DIR)
+  write_run_json(ok = length(datasets), skipped = .SKIPPED, out_dir = DATA_DIR)
 }
 
-# Append this run's skips to data/skips.jsonl (one JSON object per run that had at
-# least one skip; clean runs add nothing, so the file is a history of incident
-# days). R/health.R renders the recent tail into SKIPS.md. We deliberately do NOT
-# alarm on a skip -- a one-off fetch failure that fixes itself the next day is just
-# logged; only a dataset that STAYS stale crosses the health threshold and opens an
-# issue.
-append_skip_log <- function(skipped, out_dir) {
-  if (!length(skipped)) {
-    cat("no skips this run\n")
-    return(invisible())
-  }
+# Write this run's fetch outcome to data/run.json (overwritten every run -- it is
+# the authoritative snapshot of the latest scrape). `ok` = datasets fetched and
+# validated; `skipped` = the per-source failures captured by .try_fetch (each a
+# {id, error}); `attempted` = ok + skipped. R/uptime.R reads this to decide the
+# "run-through success" metric and .github/scripts/skip_issues.sh opens an issue
+# per skip. A skip is the LEADING signal (a parser breaking the day a source
+# changes format), so unlike before we alarm on it immediately rather than waiting
+# for the data to age into staleness.
+write_run_json <- function(ok, skipped, out_dir) {
   rec <- list(
-    ts = format(Sys.time(), tz = "UTC", "%Y-%m-%dT%H:%M:%SZ"),
-    skipped = skipped
+    ts        = format(Sys.time(), tz = "UTC", "%Y-%m-%dT%H:%M:%SZ"),
+    attempted = ok + length(skipped),
+    ok        = ok,
+    skipped   = skipped
   )
-  line <- jsonlite::toJSON(rec, auto_unbox = TRUE, null = "null")
-  cat(line, "\n", file = file.path(out_dir, "skips.jsonl"), append = TRUE, sep = "")
-  cat(sprintf("logged %d skip(s) -> skips.jsonl\n", length(skipped)))
+  writeLines(
+    jsonlite::toJSON(rec, auto_unbox = TRUE, pretty = TRUE, null = "null"),
+    file.path(out_dir, "run.json")
+  )
+  if (length(skipped)) {
+    cat(sprintf("wrote run.json (%d ok, %d skipped) -> %s\n", ok, length(skipped), out_dir))
+  } else {
+    cat(sprintf("wrote run.json (%d ok, no skips) -> %s\n", ok, out_dir))
+  }
 }
 
 main()

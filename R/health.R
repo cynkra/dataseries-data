@@ -170,68 +170,11 @@ status_md <- c(
 )
 writeLines(status_md, file.path(REPO, "STATUS.md"))
 
-# --- SKIPS.md: history of days a source failed to fetch ----------------------
-# Rendered from the append-only data/skips.jsonl (one record per incident day,
-# written by R/pipeline.R). A skip is logged, never alarmed: the run keeps the
-# previous data and a one-off failure that recovers the next day is harmless;
-# only sustained staleness crosses the health threshold and opens an issue.
-skips_path <- file.path(DATA, "skips.jsonl")
-skip_lines <- if (file.exists(skips_path)) readLines(skips_path, warn = FALSE) else character(0)
-skip_lines <- skip_lines[nzchar(trimws(skip_lines))]
-n_skip_days <- length(skip_lines)
-
-skips_md <- c(
-  "# Fetch skip log",
-  "",
-  "_Auto-generated from `data/skips.jsonl` by `R/health.R`. Do not edit by hand._",
-  "",
-  "Days when one or more sources failed to fetch. The run keeps the previous data",
-  "and continues, so a skip only matters if it **persists** — a dataset that drops",
-  "off the next day recovered on its own. Sustained staleness instead shows up on",
-  "the [health board](STATUS.md) and opens an issue."
-)
-if (n_skip_days == 0) {
-  skips_md <- c(skips_md, "", "\U00002705 No fetch skips recorded yet.")
-} else {
-  show <- rev(skip_lines)  # newest first
-  skips_md <- c(skips_md, "",
-    sprintf("_%d incident day(s) recorded%s._", n_skip_days,
-            if (n_skip_days > 60) "; showing the most recent 60" else ""), "")
-  for (ln in show[seq_len(min(60L, length(show)))]) {
-    rec <- tryCatch(fromJSON(ln, simplifyVector = FALSE), error = function(e) NULL)
-    if (is.null(rec)) next
-    skips_md <- c(skips_md, sprintf("## %s", rec$ts %||% "?"))
-    for (sk in rec$skipped) {
-      skips_md <- c(skips_md, sprintf("- `%s` — %s", sk$id %||% "?", sk$error %||% ""))
-    }
-    skips_md <- c(skips_md, "")
-  }
-}
-writeLines(skips_md, file.path(REPO, "SKIPS.md"))
-
-# --- README.md summary block (between markers; created on first run) ---------
-readme_path <- file.path(REPO, "README.md")
-block <- c(
-  "<!-- DATA-HEALTH:START -->",
-  sprintf("**Data health** (updated %s): %s %d · %s %d · %s %d · %s %d of %d datasets — see [STATUS.md](STATUS.md).",
-          format(Sys.Date()), emoji["green"], counts$green, emoji["amber"], counts$amber,
-          emoji["red"], counts$red, emoji["unknown"], counts$unknown, counts$total),
-  sprintf("**Fetch skips:** %s — see [SKIPS.md](SKIPS.md).",
-          if (n_skip_days == 0) "none recorded" else sprintf("%d incident day(s) logged", n_skip_days)),
-  "<!-- DATA-HEALTH:END -->"
-)
-if (file.exists(readme_path)) {
-  readme <- readLines(readme_path, warn = FALSE)
-  s <- grep("<!-- DATA-HEALTH:START -->", readme, fixed = TRUE)
-  e <- grep("<!-- DATA-HEALTH:END -->", readme, fixed = TRUE)
-  if (length(s) && length(e)) {
-    tail <- if (e < length(readme)) readme[(e + 1L):length(readme)] else character(0)
-    readme <- c(readme[seq_len(s - 1L)], block, tail)
-  } else {
-    readme <- c(readme, "", "## Data health", "", block)
-  }
-  writeLines(readme, readme_path)
-}
+# Note: the fetch-skip log and the README <!-- DATA-HEALTH --> summary block are no
+# longer written here. R/uptime.R (run right after this) rolls the per-dataset board
+# and this run's skip outcome up into the two daily uptime metrics, owns UPTIME.md +
+# data/uptime.csv, and is the single writer of the README block. This script's job is
+# just the per-dataset freshness detail: status.json + STATUS.md.
 
 cat(sprintf("health: %s\n  %d green / %d amber / %d red / %d unknown (of %d)\n",
             checked, counts$green, counts$amber, counts$red, counts$unknown, counts$total))

@@ -49,11 +49,17 @@ jobs:
       - name: Compute data health
         run: Rscript R/health.R
 
+      # Roll the per-dataset board + this run's skip outcome up into the two daily
+      # uptime metrics: appends data/uptime.csv, renders UPTIME.md + data/uptime.svg,
+      # and owns the README summary block.
+      - name: Compute uptime metrics
+        run: Rscript R/uptime.R
+
       - name: Commit refreshed data + status
         run: |
           git config user.name  "dataseries-bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data STATUS.md SKIPS.md README.md
+          git add data STATUS.md UPTIME.md README.md
           if git diff --cached --quiet; then
             echo "No changes to commit."
           else
@@ -73,10 +79,21 @@ jobs:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: bash .github/scripts/health_issues.sh
 
+      # Leading alarm: a source failed to fetch this run (a "skip"). For each skipped
+      # dataset open (or refresh) ONE deduped `etl-skip` issue immediately, and close
+      # any whose dataset fetched cleanly again. A skip usually means a source changed
+      # format — caught here weeks before the data would go stale. Never fails the run.
+      - name: Alert on fetch skips
+        if: success()
+        continue-on-error: true
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: bash .github/scripts/skip_issues.sh
+
       # Hard failure (dep install, R error, ...) => open or update ONE rolling issue,
       # so a broken pipeline can't rot silently. Per-source fetch errors don't reach
-      # here (pipeline.R skips a bad source and keeps going) — those surface as the
-      # affected dataset going amber/red on the health dashboard instead.
+      # here (pipeline.R skips a bad source and keeps going) — those open an `etl-skip`
+      # issue via the step above and flip the run-through metric red.
       - name: Open / refresh failure issue
         if: failure()
         uses: actions/github-script@v7
