@@ -55,12 +55,18 @@ fso_excel_ch_fso_cpi <- function(path, pubdate) {
   code     <- body[[hcol("Code")]]      # position code (series key)
   item_e   <- body[[hcol("Item_E")]]    # parent group (English)
   postxt_e <- body[[hcol("PosTxt_E")]]  # position text (English)
+  # COICOP tree depth (1 = Total). Optional: if FSO ever drops the column the dim just
+  # stays flat rather than the whole CPI fetch failing.
+  lvl_col  <- which(hdr == "Level")
+  depth    <- if (length(lvl_col) == 1L) suppressWarnings(as.integer(body[[lvl_col]]))
+              else rep(NA_integer_, nrow(body))
 
   # keep only rows with a real position code, drop duplicates
   keep <- !is.na(code) & !duplicated(code)
   code     <- code[keep]
   item_e   <- item_e[keep]
   postxt_e <- postxt_e[keep]
+  depth    <- depth[keep]
   vals     <- body[keep, date_cols, drop = FALSE]
 
   # --- parse European-formatted numbers ---------------------------------------
@@ -103,6 +109,41 @@ fso_excel_ch_fso_cpi <- function(path, pubdate) {
     lab_df$code
   )
 
+  # --- COICOP hierarchy from the source `Level` column ------------------------
+  # FSO ships a depth per position (1 = Total, 2 = division, deeper = group/leaf).
+  # The codes themselves are NOT pure string prefixes (the two-digit divisions 10/11/12
+  # collide with sub-codes of division 1), so we reconstruct the tree from depth: walk
+  # the positions in sheet order keeping a stack, and parent each row to the nearest
+  # preceding position of smaller depth. Only positions that survive into the data are
+  # placed (matches `levels`). Edge nodes that also carry data render as selectable.
+  ord <- order(match(lab_df$code, code))          # sheet order of the kept-with-data codes
+  hcode <- lab_df$code[ord]
+  hdepth <- depth[match(hcode, code)]
+  parent <- stats::setNames(rep(NA_character_, length(hcode)), hcode)
+  st_depth <- integer(0); st_code <- character(0)  # parallel stacks, shallow -> deep
+  for (i in seq_along(hcode)) {
+    d <- hdepth[i]
+    # A handful of positions carry no depth (the appended "type of goods" 110_* view
+    # and the like). Leave them as top-level roots rather than mis-nesting them, and
+    # don't push them onto the stack so they can't capture the following COICOP rows.
+    if (is.na(d)) next
+    while (length(st_depth) && st_depth[length(st_depth)] >= d) {
+      st_depth <- st_depth[-length(st_depth)]; st_code <- st_code[-length(st_code)]
+    }
+    if (length(st_code)) parent[[hcode[i]]] <- st_code[length(st_code)]
+    st_depth <- c(st_depth, d); st_code <- c(st_code, hcode[i])
+  }
+  # Assemble the nested named list (leaf = list()), preserving sheet order among siblings.
+  build_subtree <- function(node) {
+    kids <- hcode[!is.na(parent[hcode]) & parent[hcode] == node]
+    out <- list(); for (k in kids) out[[k]] <- build_subtree(k); out
+  }
+  hierarchy <- { roots <- hcode[is.na(parent[hcode])]
+    out <- list(); for (r in roots) out[[r]] <- build_subtree(r); out }
+
+  item_dim <- list(label = list(en = "CPI position"), levels = levels)
+  if (length(hierarchy)) item_dim$hierarchy <- hierarchy  # omit if no depth was available
+
   meta <- list(
     title = list(en = "Consumer Price Index (LIK)"),
     source = list(
@@ -113,12 +154,7 @@ fso_excel_ch_fso_cpi <- function(path, pubdate) {
     frequency = "monthly",
     topic = "Prices",
     updated = as.character(pubdate),
-    dimensions = list(
-      item = list(
-        label  = list(en = "CPI position"),
-        levels = levels
-      )
-    )
+    dimensions = list(item = item_dim)
   )
 
   list(id = "ch_fso_cpi", data = data, meta = meta)

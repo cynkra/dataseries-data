@@ -90,6 +90,42 @@ budget / forecast.
   as a percentage (× 100, % axis) when they alone are plotted in the level view>
 - **seasonal adjustment**: n/a (annual data).
 
+## Hierarchy
+The indicators have no single total; they are grouped by accounting view — the FS
+financing view (receipts / expenditure / balance), the GFS accrual view (revenue /
+expenses / balance), the balance sheet, the debt measures and the GDP-ratio block —
+with GDP itself on its own.
+- @grp_fs: Financing view (receipts, expenditure, balance)
+  - einnahmen
+  - ausgaben
+  - saldo
+  - einnahmen_ord
+  - ausgaben_ord
+  - saldo_ord
+- @grp_gfs: Accrual view (revenue, expenses, balance)
+  - ertrag
+  - aufwand
+  - fiskalertrag
+  - defizit_ueberschuss
+  - nettozugang_sachvermoegen
+- @grp_bs: Balance sheet
+  - aktiven
+  - fremdkapital
+  - eigenkapital
+- @grp_debt: Debt
+  - bruttoschuld_fs
+  - nettoschulden_fs
+  - maastricht_schuld
+  - nettoschuld
+- @grp_ratio: Ratios (% of GDP)
+  - fiskalquote
+  - einnahmenquote
+  - staatsquote
+  - bruttoschuldenquote
+  - schuldenquote
+  - nettoschuldenquote
+- bip
+
 ## Caveats / simplifications
 - **Units are mixed by indicator**: level aggregates are in CHF million; the `*quote`
   ratio indicators are a share of GDP on a 0–1 scale (e.g. 0.30 = 30 % of GDP). They

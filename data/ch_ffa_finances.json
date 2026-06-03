@@ -237,7 +237,74 @@
             "en": "Net-debt-to-GDP ratio"
           },
           "data": true
+        },
+        "grp_fs": {
+          "label": {
+            "en": "Financing view (receipts, expenditure, balance)"
+          },
+          "data": false
+        },
+        "grp_gfs": {
+          "label": {
+            "en": "Accrual view (revenue, expenses, balance)"
+          },
+          "data": false
+        },
+        "grp_bs": {
+          "label": {
+            "en": "Balance sheet"
+          },
+          "data": false
+        },
+        "grp_debt": {
+          "label": {
+            "en": "Debt"
+          },
+          "data": false
+        },
+        "grp_ratio": {
+          "label": {
+            "en": "Ratios (% of GDP)"
+          },
+          "data": false
         }
+      },
+      "hierarchy": {
+        "grp_fs": {
+          "einnahmen": [],
+          "ausgaben": [],
+          "saldo": [],
+          "einnahmen_ord": [],
+          "ausgaben_ord": [],
+          "saldo_ord": []
+        },
+        "grp_gfs": {
+          "ertrag": [],
+          "aufwand": [],
+          "fiskalertrag": [],
+          "defizit_ueberschuss": [],
+          "nettozugang_sachvermoegen": []
+        },
+        "grp_bs": {
+          "aktiven": [],
+          "fremdkapital": [],
+          "eigenkapital": []
+        },
+        "grp_debt": {
+          "bruttoschuld_fs": [],
+          "nettoschulden_fs": [],
+          "maastricht_schuld": [],
+          "nettoschuld": []
+        },
+        "grp_ratio": {
+          "fiskalquote": [],
+          "einnahmenquote": [],
+          "staatsquote": [],
+          "bruttoschuldenquote": [],
+          "schuldenquote": [],
+          "nettoschuldenquote": []
+        },
+        "bip": []
       }
     },
     "estimate": {
@@ -301,9 +368,20 @@
   "concept": "National accounts / Government finance",
   "canonical": true,
   "split": "indicator",
-  "single_select": ["level", "model", "estimate"],
+  "single_select": [
+    "level",
+    "model",
+    "estimate"
+  ],
   "default_transform": "level",
-  "percent_levels": ["fiskalquote", "einnahmenquote", "staatsquote", "bruttoschuldenquote", "schuldenquote", "nettoschuldenquote"],
+  "percent_levels": [
+    "fiskalquote",
+    "einnahmenquote",
+    "staatsquote",
+    "bruttoschuldenquote",
+    "schuldenquote",
+    "nettoschuldenquote"
+  ],
   "default": {
     "level": "staat",
     "model": "gfs",

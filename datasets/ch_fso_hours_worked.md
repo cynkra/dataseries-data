@@ -59,6 +59,14 @@ annual hours per job, absolute annual volume of hours) that must never overlay; 
 is a Total / Men / Women radio. The default opens on the headline "~31 h/week" series
 (2024 = 30.94 h), Total sex, all working-time lines.
 
+## Hierarchy
+`Total` splits into full-time and part-time, and part-time into the two intensity bands.
+- _T
+  - FT
+  - PT
+    - PT_I
+    - PT_II
+
 ## Caveats / simplifications
 - We keep only the **national totals** of nationality, economic branch (NOGA), sector,
   employment status and region; the source cube has all of those cuts if wanted later.

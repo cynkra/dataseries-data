@@ -52,6 +52,15 @@ Dec-2020=100 asset `su-d-05.02.67`). History to December 1982.
 - **transform**: yoy
 - **seasonal adjustment**: n/a (the CPI is not seasonally adjusted)
 
+## Hierarchy
+Built from the source: the FSO `INDEX_m` sheet carries a `Level` column (1 = Total,
+2 = COICOP division, deeper = group/leaf), and the parser reconstructs the COICOP tree
+from it (parent = the nearest preceding position of smaller depth). The code slugs are
+*not* plain string prefixes — the two-digit divisions 10/11/12 collide with sub-codes
+of division 1 — so depth, not the code, drives the nesting. The appended "type of
+goods" positions (`110_*`, no depth) stay at the top level. Each `item` node carries
+its own series, so every level is selectable.
+
 ## Caveats / simplifications
 - Code slugs (`100_100`, `100_1`, ...) are used directly as level keys rather than
   the short mnemonic ids (ttl, fanb, ...) from the old hand-maintained mapping; the

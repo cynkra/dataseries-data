@@ -53,7 +53,7 @@ needed first).
 
 ## Display
 - **split**: D1
-- **single-select**: D0, D2
+- **single-select**: D2
 - **default**: D0=A, D1=GT, D2=WMF
 - **transform**: level
 - **seasonal adjustment**: n/a (no SA dimension or SA codes). D2 mixes a level

@@ -13,7 +13,7 @@ root <- tryCatch(
   dirname(normalizePath(sub("--file=", "", grep("--file=", commandArgs(FALSE), value = TRUE)))),
   error = function(e) "R"
 )
-for (f in c("dates.R", "http.R", "io.R", "source_snb.R", "source_kof.R",
+for (f in c("dates.R", "http.R", "io.R", "hierarchy.R", "source_snb.R", "source_kof.R",
             "source_fso.R", "source_fso_excel.R", "source_fso_excel_sets.R",
             "source_fso_dam_csv.R", "source_fso_sdmx.R", "source_eurostat.R",
             "source_seco.R", "source_ffa.R", "source_adecco.R")) {
@@ -328,6 +328,10 @@ main <- function() {
     # then drop any dimension thereby (or already) pinned to a single value.
     datasets[[i]] <- drop_redundant_levels(datasets[[i]])
     datasets[[i]] <- drop_degenerate_dims(datasets[[i]])
+    # Nest a flat breakdown dim into a tree where the codes (or the datasheet) say so.
+    # No-op when the source already supplied a hierarchy (e.g. the SNB cubes, the CPI
+    # parser) or the datasheet declares none.
+    datasets[[i]] <- attach_hierarchy(datasets[[i]], DATASHEET_DIR)
     # Capture the return: write_dataset() stamps meta$fetched_utc, which
     # write_catalog() below reads into the catalog "fetched" field.
     datasets[[i]] <- write_dataset(datasets[[i]], DATA_DIR)

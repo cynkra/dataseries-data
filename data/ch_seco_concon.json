@@ -178,7 +178,47 @@
             "it": "Indice del clima di fiducia dei consumatori precedente, 2009 - 2019 (incl. retropolazione)"
           },
           "data": true
+        },
+        "grp_prices": {
+          "label": {
+            "en": "Prices"
+          },
+          "data": false
+        },
+        "grp_jobs": {
+          "label": {
+            "en": "Employment"
+          },
+          "data": false
+        },
+        "grp_saving": {
+          "label": {
+            "en": "Saving"
+          },
+          "data": false
         }
+      },
+      "hierarchy": {
+        "ks_i63_index_q": {
+          "ks_i12_econ_exp_q": [],
+          "ks_i41_fin_pos_hist_q": [],
+          "ks_i42_fin_pos_exp_q": [],
+          "ks_i52_spend_q": []
+        },
+        "ks_i11_econ_hist_q": [],
+        "grp_prices": {
+          "ks_i21_price_hist_q": [],
+          "ks_i22_price_exp_q": []
+        },
+        "grp_jobs": {
+          "ks_i31_job_secure_q": [],
+          "ks_i32_unemp_exp_q": []
+        },
+        "grp_saving": {
+          "ks_i51_save_q": [],
+          "ks_i53_save_exp_q": []
+        },
+        "ks_i62_index_q": []
       }
     },
     "seas_adj": {
@@ -238,7 +278,10 @@
   "canonical": true,
   "featured": "Consumer confidence",
   "split": "structure",
-  "single_select": ["type", "seas_adj"],
+  "single_select": [
+    "type",
+    "seas_adj"
+  ],
   "default_transform": "level",
   "default": {
     "structure": "ks_i63_index_q",

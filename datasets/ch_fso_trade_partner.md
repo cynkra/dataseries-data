@@ -67,6 +67,52 @@ trade-by-goods value series — the SNB cubes carry no partner-country dimension
 - **transform**: level
 - **seasonal adjustment**: n/a (annual series, no SA dimension)
 
+## Hierarchy
+`Total` is the root; the continent aggregates (already present as series) head each
+branch, with the reported partner countries nested beneath and the `EU` aggregate under
+Europe. Transcontinental partners follow the Swiss trade-statistics convention (Russia
+and Türkiye under Europe).
+- Total
+  - Europe
+    - EU
+    - Germany
+    - France
+    - Italy
+    - Austria
+    - Belgium
+    - Netherlands
+    - Spain
+    - Poland
+    - United Kingdom
+    - Ireland
+    - Sweden
+    - Czech Republic
+    - Russia
+    - Türkiye
+  - Asia
+    - China
+    - Japan
+    - India
+    - Hong Kong
+    - Korea (South)
+    - Taiwan
+    - Singapore
+    - Thailand
+    - Saudi Arabia
+    - United Arab Emirates
+    - Uzbekistan
+  - North America
+    - USA
+    - Canada
+    - Mexico
+  - Central and South America
+    - Brazil
+    - Peru
+  - Africa
+    - South Africa
+  - Oceania
+    - Australia
+
 ## Caveats / simplifications
 - **BAZG commercial-use permission**: the underlying customs data is produced by the
   Federal Office for Customs and Border Security (FOCBS / BAZG). FSO disseminates it

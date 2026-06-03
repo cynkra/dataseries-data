@@ -66,6 +66,12 @@ leaves `Wirtschaftsabteilung` as the single dimension.
 - **seasonal adjustment**: n/a (no seasonal-adjustment dimension; only the total
   employment-rate, total-sex slice is fetched)
 
+## Hierarchy
+The NOGA division codes are contiguous ranges that nest by containment
+(`5-96` Total ⊃ `5-43` Sector II ⊃ `10-33` Manufacturing ⊃ divisions); the tree is
+derived from those ranges.
+- derive: noga-range
+
 ## Caveats / simplifications
 - Only the total-level, total-sex slice is captured. The full-time/part-time and
   men/women breakdowns of this exact table are dropped here; the sex breakdown

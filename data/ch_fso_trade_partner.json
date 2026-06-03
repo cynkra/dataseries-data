@@ -289,6 +289,55 @@
           },
           "data": true
         }
+      },
+      "hierarchy": {
+        "Total": {
+          "Europe": {
+            "EU": [],
+            "Germany": [],
+            "France": [],
+            "Italy": [],
+            "Austria": [],
+            "Belgium": [],
+            "Netherlands": [],
+            "Spain": [],
+            "Poland": [],
+            "United Kingdom": [],
+            "Ireland": [],
+            "Sweden": [],
+            "Czech Republic": [],
+            "Russia": [],
+            "Türkiye": []
+          },
+          "Asia": {
+            "China": [],
+            "Japan": [],
+            "India": [],
+            "Hong Kong": [],
+            "Korea (South)": [],
+            "Taiwan": [],
+            "Singapore": [],
+            "Thailand": [],
+            "Saudi Arabia": [],
+            "United Arab Emirates": [],
+            "Uzbekistan": []
+          },
+          "North America": {
+            "USA": [],
+            "Canada": [],
+            "Mexico": []
+          },
+          "Central and South America": {
+            "Brazil": [],
+            "Peru": []
+          },
+          "Africa": {
+            "South Africa": []
+          },
+          "Oceania": {
+            "Australia": []
+          }
+        }
       }
     },
     "level": {

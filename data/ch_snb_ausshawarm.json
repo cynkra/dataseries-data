@@ -327,7 +327,7 @@
   "canonical": true,
   "featured": "Foreign trade",
   "split": "D1",
-  "single_select": ["D0", "D2"],
+  "single_select": "D2",
   "default_transform": "level",
   "default": {
     "D0": "A",

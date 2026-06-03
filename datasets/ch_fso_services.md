@@ -44,6 +44,17 @@ tertiary ones do not.
 - **transform**: level
 - **seasonal adjustment**: use the `ADJUSTMENT` dimension (no separate toggle)
 
+## Hierarchy
+`G-NxK` (tertiary sector) is the total; the NOGA service sections sit under it.
+- G-NxK
+  - G
+  - H
+  - I
+  - J
+  - L
+  - M
+  - N
+
 ## Caveats / simplifications
 - Nominal turnover **index** (2021 = 100); no absolute CHF values are published.
 - The `G-NxK` aggregate label comes back in German from the codelist (its English

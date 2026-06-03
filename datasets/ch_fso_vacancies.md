@@ -68,6 +68,10 @@ economy-wide total division (`5-96`) and the primary measure, the count of vacan
 (`Offene Stellen=1`), not the 2015Q2-rebased index the most-observations guess picked.
 Transform stays at `level`.
 
+## Hierarchy
+NOGA division ranges nest by containment (`5-96` ⊃ `5-43`/`45-96` ⊃ groups); derived.
+- derive: noga-range
+
 ## Caveats / simplifications
 - The three `Offene Stellen` measures share one `value` column; consumers must
   read the unit from that dimension, not the value magnitude.

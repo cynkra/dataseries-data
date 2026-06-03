@@ -73,6 +73,17 @@
           },
           "data": true
         }
+      },
+      "hierarchy": {
+        "G-NxK": {
+          "G": [],
+          "H": [],
+          "I": [],
+          "J": [],
+          "L": [],
+          "M": [],
+          "N": []
+        }
       }
     },
     "ADJUSTMENT": {
@@ -130,7 +141,10 @@
   "concept": "Domestic economy / Services turnover",
   "canonical": true,
   "split": "NOGA",
-  "single_select": ["ADJUSTMENT", "INDICATOR_KE"],
+  "single_select": [
+    "ADJUSTMENT",
+    "INDICATOR_KE"
+  ],
   "default_transform": "level",
   "default": {
     "NOGA": "G-NxK",

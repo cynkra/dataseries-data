@@ -42,6 +42,10 @@ the leading complement to the jobs (`ch_fso_besta`) and vacancies
 - **transform**: level
 - **seasonal adjustment**: n/a (it is already a diffusion-style ratio)
 
+## Hierarchy
+NOGA division ranges nest by containment (`5-96` ⊃ `5-43`/`45-96` ⊃ groups); derived.
+- derive: noga-range
+
 ## Caveats / simplifications
 - It is an **index** (ratio around 1.0, observed 0.67–1.22), not a level/count — do
   not apply a YoY transform. Flag the 1.0 neutral line.

@@ -60,6 +60,19 @@ recomputed from the index — which collapses `UNIT_MEASURE` away entirely.
 - **seasonal adjustment**: single-select on `ADJUSTMENT`; default to seasonally +
   calendar adjusted (`Y`); raw (`N`) and calendar-only (`W`) available as toggles.
 
+## Hierarchy
+Two NOGA aggregates head the tree: `B-E` Industry (mining, manufacturing, energy) and
+`F` Construction (with the `41_43` total and its divisions).
+- B-E
+  - B
+  - C
+  - D
+- F
+  - 41
+  - 42
+  - 43
+  - 41_43
+
 ## Caveats / simplifications
 - Only the secondary-sector NOGA codes are kept; the full `DF_KEU_Q1` flow also
   carries the tertiary sector (covered for retail by `ch_fso_retail`).

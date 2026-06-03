@@ -57,7 +57,6 @@ Swiss-franc rate history including the negative-rate years.
 
 ## Display
 - **split**: D0
-- **single-select**: D1
 - **default**: D0=CHF, D1=10J
 - **transform**: level
 - **seasonal adjustment**: n/a (SNB cube has no SA dimension)

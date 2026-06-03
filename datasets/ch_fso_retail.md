@@ -60,6 +60,30 @@ recomputed from the index — which collapses `UNIT_MEASURE` away entirely.
 - **seasonal adjustment**: single-select on `ADJUSTMENT`; default to seasonally +
   calendar adjusted (`Y`); raw (`N`) and calendar-only (`W`) available as toggles.
 
+## Hierarchy
+`47 Retail trade` is the total; the specialised-store divisions, the non-specialised
+classes and the alternative totals sit under it, with the by-class-of-goods breakdown
+(`47P`) as its own sub-branch.
+- 47
+  - 472
+  - 473
+  - 474
+  - 475
+  - 476
+  - 477
+  - 478_479
+  - 4711
+  - 4719
+  - 4711_472
+  - 4719_474-479
+  - 47x473
+  - 47PxTreib
+  - 47P
+    - 47P_Food
+    - 47P_Bekl
+    - 47P_Treib
+    - 47P_UW
+
 ## Caveats / simplifications
 - Only the retail division 47 NOGA codes are kept; the full `DF_KEU_M1` flow also
   carries the secondary sector and the rest of the tertiary sector (those live in

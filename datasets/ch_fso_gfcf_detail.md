@@ -70,6 +70,20 @@ split=asset / single-select=sector layout was ragged: picking any of the 8 sub-s
 together with `P51G` produced an empty (dead) chart, since sub-sectors have no grand
 total. Swapping the roles removes those 8 dead cells.
 
+## Hierarchy
+The SNA institutional sectors nest by their S-codes: `S1` total economy splits into
+non-financial / financial corporations, government, households and NPISH, with the
+financial and government sub-sectors one level deeper.
+- S1
+  - S11
+  - S12
+    - S121T127
+    - S12Q
+  - S13
+    - S1314
+  - S14
+  - S15
+
 ## Caveats / simplifications
 - **Current prices, levels only.** The source's %-change variants (`AC`, `ACPP`) are
   dropped; the app reconstructs %-change via its transform toggle, but real (volume)

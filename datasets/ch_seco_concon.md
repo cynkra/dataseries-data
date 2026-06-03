@@ -67,6 +67,29 @@ this datasheet, not from a hierarchy heuristic).
 - **seasonal adjustment**: single-select on `seas_adj`; default to the seasonally +
   calendar adjusted series (`csa`); raw (`na`) available as a toggle.
 
+## Hierarchy
+The headline **6.3 Consumer sentiment index** is the parent of the four sub-indices it
+is actually computed from — expected economic development (1.2), past and expected
+financial situation (4.1, 4.2) and the right time for major purchases (5.2) — per the
+SECO methodology (BFS June-2024 survey publication). The remaining survey balances are
+grouped by theme; the retired 6.2 index variant sits on its own.
+- ks_i63_index_q
+  - ks_i12_econ_exp_q
+  - ks_i41_fin_pos_hist_q
+  - ks_i42_fin_pos_exp_q
+  - ks_i52_spend_q
+- ks_i11_econ_hist_q
+- @grp_prices: Prices
+  - ks_i21_price_hist_q
+  - ks_i22_price_exp_q
+- @grp_jobs: Employment
+  - ks_i31_job_secure_q
+  - ks_i32_unemp_exp_q
+- @grp_saving: Saving
+  - ks_i51_save_q
+  - ks_i53_save_exp_q
+- ks_i62_index_q
+
 ## Caveats / simplifications
 - Producer attribution corrected: this is SECO's own publication, replacing the SNB
   re-export `ch_snb_concon` (retired). Same survey, fetched at source, with the SA

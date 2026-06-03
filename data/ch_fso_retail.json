@@ -139,6 +139,29 @@
           },
           "data": true
         }
+      },
+      "hierarchy": {
+        "47": {
+          "472": [],
+          "473": [],
+          "474": [],
+          "475": [],
+          "476": [],
+          "477": [],
+          "478_479": [],
+          "4711": [],
+          "4719": [],
+          "4711_472": [],
+          "4719_474-479": [],
+          "47x473": [],
+          "47PxTreib": [],
+          "47P": {
+            "47P_Food": [],
+            "47P_Bekl": [],
+            "47P_Treib": [],
+            "47P_UW": []
+          }
+        }
       }
     },
     "ADJUSTMENT": {
@@ -197,7 +220,10 @@
   "canonical": true,
   "featured": "Retail trade",
   "split": "NOGA",
-  "single_select": ["ADJUSTMENT", "INDICATOR_KE"],
+  "single_select": [
+    "ADJUSTMENT",
+    "INDICATOR_KE"
+  ],
   "default_transform": "level",
   "default": {
     "NOGA": "47",
