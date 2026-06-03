@@ -12,7 +12,7 @@ below) and its `canonical` flag, and is the source of truth for that classificat
 
 ## Model: concept-first, source-second
 
-Borrowed from Macrobond, scaled to Switzerland:
+The organizing principle, scaled to Switzerland:
 
 - Users browse a **concept tree** (National accounts → Prices → Consumer prices),
   not a list of provider dumps. Source, region, unit, seasonal adjustment and

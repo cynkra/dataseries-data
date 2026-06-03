@@ -9,7 +9,7 @@
 
 # dataseries.org — Comprehensive Coverage Review
 
-*Mission: all Swiss economic data, especially the hard-to-get, in one place. Date: 2026-06-02. Method: 21-agent workflow — inventory (current catalog + the previous swissdata catalog + old alt.dataseries.ch site) → research the canonical Swiss macro universe (SNB/FSO/SECO/KOF + Datastream/Macrobond/OECD/Trading-Economics key-indicator lists) → synthesize a gap matrix → adversarially verify the top headline gaps → report.*
+*Mission: all Swiss economic data, especially the hard-to-get, in one place. Date: 2026-06-02. Method: 21-agent workflow — inventory (current catalog + the previous swissdata catalog + old alt.dataseries.ch site) → research the canonical Swiss macro universe (SNB/FSO/SECO/KOF + Datastream/OECD/Trading-Economics key-indicator lists) → synthesize a gap matrix → adversarially verify the top headline gaps → report.*
 
 ## 0. Update — gaps actioned (2026-06-02)
 
