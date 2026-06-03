@@ -158,10 +158,11 @@ assemble_tree <- function(codes, parent) {
 
 # ---- entry point ------------------------------------------------------------
 # Attach a hierarchy to one dataset's split (or block-named) dimension, from its
-# datasheet `## Hierarchy` block. No block, or a source-supplied hierarchy already
-# present on that dim, is a no-op. Synthetic group codes are added to the dim's
-# `levels` so the front-end has a label for them; codes present in the levels but
-# absent from the declared tree are appended as top-level leaves so nothing vanishes.
+# datasheet `## Hierarchy` block. No block (or a block with no derive/tree) is a no-op,
+# leaving any source-supplied hierarchy intact. A declared tree or a `derive:` method
+# overrides the source tree. Synthetic group codes are added to the dim's `levels` so
+# the front-end has a label for them; codes present in the levels but absent from the
+# declared tree are appended as top-level leaves so nothing vanishes.
 attach_hierarchy <- function(ds, datasheet_dir) {
   f <- file.path(datasheet_dir, paste0(ds$id, ".md"))
   if (!file.exists(f)) return(ds)
@@ -184,10 +185,12 @@ attach_hierarchy <- function(ds, datasheet_dir) {
       "noga-range" = derive_noga_range(codes),                 # ignores any source tree
       "under-root" = reparent_under_root(existing, codes, arg),
       stop(sprintf("%s: unknown hierarchy derive method '%s'", ds$id, method), call. = FALSE))
-  } else if (!is.null(existing)) {
-    return(ds)                                                 # source already provides it; declaration is a no-op
+  } else if (is.null(spec$tree)) {
+    return(ds)                                                 # block has neither a derive nor a tree
   } else {
-    # Register synthetic group labels, then validate the declared real codes.
+    # A declared tree OVERRIDES a source-supplied hierarchy (you only write the block
+    # when the source tree is missing or wrong — e.g. SNB ships the M1/M2/M3 aggregates
+    # flat, but they nest). Register synthetic group labels, then validate the codes.
     for (g in names(spec$groups))
       levels[[g]] <- list(label = list(en = spec$groups[[g]]), data = FALSE)
     declared <- tree_codes(spec$tree)

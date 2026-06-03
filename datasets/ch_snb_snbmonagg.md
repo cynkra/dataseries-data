@@ -56,6 +56,23 @@ the base is the alternate.
   broadest aggregate M3 (`D1=GM3`) as a CHF-million level; use the app's YoY %
   toggle for the growth-rate view.
 
+## Hierarchy
+SNB ships `D1` flat (all eight items as siblings), but the aggregates nest
+cumulatively: M1 ⊂ M2 ⊂ M3. M1 (`GM1`) = currency in circulation (`B`) + sight
+deposits (`S0`) + transaction-account deposits (`ET`); M2 (`GM2`) = M1 + savings
+deposits (`S1`); M3 (`GM3`) = M2 + time deposits (`T`). We declare that nesting so the
+picker shows each broader aggregate as the parent of the narrower one plus its
+increment (every node is a published series, so all are selectable). Source: SNB
+definitions of the money supply (European standard).
+- GM3
+  - GM2
+    - GM1
+      - B
+      - S0
+      - ET
+    - S1
+  - T
+
 ## Caveats / simplifications
 - After dropping `D0`, the code `B` is unambiguous: it now only appears in `D1`
   ("currency in circulation"). (In the source it doubled as the `D0` "level" code.)

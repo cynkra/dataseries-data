@@ -21,7 +21,8 @@ IDS <- c(
   "ch_fso_besta", "ch_fso_besta_outlook", "ch_fso_vacancies",
   "ch_fso_gfcf_detail", "ch_fso_hours_worked",
   "ch_ffa_finances", "ch_fso_trade_partner",
-  "ch_snb_ausshawarm"   # reparent the SNB goods tree under GT Total (derive: under-root)
+  "ch_snb_ausshawarm",  # reparent the SNB goods tree under GT Total (derive: under-root)
+  "ch_snb_snbmonagg"    # override the flat SNB tree with the M1 ⊂ M2 ⊂ M3 nesting
 )
 
 # Re-emit JSON with the same key order / formatting write_dataset() uses.
