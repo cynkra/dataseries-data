@@ -32,13 +32,16 @@ than once. It is now written here and in `source-quirks.md` so it stops getting 
 
 ---
 
-## Still deferred (verified 2026-06-02)
+## Still deferred (verified 2026-06-02; SIX / PMI / BAZG-monthly re-verified 2026-06-03)
 
 | Dataset | Provider | Status / how to get it | Why still deferred |
 |---|---|---|---|
 | Construction investment (Bauinvestitionen) national levels | FSO | **Reachable** via DAM Excel order `je-d-09.04.01.27` (asset 35965030); levels now run to ~2023 (the stale "ends 2019" note is corrected). | **Largely superseded** — `ch_fso_gfcf_detail` already ships Hochbau/Tiefbau construction GFCF by sector with full 1995–2024 levels. This is the fragile multi-layout national-total cut (13/25/5-col header detection, ~18-month lag, 2012/13 break); low marginal value. Integrate opportunistically only if the national Tiefbau/Hochbau split outside the institutional-sector frame is wanted. |
 | Industrial **order intake** (Auftragseingang/-bestand) | FSO | **Not on SDMX.** Exhaustively searched all 182 dataflows (order/Auftrag/intake/book/eingang/commande) — absent. Turnover *is* shipped (`ch_fso_production`). | Would need the STAT-TAB (dead from our env) or DAM Excel channel, or SECO/KOF survey. Do **not** re-search SDMX. |
-| Purchasing Managers' Index (PMI) | procure.ch / UBS | **Genuinely closed** — no open file; headline only in press releases. | Scrape press releases or license a feed. Fragile + licensing-dubious; **not recommended.** |
+| LFS / SAKE labour-force **participation rate** (Erwerbsquote) | FSO | Open (DAM/SAKE), but a messier age-band layout. Hours/working-volume (`ch_fso_hours_worked`) is shipped; the activity-rate cut was skipped. | Low marginal value; add opportunistically. |
+| Purchasing Managers' Index (PMI) | procure.ch / UBS | **Genuinely closed (re-verified 2026-06-03).** No open CSV/API/SDMX exists — procure.ch/UBS publish PDFs stamped "educational/marketing" only; Yahoo/Investing/Trading-Economics show it on-page but forbid redistribution. The OECD/FRED "Swiss manufacturing confidence" series that *look* like a PMI are the **KOF business-tendency survey**, not the procure.ch PMI (and KOF is already shipped via `ch_kof_barometer` / `ch_kof_esi`). | Only path is a **licensing / partnership** with procure.ch/UBS — a business deal, not an open-data gap. Do not scrape PDFs. |
+| Swiss equity data beyond the SNB cube — **VSMI** volatility, SMIM, constituents, intraday, on-book EOD turnover | SIX | **Closed (re-verified 2026-06-03).** SIX index time series + constituents are license-gated (SIX Index Data Center / Exfeed, paid; trademark/IP controlled); every free mirror that returns machine-readable data (Yahoo `^SSMI`/`V3X.SW`, stooq, Investing) **prohibits redistribution**. The **open** equity slice — SMI, SPI total-return, SIX+ICB sector sub-indices, daily since 1989 — is **already shipped** via `ch_snb_capchstocki` (SNB open licence). | No redistributable channel for VSMI/SMIM/constituents. The open slice is already in; the rest needs a SIX licence. |
+| Foreign trade — **MONTHLY by commodity × partner country** (Swiss-Impex TN8 / CPA6) | BAZG / FOCBS | **OPEN (re-verified 2026-06-03; the earlier HTTP 502 was a transient outage).** opendata.swiss `waren-aussenhandel-nach-tarifnummer-land`; direct CSV-ZIP English masters at `https://ocean.nivel.bazg.admin.ch/open-data-reports/TN8_EXP_en/TN8_EXP_en.zip` (+ `TN8_IMP_en`), HTTP 200, updated 2026-06-02. Same `terms_by_ask` licence already accepted for `ch_fso_trade_partner`. | **Deferred for INGEST SIZE, not access** — each ZIP is ~0.5–0.7 GB (full TN8 8-digit tariff × country × month). Needs a sliced/aggregated ingest (CPA6 product classes × top partners, or monthly total-by-country), like the SDMX-sliced pattern, not a whole-cube pull. **Real added value** (monthly + the commodity dimension the annual `ch_fso_trade_partner` lacks) — the strongest remaining candidate to add. |
 
 ### Construction stitch recipe (if/when wanted)
 DAM Excel `je-d-09.04.01.27`, one sheet per year-pair. Year = first 4 chars of the
@@ -89,4 +92,13 @@ Eight **with-effort** (new bespoke parser):
 - `ch_fso_hicp` — EU-harmonised CPI, **Eurostat** SDMX `prc_hicp_midx` (new `source_eurostat.R` — first non-Swiss-producer source).
 - `ch_seco_wwa` — SECO Weekly Economic Activity index — the catalog's first **weekly** series.
 
-Two channel discoveries to remember: the KOF **`sets`** endpoint is open (the per-key `ts` endpoint's 412 wall does not apply); the **BAZG monthly** trade-by-tariff-×-country OGD CSV (the richer upgrade path for `ch_fso_trade_partner`, since 1988) returned HTTP 502 from this build env on every retry — annual FSO Excel was used instead.
+Two channel discoveries to remember: the KOF **`sets`** endpoint is open (the per-key `ts` endpoint's 412 wall does not apply); the **BAZG monthly** trade-by-tariff-×-country OGD CSV (the richer upgrade path for `ch_fso_trade_partner`, since 1988) returned HTTP 502 from this build env at the time — **re-verified open 2026-06-03** (transient outage; now in the deferred table above as the strongest remaining candidate).
+
+### 2026-06-03 — held 4 shipped + closed set re-verified
+All 14 are now in the catalog (70 total): the 4 previously held for display work —
+`ch_fso_ets` (split=sector tree / sex selector), `ch_fso_gdp_region` (reworked to a
+hierarchical CH→greater-region→canton tree), `ch_fso_gfcf_detail` (split=sector / asset
+selector), `ch_fso_hours_worked` (split=worktime / measure+sex selectors) — landed with
+clean displays. The closed set (PMI, SIX/VSMI, industrial orders) was adversarially
+re-verified against web sources and **holds**; only **BAZG monthly trade** flipped from
+"502/closed" to "open, deferred for size" (see table).
