@@ -63,6 +63,10 @@ by the dataset title. That leaves `Tourismusregion` as the single dimension.
 - **seasonal adjustment**: n/a (raw overnight-stay counts; strong seasonal swing is
   intentionally left in the data)
 
+## Hierarchy
+`8100 Switzerland` is the national total, the sum of the 13 tourism regions; FSO lists it flat alongside them. Nest the regions under Switzerland.
+- derive: under-root 8100
+
 ## Caveats / simplifications
 - Arrivals and other HESTA indicators are not captured; only overnight stays.
 - No `updated` date is published by the API; the latest monthly observation

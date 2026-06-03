@@ -53,6 +53,10 @@ quarter.
 - **transform**: level
 - **seasonal adjustment**: n/a (SNB cube has no seasonal-adjustment dimension)
 
+## Hierarchy
+`T0 Total` is the published aggregate of the IIP functional categories (IMF BPM6), shipped flat as a sibling. Nest them under it (the source sub-trees are preserved).
+- derive: under-root T0
+
 ## Caveats / simplifications
 - Stocks, not flows; CHF millions, end of quarter. The many `T*` codes are subtotals
   at different tree depths, so summing leaves across levels double-counts.

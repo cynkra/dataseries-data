@@ -47,6 +47,10 @@ measures traded volume.
 - **transform**: level
 - **seasonal adjustment**: n/a (SNB cube, no SA dimension)
 
+## Hierarchy
+`T2 Total` is the grand aggregate over the asset-class groups (shares, bond issues, investment funds, structured products), shipped as their sibling. Nest them under it (the shares/bonds domestic-foreign sub-splits are preserved).
+- derive: under-root T2
+
 ## Caveats / simplifications
 - `T2` is a roll-up total kept alongside its components; no frequency synthesis is
   performed.

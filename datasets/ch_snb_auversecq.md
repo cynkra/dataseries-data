@@ -54,6 +54,10 @@ populated combinations, not the full 3x5x6 grid.
 - **transform**: level
 - **seasonal adjustment**: n/a (SNB cube has no seasonal-adjustment dimension)
 
+## Hierarchy
+`T Total` is the sum of the institutional sectors (SNB, banks, public, other), shipped as their sibling. Nest the sectors under it.
+- derive: under-root T
+
 ## Caveats / simplifications
 - Flat hierarchy: every level is a leaf, so no parent grouping nodes are dropped.
 - Not all dimension cross-products exist (reserve assets only for SNB assets);

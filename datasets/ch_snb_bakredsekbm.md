@@ -58,6 +58,10 @@ the default cell.
 - **transform**: level
 - **seasonal adjustment**: n/a (no SA dimension; stock series at month end)
 
+## Hierarchy
+`T1 Total domestic` is the sum of the 17 economic-sector / household loan codes, but SNB lists it as their sibling. Nest them under it.
+- derive: under-root T1
+
 ## Caveats / simplifications
 - `K` under `D1` (other loans) is a grouping node (`data: false`); only `T2/GE/UN`
   carry data. Do not confuse it with `K` under `D3` (financial activities), which

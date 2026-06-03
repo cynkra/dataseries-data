@@ -57,6 +57,10 @@ net acquisition of assets, net incurrence of liabilities, and the net of the two
 - **transform**: level
 - **seasonal adjustment**: n/a (SNB publishes raw values, no SA dimension)
 
+## Hierarchy
+`T0 Total` is the sum of the financial-account components (direct/portfolio/other investment, reserve assets — IMF BPM6), shipped as their sibling. Nest them under it.
+- derive: under-root T0
+
 ## Caveats / simplifications
 - The flatten step relies on the SNB code, not the label, to disambiguate the
   many "Total" / "Banks" / "Swiss National Bank" entries that recur at different

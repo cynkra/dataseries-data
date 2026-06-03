@@ -135,22 +135,23 @@
         }
       },
       "hierarchy": {
-        "T": [],
-        "UEB": {
-          "UEB_T": [],
-          "UEB_PBA": {
-            "UEB_PBA_T": []
+        "T": {
+          "UEB": {
+            "UEB_T": [],
+            "UEB_PBA": {
+              "UEB_PBA_T": []
+            },
+            "UEB_NPB": {
+              "UEB_NPB_T": [],
+              "UEB_NPB_EBA": [],
+              "UEB_NPB_DKA": [],
+              "UEB_NPB_DAA": [],
+              "UEB_NPB_U": []
+            }
           },
-          "UEB_NPB": {
-            "UEB_NPB_T": [],
-            "UEB_NPB_EBA": [],
-            "UEB_NPB_DKA": [],
-            "UEB_NPB_DAA": [],
-            "UEB_NPB_U": []
-          }
-        },
-        "LAS": [],
-        "UZE": []
+          "LAS": [],
+          "UZE": []
+        }
       }
     },
     "D2": {
@@ -188,7 +189,10 @@
   "concept": "Payment systems / Payments & cash",
   "canonical": false,
   "split": "D1",
-  "single_select": ["D0", "D2"],
+  "single_select": [
+    "D0",
+    "D2"
+  ],
   "default_transform": "level",
   "default": {
     "D0": "T",

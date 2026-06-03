@@ -49,6 +49,10 @@ headline IIP story lives in `auvekomq`.
 - **transform**: level
 - **seasonal adjustment**: n/a (SNB cube has no seasonal-adjustment dimension)
 
+## Hierarchy
+`T Total` is the published aggregate of the IIP functional components (IMF BPM6), shipped flat as a sibling. Nest the components under it.
+- derive: under-root T
+
 ## Caveats / simplifications
 - Stocks in CHF millions, end of quarter; the component axis here is the coarse
   functional level only (no deep sub-tree, unlike `auvekomq`).

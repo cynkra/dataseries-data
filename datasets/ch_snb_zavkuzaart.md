@@ -51,6 +51,10 @@ payment plumbing. History starts only 2012-03, later than the card cubes.
 - **transform**: level
 - **seasonal adjustment**: n/a (SNB publishes this cube raw; no SA dimension)
 
+## Hierarchy
+`T Total` = transfers + direct debits + other outgoing payments, but SNB lists it as their sibling. Nest the order types under it.
+- derive: under-root T
+
 ## Caveats / simplifications
 - `D1` mixes leaf totals (`UEB_T`, `UEB_PBA_T`, `UEB_NPB_T`) with finer leaves; summing
   across `D1` double-counts. Use a single level of the order-type tree at a time.
