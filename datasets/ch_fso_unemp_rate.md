@@ -39,7 +39,7 @@ other at total), giving 5 series:
 
 ## Display
 - **split**: origin
-- **single-select**: sex
+- **single-select**:
 - **default**: origin=tot, sex=tot
 - **transform**: level
 - **seasonal adjustment**: n/a

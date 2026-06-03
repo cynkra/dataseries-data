@@ -51,7 +51,7 @@ banking system's book, not just totals.
 
 ## Display
 - **split**: D0
-- **single-select**: INLANDAUSLAND, WAEHRUNG, BANKENGRUPPE
+- **single-select**: INLANDAUSLAND, BANKENGRUPPE
 - **default**: D0=TOT, INLANDAUSLAND=T, WAEHRUNG=T, BANKENGRUPPE=A40
 - **transform**: level
 - **seasonal adjustment**: n/a (no SA dimension; stock series at month end)

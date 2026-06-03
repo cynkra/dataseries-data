@@ -460,7 +460,7 @@
   "concept": "External sector / Balance of payments",
   "canonical": true,
   "split": "D1",
-  "single_select": "D0",
+  "single_select": [],
   "default_transform": "level",
   "default": {
     "D1": "T0",

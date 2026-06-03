@@ -135,7 +135,7 @@
   "concept": "National accounts / Investment (gross fixed capital formation)",
   "canonical": false,
   "split": "sector",
-  "single_select": "asset",
+  "single_select": [],
   "default_transform": "level",
   "default": {
     "sector": "S1",

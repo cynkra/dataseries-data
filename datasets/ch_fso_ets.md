@@ -50,7 +50,7 @@ the male/female split of any sector reads straight off the chart.
 
 ## Display
 - **split**: sector
-- **single-select**: sex
+- **single-select**:
 - **default**: sector=P, sex=total
 - **transform**: level
 - **seasonal adjustment**: n/a (quarterly averages, not seasonally adjusted)

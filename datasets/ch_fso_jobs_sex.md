@@ -57,7 +57,7 @@ three sector aggregates (total, Sector 2, Sector 3).
 
 ## Display
 - **split**: Geschlecht
-- **single-select**: Grossregion, Wirtschaftssektor, Beschäftigungsgrad
+- **single-select**: Beschäftigungsgrad
 - **default**: Geschlecht=TOT, Grossregion=0, Wirtschaftssektor=TOT, Beschäftigungsgrad=TOT
 - **transform**: level
 - **seasonal adjustment**: lives inside `Beschäftigungsgrad` (levels `3` total SA and

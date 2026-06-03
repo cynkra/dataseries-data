@@ -52,7 +52,7 @@ government civil-engineering vs corporate equipment).
 
 ## Display
 - **split**: sector
-- **single-select**: asset
+- **single-select**:
 - **default**: sector=S1, asset=P5111_N111_112G
 - **transform**: level
 - **seasonal adjustment**: n/a (annual)

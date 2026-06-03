@@ -62,7 +62,7 @@ trade-by-goods value series — the SNB cubes carry no partner-country dimension
 
 ## Display
 - **split**: partner
-- **single-select**: flow, level
+- **single-select**: level
 - **default**: flow=export, partner=Total, level=group
 - **transform**: level
 - **seasonal adjustment**: n/a (annual series, no SA dimension)

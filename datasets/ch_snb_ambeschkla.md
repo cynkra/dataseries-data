@@ -44,7 +44,7 @@ FSO jobs cube does not expose the same way. Values are in thousands of persons.
 
 ## Display
 - **split**: D1
-- **single-select**: D0
+- **single-select**:
 - **default**: D0=VT, D1=T0
 - **transform**: level
 - **seasonal adjustment**: n/a (no SA dimension or SA codes)

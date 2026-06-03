@@ -227,7 +227,7 @@
   "concept": "Labour / Employment / employed persons",
   "canonical": false,
   "split": "sector",
-  "single_select": "sex",
+  "single_select": [],
   "default_transform": "level",
   "default": {
     "sector": "P",

@@ -314,7 +314,7 @@
   "concept": "External sector / Foreign trade",
   "canonical": true,
   "split": "partner",
-  "single_select": ["flow", "level"],
+  "single_select": ["level"],
   "default_transform": "level",
   "default": {
     "flow": "export",

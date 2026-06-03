@@ -47,7 +47,7 @@ quarter.
 
 ## Display
 - **split**: D1
-- **single-select**: D0
+- **single-select**:
 - **default**: D0=N, D1=T0
 - **transform**: level
 - **seasonal adjustment**: n/a (SNB cube has no seasonal-adjustment dimension)

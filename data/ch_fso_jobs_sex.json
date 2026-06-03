@@ -174,7 +174,7 @@
   "concept": "Labour / Employment / jobs",
   "canonical": false,
   "split": "Geschlecht",
-  "single_select": ["Grossregion", "Wirtschaftssektor", "Beschäftigungsgrad"],
+  "single_select": ["Besch\u00e4ftigungsgrad"],
   "default_transform": "level",
   "default": {
     "Geschlecht": "TOT",

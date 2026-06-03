@@ -55,7 +55,7 @@ only `data:true` leaves and totals appear in the CSV.
 
 ## Display
 - **split**: D0
-- **single-select**: D1
+- **single-select**:
 - **default**: D0=L0, D1=S
 - **transform**: level
 - **seasonal adjustment**: n/a (SNB publishes raw values, no SA dimension)

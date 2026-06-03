@@ -75,7 +75,7 @@
   "concept": "Labour / Unemployment",
   "canonical": false,
   "split": "origin",
-  "single_select": "sex",
+  "single_select": [],
   "default_transform": "level",
   "default": {
     "origin": "tot",
