@@ -368,24 +368,13 @@
   "concept": "National accounts / Government finance",
   "canonical": true,
   "split": "indicator",
-  "single_select": [
-    "level",
-    "model",
-    "estimate"
-  ],
+  "single_select": ["level", "model", "estimate"],
   "default_transform": "level",
-  "percent_levels": [
-    "fiskalquote",
-    "einnahmenquote",
-    "staatsquote",
-    "bruttoschuldenquote",
-    "schuldenquote",
-    "nettoschuldenquote"
-  ],
+  "percent_levels": ["fiskalquote", "einnahmenquote", "staatsquote", "bruttoschuldenquote", "schuldenquote", "nettoschuldenquote"],
   "default": {
     "level": "staat",
     "model": "gfs",
     "indicator": "bruttoschuldenquote"
   },
-  "fetched_utc": "2026-06-03 10:08:29"
+  "fetched_utc": "2026-06-04 09:50:23"
 }

@@ -5,7 +5,7 @@
     "item"
   ],
   "start": "1982-12-01",
-  "end": "2026-04-01",
+  "end": "2026-05-01",
   "title": {
     "en": "Consumer prices (detailed basket)"
   },
@@ -18,7 +18,7 @@
   "license": "fso",
   "frequency": "monthly",
   "topic": "Prices",
-  "updated": "2026-05-05",
+  "updated": "2026-06-04",
   "dimensions": {
     "item": {
       "label": {
@@ -4457,5 +4457,5 @@
   "default": {
     "item": "100_100"
   },
-  "fetched_utc": "2026-06-03 13:56:10"
+  "fetched_utc": "2026-06-04 09:50:23"
 }

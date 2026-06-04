@@ -281,11 +281,7 @@
   "concept": "Money & banking / Banking & credit",
   "canonical": true,
   "split": "D3",
-  "single_select": [
-    "D0",
-    "D1",
-    "D2"
-  ],
+  "single_select": ["D0", "D1", "D2"],
   "default_transform": "level",
   "default": {
     "D3": "T1",
@@ -293,5 +289,5 @@
     "D1": "T0",
     "D2": "F"
   },
-  "fetched_utc": "2026-06-03 10:08:27"
+  "fetched_utc": "2026-06-04 09:50:20"
 }
