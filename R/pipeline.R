@@ -20,6 +20,12 @@ for (f in c("dates.R", "http.R", "io.R", "hierarchy.R", "source_snb.R", "source_
   source(file.path(root, f))
 }
 
+# Base-R URL connections (SECO reads its CSV/JSON straight off a URL via readr /
+# jsonlite, which honor getOption("timeout")) default to a 60s window. Halve it so
+# an unreachable admin.ch host fails fast instead of stalling the run. The httr2
+# sources are bounded separately in http.R (connecttimeout + max_seconds).
+options(timeout = 30)
+
 # Curated NOGA slices of the CH1.KEU SDMX turnover flows (see datasheets):
 # retail = division 47; production = industry B-E (+ B/C/D) and construction F (41-43).
 .SDMX_RETAIL_NOGA <- c("47", "4711", "4711_472", "4719", "4719_474-479", "472",
@@ -123,6 +129,14 @@ drop_degenerate_dims <- function(ds) {
   # force() the fetch AND validate it inside the same guard: a structural failure
   # (or a parser's own fail-closed value-anchor stop()) skips this one dataset and
   # is logged, rather than silently shipping a bad parse or halting the whole run.
+  #
+  # Wall-clock backstop: no single source may run away with the shared run budget.
+  # Network hangs are bounded at the transport layer (http.R / options(timeout));
+  # this catches the rest -- a pathological parse -- and is cleared on exit so the
+  # cap never leaks into the next source. Together these stop one bad source from
+  # eating the 30-min job budget (the cause of the cancelled 2026-06-05 run).
+  setTimeLimit(elapsed = 240, transient = FALSE)
+  on.exit(setTimeLimit(), add = TRUE)
   ds <- tryCatch({ d <- force(expr); validate_dataset(d); d }, error = function(e) {
     msg <- conditionMessage(e)
     cat(sprintf("  SKIP %-22s %s\n", label, msg))

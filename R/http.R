@@ -7,8 +7,16 @@ suppressPackageStartupMessages(library(httr2))
 # Retry on 429 + transient 5xx, honoring Retry-After, with exponential backoff.
 .with_retry <- function(req) {
   req |>
+    # A dead or unreachable host must fail fast. `connecttimeout` caps only the TCP
+    # handshake (~15s), so an outage costs seconds, not minutes, while a slow-but-
+    # alive large transfer keeps its full req_timeout() body budget. `max_seconds`
+    # then bounds the TOTAL wall-clock across all retries: the old
+    # max_tries = 6 x req_timeout(120) let a single down host run the backoff ladder
+    # for ~13 min and blow the job's 30-min budget (the cancelled 2026-06-05 run).
+    req_options(connecttimeout = 15) |>
     req_retry(
-      max_tries = 6,
+      max_tries = 4,
+      max_seconds = 180,
       retry_on_failure = TRUE,
       is_transient = function(resp) resp_status(resp) %in% c(429, 500, 502, 503, 504),
       backoff = function(i) min(60, 2^i)
