@@ -90,23 +90,30 @@ jobs:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: bash .github/scripts/skip_issues.sh
 
-      # Hard failure (dep install, R error, ...) => open or update ONE rolling issue,
-      # so a broken pipeline can't rot silently. Per-source fetch errors don't reach
-      # here (pipeline.R skips a bad source and keeps going) — those open an `etl-skip`
-      # issue via the step above and flip the run-through metric red.
+      # Hard failure (dep install, R error, ...) OR a cancellation — including the
+      # job being killed by `timeout-minutes` — => open or update ONE rolling issue,
+      # so a broken or STALLED pipeline can't rot silently. `cancelled()` is a third
+      # conclusion distinct from failure(): a timeout slips past a bare failure()
+      # guard, which is exactly what hid the 2026-06-05 miss. Per-source fetch errors
+      # don't reach here (pipeline.R skips a bad source and keeps going) — those open
+      # an `etl-skip` issue via the step above and flip the run-through metric red.
+      #
+      # NOTE: this inline alarm still depends on the dying job getting to run this
+      # step. The independent watchdog workflow (.github/workflows/watchdog.yml) is
+      # the real backstop — it checks data freshness 2h later from a separate run.
       - name: Open / refresh failure issue
-        if: failure()
+        if: ${{ failure() || cancelled() }}
         uses: actions/github-script@v7
         with:
           script: |
             const { owner, repo } = context.repo;
             const run = `${context.serverUrl}/${owner}/${repo}/actions/runs/${context.runId}`;
             const body = [
-              `The daily ETL workflow **failed** (run ${context.runId}).`,
+              `The daily ETL workflow did **not complete** (run ${context.runId}) — it failed or was **cancelled** (e.g. it hit \`timeout-minutes\`).`,
               ``,
               `Run log: ${run}`,
               ``,
-              `Data files were **not** refreshed this cycle. Investigate the failing step.`,
+              `Data files were **not** refreshed this cycle. Investigate the failing or stalled step (a cancellation usually means a source hung and the job timed out).`,
             ].join("\n");
             const open = await github.rest.issues.listForRepo({
               owner, repo, state: "open", labels: "etl-failure", per_page: 1,
