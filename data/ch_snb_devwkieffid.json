@@ -6,7 +6,7 @@
     "D1"
   ],
   "start": "1999-01-01",
-  "end": "2026-04-30",
+  "end": "2026-05-29",
   "title": {
     "en": "Effective exchange-rate index"
   },
@@ -91,5 +91,5 @@
     "D1": "G",
     "D0": "K"
   },
-  "fetched_utc": "2026-06-04 09:50:21"
+  "fetched_utc": "2026-06-06 08:06:46"
 }
