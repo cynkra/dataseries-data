@@ -67,6 +67,22 @@ read_datasheet_meta <- function(id, datasheet_dir) {
     }
     if (length(kv)) out$default <- kv
   }
+
+  # Description: the "## What is special" section prose (until the next ## heading).
+  # The human/LLM-facing blurb the website surfaces on the series page + JSON-LD;
+  # the datasheet stays the single source of truth.
+  sect <- function(name) {
+    h <- grep(sprintf("^##\\s+%s\\s*$", name), lines)
+    if (!length(h)) return(NULL)
+    nxt <- grep("^##\\s", lines); nxt <- nxt[nxt > h[1]]
+    end <- if (length(nxt)) nxt[1] - 1L else length(lines)
+    body <- paste(lines[(h[1] + 1L):end], collapse = " ")
+    body <- gsub("[`*]", "", body)        # drop md bold/code markers
+    body <- trimws(gsub("\\s+", " ", body))
+    if (nzchar(body)) body else NULL
+  }
+  desc <- sect("What is special")
+  if (!is.null(desc)) out$description <- desc
   out
 }
 

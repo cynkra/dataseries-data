@@ -159,5 +159,6 @@
     "D1": "T",
     "D2": "T"
   },
-  "fetched_utc": "2026-06-07 09:37:41"
+  "fetched_utc": "2026-06-07 09:37:41",
+  "description": "The stock counterpart to the balance-of-payments flows: Switzerland's foreign assets and liabilities, and the resulting net international investment position (NIIP), back to 1985. The distinctive cut here is the sector breakdown: assets and liabilities are split across SNB, banks, public sector and other sectors, so you can see who holds the foreign claims. Crossed with the IIP component grid (direct, portfolio, derivatives, other investment, reserve assets), this exposes Switzerland's large net creditor position and where it sits. The reserve-assets component only carries on the assets side and only for the SNB, so many sector/component cells are empty; the stored 71 series are the populated combinations, not the full 3x5x6 grid."
 }

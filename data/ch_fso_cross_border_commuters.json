@@ -230,5 +230,6 @@
   "default": {
     "canton": "_T"
   },
-  "fetched_utc": "2026-06-07 09:37:44"
+  "fetched_utc": "2026-06-07 09:37:44",
+  "description": "Foreign cross-border commuters (Grenzgänger) working in Switzerland, by canton of work, quarterly since 2002. A distinctive feature of the Swiss labour market (~410k people, concentrated in Geneva, Ticino, Basel, Vaud). The successor to the legacy ch.fso.ggs series."
 }

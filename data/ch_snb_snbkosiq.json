@@ -208,10 +208,11 @@
   "concept": "Business cycle & sentiment / Business cycle signals",
   "canonical": true,
   "split": "D0",
-  "single_select": [],
+  "single_select": "(none; single dimension)",
   "default_transform": "level",
   "default": {
     "D0": "KA"
   },
-  "fetched_utc": "2026-06-07 09:37:43"
+  "fetched_utc": "2026-06-07 09:37:43",
+  "description": "This is the SNB's own read of the business cycle, distilled from its quarterly talks with companies across Switzerland (the SNB regional network / company survey). Unlike a single composite barometer, it ships 24 separate qualitative signals on one flat dimension: turnover vs the year-back quarter and vs the previous quarter, capacity utilisation, procurement difficulties, margins, lending conditions, liquidity, staff shortages, expected turnover and employment, expected purchase- and sales-price changes, planned equipment and construction investment, and quantitative wage- and inflation-expectation series. Most signals are diffusion-style indices; a handful (LELJ, LEFJ wage increases, IERW inflation expectations) are in percent. The one nested item is IERW -> {IERWM, IERWJ} (inflation expected in 6-12 months vs 3-5 years). Shorter history than the price/money cubes (starts 2011), and it is the only catalog series that captures firm-level sentiment direct from the central bank rather than a survey institute. KOF's barometer is the canonical leading indicator; this sits beside it as the SNB's qualitative companion."
 }

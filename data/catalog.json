@@ -824,10 +824,7 @@
   {
     "id": "ch_seco_concon",
     "title": {
-      "en": "Consumer confidence",
-      "de": "Konsumentenstimmungsindex",
-      "fr": "Indice du climat de consommation",
-      "it": "Indice del clima di fiducia dei consumatori"
+      "en": "Consumer confidence"
     },
     "concept": "Business cycle & sentiment / Consumer confidence",
     "canonical": true,

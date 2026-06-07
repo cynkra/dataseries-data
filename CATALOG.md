@@ -22,7 +22,7 @@ See [`docs/concepts.md`](docs/concepts.md) for the concept tree and canonical/al
 |---|---|---|---|---|---|
 | `ch_fso_construction_prices` | Construction prices | Swiss Federal Statistical Office (FSO) | semi-annual | 1998-10-01..2025-10-01 | FSO (free reuse, attribution) |
 | `ch_snb_plkopr` | Consumer prices (CPI) | Swiss National Bank | monthly | 1921-01-01..2026-04-01 | SNB (non-commercial, attribution) |
-| `ch_fso_cpi` | Consumer prices (detailed basket) _(alt)_ | Swiss Federal Statistical Office (FSO) | monthly | 1982-12-01..2026-04-01 | FSO (free reuse, attribution) |
+| `ch_fso_cpi` | Consumer prices (detailed basket) _(alt)_ | Swiss Federal Statistical Office (FSO) | monthly | 1982-12-01..2026-05-01 | FSO (free reuse, attribution) |
 | `ch_fso_hicp` | Harmonised CPI (HICP) _(alt)_ | Eurostat | monthly | 2004-12-01..2025-12-01 | eurostat |
 | `ch_snb_plkoprinfla` | Core inflation | Swiss National Bank | monthly | 1983-12-01..2026-04-01 | SNB (non-commercial, attribution) |
 | `ch_snb_snbiprogq` | Inflation forecast (SNB) | Swiss National Bank | quarterly | 2001-01-01..2028-10-01 | SNB (non-commercial, attribution) |
@@ -73,8 +73,8 @@ See [`docs/concepts.md`](docs/concepts.md) for the concept tree and canonical/al
 | ID | Title | Source | Frequency | Coverage | License |
 |---|---|---|---|---|---|
 | `ch_snb_devkum` | Bilateral exchange rates | Swiss National Bank | monthly | 1914-01-01..2026-05-01 | SNB (non-commercial, attribution) |
-| `ch_snb_devwkibiim` | Bilateral exchange-rate indices | Swiss National Bank | monthly | 1973-01-01..2026-04-01 | SNB (non-commercial, attribution) |
-| `ch_snb_devwkieffid` | Effective exchange-rate index | Swiss National Bank | daily | 1999-01-01..2026-04-30 | SNB (non-commercial, attribution) |
+| `ch_snb_devwkibiim` | Bilateral exchange-rate indices | Swiss National Bank | monthly | 1973-01-01..2026-05-01 | SNB (non-commercial, attribution) |
+| `ch_snb_devwkieffid` | Effective exchange-rate index | Swiss National Bank | daily | 1999-01-01..2026-05-29 | SNB (non-commercial, attribution) |
 
 ## External sector
 
@@ -97,7 +97,7 @@ See [`docs/concepts.md`](docs/concepts.md) for the concept tree and canonical/al
 |---|---|---|---|---|---|
 | `ch_snb_snbkosiq` | Business cycle signals | Swiss National Bank | quarterly | 2011-01-01..2026-01-01 | SNB (non-commercial, attribution) |
 | `ch_seco_concon` | Consumer confidence | State Secretariat for Economic Affairs (SECO) | quarterly | 1972-10-01..2026-04-01 | SECO open data |
-| `ch_seco_wwa` | Weekly economic activity (WEA) | State Secretariat for Economic Affairs (SECO) | weekly | 2005-01-03..2026-05-11 | SECO open data |
+| `ch_seco_wwa` | Weekly economic activity (WEA) | State Secretariat for Economic Affairs (SECO) | weekly | 2005-01-03..2026-05-18 | SECO open data |
 | `ch_kof_barometer` | KOF Economic Barometer | KOF Swiss Economic Institute | monthly | 1991-01-01..2026-05-01 | KOF / CC BY 4.0 |
 | `ch_kof_esi` | KOF Economic Sentiment Index | KOF Swiss Economic Institute | monthly | 2007-04-01..2026-05-01 | KOF / CC BY 4.0 |
 

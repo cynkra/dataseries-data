@@ -183,5 +183,6 @@
     "D2": "T1",
     "D3": "F"
   },
-  "fetched_utc": "2026-06-07 09:37:41"
+  "fetched_utc": "2026-06-07 09:37:41",
+  "description": "Bank loans split by domestic vs foreign counterparty, back to 1985. This is the geography cut of the loan book: it separates mortgage and other lending into claims on borrowers in Switzerland versus abroad, which the company-size and economic-sector cubes do not do. The long history (from 1985) and the domestic/foreign axis make it the reference for total credit exposure by location. Each combination is further crossed by bank category, loan type (mortgage / other, secured / unsecured) and the utilisation-vs-credit-line pair, the same utilisation/headroom logic as the other bakred cubes."
 }

@@ -155,5 +155,6 @@
     "sector": "S1",
     "asset": "P5111_N111_112G"
   },
-  "fetched_utc": "2026-06-07 09:37:45"
+  "fetched_utc": "2026-06-07 09:37:45",
+  "description": "Gross fixed capital formation (investment) broken down by institutional sector (total economy, non-financial / financial corporations, general government, households, NPISH, …) and asset type (construction vs equipment/software, with construction split into building vs civil engineering), in CHF-million current prices, annual 1995–2024. Non-duplicative with ch_seco_gdp, which carries only the single total-economy GFCF aggregate inside the GDP expenditure split — this is the who-invests-in-what cut underneath it (e.g. how much of total investment is government civil-engineering vs corporate equipment)."
 }
