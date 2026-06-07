@@ -87,25 +87,58 @@ write.csv(hist[, COLS], CSV, row.names = FALSE, quote = TRUE)
 # --- rolling stats (the "fix speed" read) -----------------------------------
 hist$date <- as.Date(hist$date)
 
-uptime_pct <- function(col, days) {
-  recent <- hist[hist$date > (Sys.Date() - days), col]
-  if (!length(recent)) return(NA_real_)
-  round(100 * mean(recent == GREEN), 1)
+# Fill calendar gaps before computing anything. A day with no recorded row sits
+# BETWEEN two recorded days (the tracker ran before and after, but that day's ETL
+# did not complete). The two metrics treat that gap differently:
+#   run_through      : DOWN (red) -- a scheduled run that didn't complete is downtime.
+#   recently_updated : carry the last known state forward -- freshness persists; a
+#                      missed run is not a day the data silently went stale, so if the
+#                      data was fresh either side of the gap it was fresh that day too.
+# We fill across the RECORDED span only (first..last recorded date). Days before
+# tracking began or after the last run stay "no data" (grey in the chart) and are
+# never counted as downtime.
+span <- if (nrow(hist)) seq(min(hist$date), max(hist$date), by = "day") else as.Date(character(0))
+
+fill_daily <- function(col, gap) {
+  by_date <- setNames(hist[[col]], as.character(hist$date))
+  last <- NA_character_
+  out <- vapply(span, function(d) {
+    key <- as.character(d)
+    v <- if (key %in% names(by_date)) by_date[[key]] else NA_character_
+    if (!is.na(v)) { last <<- v; v }
+    else if (identical(gap, "carry")) last
+    else gap
+  }, "")
+  setNames(out, as.character(span))
 }
 
-# Length (in recorded days) of the trailing run of red rows for a metric: 0 when the
-# latest day is green, else the current open-incident length.
+daily <- list(
+  run_through      = fill_daily("run_through", RED),
+  recently_updated = fill_daily("recently_updated", "carry")
+)
+
+uptime_pct <- function(col, days) {
+  v <- daily[[col]]
+  v <- v[as.Date(names(v)) > (Sys.Date() - days)]
+  v <- v[!is.na(v)]
+  if (!length(v)) return(NA_real_)
+  round(100 * mean(v == GREEN), 1)
+}
+
+# Length (in days) of the trailing run of red days for a metric, over the gap-filled
+# series: 0 when the latest day is green, else the current open-incident length.
 current_incident <- function(col) {
-  v <- hist[[col]]
+  v <- daily[[col]]; v <- v[!is.na(v)]
   n <- length(v)
   i <- 0L
   while (i < n && v[n - i] == RED) i <- i + 1L
   i
 }
 
-# Longest red run anywhere in the history (worst incident, in recorded days).
+# Longest red run anywhere in the history (worst incident, in days).
 longest_incident <- function(col) {
-  r <- rle(hist[[col]] == RED)
+  v <- daily[[col]]; v <- v[!is.na(v)]
+  r <- rle(v == RED)
   max(c(0L, r$lengths[r$values]))
 }
 
@@ -118,17 +151,20 @@ stats <- lapply(c(run_through = "run_through", recently_updated = "recently_upda
   ))
 
 # --- data/uptime.svg : hand-rolled status timeline (no plotting deps) --------
-# Last 90 calendar days, two rows of cells (run-through / recently-updated). A day
-# with no recorded row renders grey (the ETL did not complete that day = outage),
-# which is exactly what we want the long-term picture to show.
+# Last 90 calendar days, two rows of cells (run-through / recently-updated). Cells
+# are gap-filled the same way the percentages are (see `daily` above): a missed day
+# inside the tracked span is red on run-through (downtime) and carries the last known
+# freshness on recently-updated. Days outside the tracked span render grey (no data).
 write_svg <- function(path) {
   col_green <- "#2ea44f"; col_red <- "#cf222e"; col_grey <- "#d0d7de"
   ndays <- 90L
   days  <- seq(Sys.Date() - (ndays - 1L), Sys.Date(), by = "day")
   lookup <- function(col) {
-    vapply(days, function(d) {
-      row <- hist[hist$date == d, col]
-      if (!length(row)) col_grey else if (row[1] == GREEN) col_green else col_red
+    d <- daily[[col]]
+    vapply(days, function(dt) {
+      key <- as.character(dt)
+      v <- if (key %in% names(d)) d[[key]] else NA_character_
+      if (is.na(v)) col_grey else if (v == GREEN) col_green else col_red
     }, "")
   }
   rows <- list(
@@ -177,7 +213,7 @@ write_svg <- function(path) {
 
   # legend
   ly <- axis_y + 22L
-  legend <- list(c(col_green, "green"), c(col_red, "red"), c(col_grey, "no run"))
+  legend <- list(c(col_green, "green"), c(col_red, "red"), c(col_grey, "no data"))
   lx <- pad_l
   for (lg in legend) {
     parts <- c(parts, sprintf('<rect x="%d" y="%d" width="12" height="12" rx="1.5" fill="%s"/>', lx, ly - 10L, lg[1]))
@@ -251,17 +287,27 @@ if (!length(red_ids)) {
   for (id in red_ids) md <- c(md, sprintf("- `%s`", id))
 }
 
-# Recent history table (newest first, last 30 rows).
+# Recent history table (newest first, last 30 days). Built from the gap-filled daily
+# calendar, so a missed day shows up as its own row (run-through red, recently-updated
+# carried forward) instead of silently vanishing. Skip/stale counts are "·" on a day
+# with no recorded run.
 md <- c(md, "", "## Recent history", "",
   "| Date | Run-through | Recently updated | Skips | Stale |",
   "|---|---|---|---:|---:|")
-recent <- tail(hist, 30L)
+cal <- data.frame(date = span, stringsAsFactors = FALSE)
+cal$run_through      <- unname(daily$run_through)
+cal$recently_updated <- unname(daily$recently_updated)
+m <- match(cal$date, hist$date)
+cal$n_skipped <- hist$n_skipped[m]
+cal$n_stale   <- hist$n_stale[m]
+recent <- tail(cal, 30L)
 recent <- recent[order(recent$date, decreasing = TRUE), , drop = FALSE]
 for (i in seq_len(nrow(recent))) {
   r <- recent[i, ]
   md <- c(md, sprintf("| %s | %s | %s | %s | %s |",
     format(r$date), emoji(r$run_through), emoji(r$recently_updated),
-    r$n_skipped, r$n_stale))
+    if (is.na(r$n_skipped)) "\U000000B7" else r$n_skipped,
+    if (is.na(r$n_stale))   "\U000000B7" else r$n_stale))
 }
 writeLines(md, file.path(REPO, "UPTIME.md"))
 
