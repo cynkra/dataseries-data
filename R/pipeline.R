@@ -123,9 +123,19 @@ drop_degenerate_dims <- function(ds) {
 # going). Recorded so main() can append them to the skip history log.
 .SKIPPED <- list()
 
+# When non-NULL, .try_fetch runs ONLY these dataset ids and no-ops the rest. The
+# retry pass (main()) sets it to the first pass's skipped ids so build() can be
+# replayed for just those, reconstructing each fetch fresh (loop variables, query
+# lists) rather than replaying a stale captured call. NULL = run everything.
+.ONLY <- NULL
+
 # Run one fetch, tag it with a topic, and keep going on failure (a transient
 # network error on one source must not lose the whole run).
 .try_fetch <- function(label, expr, topic = NULL) {
+  # Retry-pass filter: if a subset is pinned and this isn't in it, return before
+  # forcing `expr` -- the fetch is a lazy promise, so an excluded source makes no
+  # network call. `label` is already evaluated (we matched on it); `expr` is not.
+  if (!is.null(.ONLY) && !label %in% .ONLY) return(NULL)
   # force() the fetch AND validate it inside the same guard: a structural failure
   # (or a parser's own fail-closed value-anchor stop()) skips this one dataset and
   # is logged, rather than silently shipping a bad parse or halting the whole run.
@@ -158,7 +168,11 @@ read_snb_cubes <- function() {
   lapply(seq_len(nrow(tsv)), function(i) as.list(tsv[i, ]))
 }
 
-build <- function() {
+build <- function(only = NULL) {
+  # `only` pins the run to a subset of ids (used by the retry pass). It is read by
+  # .try_fetch via the .ONLY global; cleared on exit so a plain build() runs all.
+  .ONLY <<- only
+  on.exit(.ONLY <<- NULL, add = TRUE)
   datasets <- list()
   add <- function(ds) if (!is.null(ds)) datasets[[length(datasets) + 1L]] <<- ds
 
@@ -329,8 +343,38 @@ build <- function() {
 
 DATASHEET_DIR <- file.path(dirname(root), "datasets")
 
+# Retry-pass wait. A source that timed out this run gets one more attempt before we
+# write the catalog or open any skip issue -- enough to ride out a brief host
+# outage (the failure that opened the ch_adecco_sjmi etl-skip issue was a transient
+# uzh.ch connect timeout). Overridable via env for fast local runs / tests.
+RETRY_SLEEP <- as.integer(Sys.getenv("ETL_RETRY_SLEEP", "180"))
+
 main <- function() {
   datasets <- build()
+
+  # Retry pass: the per-source transport retry (http.R) only spans ~70s, so a host
+  # down longer than that skips. Before anything is written or any issue opened,
+  # give just the skipped sources ONE more attempt after a short wait -- by which
+  # point the other ~50 fetches have already bought the host minutes of recovery.
+  # A genuine format break still fails here and opens its issue as before; only a
+  # transient blip is absorbed silently. We replay build() pinned to the skipped
+  # ids (so each fetch is reconstructed fresh) and fold any successes back in.
+  if (length(.SKIPPED)) {
+    retry_ids <- vapply(.SKIPPED, `[[`, character(1), "id")
+    cat(sprintf("retry: %d skipped (%s); waiting %ds then retrying\n",
+                length(retry_ids), paste(retry_ids, collapse = ", "), RETRY_SLEEP))
+    .SKIPPED <<- list()          # reset; the retry pass recomputes the survivors
+    Sys.sleep(RETRY_SLEEP)
+    recovered <- build(only = retry_ids)
+    if (length(recovered)) {
+      cat(sprintf("retry: %d recovered (%s)\n", length(recovered),
+                  paste(vapply(recovered, `[[`, character(1), "id"), collapse = ", ")))
+      datasets <- c(datasets, recovered)
+    }
+    if (length(.SKIPPED))
+      cat(sprintf("retry: %d still failing after retry\n", length(.SKIPPED)))
+  }
+
   # Index loop (not `for (ds in datasets)`): the datasheet merge must be written
   # BACK into `datasets`, else write_catalog() below serializes the un-merged
   # originals and concept/canonical/featured come out null in catalog.json.
