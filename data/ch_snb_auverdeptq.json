@@ -446,6 +446,6 @@
   "default": {
     "D0": "T0"
   },
-  "fetched_utc": "2026-06-07 09:37:41",
-  "description": "Switzerland's gross external debt: the liabilities side of the external balance sheet, the IMF/SDDS external-debt presentation. It complements the auvekomq IIP overview and auvercurrq currency cut, focusing only on debt liabilities. Starts later than its companions (1999-Q4) because the standardized external-debt template post-dates the IIP series. The whole cube rides on a single Overview dimension whose hierarchy encodes two cross-classifications at once: sector (public, SNB, banks, other sectors, direct-investment loans) and maturity (short-term / long-term), each further split into debt securities vs other liabilities. So one flat dim id (D0) carries a sector x maturity x instrument tree expressed entirely as codes. Values are CHF-million stocks at end of quarter."
+  "description": "Switzerland's gross external debt: the liabilities side of the external balance sheet, the IMF/SDDS external-debt presentation. It complements the auvekomq IIP overview and auvercurrq currency cut, focusing only on debt liabilities. Starts later than its companions (1999-Q4) because the standardized external-debt template post-dates the IIP series. The whole cube rides on a single Overview dimension whose hierarchy encodes two cross-classifications at once: sector (public, SNB, banks, other sectors, direct-investment loans) and maturity (short-term / long-term), each further split into debt securities vs other liabilities. So one flat dim id (D0) carries a sector x maturity x instrument tree expressed entirely as codes. Values are CHF-million stocks at end of quarter.",
+  "fetched_utc": "2026-06-08 10:08:27"
 }

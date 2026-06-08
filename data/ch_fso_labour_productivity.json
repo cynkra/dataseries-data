@@ -57,6 +57,6 @@
   "default": {
     "indicator": "productivity"
   },
-  "fetched_utc": "2026-06-07 09:37:45",
-  "description": "The headline labour-productivity decomposition: real GDP, actual hours worked, and productivity (GDP per hour), all as a chained-volume index, base 1991 = 100. Productivity is the ratio of the other two, so the three plot together on one scale — the long-run Swiss productivity-growth story (≈ +0.9%/yr) at a glance."
+  "description": "The headline labour-productivity decomposition: real GDP, actual hours worked, and productivity (GDP per hour), all as a chained-volume index, base 1991 = 100. Productivity is the ratio of the other two, so the three plot together on one scale — the long-run Swiss productivity-growth story (≈ +0.9%/yr) at a glance.",
+  "fetched_utc": "2026-06-08 10:08:31"
 }

@@ -206,6 +206,6 @@
     "D0": "VT",
     "D1": "T0"
   },
-  "fetched_utc": "2026-06-07 09:37:40",
-  "description": "Employees broken down by economic activity (NACE-style sectors) crossed with an employment type. The SNB version overlaps FSO ch_fso_besta (jobs by division); the concept universe flags this and keeps FSO as the intended canonical, so this is the labelled alternate. The distinctive feature is the two-axis cross: four head-count bases (Total, full-time, part-time, full-time-equivalents) times ~14 leaf sectors, which lets you read part-time intensity and FTE conversion by sector, something the FSO jobs cube does not expose the same way. Values are in thousands of persons."
+  "description": "Employees broken down by economic activity (NACE-style sectors) crossed with an employment type. The SNB version overlaps FSO ch_fso_besta (jobs by division); the concept universe flags this and keeps FSO as the intended canonical, so this is the labelled alternate. The distinctive feature is the two-axis cross: four head-count bases (Total, full-time, part-time, full-time-equivalents) times ~14 leaf sectors, which lets you read part-time intensity and FTE conversion by sector, something the FSO jobs cube does not expose the same way. Values are in thousands of persons.",
+  "fetched_utc": "2026-06-08 10:08:26"
 }

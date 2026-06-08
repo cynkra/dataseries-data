@@ -119,6 +119,6 @@
     "breakdown": "tot",
     "adjustment": "real"
   },
-  "fetched_utc": "2026-06-07 09:37:45",
-  "description": "The official Swiss wage index (Lohnindex, base 1993 = 100), nominal and real, by sector and sex. Captures wage development the SNB cubes do not carry at all."
+  "description": "The official Swiss wage index (Lohnindex, base 1993 = 100), nominal and real, by sector and sex. Captures wage development the SNB cubes do not carry at all.",
+  "fetched_utc": "2026-06-08 10:08:31"
 }

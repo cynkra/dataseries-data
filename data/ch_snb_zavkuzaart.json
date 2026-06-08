@@ -196,6 +196,6 @@
     "D1": "T",
     "D2": "BET"
   },
-  "fetched_utc": "2026-06-07 09:37:43",
-  "description": "Non-card retail payments: customer credit transfers, direct debits and other outgoing payments processed by banks. It is the cube that captures how Swiss customers actually send money, with a deep order-type hierarchy (D1) that distinguishes paper-based from non-paper-based transfers, then within non-paper-based splits eBanking, direct channels, standing orders and other types. This is where the migration away from paper payment slips is visible. It also separates whether a payment stays between resident banks or involves a non-resident bank (D0), giving a domestic-versus-cross-border read on the payment plumbing. History starts only 2012-03, later than the card cubes."
+  "description": "Non-card retail payments: customer credit transfers, direct debits and other outgoing payments processed by banks. It is the cube that captures how Swiss customers actually send money, with a deep order-type hierarchy (D1) that distinguishes paper-based from non-paper-based transfers, then within non-paper-based splits eBanking, direct channels, standing orders and other types. This is where the migration away from paper payment slips is visible. It also separates whether a payment stays between resident banks or involves a non-resident bank (D0), giving a domestic-versus-cross-border read on the payment plumbing. History starts only 2012-03, later than the card cubes.",
+  "fetched_utc": "2026-06-08 10:08:29"
 }
