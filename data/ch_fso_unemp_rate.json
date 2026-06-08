@@ -82,5 +82,5 @@
     "sex": "tot"
   },
   "description": "The ILO unemployment rate (%), the internationally comparable definition. This is deliberately kept alongside the SNB/SECO registered unemployment series (ch_snb_amarbma): they measure different things (ILO survey-based vs registered at job centres) and should not be deduplicated into one. Monthly averages.",
-  "fetched_utc": "2026-06-08 10:08:31"
+  "fetched_utc": "2026-06-08 12:09:26"
 }

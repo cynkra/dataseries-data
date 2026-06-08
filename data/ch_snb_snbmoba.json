@@ -132,5 +132,5 @@
     "D0": "N0"
   },
   "description": "The Swiss monetary base, monthly back to 1950, one of the longest-running money series in the catalog. Distinctive because it gives both sides of the central bank's money creation in one cube. The flat D0 codes split into three groups in the hierarchy: Origination (RF relevant foreign-currency positions, W securities portfolio, G money-market transactions, S0 other, N0 base) and Utilisation (N1 banknotes in circulation, GB sight deposit accounts of domestic banks, N2 base) sum to the same total from the asset vs liability side, and a Seasonally adjusted block (N3 base, S1 seasonal factor). So the seasonal adjustment here is encoded as its own series rather than a toggle, which matches the rest of SNB (no SA switch). Levels are in CHF millions. As a money concept it is the base-money companion to the M1-M3 aggregates; in the curated view M1-M3 (snbmonagg) is the headline aggregate, with the base, target range (snbband) and SNB balance sheet (snbbipo) kept alongside it.",
-  "fetched_utc": "2026-06-08 10:08:29"
+  "fetched_utc": "2026-06-08 12:09:24"
 }

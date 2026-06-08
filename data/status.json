@@ -1,10 +1,10 @@
 {
-  "checked": "2026-06-08 10:08 UTC",
+  "checked": "2026-06-08 12:09 UTC",
   "counts": {
-    "green": 69,
+    "green": 70,
     "red": 0,
     "unknown": 0,
-    "total": 69
+    "total": 70
   },
   "datasets": [
     {
@@ -555,6 +555,17 @@
       "updated": null,
       "age_days": 38,
       "threshold_days": 165,
+      "status": "green"
+    },
+    {
+      "id": "ch_adecco_sjmi",
+      "title": "Adecco Group Swiss Job Market Index",
+      "source": "University of Zurich (Stellenmarkt-Monitor Schweiz)",
+      "frequency": "quarterly",
+      "end": "2026-03-01",
+      "updated": null,
+      "age_days": 99,
+      "threshold_days": 435,
       "status": "green"
     },
     {

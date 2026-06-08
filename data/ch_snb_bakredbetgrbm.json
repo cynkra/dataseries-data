@@ -198,5 +198,5 @@
     "D3": "F"
   },
   "description": "Bank lending to companies, cut by firm size (number of employees): up to 9, 10-49, 50-249, 250+, plus public-sector entities. This is the SME-credit view of the loan book, useful for tracking whether small firms are getting financed. Each size band is further split by bank category, loan type (mortgage vs other, secured vs unsecured) and by whether the figure is the drawn amount (utilisation) or the granted credit line. The utilisation-vs-credit-line pairing is the distinctive twist: it shows both how much credit banks have committed and how much firms are actually using, so you can read headroom. Shorter history than the sector and domestic/foreign loan cubes (starts 2002).",
-  "fetched_utc": "2026-06-08 10:08:27"
+  "fetched_utc": "2026-06-08 12:09:23"
 }

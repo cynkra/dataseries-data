@@ -308,5 +308,5 @@
     "D0": "M0"
   },
   "description": "The headline bilateral CHF exchange-rate table, with a history reaching back to 1914, the longest FX record in the catalog. Quotes are CHF per foreign-currency unit, with the unit baked into each currency label (EUR 1, GBP 1, but DKK 100, JPY 100, etc.), so the multiplier matters when comparing rates. Each currency is published as both a monthly average (M0) and an end-of-month value (M1). Beyond spot rates it carries two USD forward rates (3-month and 6-month, CHF per 1 USD), which is unusual for a spot-rate table. Currencies are grouped by region (Europe, America, Africa, Asia and Australia, SDR, USD forward rates); the group nodes are non-data headers. Note the CSV begins well after 1914 for most currencies (e.g. ARS from 1999); the 1914 start reflects the earliest long series (USD/major European), not every pair.",
-  "fetched_utc": "2026-06-08 10:08:28"
+  "fetched_utc": "2026-06-08 12:09:23"
 }
