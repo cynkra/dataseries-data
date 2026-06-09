@@ -167,5 +167,5 @@
     "D2": "T"
   },
   "description": "The currency-denomination cut of the same international investment position covered by auvekomq. Its value is the currency axis: it shows how much of Switzerland's foreign assets and liabilities are held in CHF, USD, EUR, other currencies and precious metals, which is what makes the IIP exposed to exchange-rate moves. Three dimensions cross currency by accounting entry by functional component, so you can ask e.g. \"USD-denominated portfolio-investment liabilities\" directly. Same 1985 start and CHF-million end-of-quarter stocks as the overview. Kept as a non-canonical companion, not a re-export: the currency breakdown is a genuinely different view, but the headline IIP story lives in auvekomq.",
-  "fetched_utc": "2026-06-08 12:09:22"
+  "fetched_utc": "2026-06-09 09:39:55"
 }
