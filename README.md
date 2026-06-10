@@ -68,9 +68,9 @@ trend in [UPTIME.md](UPTIME.md)):
 A hard workflow failure opens a rolling `etl-failure` issue.
 
 <!-- DATA-HEALTH:START -->
-**ETL uptime** (run 2026-06-09):
-- 🟢 **Run-through** — clean (0 skips)
-- 🟢 **Recently updated** — 70 of 70 datasets fresh
+**ETL uptime** (run 2026-06-10):
+- 🔴 **Run-through** — 3 skip(s)
+- 🟢 **Recently updated** — 67 of 67 datasets fresh
 
 See [UPTIME.md](UPTIME.md) for the trend and [STATUS.md](STATUS.md) for the per-dataset board.
 <!-- DATA-HEALTH:END -->

@@ -92,5 +92,5 @@
     "D0": "K"
   },
   "description": "The trade-weighted effective exchange rate of the Swiss franc, the single most watched FX summary for franc strength, published daily. Two country-group aggregates are offered: the overall index (G) and a euro-area index (E). As with the bilateral indices, the nominal/real split nests into nominal (N), real CPI-based (K) and real PPI-based (P), and each is given both as index (I) and as day-on-day % change (V). This daily cube is the canonical effective-FX series; the monthly roll-up devwkieffim is the dropped lower-frequency duplicate per the native-frequency rule. The JSON start is 1999-01 but the daily observations in the CSV begin late 2000 for the index level (K,E,I from 2000-11-30); earlier history is sparse and series-dependent.",
-  "fetched_utc": "2026-06-09 09:39:56"
+  "fetched_utc": "2026-06-10 09:47:27"
 }

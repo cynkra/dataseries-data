@@ -456,5 +456,5 @@
     "D0": "K"
   },
   "description": "Bilateral exchange-rate indices (not levels) of the Swiss franc against ~54 partner currencies, the largest series count in this group at 324. The nominal/real split is itself nested: D0 offers N nominal and a non-data R real node that expands into two real measures, CPI-based (K) and PPI-based (P), so \"real\" is delivered as two distinct deflator variants rather than one. Each bilateral index is published both as the index (I) and as the year-on-year % change (V), which is why the series count is large (3 deflators x ~54 countries x 2 representations). It is the live, currently-updated companion to the discontinued country-level devlandm. Defaults to CPI-based, Austria, index.",
-  "fetched_utc": "2026-06-09 09:39:56"
+  "fetched_utc": "2026-06-10 09:47:27"
 }

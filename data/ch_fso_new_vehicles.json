@@ -5,7 +5,7 @@
     "fuel"
   ],
   "start": "2005-01-01",
-  "end": "2026-04-01",
+  "end": "2026-05-01",
   "title": {
     "en": "New car registrations by fuel"
   },
@@ -126,5 +126,5 @@
     "fuel": "_T"
   },
   "description": "Monthly new registrations of passenger cars in Switzerland, split by fuel type — the cleanest read on the EV transition: petrol/diesel (incl. their HEV variants), plug-in hybrids, battery-electric (BEV), fuel cell, and gas. A high-frequency consumption + technology-shift indicator. As of spring 2026, BEVs are ~25% of new-car registrations.",
-  "fetched_utc": "2026-06-09 09:39:58"
+  "fetched_utc": "2026-06-10 09:47:28"
 }
