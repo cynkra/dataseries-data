@@ -161,5 +161,5 @@
     "D0": "GDR"
   },
   "description": "Daily levels of the Swiss equity market, the canonical stock-index series. It pairs the two headline indices, the SPI Swiss Performance Index (total return, with dividend reinvestment, code GDR) and the SMI Swiss Market Index (price index, excluding dividend reinvestment, code SMISMIDR), with SPI sub-indices split two ways: by SIX sector classification (BA/FD/VS/NGT/GW) and by ICB classification (B/F/V/NG/G), so banks, financial services, insurance, food/beverages and health care each appear under both schemes. Also N registered shares and IPS bearer shares/participation certificates. Daily frequency back to 1989 for the headline SPI; the sector sub-indices begin later (the CSV sample for SIX banks B starts 2000), because SIX/ICB sector breakdowns were backfilled only from their introduction.",
-  "fetched_utc": "2026-06-10 14:45:53"
+  "fetched_utc": "2026-06-10 15:33:58"
 }

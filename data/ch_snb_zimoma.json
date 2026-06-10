@@ -314,5 +314,5 @@
     "D0": "1TGT"
   },
   "description": "The core money-market reference rates, monthly back to 1972. The distinctive feature is the country grouping (D0): Switzerland alongside the US, Japan, the UK and the euro area, so the same cube lets you compare CHF rates against the major currencies on one axis. It also spans the reference-rate transition end to end: the modern overnight benchmarks SARON, SOFR, TONA, SONIA and ESTR sit next to the legacy 3-month LIBOR series and EURIBOR. The Swiss block additionally carries the call money rate (tomorrow-next) and the 3-month money-market debt-register claims of the Confederation. With only 13 leaf series it is small but conceptually wide, and the Swiss 1TGT series gives the longest continuous CHF money-market history in the cube (from 1972).",
-  "fetched_utc": "2026-06-10 14:45:58"
+  "fetched_utc": "2026-06-10 15:33:58"
 }

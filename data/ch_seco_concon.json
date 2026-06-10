@@ -21,7 +21,7 @@
       "fr": "Secrétariat d'Etat à l'économie (SECO)",
       "it": "Segretaria di Stato dell'economia (SECO)"
     },
-    "url": "https://www.seco.admin.ch/seco/de/home/wirtschaftslage---wirtschaftspolitik/Wirtschaftslage/konsumentenstimmung/daten-ab-1972.html"
+    "url": "https://www.seco.admin.ch/de/konsumentenstimmung"
   },
   "license": "seco",
   "frequency": "quarterly",
@@ -109,7 +109,7 @@
         },
         "ks_i31_job_secure_q": {
           "label": {
-            "en": "3.1 Job security situation",
+            "en": "3.1 Job security situation",
             "de": "3.1 Sicherheit der Arbeitsplätze",
             "fr": "3.1 Sécurité de l'emploi",
             "it": "3.1 Sicurezza degli impieghi"
@@ -145,7 +145,7 @@
         },
         "ks_i51_save_q": {
           "label": {
-            "en": "5.1 Current savings / debt situation",
+            "en": "5.1 Current savings / debt situation",
             "de": "5.1 Aktuelle Situation: Sparen / Schulden",
             "fr": "5.1 Épargner / contracter des dettes : situation actuelle",
             "it": "5.1 Risparmiare / nuovi debiti: situazione attuale"
@@ -154,7 +154,7 @@
         },
         "ks_i52_spend_q": {
           "label": {
-            "en": "5.2 Moment to make major purchases",
+            "en": "5.2 Moment to make major purchases",
             "de": "5.2 Zeitpunkt für grössere Anschaffungen",
             "fr": "5.2 Moment favorable pour de grandes acquisitions",
             "it": "5.2 Momento favorevole per grandi acquisti"
@@ -163,7 +163,7 @@
         },
         "ks_i53_save_exp_q": {
           "label": {
-            "en": "5.3 Savings / debt outlook",
+            "en": "5.3 Savings / debt outlook",
             "de": "5.3 Erwartete Situation: Sparen / Schulden",
             "fr": "5.3 Épargner / contracter des dettes : prochains 12 mois",
             "it": "5.3 Risparmiare / nuovi debiti: prossimi 12 mesi"
@@ -266,7 +266,7 @@
       }
     }
   },
-  "updated": "2026-05-05 13:27:13",
+  "updated": "2026-02-05 09:32:16",
   "notes": {
     "en": "Consumer Sentiment Survey. Seasonally and calender adjusted data as well as unadjusted data. The level of the historical data from 1972 to 2023 has been aligned with that of the current data from 2024. Further information can be found in the Methodology document.",
     "de": "Konsumententsimmungsindex. Saison- und kalenderbereinigte Daten sowie unbereinigte Daten. Das Niveau der historischen Daten 1972-2023 wurde an jenes der aktuellen Daten ab 2024 angeglichen. Weitere Informationen sind im Methodik-Dokument zu finden.",
@@ -286,5 +286,5 @@
     "seas_adj": "csa"
   },
   "description": "The Swiss consumer sentiment survey, the canonical sentiment series, back to 1972 — one of the longest survey histories in the catalog. SECO (the State Secretariat for Economic Affairs) runs the survey and publishes the data directly in the swissdata format, so this dataset is fetched at source and attributed to the true producer. It replaces the earlier SNB re-export ch_snb_concon, which carried the same numbers second-hand through the SNB cube API: the move corrects the attribution and adds the seasonally-adjusted track that SECO publishes alongside the raw balances. The dataset exposes the headline consumer sentiment index (ks_i63_index_q) plus the underlying balance components: past/expected economic situation, past/expected prices, job security and unemployment outlook, past/future personal finances, savings situation and outlook, and major-purchase timing. Each series is published both raw (na) and seasonally + calendar adjusted (csa). The historical level (1972–2023) has been re-aligned with the current methodology in use since 2024.",
-  "fetched_utc": "2026-06-09 09:39:57"
+  "fetched_utc": "2026-06-10 15:33:59"
 }

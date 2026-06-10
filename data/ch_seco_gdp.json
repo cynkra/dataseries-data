@@ -197,15 +197,6 @@
           },
           "data": true
         },
-        "transp": {
-          "label": {
-            "en": "Transportation and storage (noga 49-53)",
-            "de": "Verkehr und Lagerei (Noga 49-53)",
-            "fr": "Transports et entreposage (Noga 49-53)",
-            "it": "Trasporto e magazzinaggio (Noga 49-53)"
-          },
-          "data": true
-        },
         "transport": {
           "label": {
             "en": "Transportation and storage (noga 49-53)",
@@ -224,30 +215,12 @@
           },
           "data": true
         },
-        "com": {
-          "label": {
-            "en": "Information and communication (noga 58-63)",
-            "de": "Information und Kommunikation (Noga 58-63)",
-            "fr": "Information et communication (Noga 58-63)",
-            "it": "Servizi di informazione e comunicazione (Noga 58-63)"
-          },
-          "data": true
-        },
         "comm": {
           "label": {
             "en": "Information and communication (noga 58-63)",
             "de": "Information und Kommunikation (Noga 58-63)",
             "fr": "Information et communication (Noga 58-63)",
             "it": "Servizi di informazione e comunicazione (Noga 58-63)"
-          },
-          "data": false
-        },
-        "transp_com": {
-          "label": {
-            "en": "Transport, storage, information and communication (noga 49-53, 58-63)",
-            "de": "Verkehr und Lagerei, Information und Kommunikation (Noga 49-53, 58-63)",
-            "fr": "Transports et entreposage, information et communication (Noga 49-53, 58-63)",
-            "it": "Trasporto e magazzinaggio, informazione e comunicazione (Noga 49-53, 58-63)"
           },
           "data": false
         },
@@ -763,9 +736,9 @@
               "trade": {
                 "trade_retail": {}
               },
-              "transp": {},
+              "transport": {},
               "hotel": {},
-              "com": {},
+              "comm": {},
               "findl": {
                 "finance": {},
                 "insur": {}
@@ -918,7 +891,7 @@
       }
     }
   },
-  "updated": "2026-05-22 13:15:47",
+  "updated": "2026-02-23 16:51:17",
   "notes": {
     "en": "Swiss quarterly national accounts data. Production, expenditure and income approach. Nominal and real values. Seasonally and calendar adjusted data as well as unadjusted data.",
     "de": "Daten der vierteljährlichen Volkswirtschaftlichen Gesamtrechnung der Schweiz. Produktions-, Ausgaben- und Einkommensseite des BIP. Saison- und kalenderbereinigte Daten sowie unbereinigte Daten.",
@@ -938,5 +911,5 @@
     "seas_adj": "csa"
   },
   "description": "The Swiss quarterly national accounts, and the single richest dataset in the catalog. SECO publishes it already in the swissdata format at source (a tidy long CSV plus a JSON meta sidecar with full en/de/fr/it labels), so our fetcher is a passthrough rather than a scrape. Three things make it distinctive: - Deep hierarchy. The structure dimension is a 68-code tree covering all three accounting views of GDP under one root (gdp): the production approach (gross value added by NOGA industry, down to chem/pharma vs other manufacturing and finance vs insurance), the expenditure approach (consumption, investment, the trade balance, exports/imports of goods and services), and the income approach (compensation of employees, operating surplus, GNI, disposable income). production, expenditure and income are non-leaf grouping nodes carried as data: false. - Seasonal adjustment is a real dimension, not a separate dataset. seas_adj has four levels: raw (na), seasonally+calendar adjusted (csa), sports-event adjusted (nasa), and seasonally+calendar+sports-event adjusted (cssa). The sports-event correction (large international sporting bodies are domiciled in Switzerland and book revenue in event years) is a Swiss-specific quirk. - Canonical GDP for the catalog. The SNB re-exports of the same series (gdppn, gdpap) were dropped in favour of this one, which is the original and carries the full breakdown and the native quarterly frequency. The FSO annual expenditure table (ch_fso_gdp_use) is a redundant alternate.",
-  "fetched_utc": "2026-06-09 09:39:57"
+  "fetched_utc": "2026-06-10 15:33:58"
 }

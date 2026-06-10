@@ -250,5 +250,5 @@
     "D0": "T0"
   },
   "description": "The full monthly balance sheet of the Swiss National Bank, asset side and liability side, broken into 28 line items. The asset side is dominated by D foreign currency investments (the default view) and GFG gold, which together explain the dramatic post-2008 balance-sheet expansion from FX-market intervention. The liability side carries N banknotes in circulation and GB sight deposits of domestic banks, the latter being the operational counterpart of the SNB's large reserves. Both sides include an explicit T0/T1 total row, so the cube is internally summable and you can reconstruct the headline balance-sheet size directly. Some items only begin later than 1996 (e.g. AIWFS, the SDR counterpart, starts 2009), so the panel is ragged. This is the canonical view of the SNB's own balance sheet, which is why CONCEPT-UNIVERSE lists it as a supporting money-and-banking series next to the monetary base and aggregates.",
-  "fetched_utc": "2026-06-10 14:45:56"
+  "fetched_utc": "2026-06-10 15:33:58"
 }

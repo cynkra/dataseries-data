@@ -126,5 +126,5 @@
     "D0": "T1"
   },
   "description": "The registered (administrative) view of Swiss unemployment, sourced from SECO and republished by the SNB. It is the deliberate alternate to the FSO ILO survey rate: different definition, not a format re-export, so both are kept and labelled. History runs back to 1948, the longest labour series in the catalog. One Overview dimension packs several distinct concepts at once: registered unemployed, jobless rate, notified vacancies (each as raw Total and Seasonally adjusted), plus short-time working, registered job seekers, and the labour force. Note the unusual mix of units on a single axis: counts of persons, a percentage rate, and vacancy counts all live under the same D0 codes, so consumers must split by code before charting.",
-  "fetched_utc": "2026-06-10 14:45:50"
+  "fetched_utc": "2026-06-10 15:33:57"
 }

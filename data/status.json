@@ -1,10 +1,10 @@
 {
-  "checked": "2026-06-10 14:46 UTC",
+  "checked": "2026-06-10 15:33 UTC",
   "counts": {
-    "green": 67,
+    "green": 70,
     "red": 0,
     "unknown": 0,
-    "total": 67
+    "total": 70
   },
   "datasets": [
     {
@@ -426,6 +426,28 @@
       "status": "green"
     },
     {
+      "id": "ch_seco_gdp",
+      "title": "Gross domestic product (GDP)",
+      "source": "State Secretariat for Economic Affairs (SECO)",
+      "frequency": "quarterly",
+      "end": "2026-01-01",
+      "updated": "2026-02-23 16:51:17",
+      "age_days": 160,
+      "threshold_days": 435,
+      "status": "green"
+    },
+    {
+      "id": "ch_seco_concon",
+      "title": "Consumer confidence",
+      "source": "State Secretariat for Economic Affairs (SECO)",
+      "frequency": "quarterly",
+      "end": "2026-04-01",
+      "updated": "2026-02-05 09:32:16",
+      "age_days": 70,
+      "threshold_days": 435,
+      "status": "green"
+    },
+    {
       "id": "ch_fso_retail",
       "title": "Retail trade turnover",
       "source": "Swiss Federal Statistical Office (FSO)",
@@ -742,6 +764,17 @@
       "updated": "2026-02-06",
       "age_days": 191,
       "threshold_days": 315,
+      "status": "green"
+    },
+    {
+      "id": "ch_seco_wwa",
+      "title": "Weekly economic activity (WEA)",
+      "source": "State Secretariat for Economic Affairs (SECO)",
+      "frequency": "weekly",
+      "end": "2026-05-18",
+      "updated": null,
+      "age_days": 23,
+      "threshold_days": 53,
       "status": "green"
     }
   ]
