@@ -129,9 +129,9 @@ See [`docs/concepts.md`](docs/concepts.md) for the concept tree and canonical/al
 
 | ID | Title | Source | Frequency | Coverage | License |
 |---|---|---|---|---|---|
-| `ch_fso_hesta` | Hotel overnight stays | Swiss Federal Statistical Office (FSO) | monthly | 2005-01-01..2026-03-01 | FSO (free reuse, attribution) |
+| `ch_fso_hesta` | Hotel overnight stays | Swiss Federal Statistical Office (FSO) | monthly | 2005-01-01..2026-04-01 | FSO (free reuse, attribution) |
 | `ch_fso_production` | Industry & construction turnover | Swiss Federal Statistical Office (FSO) | quarterly | 1999-01-01..2026-01-01 | FSO (free reuse, attribution) |
-| `ch_fso_new_vehicles` | New car registrations by fuel | Swiss Federal Statistical Office (FSO) | monthly | 2005-01-01..2026-04-01 | FSO (free reuse, attribution) |
+| `ch_fso_new_vehicles` | New car registrations by fuel | Swiss Federal Statistical Office (FSO) | monthly | 2005-01-01..2026-05-01 | FSO (free reuse, attribution) |
 | `ch_fso_retail` | Retail trade turnover | Swiss Federal Statistical Office (FSO) | monthly | 2000-01-01..2026-04-01 | FSO (free reuse, attribution) |
 | `ch_fso_services` | Services turnover | Swiss Federal Statistical Office (FSO) | quarterly | 2021-01-01..2026-01-01 | FSO (free reuse, attribution) |
 | `ch_fso_vacant_dwellings` | Vacant dwellings | Swiss Federal Statistical Office (FSO) | annual | 1995-01-01..2025-01-01 | FSO (free reuse, attribution) |

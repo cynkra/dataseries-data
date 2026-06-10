@@ -10,10 +10,16 @@ It is **not** an R package — `R/` is ETL *scripts*. The installable clients li
 elsewhere ([`cynkra/dataseries`](https://github.com/cynkra/dataseries) for R,
 `cynkra/dataseries-py` for Python) and consume the files this repo produces.
 
+> **Editing this repo (human or AI)?** Read **[AGENTS.md](AGENTS.md)** first.
+> `datasets/<id>.md` datasheets are the source of truth; almost everything in `data/`
+> and `catalog.json` is **generated** — edit the datasheet and regenerate, don't
+> hand-edit the outputs.
+
 ## Layout
 
 | Path | What |
 |---|---|
+| `AGENTS.md` | **read first** (human or AI) — source-of-truth layering + how to regenerate after an edit |
 | `R/` | ETL fetchers (one per source: SNB, KOF, SECO, FSO) + writer + catalog builder |
 | `data/` | the data product — one `*.csv` + `*.json` (meta) + `*.parquet` per dataset, plus `catalog.json` |
 | `datasets/` | per-dataset datasheets (concept-first source of truth, Markdown) |
@@ -43,10 +49,15 @@ elsewhere ([`cynkra/dataseries`](https://github.com/cynkra/dataseries) for R,
 
 ## Updating the data
 
-A daily GitHub Action (`.github/workflows/etl.yml`) re-fetches every source, rewrites
-`data/` + `catalog.json`, recomputes health/uptime, and commits the result. You can
-also run it locally: `Rscript R/pipeline.R && Rscript R/health.R && Rscript R/uptime.R`,
-then commit.
+**Datasheets are the source of truth** (`datasets/<id>.md`); `data/` + `catalog.json`
+are generated. Two regeneration paths (full detail in [AGENTS.md](AGENTS.md)):
+
+- **Edited a datasheet curation field** (concept, title, the `## Display`
+  default/split/single-select/transform): `Rscript dev/rebuild_from_datasheets.R` —
+  re-derives the meta sidecars + `catalog.json` + `CATALOG.md` from disk, **no refetch**.
+- **Changed a source/parser, or the data itself**: `Rscript R/pipeline.R && Rscript
+  R/health.R && Rscript R/uptime.R`, then commit — this is what the daily GitHub Action
+  (`.github/workflows/etl.yml`) runs.
 
 ## License
 

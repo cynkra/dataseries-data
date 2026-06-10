@@ -25,16 +25,34 @@ for (id in ids) {
   sc <- file.path(DATA_DIR, paste0(id, ".json"))
   if (!file.exists(sc)) next
   meta <- fromJSON(sc, simplifyVector = FALSE)
-  meta <- modifyList(meta, dm)            # datasheet fields win
+  meta <- modifyList(meta, dm)            # datasheet fields win (recursive: a
+                                          # multilingual title keeps de/fr/it, only
+                                          # the curated `en` is overridden)
   meta[["featured"]] <- dm[["featured"]]  # NULL -> drop (= not featured)
+  # The datasheet `split` / `single-select` lines are sometimes prose ("n/a (single
+  # series)", "(none; D0 is the only dimension)"), not real dimensions. Keep only
+  # entries that are actual dimensions, so the output matches the pipeline: no
+  # `split` field and `single_select` [] for a single-series cube.
+  valid_dims <- names(meta[["dimensions"]])
+  if (!is.null(dm[["single_select"]]))
+    meta[["single_select"]] <- intersect(unlist(dm[["single_select"]]), valid_dims)
+  if (!is.null(dm[["split"]]) && !(unlist(dm[["split"]])[1] %in% valid_dims))
+    meta[["split"]] <- NULL
   writeLines(toJSON(meta, auto_unbox = TRUE, pretty = TRUE, null = "null"), sc)
 }
 
 cat_rows <- fromJSON(file.path(DATA_DIR, "catalog.json"), simplifyVector = FALSE)
 for (i in seq_along(cat_rows)) {
   dm <- read_datasheet_meta(cat_rows[[i]]$id, DATASHEET_DIR)
-  for (k in setdiff(cat_keys, "featured"))
-    if (!is.null(dm[[k]])) cat_rows[[i]][[k]] <- dm[[k]]
+  for (k in setdiff(cat_keys, "featured")) {
+    if (is.null(dm[[k]])) next
+    # The datasheet title is en-only; the catalog title is multilingual (from the
+    # source meta). Merge so the curated `en` overrides but de/fr/it survive.
+    if (k == "title" && is.list(cat_rows[[i]][[k]]) && is.list(dm[[k]]))
+      cat_rows[[i]][[k]] <- modifyList(cat_rows[[i]][[k]], dm[[k]])
+    else
+      cat_rows[[i]][[k]] <- dm[[k]]
+  }
   cat_rows[[i]][["featured"]] <- dm[["featured"]] %||% NA
 }
 writeLines(toJSON(cat_rows, auto_unbox = TRUE, pretty = TRUE, null = "null"),

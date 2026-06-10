@@ -18,8 +18,10 @@ opening default view, and how seasonal adjustment is handled are all per-series
 curation choices and belong here, in the `## Display` block. The catalog and app
 DERIVE these from the datasheet (`read_datasheet_meta()` reads the `## Display`
 fields into the dataset meta), instead of guessing them with code heuristics. Update
-the datasheet, rebuild, and the app's behaviour follows. The markdown is the one
-source of truth.
+the datasheet, run `Rscript dev/rebuild_from_datasheets.R` (re-derives the meta
+sidecars + `catalog.json` from disk, no refetch), and the app's behaviour follows.
+The markdown is the one source of truth. (See [`../AGENTS.md`](../AGENTS.md) for the
+full edit→regenerate workflow.)
 
 ## Template
 
