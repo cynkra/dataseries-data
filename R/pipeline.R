@@ -189,12 +189,10 @@ build <- function(only = NULL) {
   # SECO: consumer sentiment survey, swissdata at source (back to 1972-Q4). This
   # is the TRUE producer — it replaces the retired SNB re-export ch_snb_concon —
   # and adds the seasonally-adjusted track SECO publishes alongside the raw balances.
-  ks_base <- paste0("https://www.seco.admin.ch/dam/seco/en/dokumente/",
-                    "Wirtschaft/Wirtschaftslage/Konsumentenstimmung/")
   add(.try_fetch("ch_seco_concon",
                  seco_fetch("ch_seco_concon",
-                            data_url = paste0(ks_base, "ks_q.csv.download.csv/ks_q.csv"),
-                            meta_url = paste0(ks_base, "ks_q_json.txt.download.txt/ks_q_json.txt")),
+                            data_url = "https://scheduler.swissdatas.ch/scheduled/ks-q.csv",
+                            meta_url = "https://scheduler.swissdatas.ch/scheduled/ch-seco-ks-q.json"),
                  "Business surveys"))
 
   # FSO SDMX (CH1.KEU): turnover flows migrated off the dead PX-Web onto

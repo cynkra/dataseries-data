@@ -32,10 +32,10 @@ both raw (`na`) and seasonally + calendar adjusted (`csa`). The historical level
 
 ## Access
 - **type**: SECO swissdata
-- **endpoint / order number**:
-  - data: `https://www.seco.admin.ch/dam/seco/en/dokumente/Wirtschaft/Wirtschaftslage/Konsumentenstimmung/ks_q.csv.download.csv/ks_q.csv`
-  - meta: `https://www.seco.admin.ch/dam/seco/en/dokumente/Wirtschaft/Wirtschaftslage/Konsumentenstimmung/ks_q_json.txt.download.txt/ks_q_json.txt`
-- **call**: `seco_fetch("ch_seco_concon", data_url = <ks_q.csv>, meta_url = <ks_q_json.txt>)`
+- **endpoint** (2026-06: SECO retired the old `/dam/...download` URLs — they now 502 — and serves the machine-readable files via `scheduler.swissdatas.ch`, linked from the new page `seco.admin.ch/consumer-sentiment`. This is the long quarterly series since 1972 — `ks-q`; SECO also publishes a monthly `ks-m` and an experimental `ks-exp-m`):
+  - data: `https://scheduler.swissdatas.ch/scheduled/ks-q.csv`
+  - meta: `https://scheduler.swissdatas.ch/scheduled/ch-seco-ks-q.json`
+- **call**: `seco_fetch("ch_seco_concon", data_url = <ks-q.csv>, meta_url = <ch-seco-ks-q.json>)`
 
 ## Parsing recipe
 SECO already publishes the swissdata long format, so the fetch is a passthrough

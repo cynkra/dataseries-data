@@ -31,10 +31,10 @@ The `structure` dimension carries two series: the headline **seco_wwa** index
 pre-crisis level rather than YoY.
 
 ## Access
-- **type**: SECO swissdata long CSV (native format, no meta sidecar)
-- **endpoint**:
-  - data: `https://www.seco.admin.ch/dam/seco/en/dokumente/Wirtschaft/Wirtschaftslage/indikatoren/wwa.csv.download.csv/wwa.csv`
-  - labels (optional): `https://www.seco.admin.ch/dam/seco/en/dokumente/Wirtschaft/Wirtschaftslage/indikatoren/wwa.xlsx.download.xlsx/wwa.xlsx` (`beschriftung` sheet)
+- **type**: SECO swissdata long CSV (native format; a JSON meta sidecar now exists, but the two series + units are stable so dimensions are built by hand)
+- **endpoint** (2026-06: SECO retired the old `/dam/...download` URLs — they now 502 — and serves the machine-readable files via `scheduler.swissdatas.ch`, linked from the new page `seco.admin.ch/wea`):
+  - data: `https://scheduler.swissdatas.ch/scheduled/wwa.csv`
+  - meta (optional, unused — dimensions hand-built): `https://scheduler.swissdatas.ch/scheduled/ch-seco-wwa.json`
 - **call**: `seco_wwa_fetch("ch_seco_wwa")`
 
 ## Parsing recipe

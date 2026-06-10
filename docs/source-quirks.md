@@ -113,3 +113,25 @@ levels and %-change leaves on the same key (`ch_fso_gfcf_detail`: filter `UNIT_M
   upgrade path for `ch_fso_trade_partner`, but its OGD ZIP/CSV endpoints **502'd from this
   build env** on every retry — annual FSO Excel (English assets) was used instead. Retry
   the BAZG monthly channel later; if it works it supersedes the annual cut.
+
+## SECO
+- **SECO publishes in the swissdata format natively** — a tidy long CSV
+  (`structure,type,seas_adj,date,value`) plus a JSON meta sidecar with full en/de/fr/it
+  labels and a hierarchy. So the SECO fetchers are passthroughs, not scrapes
+  (`R/source_seco.R::seco_fetch` for GDP + consumer sentiment; `seco_wwa_fetch` for the
+  WEA index, whose two series + units are stable so its dimensions are hand-built).
+- **2026-06 delivery migration — the old `www.seco.admin.ch/dam/...download` URLs are
+  RETIRED (they now 502 permanently — not an outage).** SECO rebuilt its website (new
+  short pages `seco.admin.ch/{gross-domestic-product,consumer-sentiment,wea}`) and now
+  delivers the machine-readable files through **`scheduler.swissdatas.ch`**, linked from
+  those pages. Current endpoints:
+  - GDP: `scheduler.swissdatas.ch/scheduled/ch-seco-gdp.csv` + `…/ch-seco-gdp.json`
+  - Consumer sentiment (`ch_seco_concon`, long quarterly since 1972): `…/ks-q.csv` +
+    `…/ch-seco-ks-q.json`. SECO also serves monthly `ks-m` and experimental `ks-exp-m`;
+    we take the quarterly.
+  - WEA / weekly activity: `…/wwa.csv` + `…/ch-seco-wwa.json` — note the CSV kept the bare
+    `wwa.csv` name while the JSON is `ch-seco-wwa.json` (the slugs are NOT uniform).
+- **If a SECO source 502s again, check the `scheduler.swissdatas.ch` link on the new SECO
+  page before assuming an outage** — and watch for other `*.admin.ch` agencies moving to
+  the same swissdata delivery. The `source_url` inside each JSON points back to the SECO
+  topic page, which is what lands in the catalog.

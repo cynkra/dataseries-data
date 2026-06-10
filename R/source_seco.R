@@ -3,6 +3,11 @@
 # `structure,type,seas_adj,date,value`) + the rich JSON meta sidecar, and remap
 # the swissdata meta into our contract's `dimensions` shape.
 #
+# 2026-06: SECO migrated its website and RETIRED the old
+# www.seco.admin.ch/dam/...download URLs (they now 502). The machine-readable
+# files are delivered via scheduler.swissdatas.ch, linked from the new short
+# pages seco.admin.ch/{gross-domestic-product,consumer-sentiment,wea}.
+#
 # This is the rich, at-source dataset: multilingual (en/de/fr/it) labels AND a
 # real production/expenditure/income hierarchy, all maintained by SECO. The
 # hardest case for the UI (deep hierarchy) and the biggest dataset (~107k rows).
@@ -32,14 +37,8 @@ suppressPackageStartupMessages({
 }
 
 seco_fetch <- function(id = "ch_seco_gdp",
-                       data_url = paste0(
-                         "https://www.seco.admin.ch/dam/seco/en/dokumente/",
-                         "Wirtschaft/Wirtschaftslage/BIP_Daten/",
-                         "ch_seco_gdp_csv.csv.download.csv/ch_seco_gdp_csv.csv"),
-                       meta_url = paste0(
-                         "https://www.seco.admin.ch/dam/seco/en/dokumente/",
-                         "Wirtschaft/Wirtschaftslage/BIP_Daten/",
-                         "ch_seco_gdp_json.txt.download.txt/ch_seco_gdp_json.txt")) {
+                       data_url = "https://scheduler.swissdatas.ch/scheduled/ch-seco-gdp.csv",
+                       meta_url = "https://scheduler.swissdatas.ch/scheduled/ch-seco-gdp.json") {
 
   sm <- jsonlite::fromJSON(meta_url, simplifyVector = FALSE)
   dim_order <- unlist(sm$dim_order)
@@ -75,18 +74,17 @@ seco_fetch <- function(id = "ch_seco_gdp",
 
 
 # SECO Weekly Economic Activity (WEA / WWA), weekly. Like seco_fetch this reads
-# the SECO swissdata long CSV directly, but unlike ch_seco_gdp there is NO
-# _json.txt meta sidecar, so we build the contract's `dimensions` by hand. The
-# `structure` dimension carries two series: the headline WEA index (`seco_wwa`,
-# 2005->) and a discontinued pre-crisis-level variant (`seco_wwa_pre_covid`,
-# 2019-2022). `type` (index) and `seas_adj` (csa) are constant in the CSV, so we
-# keep only `structure`; (structure, date) is already unique. Values are scaled
-# YoY GDP growth rates (a level, not a rate to be re-differenced) -> transform=level.
+# the SECO swissdata long CSV directly. SECO now also publishes a JSON meta
+# sidecar (scheduler.swissdatas.ch/scheduled/ch-seco-wwa.json), but the two
+# series + units are stable, so we keep building the contract's `dimensions` by
+# hand. The `structure` dimension carries two series: the headline WEA index
+# (`seco_wwa`, 2005->) and a discontinued pre-crisis-level variant
+# (`seco_wwa_pre_covid`, 2019-2022). `type` (index) and `seas_adj` (csa) are
+# constant in the CSV, so we keep only `structure`; (structure, date) is already
+# unique. Values are scaled YoY GDP growth rates (a level, not a rate to be
+# re-differenced) -> transform=level.
 seco_wwa_fetch <- function(id = "ch_seco_wwa",
-                           data_url = paste0(
-                             "https://www.seco.admin.ch/dam/seco/en/dokumente/",
-                             "Wirtschaft/Wirtschaftslage/indikatoren/",
-                             "wwa.csv.download.csv/wwa.csv")) {
+                           data_url = "https://scheduler.swissdatas.ch/scheduled/wwa.csv") {
 
   raw <- readr::read_csv(data_url, show_col_types = FALSE)
   raw_periods <- as.character(raw$date)
@@ -101,8 +99,7 @@ seco_wwa_fetch <- function(id = "ch_seco_wwa",
     title = list(en = "Weekly Economic Activity index (WEA)"),
     source = list(
       name = list(en = "State Secretariat for Economic Affairs (SECO)"),
-      url = paste0("https://www.seco.admin.ch/seco/en/home/wirtschaftslage---",
-                   "wirtschaftspolitik/Wirtschaftslage/indikatoren/wwa.html")),
+      url = "https://www.seco.admin.ch/wea"),
     license = "seco",
     frequency = infer_frequency(raw_periods),
     dimensions = list(

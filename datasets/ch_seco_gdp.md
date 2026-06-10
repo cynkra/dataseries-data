@@ -38,9 +38,9 @@ Three things make it distinctive:
 
 ## Access
 - **type**: SECO swissdata (long CSV + JSON meta sidecar, native format)
-- **endpoint**:
-  - data: `https://www.seco.admin.ch/dam/seco/en/dokumente/Wirtschaft/Wirtschaftslage/BIP_Daten/ch_seco_gdp_csv.csv.download.csv/ch_seco_gdp_csv.csv`
-  - meta: `https://www.seco.admin.ch/dam/seco/en/dokumente/Wirtschaft/Wirtschaftslage/BIP_Daten/ch_seco_gdp_json.txt.download.txt/ch_seco_gdp_json.txt`
+- **endpoint** (2026-06: SECO retired the old `/dam/...download` URLs — they now 502 — and serves the machine-readable files via `scheduler.swissdatas.ch`, linked from the new page `seco.admin.ch/gross-domestic-product`):
+  - data: `https://scheduler.swissdatas.ch/scheduled/ch-seco-gdp.csv`
+  - meta: `https://scheduler.swissdatas.ch/scheduled/ch-seco-gdp.json`
 - **call**: `seco_fetch("ch_seco_gdp")`
 
 ## Parsing recipe

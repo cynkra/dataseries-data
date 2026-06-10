@@ -72,6 +72,13 @@ don't bound a *broad* outage.
   blows only the SECO job; the rest stay green and fresh, and the failure is
   self-attributing. Plumbing is half-built already (`build(only=)` + `.ONLY`).
   Cost: artifact passing, a merge/commit job, partial-failure commit semantics.
+- **Execute the CH-source fetches off GitHub-hosted runners (the IP-block fix).** admin.ch
+  intermittently blocks GitHub's Azure runner IPs (see 2026-06-10), so no in-pipeline
+  timeout tuning can fetch the data — it must egress from a non-blocked IP. Options: a
+  self-hosted runner on a CH/EU box, running the ETL on Hetzner/locally and pushing (proven
+  2026-06-10), or routing the CH requests through an egress proxy. The swissdata-served
+  sources (SECO) are reachable everywhere; only the direct `*.admin.ch` BFS/FFA fetches
+  need this.
 
 **Tier C — highest performance, highest risk:**
 
@@ -99,8 +106,51 @@ Act on a candidate solution when one of these crosses:
   circuit breaker won't help; reconsider toward per-source budgets / parser tests.
 - **We want per-provider attribution / isolation as a feature** → Tier B.
 - **Total runtime itself becomes a constraint** (not just outage tails) → Tier C.
+- **The 30-min cancels recur and reachability shows admin.ch up everywhere but the runner**
+  (intermittent runner-IP block, per 2026-06-10) → move CH-source execution off
+  GitHub-hosted runners (self-hosted/Hetzner/local/proxy); timeout tuning can't fetch
+  through an IP block.
 
 ## Incident log
+
+### 2026-06-10 — the recurring 30-min cancels are a GitHub-runner IP block; the "SECO 502s" were a permanent source migration
+
+- **Run:** [27266968183](https://github.com/cynkra/dataseries-data/actions/runs/27266968183),
+  schedule, **cancelled** at the `timeout-minutes: 30` cap (again).
+- **Symptom:** same shape as 06-05/06-07/06-08 — full 30 min, killed mid-build, no data.
+  Separately, the 3 SECO datasets had been returning HTTP 502 for days.
+- **Root cause — TWO distinct things, both previously mis-read as "transient outage":**
+  1. **Runner-IP block, not an upstream outage.** `dam-api.bfs.admin.ch`,
+     `www.pxweb.bfs.admin.ch`, `www.data.finance.admin.ch` answer in ~20–100 ms from a
+     Swiss IP **and from a Hetzner box in Germany**, but every TCP connect from the
+     GitHub-hosted runner times out at 15 s. admin.ch is intermittently
+     blocking/null-routing GitHub's Azure runner ranges. Run history fits: ~half of recent
+     runs cancel at exactly 30 min, half finish in ~16 min; the morning scheduled runs tend
+     to pass. So "recovered ~1 h later" (06-08) was **a different runner IP**, not upstream
+     recovery.
+  2. **SECO 502 = permanent URL migration, not an outage.** SECO rebuilt its site and
+     RETIRED the old `/dam/...download` URLs; machine-readable data now ships via
+     `scheduler.swissdatas.ch` (see `docs/source-quirks.md` → SECO). The old URLs will never
+     come back — re-running could never have fixed those three.
+- **Why mitigations didn't catch it:** per-source caps held (~74 s/dead host) but don't
+  bound the aggregate (as 06-08 noted). More importantly, **no in-pipeline guard can fetch
+  through an IP block** — the data isn't reachable from the runner at all. The Tier A fixes
+  (circuit breaker / no-retry-on-connect / soft-deadline) would only convert the cancel into
+  a graceful *partial* run; they would not get the CH data.
+- **Blast radius:** cancelled run, no data; `etl-failure` #7 opened. SECO skip issues
+  #4/#5/#6 were accurate, but pointed at a migration, not an outage.
+- **Action taken this time:** (a) ran the pipeline **off-GitHub** — Hetzner (DE) first to
+  restore the 67 reachable datasets, then locally on a Swiss Mac; both reach admin.ch +
+  swissdatas.ch — and pushed fresh data (green); (b) **repointed the 3 SECO sources to
+  `scheduler.swissdatas.ch`** in code (`R/source_seco.R`, `R/pipeline.R`) + the 3
+  datasheets. Full run is now 70/70, no skips, badge brightgreen.
+- **Pattern bucket:** runner/infra (IP block) + parser/source-break (SECO migration). NOT
+  broad-outage.
+- **Correction to the 06-08 entry:** logged there as "broad *transient* admin.ch outage."
+  Reachability evidence today reframes the recurring cancellations as an **intermittent
+  GitHub-runner IP block** (admin.ch up everywhere except the runner). "Just re-run" is an
+  unreliable recovery — it only works when the retry lands on an unblocked runner IP. The
+  durable fix is executing the CH fetches off GitHub-hosted runners (new Tier B candidate).
 
 ### 2026-06-08 — 30-min timeout from a broad `admin.ch` outage
 
