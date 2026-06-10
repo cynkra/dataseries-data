@@ -98,5 +98,5 @@
     "D1": "GM3"
   },
   "description": "The headline Swiss monetary aggregates, monthly from 1984. This is the canonical money-supply series. The source cube has two dimensions — D0 level vs year-on-year change, D1 the component or aggregate — but D0 is dropped: its VV (year-on-year change) level is exactly the app's YoY % transform, derived from the B level, so keeping only B collapses D0 away and leaves D1 as the single dimension. The components nest into the aggregates by construction: currency in circulation + sight deposits + deposits in transaction accounts -> M1; M1 + savings deposits -> M2; M2 + time deposits -> M3. So the cube ships the building blocks (B, S0, ET, S1, T) and the three totals (GM1, GM2, GM3) side by side as CHF-million levels — 8 stored series. Compared with snbmoba (base money, the central bank's own liabilities), these aggregates measure money held by the public, which is why this is the canonical aggregate and the base is the alternate.",
-  "fetched_utc": "2026-06-10 09:47:27"
+  "fetched_utc": "2026-06-10 14:45:56"
 }

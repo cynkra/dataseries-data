@@ -218,5 +218,5 @@
     "D1": "10J"
   },
   "description": "This is the SNB spot-rate (zero-coupon yield) cube and the canonical Bond yields series for the catalog. Its CHF × 10J cell is the live 10-year Swiss Confederation benchmark — the most-watched Swiss long rate (the default view). It is live and current (daily, updated within days), unlike the older par-yield cube rendoblid, which the SNB discontinued (last observation 2025-07-31); that cube's content is fully covered here by the CHF curve, so it is not ingested. It crosses two dimensions: a bond category and a maturity, giving a full term structure rather than a single benchmark. The maturity dimension runs 1J through 10J plus 20J and 30J, so you can read an entire spot curve for one day. The category dimension splits into two branches: a market branch (CHF Swiss Confederation issues, EUR euro-area government bonds) and a Swiss issuer-rating branch (cantons by rating tier, mortgage-bond institutions, commercial banks by rating, manufacturing/trade by rating). That issuer-by-rating breakdown is the distinctive part: it lets you see the credit spread of, say, AA cantons or A-rated banks over the Confederation curve. Daily since 1988, so it carries the long Swiss-franc rate history including the negative-rate years.",
-  "fetched_utc": "2026-06-10 09:47:27"
+  "fetched_utc": "2026-06-10 14:45:55"
 }
