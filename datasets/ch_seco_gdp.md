@@ -72,14 +72,17 @@ Three things make it distinctive:
 ## Display
 - **split**: structure
 - **single-select**: type, seas_adj
-- **default**: structure=gdp, type=real, seas_adj=csa
+- **default**: structure=gdp, type=real, seas_adj=cssa
 - **transform**: level
-- **seasonal adjustment**: single-select; default to the seasonally + calendar
-  adjusted series (`csa`) so the opening view shows the figures people analyse. Raw
-  (`na`) and the sports-event variants (`nasa`, `cssa`) are available as toggles.
-  Opening on real (`type=real`), seasonally adjusted, headline GDP total
-  (`structure=gdp`) — not nominal consumption, which the most-observations heuristic
-  would otherwise pick.
+- **seasonal adjustment**: single-select; default to the **seasonally, calendar and
+  sports-event adjusted** series (`cssa`) — the headline figure SECO itself reports.
+  Swiss GDP carries value-added from major international sporting bodies domiciled
+  here, which books in roughly four-year lumps; SECO's quarterly communiqués quote
+  the sport-event-adjusted growth rate (e.g. "GDP adjusted for sporting events grew
+  0.4% in Q1 2026"). The plain seasonally+calendar series (`csa`), raw (`na`) and
+  sports-event-only (`nasa`) variants remain available as toggles. Opening on real
+  (`type=real`), `cssa`, headline GDP total (`structure=gdp`) — not nominal
+  consumption, which the most-observations heuristic would otherwise pick.
 
 ## Caveats / simplifications
 - Series count (660) is the number of populated `type x structure x seas_adj`
