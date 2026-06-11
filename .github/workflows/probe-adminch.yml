@@ -1,0 +1,31 @@
+# THROWAWAY diagnostic: probe admin.ch reachability from GitHub-hosted runners.
+# Samples many runner egress IPs in parallel to see whether the block is
+# Azure-wide or only on certain IP subranges. Delete after the investigation.
+name: probe-adminch
+
+on:
+  workflow_dispatch:
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 6
+    strategy:
+      fail-fast: false
+      matrix:
+        n: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+    steps:
+      - name: probe
+        run: |
+          set +e
+          IP4=$(curl -4 -s --max-time 10 https://api.ipify.org)
+          IP6=$(curl -6 -s --max-time 10 https://api6.ipify.org 2>/dev/null)
+          echo "=== sample ${{ matrix.n }}  egress_ipv4=$IP4  egress_ipv6=${IP6:-none}"
+          # admin.ch direct hosts + 2 controls (swissdata mirror + neutral)
+          for h in www.pxweb.bfs.admin.ch dam-api.bfs.admin.ch www.data.finance.admin.ch scheduler.swissdatas.ch example.com; do
+            R4=$(curl -4 -sS -o /dev/null --connect-timeout 18 --max-time 25 \
+                  -w "http=%{http_code} connect=%{time_connect}s total=%{time_total}s remote_ip=%{remote_ip}" \
+                  "https://$h/" 2>&1)
+            echo "  IPv4 $h -> $R4"
+          done
+          echo "RESULTLINE n=${{ matrix.n }} ip=$IP4 pxweb=$(curl -4 -s -o /dev/null --connect-timeout 18 --max-time 22 -w '%{time_connect}/%{http_code}' https://www.pxweb.bfs.admin.ch/ 2>&1) dam=$(curl -4 -s -o /dev/null --connect-timeout 18 --max-time 22 -w '%{time_connect}/%{http_code}' https://dam-api.bfs.admin.ch/ 2>&1)"
