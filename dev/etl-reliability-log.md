@@ -34,9 +34,21 @@ Copy this template to the top of the Incident log (newest first):
 
 ## Decision status
 
-**Open — collecting evidence (since 2026-06-08).** No structural fix committed.
-Current posture: recover by re-running; record the incident here. Revisit when
-the "What would change our mind" thresholds below are crossed.
+**Decision made 2026-06-11 — move CH-source execution off GitHub-hosted runners;
+implementation deferred one cycle.** The runner-IP-block threshold in "What would
+change our mind" is now **crossed**: the 2026-06-11 probe directly proved an
+intermittent, *partial*-Azure-range null-route at admin.ch (2/10 runner IPs
+silently dropped, 8/10 fine, all Azure). No in-pipeline fix can reach data that is
+null-routed from the runner, so the only durable answer is off-runner egress. The
+options, trade-offs, and recommended design (worker-on-Hetzner → push to GitHub)
+are written up in [`etl-offload-plan.md`](etl-offload-plan.md).
+
+Posture until built: recover by running the ETL off-GitHub (locally / Hetzner) and
+pushing; the independent `watchdog.yml` remains the backstop. We deliberately watch
+the **06-12** scheduled run before investing build effort — partial blocks have
+good days, and one more observation costs nothing.
+
+(History: "open — collecting evidence" from 2026-06-08 to 2026-06-11.)
 
 ## Candidate solutions (considered, not decided)
 
@@ -78,7 +90,9 @@ don't bound a *broad* outage.
   self-hosted runner on a CH/EU box, running the ETL on Hetzner/locally and pushing (proven
   2026-06-10), or routing the CH requests through an egress proxy. The swissdata-served
   sources (SECO) are reachable everywhere; only the direct `*.admin.ch` BFS/FFA fetches
-  need this.
+  need this. **→ Chosen 2026-06-11.** The three options were compared on *trust direction*;
+  the recommended one is **worker-on-Hetzner → push to GitHub** (outbound, single-repo
+  token; safe for a public repo). Full design + trade-offs: [`etl-offload-plan.md`](etl-offload-plan.md).
 
 **Tier C — highest performance, highest risk:**
 
@@ -109,9 +123,55 @@ Act on a candidate solution when one of these crosses:
 - **The 30-min cancels recur and reachability shows admin.ch up everywhere but the runner**
   (intermittent runner-IP block, per 2026-06-10) → move CH-source execution off
   GitHub-hosted runners (self-hosted/Hetzner/local/proxy); timeout tuning can't fetch
-  through an IP block.
+  through an IP block. **→ CROSSED 2026-06-11** (probe: 2/10 Azure runner IPs null-routed,
+  silent TCP drop; see that incident + [`etl-offload-plan.md`](etl-offload-plan.md)).
 
 ## Incident log
+
+### 2026-06-11 — probe proves it: admin.ch null-routes a *subset* of Azure runner IPs (not the whole ASN)
+
+- **Run:** [27338228345](https://github.com/cynkra/dataseries-data/actions/runs/27338228345),
+  schedule, **cancelled** at the `timeout-minutes: 30` cap — 2nd straight day (after 06-10).
+- **Symptom:** same shape — full 30 min, killed mid-build, no data. Both alarms fired this
+  time: `etl-failure` #8 (inline) **and** `watchdog` #9 (the independent backstop) — as designed
+  (a cancellation slips past the inline alarm, which is exactly why the watchdog exists).
+- **Root cause — now directly proven, not inferred.** Dispatched a throwaway 10-job matrix
+  probe (each job = a fresh Azure runner egress IP) curling the three admin.ch hosts + controls:
+  - **8/10 IPs connected in ~100 ms** (HTTP 302/200); **2/10 were silently dropped** —
+    `52.161.59.3` and `145.132.102.54` returned `connect=0.000 / http=000`, i.e. the TCP
+    handshake never completes — the *identical* signature to the ETL's 15 s connect timeouts.
+  - **All ten IPs are Microsoft Azure** (`MSFT`/`cloud`). So admin.ch null-routes a **subset of
+    Azure ranges, not the ASN** — the clean and the blocked IPs are the same provider.
+  - **No CDN/WAF in front:** the hosts resolve straight to `162.23.128.x` (BIT, Swiss federal
+    admin) and `193.246.70.x` (Abraxas, the CH gov IT provider); `Server: Apache`, no edge
+    headers. The block is therefore a **network-level firewall/blocklist at admin.ch itself**,
+    not a third-party edge rule.
+- **What this explains / quantifies:** ~20 % of sampled IPs blocked ⇒ matches the ~50 % of
+  daily runs that cancel (each run picks one egress IP and uses it for *all* admin.ch fetches:
+  a blocked IP → every CH source connect-times-out → blow the 30-min budget; a clean IP →
+  ~16-min green run). The **silent DROP** (not RST, not 403) is the signature of an
+  IP-reputation/datacenter blocklist, **not** app-layer rate-limiting — so it is unrelated to
+  our request volume or pattern; a clean IP connects instantly with our exact requests. Onset
+  was **06-05** (first scheduled cancel; 06-01→06-04 all green), so the change was on
+  **admin.ch's side** — most plausibly a datacenter/cloud-IP blocklist or anti-scraping edge
+  rule rolled out in early June — not anything we changed.
+- **Why mitigations can't catch it:** unchanged from 06-10 — **no in-pipeline guard can fetch
+  data that's null-routed from the runner.** Tier A (circuit breaker / no-retry-on-connect /
+  soft-deadline) would only convert the `cancelled` into a graceful *partial* run; it cannot
+  obtain the CH data.
+- **Blast radius:** cancelled run, no data; #8 + #9 opened.
+- **Action taken this time:** ran the full pipeline **locally from a Swiss IP** → **70/70
+  green, 0 skips** → pushed `a9161cd`. Closed #8 manually; dispatched `watchdog.yml` so it saw
+  the fresh `data/uptime.csv` row and **auto-closed #9**. (The probe was a throwaway workflow,
+  added and removed on `main`.)
+- **Pattern bucket:** runner/infra (partial-Azure-range IP block) — now **confirmed and
+  quantified**, not hypothesized.
+- **Decision:** crosses the log's own threshold (*"30-min cancels recur AND admin.ch up
+  everywhere but the runner"*). Posture moves from "collect evidence / re-run" to **commit to
+  off-runner CH egress.** Options, trade-offs, and the recommended design
+  (worker-on-Hetzner → push to GitHub) are in [`etl-offload-plan.md`](etl-offload-plan.md).
+  Implementation deferred one cycle to watch the 06-12 scheduled run; recover manually (as
+  today) if it cancels again.
 
 ### 2026-06-10 — the recurring 30-min cancels are a GitHub-runner IP block; the "SECO 502s" were a permanent source migration
 
