@@ -1,0 +1,115 @@
+name: etl-retry
+
+# Afternoon "second pass": re-fetch ONLY the sources the morning ETL skipped, then
+# (and only then) run the skip alarm. Rationale: most morning skips are a transient
+# single-host blip — a uzh.ch / admin.ch connect timeout that clears within hours —
+# not a format break. Re-trying ~6h later lets a passing outage heal silently and
+# reserves the `etl-skip` issue for a source that STILL fails after a second, much
+# later attempt (i.e. a genuine break). See dev/etl-reliability-log.md.
+#
+# Mechanism: the morning run commits data/run.json with its `skipped` list. This job
+# reads it, replays the pipeline pinned to those ids (ETL_MODE=retry -> R/pipeline.R
+# retry_skipped()), folds recoveries back into data/ + catalog.json, rewrites run.json
+# to the post-retry state, logs the retry to data/retry.csv, then runs skip_issues.sh
+# off the rewritten run.json. The independent watchdog.yml (data-freshness backstop)
+# is unaffected — the MORNING run still commits today's uptime row.
+
+on:
+  schedule:
+    - cron: "15 14 * * *"   # 14:15 UTC = 16:15 CEST / 15:15 CET — ~6h after the 08:15
+                            # etl cron, long enough for a transient host outage to clear.
+  workflow_dispatch:          # manual "Run workflow" button
+
+permissions:
+  contents: write   # push recovered data + retry.csv
+  issues: write     # open / close the etl-skip issue
+
+concurrency:
+  group: etl          # shared with the morning etl run so the two never push concurrently
+  cancel-in-progress: false
+
+jobs:
+  retry:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+
+      # Gate: only do work if TODAY's morning run left skips. Requiring run.json's date
+      # to equal today (UTC) means a missing/cancelled morning run (stale run.json) is
+      # NOT retried here — that hole is the freshness watchdog's job, and retrying stale
+      # ids would falsely refresh today's uptime row. On a clean morning (zero skips) or
+      # a stale run.json, every step below no-ops via the `retry == 'true'` guard, so the
+      # job costs only a checkout.
+      - name: Gate on this morning's skips
+        id: gate
+        run: |
+          today="$(date -u +%F)"
+          if [[ ! -f data/run.json ]]; then
+            echo "retry=false" >> "$GITHUB_OUTPUT"
+            echo "No data/run.json — nothing to retry."; exit 0
+          fi
+          run_date="$(jq -r '.ts // ""' data/run.json | cut -dT -f1)"
+          n_skip="$(jq '.skipped | length' data/run.json)"
+          echo "today=${today} run.json date=${run_date} skips=${n_skip}"
+          if [[ "$run_date" == "$today" && "$n_skip" -gt 0 ]]; then
+            echo "retry=true" >> "$GITHUB_OUTPUT"
+            echo "Morning left ${n_skip} skip(s) — running the afternoon retry."
+          else
+            echo "retry=false" >> "$GITHUB_OUTPUT"
+            echo "Nothing to retry (clean morning, or run.json not from today)."
+          fi
+
+      - uses: r-lib/actions/setup-r@v2
+        if: steps.gate.outputs.retry == 'true'
+        with:
+          use-public-rspm: true   # P3M Linux binaries — no compilation
+
+      - name: Install R dependencies
+        if: steps.gate.outputs.retry == 'true'
+        shell: Rscript {0}
+        run: |
+          install.packages(c(
+            "arrow", "dplyr", "httr2", "jsonlite", "readr",
+            "readxl", "stringr", "tibble", "tidyr"
+          ))
+
+      # Re-fetch only the morning's skips, fold recoveries into data/ + catalog.json,
+      # rewrite run.json to the post-retry skip state, append data/retry.csv.
+      - name: Retry skipped sources
+        if: steps.gate.outputs.retry == 'true'
+        run: ETL_MODE=retry Rscript R/pipeline.R
+
+      # Recompute health + uptime so status.json and the uptime row reflect the recovered
+      # data (run_through flips green when the afternoon clears every skip). Safe to re-run:
+      # health.R overwrites status.json and uptime.R upserts one row per UTC day.
+      - name: Recompute data health
+        if: steps.gate.outputs.retry == 'true'
+        run: Rscript R/health.R
+
+      - name: Recompute uptime metrics
+        if: steps.gate.outputs.retry == 'true'
+        run: Rscript R/uptime.R
+
+      - name: Commit recovered data + status
+        if: steps.gate.outputs.retry == 'true'
+        run: |
+          git config user.name  "dataseries-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data STATUS.md UPTIME.md README.md
+          if git diff --cached --quiet; then
+            echo "No changes to commit."
+          else
+            git commit -m "data: afternoon retry ($(date -u +%F))"
+            git push
+          fi
+
+      # THE alarm: open an `etl-skip` issue only for what STILL fails after the retry,
+      # and close any that recovered. Reads the rewritten data/run.json. Never fails the
+      # job — an alerting hiccup must not mask a good recovery.
+      - name: Alert on remaining fetch skips
+        if: steps.gate.outputs.retry == 'true'
+        continue-on-error: true
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: bash .github/scripts/skip_issues.sh

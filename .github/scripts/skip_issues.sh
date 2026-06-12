@@ -10,9 +10,18 @@
 # automatically. When there are zero skips, no issue is created; stragglers close.
 #
 # A skip is the LEADING signal: a parser breaks the day a source changes format,
-# weeks before the data would age into staleness. So unlike the staleness alarm we
-# fire immediately. The auto-close keeps it quiet: a one-off network blip opens and
-# closes within a day; a real format break stays open until fixed.
+# weeks before the data would age into staleness. The auto-close keeps it quiet: a
+# real format break stays open until fixed; a recovered source closes itself.
+#
+# MODES:
+#   default        — open/refresh an issue per current skip AND close recovered ones.
+#                    Run by the afternoon retry (etl-retry.yml), off the post-retry
+#                    run.json, so only a source that STILL fails after a ~6h-later
+#                    second attempt opens an issue (a transient blip never does).
+#   CLOSE_ONLY=1   — close recovered issues only; never OPEN one. Run by the MORNING
+#                    etl (etl.yml): the morning must not alarm on a fresh skip (it may
+#                    just be a passing outage), but it must still close the issue of a
+#                    source that recovered on a day the afternoon retry doesn't run.
 #
 # Dependencies (both present on GitHub-hosted runners): jq, gh.
 # Auth: expects GH_TOKEN in the environment (set in the workflow from
@@ -66,6 +75,11 @@ if [[ -n "$skip_rows" ]]; then
   while IFS=$'\t' read -r id error; do
     [[ -z "$id" ]] && continue
     SKIP_IDS["$id"]=1
+
+    # Close-only mode (morning run): record the still-failing id so the straggler
+    # sweep below keeps its issue open, but never OPEN a new one here — opening is the
+    # afternoon retry's job, after a transient outage has had time to clear.
+    [[ -n "${CLOSE_ONLY:-}" ]] && continue
 
     issue_title="Fetch skip: ${id} failed"
 

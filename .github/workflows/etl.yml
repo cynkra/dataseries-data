@@ -79,15 +79,18 @@ jobs:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: bash .github/scripts/health_issues.sh
 
-      # Leading alarm: a source failed to fetch this run (a "skip"). For each skipped
-      # dataset open (or refresh) ONE deduped `etl-skip` issue immediately, and close
-      # any whose dataset fetched cleanly again. A skip usually means a source changed
-      # format — caught here weeks before the data would go stale. Never fails the run.
-      - name: Alert on fetch skips
+      # Skip alarm, morning half: CLOSE-ONLY. The morning must NOT open an `etl-skip`
+      # issue on a fresh skip — it's often a transient single-host blip (uzh.ch /
+      # admin.ch connect timeout) that the afternoon retry (etl-retry.yml) clears. So
+      # opening is deferred there. But the morning STILL closes the issue of a source
+      # that recovered, so a fixed source's issue can't orphan on a day the afternoon
+      # retry doesn't run. Reads this run's data/run.json (the afternoon reads it too).
+      - name: Close recovered fetch-skip issues
         if: success()
         continue-on-error: true
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          CLOSE_ONLY: "1"
         run: bash .github/scripts/skip_issues.sh
 
       # Hard failure (dep install, R error, ...) OR a cancellation — including the

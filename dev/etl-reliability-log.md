@@ -76,6 +76,15 @@ don't bound a *broad* outage.
 - **Gate the in-process retry pass on time-remaining.** The `RETRY_SLEEP` (180s) +
   refetch pass helps an *isolated* transient blip but *adds* to the budget during
   a *broad* outage — skip it if we're already past ~20 min.
+- **[SHIPPED 2026-06-12] Afternoon retry second pass.** A separate
+  `.github/workflows/etl-retry.yml` runs ~6 h after the morning cron, re-fetches ONLY
+  the morning's skips (`ETL_MODE=retry` → `retry_skipped()`), and is the **sole** place
+  the `etl-skip` alarm opens; the morning closes-only. Absorbs a single-host outage that
+  outlasts the 180 s in-run retry **without a false alarm**, and a real format break still
+  surfaces (it fails the much-later second attempt too). Usage logged to `data/retry.csv`.
+  Bonus: the separate run draws a fresh runner IP — a second egress attempt for the
+  admin.ch sources on a partial-block day (complements, does not replace, the off-runner
+  plan). See the 2026-06-12 incident.
 
 **Tier B — structural isolation (the deferred "Tier 2"):**
 
@@ -127,6 +136,41 @@ Act on a candidate solution when one of these crosses:
   silent TCP drop; see that incident + [`etl-offload-plan.md`](etl-offload-plan.md)).
 
 ## Incident log
+
+### 2026-06-12 — UZH connect-timeout outlasts the 180s in-run retry; shipped an afternoon second-pass
+
+- **Run:** [27407704818](https://github.com/cynkra/dataseries-data/actions/runs/27407704818),
+  schedule, **success** — the admin.ch block had a *good day*: the 06-11 decision's "watch the
+  06-12 scheduled run" resolved as **no cancel** (a clean Azure egress IP; admin.ch all fetched).
+  69/70 sources OK.
+- **Symptom:** one source, `ch_adecco_sjmi` (Adecco SJMI, hosted at
+  `www.stellenmarktmonitor.uzh.ch` — **UZH, not admin.ch**), connect-timed-out at 15 s (09:56).
+  The in-run 180 s retry pass fired (09:56 → 10:00) and it **still** timed out → the skip
+  survived → opened `etl-skip` #10. Second occurrence of this exact UZH timeout in 4 days (first
+  was #2 on 06-08, which self-closed the next run).
+- **Root cause:** plain transient single-host unreachability at UZH — a silent connect timeout,
+  host back up within hours (verified same afternoon: HTTP 302 in ~20 ms). Not a format break.
+  The 180 s `RETRY_SLEEP` only rides out a blip of a few minutes; UZH was down longer.
+- **Why mitigations didn't catch it:** the in-process retry pass is too short for a >3-min host
+  outage, and the `etl-skip` alarm fired *immediately* after it — a false "act ASAP, source
+  changed format" issue for what was a passing outage.
+- **Blast radius:** 1 dataset kept previous data (1 day stale); one noise `etl-skip` issue (#10).
+- **Action taken this time → SHIPPED a mitigation (not just a re-run):** added an **afternoon
+  retry second pass**. New `.github/workflows/etl-retry.yml` runs ~6 h after the morning cron,
+  re-fetches ONLY the morning's skips, and is now the **sole** place the `etl-skip` alarm opens;
+  the morning runs `skip_issues.sh` in new **`CLOSE_ONLY`** mode (closes a recovered source's
+  issue, never opens one). So a transient that clears by mid-afternoon never alarms; only a
+  source that STILL fails a much-later second attempt does. R side: `R/pipeline.R` gains
+  `ETL_MODE=retry` → `retry_skipped()` (reads `data/run.json`, `build(only=)`,
+  `merge_into_catalog()`, rewrites `run.json`, appends `data/retry.csv`); `finalize_dataset()`
+  extracted so the full run and the retry finalize identically. Usage is tracked in
+  `data/retry.csv` (one row per day a retry actually ran).
+- **Bonus vs the admin.ch block:** the afternoon job is a SEPARATE Actions run ⇒ a FRESH runner
+  egress IP, i.e. a second roll of the dice for the admin.ch sources on a partial-block day. A
+  useful *complement* to — **not** a replacement for — the off-runner plan (still an Azure range,
+  can still draw a blocked IP; and it only retries what the morning skipped, which on a blocked
+  morning is the whole CH set).
+- **Pattern bucket:** single-host-outage (UZH), transient.
 
 ### 2026-06-11 — probe proves it: admin.ch null-routes a *subset* of Azure runner IPs (not the whole ASN)
 

@@ -70,8 +70,11 @@ Two binary metrics are recorded once per day (history in [`data/uptime.csv`](dat
 trend in [UPTIME.md](UPTIME.md)):
 
 - **Run-through** — did the scrape complete with zero skips? A skip (a source failing
-  to fetch/parse) is the *leading* signal that a source changed format, and opens an
-  `etl-skip` issue immediately.
+  to fetch/parse) is the *leading* signal that a source changed format. A morning skip is
+  re-fetched ~6 h later by the afternoon retry (`.github/workflows/etl-retry.yml`, which
+  re-runs only the failed sources); only a source that *still* fails the second attempt
+  opens an `etl-skip` issue — so a transient host outage never alarms. Retry usage is
+  logged in [`data/retry.csv`](data/retry.csv).
 - **Recently updated** — is every dataset that's expected to update fresh? A dataset
   ageing past its threshold is the *lagging* signal and opens a `data-health` issue.
   The per-dataset board (🟢 fresh / 🔴 stale) lives in [STATUS.md](STATUS.md).

@@ -347,6 +347,44 @@ DATASHEET_DIR <- file.path(dirname(root), "datasets")
 # uzh.ch connect timeout). Overridable via env for fast local runs / tests.
 RETRY_SLEEP <- as.integer(Sys.getenv("ETL_RETRY_SLEEP", "180"))
 
+# Curate + persist ONE built dataset: merge its datasheet (concept/canonical/featured
+# + display defaults), drop the levels/dims the app reproduces on the fly via its
+# transform toggle, nest any declared hierarchy, then write <id>.{csv,parquet,json}.
+# Returns the dataset with meta$fetched_utc stamped (write_catalog / merge_into_catalog
+# read it). Shared by the full run (main) and the afternoon retry (retry_skipped) so
+# both finalize identically.
+finalize_dataset <- function(ds) {
+  ds$meta <- modifyList(ds$meta, read_datasheet_meta(ds$id, DATASHEET_DIR))
+  ds <- drop_redundant_levels(ds)
+  ds <- drop_degenerate_dims(ds)
+  ds <- attach_hierarchy(ds, DATASHEET_DIR)
+  ds <- write_dataset(ds, DATA_DIR)
+  cat(sprintf("wrote %-22s %7d rows, %4d series  [%s]\n",
+              ds$id, nrow(ds$data), n_series(ds$data),
+              ds$meta$concept %||% "no datasheet"))
+  ds
+}
+
+# Splice freshly-recovered datasets into the existing catalog.json without rebuilding
+# the rest. The morning run drops a skipped id from the catalog entirely (build() only
+# serializes successes), so a recovered id is normally re-ADDED here; the replace-by-id
+# keeps it idempotent if an entry already exists. Used only by the retry pass, which
+# rebuilds just the morning's failures and must not clobber the entries the morning
+# already wrote.
+merge_into_catalog <- function(recovered, out_dir) {
+  path     <- file.path(out_dir, "catalog.json")
+  existing <- if (file.exists(path)) jsonlite::fromJSON(path, simplifyVector = FALSE) else list()
+  rec_ids  <- vapply(recovered, `[[`, character(1), "id")
+  kept     <- Filter(function(e) !((e$id %||% "") %in% rec_ids), existing)
+  merged   <- c(kept, lapply(recovered, catalog_entry))
+  writeLines(
+    jsonlite::toJSON(merged, auto_unbox = TRUE, pretty = TRUE, null = "null"),
+    path
+  )
+  cat(sprintf("merged %d recovered dataset(s) into catalog.json (%d total)\n",
+              length(recovered), length(merged)))
+}
+
 main <- function() {
   datasets <- build()
 
@@ -373,28 +411,10 @@ main <- function() {
       cat(sprintf("retry: %d still failing after retry\n", length(.SKIPPED)))
   }
 
-  # Index loop (not `for (ds in datasets)`): the datasheet merge must be written
-  # BACK into `datasets`, else write_catalog() below serializes the un-merged
-  # originals and concept/canonical/featured come out null in catalog.json.
-  for (i in seq_along(datasets)) {
-    # Curation (concept + canonical + featured) is derived from the datasheet, the source of truth.
-    datasets[[i]]$meta <- modifyList(datasets[[i]]$meta,
-                                     read_datasheet_meta(datasets[[i]]$id, DATASHEET_DIR))
-    # Drop levels the app reproduces via its transform toggle (see REDUNDANT_LEVELS),
-    # then drop any dimension thereby (or already) pinned to a single value.
-    datasets[[i]] <- drop_redundant_levels(datasets[[i]])
-    datasets[[i]] <- drop_degenerate_dims(datasets[[i]])
-    # Nest a flat breakdown dim into a tree where the codes (or the datasheet) say so.
-    # No-op when the source already supplied a hierarchy (e.g. the SNB cubes, the CPI
-    # parser) or the datasheet declares none.
-    datasets[[i]] <- attach_hierarchy(datasets[[i]], DATASHEET_DIR)
-    # Capture the return: write_dataset() stamps meta$fetched_utc, which
-    # write_catalog() below reads into the catalog "fetched" field.
-    datasets[[i]] <- write_dataset(datasets[[i]], DATA_DIR)
-    cat(sprintf("wrote %-22s %7d rows, %4d series  [%s]\n",
-                datasets[[i]]$id, nrow(datasets[[i]]$data), n_series(datasets[[i]]$data),
-                datasets[[i]]$meta$concept %||% "no datasheet"))
-  }
+  # Index-loop write-back: finalize_dataset() returns the curated + persisted dataset,
+  # which must land BACK in `datasets` so write_catalog() serializes the merged version
+  # (else concept/canonical/featured come out null in catalog.json).
+  for (i in seq_along(datasets)) datasets[[i]] <- finalize_dataset(datasets[[i]])
   write_catalog(datasets, DATA_DIR)
   cat(sprintf("wrote catalog.json (%d datasets) -> %s\n", length(datasets), DATA_DIR))
   write_run_json(ok = length(datasets), skipped = .SKIPPED, out_dir = DATA_DIR)
@@ -426,4 +446,82 @@ write_run_json <- function(ok, skipped, out_dir) {
   }
 }
 
-main()
+# Append one row to data/retry.csv per afternoon retry that actually ran (i.e. the
+# morning left skips). This is the "how often do we lean on the second run" ledger:
+# rows accrue ONLY on days a retry was needed, so counting rows over a window against
+# the one-row-per-day history in data/uptime.csv gives the usage rate. `recovered` =
+# fixed by the afternoon (no issue); `still_failing` = a real format break that
+# survived the retry and opened an etl-skip issue. Upsert per UTC day (a manual re-run
+# replaces the day's row), matching uptime.csv's idempotence.
+append_retry_log <- function(retried_ids, recovered_ids, still_failing_ids, out_dir) {
+  path <- file.path(out_dir, "retry.csv")
+  ID_COLS <- c("date", "ts", "retried_ids", "recovered_ids", "still_failing_ids")
+  row <- data.frame(
+    date              = format(Sys.time(), tz = "UTC", "%Y-%m-%d"),
+    ts                = format(Sys.time(), tz = "UTC", "%Y-%m-%dT%H:%M:%SZ"),
+    n_retried         = length(retried_ids),
+    retried_ids       = paste(retried_ids, collapse = ";"),
+    n_recovered       = length(recovered_ids),
+    recovered_ids     = paste(recovered_ids, collapse = ";"),
+    n_still_failing   = length(still_failing_ids),
+    still_failing_ids = paste(still_failing_ids, collapse = ";"),
+    stringsAsFactors  = FALSE
+  )
+  hist <- if (file.exists(path)) {
+    # Force id/date columns to character so an all-empty column isn't read as logical.
+    utils::read.csv(path, colClasses = setNames(rep("character", length(ID_COLS)), ID_COLS))
+  } else {
+    row[0, , drop = FALSE]
+  }
+  hist <- hist[hist$date != row$date, , drop = FALSE]
+  hist <- rbind(hist, row)
+  utils::write.csv(hist, path, row.names = FALSE)
+  cat(sprintf("retry.csv: %d retried, %d recovered, %d still failing\n",
+              length(retried_ids), length(recovered_ids), length(still_failing_ids)))
+}
+
+# Afternoon targeted-retry entrypoint (ETL_MODE=retry). Re-fetches ONLY the sources the
+# morning run skipped (read from data/run.json), folds any recoveries back into the data
+# files + catalog, rewrites run.json to the post-retry skip state, and logs the retry to
+# data/retry.csv. The skip alarm (.github/scripts/skip_issues.sh) then runs in the SAME
+# afternoon workflow off the rewritten run.json -- so a transient morning outage that
+# clears by afternoon never opens an issue, and only a genuine break survives to alarm.
+# A no-skip morning is a no-op here (the workflow gate skips this run entirely).
+retry_skipped <- function() {
+  run_path <- file.path(DATA_DIR, "run.json")
+  if (!file.exists(run_path)) {
+    cat("retry: no data/run.json -- nothing to retry.\n"); return(invisible())
+  }
+  run       <- jsonlite::fromJSON(run_path, simplifyVector = FALSE)
+  retry_ids <- vapply(run$skipped %||% list(), `[[`, character(1), "id")
+  if (!length(retry_ids)) {
+    cat("retry: morning run had no skips -- nothing to retry.\n"); return(invisible())
+  }
+  cat(sprintf("retry: re-fetching %d morning skip(s): %s\n",
+              length(retry_ids), paste(retry_ids, collapse = ", ")))
+
+  .SKIPPED  <<- list()                 # reset; the retry build recomputes the survivors
+  recovered <- build(only = retry_ids)
+  recovered_ids <- vapply(recovered, `[[`, character(1), "id")
+  still_failing <- vapply(.SKIPPED, `[[`, character(1), "id")
+
+  for (i in seq_along(recovered)) recovered[[i]] <- finalize_dataset(recovered[[i]])
+  if (length(recovered)) merge_into_catalog(recovered, DATA_DIR)
+
+  # Rewrite run.json to post-retry reality: the still-failing set drives the skip alarm,
+  # and ok rises by the recoveries so uptime.R's run-through metric goes green when the
+  # afternoon clears everything. attempted stays constant (ok + still-failing).
+  new_ok <- (run$ok %||% 0L) + length(recovered)
+  write_run_json(ok = new_ok, skipped = .SKIPPED, out_dir = DATA_DIR)
+
+  append_retry_log(retry_ids, recovered_ids, still_failing, DATA_DIR)
+
+  if (length(recovered))
+    cat(sprintf("retry: recovered %s\n", paste(recovered_ids, collapse = ", ")))
+  if (length(still_failing))
+    cat(sprintf("retry: still failing %s\n", paste(still_failing, collapse = ", ")))
+}
+
+# Mode dispatch: the afternoon workflow sets ETL_MODE=retry to re-fetch just the
+# morning's skips; the default daily run does the full scrape.
+if (identical(Sys.getenv("ETL_MODE"), "retry")) retry_skipped() else main()
