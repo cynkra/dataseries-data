@@ -452,5 +452,5 @@
     "D0": "S0"
   },
   "description": "The one-page overview of the Swiss balance of payments: the headline aggregates of all four accounts in a single cube. Unlike the current-account detail cube, this one folds the accounting entry into the component codes, so each line is named for its account and its entry at once. It carries the top-level structure rarely shown elsewhere: the financial account (direct, portfolio, other, reserve assets, each as net acquisition of assets NA vs net incurrence of liabilities NP), the capital account (S8/E8/A8), derivatives (S14), and the statistical difference (SD) that closes the BoP identity. It is the alternate to the detailed ch_snb_bopcurrq for the same concept: same producer, broader account coverage but shallower component detail, so it is kept and labelled rather than dropped.",
-  "fetched_utc": "2026-06-11 15:01:50"
+  "fetched_utc": "2026-06-12 10:01:09"
 }
