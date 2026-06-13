@@ -1,5 +1,305 @@
 [
   {
+    "id": "ch_seco_gdp",
+    "title": {
+      "en": "Gross domestic product (GDP)",
+      "de": "Bruttoninlandprodukt (BIP)",
+      "fr": "Produit intérieur brut (PIB)",
+      "it": "Prodotto interno lordo (PIL)"
+    },
+    "concept": "National accounts / GDP (output, expenditure, income)",
+    "canonical": true,
+    "featured": "GDP",
+    "topic": "National accounts",
+    "source": "State Secretariat for Economic Affairs (SECO)",
+    "license": "seco",
+    "frequency": "quarterly",
+    "start": "1980-01-01",
+    "end": "2026-01-01",
+    "n_series": 660,
+    "updated": "2026-02-23 16:51:17",
+    "fetched": "2026-06-13 17:49:46",
+    "load": "whole",
+    "data": "ch_seco_gdp.csv",
+    "meta": "ch_seco_gdp.json"
+  },
+  {
+    "id": "ch_seco_concon",
+    "title": {
+      "en": "Consumer confidence",
+      "de": "Konsumentenstimmungsindex",
+      "fr": "Indice du climat de consommation",
+      "it": "Indice del clima di fiducia dei consumatori"
+    },
+    "concept": "Business cycle & sentiment / Consumer confidence",
+    "canonical": true,
+    "featured": "Consumer confidence",
+    "topic": "Business cycle & sentiment",
+    "source": "State Secretariat for Economic Affairs (SECO)",
+    "license": "seco",
+    "frequency": "quarterly",
+    "start": "1972-10-01",
+    "end": "2026-04-01",
+    "n_series": 39,
+    "updated": "2026-02-05 09:32:16",
+    "fetched": "2026-06-13 17:49:46",
+    "load": "whole",
+    "data": "ch_seco_concon.csv",
+    "meta": "ch_seco_concon.json"
+  },
+  {
+    "id": "ch_fso_retail",
+    "title": {
+      "en": "Retail trade turnover"
+    },
+    "concept": "Domestic economy / Retail trade turnover",
+    "canonical": true,
+    "featured": "Retail trade",
+    "topic": "Domestic economy",
+    "source": "Swiss Federal Statistical Office (FSO)",
+    "license": "fso",
+    "frequency": "monthly",
+    "start": "2000-01-01",
+    "end": "2026-04-01",
+    "n_series": 171,
+    "updated": null,
+    "fetched": "2026-06-13 17:49:46",
+    "load": "whole",
+    "data": "ch_fso_retail.csv",
+    "meta": "ch_fso_retail.json"
+  },
+  {
+    "id": "ch_fso_production",
+    "title": {
+      "en": "Industry & construction turnover"
+    },
+    "concept": "Domestic economy / Industry & construction turnover",
+    "canonical": true,
+    "featured": null,
+    "topic": "Domestic economy",
+    "source": "Swiss Federal Statistical Office (FSO)",
+    "license": "fso",
+    "frequency": "quarterly",
+    "start": "1999-01-01",
+    "end": "2026-01-01",
+    "n_series": 87,
+    "updated": null,
+    "fetched": "2026-06-13 17:49:46",
+    "load": "whole",
+    "data": "ch_fso_production.csv",
+    "meta": "ch_fso_production.json"
+  },
+  {
+    "id": "ch_fso_services",
+    "title": {
+      "en": "Services turnover"
+    },
+    "concept": "Domestic economy / Services turnover",
+    "canonical": true,
+    "featured": null,
+    "topic": "Domestic economy",
+    "source": "Swiss Federal Statistical Office (FSO)",
+    "license": "fso",
+    "frequency": "quarterly",
+    "start": "2021-01-01",
+    "end": "2026-01-01",
+    "n_series": 66,
+    "updated": null,
+    "fetched": "2026-06-13 17:49:46",
+    "load": "whole",
+    "data": "ch_fso_services.csv",
+    "meta": "ch_fso_services.json"
+  },
+  {
+    "id": "ch_fso_new_vehicles",
+    "title": {
+      "en": "New car registrations by fuel"
+    },
+    "concept": "Domestic economy / New vehicle registrations",
+    "canonical": true,
+    "featured": null,
+    "topic": "Domestic economy",
+    "source": "Swiss Federal Statistical Office (FSO)",
+    "license": "fso",
+    "frequency": "monthly",
+    "start": "2005-01-01",
+    "end": "2026-05-01",
+    "n_series": 12,
+    "updated": null,
+    "fetched": "2026-06-13 17:49:46",
+    "load": "whole",
+    "data": "ch_fso_new_vehicles.csv",
+    "meta": "ch_fso_new_vehicles.json"
+  },
+  {
+    "id": "ch_fso_vacant_dwellings",
+    "title": {
+      "en": "Vacant dwellings"
+    },
+    "concept": "Domestic economy / Vacant dwellings",
+    "canonical": true,
+    "featured": null,
+    "topic": "Domestic economy",
+    "source": "Swiss Federal Statistical Office (FSO)",
+    "license": "fso",
+    "frequency": "annual",
+    "start": "1995-01-01",
+    "end": "2025-01-01",
+    "n_series": 2,
+    "updated": null,
+    "fetched": "2026-06-13 17:49:46",
+    "load": "whole",
+    "data": "ch_fso_vacant_dwellings.csv",
+    "meta": "ch_fso_vacant_dwellings.json"
+  },
+  {
+    "id": "ch_fso_cross_border_commuters",
+    "title": {
+      "en": "Cross-border commuters"
+    },
+    "concept": "Labour / Cross-border commuters",
+    "canonical": true,
+    "featured": null,
+    "topic": "Labour",
+    "source": "Swiss Federal Statistical Office (FSO)",
+    "license": "fso",
+    "frequency": "quarterly",
+    "start": "2002-07-01",
+    "end": "2026-01-01",
+    "n_series": 27,
+    "updated": null,
+    "fetched": "2026-06-13 17:49:46",
+    "load": "whole",
+    "data": "ch_fso_cross_border_commuters.csv",
+    "meta": "ch_fso_cross_border_commuters.json"
+  },
+  {
+    "id": "ch_fso_pop_detail",
+    "title": {
+      "en": "Resident population by nationality"
+    },
+    "concept": "Population & demographics / Resident population by nationality",
+    "canonical": false,
+    "featured": null,
+    "topic": "Population & demographics",
+    "source": "Swiss Federal Statistical Office (FSO)",
+    "license": "fso",
+    "frequency": "annual",
+    "start": "2010-01-01",
+    "end": "2024-01-01",
+    "n_series": 9,
+    "updated": null,
+    "fetched": "2026-06-13 17:49:46",
+    "load": "whole",
+    "data": "ch_fso_pop_detail.csv",
+    "meta": "ch_fso_pop_detail.json"
+  },
+  {
+    "id": "ch_kof_barometer",
+    "title": {
+      "en": "KOF Economic Barometer"
+    },
+    "concept": "Business cycle & sentiment / Leading barometer",
+    "canonical": true,
+    "featured": null,
+    "topic": "Business cycle & sentiment",
+    "source": "KOF Swiss Economic Institute",
+    "license": "kof",
+    "frequency": "monthly",
+    "start": "1991-01-01",
+    "end": "2026-05-01",
+    "n_series": 1,
+    "updated": null,
+    "fetched": "2026-06-13 17:49:46",
+    "load": "whole",
+    "data": "ch_kof_barometer.csv",
+    "meta": "ch_kof_barometer.json"
+  },
+  {
+    "id": "ch_kof_esi",
+    "title": {
+      "en": "KOF Economic Sentiment Index"
+    },
+    "concept": "Business cycle & sentiment / Sentiment composite",
+    "canonical": true,
+    "featured": null,
+    "topic": "Business cycle & sentiment",
+    "source": "KOF Swiss Economic Institute",
+    "license": "kof",
+    "frequency": "monthly",
+    "start": "2007-04-01",
+    "end": "2026-05-01",
+    "n_series": 2,
+    "updated": null,
+    "fetched": "2026-06-13 17:49:46",
+    "load": "whole",
+    "data": "ch_kof_esi.csv",
+    "meta": "ch_kof_esi.json"
+  },
+  {
+    "id": "ch_adecco_sjmi",
+    "title": {
+      "en": "Adecco Group Swiss Job Market Index"
+    },
+    "concept": "Labour / Job market",
+    "canonical": true,
+    "featured": null,
+    "topic": "Labour",
+    "source": "University of Zurich (Stellenmarkt-Monitor Schweiz)",
+    "license": "Stellenmarkt-Monitor Schweiz, University of Zurich (free use, attribution required; Adecco Group Swiss Job Market Index)",
+    "frequency": "quarterly",
+    "start": "2003-03-01",
+    "end": "2026-03-01",
+    "n_series": 5,
+    "updated": null,
+    "fetched": "2026-06-13 17:49:46",
+    "load": "whole",
+    "data": "ch_adecco_sjmi.csv",
+    "meta": "ch_adecco_sjmi.json"
+  },
+  {
+    "id": "ch_fso_hicp",
+    "title": {
+      "en": "Harmonised CPI (HICP)"
+    },
+    "concept": "Prices / Consumer prices",
+    "canonical": false,
+    "featured": null,
+    "topic": "Prices",
+    "source": "Eurostat",
+    "license": "eurostat",
+    "frequency": "monthly",
+    "start": "2004-12-01",
+    "end": "2025-12-01",
+    "n_series": 13,
+    "updated": "2026-02-06",
+    "fetched": "2026-06-13 17:49:46",
+    "load": "whole",
+    "data": "ch_fso_hicp.csv",
+    "meta": "ch_fso_hicp.json"
+  },
+  {
+    "id": "ch_seco_wwa",
+    "title": {
+      "en": "Weekly economic activity (WEA)"
+    },
+    "concept": "Business cycle & sentiment / High-frequency activity tracker",
+    "canonical": true,
+    "featured": null,
+    "topic": "Business cycle & sentiment",
+    "source": "State Secretariat for Economic Affairs (SECO)",
+    "license": "seco",
+    "frequency": "weekly",
+    "start": "2005-01-03",
+    "end": "2026-05-18",
+    "n_series": 2,
+    "updated": null,
+    "fetched": "2026-06-13 17:49:46",
+    "load": "whole",
+    "data": "ch_seco_wwa.csv",
+    "meta": "ch_seco_wwa.json"
+  },
+  {
     "id": "ch_snb_amarbma",
     "title": {
       "en": "Registered unemployment"
@@ -798,201 +1098,6 @@
     "meta": "ch_snb_zimoma.json"
   },
   {
-    "id": "ch_seco_gdp",
-    "title": {
-      "en": "Gross domestic product (GDP)",
-      "de": "Bruttoninlandprodukt (BIP)",
-      "fr": "Produit intérieur brut (PIB)",
-      "it": "Prodotto interno lordo (PIL)"
-    },
-    "concept": "National accounts / GDP (output, expenditure, income)",
-    "canonical": true,
-    "featured": "GDP",
-    "topic": "National accounts",
-    "source": "State Secretariat for Economic Affairs (SECO)",
-    "license": "seco",
-    "frequency": "quarterly",
-    "start": "1980-01-01",
-    "end": "2026-01-01",
-    "n_series": 660,
-    "updated": "2026-02-23 16:51:17",
-    "fetched": "2026-06-13 15:45:15",
-    "load": "whole",
-    "data": "ch_seco_gdp.csv",
-    "meta": "ch_seco_gdp.json"
-  },
-  {
-    "id": "ch_seco_concon",
-    "title": {
-      "en": "Consumer confidence",
-      "de": "Konsumentenstimmungsindex",
-      "fr": "Indice du climat de consommation",
-      "it": "Indice del clima di fiducia dei consumatori"
-    },
-    "concept": "Business cycle & sentiment / Consumer confidence",
-    "canonical": true,
-    "featured": "Consumer confidence",
-    "topic": "Business cycle & sentiment",
-    "source": "State Secretariat for Economic Affairs (SECO)",
-    "license": "seco",
-    "frequency": "quarterly",
-    "start": "1972-10-01",
-    "end": "2026-04-01",
-    "n_series": 39,
-    "updated": "2026-02-05 09:32:16",
-    "fetched": "2026-06-13 15:45:15",
-    "load": "whole",
-    "data": "ch_seco_concon.csv",
-    "meta": "ch_seco_concon.json"
-  },
-  {
-    "id": "ch_fso_retail",
-    "title": {
-      "en": "Retail trade turnover"
-    },
-    "concept": "Domestic economy / Retail trade turnover",
-    "canonical": true,
-    "featured": "Retail trade",
-    "topic": "Domestic economy",
-    "source": "Swiss Federal Statistical Office (FSO)",
-    "license": "fso",
-    "frequency": "monthly",
-    "start": "2000-01-01",
-    "end": "2026-04-01",
-    "n_series": 171,
-    "updated": null,
-    "fetched": "2026-06-13 15:45:15",
-    "load": "whole",
-    "data": "ch_fso_retail.csv",
-    "meta": "ch_fso_retail.json"
-  },
-  {
-    "id": "ch_fso_production",
-    "title": {
-      "en": "Industry & construction turnover"
-    },
-    "concept": "Domestic economy / Industry & construction turnover",
-    "canonical": true,
-    "featured": null,
-    "topic": "Domestic economy",
-    "source": "Swiss Federal Statistical Office (FSO)",
-    "license": "fso",
-    "frequency": "quarterly",
-    "start": "1999-01-01",
-    "end": "2026-01-01",
-    "n_series": 87,
-    "updated": null,
-    "fetched": "2026-06-13 15:45:16",
-    "load": "whole",
-    "data": "ch_fso_production.csv",
-    "meta": "ch_fso_production.json"
-  },
-  {
-    "id": "ch_fso_services",
-    "title": {
-      "en": "Services turnover"
-    },
-    "concept": "Domestic economy / Services turnover",
-    "canonical": true,
-    "featured": null,
-    "topic": "Domestic economy",
-    "source": "Swiss Federal Statistical Office (FSO)",
-    "license": "fso",
-    "frequency": "quarterly",
-    "start": "2021-01-01",
-    "end": "2026-01-01",
-    "n_series": 66,
-    "updated": null,
-    "fetched": "2026-06-13 15:45:16",
-    "load": "whole",
-    "data": "ch_fso_services.csv",
-    "meta": "ch_fso_services.json"
-  },
-  {
-    "id": "ch_fso_new_vehicles",
-    "title": {
-      "en": "New car registrations by fuel"
-    },
-    "concept": "Domestic economy / New vehicle registrations",
-    "canonical": true,
-    "featured": null,
-    "topic": "Domestic economy",
-    "source": "Swiss Federal Statistical Office (FSO)",
-    "license": "fso",
-    "frequency": "monthly",
-    "start": "2005-01-01",
-    "end": "2026-05-01",
-    "n_series": 12,
-    "updated": null,
-    "fetched": "2026-06-13 15:45:16",
-    "load": "whole",
-    "data": "ch_fso_new_vehicles.csv",
-    "meta": "ch_fso_new_vehicles.json"
-  },
-  {
-    "id": "ch_fso_vacant_dwellings",
-    "title": {
-      "en": "Vacant dwellings"
-    },
-    "concept": "Domestic economy / Vacant dwellings",
-    "canonical": true,
-    "featured": null,
-    "topic": "Domestic economy",
-    "source": "Swiss Federal Statistical Office (FSO)",
-    "license": "fso",
-    "frequency": "annual",
-    "start": "1995-01-01",
-    "end": "2025-01-01",
-    "n_series": 2,
-    "updated": null,
-    "fetched": "2026-06-13 15:45:16",
-    "load": "whole",
-    "data": "ch_fso_vacant_dwellings.csv",
-    "meta": "ch_fso_vacant_dwellings.json"
-  },
-  {
-    "id": "ch_fso_cross_border_commuters",
-    "title": {
-      "en": "Cross-border commuters"
-    },
-    "concept": "Labour / Cross-border commuters",
-    "canonical": true,
-    "featured": null,
-    "topic": "Labour",
-    "source": "Swiss Federal Statistical Office (FSO)",
-    "license": "fso",
-    "frequency": "quarterly",
-    "start": "2002-07-01",
-    "end": "2026-01-01",
-    "n_series": 27,
-    "updated": null,
-    "fetched": "2026-06-13 15:45:16",
-    "load": "whole",
-    "data": "ch_fso_cross_border_commuters.csv",
-    "meta": "ch_fso_cross_border_commuters.json"
-  },
-  {
-    "id": "ch_fso_pop_detail",
-    "title": {
-      "en": "Resident population by nationality"
-    },
-    "concept": "Population & demographics / Resident population by nationality",
-    "canonical": false,
-    "featured": null,
-    "topic": "Population & demographics",
-    "source": "Swiss Federal Statistical Office (FSO)",
-    "license": "fso",
-    "frequency": "annual",
-    "start": "2010-01-01",
-    "end": "2024-01-01",
-    "n_series": 9,
-    "updated": null,
-    "fetched": "2026-06-13 15:45:16",
-    "load": "whole",
-    "data": "ch_fso_pop_detail.csv",
-    "meta": "ch_fso_pop_detail.json"
-  },
-  {
     "id": "ch_ffa_finances",
     "title": {
       "en": "Government finances"
@@ -1012,69 +1117,6 @@
     "load": "whole",
     "data": "ch_ffa_finances.csv",
     "meta": "ch_ffa_finances.json"
-  },
-  {
-    "id": "ch_kof_barometer",
-    "title": {
-      "en": "KOF Economic Barometer"
-    },
-    "concept": "Business cycle & sentiment / Leading barometer",
-    "canonical": true,
-    "featured": null,
-    "topic": "Business cycle & sentiment",
-    "source": "KOF Swiss Economic Institute",
-    "license": "kof",
-    "frequency": "monthly",
-    "start": "1991-01-01",
-    "end": "2026-05-01",
-    "n_series": 1,
-    "updated": null,
-    "fetched": "2026-06-13 15:45:16",
-    "load": "whole",
-    "data": "ch_kof_barometer.csv",
-    "meta": "ch_kof_barometer.json"
-  },
-  {
-    "id": "ch_kof_esi",
-    "title": {
-      "en": "KOF Economic Sentiment Index"
-    },
-    "concept": "Business cycle & sentiment / Sentiment composite",
-    "canonical": true,
-    "featured": null,
-    "topic": "Business cycle & sentiment",
-    "source": "KOF Swiss Economic Institute",
-    "license": "kof",
-    "frequency": "monthly",
-    "start": "2007-04-01",
-    "end": "2026-05-01",
-    "n_series": 2,
-    "updated": null,
-    "fetched": "2026-06-13 15:45:16",
-    "load": "whole",
-    "data": "ch_kof_esi.csv",
-    "meta": "ch_kof_esi.json"
-  },
-  {
-    "id": "ch_adecco_sjmi",
-    "title": {
-      "en": "Adecco Group Swiss Job Market Index"
-    },
-    "concept": "Labour / Job market",
-    "canonical": true,
-    "featured": null,
-    "topic": "Labour",
-    "source": "University of Zurich (Stellenmarkt-Monitor Schweiz)",
-    "license": "Stellenmarkt-Monitor Schweiz, University of Zurich (free use, attribution required; Adecco Group Swiss Job Market Index)",
-    "frequency": "quarterly",
-    "start": "2003-03-01",
-    "end": "2026-03-01",
-    "n_series": 5,
-    "updated": null,
-    "fetched": "2026-06-13 15:45:16",
-    "load": "whole",
-    "data": "ch_adecco_sjmi.csv",
-    "meta": "ch_adecco_sjmi.json"
   },
   {
     "id": "ch_fso_hesta",
@@ -1432,47 +1474,5 @@
     "load": "whole",
     "data": "ch_fso_trade_partner.csv",
     "meta": "ch_fso_trade_partner.json"
-  },
-  {
-    "id": "ch_fso_hicp",
-    "title": {
-      "en": "Harmonised CPI (HICP)"
-    },
-    "concept": "Prices / Consumer prices",
-    "canonical": false,
-    "featured": null,
-    "topic": "Prices",
-    "source": "Eurostat",
-    "license": "eurostat",
-    "frequency": "monthly",
-    "start": "2004-12-01",
-    "end": "2025-12-01",
-    "n_series": 13,
-    "updated": "2026-02-06",
-    "fetched": "2026-06-13 15:45:16",
-    "load": "whole",
-    "data": "ch_fso_hicp.csv",
-    "meta": "ch_fso_hicp.json"
-  },
-  {
-    "id": "ch_seco_wwa",
-    "title": {
-      "en": "Weekly economic activity (WEA)"
-    },
-    "concept": "Business cycle & sentiment / High-frequency activity tracker",
-    "canonical": true,
-    "featured": null,
-    "topic": "Business cycle & sentiment",
-    "source": "State Secretariat for Economic Affairs (SECO)",
-    "license": "seco",
-    "frequency": "weekly",
-    "start": "2005-01-03",
-    "end": "2026-05-18",
-    "n_series": 2,
-    "updated": null,
-    "fetched": "2026-06-13 15:45:16",
-    "load": "whole",
-    "data": "ch_seco_wwa.csv",
-    "meta": "ch_seco_wwa.json"
   }
 ]

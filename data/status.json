@@ -1,5 +1,5 @@
 {
-  "checked": "2026-06-13 15:49 UTC",
+  "checked": "2026-06-13 17:49 UTC",
   "counts": {
     "green": 70,
     "red": 0,
@@ -7,6 +7,160 @@
     "total": 70
   },
   "datasets": [
+    {
+      "id": "ch_seco_gdp",
+      "title": "Gross domestic product (GDP)",
+      "source": "State Secretariat for Economic Affairs (SECO)",
+      "frequency": "quarterly",
+      "end": "2026-01-01",
+      "updated": "2026-02-23 16:51:17",
+      "age_days": 163,
+      "threshold_days": 435,
+      "status": "green"
+    },
+    {
+      "id": "ch_seco_concon",
+      "title": "Consumer confidence",
+      "source": "State Secretariat for Economic Affairs (SECO)",
+      "frequency": "quarterly",
+      "end": "2026-04-01",
+      "updated": "2026-02-05 09:32:16",
+      "age_days": 73,
+      "threshold_days": 435,
+      "status": "green"
+    },
+    {
+      "id": "ch_fso_retail",
+      "title": "Retail trade turnover",
+      "source": "Swiss Federal Statistical Office (FSO)",
+      "frequency": "monthly",
+      "end": "2026-04-01",
+      "updated": null,
+      "age_days": 73,
+      "threshold_days": 165,
+      "status": "green"
+    },
+    {
+      "id": "ch_fso_production",
+      "title": "Industry & construction turnover",
+      "source": "Swiss Federal Statistical Office (FSO)",
+      "frequency": "quarterly",
+      "end": "2026-01-01",
+      "updated": null,
+      "age_days": 163,
+      "threshold_days": 435,
+      "status": "green"
+    },
+    {
+      "id": "ch_fso_services",
+      "title": "Services turnover",
+      "source": "Swiss Federal Statistical Office (FSO)",
+      "frequency": "quarterly",
+      "end": "2026-01-01",
+      "updated": null,
+      "age_days": 163,
+      "threshold_days": 435,
+      "status": "green"
+    },
+    {
+      "id": "ch_fso_new_vehicles",
+      "title": "New car registrations by fuel",
+      "source": "Swiss Federal Statistical Office (FSO)",
+      "frequency": "monthly",
+      "end": "2026-05-01",
+      "updated": null,
+      "age_days": 43,
+      "threshold_days": 165,
+      "status": "green"
+    },
+    {
+      "id": "ch_fso_vacant_dwellings",
+      "title": "Vacant dwellings",
+      "source": "Swiss Federal Statistical Office (FSO)",
+      "frequency": "annual",
+      "end": "2025-01-01",
+      "updated": null,
+      "age_days": 528,
+      "threshold_days": 825,
+      "status": "green"
+    },
+    {
+      "id": "ch_fso_cross_border_commuters",
+      "title": "Cross-border commuters",
+      "source": "Swiss Federal Statistical Office (FSO)",
+      "frequency": "quarterly",
+      "end": "2026-01-01",
+      "updated": null,
+      "age_days": 163,
+      "threshold_days": 435,
+      "status": "green"
+    },
+    {
+      "id": "ch_fso_pop_detail",
+      "title": "Resident population by nationality",
+      "source": "Swiss Federal Statistical Office (FSO)",
+      "frequency": "annual",
+      "end": "2024-01-01",
+      "updated": null,
+      "age_days": 894,
+      "threshold_days": 1425,
+      "status": "green"
+    },
+    {
+      "id": "ch_kof_barometer",
+      "title": "KOF Economic Barometer",
+      "source": "KOF Swiss Economic Institute",
+      "frequency": "monthly",
+      "end": "2026-05-01",
+      "updated": null,
+      "age_days": 43,
+      "threshold_days": 165,
+      "status": "green"
+    },
+    {
+      "id": "ch_kof_esi",
+      "title": "KOF Economic Sentiment Index",
+      "source": "KOF Swiss Economic Institute",
+      "frequency": "monthly",
+      "end": "2026-05-01",
+      "updated": null,
+      "age_days": 43,
+      "threshold_days": 165,
+      "status": "green"
+    },
+    {
+      "id": "ch_adecco_sjmi",
+      "title": "Adecco Group Swiss Job Market Index",
+      "source": "University of Zurich (Stellenmarkt-Monitor Schweiz)",
+      "frequency": "quarterly",
+      "end": "2026-03-01",
+      "updated": null,
+      "age_days": 104,
+      "threshold_days": 435,
+      "status": "green"
+    },
+    {
+      "id": "ch_fso_hicp",
+      "title": "Harmonised CPI (HICP)",
+      "source": "Eurostat",
+      "frequency": "monthly",
+      "end": "2025-12-01",
+      "updated": "2026-02-06",
+      "age_days": 194,
+      "threshold_days": 315,
+      "status": "green"
+    },
+    {
+      "id": "ch_seco_wwa",
+      "title": "Weekly economic activity (WEA)",
+      "source": "State Secretariat for Economic Affairs (SECO)",
+      "frequency": "weekly",
+      "end": "2026-05-18",
+      "updated": null,
+      "age_days": 26,
+      "threshold_days": 53,
+      "status": "green"
+    },
     {
       "id": "ch_snb_amarbma",
       "title": "Registered unemployment",
@@ -426,105 +580,6 @@
       "status": "green"
     },
     {
-      "id": "ch_seco_gdp",
-      "title": "Gross domestic product (GDP)",
-      "source": "State Secretariat for Economic Affairs (SECO)",
-      "frequency": "quarterly",
-      "end": "2026-01-01",
-      "updated": "2026-02-23 16:51:17",
-      "age_days": 163,
-      "threshold_days": 435,
-      "status": "green"
-    },
-    {
-      "id": "ch_seco_concon",
-      "title": "Consumer confidence",
-      "source": "State Secretariat for Economic Affairs (SECO)",
-      "frequency": "quarterly",
-      "end": "2026-04-01",
-      "updated": "2026-02-05 09:32:16",
-      "age_days": 73,
-      "threshold_days": 435,
-      "status": "green"
-    },
-    {
-      "id": "ch_fso_retail",
-      "title": "Retail trade turnover",
-      "source": "Swiss Federal Statistical Office (FSO)",
-      "frequency": "monthly",
-      "end": "2026-04-01",
-      "updated": null,
-      "age_days": 73,
-      "threshold_days": 165,
-      "status": "green"
-    },
-    {
-      "id": "ch_fso_production",
-      "title": "Industry & construction turnover",
-      "source": "Swiss Federal Statistical Office (FSO)",
-      "frequency": "quarterly",
-      "end": "2026-01-01",
-      "updated": null,
-      "age_days": 163,
-      "threshold_days": 435,
-      "status": "green"
-    },
-    {
-      "id": "ch_fso_services",
-      "title": "Services turnover",
-      "source": "Swiss Federal Statistical Office (FSO)",
-      "frequency": "quarterly",
-      "end": "2026-01-01",
-      "updated": null,
-      "age_days": 163,
-      "threshold_days": 435,
-      "status": "green"
-    },
-    {
-      "id": "ch_fso_new_vehicles",
-      "title": "New car registrations by fuel",
-      "source": "Swiss Federal Statistical Office (FSO)",
-      "frequency": "monthly",
-      "end": "2026-05-01",
-      "updated": null,
-      "age_days": 43,
-      "threshold_days": 165,
-      "status": "green"
-    },
-    {
-      "id": "ch_fso_vacant_dwellings",
-      "title": "Vacant dwellings",
-      "source": "Swiss Federal Statistical Office (FSO)",
-      "frequency": "annual",
-      "end": "2025-01-01",
-      "updated": null,
-      "age_days": 528,
-      "threshold_days": 825,
-      "status": "green"
-    },
-    {
-      "id": "ch_fso_cross_border_commuters",
-      "title": "Cross-border commuters",
-      "source": "Swiss Federal Statistical Office (FSO)",
-      "frequency": "quarterly",
-      "end": "2026-01-01",
-      "updated": null,
-      "age_days": 163,
-      "threshold_days": 435,
-      "status": "green"
-    },
-    {
-      "id": "ch_fso_pop_detail",
-      "title": "Resident population by nationality",
-      "source": "Swiss Federal Statistical Office (FSO)",
-      "frequency": "annual",
-      "end": "2024-01-01",
-      "updated": null,
-      "age_days": 894,
-      "threshold_days": 1425,
-      "status": "green"
-    },
-    {
       "id": "ch_ffa_finances",
       "title": "Government finances",
       "source": "Federal Finance Administration (FFA)",
@@ -533,39 +588,6 @@
       "updated": "2025-03-18",
       "age_days": -933,
       "threshold_days": 825,
-      "status": "green"
-    },
-    {
-      "id": "ch_kof_barometer",
-      "title": "KOF Economic Barometer",
-      "source": "KOF Swiss Economic Institute",
-      "frequency": "monthly",
-      "end": "2026-05-01",
-      "updated": null,
-      "age_days": 43,
-      "threshold_days": 165,
-      "status": "green"
-    },
-    {
-      "id": "ch_kof_esi",
-      "title": "KOF Economic Sentiment Index",
-      "source": "KOF Swiss Economic Institute",
-      "frequency": "monthly",
-      "end": "2026-05-01",
-      "updated": null,
-      "age_days": 43,
-      "threshold_days": 165,
-      "status": "green"
-    },
-    {
-      "id": "ch_adecco_sjmi",
-      "title": "Adecco Group Swiss Job Market Index",
-      "source": "University of Zurich (Stellenmarkt-Monitor Schweiz)",
-      "frequency": "quarterly",
-      "end": "2026-03-01",
-      "updated": null,
-      "age_days": 104,
-      "threshold_days": 435,
       "status": "green"
     },
     {
@@ -753,28 +775,6 @@
       "updated": null,
       "age_days": 528,
       "threshold_days": 825,
-      "status": "green"
-    },
-    {
-      "id": "ch_fso_hicp",
-      "title": "Harmonised CPI (HICP)",
-      "source": "Eurostat",
-      "frequency": "monthly",
-      "end": "2025-12-01",
-      "updated": "2026-02-06",
-      "age_days": 194,
-      "threshold_days": 315,
-      "status": "green"
-    },
-    {
-      "id": "ch_seco_wwa",
-      "title": "Weekly economic activity (WEA)",
-      "source": "State Secretariat for Economic Affairs (SECO)",
-      "frequency": "weekly",
-      "end": "2026-05-18",
-      "updated": null,
-      "age_days": 26,
-      "threshold_days": 53,
       "status": "green"
     }
   ]

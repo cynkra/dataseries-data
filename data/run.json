@@ -1,7 +1,119 @@
 {
-  "ts": "2026-06-13T15:45:16Z",
+  "ts": "2026-06-13T17:49:47Z",
   "attempted": 70,
-  "ok": 70,
-  "unchanged": [],
-  "skipped": []
+  "ok": 14,
+  "unchanged": [
+    "ch_snb_amarbma",
+    "ch_snb_ambeschkla",
+    "ch_snb_ausshawarm",
+    "ch_snb_auvekomq",
+    "ch_snb_auvercurrq",
+    "ch_snb_auverdeptq",
+    "ch_snb_auversecq",
+    "ch_snb_babilpobm",
+    "ch_snb_bakredbetgrbm",
+    "ch_snb_bakredinausbm",
+    "ch_snb_bakredsekbm",
+    "ch_snb_bopcapbalq",
+    "ch_snb_bopcurrq",
+    "ch_snb_bopoverq",
+    "ch_snb_bopservq",
+    "ch_snb_capchstocki",
+    "ch_snb_capweums",
+    "ch_snb_devkum",
+    "ch_snb_devwkibiim",
+    "ch_snb_devwkieffid",
+    "ch_snb_plimoinchq",
+    "ch_snb_plkopr",
+    "ch_snb_plkoprinfla",
+    "ch_snb_rendeiduebd",
+    "ch_snb_snbbipo",
+    "ch_snb_snbiprogq",
+    "ch_snb_snbkosiq",
+    "ch_snb_snbmoba",
+    "ch_snb_snbmonagg",
+    "ch_snb_snboffzisa",
+    "ch_snb_zavegelade",
+    "ch_snb_zavesic",
+    "ch_snb_zavezaka",
+    "ch_snb_zavezaluba",
+    "ch_snb_zavkuzaart",
+    "ch_snb_zikredlauf",
+    "ch_snb_zikrepro",
+    "ch_snb_zimoma"
+  ],
+  "skipped": [
+    {
+      "id": "ch_ffa_finances",
+      "error": "Failed to perform HTTP request.\nCaused by error in `curl::curl_fetch_memory()`:\n! Timeout was reached [www.data.finance.admin.ch]:\nFailed to connect to www.data.finance.admin.ch port 443 after 15001 ms: Timeout was reached"
+    },
+    {
+      "id": "ch_fso_hesta",
+      "error": "Failed to perform HTTP request.\nCaused by error in `curl::curl_fetch_memory()`:\n! Timeout was reached [www.pxweb.bfs.admin.ch]:\nFailed to connect to www.pxweb.bfs.admin.ch port 443 after 15001 ms: Timeout was reached"
+    },
+    {
+      "id": "ch_fso_besta",
+      "error": "Failed to perform HTTP request.\nCaused by error in `curl::curl_fetch_memory()`:\n! Timeout was reached [www.pxweb.bfs.admin.ch]:\nFailed to connect to www.pxweb.bfs.admin.ch port 443 after 15003 ms: Timeout was reached"
+    },
+    {
+      "id": "ch_fso_vacancies",
+      "error": "Failed to perform HTTP request.\nCaused by error in `curl::curl_fetch_memory()`:\n! Timeout was reached [www.pxweb.bfs.admin.ch]:\nFailed to connect to www.pxweb.bfs.admin.ch port 443 after 15002 ms: Timeout was reached"
+    },
+    {
+      "id": "ch_fso_jobs_sex",
+      "error": "Failed to perform HTTP request.\nCaused by error in `curl::curl_fetch_memory()`:\n! Timeout was reached [www.pxweb.bfs.admin.ch]:\nFailed to connect to www.pxweb.bfs.admin.ch port 443 after 15002 ms: Timeout was reached"
+    },
+    {
+      "id": "ch_fso_besta_outlook",
+      "error": "Failed to perform HTTP request.\nCaused by error in `curl::curl_fetch_memory()`:\n! Timeout was reached [www.pxweb.bfs.admin.ch]:\nFailed to connect to www.pxweb.bfs.admin.ch port 443 after 15001 ms: Timeout was reached"
+    },
+    {
+      "id": "ch_fso_cpi",
+      "error": "Failed to perform HTTP request.\nCaused by error in `curl::curl_fetch_memory()`:\n! Timeout was reached [dam-api.bfs.admin.ch]:\nFailed to connect to dam-api.bfs.admin.ch port 443 after 15002 ms: Timeout was reached"
+    },
+    {
+      "id": "ch_fso_ppi",
+      "error": "Failed to perform HTTP request.\nCaused by error in `curl::curl_fetch_memory()`:\n! Timeout was reached [dam-api.bfs.admin.ch]:\nFailed to connect to dam-api.bfs.admin.ch port 443 after 15002 ms: Timeout was reached"
+    },
+    {
+      "id": "ch_fso_wage_idx",
+      "error": "Failed to perform HTTP request.\nCaused by error in `curl::curl_fetch_memory()`:\n! Timeout was reached [dam-api.bfs.admin.ch]:\nFailed to connect to dam-api.bfs.admin.ch port 443 after 15002 ms: Timeout was reached"
+    },
+    {
+      "id": "ch_fso_pop",
+      "error": "Failed to perform HTTP request.\nCaused by error in `curl::curl_fetch_memory()`:\n! Timeout was reached [dam-api.bfs.admin.ch]:\nFailed to connect to dam-api.bfs.admin.ch port 443 after 15002 ms: Timeout was reached"
+    },
+    {
+      "id": "ch_fso_unemp_rate",
+      "error": "Failed to perform HTTP request.\nCaused by error in `curl::curl_fetch_memory()`:\n! Timeout was reached [dam-api.bfs.admin.ch]:\nFailed to connect to dam-api.bfs.admin.ch port 443 after 15002 ms: Timeout was reached"
+    },
+    {
+      "id": "ch_fso_labour_productivity",
+      "error": "Failed to perform HTTP request.\nCaused by error in `curl::curl_fetch_memory()`:\n! Timeout was reached [dam-api.bfs.admin.ch]:\nFailed to connect to dam-api.bfs.admin.ch port 443 after 15002 ms: Timeout was reached"
+    },
+    {
+      "id": "ch_fso_ets",
+      "error": "Failed to perform HTTP request.\nCaused by error in `curl::curl_fetch_memory()`:\n! Timeout was reached [dam-api.bfs.admin.ch]:\nFailed to connect to dam-api.bfs.admin.ch port 443 after 15002 ms: Timeout was reached"
+    },
+    {
+      "id": "ch_fso_gfcf_detail",
+      "error": "Failed to perform HTTP request.\nCaused by error in `curl::curl_fetch_memory()`:\n! Timeout was reached [dam-api.bfs.admin.ch]:\nFailed to connect to dam-api.bfs.admin.ch port 443 after 15002 ms: Timeout was reached"
+    },
+    {
+      "id": "ch_fso_hours_worked",
+      "error": "Failed to perform HTTP request.\nCaused by error in `curl::curl_fetch_memory()`:\n! Timeout was reached [dam-api.bfs.admin.ch]:\nFailed to connect to dam-api.bfs.admin.ch port 443 after 15001 ms: Timeout was reached"
+    },
+    {
+      "id": "ch_fso_gdp_region",
+      "error": "Failed to perform HTTP request.\nCaused by error in `curl::curl_fetch_memory()`:\n! Timeout was reached [dam-api.bfs.admin.ch]:\nFailed to connect to dam-api.bfs.admin.ch port 443 after 15002 ms: Timeout was reached"
+    },
+    {
+      "id": "ch_fso_construction_prices",
+      "error": "Failed to perform HTTP request.\nCaused by error in `curl::curl_fetch_memory()`:\n! Timeout was reached [dam-api.bfs.admin.ch]:\nFailed to connect to dam-api.bfs.admin.ch port 443 after 15002 ms: Timeout was reached"
+    },
+    {
+      "id": "ch_fso_trade_partner",
+      "error": "Failed to perform HTTP request.\nCaused by error in `curl::curl_fetch_disk()`:\n! Timeout was reached [dam-api.bfs.admin.ch]:\nFailed to connect to dam-api.bfs.admin.ch port 443 after 15002 ms: Timeout was reached"
+    }
+  ]
 }
