@@ -1,5 +1,5 @@
 {
-  "checked": "2026-06-13 17:49 UTC",
+  "checked": "2026-06-13 20:46 UTC",
   "counts": {
     "green": 70,
     "red": 0,
@@ -107,6 +107,17 @@
       "status": "green"
     },
     {
+      "id": "ch_ffa_finances",
+      "title": "Government finances",
+      "source": "Federal Finance Administration (FFA)",
+      "frequency": "annual",
+      "end": "2029-01-01",
+      "updated": "2025-03-18",
+      "age_days": -933,
+      "threshold_days": 825,
+      "status": "green"
+    },
+    {
       "id": "ch_kof_barometer",
       "title": "KOF Economic Barometer",
       "source": "KOF Swiss Economic Institute",
@@ -137,6 +148,193 @@
       "updated": null,
       "age_days": 104,
       "threshold_days": 435,
+      "status": "green"
+    },
+    {
+      "id": "ch_fso_hesta",
+      "title": "Hotel overnight stays",
+      "source": "Swiss Federal Statistical Office (FSO)",
+      "frequency": "monthly",
+      "end": "2026-04-01",
+      "updated": null,
+      "age_days": 73,
+      "threshold_days": 165,
+      "status": "green"
+    },
+    {
+      "id": "ch_fso_besta",
+      "title": "Jobs by economic division",
+      "source": "Swiss Federal Statistical Office (FSO)",
+      "frequency": "quarterly",
+      "end": "2026-01-01",
+      "updated": null,
+      "age_days": 163,
+      "threshold_days": 435,
+      "status": "green"
+    },
+    {
+      "id": "ch_fso_vacancies",
+      "title": "Job vacancies",
+      "source": "Swiss Federal Statistical Office (FSO)",
+      "frequency": "quarterly",
+      "end": "2026-01-01",
+      "updated": null,
+      "age_days": 163,
+      "threshold_days": 435,
+      "status": "green"
+    },
+    {
+      "id": "ch_fso_jobs_sex",
+      "title": "Jobs by economic division and sex",
+      "source": "Swiss Federal Statistical Office (FSO)",
+      "frequency": "quarterly",
+      "end": "2026-01-01",
+      "updated": null,
+      "age_days": 163,
+      "threshold_days": 435,
+      "status": "green"
+    },
+    {
+      "id": "ch_fso_besta_outlook",
+      "title": "Employment outlook",
+      "source": "Swiss Federal Statistical Office (FSO)",
+      "frequency": "quarterly",
+      "end": "2026-01-01",
+      "updated": null,
+      "age_days": 163,
+      "threshold_days": 435,
+      "status": "green"
+    },
+    {
+      "id": "ch_fso_cpi",
+      "title": "Consumer prices (detailed basket)",
+      "source": "Swiss Federal Statistical Office (FSO)",
+      "frequency": "monthly",
+      "end": "2026-05-01",
+      "updated": "2026-06-04",
+      "age_days": 43,
+      "threshold_days": 165,
+      "status": "green"
+    },
+    {
+      "id": "ch_fso_ppi",
+      "title": "Producer & import prices",
+      "source": "Swiss Federal Statistical Office (FSO)",
+      "frequency": "monthly",
+      "end": "2026-04-01",
+      "updated": "2026-05-12",
+      "age_days": 73,
+      "threshold_days": 165,
+      "status": "green"
+    },
+    {
+      "id": "ch_fso_wage_idx",
+      "title": "Swiss Wage Index",
+      "source": "Swiss Federal Statistical Office (FSO)",
+      "frequency": "annual",
+      "end": "2025-01-01",
+      "updated": "2026-04-21",
+      "age_days": 528,
+      "threshold_days": 825,
+      "status": "green"
+    },
+    {
+      "id": "ch_fso_pop",
+      "title": "Resident population",
+      "source": "Swiss Federal Statistical Office (FSO)",
+      "frequency": "annual",
+      "end": "2024-01-01",
+      "updated": "2025-08-27",
+      "age_days": 894,
+      "threshold_days": 825,
+      "status": "green"
+    },
+    {
+      "id": "ch_fso_unemp_rate",
+      "title": "Unemployment rate (ILO)",
+      "source": "Swiss Federal Statistical Office (FSO)",
+      "frequency": "monthly",
+      "end": "2026-03-01",
+      "updated": "2026-05-18",
+      "age_days": 104,
+      "threshold_days": 165,
+      "status": "green"
+    },
+    {
+      "id": "ch_fso_labour_productivity",
+      "title": "Labour productivity",
+      "source": "Swiss Federal Statistical Office (FSO)",
+      "frequency": "annual",
+      "end": "2024-01-01",
+      "updated": "2025-09-29",
+      "age_days": 894,
+      "threshold_days": 825,
+      "status": "green"
+    },
+    {
+      "id": "ch_fso_ets",
+      "title": "Employed persons (ETS)",
+      "source": "Swiss Federal Statistical Office (FSO)",
+      "frequency": "quarterly",
+      "end": "2025-10-01",
+      "updated": "2026-03-17",
+      "age_days": 255,
+      "threshold_days": 435,
+      "status": "green"
+    },
+    {
+      "id": "ch_fso_gfcf_detail",
+      "title": "Investment (GFCF) detail",
+      "source": "Swiss Federal Statistical Office (FSO)",
+      "frequency": "annual",
+      "end": "2024-01-01",
+      "updated": "2025-09-29",
+      "age_days": 894,
+      "threshold_days": 825,
+      "status": "green"
+    },
+    {
+      "id": "ch_fso_hours_worked",
+      "title": "Hours worked",
+      "source": "Swiss Federal Statistical Office (FSO)",
+      "frequency": "annual",
+      "end": "2025-01-01",
+      "updated": "2026-05-21",
+      "age_days": 528,
+      "threshold_days": 825,
+      "status": "green"
+    },
+    {
+      "id": "ch_fso_gdp_region",
+      "title": "Regional GDP",
+      "source": "Swiss Federal Statistical Office (FSO)",
+      "frequency": "annual",
+      "end": "2022-01-01",
+      "updated": "2024-10-28",
+      "age_days": 1624,
+      "threshold_days": 2550,
+      "status": "green"
+    },
+    {
+      "id": "ch_fso_construction_prices",
+      "title": "Construction prices",
+      "source": "Swiss Federal Statistical Office (FSO)",
+      "frequency": "semi-annual",
+      "end": "2025-10-01",
+      "updated": "2025-12-18",
+      "age_days": 255,
+      "threshold_days": 600,
+      "status": "green"
+    },
+    {
+      "id": "ch_fso_trade_partner",
+      "title": "Foreign trade by partner country",
+      "source": "Swiss Federal Statistical Office (FSO) / Federal Office for Customs and Border Security (FOCBS)",
+      "frequency": "annual",
+      "end": "2025-01-01",
+      "updated": null,
+      "age_days": 528,
+      "threshold_days": 825,
       "status": "green"
     },
     {
@@ -577,204 +775,6 @@
       "updated": "2026-06-01 14:30",
       "age_days": 43,
       "threshold_days": 165,
-      "status": "green"
-    },
-    {
-      "id": "ch_ffa_finances",
-      "title": "Government finances",
-      "source": "Federal Finance Administration (FFA)",
-      "frequency": "annual",
-      "end": "2029-01-01",
-      "updated": "2025-03-18",
-      "age_days": -933,
-      "threshold_days": 825,
-      "status": "green"
-    },
-    {
-      "id": "ch_fso_hesta",
-      "title": "Hotel overnight stays",
-      "source": "Swiss Federal Statistical Office (FSO)",
-      "frequency": "monthly",
-      "end": "2026-04-01",
-      "updated": null,
-      "age_days": 73,
-      "threshold_days": 165,
-      "status": "green"
-    },
-    {
-      "id": "ch_fso_besta",
-      "title": "Jobs by economic division",
-      "source": "Swiss Federal Statistical Office (FSO)",
-      "frequency": "quarterly",
-      "end": "2026-01-01",
-      "updated": null,
-      "age_days": 163,
-      "threshold_days": 435,
-      "status": "green"
-    },
-    {
-      "id": "ch_fso_vacancies",
-      "title": "Job vacancies",
-      "source": "Swiss Federal Statistical Office (FSO)",
-      "frequency": "quarterly",
-      "end": "2026-01-01",
-      "updated": null,
-      "age_days": 163,
-      "threshold_days": 435,
-      "status": "green"
-    },
-    {
-      "id": "ch_fso_jobs_sex",
-      "title": "Jobs by economic division and sex",
-      "source": "Swiss Federal Statistical Office (FSO)",
-      "frequency": "quarterly",
-      "end": "2026-01-01",
-      "updated": null,
-      "age_days": 163,
-      "threshold_days": 435,
-      "status": "green"
-    },
-    {
-      "id": "ch_fso_besta_outlook",
-      "title": "Employment outlook",
-      "source": "Swiss Federal Statistical Office (FSO)",
-      "frequency": "quarterly",
-      "end": "2026-01-01",
-      "updated": null,
-      "age_days": 163,
-      "threshold_days": 435,
-      "status": "green"
-    },
-    {
-      "id": "ch_fso_cpi",
-      "title": "Consumer prices (detailed basket)",
-      "source": "Swiss Federal Statistical Office (FSO)",
-      "frequency": "monthly",
-      "end": "2026-05-01",
-      "updated": "2026-06-04",
-      "age_days": 43,
-      "threshold_days": 165,
-      "status": "green"
-    },
-    {
-      "id": "ch_fso_ppi",
-      "title": "Producer & import prices",
-      "source": "Swiss Federal Statistical Office (FSO)",
-      "frequency": "monthly",
-      "end": "2026-04-01",
-      "updated": "2026-05-12",
-      "age_days": 73,
-      "threshold_days": 165,
-      "status": "green"
-    },
-    {
-      "id": "ch_fso_wage_idx",
-      "title": "Swiss Wage Index",
-      "source": "Swiss Federal Statistical Office (FSO)",
-      "frequency": "annual",
-      "end": "2025-01-01",
-      "updated": "2026-04-21",
-      "age_days": 528,
-      "threshold_days": 825,
-      "status": "green"
-    },
-    {
-      "id": "ch_fso_pop",
-      "title": "Resident population",
-      "source": "Swiss Federal Statistical Office (FSO)",
-      "frequency": "annual",
-      "end": "2024-01-01",
-      "updated": "2025-08-27",
-      "age_days": 894,
-      "threshold_days": 825,
-      "status": "green"
-    },
-    {
-      "id": "ch_fso_unemp_rate",
-      "title": "Unemployment rate (ILO)",
-      "source": "Swiss Federal Statistical Office (FSO)",
-      "frequency": "monthly",
-      "end": "2026-03-01",
-      "updated": "2026-05-18",
-      "age_days": 104,
-      "threshold_days": 165,
-      "status": "green"
-    },
-    {
-      "id": "ch_fso_labour_productivity",
-      "title": "Labour productivity",
-      "source": "Swiss Federal Statistical Office (FSO)",
-      "frequency": "annual",
-      "end": "2024-01-01",
-      "updated": "2025-09-29",
-      "age_days": 894,
-      "threshold_days": 825,
-      "status": "green"
-    },
-    {
-      "id": "ch_fso_ets",
-      "title": "Employed persons (ETS)",
-      "source": "Swiss Federal Statistical Office (FSO)",
-      "frequency": "quarterly",
-      "end": "2025-10-01",
-      "updated": "2026-03-17",
-      "age_days": 255,
-      "threshold_days": 435,
-      "status": "green"
-    },
-    {
-      "id": "ch_fso_gfcf_detail",
-      "title": "Investment (GFCF) detail",
-      "source": "Swiss Federal Statistical Office (FSO)",
-      "frequency": "annual",
-      "end": "2024-01-01",
-      "updated": "2025-09-29",
-      "age_days": 894,
-      "threshold_days": 825,
-      "status": "green"
-    },
-    {
-      "id": "ch_fso_hours_worked",
-      "title": "Hours worked",
-      "source": "Swiss Federal Statistical Office (FSO)",
-      "frequency": "annual",
-      "end": "2025-01-01",
-      "updated": "2026-05-21",
-      "age_days": 528,
-      "threshold_days": 825,
-      "status": "green"
-    },
-    {
-      "id": "ch_fso_gdp_region",
-      "title": "Regional GDP",
-      "source": "Swiss Federal Statistical Office (FSO)",
-      "frequency": "annual",
-      "end": "2022-01-01",
-      "updated": "2024-10-28",
-      "age_days": 1624,
-      "threshold_days": 2550,
-      "status": "green"
-    },
-    {
-      "id": "ch_fso_construction_prices",
-      "title": "Construction prices",
-      "source": "Swiss Federal Statistical Office (FSO)",
-      "frequency": "semi-annual",
-      "end": "2025-10-01",
-      "updated": "2025-12-18",
-      "age_days": 255,
-      "threshold_days": 600,
-      "status": "green"
-    },
-    {
-      "id": "ch_fso_trade_partner",
-      "title": "Foreign trade by partner country",
-      "source": "Swiss Federal Statistical Office (FSO) / Federal Office for Customs and Border Security (FOCBS)",
-      "frequency": "annual",
-      "end": "2025-01-01",
-      "updated": null,
-      "age_days": 528,
-      "threshold_days": 825,
       "status": "green"
     }
   ]

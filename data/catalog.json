@@ -18,7 +18,7 @@
     "end": "2026-01-01",
     "n_series": 660,
     "updated": "2026-02-23 16:51:17",
-    "fetched": "2026-06-13 17:49:46",
+    "fetched": "2026-06-13 20:46:35",
     "load": "whole",
     "data": "ch_seco_gdp.csv",
     "meta": "ch_seco_gdp.json"
@@ -42,7 +42,7 @@
     "end": "2026-04-01",
     "n_series": 39,
     "updated": "2026-02-05 09:32:16",
-    "fetched": "2026-06-13 17:49:46",
+    "fetched": "2026-06-13 20:46:35",
     "load": "whole",
     "data": "ch_seco_concon.csv",
     "meta": "ch_seco_concon.json"
@@ -63,7 +63,7 @@
     "end": "2026-04-01",
     "n_series": 171,
     "updated": null,
-    "fetched": "2026-06-13 17:49:46",
+    "fetched": "2026-06-13 20:46:35",
     "load": "whole",
     "data": "ch_fso_retail.csv",
     "meta": "ch_fso_retail.json"
@@ -84,7 +84,7 @@
     "end": "2026-01-01",
     "n_series": 87,
     "updated": null,
-    "fetched": "2026-06-13 17:49:46",
+    "fetched": "2026-06-13 20:46:35",
     "load": "whole",
     "data": "ch_fso_production.csv",
     "meta": "ch_fso_production.json"
@@ -105,7 +105,7 @@
     "end": "2026-01-01",
     "n_series": 66,
     "updated": null,
-    "fetched": "2026-06-13 17:49:46",
+    "fetched": "2026-06-13 20:46:35",
     "load": "whole",
     "data": "ch_fso_services.csv",
     "meta": "ch_fso_services.json"
@@ -126,7 +126,7 @@
     "end": "2026-05-01",
     "n_series": 12,
     "updated": null,
-    "fetched": "2026-06-13 17:49:46",
+    "fetched": "2026-06-13 20:46:35",
     "load": "whole",
     "data": "ch_fso_new_vehicles.csv",
     "meta": "ch_fso_new_vehicles.json"
@@ -147,7 +147,7 @@
     "end": "2025-01-01",
     "n_series": 2,
     "updated": null,
-    "fetched": "2026-06-13 17:49:46",
+    "fetched": "2026-06-13 20:46:35",
     "load": "whole",
     "data": "ch_fso_vacant_dwellings.csv",
     "meta": "ch_fso_vacant_dwellings.json"
@@ -168,7 +168,7 @@
     "end": "2026-01-01",
     "n_series": 27,
     "updated": null,
-    "fetched": "2026-06-13 17:49:46",
+    "fetched": "2026-06-13 20:46:35",
     "load": "whole",
     "data": "ch_fso_cross_border_commuters.csv",
     "meta": "ch_fso_cross_border_commuters.json"
@@ -189,10 +189,31 @@
     "end": "2024-01-01",
     "n_series": 9,
     "updated": null,
-    "fetched": "2026-06-13 17:49:46",
+    "fetched": "2026-06-13 20:46:35",
     "load": "whole",
     "data": "ch_fso_pop_detail.csv",
     "meta": "ch_fso_pop_detail.json"
+  },
+  {
+    "id": "ch_ffa_finances",
+    "title": {
+      "en": "Government finances"
+    },
+    "concept": "National accounts / Government finance",
+    "canonical": true,
+    "featured": null,
+    "topic": "National accounts",
+    "source": "Federal Finance Administration (FFA)",
+    "license": "opendata.swiss terms of use (open use, attribution required: Federal Finance Administration FFA)",
+    "frequency": "annual",
+    "start": "1990-01-01",
+    "end": "2029-01-01",
+    "n_series": 387,
+    "updated": "2025-03-18",
+    "fetched": "2026-06-13 20:46:35",
+    "load": "whole",
+    "data": "ch_ffa_finances.csv",
+    "meta": "ch_ffa_finances.json"
   },
   {
     "id": "ch_kof_barometer",
@@ -210,7 +231,7 @@
     "end": "2026-05-01",
     "n_series": 1,
     "updated": null,
-    "fetched": "2026-06-13 17:49:46",
+    "fetched": "2026-06-13 20:46:35",
     "load": "whole",
     "data": "ch_kof_barometer.csv",
     "meta": "ch_kof_barometer.json"
@@ -231,7 +252,7 @@
     "end": "2026-05-01",
     "n_series": 2,
     "updated": null,
-    "fetched": "2026-06-13 17:49:46",
+    "fetched": "2026-06-13 20:46:35",
     "load": "whole",
     "data": "ch_kof_esi.csv",
     "meta": "ch_kof_esi.json"
@@ -252,10 +273,367 @@
     "end": "2026-03-01",
     "n_series": 5,
     "updated": null,
-    "fetched": "2026-06-13 17:49:46",
+    "fetched": "2026-06-13 20:46:35",
     "load": "whole",
     "data": "ch_adecco_sjmi.csv",
     "meta": "ch_adecco_sjmi.json"
+  },
+  {
+    "id": "ch_fso_hesta",
+    "title": {
+      "en": "Hotel overnight stays"
+    },
+    "concept": "Domestic economy / Hotel overnight stays",
+    "canonical": true,
+    "featured": null,
+    "topic": "Domestic economy",
+    "source": "Swiss Federal Statistical Office (FSO)",
+    "license": "fso",
+    "frequency": "monthly",
+    "start": "2005-01-01",
+    "end": "2026-04-01",
+    "n_series": 14,
+    "updated": null,
+    "fetched": "2026-06-13 20:46:35",
+    "load": "whole",
+    "data": "ch_fso_hesta.csv",
+    "meta": "ch_fso_hesta.json"
+  },
+  {
+    "id": "ch_fso_besta",
+    "title": {
+      "en": "Jobs by economic division"
+    },
+    "concept": "Labour / Employment / jobs",
+    "canonical": true,
+    "featured": "Employment",
+    "topic": "Labour",
+    "source": "Swiss Federal Statistical Office (FSO)",
+    "license": "fso",
+    "frequency": "quarterly",
+    "start": "1991-07-01",
+    "end": "2026-01-01",
+    "n_series": 60,
+    "updated": null,
+    "fetched": "2026-06-13 20:46:35",
+    "load": "whole",
+    "data": "ch_fso_besta.csv",
+    "meta": "ch_fso_besta.json"
+  },
+  {
+    "id": "ch_fso_vacancies",
+    "title": {
+      "en": "Job vacancies"
+    },
+    "concept": "Labour / Job vacancies",
+    "canonical": true,
+    "featured": null,
+    "topic": "Labour",
+    "source": "Swiss Federal Statistical Office (FSO)",
+    "license": "fso",
+    "frequency": "quarterly",
+    "start": "1992-04-01",
+    "end": "2026-01-01",
+    "n_series": 60,
+    "updated": null,
+    "fetched": "2026-06-13 20:46:35",
+    "load": "whole",
+    "data": "ch_fso_vacancies.csv",
+    "meta": "ch_fso_vacancies.json"
+  },
+  {
+    "id": "ch_fso_jobs_sex",
+    "title": {
+      "en": "Jobs by economic division and sex"
+    },
+    "concept": "Labour / Employment / jobs",
+    "canonical": false,
+    "featured": null,
+    "topic": "Labour",
+    "source": "Swiss Federal Statistical Office (FSO)",
+    "license": "fso",
+    "frequency": "quarterly",
+    "start": "1995-07-01",
+    "end": "2026-01-01",
+    "n_series": 336,
+    "updated": null,
+    "fetched": "2026-06-13 20:46:35",
+    "load": "whole",
+    "data": "ch_fso_jobs_sex.csv",
+    "meta": "ch_fso_jobs_sex.json"
+  },
+  {
+    "id": "ch_fso_besta_outlook",
+    "title": {
+      "en": "Employment outlook"
+    },
+    "concept": "Labour / Employment outlook",
+    "canonical": true,
+    "featured": null,
+    "topic": "Labour",
+    "source": "Swiss Federal Statistical Office (FSO)",
+    "license": "fso",
+    "frequency": "quarterly",
+    "start": "2004-01-01",
+    "end": "2026-01-01",
+    "n_series": 20,
+    "updated": null,
+    "fetched": "2026-06-13 20:46:35",
+    "load": "whole",
+    "data": "ch_fso_besta_outlook.csv",
+    "meta": "ch_fso_besta_outlook.json"
+  },
+  {
+    "id": "ch_fso_cpi",
+    "title": {
+      "en": "Consumer prices (detailed basket)"
+    },
+    "concept": "Prices / Consumer prices",
+    "canonical": false,
+    "featured": null,
+    "topic": "Prices",
+    "source": "Swiss Federal Statistical Office (FSO)",
+    "license": "fso",
+    "frequency": "monthly",
+    "start": "1982-12-01",
+    "end": "2026-05-01",
+    "n_series": 595,
+    "updated": "2026-06-04",
+    "fetched": "2026-06-13 20:46:35",
+    "load": "whole",
+    "data": "ch_fso_cpi.csv",
+    "meta": "ch_fso_cpi.json"
+  },
+  {
+    "id": "ch_fso_ppi",
+    "title": {
+      "en": "Producer & import prices"
+    },
+    "concept": "Prices / Producer & import prices",
+    "canonical": true,
+    "featured": null,
+    "topic": "Prices",
+    "source": "Swiss Federal Statistical Office (FSO)",
+    "license": "fso",
+    "frequency": "monthly",
+    "start": "1963-01-01",
+    "end": "2026-04-01",
+    "n_series": 7,
+    "updated": "2026-05-12",
+    "fetched": "2026-06-13 20:46:35",
+    "load": "whole",
+    "data": "ch_fso_ppi.csv",
+    "meta": "ch_fso_ppi.json"
+  },
+  {
+    "id": "ch_fso_wage_idx",
+    "title": {
+      "en": "Swiss Wage Index"
+    },
+    "concept": "Labour / Wages",
+    "canonical": true,
+    "featured": null,
+    "topic": "Labour",
+    "source": "Swiss Federal Statistical Office (FSO)",
+    "license": "fso",
+    "frequency": "annual",
+    "start": "1994-01-01",
+    "end": "2025-01-01",
+    "n_series": 12,
+    "updated": "2026-04-21",
+    "fetched": "2026-06-13 20:46:35",
+    "load": "whole",
+    "data": "ch_fso_wage_idx.csv",
+    "meta": "ch_fso_wage_idx.json"
+  },
+  {
+    "id": "ch_fso_pop",
+    "title": {
+      "en": "Resident population"
+    },
+    "concept": "Population & demographics / Resident population",
+    "canonical": true,
+    "featured": "Population",
+    "topic": "Population & demographics",
+    "source": "Swiss Federal Statistical Office (FSO)",
+    "license": "fso",
+    "frequency": "annual",
+    "start": "1861-01-01",
+    "end": "2024-01-01",
+    "n_series": 10,
+    "updated": "2025-08-27",
+    "fetched": "2026-06-13 20:46:35",
+    "load": "whole",
+    "data": "ch_fso_pop.csv",
+    "meta": "ch_fso_pop.json"
+  },
+  {
+    "id": "ch_fso_unemp_rate",
+    "title": {
+      "en": "Unemployment rate (ILO)"
+    },
+    "concept": "Labour / Unemployment",
+    "canonical": false,
+    "featured": null,
+    "topic": "Labour",
+    "source": "Swiss Federal Statistical Office (FSO)",
+    "license": "fso",
+    "frequency": "monthly",
+    "start": "1991-01-01",
+    "end": "2026-03-01",
+    "n_series": 5,
+    "updated": "2026-05-18",
+    "fetched": "2026-06-13 20:46:35",
+    "load": "whole",
+    "data": "ch_fso_unemp_rate.csv",
+    "meta": "ch_fso_unemp_rate.json"
+  },
+  {
+    "id": "ch_fso_labour_productivity",
+    "title": {
+      "en": "Labour productivity"
+    },
+    "concept": "National accounts / Labour productivity",
+    "canonical": true,
+    "featured": null,
+    "topic": "National accounts",
+    "source": "Swiss Federal Statistical Office (FSO)",
+    "license": "fso",
+    "frequency": "annual",
+    "start": "1991-01-01",
+    "end": "2024-01-01",
+    "n_series": 3,
+    "updated": "2025-09-29",
+    "fetched": "2026-06-13 20:46:35",
+    "load": "whole",
+    "data": "ch_fso_labour_productivity.csv",
+    "meta": "ch_fso_labour_productivity.json"
+  },
+  {
+    "id": "ch_fso_ets",
+    "title": {
+      "en": "Employed persons (ETS)"
+    },
+    "concept": "Labour / Employment / employed persons",
+    "canonical": false,
+    "featured": null,
+    "topic": "Labour",
+    "source": "Swiss Federal Statistical Office (FSO)",
+    "license": "fso",
+    "frequency": "quarterly",
+    "start": "1991-04-01",
+    "end": "2025-10-01",
+    "n_series": 69,
+    "updated": "2026-03-17",
+    "fetched": "2026-06-13 20:46:35",
+    "load": "whole",
+    "data": "ch_fso_ets.csv",
+    "meta": "ch_fso_ets.json"
+  },
+  {
+    "id": "ch_fso_gfcf_detail",
+    "title": {
+      "en": "Investment (GFCF) detail"
+    },
+    "concept": "National accounts / Investment (gross fixed capital formation)",
+    "canonical": false,
+    "featured": null,
+    "topic": "National accounts",
+    "source": "Swiss Federal Statistical Office (FSO)",
+    "license": "fso",
+    "frequency": "annual",
+    "start": "1995-01-01",
+    "end": "2024-01-01",
+    "n_series": 37,
+    "updated": "2025-09-29",
+    "fetched": "2026-06-13 20:46:35",
+    "load": "whole",
+    "data": "ch_fso_gfcf_detail.csv",
+    "meta": "ch_fso_gfcf_detail.json"
+  },
+  {
+    "id": "ch_fso_hours_worked",
+    "title": {
+      "en": "Hours worked"
+    },
+    "concept": "Labour / Working time and working volume",
+    "canonical": true,
+    "featured": null,
+    "topic": "Labour",
+    "source": "Swiss Federal Statistical Office (FSO)",
+    "license": "fso",
+    "frequency": "annual",
+    "start": "2010-01-01",
+    "end": "2025-01-01",
+    "n_series": 45,
+    "updated": "2026-05-21",
+    "fetched": "2026-06-13 20:46:35",
+    "load": "whole",
+    "data": "ch_fso_hours_worked.csv",
+    "meta": "ch_fso_hours_worked.json"
+  },
+  {
+    "id": "ch_fso_gdp_region",
+    "title": {
+      "en": "Regional GDP"
+    },
+    "concept": "National accounts / Regional GDP",
+    "canonical": true,
+    "featured": null,
+    "topic": "National accounts",
+    "source": "Swiss Federal Statistical Office (FSO)",
+    "license": "fso",
+    "frequency": "annual",
+    "start": "2008-01-01",
+    "end": "2022-01-01",
+    "n_series": 34,
+    "updated": "2024-10-28",
+    "fetched": "2026-06-13 20:46:35",
+    "load": "whole",
+    "data": "ch_fso_gdp_region.csv",
+    "meta": "ch_fso_gdp_region.json"
+  },
+  {
+    "id": "ch_fso_construction_prices",
+    "title": {
+      "en": "Construction prices"
+    },
+    "concept": "Prices / Construction prices",
+    "canonical": true,
+    "featured": null,
+    "topic": "Prices",
+    "source": "Swiss Federal Statistical Office (FSO)",
+    "license": "fso",
+    "frequency": "semi-annual",
+    "start": "1998-10-01",
+    "end": "2025-10-01",
+    "n_series": 3,
+    "updated": "2025-12-18",
+    "fetched": "2026-06-13 20:46:35",
+    "load": "whole",
+    "data": "ch_fso_construction_prices.csv",
+    "meta": "ch_fso_construction_prices.json"
+  },
+  {
+    "id": "ch_fso_trade_partner",
+    "title": {
+      "en": "Foreign trade by partner country"
+    },
+    "concept": "External sector / Foreign trade",
+    "canonical": true,
+    "featured": null,
+    "topic": "External sector",
+    "source": "Swiss Federal Statistical Office (FSO) / Federal Office for Customs and Border Security (FOCBS)",
+    "license": "fso",
+    "frequency": "annual",
+    "start": "1990-01-01",
+    "end": "2025-01-01",
+    "n_series": 66,
+    "updated": null,
+    "fetched": "2026-06-13 20:46:36",
+    "load": "whole",
+    "data": "ch_fso_trade_partner.csv",
+    "meta": "ch_fso_trade_partner.json"
   },
   {
     "id": "ch_fso_hicp",
@@ -273,7 +651,7 @@
     "end": "2025-12-01",
     "n_series": 13,
     "updated": "2026-02-06",
-    "fetched": "2026-06-13 17:49:46",
+    "fetched": "2026-06-13 20:46:36",
     "load": "whole",
     "data": "ch_fso_hicp.csv",
     "meta": "ch_fso_hicp.json"
@@ -294,7 +672,7 @@
     "end": "2026-05-18",
     "n_series": 2,
     "updated": null,
-    "fetched": "2026-06-13 17:49:46",
+    "fetched": "2026-06-13 20:46:36",
     "load": "whole",
     "data": "ch_seco_wwa.csv",
     "meta": "ch_seco_wwa.json"
@@ -1096,383 +1474,5 @@
     "load": "whole",
     "data": "ch_snb_zimoma.csv",
     "meta": "ch_snb_zimoma.json"
-  },
-  {
-    "id": "ch_ffa_finances",
-    "title": {
-      "en": "Government finances"
-    },
-    "concept": "National accounts / Government finance",
-    "canonical": true,
-    "featured": null,
-    "topic": "National accounts",
-    "source": "Federal Finance Administration (FFA)",
-    "license": "opendata.swiss terms of use (open use, attribution required: Federal Finance Administration FFA)",
-    "frequency": "annual",
-    "start": "1990-01-01",
-    "end": "2029-01-01",
-    "n_series": 387,
-    "updated": "2025-03-18",
-    "fetched": "2026-06-13 15:45:16",
-    "load": "whole",
-    "data": "ch_ffa_finances.csv",
-    "meta": "ch_ffa_finances.json"
-  },
-  {
-    "id": "ch_fso_hesta",
-    "title": {
-      "en": "Hotel overnight stays"
-    },
-    "concept": "Domestic economy / Hotel overnight stays",
-    "canonical": true,
-    "featured": null,
-    "topic": "Domestic economy",
-    "source": "Swiss Federal Statistical Office (FSO)",
-    "license": "fso",
-    "frequency": "monthly",
-    "start": "2005-01-01",
-    "end": "2026-04-01",
-    "n_series": 14,
-    "updated": null,
-    "fetched": "2026-06-13 15:45:16",
-    "load": "whole",
-    "data": "ch_fso_hesta.csv",
-    "meta": "ch_fso_hesta.json"
-  },
-  {
-    "id": "ch_fso_besta",
-    "title": {
-      "en": "Jobs by economic division"
-    },
-    "concept": "Labour / Employment / jobs",
-    "canonical": true,
-    "featured": "Employment",
-    "topic": "Labour",
-    "source": "Swiss Federal Statistical Office (FSO)",
-    "license": "fso",
-    "frequency": "quarterly",
-    "start": "1991-07-01",
-    "end": "2026-01-01",
-    "n_series": 60,
-    "updated": null,
-    "fetched": "2026-06-13 15:45:16",
-    "load": "whole",
-    "data": "ch_fso_besta.csv",
-    "meta": "ch_fso_besta.json"
-  },
-  {
-    "id": "ch_fso_vacancies",
-    "title": {
-      "en": "Job vacancies"
-    },
-    "concept": "Labour / Job vacancies",
-    "canonical": true,
-    "featured": null,
-    "topic": "Labour",
-    "source": "Swiss Federal Statistical Office (FSO)",
-    "license": "fso",
-    "frequency": "quarterly",
-    "start": "1992-04-01",
-    "end": "2026-01-01",
-    "n_series": 60,
-    "updated": null,
-    "fetched": "2026-06-13 15:45:16",
-    "load": "whole",
-    "data": "ch_fso_vacancies.csv",
-    "meta": "ch_fso_vacancies.json"
-  },
-  {
-    "id": "ch_fso_jobs_sex",
-    "title": {
-      "en": "Jobs by economic division and sex"
-    },
-    "concept": "Labour / Employment / jobs",
-    "canonical": false,
-    "featured": null,
-    "topic": "Labour",
-    "source": "Swiss Federal Statistical Office (FSO)",
-    "license": "fso",
-    "frequency": "quarterly",
-    "start": "1995-07-01",
-    "end": "2026-01-01",
-    "n_series": 336,
-    "updated": null,
-    "fetched": "2026-06-13 15:45:16",
-    "load": "whole",
-    "data": "ch_fso_jobs_sex.csv",
-    "meta": "ch_fso_jobs_sex.json"
-  },
-  {
-    "id": "ch_fso_besta_outlook",
-    "title": {
-      "en": "Employment outlook"
-    },
-    "concept": "Labour / Employment outlook",
-    "canonical": true,
-    "featured": null,
-    "topic": "Labour",
-    "source": "Swiss Federal Statistical Office (FSO)",
-    "license": "fso",
-    "frequency": "quarterly",
-    "start": "2004-01-01",
-    "end": "2026-01-01",
-    "n_series": 20,
-    "updated": null,
-    "fetched": "2026-06-13 15:45:16",
-    "load": "whole",
-    "data": "ch_fso_besta_outlook.csv",
-    "meta": "ch_fso_besta_outlook.json"
-  },
-  {
-    "id": "ch_fso_cpi",
-    "title": {
-      "en": "Consumer prices (detailed basket)"
-    },
-    "concept": "Prices / Consumer prices",
-    "canonical": false,
-    "featured": null,
-    "topic": "Prices",
-    "source": "Swiss Federal Statistical Office (FSO)",
-    "license": "fso",
-    "frequency": "monthly",
-    "start": "1982-12-01",
-    "end": "2026-05-01",
-    "n_series": 595,
-    "updated": "2026-06-04",
-    "fetched": "2026-06-13 15:45:16",
-    "load": "whole",
-    "data": "ch_fso_cpi.csv",
-    "meta": "ch_fso_cpi.json"
-  },
-  {
-    "id": "ch_fso_ppi",
-    "title": {
-      "en": "Producer & import prices"
-    },
-    "concept": "Prices / Producer & import prices",
-    "canonical": true,
-    "featured": null,
-    "topic": "Prices",
-    "source": "Swiss Federal Statistical Office (FSO)",
-    "license": "fso",
-    "frequency": "monthly",
-    "start": "1963-01-01",
-    "end": "2026-04-01",
-    "n_series": 7,
-    "updated": "2026-05-12",
-    "fetched": "2026-06-13 15:45:16",
-    "load": "whole",
-    "data": "ch_fso_ppi.csv",
-    "meta": "ch_fso_ppi.json"
-  },
-  {
-    "id": "ch_fso_wage_idx",
-    "title": {
-      "en": "Swiss Wage Index"
-    },
-    "concept": "Labour / Wages",
-    "canonical": true,
-    "featured": null,
-    "topic": "Labour",
-    "source": "Swiss Federal Statistical Office (FSO)",
-    "license": "fso",
-    "frequency": "annual",
-    "start": "1994-01-01",
-    "end": "2025-01-01",
-    "n_series": 12,
-    "updated": "2026-04-21",
-    "fetched": "2026-06-13 15:45:16",
-    "load": "whole",
-    "data": "ch_fso_wage_idx.csv",
-    "meta": "ch_fso_wage_idx.json"
-  },
-  {
-    "id": "ch_fso_pop",
-    "title": {
-      "en": "Resident population"
-    },
-    "concept": "Population & demographics / Resident population",
-    "canonical": true,
-    "featured": "Population",
-    "topic": "Population & demographics",
-    "source": "Swiss Federal Statistical Office (FSO)",
-    "license": "fso",
-    "frequency": "annual",
-    "start": "1861-01-01",
-    "end": "2024-01-01",
-    "n_series": 10,
-    "updated": "2025-08-27",
-    "fetched": "2026-06-13 15:45:16",
-    "load": "whole",
-    "data": "ch_fso_pop.csv",
-    "meta": "ch_fso_pop.json"
-  },
-  {
-    "id": "ch_fso_unemp_rate",
-    "title": {
-      "en": "Unemployment rate (ILO)"
-    },
-    "concept": "Labour / Unemployment",
-    "canonical": false,
-    "featured": null,
-    "topic": "Labour",
-    "source": "Swiss Federal Statistical Office (FSO)",
-    "license": "fso",
-    "frequency": "monthly",
-    "start": "1991-01-01",
-    "end": "2026-03-01",
-    "n_series": 5,
-    "updated": "2026-05-18",
-    "fetched": "2026-06-13 15:45:16",
-    "load": "whole",
-    "data": "ch_fso_unemp_rate.csv",
-    "meta": "ch_fso_unemp_rate.json"
-  },
-  {
-    "id": "ch_fso_labour_productivity",
-    "title": {
-      "en": "Labour productivity"
-    },
-    "concept": "National accounts / Labour productivity",
-    "canonical": true,
-    "featured": null,
-    "topic": "National accounts",
-    "source": "Swiss Federal Statistical Office (FSO)",
-    "license": "fso",
-    "frequency": "annual",
-    "start": "1991-01-01",
-    "end": "2024-01-01",
-    "n_series": 3,
-    "updated": "2025-09-29",
-    "fetched": "2026-06-13 15:45:16",
-    "load": "whole",
-    "data": "ch_fso_labour_productivity.csv",
-    "meta": "ch_fso_labour_productivity.json"
-  },
-  {
-    "id": "ch_fso_ets",
-    "title": {
-      "en": "Employed persons (ETS)"
-    },
-    "concept": "Labour / Employment / employed persons",
-    "canonical": false,
-    "featured": null,
-    "topic": "Labour",
-    "source": "Swiss Federal Statistical Office (FSO)",
-    "license": "fso",
-    "frequency": "quarterly",
-    "start": "1991-04-01",
-    "end": "2025-10-01",
-    "n_series": 69,
-    "updated": "2026-03-17",
-    "fetched": "2026-06-13 15:45:16",
-    "load": "whole",
-    "data": "ch_fso_ets.csv",
-    "meta": "ch_fso_ets.json"
-  },
-  {
-    "id": "ch_fso_gfcf_detail",
-    "title": {
-      "en": "Investment (GFCF) detail"
-    },
-    "concept": "National accounts / Investment (gross fixed capital formation)",
-    "canonical": false,
-    "featured": null,
-    "topic": "National accounts",
-    "source": "Swiss Federal Statistical Office (FSO)",
-    "license": "fso",
-    "frequency": "annual",
-    "start": "1995-01-01",
-    "end": "2024-01-01",
-    "n_series": 37,
-    "updated": "2025-09-29",
-    "fetched": "2026-06-13 15:45:16",
-    "load": "whole",
-    "data": "ch_fso_gfcf_detail.csv",
-    "meta": "ch_fso_gfcf_detail.json"
-  },
-  {
-    "id": "ch_fso_hours_worked",
-    "title": {
-      "en": "Hours worked"
-    },
-    "concept": "Labour / Working time and working volume",
-    "canonical": true,
-    "featured": null,
-    "topic": "Labour",
-    "source": "Swiss Federal Statistical Office (FSO)",
-    "license": "fso",
-    "frequency": "annual",
-    "start": "2010-01-01",
-    "end": "2025-01-01",
-    "n_series": 45,
-    "updated": "2026-05-21",
-    "fetched": "2026-06-13 15:45:16",
-    "load": "whole",
-    "data": "ch_fso_hours_worked.csv",
-    "meta": "ch_fso_hours_worked.json"
-  },
-  {
-    "id": "ch_fso_gdp_region",
-    "title": {
-      "en": "Regional GDP"
-    },
-    "concept": "National accounts / Regional GDP",
-    "canonical": true,
-    "featured": null,
-    "topic": "National accounts",
-    "source": "Swiss Federal Statistical Office (FSO)",
-    "license": "fso",
-    "frequency": "annual",
-    "start": "2008-01-01",
-    "end": "2022-01-01",
-    "n_series": 34,
-    "updated": "2024-10-28",
-    "fetched": "2026-06-13 15:45:16",
-    "load": "whole",
-    "data": "ch_fso_gdp_region.csv",
-    "meta": "ch_fso_gdp_region.json"
-  },
-  {
-    "id": "ch_fso_construction_prices",
-    "title": {
-      "en": "Construction prices"
-    },
-    "concept": "Prices / Construction prices",
-    "canonical": true,
-    "featured": null,
-    "topic": "Prices",
-    "source": "Swiss Federal Statistical Office (FSO)",
-    "license": "fso",
-    "frequency": "semi-annual",
-    "start": "1998-10-01",
-    "end": "2025-10-01",
-    "n_series": 3,
-    "updated": "2025-12-18",
-    "fetched": "2026-06-13 15:45:16",
-    "load": "whole",
-    "data": "ch_fso_construction_prices.csv",
-    "meta": "ch_fso_construction_prices.json"
-  },
-  {
-    "id": "ch_fso_trade_partner",
-    "title": {
-      "en": "Foreign trade by partner country"
-    },
-    "concept": "External sector / Foreign trade",
-    "canonical": true,
-    "featured": null,
-    "topic": "External sector",
-    "source": "Swiss Federal Statistical Office (FSO) / Federal Office for Customs and Border Security (FOCBS)",
-    "license": "fso",
-    "frequency": "annual",
-    "start": "1990-01-01",
-    "end": "2025-01-01",
-    "n_series": 66,
-    "updated": null,
-    "fetched": "2026-06-13 15:45:16",
-    "load": "whole",
-    "data": "ch_fso_trade_partner.csv",
-    "meta": "ch_fso_trade_partner.json"
   }
 ]
