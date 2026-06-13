@@ -21,8 +21,19 @@ canonical approach.
 - **Shape matches the swissdata format**, so the SNB approach is sound.
 - **Discontinued cubes go stale silently.** The cube still serves data, just frozen.
   `rendoblid` (daily bond par yields) stopped at 2025-07-31 (last published 2025-09-01);
-  the live bond-yield series is the spot cube `rendeiduebd` (canonical). Check the live
-  CSV `PublishingDate` header before trusting a cube as current.
+  the live bond-yield series is the spot cube `rendeiduebd` (canonical). Check the cube's
+  `lastUpdate` (see next point) before trusting a cube as current.
+- **Conditional fetch via `lastUpdate` (implemented).** SNB documents a freshness
+  method exactly for "find out if there are new data" (https://data.snb.ch/en/help_api):
+  `GET /api/cube/{id}/lastUpdate` returns a ~65-byte
+  `{"editionDate":"YYYYMMDD_HHMM","publicSinceDate":"…"}` — vs the 0.2–1.1 MB data cube.
+  `R/source_snb.R::snb_last_update()` reads `editionDate`, formats it `YYYY-MM-DD HH:MM`,
+  and stores it as meta `updated`. The pipeline (`.try_fetch_if_unchanged`) compares it to
+  the on-disk `updated` and, when unchanged, serves the cube from disk — skipping the
+  download + parse (most days, for monthly/quarterly cubes). A failed/missing probe
+  degrades to an unconditional fetch, so it never blocks a refresh. (SNB also honors
+  `ETag`/`If-None-Match` → 304 on the data endpoint, but `lastUpdate` is preferred since
+  its date doubles as `updated`. `Range` and `If-Modified-Since` are NOT honored.)
 
 ## FSO
 
@@ -88,8 +99,10 @@ levels and %-change leaves on the same key (`ch_fso_gfcf_detail`: filter `UNIT_M
   meta either way.
 
 ## Meta gaps to fill where the source allows
-- **`updated`** — capture the source publish date (SNB `PublishingDate` in the
-  CSV header; KOF and FSO carry their own).
+- **`updated`** — capture the source publish date. SNB: **done** via the `lastUpdate`
+  method (see the SNB section above) — also drives conditional fetch. KOF and FSO carry
+  their own publish dates (FSO Excel already returns a `pubdate`); wire those next if we
+  extend conditional fetch beyond SNB.
 - **`units`** — missing for SNB (packed oddly) and FSO; extract where available.
 - **`topic`** — populate from a controlled per-dataset vocabulary.
 

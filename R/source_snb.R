@@ -44,6 +44,26 @@ suppressPackageStartupMessages({
   if (inner == "") character(0) else strsplit(inner, ",", fixed = TRUE)[[1]]
 }
 
+# Cheap freshness probe. SNB documents a `lastUpdate` method exactly for "find out if
+# there are new data" (https://data.snb.ch/en/help_api): a ~65-byte JSON
+#   {"editionDate":"20260521_0900","publicSinceDate":"20260521_0900"}
+# vs the 0.2-1.1 MB data cube. `editionDate` (the edition's creation stamp; a revision
+# bumps it) is the change signal; fall back to publicSinceDate. Returns a tidy
+# "YYYY-MM-DD HH:MM" string -- which doubles as the meta `updated` field health.R reads
+# (it parses `as.Date(substr(updated, 1, 10))`) -- or NA_character_ if unreadable, so a
+# caller degrades to an unconditional fetch. Used as the conditional-fetch token AND to
+# populate meta$updated (SNB carries no publish date in the data payload itself).
+snb_last_update <- function(cube_id) {
+  doc <- tryCatch(
+    get_json(sprintf("https://data.snb.ch/api/cube/%s/lastUpdate", cube_id)),
+    error = function(e) NULL
+  )
+  ed <- doc$editionDate %||% doc$publicSinceDate
+  if (is.null(ed)) return(NA_character_)
+  m <- regmatches(ed, regexec("^([0-9]{4})([0-9]{2})([0-9]{2})_([0-9]{2})([0-9]{2})$", ed))[[1]]
+  if (length(m) == 6L) sprintf("%s-%s-%s %s:%s", m[2], m[3], m[4], m[5], m[6]) else ed
+}
+
 snb_fetch <- function(cube_id, title = NULL, lang = "en") {
   base <- "https://data.snb.ch/api/cube"
   dims_doc <- get_json(sprintf("%s/%s/dimensions/%s", base, cube_id, lang))
@@ -100,6 +120,13 @@ snb_fetch <- function(cube_id, title = NULL, lang = "en") {
     frequency = infer_frequency(raw_periods),
     dimensions = dimensions
   )
+
+  # Source publish date (SNB's `lastUpdate`). Stored so (a) the health board's
+  # "recently republished => fresh" fallback works for SNB, and (b) the next run can
+  # compare it to skip an unchanged cube. Omit the key entirely when unreadable (NULL
+  # list elements drop from toJSON), matching the pre-existing no-`updated` shape.
+  pub <- snb_last_update(cube_id)
+  if (!is.na(pub)) meta$updated <- pub
 
   list(id = paste0("ch_snb_", cube_id), data = data, meta = meta)
 }

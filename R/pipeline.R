@@ -157,6 +157,63 @@ drop_degenerate_dims <- function(ds) {
   ds
 }
 
+# Ids skipped this run because the source reports it is UNCHANGED since our last fetch
+# (see .try_fetch_if_unchanged). Distinct from .SKIPPED (a failure): an unchanged source
+# is a success we simply didn't re-download. main()/retry_skipped() reload these from disk
+# so they still flow through the catalog. Accumulates across the build + retry passes
+# (reset at each entrypoint, like .SKIPPED), never inside build().
+.UNCHANGED <- character(0)
+
+# The `updated` token last written to disk for `id` (the source publish date), or NULL if
+# there's no sidecar yet / no token stored. Compared against a fresh probe to decide
+# whether a cube can be skipped.
+.stored_updated <- function(id, dir) {
+  p <- file.path(dir, paste0(id, ".json"))
+  if (!file.exists(p)) return(NULL)
+  m <- tryCatch(jsonlite::fromJSON(p, simplifyVector = FALSE), error = function(e) NULL)
+  m$updated
+}
+
+# Reload an already-written dataset from disk into the in-memory {id, data, meta} shape,
+# so an unchanged source can skip its (re-)fetch+parse yet still be catalogued exactly
+# like a fresh one. The on-disk sidecar holds the FULLY finalized meta (datasheet merge,
+# dropped levels, hierarchy) and the CSV the finalized data, so no re-finalize is needed
+# -- catalog_entry() reads them straight. `fetched_utc` is intentionally NOT bumped: it
+# means "when we last actually fetched", which an unchanged run did not. NULL if files
+# are missing (caller drops it, falling back to a fetch next run).
+load_dataset <- function(id, dir) {
+  jp <- file.path(dir, paste0(id, ".json"))
+  cp <- file.path(dir, paste0(id, ".csv"))
+  if (!file.exists(jp) || !file.exists(cp)) return(NULL)
+  meta <- tryCatch(jsonlite::fromJSON(jp, simplifyVector = FALSE), error = function(e) NULL)
+  data <- tryCatch(readr::read_csv(cp, show_col_types = FALSE, progress = FALSE),
+                   error = function(e) NULL)
+  if (is.null(meta) || is.null(data)) return(NULL)
+  if ("date" %in% names(data)) data$date <- as.Date(data$date)
+  list(id = id, data = as.data.frame(data), meta = meta)
+}
+
+# Conditional fetch (pilot: SNB). `probe` returns a cheap version token; when it equals
+# the token stored in the on-disk sidecar AND a disk copy exists, record `label` as
+# unchanged and SKIP the full fetch+parse (the caller reloads it from disk). A missing or
+# failed probe (NA), no disk copy, no stored token, or a changed token all fall through to
+# the normal .try_fetch -- so first-ever runs and genuine updates always fetch, and a probe
+# outage degrades safely to current behavior. Honors .ONLY like .try_fetch.
+.try_fetch_if_unchanged <- function(label, probe, expr, topic = NULL) {
+  if (!is.null(.ONLY) && !label %in% .ONLY) return(NULL)
+  token  <- tryCatch(probe(), error = function(e) NA_character_)
+  stored <- .stored_updated(label, DATA_DIR)
+  unchanged <- !is.na(token) && !is.null(stored) &&
+    identical(as.character(token), as.character(stored)) &&
+    file.exists(file.path(DATA_DIR, paste0(label, ".csv")))
+  if (unchanged) {
+    cat(sprintf("  KEEP %-22s unchanged since %s -- skipping fetch+parse\n", label, token))
+    .UNCHANGED[[length(.UNCHANGED) + 1L]] <<- label
+    return(NULL)
+  }
+  .try_fetch(label, expr, topic)
+}
+
 # The SNB cube API re-exports most of the Swiss macro economy through one
 # uniform interface, so one fetcher covers GDP, prices, labour, money, rates,
 # FX, balance of payments, banking and payments. The cube list (id/topic/title)
@@ -177,9 +234,15 @@ build <- function(only = NULL) {
   add <- function(ds) if (!is.null(ds)) datasets[[length(datasets) + 1L]] <<- ds
 
   # SNB: the macro cube set (each cube = one dataset), read from snb_cubes.tsv.
+  # Conditional fetch: SNB's cheap `lastUpdate` (~65 B) lets us skip the 0.2-1.1 MB
+  # download + parse of a cube unchanged since our last run (most days, for monthly /
+  # quarterly cubes). `local()` pins this iteration's cube_id into the probe closure.
   for (cu in read_snb_cubes()) {
-    add(.try_fetch(paste0("ch_snb_", cu$cube_id),
-                   snb_fetch(cu$cube_id, title = list(en = cu$title)), cu$topic))
+    cube <- cu$cube_id
+    add(.try_fetch_if_unchanged(
+      paste0("ch_snb_", cube),
+      local({ id <- cube; function() snb_last_update(id) }),
+      snb_fetch(cube, title = list(en = cu$title)), cu$topic))
   }
 
   # SECO: full GDP, swissdata format at source (rich multilingual + deep
@@ -386,6 +449,8 @@ merge_into_catalog <- function(recovered, out_dir) {
 }
 
 main <- function() {
+  .SKIPPED   <<- list()        # reset module accumulators at the entrypoint, so a
+  .UNCHANGED <<- character(0)   # second main() call in one session starts clean
   datasets <- build()
 
   # Retry pass: the per-source transport retry (http.R) only spans ~70s, so a host
@@ -414,36 +479,46 @@ main <- function() {
   # Index-loop write-back: finalize_dataset() returns the curated + persisted dataset,
   # which must land BACK in `datasets` so write_catalog() serializes the merged version
   # (else concept/canonical/featured come out null in catalog.json).
+  n_fetched <- length(datasets)
   for (i in seq_along(datasets)) datasets[[i]] <- finalize_dataset(datasets[[i]])
+
+  # Unchanged cubes: reload the already-curated files from disk (no re-fetch, no
+  # re-write) so they still appear in the catalog. .UNCHANGED accumulated across the
+  # build + retry passes; unique() guards against a cube appearing in both.
+  unchanged_ids <- unique(.UNCHANGED)
+  kept <- Filter(Negate(is.null), lapply(unchanged_ids, load_dataset, DATA_DIR))
+  if (length(kept))
+    cat(sprintf("kept %d unchanged dataset(s) from disk (skipped fetch+parse)\n", length(kept)))
+  datasets <- c(datasets, kept)
+
   write_catalog(datasets, DATA_DIR)
-  cat(sprintf("wrote catalog.json (%d datasets) -> %s\n", length(datasets), DATA_DIR))
-  write_run_json(ok = length(datasets), skipped = .SKIPPED, out_dir = DATA_DIR)
+  cat(sprintf("wrote catalog.json (%d datasets: %d fetched, %d unchanged) -> %s\n",
+              length(datasets), n_fetched, length(kept), DATA_DIR))
+  write_run_json(ok = n_fetched, skipped = .SKIPPED, unchanged = unchanged_ids,
+                 out_dir = DATA_DIR)
 }
 
 # Write this run's fetch outcome to data/run.json (overwritten every run -- it is
-# the authoritative snapshot of the latest scrape). `ok` = datasets fetched and
-# validated; `skipped` = the per-source failures captured by .try_fetch (each a
-# {id, error}); `attempted` = ok + skipped. R/uptime.R reads this to decide the
-# "run-through success" metric and .github/scripts/skip_issues.sh opens an issue
-# per skip. A skip is the LEADING signal (a parser breaking the day a source
-# changes format), so unlike before we alarm on it immediately rather than waiting
-# for the data to age into staleness.
-write_run_json <- function(ok, skipped, out_dir) {
+# the authoritative snapshot of the latest scrape). `ok` = datasets freshly fetched and
+# validated; `unchanged` = ids the source reported unchanged, served from disk without a
+# re-download (conditional fetch); `skipped` = the per-source failures captured by
+# .try_fetch (each a {id, error}); `attempted` = ok + unchanged + skipped. R/uptime.R
+# reads `skipped` for the "run-through" metric and .github/scripts/skip_issues.sh opens an
+# issue per skip; `unchanged` is informational (how much the freshness check saved).
+write_run_json <- function(ok, skipped, unchanged = character(0), out_dir) {
   rec <- list(
     ts        = format(Sys.time(), tz = "UTC", "%Y-%m-%dT%H:%M:%SZ"),
-    attempted = ok + length(skipped),
+    attempted = ok + length(unchanged) + length(skipped),
     ok        = ok,
+    unchanged = as.list(unchanged),
     skipped   = skipped
   )
   writeLines(
     jsonlite::toJSON(rec, auto_unbox = TRUE, pretty = TRUE, null = "null"),
     file.path(out_dir, "run.json")
   )
-  if (length(skipped)) {
-    cat(sprintf("wrote run.json (%d ok, %d skipped) -> %s\n", ok, length(skipped), out_dir))
-  } else {
-    cat(sprintf("wrote run.json (%d ok, no skips) -> %s\n", ok, out_dir))
-  }
+  cat(sprintf("wrote run.json (%d ok, %d unchanged, %d skipped) -> %s\n",
+              ok, length(unchanged), length(skipped), out_dir))
 }
 
 # Append one row to data/retry.csv per afternoon retry that actually ran (i.e. the
@@ -500,21 +575,35 @@ retry_skipped <- function() {
   cat(sprintf("retry: re-fetching %d morning skip(s): %s\n",
               length(retry_ids), paste(retry_ids, collapse = ", ")))
 
-  .SKIPPED  <<- list()                 # reset; the retry build recomputes the survivors
+  .SKIPPED   <<- list()                # reset; the retry build recomputes the survivors
+  .UNCHANGED <<- character(0)           # a retried cube may now probe as unchanged
   recovered <- build(only = retry_ids)
   recovered_ids <- vapply(recovered, `[[`, character(1), "id")
   still_failing <- vapply(.SKIPPED, `[[`, character(1), "id")
 
+  # A morning-skipped cube whose source is now reachable but reports unchanged: serve it
+  # from disk (no longer a skip), exactly like the full run does.
+  retry_unchanged <- unique(.UNCHANGED)
+  kept <- Filter(Negate(is.null), lapply(retry_unchanged, load_dataset, DATA_DIR))
+  kept_ids <- vapply(kept, `[[`, character(1), "id")
+
   for (i in seq_along(recovered)) recovered[[i]] <- finalize_dataset(recovered[[i]])
-  if (length(recovered)) merge_into_catalog(recovered, DATA_DIR)
+  merged <- c(recovered, kept)
+  if (length(merged)) merge_into_catalog(merged, DATA_DIR)
 
   # Rewrite run.json to post-retry reality: the still-failing set drives the skip alarm,
-  # and ok rises by the recoveries so uptime.R's run-through metric goes green when the
-  # afternoon clears everything. attempted stays constant (ok + still-failing).
-  new_ok <- (run$ok %||% 0L) + length(recovered)
-  write_run_json(ok = new_ok, skipped = .SKIPPED, out_dir = DATA_DIR)
+  # ok rises by the recoveries so uptime.R's run-through metric goes green when the
+  # afternoon clears everything, and the unchanged set carries the morning's forward plus
+  # any cube the retry resolved as unchanged. attempted stays constant.
+  new_ok          <- (run$ok %||% 0L) + length(recovered)
+  morning_unchanged <- as.character(unlist(run$unchanged %||% list()))
+  all_unchanged   <- union(morning_unchanged, kept_ids)
+  write_run_json(ok = new_ok, skipped = .SKIPPED, unchanged = all_unchanged,
+                 out_dir = DATA_DIR)
 
-  append_retry_log(retry_ids, recovered_ids, still_failing, DATA_DIR)
+  # `recovered` for the retry ledger = both genuinely re-fetched and unchanged-on-disk:
+  # either way the morning skip is resolved without opening an issue.
+  append_retry_log(retry_ids, c(recovered_ids, kept_ids), still_failing, DATA_DIR)
 
   if (length(recovered))
     cat(sprintf("retry: recovered %s\n", paste(recovered_ids, collapse = ", ")))
