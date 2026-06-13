@@ -204,6 +204,7 @@
       }
     }
   },
+  "updated": "2026-05-21 09:00",
   "topic": "Payment systems",
   "concept": "Payment systems / Payments & cash",
   "canonical": false,
@@ -218,5 +219,5 @@
     "D4": "BMF"
   },
   "description": "The card-payment flow cube, and the most cross-cut of the zave family: five stacked dimensions describe each transaction (what kind of payment, which card type, where the card was issued, where it was used, and which metric). It separates card-present from card-not-present (online) payments, breaks out contactless within card-present, and isolates cash withdrawals at ATMs. The domestic/foreign split on both card origin (D2) and place of transaction (D3) makes it usable for inbound tourism spend (foreign cards used domestically) and Swiss spending abroad. The contactless and enhanced-cash subtotals begin mid-2017, later than the 2005 base, so many of the 113 series are short.",
-  "fetched_utc": "2026-06-12 10:01:11"
+  "fetched_utc": "2026-06-13 15:45:15"
 }

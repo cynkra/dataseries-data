@@ -198,6 +198,7 @@
       }
     }
   },
+  "updated": "2026-05-21 09:00",
   "topic": "Payment systems",
   "concept": "Payment systems / Payments & cash",
   "canonical": false,
@@ -208,5 +209,5 @@
     "D0": "T0"
   },
   "description": "Activity in SIC, Switzerland's real-time gross settlement system for interbank CHF payments, monthly from 1987. This is the deepest hierarchy of the six cubes (four nesting levels) and the one whose dimension codes are partly numeric. Two views sit side by side. The headline block (D0_0) gives counts, turnover and a turnover ratio, each as a total (T0/T1), a daily maximum (MT0/MT1/MT2) and an average per working day (DA0/DA1/DA2). The by-size block (D0_1) breaks the same number of transactions and turnover into three payment-size bands, encoded with the quirky numeric ids 149990 / 50009999990 / 1MM0 (and the parallel ...91/1MM1 for turnover). Those ids read as the band edges: 149990 = CHF 1-4,999, 50009999990 = CHF 5,000-999,999, 1MM0 = CHF 1 million and larger. Counts are number of transactions; turnover is in CHF million. The long history makes it a useful proxy for the digitisation and growth of Swiss interbank payment volume.",
-  "fetched_utc": "2026-06-12 10:01:10"
+  "fetched_utc": "2026-06-13 15:45:15"
 }
