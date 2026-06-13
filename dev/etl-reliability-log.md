@@ -137,6 +137,36 @@ Act on a candidate solution when one of these crosses:
 
 ## Incident log
 
+### 2026-06-13 — admin.ch block returns (3rd cancel in 4 days); afternoon retry can't rescue a *cancelled* morning
+
+- **Run:** [27462762798](https://github.com/cynkra/dataseries-data/actions/runs/27462762798),
+  schedule, **cancelled** at the `timeout-minutes: 30` cap (started 09:21, killed 09:51).
+- **Symptom:** the now-familiar shape — every timeout is an admin.ch host
+  (`www.pxweb.bfs.admin.ch`, `dam-api.bfs.admin.ch`), each connect-timing-out at 15002 ms;
+  ~12 FSO sources skipped serially (15 s each) blew the 30-min budget before the commit.
+  Both alarms fired as designed: `etl-failure` #11 (inline) and `watchdog` #12 (backstop).
+- **Root cause:** same partial-Azure-range IP block proven on 06-11 — this morning's runner
+  drew a blocked egress IP. **Not** related to the SNB conditional-fetch / retry code shipped
+  06-12/06-13: SNB (`data.snb.ch`) is reachable and absent from the failures, and a code bug
+  would `fail` fast, not run to the 30-min cap. Cadence now: 06-10, 06-11, 06-13 cancelled vs
+  06-09, 06-12 clean — i.e. ~half of scheduled runs, matching the ~20 %-of-IPs-blocked probe
+  compounded over the all-or-nothing per-run IP draw.
+- **New finding — the afternoon retry does NOT cover a cancelled morning.** `etl-retry.yml`
+  ran 14:57 and correctly **no-opped**: its gate requires a `run.json` dated *today* with
+  skips, but a *cancelled* morning never reached the step that writes `run.json` (it's stale
+  from 06-12). This is by design (never retry a stale skip list), so the retry second-pass
+  helps a morning that *completed with skips*, not one that was *killed*. The independent
+  `watchdog.yml` remains the only backstop for a cancelled morning — and the real fix is still
+  off-runner egress (decided 06-11, see [`etl-offload-plan.md`](etl-offload-plan.md)).
+- **Blast radius:** cancelled run, no data committed; #11 + #12 opened.
+- **Action taken this time:** recovered by running the full pipeline **locally from a Swiss IP**
+  (admin.ch reachable here: 302/200, fast connect) and pushing. This doubled as the first real
+  full-set run of the SNB conditional-fetch, bootstrapping `updated` for all SNB cubes. Closed
+  #11 manually; #12 auto-closes once `data/uptime.csv` advances to 06-13.
+- **Pattern bucket:** runner/infra (partial-Azure-range IP block) — recurring, as predicted.
+- **Decision:** unchanged and reinforced — the 06-12 clean run was the exception, not a
+  recovery; the off-runner egress is the fix. The one-cycle "watch 06-12" deferral is over.
+
 ### 2026-06-12 — UZH connect-timeout outlasts the 180s in-run retry; shipped an afternoon second-pass
 
 - **Run:** [27407704818](https://github.com/cynkra/dataseries-data/actions/runs/27407704818),
