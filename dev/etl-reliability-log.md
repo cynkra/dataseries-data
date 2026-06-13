@@ -34,21 +34,27 @@ Copy this template to the top of the Incident log (newest first):
 
 ## Decision status
 
-**Decision made 2026-06-11 — move CH-source execution off GitHub-hosted runners;
-implementation deferred one cycle.** The runner-IP-block threshold in "What would
-change our mind" is now **crossed**: the 2026-06-11 probe directly proved an
-intermittent, *partial*-Azure-range null-route at admin.ch (2/10 runner IPs
-silently dropped, 8/10 fine, all Azure). No in-pipeline fix can reach data that is
-null-routed from the runner, so the only durable answer is off-runner egress. The
-options, trade-offs, and recommended design (worker-on-Hetzner → push to GitHub)
-are written up in [`etl-offload-plan.md`](etl-offload-plan.md).
+**Superseded 2026-06-13 — stay on GitHub-hosted runners; beat the partial-IP block with
+repeated fresh-IP draws instead of moving egress off-runner.** The block is a *partial*
+Azure-range null-route (06-11 probe: 2/10 runner IPs dropped, all Azure), and crucially
+**each scheduled GHA run draws a fresh egress IP** — so retrying the failed sources in
+separate runs is itself a fix, without leaving the single-repo / all-GHA architecture.
+Shipped (06-13): no-retry-on-dead-host (a blocked run completes-with-skips, not cancels) +
+two targeted fresh-IP retry passes (lunch + afternoon) + broad-outage in-run-retry gate +
+stale-keep. See the 06-13 incident and the SHIPPED items in Candidate solutions.
 
-Posture until built: recover by running the ETL off-GitHub (locally / Hetzner) and
-pushing; the independent `watchdog.yml` remains the backstop. We deliberately watch
-the **06-12** scheduled run before investing build effort — partial blocks have
-good days, and one more observation costs nothing.
+This **supersedes the 2026-06-11 decision** to move CH-source execution off GitHub
+(worker-on-Hetzner → push, written up in [`etl-offload-plan.md`](etl-offload-plan.md)).
+Off-runner is now the **escalation of last resort**, justified only if the block widens
+from a *subset* of Azure IPs to *most* of them (p→1), where fresh-IP draws stop helping —
+re-probe the runner IPs (06-11 method) before reviving it.
 
-(History: "open — collecting evidence" from 2026-06-08 to 2026-06-11.)
+Posture: a blocked morning self-heals on a later fresh-IP retry; recover manually (full
+local run from a Swiss IP) only on the rare all-day, all-IP block, which the watchdog flags.
+
+(History: "open — collecting evidence" 2026-06-08→06-11; "move off-runner, deferred one
+cycle" 2026-06-11→06-13; "watch 06-12" resolved clean, but 06-13 re-block showed the
+recurrence is the steady state → chose the in-model fix.)
 
 ## Candidate solutions (considered, not decided)
 
@@ -63,28 +69,50 @@ don't bound a *broad* outage.
   Directly kills the cascade (outages correlate by host). Needs host attribution
   surfaced into `.try_fetch` (today it only sees a label + a lazy promise; the
   error message does carry `[host]`).
-- **Don't retry pure connection failures.** `req_retry(retry_on_failure = TRUE)`
-  dials a dead host `max_tries` times. Backoff/retry is for 429/5xx
-  (alive-but-throttled, the PX-Web reason); it does nothing for a connect timeout.
-  Splitting the two cuts a dead-host cost ~5× (one connect attempt, not four).
+- **[SHIPPED 2026-06-13] Don't retry pure connection failures.** `req_retry` had
+  `retry_on_failure = TRUE`, dialing a dead host `max_tries` times (~74s/host).
+  Backoff/retry is for 429/5xx (alive-but-throttled, the PX-Web reason); it does
+  nothing for a connect timeout. Now `FALSE` (http.R) — `is_transient` still retries
+  429/5xx. A dead host costs one 15s attempt, so a blocked run **completes with skips
+  in ~19min instead of cancelling at the 30-min cap**, and records the skips in
+  run.json. This is the keystone: a completed run is what the targeted lunch/afternoon
+  retries (fresh IPs) and the stale-keep need.
 - **Global soft-deadline → partial success.** Once total run elapsed crosses
   ~22 min, stop *starting* fetches, mark the rest `skipped: not-attempted
   (deadline)`, and fall through to write the partial catalog + `run.json`. Turns a
   hard `cancelled` (which writes nothing and reports nothing) into a graceful,
   precisely-reported partial run. Must distinguish `skipped: failed` from
   `skipped: not-attempted` so deadline-skips don't look like parser breaks.
-- **Gate the in-process retry pass on time-remaining.** The `RETRY_SLEEP` (180s) +
-  refetch pass helps an *isolated* transient blip but *adds* to the budget during
-  a *broad* outage — skip it if we're already past ~20 min.
-- **[SHIPPED 2026-06-12] Afternoon retry second pass.** A separate
-  `.github/workflows/etl-retry.yml` runs ~6 h after the morning cron, re-fetches ONLY
-  the morning's skips (`ETL_MODE=retry` → `retry_skipped()`), and is the **sole** place
-  the `etl-skip` alarm opens; the morning closes-only. Absorbs a single-host outage that
-  outlasts the 180 s in-run retry **without a false alarm**, and a real format break still
-  surfaces (it fails the much-later second attempt too). Usage logged to `data/retry.csv`.
-  Bonus: the separate run draws a fresh runner IP — a second egress attempt for the
-  admin.ch sources on a partial-block day (complements, does not replace, the off-runner
-  plan). See the 2026-06-12 incident.
+  *(Largely obviated by the no-retry-on-connect change above + the broad-outage gate
+  below, which keep a blocked run under the cap; keep as a backstop idea if a future
+  outage shape still pushes past 30 min.)*
+- **[SHIPPED 2026-06-13] Gate the in-process retry pass.** The `RETRY_SLEEP` (180s) +
+  refetch pass helps an *isolated* transient blip but is futile against a *broad*
+  outage (it re-dials the SAME runner IP). Now skipped when `> RETRY_MAX_INPROCESS`
+  (default 3) sources fail at once (pipeline.R) — saving ~RETRY_SLEEP + Nx15s on a
+  blocked day; those skips go to the fresh-IP cross-run retries instead.
+- **[SHIPPED 2026-06-12, extended 2026-06-13] Targeted retry passes on fresh IPs.** A
+  separate `.github/workflows/etl-retry.yml` re-fetches ONLY the morning's skips
+  (`ETL_MODE=retry` → `retry_skipped()`). As of 06-13 it runs **twice** — lunch
+  (10:30 UTC, `CLOSE_ONLY`) and afternoon (14:15 UTC, opens issues) — because each
+  scheduled run draws a **fresh GitHub-runner egress IP**, so each is an independent
+  fresh-IP draw at the handful that failed (the admin.ch block hits a *subset* of Azure
+  IPs). With the morning now completing-with-skips, the chain is: morning records skips →
+  lunch retries on a fresh IP → afternoon retries on another → only then alarm. P(all 3
+  draws blocked) ≈ p³ (≈12% at p=0.5, <1% at p=0.2), down from p. Only the LAST pass
+  opens `etl-skip` issues (lunch is close-only; a source still failing at noon may clear
+  on the afternoon IP). Usage logged to `data/retry.csv`. This is the **in-model
+  alternative to off-runner egress** — chosen 2026-06-13 because it keeps the
+  single-repo / all-GHA architecture (user preference); off-runner (Tier B) deferred
+  indefinitely. See the 2026-06-13 incident.
+- **[SHIPPED 2026-06-13] Stale-keep on skip.** A completed-with-skips run must not DROP
+  the skipped datasets from `catalog.json` (they'd vanish from the API until a retry).
+  main() now reloads a skipped source's previous on-disk files into the catalog (shown
+  stale, old `fetched` date); the id still rides in run.json `skipped` so retries + alarm
+  act on it. Fixes a latent bug that only mattered once blocked-mornings-complete became
+  the norm. Note: because a completed run writes today's `uptime.csv` row even when red,
+  the **watchdog now fires only on a *total* failure** (no row at all); *partial* failures
+  surface as `etl-skip` issues from the last retry pass.
 
 **Tier B — structural isolation (the deferred "Tier 2"):**
 
@@ -164,8 +192,16 @@ Act on a candidate solution when one of these crosses:
   full-set run of the SNB conditional-fetch, bootstrapping `updated` for all SNB cubes. Closed
   #11 manually; #12 auto-closes once `data/uptime.csv` advances to 06-13.
 - **Pattern bucket:** runner/infra (partial-Azure-range IP block) — recurring, as predicted.
-- **Decision:** unchanged and reinforced — the 06-12 clean run was the exception, not a
-  recovery; the off-runner egress is the fix. The one-cycle "watch 06-12" deferral is over.
+- **Decision (revised same day):** off-runner egress (Tier B) is **deferred indefinitely** —
+  it trades away the single-repo / all-GHA simplicity the project values. Instead, shipped an
+  **in-model mitigation** that attacks the cause (a blocked IP) with repeated *fresh-IP draws*:
+  (1) `retry_on_failure = FALSE` so a blocked run completes-with-skips (~19 min) instead of
+  cancelling; (2) the targeted retry now runs **twice** (lunch + afternoon), each a fresh
+  runner IP, re-fetching only the failed sources; (3) the in-process same-IP retry is gated off
+  for broad outages; (4) stale-keep so skipped datasets don't vanish from the catalog. Net: a
+  blocked morning self-heals on a later fresh IP with no manual step; only an all-day, all-IP
+  block (≈p³) still needs a manual run. Off-runner remains the documented escalation if the
+  block ever widens to most Azure IPs (p→1, where fresh draws stop helping).
 
 ### 2026-06-12 — UZH connect-timeout outlasts the 180s in-run retry; shipped an afternoon second-pass
 

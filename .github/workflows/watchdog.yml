@@ -2,15 +2,18 @@ name: watchdog
 
 # Independent dead-man's-switch for the daily ETL. The ETL's own inline alarm only
 # fires on success()/failure(); a job killed by `timeout-minutes` concludes
-# `cancelled` and slips through (the 2026-06-05 miss). This runs ~2h later on its
+# `cancelled` and slips through (the 2026-06-05 miss). This runs after the day's
+# morning + lunch + afternoon attempts on its
 # OWN schedule and checks the only thing that matters: did data/uptime.csv gain a
 # row for today? If not, it opens a deduped `watchdog` issue (and closes it once a
 # fresh row lands). See .github/scripts/watchdog.sh.
 
 on:
   schedule:
-    - cron: "15 10 * * *"   # ~2h after the etl cron (15 8 * * *); a healthy run has
-                            # committed today's row by then (etl takes ~15 min).
+    - cron: "0 15 * * *"    # 15:00 UTC — AFTER the last retry pass (afternoon etl-retry at
+                            # 14:15 UTC, ~20 min). By now the morning + lunch + afternoon
+                            # fresh-IP attempts have all had their chance; if data/uptime.csv
+                            # still has no row for today, the day is genuinely lost -> alarm.
   workflow_dispatch:          # manual "Run workflow" button
 
 permissions:

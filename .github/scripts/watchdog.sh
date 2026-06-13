@@ -2,7 +2,7 @@
 #
 # watchdog.sh — independent dead-man's-switch for the daily ETL.
 #
-# Runs on its OWN schedule ~2h after the ETL cron (see .github/workflows/watchdog.yml).
+# Runs on its OWN schedule after the day's last retry pass (see .github/workflows/watchdog.yml).
 # It does NOT trust the ETL run's self-reported status: the inline failure alarm in
 # etl.yml only fires on success()/failure(), and a job killed by `timeout-minutes`
 # concludes `cancelled` — a third state that slips through (exactly what hid the
@@ -72,7 +72,7 @@ if [[ -n "$latest" && "$latest" == "$today" ]]; then
   exit 0
 fi
 
-# Stale: no row for today ~2h after the scheduled run. Alarm.
+# Stale: no row for today after the day's morning + lunch + afternoon attempts. Alarm.
 body="$(printf '%s\n' \
   "The daily ETL has **not committed fresh data today** (\`${today}\`)." \
   "" \
@@ -83,7 +83,7 @@ body="$(printf '%s\n' \
   "" \
   "${run_line}" \
   "" \
-  "The watchdog runs ~2h after the ETL cron and checks the one thing that matters:" \
+  "The watchdog runs after the day's ETL + retry passes and checks the one thing that matters:" \
   "did \`data/uptime.csv\` gain a row for today. It hasn't — so the run is missing," \
   "**cancelled** (e.g. it hit \`timeout-minutes\`), or failed before the commit step." \
   "The inline ETL alarm only fires on success/failure, so a cancellation can slip" \

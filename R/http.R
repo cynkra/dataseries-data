@@ -17,7 +17,16 @@ suppressPackageStartupMessages(library(httr2))
     req_retry(
       max_tries = 4,
       max_seconds = 180,
-      retry_on_failure = TRUE,
+      # Do NOT retry pure transport failures (connect timeout / DNS / reset): they
+      # mean the host is unreachable, and re-dialing a dead host just burns the run
+      # budget (~74s/host x ~12 admin.ch sources blew the 30-min cap on the
+      # 2026-06-10/11/13 runner-IP-block cancellations). Retry is only useful for an
+      # alive-but-throttled host -- a 429/5xx RESPONSE -- which `is_transient` still
+      # handles. So a blocked run now COMPLETES with skips (recorded in run.json) in
+      # ~19min instead of cancelling, which lets the targeted lunch/afternoon retries
+      # (separate runs => fresh egress IPs) re-fetch just the failed sources. A genuine
+      # brief blip on a good host is caught by the in-process retry pass (pipeline.R).
+      retry_on_failure = FALSE,
       is_transient = function(resp) resp_status(resp) %in% c(429, 500, 502, 503, 504),
       backoff = function(i) min(60, 2^i)
     )

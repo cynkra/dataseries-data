@@ -71,10 +71,13 @@ trend in [UPTIME.md](UPTIME.md)):
 
 - **Run-through** — did the scrape complete with zero skips? A skip (a source failing
   to fetch/parse) is the *leading* signal that a source changed format. A morning skip is
-  re-fetched ~6 h later by the afternoon retry (`.github/workflows/etl-retry.yml`, which
-  re-runs only the failed sources); only a source that *still* fails the second attempt
-  opens an `etl-skip` issue — so a transient host outage never alarms. Retry usage is
-  logged in [`data/retry.csv`](data/retry.csv).
+  re-fetched later the same day by **two** targeted retry passes — lunch and afternoon
+  (`.github/workflows/etl-retry.yml`), each re-running only the failed sources. Each runs as
+  a separate job, so each gets a **fresh GitHub-runner egress IP** — the main defence against
+  admin.ch intermittently blocking a subset of runner IPs (see
+  [`dev/etl-reliability-log.md`](dev/etl-reliability-log.md)). Only a source still failing
+  after the *last* pass opens an `etl-skip` issue, so a transient/blocked host never alarms.
+  Retry usage is logged in [`data/retry.csv`](data/retry.csv).
 - **Recently updated** — is every dataset that's expected to update fresh? A dataset
   ageing past its threshold is the *lagging* signal and opens a `data-health` issue.
   The per-dataset board (🟢 fresh / 🔴 stale) lives in [STATUS.md](STATUS.md).

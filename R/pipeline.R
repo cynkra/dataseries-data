@@ -410,6 +410,15 @@ DATASHEET_DIR <- file.path(dirname(root), "datasets")
 # uzh.ch connect timeout). Overridable via env for fast local runs / tests.
 RETRY_SLEEP <- as.integer(Sys.getenv("ETL_RETRY_SLEEP", "180"))
 
+# Cap on how many skips still trigger the in-process retry pass. That pass re-fetches
+# on the SAME runner IP, so it can rescue a handful of independent transient blips but
+# is futile -- and wastes ~RETRY_SLEEP + Nx15s of the run budget -- against a broad
+# outage (e.g. the admin.ch runner-IP block skips ~12 sources at once; the same IP
+# can't reach them on a retry). Above this count we skip the in-run retry and leave the
+# skips for the targeted lunch/afternoon retries, which run as SEPARATE jobs => fresh
+# egress IPs. Overridable via env.
+RETRY_MAX_INPROCESS <- as.integer(Sys.getenv("ETL_RETRY_MAX_INPROCESS", "3"))
+
 # Curate + persist ONE built dataset: merge its datasheet (concept/canonical/featured
 # + display defaults), drop the levels/dims the app reproduces on the fly via its
 # transform toggle, nest any declared hierarchy, then write <id>.{csv,parquet,json}.
@@ -453,14 +462,17 @@ main <- function() {
   .UNCHANGED <<- character(0)   # second main() call in one session starts clean
   datasets <- build()
 
-  # Retry pass: the per-source transport retry (http.R) only spans ~70s, so a host
-  # down longer than that skips. Before anything is written or any issue opened,
-  # give just the skipped sources ONE more attempt after a short wait -- by which
-  # point the other ~50 fetches have already bought the host minutes of recovery.
-  # A genuine format break still fails here and opens its issue as before; only a
-  # transient blip is absorbed silently. We replay build() pinned to the skipped
-  # ids (so each fetch is reconstructed fresh) and fold any successes back in.
-  if (length(.SKIPPED)) {
+  # Retry pass: give the skipped sources ONE more attempt after a short wait, by which
+  # point the other fetches have bought the host minutes of recovery -- enough for a
+  # genuine transient blip. We replay build() pinned to the skipped ids (each fetch
+  # reconstructed fresh) and fold any successes back in. SKIPPED when many sources fail
+  # at once (> RETRY_MAX_INPROCESS): that's a broad outage (e.g. an IP block), which a
+  # same-IP retry can't fix -- those are left for the fresh-IP lunch/afternoon retries,
+  # saving ~RETRY_SLEEP + Nx15s of run budget on a blocked day.
+  if (length(.SKIPPED) && length(.SKIPPED) > RETRY_MAX_INPROCESS) {
+    cat(sprintf("retry: %d skipped (> %d) -- broad outage, skipping same-IP in-run retry; leaving for fresh-IP retries\n",
+                length(.SKIPPED), RETRY_MAX_INPROCESS))
+  } else if (length(.SKIPPED)) {
     retry_ids <- vapply(.SKIPPED, `[[`, character(1), "id")
     cat(sprintf("retry: %d skipped (%s); waiting %ds then retrying\n",
                 length(retry_ids), paste(retry_ids, collapse = ", "), RETRY_SLEEP))
@@ -489,11 +501,23 @@ main <- function() {
   kept <- Filter(Negate(is.null), lapply(unchanged_ids, load_dataset, DATA_DIR))
   if (length(kept))
     cat(sprintf("kept %d unchanged dataset(s) from disk (skipped fetch+parse)\n", length(kept)))
-  datasets <- c(datasets, kept)
+
+  # Skipped sources keep their PREVIOUS catalog entry, served from the existing on-disk
+  # files (shown stale, with the old `fetched` date). Without this, completing-with-skips
+  # would DROP a failed dataset from catalog.json entirely -- making it vanish from the
+  # API until a retry refetches it. A skip must keep the previous data (the documented
+  # intent), not erase it. New sources that never succeeded have no disk copy -> correctly
+  # absent. The id stays in run.json `skipped` so the retries + alarm still act on it.
+  skipped_ids <- vapply(.SKIPPED, `[[`, character(1), "id")
+  stale_kept  <- Filter(Negate(is.null), lapply(skipped_ids, load_dataset, DATA_DIR))
+  if (length(stale_kept))
+    cat(sprintf("retained %d skipped dataset(s) from disk (stale, pending retry)\n", length(stale_kept)))
+
+  datasets <- c(datasets, kept, stale_kept)
 
   write_catalog(datasets, DATA_DIR)
-  cat(sprintf("wrote catalog.json (%d datasets: %d fetched, %d unchanged) -> %s\n",
-              length(datasets), n_fetched, length(kept), DATA_DIR))
+  cat(sprintf("wrote catalog.json (%d datasets: %d fetched, %d unchanged, %d stale-kept) -> %s\n",
+              length(datasets), n_fetched, length(kept), length(stale_kept), DATA_DIR))
   write_run_json(ok = n_fetched, skipped = .SKIPPED, unchanged = unchanged_ids,
                  out_dir = DATA_DIR)
 }

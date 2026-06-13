@@ -1,24 +1,29 @@
 name: etl-retry
 
-# Afternoon "second pass": re-fetch ONLY the sources the morning ETL skipped, then
-# (and only then) run the skip alarm. Rationale: most morning skips are a transient
-# single-host blip — a uzh.ch / admin.ch connect timeout that clears within hours —
-# not a format break. Re-trying ~6h later lets a passing outage heal silently and
-# reserves the `etl-skip` issue for a source that STILL fails after a second, much
-# later attempt (i.e. a genuine break). See dev/etl-reliability-log.md.
+# Targeted re-fetch passes for the sources the morning ETL skipped. Runs TWICE — lunch
+# and afternoon — because each scheduled run gets a FRESH GitHub-runner egress IP, and
+# the dominant failure is admin.ch intermittently blocking a *subset* of Azure runner
+# IPs (see dev/etl-reliability-log.md). So each pass is an independent fresh-IP draw at
+# the handful that failed; the first one to land a clean IP recovers them, and the rest
+# no-op. A transient single-host blip (uzh.ch) heals the same way.
 #
-# Mechanism: the morning run commits data/run.json with its `skipped` list. This job
-# reads it, replays the pipeline pinned to those ids (ETL_MODE=retry -> R/pipeline.R
-# retry_skipped()), folds recoveries back into data/ + catalog.json, rewrites run.json
-# to the post-retry state, logs the retry to data/retry.csv, then runs skip_issues.sh
-# off the rewritten run.json. The independent watchdog.yml (data-freshness backstop)
-# is unaffected — the MORNING run still commits today's uptime row.
+# Mechanism: the morning run commits data/run.json with its `skipped` list (it now
+# COMPLETES with skips rather than cancelling — http.R no longer re-dials dead hosts).
+# This job reads it, replays the pipeline pinned to those ids (ETL_MODE=retry ->
+# R/pipeline.R retry_skipped()), folds recoveries back into data/ + catalog.json,
+# rewrites run.json, logs to data/retry.csv, then runs skip_issues.sh off the rewritten
+# run.json.
+#
+# Alarm ordering: only the LAST pass (afternoon) may OPEN an etl-skip issue; the lunch
+# pass runs skip_issues.sh in CLOSE_ONLY mode (closes recovered ones, never opens) —
+# because a source still failing at lunch may clear on the afternoon's fresh IP. The
+# watchdog (now ~after the afternoon pass) is the final "still no fresh data" backstop.
 
 on:
   schedule:
-    - cron: "15 14 * * *"   # 14:15 UTC = 16:15 CEST / 15:15 CET — ~6h after the 08:15
-                            # etl cron, long enough for a transient host outage to clear.
-  workflow_dispatch:          # manual "Run workflow" button
+    - cron: "30 10 * * *"   # 10:30 UTC = 12:30 CEST  — lunch pass  (CLOSE_ONLY; fresh IP)
+    - cron: "15 14 * * *"   # 14:15 UTC = 16:15 CEST  — afternoon pass (opens issues; fresh IP)
+  workflow_dispatch:          # manual "Run workflow" button (treated as a final pass: opens)
 
 permissions:
   contents: write   # push recovered data + retry.csv
@@ -100,16 +105,20 @@ jobs:
           if git diff --cached --quiet; then
             echo "No changes to commit."
           else
-            git commit -m "data: afternoon retry ($(date -u +%F))"
+            git commit -m "data: retry pass ($(date -u +%F))"
             git push
           fi
 
-      # THE alarm: open an `etl-skip` issue only for what STILL fails after the retry,
-      # and close any that recovered. Reads the rewritten data/run.json. Never fails the
-      # job — an alerting hiccup must not mask a good recovery.
+      # The alarm. Reads the rewritten data/run.json; never fails the job (an alerting
+      # hiccup must not mask a good recovery). The LUNCH pass runs CLOSE_ONLY — it closes
+      # recovered issues but does NOT open new ones, since a source still failing now may
+      # clear on the afternoon's fresh IP. The AFTERNOON pass (and a manual dispatch, where
+      # github.event.schedule is empty) opens an issue for whatever STILL fails — the last
+      # fresh-IP attempt of the day.
       - name: Alert on remaining fetch skips
         if: steps.gate.outputs.retry == 'true'
         continue-on-error: true
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          CLOSE_ONLY: ${{ github.event.schedule == '30 10 * * *' && '1' || '' }}
         run: bash .github/scripts/skip_issues.sh
