@@ -5,7 +5,7 @@
     "base"
   ],
   "start": "1963-01-01",
-  "end": "2026-04-01",
+  "end": "2026-05-01",
   "title": {
     "en": "Producer & import prices"
   },
@@ -18,7 +18,7 @@
   "license": "fso",
   "frequency": "monthly",
   "topic": "Prices",
-  "updated": "2026-05-12",
+  "updated": "2026-06-15",
   "dimensions": {
     "base": {
       "label": {
@@ -79,5 +79,5 @@
     "base": "2020"
   },
   "description": "Producer and import prices for Switzerland, monthly back to 1963. The seven \"series\" are the same total index expressed on seven successive original base years (1963, 1993, 2003, 2010, 2015, 2020, 2025), each a re-indexed view of the same Producer Price Index, all fully populated over the whole span. This mirrors the old parser's idx_type dimension. Longest price history in the catalog.",
-  "fetched_utc": "2026-06-14 09:25:21"
+  "fetched_utc": "2026-06-15 10:28:58"
 }
