@@ -1,6 +1,6 @@
 # dataseries-data
 
-[![data health](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/cynkra/dataseries-data/main/data/badge.json)](STATUS.md)
+[![data health](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/cynkra/dataseries-data/main/data/badge.json)](UPTIME.md)
 
 **The dataseries open-data product: source of truth for the Swiss economic data
 universe.** This repo holds the ETL that fetches the data, the data files
