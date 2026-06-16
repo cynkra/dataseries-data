@@ -20,5 +20,5 @@
   "concept": "Business cycle & sentiment / Leading barometer",
   "canonical": true,
   "description": "The headline Swiss leading indicator for the business cycle, published monthly near month-end. A single composite index built from a large basket of underlying predictors, designed to anticipate the year-over-year growth rate of Swiss GDP a few months ahead. Normalised so the long-run mean sits around 100; readings above 100 signal above-average expected growth, below 100 the reverse. Plain one-column time series, no dimensions, monthly back to 1991. Note: the per-key ts endpoint used here gates most keys behind HTTP 412, but the public sets endpoint is open for the curated OGD sets — see ch_kof_esi (R/source_kof.R::kof_set_fetch), which unlocks the wider open KOF family (ogd_ch.kof.esi, ogd_ch.kof.globalbaro, ogd_ch.kof.bts_total).",
-  "fetched_utc": "2026-06-15 10:28:57"
+  "fetched_utc": "2026-06-16 10:03:59"
 }
