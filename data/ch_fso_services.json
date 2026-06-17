@@ -149,5 +149,5 @@
     "INDICATOR_KE": "UTOT"
   },
   "description": "The turnover index for the tertiary (services) sector, completing the sector-turnover triad alongside retail (ch_fso_retail) and industry/construction (ch_fso_production). Same FSO SDMX flow as production (DF_KEU_Q1), disjoint NOGA codes. History is genuinely short — services turnover is a newer FSO product, base 2021 = 100; the secondary-sector codes in the same flow reach back to 1999, the tertiary ones do not.",
-  "fetched_utc": "2026-06-16 10:03:59"
+  "fetched_utc": "2026-06-17 09:54:11"
 }
