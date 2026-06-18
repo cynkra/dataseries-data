@@ -64,17 +64,23 @@ don't bound a *broad* outage.
 
 **Tier A — cheap, targeted, no architecture change:**
 
-- **[SHIPPED 2026-06-18] Classify skips by reachability; group transient upstream outages.**
-  Not every skip is our downtime or a format break. `R/uptime.R` now tags each skip
-  transient (HTTP 429/5xx, or a read timeout *after* connect — a reachable-but-broken
-  upstream) vs hard (DNS / refused / reset / *connect*-timeout = the IP block; a 4xx; a
-  parse error) and writes `data/skips.json`. Transient skips are **excused from
-  `run_through`** (an upstream provider outage no longer breaks *our* uptime streak/badge)
-  and **grouped into one auto-closing `etl-outage` issue** instead of N "act ASAP" alarms;
-  hard skips keep the per-source `etl-skip` alarm. A transient skip persisting **≥ 2
-  consecutive days** escalates to hard, so a block disguised as a 503 still surfaces (≤ 1-day
-  delay). Fixes the 2026-06-18 BFS-DB-outage noise (12 issues + a red streak for a non-our
-  -fault event) and the 2026-06-12 single false "format change" alarm. See that incident.
+- **[SHIPPED 2026-06-18] Three metrics + issue-only-when-actionable.** Separated "is OUR
+  automation healthy" from "did upstream deliver", and stopped filing issues for things we
+  can't fix. `R/uptime.R` now records THREE daily metrics (was two): **pipeline** (did the
+  run complete — green through any upstream outage; red only on cancel/crash), **run-through**
+  (did every source fetch this run — red on ANY skip; the honest upstream signal), and
+  **recently_updated** (freshness). Three shields badges at the top of the README, each
+  linking to its overview (a red one lands you on the failing list). Issues are now decoupled
+  from the metrics: a skip is classified network/provider (5xx / timeout / connection
+  failure — *nothing to do*) vs actionable (4xx / parse error — *our* parser must adapt).
+  Network skips are **dashboard-only** and open ONE grouped `etl-outage` issue only after
+  they persist **≥ ALERT_AFTER_DAYS (3)**; actionable breaks open a per-source `etl-skip`
+  issue immediately. Routing handed to `skip_issues.sh` via `data/skips.json`. Fixes the
+  2026-06-18 BFS-outage noise (12 "act ASAP" issues + a red headline for a non-our-fault
+  event) and the 2026-06-12 false "format change" alarm. (Supersedes the first-cut
+  reachability/transient-vs-hard design from earlier the same day — same evidence, cleaner
+  model: the metric split removes the need to excuse skips from a streak at all.) See the
+  2026-06-18 incident.
 - **Per-host circuit breaker.** After host H fails K times this run, short-circuit
   H's remaining sources instantly instead of re-paying the full timeout each.
   Directly kills the cascade (outages correlate by host). Needs host attribution
@@ -207,25 +213,34 @@ Act on a candidate solution when one of these crosses:
   backend is down" with "our scraper failed".
 - **Blast radius:** 12 datasets 1 day stale (recovered on retry / next clean BFS day); 12
   noise `etl-skip` issues; run-through 30-day dropped (87.5%) for a non-our-fault event.
-- **Action taken this time → SHIPPED a mitigation (not just a wait-it-out):** classify every
-  skip by **reachability** and route it (`R/uptime.R` writes `data/skips.json`;
-  `.github/scripts/skip_issues.sh` presents it):
-  - **transient upstream** (HTTP 429/5xx, or a read timeout *after* connect) → excused from
-    `run_through` and grouped into ONE auto-closing `etl-outage` umbrella issue that explains
-    what a 503 means and that the data is preserved;
-  - **hard** (DNS / connection refused-reset / *connect*-phase timeout = the IP-block
-    signature; or a 4xx; or a parse error) → unchanged: breaks the streak, opens a
-    per-source `etl-skip` alarm;
-  - **escalation backstop:** a transient skip that persists **≥ 2 consecutive days** (from
-    `uptime.csv` history) is promoted to a hard skip — so a block masquerading as a 503 (or a
-    tarpit hanging the body) still surfaces loudly, with at most a 1-day delay.
-  Net for today: all 12 → umbrella, run-through **green**, badge `all green (12 upstream
-  skip(s))`. The reachability line is deliberate: a server that *answers* (or accepts a
-  socket then hangs) is a passing outage; a socket we **can't open** is the runner-IP block
-  and stays a hard alarm.
-- **Pattern bucket:** broad-outage (single provider, upstream backend) — distinct from the
-  06-10/06-11/06-13 runner-IP-block bucket; this one is *reachable-but-broken*, not
-  *unreachable*.
+- **The outage then deepened (later runs).** Re-dispatches through the evening kept failing;
+  by ~21:00 UTC the DAM API went from clean `HTTP 503` to a **connect timeout** from the
+  runner (`Failed to connect ... port 443 after 15001 ms`) — while the same host stayed
+  **reachable from a Swiss IP** (503, ~30 ms connect). So BOTH things were live: the BFS DB
+  outage (503 to anyone who connects) AND the admin.ch Azure-IP block (some runner IPs
+  null-routed). The run that drew a blocked IP saw connect-timeouts, not 503s. This evolution
+  is what killed the first design idea (excuse-by-reachability): the *same* incident produced
+  503s on one run and connect-timeouts on the next, so reachability is too unstable a hook to
+  gate a streak on.
+- **Action taken this time → SHIPPED (final design): three metrics + issue-only-when-actionable.**
+  - **Metrics (`R/uptime.R`, now 3 not 2):** **pipeline** (did OUR run complete — green
+    through any outage/block; red only on cancel/crash), **run-through** (did every source
+    fetch this run — red on ANY skip; the honest upstream signal), **recently_updated**
+    (freshness). Three shields badges at the top of the README, each linking to its overview.
+    The "green streak we don't want to break" is now **pipeline**, which is independent of
+    upstream by construction — no skip needs to be *excused* from anything.
+  - **Issues (`data/skips.json` → `skip_issues.sh`), decoupled from metrics:** a skip is
+    **network/provider** (5xx / timeout / connection failure — nothing to do) or
+    **actionable** (4xx / parse error — our parser must adapt). Network skips are
+    **dashboard-only** and file ONE grouped `etl-outage` issue only after persisting **≥ 3
+    days** (`ALERT_AFTER_DAYS`); actionable breaks open a per-source `etl-skip` issue at once.
+  - Net for today: pipeline **green**, run-through **red** (12 not fetched), freshness
+    **green**; the 12 per-source issues are **closed** (provider-side, dashboard-only) and
+    nothing is filed unless FSO stays down ≥ 3 days. Matches the reality: our automation is
+    fine, the provider isn't, and there's nothing for us to do yet.
+- **Pattern bucket:** broad-outage (single provider, upstream backend) that later overlapped
+  the 06-10/06-11/06-13 runner-IP-block bucket. The new metric/alert split is agnostic to
+  which: both redden run-through, neither reddens pipeline, neither files an issue for < 3 days.
 
 ### 2026-06-13 — admin.ch block returns (3rd cancel in 4 days); afternoon retry can't rescue a *cancelled* morning
 

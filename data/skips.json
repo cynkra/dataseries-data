@@ -1,99 +1,88 @@
 {
   "ts": "2026-06-18T21:15:10Z",
+  "alert_after_days": 3,
   "skips": [
     {
       "id": "ch_fso_cpi",
       "error": "Failed to perform HTTP request. Caused by error in `curl::curl_fetch_memory()`: ! Timeout was reached [dam-api.bfs.admin.ch]: Failed to connect to dam-api.bfs.admin.ch port 443 after 15001 ms: Timeout was reached",
-      "route": "alarm",
-      "transient": false,
+      "route": "outage",
       "escalated": false,
       "consecutive_days": 1
     },
     {
       "id": "ch_fso_ppi",
       "error": "Failed to perform HTTP request. Caused by error in `curl::curl_fetch_memory()`: ! Timeout was reached [dam-api.bfs.admin.ch]: Failed to connect to dam-api.bfs.admin.ch port 443 after 15002 ms: Timeout was reached",
-      "route": "alarm",
-      "transient": false,
+      "route": "outage",
       "escalated": false,
       "consecutive_days": 1
     },
     {
       "id": "ch_fso_wage_idx",
       "error": "Failed to perform HTTP request. Caused by error in `curl::curl_fetch_memory()`: ! Timeout was reached [dam-api.bfs.admin.ch]: Failed to connect to dam-api.bfs.admin.ch port 443 after 15002 ms: Timeout was reached",
-      "route": "alarm",
-      "transient": false,
+      "route": "outage",
       "escalated": false,
       "consecutive_days": 1
     },
     {
       "id": "ch_fso_pop",
       "error": "Failed to perform HTTP request. Caused by error in `curl::curl_fetch_memory()`: ! Timeout was reached [dam-api.bfs.admin.ch]: Failed to connect to dam-api.bfs.admin.ch port 443 after 15002 ms: Timeout was reached",
-      "route": "alarm",
-      "transient": false,
+      "route": "outage",
       "escalated": false,
       "consecutive_days": 1
     },
     {
       "id": "ch_fso_unemp_rate",
       "error": "Failed to perform HTTP request. Caused by error in `curl::curl_fetch_memory()`: ! Timeout was reached [dam-api.bfs.admin.ch]: Failed to connect to dam-api.bfs.admin.ch port 443 after 15001 ms: Timeout was reached",
-      "route": "alarm",
-      "transient": false,
+      "route": "outage",
       "escalated": false,
       "consecutive_days": 1
     },
     {
       "id": "ch_fso_labour_productivity",
       "error": "Failed to perform HTTP request. Caused by error in `curl::curl_fetch_memory()`: ! Timeout was reached [dam-api.bfs.admin.ch]: Failed to connect to dam-api.bfs.admin.ch port 443 after 15002 ms: Timeout was reached",
-      "route": "alarm",
-      "transient": false,
+      "route": "outage",
       "escalated": false,
       "consecutive_days": 1
     },
     {
       "id": "ch_fso_ets",
       "error": "Failed to perform HTTP request. Caused by error in `curl::curl_fetch_memory()`: ! Timeout was reached [dam-api.bfs.admin.ch]: Failed to connect to dam-api.bfs.admin.ch port 443 after 15002 ms: Timeout was reached",
-      "route": "alarm",
-      "transient": false,
+      "route": "outage",
       "escalated": false,
       "consecutive_days": 1
     },
     {
       "id": "ch_fso_gfcf_detail",
       "error": "Failed to perform HTTP request. Caused by error in `curl::curl_fetch_memory()`: ! Timeout was reached [dam-api.bfs.admin.ch]: Failed to connect to dam-api.bfs.admin.ch port 443 after 15002 ms: Timeout was reached",
-      "route": "alarm",
-      "transient": false,
+      "route": "outage",
       "escalated": false,
       "consecutive_days": 1
     },
     {
       "id": "ch_fso_hours_worked",
       "error": "Failed to perform HTTP request. Caused by error in `curl::curl_fetch_memory()`: ! Timeout was reached [dam-api.bfs.admin.ch]: Failed to connect to dam-api.bfs.admin.ch port 443 after 15002 ms: Timeout was reached",
-      "route": "alarm",
-      "transient": false,
+      "route": "outage",
       "escalated": false,
       "consecutive_days": 1
     },
     {
       "id": "ch_fso_gdp_region",
       "error": "Failed to perform HTTP request. Caused by error in `curl::curl_fetch_memory()`: ! Timeout was reached [dam-api.bfs.admin.ch]: Failed to connect to dam-api.bfs.admin.ch port 443 after 15002 ms: Timeout was reached",
-      "route": "alarm",
-      "transient": false,
+      "route": "outage",
       "escalated": false,
       "consecutive_days": 1
     },
     {
       "id": "ch_fso_construction_prices",
       "error": "Failed to perform HTTP request. Caused by error in `curl::curl_fetch_memory()`: ! Timeout was reached [dam-api.bfs.admin.ch]: Failed to connect to dam-api.bfs.admin.ch port 443 after 15002 ms: Timeout was reached",
-      "route": "alarm",
-      "transient": false,
+      "route": "outage",
       "escalated": false,
       "consecutive_days": 1
     },
     {
       "id": "ch_fso_trade_partner",
       "error": "Failed to perform HTTP request. Caused by error in `curl::curl_fetch_disk()`: ! Timeout was reached [dam-api.bfs.admin.ch]: Failed to connect to dam-api.bfs.admin.ch port 443 after 15002 ms: Timeout was reached",
-      "route": "alarm",
-      "transient": false,
+      "route": "outage",
       "escalated": false,
       "consecutive_days": 1
     }

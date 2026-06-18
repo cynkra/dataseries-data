@@ -3,29 +3,31 @@
 # Rolls the per-run / per-dataset detail up into two binary daily metrics and a
 # one-row-per-day history we can plot for long-term uptime and incident fix-speed:
 #
-#   run_through      : did the scrape complete with zero HARD skips? (green/red)
+#   pipeline         : did OUR ETL run to completion today? (green/red) -- stays green
+#                      through a provider outage; red only when a run cancels/crashes.
+#   run_through      : did every source fetch cleanly this run? (green/red) -- the honest
+#                      upstream-delivery signal; ANY skip (503 or IP block) reddens it.
 #   recently_updated : is everything that's expected to update fresh? (green/red)
 #
-# A skip is the LEADING signal (a parser breaks the day a source changes format);
-# staleness is the LAGGING one (a source goes quiet without erroring). Only a stale
-# (red) dataset makes `recently_updated` red. The two are deliberately binary: an
-# uptime metric wants a clean trip line, and the immediate skip alarm now covers
-# early warning.
+# The three answer three different questions: pipeline = "is our automation healthy",
+# run_through = "did upstream deliver", recently_updated = "is the data current". A
+# provider outage reddens run_through but NOT pipeline -- our workflow did its job (kept
+# previous data, reported), the source just didn't deliver.
 #
-# Not every skip is OUR downtime: a transient upstream HTTP 5xx (the source is reachable
-# but returns 503/502/504/429) is EXCUSED from run_through and routed to one grouped
-# `etl-outage` issue, while a hard failure (4xx, transport failure, parse error, or a 5xx
-# that persists >= ESCALATE_DAYS) breaks the streak and opens a per-source `etl-skip`
-# alarm. See the classification block below; the routing is handed to skip_issues.sh via
-# data/skips.json.
+# Issues are separate from metrics. Most fetch failures are NOT ours to fix: a
+# network/provider error (5xx / timeout / connection failure) is shown on the dashboard and
+# opens a grouped `etl-outage` issue ONLY after it persists >= ALERT_AFTER_DAYS; an
+# actionable break (a 4xx or a parse error) opens a per-source `etl-skip` issue immediately.
+# The routing is handed to skip_issues.sh via data/skips.json.
 #
 # Reads  : data/run.json (R/pipeline.R) + data/status.json (R/health.R)
-# Writes : data/uptime.csv  (append/upsert one row per day -- the plottable history)
-#          data/uptime.svg  (committed status-timeline chart, no extra deps)
-#          data/badge.json  (shields.io endpoint badge: overall health, top of README)
-#          data/skips.json   (per-id skip routing for skip_issues.sh: umbrella vs alarm)
-#          UPTIME.md         (rendered dashboard: verdicts, uptime %, recent table)
-#          README.md         (the <!-- DATA-HEALTH --> summary block)
+# Writes : data/uptime.csv          (append/upsert one row per day -- the plottable history)
+#          data/uptime.svg          (committed status-timeline chart, no extra deps)
+#          data/badge-{pipeline,upstream,fresh}.json  (the 3 shields badges atop the README)
+#          data/badge.json          (legacy overall badge, kept for external references)
+#          data/skips.json          (per-id skip routing for skip_issues.sh: alarm vs outage)
+#          UPTIME.md                (rendered dashboard: verdicts, uptime %, recent table)
+#          README.md                (the <!-- DATA-HEALTH --> summary block)
 #
 # Run: Rscript R/uptime.R   (after R/pipeline.R and R/health.R; the daily Action runs all three)
 
@@ -68,32 +70,32 @@ n_datasets <- as.integer(status$counts$total %||% length(status$datasets %||% li
 today <- format(Sys.Date())
 CSV   <- file.path(DATA, "uptime.csv")
 
-# --- classify skips: transient upstream outage vs hard ----------------------
-# A skip is NOT automatically OUR downtime. The line is REACHABILITY: was the source host
-# reachable but unable to serve usable data for a passing reason, or could we not reach /
-# parse it at all?
-#
-#   TRANSIENT (excused from the streak, grouped into one auto-closing umbrella issue):
-#     - an HTTP 429/5xx response (the host answered "temporarily unavailable / throttled" --
-#       e.g. the 2026-06-18 BFS database outage: 503s across the FSO DAM API), or
-#     - a read/body timeout AFTER the TCP connection was established ("Operation timed out
-#       after N ms with M bytes received" -- an alive-but-overloaded host that hung past
-#       req_timeout; same outage, just slower than a clean 503).
-#   HARD (breaks the streak, opens a per-source `etl-skip` alarm):
-#     - we could not REACH the host: DNS failure, connection refused/reset, or a *connect*-
-#       phase timeout -- the admin.ch runner-IP-block signature, a silent TCP drop at the
-#       connecttimeout (see dev/etl-reliability-log.md); or
-#     - a 4xx (403 block / 404 moved), or the payload failed to parse (a format break).
-# A server that owes us a response is a passing outage; a socket we can't open, or a
-# changed payload, is a real problem.
-#
-# "Transient" has an expiry. A transient skip that persists for >= ESCALATE_DAYS consecutive
-# days is no longer a passing blip (it could be a WAF/firewall answering 503, or a tarpit
-# hanging the body, to mask a block), so it is PROMOTED to a hard skip. A genuinely
-# persistent problem therefore always surfaces; the worst case is a <= 1-day delay.
-TRANSIENT_RE      <- "HTTP (429|500|502|503|504)\\b|Operation timed out after"
-HARD_TRANSPORT_RE <- "Could not resolve host|Failed to connect|Couldn't connect|Connection refused|Connection reset|Connection timed out"
-ESCALATE_DAYS     <- 2L
+# --- three daily metrics ----------------------------------------------------
+#   pipeline         : did OUR ETL run to completion today? GREEN whenever a run writes a
+#                      row (if this script is executing, the pipeline processed); a missing
+#                      day (cancel / crash) is RED via gap-fill. This is independent of
+#                      whether upstream delivered -- the streak that does NOT break for a
+#                      provider outage or an IP block.
+#   run_through      : did every source fetch cleanly THIS run? RED on ANY skip. The honest
+#                      upstream-delivery signal (a 503 outage and a runner-IP block both
+#                      redden it -- it means "we did not get fresh data this run").
+#   recently_updated : is everything expected to update fresh? RED on stale data (lagging).
+pipeline         <- GREEN
+run_through      <- if (length(skipped_ids)) RED else GREEN
+# recently_updated is computed above from the health board.
+
+# --- classify skips for ALERTING (not for the metrics) ----------------------
+# The metrics above don't care WHY a source failed. Classification only decides what, if
+# anything, to file an ISSUE about -- because most fetch failures are not ours to fix:
+#   network/provider error (HTTP 429/5xx, a timeout, a connection failure -- a provider
+#     outage like the 2026-06-18 BFS DB outage, or the admin.ch runner-IP block): NOTHING to
+#     do on our side. It shows on the dashboard (red "upstream" badge -> the current-run
+#     list) and opens an issue ONLY if it persists >= ALERT_AFTER_DAYS, grouped into one
+#     `etl-outage` issue. A short outage never files an issue.
+#   actionable break (a 4xx, or a parse / validation error -- the source changed in a way
+#     OUR parser must adapt to): opens a per-source `etl-skip` issue immediately.
+NETWORK_RE       <- "HTTP (429|5[0-9][0-9])|Operation timed out|Timeout was reached|Failed to perform HTTP request|Could not resolve host|Failed to connect|Couldn't connect|Connection (refused|reset|timed out)"
+ALERT_AFTER_DAYS <- 3L
 
 # Consecutive prior days (strictly before today) an id appeared in uptime.csv's skips;
 # today counts as +1, so a first-day skip has consecutive_days == 1. Reading the on-disk
@@ -111,32 +113,26 @@ prior_streak <- function(id) {
   n
 }
 
-skip_transient <- vapply(skipped_ids, function(id) {
-  e <- skip_errors[[id]] %||% ""
-  grepl(TRANSIENT_RE, e) && !grepl(HARD_TRANSPORT_RE, e)   # a connect-phase failure is never transient
-}, logical(1))
+skip_network   <- vapply(skipped_ids, function(id) grepl(NETWORK_RE, skip_errors[[id]] %||% ""), logical(1))
 skip_consec    <- vapply(skipped_ids, function(id) prior_streak(id) + 1L, integer(1))
-skip_escalated <- skip_transient & (skip_consec >= ESCALATE_DAYS)
-skip_hard      <- (!skip_transient) | skip_escalated
-names(skip_transient) <- names(skip_consec) <- names(skip_escalated) <- names(skip_hard) <- skipped_ids
+skip_escalated <- skip_network & (skip_consec >= ALERT_AFTER_DAYS)   # a network outage stuck too long
+names(skip_network) <- names(skip_consec) <- names(skip_escalated) <- skipped_ids
 
-hard_ids     <- skipped_ids[skip_hard]    # break the streak + per-source `etl-skip` alarm
-upstream_ids <- skipped_ids[!skip_hard]   # transient & not escalated -> umbrella, excused
-
-# Run-through measures OUR pipeline: a transient upstream 5xx does not count as downtime.
-run_through <- if (length(hard_ids)) RED else GREEN
+actionable_ids <- skipped_ids[!skip_network]   # per-source `etl-skip` issue NOW
+network_ids    <- skipped_ids[skip_network]    # dashboard-only unless escalated
+escalated_ids  <- skipped_ids[skip_escalated]  # network skips that have crossed ALERT_AFTER_DAYS
 
 # Sidecar consumed by .github/scripts/skip_issues.sh (runs right after this in both
-# etl.yml and etl-retry.yml): the routing decision per skipped id, so the issue script
-# stays a thin presenter and the classification lives in one place.
+# etl.yml and etl-retry.yml). route="alarm" -> per-source issue now (actionable break);
+# route="outage" -> dashboard-only, grouped issue ONLY once escalated (>= ALERT_AFTER_DAYS).
 writeLines(
   toJSON(list(
-    ts = run$ts %||% format(Sys.time(), tz = "UTC", "%Y-%m-%dT%H:%M:%SZ"),
+    ts               = run$ts %||% format(Sys.time(), tz = "UTC", "%Y-%m-%dT%H:%M:%SZ"),
+    alert_after_days = ALERT_AFTER_DAYS,
     skips = lapply(skipped_ids, function(id) list(
       id               = id,
       error            = unname(skip_errors[[id]] %||% ""),
-      route            = if (isTRUE(skip_hard[[id]])) "alarm" else "umbrella",
-      transient        = unname(skip_transient[[id]]),
+      route            = if (isTRUE(skip_network[[id]])) "outage" else "alarm",
       escalated        = unname(skip_escalated[[id]]),
       consecutive_days = unname(skip_consec[[id]])
     ))
@@ -147,11 +143,12 @@ writeLines(
 # --- data/uptime.csv : upsert today's row -----------------------------------
 # One row per day. Re-running on the same day replaces the row (idempotent, like the
 # dedup commit in the workflow), so a manual re-run never double-counts.
-COLS <- c("date", "run_through", "n_skipped", "skipped_ids",
+COLS <- c("date", "pipeline", "run_through", "n_skipped", "skipped_ids",
           "recently_updated", "n_stale", "stale_ids", "n_datasets")
 
 today_row <- data.frame(
   date             = today,
+  pipeline         = pipeline,
   run_through      = run_through,
   n_skipped        = length(skipped_ids),
   skipped_ids      = paste(skipped_ids, collapse = ";"),
@@ -167,6 +164,10 @@ hist <- if (file.exists(CSV)) {
 } else {
   today_row[0, , drop = FALSE]
 }
+# Back-fill the pipeline column for rows written before it existed: a recorded row means a
+# run completed that day, so pipeline was green. Then pin to the canonical column set.
+if (!"pipeline" %in% names(hist)) hist$pipeline <- GREEN
+hist <- hist[, COLS, drop = FALSE]
 hist <- hist[setdiff(hist$date %||% character(0), NA) != today, , drop = FALSE]
 hist <- rbind(hist, today_row)
 hist <- hist[order(as.Date(hist$date)), , drop = FALSE]
@@ -177,8 +178,10 @@ hist$date <- as.Date(hist$date)
 
 # Fill calendar gaps before computing anything. A day with no recorded row sits
 # BETWEEN two recorded days (the tracker ran before and after, but that day's ETL
-# did not complete). The two metrics treat that gap differently:
-#   run_through      : DOWN (red) -- a scheduled run that didn't complete is downtime.
+# did not complete). The metrics treat that gap differently:
+#   pipeline         : DOWN (red) -- the whole point of this metric is "did the run happen";
+#                      a missing row IS a run that did not complete.
+#   run_through      : DOWN (red) -- a scheduled run that didn't complete fetched nothing.
 #   recently_updated : carry the last known state forward -- freshness persists; a
 #                      missed run is not a day the data silently went stale, so if the
 #                      data was fresh either side of the gap it was fresh that day too.
@@ -201,6 +204,7 @@ fill_daily <- function(col, gap) {
 }
 
 daily <- list(
+  pipeline         = fill_daily("pipeline", RED),
   run_through      = fill_daily("run_through", RED),
   recently_updated = fill_daily("recently_updated", "carry")
 )
@@ -230,7 +234,7 @@ longest_incident <- function(col) {
   max(c(0L, r$lengths[r$values]))
 }
 
-stats <- lapply(c(run_through = "run_through", recently_updated = "recently_updated"),
+stats <- lapply(c(pipeline = "pipeline", run_through = "run_through", recently_updated = "recently_updated"),
   function(col) list(
     up30    = uptime_pct(col, 30),
     up90    = uptime_pct(col, 90),
@@ -239,10 +243,11 @@ stats <- lapply(c(run_through = "run_through", recently_updated = "recently_upda
   ))
 
 # --- data/uptime.svg : hand-rolled status timeline (no plotting deps) --------
-# Last 90 calendar days, two rows of cells (run-through / recently-updated). Cells
-# are gap-filled the same way the percentages are (see `daily` above): a missed day
-# inside the tracked span is red on run-through (downtime) and carries the last known
-# freshness on recently-updated. Days outside the tracked span render grey (no data).
+# Last 90 calendar days, three rows of cells (pipeline / run-through / recently-updated).
+# Cells are gap-filled the same way the percentages are (see `daily` above): a missed day
+# inside the tracked span is red on pipeline + run-through (the run didn't happen) and
+# carries the last known freshness on recently-updated. Days outside the tracked span
+# render grey (no data).
 write_svg <- function(path) {
   col_green <- "#2ea44f"; col_red <- "#cf222e"; col_grey <- "#d0d7de"
   ndays <- 90L
@@ -256,6 +261,7 @@ write_svg <- function(path) {
     }, "")
   }
   rows <- list(
+    list(label = "Pipeline",         colors = lookup("pipeline")),
     list(label = "Run-through",      colors = lookup("run_through")),
     list(label = "Recently updated", colors = lookup("recently_updated"))
   )
@@ -273,7 +279,8 @@ write_svg <- function(path) {
   parts <- c(parts, sprintf(
     '<text x="20" y="30" font-size="18" font-weight="600" fill="#1f2328">Uptime — last %d days</text>', ndays))
   parts <- c(parts, sprintf(
-    '<text x="20" y="50" font-size="12" fill="#656d76">Run-through %s%% (30d) · Recently updated %s%% (30d) · generated %s</text>',
+    '<text x="20" y="50" font-size="12" fill="#656d76">Pipeline %s%% · Run-through %s%% · Recently updated %s%% (30d) · generated %s</text>',
+    esc(format(stats$pipeline$up30 %||% "—")),
     esc(format(stats$run_through$up30 %||% "—")),
     esc(format(stats$recently_updated$up30 %||% "—")), today))
 
@@ -327,18 +334,17 @@ md <- c(
   "",
   sprintf("_Last run: **%s**. Auto-generated by `R/uptime.R` (daily GitHub Action). Do not edit by hand._", checked),
   "",
-  "Two binary daily metrics, one row per day (history in [`data/uptime.csv`](data/uptime.csv)):",
+  "Three binary daily metrics, one row per day (history in [`data/uptime.csv`](data/uptime.csv)):",
   "",
-  sprintf("- %s **Run-through** — the scrape completed with %s.%s",
+  sprintf("- %s **Pipeline** — %s.%s",
+          emoji(pipeline),
+          if (pipeline == GREEN) "the daily ETL ran to completion (this is **our** automation; it stays green even when a source is down)"
+          else "the run did not complete",
+          incident_note(stats$pipeline)),
+  sprintf("- %s **Run-through (upstream)** — %s.%s",
           emoji(run_through),
-          if (run_through == GREEN) {
-            if (length(upstream_ids))
-              sprintf("no blocking skips (%d transient upstream skip(s), HTTP 5xx — excused)", length(upstream_ids))
-            else "zero skips"
-          } else {
-            sprintf("%d blocking skip(s)%s", length(hard_ids),
-                    if (length(upstream_ids)) sprintf(" + %d upstream (excused)", length(upstream_ids)) else "")
-          },
+          if (run_through == GREEN) "every source fetched cleanly this run"
+          else sprintf("%d source(s) failed to fetch — **upstream did not deliver** (previous data kept)", length(skipped_ids)),
           incident_note(stats$run_through)),
   sprintf("- %s **Recently updated** — %s.%s",
           emoji(recently_updated),
@@ -348,7 +354,10 @@ md <- c(
   "",
   "| Metric | Uptime 30d | Uptime 90d | Worst incident |",
   "|---|---:|---:|---:|",
-  sprintf("| Run-through | %s%% | %s%% | %d d |",
+  sprintf("| Pipeline | %s%% | %s%% | %d d |",
+          format(stats$pipeline$up30 %||% "—"), format(stats$pipeline$up90 %||% "—"),
+          stats$pipeline$longest),
+  sprintf("| Run-through (upstream) | %s%% | %s%% | %d d |",
           format(stats$run_through$up30 %||% "—"), format(stats$run_through$up90 %||% "—"),
           stats$run_through$longest),
   sprintf("| Recently updated | %s%% | %s%% | %d d |",
@@ -359,25 +368,28 @@ md <- c(
   ""
 )
 
-# Current-run skip detail (this replaces the old SKIPS.md). A HARD skip opens a per-source
-# `etl-skip` issue (the earliest sign a source changed format / is blocked); transient
-# upstream 5xx skips are grouped into one auto-closing `etl-outage` issue and excused.
+# Current-run skip detail. Most fetch failures are NOT ours to fix: a network/provider
+# error (5xx, timeout, connection failure) is shown here and only opens a grouped
+# `etl-outage` issue after it persists >= ALERT_AFTER_DAYS. An actionable break (a 4xx, or
+# a parse/validation error) opens a per-source `etl-skip` issue immediately.
 md <- c(md, "## Current run-through")
 if (!length(skipped_ids)) {
   md <- c(md, "", "\U00002705 Clean run-through — every source fetched and validated.")
 } else {
-  if (length(hard_ids)) {
+  if (length(network_ids)) {
     md <- c(md, "",
-      sprintf("\U0001F534 %d source(s) hard-failed this run — each opens an `etl-skip` issue:", length(hard_ids)),
+      sprintf("\U000023F3 %d source(s) hit a network/provider error this run — **nothing to do on our side** (data preserved). An issue opens only if this persists ≥ %d days:",
+              length(network_ids), ALERT_AFTER_DAYS),
       "")
-    for (id in hard_ids) md <- c(md, sprintf("- `%s` — %s%s", id, skip_errors[[id]] %||% "",
-      if (isTRUE(skip_escalated[[id]])) sprintf(" *(escalated: %d consecutive days)*", skip_consec[[id]]) else ""))
+    for (id in network_ids) md <- c(md, sprintf("- `%s` — %s%s", id, skip_errors[[id]] %||% "",
+      if (isTRUE(skip_escalated[[id]])) sprintf(" **— escalated: %d consecutive days, see `etl-outage` issue**", skip_consec[[id]])
+      else sprintf(" *(day %d)*", skip_consec[[id]])))
   }
-  if (length(upstream_ids)) {
+  if (length(actionable_ids)) {
     md <- c(md, "",
-      sprintf("\U000023F3 %d source(s) hit a transient upstream error (HTTP 5xx) — data preserved, grouped into one auto-closing `etl-outage` issue, NOT counted as downtime:", length(upstream_ids)),
+      sprintf("\U0001F534 %d source(s) failed in a way **we must fix** (4xx / parse error) — each opens an `etl-skip` issue:", length(actionable_ids)),
       "")
-    for (id in upstream_ids) md <- c(md, sprintf("- `%s` — %s", id, skip_errors[[id]] %||% ""))
+    for (id in actionable_ids) md <- c(md, sprintf("- `%s` — %s", id, skip_errors[[id]] %||% ""))
   }
 }
 
@@ -397,9 +409,10 @@ if (!length(red_ids)) {
 # carried forward) instead of silently vanishing. Skip/stale counts are "·" on a day
 # with no recorded run.
 md <- c(md, "", "## Recent history", "",
-  "| Date | Run-through | Recently updated | Skips | Stale |",
-  "|---|---|---|---:|---:|")
+  "| Date | Pipeline | Run-through | Recently updated | Skips | Stale |",
+  "|---|---|---|---|---:|---:|")
 cal <- data.frame(date = span, stringsAsFactors = FALSE)
+cal$pipeline         <- unname(daily$pipeline)
 cal$run_through      <- unname(daily$run_through)
 cal$recently_updated <- unname(daily$recently_updated)
 m <- match(cal$date, hist$date)
@@ -409,26 +422,44 @@ recent <- tail(cal, 30L)
 recent <- recent[order(recent$date, decreasing = TRUE), , drop = FALSE]
 for (i in seq_len(nrow(recent))) {
   r <- recent[i, ]
-  md <- c(md, sprintf("| %s | %s | %s | %s | %s |",
-    format(r$date), emoji(r$run_through), emoji(r$recently_updated),
+  md <- c(md, sprintf("| %s | %s | %s | %s | %s | %s |",
+    format(r$date), emoji(r$pipeline), emoji(r$run_through), emoji(r$recently_updated),
     if (is.na(r$n_skipped)) "\U000000B7" else r$n_skipped,
     if (is.na(r$n_stale))   "\U000000B7" else r$n_stale))
 }
 writeLines(md, file.path(REPO, "UPTIME.md"))
 
-# --- data/badge.json : shields.io endpoint badge (overall health, top of README) ---
-# One green-or-red verdict over BOTH metrics: green only when the scrape ran clean
-# AND nothing is stale. Read live by the shields badge at the top of the README.
-overall_green <- run_through == GREEN && recently_updated == GREEN
-badge_msg <- if (overall_green) {
-  if (length(upstream_ids)) sprintf("all green (%d upstream skip(s))", length(upstream_ids)) else "all green"
-} else paste(c(
-  if (recently_updated == RED) sprintf("%d stale", length(red_ids)),
-  if (run_through == RED)      sprintf("%d skip(s)", length(hard_ids))
-), collapse = ", ")
+# --- shields.io endpoint badges (the three badges at the top of the README) ----------
+# One verdict per metric, written independently so a provider outage reddens only
+# "upstream" while "pipeline" stays green. The README badges link each to its overview
+# (a red one lands you on the list of what's wrong).
+write_badge <- function(file, label, ok, msg_ok, msg_bad) {
+  writeLines(
+    toJSON(list(schemaVersion = 1L, label = label,
+                message = if (ok) msg_ok else msg_bad,
+                color   = if (ok) "brightgreen" else "red"),
+            auto_unbox = TRUE),
+    file.path(DATA, file))
+}
+write_badge("badge-pipeline.json", "pipeline", pipeline == GREEN,
+            "ok", sprintf("down %dd", stats$pipeline$current))
+write_badge("badge-upstream.json", "upstream", run_through == GREEN,
+            "all fetched", sprintf("%d not fetched", length(skipped_ids)))
+write_badge("badge-fresh.json", "data freshness", recently_updated == GREEN,
+            "all fresh", sprintf("%d stale", length(red_ids)))
+
+# Legacy single "data health" badge kept for any external reference. Headline stays green
+# while OUR pipeline runs and data is fresh; a passing upstream blip is not a product fault.
+overall_green <- pipeline == GREEN && recently_updated == GREEN
 writeLines(
   toJSON(list(schemaVersion = 1L, label = "data health",
-              message = badge_msg, color = if (overall_green) "brightgreen" else "red"),
+              message = if (overall_green) {
+                if (run_through == RED) sprintf("ok (%d upstream)", length(skipped_ids)) else "all green"
+              } else paste(c(
+                if (pipeline == RED)         "pipeline down",
+                if (recently_updated == RED) sprintf("%d stale", length(red_ids))
+              ), collapse = ", "),
+              color = if (overall_green) "brightgreen" else "red"),
           auto_unbox = TRUE),
   file.path(DATA, "badge.json")
 )
@@ -437,11 +468,12 @@ writeLines(
 readme_path <- file.path(REPO, "README.md")
 block <- c(
   "<!-- DATA-HEALTH:START -->",
-  sprintf("**ETL uptime** (run %s):", format(Sys.Date())),
-  sprintf("- %s **Run-through** — %s", emoji(run_through),
-          if (run_through == GREEN) {
-            if (length(upstream_ids)) sprintf("clean (%d upstream skip(s) excused)", length(upstream_ids)) else "clean (0 skips)"
-          } else sprintf("%d blocking skip(s)", length(hard_ids))),
+  sprintf("**ETL health** (run %s):", format(Sys.Date())),
+  sprintf("- %s **Pipeline** — %s", emoji(pipeline),
+          if (pipeline == GREEN) "our ETL ran to completion" else "the run did not complete"),
+  sprintf("- %s **Run-through (upstream)** — %s", emoji(run_through),
+          if (run_through == GREEN) "all sources fetched"
+          else sprintf("%d source(s) not fetched (provider-side; data kept)", length(skipped_ids))),
   sprintf("- %s **Recently updated** — %s of %d datasets fresh", emoji(recently_updated),
           n_datasets - length(red_ids), n_datasets),
   "",
@@ -461,7 +493,7 @@ if (file.exists(readme_path)) {
   writeLines(readme, readme_path)
 }
 
-cat(sprintf("uptime: run-through %s (%d hard / %d upstream skip(s)) / recently-updated %s — %d datasets (30d: %s%% / %s%%)\n",
-            run_through, length(hard_ids), length(upstream_ids), recently_updated, n_datasets,
-            format(stats$run_through$up30 %||% "—"),
-            format(stats$recently_updated$up30 %||% "—")))
+cat(sprintf("uptime: pipeline %s / run-through %s (%d skip: %d network / %d actionable, %d escalated) / recently-updated %s — %d datasets\n",
+            pipeline, run_through, length(skipped_ids),
+            length(network_ids), length(actionable_ids), length(escalated_ids),
+            recently_updated, n_datasets))

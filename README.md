@@ -1,6 +1,10 @@
 # dataseries-data
 
-[![data health](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/cynkra/dataseries-data/main/data/badge.json)](UPTIME.md)
+[![pipeline](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/cynkra/dataseries-data/main/data/badge-pipeline.json)](UPTIME.md)
+[![upstream](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/cynkra/dataseries-data/main/data/badge-upstream.json)](UPTIME.md#current-run-through)
+[![data freshness](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/cynkra/dataseries-data/main/data/badge-fresh.json)](STATUS.md)
+
+_**pipeline** = did our ETL run · **upstream** = did the sources deliver (a red here is usually a provider outage — nothing to do, [see the run](UPTIME.md#current-run-through)) · **freshness** = is the data current_
 
 **The dataseries open-data product: source of truth for the Swiss economic data
 universe.** This repo holds the ETL that fetches the data, the data files
@@ -66,22 +70,27 @@ field in its meta / `catalog.json`. Mirrors the upstream sources' terms.
 
 ## Monitoring
 
-Two binary metrics are recorded once per day (history in [`data/uptime.csv`](data/uptime.csv),
-trend in [UPTIME.md](UPTIME.md)):
+Three binary metrics are recorded once per day (history in [`data/uptime.csv`](data/uptime.csv),
+trend in [UPTIME.md](UPTIME.md)), one badge each at the top of this README. They answer
+three different questions — *did our automation run*, *did the sources deliver*, *is the
+data current* — so a provider outage reddens only the middle one:
 
-- **Run-through** — did the scrape complete with zero *blocking* skips? A skip (a source
-  failing to fetch/parse) is the *leading* signal that a source changed format. A morning
-  skip is re-fetched later the same day by **two** targeted retry passes — lunch and
-  afternoon (`.github/workflows/etl-retry.yml`), each re-running only the failed sources.
-  Each runs as a separate job, so each gets a **fresh GitHub-runner egress IP** — the main
-  defence against admin.ch intermittently blocking a subset of runner IPs (see
-  [`dev/etl-reliability-log.md`](dev/etl-reliability-log.md)). Skips still failing after the
-  *last* pass are **classified by reachability**: a **transient upstream outage** (the host
-  answered HTTP 5xx, or hung after connecting — e.g. a provider database outage) is *excused*
-  from the streak and grouped into one auto-closing `etl-outage` issue, since it's the
-  provider's problem and the previous data is kept; everything else (a 4xx, a connection we
-  couldn't open, a parse error, or a transient that persists ≥ 2 days) is a **hard skip**
-  that opens a per-source `etl-skip` alarm. Retry usage is logged in
+- **Pipeline** — did **our** ETL run to completion? Green whenever a run finishes (it
+  fetched what it could, kept previous data on a skip, committed, reported); red only when a
+  run cancels or crashes (caught by the independent `watchdog`). This is the headline: it
+  **stays green through any upstream outage or IP block**, because that's not our automation
+  failing.
+- **Run-through (upstream)** — did *every source* fetch cleanly this run? Red on **any**
+  skip — a provider 503 and an admin.ch runner-IP block both mean "we didn't get fresh data
+  this run." A morning skip is re-fetched the same day by **two** fresh-IP retry passes —
+  lunch and afternoon (`.github/workflows/etl-retry.yml`) — the main defence against admin.ch
+  intermittently blocking a subset of runner IPs (see
+  [`dev/etl-reliability-log.md`](dev/etl-reliability-log.md)). **Most red here needs no
+  action** — it's the provider's outage, shown on the dashboard but not filed as an issue.
+  A skip only becomes an issue when: it's a **network/provider error that persists ≥ 3 days**
+  (then one grouped `etl-outage` issue opens), or it's an **actionable break** — a 4xx or a
+  parse error, meaning the source changed and *our* parser must adapt (a per-source
+  `etl-skip` issue opens immediately). Retry usage is logged in
   [`data/retry.csv`](data/retry.csv).
 - **Recently updated** — is every dataset that's expected to update fresh? A dataset
   ageing past its threshold is the *lagging* signal and opens a `data-health` issue.
@@ -90,8 +99,9 @@ trend in [UPTIME.md](UPTIME.md)):
 A hard workflow failure opens a rolling `etl-failure` issue.
 
 <!-- DATA-HEALTH:START -->
-**ETL uptime** (run 2026-06-18):
-- 🔴 **Run-through** — 12 blocking skip(s)
+**ETL health** (run 2026-06-18):
+- 🟢 **Pipeline** — our ETL ran to completion
+- 🔴 **Run-through (upstream)** — 12 source(s) not fetched (provider-side; data kept)
 - 🟢 **Recently updated** — 70 of 70 datasets fresh
 
 See [UPTIME.md](UPTIME.md) for the trend and [STATUS.md](STATUS.md) for the per-dataset board.
