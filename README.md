@@ -91,7 +91,7 @@ A hard workflow failure opens a rolling `etl-failure` issue.
 
 <!-- DATA-HEALTH:START -->
 **ETL uptime** (run 2026-06-18):
-- 🟢 **Run-through** — clean (12 upstream skip(s) excused)
+- 🔴 **Run-through** — 12 blocking skip(s)
 - 🟢 **Recently updated** — 70 of 70 datasets fresh
 
 See [UPTIME.md](UPTIME.md) for the trend and [STATUS.md](STATUS.md) for the per-dataset board.
