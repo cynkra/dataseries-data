@@ -1,5 +1,5 @@
 {
-  "ts": "2026-06-18T09:56:28Z",
+  "ts": "2026-06-18T11:56:06Z",
   "attempted": 70,
   "ok": 20,
   "unchanged": [
@@ -49,19 +49,19 @@
     },
     {
       "id": "ch_fso_ppi",
-      "error": "Failed to perform HTTP request.\nCaused by error in `curl::curl_fetch_memory()`:\n! Timeout was reached [dam-api.bfs.admin.ch]:\nOperation timed out after 60002 milliseconds with 0 bytes received"
+      "error": "HTTP 503 Service Unavailable."
     },
     {
       "id": "ch_fso_wage_idx",
-      "error": "Failed to perform HTTP request.\nCaused by error in `curl::curl_fetch_memory()`:\n! Timeout was reached [dam-api.bfs.admin.ch]:\nOperation timed out after 60002 milliseconds with 0 bytes received"
+      "error": "HTTP 503 Service Unavailable."
     },
     {
       "id": "ch_fso_pop",
-      "error": "Failed to perform HTTP request.\nCaused by error in `curl::curl_fetch_memory()`:\n! Timeout was reached [dam-api.bfs.admin.ch]:\nOperation timed out after 60002 milliseconds with 0 bytes received"
+      "error": "HTTP 503 Service Unavailable."
     },
     {
       "id": "ch_fso_unemp_rate",
-      "error": "Failed to perform HTTP request.\nCaused by error in `curl::curl_fetch_memory()`:\n! Timeout was reached [dam-api.bfs.admin.ch]:\nOperation timed out after 60002 milliseconds with 0 bytes received"
+      "error": "HTTP 503 Service Unavailable."
     },
     {
       "id": "ch_fso_labour_productivity",
@@ -69,11 +69,11 @@
     },
     {
       "id": "ch_fso_ets",
-      "error": "Failed to perform HTTP request.\nCaused by error in `curl::curl_fetch_memory()`:\n! Timeout was reached [dam-api.bfs.admin.ch]:\nOperation timed out after 60002 milliseconds with 0 bytes received"
+      "error": "HTTP 503 Service Unavailable."
     },
     {
       "id": "ch_fso_gfcf_detail",
-      "error": "Failed to perform HTTP request.\nCaused by error in `curl::curl_fetch_memory()`:\n! Timeout was reached [dam-api.bfs.admin.ch]:\nOperation timed out after 60002 milliseconds with 0 bytes received"
+      "error": "HTTP 503 Service Unavailable."
     },
     {
       "id": "ch_fso_hours_worked",
@@ -85,7 +85,7 @@
     },
     {
       "id": "ch_fso_construction_prices",
-      "error": "HTTP 503 Service Unavailable."
+      "error": "Failed to perform HTTP request.\nCaused by error in `curl::curl_fetch_memory()`:\n! Timeout was reached [dam-api.bfs.admin.ch]:\nOperation timed out after 60002 milliseconds with 0 bytes received"
     },
     {
       "id": "ch_fso_trade_partner",
