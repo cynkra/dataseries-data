@@ -3,7 +3,7 @@
 # Rolls the per-run / per-dataset detail up into two binary daily metrics and a
 # one-row-per-day history we can plot for long-term uptime and incident fix-speed:
 #
-#   run_through      : did the scrape complete with ZERO skips? (green/red)
+#   run_through      : did the scrape complete with zero HARD skips? (green/red)
 #   recently_updated : is everything that's expected to update fresh? (green/red)
 #
 # A skip is the LEADING signal (a parser breaks the day a source changes format);
@@ -12,10 +12,18 @@
 # uptime metric wants a clean trip line, and the immediate skip alarm now covers
 # early warning.
 #
+# Not every skip is OUR downtime: a transient upstream HTTP 5xx (the source is reachable
+# but returns 503/502/504/429) is EXCUSED from run_through and routed to one grouped
+# `etl-outage` issue, while a hard failure (4xx, transport failure, parse error, or a 5xx
+# that persists >= ESCALATE_DAYS) breaks the streak and opens a per-source `etl-skip`
+# alarm. See the classification block below; the routing is handed to skip_issues.sh via
+# data/skips.json.
+#
 # Reads  : data/run.json (R/pipeline.R) + data/status.json (R/health.R)
 # Writes : data/uptime.csv  (append/upsert one row per day -- the plottable history)
 #          data/uptime.svg  (committed status-timeline chart, no extra deps)
 #          data/badge.json  (shields.io endpoint badge: overall health, top of README)
+#          data/skips.json   (per-id skip routing for skip_issues.sh: umbrella vs alarm)
 #          UPTIME.md         (rendered dashboard: verdicts, uptime %, recent table)
 #          README.md         (the <!-- DATA-HEALTH --> summary block)
 #
@@ -40,12 +48,16 @@ run    <- fromJSON(file.path(DATA, "run.json"),    simplifyVector = FALSE)
 status <- fromJSON(file.path(DATA, "status.json"), simplifyVector = FALSE)
 
 skipped_ids <- vapply(run$skipped %||% list(), function(s) s$id %||% "?", "")
+# Collapse multi-line curl/httr2 messages to one line (and cap length) for tidy display
+# in tables and issue bodies; the diagnostic phrases the classifier keys on survive.
+oneline <- function(x) {
+  x <- gsub("[[:space:]]+", " ", x %||% ""); x <- trimws(x)
+  if (nchar(x) > 300) paste0(substr(x, 1, 297), "...") else x
+}
 skip_errors <- setNames(
-  vapply(run$skipped %||% list(), function(s) s$error %||% "", ""),
+  vapply(run$skipped %||% list(), function(s) oneline(s$error %||% ""), ""),
   skipped_ids
 )
-run_through <- if (length(skipped_ids)) RED else GREEN
-
 red_ids <- vapply(
   Filter(function(d) (d$status %||% "") == "red", status$datasets %||% list()),
   function(d) d$id %||% "?", ""
@@ -54,11 +66,87 @@ recently_updated <- if (length(red_ids)) RED else GREEN
 n_datasets <- as.integer(status$counts$total %||% length(status$datasets %||% list()))
 
 today <- format(Sys.Date())
+CSV   <- file.path(DATA, "uptime.csv")
+
+# --- classify skips: transient upstream outage vs hard ----------------------
+# A skip is NOT automatically OUR downtime. The line is REACHABILITY: was the source host
+# reachable but unable to serve usable data for a passing reason, or could we not reach /
+# parse it at all?
+#
+#   TRANSIENT (excused from the streak, grouped into one auto-closing umbrella issue):
+#     - an HTTP 429/5xx response (the host answered "temporarily unavailable / throttled" --
+#       e.g. the 2026-06-18 BFS database outage: 503s across the FSO DAM API), or
+#     - a read/body timeout AFTER the TCP connection was established ("Operation timed out
+#       after N ms with M bytes received" -- an alive-but-overloaded host that hung past
+#       req_timeout; same outage, just slower than a clean 503).
+#   HARD (breaks the streak, opens a per-source `etl-skip` alarm):
+#     - we could not REACH the host: DNS failure, connection refused/reset, or a *connect*-
+#       phase timeout -- the admin.ch runner-IP-block signature, a silent TCP drop at the
+#       connecttimeout (see dev/etl-reliability-log.md); or
+#     - a 4xx (403 block / 404 moved), or the payload failed to parse (a format break).
+# A server that owes us a response is a passing outage; a socket we can't open, or a
+# changed payload, is a real problem.
+#
+# "Transient" has an expiry. A transient skip that persists for >= ESCALATE_DAYS consecutive
+# days is no longer a passing blip (it could be a WAF/firewall answering 503, or a tarpit
+# hanging the body, to mask a block), so it is PROMOTED to a hard skip. A genuinely
+# persistent problem therefore always surfaces; the worst case is a <= 1-day delay.
+TRANSIENT_RE      <- "HTTP (429|500|502|503|504)\\b|Operation timed out after"
+HARD_TRANSPORT_RE <- "Could not resolve host|Failed to connect|Couldn't connect|Connection refused|Connection reset|Connection timed out"
+ESCALATE_DAYS     <- 2L
+
+# Consecutive prior days (strictly before today) an id appeared in uptime.csv's skips;
+# today counts as +1, so a first-day skip has consecutive_days == 1. Reading the on-disk
+# CSV (pre-upsert) keeps this idempotent on a same-day re-run.
+prior_hist <- if (file.exists(CSV)) read.csv(CSV, colClasses = "character", check.names = FALSE) else NULL
+prior_streak <- function(id) {
+  if (is.null(prior_hist) || !nrow(prior_hist)) return(0L)
+  h <- prior_hist[order(as.Date(prior_hist$date)), , drop = FALSE]
+  h <- h[as.Date(h$date) < as.Date(today), , drop = FALSE]
+  n <- 0L
+  for (i in rev(seq_len(nrow(h)))) {
+    ids <- strsplit(h$skipped_ids[i] %||% "", ";", fixed = TRUE)[[1]]
+    if (id %in% ids) n <- n + 1L else break
+  }
+  n
+}
+
+skip_transient <- vapply(skipped_ids, function(id) {
+  e <- skip_errors[[id]] %||% ""
+  grepl(TRANSIENT_RE, e) && !grepl(HARD_TRANSPORT_RE, e)   # a connect-phase failure is never transient
+}, logical(1))
+skip_consec    <- vapply(skipped_ids, function(id) prior_streak(id) + 1L, integer(1))
+skip_escalated <- skip_transient & (skip_consec >= ESCALATE_DAYS)
+skip_hard      <- (!skip_transient) | skip_escalated
+names(skip_transient) <- names(skip_consec) <- names(skip_escalated) <- names(skip_hard) <- skipped_ids
+
+hard_ids     <- skipped_ids[skip_hard]    # break the streak + per-source `etl-skip` alarm
+upstream_ids <- skipped_ids[!skip_hard]   # transient & not escalated -> umbrella, excused
+
+# Run-through measures OUR pipeline: a transient upstream 5xx does not count as downtime.
+run_through <- if (length(hard_ids)) RED else GREEN
+
+# Sidecar consumed by .github/scripts/skip_issues.sh (runs right after this in both
+# etl.yml and etl-retry.yml): the routing decision per skipped id, so the issue script
+# stays a thin presenter and the classification lives in one place.
+writeLines(
+  toJSON(list(
+    ts = run$ts %||% format(Sys.time(), tz = "UTC", "%Y-%m-%dT%H:%M:%SZ"),
+    skips = lapply(skipped_ids, function(id) list(
+      id               = id,
+      error            = unname(skip_errors[[id]] %||% ""),
+      route            = if (isTRUE(skip_hard[[id]])) "alarm" else "umbrella",
+      transient        = unname(skip_transient[[id]]),
+      escalated        = unname(skip_escalated[[id]]),
+      consecutive_days = unname(skip_consec[[id]])
+    ))
+  ), auto_unbox = TRUE, pretty = TRUE),
+  file.path(DATA, "skips.json")
+)
 
 # --- data/uptime.csv : upsert today's row -----------------------------------
 # One row per day. Re-running on the same day replaces the row (idempotent, like the
 # dedup commit in the workflow), so a manual re-run never double-counts.
-CSV  <- file.path(DATA, "uptime.csv")
 COLS <- c("date", "run_through", "n_skipped", "skipped_ids",
           "recently_updated", "n_stale", "stale_ids", "n_datasets")
 
@@ -243,7 +331,14 @@ md <- c(
   "",
   sprintf("- %s **Run-through** — the scrape completed with %s.%s",
           emoji(run_through),
-          if (run_through == GREEN) "zero skips" else sprintf("%d skip(s)", length(skipped_ids)),
+          if (run_through == GREEN) {
+            if (length(upstream_ids))
+              sprintf("no blocking skips (%d transient upstream skip(s), HTTP 5xx — excused)", length(upstream_ids))
+            else "zero skips"
+          } else {
+            sprintf("%d blocking skip(s)%s", length(hard_ids),
+                    if (length(upstream_ids)) sprintf(" + %d upstream (excused)", length(upstream_ids)) else "")
+          },
           incident_note(stats$run_through)),
   sprintf("- %s **Recently updated** — %s.%s",
           emoji(recently_updated),
@@ -264,16 +359,26 @@ md <- c(
   ""
 )
 
-# Current-run skip detail (this replaces the old SKIPS.md). A skip opens an
-# `etl-skip` issue immediately and is the earliest sign a source changed format.
+# Current-run skip detail (this replaces the old SKIPS.md). A HARD skip opens a per-source
+# `etl-skip` issue (the earliest sign a source changed format / is blocked); transient
+# upstream 5xx skips are grouped into one auto-closing `etl-outage` issue and excused.
 md <- c(md, "## Current run-through")
 if (!length(skipped_ids)) {
   md <- c(md, "", "\U00002705 Clean run-through — every source fetched and validated.")
 } else {
-  md <- c(md, "",
-    sprintf("\U0001F534 %d source(s) failed to fetch this run — each opens an `etl-skip` issue:", length(skipped_ids)),
-    "")
-  for (id in skipped_ids) md <- c(md, sprintf("- `%s` — %s", id, skip_errors[[id]] %||% ""))
+  if (length(hard_ids)) {
+    md <- c(md, "",
+      sprintf("\U0001F534 %d source(s) hard-failed this run — each opens an `etl-skip` issue:", length(hard_ids)),
+      "")
+    for (id in hard_ids) md <- c(md, sprintf("- `%s` — %s%s", id, skip_errors[[id]] %||% "",
+      if (isTRUE(skip_escalated[[id]])) sprintf(" *(escalated: %d consecutive days)*", skip_consec[[id]]) else ""))
+  }
+  if (length(upstream_ids)) {
+    md <- c(md, "",
+      sprintf("\U000023F3 %d source(s) hit a transient upstream error (HTTP 5xx) — data preserved, grouped into one auto-closing `etl-outage` issue, NOT counted as downtime:", length(upstream_ids)),
+      "")
+    for (id in upstream_ids) md <- c(md, sprintf("- `%s` — %s", id, skip_errors[[id]] %||% ""))
+  }
 }
 
 # Stale detail mirrors the per-dataset health board.
@@ -315,9 +420,11 @@ writeLines(md, file.path(REPO, "UPTIME.md"))
 # One green-or-red verdict over BOTH metrics: green only when the scrape ran clean
 # AND nothing is stale. Read live by the shields badge at the top of the README.
 overall_green <- run_through == GREEN && recently_updated == GREEN
-badge_msg <- if (overall_green) "all green" else paste(c(
+badge_msg <- if (overall_green) {
+  if (length(upstream_ids)) sprintf("all green (%d upstream skip(s))", length(upstream_ids)) else "all green"
+} else paste(c(
   if (recently_updated == RED) sprintf("%d stale", length(red_ids)),
-  if (run_through == RED)      sprintf("%d skip(s)", length(skipped_ids))
+  if (run_through == RED)      sprintf("%d skip(s)", length(hard_ids))
 ), collapse = ", ")
 writeLines(
   toJSON(list(schemaVersion = 1L, label = "data health",
@@ -332,7 +439,9 @@ block <- c(
   "<!-- DATA-HEALTH:START -->",
   sprintf("**ETL uptime** (run %s):", format(Sys.Date())),
   sprintf("- %s **Run-through** — %s", emoji(run_through),
-          if (run_through == GREEN) "clean (0 skips)" else sprintf("%d skip(s)", length(skipped_ids))),
+          if (run_through == GREEN) {
+            if (length(upstream_ids)) sprintf("clean (%d upstream skip(s) excused)", length(upstream_ids)) else "clean (0 skips)"
+          } else sprintf("%d blocking skip(s)", length(hard_ids))),
   sprintf("- %s **Recently updated** — %s of %d datasets fresh", emoji(recently_updated),
           n_datasets - length(red_ids), n_datasets),
   "",
@@ -352,7 +461,7 @@ if (file.exists(readme_path)) {
   writeLines(readme, readme_path)
 }
 
-cat(sprintf("uptime: run-through %s / recently-updated %s — %d datasets (30d: %s%% / %s%%)\n",
-            run_through, recently_updated, n_datasets,
+cat(sprintf("uptime: run-through %s (%d hard / %d upstream skip(s)) / recently-updated %s — %d datasets (30d: %s%% / %s%%)\n",
+            run_through, length(hard_ids), length(upstream_ids), recently_updated, n_datasets,
             format(stats$run_through$up30 %||% "—"),
             format(stats$recently_updated$up30 %||% "—")))

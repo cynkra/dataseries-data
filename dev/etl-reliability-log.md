@@ -64,6 +64,17 @@ don't bound a *broad* outage.
 
 **Tier A — cheap, targeted, no architecture change:**
 
+- **[SHIPPED 2026-06-18] Classify skips by reachability; group transient upstream outages.**
+  Not every skip is our downtime or a format break. `R/uptime.R` now tags each skip
+  transient (HTTP 429/5xx, or a read timeout *after* connect — a reachable-but-broken
+  upstream) vs hard (DNS / refused / reset / *connect*-timeout = the IP block; a 4xx; a
+  parse error) and writes `data/skips.json`. Transient skips are **excused from
+  `run_through`** (an upstream provider outage no longer breaks *our* uptime streak/badge)
+  and **grouped into one auto-closing `etl-outage` issue** instead of N "act ASAP" alarms;
+  hard skips keep the per-source `etl-skip` alarm. A transient skip persisting **≥ 2
+  consecutive days** escalates to hard, so a block disguised as a 503 still surfaces (≤ 1-day
+  delay). Fixes the 2026-06-18 BFS-DB-outage noise (12 issues + a red streak for a non-our
+  -fault event) and the 2026-06-12 single false "format change" alarm. See that incident.
 - **Per-host circuit breaker.** After host H fails K times this run, short-circuit
   H's remaining sources instantly instead of re-paying the full timeout each.
   Directly kills the cascade (outages correlate by host). Needs host attribution
@@ -164,6 +175,57 @@ Act on a candidate solution when one of these crosses:
   silent TCP drop; see that incident + [`etl-offload-plan.md`](etl-offload-plan.md)).
 
 ## Incident log
+
+### 2026-06-18 — BFS database outage (12 FSO sources 503/timeout); the run was *fine*, the *alerting* was the bug
+
+- **Run:** [27770351861](https://github.com/cynkra/dataseries-data/actions/runs/27770351861)
+  (afternoon retry), schedule, **success** — completed with skips, data committed. The
+  morning run [27750963593](https://github.com/cynkra/dataseries-data/actions/runs/27750963593)
+  and lunch retry [27757363472](https://github.com/cynkra/dataseries-data/actions/runs/27757363472)
+  had already recorded the same skips.
+- **Symptom:** 12 of the 25 FSO sources — exactly the ones resolved through the FSO **DAM
+  API** (`dam-api.bfs.admin.ch`, via `fso_asset_master()`) — failed: 11 with a clean
+  `HTTP 503 Service Unavailable`, one (`ch_fso_gfcf_detail`) with a 60 s **read** timeout
+  (`Operation timed out after 60002 ms with 0 bytes received`). The SDMX/PxWeb-served FSO
+  sources and everything non-FSO fetched fine. The afternoon retry, after its backoff,
+  opened **12 `etl-skip` issues** (#13–#24) and the run-through streak went **red**.
+- **Root cause:** a **BFS-side database outage**, confirmed by BFS's own notice on
+  bfs.admin.ch: *"Since Thursday there have been problems accessing the BFS website's
+  database; various content is currently unavailable."* (Today is Thursday.) This is
+  **not** the recurring Azure-runner IP block: the hosts were *reachable* (a 503 is an HTTP
+  response; the lone timeout came *after* a successful TCP connect — the server accepted the
+  socket then couldn't serve from the dead DB), the failures hit the DAM API specifically
+  (not every admin.ch host), and the run **completed** rather than cancelling at the 30-min
+  cap. A genuinely new failure shape: *reachable upstream, broken backend.*
+- **Why mitigations didn't catch it (i.e. what was actually wrong):** nothing in the
+  *pipeline* failed — stale-keep preserved all 12 datasets, health stayed 70-green, the API
+  kept serving last-good values. The failure was in the **alerting model**: (1) every skip
+  was treated as "act ASAP — source changed format", so a single provider outage spawned 12
+  near-identical false-alarm issues (the exact noise the 2026-06-12 entry flagged for one
+  UZH timeout, now ×12); (2) `run_through` went red on *any* skip, so an **upstream**
+  provider's outage broke *our* uptime streak (and the shields badge), conflating "their
+  backend is down" with "our scraper failed".
+- **Blast radius:** 12 datasets 1 day stale (recovered on retry / next clean BFS day); 12
+  noise `etl-skip` issues; run-through 30-day dropped (87.5%) for a non-our-fault event.
+- **Action taken this time → SHIPPED a mitigation (not just a wait-it-out):** classify every
+  skip by **reachability** and route it (`R/uptime.R` writes `data/skips.json`;
+  `.github/scripts/skip_issues.sh` presents it):
+  - **transient upstream** (HTTP 429/5xx, or a read timeout *after* connect) → excused from
+    `run_through` and grouped into ONE auto-closing `etl-outage` umbrella issue that explains
+    what a 503 means and that the data is preserved;
+  - **hard** (DNS / connection refused-reset / *connect*-phase timeout = the IP-block
+    signature; or a 4xx; or a parse error) → unchanged: breaks the streak, opens a
+    per-source `etl-skip` alarm;
+  - **escalation backstop:** a transient skip that persists **≥ 2 consecutive days** (from
+    `uptime.csv` history) is promoted to a hard skip — so a block masquerading as a 503 (or a
+    tarpit hanging the body) still surfaces loudly, with at most a 1-day delay.
+  Net for today: all 12 → umbrella, run-through **green**, badge `all green (12 upstream
+  skip(s))`. The reachability line is deliberate: a server that *answers* (or accepts a
+  socket then hangs) is a passing outage; a socket we **can't open** is the runner-IP block
+  and stays a hard alarm.
+- **Pattern bucket:** broad-outage (single provider, upstream backend) — distinct from the
+  06-10/06-11/06-13 runner-IP-block bucket; this one is *reachable-but-broken*, not
+  *unreachable*.
 
 ### 2026-06-13 — admin.ch block returns (3rd cancel in 4 days); afternoon retry can't rescue a *cancelled* morning
 

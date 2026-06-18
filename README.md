@@ -69,15 +69,20 @@ field in its meta / `catalog.json`. Mirrors the upstream sources' terms.
 Two binary metrics are recorded once per day (history in [`data/uptime.csv`](data/uptime.csv),
 trend in [UPTIME.md](UPTIME.md)):
 
-- **Run-through** — did the scrape complete with zero skips? A skip (a source failing
-  to fetch/parse) is the *leading* signal that a source changed format. A morning skip is
-  re-fetched later the same day by **two** targeted retry passes — lunch and afternoon
-  (`.github/workflows/etl-retry.yml`), each re-running only the failed sources. Each runs as
-  a separate job, so each gets a **fresh GitHub-runner egress IP** — the main defence against
-  admin.ch intermittently blocking a subset of runner IPs (see
-  [`dev/etl-reliability-log.md`](dev/etl-reliability-log.md)). Only a source still failing
-  after the *last* pass opens an `etl-skip` issue, so a transient/blocked host never alarms.
-  Retry usage is logged in [`data/retry.csv`](data/retry.csv).
+- **Run-through** — did the scrape complete with zero *blocking* skips? A skip (a source
+  failing to fetch/parse) is the *leading* signal that a source changed format. A morning
+  skip is re-fetched later the same day by **two** targeted retry passes — lunch and
+  afternoon (`.github/workflows/etl-retry.yml`), each re-running only the failed sources.
+  Each runs as a separate job, so each gets a **fresh GitHub-runner egress IP** — the main
+  defence against admin.ch intermittently blocking a subset of runner IPs (see
+  [`dev/etl-reliability-log.md`](dev/etl-reliability-log.md)). Skips still failing after the
+  *last* pass are **classified by reachability**: a **transient upstream outage** (the host
+  answered HTTP 5xx, or hung after connecting — e.g. a provider database outage) is *excused*
+  from the streak and grouped into one auto-closing `etl-outage` issue, since it's the
+  provider's problem and the previous data is kept; everything else (a 4xx, a connection we
+  couldn't open, a parse error, or a transient that persists ≥ 2 days) is a **hard skip**
+  that opens a per-source `etl-skip` alarm. Retry usage is logged in
+  [`data/retry.csv`](data/retry.csv).
 - **Recently updated** — is every dataset that's expected to update fresh? A dataset
   ageing past its threshold is the *lagging* signal and opens a `data-health` issue.
   The per-dataset board (🟢 fresh / 🔴 stale) lives in [STATUS.md](STATUS.md).
@@ -86,7 +91,7 @@ A hard workflow failure opens a rolling `etl-failure` issue.
 
 <!-- DATA-HEALTH:START -->
 **ETL uptime** (run 2026-06-18):
-- 🔴 **Run-through** — 12 skip(s)
+- 🟢 **Run-through** — clean (12 upstream skip(s) excused)
 - 🟢 **Recently updated** — 70 of 70 datasets fresh
 
 See [UPTIME.md](UPTIME.md) for the trend and [STATUS.md](STATUS.md) for the per-dataset board.
