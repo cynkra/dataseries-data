@@ -148,10 +148,16 @@ if [[ ${#UMBRELLA_ERR[@]} -gt 0 && -z "${CLOSE_ONLY:-}" ]]; then
       || echo "skip_issues: edit of umbrella #${umbrella_num} failed (non-fatal)." >&2
   else
     echo "skip_issues: opening umbrella outage issue (${#UMBRELLA_ERR[@]} member(s))."
-    gh issue create --title "$OUTAGE_TITLE" --label "$LABEL_OUTAGE" --body "$body" \
-      || echo "skip_issues: create of umbrella failed (non-fatal)." >&2
-    umbrella_num="$(gh issue list --label "$LABEL_OUTAGE" --state open --json number,title \
-        --jq "map(select(.title == \"${OUTAGE_TITLE}\")) | .[0].number // empty")"
+    # Capture the number straight from create's URL: `gh issue list` is eventually
+    # consistent, so re-querying right after create can miss the new issue and leave the
+    # regroup step (3a) below with no umbrella to point at.
+    created_url="$(gh issue create --title "$OUTAGE_TITLE" --label "$LABEL_OUTAGE" --body "$body" 2>/dev/null || true)"
+    umbrella_num="$(grep -oE '/issues/[0-9]+' <<< "$created_url" | grep -oE '[0-9]+$' | tail -1)"
+    if [[ -z "$umbrella_num" ]]; then
+      echo "skip_issues: create of umbrella returned no issue number — falling back to list." >&2
+      umbrella_num="$(gh issue list --label "$LABEL_OUTAGE" --state open --json number,title \
+          --jq "map(select(.title == \"${OUTAGE_TITLE}\")) | .[0].number // empty")"
+    fi
   fi
 fi
 
