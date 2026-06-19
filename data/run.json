@@ -1,7 +1,7 @@
 {
-  "ts": "2026-06-18T21:58:58Z",
+  "ts": "2026-06-19T09:51:09Z",
   "attempted": 70,
-  "ok": 20,
+  "ok": 32,
   "unchanged": [
     "ch_snb_amarbma",
     "ch_snb_ambeschkla",
@@ -42,54 +42,5 @@
     "ch_snb_zikrepro",
     "ch_snb_zimoma"
   ],
-  "skipped": [
-    {
-      "id": "ch_fso_cpi",
-      "error": "HTTP 503 Service Unavailable."
-    },
-    {
-      "id": "ch_fso_ppi",
-      "error": "HTTP 503 Service Unavailable."
-    },
-    {
-      "id": "ch_fso_wage_idx",
-      "error": "HTTP 503 Service Unavailable."
-    },
-    {
-      "id": "ch_fso_pop",
-      "error": "Failed to perform HTTP request.\nCaused by error in `curl::curl_fetch_memory()`:\n! Timeout was reached [dam-api.bfs.admin.ch]:\nOperation timed out after 60002 milliseconds with 0 bytes received"
-    },
-    {
-      "id": "ch_fso_unemp_rate",
-      "error": "HTTP 503 Service Unavailable."
-    },
-    {
-      "id": "ch_fso_labour_productivity",
-      "error": "HTTP 503 Service Unavailable."
-    },
-    {
-      "id": "ch_fso_ets",
-      "error": "HTTP 503 Service Unavailable."
-    },
-    {
-      "id": "ch_fso_gfcf_detail",
-      "error": "HTTP 503 Service Unavailable."
-    },
-    {
-      "id": "ch_fso_hours_worked",
-      "error": "HTTP 503 Service Unavailable."
-    },
-    {
-      "id": "ch_fso_gdp_region",
-      "error": "HTTP 503 Service Unavailable."
-    },
-    {
-      "id": "ch_fso_construction_prices",
-      "error": "HTTP 503 Service Unavailable."
-    },
-    {
-      "id": "ch_fso_trade_partner",
-      "error": "Failed to perform HTTP request.\nCaused by error in `curl::curl_fetch_disk()`:\n! Timeout was reached [dam-api.bfs.admin.ch]:\nOperation timed out after 120002 milliseconds with 0 bytes received"
-    }
-  ]
+  "skipped": []
 }

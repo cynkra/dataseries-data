@@ -5,7 +5,7 @@
     "worktype"
   ],
   "start": "1998-10-01",
-  "end": "2025-10-01",
+  "end": "2026-04-01",
   "title": {
     "en": "Construction prices"
   },
@@ -21,7 +21,7 @@
   "units": {
     "en": "Index (October 2020 = 100)"
   },
-  "updated": "2025-12-18",
+  "updated": "2026-06-18",
   "dimensions": {
     "worktype": {
       "label": {
@@ -58,5 +58,5 @@
     "worktype": "total"
   },
   "description": "The Swiss Construction Price Index (Baupreisindex, BAP) measures the price development of construction work in Switzerland, surveyed semi-annually with reference months April and October. The headline series for the whole of Switzerland is captured on three work-type levels: the overall index (Baugewerbe: Total), building construction (Hochbau) and civil engineering (Tiefbau). Levels are on the October 2020 = 100 base. One of the few semi-annual price series in the catalog.",
-  "fetched_utc": "2026-06-17 09:54:12"
+  "fetched_utc": "2026-06-19 09:51:08"
 }
