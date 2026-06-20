@@ -163,5 +163,5 @@
     "INDICATOR_KE": "PTOT"
   },
   "description": "The quarterly turnover / production index for the secondary sector — industry (NOGA sections B–E) and construction (section F) — published as one dataset split by NOGA section. FSO migrated this series off the dead PX-Web STAT-TAB onto its new SDMX 2.1 endpoint (disseminate.stats.swiss, agency CH1.KEU, flow DF_KEU_Q1), so it shares the R/source_fso_sdmx.R reader with ch_fso_retail. We keep the secondary-sector slice: the industry aggregate B-E (and its sections B mining, C manufacturing, D energy), construction F, and the construction divisions 41 (buildings), 42 (civil engineering), 43 (specialised construction), plus their aggregate 41_43.",
-  "fetched_utc": "2026-06-19 09:51:06"
+  "fetched_utc": "2026-06-20 09:23:41"
 }
