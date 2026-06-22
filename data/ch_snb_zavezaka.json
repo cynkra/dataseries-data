@@ -5,7 +5,7 @@
     "D0"
   ],
   "start": "2005-01-01",
-  "end": "2026-03-01",
+  "end": "2026-04-01",
   "title": {
     "en": "Payment cards and ATMs"
   },
@@ -141,7 +141,7 @@
       }
     }
   },
-  "updated": "2026-05-21 09:00",
+  "updated": "2026-06-22 09:00",
   "topic": "Payment systems",
   "concept": "Payment systems / Payments & cash",
   "canonical": false,
@@ -152,5 +152,5 @@
     "D0": "T0"
   },
   "description": "Monthly stock of the Swiss card landscape: number of credit cards, debit cards and e-money cards in circulation, plus the count of ATMs. It is a counts-only cube (no turnover), so it reads as the installed base behind the flow cube zavezaluba. The distinctive feature is the \"of which with contactless payment function\" subtotal (DZ0/DZ1/DZ2), which only begins in late 2014 once contactless rolled out, so those three series start 2014-12 while the card totals run back to 2005. The single Total ATM series (T3) sits in the same cube despite being a different unit (machines, not cards).",
-  "fetched_utc": "2026-06-13 15:45:15"
+  "fetched_utc": "2026-06-22 10:28:18"
 }

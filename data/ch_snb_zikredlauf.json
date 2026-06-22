@@ -7,7 +7,7 @@
     "D2"
   ],
   "start": "2009-05-01",
-  "end": "2026-02-01",
+  "end": "2026-03-01",
   "title": {
     "en": "New lending rates"
   },
@@ -174,7 +174,7 @@
       }
     }
   },
-  "updated": "2026-05-21 09:00",
+  "updated": "2026-06-22 09:00",
   "topic": "Interest rates & yields",
   "concept": "Interest rates & yields / Money-market rates",
   "canonical": false,
@@ -187,5 +187,5 @@
     "D2": "MP1"
   },
   "description": "The rate banks actually charge on newly agreed loans, broken down by product and by maturity bucket, and reported as a full distribution rather than a single number. For each product/maturity cell the cube gives the mean, the 25% quantile, the median, the 75% quantile and the count of loan agreements (AK). That quantile spread is the distinctive feature: it shows the dispersion of pricing across borrowers, not just the average. Products cover fixed-rate mortgages, base-rate-linked variable mortgages and fixed-rate investment loans, each across up to ten maturity buckets from \"over 1 month\" to \"over 10 up to 15 years\". History starts 2009-05.",
-  "fetched_utc": "2026-06-13 15:45:15"
+  "fetched_utc": "2026-06-22 10:28:18"
 }

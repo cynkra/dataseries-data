@@ -3,7 +3,7 @@
   "id": "ch_snb_plkopr",
   "dim_order": [],
   "start": "1921-01-01",
-  "end": "2026-04-01",
+  "end": "2026-05-01",
   "title": {
     "en": "Consumer prices (CPI)"
   },
@@ -16,7 +16,7 @@
   "license": "snb",
   "frequency": "monthly",
   "dimensions": {},
-  "updated": "2026-05-21 09:00",
+  "updated": "2026-06-22 09:00",
   "topic": "Prices",
   "concept": "Prices / Consumer prices",
   "canonical": true,
@@ -25,5 +25,5 @@
   "default_transform": "yoy",
   "description": "The Swiss headline consumer price index (Landesindex der Konsumentenpreise), as re-disseminated by the SNB. It is the canonical CPI for the long view: the SNB chain reaches back to January 1921 — over a century — whereas the detailed FSO asset (ch_fso_cpi, the labelled alternate) only carries the full COICOP position hierarchy from December 1982. So this is the series to reach for when you want the headline index or year-on-year inflation across the whole modern history of the Swiss franc; ch_fso_cpi is the one to reach for when you want the 443-position basket breakdown. The cube carries the total index only (no sub-baskets). The source ships two measures under one flat D0 dimension — the index level (rebased December 2025 = 100) and its year-on-year change — but the change is dropped (it is the app's YoY % toggle applied to the index), so this is a single-series dataset: just the index level.",
   "default": [],
-  "fetched_utc": "2026-06-13 15:45:15"
+  "fetched_utc": "2026-06-22 10:28:17"
 }

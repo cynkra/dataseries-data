@@ -4458,5 +4458,5 @@
     "item": "100_100"
   },
   "description": "The Swiss CPI (Landesindex der Konsumentenpreise) with the full position hierarchy: 595 positions from the total index down to COICOP sub-baskets (food, housing, transport, ...), not just the headline total. This is the detailed alternate to the canonical SNB headline series (ch_snb_plkopr): reach for this one when you want the basket breakdown, and for ch_snb_plkopr when you want the headline total or YoY inflation across the long history (the FSO asset only carries the hierarchy from December 1982, whereas the SNB chain reaches back to 1921). Base period December 2025 = 100 (asset su-d-05.02.66, which superseded the frozen Dec-2020=100 asset su-d-05.02.67). History to December 1982.",
-  "fetched_utc": "2026-06-21 09:31:11"
+  "fetched_utc": "2026-06-22 10:28:19"
 }
