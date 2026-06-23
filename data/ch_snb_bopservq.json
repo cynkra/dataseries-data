@@ -7,7 +7,7 @@
     "D2"
   ],
   "start": "2012-01-01",
-  "end": "2025-10-01",
+  "end": "2026-01-01",
   "title": {
     "en": "Balance of payments: services"
   },
@@ -611,7 +611,7 @@
       }
     }
   },
-  "updated": "2026-03-24 09:00",
+  "updated": "2026-06-23 09:00",
   "topic": "External sector",
   "concept": "External sector / Balance of payments",
   "canonical": false,
@@ -624,5 +624,5 @@
     "D2": "S"
   },
   "description": "The services trade of the current account broken down by counterpart country, which the headline BoP cubes do not provide. It is the widest cube in this group: three dimensions (country x service component x accounting entry) multiply out to 1,755 leaf series, the largest in the SNB balance-of-payments set. Country coverage (D0) runs from regional totals (Europe, EU, EU27, Africa, America, Asia, Oceania) down to ~50 individual partners (Germany, US, China, UK, Singapore, Gulf Arabian countries, ...). Service components (D1) match the bopcurrq services split. Shorter history than the other BoP cubes, starting only 2012, because country-level services detail was introduced with the BPM6 standard. Alternate to ch_snb_bopcurrq for the concept: same producer, the unique value is the geographic dimension.",
-  "fetched_utc": "2026-06-13 15:45:15"
+  "fetched_utc": "2026-06-23 09:28:10"
 }
