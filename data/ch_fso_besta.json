@@ -472,5 +472,5 @@
     "Wirtschaftsabteilung": "5-96"
   },
   "description": "BESTA, the FSO employment statistics: the number of jobs in Switzerland by economic division (NOGA), quarterly back to 1991. This is the canonical Swiss employment series. Its defining feature is the deep division hierarchy: 60 NOGA aggregates from the grand total 5-96 down through sectors (5-43 Sector II, 45-96 Sector III) to individual two-digit divisions (e.g. 21 Pharmaceuticals, 64 Financial services, 86 Human health). This lets you read the structural shift of the Swiss economy (manufacturing flat, health and business services up) off one table. CONCEPT-UNIVERSE flags an overlap with SNB ambeschkla (employees by activity); BESTA is chosen as canonical because it is the FSO authoritative jobs series with the finer NOGA breakdown.",
-  "fetched_utc": "2026-06-28 09:22:59"
+  "fetched_utc": "2026-06-29 09:53:06"
 }
