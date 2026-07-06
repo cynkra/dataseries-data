@@ -137,5 +137,5 @@
     "Tourismusregion": "8100"
   },
   "description": "The HESTA accommodation statistics: monthly hotel overnight stays for Switzerland and its 13 official tourism regions, back to 2005. The strong seasonal swing is visible in the raw data (a region's January is several times its November), which is why this is kept as the canonical tourism series rather than an annual roll-up. The region breakdown is the distinctive axis: alpine regions (Graubünden, Valais, Ticino) and the urban regions (Zurich, Geneva, Basel) move on very different seasonal calendars, so the series is most useful sliced by Tourismusregion. Code 8100 is the Switzerland total; the numeric codes 1..14 are the regions. Only one indicator (overnight stays) is pulled; the table also carries arrivals, which this dataset deliberately omits.",
-  "fetched_utc": "2026-07-05 09:23:23"
+  "fetched_utc": "2026-07-06 09:39:01"
 }
