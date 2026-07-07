@@ -6,7 +6,7 @@
     "D1"
   ],
   "start": "1999-01-01",
-  "end": "2026-05-29",
+  "end": "2026-06-30",
   "title": {
     "en": "Effective exchange-rate index"
   },
@@ -81,7 +81,7 @@
       }
     }
   },
-  "updated": "2026-06-05 09:00",
+  "updated": "2026-07-07 09:00",
   "topic": "Exchange rates",
   "concept": "Exchange rates / Effective FX index",
   "canonical": true,
@@ -93,5 +93,5 @@
     "D0": "K"
   },
   "description": "The trade-weighted effective exchange rate of the Swiss franc, the single most watched FX summary for franc strength, published daily. Two country-group aggregates are offered: the overall index (G) and a euro-area index (E). As with the bilateral indices, the nominal/real split nests into nominal (N), real CPI-based (K) and real PPI-based (P), and each is given both as index (I) and as day-on-day % change (V). This daily cube is the canonical effective-FX series; the monthly roll-up devwkieffim is the dropped lower-frequency duplicate per the native-frequency rule. The JSON start is 1999-01 but the daily observations in the CSV begin late 2000 for the index level (K,E,I from 2000-11-30); earlier history is sparse and series-dependent.",
-  "fetched_utc": "2026-06-13 15:45:15"
+  "fetched_utc": "2026-07-07 09:28:35"
 }
