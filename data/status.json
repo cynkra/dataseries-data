@@ -1,5 +1,5 @@
 {
-  "checked": "2026-07-10 09:29 UTC",
+  "checked": "2026-07-10 11:33 UTC",
   "counts": {
     "green": 70,
     "red": 0,
@@ -569,17 +569,6 @@
       "status": "green"
     },
     {
-      "id": "ch_ffa_finances",
-      "title": "Government finances",
-      "source": "Federal Finance Administration (FFA)",
-      "frequency": "annual",
-      "end": "2029-01-01",
-      "updated": "2025-03-18",
-      "age_days": -906,
-      "threshold_days": 825,
-      "status": "green"
-    },
-    {
       "id": "ch_adecco_sjmi",
       "title": "Adecco Group Swiss Job Market Index",
       "source": "University of Zurich (Stellenmarkt-Monitor Schweiz)",
@@ -588,6 +577,17 @@
       "updated": null,
       "age_days": 131,
       "threshold_days": 435,
+      "status": "green"
+    },
+    {
+      "id": "ch_ffa_finances",
+      "title": "Government finances",
+      "source": "Federal Finance Administration (FFA)",
+      "frequency": "annual",
+      "end": "2029-01-01",
+      "updated": "2025-03-18",
+      "age_days": -906,
+      "threshold_days": 825,
       "status": "green"
     },
     {

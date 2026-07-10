@@ -98,5 +98,5 @@
     "item": "pop_stock_jan"
   },
   "description": "The annual demographic balance of the permanent resident population, back to 1861 (the longest series in the catalog). Broader than the old parser, which kept only the 1 January population stock; this captures the full demographic balance the workbook provides (stocks, births, deaths, birth surplus, migration, naturalisations, absolute change).",
-  "fetched_utc": "2026-07-09 09:30:07"
+  "fetched_utc": "2026-07-10 11:33:04"
 }

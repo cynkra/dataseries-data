@@ -1077,27 +1077,6 @@
     "meta": "ch_snb_zimoma.json"
   },
   {
-    "id": "ch_ffa_finances",
-    "title": {
-      "en": "Government finances"
-    },
-    "concept": "National accounts / Government finance",
-    "canonical": true,
-    "featured": null,
-    "topic": "National accounts",
-    "source": "Federal Finance Administration (FFA)",
-    "license": "opendata.swiss terms of use (open use, attribution required: Federal Finance Administration FFA)",
-    "frequency": "annual",
-    "start": "1990-01-01",
-    "end": "2029-01-01",
-    "n_series": 387,
-    "updated": "2025-03-18",
-    "fetched": "2026-07-09 09:30:06",
-    "load": "whole",
-    "data": "ch_ffa_finances.csv",
-    "meta": "ch_ffa_finances.json"
-  },
-  {
     "id": "ch_adecco_sjmi",
     "title": {
       "en": "Adecco Group Swiss Job Market Index"
@@ -1119,6 +1098,27 @@
     "meta": "ch_adecco_sjmi.json"
   },
   {
+    "id": "ch_ffa_finances",
+    "title": {
+      "en": "Government finances"
+    },
+    "concept": "National accounts / Government finance",
+    "canonical": true,
+    "featured": null,
+    "topic": "National accounts",
+    "source": "Federal Finance Administration (FFA)",
+    "license": "opendata.swiss terms of use (open use, attribution required: Federal Finance Administration FFA)",
+    "frequency": "annual",
+    "start": "1990-01-01",
+    "end": "2029-01-01",
+    "n_series": 387,
+    "updated": "2025-03-18",
+    "fetched": "2026-07-10 11:33:03",
+    "load": "whole",
+    "data": "ch_ffa_finances.csv",
+    "meta": "ch_ffa_finances.json"
+  },
+  {
     "id": "ch_fso_hesta",
     "title": {
       "en": "Hotel overnight stays"
@@ -1134,7 +1134,7 @@
     "end": "2026-05-01",
     "n_series": 14,
     "updated": null,
-    "fetched": "2026-07-09 09:30:06",
+    "fetched": "2026-07-10 11:33:03",
     "load": "whole",
     "data": "ch_fso_hesta.csv",
     "meta": "ch_fso_hesta.json"
@@ -1155,7 +1155,7 @@
     "end": "2026-01-01",
     "n_series": 60,
     "updated": null,
-    "fetched": "2026-07-09 09:30:06",
+    "fetched": "2026-07-10 11:33:03",
     "load": "whole",
     "data": "ch_fso_besta.csv",
     "meta": "ch_fso_besta.json"
@@ -1176,7 +1176,7 @@
     "end": "2026-01-01",
     "n_series": 60,
     "updated": null,
-    "fetched": "2026-07-09 09:30:06",
+    "fetched": "2026-07-10 11:33:03",
     "load": "whole",
     "data": "ch_fso_vacancies.csv",
     "meta": "ch_fso_vacancies.json"
@@ -1197,7 +1197,7 @@
     "end": "2026-01-01",
     "n_series": 336,
     "updated": null,
-    "fetched": "2026-07-09 09:30:06",
+    "fetched": "2026-07-10 11:33:03",
     "load": "whole",
     "data": "ch_fso_jobs_sex.csv",
     "meta": "ch_fso_jobs_sex.json"
@@ -1218,7 +1218,7 @@
     "end": "2026-01-01",
     "n_series": 20,
     "updated": null,
-    "fetched": "2026-07-09 09:30:06",
+    "fetched": "2026-07-10 11:33:03",
     "load": "whole",
     "data": "ch_fso_besta_outlook.csv",
     "meta": "ch_fso_besta_outlook.json"
@@ -1239,7 +1239,7 @@
     "end": "2026-06-01",
     "n_series": 595,
     "updated": "2026-07-02",
-    "fetched": "2026-07-09 09:30:07",
+    "fetched": "2026-07-10 11:33:04",
     "load": "whole",
     "data": "ch_fso_cpi.csv",
     "meta": "ch_fso_cpi.json"
@@ -1260,7 +1260,7 @@
     "end": "2026-05-01",
     "n_series": 7,
     "updated": "2026-06-15",
-    "fetched": "2026-07-09 09:30:07",
+    "fetched": "2026-07-10 11:33:04",
     "load": "whole",
     "data": "ch_fso_ppi.csv",
     "meta": "ch_fso_ppi.json"
@@ -1281,7 +1281,7 @@
     "end": "2025-01-01",
     "n_series": 12,
     "updated": "2026-04-21",
-    "fetched": "2026-07-09 09:30:07",
+    "fetched": "2026-07-10 11:33:04",
     "load": "whole",
     "data": "ch_fso_wage_idx.csv",
     "meta": "ch_fso_wage_idx.json"
@@ -1302,7 +1302,7 @@
     "end": "2024-01-01",
     "n_series": 10,
     "updated": "2025-08-27",
-    "fetched": "2026-07-09 09:30:07",
+    "fetched": "2026-07-10 11:33:04",
     "load": "whole",
     "data": "ch_fso_pop.csv",
     "meta": "ch_fso_pop.json"
@@ -1323,7 +1323,7 @@
     "end": "2026-03-01",
     "n_series": 5,
     "updated": "2026-05-18",
-    "fetched": "2026-07-09 09:30:07",
+    "fetched": "2026-07-10 11:33:04",
     "load": "whole",
     "data": "ch_fso_unemp_rate.csv",
     "meta": "ch_fso_unemp_rate.json"
@@ -1344,7 +1344,7 @@
     "end": "2024-01-01",
     "n_series": 3,
     "updated": "2025-09-29",
-    "fetched": "2026-07-09 09:30:07",
+    "fetched": "2026-07-10 11:33:04",
     "load": "whole",
     "data": "ch_fso_labour_productivity.csv",
     "meta": "ch_fso_labour_productivity.json"
@@ -1365,7 +1365,7 @@
     "end": "2026-01-01",
     "n_series": 69,
     "updated": "2026-06-16",
-    "fetched": "2026-07-09 09:30:07",
+    "fetched": "2026-07-10 11:33:04",
     "load": "whole",
     "data": "ch_fso_ets.csv",
     "meta": "ch_fso_ets.json"
@@ -1386,7 +1386,7 @@
     "end": "2024-01-01",
     "n_series": 37,
     "updated": "2025-09-29",
-    "fetched": "2026-07-09 09:30:07",
+    "fetched": "2026-07-10 11:33:04",
     "load": "whole",
     "data": "ch_fso_gfcf_detail.csv",
     "meta": "ch_fso_gfcf_detail.json"
@@ -1407,7 +1407,7 @@
     "end": "2025-01-01",
     "n_series": 45,
     "updated": "2026-05-21",
-    "fetched": "2026-07-09 09:30:07",
+    "fetched": "2026-07-10 11:33:04",
     "load": "whole",
     "data": "ch_fso_hours_worked.csv",
     "meta": "ch_fso_hours_worked.json"
@@ -1428,7 +1428,7 @@
     "end": "2022-01-01",
     "n_series": 34,
     "updated": "2024-10-28",
-    "fetched": "2026-07-09 09:30:07",
+    "fetched": "2026-07-10 11:33:04",
     "load": "whole",
     "data": "ch_fso_gdp_region.csv",
     "meta": "ch_fso_gdp_region.json"
@@ -1449,7 +1449,7 @@
     "end": "2026-04-01",
     "n_series": 3,
     "updated": "2026-06-18",
-    "fetched": "2026-07-09 09:30:07",
+    "fetched": "2026-07-10 11:33:04",
     "load": "whole",
     "data": "ch_fso_construction_prices.csv",
     "meta": "ch_fso_construction_prices.json"
@@ -1470,7 +1470,7 @@
     "end": "2025-01-01",
     "n_series": 66,
     "updated": null,
-    "fetched": "2026-07-09 09:30:07",
+    "fetched": "2026-07-10 11:33:04",
     "load": "whole",
     "data": "ch_fso_trade_partner.csv",
     "meta": "ch_fso_trade_partner.json"
