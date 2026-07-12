@@ -1,13 +1,13 @@
 {
-  "ts": "2026-07-11T14:38:21Z",
+  "ts": "2026-07-12T09:02:20Z",
   "alert_after_days": 3,
   "skips": [
     {
       "id": "ch_adecco_sjmi",
-      "error": "Failed to perform HTTP request. Caused by error in `curl::curl_fetch_memory()`: ! Timeout was reached [www.stellenmarktmonitor.uzh.ch]: Failed to connect to www.stellenmarktmonitor.uzh.ch port 443 after 15002 ms: Timeout was reached",
+      "error": "Failed to perform HTTP request. Caused by error in `curl::curl_fetch_memory()`: ! Timeout was reached [www.stellenmarktmonitor.uzh.ch]: Failed to connect to www.stellenmarktmonitor.uzh.ch port 443 after 15001 ms: Timeout was reached",
       "route": "outage",
       "escalated": true,
-      "consecutive_days": 3
+      "consecutive_days": 4
     }
   ]
 }
