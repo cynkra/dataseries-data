@@ -371,5 +371,5 @@
     "level": "group"
   },
   "description": "Swiss foreign trade broken down by partner country and region, for both flows (exports and imports), in CHF millions, back to 1990. Covers the major trading partners (Germany, USA, China, …) plus the continent / economic-area aggregates (Europe, EU, Asia, North America, …) and the grand Total. This is the partner-country cut of the customs trade statistics, complementary to the SNB's trade-by-goods value series — the SNB cubes carry no partner-country dimension.",
-  "fetched_utc": "2026-07-14 08:57:49"
+  "fetched_utc": "2026-07-15 09:02:18"
 }
