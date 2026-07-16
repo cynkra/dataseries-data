@@ -130,5 +130,5 @@
     "worktime": "_T"
   },
   "description": "The annual working volume (AVOL) statistic: the total hours actually worked in the Swiss economy, plus its two per-job intensities. One cube carries three measures — the headline usual weekly hours per job (the \"Swiss work ~31h/week, not 42\" number), the annual hours worked per job, and the absolute annual volume of hours (~8.1 billion hours). All three cut by sex and by working-time category (full-time vs the two part-time bands), so the part-time gender split — Switzerland's defining labour-market feature — reads directly.",
-  "fetched_utc": "2026-07-15 09:02:18"
+  "fetched_utc": "2026-07-16 09:03:01"
 }
