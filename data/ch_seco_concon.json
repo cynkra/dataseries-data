@@ -286,5 +286,5 @@
     "seas_adj": "csa"
   },
   "description": "The Swiss consumer sentiment survey, the canonical sentiment series, back to 1972 — one of the longest survey histories in the catalog. SECO (the State Secretariat for Economic Affairs) runs the survey and publishes the data directly in the swissdata format, so this dataset is fetched at source and attributed to the true producer. It replaces the earlier SNB re-export ch_snb_concon, which carried the same numbers second-hand through the SNB cube API: the move corrects the attribution and adds the seasonally-adjusted track that SECO publishes alongside the raw balances. The dataset exposes the headline consumer sentiment index (ks_i63_index_q) plus the underlying balance components: past/expected economic situation, past/expected prices, job security and unemployment outlook, past/future personal finances, savings situation and outlook, and major-purchase timing. Each series is published both raw (na) and seasonally + calendar adjusted (csa). The historical level (1972–2023) has been re-aligned with the current methodology in use since 2024.",
-  "fetched_utc": "2026-07-17 09:01:58"
+  "fetched_utc": "2026-07-18 08:52:51"
 }
