@@ -210,5 +210,5 @@
     "Offene Stellen": "1"
   },
   "description": "The FSO job-vacancies statistics, a leading indicator for the labour market: when firms post more openings, employment tends to follow. Quarterly back to 1992, by economic division. What makes this dataset distinctive is the Offene Stellen dimension, which carries three different units of the same concept in one table: the count of vacancies (1), an index rebased to 2015Q2 = 100 (2), and the vacancy rate in % of jobs (3). The mixed units are why the value span runs from 0.2 (a rate) to 127017 (a count) in the same column. The 20 NOGA divisions are a coarser cut than BESTA's 60 (e.g. one 68-75 aggregate instead of separate real-estate and professional-services codes). Pairs with ch_fso_besta (jobs) as the demand-side counterpart.",
-  "fetched_utc": "2026-07-20 09:24:14"
+  "fetched_utc": "2026-07-21 09:18:23"
 }

@@ -5,7 +5,7 @@
     "D0"
   ],
   "start": "2014-12-01",
-  "end": "2026-04-01",
+  "end": "2026-05-01",
   "title": {
     "en": "E-money"
   },
@@ -88,7 +88,7 @@
       }
     }
   },
-  "updated": "2026-06-22 09:00",
+  "updated": "2026-07-21 09:00",
   "topic": "Payment systems",
   "concept": "Payment systems / Payments & cash",
   "canonical": false,
@@ -99,5 +99,5 @@
     "D0": "BMF0"
   },
   "description": "A narrow, niche payments series: the loading and float of e-money on Swiss domestic payment cards (prepaid / stored-value card balances), monthly from 2014. The smallest cube in this group at just 4 series. It splits into two halves in the hierarchy. Loading (the act of topping up a card) carries three measures of the same flow: TT transactions in thousands, BMF0 amount in CHF millions, and BTF amount per transaction in CHF (a derived average, value / count). Float (the outstanding balance sitting on cards) is a single stock: BMF1 amount in CHF millions. So in one short table you get a flow (loading) with its per-transaction average and the corresponding stock (float), which is the distinctive flow-vs-stock pairing for the e-money niche. It is the youngest history of the six and one of the zave payment-system family.",
-  "fetched_utc": "2026-06-22 10:28:17"
+  "fetched_utc": "2026-07-21 09:18:22"
 }
