@@ -1,5 +1,20 @@
 {
-  "ts": "2026-07-21T09:18:24Z",
+  "ts": "2026-07-22T09:13:39Z",
   "alert_after_days": 3,
-  "skips": []
+  "skips": [
+    {
+      "id": "ch_kof_barometer",
+      "error": "HTTP 503 Service Unavailable.",
+      "route": "outage",
+      "escalated": false,
+      "consecutive_days": 1
+    },
+    {
+      "id": "ch_kof_esi",
+      "error": "HTTP 503 Service Unavailable.",
+      "route": "outage",
+      "escalated": false,
+      "consecutive_days": 1
+    }
+  ]
 }

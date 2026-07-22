@@ -1,5 +1,5 @@
 {
-  "checked": "2026-07-21 09:18 UTC",
+  "checked": "2026-07-22 09:13 UTC",
   "counts": {
     "green": 70,
     "red": 0,
@@ -8,244 +8,13 @@
   },
   "datasets": [
     {
-      "id": "ch_snb_amarbma",
-      "title": "Registered unemployment",
-      "source": "Swiss National Bank",
-      "frequency": "monthly",
-      "end": "2026-06-01",
-      "updated": "2026-07-21 09:00",
-      "age_days": 50,
-      "threshold_days": 165,
-      "status": "green"
-    },
-    {
-      "id": "ch_snb_ambeschkla",
-      "title": "Employees, by economic activity",
-      "source": "Swiss National Bank",
-      "frequency": "quarterly",
-      "end": "2026-01-01",
-      "updated": "2026-07-21 09:00",
-      "age_days": 201,
-      "threshold_days": 435,
-      "status": "green"
-    },
-    {
-      "id": "ch_snb_ausshawarm",
-      "title": "Foreign trade by goods category",
-      "source": "Swiss National Bank",
-      "frequency": "monthly",
-      "end": "2026-05-01",
-      "updated": "2026-07-21 09:00",
-      "age_days": 81,
-      "threshold_days": 165,
-      "status": "green"
-    },
-    {
-      "id": "ch_snb_babilpobm",
-      "title": "Bank balance sheets by currency",
-      "source": "Swiss National Bank",
-      "frequency": "monthly",
-      "end": "2026-05-01",
-      "updated": "2026-07-21 09:00",
-      "age_days": 81,
-      "threshold_days": 165,
-      "status": "green"
-    },
-    {
-      "id": "ch_snb_bakredbetgrbm",
-      "title": "Corporate loans by company size",
-      "source": "Swiss National Bank",
-      "frequency": "monthly",
-      "end": "2026-05-01",
-      "updated": "2026-07-21 09:00",
-      "age_days": 81,
-      "threshold_days": 165,
-      "status": "green"
-    },
-    {
-      "id": "ch_snb_bakredinausbm",
-      "title": "Mortgage & other loans",
-      "source": "Swiss National Bank",
-      "frequency": "monthly",
-      "end": "2026-05-01",
-      "updated": "2026-07-21 09:00",
-      "age_days": 81,
-      "threshold_days": 165,
-      "status": "green"
-    },
-    {
-      "id": "ch_snb_bakredsekbm",
-      "title": "Domestic loans by sector",
-      "source": "Swiss National Bank",
-      "frequency": "monthly",
-      "end": "2026-05-01",
-      "updated": "2026-07-21 09:00",
-      "age_days": 81,
-      "threshold_days": 165,
-      "status": "green"
-    },
-    {
-      "id": "ch_snb_capchstocki",
-      "title": "Swiss stock indices",
-      "source": "Swiss National Bank",
-      "frequency": "daily",
-      "end": "2026-07-15",
-      "updated": "2026-07-21 09:00",
-      "age_days": 6,
-      "threshold_days": 53,
-      "status": "green"
-    },
-    {
-      "id": "ch_snb_capweums",
-      "title": "Securities turnover",
-      "source": "Swiss National Bank",
-      "frequency": "monthly",
-      "end": "2026-06-01",
-      "updated": "2026-07-21 09:00",
-      "age_days": 50,
-      "threshold_days": 165,
-      "status": "green"
-    },
-    {
-      "id": "ch_snb_plimoinchq",
-      "title": "Real estate prices",
-      "source": "Swiss National Bank",
-      "frequency": "quarterly",
-      "end": "2026-04-01",
-      "updated": "2026-07-21 09:00",
-      "age_days": 111,
-      "threshold_days": 435,
-      "status": "green"
-    },
-    {
-      "id": "ch_snb_plkopr",
-      "title": "Consumer prices (CPI)",
-      "source": "Swiss National Bank",
-      "frequency": "monthly",
-      "end": "2026-06-01",
-      "updated": "2026-07-21 09:00",
-      "age_days": 50,
-      "threshold_days": 165,
-      "status": "green"
-    },
-    {
-      "id": "ch_snb_plkoprinfla",
-      "title": "Core inflation",
-      "source": "Swiss National Bank",
-      "frequency": "monthly",
-      "end": "2026-06-01",
-      "updated": "2026-07-21 09:00",
-      "age_days": 50,
-      "threshold_days": 165,
-      "status": "green"
-    },
-    {
-      "id": "ch_snb_snbmoba",
-      "title": "Monetary base",
-      "source": "Swiss National Bank",
-      "frequency": "monthly",
-      "end": "2026-06-01",
-      "updated": "2026-07-21 09:00",
-      "age_days": 50,
-      "threshold_days": 165,
-      "status": "green"
-    },
-    {
-      "id": "ch_snb_snbmonagg",
-      "title": "Monetary aggregates (M1–M3)",
-      "source": "Swiss National Bank",
-      "frequency": "monthly",
-      "end": "2026-06-01",
-      "updated": "2026-07-21 09:00",
-      "age_days": 50,
-      "threshold_days": 165,
-      "status": "green"
-    },
-    {
-      "id": "ch_snb_snboffzisa",
-      "title": "Official interest rates",
-      "source": "Swiss National Bank",
-      "frequency": "monthly",
-      "end": "2026-06-01",
-      "updated": "2026-07-21 09:00",
-      "age_days": 50,
-      "threshold_days": 165,
-      "status": "green"
-    },
-    {
-      "id": "ch_snb_zavegelade",
-      "title": "E-money",
-      "source": "Swiss National Bank",
-      "frequency": "monthly",
-      "end": "2026-05-01",
-      "updated": "2026-07-21 09:00",
-      "age_days": 81,
-      "threshold_days": 165,
-      "status": "green"
-    },
-    {
-      "id": "ch_snb_zavesic",
-      "title": "Interbank clearing (SIC)",
-      "source": "Swiss National Bank",
-      "frequency": "monthly",
-      "end": "2026-06-01",
-      "updated": "2026-07-21 09:00",
-      "age_days": 50,
-      "threshold_days": 165,
-      "status": "green"
-    },
-    {
-      "id": "ch_snb_zavezaka",
-      "title": "Payment cards and ATMs",
-      "source": "Swiss National Bank",
-      "frequency": "monthly",
-      "end": "2026-05-01",
-      "updated": "2026-07-21 09:00",
-      "age_days": 81,
-      "threshold_days": 165,
-      "status": "green"
-    },
-    {
-      "id": "ch_snb_zavezaluba",
-      "title": "Payments and cash withdrawals",
-      "source": "Swiss National Bank",
-      "frequency": "monthly",
-      "end": "2026-05-01",
-      "updated": "2026-07-21 09:00",
-      "age_days": 81,
-      "threshold_days": 165,
-      "status": "green"
-    },
-    {
-      "id": "ch_snb_zavkuzaart",
-      "title": "Customer payments (outgoing)",
-      "source": "Swiss National Bank",
-      "frequency": "monthly",
-      "end": "2026-05-01",
-      "updated": "2026-07-21 09:00",
-      "age_days": 81,
-      "threshold_days": 165,
-      "status": "green"
-    },
-    {
-      "id": "ch_snb_zikredlauf",
-      "title": "New lending rates",
-      "source": "Swiss National Bank",
-      "frequency": "monthly",
-      "end": "2026-04-01",
-      "updated": "2026-07-21 09:00",
-      "age_days": 111,
-      "threshold_days": 225,
-      "status": "green"
-    },
-    {
       "id": "ch_seco_gdp",
       "title": "Gross domestic product (GDP)",
       "source": "State Secretariat for Economic Affairs (SECO)",
       "frequency": "quarterly",
       "end": "2026-01-01",
       "updated": "2026-02-23 16:51:17",
-      "age_days": 201,
+      "age_days": 202,
       "threshold_days": 435,
       "status": "green"
     },
@@ -256,7 +25,7 @@
       "frequency": "quarterly",
       "end": "2026-04-01",
       "updated": "2026-05-23 16:49:08",
-      "age_days": 111,
+      "age_days": 112,
       "threshold_days": 435,
       "status": "green"
     },
@@ -267,7 +36,7 @@
       "frequency": "monthly",
       "end": "2026-05-01",
       "updated": null,
-      "age_days": 81,
+      "age_days": 82,
       "threshold_days": 165,
       "status": "green"
     },
@@ -278,7 +47,7 @@
       "frequency": "quarterly",
       "end": "2026-01-01",
       "updated": null,
-      "age_days": 201,
+      "age_days": 202,
       "threshold_days": 435,
       "status": "green"
     },
@@ -289,7 +58,7 @@
       "frequency": "quarterly",
       "end": "2026-01-01",
       "updated": null,
-      "age_days": 201,
+      "age_days": 202,
       "threshold_days": 435,
       "status": "green"
     },
@@ -300,7 +69,7 @@
       "frequency": "monthly",
       "end": "2026-06-01",
       "updated": null,
-      "age_days": 50,
+      "age_days": 51,
       "threshold_days": 165,
       "status": "green"
     },
@@ -311,7 +80,7 @@
       "frequency": "annual",
       "end": "2025-01-01",
       "updated": null,
-      "age_days": 566,
+      "age_days": 567,
       "threshold_days": 825,
       "status": "green"
     },
@@ -322,7 +91,7 @@
       "frequency": "quarterly",
       "end": "2026-01-01",
       "updated": null,
-      "age_days": 201,
+      "age_days": 202,
       "threshold_days": 435,
       "status": "green"
     },
@@ -333,7 +102,7 @@
       "frequency": "annual",
       "end": "2024-01-01",
       "updated": null,
-      "age_days": 932,
+      "age_days": 933,
       "threshold_days": 1425,
       "status": "green"
     },
@@ -344,30 +113,8 @@
       "frequency": "annual",
       "end": "2029-01-01",
       "updated": "2025-03-18",
-      "age_days": -895,
+      "age_days": -894,
       "threshold_days": 825,
-      "status": "green"
-    },
-    {
-      "id": "ch_kof_barometer",
-      "title": "KOF Economic Barometer",
-      "source": "KOF Swiss Economic Institute",
-      "frequency": "monthly",
-      "end": "2026-06-01",
-      "updated": null,
-      "age_days": 50,
-      "threshold_days": 165,
-      "status": "green"
-    },
-    {
-      "id": "ch_kof_esi",
-      "title": "KOF Economic Sentiment Index",
-      "source": "KOF Swiss Economic Institute",
-      "frequency": "monthly",
-      "end": "2026-05-01",
-      "updated": null,
-      "age_days": 81,
-      "threshold_days": 165,
       "status": "green"
     },
     {
@@ -377,7 +124,7 @@
       "frequency": "quarterly",
       "end": "2026-06-01",
       "updated": null,
-      "age_days": 50,
+      "age_days": 51,
       "threshold_days": 435,
       "status": "green"
     },
@@ -388,7 +135,7 @@
       "frequency": "monthly",
       "end": "2026-05-01",
       "updated": null,
-      "age_days": 81,
+      "age_days": 82,
       "threshold_days": 165,
       "status": "green"
     },
@@ -399,7 +146,7 @@
       "frequency": "quarterly",
       "end": "2026-01-01",
       "updated": null,
-      "age_days": 201,
+      "age_days": 202,
       "threshold_days": 435,
       "status": "green"
     },
@@ -410,7 +157,7 @@
       "frequency": "quarterly",
       "end": "2026-01-01",
       "updated": null,
-      "age_days": 201,
+      "age_days": 202,
       "threshold_days": 435,
       "status": "green"
     },
@@ -421,7 +168,7 @@
       "frequency": "quarterly",
       "end": "2026-01-01",
       "updated": null,
-      "age_days": 201,
+      "age_days": 202,
       "threshold_days": 435,
       "status": "green"
     },
@@ -432,7 +179,7 @@
       "frequency": "quarterly",
       "end": "2026-01-01",
       "updated": null,
-      "age_days": 201,
+      "age_days": 202,
       "threshold_days": 435,
       "status": "green"
     },
@@ -443,7 +190,7 @@
       "frequency": "monthly",
       "end": "2026-06-01",
       "updated": "2026-07-02",
-      "age_days": 50,
+      "age_days": 51,
       "threshold_days": 165,
       "status": "green"
     },
@@ -454,7 +201,7 @@
       "frequency": "monthly",
       "end": "2026-06-01",
       "updated": "2026-07-14",
-      "age_days": 50,
+      "age_days": 51,
       "threshold_days": 165,
       "status": "green"
     },
@@ -465,7 +212,7 @@
       "frequency": "annual",
       "end": "2025-01-01",
       "updated": "2026-04-21",
-      "age_days": 566,
+      "age_days": 567,
       "threshold_days": 825,
       "status": "green"
     },
@@ -476,7 +223,7 @@
       "frequency": "annual",
       "end": "2024-01-01",
       "updated": "2025-08-27",
-      "age_days": 932,
+      "age_days": 933,
       "threshold_days": 825,
       "status": "green"
     },
@@ -487,7 +234,7 @@
       "frequency": "monthly",
       "end": "2026-03-01",
       "updated": "2026-05-18",
-      "age_days": 142,
+      "age_days": 143,
       "threshold_days": 165,
       "status": "green"
     },
@@ -498,7 +245,7 @@
       "frequency": "annual",
       "end": "2024-01-01",
       "updated": "2025-09-29",
-      "age_days": 932,
+      "age_days": 933,
       "threshold_days": 825,
       "status": "green"
     },
@@ -509,7 +256,7 @@
       "frequency": "quarterly",
       "end": "2026-01-01",
       "updated": "2026-06-16",
-      "age_days": 201,
+      "age_days": 202,
       "threshold_days": 435,
       "status": "green"
     },
@@ -520,7 +267,7 @@
       "frequency": "annual",
       "end": "2024-01-01",
       "updated": "2025-09-29",
-      "age_days": 932,
+      "age_days": 933,
       "threshold_days": 825,
       "status": "green"
     },
@@ -531,7 +278,7 @@
       "frequency": "annual",
       "end": "2025-01-01",
       "updated": "2026-05-21",
-      "age_days": 566,
+      "age_days": 567,
       "threshold_days": 825,
       "status": "green"
     },
@@ -542,7 +289,7 @@
       "frequency": "annual",
       "end": "2022-01-01",
       "updated": "2024-10-28",
-      "age_days": 1662,
+      "age_days": 1663,
       "threshold_days": 2550,
       "status": "green"
     },
@@ -553,7 +300,7 @@
       "frequency": "semi-annual",
       "end": "2026-04-01",
       "updated": "2026-06-18",
-      "age_days": 111,
+      "age_days": 112,
       "threshold_days": 600,
       "status": "green"
     },
@@ -564,7 +311,7 @@
       "frequency": "annual",
       "end": "2025-01-01",
       "updated": null,
-      "age_days": 566,
+      "age_days": 567,
       "threshold_days": 825,
       "status": "green"
     },
@@ -575,7 +322,7 @@
       "frequency": "monthly",
       "end": "2025-12-01",
       "updated": "2026-02-06",
-      "age_days": 232,
+      "age_days": 233,
       "threshold_days": 315,
       "status": "green"
     },
@@ -586,8 +333,41 @@
       "frequency": "weekly",
       "end": "2026-06-29",
       "updated": null,
-      "age_days": 22,
+      "age_days": 23,
       "threshold_days": 53,
+      "status": "green"
+    },
+    {
+      "id": "ch_snb_amarbma",
+      "title": "Registered unemployment",
+      "source": "Swiss National Bank",
+      "frequency": "monthly",
+      "end": "2026-06-01",
+      "updated": "2026-07-21 09:00",
+      "age_days": 51,
+      "threshold_days": 165,
+      "status": "green"
+    },
+    {
+      "id": "ch_snb_ambeschkla",
+      "title": "Employees, by economic activity",
+      "source": "Swiss National Bank",
+      "frequency": "quarterly",
+      "end": "2026-01-01",
+      "updated": "2026-07-21 09:00",
+      "age_days": 202,
+      "threshold_days": 435,
+      "status": "green"
+    },
+    {
+      "id": "ch_snb_ausshawarm",
+      "title": "Foreign trade by goods category",
+      "source": "Swiss National Bank",
+      "frequency": "monthly",
+      "end": "2026-05-01",
+      "updated": "2026-07-21 09:00",
+      "age_days": 82,
+      "threshold_days": 165,
       "status": "green"
     },
     {
@@ -597,7 +377,7 @@
       "frequency": "quarterly",
       "end": "2026-01-01",
       "updated": "2026-06-23 09:00",
-      "age_days": 201,
+      "age_days": 202,
       "threshold_days": 435,
       "status": "green"
     },
@@ -608,7 +388,7 @@
       "frequency": "quarterly",
       "end": "2026-01-01",
       "updated": "2026-06-23 09:00",
-      "age_days": 201,
+      "age_days": 202,
       "threshold_days": 435,
       "status": "green"
     },
@@ -619,7 +399,7 @@
       "frequency": "quarterly",
       "end": "2026-01-01",
       "updated": "2026-06-23 09:00",
-      "age_days": 201,
+      "age_days": 202,
       "threshold_days": 435,
       "status": "green"
     },
@@ -630,8 +410,52 @@
       "frequency": "quarterly",
       "end": "2026-01-01",
       "updated": "2026-06-23 09:00",
-      "age_days": 201,
+      "age_days": 202,
       "threshold_days": 435,
+      "status": "green"
+    },
+    {
+      "id": "ch_snb_babilpobm",
+      "title": "Bank balance sheets by currency",
+      "source": "Swiss National Bank",
+      "frequency": "monthly",
+      "end": "2026-05-01",
+      "updated": "2026-07-21 09:00",
+      "age_days": 82,
+      "threshold_days": 165,
+      "status": "green"
+    },
+    {
+      "id": "ch_snb_bakredbetgrbm",
+      "title": "Corporate loans by company size",
+      "source": "Swiss National Bank",
+      "frequency": "monthly",
+      "end": "2026-05-01",
+      "updated": "2026-07-21 09:00",
+      "age_days": 82,
+      "threshold_days": 165,
+      "status": "green"
+    },
+    {
+      "id": "ch_snb_bakredinausbm",
+      "title": "Mortgage & other loans",
+      "source": "Swiss National Bank",
+      "frequency": "monthly",
+      "end": "2026-05-01",
+      "updated": "2026-07-21 09:00",
+      "age_days": 82,
+      "threshold_days": 165,
+      "status": "green"
+    },
+    {
+      "id": "ch_snb_bakredsekbm",
+      "title": "Domestic loans by sector",
+      "source": "Swiss National Bank",
+      "frequency": "monthly",
+      "end": "2026-05-01",
+      "updated": "2026-07-21 09:00",
+      "age_days": 82,
+      "threshold_days": 165,
       "status": "green"
     },
     {
@@ -641,7 +465,7 @@
       "frequency": "quarterly",
       "end": "2026-01-01",
       "updated": "2026-06-23 09:00",
-      "age_days": 201,
+      "age_days": 202,
       "threshold_days": 435,
       "status": "green"
     },
@@ -652,7 +476,7 @@
       "frequency": "quarterly",
       "end": "2026-01-01",
       "updated": "2026-06-23 09:00",
-      "age_days": 201,
+      "age_days": 202,
       "threshold_days": 435,
       "status": "green"
     },
@@ -663,7 +487,7 @@
       "frequency": "quarterly",
       "end": "2026-01-01",
       "updated": "2026-06-23 09:00",
-      "age_days": 201,
+      "age_days": 202,
       "threshold_days": 435,
       "status": "green"
     },
@@ -674,8 +498,30 @@
       "frequency": "quarterly",
       "end": "2026-01-01",
       "updated": "2026-06-23 09:00",
-      "age_days": 201,
+      "age_days": 202,
       "threshold_days": 435,
+      "status": "green"
+    },
+    {
+      "id": "ch_snb_capchstocki",
+      "title": "Swiss stock indices",
+      "source": "Swiss National Bank",
+      "frequency": "daily",
+      "end": "2026-07-15",
+      "updated": "2026-07-21 09:00",
+      "age_days": 7,
+      "threshold_days": 53,
+      "status": "green"
+    },
+    {
+      "id": "ch_snb_capweums",
+      "title": "Securities turnover",
+      "source": "Swiss National Bank",
+      "frequency": "monthly",
+      "end": "2026-06-01",
+      "updated": "2026-07-21 09:00",
+      "age_days": 51,
+      "threshold_days": 165,
       "status": "green"
     },
     {
@@ -685,7 +531,7 @@
       "frequency": "monthly",
       "end": "2026-06-01",
       "updated": "2026-07-01 14:30",
-      "age_days": 50,
+      "age_days": 51,
       "threshold_days": 165,
       "status": "green"
     },
@@ -696,7 +542,7 @@
       "frequency": "monthly",
       "end": "2026-06-01",
       "updated": "2026-07-07 09:00",
-      "age_days": 50,
+      "age_days": 51,
       "threshold_days": 165,
       "status": "green"
     },
@@ -707,8 +553,41 @@
       "frequency": "daily",
       "end": "2026-06-30",
       "updated": "2026-07-07 09:00",
-      "age_days": 21,
+      "age_days": 22,
       "threshold_days": 75,
+      "status": "green"
+    },
+    {
+      "id": "ch_snb_plimoinchq",
+      "title": "Real estate prices",
+      "source": "Swiss National Bank",
+      "frequency": "quarterly",
+      "end": "2026-04-01",
+      "updated": "2026-07-21 09:00",
+      "age_days": 112,
+      "threshold_days": 435,
+      "status": "green"
+    },
+    {
+      "id": "ch_snb_plkopr",
+      "title": "Consumer prices (CPI)",
+      "source": "Swiss National Bank",
+      "frequency": "monthly",
+      "end": "2026-06-01",
+      "updated": "2026-07-21 09:00",
+      "age_days": 51,
+      "threshold_days": 165,
+      "status": "green"
+    },
+    {
+      "id": "ch_snb_plkoprinfla",
+      "title": "Core inflation",
+      "source": "Swiss National Bank",
+      "frequency": "monthly",
+      "end": "2026-06-01",
+      "updated": "2026-07-21 09:00",
+      "age_days": 51,
+      "threshold_days": 165,
       "status": "green"
     },
     {
@@ -718,7 +597,7 @@
       "frequency": "daily",
       "end": "2026-06-30",
       "updated": "2026-07-01 14:30",
-      "age_days": 21,
+      "age_days": 22,
       "threshold_days": 75,
       "status": "green"
     },
@@ -729,7 +608,7 @@
       "frequency": "monthly",
       "end": "2026-05-01",
       "updated": "2026-06-30 09:00",
-      "age_days": 81,
+      "age_days": 82,
       "threshold_days": 165,
       "status": "green"
     },
@@ -740,7 +619,7 @@
       "frequency": "quarterly",
       "end": "2029-01-01",
       "updated": "2026-06-24 15:00",
-      "age_days": -895,
+      "age_days": -894,
       "threshold_days": 435,
       "status": "green"
     },
@@ -751,8 +630,107 @@
       "frequency": "quarterly",
       "end": "2026-04-01",
       "updated": "2026-06-24 15:00",
-      "age_days": 111,
+      "age_days": 112,
       "threshold_days": 435,
+      "status": "green"
+    },
+    {
+      "id": "ch_snb_snbmoba",
+      "title": "Monetary base",
+      "source": "Swiss National Bank",
+      "frequency": "monthly",
+      "end": "2026-06-01",
+      "updated": "2026-07-21 09:00",
+      "age_days": 51,
+      "threshold_days": 165,
+      "status": "green"
+    },
+    {
+      "id": "ch_snb_snbmonagg",
+      "title": "Monetary aggregates (M1–M3)",
+      "source": "Swiss National Bank",
+      "frequency": "monthly",
+      "end": "2026-06-01",
+      "updated": "2026-07-21 09:00",
+      "age_days": 51,
+      "threshold_days": 165,
+      "status": "green"
+    },
+    {
+      "id": "ch_snb_snboffzisa",
+      "title": "Official interest rates",
+      "source": "Swiss National Bank",
+      "frequency": "monthly",
+      "end": "2026-06-01",
+      "updated": "2026-07-21 09:00",
+      "age_days": 51,
+      "threshold_days": 165,
+      "status": "green"
+    },
+    {
+      "id": "ch_snb_zavegelade",
+      "title": "E-money",
+      "source": "Swiss National Bank",
+      "frequency": "monthly",
+      "end": "2026-05-01",
+      "updated": "2026-07-21 09:00",
+      "age_days": 82,
+      "threshold_days": 165,
+      "status": "green"
+    },
+    {
+      "id": "ch_snb_zavesic",
+      "title": "Interbank clearing (SIC)",
+      "source": "Swiss National Bank",
+      "frequency": "monthly",
+      "end": "2026-06-01",
+      "updated": "2026-07-21 09:00",
+      "age_days": 51,
+      "threshold_days": 165,
+      "status": "green"
+    },
+    {
+      "id": "ch_snb_zavezaka",
+      "title": "Payment cards and ATMs",
+      "source": "Swiss National Bank",
+      "frequency": "monthly",
+      "end": "2026-05-01",
+      "updated": "2026-07-21 09:00",
+      "age_days": 82,
+      "threshold_days": 165,
+      "status": "green"
+    },
+    {
+      "id": "ch_snb_zavezaluba",
+      "title": "Payments and cash withdrawals",
+      "source": "Swiss National Bank",
+      "frequency": "monthly",
+      "end": "2026-05-01",
+      "updated": "2026-07-21 09:00",
+      "age_days": 82,
+      "threshold_days": 165,
+      "status": "green"
+    },
+    {
+      "id": "ch_snb_zavkuzaart",
+      "title": "Customer payments (outgoing)",
+      "source": "Swiss National Bank",
+      "frequency": "monthly",
+      "end": "2026-05-01",
+      "updated": "2026-07-21 09:00",
+      "age_days": 82,
+      "threshold_days": 165,
+      "status": "green"
+    },
+    {
+      "id": "ch_snb_zikredlauf",
+      "title": "New lending rates",
+      "source": "Swiss National Bank",
+      "frequency": "monthly",
+      "end": "2026-04-01",
+      "updated": "2026-07-21 09:00",
+      "age_days": 112,
+      "threshold_days": 225,
       "status": "green"
     },
     {
@@ -762,7 +740,7 @@
       "frequency": "monthly",
       "end": "2026-05-01",
       "updated": "2026-07-01 14:30",
-      "age_days": 81,
+      "age_days": 82,
       "threshold_days": 165,
       "status": "green"
     },
@@ -773,7 +751,29 @@
       "frequency": "monthly",
       "end": "2026-06-01",
       "updated": "2026-07-01 14:30",
-      "age_days": 50,
+      "age_days": 51,
+      "threshold_days": 165,
+      "status": "green"
+    },
+    {
+      "id": "ch_kof_barometer",
+      "title": "KOF Economic Barometer",
+      "source": "KOF Swiss Economic Institute",
+      "frequency": "monthly",
+      "end": "2026-06-01",
+      "updated": null,
+      "age_days": 51,
+      "threshold_days": 165,
+      "status": "green"
+    },
+    {
+      "id": "ch_kof_esi",
+      "title": "KOF Economic Sentiment Index",
+      "source": "KOF Swiss Economic Institute",
+      "frequency": "monthly",
+      "end": "2026-05-01",
+      "updated": null,
+      "age_days": 82,
       "threshold_days": 165,
       "status": "green"
     }
