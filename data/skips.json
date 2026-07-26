@@ -1,20 +1,20 @@
 {
-  "ts": "2026-07-25T14:44:44Z",
+  "ts": "2026-07-26T09:06:27Z",
   "alert_after_days": 3,
   "skips": [
     {
       "id": "ch_kof_barometer",
-      "error": "HTTP 503 Service Unavailable.",
-      "route": "outage",
+      "error": "'{\"message\":\"This API has been discontinued. Please migrate to version 2 of the KOF Time Series Database API. For more information, please visit https://data.kof.ethz.ch/#tsdb-api.\"}' does not exist in current working directory: '/home/runner/work/dataseries-data/dataseries-data'.",
+      "route": "alarm",
       "escalated": false,
-      "consecutive_days": 2
+      "consecutive_days": 3
     },
     {
       "id": "ch_kof_esi",
-      "error": "HTTP 503 Service Unavailable.",
-      "route": "outage",
+      "error": "'{\"message\":\"This API has been discontinued. Please migrate to version 2 of the KOF Time Series Database API. For more information, please visit https://data.kof.ethz.ch/#tsdb-api.\"}' does not exist in current working directory: '/home/runner/work/dataseries-data/dataseries-data'.",
+      "route": "alarm",
       "escalated": false,
-      "consecutive_days": 2
+      "consecutive_days": 3
     }
   ]
 }
