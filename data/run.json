@@ -1,7 +1,7 @@
 {
-  "ts": "2026-07-29T11:20:49Z",
+  "ts": "2026-07-29T15:01:34Z",
   "attempted": 70,
-  "ok": 29,
+  "ok": 30,
   "unchanged": [
     "ch_snb_amarbma",
     "ch_snb_ambeschkla",
@@ -50,10 +50,6 @@
     {
       "id": "ch_kof_esi",
       "error": "'{\"message\":\"This API has been discontinued. Please migrate to version 2\nof the KOF Time Series Database API. For more information, please visit\nhttps://data.kof.ethz.ch/#tsdb-api.\"}' does not exist in current working\ndirectory: '/home/runner/work/dataseries-data/dataseries-data'."
-    },
-    {
-      "id": "ch_adecco_sjmi",
-      "error": "Failed to perform HTTP request.\nCaused by error in `curl::curl_fetch_memory()`:\n! Timeout was reached [www.stellenmarktmonitor.uzh.ch]:\nFailed to connect to www.stellenmarktmonitor.uzh.ch port 443 after 15001 ms: Timeout was reached"
     }
   ]
 }
