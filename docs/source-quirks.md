@@ -113,11 +113,29 @@ levels and %-change leaves on the same key (`ch_fso_gfcf_detail`: filter `UNIT_M
   `date,value`. That is correct, not a bug.
 
 ## Non-FSO open channels
-- **KOF — use the `sets` endpoint, not per-key `ts`.** `…/api/v1/public/ts?keys=` gates
-  most keys behind HTTP 412 (only `ch.kof.barometer` serves), but `…/api/v1/public/sets/<set>?mime=csv`
-  is open for the curated OGD sets (`ogd_ch.kof.esi`, `ogd_ch.kof.globalbaro`,
-  `ogd_ch.kof.bts_total`, …). `R/source_kof.R::kof_set_fetch` reads them (wide+sparse →
-  pivot long + drop NA). The COVID-era **weekly WBI is genuinely discontinued** (not gated).
+- **KOF — API v1 is DEAD; we are on the Time Series Database API v2** (base
+  `https://tsdb-api.kof.ethz.ch/v2`, docs `https://data.kof.ethz.ch/#tsdb-api`,
+  swagger at `/v2/docs`). Every `datenservice.kof.ethz.ch/api/v1/…` path now answers
+  `301` with a JSON "migrate to v2" body; that killed `ch_kof_barometer` +
+  `ch_kof_esi` in the 2026-07 runs. Migration (2026-07-30), response shapes unchanged:
+  | v1 | v2 |
+  |---|---|
+  | `…/api/v1/public/ts?keys=K&mime=csv` | `…/v2/ts?keys=K&mime=csv&access_type=public` |
+  | `…/api/v1/public/sets/<set>?mime=csv` | `…/v2/collections/public/<set>/ts?mime=csv&access_type=public` |
+  | `…/api/v1/public/metadata?keys=K` | `…/v2/ts/metadata?keys=K&locale=en` |
+  - **`access_type=public` is the anonymous switch.** Omit it and the API 302s to
+    KOF's Keycloak login instead of serving data — there is no separate `/public/`
+    path segment any more. The v1 `apikey=` query param is gone too (v2 wants an
+    `x-api-key` header), but we need no key for the public series.
+  - "sets" are now **collections**, owned by the `public` user; the ids are unchanged
+    (`ogd_ch.kof.esi`, `ogd_ch.kof.globalbaro`, `ogd_ch.kof.bts_total`, …), and
+    `R/source_kof.R::kof_set_fetch` still reads them wide+sparse → pivot long + drop NA.
+  - The v1 **HTTP 412 gate on per-key `ts` is gone** — under v2 any public key serves
+    directly (verified `ch.kof.globalbaro.coincident`, `ch.kof.esi.index`). Collections
+    remain the convenient route for whole families.
+  - The R client `kofdata` is discontinued along with v1; KOF's replacement is
+    [`tsdbapi`](https://github.com/KOF-ch/tsdbapi-R) (we call the API directly).
+  - The COVID-era **weekly WBI is genuinely discontinued** (not gated).
 - **Eurostat (SDMX 2.1)** for EU-harmonised series with no clean Swiss-domain source
   (e.g. HICP). `ec.europa.eu/eurostat/api/dissemination/sdmx/2.1/data/<flow>/<key>/?format=SDMX-CSV`,
   `geo=CH`. Separate host/module from FSO SDMX → `R/source_eurostat.R`. Provenance must

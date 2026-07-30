@@ -16,15 +16,20 @@ the current and expected business situation. Two methodology vintages run in
 parallel: the original "pre-Brexit" version and the standard 2018 version.
 
 ## Access
-- **type**: KOF Datenservice public **sets** endpoint (open OGD; the per-key `ts`
-  endpoint gates most keys behind HTTP 412 — the `sets` endpoint does not)
+- **type**: KOF Time Series Database API **v2**, public **collection** (v1 called
+  these "sets"; collections owned by the `public` user are open OGD)
+- **endpoint**: `https://tsdb-api.kof.ethz.ch/v2/collections/public/<collection>/ts`
 - **set**: `ogd_ch.kof.esi`
 - **call**: `kof_set_fetch("ogd_ch.kof.esi")`
+- `access_type=public` keeps the call anonymous; without it the API redirects to
+  KOF's Keycloak login. (API v1 on `datenservice.kof.ethz.ch` was discontinued in
+  2026-07 — see `docs/source-quirks.md`.)
 
 ## Parsing recipe
-- `GET .../api/v1/public/sets/ogd_ch.kof.esi?mime=csv` → a **wide** table (`date` +
-  one column per series key). Pivot longer to `indicator, date, value`; filter NA
-  (the set is sparse — series start at different dates). `date` (`YYYY-MM`) → ISO.
+- `GET .../v2/collections/public/ogd_ch.kof.esi/ts?mime=csv&access_type=public` → a
+  **wide** table (`date` + one column per series key). Pivot longer to
+  `indicator, date, value`; filter NA (the collection is sparse — series start at
+  different dates). `date` → ISO.
 
 ## Dimensions
 - `indicator`: `ch.kof.esi.index` (pre-Brexit version) and `ch.kof.esi.index.v2018`
@@ -41,9 +46,10 @@ parallel: the original "pre-Brexit" version and the standard 2018 version.
 - Unitless index (mean ≈ 100); a reading > 100 is above-average sentiment. Periodic
   re-estimation revises the back-series (same caveat as the barometer).
 - The COVID-era weekly KOF indicator (WBI) was discontinued by KOF and is not in any
-  public set — deliberately not pursued. Other open KOF sets
+  public collection — deliberately not pursued. Other open KOF collections
   (`ogd_ch.kof.globalbaro`, `ogd_ch.kof.bts_total`) are available via the same helper.
 
 ## Provenance
 Script: `R/source_kof.R::kof_set_fetch` (wired in `R/pipeline.R`).
 Datasheet authored 2026-06-02; verified live 2026-06-02 (2 series, 460 rows, to 2026-05).
+Migrated to KOF API v2 and re-verified 2026-07-30.

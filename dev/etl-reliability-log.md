@@ -182,6 +182,45 @@ Act on a candidate solution when one of these crosses:
 
 ## Incident log
 
+### 2026-07-30 — KOF discontinued API v1; both KOF sources dead until migrated to the v2 host
+
+- **Run:** the current run-through in `UPTIME.md` — 2 sources failed as 4xx/parse-error
+  (`ch_kof_barometer`, `ch_kof_esi`), each opening an etl-skip issue. Everything else fine.
+- **Symptom:** both sources skipped with
+  `'{"message":"This API has been discontinued. Please migrate to version 2 of the KOF Time
+  Series Database API..."}' does not exist in current working directory`.
+- **Root cause:** two stacked causes.
+  1. **The source break.** KOF retired the whole v1 API. Every
+     `datenservice.kof.ethz.ch/api/v1/…` path now answers `301` with that JSON body instead
+     of data. This was announced, not an outage — the discontinuation also covers the
+     `kofdata` R package (replacement: `tsdbapi`). No transient, no retry helps.
+  2. **The unreadable error.** `kof_*_fetch()` did `readr::read_csv(get_text(url))`, and
+     `read_csv()` treats a bare one-line string as a **file path**. So a non-CSV body
+     surfaced as "…does not exist in current working directory" — an error that reads like
+     a local filesystem bug and hides the actual (self-explaining!) upstream message inside
+     the quoted "filename".
+- **Why mitigations didn't catch it:** nothing was supposed to. `.with_retry()` deliberately
+  only retries 429/5xx, and a permanent 301-to-JSON is neither; `.try_fetch()` did its job —
+  it isolated the failure to 2 sources and logged it. The gap was purely **legibility**: the
+  skip message pointed at the wrong layer.
+- **Blast radius:** `ch_kof_barometer` + `ch_kof_esi` stale (barometer stuck at 2026-05,
+  2 months behind); 2 etl-skip issues. No other source touched.
+- **Action taken this time:** migrated `R/source_kof.R` to the **v2 API**
+  (`https://tsdb-api.kof.ethz.ch/v2`) — see the mapping table in
+  `docs/source-quirks.md`. Response shapes are byte-identical to v1, so the parsers,
+  the long contract and both datasheets' recipes are unchanged; only URLs moved.
+  Anonymous access is now the `access_type=public` **query parameter** rather than a
+  `/public/` path segment, and v1's "sets" are v2's "collections". Verified live: barometer
+  427 rows to **2026-07**, ESI 460 rows × 2 series to 2026-05 (the source's own end),
+  both passing `validate_dataset()`. Also added `kof_read_csv()`, which parses with
+  `readr::read_csv(I(txt))` (literal data, never a path) and fails with
+  `KOF API did not return CSV for <url>: <first 200 chars>` — so the next KOF-side change
+  names itself in the skip message.
+- **Pattern bucket:** parser-break (announced source migration), same shape as the
+  2026-06-10 SECO migration — **not** an outage. Second permanent-source-move in ~7 weeks;
+  worth noting that "4xx/parse-error" skips are the bucket that actually needs a human,
+  which is exactly what the issue-only-when-actionable alerting assumes.
+
 ### 2026-06-18 — BFS database outage (12 FSO sources 503/timeout); the run was *fine*, the *alerting* was the bug
 
 - **Run:** [27770351861](https://github.com/cynkra/dataseries-data/actions/runs/27770351861)

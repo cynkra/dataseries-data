@@ -18,16 +18,19 @@ few months ahead. Normalised so the long-run mean sits around 100; readings abov
 100 signal above-average expected growth, below 100 the reverse. Plain one-column
 time series, no dimensions, monthly back to 1991.
 
-Note: the per-key `ts` endpoint used here gates most keys behind HTTP 412, but the
-public **`sets`** endpoint is open for the curated OGD sets — see `ch_kof_esi`
-(`R/source_kof.R::kof_set_fetch`), which unlocks the wider open KOF family
-(`ogd_ch.kof.esi`, `ogd_ch.kof.globalbaro`, `ogd_ch.kof.bts_total`).
+Note: on API v2 the per-key `ts` endpoint serves every public key (the v1 HTTP 412
+gate is gone), but the wider open KOF family is still most convenient as whole
+**collections** — see `ch_kof_esi` (`R/source_kof.R::kof_set_fetch`), which reads
+`ogd_ch.kof.esi`, `ogd_ch.kof.globalbaro`, `ogd_ch.kof.bts_total`.
 
 ## Access
-- **type**: KOF API
-- **endpoint**: `https://datenservice.kof.ethz.ch/api/v1/public/ts`
+- **type**: KOF Time Series Database API **v2**
+- **endpoint**: `https://tsdb-api.kof.ethz.ch/v2/ts`
 - **call**: `kof_fetch("ch.kof.barometer")`
-  (`GET .../ts?keys=ch.kof.barometer&mime=csv`, public, no key required)
+  (`GET .../ts?keys=ch.kof.barometer&mime=csv&access_type=public`, no key required)
+- `access_type=public` is what makes the call anonymous; without it the API
+  redirects to KOF's Keycloak login. (API v1 on `datenservice.kof.ethz.ch` was
+  discontinued in 2026-07 — see `docs/source-quirks.md`.)
 
 ## Parsing recipe
 - Request the series as CSV via `&mime=csv`. The response has two columns:
@@ -44,11 +47,13 @@ None. The dataset is a single undifferentiated series (`dim_order` empty).
 ## Caveats / simplifications
 - The barometer is periodically re-based and re-estimated by KOF, so historical
   values can be revised across the whole back-series, not just recent months.
-- The per-key `ts` fetcher used here only serves `ch.kof.barometer` (other keys 412);
-  the open `sets` endpoint (`kof_set_fetch`) serves the wider OGD family — see `ch_kof_esi`.
+- Under API v1 the per-key `ts` endpoint served only `ch.kof.barometer` (other keys
+  412'd); API v2 lifted that, but whole-collection reads (`kof_set_fetch`) remain the
+  route for the wider OGD family — see `ch_kof_esi`.
 - The level is index-like and unitless (mean ~100); it is not a percentage or a
   growth rate despite tracking expected GDP growth.
 
 ## Provenance
 Script: `R/source_kof.R::kof_fetch` (key `ch.kof.barometer`). Datasheet authored
-2026-06-01; parser verified 2026-06-01 (425 rows, 1 series).
+2026-06-01; parser verified 2026-06-01 (425 rows, 1 series). Migrated to KOF API v2
+and re-verified 2026-07-30.
