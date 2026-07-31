@@ -1,7 +1,7 @@
 {
-  "ts": "2026-07-30T14:59:50Z",
+  "ts": "2026-07-31T09:17:57Z",
   "attempted": 70,
-  "ok": 30,
+  "ok": 33,
   "unchanged": [
     "ch_snb_amarbma",
     "ch_snb_ambeschkla",
@@ -27,7 +27,6 @@
     "ch_snb_plkopr",
     "ch_snb_plkoprinfla",
     "ch_snb_rendeiduebd",
-    "ch_snb_snbbipo",
     "ch_snb_snbiprogq",
     "ch_snb_snbkosiq",
     "ch_snb_snbmoba",
@@ -42,14 +41,5 @@
     "ch_snb_zikrepro",
     "ch_snb_zimoma"
   ],
-  "skipped": [
-    {
-      "id": "ch_kof_barometer",
-      "error": "'{\"message\":\"This API has been discontinued. Please migrate to version 2\nof the KOF Time Series Database API. For more information, please visit\nhttps://data.kof.ethz.ch/#tsdb-api.\"}' does not exist in current working\ndirectory: '/home/runner/work/dataseries-data/dataseries-data'."
-    },
-    {
-      "id": "ch_kof_esi",
-      "error": "'{\"message\":\"This API has been discontinued. Please migrate to version 2\nof the KOF Time Series Database API. For more information, please visit\nhttps://data.kof.ethz.ch/#tsdb-api.\"}' does not exist in current working\ndirectory: '/home/runner/work/dataseries-data/dataseries-data'."
-    }
-  ]
+  "skipped": []
 }

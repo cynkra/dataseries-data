@@ -1,20 +1,5 @@
 {
-  "ts": "2026-07-30T14:59:50Z",
+  "ts": "2026-07-31T09:17:57Z",
   "alert_after_days": 3,
-  "skips": [
-    {
-      "id": "ch_kof_barometer",
-      "error": "'{\"message\":\"This API has been discontinued. Please migrate to version 2 of the KOF Time Series Database API. For more information, please visit https://data.kof.ethz.ch/#tsdb-api.\"}' does not exist in current working directory: '/home/runner/work/dataseries-data/dataseries-data'.",
-      "route": "alarm",
-      "escalated": false,
-      "consecutive_days": 7
-    },
-    {
-      "id": "ch_kof_esi",
-      "error": "'{\"message\":\"This API has been discontinued. Please migrate to version 2 of the KOF Time Series Database API. For more information, please visit https://data.kof.ethz.ch/#tsdb-api.\"}' does not exist in current working directory: '/home/runner/work/dataseries-data/dataseries-data'.",
-      "route": "alarm",
-      "escalated": false,
-      "consecutive_days": 7
-    }
-  ]
+  "skips": []
 }
