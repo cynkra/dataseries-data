@@ -1470,7 +1470,7 @@
     "end": "2026-06-01",
     "n_series": 4,
     "updated": null,
-    "fetched": "2026-08-01 08:59:35",
+    "fetched": "2026-08-02 11:03:20",
     "load": "whole",
     "data": "ch_adecco_sjmi.csv",
     "meta": "ch_adecco_sjmi.json"
