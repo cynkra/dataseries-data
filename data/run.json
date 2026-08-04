@@ -1,7 +1,7 @@
 {
-  "ts": "2026-08-03T09:35:08Z",
+  "ts": "2026-08-04T09:20:32Z",
   "attempted": 70,
-  "ok": 32,
+  "ok": 35,
   "unchanged": [
     "ch_snb_amarbma",
     "ch_snb_ambeschkla",
@@ -20,13 +20,11 @@
     "ch_snb_bopservq",
     "ch_snb_capchstocki",
     "ch_snb_capweums",
-    "ch_snb_devkum",
     "ch_snb_devwkibiim",
     "ch_snb_devwkieffid",
     "ch_snb_plimoinchq",
     "ch_snb_plkopr",
     "ch_snb_plkoprinfla",
-    "ch_snb_rendeiduebd",
     "ch_snb_snbbipo",
     "ch_snb_snbiprogq",
     "ch_snb_snbkosiq",
@@ -38,9 +36,12 @@
     "ch_snb_zavezaka",
     "ch_snb_zavezaluba",
     "ch_snb_zavkuzaart",
-    "ch_snb_zikredlauf",
-    "ch_snb_zikrepro",
-    "ch_snb_zimoma"
+    "ch_snb_zikredlauf"
   ],
-  "skipped": []
+  "skipped": [
+    {
+      "id": "ch_adecco_sjmi",
+      "error": "Failed to perform HTTP request.\nCaused by error in `curl::curl_fetch_memory()`:\n! Timeout was reached [www.stellenmarktmonitor.uzh.ch]:\nFailed to connect to www.stellenmarktmonitor.uzh.ch port 443 after 15002 ms: Timeout was reached"
+    }
+  ]
 }
