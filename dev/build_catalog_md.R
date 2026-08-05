@@ -16,7 +16,12 @@ out_path     <- file.path(root, "CATALOG.md")
 
 cat <- fromJSON(catalog_path, simplifyVector = FALSE)
 
-# license code -> display label
+# license code -> display label. schema 1.1 ships the shared vocabulary
+# (data/licenses.json); the built-in map stays as the pre-1.1 fallback.
+lic_json <- local({
+  f <- file.path(root, "data", "licenses.json")
+  if (file.exists(f)) fromJSON(f, simplifyVector = FALSE) else list()
+})
 lic_label <- c(
   snb  = "SNB (non-commercial, attribution)",
   kof  = "KOF / CC BY 4.0",
@@ -24,9 +29,20 @@ lic_label <- c(
   seco = "SECO open data"
 )
 
+# schema 1.1: a curated string may be bare, an i18n label object, or (source)
+# an object carrying one. One tolerant read for all of them.
+disp <- function(x) {
+  if (is.null(x) || length(x) == 0) return("")
+  if (is.character(x)) return(as.character(x)[1])
+  if (is.list(x)) {
+    if (!is.null(x$name)) return(disp(x$name))
+    return(as.character(if (!is.null(x$en)) x$en else x[[1]])[1])
+  }
+  as.character(x)[1]
+}
 # pull a field, falling back to "" / English title.
-g  <- function(x, f) { v <- x[[f]]; if (is.null(v)) "" else v }
-ti <- function(x)    { t <- x$title; if (is.null(t)) "" else if (is.null(t$en)) t[[1]] else t$en }
+g  <- function(x, f) disp(x[[f]])
+ti <- function(x)    disp(x$title)
 es <- function(s) gsub("|", "\\|", as.character(s), fixed = TRUE)  # escape table pipes
 
 # split "Group / Leaf" into top-level group (everything before the FIRST " / ").
@@ -50,7 +66,9 @@ rows <- lapply(cat, function(x) {
     source  = g(x, "source"),
     freq    = g(x, "frequency"),
     cover   = paste0(g(x, "start"), "..", g(x, "end")),
-    license = { lc <- g(x, "license"); if (lc %in% names(lic_label)) lic_label[[lc]] else lc },
+    license = { lc <- g(x, "license")
+                if (!is.null(lic_json[[lc]])) disp(lic_json[[lc]]$name)
+                else if (lc %in% names(lic_label)) lic_label[[lc]] else lc },
     canon   = isTRUE(x$canonical),
     stringsAsFactors = FALSE
   )

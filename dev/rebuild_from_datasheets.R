@@ -83,5 +83,10 @@ cat(sprintf("refreshed %d sidecars + catalog.json (%d rows)\n", length(ids), len
 
 # keep the generated docs in lockstep (run as clean subprocesses so each resolves
 # its own root from --file)
-for (s in c("build_catalog_md.R", "build_concepts_ledger.R"))
-  system2("Rscript", file.path(root, "dev", s), stdout = FALSE, stderr = FALSE)
+# Errors here used to be swallowed (stdout/stderr = FALSE), so a broken doc
+# builder failed INVISIBLY — that is how a schema change silently emptied
+# CATALOG.md's Source column. Surface the output and fail loudly instead.
+for (s in c("build_catalog_md.R", "build_concepts_ledger.R")) {
+  rc <- system2("Rscript", file.path(root, "dev", s))
+  if (!identical(rc, 0L)) stop(sprintf("dev/%s failed (exit %s)", s, rc), call. = FALSE)
+}

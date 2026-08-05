@@ -14,7 +14,18 @@ root <- normalizePath(file.path(dirname(sub("--file=", "",
 
 cat_rows <- fromJSON(file.path(root, "data", "catalog.json"), simplifyVector = FALSE)
 cats     <- fromJSON(file.path(root, "data", "categories.json"), simplifyVector = FALSE)
-order    <- vapply(cats, function(c) c$name, "")
+# schema 1.1 tolerant read (bare string | label object | {name: label object})
+disp <- function(x) {
+  if (is.null(x) || length(x) == 0) return("")
+  if (is.character(x)) return(as.character(x)[1])
+  if (is.list(x)) {
+    if (!is.null(x$name)) return(disp(x$name))
+    return(as.character(if (!is.null(x$en)) x$en else x[[1]])[1])
+  }
+  as.character(x)[1]
+}
+
+order    <- vapply(cats, function(c) disp(c$name), "")
 
 grp_leaf <- function(concept) {
   parts <- trimws(strsplit(concept %||% "Other /", "/", fixed = TRUE)[[1]])
@@ -30,7 +41,7 @@ src_short <- function(s) {
 }
 tag <- function(r) {
   star <- if (!is.null(r$featured) && !is.na(r$featured) && nzchar(r$featured)) " ★" else ""
-  sprintf("`%s` (%s)%s", r$id, src_short(r$source), star)
+  sprintf("`%s` (%s)%s", r$id, src_short(disp(r$source)), star)
 }
 
 rows <- lapply(cat_rows, function(r) { gl <- grp_leaf(r$concept); c(r, gl) })

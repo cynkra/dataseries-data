@@ -13,7 +13,20 @@
 
 suppressPackageStartupMessages(library(jsonlite))
 
-`%||%` <- function(a, b) if (is.null(a) || length(a) == 0 || is.na(a)) b else a
+`%||%` <- function(a, b) if (is.null(a) || length(a) == 0 || (length(a) == 1 && is.na(a))) b else a
+
+# schema 1.1: curated catalog strings may be a bare string OR an i18n label
+# object OR (source) an object carrying one. One tolerant read, same rule the
+# website applies — see spec/multilingual/2-design.md §6.
+.disp <- function(x) {
+  if (is.null(x) || length(x) == 0) return(NA_character_)
+  if (is.character(x)) return(as.character(x)[1])
+  if (is.list(x)) {
+    if (!is.null(x$name)) return(.disp(x$name))
+    return(as.character(x$en %||% x[[1]])[1])
+  }
+  as.character(x)[1]
+}
 
 root <- tryCatch(
   dirname(normalizePath(sub("--file=", "", grep("--file=", commandArgs(FALSE), value = TRUE)))),
@@ -107,8 +120,8 @@ rows <- lapply(catalog, function(e) {
   s <- score(e$id, e$end, e$frequency, e$updated)
   list(
     id        = e$id,
-    title     = e$title$en %||% e$id,
-    source    = e$source %||% NA_character_,
+    title     = .disp(e$title) %||% e$id,
+    source    = .disp(e$source),
     frequency = e$frequency %||% NA_character_,
     end       = e$end %||% NA_character_,
     updated   = e$updated %||% NA_character_,
