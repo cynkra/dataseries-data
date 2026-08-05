@@ -48,6 +48,26 @@ for (id in ids) {
   }
 }
 
+# Language purity: a word exclusive to another language means the translation
+# drifted (a stray Italian clause in the French, say). The figure/reference guard
+# above cannot see this, and a reviewer skimming 210 strings will not either.
+FORBIDDEN <- list(
+  de = "\\b(che|gli|degli|delle|pi\u00f9|sono|avec|aux|dans|selon|leur|ainsi|chaque|sont)\\b",
+  fr = "\\b(che|gli|degli|delle|pi\u00f9|sono|nella|und|f\u00fcr|nach|sowie|werden|nicht|sind|wird)\\b",
+  it = "\\b(avec|aux|dans|selon|leur|ainsi|chaque|sont|und|f\u00fcr|nach|sowie|werden|nicht|sind|wird)\\b"
+)
+for (id in ids) {
+  lines <- ds_read(id, "datasets")
+  for (L in names(FORBIDDEN)) {
+    tr <- ds_prose(lines, sprintf("What is special (%s)", L))
+    if (is.null(tr)) next
+    m <- regmatches(tr, gregexpr(FORBIDDEN[[L]], tr, perl = TRUE, ignore.case = TRUE))[[1]]
+    if (length(m))
+      problems <- c(problems, sprintf("%s [%s]: foreign-language word(s): %s", id, L,
+                                      paste(unique(m), collapse = ", ")))
+  }
+}
+
 if (length(problems)) {
   cat(paste0("  ", problems, collapse = "\n"), "\n")
   stop(sprintf("test_description_i18n: %d problem(s) across %d translations",
