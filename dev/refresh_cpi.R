@@ -3,7 +3,7 @@
 #   Rscript dev/refresh_cpi.R
 suppressPackageStartupMessages({ library(dplyr) })
 root <- "R"
-for (f in c("dates.R", "http.R", "io.R", "source_snb.R", "source_kof.R",
+for (f in c("dates.R", "http.R", "datasheet.R", "io.R", "source_snb.R", "source_kof.R",
             "source_fso.R", "source_fso_excel.R", "source_fso_excel_sets.R",
             "source_seco.R")) source(file.path(root, f))
 DATA_DIR <- "data"; DATASHEET_DIR <- "datasets"

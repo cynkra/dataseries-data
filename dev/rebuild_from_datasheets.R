@@ -2,7 +2,8 @@
 # rebuild_from_datasheets.R — re-derive every datasheet-controlled field onto the
 # meta sidecars (data/<id>.json) and data/catalog.json FROM DISK, no refetch. Run
 # this after editing datasheets (title, concept, canonical, featured, default,
-# split, transform, …) to propagate the change to what the API serves.
+# split, transform, a `## Hierarchy` tree, …) to propagate the change to what the
+# API serves.
 #
 # Datasheets are the source of truth; this just refreshes the generated caches.
 # Idempotent. Run from repo root: Rscript dev/rebuild_from_datasheets.R
@@ -12,7 +13,9 @@ root <- normalizePath(file.path(dirname(sub("--file=", "",
   grep("--file=", commandArgs(FALSE), value = TRUE)[1])), ".."))
 DATASHEET_DIR <- file.path(root, "datasets")
 DATA_DIR      <- file.path(root, "data")
-source(file.path(root, "R", "io.R"))   # read_datasheet_meta(), %||%
+source(file.path(root, "R", "datasheet.R"))   # ds_read(), ds_i18n(), %||%
+source(file.path(root, "R", "io.R"))          # read_datasheet_meta()
+source(file.path(root, "R", "hierarchy.R"))   # attach_hierarchy()
 
 # Fields the catalog row carries (the rest of the datasheet meta lives only in the
 # per-dataset sidecar, which the detail view reads). `featured`/`title` are
@@ -21,7 +24,8 @@ cat_keys <- c("concept", "canonical", "featured", "topic", "title")
 
 ids <- sub("\\.md$", "", list.files(DATASHEET_DIR, pattern = "^ch_.*\\.md$"))
 for (id in ids) {
-  dm <- read_datasheet_meta(id, DATASHEET_DIR)
+  sheet <- ds_read(id, DATASHEET_DIR)     # one read; shared by fields + hierarchy
+  dm <- read_datasheet_meta(id, DATASHEET_DIR, lines = sheet)
   sc <- file.path(DATA_DIR, paste0(id, ".json"))
   if (!file.exists(sc)) next
   meta <- fromJSON(sc, simplifyVector = FALSE)
@@ -38,6 +42,12 @@ for (id in ids) {
     meta[["single_select"]] <- intersect(unlist(dm[["single_select"]]), valid_dims)
   if (!is.null(dm[["split"]]) && !(unlist(dm[["split"]])[1] %in% valid_dims))
     meta[["split"]] <- NULL
+  # Re-apply the datasheet `## Hierarchy` block (declared trees + derive methods
+  # rebuild deterministically from the sidecar's level codes; prose-only blocks and
+  # source-built trees — e.g. CPI's — are no-ops). Historically this needed the
+  # separate, undocumented dev/regen_hierarchy.R; now the one documented rebuild
+  # covers every datasheet-controlled field.
+  meta <- attach_hierarchy(list(id = id, meta = meta), DATASHEET_DIR, lines = sheet)$meta
   writeLines(toJSON(meta, auto_unbox = TRUE, pretty = TRUE, null = "null"), sc)
 }
 

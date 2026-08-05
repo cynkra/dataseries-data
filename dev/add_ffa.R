@@ -6,7 +6,7 @@
 # Run from repo root:  Rscript dev/add_ffa.R
 suppressPackageStartupMessages({ library(dplyr); library(jsonlite) })
 root <- "R"
-for (f in c("dates.R", "http.R", "io.R", "source_ffa.R")) source(file.path(root, f))
+for (f in c("dates.R", "http.R", "datasheet.R", "io.R", "source_ffa.R")) source(file.path(root, f))
 DATA_DIR <- "data"; DATASHEET_DIR <- "datasets"
 
 # 1) fetch + write the new dataset (merging its datasheet curation)

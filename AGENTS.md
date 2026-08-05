@@ -22,7 +22,7 @@ transform). The `R/` fetchers, `data/*.{csv,json,parquet}`, `catalog.json`,
 
 | You changed… | Run | Effect |
 |---|---|---|
-| A datasheet **curation field** (`concept`, `canonical`, `featured`, `title`, the `## Display` default/split/single-select/transform, `## What is special`) | `Rscript dev/rebuild_from_datasheets.R` | Re-derives those fields onto the meta sidecars + `catalog.json` + `CATALOG.md` **from disk, no refetch** (~seconds). |
+| A datasheet **curation field** (`concept`, `canonical`, `featured`, `title`, the `## Display` default/split/single-select/transform, a `## Hierarchy` tree, `## What is special`) | `Rscript dev/rebuild_from_datasheets.R` | Re-derives those fields onto the meta sidecars + `catalog.json` + `CATALOG.md` **from disk, no refetch** (~seconds). |
 | A **source URL / parser**, or **added/removed a dataset** | `Rscript R/pipeline.R && Rscript R/health.R && Rscript R/uptime.R` | Full refetch + rewrite of `data/`, catalog, health/uptime (~7–15 min). |
 
 After either, `git diff` should show **only your intended change** (plus refreshed

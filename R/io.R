@@ -12,54 +12,46 @@ suppressPackageStartupMessages({
 
 dim_cols <- function(data) setdiff(names(data), c("date", "value"))
 
-# Read concept + canonical from a dataset's datasheet (datasets/<id>.md), which is
+# Read the curation fields from a dataset's datasheet (datasets/<id>.md), which is
 # the source of truth for curation. The catalog derives these fields from the
-# markdown rather than duplicating them in code. Returns list(concept=, canonical=)
-# or an empty list if there is no datasheet.
-read_datasheet_meta <- function(id, datasheet_dir) {
-  f <- file.path(datasheet_dir, paste0(id, ".md"))
-  if (!file.exists(f)) return(list())
-  lines <- readLines(f, warn = FALSE)
-  pick <- function(key) {
-    pat <- sprintf("^- \\*\\*%s\\*\\*:", key)
-    hit <- grep(pat, lines, value = TRUE)
-    if (!length(hit)) return(NULL)
-    trimws(sub(sprintf("^- \\*\\*%s\\*\\*:\\s*", key), "", hit[1]))
-  }
+# markdown rather than duplicating them in code. Returns an empty list if there is
+# no datasheet. Syntax (sections, fields, the i18n value grammar) lives in
+# R/datasheet.R; this function is pure SEMANTICS: which field means what.
+# `lines` lets a caller that already ds_read() the file avoid a second read.
+read_datasheet_meta <- function(id, datasheet_dir, lines = NULL) {
+  lines <- lines %||% ds_read(id, datasheet_dir)
+  if (is.null(lines)) return(list())
+  top  <- ds_fields(ds_top(lines))                 # identity block
+  disp <- ds_fields(ds_section(lines, "Display"))  # presentation block
+
   out <- list()
-  concept <- pick("concept")
-  if (!is.null(concept)) {
-    out$concept <- concept
+  if (!is.null(top$concept)) {
+    out$concept <- top$concept
     # The website overview groups by the concept *Group* (the segment before the
     # first "/"). `topic` is the same grouping on the detail page / in search, so
     # we derive it from the concept here rather than keep a second, drift-prone
     # source in the parser code. modifyList() lets this override the parser topic.
-    out$topic <- trimws(strsplit(concept, "/", fixed = TRUE)[[1]][1])
+    out$topic <- trimws(strsplit(top$concept, "/", fixed = TRUE)[[1]][1])
   }
-  canon <- pick("canonical")
-  if (!is.null(canon)) out$canonical <- grepl("^yes", tolower(canon))  # "no (alternate ...)" -> FALSE
-  feat <- pick("featured")
-  if (!is.null(feat)) out$featured <- feat  # homepage example label, e.g. "Inflation"
+  if (!is.null(top$canonical))
+    out$canonical <- grepl("^yes", tolower(top$canonical))  # "no (alternate ...)" -> FALSE
+  if (!is.null(top$featured)) out$featured <- top$featured  # homepage example label
   # Optional curated title: overrides the raw source title (which is often a verbose
   # SNB/FSO cube name). Single source of truth, like `featured` — set it only where
-  # the source title needs cleaning up.
-  ttl <- pick("title")
-  if (!is.null(ttl)) out$title <- list(en = ttl)
+  # the source title needs cleaning up. i18n: "En title | de: … | fr: …".
+  if (!is.null(top$title)) out$title <- ds_i18n(top$title)
 
   # Display block: presentation decisions the app derives from the datasheet
   # instead of guessing with code heuristics.
-  split <- pick("split")
-  if (!is.null(split)) out$split <- split
-  ss <- pick("single-select")
-  if (!is.null(ss)) out$single_select <- trimws(strsplit(ss, ",")[[1]])
-  tr <- pick("transform")
-  if (!is.null(tr)) out$default_transform <- tr
-  pl <- pick("percent-levels")   # split-dim levels stored as a 0-1 share -> app shows as %
-  if (!is.null(pl)) out$percent_levels <- trimws(strsplit(pl, ",")[[1]])
-  def <- pick("default")
-  if (!is.null(def)) {
+  if (!is.null(disp$split)) out$split <- disp$split
+  if (!is.null(disp[["single-select"]]))
+    out$single_select <- trimws(strsplit(disp[["single-select"]], ",")[[1]])
+  if (!is.null(disp$transform)) out$default_transform <- disp$transform
+  if (!is.null(disp[["percent-levels"]]))   # levels stored as a 0-1 share -> app shows as %
+    out$percent_levels <- trimws(strsplit(disp[["percent-levels"]], ",")[[1]])
+  if (!is.null(disp$default)) {
     kv <- list()
-    for (p in trimws(strsplit(def, ",")[[1]])) {
+    for (p in trimws(strsplit(disp$default, ",")[[1]])) {
       if (grepl("=", p)) {
         parts <- strsplit(p, "=", fixed = TRUE)[[1]]
         kv[[trimws(parts[1])]] <- trimws(parts[2])
@@ -68,20 +60,9 @@ read_datasheet_meta <- function(id, datasheet_dir) {
     if (length(kv)) out$default <- kv
   }
 
-  # Description: the "## What is special" section prose (until the next ## heading).
-  # The human/LLM-facing blurb the website surfaces on the series page + JSON-LD;
-  # the datasheet stays the single source of truth.
-  sect <- function(name) {
-    h <- grep(sprintf("^##\\s+%s\\s*$", name), lines)
-    if (!length(h)) return(NULL)
-    nxt <- grep("^##\\s", lines); nxt <- nxt[nxt > h[1]]
-    end <- if (length(nxt)) nxt[1] - 1L else length(lines)
-    body <- paste(lines[(h[1] + 1L):end], collapse = " ")
-    body <- gsub("[`*]", "", body)        # drop md bold/code markers
-    body <- trimws(gsub("\\s+", " ", body))
-    if (nzchar(body)) body else NULL
-  }
-  desc <- sect("What is special")
+  # Description: the "## What is special" prose — the human/LLM-facing blurb the
+  # website surfaces on the series page + JSON-LD.
+  desc <- ds_prose(lines, "What is special")
   if (!is.null(desc)) out$description <- desc
   out
 }
