@@ -59,3 +59,12 @@ What Switzerland owns abroad and owes abroad, and the net position, as end-of-qu
 ## Provenance
 Script: `R/source_snb.R::snb_fetch` via `R/snb_cubes.tsv` (cube_id `auvekomq`).
 Datasheet 2026-06-01; parser verified 2026-06-01 (10,056 rows, 63 series).
+
+## What is special (de)
+Was die Schweiz im Ausland besitzt und schuldet, samt Nettoposition, als Bestände per Quartalsende bis hin zu den Währungsreserven der Nationalbank.
+
+## What is special (fr)
+Ce que la Suisse possède et doit à l'étranger, et la position nette, en stocks de fin de trimestre jusqu'aux réserves monétaires de la banque centrale.
+
+## What is special (it)
+Cosa la Svizzera possiede e deve all'estero, e la posizione netta, come stock di fine trimestre fino alle riserve monetarie della banca centrale.

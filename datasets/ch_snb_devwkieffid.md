@@ -51,3 +51,12 @@ Keeping only `I` collapses `D2` away.
 ## Provenance
 Script: `R/source_snb.R::snb_fetch` (title/topic from `R/snb_cubes.tsv`). Datasheet
 authored 2026-06-01.
+
+## What is special (de)
+Der handelsgewichtete Frankenindex, das tägliche Standardmass dafür, wie stark der Franken insgesamt und gegenüber dem Euroraum ist.
+
+## What is special (fr)
+L'indice du franc pondéré par les échanges, la mesure quotidienne de référence de la force du franc, globalement et face à la zone euro.
+
+## What is special (it)
+L'indice del franco ponderato per gli scambi, la misura giornaliera di riferimento della forza del franco, complessiva e verso l'area euro.

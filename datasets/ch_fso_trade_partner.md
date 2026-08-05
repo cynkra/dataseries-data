@@ -142,3 +142,12 @@ and Türkiye under Europe).
 Script: `R/source_fso_excel_sets.R::fso_excel_ch_fso_trade_partner` (+ `.trade_partner_sheet`,
 `.TRADE_GROUPS`). Datasheet 2026-06-02; parser verified live 2026-06-02
 (2367 rows, 66 series, 40 partners, 1990 .. 2025, 0 NA values; four value anchors pass).
+
+## What is special (de)
+Schweizer Exporte und Importe nach Land in Mio. CHF: Deutschland, die USA, China und andere, dazu Kontinent- und Wirtschaftsraum-Totale.
+
+## What is special (fr)
+Exportations et importations suisses par pays en millions de CHF : Allemagne, États-Unis, Chine et autres, plus les totaux par continent et espace économique.
+
+## What is special (it)
+Esportazioni e importazioni svizzere per paese in milioni di CHF: Germania, Stati Uniti, Cina e altri, più i totali per continente e area economica.

@@ -59,3 +59,12 @@ Policy interest rates of the SNB, Fed, ECB, Bank of England and Bank of Japan in
 ## Provenance
 Script: `R/source_snb.R::snb_fetch` (cube `snboffzisa`, title from
 `R/snb_cubes.tsv`, topic "Interest rates"). Datasheet authored 2026-06-01.
+
+## What is special (de)
+Leitzinsen von SNB, Fed, EZB, Bank of England und Bank of Japan in einer Tabelle, inklusive des früheren Schweizer Libor-Zielbands.
+
+## What is special (fr)
+Taux directeurs de la BNS, de la Fed, de la BCE, de la Banque d'Angleterre et de la Banque du Japon dans un même tableau, y compris l'ancienne marge cible Libor suisse.
+
+## What is special (it)
+Tassi di riferimento di BNS, Fed, BCE, Bank of England e Bank of Japan in un'unica tabella, incluso il precedente margine obiettivo Libor svizzero.

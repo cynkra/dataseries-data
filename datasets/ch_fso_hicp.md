@@ -67,3 +67,12 @@ Source: **Eurostat** (NOT the FSO) — flow `prc_hicp_midx`, key `M.I15.{COICOP}
 Script: `R/source_eurostat.R::eurostat_hicp_fetch`. Datasheet 2026-06-02; parser
 verified live 2026-06-02 (3,289 rows, 13 series, 0 NA values; CP00 2004-12 = 96.90,
 CP00 2025-12 = 107.07, CP00 2015 mean = 100.00).
+
+## What is special (de)
+Schweizer Teuerung nach der EU-harmonisierten Methode, von Eurostat, für den Vergleich mit dem Euroraum. Ohne Wohneigentumskosten, anders als der Landesindex.
+
+## What is special (fr)
+Inflation suisse selon la méthode harmonisée de l'UE, d'Eurostat, pour la comparaison avec la zone euro. Exclut le logement en propriété, contrairement à l'indice national.
+
+## What is special (it)
+Inflazione svizzera secondo il metodo armonizzato UE, di Eurostat, per il confronto con l'area euro. Esclude i costi dell'abitazione di proprietà, a differenza dell'indice nazionale.

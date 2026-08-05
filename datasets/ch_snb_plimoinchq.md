@@ -49,3 +49,12 @@ Swiss house and rent price indices from four providers side by side, covering ap
 ## Provenance
 Script: `R/source_snb.R::snb_fetch` (title/topic from `R/snb_cubes.tsv`). Datasheet
 authored 2026-06-01.
+
+## What is special (de)
+Schweizer Immobilien- und Mietpreisindizes von vier Anbietern nebeneinander, für Wohnungen, Häuser, Büro-, Verkaufs- und Industrieflächen.
+
+## What is special (fr)
+Indices suisses des prix de l'immobilier et des loyers de quatre fournisseurs côte à côte, pour appartements, maisons, bureaux, commerces et surfaces industrielles.
+
+## What is special (it)
+Indici svizzeri dei prezzi immobiliari e delle pigioni di quattro fornitori affiancati, per appartamenti, case, uffici, superfici commerciali e industriali.

@@ -66,3 +66,12 @@ Interbank payments settled in Swiss francs through SIC each month: how many, how
 ## Provenance
 Script: `R/source_snb.R::snb_fetch` (cube `zavesic`, title from `R/snb_cubes.tsv`,
 topic "Payment systems"). Datasheet authored 2026-06-01.
+
+## What is special (de)
+Interbankzahlungen in Franken, die monatlich über SIC abgewickelt werden: wie viele, wie viel, und nach Zahlungsgrösse aufgeteilt.
+
+## What is special (fr)
+Paiements interbancaires en francs réglés chaque mois via SIC : combien, pour quels montants, et répartis par taille de paiement.
+
+## What is special (it)
+Pagamenti interbancari in franchi regolati ogni mese tramite SIC: quanti, per quali importi, e ripartiti per dimensione del pagamento.

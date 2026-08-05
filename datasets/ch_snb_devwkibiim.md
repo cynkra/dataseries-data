@@ -52,3 +52,12 @@ duplicate a button. Keeping only `I` collapses `D2` away.
 ## Provenance
 Script: `R/source_snb.R::snb_fetch` (title/topic from `R/snb_cubes.tsv`). Datasheet
 authored 2026-06-01.
+
+## What is special (de)
+Frankenkurs-Indizes gegenüber rund 54 Währungen, nominal und teuerungsbereinigt, als Indexstände und als Jahresveränderungen.
+
+## What is special (fr)
+Indices de cours du franc face à environ 54 monnaies, nominaux et corrigés de l'inflation, en niveaux d'indice et en variations annuelles.
+
+## What is special (it)
+Indici del corso del franco rispetto a circa 54 valute, nominali e corretti per l'inflazione, come livelli d'indice e variazioni annue.

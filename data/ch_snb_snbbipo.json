@@ -319,7 +319,15 @@
       "it": "Moneta e banche"
     }
   },
-  "concept": "Money & banking / Monetary aggregates",
+  "concept": {
+    "en": "Money & banking / Monetary aggregates",
+    "leaf": {
+      "en": "Monetary aggregates",
+      "de": "Geldmengen",
+      "fr": "Agrégats monétaires",
+      "it": "Aggregati monetari"
+    }
+  },
   "canonical": false,
   "split": "D0",
   "single_select": [],
@@ -328,7 +336,10 @@
     "D0": "T0"
   },
   "description": {
-    "en": "What the Swiss National Bank owns and owes each month. Foreign-currency investments and gold explain the expansion after 2008."
+    "en": "What the Swiss National Bank owns and owes each month. Foreign-currency investments and gold explain the expansion after 2008.",
+    "de": "Was die Schweizerische Nationalbank monatlich besitzt und schuldet. Devisenanlagen und Gold erklären die Ausweitung nach 2008.",
+    "fr": "Ce que la Banque nationale suisse possède et doit chaque mois. Les placements en devises et l'or expliquent l'expansion après 2008.",
+    "it": "Cosa la Banca nazionale svizzera possiede e deve ogni mese. Gli investimenti in valuta estera e l'oro spiegano l'espansione dopo il 2008."
   },
   "fetched_utc": "2026-08-05 13:12:03"
 }

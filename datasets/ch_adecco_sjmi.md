@@ -63,3 +63,12 @@ Quarterly index of advertised job vacancies in Switzerland, from the University 
 ## Provenance
 Script: `R/source_adecco.R::adecco_fetch` (wired in `R/pipeline.R`). Datasheet
 authored 2026-06-02; parser verified live 2026-06-02 (5 series, 2003-03 .. 2026-03).
+
+## What is special (de)
+Quartalsindex der ausgeschriebenen Stellen in der Schweiz, von der Universität Zürich. Aufgeteilt nach Publikationskanal: online, Firmenwebseite, Presse.
+
+## What is special (fr)
+Indice trimestriel des postes vacants publiés en Suisse, de l'Université de Zurich. Réparti selon le canal de publication : en ligne, site d'entreprise, presse.
+
+## What is special (it)
+Indice trimestrale dei posti vacanti pubblicati in Svizzera, dell'Università di Zurigo. Ripartito per canale di pubblicazione: online, sito aziendale, stampa.

@@ -67,3 +67,12 @@ by the dataset title. That leaves `Tourismusregion` as the single dimension.
 ## Provenance
 Script: `R/source_fso.R::fso_fetch` (explicit query built in
 `R/pipeline.R`). Datasheet authored 2026-06-01.
+
+## What is special (de)
+Hotellogiernächte in der Schweiz pro Monat, für das Land und seine 13 Tourismusregionen. Alpine und städtische Regionen haben gegenläufige Saisons.
+
+## What is special (fr)
+Nuitées hôtelières en Suisse chaque mois, pour le pays et ses 13 régions touristiques. Les régions alpines et urbaines culminent à des saisons opposées.
+
+## What is special (it)
+Pernottamenti alberghieri in Svizzera ogni mese, per il Paese e le sue 13 regioni turistiche. Le regioni alpine e urbane hanno stagioni opposte.

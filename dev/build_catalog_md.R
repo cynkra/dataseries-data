@@ -31,6 +31,10 @@ lic_label <- c(
 
 # schema 1.1: a curated string may be bare, an i18n label object, or (source)
 # an object carrying one. One tolerant read for all of them.
+# schema 1.1: `concept` may be a bare "Group / Leaf" string or an object
+# carrying that string plus the resolved i18n leaf. The grouping logic wants
+# the English "Group / Leaf" either way.
+conc_en <- function(x) if (is.list(x)) (x$en %||% "") else (x %||% "")
 disp <- function(x) {
   if (is.null(x) || length(x) == 0) return("")
   if (is.character(x)) return(as.character(x)[1])
@@ -56,7 +60,7 @@ leaf_of <- function(concept) {
 }
 
 rows <- lapply(cat, function(x) {
-  concept <- g(x, "concept")
+  concept <- conc_en(x[["concept"]])
   data.frame(
     group   = top_group(concept),
     leaf    = leaf_of(concept),

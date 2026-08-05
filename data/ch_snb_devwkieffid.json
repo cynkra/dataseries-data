@@ -114,7 +114,15 @@
       "it": "Tassi di cambio"
     }
   },
-  "concept": "Exchange rates / Effective FX index",
+  "concept": {
+    "en": "Exchange rates / Effective FX index",
+    "leaf": {
+      "en": "Effective FX index",
+      "de": "Effektiver Wechselkursindex",
+      "fr": "Indice de change effectif",
+      "it": "Indice di cambio effettivo"
+    }
+  },
   "canonical": true,
   "split": "D1",
   "single_select": "D0",
@@ -124,7 +132,10 @@
     "D0": "K"
   },
   "description": {
-    "en": "The trade-weighted franc index, the standard daily measure of how strong the Swiss franc is overall and against the euro area."
+    "en": "The trade-weighted franc index, the standard daily measure of how strong the Swiss franc is overall and against the euro area.",
+    "de": "Der handelsgewichtete Frankenindex, das tägliche Standardmass dafür, wie stark der Franken insgesamt und gegenüber dem Euroraum ist.",
+    "fr": "L'indice du franc pondéré par les échanges, la mesure quotidienne de référence de la force du franc, globalement et face à la zone euro.",
+    "it": "L'indice del franco ponderato per gli scambi, la misura giornaliera di riferimento della forza del franco, complessiva e verso l'area euro."
   },
   "fetched_utc": "2026-08-05 13:12:02"
 }

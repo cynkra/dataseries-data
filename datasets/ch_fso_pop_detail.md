@@ -58,3 +58,12 @@ Swiss and foreign residents by sex, year-end count from the population register.
 ## Provenance
 Script: `R/source_fso_sdmx.R::fso_sdmx_pop_detail` (wired in `R/pipeline.R`).
 Datasheet authored 2026-06-02; verified live 2026-06-02 (Total 2024 = 9,051,029, exact match to FSO).
+
+## What is special (de)
+Schweizer und ausländische Wohnbevölkerung nach Geschlecht, Jahresendbestand aus dem Bevölkerungsregister. Der Ausländeranteil lag 2024 bei rund 27.4%.
+
+## What is special (fr)
+Population résidante suisse et étrangère par sexe, effectif de fin d'année tiré du registre. La part étrangère était d'environ 27.4% en 2024.
+
+## What is special (it)
+Popolazione residente svizzera e straniera per sesso, effettivo di fine anno dal registro. La quota straniera era circa il 27.4% nel 2024.

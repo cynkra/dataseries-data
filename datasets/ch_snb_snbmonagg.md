@@ -72,3 +72,12 @@ definitions of the money supply (European standard).
 ## Provenance
 Script: `R/source_snb.R::snb_fetch` (cube `snbmonagg`, title from
 `R/snb_cubes.tsv`, topic "Money and banking"). Datasheet authored 2026-06-01.
+
+## What is special (de)
+Die Schweizer Geldmengen M1, M2 und M3 samt Bargeld und Einlagen, aus denen sie bestehen: Geld in den Händen des Publikums, nicht der Notenbank.
+
+## What is special (fr)
+Les agrégats monétaires suisses M1, M2 et M3 avec les espèces et dépôts qui les composent : la monnaie détenue par le public, non par la banque centrale.
+
+## What is special (it)
+Gli aggregati monetari svizzeri M1, M2 e M3 con il contante e i depositi che li compongono: moneta detenuta dal pubblico, non dalla banca centrale.

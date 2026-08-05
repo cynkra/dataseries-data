@@ -277,7 +277,15 @@
       "it": "Tassi d'interesse e rendimenti"
     }
   },
-  "concept": "Interest rates & yields / Bond yields",
+  "concept": {
+    "en": "Interest rates & yields / Bond yields",
+    "leaf": {
+      "en": "Bond yields",
+      "de": "Obligationenrenditen",
+      "fr": "Rendements obligataires",
+      "it": "Rendimenti obbligazionari"
+    }
+  },
   "canonical": true,
   "split": "D0",
   "default_transform": "level",
@@ -286,7 +294,10 @@
     "D1": "10J"
   },
   "description": {
-    "en": "Swiss government bond yields for every maturity from 1 to 30 years, plus cantons, banks and industry by credit rating, so spreads are visible."
+    "en": "Swiss government bond yields for every maturity from 1 to 30 years, plus cantons, banks and industry by credit rating, so spreads are visible.",
+    "de": "Renditen Schweizer Staatsanleihen für jede Laufzeit von 1 bis 30 Jahren, dazu Kantone, Banken und Industrie nach Rating, sodass Spreads sichtbar werden.",
+    "fr": "Rendements des emprunts d'État suisses pour chaque échéance de 1 à 30 ans, plus cantons, banques et industrie par notation, si bien que les écarts sont visibles.",
+    "it": "Rendimenti dei titoli di Stato svizzeri per ogni scadenza da 1 a 30 anni, più Cantoni, banche e industria per rating, così gli spread sono visibili."
   },
   "fetched_utc": "2026-08-05 13:12:03"
 }

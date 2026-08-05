@@ -387,7 +387,15 @@
       }
     }
   },
-  "concept": "External sector / Foreign trade",
+  "concept": {
+    "en": "External sector / Foreign trade",
+    "leaf": {
+      "en": "Foreign trade",
+      "de": "Aussenhandel",
+      "fr": "Commerce extérieur",
+      "it": "Commercio estero"
+    }
+  },
   "canonical": true,
   "title": {
     "en": "Foreign trade by partner country",
@@ -404,7 +412,10 @@
     "level": "group"
   },
   "description": {
-    "en": "Swiss exports and imports by country in CHF millions: Germany, the US, China and the rest, plus continent and economic-area totals."
+    "en": "Swiss exports and imports by country in CHF millions: Germany, the US, China and the rest, plus continent and economic-area totals.",
+    "de": "Schweizer Exporte und Importe nach Land in Mio. CHF: Deutschland, die USA, China und andere, dazu Kontinent- und Wirtschaftsraum-Totale.",
+    "fr": "Exportations et importations suisses par pays en millions de CHF : Allemagne, États-Unis, Chine et autres, plus les totaux par continent et espace économique.",
+    "it": "Esportazioni e importazioni svizzere per paese in milioni di CHF: Germania, Stati Uniti, Cina e altri, più i totali per continente e area economica."
   },
   "units": {
     "en": "CHF millions",

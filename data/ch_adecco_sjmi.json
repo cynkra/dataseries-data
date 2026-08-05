@@ -98,7 +98,15 @@
       }
     }
   },
-  "concept": "Labour / Job market",
+  "concept": {
+    "en": "Labour / Job market",
+    "leaf": {
+      "en": "Job market",
+      "de": "Arbeitsmarkt",
+      "fr": "Marché du travail",
+      "it": "Mercato del lavoro"
+    }
+  },
   "canonical": true,
   "split": "index",
   "single_select": [],
@@ -107,7 +115,10 @@
     "index": "gesamt"
   },
   "description": {
-    "en": "Quarterly index of advertised job vacancies in Switzerland, from the University of Zurich. Split by where the job was posted: online, company site, press."
+    "en": "Quarterly index of advertised job vacancies in Switzerland, from the University of Zurich. Split by where the job was posted: online, company site, press.",
+    "de": "Quartalsindex der ausgeschriebenen Stellen in der Schweiz, von der Universität Zürich. Aufgeteilt nach Publikationskanal: online, Firmenwebseite, Presse.",
+    "fr": "Indice trimestriel des postes vacants publiés en Suisse, de l'Université de Zurich. Réparti selon le canal de publication : en ligne, site d'entreprise, presse.",
+    "it": "Indice trimestrale dei posti vacanti pubblicati in Svizzera, dell'Università di Zurigo. Ripartito per canale di pubblicazione: online, sito aziendale, stampa."
   },
   "units": {
     "en": "Index, Q1 2008 = 100",

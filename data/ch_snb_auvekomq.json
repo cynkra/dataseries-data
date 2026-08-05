@@ -530,7 +530,15 @@
       "it": "Settore estero"
     }
   },
-  "concept": "External sector / International investment position",
+  "concept": {
+    "en": "External sector / International investment position",
+    "leaf": {
+      "en": "International investment position",
+      "de": "Auslandvermögen",
+      "fr": "Position extérieure",
+      "it": "Posizione sull'estero"
+    }
+  },
   "canonical": true,
   "split": "D1",
   "single_select": "D0",
@@ -540,7 +548,10 @@
     "D1": "T0"
   },
   "description": {
-    "en": "What Switzerland owns abroad and owes abroad, and the net position, as end-of-quarter stocks down to the central bank's reserve assets."
+    "en": "What Switzerland owns abroad and owes abroad, and the net position, as end-of-quarter stocks down to the central bank's reserve assets.",
+    "de": "Was die Schweiz im Ausland besitzt und schuldet, samt Nettoposition, als Bestände per Quartalsende bis hin zu den Währungsreserven der Nationalbank.",
+    "fr": "Ce que la Suisse possède et doit à l'étranger, et la position nette, en stocks de fin de trimestre jusqu'aux réserves monétaires de la banque centrale.",
+    "it": "Cosa la Svizzera possiede e deve all'estero, e la posizione netta, come stock di fine trimestre fino alle riserve monetarie della banca centrale."
   },
   "fetched_utc": "2026-08-05 13:12:01"
 }

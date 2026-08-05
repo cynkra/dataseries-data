@@ -93,3 +93,12 @@ sub-position.
 ## Provenance
 Script: `R/source_fso_excel_sets.R::fso_excel_ch_fso_wage_idx`. Datasheet 2026-06-01;
 parser verified 2026-06-01 (768 rows, 24 series, 0 NA values).
+
+## What is special (de)
+Wie sich die Schweizer Löhne seit 1993 entwickelt haben, nominal und teuerungsbereinigt, nach Sektor und Geschlecht. Reallöhne zeigen, ob die Löhne mit den Preisen Schritt hielten.
+
+## What is special (fr)
+Comment les salaires suisses ont évolué depuis 1993, nominaux et corrigés de l'inflation, par secteur et par sexe. Les salaires réels montrent si la paie a suivi les prix.
+
+## What is special (it)
+Come sono evoluti i salari svizzeri dal 1993, nominali e corretti per l'inflazione, per settore e sesso. I salari reali mostrano se le paghe hanno tenuto il passo dei prezzi.

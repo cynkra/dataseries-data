@@ -76,3 +76,12 @@ NOGA division ranges nest by containment (`5-96` ⊃ `5-43`/`45-96` ⊃ groups);
 ## Provenance
 Script: `R/source_fso.R::fso_fetch_auto` (auto-query; entry in `R/pipeline.R`).
 Datasheet authored 2026-06-01.
+
+## What is special (de)
+Von Schweizer Firmen ausgeschriebene offene Stellen, nach Branche, als Anzahl, Index und Quote. Ein Frühindikator: Ausschreibungen bewegen sich vor der Beschäftigung.
+
+## What is special (fr)
+Postes vacants publiés par les entreprises suisses, par branche, en nombre, en indice et en taux. Un indicateur avancé : les annonces bougent avant l'emploi.
+
+## What is special (it)
+Posti vacanti pubblicati dalle imprese svizzere, per ramo, come numero, indice e tasso. Un indicatore anticipatore: gli annunci si muovono prima dell'occupazione.

@@ -73,3 +73,12 @@ Swiss jobs split by region, sector, full-time or part-time, and sex, the breakdo
 ## Provenance
 Script: `R/source_fso.R::fso_fetch_auto` (auto-query; entry in `R/pipeline.R`).
 Datasheet authored 2026-06-01.
+
+## What is special (de)
+Schweizer Stellen nach Region, Sektor, Voll- oder Teilzeit und Geschlecht — die Gliederungen, welche die Hauptreihe nur als Total ausweist.
+
+## What is special (fr)
+Emplois suisses par région, secteur, temps plein ou partiel et sexe : les ventilations que la série principale ne publie qu'en total.
+
+## What is special (it)
+Posti di lavoro svizzeri per regione, settore, tempo pieno o parziale e sesso: le ripartizioni che la serie principale riporta solo come totale.

@@ -61,3 +61,12 @@ currency breakdown (D0: CHF / USD / EUR / other currencies / precious metals).
 ## Provenance
 Script: `R/source_snb.R::snb_fetch` via `R/snb_cubes.tsv` (cube_id `auvercurrq`).
 Datasheet 2026-06-01; parser verified 2026-06-01 (13,794 rows, 94 series).
+
+## What is special (de)
+In welchen Währungen die Schweizer Auslandguthaben und -schulden gehalten werden — Franken, Dollar, Euro oder Edelmetalle — und wie exponiert sie damit sind.
+
+## What is special (fr)
+Dans quelles monnaies sont détenus les avoirs et engagements suisses à l'étranger — francs, dollars, euros ou métaux précieux — et donc leur exposition.
+
+## What is special (it)
+In quali valute sono detenuti gli attivi e i debiti svizzeri sull'estero — franchi, dollari, euro o metalli preziosi — e quindi quanto sono esposti.

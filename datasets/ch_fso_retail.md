@@ -87,3 +87,12 @@ classes and the alternative totals sit under it, with the by-class-of-goods brea
 ## Provenance
 Script: `R/source_fso_sdmx.R::fso_sdmx_fetch` (wired in `R/pipeline.R`). Datasheet
 authored 2026-06-01; parser verified 2026-06-01.
+
+## What is special (de)
+Wie viel Schweizer Läden monatlich verkaufen, der Standardindikator für den Konsum. Unbereinigt, kalender- und saisonbereinigt; nominal oder real.
+
+## What is special (fr)
+Ce que vendent les commerces suisses chaque mois, l'indicateur de référence de la consommation. Brut, corrigé du calendrier et désaisonnalisé ; nominal ou réel.
+
+## What is special (it)
+Quanto vendono i negozi svizzeri ogni mese, l'indicatore di riferimento dei consumi. Grezzo, corretto per il calendario e destagionalizzato; nominale o reale.

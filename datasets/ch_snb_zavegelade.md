@@ -56,3 +56,12 @@ Top-ups and outstanding balances on Swiss prepaid and stored-value payment cards
 ## Provenance
 Script: `R/source_snb.R::snb_fetch` (cube `zavegelade`, title from
 `R/snb_cubes.tsv`, topic "Payment systems"). Datasheet authored 2026-06-01.
+
+## What is special (de)
+Aufladungen und ausstehende Guthaben auf Schweizer Vorauszahlungs- und Wertkarten.
+
+## What is special (fr)
+Chargements et soldes en circulation sur les cartes suisses prépayées et à valeur stockée.
+
+## What is special (it)
+Ricariche e saldi in circolazione sulle carte svizzere prepagate e a valore memorizzato.

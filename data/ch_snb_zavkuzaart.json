@@ -246,7 +246,15 @@
       "it": "Sistemi di pagamento"
     }
   },
-  "concept": "Payment systems / Payments & cash",
+  "concept": {
+    "en": "Payment systems / Payments & cash",
+    "leaf": {
+      "en": "Payments & cash",
+      "de": "Zahlungsverkehr & Bargeld",
+      "fr": "Paiements & espèces",
+      "it": "Pagamenti e contante"
+    }
+  },
   "canonical": false,
   "split": "D1",
   "single_select": ["D0", "D2"],
@@ -257,7 +265,10 @@
     "D2": "BET"
   },
   "description": {
-    "en": "How Swiss customers send money without a card: credit transfers, direct debits and standing orders, paper versus electronic."
+    "en": "How Swiss customers send money without a card: credit transfers, direct debits and standing orders, paper versus electronic.",
+    "de": "Wie Schweizer Kundinnen und Kunden ohne Karte Geld überweisen: Zahlungsaufträge, Lastschriften und Daueraufträge, papierbasiert oder elektronisch.",
+    "fr": "Comment la clientèle suisse transfère de l'argent sans carte : virements, prélèvements et ordres permanents, sur papier ou par voie électronique.",
+    "it": "Come la clientela svizzera trasferisce denaro senza carta: bonifici, addebiti diretti e ordini permanenti, su carta o in forma elettronica."
   },
   "fetched_utc": "2026-08-05 13:12:03"
 }

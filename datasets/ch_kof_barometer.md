@@ -49,3 +49,12 @@ None. The dataset is a single undifferentiated series (`dim_order` empty).
 Script: `R/source_kof.R::kof_fetch` (key `ch.kof.barometer`). Datasheet authored
 2026-06-01; parser verified 2026-06-01 (425 rows, 1 series). Migrated to KOF API v2
 and re-verified 2026-07-30.
+
+## What is special (de)
+Der führende Schweizer Konjunkturindikator, monatlich von der ETH Zürich publiziert. Rund 100 ist der Durchschnitt; darüber deutet auf stärkeres Wachstum hin.
+
+## What is special (fr)
+L'indicateur avancé de la conjoncture suisse, publié mensuellement par l'EPF de Zurich. Environ 100 correspond à la moyenne ; au-dessus signale une croissance plus forte.
+
+## What is special (it)
+L'indicatore anticipatore della congiuntura svizzera, pubblicato mensilmente dal PF di Zurigo. Circa 100 è la media; sopra segnala una crescita più forte.

@@ -1,0 +1,349 @@
+{
+ "_comment": "Display vocabulary shared across datasets: concept leaves (the sub-heading under each overview group) and featured chip labels. Hand-maintained, like categories.json. Keyed by the English string, which is what the datasheet declares; resolved to a label object at rebuild time (spec/multilingual/2-design.md §5d).",
+ "leaves": {
+  "Balance of payments": {
+   "en": "Balance of payments",
+   "de": "Zahlungsbilanz",
+   "fr": "Balance des paiements",
+   "it": "Bilancia dei pagamenti"
+  },
+  "Banking & credit": {
+   "en": "Banking & credit",
+   "de": "Banken & Kredit",
+   "fr": "Banques & crédit",
+   "it": "Banche e credito"
+  },
+  "Bilateral FX": {
+   "en": "Bilateral FX",
+   "de": "Bilaterale Wechselkurse",
+   "fr": "Change bilatéral",
+   "it": "Cambi bilaterali"
+  },
+  "Bond yields": {
+   "en": "Bond yields",
+   "de": "Obligationenrenditen",
+   "fr": "Rendements obligataires",
+   "it": "Rendimenti obbligazionari"
+  },
+  "Business cycle signals": {
+   "en": "Business cycle signals",
+   "de": "Konjunktursignale",
+   "fr": "Signaux conjoncturels",
+   "it": "Segnali congiunturali"
+  },
+  "Construction prices": {
+   "en": "Construction prices",
+   "de": "Baupreise",
+   "fr": "Prix de la construction",
+   "it": "Prezzi delle costruzioni"
+  },
+  "Consumer confidence": {
+   "en": "Consumer confidence",
+   "de": "Konsumentenstimmung",
+   "fr": "Climat de consommation",
+   "it": "Clima di consumo"
+  },
+  "Consumer prices": {
+   "en": "Consumer prices",
+   "de": "Konsumentenpreise",
+   "fr": "Prix à la consommation",
+   "it": "Prezzi al consumo"
+  },
+  "Core inflation": {
+   "en": "Core inflation",
+   "de": "Kerninflation",
+   "fr": "Inflation sous-jacente",
+   "it": "Inflazione di fondo"
+  },
+  "Cross-border commuters": {
+   "en": "Cross-border commuters",
+   "de": "Grenzgänger",
+   "fr": "Frontaliers",
+   "it": "Frontalieri"
+  },
+  "Effective FX index": {
+   "en": "Effective FX index",
+   "de": "Effektiver Wechselkursindex",
+   "fr": "Indice de change effectif",
+   "it": "Indice di cambio effettivo"
+  },
+  "Employment": {
+   "en": "Employment",
+   "de": "Beschäftigung",
+   "fr": "Emploi",
+   "it": "Occupazione"
+  },
+  "Employment outlook": {
+   "en": "Employment outlook",
+   "de": "Beschäftigungsaussichten",
+   "fr": "Perspectives d'emploi",
+   "it": "Prospettive occupazionali"
+  },
+  "Foreign trade": {
+   "en": "Foreign trade",
+   "de": "Aussenhandel",
+   "fr": "Commerce extérieur",
+   "it": "Commercio estero"
+  },
+  "GDP (output, expenditure, income)": {
+   "en": "GDP (output, expenditure, income)",
+   "de": "BIP (Produktion, Verwendung, Einkommen)",
+   "fr": "PIB (production, dépenses, revenus)",
+   "it": "PIL (produzione, spesa, redditi)"
+  },
+  "Government finance": {
+   "en": "Government finance",
+   "de": "Öffentliche Finanzen",
+   "fr": "Finances publiques",
+   "it": "Finanze pubbliche"
+  },
+  "High-frequency activity tracker": {
+   "en": "High-frequency activity tracker",
+   "de": "Hochfrequenz-Aktivitätsindikator",
+   "fr": "Indicateur d'activité à haute fréquence",
+   "it": "Indicatore di attività ad alta frequenza"
+  },
+  "Hotel overnight stays": {
+   "en": "Hotel overnight stays",
+   "de": "Hotellogiernächte",
+   "fr": "Nuitées hôtelières",
+   "it": "Pernottamenti alberghieri"
+  },
+  "Industry & construction turnover": {
+   "en": "Industry & construction turnover",
+   "de": "Umsätze Industrie & Bau",
+   "fr": "Chiffres d'affaires industrie & construction",
+   "it": "Fatturato industria e costruzioni"
+  },
+  "Inflation forecast": {
+   "en": "Inflation forecast",
+   "de": "Inflationsprognose",
+   "fr": "Prévision d'inflation",
+   "it": "Previsione d'inflazione"
+  },
+  "International investment position": {
+   "en": "International investment position",
+   "de": "Auslandvermögen",
+   "fr": "Position extérieure",
+   "it": "Posizione sull'estero"
+  },
+  "Investment (gross fixed capital formation)": {
+   "en": "Investment (gross fixed capital formation)",
+   "de": "Investitionen (Bruttoanlageinvestitionen)",
+   "fr": "Investissements (FBCF)",
+   "it": "Investimenti (investimenti fissi lordi)"
+  },
+  "Job market": {
+   "en": "Job market",
+   "de": "Arbeitsmarkt",
+   "fr": "Marché du travail",
+   "it": "Mercato del lavoro"
+  },
+  "Job vacancies": {
+   "en": "Job vacancies",
+   "de": "Offene Stellen",
+   "fr": "Postes vacants",
+   "it": "Posti vacanti"
+  },
+  "Labour productivity": {
+   "en": "Labour productivity",
+   "de": "Arbeitsproduktivität",
+   "fr": "Productivité du travail",
+   "it": "Produttività del lavoro"
+  },
+  "Leading barometer": {
+   "en": "Leading barometer",
+   "de": "Vorlaufendes Barometer",
+   "fr": "Baromètre avancé",
+   "it": "Barometro anticipatore"
+  },
+  "Monetary aggregates": {
+   "en": "Monetary aggregates",
+   "de": "Geldmengen",
+   "fr": "Agrégats monétaires",
+   "it": "Aggregati monetari"
+  },
+  "Money-market rates": {
+   "en": "Money-market rates",
+   "de": "Geldmarktsätze",
+   "fr": "Taux du marché monétaire",
+   "it": "Tassi del mercato monetario"
+  },
+  "New vehicle registrations": {
+   "en": "New vehicle registrations",
+   "de": "Neuzulassungen von Fahrzeugen",
+   "fr": "Nouvelles immatriculations",
+   "it": "Nuove immatricolazioni"
+  },
+  "Payments & cash": {
+   "en": "Payments & cash",
+   "de": "Zahlungsverkehr & Bargeld",
+   "fr": "Paiements & espèces",
+   "it": "Pagamenti e contante"
+  },
+  "Policy & official rates": {
+   "en": "Policy & official rates",
+   "de": "Leitzinsen & offizielle Zinssätze",
+   "fr": "Taux directeurs & officiels",
+   "it": "Tassi di riferimento e ufficiali"
+  },
+  "Producer & import prices": {
+   "en": "Producer & import prices",
+   "de": "Produzenten- & Importpreise",
+   "fr": "Prix à la production & à l'importation",
+   "it": "Prezzi alla produzione e all'importazione"
+  },
+  "Real estate prices": {
+   "en": "Real estate prices",
+   "de": "Immobilienpreise",
+   "fr": "Prix de l'immobilier",
+   "it": "Prezzi immobiliari"
+  },
+  "Regional GDP": {
+   "en": "Regional GDP",
+   "de": "Regionales BIP",
+   "fr": "PIB régional",
+   "it": "PIL regionale"
+  },
+  "Resident population": {
+   "en": "Resident population",
+   "de": "Wohnbevölkerung",
+   "fr": "Population résidante",
+   "it": "Popolazione residente"
+  },
+  "Resident population by nationality": {
+   "en": "Resident population by nationality",
+   "de": "Wohnbevölkerung nach Staatsangehörigkeit",
+   "fr": "Population résidante par nationalité",
+   "it": "Popolazione residente per nazionalità"
+  },
+  "Retail trade turnover": {
+   "en": "Retail trade turnover",
+   "de": "Detailhandelsumsätze",
+   "fr": "Chiffres d'affaires du commerce de détail",
+   "it": "Fatturato del commercio al dettaglio"
+  },
+  "Securities turnover": {
+   "en": "Securities turnover",
+   "de": "Effektenumsätze",
+   "fr": "Transactions sur titres",
+   "it": "Transazioni in titoli"
+  },
+  "Sentiment composite": {
+   "en": "Sentiment composite",
+   "de": "Stimmungsindikator",
+   "fr": "Indice de climat",
+   "it": "Indice di clima"
+  },
+  "Services turnover": {
+   "en": "Services turnover",
+   "de": "Umsätze Dienstleistungen",
+   "fr": "Chiffres d'affaires des services",
+   "it": "Fatturato dei servizi"
+  },
+  "Swiss stock indices": {
+   "en": "Swiss stock indices",
+   "de": "Schweizer Aktienindizes",
+   "fr": "Indices boursiers suisses",
+   "it": "Indici azionari svizzeri"
+  },
+  "Unemployment": {
+   "en": "Unemployment",
+   "de": "Arbeitslosigkeit",
+   "fr": "Chômage",
+   "it": "Disoccupazione"
+  },
+  "Vacant dwellings": {
+   "en": "Vacant dwellings",
+   "de": "Leerwohnungen",
+   "fr": "Logements vacants",
+   "it": "Abitazioni vuote"
+  },
+  "Wages": {
+   "en": "Wages",
+   "de": "Löhne",
+   "fr": "Salaires",
+   "it": "Salari"
+  },
+  "Working time and working volume": {
+   "en": "Working time and working volume",
+   "de": "Arbeitszeit und Arbeitsvolumen",
+   "fr": "Temps et volume de travail",
+   "it": "Tempo e volume di lavoro"
+  }
+ },
+ "featured": {
+  "Consumer confidence": {
+   "en": "Consumer confidence",
+   "de": "Konsumentenstimmung",
+   "fr": "Climat de consommation",
+   "it": "Clima di consumo"
+  },
+  "Employment": {
+   "en": "Employment",
+   "de": "Beschäftigung",
+   "fr": "Emploi",
+   "it": "Occupazione"
+  },
+  "Exchange rates": {
+   "en": "Exchange rates",
+   "de": "Wechselkurse",
+   "fr": "Taux de change",
+   "it": "Tassi di cambio"
+  },
+  "Foreign trade": {
+   "en": "Foreign trade",
+   "de": "Aussenhandel",
+   "fr": "Commerce extérieur",
+   "it": "Commercio estero"
+  },
+  "GDP": {
+   "en": "GDP",
+   "de": "BIP",
+   "fr": "PIB",
+   "it": "PIL"
+  },
+  "Inflation": {
+   "en": "Inflation",
+   "de": "Teuerung",
+   "fr": "Inflation",
+   "it": "Inflazione"
+  },
+  "Money supply": {
+   "en": "Money supply",
+   "de": "Geldmenge",
+   "fr": "Masse monétaire",
+   "it": "Massa monetaria"
+  },
+  "Population": {
+   "en": "Population",
+   "de": "Bevölkerung",
+   "fr": "Population",
+   "it": "Popolazione"
+  },
+  "Retail trade": {
+   "en": "Retail trade",
+   "de": "Detailhandel",
+   "fr": "Commerce de détail",
+   "it": "Commercio al dettaglio"
+  },
+  "SARON": {
+   "en": "SARON",
+   "de": "SARON",
+   "fr": "SARON",
+   "it": "SARON"
+  },
+  "Stock market": {
+   "en": "Stock market",
+   "de": "Aktienmarkt",
+   "fr": "Marché des actions",
+   "it": "Mercato azionario"
+  },
+  "Unemployment": {
+   "en": "Unemployment",
+   "de": "Arbeitslosigkeit",
+   "fr": "Chômage",
+   "it": "Disoccupazione"
+  }
+ }
+}

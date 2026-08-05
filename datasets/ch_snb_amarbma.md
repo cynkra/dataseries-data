@@ -58,3 +58,12 @@ People registered unemployed at Swiss job centres, with the unemployment rate, n
 ## Provenance
 Script: `R/source_snb.R::snb_fetch` via `R/snb_cubes.tsv` (cube_id `amarbma`).
 Datasheet 2026-06-01; parser verified 2026-06-01 (6,540 rows, 9 series).
+
+## What is special (de)
+Bei den Schweizer RAV registrierte Arbeitslose, mit Arbeitslosenquote, gemeldeten offenen Stellen und Kurzarbeit.
+
+## What is special (fr)
+Personnes inscrites au chômage auprès des offices régionaux suisses, avec le taux de chômage, les places vacantes annoncées et le chômage partiel.
+
+## What is special (it)
+Persone iscritte alla disoccupazione presso gli uffici regionali svizzeri, con tasso di disoccupazione, posti vacanti annunciati e lavoro ridotto.

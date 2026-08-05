@@ -195,7 +195,15 @@
       "it": "Economia interna"
     }
   },
-  "concept": "Domestic economy / Services turnover",
+  "concept": {
+    "en": "Domestic economy / Services turnover",
+    "leaf": {
+      "en": "Services turnover",
+      "de": "Umsätze Dienstleistungen",
+      "fr": "Chiffres d'affaires des services",
+      "it": "Fatturato dei servizi"
+    }
+  },
   "canonical": true,
   "split": "NOGA",
   "single_select": ["ADJUSTMENT", "INDICATOR_KE"],
@@ -206,7 +214,10 @@
     "INDICATOR_KE": "UTOT"
   },
   "description": {
-    "en": "Turnover of the Swiss services sector each quarter, completing the picture alongside retail and industry. Base 2021 = 100, so history is short."
+    "en": "Turnover of the Swiss services sector each quarter, completing the picture alongside retail and industry. Base 2021 = 100, so history is short.",
+    "de": "Umsatz des Schweizer Dienstleistungssektors pro Quartal, als Ergänzung zu Detailhandel und Industrie. Basis 2021 = 100, daher kurze Historie.",
+    "fr": "Chiffre d'affaires du secteur suisse des services par trimestre, en complément du commerce de détail et de l'industrie. Base 2021 = 100, donc historique court.",
+    "it": "Fatturato del settore svizzero dei servizi per trimestre, a completamento di commercio al dettaglio e industria. Base 2021 = 100, quindi storia breve."
   },
   "fetched_utc": "2026-08-05 13:12:05"
 }

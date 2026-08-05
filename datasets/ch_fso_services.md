@@ -58,3 +58,12 @@ Turnover of the Swiss services sector each quarter, completing the picture along
 ## Provenance
 Script: `R/source_fso_sdmx.R::fso_sdmx_fetch` (wired in `R/pipeline.R`).
 Datasheet authored 2026-06-02; SDMX slice verified live 2026-06-02 (2574 rows, 132 series).
+
+## What is special (de)
+Umsatz des Schweizer Dienstleistungssektors pro Quartal, als Ergänzung zu Detailhandel und Industrie. Basis 2021 = 100, daher kurze Historie.
+
+## What is special (fr)
+Chiffre d'affaires du secteur suisse des services par trimestre, en complément du commerce de détail et de l'industrie. Base 2021 = 100, donc historique court.
+
+## What is special (it)
+Fatturato del settore svizzero dei servizi per trimestre, a completamento di commercio al dettaglio e industria. Base 2021 = 100, quindi storia breve.

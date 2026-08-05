@@ -74,3 +74,12 @@ Two NOGA aggregates head the tree: `B-E` Industry (mining, manufacturing, energy
 ## Provenance
 Script: `R/source_fso_sdmx.R::fso_sdmx_fetch` (wired in `R/pipeline.R`). Datasheet
 authored 2026-06-01; parser verified 2026-06-01.
+
+## What is special (de)
+Umsatz und Produktion der Schweizer Industrie und des Baugewerbes pro Quartal, nach Branche, inklusive Hochbau, Tiefbau und Ausbaugewerbe.
+
+## What is special (fr)
+Chiffre d'affaires et production de l'industrie et de la construction suisses par trimestre, par branche, y compris bâtiment, génie civil et travaux spécialisés.
+
+## What is special (it)
+Fatturato e produzione dell'industria e delle costruzioni svizzere per trimestre, per ramo, inclusi edilizia, genio civile e lavori specializzati.

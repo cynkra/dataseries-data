@@ -575,7 +575,15 @@
       "it": "Settore estero"
     }
   },
-  "concept": "External sector / Balance of payments",
+  "concept": {
+    "en": "External sector / Balance of payments",
+    "leaf": {
+      "en": "Balance of payments",
+      "de": "Zahlungsbilanz",
+      "fr": "Balance des paiements",
+      "it": "Bilancia dei pagamenti"
+    }
+  },
   "canonical": false,
   "split": "D0",
   "single_select": [],
@@ -584,7 +592,10 @@
     "D0": "S0"
   },
   "description": {
-    "en": "Switzerland's balance of payments on one page: all four accounts including the statistical difference that closes the books."
+    "en": "Switzerland's balance of payments on one page: all four accounts including the statistical difference that closes the books.",
+    "de": "Die Schweizer Zahlungsbilanz auf einer Seite: alle vier Teilbilanzen samt der statistischen Differenz, die die Rechnung schliesst.",
+    "fr": "La balance des paiements suisse sur une page : les quatre comptes, y compris la différence statistique qui boucle les comptes.",
+    "it": "La bilancia dei pagamenti svizzera in una pagina: tutti e quattro i conti, inclusa la differenza statistica che chiude i conti."
   },
   "fetched_utc": "2026-08-05 13:12:02"
 }

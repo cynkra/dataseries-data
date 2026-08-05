@@ -60,3 +60,12 @@ the headline transform is year-on-year (`yoy`) rather than the raw index level.
 ## Provenance
 Script: `R/source_fso_excel_sets.R::fso_excel_ch_fso_ppi`. Datasheet 2026-06-01;
 parser verified 2026-06-01 (5,320 rows, 7 series, 0 NA values).
+
+## What is special (de)
+Preise, die Schweizer Produzenten verlangen und Importeure zahlen, monatlich. Die sieben Reihen sind derselbe Index, neu basiert auf den Jahren 1963 bis 2025.
+
+## What is special (fr)
+Prix pratiqués par les producteurs suisses et payés par les importateurs, mensuel. Les sept séries sont le même indice rebasé sur les années 1963 à 2025.
+
+## What is special (it)
+Prezzi praticati dai produttori svizzeri e pagati dagli importatori, mensile. Le sette serie sono lo stesso indice ribasato sugli anni dal 1963 al 2025.

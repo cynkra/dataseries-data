@@ -170,7 +170,15 @@
       "it": "Lavoro"
     }
   },
-  "concept": "Labour / Working time and working volume",
+  "concept": {
+    "en": "Labour / Working time and working volume",
+    "leaf": {
+      "en": "Working time and working volume",
+      "de": "Arbeitszeit und Arbeitsvolumen",
+      "fr": "Temps et volume de travail",
+      "it": "Tempo e volume di lavoro"
+    }
+  },
   "canonical": true,
   "title": {
     "en": "Hours worked",
@@ -187,7 +195,10 @@
     "worktime": "_T"
   },
   "description": {
-    "en": "How many hours the Swiss actually work: total volume, hours per job, and usual weekly hours, split by sex and by full-time or part-time."
+    "en": "How many hours the Swiss actually work: total volume, hours per job, and usual weekly hours, split by sex and by full-time or part-time.",
+    "de": "Wie viele Stunden in der Schweiz tatsächlich gearbeitet wird: Gesamtvolumen, Stunden pro Stelle und übliche Wochenstunden, nach Geschlecht sowie Voll- und Teilzeit.",
+    "fr": "Combien d'heures on travaille réellement en Suisse : volume total, heures par emploi et heures hebdomadaires usuelles, selon le sexe et le temps plein ou partiel.",
+    "it": "Quante ore si lavora effettivamente in Svizzera: volume totale, ore per impiego e ore settimanali abituali, per sesso e per tempo pieno o parziale."
   },
   "fetched_utc": "2026-08-05 13:12:07"
 }

@@ -54,3 +54,12 @@ What Swiss banks charge on new loans and mortgages by maturity, as a full spread
 ## Provenance
 Script: `R/source_snb.R::snb_fetch` (cube list + title from `R/snb_cubes.tsv`).
 Datasheet authored 2026-06-01; parser verified 2026-06-01 (19,555 data rows, 105 series).
+
+## What is special (de)
+Was Schweizer Banken für neue Kredite und Hypotheken nach Laufzeit verlangen, als ganze Spanne: Mittelwert, Quartile und Median statt nur eines Durchschnitts.
+
+## What is special (fr)
+Ce que les banques suisses facturent sur les nouveaux crédits et hypothèques par échéance, en fourchette complète : moyenne, quartiles et médiane, pas seulement une moyenne.
+
+## What is special (it)
+Quanto applicano le banche svizzere su nuovi crediti e ipoteche per scadenza, come intera distribuzione: media, quartili e mediana, non solo una media.

@@ -67,7 +67,15 @@
       "it": "Conti nazionali"
     }
   },
-  "concept": "National accounts / Labour productivity",
+  "concept": {
+    "en": "National accounts / Labour productivity",
+    "leaf": {
+      "en": "Labour productivity",
+      "de": "Arbeitsproduktivität",
+      "fr": "Productivité du travail",
+      "it": "Produttività del lavoro"
+    }
+  },
   "canonical": true,
   "title": {
     "en": "Labour productivity",
@@ -82,7 +90,10 @@
     "indicator": "productivity"
   },
   "description": {
-    "en": "Swiss output per hour worked, with real GDP and total hours on the same index base, so the productivity trend reads off one chart."
+    "en": "Swiss output per hour worked, with real GDP and total hours on the same index base, so the productivity trend reads off one chart.",
+    "de": "Schweizer Produktion pro Arbeitsstunde, mit realem BIP und Gesamtstunden auf derselben Indexbasis, sodass der Produktivitätstrend aus einer Grafik ablesbar ist.",
+    "fr": "Production suisse par heure travaillée, avec le PIB réel et le total des heures sur la même base d'indice, si bien que la tendance de productivité se lit sur un seul graphique.",
+    "it": "Produzione svizzera per ora lavorata, con PIL reale e ore totali sulla stessa base d'indice, così l'andamento della produttività si legge da un solo grafico."
   },
   "units": {
     "en": "Index (1991 = 100), chained volume (previous year's prices)",

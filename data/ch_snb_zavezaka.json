@@ -190,7 +190,15 @@
       "it": "Sistemi di pagamento"
     }
   },
-  "concept": "Payment systems / Payments & cash",
+  "concept": {
+    "en": "Payment systems / Payments & cash",
+    "leaf": {
+      "en": "Payments & cash",
+      "de": "Zahlungsverkehr & Bargeld",
+      "fr": "Paiements & espèces",
+      "it": "Pagamenti e contante"
+    }
+  },
   "canonical": false,
   "split": "D0",
   "single_select": [],
@@ -199,7 +207,10 @@
     "D0": "T0"
   },
   "description": {
-    "en": "How many credit, debit and prepaid cards are in circulation in Switzerland, plus the number of ATMs. Counts only, no spending."
+    "en": "How many credit, debit and prepaid cards are in circulation in Switzerland, plus the number of ATMs. Counts only, no spending.",
+    "de": "Wie viele Kredit-, Debit- und Vorauszahlungskarten in der Schweiz im Umlauf sind, dazu die Zahl der Geldautomaten. Nur Bestände, keine Umsätze.",
+    "fr": "Combien de cartes de crédit, de débit et prépayées circulent en Suisse, plus le nombre de distributeurs. Effectifs seulement, pas de dépenses.",
+    "it": "Quante carte di credito, di debito e prepagate circolano in Svizzera, più il numero di bancomat. Solo consistenze, nessuna spesa."
   },
   "fetched_utc": "2026-08-05 13:12:03"
 }

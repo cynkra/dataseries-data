@@ -99,3 +99,12 @@ Datasheet authored 2026-06-02; verified live 2026-06-02 (Total P both sexes
 Display reworked 2026-06-03: split = sector (the hierarchical industry tree is the
 set of lines), sex = exclusive single-select (Total / Men / Women); sector×sex is
 a clean 23×3 rectangle so every chip is populated.
+
+## What is special (de)
+Wie viele Menschen in der Schweiz arbeiten, nach Sektor und Geschlecht — gezählt werden Personen statt Stellen, sodass der Frauen- und Männeranteil direkt ablesbar ist.
+
+## What is special (fr)
+Combien de personnes travaillent en Suisse, par secteur et par sexe : on compte des personnes et non des emplois, si bien que la répartition hommes-femmes se lit directement.
+
+## What is special (it)
+Quante persone lavorano in Svizzera, per settore e sesso: si contano persone e non posti di lavoro, così la ripartizione tra uomini e donne è leggibile direttamente.

@@ -312,7 +312,15 @@
       }
     }
   },
-  "concept": "Labour / Cross-border commuters",
+  "concept": {
+    "en": "Labour / Cross-border commuters",
+    "leaf": {
+      "en": "Cross-border commuters",
+      "de": "Grenzgänger",
+      "fr": "Frontaliers",
+      "it": "Frontalieri"
+    }
+  },
   "canonical": true,
   "title": {
     "en": "Cross-border commuters",
@@ -327,7 +335,10 @@
     "canton": "_T"
   },
   "description": {
-    "en": "Foreign workers commuting into Switzerland each day, by canton. Around 410,000 people, concentrated in Geneva, Ticino, Basel and Vaud."
+    "en": "Foreign workers commuting into Switzerland each day, by canton. Around 410,000 people, concentrated in Geneva, Ticino, Basel and Vaud.",
+    "de": "Ausländische Grenzgänger, die täglich in die Schweiz zur Arbeit pendeln, nach Kanton. Rund 410,000 Personen, vor allem in Genf, Tessin, Basel und Waadt.",
+    "fr": "Frontaliers étrangers venant travailler en Suisse chaque jour, par canton. Environ 410,000 personnes, surtout à Genève, au Tessin, à Bâle et dans le canton de Vaud.",
+    "it": "Frontalieri stranieri che ogni giorno si recano al lavoro in Svizzera, per Cantone. Circa 410,000 persone, soprattutto a Ginevra, Ticino, Basilea e Vaud."
   },
   "units": {
     "en": "Number of cross-border commuters (estimate)",

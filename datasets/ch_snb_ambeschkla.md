@@ -58,3 +58,12 @@ The overview line dimension D0 carries a `VT Total` (employment level) shipped a
 ## Provenance
 Script: `R/source_snb.R::snb_fetch` via `R/snb_cubes.tsv` (cube_id `ambeschkla`).
 Datasheet 2026-06-01; parser verified 2026-06-01 (8,280 rows, 60 series).
+
+## What is special (de)
+Schweizer Beschäftigte nach Branche, aufgeteilt in Voll-, Teilzeit und Vollzeitäquivalente, sodass die Teilzeitintensität je Sektor direkt ablesbar ist.
+
+## What is special (fr)
+Salariés suisses par branche, répartis en temps plein, temps partiel et équivalents plein temps, si bien que l'intensité du temps partiel par secteur se lit directement.
+
+## What is special (it)
+Occupati svizzeri per ramo, ripartiti in tempo pieno, tempo parziale ed equivalenti a tempo pieno, così l'intensità del tempo parziale per settore è leggibile direttamente.

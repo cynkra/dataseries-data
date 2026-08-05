@@ -53,3 +53,12 @@ Swiss bank lending split by whether the borrower is at home or abroad, for mortg
 ## Provenance
 Script: `R/source_snb.R::snb_fetch` (cube `bakredinausbm`, title/topic from
 `R/snb_cubes.tsv`). Datasheet authored 2026-06-01.
+
+## What is special (de)
+Schweizer Bankkredite danach aufgeteilt, ob der Schuldner im In- oder Ausland sitzt, für Hypotheken und übrige Kredite.
+
+## What is special (fr)
+Crédits bancaires suisses selon que l'emprunteur se trouve en Suisse ou à l'étranger, pour les hypothèques et les autres prêts.
+
+## What is special (it)
+Crediti bancari svizzeri a seconda che il debitore sia in Svizzera o all'estero, per ipoteche e altri prestiti.

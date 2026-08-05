@@ -112,3 +112,12 @@ financial and government sub-sectors one level deeper.
 ## Provenance
 Script: `R/source_fso_dam_csv.R::fso_gfcf_detail` (wired in `R/pipeline.R`).
 Datasheet authored 2026-06-02; verified live 2026-06-03 (S1 P51G 2024 = 225,873.1 and S1 construction 2023 = 66,634.8, exact matches to FSO).
+
+## What is special (de)
+Wer investiert worin: Schweizer Anlageinvestitionen nach Sektor (Unternehmen, Staat, Haushalte) und nach Art, von Bauten bis Ausrüstung und Software.
+
+## What is special (fr)
+Qui investit dans quoi : les investissements suisses par secteur (entreprises, État, ménages) et par type, du bâtiment aux équipements et logiciels.
+
+## What is special (it)
+Chi investe in cosa: gli investimenti svizzeri per settore (imprese, Stato, economie domestiche) e per tipo, dalle costruzioni alle attrezzature e al software.

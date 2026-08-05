@@ -73,3 +73,12 @@ derived from those ranges.
 ## Provenance
 Script: `R/source_fso.R::fso_fetch` (explicit chunked query built in
 `R/pipeline.R`). Datasheet authored 2026-06-01.
+
+## What is special (de)
+Zahl der Stellen in der Schweiz nach Branche, vierteljährlich, bis auf zweistellige Abteilungen wie Pharma, Finanzdienstleistungen und Gesundheit.
+
+## What is special (fr)
+Nombre d'emplois en Suisse par branche, trimestriel, jusqu'aux divisions à deux chiffres comme la pharma, la finance et la santé.
+
+## What is special (it)
+Numero di posti di lavoro in Svizzera per ramo, trimestrale, fino alle divisioni a due cifre come farmaceutica, finanza e sanità.

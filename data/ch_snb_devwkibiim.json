@@ -582,7 +582,15 @@
       "it": "Tassi di cambio"
     }
   },
-  "concept": "Exchange rates / Bilateral FX",
+  "concept": {
+    "en": "Exchange rates / Bilateral FX",
+    "leaf": {
+      "en": "Bilateral FX",
+      "de": "Bilaterale Wechselkurse",
+      "fr": "Change bilatéral",
+      "it": "Cambi bilaterali"
+    }
+  },
   "canonical": true,
   "split": "D1",
   "single_select": "D0",
@@ -592,7 +600,10 @@
     "D0": "K"
   },
   "description": {
-    "en": "Swiss franc exchange-rate indices against about 54 currencies, nominal and inflation-adjusted, as index levels and as yearly changes."
+    "en": "Swiss franc exchange-rate indices against about 54 currencies, nominal and inflation-adjusted, as index levels and as yearly changes.",
+    "de": "Frankenkurs-Indizes gegenüber rund 54 Währungen, nominal und teuerungsbereinigt, als Indexstände und als Jahresveränderungen.",
+    "fr": "Indices de cours du franc face à environ 54 monnaies, nominaux et corrigés de l'inflation, en niveaux d'indice et en variations annuelles.",
+    "it": "Indici del corso del franco rispetto a circa 54 valute, nominali e corretti per l'inflazione, come livelli d'indice e variazioni annue."
   },
   "fetched_utc": "2026-08-05 13:12:02"
 }

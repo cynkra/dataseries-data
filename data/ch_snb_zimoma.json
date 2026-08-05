@@ -394,9 +394,22 @@
       "it": "Tassi d'interesse e rendimenti"
     }
   },
-  "concept": "Interest rates & yields / Money-market rates",
+  "concept": {
+    "en": "Interest rates & yields / Money-market rates",
+    "leaf": {
+      "en": "Money-market rates",
+      "de": "Geldmarktsätze",
+      "fr": "Taux du marché monétaire",
+      "it": "Tassi del mercato monetario"
+    }
+  },
   "canonical": true,
-  "featured": "SARON",
+  "featured": {
+    "en": "SARON",
+    "de": "SARON",
+    "fr": "SARON",
+    "it": "SARON"
+  },
   "split": "D0",
   "single_select": [],
   "default_transform": "level",
@@ -405,9 +418,9 @@
   },
   "description": {
     "en": "Money-market rates for Switzerland, the US, Japan, the UK and the euro area on one chart, spanning the switch from Libor to SARON and SOFR.",
-    "de": "Die zentralen Referenzzinssätze des Geldmarkts, monatlich zurück bis 1972. Das prägende Merkmal ist die Ländergruppierung (D0): die Schweiz neben den USA, Japan, dem Vereinigten Königreich und dem Euroraum, sodass sich Frankensätze im selben Würfel auf einer Achse mit den grossen Währungen vergleichen lassen. Der Würfel deckt zudem den Übergang der Referenzzinssätze lückenlos ab: Die modernen Tagesgeld-Benchmarks SARON, SOFR, TONA, SONIA und ESTR stehen neben den früheren 3-Monats-LIBOR-Reihen und dem EURIBOR. Der Schweizer Block enthält zusätzlich den Tagesgeldsatz (Tom-Next) und die 3-monatigen Geldmarktbuchforderungen des Bundes. Mit nur 13 Blattreihen ist er klein, aber konzeptionell breit; die Schweizer Reihe 1TGT liefert die längste durchgehende Frankengeldmarkt-Historie im Würfel (ab 1972).",
-    "fr": "Les taux de référence du marché monétaire, mensuels depuis 1972. Sa caractéristique distinctive est le regroupement par pays (D0) : la Suisse aux côtés des États-Unis, du Japon, du Royaume-Uni et de la zone euro, de sorte qu'un même cube permet de comparer les taux du franc aux grandes devises sur un seul axe. Il couvre aussi la transition des taux de référence de bout en bout : les références au jour le jour modernes SARON, SOFR, TONA, SONIA et ESTR côtoient les anciennes séries LIBOR à 3 mois et l'EURIBOR. Le bloc suisse porte en outre le taux de l'argent au jour le jour (tom-next) et les créances comptables à 3 mois de la Confédération sur le marché monétaire. Avec seulement 13 séries terminales, il est petit mais conceptuellement large, et la série suisse 1TGT offre le plus long historique continu du marché monétaire en francs du cube (depuis 1972).",
-    "it": "I tassi di riferimento del mercato monetario, mensili a partire dal 1972. Il tratto distintivo è il raggruppamento per paese (D0): la Svizzera accanto a Stati Uniti, Giappone, Regno Unito e area euro, così che lo stesso cubo consente di confrontare i tassi del franco con le principali valute su un unico asse. Copre inoltre per intero la transizione dei tassi di riferimento: i moderni benchmark overnight SARON, SOFR, TONA, SONIA ed ESTR affiancano le precedenti serie LIBOR a 3 mesi e l'EURIBOR. Il blocco svizzero riporta anche il tasso del denaro a un giorno (tom-next) e i crediti contabili a 3 mesi della Confederazione sul mercato monetario. Con sole 13 serie terminali è piccolo ma concettualmente ampio, e la serie svizzera 1TGT offre la più lunga storia continua del mercato monetario in franchi presente nel cubo (dal 1972)."
+    "de": "Geldmarktsätze für die Schweiz, die USA, Japan, Grossbritannien und den Euroraum in einer Grafik, über den Wechsel von Libor zu SARON und SOFR hinweg.",
+    "fr": "Taux du marché monétaire pour la Suisse, les États-Unis, le Japon, le Royaume-Uni et la zone euro sur un même graphique, à travers le passage du Libor au SARON et au SOFR.",
+    "it": "Tassi del mercato monetario per Svizzera, Stati Uniti, Giappone, Regno Unito e area euro in un unico grafico, attraverso il passaggio da Libor a SARON e SOFR."
   },
   "fetched_utc": "2026-08-05 13:12:04"
 }

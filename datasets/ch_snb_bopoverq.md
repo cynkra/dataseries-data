@@ -53,3 +53,12 @@ Switzerland's balance of payments on one page: all four accounts including the s
 Script: `R/source_snb.R::snb_fetch` via `R/snb_cubes.tsv` (cube `bopoverq`, topic
 "Balance of payments"). Datasheet authored 2026-06-01; parser verified 2026-06-01
 (6,676 rows, 42 series).
+
+## What is special (de)
+Die Schweizer Zahlungsbilanz auf einer Seite: alle vier Teilbilanzen samt der statistischen Differenz, die die Rechnung schliesst.
+
+## What is special (fr)
+La balance des paiements suisse sur une page : les quatre comptes, y compris la différence statistique qui boucle les comptes.
+
+## What is special (it)
+La bilancia dei pagamenti svizzera in una pagina: tutti e quattro i conti, inclusa la differenza statistica che chiude i conti.

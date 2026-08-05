@@ -57,7 +57,15 @@
       }
     }
   },
-  "concept": "Domestic economy / Vacant dwellings",
+  "concept": {
+    "en": "Domestic economy / Vacant dwellings",
+    "leaf": {
+      "en": "Vacant dwellings",
+      "de": "Leerwohnungen",
+      "fr": "Logements vacants",
+      "it": "Abitazioni vuote"
+    }
+  },
   "canonical": true,
   "title": {
     "en": "Vacant dwellings",
@@ -72,7 +80,10 @@
     "measure": "PC"
   },
   "description": {
-    "en": "How many Swiss homes stand empty, and the official vacancy rate, the standard measure of housing shortage. Down to about 1.0% by 2025."
+    "en": "How many Swiss homes stand empty, and the official vacancy rate, the standard measure of housing shortage. Down to about 1.0% by 2025.",
+    "de": "Wie viele Schweizer Wohnungen leer stehen, und die offizielle Leerwohnungsziffer, das Standardmass für Wohnungsknappheit. 2025 bei rund 1.0%.",
+    "fr": "Combien de logements suisses sont vacants, et le taux de vacance officiel, la mesure de référence de la pénurie de logements. Environ 1.0% en 2025.",
+    "it": "Quante abitazioni svizzere sono vuote, e il tasso di sfitto ufficiale, la misura di riferimento della penuria di alloggi. Circa l'1.0% nel 2025."
   },
   "fetched_utc": "2026-08-05 13:12:05"
 }

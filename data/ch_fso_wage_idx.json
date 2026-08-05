@@ -155,7 +155,15 @@
       }
     }
   },
-  "concept": "Labour / Wages",
+  "concept": {
+    "en": "Labour / Wages",
+    "leaf": {
+      "en": "Wages",
+      "de": "Löhne",
+      "fr": "Salaires",
+      "it": "Salari"
+    }
+  },
   "canonical": true,
   "title": {
     "en": "Swiss Wage Index",
@@ -171,7 +179,10 @@
     "adjustment": "real"
   },
   "description": {
-    "en": "How Swiss pay has developed since 1993, nominal and after inflation, by sector and sex. Real wages show whether pay kept pace with prices."
+    "en": "How Swiss pay has developed since 1993, nominal and after inflation, by sector and sex. Real wages show whether pay kept pace with prices.",
+    "de": "Wie sich die Schweizer Löhne seit 1993 entwickelt haben, nominal und teuerungsbereinigt, nach Sektor und Geschlecht. Reallöhne zeigen, ob die Löhne mit den Preisen Schritt hielten.",
+    "fr": "Comment les salaires suisses ont évolué depuis 1993, nominaux et corrigés de l'inflation, par secteur et par sexe. Les salaires réels montrent si la paie a suivi les prix.",
+    "it": "Come sono evoluti i salari svizzeri dal 1993, nominali e corretti per l'inflazione, per settore e sesso. I salari reali mostrano se le paghe hanno tenuto il passo dei prezzi."
   },
   "fetched_utc": "2026-08-05 13:12:07"
 }

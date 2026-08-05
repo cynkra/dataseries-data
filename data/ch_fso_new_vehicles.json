@@ -162,7 +162,15 @@
       }
     }
   },
-  "concept": "Domestic economy / New vehicle registrations",
+  "concept": {
+    "en": "Domestic economy / New vehicle registrations",
+    "leaf": {
+      "en": "New vehicle registrations",
+      "de": "Neuzulassungen von Fahrzeugen",
+      "fr": "Nouvelles immatriculations",
+      "it": "Nuove immatricolazioni"
+    }
+  },
   "canonical": true,
   "title": {
     "en": "New car registrations by fuel",
@@ -177,7 +185,10 @@
     "fuel": "_T"
   },
   "description": {
-    "en": "New cars registered in Switzerland each month by fuel: petrol, diesel, hybrid, plug-in and battery-electric. EVs were about 25% in spring 2026."
+    "en": "New cars registered in Switzerland each month by fuel: petrol, diesel, hybrid, plug-in and battery-electric. EVs were about 25% in spring 2026.",
+    "de": "Monatliche Neuzulassungen von Personenwagen in der Schweiz nach Treibstoff: Benzin, Diesel, Hybrid, Plug-in und Elektro. E-Autos lagen im Frühling 2026 bei rund 25%.",
+    "fr": "Nouvelles immatriculations mensuelles de voitures en Suisse par carburant : essence, diesel, hybride, hybride rechargeable et électrique. Les électriques étaient à environ 25% au printemps 2026.",
+    "it": "Nuove immatricolazioni mensili di automobili in Svizzera per carburante: benzina, diesel, ibrido, ibrido plug-in ed elettrico. Le elettriche erano circa il 25% nella primavera 2026."
   },
   "units": {
     "en": "Number of new registrations",

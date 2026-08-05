@@ -594,7 +594,15 @@
       "it": "Settore estero"
     }
   },
-  "concept": "External sector / Balance of payments",
+  "concept": {
+    "en": "External sector / Balance of payments",
+    "leaf": {
+      "en": "Balance of payments",
+      "de": "Zahlungsbilanz",
+      "fr": "Balance des paiements",
+      "it": "Bilancia dei pagamenti"
+    }
+  },
   "canonical": true,
   "split": "D1",
   "single_select": "D0",
@@ -604,7 +612,10 @@
     "D0": "S"
   },
   "description": {
-    "en": "Cross-border investment flows in and out of Switzerland: direct, portfolio and other investment plus reserve assets, quarterly."
+    "en": "Cross-border investment flows in and out of Switzerland: direct, portfolio and other investment plus reserve assets, quarterly.",
+    "de": "Grenzüberschreitende Investitionsströme in die Schweiz und aus ihr heraus: Direkt-, Portfolio- und übrige Investitionen sowie Währungsreserven, vierteljährlich.",
+    "fr": "Flux d'investissement transfrontaliers vers et depuis la Suisse : investissements directs, de portefeuille et autres, plus les réserves monétaires, par trimestre.",
+    "it": "Flussi d'investimento transfrontalieri verso e dalla Svizzera: investimenti diretti, di portafoglio e altri, più le riserve monetarie, per trimestre."
   },
   "fetched_utc": "2026-08-05 13:12:01"
 }

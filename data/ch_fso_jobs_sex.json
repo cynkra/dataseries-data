@@ -269,7 +269,15 @@
       "it": "Lavoro"
     }
   },
-  "concept": "Labour / Employment / jobs",
+  "concept": {
+    "en": "Labour / Employment / jobs",
+    "leaf": {
+      "en": "Employment",
+      "de": "Beschäftigung",
+      "fr": "Emploi",
+      "it": "Occupazione"
+    }
+  },
   "canonical": false,
   "split": "Geschlecht",
   "single_select": "Beschäftigungsgrad",
@@ -281,7 +289,10 @@
     "Beschäftigungsgrad": "TOT"
   },
   "description": {
-    "en": "Swiss jobs split by region, sector, full-time or part-time, and sex, the breakdowns the headline employment series reports only as a total."
+    "en": "Swiss jobs split by region, sector, full-time or part-time, and sex, the breakdowns the headline employment series reports only as a total.",
+    "de": "Schweizer Stellen nach Region, Sektor, Voll- oder Teilzeit und Geschlecht — die Gliederungen, welche die Hauptreihe nur als Total ausweist.",
+    "fr": "Emplois suisses par région, secteur, temps plein ou partiel et sexe : les ventilations que la série principale ne publie qu'en total.",
+    "it": "Posti di lavoro svizzeri per regione, settore, tempo pieno o parziale e sesso: le ripartizioni che la serie principale riporta solo come totale."
   },
   "fetched_utc": "2026-08-05 13:12:06"
 }

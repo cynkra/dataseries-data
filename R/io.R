@@ -155,6 +155,28 @@ ds_topic_of <- function(group_en, data_dir) {
   list(key = NA_character_, name = list(en = group_en))   # uncategorised, still renders
 }
 
+# data/vocab.json — display vocabulary shared across datasets (concept leaves,
+# featured chip labels). Hand-maintained, like categories.json.
+ds_vocab <- local({
+  cache <- NULL
+  function(data_dir) {
+    if (is.null(cache)) {
+      f <- file.path(data_dir, "vocab.json")
+      cache <<- if (file.exists(f)) jsonlite::fromJSON(f, simplifyVector = FALSE) else list()
+    }
+    cache
+  }
+})
+
+# "Group / Leaf" -> the leaf resolved to a label object; the group segment is
+# already carried (translated) by meta$topic, so only the leaf needs lookup.
+ds_concept_of <- function(concept_en, data_dir) {
+  parts <- trimws(strsplit(concept_en, "/", fixed = TRUE)[[1]])
+  leaf  <- if (length(parts) > 1) parts[2] else NA_character_
+  lv    <- if (!is.na(leaf)) ds_vocab(data_dir)$leaves[[leaf]] else NULL
+  list(en = concept_en, leaf = lv %||% (if (!is.na(leaf)) list(en = leaf) else NULL))
+}
+
 # Resolve the datasheet-declared vocab keys onto one dataset meta:
 #   - **source**: <key>   -> meta$source$name from sources.json (+ $key; the
 #                            fetcher's url survives, vocab url is the fallback)
@@ -164,6 +186,10 @@ apply_vocab <- function(meta, lines, data_dir) {
   f <- ds_fields(ds_top(lines))
   if (is.character(meta$topic) && nzchar(meta$topic))
     meta$topic <- ds_topic_of(meta$topic, data_dir)
+  if (is.character(meta$concept) && nzchar(meta$concept))
+    meta$concept <- ds_concept_of(meta$concept, data_dir)
+  if (is.character(meta$featured) && nzchar(meta$featured))
+    meta$featured <- ds_vocab(data_dir)$featured[[meta$featured]] %||% list(en = meta$featured)
   lic <- sub("\\s.*$", "", f$license %||% "")
   if (nzchar(lic)) meta$license <- lic
   key <- sub("\\s.*$", "", f$source %||% "")

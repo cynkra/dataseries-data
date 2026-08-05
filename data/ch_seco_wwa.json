@@ -58,7 +58,15 @@
       "it": "Congiuntura e clima"
     }
   },
-  "concept": "Business cycle & sentiment / High-frequency activity tracker",
+  "concept": {
+    "en": "Business cycle & sentiment / High-frequency activity tracker",
+    "leaf": {
+      "en": "High-frequency activity tracker",
+      "de": "Hochfrequenz-Aktivitätsindikator",
+      "fr": "Indicateur d'activité à haute fréquence",
+      "it": "Indicatore di attività ad alta frequenza"
+    }
+  },
   "canonical": true,
   "title": {
     "en": "Weekly economic activity (WEA)",
@@ -73,7 +81,10 @@
     "structure": "seco_wwa"
   },
   "description": {
-    "en": "How the Swiss economy is doing this week, tracked from electricity use, card payments and freight rather than waiting for quarterly GDP."
+    "en": "How the Swiss economy is doing this week, tracked from electricity use, card payments and freight rather than waiting for quarterly GDP.",
+    "de": "Wie es der Schweizer Wirtschaft diese Woche geht, gemessen an Stromverbrauch, Kartenzahlungen und Güterverkehr statt erst am Quartals-BIP.",
+    "fr": "Comment se porte l'économie suisse cette semaine, mesurée par la consommation d'électricité, les paiements par carte et le fret, sans attendre le PIB trimestriel.",
+    "it": "Come va l'economia svizzera questa settimana, misurata con consumo di elettricità, pagamenti con carta e trasporto merci, senza attendere il PIL trimestrale."
   },
   "units": {
     "en": "Scaled to the rate of growth of real, seasonally, calendar and sport-event adjusted GDP versus the same quarter of the previous year (percent)",

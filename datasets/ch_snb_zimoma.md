@@ -54,3 +54,12 @@ Money-market rates for Switzerland, the US, Japan, the UK and the euro area on o
 ## Provenance
 Script: `R/source_snb.R::snb_fetch` (cube list + title from `R/snb_cubes.tsv`).
 Datasheet authored 2026-06-01; parser verified 2026-06-01 (4,741 data rows, 13 series).
+
+## What is special (de)
+Geldmarktsätze für die Schweiz, die USA, Japan, Grossbritannien und den Euroraum in einer Grafik, über den Wechsel von Libor zu SARON und SOFR hinweg.
+
+## What is special (fr)
+Taux du marché monétaire pour la Suisse, les États-Unis, le Japon, le Royaume-Uni et la zone euro sur un même graphique, à travers le passage du Libor au SARON et au SOFR.
+
+## What is special (it)
+Tassi del mercato monetario per Svizzera, Stati Uniti, Giappone, Regno Unito e area euro in un unico grafico, attraverso il passaggio da Libor a SARON e SOFR.

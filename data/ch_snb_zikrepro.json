@@ -838,7 +838,15 @@
       "it": "Tassi d'interesse e rendimenti"
     }
   },
-  "concept": "Interest rates & yields / Money-market rates",
+  "concept": {
+    "en": "Interest rates & yields / Money-market rates",
+    "leaf": {
+      "en": "Money-market rates",
+      "de": "Geldmarktsätze",
+      "fr": "Taux du marché monétaire",
+      "it": "Tassi del mercato monetario"
+    }
+  },
   "canonical": false,
   "split": "D1",
   "single_select": "D0",
@@ -848,7 +856,10 @@
     "D1": "MV"
   },
   "description": {
-    "en": "Interest rates on new Swiss banking business: mortgages, consumer credit, savings, pensions and term deposits, given as a distribution."
+    "en": "Interest rates on new Swiss banking business: mortgages, consumer credit, savings, pensions and term deposits, given as a distribution.",
+    "de": "Zinssätze im Schweizer Neugeschäft: Hypotheken, Konsumkredite, Spar- und Vorsorgekonten sowie Festgelder, angegeben als Verteilung.",
+    "fr": "Taux d'intérêt sur les nouvelles affaires bancaires suisses : hypothèques, crédits à la consommation, épargne, prévoyance et dépôts à terme, donnés en distribution.",
+    "it": "Tassi d'interesse sui nuovi affari bancari svizzeri: ipoteche, crediti al consumo, risparmio, previdenza e depositi a termine, indicati come distribuzione."
   },
   "fetched_utc": "2026-08-05 13:12:04"
 }

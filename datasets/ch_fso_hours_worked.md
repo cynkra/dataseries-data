@@ -94,3 +94,12 @@ Datasheet authored 2026-06-02; verified live 2026-06-02 (weekly _T/_T 2024 = 30.
 = FSO "30h56min"; annual volume _T/_T 2024 = 8.117 bn hours — both exact matches).
 Display verified live 2026-06-03 (45/45 cube combos populated, default + spot-checks all
 return 16 rows; all dim levels flag data:true; validate_dataset() passes).
+
+## What is special (de)
+Wie viele Stunden in der Schweiz tatsächlich gearbeitet wird: Gesamtvolumen, Stunden pro Stelle und übliche Wochenstunden, nach Geschlecht sowie Voll- und Teilzeit.
+
+## What is special (fr)
+Combien d'heures on travaille réellement en Suisse : volume total, heures par emploi et heures hebdomadaires usuelles, selon le sexe et le temps plein ou partiel.
+
+## What is special (it)
+Quante ore si lavora effettivamente in Svizzera: volume totale, ore per impiego e ore settimanali abituali, per sesso e per tempo pieno o parziale.

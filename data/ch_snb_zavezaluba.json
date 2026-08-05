@@ -269,7 +269,15 @@
       "it": "Sistemi di pagamento"
     }
   },
-  "concept": "Payment systems / Payments & cash",
+  "concept": {
+    "en": "Payment systems / Payments & cash",
+    "leaf": {
+      "en": "Payments & cash",
+      "de": "Zahlungsverkehr & Bargeld",
+      "fr": "Paiements & espèces",
+      "it": "Pagamenti e contante"
+    }
+  },
   "canonical": false,
   "split": "D0",
   "single_select": ["D1", "D2", "D3", "D4"],
@@ -282,7 +290,10 @@
     "D4": "BMF"
   },
   "description": {
-    "en": "What Swiss card payments are spent on and where, in shops or online, at home or abroad, plus cash withdrawn at ATMs."
+    "en": "What Swiss card payments are spent on and where, in shops or online, at home or abroad, plus cash withdrawn at ATMs.",
+    "de": "Wofür und wo mit Schweizer Karten bezahlt wird — im Laden oder online, im In- oder Ausland — sowie Bargeldbezüge am Automaten.",
+    "fr": "Pour quoi et où l'on paie avec des cartes suisses — en magasin ou en ligne, en Suisse ou à l'étranger — ainsi que les retraits aux distributeurs.",
+    "it": "Per cosa e dove si paga con le carte svizzere — in negozio o online, in Svizzera o all'estero — nonché i prelievi ai bancomat."
   },
   "fetched_utc": "2026-08-05 13:12:03"
 }

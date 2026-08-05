@@ -53,3 +53,12 @@ Daily levels of the SPI and SMI Swiss share indices, with sector sub-indices. Th
 Script: `R/source_snb.R::snb_fetch` via `R/snb_cubes.tsv` (cube `capchstocki`, topic
 "Financial markets"). Datasheet authored 2026-06-01; parser verified 2026-06-01
 (70,324 rows, 14 series).
+
+## What is special (de)
+Tägliche Stände der Schweizer Aktienindizes SPI und SMI, mit Sektor-Subindizes. Der SPI enthält reinvestierte Dividenden, der SMI nicht.
+
+## What is special (fr)
+Niveaux quotidiens des indices boursiers suisses SPI et SMI, avec des sous-indices sectoriels. Le SPI inclut les dividendes réinvestis, le SMI non.
+
+## What is special (it)
+Livelli giornalieri degli indici azionari svizzeri SPI e SMI, con sottoindici settoriali. Lo SPI include i dividendi reinvestiti, lo SMI no.

@@ -263,7 +263,15 @@
       "it": "Sistemi di pagamento"
     }
   },
-  "concept": "Payment systems / Payments & cash",
+  "concept": {
+    "en": "Payment systems / Payments & cash",
+    "leaf": {
+      "en": "Payments & cash",
+      "de": "Zahlungsverkehr & Bargeld",
+      "fr": "Paiements & espèces",
+      "it": "Pagamenti e contante"
+    }
+  },
   "canonical": false,
   "split": "D0",
   "single_select": [],
@@ -272,7 +280,10 @@
     "D0": "T0"
   },
   "description": {
-    "en": "Interbank payments settled in Swiss francs through SIC each month: how many, how much, and split by payment size."
+    "en": "Interbank payments settled in Swiss francs through SIC each month: how many, how much, and split by payment size.",
+    "de": "Interbankzahlungen in Franken, die monatlich über SIC abgewickelt werden: wie viele, wie viel, und nach Zahlungsgrösse aufgeteilt.",
+    "fr": "Paiements interbancaires en francs réglés chaque mois via SIC : combien, pour quels montants, et répartis par taille de paiement.",
+    "it": "Pagamenti interbancari in franchi regolati ogni mese tramite SIC: quanti, per quali importi, e ripartiti per dimensione del pagamento."
   },
   "fetched_utc": "2026-08-05 13:12:03"
 }

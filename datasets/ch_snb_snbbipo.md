@@ -60,3 +60,12 @@ What the Swiss National Bank owns and owes each month. Foreign-currency investme
 Script: `R/source_snb.R::snb_fetch`, cube from `R/snb_cubes.tsv` (`snbbipo`, topic
 "Money and banking"). Datasheet authored 2026-06-01; parser verified 2026-06-01
 (8,699 rows, 28 series).
+
+## What is special (de)
+Was die Schweizerische Nationalbank monatlich besitzt und schuldet. Devisenanlagen und Gold erklären die Ausweitung nach 2008.
+
+## What is special (fr)
+Ce que la Banque nationale suisse possède et doit chaque mois. Les placements en devises et l'or expliquent l'expansion après 2008.
+
+## What is special (it)
+Cosa la Banca nazionale svizzera possiede e deve ogni mese. Gli investimenti in valuta estera e l'oro spiegano l'espansione dopo il 2008.

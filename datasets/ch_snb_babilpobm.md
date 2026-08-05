@@ -57,3 +57,12 @@ Assets and liabilities of banks in Switzerland month by month, item by item, spl
 ## Provenance
 Script: `R/source_snb.R::snb_fetch` (cube `babilpobm`, title/topic from
 `R/snb_cubes.tsv`). Datasheet authored 2026-06-01.
+
+## What is special (de)
+Aktiven und Passiven der Banken in der Schweiz Monat für Monat, Position für Position, nach Währung und Bankengrösse.
+
+## What is special (fr)
+Actifs et passifs des banques en Suisse mois par mois, poste par poste, par monnaie et par taille de banque.
+
+## What is special (it)
+Attivi e passivi delle banche in Svizzera mese per mese, voce per voce, per valuta e per dimensione della banca.

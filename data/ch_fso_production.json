@@ -215,7 +215,15 @@
       "it": "Economia interna"
     }
   },
-  "concept": "Domestic economy / Industry & construction turnover",
+  "concept": {
+    "en": "Domestic economy / Industry & construction turnover",
+    "leaf": {
+      "en": "Industry & construction turnover",
+      "de": "Umsätze Industrie & Bau",
+      "fr": "Chiffres d'affaires industrie & construction",
+      "it": "Fatturato industria e costruzioni"
+    }
+  },
   "canonical": true,
   "split": "NOGA",
   "single_select": ["ADJUSTMENT", "INDICATOR_KE"],
@@ -226,7 +234,10 @@
     "INDICATOR_KE": "PTOT"
   },
   "description": {
-    "en": "Turnover and output of Swiss industry and construction each quarter, by branch, including buildings, civil engineering and specialised works."
+    "en": "Turnover and output of Swiss industry and construction each quarter, by branch, including buildings, civil engineering and specialised works.",
+    "de": "Umsatz und Produktion der Schweizer Industrie und des Baugewerbes pro Quartal, nach Branche, inklusive Hochbau, Tiefbau und Ausbaugewerbe.",
+    "fr": "Chiffre d'affaires et production de l'industrie et de la construction suisses par trimestre, par branche, y compris bâtiment, génie civil et travaux spécialisés.",
+    "it": "Fatturato e produzione dell'industria e delle costruzioni svizzere per trimestre, per ramo, inclusi edilizia, genio civile e lavori specializzati."
   },
   "fetched_utc": "2026-08-05 13:12:05"
 }

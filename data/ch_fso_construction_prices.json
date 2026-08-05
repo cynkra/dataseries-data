@@ -67,7 +67,15 @@
       }
     }
   },
-  "concept": "Prices / Construction prices",
+  "concept": {
+    "en": "Prices / Construction prices",
+    "leaf": {
+      "en": "Construction prices",
+      "de": "Baupreise",
+      "fr": "Prix de la construction",
+      "it": "Prezzi delle costruzioni"
+    }
+  },
   "canonical": true,
   "title": {
     "en": "Construction prices",
@@ -82,7 +90,10 @@
     "worktype": "total"
   },
   "description": {
-    "en": "Price index for construction work in Switzerland, surveyed each April and October. Covers building construction and civil engineering separately."
+    "en": "Price index for construction work in Switzerland, surveyed each April and October. Covers building construction and civil engineering separately.",
+    "de": "Preisindex für Bauarbeiten in der Schweiz, halbjährlich im April und Oktober erhoben. Erfasst Hochbau und Tiefbau getrennt.",
+    "fr": "Indice des prix des travaux de construction en Suisse, relevé chaque avril et octobre. Bâtiment et génie civil sont couverts séparément.",
+    "it": "Indice dei prezzi dei lavori di costruzione in Svizzera, rilevato ogni aprile e ottobre. Edilizia e genio civile sono coperti separatamente."
   },
   "units": {
     "en": "Index (October 2020 = 100)",

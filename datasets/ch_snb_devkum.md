@@ -52,3 +52,12 @@ Swiss franc exchange rates against the major currencies, monthly average and mon
 ## Provenance
 Script: `R/source_snb.R::snb_fetch` (title/topic from `R/snb_cubes.tsv`). Datasheet
 authored 2026-06-01.
+
+## What is special (de)
+Frankenkurse gegenüber den wichtigsten Währungen, Monatsdurchschnitt und Monatsende. Notiert je Einheit, aber je 100 bei Yen, Kronen und anderen.
+
+## What is special (fr)
+Cours du franc suisse face aux principales monnaies, moyenne mensuelle et fin de mois. Cotés par unité, mais par 100 pour le yen, les couronnes et d'autres.
+
+## What is special (it)
+Corsi del franco svizzero rispetto alle principali valute, media mensile e fine mese. Quotati per unità, ma per 100 per yen, corone e altre.

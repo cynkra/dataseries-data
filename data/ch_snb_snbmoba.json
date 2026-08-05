@@ -167,7 +167,15 @@
       "it": "Moneta e banche"
     }
   },
-  "concept": "Money & banking / Monetary aggregates",
+  "concept": {
+    "en": "Money & banking / Monetary aggregates",
+    "leaf": {
+      "en": "Monetary aggregates",
+      "de": "Geldmengen",
+      "fr": "Agrégats monétaires",
+      "it": "Aggregati monetari"
+    }
+  },
   "canonical": false,
   "split": "D0",
   "single_select": [],
@@ -176,7 +184,10 @@
     "D0": "N0"
   },
   "description": {
-    "en": "Central bank money in Switzerland, shown from both sides: how it is created, and banknotes plus the sight deposits banks hold."
+    "en": "Central bank money in Switzerland, shown from both sides: how it is created, and banknotes plus the sight deposits banks hold.",
+    "de": "Notenbankgeld in der Schweiz, von beiden Seiten gezeigt: wie es entsteht, und Notenumlauf plus Giroguthaben der Banken.",
+    "fr": "La monnaie centrale en Suisse, montrée des deux côtés : comment elle est créée, et les billets en circulation plus les avoirs à vue des banques.",
+    "it": "La moneta centrale in Svizzera, mostrata da entrambi i lati: come viene creata, e le banconote in circolazione più gli averi a vista delle banche."
   },
   "fetched_utc": "2026-08-05 13:12:03"
 }

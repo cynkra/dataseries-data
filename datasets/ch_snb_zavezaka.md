@@ -53,3 +53,12 @@ How many credit, debit and prepaid cards are in circulation in Switzerland, plus
 ## Provenance
 Script: `R/source_snb.R::snb_fetch` (cube list + title from `R/snb_cubes.tsv`).
 Datasheet authored 2026-06-01; parser verified 2026-06-01 (1,309 data rows, 7 series).
+
+## What is special (de)
+Wie viele Kredit-, Debit- und Vorauszahlungskarten in der Schweiz im Umlauf sind, dazu die Zahl der Geldautomaten. Nur Bestände, keine Umsätze.
+
+## What is special (fr)
+Combien de cartes de crédit, de débit et prépayées circulent en Suisse, plus le nombre de distributeurs. Effectifs seulement, pas de dépenses.
+
+## What is special (it)
+Quante carte di credito, di debito e prepagate circolano in Svizzera, più il numero di bancomat. Solo consistenze, nessuna spesa.

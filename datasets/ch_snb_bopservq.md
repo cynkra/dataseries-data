@@ -60,3 +60,12 @@ The service-component line dimension D1 carries a `DT Total for all services` sh
 Script: `R/source_snb.R::snb_fetch` via `R/snb_cubes.tsv` (cube `bopservq`, topic
 "Balance of payments"). Datasheet authored 2026-06-01; parser verified 2026-06-01
 (98,280 rows, 1,755 series).
+
+## What is special (de)
+Mit welchen Ländern die Schweiz Dienstleistungen handelt — rund 50 Partner plus Regionentotale — nach Dienstleistungsart und Richtung.
+
+## What is special (fr)
+Avec quels pays la Suisse échange des services — environ 50 partenaires plus les totaux régionaux — par type de service et par sens.
+
+## What is special (it)
+Con quali paesi la Svizzera scambia servizi — circa 50 partner più i totali regionali — per tipo di servizio e direzione.

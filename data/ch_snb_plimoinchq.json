@@ -227,7 +227,15 @@
       "it": "Prezzi"
     }
   },
-  "concept": "Prices / Real estate prices",
+  "concept": {
+    "en": "Prices / Real estate prices",
+    "leaf": {
+      "en": "Real estate prices",
+      "de": "Immobilienpreise",
+      "fr": "Prix de l'immobilier",
+      "it": "Prezzi immobiliari"
+    }
+  },
   "canonical": true,
   "split": "D0",
   "single_select": "D1",
@@ -237,7 +245,10 @@
     "D1": "AP"
   },
   "description": {
-    "en": "Swiss house and rent price indices from four providers side by side, covering apartments, houses, offices, retail and industrial space."
+    "en": "Swiss house and rent price indices from four providers side by side, covering apartments, houses, offices, retail and industrial space.",
+    "de": "Schweizer Immobilien- und Mietpreisindizes von vier Anbietern nebeneinander, für Wohnungen, Häuser, Büro-, Verkaufs- und Industrieflächen.",
+    "fr": "Indices suisses des prix de l'immobilier et des loyers de quatre fournisseurs côte à côte, pour appartements, maisons, bureaux, commerces et surfaces industrielles.",
+    "it": "Indici svizzeri dei prezzi immobiliari e delle pigioni di quattro fornitori affiancati, per appartamenti, case, uffici, superfici commerciali e industriali."
   },
   "fetched_utc": "2026-08-05 13:12:02"
 }

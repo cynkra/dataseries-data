@@ -64,3 +64,12 @@ The Swiss National Bank's inflation forecast, one path per quarterly policy meet
 Script: `R/source_snb.R::snb_fetch`, cube from `R/snb_cubes.tsv` (`snbiprogq`, topic
 "SNB forecasts"). Datasheet authored 2026-06-01; parser verified 2026-06-01 (2,312
 rows, 176 series).
+
+## What is special (de)
+Die Inflationsprognose der Schweizerischen Nationalbank, ein Pfad je vierteljährlicher Lagebeurteilung, neben der tatsächlich eingetretenen Teuerung.
+
+## What is special (fr)
+La prévision d'inflation de la Banque nationale suisse, un profil par appréciation trimestrielle, à côté de l'inflation effectivement observée.
+
+## What is special (it)
+La previsione d'inflazione della Banca nazionale svizzera, un profilo per ogni valutazione trimestrale, accanto all'inflazione effettivamente osservata.

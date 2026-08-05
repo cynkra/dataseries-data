@@ -69,3 +69,12 @@ its own series, so every level is selectable.
 ## Provenance
 Script: `R/source_fso_excel_sets.R::fso_excel_ch_fso_cpi`. Datasheet 2026-06-01;
 parser verified 2026-06-01 (177,589 rows, 443 series, 0 NA values).
+
+## What is special (de)
+Schweizer Teuerung mit dem vollständigen Warenkorb: 595 Positionen vom Gesamtindex bis zu Nahrung, Wohnen und Verkehr. Basis Dezember 2025 = 100.
+
+## What is special (fr)
+Inflation suisse avec le panier complet : 595 positions, de l'indice total à l'alimentation, au logement et aux transports. Base décembre 2025 = 100.
+
+## What is special (it)
+Inflazione svizzera con il paniere completo: 595 posizioni, dall'indice totale ad alimentari, abitazione e trasporti. Base dicembre 2025 = 100.

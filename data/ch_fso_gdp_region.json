@@ -288,7 +288,15 @@
       }
     }
   },
-  "concept": "National accounts / Regional GDP",
+  "concept": {
+    "en": "National accounts / Regional GDP",
+    "leaf": {
+      "en": "Regional GDP",
+      "de": "Regionales BIP",
+      "fr": "PIB régional",
+      "it": "PIL regionale"
+    }
+  },
   "canonical": true,
   "title": {
     "en": "Regional GDP",
@@ -302,7 +310,10 @@
     "region": "ch"
   },
   "description": {
-    "en": "Swiss economic output per canton and per greater region, at current prices. Shows each canton's share of its region and of the country."
+    "en": "Swiss economic output per canton and per greater region, at current prices. Shows each canton's share of its region and of the country.",
+    "de": "Schweizer Wirtschaftsleistung je Kanton und Grossregion, zu laufenden Preisen. Zeigt den Anteil jedes Kantons an seiner Region und am Land.",
+    "fr": "Production économique suisse par canton et par grande région, aux prix courants. Montre la part de chaque canton dans sa région et dans le pays.",
+    "it": "Produzione economica svizzera per Cantone e grande regione, a prezzi correnti. Mostra la quota di ogni Cantone nella sua regione e nel Paese."
   },
   "units": {
     "en": "CHF million, at current prices",

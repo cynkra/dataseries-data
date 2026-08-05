@@ -55,3 +55,12 @@ Switzerland's gross external debt on the IMF standard, by borrowing sector and b
 ## Provenance
 Script: `R/source_snb.R::snb_fetch` via `R/snb_cubes.tsv` (cube_id `auverdeptq`).
 Datasheet 2026-06-01; parser verified 2026-06-01 (3,785 rows, 38 series).
+
+## What is special (de)
+Die Bruttoauslandschulden der Schweiz nach IMF-Standard, nach Schuldnersektor und nach kurz- oder langfristiger Laufzeit.
+
+## What is special (fr)
+La dette extérieure brute de la Suisse selon le standard du FMI, par secteur emprunteur et selon l'échéance, courte ou longue.
+
+## What is special (it)
+Il debito estero lordo della Svizzera secondo lo standard FMI, per settore debitore e per scadenza, breve o lunga.

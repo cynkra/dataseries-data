@@ -68,3 +68,12 @@ New cars registered in Switzerland each month by fuel: petrol, diesel, hybrid, p
 ## Provenance
 Script: `R/source_fso_sdmx.R::fso_sdmx_new_vehicles` (wired in `R/pipeline.R`).
 Datasheet authored 2026-06-02; SDMX slice verified live 2026-06-02 (2005-01 .. 2026-04).
+
+## What is special (de)
+Monatliche Neuzulassungen von Personenwagen in der Schweiz nach Treibstoff: Benzin, Diesel, Hybrid, Plug-in und Elektro. E-Autos lagen im Frühling 2026 bei rund 25%.
+
+## What is special (fr)
+Nouvelles immatriculations mensuelles de voitures en Suisse par carburant : essence, diesel, hybride, hybride rechargeable et électrique. Les électriques étaient à environ 25% au printemps 2026.
+
+## What is special (it)
+Nuove immatricolazioni mensili di automobili in Svizzera per carburante: benzina, diesel, ibrido, ibrido plug-in ed elettrico. Le elettriche erano circa il 25% nella primavera 2026.

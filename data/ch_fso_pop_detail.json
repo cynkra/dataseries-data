@@ -116,7 +116,15 @@
       }
     }
   },
-  "concept": "Population & demographics / Resident population by nationality",
+  "concept": {
+    "en": "Population & demographics / Resident population by nationality",
+    "leaf": {
+      "en": "Resident population by nationality",
+      "de": "Wohnbevölkerung nach Staatsangehörigkeit",
+      "fr": "Population résidante par nationalité",
+      "it": "Popolazione residente per nazionalità"
+    }
+  },
   "canonical": false,
   "title": {
     "en": "Resident population by nationality",
@@ -132,7 +140,10 @@
     "sex": "_T"
   },
   "description": {
-    "en": "Swiss and foreign residents by sex, year-end count from the population register. The foreign share was about 27.4% in 2024."
+    "en": "Swiss and foreign residents by sex, year-end count from the population register. The foreign share was about 27.4% in 2024.",
+    "de": "Schweizer und ausländische Wohnbevölkerung nach Geschlecht, Jahresendbestand aus dem Bevölkerungsregister. Der Ausländeranteil lag 2024 bei rund 27.4%.",
+    "fr": "Population résidante suisse et étrangère par sexe, effectif de fin d'année tiré du registre. La part étrangère était d'environ 27.4% en 2024.",
+    "it": "Popolazione residente svizzera e straniera per sesso, effettivo di fine anno dal registro. La quota straniera era circa il 27.4% nel 2024."
   },
   "units": {
     "en": "Number of permanent residents (year-end stock)",

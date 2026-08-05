@@ -71,3 +71,12 @@ deaths, migration, naturalisations) are picked from the same list.
 ## Provenance
 Script: `R/source_fso_excel_sets.R::fso_excel_ch_fso_pop`. Datasheet 2026-06-01;
 parser verified 2026-06-01 (1,395 rows, 11 series, 0 NA values).
+
+## What is special (de)
+Wie sich die Schweizer Bevölkerung jährlich verändert: Geburten, Todesfälle, Ein- und Auswanderung sowie Einbürgerungen, mit dem Bestand per Jahresende.
+
+## What is special (fr)
+Comment la population suisse évolue chaque année : naissances, décès, immigration, émigration et naturalisations, avec l'effectif en fin d'année.
+
+## What is special (it)
+Come cambia ogni anno la popolazione svizzera: nascite, decessi, immigrazione, emigrazione e naturalizzazioni, con l'effettivo a fine anno.

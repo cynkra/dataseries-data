@@ -290,7 +290,15 @@
       "it": "Lavoro"
     }
   },
-  "concept": "Labour / Job vacancies",
+  "concept": {
+    "en": "Labour / Job vacancies",
+    "leaf": {
+      "en": "Job vacancies",
+      "de": "Offene Stellen",
+      "fr": "Postes vacants",
+      "it": "Posti vacanti"
+    }
+  },
   "canonical": true,
   "split": "Wirtschaftsabteilung",
   "single_select": "Offene Stellen",
@@ -300,7 +308,10 @@
     "Offene Stellen": "1"
   },
   "description": {
-    "en": "Job vacancies posted by Swiss firms, by industry, as a count, an index and a rate. A leading signal: postings move before employment does."
+    "en": "Job vacancies posted by Swiss firms, by industry, as a count, an index and a rate. A leading signal: postings move before employment does.",
+    "de": "Von Schweizer Firmen ausgeschriebene offene Stellen, nach Branche, als Anzahl, Index und Quote. Ein Frühindikator: Ausschreibungen bewegen sich vor der Beschäftigung.",
+    "fr": "Postes vacants publiés par les entreprises suisses, par branche, en nombre, en indice et en taux. Un indicateur avancé : les annonces bougent avant l'emploi.",
+    "it": "Posti vacanti pubblicati dalle imprese svizzere, per ramo, come numero, indice e tasso. Un indicatore anticipatore: gli annunci si muovono prima dell'occupazione."
   },
   "fetched_utc": "2026-08-05 13:12:06"
 }

@@ -228,7 +228,15 @@
       "it": "Moneta e banche"
     }
   },
-  "concept": "Money & banking / Banking & credit",
+  "concept": {
+    "en": "Money & banking / Banking & credit",
+    "leaf": {
+      "en": "Banking & credit",
+      "de": "Banken & Kredit",
+      "fr": "Banques & crédit",
+      "it": "Banche e credito"
+    }
+  },
   "canonical": true,
   "split": "D1",
   "single_select": ["D0", "D2", "D3"],
@@ -240,7 +248,10 @@
     "D3": "F"
   },
   "description": {
-    "en": "Swiss bank lending split by whether the borrower is at home or abroad, for mortgages and other loans."
+    "en": "Swiss bank lending split by whether the borrower is at home or abroad, for mortgages and other loans.",
+    "de": "Schweizer Bankkredite danach aufgeteilt, ob der Schuldner im In- oder Ausland sitzt, für Hypotheken und übrige Kredite.",
+    "fr": "Crédits bancaires suisses selon que l'emprunteur se trouve en Suisse ou à l'étranger, pour les hypothèques et les autres prêts.",
+    "it": "Crediti bancari svizzeri a seconda che il debitore sia in Svizzera o all'estero, per ipoteche e altri prestiti."
   },
   "fetched_utc": "2026-08-05 13:12:01"
 }

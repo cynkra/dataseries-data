@@ -93,3 +93,12 @@ grouped by theme; the retired 6.2 index variant sits on its own.
 ## Provenance
 Script: `R/source_seco.R::seco_fetch` (wired in `R/pipeline.R`). Datasheet authored
 2026-06-01; parser verified 2026-06-01.
+
+## What is special (de)
+Wie Schweizer Haushalte die Wirtschaft, die Preise, die Arbeitsplatzsicherheit, ihre eigenen Finanzen und grössere Anschaffungen einschätzen. Unbereinigt und saisonbereinigt.
+
+## What is special (fr)
+Comment les ménages suisses voient l'économie, les prix, la sécurité de l'emploi, leurs propres finances et les achats importants. Brut et désaisonnalisé.
+
+## What is special (it)
+Come le economie domestiche svizzere vedono l'economia, i prezzi, la sicurezza del posto di lavoro, le proprie finanze e i grandi acquisti. Grezzo e destagionalizzato.

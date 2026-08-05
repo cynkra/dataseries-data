@@ -134,7 +134,15 @@
       "it": "Prezzi"
     }
   },
-  "concept": "Prices / Consumer prices",
+  "concept": {
+    "en": "Prices / Consumer prices",
+    "leaf": {
+      "en": "Consumer prices",
+      "de": "Konsumentenpreise",
+      "fr": "Prix à la consommation",
+      "it": "Prezzi al consumo"
+    }
+  },
   "canonical": false,
   "title": {
     "en": "Harmonised CPI (HICP)",
@@ -149,7 +157,10 @@
     "coicop": "CP00"
   },
   "description": {
-    "en": "Swiss inflation on the EU-harmonised method, from Eurostat, for comparison with the euro area. Excludes owner-occupied housing, unlike the national index."
+    "en": "Swiss inflation on the EU-harmonised method, from Eurostat, for comparison with the euro area. Excludes owner-occupied housing, unlike the national index.",
+    "de": "Schweizer Teuerung nach der EU-harmonisierten Methode, von Eurostat, für den Vergleich mit dem Euroraum. Ohne Wohneigentumskosten, anders als der Landesindex.",
+    "fr": "Inflation suisse selon la méthode harmonisée de l'UE, d'Eurostat, pour la comparaison avec la zone euro. Exclut le logement en propriété, contrairement à l'indice national.",
+    "it": "Inflazione svizzera secondo il metodo armonizzato UE, di Eurostat, per il confronto con l'area euro. Esclude i costi dell'abitazione di proprietà, a differenza dell'indice nazionale."
   },
   "units": {
     "en": "Index (2015 = 100)",

@@ -67,3 +67,12 @@ non-selectable grouping headers, now correctly placed under Total.
 ## Provenance
 Script: `R/source_snb.R::snb_fetch` via `R/snb_cubes.tsv` (cube_id `ausshawarm`).
 Datasheet 2026-06-01; parser verified 2026-06-01 (28,285 rows, 175 series).
+
+## What is special (de)
+Was die Schweiz monatlich nach Warengruppe exportiert und importiert, in Mio. CHF und als reale, teuerungsbereinigte Veränderung.
+
+## What is special (fr)
+Ce que la Suisse exporte et importe chaque mois par groupe de marchandises, en millions de CHF et en variation réelle, corrigée de l'inflation.
+
+## What is special (it)
+Cosa la Svizzera esporta e importa ogni mese per gruppo di merci, in milioni di CHF e come variazione reale, corretta per l'inflazione.

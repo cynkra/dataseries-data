@@ -52,3 +52,12 @@ How much is traded on the Swiss exchange each month, with shares and bonds split
 Script: `R/source_snb.R::snb_fetch` via `R/snb_cubes.tsv` (cube `capweums`, topic
 "Financial markets"). Datasheet authored 2026-06-01; parser verified 2026-06-01
 (3,973 rows, 10 series).
+
+## What is special (de)
+Wie viel an der Schweizer Börse monatlich gehandelt wird, mit Aktien und Anleihen getrennt nach inländischen und ausländischen Titeln.
+
+## What is special (fr)
+Combien s'échange chaque mois à la bourse suisse, actions et obligations séparées en titres suisses et étrangers.
+
+## What is special (it)
+Quanto viene scambiato ogni mese alla borsa svizzera, con azioni e obbligazioni separate in titoli svizzeri ed esteri.

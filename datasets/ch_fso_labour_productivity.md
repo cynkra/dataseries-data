@@ -52,3 +52,12 @@ Swiss output per hour worked, with real GDP and total hours on the same index ba
 ## Provenance
 Script: `R/source_fso_dam_csv.R::fso_labour_productivity` (wired in `R/pipeline.R`).
 Datasheet authored 2026-06-02; verified live 2026-06-02 (productivity 2024 = 146.0786, exact match).
+
+## What is special (de)
+Schweizer Produktion pro Arbeitsstunde, mit realem BIP und Gesamtstunden auf derselben Indexbasis, sodass der Produktivitätstrend aus einer Grafik ablesbar ist.
+
+## What is special (fr)
+Production suisse par heure travaillée, avec le PIB réel et le total des heures sur la même base d'indice, si bien que la tendance de productivité se lit sur un seul graphique.
+
+## What is special (it)
+Produzione svizzera per ora lavorata, con PIL reale e ore totali sulla stessa base d'indice, così l'andamento della produttività si legge da un solo grafico.

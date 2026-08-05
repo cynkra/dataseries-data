@@ -76,3 +76,12 @@ Foreign workers commuting into Switzerland each day, by canton. Around 410,000 p
 ## Provenance
 Script: `R/source_fso_sdmx.R::fso_sdmx_cross_border_commuters` (wired in `R/pipeline.R`).
 Datasheet authored 2026-06-02; verified live 2026-06-02 (2565 rows, CH total 2026-Q1 = 413,320).
+
+## What is special (de)
+Ausländische Grenzgänger, die täglich in die Schweiz zur Arbeit pendeln, nach Kanton. Rund 410,000 Personen, vor allem in Genf, Tessin, Basel und Waadt.
+
+## What is special (fr)
+Frontaliers étrangers venant travailler en Suisse chaque jour, par canton. Environ 410,000 personnes, surtout à Genève, au Tessin, à Bâle et dans le canton de Vaud.
+
+## What is special (it)
+Frontalieri stranieri che ogni giorno si recano al lavoro in Svizzera, per Cantone. Circa 410,000 persone, soprattutto a Ginevra, Ticino, Basilea e Vaud.

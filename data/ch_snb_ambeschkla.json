@@ -261,7 +261,15 @@
       "it": "Lavoro"
     }
   },
-  "concept": "Labour / Employment / jobs",
+  "concept": {
+    "en": "Labour / Employment / jobs",
+    "leaf": {
+      "en": "Employment",
+      "de": "Beschäftigung",
+      "fr": "Emploi",
+      "it": "Occupazione"
+    }
+  },
   "canonical": false,
   "split": "D1",
   "single_select": [],
@@ -271,7 +279,10 @@
     "D1": "T0"
   },
   "description": {
-    "en": "Swiss employees by industry, split into full-time, part-time and full-time equivalents, so part-time intensity per sector reads directly."
+    "en": "Swiss employees by industry, split into full-time, part-time and full-time equivalents, so part-time intensity per sector reads directly.",
+    "de": "Schweizer Beschäftigte nach Branche, aufgeteilt in Voll-, Teilzeit und Vollzeitäquivalente, sodass die Teilzeitintensität je Sektor direkt ablesbar ist.",
+    "fr": "Salariés suisses par branche, répartis en temps plein, temps partiel et équivalents plein temps, si bien que l'intensité du temps partiel par secteur se lit directement.",
+    "it": "Occupati svizzeri per ramo, ripartiti in tempo pieno, tempo parziale ed equivalenti a tempo pieno, così l'intensità del tempo parziale per settore è leggibile direttamente."
   },
   "fetched_utc": "2026-08-05 13:12:00"
 }

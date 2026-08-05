@@ -517,7 +517,15 @@
       "it": "Moneta e banche"
     }
   },
-  "concept": "Money & banking / Banking & credit",
+  "concept": {
+    "en": "Money & banking / Banking & credit",
+    "leaf": {
+      "en": "Banking & credit",
+      "de": "Banken & Kredit",
+      "fr": "Banques & crédit",
+      "it": "Banche e credito"
+    }
+  },
   "canonical": true,
   "split": "D0",
   "single_select": ["INLANDAUSLAND", "BANKENGRUPPE"],
@@ -529,7 +537,10 @@
     "BANKENGRUPPE": "A40"
   },
   "description": {
-    "en": "Assets and liabilities of banks in Switzerland month by month, item by item, split by currency and by bank size."
+    "en": "Assets and liabilities of banks in Switzerland month by month, item by item, split by currency and by bank size.",
+    "de": "Aktiven und Passiven der Banken in der Schweiz Monat für Monat, Position für Position, nach Währung und Bankengrösse.",
+    "fr": "Actifs et passifs des banques en Suisse mois par mois, poste par poste, par monnaie et par taille de banque.",
+    "it": "Attivi e passivi delle banche in Svizzera mese per mese, voce per voce, per valuta e per dimensione della banca."
   },
   "fetched_utc": "2026-08-05 13:12:01"
 }

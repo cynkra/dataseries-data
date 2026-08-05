@@ -78,3 +78,12 @@ How the Swiss economy is doing this week, tracked from electricity use, card pay
 Script: `R/source_seco.R::seco_wwa_fetch`. Datasheet 2026-06-02; parser verified
 live 2026-06-02 (1,265 rows, 2 series, span 2005-01-03 .. 2026-05-11; anchors
 seco_wwa 2026-05-11 = 2.07064226892172, 2005-01-03 = 3.9011681763975).
+
+## What is special (de)
+Wie es der Schweizer Wirtschaft diese Woche geht, gemessen an Stromverbrauch, Kartenzahlungen und Güterverkehr statt erst am Quartals-BIP.
+
+## What is special (fr)
+Comment se porte l'économie suisse cette semaine, mesurée par la consommation d'électricité, les paiements par carte et le fret, sans attendre le PIB trimestriel.
+
+## What is special (it)
+Come va l'economia svizzera questa settimana, misurata con consumo di elettricità, pagamenti con carta e trasporto merci, senza attendere il PIL trimestrale.

@@ -51,3 +51,12 @@ How Swiss firms rate their current and expected business situation, from ETH Zur
 Script: `R/source_kof.R::kof_set_fetch` (wired in `R/pipeline.R`).
 Datasheet authored 2026-06-02; verified live 2026-06-02 (2 series, 460 rows, to 2026-05).
 Migrated to KOF API v2 and re-verified 2026-07-30.
+
+## What is special (de)
+Wie Schweizer Firmen ihre aktuelle und erwartete Geschäftslage einschätzen, aus Umfragedaten der ETH Zürich. Zwei Methodikvarianten laufen parallel.
+
+## What is special (fr)
+Comment les entreprises suisses jugent leur situation actuelle et attendue, à partir des enquêtes de l'EPF de Zurich. Deux versions méthodologiques coexistent.
+
+## What is special (it)
+Come le imprese svizzere valutano la situazione attuale e attesa, dai sondaggi del PF di Zurigo. Due versioni metodologiche coesistono.

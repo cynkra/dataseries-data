@@ -7,9 +7,22 @@
       "fr": "Chômage inscrit",
       "it": "Disoccupazione registrata"
     },
-    "concept": "Labour / Unemployment",
+    "concept": {
+      "en": "Labour / Unemployment",
+      "leaf": {
+        "en": "Unemployment",
+        "de": "Arbeitslosigkeit",
+        "fr": "Chômage",
+        "it": "Disoccupazione"
+      }
+    },
     "canonical": true,
-    "featured": "Unemployment",
+    "featured": {
+      "en": "Unemployment",
+      "de": "Arbeitslosigkeit",
+      "fr": "Chômage",
+      "it": "Disoccupazione"
+    },
     "topic": {
       "key": "labour",
       "name": {
@@ -47,7 +60,15 @@
       "fr": "Emplois par branche économique",
       "it": "Impieghi per ramo economico"
     },
-    "concept": "Labour / Employment / jobs",
+    "concept": {
+      "en": "Labour / Employment / jobs",
+      "leaf": {
+        "en": "Employment",
+        "de": "Beschäftigung",
+        "fr": "Emploi",
+        "it": "Occupazione"
+      }
+    },
     "canonical": false,
     "featured": null,
     "topic": {
@@ -87,9 +108,22 @@
       "fr": "Commerce extérieur par catégorie de marchandises",
       "it": "Commercio estero per categoria di merci"
     },
-    "concept": "External sector / Foreign trade",
+    "concept": {
+      "en": "External sector / Foreign trade",
+      "leaf": {
+        "en": "Foreign trade",
+        "de": "Aussenhandel",
+        "fr": "Commerce extérieur",
+        "it": "Commercio estero"
+      }
+    },
     "canonical": true,
-    "featured": "Foreign trade",
+    "featured": {
+      "en": "Foreign trade",
+      "de": "Aussenhandel",
+      "fr": "Commerce extérieur",
+      "it": "Commercio estero"
+    },
     "topic": {
       "key": "external-sector",
       "name": {
@@ -127,7 +161,15 @@
       "fr": "Position extérieure",
       "it": "Posizione patrimoniale sull'estero"
     },
-    "concept": "External sector / International investment position",
+    "concept": {
+      "en": "External sector / International investment position",
+      "leaf": {
+        "en": "International investment position",
+        "de": "Auslandvermögen",
+        "fr": "Position extérieure",
+        "it": "Posizione sull'estero"
+      }
+    },
     "canonical": true,
     "featured": null,
     "topic": {
@@ -167,7 +209,15 @@
       "fr": "Position extérieure par monnaie",
       "it": "Posizione sull'estero per valuta"
     },
-    "concept": "External sector / International investment position",
+    "concept": {
+      "en": "External sector / International investment position",
+      "leaf": {
+        "en": "International investment position",
+        "de": "Auslandvermögen",
+        "fr": "Position extérieure",
+        "it": "Posizione sull'estero"
+      }
+    },
     "canonical": false,
     "featured": null,
     "topic": {
@@ -207,7 +257,15 @@
       "fr": "Dette extérieure",
       "it": "Debito estero"
     },
-    "concept": "External sector / International investment position",
+    "concept": {
+      "en": "External sector / International investment position",
+      "leaf": {
+        "en": "International investment position",
+        "de": "Auslandvermögen",
+        "fr": "Position extérieure",
+        "it": "Posizione sull'estero"
+      }
+    },
     "canonical": false,
     "featured": null,
     "topic": {
@@ -247,7 +305,15 @@
       "fr": "Position extérieure par secteur",
       "it": "Posizione sull'estero per settore"
     },
-    "concept": "External sector / International investment position",
+    "concept": {
+      "en": "External sector / International investment position",
+      "leaf": {
+        "en": "International investment position",
+        "de": "Auslandvermögen",
+        "fr": "Position extérieure",
+        "it": "Posizione sull'estero"
+      }
+    },
     "canonical": true,
     "featured": null,
     "topic": {
@@ -287,7 +353,15 @@
       "fr": "Bilans bancaires par monnaie",
       "it": "Bilanci bancari per valuta"
     },
-    "concept": "Money & banking / Banking & credit",
+    "concept": {
+      "en": "Money & banking / Banking & credit",
+      "leaf": {
+        "en": "Banking & credit",
+        "de": "Banken & Kredit",
+        "fr": "Banques & crédit",
+        "it": "Banche e credito"
+      }
+    },
     "canonical": true,
     "featured": null,
     "topic": {
@@ -327,7 +401,15 @@
       "fr": "Crédits aux entreprises par taille d'entreprise",
       "it": "Crediti alle imprese per dimensione dell'impresa"
     },
-    "concept": "Money & banking / Banking & credit",
+    "concept": {
+      "en": "Money & banking / Banking & credit",
+      "leaf": {
+        "en": "Banking & credit",
+        "de": "Banken & Kredit",
+        "fr": "Banques & crédit",
+        "it": "Banche e credito"
+      }
+    },
     "canonical": true,
     "featured": null,
     "topic": {
@@ -367,7 +449,15 @@
       "fr": "Crédits hypothécaires et autres",
       "it": "Crediti ipotecari e altri crediti"
     },
-    "concept": "Money & banking / Banking & credit",
+    "concept": {
+      "en": "Money & banking / Banking & credit",
+      "leaf": {
+        "en": "Banking & credit",
+        "de": "Banken & Kredit",
+        "fr": "Banques & crédit",
+        "it": "Banche e credito"
+      }
+    },
     "canonical": true,
     "featured": null,
     "topic": {
@@ -407,7 +497,15 @@
       "fr": "Crédits en Suisse par secteur",
       "it": "Crediti interni per settore"
     },
-    "concept": "Money & banking / Banking & credit",
+    "concept": {
+      "en": "Money & banking / Banking & credit",
+      "leaf": {
+        "en": "Banking & credit",
+        "de": "Banken & Kredit",
+        "fr": "Banques & crédit",
+        "it": "Banche e credito"
+      }
+    },
     "canonical": true,
     "featured": null,
     "topic": {
@@ -447,7 +545,15 @@
       "fr": "Balance des paiements : compte financier",
       "it": "Bilancia dei pagamenti: conto finanziario"
     },
-    "concept": "External sector / Balance of payments",
+    "concept": {
+      "en": "External sector / Balance of payments",
+      "leaf": {
+        "en": "Balance of payments",
+        "de": "Zahlungsbilanz",
+        "fr": "Balance des paiements",
+        "it": "Bilancia dei pagamenti"
+      }
+    },
     "canonical": true,
     "featured": null,
     "topic": {
@@ -487,7 +593,15 @@
       "fr": "Balance des paiements : compte courant",
       "it": "Bilancia dei pagamenti: conto corrente"
     },
-    "concept": "External sector / Balance of payments",
+    "concept": {
+      "en": "External sector / Balance of payments",
+      "leaf": {
+        "en": "Balance of payments",
+        "de": "Zahlungsbilanz",
+        "fr": "Balance des paiements",
+        "it": "Bilancia dei pagamenti"
+      }
+    },
     "canonical": true,
     "featured": null,
     "topic": {
@@ -527,7 +641,15 @@
       "fr": "Balance des paiements : vue d'ensemble",
       "it": "Bilancia dei pagamenti: panoramica"
     },
-    "concept": "External sector / Balance of payments",
+    "concept": {
+      "en": "External sector / Balance of payments",
+      "leaf": {
+        "en": "Balance of payments",
+        "de": "Zahlungsbilanz",
+        "fr": "Balance des paiements",
+        "it": "Bilancia dei pagamenti"
+      }
+    },
     "canonical": false,
     "featured": null,
     "topic": {
@@ -567,7 +689,15 @@
       "fr": "Balance des paiements : services",
       "it": "Bilancia dei pagamenti: servizi"
     },
-    "concept": "External sector / Balance of payments",
+    "concept": {
+      "en": "External sector / Balance of payments",
+      "leaf": {
+        "en": "Balance of payments",
+        "de": "Zahlungsbilanz",
+        "fr": "Balance des paiements",
+        "it": "Bilancia dei pagamenti"
+      }
+    },
     "canonical": false,
     "featured": null,
     "topic": {
@@ -607,9 +737,22 @@
       "fr": "Indices boursiers suisses",
       "it": "Indici azionari svizzeri"
     },
-    "concept": "Financial markets / Swiss stock indices",
+    "concept": {
+      "en": "Financial markets / Swiss stock indices",
+      "leaf": {
+        "en": "Swiss stock indices",
+        "de": "Schweizer Aktienindizes",
+        "fr": "Indices boursiers suisses",
+        "it": "Indici azionari svizzeri"
+      }
+    },
     "canonical": true,
-    "featured": "Stock market",
+    "featured": {
+      "en": "Stock market",
+      "de": "Aktienmarkt",
+      "fr": "Marché des actions",
+      "it": "Mercato azionario"
+    },
     "topic": {
       "key": "financial-markets",
       "name": {
@@ -647,7 +790,15 @@
       "fr": "Transactions sur titres",
       "it": "Transazioni in titoli"
     },
-    "concept": "Financial markets / Securities turnover",
+    "concept": {
+      "en": "Financial markets / Securities turnover",
+      "leaf": {
+        "en": "Securities turnover",
+        "de": "Effektenumsätze",
+        "fr": "Transactions sur titres",
+        "it": "Transazioni in titoli"
+      }
+    },
     "canonical": true,
     "featured": null,
     "topic": {
@@ -687,9 +838,22 @@
       "fr": "Taux de change bilatéraux",
       "it": "Tassi di cambio bilaterali"
     },
-    "concept": "Exchange rates / Bilateral FX",
+    "concept": {
+      "en": "Exchange rates / Bilateral FX",
+      "leaf": {
+        "en": "Bilateral FX",
+        "de": "Bilaterale Wechselkurse",
+        "fr": "Change bilatéral",
+        "it": "Cambi bilaterali"
+      }
+    },
     "canonical": true,
-    "featured": "Exchange rates",
+    "featured": {
+      "en": "Exchange rates",
+      "de": "Wechselkurse",
+      "fr": "Taux de change",
+      "it": "Tassi di cambio"
+    },
     "topic": {
       "key": "exchange-rates",
       "name": {
@@ -727,7 +891,15 @@
       "fr": "Indices de taux de change bilatéraux",
       "it": "Indici dei tassi di cambio bilaterali"
     },
-    "concept": "Exchange rates / Bilateral FX",
+    "concept": {
+      "en": "Exchange rates / Bilateral FX",
+      "leaf": {
+        "en": "Bilateral FX",
+        "de": "Bilaterale Wechselkurse",
+        "fr": "Change bilatéral",
+        "it": "Cambi bilaterali"
+      }
+    },
     "canonical": true,
     "featured": null,
     "topic": {
@@ -767,7 +939,15 @@
       "fr": "Indice de taux de change effectif",
       "it": "Indice del tasso di cambio effettivo"
     },
-    "concept": "Exchange rates / Effective FX index",
+    "concept": {
+      "en": "Exchange rates / Effective FX index",
+      "leaf": {
+        "en": "Effective FX index",
+        "de": "Effektiver Wechselkursindex",
+        "fr": "Indice de change effectif",
+        "it": "Indice di cambio effettivo"
+      }
+    },
     "canonical": true,
     "featured": null,
     "topic": {
@@ -807,7 +987,15 @@
       "fr": "Prix de l'immobilier",
       "it": "Prezzi immobiliari"
     },
-    "concept": "Prices / Real estate prices",
+    "concept": {
+      "en": "Prices / Real estate prices",
+      "leaf": {
+        "en": "Real estate prices",
+        "de": "Immobilienpreise",
+        "fr": "Prix de l'immobilier",
+        "it": "Prezzi immobiliari"
+      }
+    },
     "canonical": true,
     "featured": null,
     "topic": {
@@ -847,9 +1035,22 @@
       "fr": "Prix à la consommation (IPC)",
       "it": "Prezzi al consumo (IPC)"
     },
-    "concept": "Prices / Consumer prices",
+    "concept": {
+      "en": "Prices / Consumer prices",
+      "leaf": {
+        "en": "Consumer prices",
+        "de": "Konsumentenpreise",
+        "fr": "Prix à la consommation",
+        "it": "Prezzi al consumo"
+      }
+    },
     "canonical": true,
-    "featured": "Inflation",
+    "featured": {
+      "en": "Inflation",
+      "de": "Teuerung",
+      "fr": "Inflation",
+      "it": "Inflazione"
+    },
     "topic": {
       "key": "prices",
       "name": {
@@ -887,7 +1088,15 @@
       "fr": "Inflation sous-jacente",
       "it": "Inflazione di fondo"
     },
-    "concept": "Prices / Core inflation",
+    "concept": {
+      "en": "Prices / Core inflation",
+      "leaf": {
+        "en": "Core inflation",
+        "de": "Kerninflation",
+        "fr": "Inflation sous-jacente",
+        "it": "Inflazione di fondo"
+      }
+    },
     "canonical": true,
     "featured": null,
     "topic": {
@@ -927,7 +1136,15 @@
       "fr": "Rendements obligataires (taux au comptant)",
       "it": "Rendimenti obbligazionari (tassi a pronti)"
     },
-    "concept": "Interest rates & yields / Bond yields",
+    "concept": {
+      "en": "Interest rates & yields / Bond yields",
+      "leaf": {
+        "en": "Bond yields",
+        "de": "Obligationenrenditen",
+        "fr": "Rendements obligataires",
+        "it": "Rendimenti obbligazionari"
+      }
+    },
     "canonical": true,
     "featured": null,
     "topic": {
@@ -967,7 +1184,15 @@
       "fr": "Bilan de la BNS",
       "it": "Bilancio della BNS"
     },
-    "concept": "Money & banking / Monetary aggregates",
+    "concept": {
+      "en": "Money & banking / Monetary aggregates",
+      "leaf": {
+        "en": "Monetary aggregates",
+        "de": "Geldmengen",
+        "fr": "Agrégats monétaires",
+        "it": "Aggregati monetari"
+      }
+    },
     "canonical": false,
     "featured": null,
     "topic": {
@@ -1007,7 +1232,15 @@
       "fr": "Prévision d'inflation (BNS)",
       "it": "Previsione d'inflazione (BNS)"
     },
-    "concept": "Prices / Inflation forecast",
+    "concept": {
+      "en": "Prices / Inflation forecast",
+      "leaf": {
+        "en": "Inflation forecast",
+        "de": "Inflationsprognose",
+        "fr": "Prévision d'inflation",
+        "it": "Previsione d'inflazione"
+      }
+    },
     "canonical": true,
     "featured": null,
     "topic": {
@@ -1047,7 +1280,15 @@
       "fr": "Signaux conjoncturels",
       "it": "Segnali congiunturali"
     },
-    "concept": "Business cycle & sentiment / Business cycle signals",
+    "concept": {
+      "en": "Business cycle & sentiment / Business cycle signals",
+      "leaf": {
+        "en": "Business cycle signals",
+        "de": "Konjunktursignale",
+        "fr": "Signaux conjoncturels",
+        "it": "Segnali congiunturali"
+      }
+    },
     "canonical": true,
     "featured": null,
     "topic": {
@@ -1087,7 +1328,15 @@
       "fr": "Monnaie centrale",
       "it": "Base monetaria"
     },
-    "concept": "Money & banking / Monetary aggregates",
+    "concept": {
+      "en": "Money & banking / Monetary aggregates",
+      "leaf": {
+        "en": "Monetary aggregates",
+        "de": "Geldmengen",
+        "fr": "Agrégats monétaires",
+        "it": "Aggregati monetari"
+      }
+    },
     "canonical": false,
     "featured": null,
     "topic": {
@@ -1127,9 +1376,22 @@
       "fr": "Agrégats monétaires (M1–M3)",
       "it": "Aggregati monetari (M1–M3)"
     },
-    "concept": "Money & banking / Monetary aggregates",
+    "concept": {
+      "en": "Money & banking / Monetary aggregates",
+      "leaf": {
+        "en": "Monetary aggregates",
+        "de": "Geldmengen",
+        "fr": "Agrégats monétaires",
+        "it": "Aggregati monetari"
+      }
+    },
     "canonical": true,
-    "featured": "Money supply",
+    "featured": {
+      "en": "Money supply",
+      "de": "Geldmenge",
+      "fr": "Masse monétaire",
+      "it": "Massa monetaria"
+    },
     "topic": {
       "key": "money-banking",
       "name": {
@@ -1167,7 +1429,15 @@
       "fr": "Taux d'intérêt officiels",
       "it": "Tassi d'interesse ufficiali"
     },
-    "concept": "Interest rates & yields / Policy & official rates",
+    "concept": {
+      "en": "Interest rates & yields / Policy & official rates",
+      "leaf": {
+        "en": "Policy & official rates",
+        "de": "Leitzinsen & offizielle Zinssätze",
+        "fr": "Taux directeurs & officiels",
+        "it": "Tassi di riferimento e ufficiali"
+      }
+    },
     "canonical": true,
     "featured": null,
     "topic": {
@@ -1207,7 +1477,15 @@
       "fr": "Monnaie électronique",
       "it": "Moneta elettronica"
     },
-    "concept": "Payment systems / Payments & cash",
+    "concept": {
+      "en": "Payment systems / Payments & cash",
+      "leaf": {
+        "en": "Payments & cash",
+        "de": "Zahlungsverkehr & Bargeld",
+        "fr": "Paiements & espèces",
+        "it": "Pagamenti e contante"
+      }
+    },
     "canonical": false,
     "featured": null,
     "topic": {
@@ -1247,7 +1525,15 @@
       "fr": "Clearing interbancaire (SIC)",
       "it": "Clearing interbancario (SIC)"
     },
-    "concept": "Payment systems / Payments & cash",
+    "concept": {
+      "en": "Payment systems / Payments & cash",
+      "leaf": {
+        "en": "Payments & cash",
+        "de": "Zahlungsverkehr & Bargeld",
+        "fr": "Paiements & espèces",
+        "it": "Pagamenti e contante"
+      }
+    },
     "canonical": false,
     "featured": null,
     "topic": {
@@ -1287,7 +1573,15 @@
       "fr": "Cartes de paiement et distributeurs",
       "it": "Carte di pagamento e bancomat"
     },
-    "concept": "Payment systems / Payments & cash",
+    "concept": {
+      "en": "Payment systems / Payments & cash",
+      "leaf": {
+        "en": "Payments & cash",
+        "de": "Zahlungsverkehr & Bargeld",
+        "fr": "Paiements & espèces",
+        "it": "Pagamenti e contante"
+      }
+    },
     "canonical": false,
     "featured": null,
     "topic": {
@@ -1327,7 +1621,15 @@
       "fr": "Paiements et retraits d'espèces",
       "it": "Pagamenti e prelievi di contante"
     },
-    "concept": "Payment systems / Payments & cash",
+    "concept": {
+      "en": "Payment systems / Payments & cash",
+      "leaf": {
+        "en": "Payments & cash",
+        "de": "Zahlungsverkehr & Bargeld",
+        "fr": "Paiements & espèces",
+        "it": "Pagamenti e contante"
+      }
+    },
     "canonical": false,
     "featured": null,
     "topic": {
@@ -1367,7 +1669,15 @@
       "fr": "Paiements des clients (sortants)",
       "it": "Pagamenti dei clienti (in uscita)"
     },
-    "concept": "Payment systems / Payments & cash",
+    "concept": {
+      "en": "Payment systems / Payments & cash",
+      "leaf": {
+        "en": "Payments & cash",
+        "de": "Zahlungsverkehr & Bargeld",
+        "fr": "Paiements & espèces",
+        "it": "Pagamenti e contante"
+      }
+    },
     "canonical": false,
     "featured": null,
     "topic": {
@@ -1407,7 +1717,15 @@
       "fr": "Taux des nouveaux crédits",
       "it": "Tassi sui nuovi crediti"
     },
-    "concept": "Interest rates & yields / Money-market rates",
+    "concept": {
+      "en": "Interest rates & yields / Money-market rates",
+      "leaf": {
+        "en": "Money-market rates",
+        "de": "Geldmarktsätze",
+        "fr": "Taux du marché monétaire",
+        "it": "Tassi del mercato monetario"
+      }
+    },
     "canonical": false,
     "featured": null,
     "topic": {
@@ -1447,7 +1765,15 @@
       "fr": "Taux d'intérêt publiés",
       "it": "Tassi d'interesse pubblicati"
     },
-    "concept": "Interest rates & yields / Money-market rates",
+    "concept": {
+      "en": "Interest rates & yields / Money-market rates",
+      "leaf": {
+        "en": "Money-market rates",
+        "de": "Geldmarktsätze",
+        "fr": "Taux du marché monétaire",
+        "it": "Tassi del mercato monetario"
+      }
+    },
     "canonical": false,
     "featured": null,
     "topic": {
@@ -1487,9 +1813,22 @@
       "fr": "Taux du marché monétaire",
       "it": "Tassi del mercato monetario"
     },
-    "concept": "Interest rates & yields / Money-market rates",
+    "concept": {
+      "en": "Interest rates & yields / Money-market rates",
+      "leaf": {
+        "en": "Money-market rates",
+        "de": "Geldmarktsätze",
+        "fr": "Taux du marché monétaire",
+        "it": "Tassi del mercato monetario"
+      }
+    },
     "canonical": true,
-    "featured": "SARON",
+    "featured": {
+      "en": "SARON",
+      "de": "SARON",
+      "fr": "SARON",
+      "it": "SARON"
+    },
     "topic": {
       "key": "interest-rates-yields",
       "name": {
@@ -1527,9 +1866,22 @@
       "fr": "Produit intérieur brut (PIB)",
       "it": "Prodotto interno lordo (PIL)"
     },
-    "concept": "National accounts / GDP (output, expenditure, income)",
+    "concept": {
+      "en": "National accounts / GDP (output, expenditure, income)",
+      "leaf": {
+        "en": "GDP (output, expenditure, income)",
+        "de": "BIP (Produktion, Verwendung, Einkommen)",
+        "fr": "PIB (production, dépenses, revenus)",
+        "it": "PIL (produzione, spesa, redditi)"
+      }
+    },
     "canonical": true,
-    "featured": "GDP",
+    "featured": {
+      "en": "GDP",
+      "de": "BIP",
+      "fr": "PIB",
+      "it": "PIL"
+    },
     "topic": {
       "key": "national-accounts",
       "name": {
@@ -1567,9 +1919,22 @@
       "fr": "Climat de consommation",
       "it": "Clima di consumo"
     },
-    "concept": "Business cycle & sentiment / Consumer confidence",
+    "concept": {
+      "en": "Business cycle & sentiment / Consumer confidence",
+      "leaf": {
+        "en": "Consumer confidence",
+        "de": "Konsumentenstimmung",
+        "fr": "Climat de consommation",
+        "it": "Clima di consumo"
+      }
+    },
     "canonical": true,
-    "featured": "Consumer confidence",
+    "featured": {
+      "en": "Consumer confidence",
+      "de": "Konsumentenstimmung",
+      "fr": "Climat de consommation",
+      "it": "Clima di consumo"
+    },
     "topic": {
       "key": "business-cycle-sentiment",
       "name": {
@@ -1607,9 +1972,22 @@
       "fr": "Chiffres d'affaires du commerce de détail",
       "it": "Fatturato del commercio al dettaglio"
     },
-    "concept": "Domestic economy / Retail trade turnover",
+    "concept": {
+      "en": "Domestic economy / Retail trade turnover",
+      "leaf": {
+        "en": "Retail trade turnover",
+        "de": "Detailhandelsumsätze",
+        "fr": "Chiffres d'affaires du commerce de détail",
+        "it": "Fatturato del commercio al dettaglio"
+      }
+    },
     "canonical": true,
-    "featured": "Retail trade",
+    "featured": {
+      "en": "Retail trade",
+      "de": "Detailhandel",
+      "fr": "Commerce de détail",
+      "it": "Commercio al dettaglio"
+    },
     "topic": {
       "key": "domestic-economy",
       "name": {
@@ -1647,7 +2025,15 @@
       "fr": "Chiffres d'affaires industrie et construction",
       "it": "Fatturato industria e costruzioni"
     },
-    "concept": "Domestic economy / Industry & construction turnover",
+    "concept": {
+      "en": "Domestic economy / Industry & construction turnover",
+      "leaf": {
+        "en": "Industry & construction turnover",
+        "de": "Umsätze Industrie & Bau",
+        "fr": "Chiffres d'affaires industrie & construction",
+        "it": "Fatturato industria e costruzioni"
+      }
+    },
     "canonical": true,
     "featured": null,
     "topic": {
@@ -1687,7 +2073,15 @@
       "fr": "Chiffres d'affaires des services",
       "it": "Fatturato dei servizi"
     },
-    "concept": "Domestic economy / Services turnover",
+    "concept": {
+      "en": "Domestic economy / Services turnover",
+      "leaf": {
+        "en": "Services turnover",
+        "de": "Umsätze Dienstleistungen",
+        "fr": "Chiffres d'affaires des services",
+        "it": "Fatturato dei servizi"
+      }
+    },
     "canonical": true,
     "featured": null,
     "topic": {
@@ -1727,7 +2121,15 @@
       "fr": "Nouvelles immatriculations de voitures par carburant",
       "it": "Nuove immatricolazioni di automobili per carburante"
     },
-    "concept": "Domestic economy / New vehicle registrations",
+    "concept": {
+      "en": "Domestic economy / New vehicle registrations",
+      "leaf": {
+        "en": "New vehicle registrations",
+        "de": "Neuzulassungen von Fahrzeugen",
+        "fr": "Nouvelles immatriculations",
+        "it": "Nuove immatricolazioni"
+      }
+    },
     "canonical": true,
     "featured": null,
     "topic": {
@@ -1767,7 +2169,15 @@
       "fr": "Logements vacants",
       "it": "Abitazioni vuote"
     },
-    "concept": "Domestic economy / Vacant dwellings",
+    "concept": {
+      "en": "Domestic economy / Vacant dwellings",
+      "leaf": {
+        "en": "Vacant dwellings",
+        "de": "Leerwohnungen",
+        "fr": "Logements vacants",
+        "it": "Abitazioni vuote"
+      }
+    },
     "canonical": true,
     "featured": null,
     "topic": {
@@ -1807,7 +2217,15 @@
       "fr": "Frontaliers",
       "it": "Frontalieri"
     },
-    "concept": "Labour / Cross-border commuters",
+    "concept": {
+      "en": "Labour / Cross-border commuters",
+      "leaf": {
+        "en": "Cross-border commuters",
+        "de": "Grenzgänger",
+        "fr": "Frontaliers",
+        "it": "Frontalieri"
+      }
+    },
     "canonical": true,
     "featured": null,
     "topic": {
@@ -1847,7 +2265,15 @@
       "fr": "Population résidante permanente par nationalité",
       "it": "Popolazione residente permanente per nazionalità"
     },
-    "concept": "Population & demographics / Resident population by nationality",
+    "concept": {
+      "en": "Population & demographics / Resident population by nationality",
+      "leaf": {
+        "en": "Resident population by nationality",
+        "de": "Wohnbevölkerung nach Staatsangehörigkeit",
+        "fr": "Population résidante par nationalité",
+        "it": "Popolazione residente per nazionalità"
+      }
+    },
     "canonical": false,
     "featured": null,
     "topic": {
@@ -1887,7 +2313,15 @@
       "fr": "Finances publiques",
       "it": "Finanze pubbliche"
     },
-    "concept": "National accounts / Government finance",
+    "concept": {
+      "en": "National accounts / Government finance",
+      "leaf": {
+        "en": "Government finance",
+        "de": "Öffentliche Finanzen",
+        "fr": "Finances publiques",
+        "it": "Finanze pubbliche"
+      }
+    },
     "canonical": true,
     "featured": null,
     "topic": {
@@ -1927,7 +2361,15 @@
       "fr": "Baromètre conjoncturel KOF",
       "it": "Barometro congiunturale KOF"
     },
-    "concept": "Business cycle & sentiment / Leading barometer",
+    "concept": {
+      "en": "Business cycle & sentiment / Leading barometer",
+      "leaf": {
+        "en": "Leading barometer",
+        "de": "Vorlaufendes Barometer",
+        "fr": "Baromètre avancé",
+        "it": "Barometro anticipatore"
+      }
+    },
     "canonical": true,
     "featured": null,
     "topic": {
@@ -1967,7 +2409,15 @@
       "fr": "KOF Economic Sentiment Index",
       "it": "KOF Economic Sentiment Index"
     },
-    "concept": "Business cycle & sentiment / Sentiment composite",
+    "concept": {
+      "en": "Business cycle & sentiment / Sentiment composite",
+      "leaf": {
+        "en": "Sentiment composite",
+        "de": "Stimmungsindikator",
+        "fr": "Indice de climat",
+        "it": "Indice di clima"
+      }
+    },
     "canonical": true,
     "featured": null,
     "topic": {
@@ -2007,7 +2457,15 @@
       "fr": "Adecco Group Swiss Job Market Index",
       "it": "Adecco Group Swiss Job Market Index"
     },
-    "concept": "Labour / Job market",
+    "concept": {
+      "en": "Labour / Job market",
+      "leaf": {
+        "en": "Job market",
+        "de": "Arbeitsmarkt",
+        "fr": "Marché du travail",
+        "it": "Mercato del lavoro"
+      }
+    },
     "canonical": true,
     "featured": null,
     "topic": {
@@ -2047,7 +2505,15 @@
       "fr": "Nuitées hôtelières",
       "it": "Pernottamenti alberghieri"
     },
-    "concept": "Domestic economy / Hotel overnight stays",
+    "concept": {
+      "en": "Domestic economy / Hotel overnight stays",
+      "leaf": {
+        "en": "Hotel overnight stays",
+        "de": "Hotellogiernächte",
+        "fr": "Nuitées hôtelières",
+        "it": "Pernottamenti alberghieri"
+      }
+    },
     "canonical": true,
     "featured": null,
     "topic": {
@@ -2087,9 +2553,22 @@
       "fr": "Emplois par division économique",
       "it": "Impieghi per divisione economica"
     },
-    "concept": "Labour / Employment / jobs",
+    "concept": {
+      "en": "Labour / Employment / jobs",
+      "leaf": {
+        "en": "Employment",
+        "de": "Beschäftigung",
+        "fr": "Emploi",
+        "it": "Occupazione"
+      }
+    },
     "canonical": true,
-    "featured": "Employment",
+    "featured": {
+      "en": "Employment",
+      "de": "Beschäftigung",
+      "fr": "Emploi",
+      "it": "Occupazione"
+    },
     "topic": {
       "key": "labour",
       "name": {
@@ -2127,7 +2606,15 @@
       "fr": "Postes vacants",
       "it": "Posti vacanti"
     },
-    "concept": "Labour / Job vacancies",
+    "concept": {
+      "en": "Labour / Job vacancies",
+      "leaf": {
+        "en": "Job vacancies",
+        "de": "Offene Stellen",
+        "fr": "Postes vacants",
+        "it": "Posti vacanti"
+      }
+    },
     "canonical": true,
     "featured": null,
     "topic": {
@@ -2167,7 +2654,15 @@
       "fr": "Emplois par division économique et sexe",
       "it": "Impieghi per divisione economica e sesso"
     },
-    "concept": "Labour / Employment / jobs",
+    "concept": {
+      "en": "Labour / Employment / jobs",
+      "leaf": {
+        "en": "Employment",
+        "de": "Beschäftigung",
+        "fr": "Emploi",
+        "it": "Occupazione"
+      }
+    },
     "canonical": false,
     "featured": null,
     "topic": {
@@ -2207,7 +2702,15 @@
       "fr": "Perspectives d'emploi",
       "it": "Prospettive occupazionali"
     },
-    "concept": "Labour / Employment outlook",
+    "concept": {
+      "en": "Labour / Employment outlook",
+      "leaf": {
+        "en": "Employment outlook",
+        "de": "Beschäftigungsaussichten",
+        "fr": "Perspectives d'emploi",
+        "it": "Prospettive occupazionali"
+      }
+    },
     "canonical": true,
     "featured": null,
     "topic": {
@@ -2247,7 +2750,15 @@
       "fr": "Prix à la consommation (panier détaillé)",
       "it": "Prezzi al consumo (paniere dettagliato)"
     },
-    "concept": "Prices / Consumer prices",
+    "concept": {
+      "en": "Prices / Consumer prices",
+      "leaf": {
+        "en": "Consumer prices",
+        "de": "Konsumentenpreise",
+        "fr": "Prix à la consommation",
+        "it": "Prezzi al consumo"
+      }
+    },
     "canonical": false,
     "featured": null,
     "topic": {
@@ -2287,7 +2798,15 @@
       "fr": "Prix à la production et à l'importation",
       "it": "Prezzi alla produzione e all'importazione"
     },
-    "concept": "Prices / Producer & import prices",
+    "concept": {
+      "en": "Prices / Producer & import prices",
+      "leaf": {
+        "en": "Producer & import prices",
+        "de": "Produzenten- & Importpreise",
+        "fr": "Prix à la production & à l'importation",
+        "it": "Prezzi alla produzione e all'importazione"
+      }
+    },
     "canonical": true,
     "featured": null,
     "topic": {
@@ -2327,7 +2846,15 @@
       "fr": "Indice suisse des salaires",
       "it": "Indice svizzero dei salari"
     },
-    "concept": "Labour / Wages",
+    "concept": {
+      "en": "Labour / Wages",
+      "leaf": {
+        "en": "Wages",
+        "de": "Löhne",
+        "fr": "Salaires",
+        "it": "Salari"
+      }
+    },
     "canonical": true,
     "featured": null,
     "topic": {
@@ -2367,9 +2894,22 @@
       "fr": "Population résidante permanente",
       "it": "Popolazione residente permanente"
     },
-    "concept": "Population & demographics / Resident population",
+    "concept": {
+      "en": "Population & demographics / Resident population",
+      "leaf": {
+        "en": "Resident population",
+        "de": "Wohnbevölkerung",
+        "fr": "Population résidante",
+        "it": "Popolazione residente"
+      }
+    },
     "canonical": true,
-    "featured": "Population",
+    "featured": {
+      "en": "Population",
+      "de": "Bevölkerung",
+      "fr": "Population",
+      "it": "Popolazione"
+    },
     "topic": {
       "key": "population-demographics",
       "name": {
@@ -2407,7 +2947,15 @@
       "fr": "Taux de chômage (BIT)",
       "it": "Tasso di disoccupazione (ILO)"
     },
-    "concept": "Labour / Unemployment",
+    "concept": {
+      "en": "Labour / Unemployment",
+      "leaf": {
+        "en": "Unemployment",
+        "de": "Arbeitslosigkeit",
+        "fr": "Chômage",
+        "it": "Disoccupazione"
+      }
+    },
     "canonical": false,
     "featured": null,
     "topic": {
@@ -2447,7 +2995,15 @@
       "fr": "Productivité du travail",
       "it": "Produttività del lavoro"
     },
-    "concept": "National accounts / Labour productivity",
+    "concept": {
+      "en": "National accounts / Labour productivity",
+      "leaf": {
+        "en": "Labour productivity",
+        "de": "Arbeitsproduktivität",
+        "fr": "Productivité du travail",
+        "it": "Produttività del lavoro"
+      }
+    },
     "canonical": true,
     "featured": null,
     "topic": {
@@ -2487,7 +3043,15 @@
       "fr": "Personnes actives occupées (SPAO)",
       "it": "Persone occupate (SPO)"
     },
-    "concept": "Labour / Employment / employed persons",
+    "concept": {
+      "en": "Labour / Employment / employed persons",
+      "leaf": {
+        "en": "Employment",
+        "de": "Beschäftigung",
+        "fr": "Emploi",
+        "it": "Occupazione"
+      }
+    },
     "canonical": false,
     "featured": null,
     "topic": {
@@ -2527,7 +3091,15 @@
       "fr": "Investissements (FBCF) en détail",
       "it": "Investimenti (IFL) in dettaglio"
     },
-    "concept": "National accounts / Investment (gross fixed capital formation)",
+    "concept": {
+      "en": "National accounts / Investment (gross fixed capital formation)",
+      "leaf": {
+        "en": "Investment (gross fixed capital formation)",
+        "de": "Investitionen (Bruttoanlageinvestitionen)",
+        "fr": "Investissements (FBCF)",
+        "it": "Investimenti (investimenti fissi lordi)"
+      }
+    },
     "canonical": false,
     "featured": null,
     "topic": {
@@ -2567,7 +3139,15 @@
       "fr": "Heures de travail",
       "it": "Ore di lavoro"
     },
-    "concept": "Labour / Working time and working volume",
+    "concept": {
+      "en": "Labour / Working time and working volume",
+      "leaf": {
+        "en": "Working time and working volume",
+        "de": "Arbeitszeit und Arbeitsvolumen",
+        "fr": "Temps et volume de travail",
+        "it": "Tempo e volume di lavoro"
+      }
+    },
     "canonical": true,
     "featured": null,
     "topic": {
@@ -2607,7 +3187,15 @@
       "fr": "PIB régional",
       "it": "PIL regionale"
     },
-    "concept": "National accounts / Regional GDP",
+    "concept": {
+      "en": "National accounts / Regional GDP",
+      "leaf": {
+        "en": "Regional GDP",
+        "de": "Regionales BIP",
+        "fr": "PIB régional",
+        "it": "PIL regionale"
+      }
+    },
     "canonical": true,
     "featured": null,
     "topic": {
@@ -2647,7 +3235,15 @@
       "fr": "Prix de la construction",
       "it": "Prezzi delle costruzioni"
     },
-    "concept": "Prices / Construction prices",
+    "concept": {
+      "en": "Prices / Construction prices",
+      "leaf": {
+        "en": "Construction prices",
+        "de": "Baupreise",
+        "fr": "Prix de la construction",
+        "it": "Prezzi delle costruzioni"
+      }
+    },
     "canonical": true,
     "featured": null,
     "topic": {
@@ -2687,7 +3283,15 @@
       "fr": "Commerce extérieur par pays partenaire",
       "it": "Commercio estero per paese partner"
     },
-    "concept": "External sector / Foreign trade",
+    "concept": {
+      "en": "External sector / Foreign trade",
+      "leaf": {
+        "en": "Foreign trade",
+        "de": "Aussenhandel",
+        "fr": "Commerce extérieur",
+        "it": "Commercio estero"
+      }
+    },
     "canonical": true,
     "featured": null,
     "topic": {
@@ -2727,7 +3331,15 @@
       "fr": "IPC harmonisé (IPCH)",
       "it": "IPC armonizzato (IPCA)"
     },
-    "concept": "Prices / Consumer prices",
+    "concept": {
+      "en": "Prices / Consumer prices",
+      "leaf": {
+        "en": "Consumer prices",
+        "de": "Konsumentenpreise",
+        "fr": "Prix à la consommation",
+        "it": "Prezzi al consumo"
+      }
+    },
     "canonical": false,
     "featured": null,
     "topic": {
@@ -2767,7 +3379,15 @@
       "fr": "Activité économique hebdomadaire (WEA)",
       "it": "Attività economica settimanale (WEA)"
     },
-    "concept": "Business cycle & sentiment / High-frequency activity tracker",
+    "concept": {
+      "en": "Business cycle & sentiment / High-frequency activity tracker",
+      "leaf": {
+        "en": "High-frequency activity tracker",
+        "de": "Hochfrequenz-Aktivitätsindikator",
+        "fr": "Indicateur d'activité à haute fréquence",
+        "it": "Indicatore di attività ad alta frequenza"
+      }
+    },
     "canonical": true,
     "featured": null,
     "topic": {

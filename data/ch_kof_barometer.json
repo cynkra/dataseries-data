@@ -32,10 +32,21 @@
       "it": "Congiuntura e clima"
     }
   },
-  "concept": "Business cycle & sentiment / Leading barometer",
+  "concept": {
+    "en": "Business cycle & sentiment / Leading barometer",
+    "leaf": {
+      "en": "Leading barometer",
+      "de": "Vorlaufendes Barometer",
+      "fr": "Baromètre avancé",
+      "it": "Barometro anticipatore"
+    }
+  },
   "canonical": true,
   "description": {
-    "en": "Switzerland's leading business-cycle indicator, published monthly by ETH Zurich. Around 100 is average; above signals faster growth ahead."
+    "en": "Switzerland's leading business-cycle indicator, published monthly by ETH Zurich. Around 100 is average; above signals faster growth ahead.",
+    "de": "Der führende Schweizer Konjunkturindikator, monatlich von der ETH Zürich publiziert. Rund 100 ist der Durchschnitt; darüber deutet auf stärkeres Wachstum hin.",
+    "fr": "L'indicateur avancé de la conjoncture suisse, publié mensuellement par l'EPF de Zurich. Environ 100 correspond à la moyenne ; au-dessus signale une croissance plus forte.",
+    "it": "L'indicatore anticipatore della congiuntura svizzera, pubblicato mensilmente dal PF di Zurigo. Circa 100 è la media; sopra segnala una crescita più forte."
   },
   "fetched_utc": "2026-08-05 13:12:05"
 }

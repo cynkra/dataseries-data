@@ -273,7 +273,15 @@
       "it": "Congiuntura e clima"
     }
   },
-  "concept": "Business cycle & sentiment / Business cycle signals",
+  "concept": {
+    "en": "Business cycle & sentiment / Business cycle signals",
+    "leaf": {
+      "en": "Business cycle signals",
+      "de": "Konjunktursignale",
+      "fr": "Signaux conjoncturels",
+      "it": "Segnali congiunturali"
+    }
+  },
   "canonical": true,
   "split": "D0",
   "single_select": [],
@@ -282,7 +290,10 @@
     "D0": "KA"
   },
   "description": {
-    "en": "What Swiss companies tell the National Bank each quarter about turnover, capacity, hiring, margins, prices and wage expectations."
+    "en": "What Swiss companies tell the National Bank each quarter about turnover, capacity, hiring, margins, prices and wage expectations.",
+    "de": "Was Schweizer Unternehmen der Nationalbank vierteljährlich zu Umsatz, Kapazität, Personalsuche, Margen, Preisen und Lohnerwartungen berichten.",
+    "fr": "Ce que les entreprises suisses rapportent chaque trimestre à la Banque nationale sur le chiffre d'affaires, les capacités, l'embauche, les marges, les prix et les salaires attendus.",
+    "it": "Cosa le imprese svizzere riferiscono trimestralmente alla Banca nazionale su fatturato, capacità, assunzioni, margini, prezzi e attese salariali."
   },
   "fetched_utc": "2026-08-05 13:12:03"
 }

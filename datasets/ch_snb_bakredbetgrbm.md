@@ -57,3 +57,12 @@ How much Swiss banks lend to companies by company size, shown both as credit gra
 ## Provenance
 Script: `R/source_snb.R::snb_fetch` (cube `bakredbetgrbm`, title/topic from
 `R/snb_cubes.tsv`). Datasheet authored 2026-06-01.
+
+## What is special (de)
+Wie viel Schweizer Banken Unternehmen nach Unternehmensgrösse ausleihen, als gewährter Kredit und als tatsächlich beanspruchter Betrag, sodass der Spielraum sichtbar wird.
+
+## What is special (fr)
+Combien les banques suisses prêtent aux entreprises selon leur taille, en crédit accordé et en montant effectivement utilisé, si bien que la marge est visible.
+
+## What is special (it)
+Quanto le banche svizzere prestano alle imprese per dimensione, come credito concesso e come importo effettivamente utilizzato, così il margine è visibile.

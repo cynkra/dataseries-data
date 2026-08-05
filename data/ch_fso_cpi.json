@@ -6246,7 +6246,15 @@
       }
     }
   },
-  "concept": "Prices / Consumer prices",
+  "concept": {
+    "en": "Prices / Consumer prices",
+    "leaf": {
+      "en": "Consumer prices",
+      "de": "Konsumentenpreise",
+      "fr": "Prix à la consommation",
+      "it": "Prezzi al consumo"
+    }
+  },
   "canonical": false,
   "title": {
     "en": "Consumer prices (detailed basket)",
@@ -6261,7 +6269,10 @@
     "item": "100_100"
   },
   "description": {
-    "en": "Swiss inflation with the full shopping basket: 595 items from the total index down to food, housing and transport. Base December 2025 = 100."
+    "en": "Swiss inflation with the full shopping basket: 595 items from the total index down to food, housing and transport. Base December 2025 = 100.",
+    "de": "Schweizer Teuerung mit dem vollständigen Warenkorb: 595 Positionen vom Gesamtindex bis zu Nahrung, Wohnen und Verkehr. Basis Dezember 2025 = 100.",
+    "fr": "Inflation suisse avec le panier complet : 595 positions, de l'indice total à l'alimentation, au logement et aux transports. Base décembre 2025 = 100.",
+    "it": "Inflazione svizzera con il paniere completo: 595 posizioni, dall'indice totale ad alimentari, abitazione e trasporti. Base dicembre 2025 = 100."
   },
   "fetched_utc": "2026-08-05 13:12:07"
 }

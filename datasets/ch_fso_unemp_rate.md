@@ -67,3 +67,12 @@ already rates in %, so the transform stays at `level`.
 ## Provenance
 Script: `R/source_fso_excel_sets.R::fso_excel_ch_fso_unemp_rate`. Datasheet
 2026-06-01; parser verified 2026-06-01 (2,115 rows, 5 series, 0 NA values).
+
+## What is special (de)
+Schweizer Erwerbslosigkeit nach der internationalen ILO-Definition. Nicht dasselbe wie die bei den RAV registrierte Arbeitslosigkeit; die beiden sind nicht austauschbar.
+
+## What is special (fr)
+Chômage suisse selon la définition internationale du BIT. À ne pas confondre avec le chômage inscrit auprès des offices régionaux ; les deux ne sont pas interchangeables.
+
+## What is special (it)
+Disoccupazione svizzera secondo la definizione internazionale ILO. Da non confondere con la disoccupazione registrata presso gli uffici del lavoro; le due non sono intercambiabili.

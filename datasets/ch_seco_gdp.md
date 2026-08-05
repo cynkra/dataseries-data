@@ -77,3 +77,12 @@ Swiss economic output each quarter from all three angles, production, spending a
 ## Provenance
 Script: `R/source_seco.R::seco_fetch`. Datasheet 2026-06-01; parser verified
 2026-06-01 (107,100 rows, 660 series, span 1980-01 .. 2025-10).
+
+## What is special (de)
+Schweizer Wirtschaftsleistung pro Quartal aus allen drei Blickwinkeln — Produktion, Verwendung und Einkommen — inklusive einer Korrektur für Erträge von Sportverbänden.
+
+## What is special (fr)
+Production économique suisse par trimestre sous les trois optiques — production, dépenses et revenus — avec une correction pour les recettes des fédérations sportives.
+
+## What is special (it)
+Produzione economica svizzera per trimestre nelle tre ottiche — produzione, spesa e redditi — con una correzione per i ricavi delle federazioni sportive.

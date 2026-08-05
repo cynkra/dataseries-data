@@ -53,3 +53,12 @@ How many Swiss homes stand empty, and the official vacancy rate, the standard me
 ## Provenance
 Script: `R/source_fso_sdmx.R::fso_sdmx_vacant_dwellings` (wired in `R/pipeline.R`).
 Datasheet authored 2026-06-02; SDMX slice verified live 2026-06-02 (1995 .. 2025).
+
+## What is special (de)
+Wie viele Schweizer Wohnungen leer stehen, und die offizielle Leerwohnungsziffer, das Standardmass für Wohnungsknappheit. 2025 bei rund 1.0%.
+
+## What is special (fr)
+Combien de logements suisses sont vacants, et le taux de vacance officiel, la mesure de référence de la pénurie de logements. Environ 1.0% en 2025.
+
+## What is special (it)
+Quante abitazioni svizzere sono vuote, e il tasso di sfitto ufficiale, la misura di riferimento della penuria di alloggi. Circa l'1.0% nel 2025.

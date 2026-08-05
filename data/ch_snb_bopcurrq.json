@@ -556,7 +556,15 @@
       "it": "Settore estero"
     }
   },
-  "concept": "External sector / Balance of payments",
+  "concept": {
+    "en": "External sector / Balance of payments",
+    "leaf": {
+      "en": "Balance of payments",
+      "de": "Zahlungsbilanz",
+      "fr": "Balance des paiements",
+      "it": "Bilancia dei pagamenti"
+    }
+  },
   "canonical": true,
   "split": "D0",
   "single_select": "D1",
@@ -566,7 +574,10 @@
     "D1": "S"
   },
   "description": {
-    "en": "Switzerland's current account in detail, goods, services and income from work and investment, showing where the structural surplus comes from."
+    "en": "Switzerland's current account in detail, goods, services and income from work and investment, showing where the structural surplus comes from.",
+    "de": "Die Schweizer Leistungsbilanz im Detail — Waren, Dienstleistungen sowie Arbeits- und Kapitaleinkommen — und woher der strukturelle Überschuss stammt.",
+    "fr": "Le compte courant suisse en détail — biens, services, revenus du travail et des investissements — et d'où vient l'excédent structurel.",
+    "it": "Il conto corrente svizzero in dettaglio — beni, servizi, redditi da lavoro e da investimenti — e da dove proviene l'avanzo strutturale."
   },
   "fetched_utc": "2026-08-05 13:12:02"
 }

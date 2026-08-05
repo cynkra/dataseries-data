@@ -246,7 +246,15 @@
       "it": "Moneta e banche"
     }
   },
-  "concept": "Money & banking / Banking & credit",
+  "concept": {
+    "en": "Money & banking / Banking & credit",
+    "leaf": {
+      "en": "Banking & credit",
+      "de": "Banken & Kredit",
+      "fr": "Banques & crédit",
+      "it": "Banche e credito"
+    }
+  },
   "canonical": true,
   "split": "D1",
   "single_select": ["D0", "D2", "D3"],
@@ -258,7 +266,10 @@
     "D3": "F"
   },
   "description": {
-    "en": "How much Swiss banks lend to companies by company size, shown both as credit granted and credit actually drawn, so headroom is visible."
+    "en": "How much Swiss banks lend to companies by company size, shown both as credit granted and credit actually drawn, so headroom is visible.",
+    "de": "Wie viel Schweizer Banken Unternehmen nach Unternehmensgrösse ausleihen, als gewährter Kredit und als tatsächlich beanspruchter Betrag, sodass der Spielraum sichtbar wird.",
+    "fr": "Combien les banques suisses prêtent aux entreprises selon leur taille, en crédit accordé et en montant effectivement utilisé, si bien que la marge est visible.",
+    "it": "Quanto le banche svizzere prestano alle imprese per dimensione, come credito concesso e come importo effettivamente utilizzato, così il margine è visibile."
   },
   "fetched_utc": "2026-08-05 13:12:01"
 }

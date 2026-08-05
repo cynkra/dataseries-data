@@ -46,3 +46,12 @@ Swiss inflation with volatile items stripped out, the measure central banks watc
 ## Provenance
 Script: `R/source_snb.R::snb_fetch` (title/topic from `R/snb_cubes.tsv`). Datasheet
 authored 2026-06-01.
+
+## What is special (de)
+Schweizer Teuerung ohne die schwankungsanfälligen Positionen, das Mass, auf das Zentralbanken schauen. Vier Definitionen nebeneinander, als Jahresraten statt Indexstände.
+
+## What is special (fr)
+Inflation suisse hors postes volatils, la mesure que suivent les banques centrales. Quatre définitions côte à côte, en taux annuels et non en niveaux d'indice.
+
+## What is special (it)
+Inflazione svizzera al netto delle voci volatili, la misura seguita dalle banche centrali. Quattro definizioni affiancate, come tassi annui e non livelli d'indice.

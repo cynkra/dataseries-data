@@ -68,3 +68,12 @@ What Swiss companies tell the National Bank each quarter about turnover, capacit
 ## Provenance
 Script: `R/source_snb.R::snb_fetch` (cube `snbkosiq`, title from `R/snb_cubes.tsv`,
 topic "Business surveys"). Datasheet authored 2026-06-01.
+
+## What is special (de)
+Was Schweizer Unternehmen der Nationalbank vierteljährlich zu Umsatz, Kapazität, Personalsuche, Margen, Preisen und Lohnerwartungen berichten.
+
+## What is special (fr)
+Ce que les entreprises suisses rapportent chaque trimestre à la Banque nationale sur le chiffre d'affaires, les capacités, l'embauche, les marges, les prix et les salaires attendus.
+
+## What is special (it)
+Cosa le imprese svizzere riferiscono trimestralmente alla Banca nazionale su fatturato, capacità, assunzioni, margini, prezzi e attese salariali.

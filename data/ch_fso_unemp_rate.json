@@ -105,7 +105,15 @@
       }
     }
   },
-  "concept": "Labour / Unemployment",
+  "concept": {
+    "en": "Labour / Unemployment",
+    "leaf": {
+      "en": "Unemployment",
+      "de": "Arbeitslosigkeit",
+      "fr": "Chômage",
+      "it": "Disoccupazione"
+    }
+  },
   "canonical": false,
   "title": {
     "en": "Unemployment rate (ILO)",
@@ -121,7 +129,10 @@
     "sex": "tot"
   },
   "description": {
-    "en": "Swiss unemployment on the international (ILO) survey definition. Different from registered unemployment at job centres; the two are not interchangeable."
+    "en": "Swiss unemployment on the international (ILO) survey definition. Different from registered unemployment at job centres; the two are not interchangeable.",
+    "de": "Schweizer Erwerbslosigkeit nach der internationalen ILO-Definition. Nicht dasselbe wie die bei den RAV registrierte Arbeitslosigkeit; die beiden sind nicht austauschbar.",
+    "fr": "Chômage suisse selon la définition internationale du BIT. À ne pas confondre avec le chômage inscrit auprès des offices régionaux ; les deux ne sont pas interchangeables.",
+    "it": "Disoccupazione svizzera secondo la definizione internazionale ILO. Da non confondere con la disoccupazione registrata presso gli uffici del lavoro; le due non sono intercambiabili."
   },
   "fetched_utc": "2026-08-05 13:12:07"
 }

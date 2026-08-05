@@ -59,3 +59,12 @@ Interest rates on new Swiss banking business: mortgages, consumer credit, saving
 ## Provenance
 Script: `R/source_snb.R::snb_fetch` (cube list + title from `R/snb_cubes.tsv`).
 Datasheet authored 2026-06-01; parser verified 2026-06-01 (40,857 data rows, 228 series).
+
+## What is special (de)
+Zinssätze im Schweizer Neugeschäft: Hypotheken, Konsumkredite, Spar- und Vorsorgekonten sowie Festgelder, angegeben als Verteilung.
+
+## What is special (fr)
+Taux d'intérêt sur les nouvelles affaires bancaires suisses : hypothèques, crédits à la consommation, épargne, prévoyance et dépôts à terme, donnés en distribution.
+
+## What is special (it)
+Tassi d'interesse sui nuovi affari bancari svizzeri: ipoteche, crediti al consumo, risparmio, previdenza e depositi a termine, indicati come distribuzione.

@@ -364,7 +364,15 @@
       "it": "Moneta e banche"
     }
   },
-  "concept": "Money & banking / Banking & credit",
+  "concept": {
+    "en": "Money & banking / Banking & credit",
+    "leaf": {
+      "en": "Banking & credit",
+      "de": "Banken & Kredit",
+      "fr": "Banques & crédit",
+      "it": "Banche e credito"
+    }
+  },
   "canonical": true,
   "split": "D3",
   "single_select": ["D0", "D1", "D2"],
@@ -376,7 +384,10 @@
     "D2": "F"
   },
   "description": {
-    "en": "Which industries Swiss banks lend to: households, manufacturing, construction, trade, finance, health and the rest of the economy."
+    "en": "Which industries Swiss banks lend to: households, manufacturing, construction, trade, finance, health and the rest of the economy.",
+    "de": "Welchen Branchen Schweizer Banken Kredite geben: Haushalte, Industrie, Bau, Handel, Finanz, Gesundheit und die übrige Wirtschaft.",
+    "fr": "À quelles branches les banques suisses prêtent : ménages, industrie, construction, commerce, finance, santé et le reste de l'économie.",
+    "it": "A quali rami le banche svizzere concedono crediti: economie domestiche, industria, costruzioni, commercio, finanza, sanità e resto dell'economia."
   },
   "fetched_utc": "2026-08-05 13:12:01"
 }

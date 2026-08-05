@@ -75,7 +75,9 @@ for (i in seq_along(cat_rows)) {
   if (!is.null(m$source$key))
     cat_rows[[i]][["source"]] <- list(key = m$source$key, name = m$source$name)
   if (!is.null(m$license)) cat_rows[[i]][["license"]] <- m$license
-  if (!is.null(m$topic))   cat_rows[[i]][["topic"]]   <- m$topic
+  if (!is.null(m$topic))    cat_rows[[i]][["topic"]]    <- m$topic
+  if (!is.null(m$concept))  cat_rows[[i]][["concept"]]  <- m$concept
+  if (!is.null(m$featured)) cat_rows[[i]][["featured"]] <- m$featured
 }
 writeLines(toJSON(cat_rows, auto_unbox = TRUE, pretty = TRUE, null = "null"),
            file.path(DATA_DIR, "catalog.json"))

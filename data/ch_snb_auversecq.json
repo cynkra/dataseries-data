@@ -199,7 +199,15 @@
       "it": "Settore estero"
     }
   },
-  "concept": "External sector / International investment position",
+  "concept": {
+    "en": "External sector / International investment position",
+    "leaf": {
+      "en": "International investment position",
+      "de": "Auslandvermögen",
+      "fr": "Position extérieure",
+      "it": "Posizione sull'estero"
+    }
+  },
   "canonical": true,
   "split": "D1",
   "single_select": "D0",
@@ -210,7 +218,10 @@
     "D2": "T"
   },
   "description": {
-    "en": "Who holds Switzerland's foreign assets and debts, the central bank, banks, government or others, and the resulting net creditor position."
+    "en": "Who holds Switzerland's foreign assets and debts, the central bank, banks, government or others, and the resulting net creditor position.",
+    "de": "Wer die Schweizer Auslandguthaben und -schulden hält — Nationalbank, Banken, Staat oder übrige Sektoren — und die daraus folgende Nettogläubigerposition.",
+    "fr": "Qui détient les avoirs et engagements suisses à l'étranger — banque centrale, banques, État ou autres secteurs — et la position créditrice nette qui en résulte.",
+    "it": "Chi detiene gli attivi e i debiti svizzeri sull'estero — banca centrale, banche, Stato o altri settori — e la posizione creditoria netta che ne risulta."
   },
   "fetched_utc": "2026-08-05 13:12:01"
 }

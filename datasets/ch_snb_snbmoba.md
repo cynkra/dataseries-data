@@ -59,3 +59,12 @@ Central bank money in Switzerland, shown from both sides: how it is created, and
 ## Provenance
 Script: `R/source_snb.R::snb_fetch` (cube `snbmoba`, title from `R/snb_cubes.tsv`,
 topic "Money and banking"). Datasheet authored 2026-06-01.
+
+## What is special (de)
+Notenbankgeld in der Schweiz, von beiden Seiten gezeigt: wie es entsteht, und Notenumlauf plus Giroguthaben der Banken.
+
+## What is special (fr)
+La monnaie centrale en Suisse, montrée des deux côtés : comment elle est créée, et les billets en circulation plus les avoirs à vue des banques.
+
+## What is special (it)
+La moneta centrale in Svizzera, mostrata da entrambi i lati: come viene creata, e le banconote in circolazione più gli averi a vista delle banche.

@@ -792,7 +792,15 @@
       "it": "Settore estero"
     }
   },
-  "concept": "External sector / Balance of payments",
+  "concept": {
+    "en": "External sector / Balance of payments",
+    "leaf": {
+      "en": "Balance of payments",
+      "de": "Zahlungsbilanz",
+      "fr": "Balance des paiements",
+      "it": "Bilancia dei pagamenti"
+    }
+  },
   "canonical": false,
   "split": "D0",
   "single_select": "D2",
@@ -803,7 +811,10 @@
     "D2": "S"
   },
   "description": {
-    "en": "Which countries Switzerland trades services with, around 50 partners plus regional totals, by service type and direction."
+    "en": "Which countries Switzerland trades services with, around 50 partners plus regional totals, by service type and direction.",
+    "de": "Mit welchen Ländern die Schweiz Dienstleistungen handelt — rund 50 Partner plus Regionentotale — nach Dienstleistungsart und Richtung.",
+    "fr": "Avec quels pays la Suisse échange des services — environ 50 partenaires plus les totaux régionaux — par type de service et par sens.",
+    "it": "Con quali paesi la Svizzera scambia servizi — circa 50 partner più i totali regionali — per tipo di servizio e direzione."
   },
   "fetched_utc": "2026-08-05 13:12:02"
 }

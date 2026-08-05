@@ -59,3 +59,12 @@ Swiss government bond yields for every maturity from 1 to 30 years, plus cantons
 Script: `R/source_snb.R::snb_fetch`, cube discovered via `R/snb_cubes.tsv`
 (`rendeiduebd`, topic "Interest rates"). Datasheet authored 2026-06-01; parser
 verified 2026-06-01 (184,434 rows, 48 series).
+
+## What is special (de)
+Renditen Schweizer Staatsanleihen für jede Laufzeit von 1 bis 30 Jahren, dazu Kantone, Banken und Industrie nach Rating, sodass Spreads sichtbar werden.
+
+## What is special (fr)
+Rendements des emprunts d'État suisses pour chaque échéance de 1 à 30 ans, plus cantons, banques et industrie par notation, si bien que les écarts sont visibles.
+
+## What is special (it)
+Rendimenti dei titoli di Stato svizzeri per ogni scadenza da 1 a 30 anni, più Cantoni, banche e industria per rating, così gli spread sono visibili.

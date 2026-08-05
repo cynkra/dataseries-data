@@ -208,7 +208,15 @@
       "it": "Settore estero"
     }
   },
-  "concept": "External sector / International investment position",
+  "concept": {
+    "en": "External sector / International investment position",
+    "leaf": {
+      "en": "International investment position",
+      "de": "Auslandvermögen",
+      "fr": "Position extérieure",
+      "it": "Posizione sull'estero"
+    }
+  },
   "canonical": false,
   "split": "D2",
   "single_select": "D1",
@@ -219,7 +227,10 @@
     "D2": "T"
   },
   "description": {
-    "en": "Which currencies Switzerland's foreign assets and debts are held in, francs, dollars, euros or precious metals, and so how exposed they are."
+    "en": "Which currencies Switzerland's foreign assets and debts are held in, francs, dollars, euros or precious metals, and so how exposed they are.",
+    "de": "In welchen Währungen die Schweizer Auslandguthaben und -schulden gehalten werden — Franken, Dollar, Euro oder Edelmetalle — und wie exponiert sie damit sind.",
+    "fr": "Dans quelles monnaies sont détenus les avoirs et engagements suisses à l'étranger — francs, dollars, euros ou métaux précieux — et donc leur exposition.",
+    "it": "In quali valute sono detenuti gli attivi e i debiti svizzeri sull'estero — franchi, dollari, euro o metalli preziosi — e quindi quanto sono esposti."
   },
   "fetched_utc": "2026-08-05 13:12:01"
 }

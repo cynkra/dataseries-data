@@ -1108,7 +1108,15 @@
       "it": "Prezzi"
     }
   },
-  "concept": "Prices / Inflation forecast",
+  "concept": {
+    "en": "Prices / Inflation forecast",
+    "leaf": {
+      "en": "Inflation forecast",
+      "de": "Inflationsprognose",
+      "fr": "Prévision d'inflation",
+      "it": "Previsione d'inflazione"
+    }
+  },
   "canonical": true,
   "split": "D0",
   "single_select": "D1",
@@ -1118,7 +1126,10 @@
     "D1": "BI"
   },
   "description": {
-    "en": "The Swiss National Bank's inflation forecast, one path per quarterly policy meeting, alongside the inflation that actually followed."
+    "en": "The Swiss National Bank's inflation forecast, one path per quarterly policy meeting, alongside the inflation that actually followed.",
+    "de": "Die Inflationsprognose der Schweizerischen Nationalbank, ein Pfad je vierteljährlicher Lagebeurteilung, neben der tatsächlich eingetretenen Teuerung.",
+    "fr": "La prévision d'inflation de la Banque nationale suisse, un profil par appréciation trimestrielle, à côté de l'inflation effectivement observée.",
+    "it": "La previsione d'inflazione della Banca nazionale svizzera, un profilo per ogni valutazione trimestrale, accanto all'inflazione effettivamente osservata."
   },
   "fetched_utc": "2026-08-05 13:12:03"
 }

@@ -58,3 +58,12 @@ How Swiss customers send money without a card: credit transfers, direct debits a
 ## Provenance
 Script: `R/source_snb.R::snb_fetch` (cube list + title from `R/snb_cubes.tsv`).
 Datasheet authored 2026-06-01; parser verified 2026-06-01 (4,932 data rows, 90 series).
+
+## What is special (de)
+Wie Schweizer Kundinnen und Kunden ohne Karte Geld überweisen: Zahlungsaufträge, Lastschriften und Daueraufträge, papierbasiert oder elektronisch.
+
+## What is special (fr)
+Comment la clientèle suisse transfère de l'argent sans carte : virements, prélèvements et ordres permanents, sur papier ou par voie électronique.
+
+## What is special (it)
+Come la clientela svizzera trasferisce denaro senza carta: bonifici, addebiti diretti e ordini permanenti, su carta o in forma elettronica.

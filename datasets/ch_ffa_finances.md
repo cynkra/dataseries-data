@@ -186,3 +186,12 @@ with GDP itself on its own.
 ## Provenance
 Script: `R/source_ffa.R::ffa_fetch` (wired in `R/pipeline.R`). Datasheet authored
 2026-06-01; parser verified 2026-06-01.
+
+## What is special (de)
+Einnahmen, Ausgaben, Defizit und Schulden von Bund, Kantonen, Gemeinden und Sozialversicherungen, sowohl national als auch nach Maastricht.
+
+## What is special (fr)
+Recettes, dépenses, déficit et dette de la Confédération, des cantons, des communes et des assurances sociales, en base nationale et Maastricht.
+
+## What is special (it)
+Entrate, uscite, disavanzo e debito di Confederazione, Cantoni, Comuni e assicurazioni sociali, su base nazionale e Maastricht.

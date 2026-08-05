@@ -77,3 +77,12 @@ Script: `R/source_fso_excel_sets.R::fso_excel_ch_fso_construction_prices`.
 Datasheet 2026-06-02; parser verified live 2026-06-02 (165 rows, 3 series, 0 NA
 values; anchors Total/Switzerland Oct1998=78.7, Oct2020=100.0, Apr2025=115.8,
 Oct2025=116.2 reproduced).
+
+## What is special (de)
+Preisindex für Bauarbeiten in der Schweiz, halbjährlich im April und Oktober erhoben. Erfasst Hochbau und Tiefbau getrennt.
+
+## What is special (fr)
+Indice des prix des travaux de construction en Suisse, relevé chaque avril et octobre. Bâtiment et génie civil sont couverts séparément.
+
+## What is special (it)
+Indice dei prezzi dei lavori di costruzione in Svizzera, rilevato ogni aprile e ottobre. Edilizia e genio civile sono coperti separatamente.

@@ -158,7 +158,15 @@
       "it": "Mercati finanziari"
     }
   },
-  "concept": "Financial markets / Securities turnover",
+  "concept": {
+    "en": "Financial markets / Securities turnover",
+    "leaf": {
+      "en": "Securities turnover",
+      "de": "Effektenumsätze",
+      "fr": "Transactions sur titres",
+      "it": "Transazioni in titoli"
+    }
+  },
   "canonical": true,
   "split": "D0",
   "single_select": [],
@@ -167,7 +175,10 @@
     "D0": "T2"
   },
   "description": {
-    "en": "How much is traded on the Swiss exchange each month, with shares and bonds split into domestic and foreign paper."
+    "en": "How much is traded on the Swiss exchange each month, with shares and bonds split into domestic and foreign paper.",
+    "de": "Wie viel an der Schweizer Börse monatlich gehandelt wird, mit Aktien und Anleihen getrennt nach inländischen und ausländischen Titeln.",
+    "fr": "Combien s'échange chaque mois à la bourse suisse, actions et obligations séparées en titres suisses et étrangers.",
+    "it": "Quanto viene scambiato ogni mese alla borsa svizzera, con azioni e obbligazioni separate in titoli svizzeri ed esteri."
   },
   "fetched_utc": "2026-08-05 13:12:02"
 }

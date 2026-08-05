@@ -123,7 +123,15 @@
       "it": "Sistemi di pagamento"
     }
   },
-  "concept": "Payment systems / Payments & cash",
+  "concept": {
+    "en": "Payment systems / Payments & cash",
+    "leaf": {
+      "en": "Payments & cash",
+      "de": "Zahlungsverkehr & Bargeld",
+      "fr": "Paiements & espèces",
+      "it": "Pagamenti e contante"
+    }
+  },
   "canonical": false,
   "split": "D0",
   "single_select": [],
@@ -132,7 +140,10 @@
     "D0": "BMF0"
   },
   "description": {
-    "en": "Top-ups and outstanding balances on Swiss prepaid and stored-value payment cards."
+    "en": "Top-ups and outstanding balances on Swiss prepaid and stored-value payment cards.",
+    "de": "Aufladungen und ausstehende Guthaben auf Schweizer Vorauszahlungs- und Wertkarten.",
+    "fr": "Chargements et soldes en circulation sur les cartes suisses prépayées et à valeur stockée.",
+    "it": "Ricariche e saldi in circolazione sulle carte svizzere prepagate e a valore memorizzato."
   },
   "fetched_utc": "2026-08-05 13:12:03"
 }

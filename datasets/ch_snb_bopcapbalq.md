@@ -63,3 +63,12 @@ Cross-border investment flows in and out of Switzerland: direct, portfolio and o
 ## Provenance
 Script: `R/source_snb.R::snb_fetch` (cube `bopcapbalq`, title/topic from
 `R/snb_cubes.tsv`). Datasheet authored 2026-06-01.
+
+## What is special (de)
+Grenzüberschreitende Investitionsströme in die Schweiz und aus ihr heraus: Direkt-, Portfolio- und übrige Investitionen sowie Währungsreserven, vierteljährlich.
+
+## What is special (fr)
+Flux d'investissement transfrontaliers vers et depuis la Suisse : investissements directs, de portefeuille et autres, plus les réserves monétaires, par trimestre.
+
+## What is special (it)
+Flussi d'investimento transfrontalieri verso e dalla Svizzera: investimenti diretti, di portafoglio e altri, più le riserve monetarie, per trimestre.

@@ -200,7 +200,15 @@
       "it": "Conti nazionali"
     }
   },
-  "concept": "National accounts / Investment (gross fixed capital formation)",
+  "concept": {
+    "en": "National accounts / Investment (gross fixed capital formation)",
+    "leaf": {
+      "en": "Investment (gross fixed capital formation)",
+      "de": "Investitionen (Bruttoanlageinvestitionen)",
+      "fr": "Investissements (FBCF)",
+      "it": "Investimenti (investimenti fissi lordi)"
+    }
+  },
   "canonical": false,
   "title": {
     "en": "Investment (GFCF) detail",
@@ -216,7 +224,10 @@
     "asset": "P5111_N111_112G"
   },
   "description": {
-    "en": "Who invests in what: Swiss capital spending by sector (companies, government, households) and by type, from buildings to equipment and software."
+    "en": "Who invests in what: Swiss capital spending by sector (companies, government, households) and by type, from buildings to equipment and software.",
+    "de": "Wer investiert worin: Schweizer Anlageinvestitionen nach Sektor (Unternehmen, Staat, Haushalte) und nach Art, von Bauten bis Ausrüstung und Software.",
+    "fr": "Qui investit dans quoi : les investissements suisses par secteur (entreprises, État, ménages) et par type, du bâtiment aux équipements et logiciels.",
+    "it": "Chi investe in cosa: gli investimenti svizzeri per settore (imprese, Stato, economie domestiche) e per tipo, dalle costruzioni alle attrezzature e al software."
   },
   "units": {
     "en": "CHF million, current prices",

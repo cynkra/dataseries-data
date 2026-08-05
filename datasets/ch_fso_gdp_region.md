@@ -84,3 +84,12 @@ hierarchical `region` dimension (CH → greater region → canton; the `level`
 dimension was removed). Spot-checks match raw values exactly: Zurich canton
 2008 = 135763.7 and 2022 = 164494.8; Geneva 2022 = 61231.3; Ticino 2022 = 36083.6;
 Switzerland 2022 = 791087.2.
+
+## What is special (de)
+Schweizer Wirtschaftsleistung je Kanton und Grossregion, zu laufenden Preisen. Zeigt den Anteil jedes Kantons an seiner Region und am Land.
+
+## What is special (fr)
+Production économique suisse par canton et par grande région, aux prix courants. Montre la part de chaque canton dans sa région et dans le pays.
+
+## What is special (it)
+Produzione economica svizzera per Cantone e grande regione, a prezzi correnti. Mostra la quota di ogni Cantone nella sua regione e nel Paese.

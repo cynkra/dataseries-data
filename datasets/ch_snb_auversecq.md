@@ -64,3 +64,12 @@ and the functional-component line dim (D2, IMF BPM6).
 ## Provenance
 Script: `R/source_snb.R::snb_fetch` (cube `auversecq`, title/topic from
 `R/snb_cubes.tsv`). Datasheet authored 2026-06-01.
+
+## What is special (de)
+Wer die Schweizer Auslandguthaben und -schulden hält — Nationalbank, Banken, Staat oder übrige Sektoren — und die daraus folgende Nettogläubigerposition.
+
+## What is special (fr)
+Qui détient les avoirs et engagements suisses à l'étranger — banque centrale, banques, État ou autres secteurs — et la position créditrice nette qui en résulte.
+
+## What is special (it)
+Chi detiene gli attivi e i debiti svizzeri sull'estero — banca centrale, banche, Stato o altri settori — e la posizione creditoria netta che ne risulta.

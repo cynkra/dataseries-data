@@ -64,3 +64,12 @@ Which industries Swiss banks lend to: households, manufacturing, construction, t
 ## Provenance
 Script: `R/source_snb.R::snb_fetch` (cube `bakredsekbm`, title/topic from
 `R/snb_cubes.tsv`). Datasheet authored 2026-06-01.
+
+## What is special (de)
+Welchen Branchen Schweizer Banken Kredite geben: Haushalte, Industrie, Bau, Handel, Finanz, Gesundheit und die übrige Wirtschaft.
+
+## What is special (fr)
+À quelles branches les banques suisses prêtent : ménages, industrie, construction, commerce, finance, santé et le reste de l'économie.
+
+## What is special (it)
+A quali rami le banche svizzere concedono crediti: economie domestiche, industria, costruzioni, commercio, finanza, sanità e resto dell'economia.

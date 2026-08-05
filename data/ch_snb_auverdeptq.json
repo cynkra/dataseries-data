@@ -568,7 +568,15 @@
       "it": "Settore estero"
     }
   },
-  "concept": "External sector / International investment position",
+  "concept": {
+    "en": "External sector / International investment position",
+    "leaf": {
+      "en": "International investment position",
+      "de": "Auslandvermögen",
+      "fr": "Position extérieure",
+      "it": "Posizione sull'estero"
+    }
+  },
   "canonical": false,
   "split": "D0",
   "single_select": [],
@@ -577,7 +585,10 @@
     "D0": "T0"
   },
   "description": {
-    "en": "Switzerland's gross external debt on the IMF standard, by borrowing sector and by whether it is short or long term."
+    "en": "Switzerland's gross external debt on the IMF standard, by borrowing sector and by whether it is short or long term.",
+    "de": "Die Bruttoauslandschulden der Schweiz nach IMF-Standard, nach Schuldnersektor und nach kurz- oder langfristiger Laufzeit.",
+    "fr": "La dette extérieure brute de la Suisse selon le standard du FMI, par secteur emprunteur et selon l'échéance, courte ou longue.",
+    "it": "Il debito estero lordo della Svizzera secondo lo standard FMI, per settore debitore e per scadenza, breve o lunga."
   },
   "fetched_utc": "2026-08-05 13:12:01"
 }

@@ -56,3 +56,12 @@ What Swiss card payments are spent on and where, in shops or online, at home or 
 ## Provenance
 Script: `R/source_snb.R::snb_fetch` (cube list + title from `R/snb_cubes.tsv`).
 Datasheet authored 2026-06-01; parser verified 2026-06-01 (19,462 data rows, 113 series).
+
+## What is special (de)
+Wofür und wo mit Schweizer Karten bezahlt wird — im Laden oder online, im In- oder Ausland — sowie Bargeldbezüge am Automaten.
+
+## What is special (fr)
+Pour quoi et où l'on paie avec des cartes suisses — en magasin ou en ligne, en Suisse ou à l'étranger — ainsi que les retraits aux distributeurs.
+
+## What is special (it)
+Per cosa e dove si paga con le carte svizzere — in negozio o online, in Svizzera o all'estero — nonché i prelievi ai bancomat.

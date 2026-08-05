@@ -252,7 +252,15 @@
       "it": "Lavoro"
     }
   },
-  "concept": "Labour / Employment outlook",
+  "concept": {
+    "en": "Labour / Employment outlook",
+    "leaf": {
+      "en": "Employment outlook",
+      "de": "Beschäftigungsaussichten",
+      "fr": "Perspectives d'emploi",
+      "it": "Prospettive occupazionali"
+    }
+  },
   "canonical": true,
   "split": "Wirtschaftsabteilung",
   "single_select": [],
@@ -261,7 +269,10 @@
     "Wirtschaftsabteilung": "5-96"
   },
   "description": {
-    "en": "Swiss firms' hiring intentions for the next three months, by industry. Above 1.0 means net hiring planned, below 1.0 net cuts."
+    "en": "Swiss firms' hiring intentions for the next three months, by industry. Above 1.0 means net hiring planned, below 1.0 net cuts.",
+    "de": "Einstellungsabsichten Schweizer Firmen für die nächsten drei Monate, nach Branche. Über 1.0 bedeutet geplanter Stellenaufbau, unter 1.0 Abbau.",
+    "fr": "Intentions d'embauche des entreprises suisses pour les trois prochains mois, par branche. Au-dessus de 1.0 : embauches nettes ; en dessous : réductions.",
+    "it": "Intenzioni di assunzione delle imprese svizzere per i prossimi tre mesi, per ramo. Sopra 1.0 assunzioni nette, sotto 1.0 riduzioni."
   },
   "fetched_utc": "2026-08-05 13:12:06"
 }

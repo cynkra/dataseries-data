@@ -207,7 +207,15 @@
       "it": "Tassi d'interesse e rendimenti"
     }
   },
-  "concept": "Interest rates & yields / Policy & official rates",
+  "concept": {
+    "en": "Interest rates & yields / Policy & official rates",
+    "leaf": {
+      "en": "Policy & official rates",
+      "de": "Leitzinsen & offizielle Zinssätze",
+      "fr": "Taux directeurs & officiels",
+      "it": "Tassi di riferimento e ufficiali"
+    }
+  },
   "canonical": true,
   "split": "D0",
   "single_select": [],
@@ -216,7 +224,10 @@
     "D0": "LZ"
   },
   "description": {
-    "en": "Policy interest rates of the SNB, Fed, ECB, Bank of England and Bank of Japan in one table, including the old Swiss Libor target range."
+    "en": "Policy interest rates of the SNB, Fed, ECB, Bank of England and Bank of Japan in one table, including the old Swiss Libor target range.",
+    "de": "Leitzinsen von SNB, Fed, EZB, Bank of England und Bank of Japan in einer Tabelle, inklusive des früheren Schweizer Libor-Zielbands.",
+    "fr": "Taux directeurs de la BNS, de la Fed, de la BCE, de la Banque d'Angleterre et de la Banque du Japon dans un même tableau, y compris l'ancienne marge cible Libor suisse.",
+    "it": "Tassi di riferimento di BNS, Fed, BCE, Bank of England e Bank of Japan in un'unica tabella, incluso il precedente margine obiettivo Libor svizzero."
   },
   "fetched_utc": "2026-08-05 13:12:03"
 }

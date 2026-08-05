@@ -53,3 +53,12 @@ NOGA division ranges nest by containment (`5-96` ⊃ `5-43`/`45-96` ⊃ groups);
 ## Provenance
 Script: `R/source_fso.R::fso_fetch` (wired in `R/pipeline.R`).
 Datasheet authored 2026-06-02; verified live 2026-06-02 (1780 rows, 20 divisions, Total Q1 2026 ≈ 1.03).
+
+## What is special (de)
+Einstellungsabsichten Schweizer Firmen für die nächsten drei Monate, nach Branche. Über 1.0 bedeutet geplanter Stellenaufbau, unter 1.0 Abbau.
+
+## What is special (fr)
+Intentions d'embauche des entreprises suisses pour les trois prochains mois, par branche. Au-dessus de 1.0 : embauches nettes ; en dessous : réductions.
+
+## What is special (it)
+Intenzioni di assunzione delle imprese svizzere per i prossimi tre mesi, per ramo. Sopra 1.0 assunzioni nette, sotto 1.0 riduzioni.
