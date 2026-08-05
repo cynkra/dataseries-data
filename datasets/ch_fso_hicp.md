@@ -4,7 +4,7 @@
 - **title**: Harmonised CPI (HICP)
 - **concept**: Prices / Consumer prices
 - **canonical**: no (alternate for Consumer prices — the EU-harmonised methodology, for cross-country comparison)
-- **source**: Eurostat
+- **source**: eurostat
 - **license**: eurostat (free reuse, attribution required)
 - **frequency**: monthly
 - **coverage**: 2004-12 .. 2025-12

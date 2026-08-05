@@ -4,7 +4,7 @@
 - **title**: KOF Economic Barometer
 - **concept**: Business cycle & sentiment / Leading barometer
 - **canonical**: yes
-- **source**: KOF Swiss Economic Institute (ETH Zurich)
+- **source**: kof
 - **license**: kof (CC BY, redistributable with attribution)
 - **frequency**: monthly
 - **coverage**: 1991-01 .. 2026-05

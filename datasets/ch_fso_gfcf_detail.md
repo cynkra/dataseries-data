@@ -4,7 +4,7 @@
 - **title**: Investment (GFCF) detail
 - **concept**: National accounts / Investment (gross fixed capital formation)
 - **canonical**: no (headline total-economy GFCF is in `ch_seco_gdp` as part of the GDP expenditure breakdown; this is the institutional-sector × asset-type detail)
-- **source**: Swiss Federal Statistical Office (FSO)
+- **source**: fso
 - **license**: fso (free reuse, attribution required)
 - **frequency**: annual
 - **coverage**: 1995 .. 2024

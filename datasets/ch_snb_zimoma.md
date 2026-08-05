@@ -5,7 +5,7 @@
 - **concept**: Interest rates & yields / Money-market rates
 - **canonical**: yes (the headline money-market-rate cube; `zikredlauf` and `zikrepro` are the lending/published-rate alternates under the same concept)
 - **featured**: SARON
-- **source**: Swiss National Bank (SNB)
+- **source**: snb
 - **license**: snb (free reuse, attribution required)
 - **frequency**: monthly
 - **coverage**: 1972-01 .. 2026-04

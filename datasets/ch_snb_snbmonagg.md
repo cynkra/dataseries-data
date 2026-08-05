@@ -5,7 +5,7 @@
 - **concept**: Money & banking / Monetary aggregates
 - **canonical**: yes
 - **featured**: Money supply
-- **source**: Swiss National Bank (SNB)
+- **source**: snb
 - **license**: snb (free reuse, attribution required)
 - **frequency**: monthly
 - **coverage**: 1984-12 .. 2026-04

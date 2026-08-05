@@ -1,5 +1,5 @@
 {
-  "schema_version": "1.0",
+  "schema_version": "1.1",
   "id": "ch_fso_unemp_rate",
   "dim_order": [
     "origin",
@@ -12,9 +12,13 @@
   },
   "source": {
     "name": {
-      "en": "Swiss Federal Statistical Office (FSO)"
+      "en": "Swiss Federal Statistical Office (FSO)",
+      "de": "Bundesamt für Statistik (BFS)",
+      "fr": "Office fédéral de la statistique (OFS)",
+      "it": "Ufficio federale di statistica (UST)"
     },
-    "url": "https://www.bfs.admin.ch/asset/de/je-d-03.03.01.03"
+    "url": "https://www.bfs.admin.ch/asset/de/je-d-03.03.01.03",
+    "key": "fso"
   },
   "license": "fso",
   "frequency": "monthly",

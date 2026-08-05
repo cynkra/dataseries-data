@@ -5,7 +5,7 @@
 - **concept**: Exchange rates / Bilateral FX
 - **canonical**: yes
 - **featured**: Exchange rates
-- **source**: Swiss National Bank (SNB)
+- **source**: snb
 - **license**: snb (free reuse, attribution required)
 - **frequency**: monthly
 - **coverage**: 1914-01 .. 2026-04

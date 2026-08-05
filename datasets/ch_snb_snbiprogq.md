@@ -4,7 +4,7 @@
 - **title**: Inflation forecast (SNB)
 - **concept**: Prices / Inflation forecast
 - **canonical**: yes (sole canonical for this concept; an annual view is derived on demand by calendar-year averaging the quarterly forecast)
-- **source**: Swiss National Bank
+- **source**: snb
 - **license**: snb (free reuse, attribution required)
 - **frequency**: quarterly
 - **coverage**: 2001-01-01 .. 2028-10-01

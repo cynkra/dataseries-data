@@ -436,6 +436,7 @@ finalize_dataset <- function(ds) {
   ds <- drop_degenerate_dims(ds)
   ds <- attach_labels(ds, DATASHEET_DIR, lines = sheet)     # curated text first …
   ds <- attach_hierarchy(ds, DATASHEET_DIR, lines = sheet)  # … then structure
+  if (!is.null(sheet)) ds$meta <- apply_vocab(ds$meta, sheet, DATA_DIR)
   ds <- write_dataset(ds, DATA_DIR)
   cat(sprintf("wrote %-22s %7d rows, %4d series  [%s]\n",
               ds$id, nrow(ds$data), n_series(ds$data),

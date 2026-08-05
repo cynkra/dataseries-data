@@ -5,9 +5,8 @@
 - **concept**: Domestic economy / Industry & construction turnover
 - **canonical**: yes
 
-- **source**: Swiss Federal Statistical Office (FSO)
-- **license**: fso
-- **frequency**: quarterly
+- **source**: fso
+- **license**: fso - **frequency**: quarterly
 - **coverage**: 1999-Q1 .. 2026-Q1
 - **series**: see provenance
 - **updated**: 2026-Q1 (latest observation)

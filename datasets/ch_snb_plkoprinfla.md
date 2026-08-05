@@ -4,7 +4,7 @@
 - **title**: Core inflation
 - **concept**: Prices / Core inflation
 - **canonical**: yes
-- **source**: Swiss National Bank (SNB)
+- **source**: snb
 - **license**: snb (free reuse, attribution required)
 - **frequency**: monthly
 - **coverage**: 1983-12 .. 2026-04

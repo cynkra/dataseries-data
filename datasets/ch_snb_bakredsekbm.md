@@ -4,7 +4,7 @@
 - **title**: Domestic loans by sector
 - **concept**: Money & banking / Banking & credit
 - **canonical**: yes
-- **source**: Swiss National Bank (SNB)
+- **source**: snb
 - **license**: snb (free reuse, attribution required)
 - **frequency**: monthly
 - **coverage**: 1985-06 .. 2026-03

@@ -1,5 +1,5 @@
 {
-  "schema_version": "1.0",
+  "schema_version": "1.1",
   "id": "ch_fso_hesta",
   "dim_order": [
     "Tourismusregion"
@@ -11,9 +11,13 @@
   },
   "source": {
     "name": {
-      "en": "Swiss Federal Statistical Office (FSO)"
+      "en": "Swiss Federal Statistical Office (FSO)",
+      "de": "Bundesamt für Statistik (BFS)",
+      "fr": "Office fédéral de la statistique (OFS)",
+      "it": "Ufficio federale di statistica (UST)"
     },
-    "url": "https://www.pxweb.bfs.admin.ch/pxweb/en/px-x-1003020000_103"
+    "url": "https://www.pxweb.bfs.admin.ch/pxweb/en/px-x-1003020000_103",
+    "key": "fso"
   },
   "license": "fso",
   "frequency": "monthly",

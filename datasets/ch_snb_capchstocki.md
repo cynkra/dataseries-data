@@ -5,7 +5,7 @@
 - **concept**: Financial markets / Swiss stock indices
 - **canonical**: yes
 - **featured**: Stock market
-- **source**: Swiss National Bank (SNB)
+- **source**: snb
 - **license**: snb (free reuse, attribution required)
 - **frequency**: daily
 - **coverage**: 1989-01-03 .. 2026-05-15

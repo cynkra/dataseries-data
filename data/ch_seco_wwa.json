@@ -1,5 +1,5 @@
 {
-  "schema_version": "1.0",
+  "schema_version": "1.1",
   "id": "ch_seco_wwa",
   "dim_order": [
     "structure"
@@ -11,9 +11,13 @@
   },
   "source": {
     "name": {
-      "en": "State Secretariat for Economic Affairs (SECO)"
+      "en": "State Secretariat for Economic Affairs (SECO)",
+      "de": "Staatssekretariat für Wirtschaft (SECO)",
+      "fr": "Secrétariat d'État à l'économie (SECO)",
+      "it": "Segreteria di Stato dell'economia (SECO)"
     },
-    "url": "https://www.seco.admin.ch/wea"
+    "url": "https://www.seco.admin.ch/wea",
+    "key": "seco"
   },
   "license": "seco",
   "frequency": "weekly",

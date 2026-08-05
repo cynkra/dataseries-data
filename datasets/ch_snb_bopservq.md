@@ -4,7 +4,7 @@
 - **title**: Balance of payments: services
 - **concept**: External sector / Balance of payments
 - **canonical**: no (alternate for Balance of payments)
-- **source**: Swiss National Bank (SNB)
+- **source**: snb
 - **license**: snb (free reuse, attribution required)
 - **frequency**: quarterly
 - **coverage**: 2012-Q1 .. 2025-Q4

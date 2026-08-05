@@ -4,7 +4,7 @@
 - **title**: Published interest rates
 - **concept**: Interest rates & yields / Money-market rates
 - **canonical**: no (alternate; one of the three money-market-rate cubes `zimoma` / `zikredlauf` / `zikrepro`, this one is the published retail rates with the deepest product tree)
-- **source**: Swiss National Bank (SNB)
+- **source**: snb
 - **license**: snb (free reuse, attribution required)
 - **frequency**: monthly
 - **coverage**: 1933-01 .. 2026-03

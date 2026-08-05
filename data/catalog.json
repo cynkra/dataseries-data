@@ -8,7 +8,15 @@
     "canonical": false,
     "featured": null,
     "topic": "Money & banking",
-    "source": "Swiss National Bank",
+    "source": {
+      "key": "snb",
+      "name": {
+        "en": "Swiss National Bank",
+        "de": "Schweizerische Nationalbank (SNB)",
+        "fr": "Banque nationale suisse (BNS)",
+        "it": "Banca nazionale svizzera (BNS)"
+      }
+    },
     "license": "snb",
     "frequency": "monthly",
     "start": "1996-12-01",
@@ -32,7 +40,15 @@
     "canonical": true,
     "featured": "GDP",
     "topic": "National accounts",
-    "source": "State Secretariat for Economic Affairs (SECO)",
+    "source": {
+      "key": "seco",
+      "name": {
+        "en": "State Secretariat for Economic Affairs (SECO)",
+        "de": "Staatssekretariat für Wirtschaft (SECO)",
+        "fr": "Secrétariat d'État à l'économie (SECO)",
+        "it": "Segreteria di Stato dell'economia (SECO)"
+      }
+    },
     "license": "seco",
     "frequency": "quarterly",
     "start": "1980-01-01",
@@ -56,8 +72,16 @@
     "canonical": true,
     "featured": "Consumer confidence",
     "topic": "Business cycle & sentiment",
-    "source": "State Secretariat for Economic Affairs (SECO)",
-    "license": "seco",
+    "source": {
+      "key": "seco",
+      "name": {
+        "en": "State Secretariat for Economic Affairs (SECO)",
+        "de": "Staatssekretariat für Wirtschaft (SECO)",
+        "fr": "Secrétariat d'État à l'économie (SECO)",
+        "it": "Segreteria di Stato dell'economia (SECO)"
+      }
+    },
+    "license": "quarterly",
     "frequency": "quarterly",
     "start": "1972-10-01",
     "end": "2026-04-01",
@@ -77,8 +101,16 @@
     "canonical": true,
     "featured": "Retail trade",
     "topic": "Domestic economy",
-    "source": "Swiss Federal Statistical Office (FSO)",
-    "license": "fso",
+    "source": {
+      "key": "fso",
+      "name": {
+        "en": "Swiss Federal Statistical Office (FSO)",
+        "de": "Bundesamt für Statistik (BFS)",
+        "fr": "Office fédéral de la statistique (OFS)",
+        "it": "Ufficio federale di statistica (UST)"
+      }
+    },
+    "license": "monthly",
     "frequency": "monthly",
     "start": "2000-01-01",
     "end": "2026-06-01",
@@ -98,8 +130,16 @@
     "canonical": true,
     "featured": null,
     "topic": "Domestic economy",
-    "source": "Swiss Federal Statistical Office (FSO)",
-    "license": "fso",
+    "source": {
+      "key": "fso",
+      "name": {
+        "en": "Swiss Federal Statistical Office (FSO)",
+        "de": "Bundesamt für Statistik (BFS)",
+        "fr": "Office fédéral de la statistique (OFS)",
+        "it": "Ufficio federale di statistica (UST)"
+      }
+    },
+    "license": "quarterly",
     "frequency": "quarterly",
     "start": "1999-01-01",
     "end": "2026-01-01",
@@ -119,7 +159,15 @@
     "canonical": true,
     "featured": null,
     "topic": "Domestic economy",
-    "source": "Swiss Federal Statistical Office (FSO)",
+    "source": {
+      "key": "fso",
+      "name": {
+        "en": "Swiss Federal Statistical Office (FSO)",
+        "de": "Bundesamt für Statistik (BFS)",
+        "fr": "Office fédéral de la statistique (OFS)",
+        "it": "Ufficio federale di statistica (UST)"
+      }
+    },
     "license": "fso",
     "frequency": "quarterly",
     "start": "2021-01-01",
@@ -140,7 +188,15 @@
     "canonical": true,
     "featured": null,
     "topic": "Domestic economy",
-    "source": "Swiss Federal Statistical Office (FSO)",
+    "source": {
+      "key": "fso",
+      "name": {
+        "en": "Swiss Federal Statistical Office (FSO)",
+        "de": "Bundesamt für Statistik (BFS)",
+        "fr": "Office fédéral de la statistique (OFS)",
+        "it": "Ufficio federale di statistica (UST)"
+      }
+    },
     "license": "fso",
     "frequency": "monthly",
     "start": "2005-01-01",
@@ -161,7 +217,15 @@
     "canonical": true,
     "featured": null,
     "topic": "Domestic economy",
-    "source": "Swiss Federal Statistical Office (FSO)",
+    "source": {
+      "key": "fso",
+      "name": {
+        "en": "Swiss Federal Statistical Office (FSO)",
+        "de": "Bundesamt für Statistik (BFS)",
+        "fr": "Office fédéral de la statistique (OFS)",
+        "it": "Ufficio federale di statistica (UST)"
+      }
+    },
     "license": "fso",
     "frequency": "annual",
     "start": "1995-01-01",
@@ -182,7 +246,15 @@
     "canonical": true,
     "featured": null,
     "topic": "Labour",
-    "source": "Swiss Federal Statistical Office (FSO)",
+    "source": {
+      "key": "fso",
+      "name": {
+        "en": "Swiss Federal Statistical Office (FSO)",
+        "de": "Bundesamt für Statistik (BFS)",
+        "fr": "Office fédéral de la statistique (OFS)",
+        "it": "Ufficio federale di statistica (UST)"
+      }
+    },
     "license": "fso",
     "frequency": "quarterly",
     "start": "2002-07-01",
@@ -203,7 +275,15 @@
     "canonical": false,
     "featured": null,
     "topic": "Population & demographics",
-    "source": "Swiss Federal Statistical Office (FSO)",
+    "source": {
+      "key": "fso",
+      "name": {
+        "en": "Swiss Federal Statistical Office (FSO)",
+        "de": "Bundesamt für Statistik (BFS)",
+        "fr": "Office fédéral de la statistique (OFS)",
+        "it": "Ufficio federale di statistica (UST)"
+      }
+    },
     "license": "fso",
     "frequency": "annual",
     "start": "2010-01-01",
@@ -224,8 +304,16 @@
     "canonical": true,
     "featured": null,
     "topic": "National accounts",
-    "source": "Federal Finance Administration (FFA)",
-    "license": "opendata.swiss terms of use (open use, attribution required: Federal Finance Administration FFA)",
+    "source": {
+      "key": "ffa",
+      "name": {
+        "en": "Federal Finance Administration (FFA)",
+        "de": "Eidgenössische Finanzverwaltung (EFV)",
+        "fr": "Administration fédérale des finances (AFF)",
+        "it": "Amministrazione federale delle finanze (AFF)"
+      }
+    },
+    "license": "opendata-swiss",
     "frequency": "annual",
     "start": "1990-01-01",
     "end": "2029-01-01",
@@ -245,7 +333,15 @@
     "canonical": true,
     "featured": null,
     "topic": "Business cycle & sentiment",
-    "source": "KOF Swiss Economic Institute",
+    "source": {
+      "key": "kof",
+      "name": {
+        "en": "KOF Swiss Economic Institute",
+        "de": "KOF Konjunkturforschungsstelle der ETH Zürich",
+        "fr": "KOF Centre de recherches conjoncturelles (EPF Zurich)",
+        "it": "KOF Centro di ricerche congiunturali (PF Zurigo)"
+      }
+    },
     "license": "kof",
     "frequency": "monthly",
     "start": "1991-01-01",
@@ -266,7 +362,15 @@
     "canonical": true,
     "featured": null,
     "topic": "Business cycle & sentiment",
-    "source": "KOF Swiss Economic Institute",
+    "source": {
+      "key": "kof",
+      "name": {
+        "en": "KOF Swiss Economic Institute",
+        "de": "KOF Konjunkturforschungsstelle der ETH Zürich",
+        "fr": "KOF Centre de recherches conjoncturelles (EPF Zurich)",
+        "it": "KOF Centro di ricerche congiunturali (PF Zurigo)"
+      }
+    },
     "license": "kof",
     "frequency": "monthly",
     "start": "2007-04-01",
@@ -287,8 +391,16 @@
     "canonical": true,
     "featured": null,
     "topic": "Labour",
-    "source": "University of Zurich (Stellenmarkt-Monitor Schweiz)",
-    "license": "Stellenmarkt-Monitor Schweiz, University of Zurich (free use, attribution required; Adecco Group Swiss Job Market Index)",
+    "source": {
+      "key": "uzh-smm",
+      "name": {
+        "en": "University of Zurich (Stellenmarkt-Monitor Schweiz)",
+        "de": "Universität Zürich (Stellenmarkt-Monitor Schweiz)",
+        "fr": "Université de Zurich (Stellenmarkt-Monitor Schweiz)",
+        "it": "Università di Zurigo (Stellenmarkt-Monitor Schweiz)"
+      }
+    },
+    "license": "uzh-smm",
     "frequency": "quarterly",
     "start": "2003-03-01",
     "end": "2026-06-01",
@@ -308,7 +420,15 @@
     "canonical": true,
     "featured": null,
     "topic": "Domestic economy",
-    "source": "Swiss Federal Statistical Office (FSO)",
+    "source": {
+      "key": "fso",
+      "name": {
+        "en": "Swiss Federal Statistical Office (FSO)",
+        "de": "Bundesamt für Statistik (BFS)",
+        "fr": "Office fédéral de la statistique (OFS)",
+        "it": "Ufficio federale di statistica (UST)"
+      }
+    },
     "license": "fso",
     "frequency": "monthly",
     "start": "2005-01-01",
@@ -329,7 +449,15 @@
     "canonical": true,
     "featured": "Employment",
     "topic": "Labour",
-    "source": "Swiss Federal Statistical Office (FSO)",
+    "source": {
+      "key": "fso",
+      "name": {
+        "en": "Swiss Federal Statistical Office (FSO)",
+        "de": "Bundesamt für Statistik (BFS)",
+        "fr": "Office fédéral de la statistique (OFS)",
+        "it": "Ufficio federale di statistica (UST)"
+      }
+    },
     "license": "fso",
     "frequency": "quarterly",
     "start": "1991-07-01",
@@ -350,7 +478,15 @@
     "canonical": true,
     "featured": null,
     "topic": "Labour",
-    "source": "Swiss Federal Statistical Office (FSO)",
+    "source": {
+      "key": "fso",
+      "name": {
+        "en": "Swiss Federal Statistical Office (FSO)",
+        "de": "Bundesamt für Statistik (BFS)",
+        "fr": "Office fédéral de la statistique (OFS)",
+        "it": "Ufficio federale di statistica (UST)"
+      }
+    },
     "license": "fso",
     "frequency": "quarterly",
     "start": "1992-04-01",
@@ -371,7 +507,15 @@
     "canonical": false,
     "featured": null,
     "topic": "Labour",
-    "source": "Swiss Federal Statistical Office (FSO)",
+    "source": {
+      "key": "fso",
+      "name": {
+        "en": "Swiss Federal Statistical Office (FSO)",
+        "de": "Bundesamt für Statistik (BFS)",
+        "fr": "Office fédéral de la statistique (OFS)",
+        "it": "Ufficio federale di statistica (UST)"
+      }
+    },
     "license": "fso",
     "frequency": "quarterly",
     "start": "1995-07-01",
@@ -392,7 +536,15 @@
     "canonical": true,
     "featured": null,
     "topic": "Labour",
-    "source": "Swiss Federal Statistical Office (FSO)",
+    "source": {
+      "key": "fso",
+      "name": {
+        "en": "Swiss Federal Statistical Office (FSO)",
+        "de": "Bundesamt für Statistik (BFS)",
+        "fr": "Office fédéral de la statistique (OFS)",
+        "it": "Ufficio federale di statistica (UST)"
+      }
+    },
     "license": "fso",
     "frequency": "quarterly",
     "start": "2004-01-01",
@@ -413,7 +565,15 @@
     "canonical": false,
     "featured": null,
     "topic": "Prices",
-    "source": "Swiss Federal Statistical Office (FSO)",
+    "source": {
+      "key": "fso",
+      "name": {
+        "en": "Swiss Federal Statistical Office (FSO)",
+        "de": "Bundesamt für Statistik (BFS)",
+        "fr": "Office fédéral de la statistique (OFS)",
+        "it": "Ufficio federale di statistica (UST)"
+      }
+    },
     "license": "fso",
     "frequency": "monthly",
     "start": "1982-12-01",
@@ -434,7 +594,15 @@
     "canonical": true,
     "featured": null,
     "topic": "Prices",
-    "source": "Swiss Federal Statistical Office (FSO)",
+    "source": {
+      "key": "fso",
+      "name": {
+        "en": "Swiss Federal Statistical Office (FSO)",
+        "de": "Bundesamt für Statistik (BFS)",
+        "fr": "Office fédéral de la statistique (OFS)",
+        "it": "Ufficio federale di statistica (UST)"
+      }
+    },
     "license": "fso",
     "frequency": "monthly",
     "start": "1963-01-01",
@@ -455,7 +623,15 @@
     "canonical": true,
     "featured": null,
     "topic": "Labour",
-    "source": "Swiss Federal Statistical Office (FSO)",
+    "source": {
+      "key": "fso",
+      "name": {
+        "en": "Swiss Federal Statistical Office (FSO)",
+        "de": "Bundesamt für Statistik (BFS)",
+        "fr": "Office fédéral de la statistique (OFS)",
+        "it": "Ufficio federale di statistica (UST)"
+      }
+    },
     "license": "fso",
     "frequency": "annual",
     "start": "1994-01-01",
@@ -476,7 +652,15 @@
     "canonical": true,
     "featured": "Population",
     "topic": "Population & demographics",
-    "source": "Swiss Federal Statistical Office (FSO)",
+    "source": {
+      "key": "fso",
+      "name": {
+        "en": "Swiss Federal Statistical Office (FSO)",
+        "de": "Bundesamt für Statistik (BFS)",
+        "fr": "Office fédéral de la statistique (OFS)",
+        "it": "Ufficio federale di statistica (UST)"
+      }
+    },
     "license": "fso",
     "frequency": "annual",
     "start": "1861-01-01",
@@ -497,7 +681,15 @@
     "canonical": false,
     "featured": null,
     "topic": "Labour",
-    "source": "Swiss Federal Statistical Office (FSO)",
+    "source": {
+      "key": "fso",
+      "name": {
+        "en": "Swiss Federal Statistical Office (FSO)",
+        "de": "Bundesamt für Statistik (BFS)",
+        "fr": "Office fédéral de la statistique (OFS)",
+        "it": "Ufficio federale di statistica (UST)"
+      }
+    },
     "license": "fso",
     "frequency": "monthly",
     "start": "1991-01-01",
@@ -518,7 +710,15 @@
     "canonical": true,
     "featured": null,
     "topic": "National accounts",
-    "source": "Swiss Federal Statistical Office (FSO)",
+    "source": {
+      "key": "fso",
+      "name": {
+        "en": "Swiss Federal Statistical Office (FSO)",
+        "de": "Bundesamt für Statistik (BFS)",
+        "fr": "Office fédéral de la statistique (OFS)",
+        "it": "Ufficio federale di statistica (UST)"
+      }
+    },
     "license": "fso",
     "frequency": "annual",
     "start": "1991-01-01",
@@ -539,7 +739,15 @@
     "canonical": false,
     "featured": null,
     "topic": "Labour",
-    "source": "Swiss Federal Statistical Office (FSO)",
+    "source": {
+      "key": "fso",
+      "name": {
+        "en": "Swiss Federal Statistical Office (FSO)",
+        "de": "Bundesamt für Statistik (BFS)",
+        "fr": "Office fédéral de la statistique (OFS)",
+        "it": "Ufficio federale di statistica (UST)"
+      }
+    },
     "license": "fso",
     "frequency": "quarterly",
     "start": "1991-04-01",
@@ -560,7 +768,15 @@
     "canonical": false,
     "featured": null,
     "topic": "National accounts",
-    "source": "Swiss Federal Statistical Office (FSO)",
+    "source": {
+      "key": "fso",
+      "name": {
+        "en": "Swiss Federal Statistical Office (FSO)",
+        "de": "Bundesamt für Statistik (BFS)",
+        "fr": "Office fédéral de la statistique (OFS)",
+        "it": "Ufficio federale di statistica (UST)"
+      }
+    },
     "license": "fso",
     "frequency": "annual",
     "start": "1995-01-01",
@@ -581,7 +797,15 @@
     "canonical": true,
     "featured": null,
     "topic": "Labour",
-    "source": "Swiss Federal Statistical Office (FSO)",
+    "source": {
+      "key": "fso",
+      "name": {
+        "en": "Swiss Federal Statistical Office (FSO)",
+        "de": "Bundesamt für Statistik (BFS)",
+        "fr": "Office fédéral de la statistique (OFS)",
+        "it": "Ufficio federale di statistica (UST)"
+      }
+    },
     "license": "fso",
     "frequency": "annual",
     "start": "2010-01-01",
@@ -602,7 +826,15 @@
     "canonical": true,
     "featured": null,
     "topic": "National accounts",
-    "source": "Swiss Federal Statistical Office (FSO)",
+    "source": {
+      "key": "fso",
+      "name": {
+        "en": "Swiss Federal Statistical Office (FSO)",
+        "de": "Bundesamt für Statistik (BFS)",
+        "fr": "Office fédéral de la statistique (OFS)",
+        "it": "Ufficio federale di statistica (UST)"
+      }
+    },
     "license": "fso",
     "frequency": "annual",
     "start": "2008-01-01",
@@ -623,7 +855,15 @@
     "canonical": true,
     "featured": null,
     "topic": "Prices",
-    "source": "Swiss Federal Statistical Office (FSO)",
+    "source": {
+      "key": "fso",
+      "name": {
+        "en": "Swiss Federal Statistical Office (FSO)",
+        "de": "Bundesamt für Statistik (BFS)",
+        "fr": "Office fédéral de la statistique (OFS)",
+        "it": "Ufficio federale di statistica (UST)"
+      }
+    },
     "license": "fso",
     "frequency": "semi-annual",
     "start": "1998-10-01",
@@ -644,7 +884,15 @@
     "canonical": true,
     "featured": null,
     "topic": "External sector",
-    "source": "Swiss Federal Statistical Office (FSO) / Federal Office for Customs and Border Security (FOCBS)",
+    "source": {
+      "key": "fso-focbs",
+      "name": {
+        "en": "Swiss Federal Statistical Office (FSO) / Federal Office for Customs and Border Security (FOCBS)",
+        "de": "Bundesamt für Statistik (BFS) / Bundesamt für Zoll und Grenzsicherheit (BAZG)",
+        "fr": "Office fédéral de la statistique (OFS) / Office fédéral de la douane et de la sécurité des frontières (OFDF)",
+        "it": "Ufficio federale di statistica (UST) / Ufficio federale della dogana e della sicurezza dei confini (UDSC)"
+      }
+    },
     "license": "fso",
     "frequency": "annual",
     "start": "1990-01-01",
@@ -665,7 +913,15 @@
     "canonical": false,
     "featured": null,
     "topic": "Prices",
-    "source": "Eurostat",
+    "source": {
+      "key": "eurostat",
+      "name": {
+        "en": "Eurostat",
+        "de": "Eurostat",
+        "fr": "Eurostat",
+        "it": "Eurostat"
+      }
+    },
     "license": "eurostat",
     "frequency": "monthly",
     "start": "2004-12-01",
@@ -686,7 +942,15 @@
     "canonical": true,
     "featured": null,
     "topic": "Business cycle & sentiment",
-    "source": "State Secretariat for Economic Affairs (SECO)",
+    "source": {
+      "key": "seco",
+      "name": {
+        "en": "State Secretariat for Economic Affairs (SECO)",
+        "de": "Staatssekretariat für Wirtschaft (SECO)",
+        "fr": "Secrétariat d'État à l'économie (SECO)",
+        "it": "Segreteria di Stato dell'economia (SECO)"
+      }
+    },
     "license": "seco",
     "frequency": "weekly",
     "start": "2005-01-03",
@@ -707,7 +971,15 @@
     "canonical": true,
     "featured": "Unemployment",
     "topic": "Labour",
-    "source": "Swiss National Bank",
+    "source": {
+      "key": "snb",
+      "name": {
+        "en": "Swiss National Bank",
+        "de": "Schweizerische Nationalbank (SNB)",
+        "fr": "Banque nationale suisse (BNS)",
+        "it": "Banca nazionale svizzera (BNS)"
+      }
+    },
     "license": "snb",
     "frequency": "monthly",
     "start": "1948-01-01",
@@ -728,7 +1000,15 @@
     "canonical": false,
     "featured": null,
     "topic": "Labour",
-    "source": "Swiss National Bank",
+    "source": {
+      "key": "snb",
+      "name": {
+        "en": "Swiss National Bank",
+        "de": "Schweizerische Nationalbank (SNB)",
+        "fr": "Banque nationale suisse (BNS)",
+        "it": "Banca nazionale svizzera (BNS)"
+      }
+    },
     "license": "snb",
     "frequency": "quarterly",
     "start": "1991-07-01",
@@ -749,7 +1029,15 @@
     "canonical": true,
     "featured": "Foreign trade",
     "topic": "External sector",
-    "source": "Swiss National Bank",
+    "source": {
+      "key": "snb",
+      "name": {
+        "en": "Swiss National Bank",
+        "de": "Schweizerische Nationalbank (SNB)",
+        "fr": "Banque nationale suisse (BNS)",
+        "it": "Banca nazionale svizzera (BNS)"
+      }
+    },
     "license": "snb",
     "frequency": "monthly",
     "start": "2012-01-01",
@@ -770,7 +1058,15 @@
     "canonical": true,
     "featured": null,
     "topic": "External sector",
-    "source": "Swiss National Bank",
+    "source": {
+      "key": "snb",
+      "name": {
+        "en": "Swiss National Bank",
+        "de": "Schweizerische Nationalbank (SNB)",
+        "fr": "Banque nationale suisse (BNS)",
+        "it": "Banca nazionale svizzera (BNS)"
+      }
+    },
     "license": "snb",
     "frequency": "quarterly",
     "start": "1985-01-01",
@@ -791,7 +1087,15 @@
     "canonical": false,
     "featured": null,
     "topic": "External sector",
-    "source": "Swiss National Bank",
+    "source": {
+      "key": "snb",
+      "name": {
+        "en": "Swiss National Bank",
+        "de": "Schweizerische Nationalbank (SNB)",
+        "fr": "Banque nationale suisse (BNS)",
+        "it": "Banca nazionale svizzera (BNS)"
+      }
+    },
     "license": "snb",
     "frequency": "quarterly",
     "start": "1985-01-01",
@@ -812,7 +1116,15 @@
     "canonical": false,
     "featured": null,
     "topic": "External sector",
-    "source": "Swiss National Bank",
+    "source": {
+      "key": "snb",
+      "name": {
+        "en": "Swiss National Bank",
+        "de": "Schweizerische Nationalbank (SNB)",
+        "fr": "Banque nationale suisse (BNS)",
+        "it": "Banca nazionale svizzera (BNS)"
+      }
+    },
     "license": "snb",
     "frequency": "quarterly",
     "start": "1999-10-01",
@@ -833,7 +1145,15 @@
     "canonical": true,
     "featured": null,
     "topic": "External sector",
-    "source": "Swiss National Bank",
+    "source": {
+      "key": "snb",
+      "name": {
+        "en": "Swiss National Bank",
+        "de": "Schweizerische Nationalbank (SNB)",
+        "fr": "Banque nationale suisse (BNS)",
+        "it": "Banca nazionale svizzera (BNS)"
+      }
+    },
     "license": "snb",
     "frequency": "quarterly",
     "start": "1985-01-01",
@@ -854,7 +1174,15 @@
     "canonical": true,
     "featured": null,
     "topic": "Money & banking",
-    "source": "Swiss National Bank",
+    "source": {
+      "key": "snb",
+      "name": {
+        "en": "Swiss National Bank",
+        "de": "Schweizerische Nationalbank (SNB)",
+        "fr": "Banque nationale suisse (BNS)",
+        "it": "Banca nazionale svizzera (BNS)"
+      }
+    },
     "license": "snb",
     "frequency": "monthly",
     "start": "1987-12-01",
@@ -875,7 +1203,15 @@
     "canonical": true,
     "featured": null,
     "topic": "Money & banking",
-    "source": "Swiss National Bank",
+    "source": {
+      "key": "snb",
+      "name": {
+        "en": "Swiss National Bank",
+        "de": "Schweizerische Nationalbank (SNB)",
+        "fr": "Banque nationale suisse (BNS)",
+        "it": "Banca nazionale svizzera (BNS)"
+      }
+    },
     "license": "snb",
     "frequency": "monthly",
     "start": "2002-01-01",
@@ -896,7 +1232,15 @@
     "canonical": true,
     "featured": null,
     "topic": "Money & banking",
-    "source": "Swiss National Bank",
+    "source": {
+      "key": "snb",
+      "name": {
+        "en": "Swiss National Bank",
+        "de": "Schweizerische Nationalbank (SNB)",
+        "fr": "Banque nationale suisse (BNS)",
+        "it": "Banca nazionale svizzera (BNS)"
+      }
+    },
     "license": "snb",
     "frequency": "monthly",
     "start": "1985-06-01",
@@ -917,7 +1261,15 @@
     "canonical": true,
     "featured": null,
     "topic": "Money & banking",
-    "source": "Swiss National Bank",
+    "source": {
+      "key": "snb",
+      "name": {
+        "en": "Swiss National Bank",
+        "de": "Schweizerische Nationalbank (SNB)",
+        "fr": "Banque nationale suisse (BNS)",
+        "it": "Banca nazionale svizzera (BNS)"
+      }
+    },
     "license": "snb",
     "frequency": "monthly",
     "start": "1985-06-01",
@@ -938,7 +1290,15 @@
     "canonical": true,
     "featured": null,
     "topic": "External sector",
-    "source": "Swiss National Bank",
+    "source": {
+      "key": "snb",
+      "name": {
+        "en": "Swiss National Bank",
+        "de": "Schweizerische Nationalbank (SNB)",
+        "fr": "Banque nationale suisse (BNS)",
+        "it": "Banca nazionale svizzera (BNS)"
+      }
+    },
     "license": "snb",
     "frequency": "quarterly",
     "start": "1985-01-01",
@@ -959,7 +1319,15 @@
     "canonical": true,
     "featured": null,
     "topic": "External sector",
-    "source": "Swiss National Bank",
+    "source": {
+      "key": "snb",
+      "name": {
+        "en": "Swiss National Bank",
+        "de": "Schweizerische Nationalbank (SNB)",
+        "fr": "Banque nationale suisse (BNS)",
+        "it": "Banca nazionale svizzera (BNS)"
+      }
+    },
     "license": "snb",
     "frequency": "quarterly",
     "start": "1983-01-01",
@@ -980,7 +1348,15 @@
     "canonical": false,
     "featured": null,
     "topic": "External sector",
-    "source": "Swiss National Bank",
+    "source": {
+      "key": "snb",
+      "name": {
+        "en": "Swiss National Bank",
+        "de": "Schweizerische Nationalbank (SNB)",
+        "fr": "Banque nationale suisse (BNS)",
+        "it": "Banca nazionale svizzera (BNS)"
+      }
+    },
     "license": "snb",
     "frequency": "quarterly",
     "start": "1985-01-01",
@@ -1001,7 +1377,15 @@
     "canonical": false,
     "featured": null,
     "topic": "External sector",
-    "source": "Swiss National Bank",
+    "source": {
+      "key": "snb",
+      "name": {
+        "en": "Swiss National Bank",
+        "de": "Schweizerische Nationalbank (SNB)",
+        "fr": "Banque nationale suisse (BNS)",
+        "it": "Banca nazionale svizzera (BNS)"
+      }
+    },
     "license": "snb",
     "frequency": "quarterly",
     "start": "2012-01-01",
@@ -1022,7 +1406,15 @@
     "canonical": true,
     "featured": "Stock market",
     "topic": "Financial markets",
-    "source": "Swiss National Bank",
+    "source": {
+      "key": "snb",
+      "name": {
+        "en": "Swiss National Bank",
+        "de": "Schweizerische Nationalbank (SNB)",
+        "fr": "Banque nationale suisse (BNS)",
+        "it": "Banca nazionale svizzera (BNS)"
+      }
+    },
     "license": "snb",
     "frequency": "daily",
     "start": "1989-01-03",
@@ -1043,7 +1435,15 @@
     "canonical": true,
     "featured": null,
     "topic": "Financial markets",
-    "source": "Swiss National Bank",
+    "source": {
+      "key": "snb",
+      "name": {
+        "en": "Swiss National Bank",
+        "de": "Schweizerische Nationalbank (SNB)",
+        "fr": "Banque nationale suisse (BNS)",
+        "it": "Banca nazionale svizzera (BNS)"
+      }
+    },
     "license": "snb",
     "frequency": "monthly",
     "start": "1993-01-01",
@@ -1064,7 +1464,15 @@
     "canonical": true,
     "featured": "Exchange rates",
     "topic": "Exchange rates",
-    "source": "Swiss National Bank",
+    "source": {
+      "key": "snb",
+      "name": {
+        "en": "Swiss National Bank",
+        "de": "Schweizerische Nationalbank (SNB)",
+        "fr": "Banque nationale suisse (BNS)",
+        "it": "Banca nazionale svizzera (BNS)"
+      }
+    },
     "license": "snb",
     "frequency": "monthly",
     "start": "1914-01-01",
@@ -1085,7 +1493,15 @@
     "canonical": true,
     "featured": null,
     "topic": "Exchange rates",
-    "source": "Swiss National Bank",
+    "source": {
+      "key": "snb",
+      "name": {
+        "en": "Swiss National Bank",
+        "de": "Schweizerische Nationalbank (SNB)",
+        "fr": "Banque nationale suisse (BNS)",
+        "it": "Banca nazionale svizzera (BNS)"
+      }
+    },
     "license": "snb",
     "frequency": "monthly",
     "start": "1973-01-01",
@@ -1106,7 +1522,15 @@
     "canonical": true,
     "featured": null,
     "topic": "Exchange rates",
-    "source": "Swiss National Bank",
+    "source": {
+      "key": "snb",
+      "name": {
+        "en": "Swiss National Bank",
+        "de": "Schweizerische Nationalbank (SNB)",
+        "fr": "Banque nationale suisse (BNS)",
+        "it": "Banca nazionale svizzera (BNS)"
+      }
+    },
     "license": "snb",
     "frequency": "daily",
     "start": "1999-01-01",
@@ -1127,7 +1551,15 @@
     "canonical": true,
     "featured": null,
     "topic": "Prices",
-    "source": "Swiss National Bank",
+    "source": {
+      "key": "snb",
+      "name": {
+        "en": "Swiss National Bank",
+        "de": "Schweizerische Nationalbank (SNB)",
+        "fr": "Banque nationale suisse (BNS)",
+        "it": "Banca nazionale svizzera (BNS)"
+      }
+    },
     "license": "snb",
     "frequency": "quarterly",
     "start": "1970-01-01",
@@ -1148,7 +1580,15 @@
     "canonical": true,
     "featured": "Inflation",
     "topic": "Prices",
-    "source": "Swiss National Bank",
+    "source": {
+      "key": "snb",
+      "name": {
+        "en": "Swiss National Bank",
+        "de": "Schweizerische Nationalbank (SNB)",
+        "fr": "Banque nationale suisse (BNS)",
+        "it": "Banca nazionale svizzera (BNS)"
+      }
+    },
     "license": "snb",
     "frequency": "monthly",
     "start": "1921-01-01",
@@ -1169,7 +1609,15 @@
     "canonical": true,
     "featured": null,
     "topic": "Prices",
-    "source": "Swiss National Bank",
+    "source": {
+      "key": "snb",
+      "name": {
+        "en": "Swiss National Bank",
+        "de": "Schweizerische Nationalbank (SNB)",
+        "fr": "Banque nationale suisse (BNS)",
+        "it": "Banca nazionale svizzera (BNS)"
+      }
+    },
     "license": "snb",
     "frequency": "monthly",
     "start": "1983-12-01",
@@ -1190,7 +1638,15 @@
     "canonical": true,
     "featured": null,
     "topic": "Interest rates & yields",
-    "source": "Swiss National Bank",
+    "source": {
+      "key": "snb",
+      "name": {
+        "en": "Swiss National Bank",
+        "de": "Schweizerische Nationalbank (SNB)",
+        "fr": "Banque nationale suisse (BNS)",
+        "it": "Banca nazionale svizzera (BNS)"
+      }
+    },
     "license": "snb",
     "frequency": "daily",
     "start": "1988-01-04",
@@ -1211,7 +1667,15 @@
     "canonical": true,
     "featured": null,
     "topic": "Prices",
-    "source": "Swiss National Bank",
+    "source": {
+      "key": "snb",
+      "name": {
+        "en": "Swiss National Bank",
+        "de": "Schweizerische Nationalbank (SNB)",
+        "fr": "Banque nationale suisse (BNS)",
+        "it": "Banca nazionale svizzera (BNS)"
+      }
+    },
     "license": "snb",
     "frequency": "quarterly",
     "start": "2001-01-01",
@@ -1232,7 +1696,15 @@
     "canonical": true,
     "featured": null,
     "topic": "Business cycle & sentiment",
-    "source": "Swiss National Bank",
+    "source": {
+      "key": "snb",
+      "name": {
+        "en": "Swiss National Bank",
+        "de": "Schweizerische Nationalbank (SNB)",
+        "fr": "Banque nationale suisse (BNS)",
+        "it": "Banca nazionale svizzera (BNS)"
+      }
+    },
     "license": "snb",
     "frequency": "quarterly",
     "start": "2011-01-01",
@@ -1253,7 +1725,15 @@
     "canonical": false,
     "featured": null,
     "topic": "Money & banking",
-    "source": "Swiss National Bank",
+    "source": {
+      "key": "snb",
+      "name": {
+        "en": "Swiss National Bank",
+        "de": "Schweizerische Nationalbank (SNB)",
+        "fr": "Banque nationale suisse (BNS)",
+        "it": "Banca nazionale svizzera (BNS)"
+      }
+    },
     "license": "snb",
     "frequency": "monthly",
     "start": "1950-01-01",
@@ -1274,7 +1754,15 @@
     "canonical": true,
     "featured": "Money supply",
     "topic": "Money & banking",
-    "source": "Swiss National Bank",
+    "source": {
+      "key": "snb",
+      "name": {
+        "en": "Swiss National Bank",
+        "de": "Schweizerische Nationalbank (SNB)",
+        "fr": "Banque nationale suisse (BNS)",
+        "it": "Banca nazionale svizzera (BNS)"
+      }
+    },
     "license": "snb",
     "frequency": "monthly",
     "start": "1984-12-01",
@@ -1295,7 +1783,15 @@
     "canonical": true,
     "featured": null,
     "topic": "Interest rates & yields",
-    "source": "Swiss National Bank",
+    "source": {
+      "key": "snb",
+      "name": {
+        "en": "Swiss National Bank",
+        "de": "Schweizerische Nationalbank (SNB)",
+        "fr": "Banque nationale suisse (BNS)",
+        "it": "Banca nazionale svizzera (BNS)"
+      }
+    },
     "license": "snb",
     "frequency": "monthly",
     "start": "2000-01-01",
@@ -1316,7 +1812,15 @@
     "canonical": false,
     "featured": null,
     "topic": "Payment systems",
-    "source": "Swiss National Bank",
+    "source": {
+      "key": "snb",
+      "name": {
+        "en": "Swiss National Bank",
+        "de": "Schweizerische Nationalbank (SNB)",
+        "fr": "Banque nationale suisse (BNS)",
+        "it": "Banca nazionale svizzera (BNS)"
+      }
+    },
     "license": "snb",
     "frequency": "monthly",
     "start": "2014-12-01",
@@ -1337,7 +1841,15 @@
     "canonical": false,
     "featured": null,
     "topic": "Payment systems",
-    "source": "Swiss National Bank",
+    "source": {
+      "key": "snb",
+      "name": {
+        "en": "Swiss National Bank",
+        "de": "Schweizerische Nationalbank (SNB)",
+        "fr": "Banque nationale suisse (BNS)",
+        "it": "Banca nazionale svizzera (BNS)"
+      }
+    },
     "license": "snb",
     "frequency": "monthly",
     "start": "1987-07-01",
@@ -1358,7 +1870,15 @@
     "canonical": false,
     "featured": null,
     "topic": "Payment systems",
-    "source": "Swiss National Bank",
+    "source": {
+      "key": "snb",
+      "name": {
+        "en": "Swiss National Bank",
+        "de": "Schweizerische Nationalbank (SNB)",
+        "fr": "Banque nationale suisse (BNS)",
+        "it": "Banca nazionale svizzera (BNS)"
+      }
+    },
     "license": "snb",
     "frequency": "monthly",
     "start": "2005-01-01",
@@ -1379,7 +1899,15 @@
     "canonical": false,
     "featured": null,
     "topic": "Payment systems",
-    "source": "Swiss National Bank",
+    "source": {
+      "key": "snb",
+      "name": {
+        "en": "Swiss National Bank",
+        "de": "Schweizerische Nationalbank (SNB)",
+        "fr": "Banque nationale suisse (BNS)",
+        "it": "Banca nazionale svizzera (BNS)"
+      }
+    },
     "license": "snb",
     "frequency": "monthly",
     "start": "2005-01-01",
@@ -1400,7 +1928,15 @@
     "canonical": false,
     "featured": null,
     "topic": "Payment systems",
-    "source": "Swiss National Bank",
+    "source": {
+      "key": "snb",
+      "name": {
+        "en": "Swiss National Bank",
+        "de": "Schweizerische Nationalbank (SNB)",
+        "fr": "Banque nationale suisse (BNS)",
+        "it": "Banca nazionale svizzera (BNS)"
+      }
+    },
     "license": "snb",
     "frequency": "monthly",
     "start": "2012-03-01",
@@ -1421,7 +1957,15 @@
     "canonical": false,
     "featured": null,
     "topic": "Interest rates & yields",
-    "source": "Swiss National Bank",
+    "source": {
+      "key": "snb",
+      "name": {
+        "en": "Swiss National Bank",
+        "de": "Schweizerische Nationalbank (SNB)",
+        "fr": "Banque nationale suisse (BNS)",
+        "it": "Banca nazionale svizzera (BNS)"
+      }
+    },
     "license": "snb",
     "frequency": "monthly",
     "start": "2009-05-01",
@@ -1442,7 +1986,15 @@
     "canonical": false,
     "featured": null,
     "topic": "Interest rates & yields",
-    "source": "Swiss National Bank",
+    "source": {
+      "key": "snb",
+      "name": {
+        "en": "Swiss National Bank",
+        "de": "Schweizerische Nationalbank (SNB)",
+        "fr": "Banque nationale suisse (BNS)",
+        "it": "Banca nazionale svizzera (BNS)"
+      }
+    },
     "license": "snb",
     "frequency": "monthly",
     "start": "1933-01-01",
@@ -1463,7 +2015,15 @@
     "canonical": true,
     "featured": "SARON",
     "topic": "Interest rates & yields",
-    "source": "Swiss National Bank",
+    "source": {
+      "key": "snb",
+      "name": {
+        "en": "Swiss National Bank",
+        "de": "Schweizerische Nationalbank (SNB)",
+        "fr": "Banque nationale suisse (BNS)",
+        "it": "Banca nazionale svizzera (BNS)"
+      }
+    },
     "license": "snb",
     "frequency": "monthly",
     "start": "1972-01-01",

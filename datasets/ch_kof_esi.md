@@ -4,7 +4,7 @@
 - **title**: KOF Economic Sentiment Index
 - **concept**: Business cycle & sentiment / Sentiment composite
 - **canonical**: yes
-- **source**: KOF Swiss Economic Institute
+- **source**: kof
 - **license**: kof (CC BY, attribution required)
 - **frequency**: monthly
 - **coverage**: 2007-04 .. 2026-05

@@ -4,7 +4,7 @@
 - **title**: Payments and cash withdrawals
 - **concept**: Payment systems / Payments & cash
 - **canonical**: no (alternate for Payments & cash; the flow cube of the `zave*` family, paired with the stock cube `zavezaka`)
-- **source**: Swiss National Bank (SNB)
+- **source**: snb
 - **license**: snb (free reuse, attribution required)
 - **frequency**: monthly
 - **coverage**: 2005-01 .. 2026-03

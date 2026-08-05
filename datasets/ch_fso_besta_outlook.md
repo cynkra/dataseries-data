@@ -4,7 +4,7 @@
 - **title**: Employment outlook
 - **concept**: Labour / Employment outlook
 - **canonical**: yes
-- **source**: Swiss Federal Statistical Office (FSO)
+- **source**: fso
 - **license**: fso (free reuse, attribution required)
 - **frequency**: quarterly
 - **coverage**: 2004-Q1 .. 2026-Q1

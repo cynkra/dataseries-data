@@ -4,8 +4,8 @@
 - **title**: Adecco Group Swiss Job Market Index
 - **concept**: Labour / Job market
 - **canonical**: yes
-- **source**: University of Zurich (Stellenmarkt-Monitor Schweiz)
-- **license**: Stellenmarkt-Monitor Schweiz, UZH (free use, attribution required)
+- **source**: uzh-smm
+- **license**: uzh-smm (free use, attribution required)
 - **frequency**: quarterly
 - **coverage**: 2003 .. 2026
 - **series**: 5

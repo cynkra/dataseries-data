@@ -4,7 +4,7 @@
 - **title**: Jobs by economic division and sex
 - **concept**: Labour / Employment / jobs
 - **canonical**: no (alternate / breakdown of `ch_fso_besta`)
-- **source**: Swiss Federal Statistical Office (FSO)
+- **source**: fso
 - **license**: fso (free reuse, attribution required)
 - **frequency**: quarterly
 - **coverage**: 1995-07 .. 2026-01

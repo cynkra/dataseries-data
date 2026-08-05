@@ -4,7 +4,7 @@
 - **title**: Foreign trade by partner country
 - **concept**: External sector / Foreign trade
 - **canonical**: yes
-- **source**: Swiss Federal Statistical Office (FSO) / Federal Office for Customs and Border Security (FOCBS)
+- **source**: fso-focbs
 - **license**: fso (free reuse, attribution required)
 - **frequency**: annual
 - **coverage**: 1990 .. 2025

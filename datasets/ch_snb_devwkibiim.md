@@ -4,7 +4,7 @@
 - **title**: Bilateral exchange-rate indices
 - **concept**: Exchange rates / Bilateral FX
 - **canonical**: yes
-- **source**: Swiss National Bank (SNB)
+- **source**: snb
 - **license**: snb (free reuse, attribution required)
 - **frequency**: monthly
 - **coverage**: 1973-01 .. 2026-04

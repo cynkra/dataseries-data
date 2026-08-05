@@ -4,7 +4,7 @@
 - **title**: Investment position by currency
 - **concept**: External sector / International investment position
 - **canonical**: no (currency cut of the IIP; companion to canonical overview `auvekomq`)
-- **source**: Swiss National Bank
+- **source**: snb
 - **license**: snb (free reuse, attribution required)
 - **frequency**: quarterly
 - **coverage**: 1985-Q1 .. 2025-Q4

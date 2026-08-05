@@ -4,7 +4,7 @@
 - **title**: Cross-border commuters
 - **concept**: Labour / Cross-border commuters
 - **canonical**: yes
-- **source**: Swiss Federal Statistical Office (FSO)
+- **source**: fso
 - **license**: fso (free reuse, attribution required)
 - **frequency**: quarterly
 - **coverage**: 2002-Q3 .. 2026-Q1

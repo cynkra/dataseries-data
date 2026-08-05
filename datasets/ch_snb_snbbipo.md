@@ -5,7 +5,7 @@
 - **concept**: Money & banking / Monetary aggregates
 - **canonical**: no (supporting series under Monetary aggregates;
   `ch_snb_snbmonagg` is canonical)
-- **source**: Swiss National Bank
+- **source**: snb
 - **license**: snb (free reuse, attribution required)
 - **frequency**: monthly
 - **coverage**: 1996-12-01 .. 2026-04-01

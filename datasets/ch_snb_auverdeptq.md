@@ -4,7 +4,7 @@
 - **title**: External debt
 - **concept**: External sector / International investment position
 - **canonical**: no (external-debt cut of the IIP; companion to canonical overview `auvekomq`)
-- **source**: Swiss National Bank
+- **source**: snb
 - **license**: snb (free reuse, attribution required)
 - **frequency**: quarterly
 - **coverage**: 1999-Q4 .. 2025-Q4

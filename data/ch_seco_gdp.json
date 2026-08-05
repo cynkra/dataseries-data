@@ -1,5 +1,5 @@
 {
-  "schema_version": "1.0",
+  "schema_version": "1.1",
   "id": "ch_seco_gdp",
   "dim_order": [
     "type",
@@ -18,10 +18,11 @@
     "name": {
       "en": "State Secretariat for Economic Affairs (SECO)",
       "de": "Staatssekretariat für Wirtschaft (SECO)",
-      "fr": "Secrétariat d'Etat à l'économie (SECO)",
-      "it": "Segretaria di Stato dell'economia (SECO)"
+      "fr": "Secrétariat d'État à l'économie (SECO)",
+      "it": "Segreteria di Stato dell'economia (SECO)"
     },
-    "url": "https://www.seco.admin.ch/de/bruttoinlandprodukt"
+    "url": "https://www.seco.admin.ch/de/bruttoinlandprodukt",
+    "key": "seco"
   },
   "license": "seco",
   "frequency": "quarterly",
@@ -864,31 +865,29 @@
     }
   },
   "units": {
-    "type": {
-      "nom": {
-        "en": "Swiss Francs, at current prices",
-        "de": "Schweizer Franken, zu laufenden Preisen",
-        "fr": "Francs suisses, aux prix courants",
-        "it": "Franchi, a prezzi correnti"
-      },
-      "real": {
-        "en": "Swiss Francs, chain-linked volumes, reference year 2020",
-        "de": "Schweizer Franken, verkettete reale Werte, Referenzjahr 2020",
-        "fr": "Francs suisses, valeurs réelles chainées, année de réference 2020",
-        "it": "Franchi svizzeri, valori concatenati, anno di referenza 2020"
-      },
-      "gc_q": {
-        "en": "Percentage points",
-        "de": "Prozentpunkte",
-        "fr": "Points de pourcentage",
-        "it": "Punti percentuali"
-      },
-      "gc_y": {
-        "en": "Percentage points",
-        "de": "Prozentpunkte",
-        "fr": "Points de pourcentage",
-        "it": "Punti percentuali"
-      }
+    "nom": {
+      "en": "Swiss Francs, at current prices",
+      "de": "Schweizer Franken, zu laufenden Preisen",
+      "fr": "Francs suisses, aux prix courants",
+      "it": "Franchi, a prezzi correnti"
+    },
+    "real": {
+      "en": "Swiss Francs, chain-linked volumes, reference year 2020",
+      "de": "Schweizer Franken, verkettete reale Werte, Referenzjahr 2020",
+      "fr": "Francs suisses, valeurs réelles chainées, année de réference 2020",
+      "it": "Franchi svizzeri, valori concatenati, anno di referenza 2020"
+    },
+    "gc_q": {
+      "en": "Percentage points",
+      "de": "Prozentpunkte",
+      "fr": "Points de pourcentage",
+      "it": "Punti percentuali"
+    },
+    "gc_y": {
+      "en": "Percentage points",
+      "de": "Prozentpunkte",
+      "fr": "Points de pourcentage",
+      "it": "Punti percentuali"
     }
   },
   "updated": "2026-02-23 16:51:17",

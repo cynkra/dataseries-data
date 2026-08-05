@@ -4,7 +4,7 @@
 - **title**: Producer & import prices
 - **concept**: Prices / Producer & import prices
 - **canonical**: yes
-- **source**: Swiss Federal Statistical Office (FSO)
+- **source**: fso
 - **license**: fso (free reuse, attribution required)
 - **frequency**: monthly
 - **coverage**: 1963-01 .. 2026-04

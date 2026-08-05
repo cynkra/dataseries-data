@@ -4,7 +4,7 @@
 - **title**: Balance of payments: current account
 - **concept**: External sector / Balance of payments
 - **canonical**: yes
-- **source**: Swiss National Bank (SNB)
+- **source**: snb
 - **license**: snb (free reuse, attribution required)
 - **frequency**: quarterly
 - **coverage**: 1983-Q1 .. 2025-Q4

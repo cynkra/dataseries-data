@@ -5,7 +5,7 @@
 - **concept**: Labour / Unemployment
 - **canonical**: yes (registered/SECO definition — the headline unemployment series; the ILO `ch_fso_unemp_rate` is the labelled alternate)
 - **featured**: Unemployment
-- **source**: Swiss National Bank (data originate from SECO)
+- **source**: snb (data originate from SECO)
 - **license**: snb (free reuse, attribution required)
 - **frequency**: monthly
 - **coverage**: 1948-01 .. 2026-04

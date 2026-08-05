@@ -6,9 +6,8 @@
 - **canonical**: yes
 - **featured**: Consumer confidence
 
-- **source**: State Secretariat for Economic Affairs (SECO)
-- **license**: seco
-- **frequency**: quarterly
+- **source**: seco
+- **license**: seco - **frequency**: quarterly
 - **coverage**: 1972-Q4 .. 2026-Q2
 - **series**: 26
 - **updated**: 2026-05-05 (source publish date)

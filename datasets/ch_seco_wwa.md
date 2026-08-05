@@ -4,7 +4,7 @@
 - **title**: Weekly economic activity (WEA)
 - **concept**: Business cycle & sentiment / High-frequency activity tracker
 - **canonical**: yes
-- **source**: State Secretariat for Economic Affairs (SECO)
+- **source**: seco
 - **license**: seco (free reuse, attribution required)
 - **frequency**: weekly
 - **coverage**: 2005-01-03 .. 2026-05-11

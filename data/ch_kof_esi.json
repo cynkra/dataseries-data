@@ -1,5 +1,5 @@
 {
-  "schema_version": "1.0",
+  "schema_version": "1.1",
   "id": "ch_kof_esi",
   "dim_order": [
     "indicator"
@@ -11,9 +11,13 @@
   },
   "source": {
     "name": {
-      "en": "KOF Swiss Economic Institute"
+      "en": "KOF Swiss Economic Institute",
+      "de": "KOF Konjunkturforschungsstelle der ETH Zürich",
+      "fr": "KOF Centre de recherches conjoncturelles (EPF Zurich)",
+      "it": "KOF Centro di ricerche congiunturali (PF Zurigo)"
     },
-    "url": "https://kof.ethz.ch/en/forecasts-and-indicators/indicators/kof-economic-sentiment-indicator.html"
+    "url": "https://kof.ethz.ch/en/forecasts-and-indicators/indicators/kof-economic-sentiment-indicator.html",
+    "key": "kof"
   },
   "license": "kof",
   "frequency": "monthly",

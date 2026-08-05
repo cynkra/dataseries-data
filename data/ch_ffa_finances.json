@@ -1,5 +1,5 @@
 {
-  "schema_version": "1.0",
+  "schema_version": "1.1",
   "id": "ch_ffa_finances",
   "dim_order": [
     "level",
@@ -14,11 +14,15 @@
   },
   "source": {
     "name": {
-      "en": "Federal Finance Administration (FFA)"
+      "en": "Federal Finance Administration (FFA)",
+      "de": "Eidgenössische Finanzverwaltung (EFV)",
+      "fr": "Administration fédérale des finances (AFF)",
+      "it": "Amministrazione federale delle finanze (AFF)"
     },
-    "url": "https://opendata.swiss/en/dataset/hauptaggregate-und-prognosen-im-fs-und-gfs-modell"
+    "url": "https://opendata.swiss/en/dataset/hauptaggregate-und-prognosen-im-fs-und-gfs-modell",
+    "key": "ffa"
   },
-  "license": "opendata.swiss terms of use (open use, attribution required: Federal Finance Administration FFA)",
+  "license": "opendata-swiss",
   "frequency": "annual",
   "dimensions": {
     "level": {

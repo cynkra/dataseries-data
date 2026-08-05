@@ -4,7 +4,7 @@
 - **title**: Consumer prices (detailed basket)
 - **concept**: Prices / Consumer prices
 - **canonical**: no (alternate for Consumer prices — the detailed basket breakdown)
-- **source**: Swiss Federal Statistical Office (FSO)
+- **source**: fso
 - **license**: fso (free reuse, attribution required)
 - **frequency**: monthly
 - **coverage**: 1982-12 .. 2026-04

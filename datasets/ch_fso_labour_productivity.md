@@ -4,7 +4,7 @@
 - **title**: Labour productivity
 - **concept**: National accounts / Labour productivity
 - **canonical**: yes
-- **source**: Swiss Federal Statistical Office (FSO)
+- **source**: fso
 - **license**: fso (free reuse, attribution required)
 - **frequency**: annual
 - **coverage**: 1991 .. 2024

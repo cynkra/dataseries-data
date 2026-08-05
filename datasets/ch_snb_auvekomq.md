@@ -4,7 +4,7 @@
 - **title**: International investment position
 - **concept**: External sector / International investment position
 - **canonical**: yes (IIP overview; the by-currency `auvercurrq` and external-debt `auverdeptq` cuts are companions)
-- **source**: Swiss National Bank
+- **source**: snb
 - **license**: snb (free reuse, attribution required)
 - **frequency**: quarterly
 - **coverage**: 1985-Q1 .. 2025-Q4

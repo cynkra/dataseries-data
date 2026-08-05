@@ -1,5 +1,5 @@
 {
-  "schema_version": "1.0",
+  "schema_version": "1.1",
   "id": "ch_fso_hicp",
   "dim_order": [
     "coicop"
@@ -11,9 +11,13 @@
   },
   "source": {
     "name": {
-      "en": "Eurostat"
+      "en": "Eurostat",
+      "de": "Eurostat",
+      "fr": "Eurostat",
+      "it": "Eurostat"
     },
-    "url": "https://ec.europa.eu/eurostat/databrowser/view/prc_hicp_midx/default/table"
+    "url": "https://ec.europa.eu/eurostat/databrowser/view/prc_hicp_midx/default/table",
+    "key": "eurostat"
   },
   "license": "eurostat",
   "frequency": "monthly",

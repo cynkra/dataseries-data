@@ -4,7 +4,7 @@
 - **title**: Effective exchange-rate index
 - **concept**: Exchange rates / Effective FX index
 - **canonical**: yes
-- **source**: Swiss National Bank (SNB)
+- **source**: snb
 - **license**: snb (free reuse, attribution required)
 - **frequency**: daily
 - **coverage**: 1999-01 .. 2026-04-30

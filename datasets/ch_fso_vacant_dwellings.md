@@ -4,7 +4,7 @@
 - **title**: Vacant dwellings
 - **concept**: Domestic economy / Vacant dwellings
 - **canonical**: yes
-- **source**: Swiss Federal Statistical Office (FSO)
+- **source**: fso
 - **license**: fso (free reuse, attribution required)
 - **frequency**: annual
 - **coverage**: 1995 .. 2025

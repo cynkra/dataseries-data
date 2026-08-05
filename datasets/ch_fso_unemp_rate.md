@@ -4,7 +4,7 @@
 - **title**: Unemployment rate (ILO)
 - **concept**: Labour / Unemployment
 - **canonical**: no (alternate — ILO definition; the registered/SECO `ch_snb_amarbma` is canonical)
-- **source**: Swiss Federal Statistical Office (FSO)
+- **source**: fso
 - **license**: fso (free reuse, attribution required)
 - **frequency**: monthly
 - **coverage**: 1991-01 .. 2026-03

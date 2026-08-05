@@ -14,6 +14,9 @@ transform). The `R/` fetchers, `data/*.{csv,json,parquet}`, `catalog.json`,
 
 - **Never hand-edit** `data/*.json`, `data/catalog.json` or `CATALOG.md` — they are
   regenerated and your edit will be overwritten. Edit the datasheet, then regenerate.
+  The three exceptions — the only hand-maintained files inside `data/` — are the
+  cross-dataset vocabularies `data/categories.json`, `data/sources.json` and
+  `data/licenses.json` (i18n label objects; edit + run the rebuild).
 - When a **source changes** (URL moved, format changed): update the datasheet's
   `## Access` block first, then the `R/source_*.R` fetcher, then regenerate.
 - Full datasheet format + rationale: [`datasets/README.md`](datasets/README.md).

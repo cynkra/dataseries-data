@@ -24,6 +24,7 @@ source(file.path(root, "R", "hierarchy.R"))   # attach_hierarchy()
 cat_keys <- c("concept", "canonical", "featured", "topic", "title")
 
 ids <- sub("\\.md$", "", list.files(DATASHEET_DIR, pattern = "^ch_.*\\.md$"))
+metas <- list()
 for (id in ids) {
   sheet <- ds_read(id, DATASHEET_DIR)     # one read; shared by fields + hierarchy
   dm <- read_datasheet_meta(id, DATASHEET_DIR, lines = sheet)
@@ -50,6 +51,9 @@ for (id in ids) {
   # covers every datasheet-controlled field.
   meta <- attach_labels(list(id = id, meta = meta), DATASHEET_DIR, lines = sheet)$meta
   meta <- attach_hierarchy(list(id = id, meta = meta), DATASHEET_DIR, lines = sheet)$meta
+  meta$schema_version <- DS_SCHEMA_VERSION
+  meta <- apply_vocab(meta, sheet, DATA_DIR)
+  metas[[id]] <- meta
   writeLines(toJSON(meta, auto_unbox = TRUE, pretty = TRUE, null = "null"), sc)
 }
 
@@ -66,6 +70,11 @@ for (i in seq_along(cat_rows)) {
       cat_rows[[i]][[k]] <- dm[[k]]
   }
   cat_rows[[i]][["featured"]] <- dm[["featured"]] %||% NA
+  # schema 1.1: catalog source/license mirror the (vocab-resolved) sidecar
+  m <- metas[[cat_rows[[i]]$id]]
+  if (!is.null(m$source$key))
+    cat_rows[[i]][["source"]] <- list(key = m$source$key, name = m$source$name)
+  if (!is.null(m$license)) cat_rows[[i]][["license"]] <- m$license
 }
 writeLines(toJSON(cat_rows, auto_unbox = TRUE, pretty = TRUE, null = "null"),
            file.path(DATA_DIR, "catalog.json"))

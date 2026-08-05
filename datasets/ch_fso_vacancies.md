@@ -4,7 +4,7 @@
 - **title**: Job vacancies
 - **concept**: Labour / Job vacancies
 - **canonical**: yes
-- **source**: Swiss Federal Statistical Office (FSO)
+- **source**: fso
 - **license**: fso (free reuse, attribution required)
 - **frequency**: quarterly
 - **coverage**: 1992-04 .. 2026-01

@@ -5,7 +5,7 @@
 - **concept**: Prices / Consumer prices
 - **canonical**: yes
 - **featured**: Inflation
-- **source**: Swiss National Bank (SNB)
+- **source**: snb
 - **license**: snb (free reuse, attribution required)
 - **frequency**: monthly
 - **coverage**: 1921-01 .. 2026-04

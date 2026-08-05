@@ -5,7 +5,7 @@
 - **concept**: National accounts / GDP (output, expenditure, income)
 - **canonical**: yes
 - **featured**: GDP
-- **source**: State Secretariat for Economic Affairs (SECO)
+- **source**: seco
 - **license**: seco (free reuse, attribution required)
 - **frequency**: quarterly
 - **coverage**: 1980-01 .. 2025-10

@@ -4,7 +4,7 @@
 - **title**: Official interest rates
 - **concept**: Interest rates & yields / Policy & official rates
 - **canonical**: yes
-- **source**: Swiss National Bank (SNB)
+- **source**: snb
 - **license**: snb (free reuse, attribution required)
 - **frequency**: monthly
 - **coverage**: 2000-01 .. 2026-04

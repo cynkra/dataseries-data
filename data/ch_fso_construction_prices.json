@@ -1,5 +1,5 @@
 {
-  "schema_version": "1.0",
+  "schema_version": "1.1",
   "id": "ch_fso_construction_prices",
   "dim_order": [
     "worktype"
@@ -11,9 +11,13 @@
   },
   "source": {
     "name": {
-      "en": "Swiss Federal Statistical Office (FSO)"
+      "en": "Swiss Federal Statistical Office (FSO)",
+      "de": "Bundesamt für Statistik (BFS)",
+      "fr": "Office fédéral de la statistique (OFS)",
+      "it": "Ufficio federale di statistica (UST)"
     },
-    "url": "https://www.bfs.admin.ch/asset/de/cc-t-05.05.01"
+    "url": "https://www.bfs.admin.ch/asset/de/cc-t-05.05.01",
+    "key": "fso"
   },
   "license": "fso",
   "frequency": "semi-annual",

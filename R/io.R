@@ -106,6 +106,47 @@ read_access <- function(id, datasheet_dir, lines = NULL) {
        fields = f)
 }
 
+# The sidecar/meta schema version. 1.1 = i18n label objects allowed on every
+# curated string (catalog source/categories too) + shared sources.json /
+# licenses.json vocabularies. Readers were widened first (app commit e40b231);
+# see spec/multilingual/2-design.md §6.
+DS_SCHEMA_VERSION <- "1.1"
+
+# Shared cross-dataset vocabularies (data/sources.json, data/licenses.json) —
+# hand-maintained files, the documented exception inside the generated data/.
+ds_sources <- local({
+  cache <- NULL
+  function(data_dir) {
+    if (is.null(cache)) cache <<- jsonlite::fromJSON(
+      file.path(data_dir, "sources.json"), simplifyVector = FALSE)
+    cache
+  }
+})
+
+# Resolve the datasheet-declared vocab keys onto one dataset meta:
+#   - **source**: <key>   -> meta$source$name from sources.json (+ $key; the
+#                            fetcher's url survives, vocab url is the fallback)
+#   - **license**: <key>  -> meta$license normalised to the bare key
+# Both lines live in the datasheet top block; prose tails are ignored.
+apply_vocab <- function(meta, lines, data_dir) {
+  f <- ds_fields(ds_top(lines))
+  lic <- sub("\\s.*$", "", f$license %||% "")
+  if (nzchar(lic)) meta$license <- lic
+  key <- sub("\\s.*$", "", f$source %||% "")
+  if (nzchar(key)) {
+    vocab <- ds_sources(data_dir)[[key]]
+    if (is.null(vocab))
+      stop(sprintf("unknown source key '%s' (not in data/sources.json)", key), call. = FALSE)
+    src <- meta$source %||% list()
+    src$name <- vocab$name
+    src$url <- src$url %||% vocab$url
+    src$key <- key
+    meta$source <- src[c(intersect(c("name", "url"), names(src)),
+                         setdiff(names(src), c("name", "url", "key")), "key")]
+  }
+  meta
+}
+
 # Add `$data = TRUE/FALSE` to every level of every dimension, flagging whether
 # that code actually appears in the data (vs being a grouping-only hierarchy
 # node). Dimension-agnostic; a no-op for datasets without dimensions (e.g. KOF).
@@ -198,7 +239,7 @@ write_dataset <- function(ds, out_dir) {
   span <- range(data$date)
   meta <- c(
     list(
-      schema_version = "1.0",
+      schema_version = DS_SCHEMA_VERSION,
       id = ds$id,
       dim_order = as.list(dc),
       start = as.character(span[1]),
@@ -216,7 +257,10 @@ write_dataset <- function(ds, out_dir) {
 catalog_entry <- function(ds) {
   span <- range(ds$data$date)
   m <- ds$meta
-  src <- m$source$name$en %||% m$source$name %||% NA_character_
+  # schema 1.1: the full i18n name object (+ vocab key); legacy bare string only
+  # when no vocab key was resolved (a dataset without a datasheet).
+  src <- if (!is.null(m$source$key)) list(key = m$source$key, name = m$source$name)
+         else m$source$name$en %||% m$source$name %||% NA_character_
   list(
     id = ds$id,
     title = m$title,

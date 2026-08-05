@@ -4,7 +4,7 @@
 - **title**: New car registrations by fuel
 - **concept**: Domestic economy / New vehicle registrations
 - **canonical**: yes
-- **source**: Swiss Federal Statistical Office (FSO)
+- **source**: fso
 - **license**: fso (free reuse, attribution required)
 - **frequency**: monthly
 - **coverage**: 2005 .. 2026

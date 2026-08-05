@@ -1,5 +1,5 @@
 {
-  "schema_version": "1.0",
+  "schema_version": "1.1",
   "id": "ch_seco_concon",
   "dim_order": [
     "type",
@@ -18,12 +18,13 @@
     "name": {
       "en": "State Secretariat for Economic Affairs (SECO)",
       "de": "Staatssekretariat für Wirtschaft (SECO)",
-      "fr": "Secrétariat d'Etat à l'économie (SECO)",
-      "it": "Segretaria di Stato dell'economia (SECO)"
+      "fr": "Secrétariat d'État à l'économie (SECO)",
+      "it": "Segreteria di Stato dell'economia (SECO)"
     },
-    "url": "https://www.seco.admin.ch/de/konsumentenstimmung"
+    "url": "https://www.seco.admin.ch/de/konsumentenstimmung",
+    "key": "seco"
   },
-  "license": "seco",
+  "license": "quarterly",
   "frequency": "quarterly",
   "dimensions": {
     "type": {
@@ -251,19 +252,17 @@
     }
   },
   "units": {
-    "type": {
-      "index": {
-        "en": "Index",
-        "de": "Index",
-        "fr": "Indice",
-        "it": "Indice"
-      },
-      "sd": {
-        "en": "Standard deviation",
-        "de": "Standardabweichung",
-        "fr": "Écart-type",
-        "it": "Deviazione standard"
-      }
+    "index": {
+      "en": "Index",
+      "de": "Index",
+      "fr": "Indice",
+      "it": "Indice"
+    },
+    "sd": {
+      "en": "Standard deviation",
+      "de": "Standardabweichung",
+      "fr": "Écart-type",
+      "it": "Deviazione standard"
     }
   },
   "updated": "2026-05-23 16:49:08",

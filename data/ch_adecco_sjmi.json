@@ -1,5 +1,5 @@
 {
-  "schema_version": "1.0",
+  "schema_version": "1.1",
   "id": "ch_adecco_sjmi",
   "dim_order": [
     "index"
@@ -11,11 +11,15 @@
   },
   "source": {
     "name": {
-      "en": "University of Zurich (Stellenmarkt-Monitor Schweiz)"
+      "en": "University of Zurich (Stellenmarkt-Monitor Schweiz)",
+      "de": "Universität Zürich (Stellenmarkt-Monitor Schweiz)",
+      "fr": "Université de Zurich (Stellenmarkt-Monitor Schweiz)",
+      "it": "Università di Zurigo (Stellenmarkt-Monitor Schweiz)"
     },
-    "url": "https://www.stellenmarktmonitor.uzh.ch/de/indices/asjmi.html"
+    "url": "https://www.stellenmarktmonitor.uzh.ch/de/indices/asjmi.html",
+    "key": "uzh-smm"
   },
-  "license": "Stellenmarkt-Monitor Schweiz, University of Zurich (free use, attribution required; Adecco Group Swiss Job Market Index)",
+  "license": "uzh-smm",
   "frequency": "quarterly",
   "topic": "Labour",
   "units": {

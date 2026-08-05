@@ -4,7 +4,7 @@
 - **title**: Employees, by economic activity
 - **concept**: Labour / Employment / jobs
 - **canonical**: no (alternate for Employment; overlaps FSO `ch_fso_besta`, flagged in CONCEPT-UNIVERSE; FSO is the intended canonical employment series)
-- **source**: Swiss National Bank
+- **source**: snb
 - **license**: snb (free reuse, attribution required)
 - **frequency**: quarterly
 - **coverage**: 1991-Q3 .. 2025-Q4

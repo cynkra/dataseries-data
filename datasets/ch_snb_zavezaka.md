@@ -4,7 +4,7 @@
 - **title**: Payment cards and ATMs
 - **concept**: Payment systems / Payments & cash
 - **canonical**: no (alternate for Payments & cash; the `zave*` family covers SIC, cards, ATMs and e-money, this cube is the card-and-ATM stock view)
-- **source**: Swiss National Bank (SNB)
+- **source**: snb
 - **license**: snb (free reuse, attribution required)
 - **frequency**: monthly
 - **coverage**: 2005-01 .. 2026-03

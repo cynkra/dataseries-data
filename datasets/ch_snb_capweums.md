@@ -4,7 +4,7 @@
 - **title**: Securities turnover
 - **concept**: Financial markets / Securities turnover
 - **canonical**: yes
-- **source**: Swiss National Bank (SNB)
+- **source**: snb
 - **license**: snb (free reuse, attribution required)
 - **frequency**: monthly
 - **coverage**: 1993-01 .. 2026-04

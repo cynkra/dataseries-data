@@ -4,7 +4,7 @@
 - **title**: Construction prices
 - **concept**: Prices / Construction prices
 - **canonical**: yes
-- **source**: Swiss Federal Statistical Office (FSO)
+- **source**: fso
 - **license**: fso (free reuse, attribution required)
 - **frequency**: semi-annual
 - **coverage**: 1998-10 .. 2025-10

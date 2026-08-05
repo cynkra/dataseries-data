@@ -1,0 +1,80 @@
+{
+  "_comment": "Shared license vocabulary (format-contract §4, finally built; spec: dataseries.org spec/multilingual/2-design.md §5d). Hand-maintained. `license` in catalog/meta is a key into this table; the website resolves display name + terms from here.",
+  "snb": {
+    "name": {
+      "en": "Swiss National Bank — terms of use (non-commercial)",
+      "de": "Schweizerische Nationalbank — Nutzungsbedingungen (nicht kommerziell)",
+      "fr": "Banque nationale suisse — conditions d'utilisation (non commercial)",
+      "it": "Banca nazionale svizzera — condizioni d'uso (non commerciale)"
+    },
+    "url": "https://www.snb.ch/en/the-snb/legal-information",
+    "commercial": "no",
+    "attribution": true
+  },
+  "fso": {
+    "name": {
+      "en": "FSO open data — free use, attribution required",
+      "de": "BFS Open Data — freie Nutzung, Quellenangabe erforderlich",
+      "fr": "Données ouvertes OFS — utilisation libre, indication de la source requise",
+      "it": "Open data UST — uso libero, indicazione della fonte richiesta"
+    },
+    "url": "https://www.bfs.admin.ch/bfs/en/home/fso/terms-of-use.html",
+    "commercial": "yes",
+    "attribution": true
+  },
+  "seco": {
+    "name": {
+      "en": "SECO open data — free use, attribution required",
+      "de": "SECO Open Data — freie Nutzung, Quellenangabe erforderlich",
+      "fr": "Données ouvertes SECO — utilisation libre, indication de la source requise",
+      "it": "Open data SECO — uso libero, indicazione della fonte richiesta"
+    },
+    "url": "https://www.seco.admin.ch/seco/en/home/seco/legal-notices.html",
+    "commercial": "yes",
+    "attribution": true
+  },
+  "kof": {
+    "name": {
+      "en": "KOF Swiss Economic Institute — CC BY 4.0",
+      "de": "KOF Konjunkturforschungsstelle — CC BY 4.0",
+      "fr": "KOF Centre de recherches conjoncturelles — CC BY 4.0",
+      "it": "KOF Centro di ricerche congiunturali — CC BY 4.0"
+    },
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "commercial": "yes",
+    "attribution": true
+  },
+  "eurostat": {
+    "name": {
+      "en": "Eurostat — CC BY 4.0",
+      "de": "Eurostat — CC BY 4.0",
+      "fr": "Eurostat — CC BY 4.0",
+      "it": "Eurostat — CC BY 4.0"
+    },
+    "url": "https://ec.europa.eu/eurostat/about-us/policies/copyright",
+    "commercial": "yes",
+    "attribution": true
+  },
+  "opendata-swiss": {
+    "name": {
+      "en": "opendata.swiss terms of use — open use, attribution required",
+      "de": "opendata.swiss Nutzungsbedingungen — freie Nutzung, Quellenangabe erforderlich",
+      "fr": "Conditions d'utilisation opendata.swiss — utilisation libre, indication de la source requise",
+      "it": "Condizioni d'uso opendata.swiss — uso libero, indicazione della fonte richiesta"
+    },
+    "url": "https://opendata.swiss/en/terms-of-use",
+    "commercial": "yes",
+    "attribution": true
+  },
+  "uzh-smm": {
+    "name": {
+      "en": "Stellenmarkt-Monitor Schweiz, University of Zurich — free use, attribution required",
+      "de": "Stellenmarkt-Monitor Schweiz, Universität Zürich — freie Nutzung, Quellenangabe erforderlich",
+      "fr": "Stellenmarkt-Monitor Schweiz, Université de Zurich — utilisation libre, indication de la source requise",
+      "it": "Stellenmarkt-Monitor Schweiz, Università di Zurigo — uso libero, indicazione della fonte richiesta"
+    },
+    "url": "https://www.stellenmarktmonitor.uzh.ch/",
+    "commercial": "yes",
+    "attribution": true
+  }
+}

@@ -4,7 +4,7 @@
 - **title**: Employed persons (ETS)
 - **concept**: Labour / Employment / employed persons
 - **canonical**: no (alternate / sector-and-sex breakdown of the employment concept; `ch_fso_besta` is the headline)
-- **source**: Swiss Federal Statistical Office (FSO)
+- **source**: fso
 - **license**: fso (free reuse, attribution required)
 - **frequency**: quarterly
 - **coverage**: 1991-04 .. 2025-10

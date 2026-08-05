@@ -1,5 +1,5 @@
 {
-  "schema_version": "1.0",
+  "schema_version": "1.1",
   "id": "ch_snb_bakredbetgrbm",
   "dim_order": [
     "D0",
@@ -14,9 +14,13 @@
   },
   "source": {
     "name": {
-      "en": "Swiss National Bank"
+      "en": "Swiss National Bank",
+      "de": "Schweizerische Nationalbank (SNB)",
+      "fr": "Banque nationale suisse (BNS)",
+      "it": "Banca nazionale svizzera (BNS)"
     },
-    "url": "https://data.snb.ch/en/topics/snb/cube/bakredbetgrbm"
+    "url": "https://data.snb.ch/en/topics/snb/cube/bakredbetgrbm",
+    "key": "snb"
   },
   "license": "snb",
   "frequency": "monthly",

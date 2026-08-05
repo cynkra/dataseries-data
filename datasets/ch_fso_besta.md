@@ -5,7 +5,7 @@
 - **concept**: Labour / Employment / jobs
 - **canonical**: yes
 - **featured**: Employment
-- **source**: Swiss Federal Statistical Office (FSO)
+- **source**: fso
 - **license**: fso (free reuse, attribution required)
 - **frequency**: quarterly
 - **coverage**: 1991-07 .. 2026-01

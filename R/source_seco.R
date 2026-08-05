@@ -57,7 +57,12 @@ seco_fetch <- function(id = "ch_seco_gdp",
     license = "seco",
     frequency = infer_frequency(raw_periods),
     dimensions = .seco_dimensions(sm),
-    units = sm$units,
+    # Canonical units shape (contract §2): keyed by the unit-bearing dimension's
+    # LEVELS directly. SECO's native sidecar nests one dimension layer above that
+    # ({type: {nom: …}}); lift it off when present (schema 1.1 normalisation).
+    units = if (length(sm$units) == 1 && !is.null(names(sm$units)) &&
+                names(sm$units) %in% (sm$dim_order %||% character(0)))
+              sm$units[[1]] else sm$units,
     updated = sm$updated_utc,
     notes = sm$details
   )

@@ -5,7 +5,7 @@
 - **concept**: Population & demographics / Resident population
 - **canonical**: yes
 - **featured**: Population
-- **source**: Swiss Federal Statistical Office (FSO)
+- **source**: fso
 - **license**: fso (free reuse, attribution required)
 - **frequency**: annual
 - **coverage**: 1861 .. 2024

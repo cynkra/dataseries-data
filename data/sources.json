@@ -1,0 +1,75 @@
+{
+  "_comment": "Shared source vocabulary (spec: dataseries.org spec/multilingual/2-design.md §5d). Hand-maintained, like categories.json — the exception in data/. Datasheets declare `- **source**: <key>`; the pipeline resolves key -> this name object into every sidecar + catalog row, so an institution's name is translated once, not per dataset.",
+  "snb": {
+    "name": {
+      "en": "Swiss National Bank",
+      "de": "Schweizerische Nationalbank (SNB)",
+      "fr": "Banque nationale suisse (BNS)",
+      "it": "Banca nazionale svizzera (BNS)"
+    },
+    "url": "https://www.snb.ch/"
+  },
+  "fso": {
+    "name": {
+      "en": "Swiss Federal Statistical Office (FSO)",
+      "de": "Bundesamt für Statistik (BFS)",
+      "fr": "Office fédéral de la statistique (OFS)",
+      "it": "Ufficio federale di statistica (UST)"
+    },
+    "url": "https://www.bfs.admin.ch/"
+  },
+  "seco": {
+    "name": {
+      "en": "State Secretariat for Economic Affairs (SECO)",
+      "de": "Staatssekretariat für Wirtschaft (SECO)",
+      "fr": "Secrétariat d'État à l'économie (SECO)",
+      "it": "Segreteria di Stato dell'economia (SECO)"
+    },
+    "url": "https://www.seco.admin.ch/"
+  },
+  "kof": {
+    "name": {
+      "en": "KOF Swiss Economic Institute",
+      "de": "KOF Konjunkturforschungsstelle der ETH Zürich",
+      "fr": "KOF Centre de recherches conjoncturelles (EPF Zurich)",
+      "it": "KOF Centro di ricerche congiunturali (PF Zurigo)"
+    },
+    "url": "https://kof.ethz.ch/"
+  },
+  "eurostat": {
+    "name": {
+      "en": "Eurostat",
+      "de": "Eurostat",
+      "fr": "Eurostat",
+      "it": "Eurostat"
+    },
+    "url": "https://ec.europa.eu/eurostat"
+  },
+  "ffa": {
+    "name": {
+      "en": "Federal Finance Administration (FFA)",
+      "de": "Eidgenössische Finanzverwaltung (EFV)",
+      "fr": "Administration fédérale des finances (AFF)",
+      "it": "Amministrazione federale delle finanze (AFF)"
+    },
+    "url": "https://www.efv.admin.ch/"
+  },
+  "uzh-smm": {
+    "name": {
+      "en": "University of Zurich (Stellenmarkt-Monitor Schweiz)",
+      "de": "Universität Zürich (Stellenmarkt-Monitor Schweiz)",
+      "fr": "Université de Zurich (Stellenmarkt-Monitor Schweiz)",
+      "it": "Università di Zurigo (Stellenmarkt-Monitor Schweiz)"
+    },
+    "url": "https://www.stellenmarktmonitor.uzh.ch/"
+  },
+  "fso-focbs": {
+    "name": {
+      "en": "Swiss Federal Statistical Office (FSO) / Federal Office for Customs and Border Security (FOCBS)",
+      "de": "Bundesamt für Statistik (BFS) / Bundesamt für Zoll und Grenzsicherheit (BAZG)",
+      "fr": "Office fédéral de la statistique (OFS) / Office fédéral de la douane et de la sécurité des frontières (OFDF)",
+      "it": "Ufficio federale di statistica (UST) / Ufficio federale della dogana e della sicurezza dei confini (UDSC)"
+    },
+    "url": "https://www.bfs.admin.ch/"
+  }
+}

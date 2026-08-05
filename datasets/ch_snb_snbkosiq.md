@@ -4,7 +4,7 @@
 - **title**: Business cycle signals
 - **concept**: Business cycle & sentiment / Business cycle signals
 - **canonical**: yes
-- **source**: Swiss National Bank (SNB)
+- **source**: snb
 - **license**: snb (free reuse, attribution required)
 - **frequency**: quarterly
 - **coverage**: 2011-01 .. 2026-01

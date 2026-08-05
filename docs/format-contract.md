@@ -110,7 +110,23 @@ One array, one entry per dataset. This is all the homepage/search needs without 
 
 Add a **`load` hint** per dataset so the website knows how to fetch it (see website-concept doc): `"whole"` (default — download the whole CSV, instant client-side interaction), `"sliced"` (fetch only the needed slice file — for high-cardinality cubes pre-split at ETL time), or `"parquet"` (query a Parquet via DuckDB-WASM). Threshold for non-`whole`: gzipped size over ~2 MB. Most datasets are `whole`.
 
-## 4. Shared `licenses.json` (repo root, optional but recommended)
+## Schema 1.1 (2026-08)
+
+`schema_version: "1.1"` marks three additive changes (readers that follow the
+"every curated string may be a `{en,de,fr,it}` label object" rule need no code):
+
+- **catalog `source`** is an object `{key, name: {en,de,…}}` (was a bare string);
+  `key` resolves into the shared `sources.json`. **`categories.json`** `name`/`blurb`
+  are label objects.
+- **Shared vocabularies** ship at `data/sources.json` and `data/licenses.json`
+  (hand-maintained, the documented exceptions inside the generated `data/`);
+  `license` values are always bare keys into the license table.
+- **`units` has exactly two shapes**: dataset-wide `{en: …}` (a flat language
+  map), or per-level keyed by the unit-bearing dimension's level codes
+  (`{nom: {en: …}, real: {en: …}}`). The former SECO nesting (`{type: {nom: …}}`)
+  is retired. Disambiguation: shape 1 iff every key is a language code.
+
+## 4. Shared `licenses.json` (BUILT, schema 1.1 — see above)
 
 So the `license` key resolves to display text + terms:
 ```json

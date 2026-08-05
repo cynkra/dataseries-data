@@ -4,7 +4,7 @@
 - **title**: Customer payments (outgoing)
 - **concept**: Payment systems / Payments & cash
 - **canonical**: no (alternate for Payments & cash; the credit-transfer / direct-debit view of the `zave*` family, complementary to the card cubes)
-- **source**: Swiss National Bank (SNB)
+- **source**: snb
 - **license**: snb (free reuse, attribution required)
 - **frequency**: monthly
 - **coverage**: 2012-03 .. 2026-03

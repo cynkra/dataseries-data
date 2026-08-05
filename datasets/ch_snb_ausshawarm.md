@@ -5,7 +5,7 @@
 - **concept**: External sector / Foreign trade
 - **canonical**: yes
 - **featured**: Foreign trade
-- **source**: Swiss National Bank
+- **source**: snb
 - **license**: snb (free reuse, attribution required)
 - **frequency**: monthly
 - **coverage**: 2012-01 .. 2026-03

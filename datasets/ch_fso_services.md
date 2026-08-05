@@ -4,7 +4,7 @@
 - **title**: Services turnover
 - **concept**: Domestic economy / Services turnover
 - **canonical**: yes
-- **source**: Swiss Federal Statistical Office (FSO)
+- **source**: fso
 - **license**: fso (free reuse, attribution required)
 - **frequency**: quarterly
 - **coverage**: 2021-Q1 .. 2026-Q1

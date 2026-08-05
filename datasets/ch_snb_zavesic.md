@@ -4,7 +4,7 @@
 - **title**: Interbank clearing (SIC)
 - **concept**: Payment systems / Payments & cash
 - **canonical**: no (alternate within Payments & cash; one of several `ch_snb_zave*` payment series)
-- **source**: Swiss National Bank (SNB)
+- **source**: snb
 - **license**: snb (free reuse, attribution required)
 - **frequency**: monthly
 - **coverage**: 1987-07 .. 2026-04

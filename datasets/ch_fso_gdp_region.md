@@ -4,7 +4,7 @@
 - **title**: Regional GDP
 - **concept**: National accounts / Regional GDP
 - **canonical**: yes
-- **source**: Swiss Federal Statistical Office (FSO)
+- **source**: fso
 - **license**: fso (free reuse, attribution required)
 - **frequency**: annual
 - **coverage**: 2008 .. 2022

@@ -4,7 +4,7 @@
 - **title**: Real estate prices
 - **concept**: Prices / Real estate prices
 - **canonical**: yes
-- **source**: Swiss National Bank (SNB)
+- **source**: snb
 - **license**: snb (free reuse, attribution required)
 - **frequency**: quarterly
 - **coverage**: 1970-Q1 .. 2026-Q1

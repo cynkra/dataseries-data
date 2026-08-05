@@ -5,8 +5,8 @@
 - **concept**: National accounts / Government finance
 - **canonical**: yes
 
-- **source**: Federal Finance Administration (FFA / Eidg. Finanzverwaltung EFV)
-- **license**: opendata.swiss terms of use (open use, attribution required)
+- **source**: ffa
+- **license**: opendata-swiss (open use, attribution required)
 - **frequency**: annual
 - **coverage**: 1990 .. 2029 (latest financial statement plus budget / financial-plan / forecast years)
 - **series**: see provenance

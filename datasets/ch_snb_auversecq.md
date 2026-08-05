@@ -4,7 +4,7 @@
 - **title**: Investment position by sector
 - **concept**: External sector / International investment position
 - **canonical**: yes
-- **source**: Swiss National Bank (SNB)
+- **source**: snb
 - **license**: snb (free reuse, attribution required)
 - **frequency**: quarterly
 - **coverage**: 1985-01 .. 2025-10

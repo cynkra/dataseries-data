@@ -4,7 +4,7 @@
 - **title**: Hotel overnight stays
 - **concept**: Domestic economy / Hotel overnight stays
 - **canonical**: yes
-- **source**: Swiss Federal Statistical Office (FSO)
+- **source**: fso
 - **license**: fso (free reuse, attribution required)
 - **frequency**: monthly
 - **coverage**: 2005-01 .. 2026-03

@@ -4,7 +4,7 @@
 - **title**: Swiss Wage Index
 - **concept**: Labour / Wages
 - **canonical**: yes
-- **source**: Swiss Federal Statistical Office (FSO)
+- **source**: fso
 - **license**: fso (free reuse, attribution required)
 - **frequency**: annual
 - **coverage**: 1994 .. 2025
