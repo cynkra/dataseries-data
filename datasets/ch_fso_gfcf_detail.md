@@ -11,10 +11,7 @@
 - **series**: 37
 
 ## What is special
-Investment (gross fixed capital formation) by institutional sector and asset type:
-who invests, and in what. Construction is split into building and civil
-engineering, and equipment and software are separated out. The national accounts
-(`ch_seco_gdp`) carry only the single economy-wide total.
+Who invests in what: Swiss capital spending by sector (companies, government, households) and by type, from buildings to equipment and software.
 
 ## Access
 - **type**: fso-dam-csv — FSO DAM asset, master is a long CSV (not xlsx)

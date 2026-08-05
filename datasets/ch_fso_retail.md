@@ -13,10 +13,7 @@
 - **updated**: 2026-05 (latest observation)
 
 ## What is special
-The monthly retail trade turnover index, the headline read on Swiss consumer
-spending, covering NOGA division 47 and its sub-classes. Each series comes raw,
-calendar-adjusted and seasonally plus calendar adjusted, and as nominal turnover
-(total, domestic or foreign) or real volume.
+How much Swiss shops sell each month, the standard read on consumer spending. Raw, calendar-adjusted and seasonally adjusted; nominal or real.
 
 ## Access
 - **type**: fso-sdmx — FSO SDMX (disseminate.stats.swiss, agency CH1.KEU)

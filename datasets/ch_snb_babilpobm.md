@@ -12,13 +12,7 @@
 - **updated**: 2026-03 release (PublishingDate in CSV header)
 
 ## What is special
-The monthly balance sheet of banks in Switzerland, line by line: on the asset side
-liquid assets, amounts due from banks and customers, mortgage loans, trading
-portfolio and financial investments; on the liabilities side amounts due to banks
-and customers, bonds, provisions and the equity components. Each item is crossed
-with a currency split (CHF, EUR, USD) and a bank-category split (all banks versus
-big banks), which is what lets you watch the currency composition of the banking
-system's book rather than just totals.
+Assets and liabilities of banks in Switzerland month by month, item by item, split by currency and by bank size.
 
 ## Access
 - **type**: snb-cube — SNB cube API

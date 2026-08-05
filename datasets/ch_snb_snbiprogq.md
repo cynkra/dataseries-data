@@ -12,11 +12,7 @@
 - **updated**: 2026-03
 
 ## What is special
-The SNB's conditional inflation forecast, one path per quarterly monetary-policy
-assessment, each labelled with the policy rate it assumes. Alongside the forecasts
-it carries the observed inflation path, so any historical forecast can be aligned
-against the inflation that actually followed. Values extend into the future by
-construction.
+The Swiss National Bank's inflation forecast, one path per quarterly policy meeting, alongside the inflation that actually followed.
 
 ## Access
 - **type**: snb-cube — SNB cube API

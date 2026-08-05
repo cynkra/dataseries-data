@@ -12,12 +12,7 @@
 - **updated**: 2025-Q4 (latest observation; SNB publishes ~3 months in arrears)
 
 ## What is special
-Trade in services broken down by counterpart country, which the headline
-balance-of-payments series do not provide. Coverage runs from regional totals
-(Europe, the EU, Africa, the Americas, Asia, Oceania) down to about 50 individual
-partners, crossed with the service components and the accounting entry. Country
-detail for services was introduced with the BPM6 standard, so the history is
-shorter than for the other balance-of-payments series.
+Which countries Switzerland trades services with, around 50 partners plus regional totals, by service type and direction.
 
 ## Access
 - **type**: snb-cube — SNB cube API

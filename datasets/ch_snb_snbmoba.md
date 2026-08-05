@@ -12,12 +12,7 @@
 - **updated**: 2026-04 (use API PublishingDate header for exact day)
 
 ## What is special
-The Swiss monetary base, giving both sides of central-bank money creation in one
-table. The origination side (foreign-currency positions, securities portfolio,
-money-market transactions) and the utilisation side (banknotes in circulation,
-sight deposits of domestic banks) sum to the same total. Seasonal adjustment is
-carried as its own series rather than a toggle. For money held by the public
-rather than central-bank money, see `ch_snb_snbmonagg`.
+Central bank money in Switzerland, shown from both sides: how it is created, and banknotes plus the sight deposits banks hold.
 
 ## Access
 - **type**: snb-cube — SNB cube API

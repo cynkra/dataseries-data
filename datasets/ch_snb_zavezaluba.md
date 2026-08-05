@@ -12,12 +12,7 @@
 - **updated**: 2026-03 (latest published period)
 
 ## What is special
-Card payment flows, described along five axes: the kind of payment, the card type,
-where the card was issued, where it was used, and the metric. Separates
-card-present from online payments, breaks out contactless, and isolates cash
-withdrawals at ATMs. Because both card origin and place of transaction carry a
-domestic/foreign split, it can be read for inbound tourism spending or for Swiss
-spending abroad.
+What Swiss card payments are spent on and where, in shops or online, at home or abroad, plus cash withdrawn at ATMs.
 
 ## Access
 - **type**: snb-cube — SNB cube API

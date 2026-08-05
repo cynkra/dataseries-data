@@ -12,12 +12,7 @@
 - **updated**: 2026-04 (use API PublishingDate header for exact day)
 
 ## What is special
-Activity in SIC, Switzerland's real-time gross settlement system for interbank
-franc payments. Reports transaction counts and turnover as monthly totals, daily
-maxima and averages per working day, and additionally splits both by payment size
-band: under CHF 5,000, CHF 5,000 to just under a million, and a million and above.
-The long history makes it a useful proxy for the growth and digitisation of Swiss
-interbank payment volume.
+Interbank payments settled in Swiss francs through SIC each month: how many, how much, and split by payment size.
 
 ## Access
 - **type**: snb-cube — SNB cube API

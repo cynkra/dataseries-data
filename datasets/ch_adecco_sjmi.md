@@ -12,11 +12,7 @@
 - **updated**: 2026 Q1
 
 ## What is special
-Index of publicly advertised job vacancies in Switzerland, compiled by the
-Stellenmarkt-Monitor at the University of Zurich and published as the Adecco Group
-Swiss Job Market Index (Q1 2008 = 100). A leading indicator of labour demand,
-broken down by where the vacancy was advertised: online job portals, company
-websites and print.
+Quarterly index of advertised job vacancies in Switzerland, from the University of Zurich. Split by where the job was posted: online, company site, press.
 
 ## Access
 - **type**: scraped

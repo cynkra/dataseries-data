@@ -12,12 +12,7 @@
 - **updated**: 2026-05
 
 ## What is special
-The KOF Economic Barometer, Switzerland's headline leading indicator for the
-business cycle, published monthly near month-end by the KOF Swiss Economic
-Institute at ETH Zurich. A composite of a large basket of predictors, designed to
-anticipate the year-on-year growth of Swiss GDP a few months ahead and normalised
-so the long-run mean sits near 100: above 100 signals above-average expected
-growth, below 100 the reverse.
+Switzerland's leading business-cycle indicator, published monthly by ETH Zurich. Around 100 is average; above signals faster growth ahead.
 
 ## Access
 - **type**: kof-api — KOF Time Series Database API **v2**

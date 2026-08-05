@@ -82,7 +82,7 @@
     "worktype": "total"
   },
   "description": {
-    "en": "The Swiss Construction Price Index, surveyed twice a year with April and October reference months (October 2020 = 100). Covers construction as a whole plus its two branches, building construction (Hochbau) and civil engineering (Tiefbau)."
+    "en": "Price index for construction work in Switzerland, surveyed each April and October. Covers building construction and civil engineering separately."
   },
   "units": {
     "en": "Index (October 2020 = 100)",

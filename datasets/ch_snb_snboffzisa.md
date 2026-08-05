@@ -12,12 +12,7 @@
 - **updated**: 2026-04 (use API PublishingDate header for exact day)
 
 ## What is special
-Official policy rates of the major central banks in one table, organised by
-country, so it doubles as a cross-central-bank comparison. Switzerland carries the
-SNB policy rate and the historical target range for three-month franc Libor, which
-captures the regime change from a target band to a single policy rate. The euro
-area has three facility rates; the United States, the United Kingdom and Japan one
-each.
+Policy interest rates of the SNB, Fed, ECB, Bank of England and Bank of Japan in one table, including the old Swiss Libor target range.
 
 ## Access
 - **type**: snb-cube — SNB cube API

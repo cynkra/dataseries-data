@@ -63,7 +63,7 @@
     "indicator": "ch.kof.esi.index.v2018"
   },
   "description": {
-    "en": "The KOF Economic Sentiment Index, a survey-based composite of firms' assessment of their current and expected business situation. Sibling to the KOF Economic Barometer (ch_kof_barometer), which is built from hard predictors rather than survey responses. Two methodology vintages run in parallel: the original pre-Brexit version and the standard 2018 version."
+    "en": "How Swiss firms rate their current and expected business situation, from ETH Zurich survey data. Two methodology versions run side by side."
   },
   "fetched_utc": "2026-08-05 13:12:06"
 }

@@ -13,11 +13,7 @@
 - **updated**: 2026-04 (latest published period)
 
 ## What is special
-Money-market reference rates for Switzerland and the major currency areas — the
-United States, Japan, the United Kingdom and the euro area — on one axis, so franc
-rates compare directly against them. Spans the reference-rate transition, with the
-overnight benchmarks SARON, SOFR, TONA, SONIA and ESTR alongside the legacy
-three-month Libor and Euribor series.
+Money-market rates for Switzerland, the US, Japan, the UK and the euro area on one chart, spanning the switch from Libor to SARON and SOFR.
 
 ## Access
 - **type**: snb-cube — SNB cube API

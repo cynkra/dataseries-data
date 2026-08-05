@@ -12,12 +12,7 @@
 - **updated**: 2025-Q4 (latest observation; SNB publishes ~3 months in arrears)
 
 ## What is special
-The detailed current account of the Swiss balance of payments: goods (including
-merchanting), services (transport, tourism, insurance, financial services,
-licence fees, R&D and business services), primary income from labour and
-investment, and secondary income. Each component is reported as receipts, expenses
-and the net of the two, which is where Switzerland's structural current-account
-surplus and the weight of merchanting and investment income become visible.
+Switzerland's current account in detail, goods, services and income from work and investment, showing where the structural surplus comes from.
 
 ## Access
 - **type**: snb-cube — SNB cube API

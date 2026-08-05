@@ -12,10 +12,7 @@
 - **updated**: 2026-05-05
 
 ## What is special
-The Swiss consumer price index with its full basket breakdown: 595 COICOP
-positions from the total index down to individual goods and services (food,
-housing, transport). Base December 2025 = 100. For the headline index alone over a
-much longer history, use `ch_snb_plkopr`.
+Swiss inflation with the full shopping basket: 595 items from the total index down to food, housing and transport. Base December 2025 = 100.
 
 ## Access
 - **type**: fso-dam-excel — FSO DAM Excel asset

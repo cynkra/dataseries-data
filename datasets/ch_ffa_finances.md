@@ -13,13 +13,7 @@
 - **updated**: 2025-03 (CKAN `modified`)
 
 ## What is special
-Consolidated Swiss public finances from the Federal Finance Administration:
-receipts, expenditure, the budget balance, gross and net debt, and the GDP ratios,
-for the Confederation, the 26 cantons, the communes and the social-security funds.
-Reported on both the Swiss FS model and the internationally comparable GFS
-(Maastricht) basis. Unlike most series here it extends past the last closed
-accounts into official budget and forecast years, flagged in the estimate
-dimension.
+Receipts, spending, deficit and debt for the Swiss Confederation, cantons, communes and social security, on both the national and Maastricht basis.
 
 ## Access
 - **type**: scraped — opendata.swiss (CKAN) → data.finance.admin.ch CSV asset

@@ -12,11 +12,7 @@
 - **updated**: 2025-Q4 (latest observation; PublishingDate in CSV header is the freshness signal)
 
 ## What is special
-Employees by economic activity, crossed with an employment basis: total,
-full-time, part-time and full-time equivalents. That cross is the point — it makes
-part-time intensity and the FTE conversion readable per sector, which the FSO job
-statistics (`ch_fso_besta`) do not expose the same way. Values are in thousands of
-persons.
+Employees by industry, split into full-time, part-time and full-time equivalents, so part-time intensity per sector reads directly. In thousands.
 
 ## Access
 - **type**: snb-cube — SNB cube API

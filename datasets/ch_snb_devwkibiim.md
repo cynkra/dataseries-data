@@ -11,11 +11,7 @@
 - **series**: 324
 
 ## What is special
-Bilateral exchange-rate indices of the Swiss franc against about 54 partner
-currencies. Real rates come in two deflator variants, consumer-price and
-producer-price based, alongside the nominal index, and each is given both as an
-index and as a year-on-year percentage change. For the trade-weighted summary
-rather than individual partners, see `ch_snb_devwkieffid`.
+Franc exchange-rate indices against about 54 currencies, nominal and inflation-adjusted, as index levels and as yearly changes.
 
 ## Access
 - **type**: snb-cube — SNB cube API

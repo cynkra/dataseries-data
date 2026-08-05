@@ -199,7 +199,7 @@
     "D0": "T0"
   },
   "description": {
-    "en": "The installed base of the Swiss card landscape: credit, debit and e-money cards in circulation, plus the number of ATMs. Counts only, no turnover — for payment flows see ch_snb_zavezaluba. A contactless subtotal is reported separately and begins in late 2014, once contactless cards had rolled out."
+    "en": "How many credit, debit and prepaid cards are in circulation in Switzerland, plus the number of ATMs. Counts only, no spending."
   },
   "fetched_utc": "2026-08-05 13:12:03"
 }

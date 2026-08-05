@@ -12,12 +12,7 @@
 - **updated**: 2025-Q4 (latest observation; PublishingDate in CSV header is the freshness signal)
 
 ## What is special
-The currency cut of Switzerland's international investment position: how much of
-the country's foreign assets and liabilities are denominated in Swiss francs, US
-dollars, euros, other currencies and precious metals. This is what makes the
-external balance sheet sensitive to exchange-rate moves. Currency is crossed with
-accounting entry and functional component, so a query such as US-dollar portfolio
-liabilities is direct. For the headline position, see `ch_snb_auvekomq`.
+Which currencies Switzerland's foreign assets and debts are held in, francs, dollars, euros or precious metals, and so how exposed they are.
 
 ## Access
 - **type**: snb-cube — SNB cube API

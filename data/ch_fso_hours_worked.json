@@ -187,7 +187,7 @@
     "worktime": "_T"
   },
   "description": {
-    "en": "Hours actually worked in the Swiss economy: the total annual volume, the annual hours per job, and the usual weekly hours per job — the figure behind \"the Swiss work about 31 hours a week, not 42\". All three are cut by sex and by full-time or part-time band, so Switzerland's high part-time rate among women is directly visible."
+    "en": "How many hours the Swiss actually work: total volume, hours per job, and usual weekly hours, split by sex and by full-time or part-time."
   },
   "fetched_utc": "2026-08-05 13:12:07"
 }

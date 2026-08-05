@@ -13,11 +13,7 @@
 - **updated**: not published (live PX-Web pull; latest observation 2026Q1)
 
 ## What is special
-The Federal Statistical Office's job statistics (BESTA): the number of jobs in
-Switzerland by economic division (NOGA), from the grand total down to two-digit
-divisions such as pharmaceuticals, financial services and human health. The
-division depth is what makes the structural shift of the Swiss economy readable
-from a single table.
+Number of jobs in Switzerland by industry, quarterly, down to two-digit divisions such as pharmaceuticals, financial services and health.
 
 ## Access
 - **type**: fso-pxweb — FSO PX-Web (json-stat2)

@@ -13,11 +13,7 @@
 - **updated**: 2026-04 (latest observation)
 
 ## What is special
-Bilateral Swiss franc exchange rates against the major currencies, quoted as CHF
-per unit of foreign currency. The unit is part of each currency's label — EUR 1
-and GBP 1, but DKK 100 and JPY 100 — so the multiplier matters when comparing
-rates. Each currency is given as both a monthly average and an end-of-month value,
-and the table also carries 3-month and 6-month US dollar forward rates.
+Swiss franc exchange rates against the major currencies, monthly average and month end. Quoted per unit, but per 100 for yen, krone and others.
 
 ## Access
 - **type**: snb-cube — SNB cube API

@@ -1118,7 +1118,7 @@
     "D1": "BI"
   },
   "description": {
-    "en": "The SNB's conditional inflation forecast, one path per quarterly monetary-policy assessment, each labelled with the policy rate it assumes. Alongside the forecasts it carries the observed inflation path, so any historical forecast can be aligned against the inflation that actually followed. Values extend into the future by construction."
+    "en": "The Swiss National Bank's inflation forecast, one path per quarterly policy meeting, alongside the inflation that actually followed."
   },
   "fetched_utc": "2026-08-05 13:12:03"
 }

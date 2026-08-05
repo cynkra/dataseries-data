@@ -132,7 +132,7 @@
     "D0": "BMF0"
   },
   "description": {
-    "en": "Loading and float of e-money on Swiss prepaid and stored-value payment cards. Loading is the flow of top-ups, reported as a transaction count, a total amount and an average per transaction; float is the balance left sitting on cards. The flow and its corresponding stock in one short table."
+    "en": "Top-ups and outstanding balances on Swiss prepaid and stored-value payment cards."
   },
   "fetched_utc": "2026-08-05 13:12:03"
 }

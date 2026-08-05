@@ -12,11 +12,7 @@
 - **updated**: 2025 Q4 release (PublishingDate in CSV header)
 
 ## What is special
-Switzerland's foreign assets and liabilities and the resulting net international
-investment position, split by holding sector: SNB, banks, public sector and other
-sectors. The sector cut shows who holds the foreign claims behind Switzerland's
-large net creditor position. Reserve assets appear only on the asset side and only
-for the SNB, so many sector and component combinations are legitimately empty.
+Who holds Switzerland's foreign assets and debts, the central bank, banks, government or others, and the resulting net creditor position.
 
 ## Access
 - **type**: snb-cube — SNB cube API

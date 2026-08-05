@@ -261,7 +261,7 @@
     "Wirtschaftsabteilung": "5-96"
   },
   "description": {
-    "en": "Firms' employment intentions for the coming three months, from the FSO employment barometer, by economic division. A reading above 1.0 signals net hiring intent, below 1.0 net reduction — the forward-looking companion to jobs (ch_fso_besta) and vacancies (ch_fso_vacancies)."
+    "en": "Swiss firms' hiring intentions for the next three months, by industry. Above 1.0 means net hiring planned, below 1.0 net cuts."
   },
   "fetched_utc": "2026-08-05 13:12:06"
 }

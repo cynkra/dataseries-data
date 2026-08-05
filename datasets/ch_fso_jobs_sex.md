@@ -12,10 +12,7 @@
 - **updated**: not published (live PX-Web pull; latest observation 2026Q1)
 
 ## What is special
-Jobs cut by major region, broad economic sector, employment level and sex — the
-breakdown axes that BESTA collapses into a total. Use it for the
-full-time/part-time and male/female splits or for regional detail; use
-`ch_fso_besta` when you need depth by NOGA division instead.
+Swiss jobs split by region, sector, full-time or part-time, and sex, the breakdowns the headline employment series reports only as a total.
 
 ## Access
 - **type**: fso-pxweb — FSO PX-Web (json-stat2)

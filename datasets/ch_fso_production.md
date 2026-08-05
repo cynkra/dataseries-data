@@ -12,9 +12,7 @@
 - **updated**: 2026-Q1 (latest observation)
 
 ## What is special
-The quarterly turnover and production index for the secondary sector: industry
-(NOGA sections B–E) and construction (section F), with the construction divisions
-for buildings, civil engineering and specialised works reported separately.
+Turnover and output of Swiss industry and construction each quarter, by branch, including buildings, civil engineering and specialised works.
 
 ## Access
 - **type**: fso-sdmx — FSO SDMX (disseminate.stats.swiss, agency CH1.KEU)

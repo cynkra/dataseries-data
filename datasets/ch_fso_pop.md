@@ -13,9 +13,7 @@
 - **updated**: 2025-08-27
 
 ## What is special
-The annual demographic balance of Switzerland's permanent resident population: the
-stock at the start and end of each year, and the flows that connect them — births,
-deaths, immigration, emigration and naturalisations.
+How Switzerland's population changes each year: births, deaths, immigration, emigration and naturalisations, with the stock at each year end.
 
 ## Access
 - **type**: fso-dam-excel — FSO DAM Excel asset

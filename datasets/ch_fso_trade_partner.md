@@ -12,10 +12,7 @@
 - **updated**: 2026-06-02
 
 ## What is special
-Swiss foreign trade by partner country and region, for exports and imports, in
-CHF millions. Covers the major partners (Germany, the United States, China)
-alongside continent and economic-area aggregates. The SNB trade series break down
-by goods category but carry no partner country.
+Swiss exports and imports by country in CHF millions: Germany, the US, China and the rest, plus continent and economic-area totals.
 
 ## Access
 - **type**: fso-dam-excel — FSO DAM Excel asset (two single-sheet workbooks, pinned by asset id)

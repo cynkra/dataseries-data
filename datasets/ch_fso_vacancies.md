@@ -12,12 +12,7 @@
 - **updated**: not published (live PX-Web pull; latest observation 2026Q1)
 
 ## What is special
-The FSO job-vacancies statistics by economic division: a leading labour-market
-indicator, since firms post openings before employment moves. The Offene Stellen
-dimension carries three units of the same concept in one table — the count of
-vacancies, an index rebased to 2015Q2 = 100, and the vacancy rate as a percentage
-of jobs — so pick one before charting or the scale will be meaningless. The
-division cut is coarser than `ch_fso_besta`.
+Job vacancies posted by Swiss firms, by industry. Reported three ways in one table, as a count, an index and a rate, so pick one before charting.
 
 ## Access
 - **type**: fso-pxweb — FSO PX-Web (json-stat2)

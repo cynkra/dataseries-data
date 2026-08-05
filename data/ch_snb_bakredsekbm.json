@@ -376,7 +376,7 @@
     "D2": "F"
   },
   "description": {
-    "en": "Domestic bank loans by borrower industry: private households plus the full sector list from agriculture and manufacturing through construction, trade, hospitality, finance, health and public administration. The most granular of the SNB credit series, and the one that shows which parts of the Swiss economy are borrowing. Each industry is reported as both the amount drawn and the credit line granted."
+    "en": "Which industries Swiss banks lend to: households, manufacturing, construction, trade, finance, health and the rest of the economy."
   },
   "fetched_utc": "2026-08-05 13:12:01"
 }

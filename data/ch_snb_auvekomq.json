@@ -540,7 +540,7 @@
     "D1": "T0"
   },
   "description": {
-    "en": "Switzerland's international investment position: the stock of foreign assets, liabilities and the resulting net position, at end of quarter in CHF millions. The component hierarchy runs four levels deep in places, from the total down to bank and customer sub-balances and the composition of the SNB's reserve assets (gold, IMF reserve position, SDRs, foreign-currency investments)."
+    "en": "What Switzerland owns abroad and owes abroad, and the net position, as end-of-quarter stocks down to the central bank's reserve assets."
   },
   "fetched_utc": "2026-08-05 13:12:01"
 }

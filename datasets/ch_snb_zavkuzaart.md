@@ -12,12 +12,7 @@
 - **updated**: 2026-03 (latest published period)
 
 ## What is special
-Non-card retail payments: customer credit transfers, direct debits and other
-outgoing payments processed by banks. The order-type breakdown separates
-paper-based from electronic transfers and, within electronic, eBanking, direct
-channels and standing orders — which is where the migration away from paper
-payment slips is visible. It also separates payments between resident banks from
-those involving a bank abroad.
+How Swiss customers send money without a card: credit transfers, direct debits and standing orders, paper versus electronic.
 
 ## Access
 - **type**: snb-cube — SNB cube API

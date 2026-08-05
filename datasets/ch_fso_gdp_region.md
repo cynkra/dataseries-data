@@ -12,10 +12,7 @@
 - **updated**: 2024-10-28
 
 ## What is special
-Gross domestic product by canton and by the seven greater regions (NUTS-2), at
-current prices. The tree runs Switzerland → greater region → canton, so any
-canton's share of its region, or of the country, is one division away. The
-national accounts carry no regional breakdown.
+Economic output per canton and per greater region, at current prices. Shows each canton's share of its region and of the country.
 
 ## Access
 - **type**: fso-dam-excel — FSO DAM Excel asset

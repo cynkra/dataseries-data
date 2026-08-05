@@ -13,12 +13,7 @@
 - **updated**: 2026-04-01
 
 ## What is special
-The monthly balance sheet of the Swiss National Bank, 28 line items across both
-sides. The asset side is dominated by foreign-currency investments and gold, which
-together explain the expansion after 2008 driven by foreign-exchange intervention;
-the liability side carries banknotes in circulation and the sight deposits of
-domestic banks. Both sides include an explicit total, so the balance sheet is
-internally summable. Some items begin later than others, so the panel is ragged.
+What the Swiss National Bank owns and owes each month. Foreign-currency investments and gold explain the expansion after 2008.
 
 ## Access
 - **type**: snb-cube — SNB cube API

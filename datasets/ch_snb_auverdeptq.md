@@ -12,12 +12,7 @@
 - **updated**: 2025-Q4 (latest observation; PublishingDate in CSV header is the freshness signal)
 
 ## What is special
-Switzerland's gross external debt on the IMF standard presentation: the liabilities
-side of the external balance sheet only. A single hierarchy encodes two
-classifications at once — borrowing sector (public, SNB, banks, other sectors,
-direct-investment loans) and maturity (short or long term), each split further
-into debt securities and other liabilities. Starts later than the wider investment
-position because the standardised template post-dates it.
+Switzerland's gross external debt on the IMF standard, by borrowing sector and by whether it is short or long term.
 
 ## Access
 - **type**: snb-cube — SNB cube API

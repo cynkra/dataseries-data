@@ -258,7 +258,7 @@
     "D3": "F"
   },
   "description": {
-    "en": "Bank lending to companies by firm size, measured in employees: up to 9, 10 to 49, 50 to 249, 250 and more, plus public-sector entities. The SME credit view of the loan book. Each band is reported both as the amount actually drawn and as the credit line granted, so the headroom between commitment and use is readable directly."
+    "en": "How much Swiss banks lend to companies by company size, shown both as credit granted and credit actually drawn, so headroom is visible."
   },
   "fetched_utc": "2026-08-05 13:12:01"
 }

@@ -11,10 +11,7 @@
 - **series**: 20
 
 ## What is special
-Firms' employment intentions for the coming three months, from the FSO employment
-barometer, by economic division. A reading above 1.0 signals net hiring intent,
-below 1.0 net reduction — the forward-looking companion to jobs
-(`ch_fso_besta`) and vacancies (`ch_fso_vacancies`).
+Swiss firms' hiring intentions for the next three months, by industry. Above 1.0 means net hiring planned, below 1.0 net cuts.
 
 ## Access
 - **type**: fso-pxweb — FSO PX-Web / STAT-TAB (the BESTA theme-0602 family is reachable, unlike

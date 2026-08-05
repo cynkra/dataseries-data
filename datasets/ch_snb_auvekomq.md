@@ -12,11 +12,7 @@
 - **updated**: 2025-Q4 (latest observation; PublishingDate in CSV header is the freshness signal)
 
 ## What is special
-Switzerland's international investment position: the stock of foreign assets,
-liabilities and the resulting net position, at end of quarter in CHF millions. The
-component hierarchy runs four levels deep in places, from the total down to
-bank and customer sub-balances and the composition of the SNB's reserve assets
-(gold, IMF reserve position, SDRs, foreign-currency investments).
+What Switzerland owns abroad and owes abroad, and the net position, as end-of-quarter stocks down to the central bank's reserve assets.
 
 ## Access
 - **type**: snb-cube — SNB cube API

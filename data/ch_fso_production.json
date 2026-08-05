@@ -226,7 +226,7 @@
     "INDICATOR_KE": "PTOT"
   },
   "description": {
-    "en": "The quarterly turnover and production index for the secondary sector: industry (NOGA sections B–E) and construction (section F), with the construction divisions for buildings, civil engineering and specialised works reported separately."
+    "en": "Turnover and output of Swiss industry and construction each quarter, by branch, including buildings, civil engineering and specialised works."
   },
   "fetched_utc": "2026-08-05 13:12:05"
 }

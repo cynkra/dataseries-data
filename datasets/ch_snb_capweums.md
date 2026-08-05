@@ -12,11 +12,7 @@
 - **updated**: 2026-04 (latest observation)
 
 ## What is special
-Monthly trading turnover on the Swiss stock exchange (SIX). Shares and bonds are
-each split into domestic, foreign and total, which shows how much of the venue's
-volume is foreign paper. Also covers investment funds, structured products and
-options, and turnover in SMI constituents. Where `ch_snb_capchstocki` measures
-price levels, this measures traded volume.
+How much is traded on the Swiss exchange each month, with shares and bonds split into domestic and foreign paper.
 
 ## Access
 - **type**: snb-cube — SNB cube API

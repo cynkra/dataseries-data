@@ -12,13 +12,7 @@
 - **updated**: 2026-06-02
 
 ## What is special
-SECO's Weekly Economic Activity index (WEA), a high-frequency nowcasting indicator
-built from weekly real-economy signals such as electricity consumption, payment
-transactions and freight. It is scaled to the year-on-year growth rate of real
-adjusted GDP, so a value of 2.0 means activity is running about 2% above the same
-week a year earlier. It is already a growth rate and should not be differenced
-again. A discontinued companion series measured activity against the pre-2020
-level instead.
+How the Swiss economy is doing this week, from electricity use, card payments and freight. Already a growth rate, so do not difference it again.
 
 ## Access
 - **type**: seco-swissdata — SECO swissdata long CSV (native format; a JSON meta sidecar now exists, but the two series + units are stable so dimensions are built by hand)

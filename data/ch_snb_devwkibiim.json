@@ -592,7 +592,7 @@
     "D0": "K"
   },
   "description": {
-    "en": "Bilateral exchange-rate indices of the Swiss franc against about 54 partner currencies. Real rates come in two deflator variants, consumer-price and producer-price based, alongside the nominal index, and each is given both as an index and as a year-on-year percentage change. For the trade-weighted summary rather than individual partners, see ch_snb_devwkieffid."
+    "en": "Franc exchange-rate indices against about 54 currencies, nominal and inflation-adjusted, as index levels and as yearly changes."
   },
   "fetched_utc": "2026-08-05 13:12:02"
 }

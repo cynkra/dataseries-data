@@ -12,11 +12,7 @@
 - **updated**: 2025-Q4 (latest observation; SNB publishes ~3 months in arrears)
 
 ## What is special
-The one-page overview of the Swiss balance of payments: the headline aggregates of
-all four accounts in a single table, including the capital account, derivatives
-and the statistical difference that closes the balance-of-payments identity. Each
-line names its account and its accounting entry together. Broader account coverage
-but far less component detail than `ch_snb_bopcurrq`.
+Switzerland's balance of payments on one page: all four accounts including the statistical difference that closes the books.
 
 ## Access
 - **type**: snb-cube — SNB cube API

@@ -12,10 +12,7 @@
 - **updated**: 2026-05-18
 
 ## What is special
-The unemployment rate on the ILO definition, derived from labour-force survey
-data, which is the internationally comparable measure. It differs from registered
-unemployment (`ch_snb_amarbma`), which counts people enrolled at regional job
-centres; the two are not interchangeable.
+Swiss unemployment on the international (ILO) survey definition. Different from registered unemployment at job centres; the two are not interchangeable.
 
 ## Access
 - **type**: fso-dam-excel — FSO DAM Excel asset

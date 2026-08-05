@@ -237,7 +237,7 @@
     "D1": "AP"
   },
   "description": {
-    "en": "The Swiss real estate price index, covering residential property (owner-occupied apartments, single-family houses, apartment buildings) and rental, office, industrial and retail space. The second dimension is the data provider: the same property types are compiled by the Federal Statistical Office, Fahrländer Partner, IAZI and Wüest Partner, so methodologies can be compared directly. Not every property type exists for every provider."
+    "en": "Swiss house and rent price indices from four providers side by side, covering apartments, houses, offices, retail and industrial space."
   },
   "fetched_utc": "2026-08-05 13:12:02"
 }

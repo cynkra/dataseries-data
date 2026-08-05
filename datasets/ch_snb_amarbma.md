@@ -13,13 +13,7 @@
 - **updated**: 2026-04 (latest observation; PublishingDate in CSV header is the freshness signal)
 
 ## What is special
-Registered unemployment in Switzerland: people enrolled at regional job centres,
-compiled by SECO and republished by the SNB. Alongside the count and rate it
-carries notified vacancies, short-time working, registered job seekers and the
-labour force, each raw and seasonally adjusted. The units differ across the
-series — persons, percentages and vacancy counts share one axis — so select a
-single code before charting. For the survey-based international definition, see
-`ch_fso_unemp_rate`.
+People registered unemployed at Swiss job centres, with the rate, vacancies and short-time work. Units differ by series, so select one to chart.
 
 ## Access
 - **type**: snb-cube — SNB cube API

@@ -12,10 +12,7 @@
 - **updated**: 2026-03 (latest published period)
 
 ## What is special
-The installed base of the Swiss card landscape: credit, debit and e-money cards in
-circulation, plus the number of ATMs. Counts only, no turnover — for payment flows
-see `ch_snb_zavezaluba`. A contactless subtotal is reported separately and begins
-in late 2014, once contactless cards had rolled out.
+How many credit, debit and prepaid cards are in circulation in Switzerland, plus the number of ATMs. Counts only, no spending.
 
 ## Access
 - **type**: snb-cube — SNB cube API

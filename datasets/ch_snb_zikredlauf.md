@@ -12,12 +12,7 @@
 - **updated**: 2026-02 (latest published period)
 
 ## What is special
-The interest rates banks actually charge on newly agreed loans, by product and
-maturity, reported as a distribution rather than a single number: mean, quartiles,
-median and the number of agreements. The quartile spread shows how widely pricing
-varies across borrowers. Covers fixed-rate mortgages, variable mortgages linked to
-a base rate, and fixed-rate investment loans across maturities from one month to
-fifteen years.
+What Swiss banks charge on new loans and mortgages by maturity, as a full spread: mean, quartiles and median, not just an average.
 
 ## Access
 - **type**: snb-cube — SNB cube API

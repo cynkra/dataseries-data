@@ -11,11 +11,7 @@
 - **series**: 2
 
 ## What is special
-The KOF Economic Sentiment Index, a survey-based composite of firms' assessment of
-their current and expected business situation. Sibling to the KOF Economic
-Barometer (`ch_kof_barometer`), which is built from hard predictors rather than
-survey responses. Two methodology vintages run in parallel: the original
-pre-Brexit version and the standard 2018 version.
+How Swiss firms rate their current and expected business situation, from ETH Zurich survey data. Two methodology versions run side by side.
 
 ## Access
 - **type**: kof-api — KOF Time Series Database API **v2**, public **collection** (v1 called

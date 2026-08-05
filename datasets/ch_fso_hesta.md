@@ -12,11 +12,7 @@
 - **updated**: not published (live PX-Web pull; latest observation 2026-03)
 
 ## What is special
-Monthly hotel overnight stays for Switzerland and its 13 official tourism regions.
-The seasonal swing is large and regionally opposed — alpine regions peak in
-winter, urban regions do not — so the series is most informative sliced by region.
-Arrivals are published by the FSO alongside overnight stays but are not carried
-here.
+Hotel overnight stays in Switzerland each month, for the country and its 13 tourism regions. Alpine and urban regions peak in opposite seasons.
 
 ## Access
 - **type**: fso-pxweb — FSO PX-Web (json-stat2)

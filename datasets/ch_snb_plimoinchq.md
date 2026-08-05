@@ -11,12 +11,7 @@
 - **series**: 17
 
 ## What is special
-The Swiss real estate price index, covering residential property (owner-occupied
-apartments, single-family houses, apartment buildings) and rental, office,
-industrial and retail space. The second dimension is the data provider: the same
-property types are compiled by the Federal Statistical Office, Fahrländer Partner,
-IAZI and Wüest Partner, so methodologies can be compared directly. Not every
-property type exists for every provider.
+Swiss house and rent price indices from four providers side by side, covering apartments, houses, offices, retail and industrial space.
 
 ## Access
 - **type**: snb-cube — SNB cube API

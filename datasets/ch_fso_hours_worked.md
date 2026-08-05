@@ -11,11 +11,7 @@
 - **series**: 45
 
 ## What is special
-Hours actually worked in the Swiss economy: the total annual volume, the annual
-hours per job, and the usual weekly hours per job — the figure behind "the Swiss
-work about 31 hours a week, not 42". All three are cut by sex and by full-time or
-part-time band, so Switzerland's high part-time rate among women is directly
-visible.
+How many hours the Swiss actually work: total volume, hours per job, and usual weekly hours, split by sex and by full-time or part-time.
 
 ## Access
 - **type**: fso-dam-csv — FSO DAM asset, master is a long SDMX-style CSV (not xlsx)

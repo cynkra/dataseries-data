@@ -12,10 +12,7 @@
 - **updated**: 2026-05-12
 
 ## What is special
-Producer and import prices for Switzerland. The seven series are the same index
-expressed on seven successive base years (1963, 1993, 2003, 2010, 2015, 2020,
-2025); each is a re-indexed view of the same underlying price development, fully
-populated across the whole span.
+Prices Swiss producers charge and importers pay, monthly. The seven series are the same index rebased on successive years from 1963 to 2025.
 
 ## Access
 - **type**: fso-dam-excel — FSO DAM Excel asset

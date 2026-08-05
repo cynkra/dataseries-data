@@ -12,10 +12,7 @@
 - **updated**: 2026-03-17
 
 ## What is special
-Employment statistics (ETS): the number of employed persons on the domestic
-concept, cut by economic sector and by sex. Where BESTA counts jobs by fine NOGA
-division, ETS counts people and carries the full sector tree on one axis, so the
-male/female split of any sector reads directly off the chart.
+How many people work in Switzerland, by sector and sex, counting persons rather than jobs, so the male and female split reads directly.
 
 ## Access
 - **type**: fso-dam-csv — FSO DAM asset, master is a long CSV (not xlsx)

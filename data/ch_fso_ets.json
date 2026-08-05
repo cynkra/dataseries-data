@@ -330,7 +330,7 @@
     "sex": "total"
   },
   "description": {
-    "en": "Employment statistics (ETS): the number of employed persons on the domestic concept, cut by economic sector and by sex. Where BESTA counts jobs by fine NOGA division, ETS counts people and carries the full sector tree on one axis, so the male/female split of any sector reads directly off the chart."
+    "en": "How many people work in Switzerland, by sector and sex, counting persons rather than jobs, so the male and female split reads directly."
   },
   "units": {
     "en": "Number of employed persons (domestic concept, quarterly average)",

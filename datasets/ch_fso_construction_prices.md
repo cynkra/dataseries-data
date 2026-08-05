@@ -12,9 +12,7 @@
 - **updated**: 2025-12-18
 
 ## What is special
-The Swiss Construction Price Index, surveyed twice a year with April and October
-reference months (October 2020 = 100). Covers construction as a whole plus its two
-branches, building construction (Hochbau) and civil engineering (Tiefbau).
+Price index for construction work in Switzerland, surveyed each April and October. Covers building construction and civil engineering separately.
 
 ## Access
 - **type**: fso-dam-excel — FSO DAM Excel asset

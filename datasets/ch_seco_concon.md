@@ -13,13 +13,7 @@
 - **updated**: 2026-05-05 (source publish date)
 
 ## What is special
-The Swiss consumer sentiment survey, run and published by SECO, the State
-Secretariat for Economic Affairs. Alongside the headline sentiment index it
-carries the underlying components: households' view of the past and expected
-economic situation, prices, job security, their own finances, savings and whether
-now is a good time for major purchases. Each series is published both raw and
-seasonally adjusted. Levels before 2024 have been re-aligned with the current
-methodology.
+How Swiss households see the economy, prices, job security, their own finances and whether to make big purchases. Raw and seasonally adjusted.
 
 ## Access
 - **type**: seco-swissdata — SECO swissdata

@@ -12,11 +12,7 @@
 - **updated**: 2026-03 release (PublishingDate in CSV header)
 
 ## What is special
-Bank lending to companies by firm size, measured in employees: up to 9, 10 to 49,
-50 to 249, 250 and more, plus public-sector entities. The SME credit view of the
-loan book. Each band is reported both as the amount actually drawn and as the
-credit line granted, so the headroom between commitment and use is readable
-directly.
+How much Swiss banks lend to companies by company size, shown both as credit granted and credit actually drawn, so headroom is visible.
 
 ## Access
 - **type**: snb-cube — SNB cube API

@@ -11,11 +11,7 @@
 - **series**: 4
 
 ## What is special
-Core inflation for Switzerland: the price trend with the most volatile components
-stripped out, which is what central banks watch instead of the headline rate. Four
-definitions sit side by side — the SNB's trimmed mean and two Federal Statistical
-Office measures, plus the headline rate for reference. Values are year-on-year
-rates in percent, not index levels.
+Swiss inflation with volatile items stripped out, the measure central banks watch. Four definitions side by side, as yearly rates not index levels.
 
 ## Access
 - **type**: snb-cube — SNB cube API

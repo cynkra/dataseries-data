@@ -12,10 +12,7 @@
 - **updated**: 2026-03 (use API PublishingDate header for exact day)
 
 ## What is special
-Loading and float of e-money on Swiss prepaid and stored-value payment cards.
-Loading is the flow of top-ups, reported as a transaction count, a total amount
-and an average per transaction; float is the balance left sitting on cards. The
-flow and its corresponding stock in one short table.
+Top-ups and outstanding balances on Swiss prepaid and stored-value payment cards.
 
 ## Access
 - **type**: snb-cube — SNB cube API

@@ -13,11 +13,7 @@
 - **updated**: 2026-03 (latest observation; PublishingDate in CSV header is the freshness signal)
 
 ## What is special
-Swiss foreign trade by goods category, monthly: exports, imports and the trade
-balance across a two-level goods hierarchy that separates the pharmaceutical and
-chemical products dominating Swiss exports. Carried as both a value in CHF
-millions and a real, price-deflated year-on-year change, so the `value` column
-means different things depending on which you select.
+What Switzerland exports and imports by product group each month, in CHF millions and as a real, inflation-adjusted change.
 
 ## Access
 - **type**: snb-cube — SNB cube API

@@ -13,11 +13,7 @@
 - **updated**: 2026-04 (use API PublishingDate header for exact day)
 
 ## What is special
-The Swiss monetary aggregates M1, M2 and M3, with the components they are built
-from. Currency in circulation plus sight and transaction deposits gives M1; adding
-savings deposits gives M2; adding time deposits gives M3. Building blocks and
-totals are reported side by side in CHF millions. These measure money held by the
-public, as opposed to the central bank's own liabilities (`ch_snb_snbmoba`).
+Swiss money supply M1, M2 and M3 with the cash and deposits they are built from: money held by the public, not by the central bank.
 
 ## Access
 - **type**: snb-cube — SNB cube API

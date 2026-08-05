@@ -12,10 +12,7 @@
 - **updated**: monthly
 
 ## What is special
-Monthly new passenger-car registrations by fuel type: petrol and diesel including
-their hybrid variants, plug-in hybrids, battery-electric, fuel cell and gas. The
-clearest high-frequency read on the Swiss shift to electric vehicles —
-battery-electric cars were about 25% of new registrations in spring 2026.
+New cars registered in Switzerland each month by fuel: petrol, diesel, hybrid, plug-in and battery-electric. EVs were about 25% in spring 2026.
 
 ## Access
 - **type**: fso-sdmx — FSO SDMX (disseminate.stats.swiss), sliced to the national total

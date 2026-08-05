@@ -11,10 +11,7 @@
 - **series**: 132
 
 ## What is special
-The turnover index for the tertiary sector, completing the picture alongside
-retail (`ch_fso_retail`) and industry and construction (`ch_fso_production`). A
-newer FSO product on a 2021 = 100 base, so its history is much shorter than for
-the secondary sector.
+Turnover of the Swiss services sector each quarter, completing the picture alongside retail and industry. Base 2021 = 100, so history is short.
 
 ## Access
 - **type**: fso-sdmx — FSO SDMX (disseminate.stats.swiss)

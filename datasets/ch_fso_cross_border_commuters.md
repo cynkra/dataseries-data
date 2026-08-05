@@ -11,10 +11,7 @@
 - **series**: 27
 
 ## What is special
-Foreign residents commuting into Switzerland for work (Grenzgänger), by canton of
-employment. About 410,000 people, concentrated in Geneva, Ticino, Basel and Vaud —
-a structural feature of the Swiss labour market with no equivalent in most
-countries.
+Foreign workers commuting into Switzerland each day, by canton. Around 410,000 people, concentrated in Geneva, Ticino, Basel and Vaud.
 
 ## Access
 - **type**: fso-sdmx — FSO SDMX (disseminate.stats.swiss), sliced to the national total

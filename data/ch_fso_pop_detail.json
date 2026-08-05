@@ -132,7 +132,7 @@
     "sex": "_T"
   },
   "description": {
-    "en": "The permanent resident population by nationality (Swiss or foreign) and sex, as a year-end stock from the STATPOP register. The foreign share stood at about 27.4% in 2024. For births, deaths and migration flows, see ch_fso_pop."
+    "en": "Swiss and foreign residents by sex, year-end count from the population register. The foreign share was about 27.4% in 2024."
   },
   "units": {
     "en": "Number of permanent residents (year-end stock)",

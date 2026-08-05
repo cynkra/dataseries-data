@@ -124,7 +124,7 @@
     "D0": "K"
   },
   "description": {
-    "en": "The trade-weighted effective exchange rate of the Swiss franc, the standard summary measure of franc strength, published daily. Two aggregates are offered: the overall index and a euro-area index. As with the bilateral indices, nominal and the two real variants (consumer-price and producer-price deflated) are each given as an index and as a percentage change."
+    "en": "The trade-weighted franc index, the standard daily measure of how strong the Swiss franc is overall and against the euro area."
   },
   "fetched_utc": "2026-08-05 13:12:02"
 }

@@ -12,9 +12,7 @@
 - **updated**: 2026-04-21
 
 ## What is special
-The official Swiss wage index (Lohnindex, 1993 = 100), nominal and real, broken
-down by sector and by sex. Real wages are the nominal index deflated by consumer
-prices, so the two together show whether pay rises kept pace with inflation.
+How Swiss pay has developed since 1993, nominal and after inflation, by sector and sex. Real wages show whether pay kept pace with prices.
 
 ## Access
 - **type**: fso-dam-excel — FSO DAM Excel asset

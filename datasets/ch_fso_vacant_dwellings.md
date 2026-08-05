@@ -11,9 +11,7 @@
 - **series**: 2
 
 ## What is special
-The official Swiss vacancy rate (Leerwohnungsziffer) and the absolute number of
-vacant dwellings, nationally. The vacancy rate is the standard measure of housing
-market tightness; it had fallen to about 1.0% by 2025.
+How many Swiss homes stand empty, and the official vacancy rate, the standard measure of housing shortage. Down to about 1.0% by 2025.
 
 ## Access
 - **type**: fso-sdmx — FSO SDMX (disseminate.stats.swiss), sliced to the national total

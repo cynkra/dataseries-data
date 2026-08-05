@@ -12,12 +12,7 @@
 - **updated**: 2026-01 (use API PublishingDate header for exact day)
 
 ## What is special
-The SNB's own read of the business cycle, distilled from its quarterly talks with
-companies across Switzerland. Twenty-four qualitative signals: turnover, capacity
-utilisation, procurement difficulties, margins, lending conditions, liquidity,
-staff shortages, expected turnover and employment, expected price changes,
-investment plans, and firms' wage and inflation expectations. Most are diffusion
-indices; the wage and inflation expectations are in percent.
+What Swiss companies tell the National Bank each quarter about turnover, capacity, hiring, margins, prices and wage expectations.
 
 ## Access
 - **type**: snb-cube — SNB cube API

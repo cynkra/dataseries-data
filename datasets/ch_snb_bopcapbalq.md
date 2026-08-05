@@ -12,12 +12,7 @@
 - **updated**: 2025 Q4 release (PublishingDate in CSV header)
 
 ## What is special
-The financial account of the Swiss balance of payments: the cross-border
-investment flows whose accumulated result appears as stocks in the international
-investment position (`ch_snb_auversecq`). Follows the standard BPM6 breakdown into
-direct, portfolio and other investment plus reserve assets, unrolled several
-levels deep. Each component carries three entries: net acquisition of assets, net
-incurrence of liabilities, and the net of the two.
+Cross-border investment flows in and out of Switzerland: direct, portfolio and other investment plus reserve assets, quarterly.
 
 ## Access
 - **type**: snb-cube — SNB cube API

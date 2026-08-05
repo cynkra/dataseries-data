@@ -11,11 +11,7 @@
 - **series**: 12
 
 ## What is special
-The trade-weighted effective exchange rate of the Swiss franc, the standard
-summary measure of franc strength, published daily. Two aggregates are offered:
-the overall index and a euro-area index. As with the bilateral indices, nominal
-and the two real variants (consumer-price and producer-price deflated) are each
-given as an index and as a percentage change.
+The trade-weighted franc index, the standard daily measure of how strong the Swiss franc is overall and against the euro area.
 
 ## Access
 - **type**: snb-cube — SNB cube API

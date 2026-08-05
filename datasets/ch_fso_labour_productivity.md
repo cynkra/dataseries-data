@@ -11,10 +11,7 @@
 - **series**: 3
 
 ## What is special
-Real GDP, hours actually worked, and labour productivity (GDP per hour), as
-chained-volume indices on a common base of 1991 = 100. Productivity is the ratio
-of the other two, so all three plot on one scale and the long-run Swiss trend of
-roughly +0.9% a year is readable directly.
+Swiss output per hour worked, with real GDP and total hours on the same index base, so the productivity trend reads off one chart.
 
 ## Access
 - **type**: fso-dam-csv — FSO DAM asset, master is a long CSV (not xlsx)

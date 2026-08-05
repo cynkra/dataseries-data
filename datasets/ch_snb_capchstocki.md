@@ -13,12 +13,7 @@
 - **updated**: 2026-05-15 (latest observation)
 
 ## What is special
-Daily levels of the Swiss equity market: the SPI Swiss Performance Index (a total
-return index, including reinvested dividends) and the SMI Swiss Market Index (a
-price index, excluding them). SPI sub-indices are provided under two sector
-classifications, SIX and ICB, so banks, financial services, insurance, food and
-beverages and health care each appear twice. Sector sub-indices begin later than
-the headline index, since the classifications were not backfilled.
+Daily levels of the SPI and SMI Swiss share indices, with sector sub-indices. The SPI includes reinvested dividends, the SMI does not.
 
 ## Access
 - **type**: snb-cube — SNB cube API

@@ -12,10 +12,7 @@
 - **series**: 1
 
 ## What is special
-Switzerland's consumer price index, the standard measure of inflation, compiled by
-the Federal Statistical Office and re-disseminated by the SNB. This series carries
-the headline total index only. For the breakdown into the 595 basket positions,
-use `ch_fso_cpi`.
+Swiss inflation, the headline consumer price index only. For the breakdown into 595 basket items such as food, rent and transport, see the detailed series.
 
 ## Access
 - **type**: snb-cube — SNB cube API

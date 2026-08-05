@@ -112,7 +112,7 @@
     "D0": "KGM"
   },
   "description": {
-    "en": "Core inflation for Switzerland: the price trend with the most volatile components stripped out, which is what central banks watch instead of the headline rate. Four definitions sit side by side — the SNB's trimmed mean and two Federal Statistical Office measures, plus the headline rate for reference. Values are year-on-year rates in percent, not index levels."
+    "en": "Swiss inflation with volatile items stripped out, the measure central banks watch. Four definitions side by side, as yearly rates not index levels."
   },
   "fetched_utc": "2026-08-05 13:12:02"
 }

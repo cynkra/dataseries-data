@@ -12,12 +12,7 @@
 - **updated**: 2026-03 (latest published period)
 
 ## What is special
-Published interest rates on new banking business across a deep product tree:
-mortgages (variable, fixed by maturity, and money-market linked via SARON and the
-historic Libor maturities), consumer credit, payment and savings accounts, tied
-pension provision, term deposits and cash bonds. Each product is reported as a
-distribution — mean, quartiles and median. The SARON and legacy Libor branches
-coexist, capturing the reference-rate transition.
+Interest rates on new Swiss banking business: mortgages, consumer credit, savings, pensions and term deposits, given as a distribution.
 
 ## Access
 - **type**: snb-cube — SNB cube API

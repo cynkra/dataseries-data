@@ -12,10 +12,7 @@
 - **updated**: 2026-03 release (PublishingDate in CSV header)
 
 ## What is special
-Bank loans split by whether the borrower is in Switzerland or abroad — the
-geographic cut of the loan book, which the firm-size and industry breakdowns do
-not provide. Mortgage and other lending are separated, each reported as both the
-amount drawn and the credit line granted.
+Swiss bank lending split by whether the borrower is at home or abroad, for mortgages and other loans.
 
 ## Access
 - **type**: snb-cube — SNB cube API

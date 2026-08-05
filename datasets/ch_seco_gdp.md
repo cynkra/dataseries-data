@@ -13,13 +13,7 @@
 - **updated**: 2026-02-23
 
 ## What is special
-The Swiss quarterly national accounts from SECO, covering all three views of GDP
-in one structure: production (value added by industry), expenditure (consumption,
-investment, trade balance) and income (compensation of employees, operating
-surplus, national income). Seasonal adjustment is a dimension rather than a
-separate series, and includes a Swiss-specific sports-event correction — large
-international sporting bodies are domiciled here and book revenue in tournament
-years.
+Swiss economic output each quarter from all three angles, production, spending and income, including a correction for sporting-body revenue.
 
 ## Access
 - **type**: seco-swissdata — SECO swissdata (long CSV + JSON meta sidecar, native format)

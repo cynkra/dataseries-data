@@ -12,12 +12,7 @@
 - **updated**: 2026-04-30
 
 ## What is special
-Swiss bond yields as a full term structure: spot (zero-coupon) rates from 1 to 10
-years plus 20 and 30 years, so an entire yield curve can be read for a single day.
-The 10-year Confederation rate is the benchmark Swiss long rate. Alongside
-Confederation and euro-area government bonds, the series breaks out Swiss issuers
-by credit rating — cantons, mortgage-bond institutions, banks and industry — which
-makes credit spreads over the Confederation curve directly visible.
+Swiss government bond yields for every maturity from 1 to 30 years, plus cantons, banks and industry by credit rating, so spreads are visible.
 
 ## Access
 - **type**: snb-cube — SNB cube API
