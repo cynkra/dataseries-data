@@ -12,7 +12,7 @@
 - **updated**: not published (live PX-Web pull; latest observation 2026Q1)
 
 ## What is special
-Job vacancies posted by Swiss firms, by industry. Reported three ways in one table, as a count, an index and a rate, so pick one before charting.
+Job vacancies posted by Swiss firms, by industry, as a count, an index and a rate. A leading signal: postings move before employment does.
 
 ## Access
 - **type**: fso-pxweb — FSO PX-Web (json-stat2)
@@ -65,6 +65,8 @@ NOGA division ranges nest by containment (`5-96` ⊃ `5-43`/`45-96` ⊃ groups);
 - derive: noga-range
 
 ## Caveats / simplifications
+- The `Offene Stellen` dimension mixes three units of the same concept (count,
+  index, rate), so a chart spanning all three has a meaningless scale. Select one.
 - The three `Offene Stellen` measures share one `value` column; consumers must
   read the unit from that dimension, not the value magnitude.
 - Coverage start differs by slice: the count/rate begin earlier than the index

@@ -73,7 +73,7 @@
     "structure": "seco_wwa"
   },
   "description": {
-    "en": "How the Swiss economy is doing this week, from electricity use, card payments and freight. Already a growth rate, so do not difference it again."
+    "en": "How the Swiss economy is doing this week, tracked from electricity use, card payments and freight rather than waiting for quarterly GDP."
   },
   "units": {
     "en": "Scaled to the rate of growth of real, seasonally, calendar and sport-event adjusted GDP versus the same quarter of the previous year (percent)",

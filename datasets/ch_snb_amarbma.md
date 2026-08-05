@@ -13,7 +13,7 @@
 - **updated**: 2026-04 (latest observation; PublishingDate in CSV header is the freshness signal)
 
 ## What is special
-People registered unemployed at Swiss job centres, with the rate, vacancies and short-time work. Units differ by series, so select one to chart.
+People registered unemployed at Swiss job centres, with the unemployment rate, notified vacancies and short-time working.
 
 ## Access
 - **type**: snb-cube — SNB cube API
@@ -49,6 +49,8 @@ People registered unemployed at Swiss job centres, with the rate, vacancies and 
   only pair with their own raw Total (T0<->S0, T1<->S1, T2<->S2).
 
 ## Caveats / simplifications
+- Units differ across the levels of the single `Overview` dimension: persons, a
+  percentage rate and vacancy counts share one axis. Select a code before charting.
 - Heterogeneous units within one dimension (persons, %, vacancy counts); no unit
   column, the meaning is encoded in the `D0` code.
 - Default series for previews is `E` (labour force).

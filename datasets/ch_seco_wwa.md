@@ -12,7 +12,7 @@
 - **updated**: 2026-06-02
 
 ## What is special
-How the Swiss economy is doing this week, from electricity use, card payments and freight. Already a growth rate, so do not difference it again.
+How the Swiss economy is doing this week, tracked from electricity use, card payments and freight rather than waiting for quarterly GDP.
 
 ## Access
 - **type**: seco-swissdata — SECO swissdata long CSV (native format; a JSON meta sidecar now exists, but the two series + units are stable so dimensions are built by hand)
@@ -62,6 +62,8 @@ How the Swiss economy is doing this week, from electricity use, card payments an
   the values are *already* a (scaled) YoY GDP growth rate.
 
 ## Caveats / simplifications
+- The index is already expressed as a year-on-year growth rate. Do not difference
+  it again; a value of 2.0 means activity about 2% above the same week a year earlier.
 - Values are a level on a growth-rate scale (scaled YoY real-GDP growth), so
   `transform=level` — applying `yoy` would double-difference and produce nonsense.
 - `seco_wwa_pre_covid` is discontinued (last obs 2022-12-05) and measures a
