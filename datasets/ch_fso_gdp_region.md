@@ -12,7 +12,7 @@
 - **updated**: 2024-10-28
 
 ## What is special
-Economic output per canton and per greater region, at current prices. Shows each canton's share of its region and of the country.
+Swiss economic output per canton and per greater region, at current prices. Shows each canton's share of its region and of the country.
 
 ## Access
 - **type**: fso-dam-excel — FSO DAM Excel asset

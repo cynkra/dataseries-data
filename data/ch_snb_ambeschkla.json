@@ -271,7 +271,7 @@
     "D1": "T0"
   },
   "description": {
-    "en": "Employees by industry, split into full-time, part-time and full-time equivalents, so part-time intensity per sector reads directly. In thousands."
+    "en": "Swiss employees by industry, split into full-time, part-time and full-time equivalents, so part-time intensity per sector reads directly."
   },
   "fetched_utc": "2026-08-05 13:12:00"
 }

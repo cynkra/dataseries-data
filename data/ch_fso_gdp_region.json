@@ -302,7 +302,7 @@
     "region": "ch"
   },
   "description": {
-    "en": "Economic output per canton and per greater region, at current prices. Shows each canton's share of its region and of the country."
+    "en": "Swiss economic output per canton and per greater region, at current prices. Shows each canton's share of its region and of the country."
   },
   "units": {
     "en": "CHF million, at current prices",

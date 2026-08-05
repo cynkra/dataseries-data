@@ -11,7 +11,7 @@
 - **series**: 324
 
 ## What is special
-Franc exchange-rate indices against about 54 currencies, nominal and inflation-adjusted, as index levels and as yearly changes.
+Swiss franc exchange-rate indices against about 54 currencies, nominal and inflation-adjusted, as index levels and as yearly changes.
 
 ## Access
 - **type**: snb-cube — SNB cube API
