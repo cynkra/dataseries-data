@@ -1,0 +1,562 @@
+{
+  "ch_adecco_sjmi": {
+    "en": "eb8660b00be21c71062003b014ecc706",
+    "langs": [
+      "de",
+      "fr",
+      "it"
+    ]
+  },
+  "ch_ffa_finances": {
+    "en": "ed08e945c7ad0af264b035da9a18d115",
+    "langs": [
+      "de",
+      "fr",
+      "it"
+    ]
+  },
+  "ch_fso_besta": {
+    "en": "869d513ce6b56c901cacc10ef346ad14",
+    "langs": [
+      "de",
+      "fr",
+      "it"
+    ]
+  },
+  "ch_fso_besta_outlook": {
+    "en": "0668f345decd1ca15c8335aba57f1024",
+    "langs": [
+      "de",
+      "fr",
+      "it"
+    ]
+  },
+  "ch_fso_construction_prices": {
+    "en": "beace4c7d9b3ca5e1a51d731ebaca302",
+    "langs": [
+      "de",
+      "fr",
+      "it"
+    ]
+  },
+  "ch_fso_cpi": {
+    "en": "43d19d59bf05c53f4dff80d5e22d1e45",
+    "langs": [
+      "de",
+      "fr",
+      "it"
+    ]
+  },
+  "ch_fso_cross_border_commuters": {
+    "en": "ce088dedb61a5a34ba708988fd042e6d",
+    "langs": [
+      "de",
+      "fr",
+      "it"
+    ]
+  },
+  "ch_fso_ets": {
+    "en": "8831f785c4749f6f51ba958b0d51cbba",
+    "langs": [
+      "de",
+      "fr",
+      "it"
+    ]
+  },
+  "ch_fso_gdp_region": {
+    "en": "2b9b0d08fcc0fca4acd486f20d886d7f",
+    "langs": [
+      "de",
+      "fr",
+      "it"
+    ]
+  },
+  "ch_fso_gfcf_detail": {
+    "en": "b69ffc78a932d760a26caf88c3b719c2",
+    "langs": [
+      "de",
+      "fr",
+      "it"
+    ]
+  },
+  "ch_fso_hesta": {
+    "en": "cfe3040d17467074ecd90c3f0f2c1ef2",
+    "langs": [
+      "de",
+      "fr",
+      "it"
+    ]
+  },
+  "ch_fso_hicp": {
+    "en": "47a15b50fa34c66ca003e332e622def8",
+    "langs": [
+      "de",
+      "fr",
+      "it"
+    ]
+  },
+  "ch_fso_hours_worked": {
+    "en": "966e9631227a9540ed95658309891694",
+    "langs": [
+      "de",
+      "fr",
+      "it"
+    ]
+  },
+  "ch_fso_jobs_sex": {
+    "en": "48b8f1dfbf4dd2f71e2c5c93be2d0174",
+    "langs": [
+      "de",
+      "fr",
+      "it"
+    ]
+  },
+  "ch_fso_labour_productivity": {
+    "en": "6aca7766dbf4ca5bdee0070ee2e63d6c",
+    "langs": [
+      "de",
+      "fr",
+      "it"
+    ]
+  },
+  "ch_fso_new_vehicles": {
+    "en": "c7ebda8e4d93b59e317089d2b330eb40",
+    "langs": [
+      "de",
+      "fr",
+      "it"
+    ]
+  },
+  "ch_fso_pop": {
+    "en": "af702e58977c65b11518de4dafb62d20",
+    "langs": [
+      "de",
+      "fr",
+      "it"
+    ]
+  },
+  "ch_fso_pop_detail": {
+    "en": "cd8e23a11957999e1ce12ded737c82e7",
+    "langs": [
+      "de",
+      "fr",
+      "it"
+    ]
+  },
+  "ch_fso_ppi": {
+    "en": "d33c4457a9d6bd6a9d5f1be22c9f68c8",
+    "langs": [
+      "de",
+      "fr",
+      "it"
+    ]
+  },
+  "ch_fso_production": {
+    "en": "e895565c3e8827ad78ecfb01aeaf6f92",
+    "langs": [
+      "de",
+      "fr",
+      "it"
+    ]
+  },
+  "ch_fso_retail": {
+    "en": "b49a2f1a650e4fa6ec27033f354a98d6",
+    "langs": [
+      "de",
+      "fr",
+      "it"
+    ]
+  },
+  "ch_fso_services": {
+    "en": "8ca61f9daa4af53542707ebf05be7af2",
+    "langs": [
+      "de",
+      "fr",
+      "it"
+    ]
+  },
+  "ch_fso_trade_partner": {
+    "en": "bf247b14cbbbb1841ef8425e882424d5",
+    "langs": [
+      "de",
+      "fr",
+      "it"
+    ]
+  },
+  "ch_fso_unemp_rate": {
+    "en": "a74223c68217f04fcf2087156a8ef8f7",
+    "langs": [
+      "de",
+      "fr",
+      "it"
+    ]
+  },
+  "ch_fso_vacancies": {
+    "en": "75601c0695ea7ccb823b09a6b866fd63",
+    "langs": [
+      "de",
+      "fr",
+      "it"
+    ]
+  },
+  "ch_fso_vacant_dwellings": {
+    "en": "916b845578ae3f8d78497599f5ae4c2e",
+    "langs": [
+      "de",
+      "fr",
+      "it"
+    ]
+  },
+  "ch_fso_wage_idx": {
+    "en": "5a895374e8694936107029162f65261d",
+    "langs": [
+      "de",
+      "fr",
+      "it"
+    ]
+  },
+  "ch_kof_barometer": {
+    "en": "41222cd8f97a978cedd50433a1712875",
+    "langs": [
+      "de",
+      "fr",
+      "it"
+    ]
+  },
+  "ch_kof_esi": {
+    "en": "4229bff967bd9eb1a2616da237cf9ee4",
+    "langs": [
+      "de",
+      "fr",
+      "it"
+    ]
+  },
+  "ch_seco_concon": {
+    "en": "388661293a27fdb454293027b715284b",
+    "langs": [
+      "de",
+      "fr",
+      "it"
+    ]
+  },
+  "ch_seco_gdp": {
+    "en": "25971312d2f8bee14377a2c43fdaef59",
+    "langs": [
+      "de",
+      "fr",
+      "it"
+    ]
+  },
+  "ch_seco_wwa": {
+    "en": "46ba828db1616953b693533f5ab463e7",
+    "langs": [
+      "de",
+      "fr",
+      "it"
+    ]
+  },
+  "ch_snb_amarbma": {
+    "en": "44ccfc9024d427c8e7dd52c2e94e9442",
+    "langs": [
+      "de",
+      "fr",
+      "it"
+    ]
+  },
+  "ch_snb_ambeschkla": {
+    "en": "57884fd5af3e20ec06705fdc5eef9e5c",
+    "langs": [
+      "de",
+      "fr",
+      "it"
+    ]
+  },
+  "ch_snb_ausshawarm": {
+    "en": "a012cd36bda9dd6fa83ef9878120ee3d",
+    "langs": [
+      "de",
+      "fr",
+      "it"
+    ]
+  },
+  "ch_snb_auvekomq": {
+    "en": "ffffce9a84dd1d636ca0bdad2a1e6d43",
+    "langs": [
+      "de",
+      "fr",
+      "it"
+    ]
+  },
+  "ch_snb_auvercurrq": {
+    "en": "168d8406361cfa19b26361692dca5505",
+    "langs": [
+      "de",
+      "fr",
+      "it"
+    ]
+  },
+  "ch_snb_auverdeptq": {
+    "en": "5fe611d4f12b0094b2ad314d78e598c0",
+    "langs": [
+      "de",
+      "fr",
+      "it"
+    ]
+  },
+  "ch_snb_auversecq": {
+    "en": "8622e21b091161a1a0e43afe94dd04bf",
+    "langs": [
+      "de",
+      "fr",
+      "it"
+    ]
+  },
+  "ch_snb_babilpobm": {
+    "en": "7b381f2aaa0438c054b7843b83515a1a",
+    "langs": [
+      "de",
+      "fr",
+      "it"
+    ]
+  },
+  "ch_snb_bakredbetgrbm": {
+    "en": "a7abb56b1a4730291f4b390de1d3cebb",
+    "langs": [
+      "de",
+      "fr",
+      "it"
+    ]
+  },
+  "ch_snb_bakredinausbm": {
+    "en": "22fe12ec0d675ac7053a5588d550ffb7",
+    "langs": [
+      "de",
+      "fr",
+      "it"
+    ]
+  },
+  "ch_snb_bakredsekbm": {
+    "en": "1b9d0329719d11ce9c162136fed9fe9c",
+    "langs": [
+      "de",
+      "fr",
+      "it"
+    ]
+  },
+  "ch_snb_bopcapbalq": {
+    "en": "29cae6cb08cbec4f001655830ff01d0b",
+    "langs": [
+      "de",
+      "fr",
+      "it"
+    ]
+  },
+  "ch_snb_bopcurrq": {
+    "en": "efe217ce633597dafadcbb488a1f87d9",
+    "langs": [
+      "de",
+      "fr",
+      "it"
+    ]
+  },
+  "ch_snb_bopoverq": {
+    "en": "4a94cad704a636573db27592d72ff3cc",
+    "langs": [
+      "de",
+      "fr",
+      "it"
+    ]
+  },
+  "ch_snb_bopservq": {
+    "en": "f8ff785354ad5cb3a328a77b40efd103",
+    "langs": [
+      "de",
+      "fr",
+      "it"
+    ]
+  },
+  "ch_snb_capchstocki": {
+    "en": "ebc76324fd3c0e9000513c8f7d80c780",
+    "langs": [
+      "de",
+      "fr",
+      "it"
+    ]
+  },
+  "ch_snb_capweums": {
+    "en": "a4affd79c584b4d6168d5d50eb5385e7",
+    "langs": [
+      "de",
+      "fr",
+      "it"
+    ]
+  },
+  "ch_snb_devkum": {
+    "en": "8934838b8e4bd9e26cd38975a7aa0056",
+    "langs": [
+      "de",
+      "fr",
+      "it"
+    ]
+  },
+  "ch_snb_devwkibiim": {
+    "en": "3acb2376e53df52f2c918b5179738ae9",
+    "langs": [
+      "de",
+      "fr",
+      "it"
+    ]
+  },
+  "ch_snb_devwkieffid": {
+    "en": "adb269cbc3a04369cdef804686e78e1f",
+    "langs": [
+      "de",
+      "fr",
+      "it"
+    ]
+  },
+  "ch_snb_plimoinchq": {
+    "en": "f4513bbadeed51586404ed8da4350700",
+    "langs": [
+      "de",
+      "fr",
+      "it"
+    ]
+  },
+  "ch_snb_plkopr": {
+    "en": "4344980e686638e04db1eeba0f540d6a",
+    "langs": [
+      "de",
+      "fr",
+      "it"
+    ]
+  },
+  "ch_snb_plkoprinfla": {
+    "en": "95a9846ee2c02fb5852fdf83710784bd",
+    "langs": [
+      "de",
+      "fr",
+      "it"
+    ]
+  },
+  "ch_snb_rendeiduebd": {
+    "en": "54b520e22b99169340e42c0cf356f361",
+    "langs": [
+      "de",
+      "fr",
+      "it"
+    ]
+  },
+  "ch_snb_snbbipo": {
+    "en": "7915c450cc1508a970d88f53ff970cd0",
+    "langs": [
+      "de",
+      "fr",
+      "it"
+    ]
+  },
+  "ch_snb_snbiprogq": {
+    "en": "2d30cef891c26557045f4868a0da9246",
+    "langs": [
+      "de",
+      "fr",
+      "it"
+    ]
+  },
+  "ch_snb_snbkosiq": {
+    "en": "03824b6ff1efc104d18a477591a6c417",
+    "langs": [
+      "de",
+      "fr",
+      "it"
+    ]
+  },
+  "ch_snb_snbmoba": {
+    "en": "b48847cf76cdb066f123b556d503cecf",
+    "langs": [
+      "de",
+      "fr",
+      "it"
+    ]
+  },
+  "ch_snb_snbmonagg": {
+    "en": "107a647d99681d4216428932f167d387",
+    "langs": [
+      "de",
+      "fr",
+      "it"
+    ]
+  },
+  "ch_snb_snboffzisa": {
+    "en": "d01a3e11dcfcad7fdcf6470f33e449c8",
+    "langs": [
+      "de",
+      "fr",
+      "it"
+    ]
+  },
+  "ch_snb_zavegelade": {
+    "en": "3c399bf596c015170675b59a2fe696d5",
+    "langs": [
+      "de",
+      "fr",
+      "it"
+    ]
+  },
+  "ch_snb_zavesic": {
+    "en": "924f0415ab036d6a126a6d36f63a6ae1",
+    "langs": [
+      "de",
+      "fr",
+      "it"
+    ]
+  },
+  "ch_snb_zavezaka": {
+    "en": "ba2a37922488ad1e0d20a68cb3f41f86",
+    "langs": [
+      "de",
+      "fr",
+      "it"
+    ]
+  },
+  "ch_snb_zavezaluba": {
+    "en": "ab84dc3aa49804cb4706f08aa786f334",
+    "langs": [
+      "de",
+      "fr",
+      "it"
+    ]
+  },
+  "ch_snb_zavkuzaart": {
+    "en": "252699b89cf4378e99f3b85dd17fe802",
+    "langs": [
+      "de",
+      "fr",
+      "it"
+    ]
+  },
+  "ch_snb_zikredlauf": {
+    "en": "e277ab839a48c9cf1cfb874ef8650a37",
+    "langs": [
+      "de",
+      "fr",
+      "it"
+    ]
+  },
+  "ch_snb_zikrepro": {
+    "en": "5430971fa14a65362422c9cad9894010",
+    "langs": [
+      "de",
+      "fr",
+      "it"
+    ]
+  },
+  "ch_snb_zimoma": {
+    "en": "31b2b7dbe66cdd3c582bb653474311a5",
+    "langs": [
+      "de",
+      "fr",
+      "it"
+    ]
+  }
+}

@@ -68,9 +68,46 @@ for (id in ids) {
   }
 }
 
+# Staleness: the translations were written from a specific English sentence. Edit
+# the English and the other three silently stop matching it — and a stale German
+# snippet is worse than no German snippet, because it reads as current. The
+# checksum in datasets/translation-sync.json is what each translation was blessed
+# against; a mismatch means the English moved on.
+#
+# This is the one drift the checks above cannot see: rewording the English
+# without touching a figure or a ch_ reference passes every one of them.
+SYNC_PATH <- "datasets/translation-sync.json"
+sync <- if (file.exists(SYNC_PATH))
+  jsonlite::fromJSON(SYNC_PATH, simplifyVector = FALSE) else list()
+stale <- character(0)
+untracked <- character(0)
+for (id in ids) {
+  lines <- ds_read(id, "datasets")
+  en <- ds_prose(lines, "What is special")
+  if (is.null(en)) next
+  have <- DS_I18N_LANGS[vapply(DS_I18N_LANGS, function(L)
+    !is.null(ds_prose(lines, sprintf("What is special (%s)", L))), logical(1))]
+  if (!length(have)) next                    # untranslated on purpose — not tracked
+  rec <- sync[[id]]
+  if (is.null(rec)) { untracked <- c(untracked, id); next }
+  if (!identical(rec$en, digest::digest(en, algo = "md5", serialize = FALSE)))
+    stale <- c(stale, id)
+}
+if (length(stale))
+  problems <- c(problems, sprintf(
+    "%s: the English changed since its translations were blessed", stale))
+if (length(untracked))
+  problems <- c(problems, sprintf(
+    "%s: translated but absent from %s", untracked, SYNC_PATH))
+if (length(stale) || length(untracked))
+  problems <- c(problems,
+    "  -> update the de/fr/it prose to match, then: Rscript dev/bless_translations.R")
+
 if (length(problems)) {
   cat(paste0("  ", problems, collapse = "\n"), "\n")
   stop(sprintf("test_description_i18n: %d problem(s) across %d translations",
                length(problems), n_tr), call. = FALSE)
 }
-cat(sprintf("test_description_i18n: %d translations preserve every figure and cross-reference\n", n_tr))
+cat(sprintf(paste0("test_description_i18n: %d translations preserve every figure and ",
+                   "cross-reference; %d in sync with their English\n"),
+            n_tr, length(sync)))
