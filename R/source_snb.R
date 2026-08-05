@@ -79,8 +79,13 @@ snb_fetch <- function(cube_id, title = NULL, langs = c("en", "de", "fr")) {
     lapply(dims, function(d) .snb_hierarchy(d$dimensionItems %||% list())), dim_ids
   )
 
-  # Label translations: one extra ~50 KB /dimensions/{lang} doc per language (the
-  # data cube itself is fetched once, in en). SNB has NO Italian — /dimensions/it
+  # Label translations: one extra /dimensions/{lang} doc per language — 0.2–2.3 KB
+  # measured across 11 cubes, i.e. ~0.1% of the data payload (rendopar: 234 B of
+  # labels against 1.5 MB of observations). The cost is latency, not bytes: ~0.2 s
+  # per request. And it is only paid on a FULL run — this call sits inside
+  # snb_fetch, which .try_fetch_if_unchanged evaluates lazily, so an unchanged
+  # cube fetches no language docs at all. (The data cube itself is fetched once,
+  # in en.) SNB has NO Italian — /dimensions/it
   # returns byte-identical German with HTTP 200 (verified 2026-08-05, see
   # spec/multilingual/1-feasibility-review.md §2) — so `it` is deliberately not in
   # the default. A failed language doc skips that language, never the dataset.
