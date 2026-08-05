@@ -96,5 +96,5 @@
     "sex": "_T"
   },
   "description": "The permanent resident population broken down by nationality (Swiss / foreign) × sex, annual year-end stock from the STATPOP register. Complements ch_fso_pop (the long 1861– demographic balance with births/deaths) with the modern foreign-population share — ~27.4% foreign in 2024.",
-  "fetched_utc": "2026-08-04 09:20:31"
+  "fetched_utc": "2026-08-05 09:13:31"
 }

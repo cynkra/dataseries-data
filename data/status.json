@@ -1,5 +1,5 @@
 {
-  "checked": "2026-08-04 11:20 UTC",
+  "checked": "2026-08-05 09:13 UTC",
   "counts": {
     "green": 70,
     "red": 0,
@@ -8,57 +8,13 @@
   },
   "datasets": [
     {
-      "id": "ch_snb_devkum",
-      "title": "Bilateral exchange rates",
-      "source": "Swiss National Bank",
-      "frequency": "monthly",
-      "end": "2026-07-01",
-      "updated": "2026-08-03 14:30",
-      "age_days": 34,
-      "threshold_days": 165,
-      "status": "green"
-    },
-    {
-      "id": "ch_snb_rendeiduebd",
-      "title": "Bond yields (spot rates)",
-      "source": "Swiss National Bank",
-      "frequency": "daily",
-      "end": "2026-07-31",
-      "updated": "2026-08-03 14:30",
-      "age_days": 4,
-      "threshold_days": 75,
-      "status": "green"
-    },
-    {
-      "id": "ch_snb_zikrepro",
-      "title": "Published interest rates",
-      "source": "Swiss National Bank",
-      "frequency": "monthly",
-      "end": "2026-06-01",
-      "updated": "2026-08-03 14:30",
-      "age_days": 64,
-      "threshold_days": 165,
-      "status": "green"
-    },
-    {
-      "id": "ch_snb_zimoma",
-      "title": "Money market rates",
-      "source": "Swiss National Bank",
-      "frequency": "monthly",
-      "end": "2026-07-01",
-      "updated": "2026-08-03 14:30",
-      "age_days": 34,
-      "threshold_days": 165,
-      "status": "green"
-    },
-    {
       "id": "ch_seco_gdp",
       "title": "Gross domestic product (GDP)",
       "source": "State Secretariat for Economic Affairs (SECO)",
       "frequency": "quarterly",
       "end": "2026-01-01",
       "updated": "2026-02-23 16:51:17",
-      "age_days": 215,
+      "age_days": 216,
       "threshold_days": 435,
       "status": "green"
     },
@@ -69,7 +25,7 @@
       "frequency": "quarterly",
       "end": "2026-04-01",
       "updated": "2026-05-23 16:49:08",
-      "age_days": 125,
+      "age_days": 126,
       "threshold_days": 435,
       "status": "green"
     },
@@ -80,7 +36,7 @@
       "frequency": "monthly",
       "end": "2026-06-01",
       "updated": null,
-      "age_days": 64,
+      "age_days": 65,
       "threshold_days": 165,
       "status": "green"
     },
@@ -91,7 +47,7 @@
       "frequency": "quarterly",
       "end": "2026-01-01",
       "updated": null,
-      "age_days": 215,
+      "age_days": 216,
       "threshold_days": 435,
       "status": "green"
     },
@@ -102,7 +58,7 @@
       "frequency": "quarterly",
       "end": "2026-01-01",
       "updated": null,
-      "age_days": 215,
+      "age_days": 216,
       "threshold_days": 435,
       "status": "green"
     },
@@ -113,7 +69,7 @@
       "frequency": "monthly",
       "end": "2026-06-01",
       "updated": null,
-      "age_days": 64,
+      "age_days": 65,
       "threshold_days": 165,
       "status": "green"
     },
@@ -124,7 +80,7 @@
       "frequency": "annual",
       "end": "2025-01-01",
       "updated": null,
-      "age_days": 580,
+      "age_days": 581,
       "threshold_days": 825,
       "status": "green"
     },
@@ -135,7 +91,7 @@
       "frequency": "quarterly",
       "end": "2026-01-01",
       "updated": null,
-      "age_days": 215,
+      "age_days": 216,
       "threshold_days": 435,
       "status": "green"
     },
@@ -146,7 +102,7 @@
       "frequency": "annual",
       "end": "2024-01-01",
       "updated": null,
-      "age_days": 946,
+      "age_days": 947,
       "threshold_days": 1425,
       "status": "green"
     },
@@ -157,7 +113,7 @@
       "frequency": "annual",
       "end": "2029-01-01",
       "updated": "2025-03-18",
-      "age_days": -881,
+      "age_days": -880,
       "threshold_days": 825,
       "status": "green"
     },
@@ -168,7 +124,7 @@
       "frequency": "monthly",
       "end": "2026-07-01",
       "updated": null,
-      "age_days": 34,
+      "age_days": 35,
       "threshold_days": 165,
       "status": "green"
     },
@@ -177,10 +133,21 @@
       "title": "KOF Economic Sentiment Index",
       "source": "KOF Swiss Economic Institute",
       "frequency": "monthly",
-      "end": "2026-05-01",
+      "end": "2026-06-01",
       "updated": null,
-      "age_days": 95,
+      "age_days": 65,
       "threshold_days": 165,
+      "status": "green"
+    },
+    {
+      "id": "ch_adecco_sjmi",
+      "title": "Adecco Group Swiss Job Market Index",
+      "source": "University of Zurich (Stellenmarkt-Monitor Schweiz)",
+      "frequency": "quarterly",
+      "end": "2026-06-01",
+      "updated": null,
+      "age_days": 65,
+      "threshold_days": 435,
       "status": "green"
     },
     {
@@ -190,7 +157,7 @@
       "frequency": "monthly",
       "end": "2026-06-01",
       "updated": null,
-      "age_days": 64,
+      "age_days": 65,
       "threshold_days": 165,
       "status": "green"
     },
@@ -201,7 +168,7 @@
       "frequency": "quarterly",
       "end": "2026-01-01",
       "updated": null,
-      "age_days": 215,
+      "age_days": 216,
       "threshold_days": 435,
       "status": "green"
     },
@@ -212,7 +179,7 @@
       "frequency": "quarterly",
       "end": "2026-01-01",
       "updated": null,
-      "age_days": 215,
+      "age_days": 216,
       "threshold_days": 435,
       "status": "green"
     },
@@ -223,7 +190,7 @@
       "frequency": "quarterly",
       "end": "2026-01-01",
       "updated": null,
-      "age_days": 215,
+      "age_days": 216,
       "threshold_days": 435,
       "status": "green"
     },
@@ -234,7 +201,7 @@
       "frequency": "quarterly",
       "end": "2026-01-01",
       "updated": null,
-      "age_days": 215,
+      "age_days": 216,
       "threshold_days": 435,
       "status": "green"
     },
@@ -245,7 +212,7 @@
       "frequency": "monthly",
       "end": "2026-07-01",
       "updated": "2026-08-03",
-      "age_days": 34,
+      "age_days": 35,
       "threshold_days": 165,
       "status": "green"
     },
@@ -256,7 +223,7 @@
       "frequency": "monthly",
       "end": "2026-06-01",
       "updated": "2026-07-14",
-      "age_days": 64,
+      "age_days": 65,
       "threshold_days": 165,
       "status": "green"
     },
@@ -267,7 +234,7 @@
       "frequency": "annual",
       "end": "2025-01-01",
       "updated": "2026-04-21",
-      "age_days": 580,
+      "age_days": 581,
       "threshold_days": 825,
       "status": "green"
     },
@@ -278,7 +245,7 @@
       "frequency": "annual",
       "end": "2024-01-01",
       "updated": "2025-08-27",
-      "age_days": 946,
+      "age_days": 947,
       "threshold_days": 825,
       "status": "green"
     },
@@ -289,7 +256,7 @@
       "frequency": "monthly",
       "end": "2026-03-01",
       "updated": "2026-05-18",
-      "age_days": 156,
+      "age_days": 157,
       "threshold_days": 165,
       "status": "green"
     },
@@ -300,7 +267,7 @@
       "frequency": "annual",
       "end": "2024-01-01",
       "updated": "2025-09-29",
-      "age_days": 946,
+      "age_days": 947,
       "threshold_days": 825,
       "status": "green"
     },
@@ -311,7 +278,7 @@
       "frequency": "quarterly",
       "end": "2026-01-01",
       "updated": "2026-06-16",
-      "age_days": 215,
+      "age_days": 216,
       "threshold_days": 435,
       "status": "green"
     },
@@ -322,7 +289,7 @@
       "frequency": "annual",
       "end": "2024-01-01",
       "updated": "2025-09-29",
-      "age_days": 946,
+      "age_days": 947,
       "threshold_days": 825,
       "status": "green"
     },
@@ -333,7 +300,7 @@
       "frequency": "annual",
       "end": "2025-01-01",
       "updated": "2026-05-21",
-      "age_days": 580,
+      "age_days": 581,
       "threshold_days": 825,
       "status": "green"
     },
@@ -344,7 +311,7 @@
       "frequency": "annual",
       "end": "2022-01-01",
       "updated": "2024-10-28",
-      "age_days": 1676,
+      "age_days": 1677,
       "threshold_days": 2550,
       "status": "green"
     },
@@ -355,7 +322,7 @@
       "frequency": "semi-annual",
       "end": "2026-04-01",
       "updated": "2026-06-18",
-      "age_days": 125,
+      "age_days": 126,
       "threshold_days": 600,
       "status": "green"
     },
@@ -366,7 +333,7 @@
       "frequency": "annual",
       "end": "2025-01-01",
       "updated": null,
-      "age_days": 580,
+      "age_days": 581,
       "threshold_days": 825,
       "status": "green"
     },
@@ -377,7 +344,7 @@
       "frequency": "monthly",
       "end": "2025-12-01",
       "updated": "2026-02-06",
-      "age_days": 246,
+      "age_days": 247,
       "threshold_days": 315,
       "status": "green"
     },
@@ -388,7 +355,7 @@
       "frequency": "weekly",
       "end": "2026-07-13",
       "updated": null,
-      "age_days": 22,
+      "age_days": 23,
       "threshold_days": 53,
       "status": "green"
     },
@@ -399,7 +366,7 @@
       "frequency": "monthly",
       "end": "2026-06-01",
       "updated": "2026-07-21 09:00",
-      "age_days": 64,
+      "age_days": 65,
       "threshold_days": 165,
       "status": "green"
     },
@@ -410,7 +377,7 @@
       "frequency": "quarterly",
       "end": "2026-01-01",
       "updated": "2026-07-21 09:00",
-      "age_days": 215,
+      "age_days": 216,
       "threshold_days": 435,
       "status": "green"
     },
@@ -421,7 +388,7 @@
       "frequency": "monthly",
       "end": "2026-05-01",
       "updated": "2026-07-21 09:00",
-      "age_days": 95,
+      "age_days": 96,
       "threshold_days": 165,
       "status": "green"
     },
@@ -432,7 +399,7 @@
       "frequency": "quarterly",
       "end": "2026-01-01",
       "updated": "2026-06-23 09:00",
-      "age_days": 215,
+      "age_days": 216,
       "threshold_days": 435,
       "status": "green"
     },
@@ -443,7 +410,7 @@
       "frequency": "quarterly",
       "end": "2026-01-01",
       "updated": "2026-06-23 09:00",
-      "age_days": 215,
+      "age_days": 216,
       "threshold_days": 435,
       "status": "green"
     },
@@ -454,7 +421,7 @@
       "frequency": "quarterly",
       "end": "2026-01-01",
       "updated": "2026-06-23 09:00",
-      "age_days": 215,
+      "age_days": 216,
       "threshold_days": 435,
       "status": "green"
     },
@@ -465,7 +432,7 @@
       "frequency": "quarterly",
       "end": "2026-01-01",
       "updated": "2026-06-23 09:00",
-      "age_days": 215,
+      "age_days": 216,
       "threshold_days": 435,
       "status": "green"
     },
@@ -476,7 +443,7 @@
       "frequency": "monthly",
       "end": "2026-05-01",
       "updated": "2026-07-21 09:00",
-      "age_days": 95,
+      "age_days": 96,
       "threshold_days": 165,
       "status": "green"
     },
@@ -487,7 +454,7 @@
       "frequency": "monthly",
       "end": "2026-05-01",
       "updated": "2026-07-21 09:00",
-      "age_days": 95,
+      "age_days": 96,
       "threshold_days": 165,
       "status": "green"
     },
@@ -498,7 +465,7 @@
       "frequency": "monthly",
       "end": "2026-05-01",
       "updated": "2026-07-21 09:00",
-      "age_days": 95,
+      "age_days": 96,
       "threshold_days": 165,
       "status": "green"
     },
@@ -509,7 +476,7 @@
       "frequency": "monthly",
       "end": "2026-05-01",
       "updated": "2026-07-21 09:00",
-      "age_days": 95,
+      "age_days": 96,
       "threshold_days": 165,
       "status": "green"
     },
@@ -520,7 +487,7 @@
       "frequency": "quarterly",
       "end": "2026-01-01",
       "updated": "2026-06-23 09:00",
-      "age_days": 215,
+      "age_days": 216,
       "threshold_days": 435,
       "status": "green"
     },
@@ -531,7 +498,7 @@
       "frequency": "quarterly",
       "end": "2026-01-01",
       "updated": "2026-06-23 09:00",
-      "age_days": 215,
+      "age_days": 216,
       "threshold_days": 435,
       "status": "green"
     },
@@ -542,7 +509,7 @@
       "frequency": "quarterly",
       "end": "2026-01-01",
       "updated": "2026-06-23 09:00",
-      "age_days": 215,
+      "age_days": 216,
       "threshold_days": 435,
       "status": "green"
     },
@@ -553,7 +520,7 @@
       "frequency": "quarterly",
       "end": "2026-01-01",
       "updated": "2026-06-23 09:00",
-      "age_days": 215,
+      "age_days": 216,
       "threshold_days": 435,
       "status": "green"
     },
@@ -564,7 +531,7 @@
       "frequency": "daily",
       "end": "2026-07-15",
       "updated": "2026-07-21 09:00",
-      "age_days": 20,
+      "age_days": 21,
       "threshold_days": 53,
       "status": "green"
     },
@@ -575,7 +542,18 @@
       "frequency": "monthly",
       "end": "2026-06-01",
       "updated": "2026-07-21 09:00",
-      "age_days": 64,
+      "age_days": 65,
+      "threshold_days": 165,
+      "status": "green"
+    },
+    {
+      "id": "ch_snb_devkum",
+      "title": "Bilateral exchange rates",
+      "source": "Swiss National Bank",
+      "frequency": "monthly",
+      "end": "2026-07-01",
+      "updated": "2026-08-03 14:30",
+      "age_days": 35,
       "threshold_days": 165,
       "status": "green"
     },
@@ -586,7 +564,7 @@
       "frequency": "monthly",
       "end": "2026-06-01",
       "updated": "2026-07-07 09:00",
-      "age_days": 64,
+      "age_days": 65,
       "threshold_days": 165,
       "status": "green"
     },
@@ -597,7 +575,7 @@
       "frequency": "daily",
       "end": "2026-06-30",
       "updated": "2026-07-07 09:00",
-      "age_days": 35,
+      "age_days": 36,
       "threshold_days": 75,
       "status": "green"
     },
@@ -608,7 +586,7 @@
       "frequency": "quarterly",
       "end": "2026-04-01",
       "updated": "2026-07-21 09:00",
-      "age_days": 125,
+      "age_days": 126,
       "threshold_days": 435,
       "status": "green"
     },
@@ -619,7 +597,7 @@
       "frequency": "monthly",
       "end": "2026-06-01",
       "updated": "2026-07-21 09:00",
-      "age_days": 64,
+      "age_days": 65,
       "threshold_days": 165,
       "status": "green"
     },
@@ -630,8 +608,19 @@
       "frequency": "monthly",
       "end": "2026-06-01",
       "updated": "2026-07-21 09:00",
-      "age_days": 64,
+      "age_days": 65,
       "threshold_days": 165,
+      "status": "green"
+    },
+    {
+      "id": "ch_snb_rendeiduebd",
+      "title": "Bond yields (spot rates)",
+      "source": "Swiss National Bank",
+      "frequency": "daily",
+      "end": "2026-07-31",
+      "updated": "2026-08-03 14:30",
+      "age_days": 5,
+      "threshold_days": 75,
       "status": "green"
     },
     {
@@ -641,7 +630,7 @@
       "frequency": "monthly",
       "end": "2026-06-01",
       "updated": "2026-07-31 09:00",
-      "age_days": 64,
+      "age_days": 65,
       "threshold_days": 165,
       "status": "green"
     },
@@ -652,7 +641,7 @@
       "frequency": "quarterly",
       "end": "2029-01-01",
       "updated": "2026-06-24 15:00",
-      "age_days": -881,
+      "age_days": -880,
       "threshold_days": 435,
       "status": "green"
     },
@@ -663,7 +652,7 @@
       "frequency": "quarterly",
       "end": "2026-04-01",
       "updated": "2026-06-24 15:00",
-      "age_days": 125,
+      "age_days": 126,
       "threshold_days": 435,
       "status": "green"
     },
@@ -674,7 +663,7 @@
       "frequency": "monthly",
       "end": "2026-06-01",
       "updated": "2026-07-21 09:00",
-      "age_days": 64,
+      "age_days": 65,
       "threshold_days": 165,
       "status": "green"
     },
@@ -685,7 +674,7 @@
       "frequency": "monthly",
       "end": "2026-06-01",
       "updated": "2026-07-21 09:00",
-      "age_days": 64,
+      "age_days": 65,
       "threshold_days": 165,
       "status": "green"
     },
@@ -696,7 +685,7 @@
       "frequency": "monthly",
       "end": "2026-06-01",
       "updated": "2026-07-21 09:00",
-      "age_days": 64,
+      "age_days": 65,
       "threshold_days": 165,
       "status": "green"
     },
@@ -707,7 +696,7 @@
       "frequency": "monthly",
       "end": "2026-05-01",
       "updated": "2026-07-21 09:00",
-      "age_days": 95,
+      "age_days": 96,
       "threshold_days": 165,
       "status": "green"
     },
@@ -718,7 +707,7 @@
       "frequency": "monthly",
       "end": "2026-06-01",
       "updated": "2026-07-21 09:00",
-      "age_days": 64,
+      "age_days": 65,
       "threshold_days": 165,
       "status": "green"
     },
@@ -729,7 +718,7 @@
       "frequency": "monthly",
       "end": "2026-05-01",
       "updated": "2026-07-21 09:00",
-      "age_days": 95,
+      "age_days": 96,
       "threshold_days": 165,
       "status": "green"
     },
@@ -740,7 +729,7 @@
       "frequency": "monthly",
       "end": "2026-05-01",
       "updated": "2026-07-21 09:00",
-      "age_days": 95,
+      "age_days": 96,
       "threshold_days": 165,
       "status": "green"
     },
@@ -751,7 +740,7 @@
       "frequency": "monthly",
       "end": "2026-05-01",
       "updated": "2026-07-21 09:00",
-      "age_days": 95,
+      "age_days": 96,
       "threshold_days": 165,
       "status": "green"
     },
@@ -762,19 +751,30 @@
       "frequency": "monthly",
       "end": "2026-04-01",
       "updated": "2026-07-21 09:00",
-      "age_days": 125,
+      "age_days": 126,
       "threshold_days": 225,
       "status": "green"
     },
     {
-      "id": "ch_adecco_sjmi",
-      "title": "Adecco Group Swiss Job Market Index",
-      "source": "University of Zurich (Stellenmarkt-Monitor Schweiz)",
-      "frequency": "quarterly",
+      "id": "ch_snb_zikrepro",
+      "title": "Published interest rates",
+      "source": "Swiss National Bank",
+      "frequency": "monthly",
       "end": "2026-06-01",
-      "updated": null,
-      "age_days": 64,
-      "threshold_days": 435,
+      "updated": "2026-08-03 14:30",
+      "age_days": 65,
+      "threshold_days": 165,
+      "status": "green"
+    },
+    {
+      "id": "ch_snb_zimoma",
+      "title": "Money market rates",
+      "source": "Swiss National Bank",
+      "frequency": "monthly",
+      "end": "2026-07-01",
+      "updated": "2026-08-03 14:30",
+      "age_days": 35,
+      "threshold_days": 165,
       "status": "green"
     }
   ]
