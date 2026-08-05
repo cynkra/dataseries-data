@@ -7,9 +7,10 @@
 # datasheet and its generated output disagreeing, not a function returning the
 # wrong value.
 #
-# NOTE: nothing runs these automatically. The ETL workflow refreshes data and
-# commits it without consulting them, so a datasheet edit that breaks a guard
-# stays broken until someone runs this. Worth wiring into CI on push.
+# The daily ETL runs these too, via .github/scripts/test_issues.sh — but it
+# REPORTS rather than gates: a failing guard opens an issue labelled `data-guard`
+# and the data still publishes. So a red guard will not stop the pipeline, and
+# equally will not block you here. Run this before pushing a datasheet edit.
 
 files <- sort(list.files("tests", pattern = "^test_.*\\.R$", full.names = TRUE))
 if (!length(files)) stop("no tests found — run me from the repo root", call. = FALSE)

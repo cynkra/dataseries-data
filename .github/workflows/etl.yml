@@ -67,6 +67,24 @@ jobs:
             git push
           fi
 
+      # Soft alarm: a datasheet guard is failing. The tests/ suites check what the
+      # ETL cannot — a datasheet disagreeing with its generated output, a curated
+      # string creeping into the fetch code, a translation outliving the English
+      # it was written from. Nothing ran them before this step existed, so a
+      # breaking edit stayed unnoticed until somebody ran them by hand.
+      #
+      # They REPORT, they do not gate: this runs AFTER the commit, so the numbers
+      # still publish. A red guard means "a human should look at this", not
+      # "ship nothing today" — the data is usually still correct, and it is the
+      # curated layer around it that has drifted. One deduped issue per failing
+      # suite, labelled `data-guard`, auto-closed when the suite passes again.
+      - name: Run datasheet guards (report, don't gate)
+        if: success()
+        continue-on-error: true
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: bash .github/scripts/test_issues.sh
+
       # Soft alarm: a dataset has gone stale (red on the health board). For each
       # red dataset, open (or refresh) ONE deduped issue labelled `data-health`,
       # and auto-close any data-health issue whose dataset is fresh again. Runs
