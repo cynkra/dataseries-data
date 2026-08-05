@@ -147,6 +147,29 @@ apply_vocab <- function(meta, lines, data_dir) {
   meta
 }
 
+# The SNB-silent-fallback guard: a non-German language whose labels are
+# byte-identical to German across an ENTIRE dimension (>= 3 distinct German
+# values, so tiny dims can't trigger it) is an echo, not a translation — the
+# upstream API fell back without saying so (SNB does this for Italian, HTTP 200).
+# Contract rule: omit a language rather than stub it, so the echo is dropped.
+drop_lang_echo <- function(dimensions) {
+  for (d in names(dimensions)) {
+    lv <- dimensions[[d]]$levels
+    if (is.null(lv) || !length(lv)) next
+    de <- vapply(lv, function(x) x$label$de %||% NA_character_, "")
+    if (length(unique(de[!is.na(de)])) < 3) next
+    for (L in c("fr", "it")) {
+      other <- vapply(lv, function(x) x$label[[L]] %||% NA_character_, "")
+      have <- !is.na(de) & !is.na(other)
+      if (!any(have) || !all(other[have] == de[have])) next
+      for (code in names(lv)) dimensions[[d]]$levels[[code]]$label[[L]] <- NULL
+      if (!is.null(dimensions[[d]]$label[[L]])) dimensions[[d]]$label[[L]] <- NULL
+      message(sprintf("    dropped '%s' labels on dim '%s': byte-identical to 'de' (upstream fallback)", L, d))
+    }
+  }
+  dimensions
+}
+
 # Add `$data = TRUE/FALSE` to every level of every dimension, flagging whether
 # that code actually appears in the data (vs being a grouping-only hierarchy
 # node). Dimension-agnostic; a no-op for datasets without dimensions (e.g. KOF).

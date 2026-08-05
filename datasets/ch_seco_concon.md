@@ -1,7 +1,7 @@
 # Consumer sentiment index
 
 - **id**: ch_seco_concon
-- **title**: Consumer confidence
+- **title**: Consumer confidence | de: Konsumentenstimmung | fr: Climat de consommation | it: Clima di consumo
 - **concept**: Business cycle & sentiment / Consumer confidence
 - **canonical**: yes
 - **featured**: Consumer confidence
@@ -61,9 +61,9 @@ this datasheet, not from a hierarchy heuristic).
 
 ## Labels
 - dim: structure
-  - grp_prices: Prices
-  - grp_jobs: Employment
-  - grp_saving: Saving
+  - grp_prices: Prices | de: Preise | fr: Prix | it: Prezzi
+  - grp_jobs: Employment | de: Beschäftigung | fr: Emploi | it: Occupazione
+  - grp_saving: Saving | de: Sparen | fr: Épargne | it: Risparmio
 
 ## Display
 - **split**: structure

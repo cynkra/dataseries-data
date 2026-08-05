@@ -1,7 +1,7 @@
 # Mortgage loans and other domestic and foreign loans (monthly)
 
 - **id**: ch_snb_bakredinausbm
-- **title**: Mortgage & other loans
+- **title**: Mortgage & other loans | de: Hypothekar- und übrige Kredite | fr: Crédits hypothécaires et autres | it: Crediti ipotecari e altri crediti
 - **concept**: Money & banking / Banking & credit
 - **canonical**: yes
 - **source**: snb

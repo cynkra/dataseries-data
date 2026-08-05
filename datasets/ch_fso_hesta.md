@@ -1,7 +1,7 @@
 # Hotel sector: overnight stays by tourism region
 
 - **id**: ch_fso_hesta
-- **title**: Hotel overnight stays
+- **title**: Hotel overnight stays | de: Hotellogiernächte | fr: Nuitées hôtelières | it: Pernottamenti alberghieri
 - **concept**: Domestic economy / Hotel overnight stays
 - **canonical**: yes
 - **source**: fso

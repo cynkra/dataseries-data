@@ -1,7 +1,7 @@
 # Swiss balance of payments, financial account (quarterly)
 
 - **id**: ch_snb_bopcapbalq
-- **title**: Balance of payments: financial account
+- **title**: Balance of payments: financial account | de: Zahlungsbilanz: Kapitalbilanz | fr: Balance des paiements : compte financier | it: Bilancia dei pagamenti: conto finanziario
 - **concept**: External sector / Balance of payments
 - **canonical**: yes
 - **source**: snb

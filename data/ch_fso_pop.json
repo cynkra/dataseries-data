@@ -6,9 +6,6 @@
   ],
   "start": "1861-01-01",
   "end": "2024-01-01",
-  "title": {
-    "en": "Resident population"
-  },
   "source": {
     "name": {
       "en": "Swiss Federal Statistical Office (FSO)",
@@ -26,66 +23,99 @@
   "dimensions": {
     "item": {
       "label": {
-        "en": "Demographic component"
+        "en": "Demographic component",
+        "de": "Demografische Komponente",
+        "fr": "Composante démographique",
+        "it": "Componente demografica"
       },
       "levels": {
         "pop_stock_jan": {
           "label": {
-            "en": "Population on 1 January"
+            "en": "Population on 1 January",
+            "de": "Bevölkerung am 1. Januar",
+            "fr": "Population au 1er janvier",
+            "it": "Popolazione al 1° gennaio"
           },
           "data": true
         },
         "live_births": {
           "label": {
-            "en": "Live births"
+            "en": "Live births",
+            "de": "Lebendgeburten",
+            "fr": "Naissances vivantes",
+            "it": "Nati vivi"
           },
           "data": true
         },
         "deaths": {
           "label": {
-            "en": "Deaths"
+            "en": "Deaths",
+            "de": "Todesfälle",
+            "fr": "Décès",
+            "it": "Decessi"
           },
           "data": true
         },
         "birth_surplus": {
           "label": {
-            "en": "Excess of births over deaths"
+            "en": "Excess of births over deaths",
+            "de": "Geburtenüberschuss",
+            "fr": "Excédent des naissances",
+            "it": "Eccedenza delle nascite"
           },
           "data": true
         },
         "immigration": {
           "label": {
-            "en": "Immigration"
+            "en": "Immigration",
+            "de": "Einwanderung",
+            "fr": "Immigration",
+            "it": "Immigrazione"
           },
           "data": true
         },
         "emigration": {
           "label": {
-            "en": "Emigration"
+            "en": "Emigration",
+            "de": "Auswanderung",
+            "fr": "Émigration",
+            "it": "Emigrazione"
           },
           "data": true
         },
         "migration_bal": {
           "label": {
-            "en": "Net migration"
+            "en": "Net migration",
+            "de": "Wanderungssaldo",
+            "fr": "Solde migratoire",
+            "it": "Saldo migratorio"
           },
           "data": true
         },
         "naturalisation": {
           "label": {
-            "en": "Acquisition of Swiss citizenship"
+            "en": "Acquisition of Swiss citizenship",
+            "de": "Erwerb des Schweizer Bürgerrechts",
+            "fr": "Acquisition de la nationalité suisse",
+            "it": "Acquisizione della cittadinanza svizzera"
           },
           "data": true
         },
         "adjustments": {
           "label": {
-            "en": "Adjustments"
+            "en": "Adjustments",
+            "de": "Bereinigungen",
+            "fr": "Ajustements",
+            "it": "Rettifiche"
           },
           "data": true
         },
         "pop_stock_dec": {
           "label": {
-            "en": "Population on 31 December"
+            "en": "Population on 31 December",
+            "de": "Bevölkerung am 31. Dezember",
+            "fr": "Population au 31 décembre",
+            "it": "Popolazione al 31 dicembre"
           },
           "data": true
         }
@@ -95,6 +125,12 @@
   "concept": "Population & demographics / Resident population",
   "canonical": true,
   "featured": "Population",
+  "title": {
+    "en": "Resident population",
+    "de": "Ständige Wohnbevölkerung",
+    "fr": "Population résidante permanente",
+    "it": "Popolazione residente permanente"
+  },
   "split": "item",
   "single_select": [],
   "default_transform": "level",
@@ -102,5 +138,5 @@
     "item": "pop_stock_jan"
   },
   "description": "The annual demographic balance of the permanent resident population, back to 1861 (the longest series in the catalog). Broader than the old parser, which kept only the 1 January population stock; this captures the full demographic balance the workbook provides (stocks, births, deaths, birth surplus, migration, naturalisations, absolute change).",
-  "fetched_utc": "2026-07-31 09:17:56"
+  "fetched_utc": "2026-08-05 13:12:07"
 }

@@ -1,7 +1,7 @@
 # Employees, by economic activity
 
 - **id**: ch_snb_ambeschkla
-- **title**: Employees, by economic activity
+- **title**: Employees, by economic activity | de: Beschäftigte nach Wirtschaftszweig | fr: Emplois par branche économique | it: Impieghi per ramo economico
 - **concept**: Labour / Employment / jobs
 - **canonical**: no (alternate for Employment; overlaps FSO `ch_fso_besta`, flagged in CONCEPT-UNIVERSE; FSO is the intended canonical employment series)
 - **source**: snb

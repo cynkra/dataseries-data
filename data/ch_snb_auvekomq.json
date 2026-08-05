@@ -8,7 +8,10 @@
   "start": "1985-01-01",
   "end": "2026-01-01",
   "title": {
-    "en": "International investment position"
+    "en": "International investment position",
+    "de": "Auslandvermögen",
+    "fr": "Position extérieure",
+    "it": "Posizione patrimoniale sull'estero"
   },
   "source": {
     "name": {
@@ -25,24 +28,32 @@
   "dimensions": {
     "D0": {
       "label": {
-        "en": "Accounting entry"
+        "en": "Accounting entry",
+        "de": "Buchungseintrag",
+        "fr": "Enregistrement comptable"
       },
       "levels": {
         "A": {
           "label": {
-            "en": "Assets"
+            "en": "Assets",
+            "de": "Aktiven",
+            "fr": "Actifs"
           },
           "data": true
         },
         "P": {
           "label": {
-            "en": "Liabilities"
+            "en": "Liabilities",
+            "de": "Passiven",
+            "fr": "Passifs"
           },
           "data": true
         },
         "N": {
           "label": {
-            "en": "Net international investment position"
+            "en": "Net international investment position",
+            "de": "Nettovermögen",
+            "fr": "Position extérieure nette"
           },
           "data": true
         }
@@ -55,294 +66,392 @@
     },
     "D1": {
       "label": {
-        "en": "Component"
+        "en": "Component",
+        "de": "Komponente",
+        "fr": "Composantes"
       },
       "levels": {
         "T0": {
           "label": {
-            "en": "Total"
+            "en": "Total",
+            "de": "Total",
+            "fr": "Total"
           },
           "data": true
         },
         "D1_1": {
           "label": {
-            "en": "Direct investment"
+            "en": "Direct investment",
+            "de": "Direktinvestitionen",
+            "fr": "Investissements directs"
           },
           "data": false
         },
         "T1": {
           "label": {
-            "en": "Total"
+            "en": "Total",
+            "de": "Total",
+            "fr": "Total"
           },
           "data": true
         },
         "B0": {
           "label": {
-            "en": "Equity capital"
+            "en": "Equity capital",
+            "de": "Beteiligungskapital",
+            "fr": "Participations"
           },
           "data": true
         },
         "K0": {
           "label": {
-            "en": "Debt instruments"
+            "en": "Debt instruments",
+            "de": "Kredite",
+            "fr": "Prêts"
           },
           "data": true
         },
         "D1_2": {
           "label": {
-            "en": "Portfolio investment"
+            "en": "Portfolio investment",
+            "de": "Portfolioinvestitionen",
+            "fr": "Investissements de portefeuille"
           },
           "data": false
         },
         "T2": {
           "label": {
-            "en": "Total"
+            "en": "Total",
+            "de": "Total",
+            "fr": "Total"
           },
           "data": true
         },
         "S0": {
           "label": {
-            "en": "Debt securities"
+            "en": "Debt securities",
+            "de": "Schuldtitel",
+            "fr": "Titres de créance"
           },
           "data": false
         },
         "S0T": {
           "label": {
-            "en": "Total"
+            "en": "Total",
+            "de": "Total",
+            "fr": "Total"
           },
           "data": true
         },
         "STK": {
           "label": {
-            "en": "Short-term"
+            "en": "Short-term",
+            "de": "Kurzfristig",
+            "fr": "À court terme"
           },
           "data": true
         },
         "STL": {
           "label": {
-            "en": "Long-term"
+            "en": "Long-term",
+            "de": "Langfristig",
+            "fr": "À long terme"
           },
           "data": true
         },
         "D1_2_2": {
           "label": {
-            "en": "Equity securities"
+            "en": "Equity securities",
+            "de": "Dividendenpapiere",
+            "fr": "Titres de participation"
           },
           "data": false
         },
         "T3": {
           "label": {
-            "en": "Total"
+            "en": "Total",
+            "de": "Total",
+            "fr": "Total"
           },
           "data": true
         },
         "A": {
           "label": {
-            "en": "Shares"
+            "en": "Shares",
+            "de": "Aktien",
+            "fr": "Actions"
           },
           "data": true
         },
         "K1": {
           "label": {
-            "en": "Collective investment schemes"
+            "en": "Collective investment schemes",
+            "de": "Kollektivanlagen",
+            "fr": "Placements collectifs"
           },
           "data": true
         },
         "D": {
           "label": {
-            "en": "Derivatives"
+            "en": "Derivatives",
+            "de": "Derivate",
+            "fr": "Produits dérivés"
           },
           "data": true
         },
         "D1_4": {
           "label": {
-            "en": "Other investment"
+            "en": "Other investment",
+            "de": "Übrige Investitionen",
+            "fr": "Autres investissements"
           },
           "data": false
         },
         "T4": {
           "label": {
-            "en": "Total"
+            "en": "Total",
+            "de": "Total",
+            "fr": "Total"
           },
           "data": true
         },
         "D1_4_1": {
           "label": {
-            "en": "Currency and deposits"
+            "en": "Currency and deposits",
+            "de": "Bargeld und Einlagen",
+            "fr": "Numéraire et dépôts"
           },
           "data": false
         },
         "T5": {
           "label": {
-            "en": "Total"
+            "en": "Total",
+            "de": "Total",
+            "fr": "Total"
           },
           "data": true
         },
         "N0": {
           "label": {
-            "en": "Swiss National Bank"
+            "en": "Swiss National Bank",
+            "de": "Nationalbank",
+            "fr": "Banque nationale"
           },
           "data": true
         },
         "B1": {
           "label": {
-            "en": "Banks"
+            "en": "Banks",
+            "de": "Banken",
+            "fr": "Banques"
           },
           "data": false
         },
         "TB1": {
           "label": {
-            "en": "Total"
+            "en": "Total",
+            "de": "Total",
+            "fr": "Total"
           },
           "data": true
         },
         "FGB": {
           "label": {
-            "en": "Of which Amounts due from banks"
+            "en": "Of which Amounts due from banks",
+            "de": "davon Forderungen gegenüber Banken",
+            "fr": "dont Créances sur les banques"
           },
           "data": true
         },
         "VGB": {
           "label": {
-            "en": "Of which Amounts due to banks"
+            "en": "Of which Amounts due to banks",
+            "de": "davon Verpflichtungen gegenüber Banken",
+            "fr": "dont Engagements envers les banques"
           },
           "data": true
         },
         "VGK": {
           "label": {
-            "en": "Of which Amounts due to customers"
+            "en": "Of which Amounts due to customers",
+            "de": "davon Verpflichtungen gegenüber Kunden",
+            "fr": "dont Engagements envers la clientèle"
           },
           "data": true
         },
         "OH0": {
           "label": {
-            "en": "Public sector"
+            "en": "Public sector",
+            "de": "Öffentliche Hand",
+            "fr": "Collectivités publiques"
           },
           "data": true
         },
         "US0": {
           "label": {
-            "en": "Other sectors"
+            "en": "Other sectors",
+            "de": "Übrige Sektoren",
+            "fr": "Autres secteurs"
           },
           "data": true
         },
         "D1_4_2": {
           "label": {
-            "en": "Loans"
+            "en": "Loans",
+            "de": "Kredite",
+            "fr": "Prêts"
           },
           "data": false
         },
         "T6": {
           "label": {
-            "en": "Total"
+            "en": "Total",
+            "de": "Total",
+            "fr": "Total"
           },
           "data": true
         },
         "N1": {
           "label": {
-            "en": "Swiss National Bank"
+            "en": "Swiss National Bank",
+            "de": "Nationalbank",
+            "fr": "Banque nationale"
           },
           "data": true
         },
         "B2": {
           "label": {
-            "en": "Banks"
+            "en": "Banks",
+            "de": "Banken",
+            "fr": "Banques"
           },
           "data": false
         },
         "TB2": {
           "label": {
-            "en": "Total"
+            "en": "Total",
+            "de": "Total",
+            "fr": "Total"
           },
           "data": true
         },
         "FGK": {
           "label": {
-            "en": "Of which Amounts due from customers"
+            "en": "Of which Amounts due from customers",
+            "de": "davon Forderungen gegenüber Kunden",
+            "fr": "dont Créances sur la clientèle"
           },
           "data": true
         },
         "OH1": {
           "label": {
-            "en": "Public sector"
+            "en": "Public sector",
+            "de": "Öffentliche Hand",
+            "fr": "Collectivités publiques"
           },
           "data": true
         },
         "US1": {
           "label": {
-            "en": "Other sectors"
+            "en": "Other sectors",
+            "de": "Übrige Sektoren",
+            "fr": "Autres secteurs"
           },
           "data": true
         },
         "UA": {
           "label": {
-            "en": "Other assets"
+            "en": "Other assets",
+            "de": "Übrige Aktiven",
+            "fr": "Autres actifs"
           },
           "data": true
         },
         "UP": {
           "label": {
-            "en": "Other liabilities"
+            "en": "Other liabilities",
+            "de": "Übrige Passiven",
+            "fr": "Autres passifs"
           },
           "data": true
         },
         "D1_5": {
           "label": {
-            "en": "Reserve assets"
+            "en": "Reserve assets",
+            "de": "Währungsreserven",
+            "fr": "Réserves monétaires"
           },
           "data": false
         },
         "T7": {
           "label": {
-            "en": "Total"
+            "en": "Total",
+            "de": "Total",
+            "fr": "Total"
           },
           "data": true
         },
         "G": {
           "label": {
-            "en": "Gold holdings"
+            "en": "Gold holdings",
+            "de": "Gold",
+            "fr": "Or"
           },
           "data": true
         },
         "RIWF": {
           "label": {
-            "en": "Reserve position in the IMF"
+            "en": "Reserve position in the IMF",
+            "de": "Reserveposition beim IWF",
+            "fr": "Position de réserve au FMI"
           },
           "data": true
         },
         "S1": {
           "label": {
-            "en": "Special Drawing Rights"
+            "en": "Special Drawing Rights",
+            "de": "Sonderziehungsrechte",
+            "fr": "Droits de tirage spéciaux"
           },
           "data": true
         },
         "D1_5_4": {
           "label": {
-            "en": "Foreign currency investments"
+            "en": "Foreign currency investments",
+            "de": "Devisenanlagen",
+            "fr": "Placements de devises"
           },
           "data": false
         },
         "T8": {
           "label": {
-            "en": "Total"
+            "en": "Total",
+            "de": "Total",
+            "fr": "Total"
           },
           "data": true
         },
         "W": {
           "label": {
-            "en": "Securities"
+            "en": "Securities",
+            "de": "Wertpapiere",
+            "fr": "Titres"
           },
           "data": true
         },
         "BE": {
           "label": {
-            "en": "Currency and deposits"
+            "en": "Currency and deposits",
+            "de": "Bargeld und Einlagen",
+            "fr": "Numéraire et dépôts"
           },
           "data": true
         },
         "U": {
           "label": {
-            "en": "Other positions"
+            "en": "Other positions",
+            "de": "Übrige",
+            "fr": "Autres réserves monétaires"
           },
           "data": true
         }
@@ -423,5 +532,5 @@
     "D1": "T0"
   },
   "description": "The headline overview of Switzerland's international investment position (IIP): the stock of foreign assets, liabilities and the net position, back to 1985. This is the canonical IIP cube; auvercurrq (currency breakdown) and auverdeptq (external debt) are companion cuts of the same external balance sheet. The distinctive feature is the very deep functional Component hierarchy (direct / portfolio / derivatives / other investment / reserve assets), four levels deep in places, drilling from a total down to bank/customer sub-balances and the SNB's reserve-asset composition (gold, IMF reserve position, SDRs, FX investments). Values are CHF-million stocks at end of quarter.",
-  "fetched_utc": "2026-06-23 09:28:09"
+  "fetched_utc": "2026-08-05 13:12:01"
 }

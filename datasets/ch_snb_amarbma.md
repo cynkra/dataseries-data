@@ -1,7 +1,7 @@
 # Labour market (registered unemployment, SECO)
 
 - **id**: ch_snb_amarbma
-- **title**: Registered unemployment
+- **title**: Registered unemployment | de: Registrierte Arbeitslosigkeit | fr: Chômage inscrit | it: Disoccupazione registrata
 - **concept**: Labour / Unemployment
 - **canonical**: yes (registered/SECO definition — the headline unemployment series; the ILO `ch_fso_unemp_rate` is the labelled alternate)
 - **featured**: Unemployment

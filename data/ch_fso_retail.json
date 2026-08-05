@@ -9,7 +9,10 @@
   "start": "2000-01-01",
   "end": "2026-06-01",
   "title": {
-    "en": "Retail trade turnover"
+    "en": "Retail trade turnover",
+    "de": "Detailhandelsumsätze",
+    "fr": "Chiffres d'affaires du commerce de détail",
+    "it": "Fatturato del commercio al dettaglio"
   },
   "source": {
     "name": {
@@ -31,115 +34,172 @@
       "levels": {
         "47": {
           "label": {
-            "en": "47 Retail trade"
+            "en": "47 Retail trade",
+            "de": "47 Detailhandel",
+            "fr": "47 Commerce de détail",
+            "it": "47 Commercio al dettaglio"
           },
           "data": true
         },
         "4711": {
           "label": {
-            "en": "4711 Retail sale in non-specialised stores with food, beverages or tobacco predominating"
+            "en": "4711 Retail sale in non-specialised stores with food, beverages or tobacco predominating",
+            "de": "4711 Detailhandel mit Waren verschiedener Art, Hauptrichtung Nahrungs- und Genussmittel, Getränke und Tabakwaren",
+            "fr": "4711 Commerce de détail en magasin non spécialisé à prédominance alimentaire",
+            "it": "4711 Commercio al dettaglio in esercizi non specializzati con prevalenza di prodotti alimentari, bevande o tabacco"
           },
           "data": true
         },
         "4711_472": {
           "label": {
-            "en": "4711_472 Retail sale of food, beverages and tobacco"
+            "en": "4711_472 Retail sale of food, beverages and tobacco",
+            "de": "4711_472 Detailhandel mit Nahrungsmitteln, Getränken, Tabakwaren",
+            "fr": "4711_472 Commerce de détail de denrées alimentaires, boissons, tabac",
+            "it": "4711_472 Commercio al dettaglio di prodotti alimentari, bevande e tabacchi"
           },
           "data": true
         },
         "4719": {
           "label": {
-            "en": "4719 Other retail sale in non-specialised stores"
+            "en": "4719 Other retail sale in non-specialised stores",
+            "de": "4719 Sonstiger Detailhandel mit Waren verschiedener Art",
+            "fr": "4719 Autre commerce de détail en magasin non spécialisé",
+            "it": "4719 Commercio al dettaglio in altri esercizi non specializzati"
           },
           "data": true
         },
         "4719_474-479": {
           "label": {
-            "en": "4719_474-479 Retail sale of non-food (except fuel)"
+            "en": "4719_474-479 Retail sale of non-food (except fuel)",
+            "de": "4719_474-479 Detailhandel mit Nicht-Nahrungsmitteln (ohne Tankstellen)",
+            "fr": "4719_474-479 Commerce de détail non alimentaire (carburants exclus)",
+            "it": "4719_474-479 Commercio al dettaglio di prodotti non alimentari (escl. carburanti)"
           },
           "data": true
         },
         "472": {
           "label": {
-            "en": "472 Retail sale of food, beverages and tobacco in specialised stores"
+            "en": "472 Retail sale of food, beverages and tobacco in specialised stores",
+            "de": "472 Detailhandel mit Nahrungs- und Genussmitteln, Getränken und Tabakwaren (in Verkaufsräumen)",
+            "fr": "472 Commerce de détail alimentaire en magasin spécialisé",
+            "it": "472 Commercio al dettaglio di prodotti alimentari, bevande e tabacco in esercizi specializzati"
           },
           "data": true
         },
         "473": {
           "label": {
-            "en": "473 Retail sale of automotive fuel in specialised stores"
+            "en": "473 Retail sale of automotive fuel in specialised stores",
+            "de": "473 Detailhandel mit Motorenkraftstoffen (Tankstellen)",
+            "fr": "473 Commerce de détail de carburants en magasin spécialisé",
+            "it": "473 Commercio al dettaglio di carburante per autotrazione in esercizi specializzati"
           },
           "data": true
         },
         "474": {
           "label": {
-            "en": "474 Retail sale of information and communication equipment in specialised stores"
+            "en": "474 Retail sale of information and communication equipment in specialised stores",
+            "de": "474 Detailhandel mit Geräten der Informations- und Kommunikationstechnik (in Verkaufsräumen)",
+            "fr": "474 Commerce de détail d'équipements de l'information et de la communication en magasin spécialisé",
+            "it": "474 Commercio al dettaglio di apparecchiature di informazione e comunicazione in esercizi specializzati"
           },
           "data": true
         },
         "475": {
           "label": {
-            "en": "475 Retail sale of other household equipment in specialised stores"
+            "en": "475 Retail sale of other household equipment in specialised stores",
+            "de": "475 Detailhandel mit sonstigen Haushaltsgeräten, Textilien, Heimwerker- und Einrichtungsbedarf (in Verkaufsräumen)",
+            "fr": "475 Commerce de détail d'autres équipements du foyer en magasin spécialisé",
+            "it": "475 Commercio al dettaglio di altri oggetti di uso domestico in esercizi specializzati"
           },
           "data": true
         },
         "476": {
           "label": {
-            "en": "476 Retail sale of cultural and recreation goods in specialised stores"
+            "en": "476 Retail sale of cultural and recreation goods in specialised stores",
+            "de": "476 Detailhandel mit Verlagsprodukten, Sportausrüstungen und Spielwaren (in Verkaufsräumen)",
+            "fr": "476 Commerce de détail de biens culturels et de loisirs en magasin spécialisé",
+            "it": "476 Commercio al dettaglio di articoli culturali e ricreativi in esercizi specializzati"
           },
           "data": true
         },
         "477": {
           "label": {
-            "en": "477 Retail sale of other goods in specialised stores"
+            "en": "477 Retail sale of other goods in specialised stores",
+            "de": "477 Detailhandel mit sonstigen Gütern (in Verkaufsräumen)",
+            "fr": "477 Autres commerces de détail en magasin spécialisé",
+            "it": "477 Commercio al dettaglio di altri prodotti in esercizi specializzati"
           },
           "data": true
         },
         "478_479": {
           "label": {
-            "en": "478_479 Retail sale via stalls and markets; Retail sale via mail order houses or via internet"
+            "en": "478_479 Retail sale via stalls and markets; Retail sale via mail order houses or via internet",
+            "de": "478_479 Detailhandel an Verkaufsständen und auf Märkten; Versand- und Internet-Detailhandel",
+            "fr": "478_479 Commerce de détail sur éventaires et marchés; Vente par correspondance ou via internet",
+            "it": "478_479 Commercio al dettaglio ambulante in bancarelle e mercati, Commercio al dettaglio per corrispondenza o attraverso Internet"
           },
           "data": true
         },
         "47P": {
           "label": {
-            "en": "47P Class of goods of retail trade"
+            "en": "47P Class of goods of retail trade",
+            "de": "47P Warengruppen des Detailhandels",
+            "fr": "47P Groupes de marchandises du commerce de détail",
+            "it": "47P Gruppi di merci del commercio al dettaglio"
           },
           "data": true
         },
         "47P_Bekl": {
           "label": {
-            "en": "47P_Bekl Clothing, footwear"
+            "en": "47P_Bekl Clothing, footwear",
+            "de": "47P_Bekl Bekleidung, Schuhe",
+            "fr": "47P_Bekl Vêtements, chaussures",
+            "it": "47P_Bekl Abbigliamento, calzature"
           },
           "data": true
         },
         "47P_Food": {
           "label": {
-            "en": "47P_Food Food, beverages and tobacco"
+            "en": "47P_Food Food, beverages and tobacco",
+            "de": "47P_Food Nahrungsmittel, Getränke, Tabak",
+            "fr": "47P_Food Alimentation, boissons, tabac",
+            "it": "47P_Food Prodotti alimentari, bevande, tabacchi"
           },
           "data": true
         },
         "47P_Treib": {
           "label": {
-            "en": "47P_Treib Automotive fuel"
+            "en": "47P_Treib Automotive fuel",
+            "de": "47P_Treib Treibstoffe",
+            "fr": "47P_Treib Carburants",
+            "it": "47P_Treib Carburante"
           },
           "data": true
         },
         "47P_UW": {
           "label": {
-            "en": "47P_UW Remaining classes of goods (excluding fuel)"
+            "en": "47P_UW Remaining classes of goods (excluding fuel)",
+            "de": "47P_UW Übrige Warengruppen (ohne Treibstoffe)",
+            "fr": "47P_UW Ensemble des autres groupes (hors carburants)",
+            "it": "47P_UW Insieme degli altri gruppi (senza carburante)"
           },
           "data": true
         },
         "47PxTreib": {
           "label": {
-            "en": "47PxTreib Total retail sector without fuel"
+            "en": "47PxTreib Total retail sector without fuel",
+            "de": "47PxTreib Total Detailhandel ohne Treibstoffe",
+            "fr": "47PxTreib Total du commerce de détail hors carburants",
+            "it": "47PxTreib Totale commercio al dettaglio senza carburante"
           },
           "data": true
         },
         "47x473": {
           "label": {
-            "en": "47x473 Total retail trade except fuel"
+            "en": "47x473 Total retail trade except fuel",
+            "de": "47x473 Total Detailhandel ohne Tankstellen",
+            "fr": "47x473 Total du commerce de détail hors carburants",
+            "it": "47x473 Totale commercio al dettaglio senza carburante"
           },
           "data": true
         }
@@ -175,19 +235,28 @@
       "levels": {
         "N": {
           "label": {
-            "en": "Neither seasonally adjusted nor calendar adjusted data"
+            "en": "Neither seasonally adjusted nor calendar adjusted data",
+            "de": "Weder saisonbereinigte noch kalenderbereinigte Daten",
+            "fr": "Données ni corrigées des variations saisonnières ni corrigées des effets de calendrier",
+            "it": "Dati non destagionalizzati né corretti per il calendario"
           },
           "data": true
         },
         "W": {
           "label": {
-            "en": "Calendar adjusted data, not seasonally adjusted"
+            "en": "Calendar adjusted data, not seasonally adjusted",
+            "de": "Kalenderbereinigte Daten, nicht saisonal bereinigt",
+            "fr": "Données corrigées du calendrier, non corrigées des variations saisonnières",
+            "it": "Dati corretti per il calendario, non destagionalizzati"
           },
           "data": true
         },
         "Y": {
           "label": {
-            "en": "Calendar and seasonally adjusted data"
+            "en": "Calendar and seasonally adjusted data",
+            "de": "Kalender- und saisonbereinigte Daten",
+            "fr": "Données corrigées du calendrier et des variations saisonnières",
+            "it": "Dati corretti per il calendario e per la stagione"
           },
           "data": true
         }
@@ -200,19 +269,28 @@
       "levels": {
         "PTOT": {
           "label": {
-            "en": "Production / Total turnover (real)"
+            "en": "Production / Total turnover (real)",
+            "de": "Produktion / Gesamtumsatz (real)",
+            "fr": "Production / Chiffre d'affaires total (réel)",
+            "it": "Produzione / Cifre d'affari totali (reale)"
           },
           "data": true
         },
         "UINL": {
           "label": {
-            "en": "Domestic turnover (nominal)"
+            "en": "Domestic turnover (nominal)",
+            "de": "Inlandumsatz (nominal)",
+            "fr": "Chiffre d'affaires à l'intérieur (nominal)",
+            "it": "Cifre d'affari sul mercato interno (nominale)"
           },
           "data": true
         },
         "UTOT": {
           "label": {
-            "en": "Total turnover (nominal)"
+            "en": "Total turnover (nominal)",
+            "de": "Gesamtumsatz (nominal)",
+            "fr": "Chiffre d'affaires total (nominal)",
+            "it": "Cifre d'affari totali (nominale)"
           },
           "data": true
         }
@@ -232,5 +310,5 @@
     "INDICATOR_KE": "UTOT"
   },
   "description": "The monthly retail trade turnover index — the headline read on Swiss consumer spending. FSO migrated this series off the dead PX-Web STAT-TAB onto its new SDMX 2.1 endpoint (disseminate.stats.swiss, agency CH1.KEU, flow DF_KEU_M1), so this dataset is the first to use R/source_fso_sdmx.R. We keep the retail slice of the flow: NOGA division 47 (retail trade) and its sub-classes. Each series comes in several adjustment variants (raw, calendar-adjusted, seasonally + calendar adjusted) and several indicator/result-type combinations (nominal total/domestic/foreign turnover, real production volume; index vs. year-on-year change).",
-  "fetched_utc": "2026-07-31 09:17:55"
+  "fetched_utc": "2026-08-05 13:12:05"
 }

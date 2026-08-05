@@ -1,7 +1,7 @@
 # Foreign exchange rates – Month
 
 - **id**: ch_snb_devkum
-- **title**: Bilateral exchange rates
+- **title**: Bilateral exchange rates | de: Bilaterale Wechselkurse | fr: Taux de change bilatéraux | it: Tassi di cambio bilaterali
 - **concept**: Exchange rates / Bilateral FX
 - **canonical**: yes
 - **featured**: Exchange rates

@@ -1,7 +1,7 @@
 # Job vacancies by economic division
 
 - **id**: ch_fso_vacancies
-- **title**: Job vacancies
+- **title**: Job vacancies | de: Offene Stellen | fr: Postes vacants | it: Posti vacanti
 - **concept**: Labour / Job vacancies
 - **canonical**: yes
 - **source**: fso

@@ -1,8 +1,779 @@
 [
   {
+    "id": "ch_snb_amarbma",
+    "title": {
+      "en": "Registered unemployment",
+      "de": "Registrierte Arbeitslosigkeit",
+      "fr": "Chômage inscrit",
+      "it": "Disoccupazione registrata"
+    },
+    "concept": "Labour / Unemployment",
+    "canonical": true,
+    "featured": "Unemployment",
+    "topic": "Labour",
+    "source": {
+      "key": "snb",
+      "name": {
+        "en": "Swiss National Bank",
+        "de": "Schweizerische Nationalbank (SNB)",
+        "fr": "Banque nationale suisse (BNS)",
+        "it": "Banca nazionale svizzera (BNS)"
+      }
+    },
+    "license": "snb",
+    "frequency": "monthly",
+    "start": "1948-01-01",
+    "end": "2026-06-01",
+    "n_series": 9,
+    "updated": "2026-07-21 09:00",
+    "fetched": "2026-08-05 13:12:00",
+    "load": "whole",
+    "data": "ch_snb_amarbma.csv",
+    "meta": "ch_snb_amarbma.json"
+  },
+  {
+    "id": "ch_snb_ambeschkla",
+    "title": {
+      "en": "Employees, by economic activity",
+      "de": "Beschäftigte nach Wirtschaftszweig",
+      "fr": "Emplois par branche économique",
+      "it": "Impieghi per ramo economico"
+    },
+    "concept": "Labour / Employment / jobs",
+    "canonical": false,
+    "featured": null,
+    "topic": "Labour",
+    "source": {
+      "key": "snb",
+      "name": {
+        "en": "Swiss National Bank",
+        "de": "Schweizerische Nationalbank (SNB)",
+        "fr": "Banque nationale suisse (BNS)",
+        "it": "Banca nazionale svizzera (BNS)"
+      }
+    },
+    "license": "snb",
+    "frequency": "quarterly",
+    "start": "1991-07-01",
+    "end": "2026-01-01",
+    "n_series": 60,
+    "updated": "2026-07-21 09:00",
+    "fetched": "2026-08-05 13:12:00",
+    "load": "whole",
+    "data": "ch_snb_ambeschkla.csv",
+    "meta": "ch_snb_ambeschkla.json"
+  },
+  {
+    "id": "ch_snb_ausshawarm",
+    "title": {
+      "en": "Foreign trade by goods category",
+      "de": "Aussenhandel nach Warengruppe",
+      "fr": "Commerce extérieur par catégorie de marchandises",
+      "it": "Commercio estero per categoria di merci"
+    },
+    "concept": "External sector / Foreign trade",
+    "canonical": true,
+    "featured": "Foreign trade",
+    "topic": "External sector",
+    "source": {
+      "key": "snb",
+      "name": {
+        "en": "Swiss National Bank",
+        "de": "Schweizerische Nationalbank (SNB)",
+        "fr": "Banque nationale suisse (BNS)",
+        "it": "Banca nazionale svizzera (BNS)"
+      }
+    },
+    "license": "snb",
+    "frequency": "monthly",
+    "start": "2012-01-01",
+    "end": "2026-05-01",
+    "n_series": 125,
+    "updated": "2026-07-21 09:00",
+    "fetched": "2026-08-05 13:12:01",
+    "load": "whole",
+    "data": "ch_snb_ausshawarm.csv",
+    "meta": "ch_snb_ausshawarm.json"
+  },
+  {
+    "id": "ch_snb_auvekomq",
+    "title": {
+      "en": "International investment position",
+      "de": "Auslandvermögen",
+      "fr": "Position extérieure",
+      "it": "Posizione patrimoniale sull'estero"
+    },
+    "concept": "External sector / International investment position",
+    "canonical": true,
+    "featured": null,
+    "topic": "External sector",
+    "source": {
+      "key": "snb",
+      "name": {
+        "en": "Swiss National Bank",
+        "de": "Schweizerische Nationalbank (SNB)",
+        "fr": "Banque nationale suisse (BNS)",
+        "it": "Banca nazionale svizzera (BNS)"
+      }
+    },
+    "license": "snb",
+    "frequency": "quarterly",
+    "start": "1985-01-01",
+    "end": "2026-01-01",
+    "n_series": 63,
+    "updated": "2026-06-23 09:00",
+    "fetched": "2026-08-05 13:12:01",
+    "load": "whole",
+    "data": "ch_snb_auvekomq.csv",
+    "meta": "ch_snb_auvekomq.json"
+  },
+  {
+    "id": "ch_snb_auvercurrq",
+    "title": {
+      "en": "Investment position by currency",
+      "de": "Auslandvermögen nach Währung",
+      "fr": "Position extérieure par monnaie",
+      "it": "Posizione sull'estero per valuta"
+    },
+    "concept": "External sector / International investment position",
+    "canonical": false,
+    "featured": null,
+    "topic": "External sector",
+    "source": {
+      "key": "snb",
+      "name": {
+        "en": "Swiss National Bank",
+        "de": "Schweizerische Nationalbank (SNB)",
+        "fr": "Banque nationale suisse (BNS)",
+        "it": "Banca nazionale svizzera (BNS)"
+      }
+    },
+    "license": "snb",
+    "frequency": "quarterly",
+    "start": "1985-01-01",
+    "end": "2026-01-01",
+    "n_series": 94,
+    "updated": "2026-06-23 09:00",
+    "fetched": "2026-08-05 13:12:01",
+    "load": "whole",
+    "data": "ch_snb_auvercurrq.csv",
+    "meta": "ch_snb_auvercurrq.json"
+  },
+  {
+    "id": "ch_snb_auverdeptq",
+    "title": {
+      "en": "External debt",
+      "de": "Auslandschulden",
+      "fr": "Dette extérieure",
+      "it": "Debito estero"
+    },
+    "concept": "External sector / International investment position",
+    "canonical": false,
+    "featured": null,
+    "topic": "External sector",
+    "source": {
+      "key": "snb",
+      "name": {
+        "en": "Swiss National Bank",
+        "de": "Schweizerische Nationalbank (SNB)",
+        "fr": "Banque nationale suisse (BNS)",
+        "it": "Banca nazionale svizzera (BNS)"
+      }
+    },
+    "license": "snb",
+    "frequency": "quarterly",
+    "start": "1999-10-01",
+    "end": "2026-01-01",
+    "n_series": 38,
+    "updated": "2026-06-23 09:00",
+    "fetched": "2026-08-05 13:12:01",
+    "load": "whole",
+    "data": "ch_snb_auverdeptq.csv",
+    "meta": "ch_snb_auverdeptq.json"
+  },
+  {
+    "id": "ch_snb_auversecq",
+    "title": {
+      "en": "Investment position by sector",
+      "de": "Auslandvermögen nach Sektor",
+      "fr": "Position extérieure par secteur",
+      "it": "Posizione sull'estero per settore"
+    },
+    "concept": "External sector / International investment position",
+    "canonical": true,
+    "featured": null,
+    "topic": "External sector",
+    "source": {
+      "key": "snb",
+      "name": {
+        "en": "Swiss National Bank",
+        "de": "Schweizerische Nationalbank (SNB)",
+        "fr": "Banque nationale suisse (BNS)",
+        "it": "Banca nazionale svizzera (BNS)"
+      }
+    },
+    "license": "snb",
+    "frequency": "quarterly",
+    "start": "1985-01-01",
+    "end": "2026-01-01",
+    "n_series": 71,
+    "updated": "2026-06-23 09:00",
+    "fetched": "2026-08-05 13:12:01",
+    "load": "whole",
+    "data": "ch_snb_auversecq.csv",
+    "meta": "ch_snb_auversecq.json"
+  },
+  {
+    "id": "ch_snb_babilpobm",
+    "title": {
+      "en": "Bank balance sheets by currency",
+      "de": "Bankbilanzen nach Währung",
+      "fr": "Bilans bancaires par monnaie",
+      "it": "Bilanci bancari per valuta"
+    },
+    "concept": "Money & banking / Banking & credit",
+    "canonical": true,
+    "featured": null,
+    "topic": "Money & banking",
+    "source": {
+      "key": "snb",
+      "name": {
+        "en": "Swiss National Bank",
+        "de": "Schweizerische Nationalbank (SNB)",
+        "fr": "Banque nationale suisse (BNS)",
+        "it": "Banca nazionale svizzera (BNS)"
+      }
+    },
+    "license": "snb",
+    "frequency": "monthly",
+    "start": "1987-12-01",
+    "end": "2026-05-01",
+    "n_series": 872,
+    "updated": "2026-07-21 09:00",
+    "fetched": "2026-08-05 13:12:01",
+    "load": "whole",
+    "data": "ch_snb_babilpobm.csv",
+    "meta": "ch_snb_babilpobm.json"
+  },
+  {
+    "id": "ch_snb_bakredbetgrbm",
+    "title": {
+      "en": "Corporate loans by company size",
+      "de": "Unternehmenskredite nach Unternehmensgrösse",
+      "fr": "Crédits aux entreprises par taille d'entreprise",
+      "it": "Crediti alle imprese per dimensione dell'impresa"
+    },
+    "concept": "Money & banking / Banking & credit",
+    "canonical": true,
+    "featured": null,
+    "topic": "Money & banking",
+    "source": {
+      "key": "snb",
+      "name": {
+        "en": "Swiss National Bank",
+        "de": "Schweizerische Nationalbank (SNB)",
+        "fr": "Banque nationale suisse (BNS)",
+        "it": "Banca nazionale svizzera (BNS)"
+      }
+    },
+    "license": "snb",
+    "frequency": "monthly",
+    "start": "2002-01-01",
+    "end": "2026-05-01",
+    "n_series": 150,
+    "updated": "2026-07-21 09:00",
+    "fetched": "2026-08-05 13:12:01",
+    "load": "whole",
+    "data": "ch_snb_bakredbetgrbm.csv",
+    "meta": "ch_snb_bakredbetgrbm.json"
+  },
+  {
+    "id": "ch_snb_bakredinausbm",
+    "title": {
+      "en": "Mortgage & other loans",
+      "de": "Hypothekar- und übrige Kredite",
+      "fr": "Crédits hypothécaires et autres",
+      "it": "Crediti ipotecari e altri crediti"
+    },
+    "concept": "Money & banking / Banking & credit",
+    "canonical": true,
+    "featured": null,
+    "topic": "Money & banking",
+    "source": {
+      "key": "snb",
+      "name": {
+        "en": "Swiss National Bank",
+        "de": "Schweizerische Nationalbank (SNB)",
+        "fr": "Banque nationale suisse (BNS)",
+        "it": "Banca nazionale svizzera (BNS)"
+      }
+    },
+    "license": "snb",
+    "frequency": "monthly",
+    "start": "1985-06-01",
+    "end": "2026-05-01",
+    "n_series": 90,
+    "updated": "2026-07-21 09:00",
+    "fetched": "2026-08-05 13:12:01",
+    "load": "whole",
+    "data": "ch_snb_bakredinausbm.csv",
+    "meta": "ch_snb_bakredinausbm.json"
+  },
+  {
+    "id": "ch_snb_bakredsekbm",
+    "title": {
+      "en": "Domestic loans by sector",
+      "de": "Inlandkredite nach Sektor",
+      "fr": "Crédits en Suisse par secteur",
+      "it": "Crediti interni per settore"
+    },
+    "concept": "Money & banking / Banking & credit",
+    "canonical": true,
+    "featured": null,
+    "topic": "Money & banking",
+    "source": {
+      "key": "snb",
+      "name": {
+        "en": "Swiss National Bank",
+        "de": "Schweizerische Nationalbank (SNB)",
+        "fr": "Banque nationale suisse (BNS)",
+        "it": "Banca nazionale svizzera (BNS)"
+      }
+    },
+    "license": "snb",
+    "frequency": "monthly",
+    "start": "1985-06-01",
+    "end": "2026-05-01",
+    "n_series": 540,
+    "updated": "2026-07-21 09:00",
+    "fetched": "2026-08-05 13:12:01",
+    "load": "whole",
+    "data": "ch_snb_bakredsekbm.csv",
+    "meta": "ch_snb_bakredsekbm.json"
+  },
+  {
+    "id": "ch_snb_bopcapbalq",
+    "title": {
+      "en": "Balance of payments: financial account",
+      "de": "Zahlungsbilanz: Kapitalbilanz",
+      "fr": "Balance des paiements : compte financier",
+      "it": "Bilancia dei pagamenti: conto finanziario"
+    },
+    "concept": "External sector / Balance of payments",
+    "canonical": true,
+    "featured": null,
+    "topic": "External sector",
+    "source": {
+      "key": "snb",
+      "name": {
+        "en": "Swiss National Bank",
+        "de": "Schweizerische Nationalbank (SNB)",
+        "fr": "Banque nationale suisse (BNS)",
+        "it": "Banca nazionale svizzera (BNS)"
+      }
+    },
+    "license": "snb",
+    "frequency": "quarterly",
+    "start": "1985-01-01",
+    "end": "2026-01-01",
+    "n_series": 62,
+    "updated": "2026-06-23 09:00",
+    "fetched": "2026-08-05 13:12:01",
+    "load": "whole",
+    "data": "ch_snb_bopcapbalq.csv",
+    "meta": "ch_snb_bopcapbalq.json"
+  },
+  {
+    "id": "ch_snb_bopcurrq",
+    "title": {
+      "en": "Balance of payments: current account",
+      "de": "Zahlungsbilanz: Leistungsbilanz",
+      "fr": "Balance des paiements : compte courant",
+      "it": "Bilancia dei pagamenti: conto corrente"
+    },
+    "concept": "External sector / Balance of payments",
+    "canonical": true,
+    "featured": null,
+    "topic": "External sector",
+    "source": {
+      "key": "snb",
+      "name": {
+        "en": "Swiss National Bank",
+        "de": "Schweizerische Nationalbank (SNB)",
+        "fr": "Banque nationale suisse (BNS)",
+        "it": "Banca nazionale svizzera (BNS)"
+      }
+    },
+    "license": "snb",
+    "frequency": "quarterly",
+    "start": "1983-01-01",
+    "end": "2026-01-01",
+    "n_series": 116,
+    "updated": "2026-06-23 09:00",
+    "fetched": "2026-08-05 13:12:02",
+    "load": "whole",
+    "data": "ch_snb_bopcurrq.csv",
+    "meta": "ch_snb_bopcurrq.json"
+  },
+  {
+    "id": "ch_snb_bopoverq",
+    "title": {
+      "en": "Balance of payments: overview",
+      "de": "Zahlungsbilanz: Übersicht",
+      "fr": "Balance des paiements : vue d'ensemble",
+      "it": "Bilancia dei pagamenti: panoramica"
+    },
+    "concept": "External sector / Balance of payments",
+    "canonical": false,
+    "featured": null,
+    "topic": "External sector",
+    "source": {
+      "key": "snb",
+      "name": {
+        "en": "Swiss National Bank",
+        "de": "Schweizerische Nationalbank (SNB)",
+        "fr": "Banque nationale suisse (BNS)",
+        "it": "Banca nazionale svizzera (BNS)"
+      }
+    },
+    "license": "snb",
+    "frequency": "quarterly",
+    "start": "1985-01-01",
+    "end": "2026-01-01",
+    "n_series": 42,
+    "updated": "2026-06-23 09:00",
+    "fetched": "2026-08-05 13:12:02",
+    "load": "whole",
+    "data": "ch_snb_bopoverq.csv",
+    "meta": "ch_snb_bopoverq.json"
+  },
+  {
+    "id": "ch_snb_bopservq",
+    "title": {
+      "en": "Balance of payments: services",
+      "de": "Zahlungsbilanz: Dienstleistungen",
+      "fr": "Balance des paiements : services",
+      "it": "Bilancia dei pagamenti: servizi"
+    },
+    "concept": "External sector / Balance of payments",
+    "canonical": false,
+    "featured": null,
+    "topic": "External sector",
+    "source": {
+      "key": "snb",
+      "name": {
+        "en": "Swiss National Bank",
+        "de": "Schweizerische Nationalbank (SNB)",
+        "fr": "Banque nationale suisse (BNS)",
+        "it": "Banca nazionale svizzera (BNS)"
+      }
+    },
+    "license": "snb",
+    "frequency": "quarterly",
+    "start": "2012-01-01",
+    "end": "2026-01-01",
+    "n_series": 1755,
+    "updated": "2026-06-23 09:00",
+    "fetched": "2026-08-05 13:12:02",
+    "load": "whole",
+    "data": "ch_snb_bopservq.csv",
+    "meta": "ch_snb_bopservq.json"
+  },
+  {
+    "id": "ch_snb_capchstocki",
+    "title": {
+      "en": "Swiss stock indices",
+      "de": "Schweizer Aktienindizes",
+      "fr": "Indices boursiers suisses",
+      "it": "Indici azionari svizzeri"
+    },
+    "concept": "Financial markets / Swiss stock indices",
+    "canonical": true,
+    "featured": "Stock market",
+    "topic": "Financial markets",
+    "source": {
+      "key": "snb",
+      "name": {
+        "en": "Swiss National Bank",
+        "de": "Schweizerische Nationalbank (SNB)",
+        "fr": "Banque nationale suisse (BNS)",
+        "it": "Banca nazionale svizzera (BNS)"
+      }
+    },
+    "license": "snb",
+    "frequency": "daily",
+    "start": "1989-01-03",
+    "end": "2026-07-15",
+    "n_series": 14,
+    "updated": "2026-07-21 09:00",
+    "fetched": "2026-08-05 13:12:02",
+    "load": "whole",
+    "data": "ch_snb_capchstocki.csv",
+    "meta": "ch_snb_capchstocki.json"
+  },
+  {
+    "id": "ch_snb_capweums",
+    "title": {
+      "en": "Securities turnover",
+      "de": "Effektenumsätze",
+      "fr": "Transactions sur titres",
+      "it": "Transazioni in titoli"
+    },
+    "concept": "Financial markets / Securities turnover",
+    "canonical": true,
+    "featured": null,
+    "topic": "Financial markets",
+    "source": {
+      "key": "snb",
+      "name": {
+        "en": "Swiss National Bank",
+        "de": "Schweizerische Nationalbank (SNB)",
+        "fr": "Banque nationale suisse (BNS)",
+        "it": "Banca nazionale svizzera (BNS)"
+      }
+    },
+    "license": "snb",
+    "frequency": "monthly",
+    "start": "1993-01-01",
+    "end": "2026-06-01",
+    "n_series": 10,
+    "updated": "2026-07-21 09:00",
+    "fetched": "2026-08-05 13:12:02",
+    "load": "whole",
+    "data": "ch_snb_capweums.csv",
+    "meta": "ch_snb_capweums.json"
+  },
+  {
+    "id": "ch_snb_devkum",
+    "title": {
+      "en": "Bilateral exchange rates",
+      "de": "Bilaterale Wechselkurse",
+      "fr": "Taux de change bilatéraux",
+      "it": "Tassi di cambio bilaterali"
+    },
+    "concept": "Exchange rates / Bilateral FX",
+    "canonical": true,
+    "featured": "Exchange rates",
+    "topic": "Exchange rates",
+    "source": {
+      "key": "snb",
+      "name": {
+        "en": "Swiss National Bank",
+        "de": "Schweizerische Nationalbank (SNB)",
+        "fr": "Banque nationale suisse (BNS)",
+        "it": "Banca nazionale svizzera (BNS)"
+      }
+    },
+    "license": "snb",
+    "frequency": "monthly",
+    "start": "1914-01-01",
+    "end": "2026-07-01",
+    "n_series": 54,
+    "updated": "2026-08-03 14:30",
+    "fetched": "2026-08-05 13:12:02",
+    "load": "whole",
+    "data": "ch_snb_devkum.csv",
+    "meta": "ch_snb_devkum.json"
+  },
+  {
+    "id": "ch_snb_devwkibiim",
+    "title": {
+      "en": "Bilateral exchange-rate indices",
+      "de": "Bilaterale Wechselkursindizes",
+      "fr": "Indices de taux de change bilatéraux",
+      "it": "Indici dei tassi di cambio bilaterali"
+    },
+    "concept": "Exchange rates / Bilateral FX",
+    "canonical": true,
+    "featured": null,
+    "topic": "Exchange rates",
+    "source": {
+      "key": "snb",
+      "name": {
+        "en": "Swiss National Bank",
+        "de": "Schweizerische Nationalbank (SNB)",
+        "fr": "Banque nationale suisse (BNS)",
+        "it": "Banca nazionale svizzera (BNS)"
+      }
+    },
+    "license": "snb",
+    "frequency": "monthly",
+    "start": "1973-01-01",
+    "end": "2026-06-01",
+    "n_series": 162,
+    "updated": "2026-07-07 09:00",
+    "fetched": "2026-08-05 13:12:02",
+    "load": "whole",
+    "data": "ch_snb_devwkibiim.csv",
+    "meta": "ch_snb_devwkibiim.json"
+  },
+  {
+    "id": "ch_snb_devwkieffid",
+    "title": {
+      "en": "Effective exchange-rate index",
+      "de": "Effektiver Wechselkursindex",
+      "fr": "Indice de taux de change effectif",
+      "it": "Indice del tasso di cambio effettivo"
+    },
+    "concept": "Exchange rates / Effective FX index",
+    "canonical": true,
+    "featured": null,
+    "topic": "Exchange rates",
+    "source": {
+      "key": "snb",
+      "name": {
+        "en": "Swiss National Bank",
+        "de": "Schweizerische Nationalbank (SNB)",
+        "fr": "Banque nationale suisse (BNS)",
+        "it": "Banca nazionale svizzera (BNS)"
+      }
+    },
+    "license": "snb",
+    "frequency": "daily",
+    "start": "1999-01-01",
+    "end": "2026-06-30",
+    "n_series": 6,
+    "updated": "2026-07-07 09:00",
+    "fetched": "2026-08-05 13:12:02",
+    "load": "whole",
+    "data": "ch_snb_devwkieffid.csv",
+    "meta": "ch_snb_devwkieffid.json"
+  },
+  {
+    "id": "ch_snb_plimoinchq",
+    "title": {
+      "en": "Real estate prices",
+      "de": "Immobilienpreise",
+      "fr": "Prix de l'immobilier",
+      "it": "Prezzi immobiliari"
+    },
+    "concept": "Prices / Real estate prices",
+    "canonical": true,
+    "featured": null,
+    "topic": "Prices",
+    "source": {
+      "key": "snb",
+      "name": {
+        "en": "Swiss National Bank",
+        "de": "Schweizerische Nationalbank (SNB)",
+        "fr": "Banque nationale suisse (BNS)",
+        "it": "Banca nazionale svizzera (BNS)"
+      }
+    },
+    "license": "snb",
+    "frequency": "quarterly",
+    "start": "1970-01-01",
+    "end": "2026-04-01",
+    "n_series": 17,
+    "updated": "2026-07-21 09:00",
+    "fetched": "2026-08-05 13:12:02",
+    "load": "whole",
+    "data": "ch_snb_plimoinchq.csv",
+    "meta": "ch_snb_plimoinchq.json"
+  },
+  {
+    "id": "ch_snb_plkopr",
+    "title": {
+      "en": "Consumer prices (CPI)",
+      "de": "Konsumentenpreise (LIK)",
+      "fr": "Prix à la consommation (IPC)",
+      "it": "Prezzi al consumo (IPC)"
+    },
+    "concept": "Prices / Consumer prices",
+    "canonical": true,
+    "featured": "Inflation",
+    "topic": "Prices",
+    "source": {
+      "key": "snb",
+      "name": {
+        "en": "Swiss National Bank",
+        "de": "Schweizerische Nationalbank (SNB)",
+        "fr": "Banque nationale suisse (BNS)",
+        "it": "Banca nazionale svizzera (BNS)"
+      }
+    },
+    "license": "snb",
+    "frequency": "monthly",
+    "start": "1921-01-01",
+    "end": "2026-06-01",
+    "n_series": 1,
+    "updated": "2026-07-21 09:00",
+    "fetched": "2026-08-05 13:12:02",
+    "load": "whole",
+    "data": "ch_snb_plkopr.csv",
+    "meta": "ch_snb_plkopr.json"
+  },
+  {
+    "id": "ch_snb_plkoprinfla",
+    "title": {
+      "en": "Core inflation",
+      "de": "Kerninflation",
+      "fr": "Inflation sous-jacente",
+      "it": "Inflazione di fondo"
+    },
+    "concept": "Prices / Core inflation",
+    "canonical": true,
+    "featured": null,
+    "topic": "Prices",
+    "source": {
+      "key": "snb",
+      "name": {
+        "en": "Swiss National Bank",
+        "de": "Schweizerische Nationalbank (SNB)",
+        "fr": "Banque nationale suisse (BNS)",
+        "it": "Banca nazionale svizzera (BNS)"
+      }
+    },
+    "license": "snb",
+    "frequency": "monthly",
+    "start": "1983-12-01",
+    "end": "2026-06-01",
+    "n_series": 4,
+    "updated": "2026-07-21 09:00",
+    "fetched": "2026-08-05 13:12:02",
+    "load": "whole",
+    "data": "ch_snb_plkoprinfla.csv",
+    "meta": "ch_snb_plkoprinfla.json"
+  },
+  {
+    "id": "ch_snb_rendeiduebd",
+    "title": {
+      "en": "Bond yields (spot rates)",
+      "de": "Obligationenrenditen (Kassazinssätze)",
+      "fr": "Rendements obligataires (taux au comptant)",
+      "it": "Rendimenti obbligazionari (tassi a pronti)"
+    },
+    "concept": "Interest rates & yields / Bond yields",
+    "canonical": true,
+    "featured": null,
+    "topic": "Interest rates & yields",
+    "source": {
+      "key": "snb",
+      "name": {
+        "en": "Swiss National Bank",
+        "de": "Schweizerische Nationalbank (SNB)",
+        "fr": "Banque nationale suisse (BNS)",
+        "it": "Banca nazionale svizzera (BNS)"
+      }
+    },
+    "license": "snb",
+    "frequency": "daily",
+    "start": "1988-01-04",
+    "end": "2026-07-31",
+    "n_series": 48,
+    "updated": "2026-08-03 14:30",
+    "fetched": "2026-08-05 13:12:03",
+    "load": "whole",
+    "data": "ch_snb_rendeiduebd.csv",
+    "meta": "ch_snb_rendeiduebd.json"
+  },
+  {
     "id": "ch_snb_snbbipo",
     "title": {
-      "en": "SNB balance sheet"
+      "en": "SNB balance sheet",
+      "de": "SNB-Bilanz",
+      "fr": "Bilan de la BNS",
+      "it": "Bilancio della BNS"
     },
     "concept": "Money & banking / Monetary aggregates",
     "canonical": false,
@@ -23,16 +794,432 @@
     "end": "2026-06-01",
     "n_series": 28,
     "updated": "2026-07-31 09:00",
-    "fetched": "2026-07-31 09:17:54",
+    "fetched": "2026-08-05 13:12:03",
     "load": "whole",
     "data": "ch_snb_snbbipo.csv",
     "meta": "ch_snb_snbbipo.json"
   },
   {
+    "id": "ch_snb_snbiprogq",
+    "title": {
+      "en": "Inflation forecast (SNB)",
+      "de": "Inflationsprognose (SNB)",
+      "fr": "Prévision d'inflation (BNS)",
+      "it": "Previsione d'inflazione (BNS)"
+    },
+    "concept": "Prices / Inflation forecast",
+    "canonical": true,
+    "featured": null,
+    "topic": "Prices",
+    "source": {
+      "key": "snb",
+      "name": {
+        "en": "Swiss National Bank",
+        "de": "Schweizerische Nationalbank (SNB)",
+        "fr": "Banque nationale suisse (BNS)",
+        "it": "Banca nazionale svizzera (BNS)"
+      }
+    },
+    "license": "snb",
+    "frequency": "quarterly",
+    "start": "2001-01-01",
+    "end": "2029-01-01",
+    "n_series": 178,
+    "updated": "2026-06-24 15:00",
+    "fetched": "2026-08-05 13:12:03",
+    "load": "whole",
+    "data": "ch_snb_snbiprogq.csv",
+    "meta": "ch_snb_snbiprogq.json"
+  },
+  {
+    "id": "ch_snb_snbkosiq",
+    "title": {
+      "en": "Business cycle signals",
+      "de": "Konjunktursignale",
+      "fr": "Signaux conjoncturels",
+      "it": "Segnali congiunturali"
+    },
+    "concept": "Business cycle & sentiment / Business cycle signals",
+    "canonical": true,
+    "featured": null,
+    "topic": "Business cycle & sentiment",
+    "source": {
+      "key": "snb",
+      "name": {
+        "en": "Swiss National Bank",
+        "de": "Schweizerische Nationalbank (SNB)",
+        "fr": "Banque nationale suisse (BNS)",
+        "it": "Banca nazionale svizzera (BNS)"
+      }
+    },
+    "license": "snb",
+    "frequency": "quarterly",
+    "start": "2011-01-01",
+    "end": "2026-04-01",
+    "n_series": 24,
+    "updated": "2026-06-24 15:00",
+    "fetched": "2026-08-05 13:12:03",
+    "load": "whole",
+    "data": "ch_snb_snbkosiq.csv",
+    "meta": "ch_snb_snbkosiq.json"
+  },
+  {
+    "id": "ch_snb_snbmoba",
+    "title": {
+      "en": "Monetary base",
+      "de": "Notenbankgeldmenge",
+      "fr": "Monnaie centrale",
+      "it": "Base monetaria"
+    },
+    "concept": "Money & banking / Monetary aggregates",
+    "canonical": false,
+    "featured": null,
+    "topic": "Money & banking",
+    "source": {
+      "key": "snb",
+      "name": {
+        "en": "Swiss National Bank",
+        "de": "Schweizerische Nationalbank (SNB)",
+        "fr": "Banque nationale suisse (BNS)",
+        "it": "Banca nazionale svizzera (BNS)"
+      }
+    },
+    "license": "snb",
+    "frequency": "monthly",
+    "start": "1950-01-01",
+    "end": "2026-06-01",
+    "n_series": 10,
+    "updated": "2026-07-21 09:00",
+    "fetched": "2026-08-05 13:12:03",
+    "load": "whole",
+    "data": "ch_snb_snbmoba.csv",
+    "meta": "ch_snb_snbmoba.json"
+  },
+  {
+    "id": "ch_snb_snbmonagg",
+    "title": {
+      "en": "Monetary aggregates (M1–M3)",
+      "de": "Geldmengen (M1–M3)",
+      "fr": "Agrégats monétaires (M1–M3)",
+      "it": "Aggregati monetari (M1–M3)"
+    },
+    "concept": "Money & banking / Monetary aggregates",
+    "canonical": true,
+    "featured": "Money supply",
+    "topic": "Money & banking",
+    "source": {
+      "key": "snb",
+      "name": {
+        "en": "Swiss National Bank",
+        "de": "Schweizerische Nationalbank (SNB)",
+        "fr": "Banque nationale suisse (BNS)",
+        "it": "Banca nazionale svizzera (BNS)"
+      }
+    },
+    "license": "snb",
+    "frequency": "monthly",
+    "start": "1984-12-01",
+    "end": "2026-06-01",
+    "n_series": 8,
+    "updated": "2026-07-21 09:00",
+    "fetched": "2026-08-05 13:12:03",
+    "load": "whole",
+    "data": "ch_snb_snbmonagg.csv",
+    "meta": "ch_snb_snbmonagg.json"
+  },
+  {
+    "id": "ch_snb_snboffzisa",
+    "title": {
+      "en": "Official interest rates",
+      "de": "Offizielle Zinssätze",
+      "fr": "Taux d'intérêt officiels",
+      "it": "Tassi d'interesse ufficiali"
+    },
+    "concept": "Interest rates & yields / Policy & official rates",
+    "canonical": true,
+    "featured": null,
+    "topic": "Interest rates & yields",
+    "source": {
+      "key": "snb",
+      "name": {
+        "en": "Swiss National Bank",
+        "de": "Schweizerische Nationalbank (SNB)",
+        "fr": "Banque nationale suisse (BNS)",
+        "it": "Banca nazionale svizzera (BNS)"
+      }
+    },
+    "license": "snb",
+    "frequency": "monthly",
+    "start": "2000-01-01",
+    "end": "2026-06-01",
+    "n_series": 10,
+    "updated": "2026-07-21 09:00",
+    "fetched": "2026-08-05 13:12:03",
+    "load": "whole",
+    "data": "ch_snb_snboffzisa.csv",
+    "meta": "ch_snb_snboffzisa.json"
+  },
+  {
+    "id": "ch_snb_zavegelade",
+    "title": {
+      "en": "E-money",
+      "de": "E-Geld",
+      "fr": "Monnaie électronique",
+      "it": "Moneta elettronica"
+    },
+    "concept": "Payment systems / Payments & cash",
+    "canonical": false,
+    "featured": null,
+    "topic": "Payment systems",
+    "source": {
+      "key": "snb",
+      "name": {
+        "en": "Swiss National Bank",
+        "de": "Schweizerische Nationalbank (SNB)",
+        "fr": "Banque nationale suisse (BNS)",
+        "it": "Banca nazionale svizzera (BNS)"
+      }
+    },
+    "license": "snb",
+    "frequency": "monthly",
+    "start": "2014-12-01",
+    "end": "2026-05-01",
+    "n_series": 4,
+    "updated": "2026-07-21 09:00",
+    "fetched": "2026-08-05 13:12:03",
+    "load": "whole",
+    "data": "ch_snb_zavegelade.csv",
+    "meta": "ch_snb_zavegelade.json"
+  },
+  {
+    "id": "ch_snb_zavesic",
+    "title": {
+      "en": "Interbank clearing (SIC)",
+      "de": "Interbank-Clearing (SIC)",
+      "fr": "Clearing interbancaire (SIC)",
+      "it": "Clearing interbancario (SIC)"
+    },
+    "concept": "Payment systems / Payments & cash",
+    "canonical": false,
+    "featured": null,
+    "topic": "Payment systems",
+    "source": {
+      "key": "snb",
+      "name": {
+        "en": "Swiss National Bank",
+        "de": "Schweizerische Nationalbank (SNB)",
+        "fr": "Banque nationale suisse (BNS)",
+        "it": "Banca nazionale svizzera (BNS)"
+      }
+    },
+    "license": "snb",
+    "frequency": "monthly",
+    "start": "1987-07-01",
+    "end": "2026-06-01",
+    "n_series": 14,
+    "updated": "2026-07-21 09:00",
+    "fetched": "2026-08-05 13:12:03",
+    "load": "whole",
+    "data": "ch_snb_zavesic.csv",
+    "meta": "ch_snb_zavesic.json"
+  },
+  {
+    "id": "ch_snb_zavezaka",
+    "title": {
+      "en": "Payment cards and ATMs",
+      "de": "Zahlungskarten und Geldautomaten",
+      "fr": "Cartes de paiement et distributeurs",
+      "it": "Carte di pagamento e bancomat"
+    },
+    "concept": "Payment systems / Payments & cash",
+    "canonical": false,
+    "featured": null,
+    "topic": "Payment systems",
+    "source": {
+      "key": "snb",
+      "name": {
+        "en": "Swiss National Bank",
+        "de": "Schweizerische Nationalbank (SNB)",
+        "fr": "Banque nationale suisse (BNS)",
+        "it": "Banca nazionale svizzera (BNS)"
+      }
+    },
+    "license": "snb",
+    "frequency": "monthly",
+    "start": "2005-01-01",
+    "end": "2026-05-01",
+    "n_series": 7,
+    "updated": "2026-07-21 09:00",
+    "fetched": "2026-08-05 13:12:03",
+    "load": "whole",
+    "data": "ch_snb_zavezaka.csv",
+    "meta": "ch_snb_zavezaka.json"
+  },
+  {
+    "id": "ch_snb_zavezaluba",
+    "title": {
+      "en": "Payments and cash withdrawals",
+      "de": "Zahlungen und Bargeldbezüge",
+      "fr": "Paiements et retraits d'espèces",
+      "it": "Pagamenti e prelievi di contante"
+    },
+    "concept": "Payment systems / Payments & cash",
+    "canonical": false,
+    "featured": null,
+    "topic": "Payment systems",
+    "source": {
+      "key": "snb",
+      "name": {
+        "en": "Swiss National Bank",
+        "de": "Schweizerische Nationalbank (SNB)",
+        "fr": "Banque nationale suisse (BNS)",
+        "it": "Banca nazionale svizzera (BNS)"
+      }
+    },
+    "license": "snb",
+    "frequency": "monthly",
+    "start": "2005-01-01",
+    "end": "2026-05-01",
+    "n_series": 113,
+    "updated": "2026-07-21 09:00",
+    "fetched": "2026-08-05 13:12:03",
+    "load": "whole",
+    "data": "ch_snb_zavezaluba.csv",
+    "meta": "ch_snb_zavezaluba.json"
+  },
+  {
+    "id": "ch_snb_zavkuzaart",
+    "title": {
+      "en": "Customer payments (outgoing)",
+      "de": "Kundenzahlungen (ausgehend)",
+      "fr": "Paiements des clients (sortants)",
+      "it": "Pagamenti dei clienti (in uscita)"
+    },
+    "concept": "Payment systems / Payments & cash",
+    "canonical": false,
+    "featured": null,
+    "topic": "Payment systems",
+    "source": {
+      "key": "snb",
+      "name": {
+        "en": "Swiss National Bank",
+        "de": "Schweizerische Nationalbank (SNB)",
+        "fr": "Banque nationale suisse (BNS)",
+        "it": "Banca nazionale svizzera (BNS)"
+      }
+    },
+    "license": "snb",
+    "frequency": "monthly",
+    "start": "2012-03-01",
+    "end": "2026-05-01",
+    "n_series": 90,
+    "updated": "2026-07-21 09:00",
+    "fetched": "2026-08-05 13:12:03",
+    "load": "whole",
+    "data": "ch_snb_zavkuzaart.csv",
+    "meta": "ch_snb_zavkuzaart.json"
+  },
+  {
+    "id": "ch_snb_zikredlauf",
+    "title": {
+      "en": "New lending rates",
+      "de": "Zinssätze Neugeschäft",
+      "fr": "Taux des nouveaux crédits",
+      "it": "Tassi sui nuovi crediti"
+    },
+    "concept": "Interest rates & yields / Money-market rates",
+    "canonical": false,
+    "featured": null,
+    "topic": "Interest rates & yields",
+    "source": {
+      "key": "snb",
+      "name": {
+        "en": "Swiss National Bank",
+        "de": "Schweizerische Nationalbank (SNB)",
+        "fr": "Banque nationale suisse (BNS)",
+        "it": "Banca nazionale svizzera (BNS)"
+      }
+    },
+    "license": "snb",
+    "frequency": "monthly",
+    "start": "2009-05-01",
+    "end": "2026-04-01",
+    "n_series": 105,
+    "updated": "2026-07-21 09:00",
+    "fetched": "2026-08-05 13:12:03",
+    "load": "whole",
+    "data": "ch_snb_zikredlauf.csv",
+    "meta": "ch_snb_zikredlauf.json"
+  },
+  {
+    "id": "ch_snb_zikrepro",
+    "title": {
+      "en": "Published interest rates",
+      "de": "Publizierte Zinssätze",
+      "fr": "Taux d'intérêt publiés",
+      "it": "Tassi d'interesse pubblicati"
+    },
+    "concept": "Interest rates & yields / Money-market rates",
+    "canonical": false,
+    "featured": null,
+    "topic": "Interest rates & yields",
+    "source": {
+      "key": "snb",
+      "name": {
+        "en": "Swiss National Bank",
+        "de": "Schweizerische Nationalbank (SNB)",
+        "fr": "Banque nationale suisse (BNS)",
+        "it": "Banca nazionale svizzera (BNS)"
+      }
+    },
+    "license": "snb",
+    "frequency": "monthly",
+    "start": "1933-01-01",
+    "end": "2026-06-01",
+    "n_series": 228,
+    "updated": "2026-08-03 14:30",
+    "fetched": "2026-08-05 13:12:04",
+    "load": "whole",
+    "data": "ch_snb_zikrepro.csv",
+    "meta": "ch_snb_zikrepro.json"
+  },
+  {
+    "id": "ch_snb_zimoma",
+    "title": {
+      "en": "Money market rates",
+      "de": "Geldmarktsätze",
+      "fr": "Taux du marché monétaire",
+      "it": "Tassi del mercato monetario"
+    },
+    "concept": "Interest rates & yields / Money-market rates",
+    "canonical": true,
+    "featured": "SARON",
+    "topic": "Interest rates & yields",
+    "source": {
+      "key": "snb",
+      "name": {
+        "en": "Swiss National Bank",
+        "de": "Schweizerische Nationalbank (SNB)",
+        "fr": "Banque nationale suisse (BNS)",
+        "it": "Banca nazionale svizzera (BNS)"
+      }
+    },
+    "license": "snb",
+    "frequency": "monthly",
+    "start": "1972-01-01",
+    "end": "2026-07-01",
+    "n_series": 13,
+    "updated": "2026-08-03 14:30",
+    "fetched": "2026-08-05 13:12:04",
+    "load": "whole",
+    "data": "ch_snb_zimoma.csv",
+    "meta": "ch_snb_zimoma.json"
+  },
+  {
     "id": "ch_seco_gdp",
     "title": {
       "en": "Gross domestic product (GDP)",
-      "de": "Bruttoninlandprodukt (BIP)",
+      "de": "Bruttoinlandprodukt (BIP)",
       "fr": "Produit intérieur brut (PIB)",
       "it": "Prodotto interno lordo (PIL)"
     },
@@ -55,7 +1242,7 @@
     "end": "2026-01-01",
     "n_series": 660,
     "updated": "2026-02-23 16:51:17",
-    "fetched": "2026-07-31 09:17:54",
+    "fetched": "2026-08-05 13:12:04",
     "load": "whole",
     "data": "ch_seco_gdp.csv",
     "meta": "ch_seco_gdp.json"
@@ -64,9 +1251,9 @@
     "id": "ch_seco_concon",
     "title": {
       "en": "Consumer confidence",
-      "de": "Konsumentenstimmungsindex",
-      "fr": "Indice du climat de consommation",
-      "it": "Indice del clima di fiducia dei consumatori"
+      "de": "Konsumentenstimmung",
+      "fr": "Climat de consommation",
+      "it": "Clima di consumo"
     },
     "concept": "Business cycle & sentiment / Consumer confidence",
     "canonical": true,
@@ -87,7 +1274,7 @@
     "end": "2026-04-01",
     "n_series": 39,
     "updated": "2026-05-23 16:49:08",
-    "fetched": "2026-07-31 09:17:55",
+    "fetched": "2026-08-05 13:12:04",
     "load": "whole",
     "data": "ch_seco_concon.csv",
     "meta": "ch_seco_concon.json"
@@ -95,7 +1282,10 @@
   {
     "id": "ch_fso_retail",
     "title": {
-      "en": "Retail trade turnover"
+      "en": "Retail trade turnover",
+      "de": "Detailhandelsumsätze",
+      "fr": "Chiffres d'affaires du commerce de détail",
+      "it": "Fatturato del commercio al dettaglio"
     },
     "concept": "Domestic economy / Retail trade turnover",
     "canonical": true,
@@ -116,7 +1306,7 @@
     "end": "2026-06-01",
     "n_series": 171,
     "updated": null,
-    "fetched": "2026-07-31 09:17:55",
+    "fetched": "2026-08-05 13:12:05",
     "load": "whole",
     "data": "ch_fso_retail.csv",
     "meta": "ch_fso_retail.json"
@@ -124,7 +1314,10 @@
   {
     "id": "ch_fso_production",
     "title": {
-      "en": "Industry & construction turnover"
+      "en": "Industry & construction turnover",
+      "de": "Umsätze Industrie und Bau",
+      "fr": "Chiffres d'affaires industrie et construction",
+      "it": "Fatturato industria e costruzioni"
     },
     "concept": "Domestic economy / Industry & construction turnover",
     "canonical": true,
@@ -145,7 +1338,7 @@
     "end": "2026-01-01",
     "n_series": 87,
     "updated": null,
-    "fetched": "2026-07-31 09:17:55",
+    "fetched": "2026-08-05 13:12:05",
     "load": "whole",
     "data": "ch_fso_production.csv",
     "meta": "ch_fso_production.json"
@@ -153,7 +1346,10 @@
   {
     "id": "ch_fso_services",
     "title": {
-      "en": "Services turnover"
+      "en": "Services turnover",
+      "de": "Umsätze Dienstleistungssektor",
+      "fr": "Chiffres d'affaires des services",
+      "it": "Fatturato dei servizi"
     },
     "concept": "Domestic economy / Services turnover",
     "canonical": true,
@@ -174,7 +1370,7 @@
     "end": "2026-01-01",
     "n_series": 66,
     "updated": null,
-    "fetched": "2026-07-31 09:17:55",
+    "fetched": "2026-08-05 13:12:05",
     "load": "whole",
     "data": "ch_fso_services.csv",
     "meta": "ch_fso_services.json"
@@ -182,7 +1378,10 @@
   {
     "id": "ch_fso_new_vehicles",
     "title": {
-      "en": "New car registrations by fuel"
+      "en": "New car registrations by fuel",
+      "de": "Neuzulassungen von Personenwagen nach Treibstoff",
+      "fr": "Nouvelles immatriculations de voitures par carburant",
+      "it": "Nuove immatricolazioni di automobili per carburante"
     },
     "concept": "Domestic economy / New vehicle registrations",
     "canonical": true,
@@ -203,7 +1402,7 @@
     "end": "2026-06-01",
     "n_series": 12,
     "updated": null,
-    "fetched": "2026-07-31 09:17:55",
+    "fetched": "2026-08-05 13:12:05",
     "load": "whole",
     "data": "ch_fso_new_vehicles.csv",
     "meta": "ch_fso_new_vehicles.json"
@@ -211,7 +1410,10 @@
   {
     "id": "ch_fso_vacant_dwellings",
     "title": {
-      "en": "Vacant dwellings"
+      "en": "Vacant dwellings",
+      "de": "Leerwohnungen",
+      "fr": "Logements vacants",
+      "it": "Abitazioni vuote"
     },
     "concept": "Domestic economy / Vacant dwellings",
     "canonical": true,
@@ -232,7 +1434,7 @@
     "end": "2025-01-01",
     "n_series": 2,
     "updated": null,
-    "fetched": "2026-07-31 09:17:55",
+    "fetched": "2026-08-05 13:12:05",
     "load": "whole",
     "data": "ch_fso_vacant_dwellings.csv",
     "meta": "ch_fso_vacant_dwellings.json"
@@ -240,7 +1442,10 @@
   {
     "id": "ch_fso_cross_border_commuters",
     "title": {
-      "en": "Cross-border commuters"
+      "en": "Cross-border commuters",
+      "de": "Grenzgängerinnen und Grenzgänger",
+      "fr": "Frontaliers",
+      "it": "Frontalieri"
     },
     "concept": "Labour / Cross-border commuters",
     "canonical": true,
@@ -261,7 +1466,7 @@
     "end": "2026-01-01",
     "n_series": 27,
     "updated": null,
-    "fetched": "2026-07-31 09:17:55",
+    "fetched": "2026-08-05 13:12:05",
     "load": "whole",
     "data": "ch_fso_cross_border_commuters.csv",
     "meta": "ch_fso_cross_border_commuters.json"
@@ -269,7 +1474,10 @@
   {
     "id": "ch_fso_pop_detail",
     "title": {
-      "en": "Resident population by nationality"
+      "en": "Resident population by nationality",
+      "de": "Ständige Wohnbevölkerung nach Staatsangehörigkeit",
+      "fr": "Population résidante permanente par nationalité",
+      "it": "Popolazione residente permanente per nazionalità"
     },
     "concept": "Population & demographics / Resident population by nationality",
     "canonical": false,
@@ -290,7 +1498,7 @@
     "end": "2024-01-01",
     "n_series": 9,
     "updated": null,
-    "fetched": "2026-07-31 09:17:55",
+    "fetched": "2026-08-05 13:12:05",
     "load": "whole",
     "data": "ch_fso_pop_detail.csv",
     "meta": "ch_fso_pop_detail.json"
@@ -298,7 +1506,10 @@
   {
     "id": "ch_ffa_finances",
     "title": {
-      "en": "Government finances"
+      "en": "Government finances",
+      "de": "Öffentliche Finanzen",
+      "fr": "Finances publiques",
+      "it": "Finanze pubbliche"
     },
     "concept": "National accounts / Government finance",
     "canonical": true,
@@ -319,7 +1530,7 @@
     "end": "2029-01-01",
     "n_series": 387,
     "updated": "2025-03-18",
-    "fetched": "2026-07-31 09:17:55",
+    "fetched": "2026-08-05 13:12:05",
     "load": "whole",
     "data": "ch_ffa_finances.csv",
     "meta": "ch_ffa_finances.json"
@@ -327,7 +1538,10 @@
   {
     "id": "ch_kof_barometer",
     "title": {
-      "en": "KOF Economic Barometer"
+      "en": "KOF Economic Barometer",
+      "de": "KOF Konjunkturbarometer",
+      "fr": "Baromètre conjoncturel KOF",
+      "it": "Barometro congiunturale KOF"
     },
     "concept": "Business cycle & sentiment / Leading barometer",
     "canonical": true,
@@ -348,7 +1562,7 @@
     "end": "2026-07-01",
     "n_series": 1,
     "updated": null,
-    "fetched": "2026-07-31 09:17:55",
+    "fetched": "2026-08-05 13:12:05",
     "load": "whole",
     "data": "ch_kof_barometer.csv",
     "meta": "ch_kof_barometer.json"
@@ -356,7 +1570,10 @@
   {
     "id": "ch_kof_esi",
     "title": {
-      "en": "KOF Economic Sentiment Index"
+      "en": "KOF Economic Sentiment Index",
+      "de": "KOF Economic Sentiment Index",
+      "fr": "KOF Economic Sentiment Index",
+      "it": "KOF Economic Sentiment Index"
     },
     "concept": "Business cycle & sentiment / Sentiment composite",
     "canonical": true,
@@ -374,10 +1591,10 @@
     "license": "kof",
     "frequency": "monthly",
     "start": "2007-04-01",
-    "end": "2026-05-01",
+    "end": "2026-06-01",
     "n_series": 2,
     "updated": null,
-    "fetched": "2026-07-31 09:17:55",
+    "fetched": "2026-08-05 13:12:06",
     "load": "whole",
     "data": "ch_kof_esi.csv",
     "meta": "ch_kof_esi.json"
@@ -385,7 +1602,10 @@
   {
     "id": "ch_adecco_sjmi",
     "title": {
-      "en": "Adecco Group Swiss Job Market Index"
+      "en": "Adecco Group Swiss Job Market Index",
+      "de": "Adecco Group Swiss Job Market Index",
+      "fr": "Adecco Group Swiss Job Market Index",
+      "it": "Adecco Group Swiss Job Market Index"
     },
     "concept": "Labour / Job market",
     "canonical": true,
@@ -406,7 +1626,7 @@
     "end": "2026-06-01",
     "n_series": 4,
     "updated": null,
-    "fetched": "2026-07-31 09:17:55",
+    "fetched": "2026-08-05 13:12:06",
     "load": "whole",
     "data": "ch_adecco_sjmi.csv",
     "meta": "ch_adecco_sjmi.json"
@@ -414,7 +1634,10 @@
   {
     "id": "ch_fso_hesta",
     "title": {
-      "en": "Hotel overnight stays"
+      "en": "Hotel overnight stays",
+      "de": "Hotellogiernächte",
+      "fr": "Nuitées hôtelières",
+      "it": "Pernottamenti alberghieri"
     },
     "concept": "Domestic economy / Hotel overnight stays",
     "canonical": true,
@@ -432,10 +1655,10 @@
     "license": "fso",
     "frequency": "monthly",
     "start": "2005-01-01",
-    "end": "2026-05-01",
+    "end": "2026-06-01",
     "n_series": 14,
     "updated": null,
-    "fetched": "2026-07-31 09:17:55",
+    "fetched": "2026-08-05 13:12:06",
     "load": "whole",
     "data": "ch_fso_hesta.csv",
     "meta": "ch_fso_hesta.json"
@@ -443,7 +1666,10 @@
   {
     "id": "ch_fso_besta",
     "title": {
-      "en": "Jobs by economic division"
+      "en": "Jobs by economic division",
+      "de": "Beschäftigte nach Wirtschaftsabteilung",
+      "fr": "Emplois par division économique",
+      "it": "Impieghi per divisione economica"
     },
     "concept": "Labour / Employment / jobs",
     "canonical": true,
@@ -464,7 +1690,7 @@
     "end": "2026-01-01",
     "n_series": 60,
     "updated": null,
-    "fetched": "2026-07-31 09:17:55",
+    "fetched": "2026-08-05 13:12:06",
     "load": "whole",
     "data": "ch_fso_besta.csv",
     "meta": "ch_fso_besta.json"
@@ -472,7 +1698,10 @@
   {
     "id": "ch_fso_vacancies",
     "title": {
-      "en": "Job vacancies"
+      "en": "Job vacancies",
+      "de": "Offene Stellen",
+      "fr": "Postes vacants",
+      "it": "Posti vacanti"
     },
     "concept": "Labour / Job vacancies",
     "canonical": true,
@@ -493,7 +1722,7 @@
     "end": "2026-01-01",
     "n_series": 60,
     "updated": null,
-    "fetched": "2026-07-31 09:17:55",
+    "fetched": "2026-08-05 13:12:06",
     "load": "whole",
     "data": "ch_fso_vacancies.csv",
     "meta": "ch_fso_vacancies.json"
@@ -501,7 +1730,10 @@
   {
     "id": "ch_fso_jobs_sex",
     "title": {
-      "en": "Jobs by economic division and sex"
+      "en": "Jobs by economic division and sex",
+      "de": "Beschäftigte nach Wirtschaftsabteilung und Geschlecht",
+      "fr": "Emplois par division économique et sexe",
+      "it": "Impieghi per divisione economica e sesso"
     },
     "concept": "Labour / Employment / jobs",
     "canonical": false,
@@ -522,7 +1754,7 @@
     "end": "2026-01-01",
     "n_series": 336,
     "updated": null,
-    "fetched": "2026-07-31 09:17:55",
+    "fetched": "2026-08-05 13:12:06",
     "load": "whole",
     "data": "ch_fso_jobs_sex.csv",
     "meta": "ch_fso_jobs_sex.json"
@@ -530,7 +1762,10 @@
   {
     "id": "ch_fso_besta_outlook",
     "title": {
-      "en": "Employment outlook"
+      "en": "Employment outlook",
+      "de": "Beschäftigungsaussichten",
+      "fr": "Perspectives d'emploi",
+      "it": "Prospettive occupazionali"
     },
     "concept": "Labour / Employment outlook",
     "canonical": true,
@@ -551,7 +1786,7 @@
     "end": "2026-01-01",
     "n_series": 20,
     "updated": null,
-    "fetched": "2026-07-31 09:17:55",
+    "fetched": "2026-08-05 13:12:06",
     "load": "whole",
     "data": "ch_fso_besta_outlook.csv",
     "meta": "ch_fso_besta_outlook.json"
@@ -559,7 +1794,10 @@
   {
     "id": "ch_fso_cpi",
     "title": {
-      "en": "Consumer prices (detailed basket)"
+      "en": "Consumer prices (detailed basket)",
+      "de": "Konsumentenpreise (detaillierter Warenkorb)",
+      "fr": "Prix à la consommation (panier détaillé)",
+      "it": "Prezzi al consumo (paniere dettagliato)"
     },
     "concept": "Prices / Consumer prices",
     "canonical": false,
@@ -577,10 +1815,10 @@
     "license": "fso",
     "frequency": "monthly",
     "start": "1982-12-01",
-    "end": "2026-06-01",
+    "end": "2026-07-01",
     "n_series": 595,
-    "updated": "2026-07-02",
-    "fetched": "2026-07-31 09:17:56",
+    "updated": "2026-08-03",
+    "fetched": "2026-08-05 13:12:07",
     "load": "whole",
     "data": "ch_fso_cpi.csv",
     "meta": "ch_fso_cpi.json"
@@ -588,7 +1826,10 @@
   {
     "id": "ch_fso_ppi",
     "title": {
-      "en": "Producer & import prices"
+      "en": "Producer & import prices",
+      "de": "Produzenten- und Importpreise",
+      "fr": "Prix à la production et à l'importation",
+      "it": "Prezzi alla produzione e all'importazione"
     },
     "concept": "Prices / Producer & import prices",
     "canonical": true,
@@ -609,7 +1850,7 @@
     "end": "2026-06-01",
     "n_series": 7,
     "updated": "2026-07-14",
-    "fetched": "2026-07-31 09:17:56",
+    "fetched": "2026-08-05 13:12:07",
     "load": "whole",
     "data": "ch_fso_ppi.csv",
     "meta": "ch_fso_ppi.json"
@@ -617,7 +1858,10 @@
   {
     "id": "ch_fso_wage_idx",
     "title": {
-      "en": "Swiss Wage Index"
+      "en": "Swiss Wage Index",
+      "de": "Schweizerischer Lohnindex",
+      "fr": "Indice suisse des salaires",
+      "it": "Indice svizzero dei salari"
     },
     "concept": "Labour / Wages",
     "canonical": true,
@@ -638,7 +1882,7 @@
     "end": "2025-01-01",
     "n_series": 12,
     "updated": "2026-04-21",
-    "fetched": "2026-07-31 09:17:56",
+    "fetched": "2026-08-05 13:12:07",
     "load": "whole",
     "data": "ch_fso_wage_idx.csv",
     "meta": "ch_fso_wage_idx.json"
@@ -646,7 +1890,10 @@
   {
     "id": "ch_fso_pop",
     "title": {
-      "en": "Resident population"
+      "en": "Resident population",
+      "de": "Ständige Wohnbevölkerung",
+      "fr": "Population résidante permanente",
+      "it": "Popolazione residente permanente"
     },
     "concept": "Population & demographics / Resident population",
     "canonical": true,
@@ -667,7 +1914,7 @@
     "end": "2024-01-01",
     "n_series": 10,
     "updated": "2025-08-27",
-    "fetched": "2026-07-31 09:17:56",
+    "fetched": "2026-08-05 13:12:07",
     "load": "whole",
     "data": "ch_fso_pop.csv",
     "meta": "ch_fso_pop.json"
@@ -675,7 +1922,10 @@
   {
     "id": "ch_fso_unemp_rate",
     "title": {
-      "en": "Unemployment rate (ILO)"
+      "en": "Unemployment rate (ILO)",
+      "de": "Erwerbslosenquote (ILO)",
+      "fr": "Taux de chômage (BIT)",
+      "it": "Tasso di disoccupazione (ILO)"
     },
     "concept": "Labour / Unemployment",
     "canonical": false,
@@ -696,7 +1946,7 @@
     "end": "2026-03-01",
     "n_series": 5,
     "updated": "2026-05-18",
-    "fetched": "2026-07-31 09:17:56",
+    "fetched": "2026-08-05 13:12:07",
     "load": "whole",
     "data": "ch_fso_unemp_rate.csv",
     "meta": "ch_fso_unemp_rate.json"
@@ -704,7 +1954,10 @@
   {
     "id": "ch_fso_labour_productivity",
     "title": {
-      "en": "Labour productivity"
+      "en": "Labour productivity",
+      "de": "Arbeitsproduktivität",
+      "fr": "Productivité du travail",
+      "it": "Produttività del lavoro"
     },
     "concept": "National accounts / Labour productivity",
     "canonical": true,
@@ -725,7 +1978,7 @@
     "end": "2024-01-01",
     "n_series": 3,
     "updated": "2025-09-29",
-    "fetched": "2026-07-31 09:17:56",
+    "fetched": "2026-08-05 13:12:07",
     "load": "whole",
     "data": "ch_fso_labour_productivity.csv",
     "meta": "ch_fso_labour_productivity.json"
@@ -733,7 +1986,10 @@
   {
     "id": "ch_fso_ets",
     "title": {
-      "en": "Employed persons (ETS)"
+      "en": "Employed persons (ETS)",
+      "de": "Erwerbstätige (ETS)",
+      "fr": "Personnes actives occupées (SPAO)",
+      "it": "Persone occupate (SPO)"
     },
     "concept": "Labour / Employment / employed persons",
     "canonical": false,
@@ -754,7 +2010,7 @@
     "end": "2026-01-01",
     "n_series": 69,
     "updated": "2026-06-16",
-    "fetched": "2026-07-31 09:17:56",
+    "fetched": "2026-08-05 13:12:07",
     "load": "whole",
     "data": "ch_fso_ets.csv",
     "meta": "ch_fso_ets.json"
@@ -762,7 +2018,10 @@
   {
     "id": "ch_fso_gfcf_detail",
     "title": {
-      "en": "Investment (GFCF) detail"
+      "en": "Investment (GFCF) detail",
+      "de": "Investitionen (Bruttoanlageinvestitionen) im Detail",
+      "fr": "Investissements (FBCF) en détail",
+      "it": "Investimenti (IFL) in dettaglio"
     },
     "concept": "National accounts / Investment (gross fixed capital formation)",
     "canonical": false,
@@ -783,7 +2042,7 @@
     "end": "2024-01-01",
     "n_series": 37,
     "updated": "2025-09-29",
-    "fetched": "2026-07-31 09:17:56",
+    "fetched": "2026-08-05 13:12:07",
     "load": "whole",
     "data": "ch_fso_gfcf_detail.csv",
     "meta": "ch_fso_gfcf_detail.json"
@@ -791,7 +2050,10 @@
   {
     "id": "ch_fso_hours_worked",
     "title": {
-      "en": "Hours worked"
+      "en": "Hours worked",
+      "de": "Arbeitsstunden",
+      "fr": "Heures de travail",
+      "it": "Ore di lavoro"
     },
     "concept": "Labour / Working time and working volume",
     "canonical": true,
@@ -812,7 +2074,7 @@
     "end": "2025-01-01",
     "n_series": 45,
     "updated": "2026-05-21",
-    "fetched": "2026-07-31 09:17:56",
+    "fetched": "2026-08-05 13:12:07",
     "load": "whole",
     "data": "ch_fso_hours_worked.csv",
     "meta": "ch_fso_hours_worked.json"
@@ -820,7 +2082,10 @@
   {
     "id": "ch_fso_gdp_region",
     "title": {
-      "en": "Regional GDP"
+      "en": "Regional GDP",
+      "de": "Regionales BIP",
+      "fr": "PIB régional",
+      "it": "PIL regionale"
     },
     "concept": "National accounts / Regional GDP",
     "canonical": true,
@@ -841,7 +2106,7 @@
     "end": "2022-01-01",
     "n_series": 34,
     "updated": "2024-10-28",
-    "fetched": "2026-07-31 09:17:56",
+    "fetched": "2026-08-05 13:12:07",
     "load": "whole",
     "data": "ch_fso_gdp_region.csv",
     "meta": "ch_fso_gdp_region.json"
@@ -849,7 +2114,10 @@
   {
     "id": "ch_fso_construction_prices",
     "title": {
-      "en": "Construction prices"
+      "en": "Construction prices",
+      "de": "Baupreise",
+      "fr": "Prix de la construction",
+      "it": "Prezzi delle costruzioni"
     },
     "concept": "Prices / Construction prices",
     "canonical": true,
@@ -870,7 +2138,7 @@
     "end": "2026-04-01",
     "n_series": 3,
     "updated": "2026-06-18",
-    "fetched": "2026-07-31 09:17:56",
+    "fetched": "2026-08-05 13:12:07",
     "load": "whole",
     "data": "ch_fso_construction_prices.csv",
     "meta": "ch_fso_construction_prices.json"
@@ -878,7 +2146,10 @@
   {
     "id": "ch_fso_trade_partner",
     "title": {
-      "en": "Foreign trade by partner country"
+      "en": "Foreign trade by partner country",
+      "de": "Aussenhandel nach Partnerland",
+      "fr": "Commerce extérieur par pays partenaire",
+      "it": "Commercio estero per paese partner"
     },
     "concept": "External sector / Foreign trade",
     "canonical": true,
@@ -899,7 +2170,7 @@
     "end": "2025-01-01",
     "n_series": 66,
     "updated": null,
-    "fetched": "2026-07-31 09:17:56",
+    "fetched": "2026-08-05 13:12:07",
     "load": "whole",
     "data": "ch_fso_trade_partner.csv",
     "meta": "ch_fso_trade_partner.json"
@@ -907,7 +2178,10 @@
   {
     "id": "ch_fso_hicp",
     "title": {
-      "en": "Harmonised CPI (HICP)"
+      "en": "Harmonised CPI (HICP)",
+      "de": "Harmonisierter Konsumentenpreisindex (HVPI)",
+      "fr": "IPC harmonisé (IPCH)",
+      "it": "IPC armonizzato (IPCA)"
     },
     "concept": "Prices / Consumer prices",
     "canonical": false,
@@ -928,7 +2202,7 @@
     "end": "2025-12-01",
     "n_series": 13,
     "updated": "2026-02-06",
-    "fetched": "2026-07-31 09:17:56",
+    "fetched": "2026-08-05 13:12:08",
     "load": "whole",
     "data": "ch_fso_hicp.csv",
     "meta": "ch_fso_hicp.json"
@@ -936,7 +2210,10 @@
   {
     "id": "ch_seco_wwa",
     "title": {
-      "en": "Weekly economic activity (WEA)"
+      "en": "Weekly economic activity (WEA)",
+      "de": "Wöchentliche Wirtschaftsaktivität (WWA)",
+      "fr": "Activité économique hebdomadaire (WEA)",
+      "it": "Attività economica settimanale (WEA)"
     },
     "concept": "Business cycle & sentiment / High-frequency activity tracker",
     "canonical": true,
@@ -957,1082 +2234,9 @@
     "end": "2026-07-13",
     "n_series": 2,
     "updated": null,
-    "fetched": "2026-07-31 09:17:56",
+    "fetched": "2026-08-05 13:12:08",
     "load": "whole",
     "data": "ch_seco_wwa.csv",
     "meta": "ch_seco_wwa.json"
-  },
-  {
-    "id": "ch_snb_amarbma",
-    "title": {
-      "en": "Registered unemployment"
-    },
-    "concept": "Labour / Unemployment",
-    "canonical": true,
-    "featured": "Unemployment",
-    "topic": "Labour",
-    "source": {
-      "key": "snb",
-      "name": {
-        "en": "Swiss National Bank",
-        "de": "Schweizerische Nationalbank (SNB)",
-        "fr": "Banque nationale suisse (BNS)",
-        "it": "Banca nazionale svizzera (BNS)"
-      }
-    },
-    "license": "snb",
-    "frequency": "monthly",
-    "start": "1948-01-01",
-    "end": "2026-06-01",
-    "n_series": 9,
-    "updated": "2026-07-21 09:00",
-    "fetched": "2026-07-21 09:18:20",
-    "load": "whole",
-    "data": "ch_snb_amarbma.csv",
-    "meta": "ch_snb_amarbma.json"
-  },
-  {
-    "id": "ch_snb_ambeschkla",
-    "title": {
-      "en": "Employees, by economic activity"
-    },
-    "concept": "Labour / Employment / jobs",
-    "canonical": false,
-    "featured": null,
-    "topic": "Labour",
-    "source": {
-      "key": "snb",
-      "name": {
-        "en": "Swiss National Bank",
-        "de": "Schweizerische Nationalbank (SNB)",
-        "fr": "Banque nationale suisse (BNS)",
-        "it": "Banca nazionale svizzera (BNS)"
-      }
-    },
-    "license": "snb",
-    "frequency": "quarterly",
-    "start": "1991-07-01",
-    "end": "2026-01-01",
-    "n_series": 60,
-    "updated": "2026-07-21 09:00",
-    "fetched": "2026-07-21 09:18:21",
-    "load": "whole",
-    "data": "ch_snb_ambeschkla.csv",
-    "meta": "ch_snb_ambeschkla.json"
-  },
-  {
-    "id": "ch_snb_ausshawarm",
-    "title": {
-      "en": "Foreign trade by goods category"
-    },
-    "concept": "External sector / Foreign trade",
-    "canonical": true,
-    "featured": "Foreign trade",
-    "topic": "External sector",
-    "source": {
-      "key": "snb",
-      "name": {
-        "en": "Swiss National Bank",
-        "de": "Schweizerische Nationalbank (SNB)",
-        "fr": "Banque nationale suisse (BNS)",
-        "it": "Banca nazionale svizzera (BNS)"
-      }
-    },
-    "license": "snb",
-    "frequency": "monthly",
-    "start": "2012-01-01",
-    "end": "2026-05-01",
-    "n_series": 125,
-    "updated": "2026-07-21 09:00",
-    "fetched": "2026-07-21 09:18:21",
-    "load": "whole",
-    "data": "ch_snb_ausshawarm.csv",
-    "meta": "ch_snb_ausshawarm.json"
-  },
-  {
-    "id": "ch_snb_auvekomq",
-    "title": {
-      "en": "International investment position"
-    },
-    "concept": "External sector / International investment position",
-    "canonical": true,
-    "featured": null,
-    "topic": "External sector",
-    "source": {
-      "key": "snb",
-      "name": {
-        "en": "Swiss National Bank",
-        "de": "Schweizerische Nationalbank (SNB)",
-        "fr": "Banque nationale suisse (BNS)",
-        "it": "Banca nazionale svizzera (BNS)"
-      }
-    },
-    "license": "snb",
-    "frequency": "quarterly",
-    "start": "1985-01-01",
-    "end": "2026-01-01",
-    "n_series": 63,
-    "updated": "2026-06-23 09:00",
-    "fetched": "2026-06-23 09:28:09",
-    "load": "whole",
-    "data": "ch_snb_auvekomq.csv",
-    "meta": "ch_snb_auvekomq.json"
-  },
-  {
-    "id": "ch_snb_auvercurrq",
-    "title": {
-      "en": "Investment position by currency"
-    },
-    "concept": "External sector / International investment position",
-    "canonical": false,
-    "featured": null,
-    "topic": "External sector",
-    "source": {
-      "key": "snb",
-      "name": {
-        "en": "Swiss National Bank",
-        "de": "Schweizerische Nationalbank (SNB)",
-        "fr": "Banque nationale suisse (BNS)",
-        "it": "Banca nazionale svizzera (BNS)"
-      }
-    },
-    "license": "snb",
-    "frequency": "quarterly",
-    "start": "1985-01-01",
-    "end": "2026-01-01",
-    "n_series": 94,
-    "updated": "2026-06-23 09:00",
-    "fetched": "2026-06-23 09:28:09",
-    "load": "whole",
-    "data": "ch_snb_auvercurrq.csv",
-    "meta": "ch_snb_auvercurrq.json"
-  },
-  {
-    "id": "ch_snb_auverdeptq",
-    "title": {
-      "en": "External debt"
-    },
-    "concept": "External sector / International investment position",
-    "canonical": false,
-    "featured": null,
-    "topic": "External sector",
-    "source": {
-      "key": "snb",
-      "name": {
-        "en": "Swiss National Bank",
-        "de": "Schweizerische Nationalbank (SNB)",
-        "fr": "Banque nationale suisse (BNS)",
-        "it": "Banca nazionale svizzera (BNS)"
-      }
-    },
-    "license": "snb",
-    "frequency": "quarterly",
-    "start": "1999-10-01",
-    "end": "2026-01-01",
-    "n_series": 38,
-    "updated": "2026-06-23 09:00",
-    "fetched": "2026-06-23 09:28:09",
-    "load": "whole",
-    "data": "ch_snb_auverdeptq.csv",
-    "meta": "ch_snb_auverdeptq.json"
-  },
-  {
-    "id": "ch_snb_auversecq",
-    "title": {
-      "en": "Investment position by sector"
-    },
-    "concept": "External sector / International investment position",
-    "canonical": true,
-    "featured": null,
-    "topic": "External sector",
-    "source": {
-      "key": "snb",
-      "name": {
-        "en": "Swiss National Bank",
-        "de": "Schweizerische Nationalbank (SNB)",
-        "fr": "Banque nationale suisse (BNS)",
-        "it": "Banca nazionale svizzera (BNS)"
-      }
-    },
-    "license": "snb",
-    "frequency": "quarterly",
-    "start": "1985-01-01",
-    "end": "2026-01-01",
-    "n_series": 71,
-    "updated": "2026-06-23 09:00",
-    "fetched": "2026-06-23 09:28:09",
-    "load": "whole",
-    "data": "ch_snb_auversecq.csv",
-    "meta": "ch_snb_auversecq.json"
-  },
-  {
-    "id": "ch_snb_babilpobm",
-    "title": {
-      "en": "Bank balance sheets by currency"
-    },
-    "concept": "Money & banking / Banking & credit",
-    "canonical": true,
-    "featured": null,
-    "topic": "Money & banking",
-    "source": {
-      "key": "snb",
-      "name": {
-        "en": "Swiss National Bank",
-        "de": "Schweizerische Nationalbank (SNB)",
-        "fr": "Banque nationale suisse (BNS)",
-        "it": "Banca nazionale svizzera (BNS)"
-      }
-    },
-    "license": "snb",
-    "frequency": "monthly",
-    "start": "1987-12-01",
-    "end": "2026-05-01",
-    "n_series": 872,
-    "updated": "2026-07-21 09:00",
-    "fetched": "2026-07-21 09:18:21",
-    "load": "whole",
-    "data": "ch_snb_babilpobm.csv",
-    "meta": "ch_snb_babilpobm.json"
-  },
-  {
-    "id": "ch_snb_bakredbetgrbm",
-    "title": {
-      "en": "Corporate loans by company size"
-    },
-    "concept": "Money & banking / Banking & credit",
-    "canonical": true,
-    "featured": null,
-    "topic": "Money & banking",
-    "source": {
-      "key": "snb",
-      "name": {
-        "en": "Swiss National Bank",
-        "de": "Schweizerische Nationalbank (SNB)",
-        "fr": "Banque nationale suisse (BNS)",
-        "it": "Banca nazionale svizzera (BNS)"
-      }
-    },
-    "license": "snb",
-    "frequency": "monthly",
-    "start": "2002-01-01",
-    "end": "2026-05-01",
-    "n_series": 150,
-    "updated": "2026-07-21 09:00",
-    "fetched": "2026-07-21 09:18:21",
-    "load": "whole",
-    "data": "ch_snb_bakredbetgrbm.csv",
-    "meta": "ch_snb_bakredbetgrbm.json"
-  },
-  {
-    "id": "ch_snb_bakredinausbm",
-    "title": {
-      "en": "Mortgage & other loans"
-    },
-    "concept": "Money & banking / Banking & credit",
-    "canonical": true,
-    "featured": null,
-    "topic": "Money & banking",
-    "source": {
-      "key": "snb",
-      "name": {
-        "en": "Swiss National Bank",
-        "de": "Schweizerische Nationalbank (SNB)",
-        "fr": "Banque nationale suisse (BNS)",
-        "it": "Banca nazionale svizzera (BNS)"
-      }
-    },
-    "license": "snb",
-    "frequency": "monthly",
-    "start": "1985-06-01",
-    "end": "2026-05-01",
-    "n_series": 90,
-    "updated": "2026-07-21 09:00",
-    "fetched": "2026-07-21 09:18:21",
-    "load": "whole",
-    "data": "ch_snb_bakredinausbm.csv",
-    "meta": "ch_snb_bakredinausbm.json"
-  },
-  {
-    "id": "ch_snb_bakredsekbm",
-    "title": {
-      "en": "Domestic loans by sector"
-    },
-    "concept": "Money & banking / Banking & credit",
-    "canonical": true,
-    "featured": null,
-    "topic": "Money & banking",
-    "source": {
-      "key": "snb",
-      "name": {
-        "en": "Swiss National Bank",
-        "de": "Schweizerische Nationalbank (SNB)",
-        "fr": "Banque nationale suisse (BNS)",
-        "it": "Banca nazionale svizzera (BNS)"
-      }
-    },
-    "license": "snb",
-    "frequency": "monthly",
-    "start": "1985-06-01",
-    "end": "2026-05-01",
-    "n_series": 540,
-    "updated": "2026-07-21 09:00",
-    "fetched": "2026-07-21 09:18:21",
-    "load": "whole",
-    "data": "ch_snb_bakredsekbm.csv",
-    "meta": "ch_snb_bakredsekbm.json"
-  },
-  {
-    "id": "ch_snb_bopcapbalq",
-    "title": {
-      "en": "Balance of payments: financial account"
-    },
-    "concept": "External sector / Balance of payments",
-    "canonical": true,
-    "featured": null,
-    "topic": "External sector",
-    "source": {
-      "key": "snb",
-      "name": {
-        "en": "Swiss National Bank",
-        "de": "Schweizerische Nationalbank (SNB)",
-        "fr": "Banque nationale suisse (BNS)",
-        "it": "Banca nazionale svizzera (BNS)"
-      }
-    },
-    "license": "snb",
-    "frequency": "quarterly",
-    "start": "1985-01-01",
-    "end": "2026-01-01",
-    "n_series": 62,
-    "updated": "2026-06-23 09:00",
-    "fetched": "2026-06-23 09:28:09",
-    "load": "whole",
-    "data": "ch_snb_bopcapbalq.csv",
-    "meta": "ch_snb_bopcapbalq.json"
-  },
-  {
-    "id": "ch_snb_bopcurrq",
-    "title": {
-      "en": "Balance of payments: current account"
-    },
-    "concept": "External sector / Balance of payments",
-    "canonical": true,
-    "featured": null,
-    "topic": "External sector",
-    "source": {
-      "key": "snb",
-      "name": {
-        "en": "Swiss National Bank",
-        "de": "Schweizerische Nationalbank (SNB)",
-        "fr": "Banque nationale suisse (BNS)",
-        "it": "Banca nazionale svizzera (BNS)"
-      }
-    },
-    "license": "snb",
-    "frequency": "quarterly",
-    "start": "1983-01-01",
-    "end": "2026-01-01",
-    "n_series": 116,
-    "updated": "2026-06-23 09:00",
-    "fetched": "2026-06-23 09:28:09",
-    "load": "whole",
-    "data": "ch_snb_bopcurrq.csv",
-    "meta": "ch_snb_bopcurrq.json"
-  },
-  {
-    "id": "ch_snb_bopoverq",
-    "title": {
-      "en": "Balance of payments: overview"
-    },
-    "concept": "External sector / Balance of payments",
-    "canonical": false,
-    "featured": null,
-    "topic": "External sector",
-    "source": {
-      "key": "snb",
-      "name": {
-        "en": "Swiss National Bank",
-        "de": "Schweizerische Nationalbank (SNB)",
-        "fr": "Banque nationale suisse (BNS)",
-        "it": "Banca nazionale svizzera (BNS)"
-      }
-    },
-    "license": "snb",
-    "frequency": "quarterly",
-    "start": "1985-01-01",
-    "end": "2026-01-01",
-    "n_series": 42,
-    "updated": "2026-06-23 09:00",
-    "fetched": "2026-06-23 09:28:10",
-    "load": "whole",
-    "data": "ch_snb_bopoverq.csv",
-    "meta": "ch_snb_bopoverq.json"
-  },
-  {
-    "id": "ch_snb_bopservq",
-    "title": {
-      "en": "Balance of payments: services"
-    },
-    "concept": "External sector / Balance of payments",
-    "canonical": false,
-    "featured": null,
-    "topic": "External sector",
-    "source": {
-      "key": "snb",
-      "name": {
-        "en": "Swiss National Bank",
-        "de": "Schweizerische Nationalbank (SNB)",
-        "fr": "Banque nationale suisse (BNS)",
-        "it": "Banca nazionale svizzera (BNS)"
-      }
-    },
-    "license": "snb",
-    "frequency": "quarterly",
-    "start": "2012-01-01",
-    "end": "2026-01-01",
-    "n_series": 1755,
-    "updated": "2026-06-23 09:00",
-    "fetched": "2026-06-23 09:28:10",
-    "load": "whole",
-    "data": "ch_snb_bopservq.csv",
-    "meta": "ch_snb_bopservq.json"
-  },
-  {
-    "id": "ch_snb_capchstocki",
-    "title": {
-      "en": "Swiss stock indices"
-    },
-    "concept": "Financial markets / Swiss stock indices",
-    "canonical": true,
-    "featured": "Stock market",
-    "topic": "Financial markets",
-    "source": {
-      "key": "snb",
-      "name": {
-        "en": "Swiss National Bank",
-        "de": "Schweizerische Nationalbank (SNB)",
-        "fr": "Banque nationale suisse (BNS)",
-        "it": "Banca nazionale svizzera (BNS)"
-      }
-    },
-    "license": "snb",
-    "frequency": "daily",
-    "start": "1989-01-03",
-    "end": "2026-07-15",
-    "n_series": 14,
-    "updated": "2026-07-21 09:00",
-    "fetched": "2026-07-21 09:18:21",
-    "load": "whole",
-    "data": "ch_snb_capchstocki.csv",
-    "meta": "ch_snb_capchstocki.json"
-  },
-  {
-    "id": "ch_snb_capweums",
-    "title": {
-      "en": "Securities turnover"
-    },
-    "concept": "Financial markets / Securities turnover",
-    "canonical": true,
-    "featured": null,
-    "topic": "Financial markets",
-    "source": {
-      "key": "snb",
-      "name": {
-        "en": "Swiss National Bank",
-        "de": "Schweizerische Nationalbank (SNB)",
-        "fr": "Banque nationale suisse (BNS)",
-        "it": "Banca nazionale svizzera (BNS)"
-      }
-    },
-    "license": "snb",
-    "frequency": "monthly",
-    "start": "1993-01-01",
-    "end": "2026-06-01",
-    "n_series": 10,
-    "updated": "2026-07-21 09:00",
-    "fetched": "2026-07-21 09:18:21",
-    "load": "whole",
-    "data": "ch_snb_capweums.csv",
-    "meta": "ch_snb_capweums.json"
-  },
-  {
-    "id": "ch_snb_devkum",
-    "title": {
-      "en": "Bilateral exchange rates"
-    },
-    "concept": "Exchange rates / Bilateral FX",
-    "canonical": true,
-    "featured": "Exchange rates",
-    "topic": "Exchange rates",
-    "source": {
-      "key": "snb",
-      "name": {
-        "en": "Swiss National Bank",
-        "de": "Schweizerische Nationalbank (SNB)",
-        "fr": "Banque nationale suisse (BNS)",
-        "it": "Banca nazionale svizzera (BNS)"
-      }
-    },
-    "license": "snb",
-    "frequency": "monthly",
-    "start": "1914-01-01",
-    "end": "2026-06-01",
-    "n_series": 54,
-    "updated": "2026-07-01 14:30",
-    "fetched": "2026-07-02 09:26:29",
-    "load": "whole",
-    "data": "ch_snb_devkum.csv",
-    "meta": "ch_snb_devkum.json"
-  },
-  {
-    "id": "ch_snb_devwkibiim",
-    "title": {
-      "en": "Bilateral exchange-rate indices"
-    },
-    "concept": "Exchange rates / Bilateral FX",
-    "canonical": true,
-    "featured": null,
-    "topic": "Exchange rates",
-    "source": {
-      "key": "snb",
-      "name": {
-        "en": "Swiss National Bank",
-        "de": "Schweizerische Nationalbank (SNB)",
-        "fr": "Banque nationale suisse (BNS)",
-        "it": "Banca nazionale svizzera (BNS)"
-      }
-    },
-    "license": "snb",
-    "frequency": "monthly",
-    "start": "1973-01-01",
-    "end": "2026-06-01",
-    "n_series": 162,
-    "updated": "2026-07-07 09:00",
-    "fetched": "2026-07-07 09:28:35",
-    "load": "whole",
-    "data": "ch_snb_devwkibiim.csv",
-    "meta": "ch_snb_devwkibiim.json"
-  },
-  {
-    "id": "ch_snb_devwkieffid",
-    "title": {
-      "en": "Effective exchange-rate index"
-    },
-    "concept": "Exchange rates / Effective FX index",
-    "canonical": true,
-    "featured": null,
-    "topic": "Exchange rates",
-    "source": {
-      "key": "snb",
-      "name": {
-        "en": "Swiss National Bank",
-        "de": "Schweizerische Nationalbank (SNB)",
-        "fr": "Banque nationale suisse (BNS)",
-        "it": "Banca nazionale svizzera (BNS)"
-      }
-    },
-    "license": "snb",
-    "frequency": "daily",
-    "start": "1999-01-01",
-    "end": "2026-06-30",
-    "n_series": 6,
-    "updated": "2026-07-07 09:00",
-    "fetched": "2026-07-07 09:28:35",
-    "load": "whole",
-    "data": "ch_snb_devwkieffid.csv",
-    "meta": "ch_snb_devwkieffid.json"
-  },
-  {
-    "id": "ch_snb_plimoinchq",
-    "title": {
-      "en": "Real estate prices"
-    },
-    "concept": "Prices / Real estate prices",
-    "canonical": true,
-    "featured": null,
-    "topic": "Prices",
-    "source": {
-      "key": "snb",
-      "name": {
-        "en": "Swiss National Bank",
-        "de": "Schweizerische Nationalbank (SNB)",
-        "fr": "Banque nationale suisse (BNS)",
-        "it": "Banca nazionale svizzera (BNS)"
-      }
-    },
-    "license": "snb",
-    "frequency": "quarterly",
-    "start": "1970-01-01",
-    "end": "2026-04-01",
-    "n_series": 17,
-    "updated": "2026-07-21 09:00",
-    "fetched": "2026-07-21 09:18:22",
-    "load": "whole",
-    "data": "ch_snb_plimoinchq.csv",
-    "meta": "ch_snb_plimoinchq.json"
-  },
-  {
-    "id": "ch_snb_plkopr",
-    "title": {
-      "en": "Consumer prices (CPI)"
-    },
-    "concept": "Prices / Consumer prices",
-    "canonical": true,
-    "featured": "Inflation",
-    "topic": "Prices",
-    "source": {
-      "key": "snb",
-      "name": {
-        "en": "Swiss National Bank",
-        "de": "Schweizerische Nationalbank (SNB)",
-        "fr": "Banque nationale suisse (BNS)",
-        "it": "Banca nazionale svizzera (BNS)"
-      }
-    },
-    "license": "snb",
-    "frequency": "monthly",
-    "start": "1921-01-01",
-    "end": "2026-06-01",
-    "n_series": 1,
-    "updated": "2026-07-21 09:00",
-    "fetched": "2026-07-21 09:18:22",
-    "load": "whole",
-    "data": "ch_snb_plkopr.csv",
-    "meta": "ch_snb_plkopr.json"
-  },
-  {
-    "id": "ch_snb_plkoprinfla",
-    "title": {
-      "en": "Core inflation"
-    },
-    "concept": "Prices / Core inflation",
-    "canonical": true,
-    "featured": null,
-    "topic": "Prices",
-    "source": {
-      "key": "snb",
-      "name": {
-        "en": "Swiss National Bank",
-        "de": "Schweizerische Nationalbank (SNB)",
-        "fr": "Banque nationale suisse (BNS)",
-        "it": "Banca nazionale svizzera (BNS)"
-      }
-    },
-    "license": "snb",
-    "frequency": "monthly",
-    "start": "1983-12-01",
-    "end": "2026-06-01",
-    "n_series": 4,
-    "updated": "2026-07-21 09:00",
-    "fetched": "2026-07-21 09:18:22",
-    "load": "whole",
-    "data": "ch_snb_plkoprinfla.csv",
-    "meta": "ch_snb_plkoprinfla.json"
-  },
-  {
-    "id": "ch_snb_rendeiduebd",
-    "title": {
-      "en": "Bond yields (spot rates)"
-    },
-    "concept": "Interest rates & yields / Bond yields",
-    "canonical": true,
-    "featured": null,
-    "topic": "Interest rates & yields",
-    "source": {
-      "key": "snb",
-      "name": {
-        "en": "Swiss National Bank",
-        "de": "Schweizerische Nationalbank (SNB)",
-        "fr": "Banque nationale suisse (BNS)",
-        "it": "Banca nazionale svizzera (BNS)"
-      }
-    },
-    "license": "snb",
-    "frequency": "daily",
-    "start": "1988-01-04",
-    "end": "2026-06-30",
-    "n_series": 48,
-    "updated": "2026-07-01 14:30",
-    "fetched": "2026-07-02 09:26:29",
-    "load": "whole",
-    "data": "ch_snb_rendeiduebd.csv",
-    "meta": "ch_snb_rendeiduebd.json"
-  },
-  {
-    "id": "ch_snb_snbiprogq",
-    "title": {
-      "en": "Inflation forecast (SNB)"
-    },
-    "concept": "Prices / Inflation forecast",
-    "canonical": true,
-    "featured": null,
-    "topic": "Prices",
-    "source": {
-      "key": "snb",
-      "name": {
-        "en": "Swiss National Bank",
-        "de": "Schweizerische Nationalbank (SNB)",
-        "fr": "Banque nationale suisse (BNS)",
-        "it": "Banca nazionale svizzera (BNS)"
-      }
-    },
-    "license": "snb",
-    "frequency": "quarterly",
-    "start": "2001-01-01",
-    "end": "2029-01-01",
-    "n_series": 178,
-    "updated": "2026-06-24 15:00",
-    "fetched": "2026-06-25 09:25:37",
-    "load": "whole",
-    "data": "ch_snb_snbiprogq.csv",
-    "meta": "ch_snb_snbiprogq.json"
-  },
-  {
-    "id": "ch_snb_snbkosiq",
-    "title": {
-      "en": "Business cycle signals"
-    },
-    "concept": "Business cycle & sentiment / Business cycle signals",
-    "canonical": true,
-    "featured": null,
-    "topic": "Business cycle & sentiment",
-    "source": {
-      "key": "snb",
-      "name": {
-        "en": "Swiss National Bank",
-        "de": "Schweizerische Nationalbank (SNB)",
-        "fr": "Banque nationale suisse (BNS)",
-        "it": "Banca nazionale svizzera (BNS)"
-      }
-    },
-    "license": "snb",
-    "frequency": "quarterly",
-    "start": "2011-01-01",
-    "end": "2026-04-01",
-    "n_series": 24,
-    "updated": "2026-06-24 15:00",
-    "fetched": "2026-06-25 09:25:37",
-    "load": "whole",
-    "data": "ch_snb_snbkosiq.csv",
-    "meta": "ch_snb_snbkosiq.json"
-  },
-  {
-    "id": "ch_snb_snbmoba",
-    "title": {
-      "en": "Monetary base"
-    },
-    "concept": "Money & banking / Monetary aggregates",
-    "canonical": false,
-    "featured": null,
-    "topic": "Money & banking",
-    "source": {
-      "key": "snb",
-      "name": {
-        "en": "Swiss National Bank",
-        "de": "Schweizerische Nationalbank (SNB)",
-        "fr": "Banque nationale suisse (BNS)",
-        "it": "Banca nazionale svizzera (BNS)"
-      }
-    },
-    "license": "snb",
-    "frequency": "monthly",
-    "start": "1950-01-01",
-    "end": "2026-06-01",
-    "n_series": 10,
-    "updated": "2026-07-21 09:00",
-    "fetched": "2026-07-21 09:18:22",
-    "load": "whole",
-    "data": "ch_snb_snbmoba.csv",
-    "meta": "ch_snb_snbmoba.json"
-  },
-  {
-    "id": "ch_snb_snbmonagg",
-    "title": {
-      "en": "Monetary aggregates (M1–M3)"
-    },
-    "concept": "Money & banking / Monetary aggregates",
-    "canonical": true,
-    "featured": "Money supply",
-    "topic": "Money & banking",
-    "source": {
-      "key": "snb",
-      "name": {
-        "en": "Swiss National Bank",
-        "de": "Schweizerische Nationalbank (SNB)",
-        "fr": "Banque nationale suisse (BNS)",
-        "it": "Banca nazionale svizzera (BNS)"
-      }
-    },
-    "license": "snb",
-    "frequency": "monthly",
-    "start": "1984-12-01",
-    "end": "2026-06-01",
-    "n_series": 8,
-    "updated": "2026-07-21 09:00",
-    "fetched": "2026-07-21 09:18:22",
-    "load": "whole",
-    "data": "ch_snb_snbmonagg.csv",
-    "meta": "ch_snb_snbmonagg.json"
-  },
-  {
-    "id": "ch_snb_snboffzisa",
-    "title": {
-      "en": "Official interest rates"
-    },
-    "concept": "Interest rates & yields / Policy & official rates",
-    "canonical": true,
-    "featured": null,
-    "topic": "Interest rates & yields",
-    "source": {
-      "key": "snb",
-      "name": {
-        "en": "Swiss National Bank",
-        "de": "Schweizerische Nationalbank (SNB)",
-        "fr": "Banque nationale suisse (BNS)",
-        "it": "Banca nazionale svizzera (BNS)"
-      }
-    },
-    "license": "snb",
-    "frequency": "monthly",
-    "start": "2000-01-01",
-    "end": "2026-06-01",
-    "n_series": 10,
-    "updated": "2026-07-21 09:00",
-    "fetched": "2026-07-21 09:18:22",
-    "load": "whole",
-    "data": "ch_snb_snboffzisa.csv",
-    "meta": "ch_snb_snboffzisa.json"
-  },
-  {
-    "id": "ch_snb_zavegelade",
-    "title": {
-      "en": "E-money"
-    },
-    "concept": "Payment systems / Payments & cash",
-    "canonical": false,
-    "featured": null,
-    "topic": "Payment systems",
-    "source": {
-      "key": "snb",
-      "name": {
-        "en": "Swiss National Bank",
-        "de": "Schweizerische Nationalbank (SNB)",
-        "fr": "Banque nationale suisse (BNS)",
-        "it": "Banca nazionale svizzera (BNS)"
-      }
-    },
-    "license": "snb",
-    "frequency": "monthly",
-    "start": "2014-12-01",
-    "end": "2026-05-01",
-    "n_series": 4,
-    "updated": "2026-07-21 09:00",
-    "fetched": "2026-07-21 09:18:22",
-    "load": "whole",
-    "data": "ch_snb_zavegelade.csv",
-    "meta": "ch_snb_zavegelade.json"
-  },
-  {
-    "id": "ch_snb_zavesic",
-    "title": {
-      "en": "Interbank clearing (SIC)"
-    },
-    "concept": "Payment systems / Payments & cash",
-    "canonical": false,
-    "featured": null,
-    "topic": "Payment systems",
-    "source": {
-      "key": "snb",
-      "name": {
-        "en": "Swiss National Bank",
-        "de": "Schweizerische Nationalbank (SNB)",
-        "fr": "Banque nationale suisse (BNS)",
-        "it": "Banca nazionale svizzera (BNS)"
-      }
-    },
-    "license": "snb",
-    "frequency": "monthly",
-    "start": "1987-07-01",
-    "end": "2026-06-01",
-    "n_series": 14,
-    "updated": "2026-07-21 09:00",
-    "fetched": "2026-07-21 09:18:22",
-    "load": "whole",
-    "data": "ch_snb_zavesic.csv",
-    "meta": "ch_snb_zavesic.json"
-  },
-  {
-    "id": "ch_snb_zavezaka",
-    "title": {
-      "en": "Payment cards and ATMs"
-    },
-    "concept": "Payment systems / Payments & cash",
-    "canonical": false,
-    "featured": null,
-    "topic": "Payment systems",
-    "source": {
-      "key": "snb",
-      "name": {
-        "en": "Swiss National Bank",
-        "de": "Schweizerische Nationalbank (SNB)",
-        "fr": "Banque nationale suisse (BNS)",
-        "it": "Banca nazionale svizzera (BNS)"
-      }
-    },
-    "license": "snb",
-    "frequency": "monthly",
-    "start": "2005-01-01",
-    "end": "2026-05-01",
-    "n_series": 7,
-    "updated": "2026-07-21 09:00",
-    "fetched": "2026-07-21 09:18:22",
-    "load": "whole",
-    "data": "ch_snb_zavezaka.csv",
-    "meta": "ch_snb_zavezaka.json"
-  },
-  {
-    "id": "ch_snb_zavezaluba",
-    "title": {
-      "en": "Payments and cash withdrawals"
-    },
-    "concept": "Payment systems / Payments & cash",
-    "canonical": false,
-    "featured": null,
-    "topic": "Payment systems",
-    "source": {
-      "key": "snb",
-      "name": {
-        "en": "Swiss National Bank",
-        "de": "Schweizerische Nationalbank (SNB)",
-        "fr": "Banque nationale suisse (BNS)",
-        "it": "Banca nazionale svizzera (BNS)"
-      }
-    },
-    "license": "snb",
-    "frequency": "monthly",
-    "start": "2005-01-01",
-    "end": "2026-05-01",
-    "n_series": 113,
-    "updated": "2026-07-21 09:00",
-    "fetched": "2026-07-21 09:18:22",
-    "load": "whole",
-    "data": "ch_snb_zavezaluba.csv",
-    "meta": "ch_snb_zavezaluba.json"
-  },
-  {
-    "id": "ch_snb_zavkuzaart",
-    "title": {
-      "en": "Customer payments (outgoing)"
-    },
-    "concept": "Payment systems / Payments & cash",
-    "canonical": false,
-    "featured": null,
-    "topic": "Payment systems",
-    "source": {
-      "key": "snb",
-      "name": {
-        "en": "Swiss National Bank",
-        "de": "Schweizerische Nationalbank (SNB)",
-        "fr": "Banque nationale suisse (BNS)",
-        "it": "Banca nazionale svizzera (BNS)"
-      }
-    },
-    "license": "snb",
-    "frequency": "monthly",
-    "start": "2012-03-01",
-    "end": "2026-05-01",
-    "n_series": 90,
-    "updated": "2026-07-21 09:00",
-    "fetched": "2026-07-21 09:18:22",
-    "load": "whole",
-    "data": "ch_snb_zavkuzaart.csv",
-    "meta": "ch_snb_zavkuzaart.json"
-  },
-  {
-    "id": "ch_snb_zikredlauf",
-    "title": {
-      "en": "New lending rates"
-    },
-    "concept": "Interest rates & yields / Money-market rates",
-    "canonical": false,
-    "featured": null,
-    "topic": "Interest rates & yields",
-    "source": {
-      "key": "snb",
-      "name": {
-        "en": "Swiss National Bank",
-        "de": "Schweizerische Nationalbank (SNB)",
-        "fr": "Banque nationale suisse (BNS)",
-        "it": "Banca nazionale svizzera (BNS)"
-      }
-    },
-    "license": "snb",
-    "frequency": "monthly",
-    "start": "2009-05-01",
-    "end": "2026-04-01",
-    "n_series": 105,
-    "updated": "2026-07-21 09:00",
-    "fetched": "2026-07-21 09:18:22",
-    "load": "whole",
-    "data": "ch_snb_zikredlauf.csv",
-    "meta": "ch_snb_zikredlauf.json"
-  },
-  {
-    "id": "ch_snb_zikrepro",
-    "title": {
-      "en": "Published interest rates"
-    },
-    "concept": "Interest rates & yields / Money-market rates",
-    "canonical": false,
-    "featured": null,
-    "topic": "Interest rates & yields",
-    "source": {
-      "key": "snb",
-      "name": {
-        "en": "Swiss National Bank",
-        "de": "Schweizerische Nationalbank (SNB)",
-        "fr": "Banque nationale suisse (BNS)",
-        "it": "Banca nazionale svizzera (BNS)"
-      }
-    },
-    "license": "snb",
-    "frequency": "monthly",
-    "start": "1933-01-01",
-    "end": "2026-05-01",
-    "n_series": 228,
-    "updated": "2026-07-01 14:30",
-    "fetched": "2026-07-02 09:26:29",
-    "load": "whole",
-    "data": "ch_snb_zikrepro.csv",
-    "meta": "ch_snb_zikrepro.json"
-  },
-  {
-    "id": "ch_snb_zimoma",
-    "title": {
-      "en": "Money market rates"
-    },
-    "concept": "Interest rates & yields / Money-market rates",
-    "canonical": true,
-    "featured": "SARON",
-    "topic": "Interest rates & yields",
-    "source": {
-      "key": "snb",
-      "name": {
-        "en": "Swiss National Bank",
-        "de": "Schweizerische Nationalbank (SNB)",
-        "fr": "Banque nationale suisse (BNS)",
-        "it": "Banca nazionale svizzera (BNS)"
-      }
-    },
-    "license": "snb",
-    "frequency": "monthly",
-    "start": "1972-01-01",
-    "end": "2026-06-01",
-    "n_series": 13,
-    "updated": "2026-07-01 14:30",
-    "fetched": "2026-07-02 09:26:29",
-    "load": "whole",
-    "data": "ch_snb_zimoma.csv",
-    "meta": "ch_snb_zimoma.json"
   }
 ]

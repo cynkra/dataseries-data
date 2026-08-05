@@ -5,9 +5,12 @@
     "D0"
   ],
   "start": "1972-01-01",
-  "end": "2026-06-01",
+  "end": "2026-07-01",
   "title": {
-    "en": "Money market rates"
+    "en": "Money market rates",
+    "de": "Geldmarktsätze",
+    "fr": "Taux du marché monétaire",
+    "it": "Tassi del mercato monetario"
   },
   "source": {
     "name": {
@@ -24,222 +27,296 @@
   "dimensions": {
     "D0": {
       "label": {
-        "en": "Overview"
+        "en": "Overview",
+        "de": "Übersicht",
+        "fr": "Vue d’ensemble"
       },
       "levels": {
         "D0_0": {
           "label": {
-            "en": "Switzerland"
+            "en": "Switzerland",
+            "de": "Schweiz",
+            "fr": "Suisse"
           },
           "data": false
         },
         "D0_0_0": {
           "label": {
-            "en": "CHF"
+            "en": "CHF",
+            "de": "CHF",
+            "fr": "CHF"
           },
           "data": false
         },
         "1DSARON": {
           "label": {
-            "en": "SARON"
+            "en": "SARON",
+            "de": "SARON",
+            "fr": "SARON"
           },
           "data": false
         },
         "SARON": {
           "label": {
-            "en": "1 day"
+            "en": "1 day",
+            "de": "1 Tag",
+            "fr": "1 jour"
           },
           "data": true
         },
         "TOMN": {
           "label": {
-            "en": "Call money rate (Tomorrow next)"
+            "en": "Call money rate (Tomorrow next)",
+            "de": "1-Tages-Geld (Tomorrow next)",
+            "fr": "Argent au jour le jour (Tomorrow Next)"
           },
           "data": false
         },
         "1TGT": {
           "label": {
-            "en": "1 day"
+            "en": "1 day",
+            "de": "1 Tag",
+            "fr": "1 jour"
           },
           "data": true
         },
         "EGMBF": {
           "label": {
-            "en": "Money market debt register claims of the Swiss Confederation"
+            "en": "Money market debt register claims of the Swiss Confederation",
+            "de": "Eidg. Geldmarktbuchforderungen",
+            "fr": "Créances comptables sur la Confédération"
           },
           "data": false
         },
         "EG3M": {
           "label": {
-            "en": "3-month"
+            "en": "3-month",
+            "de": "3 Monate",
+            "fr": "3 mois"
           },
           "data": true
         },
         "CHFLIB": {
           "label": {
-            "en": "CHF LIBOR"
+            "en": "CHF LIBOR",
+            "de": "CHF LIBOR",
+            "fr": "CHF LIBOR"
           },
           "data": false
         },
         "3M0": {
           "label": {
-            "en": "3-month"
+            "en": "3-month",
+            "de": "3 Monate",
+            "fr": "3 mois"
           },
           "data": true
         },
         "D0_1": {
           "label": {
-            "en": "United States"
+            "en": "United States",
+            "de": "Vereinigte Staaten ​",
+            "fr": "États-Unis"
           },
           "data": false
         },
         "D0_1_1": {
           "label": {
-            "en": "USD"
+            "en": "USD",
+            "de": "USD",
+            "fr": "USD"
           },
           "data": false
         },
         "1DSOFR": {
           "label": {
-            "en": "SOFR"
+            "en": "SOFR",
+            "de": "SOFR",
+            "fr": "SOFR"
           },
           "data": false
         },
         "SOFR": {
           "label": {
-            "en": "1-day"
+            "en": "1-day",
+            "de": "1 Tag",
+            "fr": "1 jour"
           },
           "data": true
         },
         "D0_1_1_1": {
           "label": {
-            "en": "USD LIBOR"
+            "en": "USD LIBOR",
+            "de": "USD LIBOR",
+            "fr": "USD LIBOR"
           },
           "data": false
         },
         "3M1": {
           "label": {
-            "en": "3-month"
+            "en": "3-month",
+            "de": "3 Monate",
+            "fr": "3 mois"
           },
           "data": true
         },
         "D0_2": {
           "label": {
-            "en": "Japan"
+            "en": "Japan",
+            "de": "Japan",
+            "fr": "Japon"
           },
           "data": false
         },
         "D0_2_1": {
           "label": {
-            "en": "JPY"
+            "en": "JPY",
+            "de": "JPY",
+            "fr": "JPY"
           },
           "data": false
         },
         "1DTONA": {
           "label": {
-            "en": "TONA"
+            "en": "TONA",
+            "de": "TONA",
+            "fr": "TONA"
           },
           "data": false
         },
         "TONA": {
           "label": {
-            "en": "1-day"
+            "en": "1-day",
+            "de": "1 Tag",
+            "fr": "1 jour"
           },
           "data": true
         },
         "D0_2_1_1": {
           "label": {
-            "en": "JPY LIBOR"
+            "en": "JPY LIBOR",
+            "de": "JPY LIBOR",
+            "fr": "JPY LIBOR"
           },
           "data": false
         },
         "3M2": {
           "label": {
-            "en": "3-month"
+            "en": "3-month",
+            "de": "3 Monate",
+            "fr": "3 mois"
           },
           "data": true
         },
         "D0_3": {
           "label": {
-            "en": "United Kingdom"
+            "en": "United Kingdom",
+            "de": "Vereinigtes Königreich",
+            "fr": "Royaume-Uni"
           },
           "data": false
         },
         "D0_3_1": {
           "label": {
-            "en": "GBP"
+            "en": "GBP",
+            "de": "GBP",
+            "fr": "GBP"
           },
           "data": false
         },
         "1DSONIA": {
           "label": {
-            "en": "SONIA"
+            "en": "SONIA",
+            "de": "SONIA",
+            "fr": "SONIA"
           },
           "data": false
         },
         "SONIA": {
           "label": {
-            "en": "1-day"
+            "en": "1-day",
+            "de": "1 Tag",
+            "fr": "1 jour"
           },
           "data": true
         },
         "D0_3_1_1": {
           "label": {
-            "en": "GBP LIBOR"
+            "en": "GBP LIBOR",
+            "de": "GBP LIBOR",
+            "fr": "GBP LIBOR"
           },
           "data": false
         },
         "3M3": {
           "label": {
-            "en": "3-month"
+            "en": "3-month",
+            "de": "3 Monate",
+            "fr": "3 mois"
           },
           "data": true
         },
         "D0_4": {
           "label": {
-            "en": "Euro area"
+            "en": "Euro area",
+            "de": "Eurozone",
+            "fr": "Zone euro"
           },
           "data": false
         },
         "D0_4_1": {
           "label": {
-            "en": "EUR"
+            "en": "EUR",
+            "de": "EUR",
+            "fr": "EUR"
           },
           "data": false
         },
         "1DESTR": {
           "label": {
-            "en": "ESTR"
+            "en": "ESTR",
+            "de": "ESTR",
+            "fr": "ESTR"
           },
           "data": false
         },
         "ESTR": {
           "label": {
-            "en": "1-day"
+            "en": "1-day",
+            "de": "1 Tag",
+            "fr": "1 jour"
           },
           "data": true
         },
         "1DEURIBOR": {
           "label": {
-            "en": "EURIBOR"
+            "en": "EURIBOR",
+            "de": "EURIBOR",
+            "fr": "EURIBOR"
           },
           "data": false
         },
         "EURIBOR": {
           "label": {
-            "en": "3-month"
+            "en": "3-month",
+            "de": "3 Monate",
+            "fr": "3 mois"
           },
           "data": true
         },
         "D0_4_1_1": {
           "label": {
-            "en": "EUR LIBOR"
+            "en": "EUR LIBOR",
+            "de": "EUR LIBOR",
+            "fr": "EUR LIBOR"
           },
           "data": false
         },
         "3M4": {
           "label": {
-            "en": "3-month"
+            "en": "3-month",
+            "de": "3 Monate",
+            "fr": "3 mois"
           },
           "data": true
         }
@@ -307,7 +384,7 @@
       }
     }
   },
-  "updated": "2026-07-01 14:30",
+  "updated": "2026-08-03 14:30",
   "topic": "Interest rates & yields",
   "concept": "Interest rates & yields / Money-market rates",
   "canonical": true,
@@ -319,5 +396,5 @@
     "D0": "1TGT"
   },
   "description": "The core money-market reference rates, monthly back to 1972. The distinctive feature is the country grouping (D0): Switzerland alongside the US, Japan, the UK and the euro area, so the same cube lets you compare CHF rates against the major currencies on one axis. It also spans the reference-rate transition end to end: the modern overnight benchmarks SARON, SOFR, TONA, SONIA and ESTR sit next to the legacy 3-month LIBOR series and EURIBOR. The Swiss block additionally carries the call money rate (tomorrow-next) and the 3-month money-market debt-register claims of the Confederation. With only 13 leaf series it is small but conceptually wide, and the Swiss 1TGT series gives the longest continuous CHF money-market history in the cube (from 1972).",
-  "fetched_utc": "2026-07-02 09:26:29"
+  "fetched_utc": "2026-08-05 13:12:04"
 }

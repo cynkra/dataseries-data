@@ -1,7 +1,7 @@
 # Employment outlook index by economic division
 
 - **id**: ch_fso_besta_outlook
-- **title**: Employment outlook
+- **title**: Employment outlook | de: Beschäftigungsaussichten | fr: Perspectives d'emploi | it: Prospettive occupazionali
 - **concept**: Labour / Employment outlook
 - **canonical**: yes
 - **source**: fso

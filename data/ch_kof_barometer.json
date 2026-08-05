@@ -5,7 +5,10 @@
   "start": "1991-01-01",
   "end": "2026-07-01",
   "title": {
-    "en": "KOF Economic Barometer"
+    "en": "KOF Economic Barometer",
+    "de": "KOF Konjunkturbarometer",
+    "fr": "Baromètre conjoncturel KOF",
+    "it": "Barometro congiunturale KOF"
   },
   "source": {
     "name": {
@@ -24,5 +27,5 @@
   "concept": "Business cycle & sentiment / Leading barometer",
   "canonical": true,
   "description": "The headline Swiss leading indicator for the business cycle, published monthly near month-end. A single composite index built from a large basket of underlying predictors, designed to anticipate the year-over-year growth rate of Swiss GDP a few months ahead. Normalised so the long-run mean sits around 100; readings above 100 signal above-average expected growth, below 100 the reverse. Plain one-column time series, no dimensions, monthly back to 1991. Note: on API v2 the per-key ts endpoint serves every public key (the v1 HTTP 412 gate is gone), but the wider open KOF family is still most convenient as whole collections — see ch_kof_esi (R/source_kof.R::kof_set_fetch), which reads ogd_ch.kof.esi, ogd_ch.kof.globalbaro, ogd_ch.kof.bts_total.",
-  "fetched_utc": "2026-07-31 09:17:55"
+  "fetched_utc": "2026-08-05 13:12:05"
 }

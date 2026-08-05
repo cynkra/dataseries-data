@@ -6,9 +6,6 @@
   ],
   "start": "1991-01-01",
   "end": "2024-01-01",
-  "title": {
-    "en": "Labour productivity"
-  },
   "source": {
     "name": {
       "en": "Swiss Federal Statistical Office (FSO)",
@@ -22,30 +19,39 @@
   "license": "fso",
   "frequency": "annual",
   "updated": "2025-09-29",
-  "units": {
-    "en": "Index (1991 = 100), chained volume (previous year's prices)"
-  },
   "dimensions": {
     "indicator": {
       "label": {
-        "en": "Indicator"
+        "en": "Indicator",
+        "de": "Indikator",
+        "fr": "Indicateur",
+        "it": "Indicatore"
       },
       "levels": {
         "gdp": {
           "label": {
-            "en": "Gross domestic product (volume)"
+            "en": "Gross domestic product (volume)",
+            "de": "Bruttoinlandprodukt (Volumen)",
+            "fr": "Produit intérieur brut (volume)",
+            "it": "Prodotto interno lordo (volume)"
           },
           "data": true
         },
         "hours": {
           "label": {
-            "en": "Actual hours worked"
+            "en": "Actual hours worked",
+            "de": "Tatsächliche Arbeitsstunden",
+            "fr": "Heures effectives de travail",
+            "it": "Ore di lavoro effettive"
           },
           "data": true
         },
         "productivity": {
           "label": {
-            "en": "Labour productivity (GDP per hour worked)"
+            "en": "Labour productivity (GDP per hour worked)",
+            "de": "Arbeitsproduktivität (BIP pro Arbeitsstunde)",
+            "fr": "Productivité du travail (PIB par heure travaillée)",
+            "it": "Produttività del lavoro (PIL per ora lavorata)"
           },
           "data": true
         }
@@ -55,6 +61,12 @@
   "topic": "National accounts",
   "concept": "National accounts / Labour productivity",
   "canonical": true,
+  "title": {
+    "en": "Labour productivity",
+    "de": "Arbeitsproduktivität",
+    "fr": "Productivité du travail",
+    "it": "Produttività del lavoro"
+  },
   "split": "indicator",
   "single_select": [],
   "default_transform": "level",
@@ -62,5 +74,11 @@
     "indicator": "productivity"
   },
   "description": "The headline labour-productivity decomposition: real GDP, actual hours worked, and productivity (GDP per hour), all as a chained-volume index, base 1991 = 100. Productivity is the ratio of the other two, so the three plot together on one scale — the long-run Swiss productivity-growth story (≈ +0.9%/yr) at a glance.",
-  "fetched_utc": "2026-07-31 09:17:56"
+  "units": {
+    "en": "Index (1991 = 100), chained volume (previous year's prices)",
+    "de": "Index (1991 = 100), verkettete Volumen (Vorjahrespreise)",
+    "fr": "Indice (1991 = 100), volumes chaînés (prix de l'année précédente)",
+    "it": "Indice (1991 = 100), volumi concatenati (prezzi dell'anno precedente)"
+  },
+  "fetched_utc": "2026-08-05 13:12:07"
 }

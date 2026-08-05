@@ -1,7 +1,7 @@
 # Payments and cash withdrawals
 
 - **id**: ch_snb_zavezaluba
-- **title**: Payments and cash withdrawals
+- **title**: Payments and cash withdrawals | de: Zahlungen und Bargeldbezüge | fr: Paiements et retraits d'espèces | it: Pagamenti e prelievi di contante
 - **concept**: Payment systems / Payments & cash
 - **canonical**: no (alternate for Payments & cash; the flow cube of the `zave*` family, paired with the stock cube `zavezaka`)
 - **source**: snb

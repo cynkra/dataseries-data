@@ -1,7 +1,7 @@
 # Vacant dwellings
 
 - **id**: ch_fso_vacant_dwellings
-- **title**: Vacant dwellings
+- **title**: Vacant dwellings | de: Leerwohnungen | fr: Logements vacants | it: Abitazioni vuote
 - **concept**: Domestic economy / Vacant dwellings
 - **canonical**: yes
 - **source**: fso
@@ -36,9 +36,9 @@ years.
 
 ## Labels
 - dim: measure
-  - **label**: Measure
-  - PC: Vacancy rate (%)
-  - V: Vacant dwellings (number)
+  - **label**: Measure | de: Messgrösse | fr: Mesure | it: Misura
+  - PC: Vacancy rate (%) | de: Leerwohnungsziffer (%) | fr: Taux de logements vacants (%) | it: Tasso di abitazioni vuote (%)
+  - V: Vacant dwellings (number) | de: Leerwohnungen (Anzahl) | fr: Logements vacants (nombre) | it: Abitazioni vuote (numero)
 
 ## Display
 - **split**: measure

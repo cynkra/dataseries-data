@@ -6,9 +6,6 @@
   ],
   "start": "1963-01-01",
   "end": "2026-06-01",
-  "title": {
-    "en": "Producer & import prices"
-  },
   "source": {
     "name": {
       "en": "Swiss Federal Statistical Office (FSO)",
@@ -26,7 +23,10 @@
   "dimensions": {
     "base": {
       "label": {
-        "en": "Index base"
+        "en": "Index base",
+        "de": "Indexbasis",
+        "fr": "Base de l'indice",
+        "it": "Base dell'indice"
       },
       "levels": {
         "1963": {
@@ -76,6 +76,12 @@
   },
   "concept": "Prices / Producer & import prices",
   "canonical": true,
+  "title": {
+    "en": "Producer & import prices",
+    "de": "Produzenten- und Importpreise",
+    "fr": "Prix à la production et à l'importation",
+    "it": "Prezzi alla produzione e all'importazione"
+  },
   "split": "base",
   "single_select": [],
   "default_transform": "yoy",
@@ -83,5 +89,5 @@
     "base": "2020"
   },
   "description": "Producer and import prices for Switzerland, monthly back to 1963. The seven \"series\" are the same total index expressed on seven successive original base years (1963, 1993, 2003, 2010, 2015, 2020, 2025), each a re-indexed view of the same Producer Price Index, all fully populated over the whole span. This mirrors the old parser's idx_type dimension. Longest price history in the catalog.",
-  "fetched_utc": "2026-07-31 09:17:56"
+  "fetched_utc": "2026-08-05 13:12:07"
 }

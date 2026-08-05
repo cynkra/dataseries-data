@@ -7,7 +7,10 @@
   "start": "2000-01-01",
   "end": "2026-06-01",
   "title": {
-    "en": "Official interest rates"
+    "en": "Official interest rates",
+    "de": "Offizielle Zinssätze",
+    "fr": "Taux d'intérêt officiels",
+    "it": "Tassi d'interesse ufficiali"
   },
   "source": {
     "name": {
@@ -24,108 +27,144 @@
   "dimensions": {
     "D0": {
       "label": {
-        "en": "Overview"
+        "en": "Overview",
+        "de": "Übersicht",
+        "fr": "Vue d’ensemble"
       },
       "levels": {
         "D0_0": {
           "label": {
-            "en": "Switzerland"
+            "en": "Switzerland",
+            "de": "Schweiz",
+            "fr": "Suisse"
           },
           "data": false
         },
         "LZ": {
           "label": {
-            "en": "SNB policy rate"
+            "en": "SNB policy rate",
+            "de": "SNB-Leitzins",
+            "fr": "Taux directeur de la BNS"
           },
           "data": true
         },
         "D0_0_0": {
           "label": {
-            "en": "SNB target range for the 3-month Libor rate in CHF"
+            "en": "SNB target range for the 3-month Libor rate in CHF",
+            "de": "SNB Zielband für Dreimonats-Libor in CHF",
+            "fr": "BNS - Marge de fluctuation du Libor à trois mois pour le franc"
           },
           "data": false
         },
         "UG0": {
           "label": {
-            "en": "Lower limit"
+            "en": "Lower limit",
+            "de": "untere Grenze",
+            "fr": "limite inférieure"
           },
           "data": true
         },
         "OG0": {
           "label": {
-            "en": "Upper limit"
+            "en": "Upper limit",
+            "de": "obere Grenze",
+            "fr": "limite supérieure"
           },
           "data": true
         },
         "D0_1": {
           "label": {
-            "en": "United States"
+            "en": "United States",
+            "de": "USA",
+            "fr": "États-Unis"
           },
           "data": false
         },
         "D0_1_0": {
           "label": {
-            "en": "Fed target range"
+            "en": "Fed target range",
+            "de": "Fed Zielband",
+            "fr": "Fed - Marge de fluctuation"
           },
           "data": false
         },
         "UG1": {
           "label": {
-            "en": "Lower limit"
+            "en": "Lower limit",
+            "de": "untere Grenze",
+            "fr": "limite inférieure"
           },
           "data": true
         },
         "OG1": {
           "label": {
-            "en": "Upper limit"
+            "en": "Upper limit",
+            "de": "obere Grenze",
+            "fr": "limite supérieure"
           },
           "data": true
         },
         "D0_2": {
           "label": {
-            "en": "Euro area/ECB"
+            "en": "Euro area/ECB",
+            "de": "Eurowährungsgebiet/EZB",
+            "fr": "Zone euro/BCE"
           },
           "data": false
         },
         "H": {
           "label": {
-            "en": "Main refinancing rate"
+            "en": "Main refinancing rate",
+            "de": "Hauptrefinanzierungsgeschäfte",
+            "fr": "Opérations principales de refinancement"
           },
           "data": true
         },
         "SRF": {
           "label": {
-            "en": "Marginal Lending Facility"
+            "en": "Marginal Lending Facility",
+            "de": "Spitzenrefinanzierungsfazilität",
+            "fr": "Facilité de prêt marginal"
           },
           "data": true
         },
         "EF": {
           "label": {
-            "en": "Deposit Facility"
+            "en": "Deposit Facility",
+            "de": "Einlagefazilität",
+            "fr": "Facilité de dépôt"
           },
           "data": true
         },
         "D0_3": {
           "label": {
-            "en": "United Kingdom"
+            "en": "United Kingdom",
+            "de": "Vereinigtes Königreich",
+            "fr": "Royaume-Uni"
           },
           "data": false
         },
         "L0": {
           "label": {
-            "en": "Bank of England - Bank rate"
+            "en": "Bank of England - Bank rate",
+            "de": "Bank of England - Leitzins",
+            "fr": "Banque d’Angleterre - Taux directeur"
           },
           "data": true
         },
         "D0_4": {
           "label": {
-            "en": "Japan"
+            "en": "Japan",
+            "de": "Japan",
+            "fr": "Japon"
           },
           "data": false
         },
         "L1": {
           "label": {
-            "en": "Bank of Japan - Uncollateralized overnight call rate"
+            "en": "Bank of Japan - Uncollateralized overnight call rate",
+            "de": "Bank of Japan - Leitzins",
+            "fr": "Banque du Japon - Taux directeur"
           },
           "data": true
         }
@@ -169,5 +208,5 @@
     "D0": "LZ"
   },
   "description": "The official policy rates set by the major central banks, monthly from 2000, on a single cube. Distinctive because it is not just the Swiss rate: the hierarchy is organised by country, so it doubles as a cross-central-bank policy-rate comparison. Switzerland carries the LZ SNB policy rate plus the historical SNB target range for 3-month CHF Libor (UG0 lower, OG0 upper). The United States block is the Fed target range (UG1/OG1). The Euro area/ECB block has three distinct facility rates: H main refinancing, SRF marginal lending, EF deposit facility. The UK is L0 (Bank of England Bank Rate) and Japan L1 (BoJ uncollateralised overnight call rate). All values are in percent. This captures the regime change in Swiss monetary policy (the move from a Libor target band to a single SNB policy rate) inside one series, because both the old range bounds and the current single rate live here.",
-  "fetched_utc": "2026-07-21 09:18:22"
+  "fetched_utc": "2026-08-05 13:12:03"
 }

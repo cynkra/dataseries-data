@@ -11,7 +11,10 @@
   "start": "2005-01-01",
   "end": "2026-05-01",
   "title": {
-    "en": "Payments and cash withdrawals"
+    "en": "Payments and cash withdrawals",
+    "de": "Zahlungen und Bargeldbezüge",
+    "fr": "Paiements et retraits d'espèces",
+    "it": "Pagamenti e prelievi di contante"
   },
   "source": {
     "name": {
@@ -28,60 +31,80 @@
   "dimensions": {
     "D0": {
       "label": {
-        "en": "Payments/Cash withdrawals "
+        "en": "Payments/Cash withdrawals ",
+        "de": "Zahlungen/Bargeldbezüge ",
+        "fr": "Paiements/Retraits d’argent liquide "
       },
       "levels": {
         "Z": {
           "label": {
-            "en": "Payments"
+            "en": "Payments",
+            "de": "Zahlungen",
+            "fr": "Paiements"
           },
           "data": false
         },
         "ZT": {
           "label": {
-            "en": "Total"
+            "en": "Total",
+            "de": "Total",
+            "fr": "Total"
           },
           "data": true
         },
         "PG": {
           "label": {
-            "en": "Card-present payments"
+            "en": "Card-present payments",
+            "de": "Präsenzgeschäft",
+            "fr": "Transactions effectuées sur place"
           },
           "data": false
         },
         "PGT": {
           "label": {
-            "en": "Total"
+            "en": "Total",
+            "de": "Total",
+            "fr": "Total"
           },
           "data": true
         },
         "PGKL": {
           "label": {
-            "en": "Of which contactless"
+            "en": "Of which contactless",
+            "de": "davon kontaktlos ausgelöst",
+            "fr": "dont sans contact"
           },
           "data": true
         },
         "DG": {
           "label": {
-            "en": "Card-not-present payments"
+            "en": "Card-not-present payments",
+            "de": "Distanzgeschäft",
+            "fr": "Transactions effectuées à distance"
           },
           "data": true
         },
         "B": {
           "label": {
-            "en": "Cash withdrawals"
+            "en": "Cash withdrawals",
+            "de": "Bargeldbezüge",
+            "fr": "Retraits d’argent liquide"
           },
           "data": false
         },
         "BT": {
           "label": {
-            "en": "Total"
+            "en": "Total",
+            "de": "Total",
+            "fr": "Total"
           },
           "data": true
         },
         "BE": {
           "label": {
-            "en": "Of which enhanced coverage of cash withdrawals at card-issuing bank"
+            "en": "Of which enhanced coverage of cash withdrawals at card-issuing bank",
+            "de": "davon zunehmende Erfassung bankeigene Bezüge",
+            "fr": "dont couverture croissante de retraits d’espèces auprès de la banque émettrice de la carte concernée"
           },
           "data": true
         }
@@ -103,24 +126,32 @@
     },
     "D1": {
       "label": {
-        "en": "Payment cards"
+        "en": "Payment cards",
+        "de": "Zahlungskarten",
+        "fr": "Cartes de paiement"
       },
       "levels": {
         "K": {
           "label": {
-            "en": "Credit cards"
+            "en": "Credit cards",
+            "de": "Kreditkarten",
+            "fr": "Cartes de crédit"
           },
           "data": true
         },
         "D": {
           "label": {
-            "en": "Debit cards"
+            "en": "Debit cards",
+            "de": "Debitkarten",
+            "fr": "Cartes de débit"
           },
           "data": true
         },
         "EG": {
           "label": {
-            "en": "E-money"
+            "en": "E-money",
+            "de": "E-Geld",
+            "fr": "Monnaie électronique"
           },
           "data": true
         }
@@ -133,18 +164,24 @@
     },
     "D2": {
       "label": {
-        "en": "Card origin"
+        "en": "Card origin",
+        "de": "Herkunft der Karte",
+        "fr": "Origine de la carte"
       },
       "levels": {
         "IZ": {
           "label": {
-            "en": "Domestic payment cards"
+            "en": "Domestic payment cards",
+            "de": "Inländische Zahlungskarten",
+            "fr": "Cartes de paiement suisses"
           },
           "data": true
         },
         "AZ": {
           "label": {
-            "en": "Foreign payment cards"
+            "en": "Foreign payment cards",
+            "de": "Ausländische Zahlungskarten",
+            "fr": "Cartes de paiement étrangères"
           },
           "data": true
         }
@@ -156,18 +193,24 @@
     },
     "D3": {
       "label": {
-        "en": "Place of transaction"
+        "en": "Place of transaction",
+        "de": "Ort der Transaktion",
+        "fr": "Lieu de la transaction"
       },
       "levels": {
         "II": {
           "label": {
-            "en": "Domestic"
+            "en": "Domestic",
+            "de": "im Inland",
+            "fr": "en Suisse"
           },
           "data": true
         },
         "IA": {
           "label": {
-            "en": "Foreign"
+            "en": "Foreign",
+            "de": "im Ausland",
+            "fr": "à l’étranger"
           },
           "data": true
         }
@@ -179,24 +222,32 @@
     },
     "D4": {
       "label": {
-        "en": "Transactions and amount"
+        "en": "Transactions and amount",
+        "de": "Transaktionen und Betrag",
+        "fr": "Transactions et montant"
       },
       "levels": {
         "TT": {
           "label": {
-            "en": "Transactions in thousands"
+            "en": "Transactions in thousands",
+            "de": "Transaktionen in Tausend",
+            "fr": "Nombre de transactions en milliers"
           },
           "data": true
         },
         "BMF": {
           "label": {
-            "en": "Amount in CHF millions"
+            "en": "Amount in CHF millions",
+            "de": "Betrag in Millionen Franken",
+            "fr": "Montant en millions de francs"
           },
           "data": true
         },
         "BTF": {
           "label": {
-            "en": "Amount per transaction in CHF"
+            "en": "Amount per transaction in CHF",
+            "de": "Betrag pro Transaktion in Franken",
+            "fr": "Montant par transaction en francs"
           },
           "data": true
         }
@@ -223,5 +274,5 @@
     "D4": "BMF"
   },
   "description": "The card-payment flow cube, and the most cross-cut of the zave family: five stacked dimensions describe each transaction (what kind of payment, which card type, where the card was issued, where it was used, and which metric). It separates card-present from card-not-present (online) payments, breaks out contactless within card-present, and isolates cash withdrawals at ATMs. The domestic/foreign split on both card origin (D2) and place of transaction (D3) makes it usable for inbound tourism spend (foreign cards used domestically) and Swiss spending abroad. The contactless and enhanced-cash subtotals begin mid-2017, later than the 2005 base, so many of the 113 series are short.",
-  "fetched_utc": "2026-07-21 09:18:22"
+  "fetched_utc": "2026-08-05 13:12:03"
 }

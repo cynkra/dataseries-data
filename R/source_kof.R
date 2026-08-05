@@ -41,7 +41,6 @@ kof_fetch <- function(key, title = NULL) {
   meta <- list(
     title = title %||% setNames(list(key), "en"),
     source = list(
-      name = list(en = "KOF Swiss Economic Institute"),
       url = "https://kof.ethz.ch/en/forecasts-and-indicators/indicators/kof-economic-barometer.html"
     ),
     license = "kof",
@@ -77,7 +76,6 @@ kof_set_fetch <- function(set, title = NULL, dim_name = "indicator",
   meta <- list(
     title = title %||% setNames(list(set), "en"),
     source = list(
-      name = list(en = "KOF Swiss Economic Institute"),
       url = source_url %||% "https://kof.ethz.ch/en/forecasts-and-indicators/indicators.html"
     ),
     license = "kof",

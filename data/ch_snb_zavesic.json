@@ -7,7 +7,10 @@
   "start": "1987-07-01",
   "end": "2026-06-01",
   "title": {
-    "en": "Interbank clearing (SIC)"
+    "en": "Interbank clearing (SIC)",
+    "de": "Interbank-Clearing (SIC)",
+    "fr": "Clearing interbancaire (SIC)",
+    "it": "Clearing interbancario (SIC)"
   },
   "source": {
     "name": {
@@ -24,144 +27,192 @@
   "dimensions": {
     "D0": {
       "label": {
-        "en": "Overview"
+        "en": "Overview",
+        "de": "Übersicht",
+        "fr": "Vue d’ensemble"
       },
       "levels": {
         "D0_0": {
           "label": {
-            "en": "Transactions, turnover, turnover ratio"
+            "en": "Transactions, turnover, turnover ratio",
+            "de": "Transaktionen, Umsatz, Umschlagshäufigkeit",
+            "fr": "Nombre de transactions, capitaux échangés et vitesse de circulation"
           },
           "data": false
         },
         "D0_0_0": {
           "label": {
-            "en": "Number of transactions"
+            "en": "Number of transactions",
+            "de": "Anzahl Transaktionen",
+            "fr": "Nombre de transactions"
           },
           "data": false
         },
         "T0": {
           "label": {
-            "en": "Total"
+            "en": "Total",
+            "de": "Total",
+            "fr": "Total"
           },
           "data": true
         },
         "MT0": {
           "label": {
-            "en": "Daily maximum"
+            "en": "Daily maximum",
+            "de": "Maximaler Tageswert",
+            "fr": "Maximum quotidien"
           },
           "data": true
         },
         "DA0": {
           "label": {
-            "en": "Average per working day"
+            "en": "Average per working day",
+            "de": "Durchschnitt pro Arbeitstag",
+            "fr": "Moyenne par jour ouvré"
           },
           "data": true
         },
         "D0_0_1": {
           "label": {
-            "en": "Turnover in CHF million"
+            "en": "Turnover in CHF million",
+            "de": "Umsatz in Millionen Franken",
+            "fr": "Capitaux échangés (en millions de francs)"
           },
           "data": false
         },
         "T1": {
           "label": {
-            "en": "Total"
+            "en": "Total",
+            "de": "Total",
+            "fr": "Total"
           },
           "data": true
         },
         "MT1": {
           "label": {
-            "en": "Daily maximum"
+            "en": "Daily maximum",
+            "de": "Maximaler Tageswert",
+            "fr": "Maximum quotidien"
           },
           "data": true
         },
         "DA1": {
           "label": {
-            "en": "Average per working day"
+            "en": "Average per working day",
+            "de": "Durchschnitt pro Arbeitstag",
+            "fr": "Moyenne par jour ouvré"
           },
           "data": true
         },
         "D0_0_2": {
           "label": {
-            "en": "Turnover ratio"
+            "en": "Turnover ratio",
+            "de": "Umschlagshäufigkeit",
+            "fr": "Vitesse de circulation"
           },
           "data": false
         },
         "MT2": {
           "label": {
-            "en": "Daily maximum"
+            "en": "Daily maximum",
+            "de": "Maximaler Tageswert",
+            "fr": "Maximum quotidien"
           },
           "data": true
         },
         "DA2": {
           "label": {
-            "en": "Average per working day"
+            "en": "Average per working day",
+            "de": "Durchschnitt pro Arbeitstag",
+            "fr": "Moyenne par jour ouvré"
           },
           "data": true
         },
         "D0_1": {
           "label": {
-            "en": "By size of payments"
+            "en": "By size of payments",
+            "de": "Nach Grössenklassen",
+            "fr": "Ventilation selon le montant des paiements"
           },
           "data": false
         },
         "D0_1_0": {
           "label": {
-            "en": "Number of transactions"
+            "en": "Number of transactions",
+            "de": "Anzahl Transaktionen",
+            "fr": "Nombre de transactions"
           },
           "data": false
         },
         "D0_1_0_0": {
           "label": {
-            "en": "Size of payments (in CHF)"
+            "en": "Size of payments (in CHF)",
+            "de": "Grössenklassen (in Franken)",
+            "fr": "Catégories de paiements (en francs)"
           },
           "data": false
         },
         "149990": {
           "label": {
-            "en": "1–4,999"
+            "en": "1–4,999",
+            "de": "1 – 4 999",
+            "fr": "de 1 à 4 999"
           },
           "data": true
         },
         "50009999990": {
           "label": {
-            "en": "5,000–999,999"
+            "en": "5,000–999,999",
+            "de": "5 000 – 999 999",
+            "fr": "de 5 000 à 999 999"
           },
           "data": true
         },
         "1MM0": {
           "label": {
-            "en": "1 million and larger"
+            "en": "1 million and larger",
+            "de": "1 Million und mehr",
+            "fr": "1 million et plus"
           },
           "data": true
         },
         "D0_1_1": {
           "label": {
-            "en": "Turnover in CHF million"
+            "en": "Turnover in CHF million",
+            "de": "Umsatz in Millionen Franken",
+            "fr": "Capitaux échangés en millions de francs"
           },
           "data": false
         },
         "D0_1_1_0": {
           "label": {
-            "en": "Size of payments (in CHF)"
+            "en": "Size of payments (in CHF)",
+            "de": "Grössenklassen (in Franken)",
+            "fr": "Catégories de paiements (en francs)"
           },
           "data": false
         },
         "149991": {
           "label": {
-            "en": "1–4,999"
+            "en": "1–4,999",
+            "de": "1 – 4 999",
+            "fr": "de 1 à 4 999"
           },
           "data": true
         },
         "50009999991": {
           "label": {
-            "en": "5,000–999,999"
+            "en": "5,000–999,999",
+            "de": "5 000 – 999 999",
+            "fr": "de 5 000 à 999 999"
           },
           "data": true
         },
         "1MM1": {
           "label": {
-            "en": "1 million and larger"
+            "en": "1 million and larger",
+            "de": "1 Million und mehr",
+            "fr": "1 million et plus"
           },
           "data": true
         }
@@ -213,5 +264,5 @@
     "D0": "T0"
   },
   "description": "Activity in SIC, Switzerland's real-time gross settlement system for interbank CHF payments, monthly from 1987. This is the deepest hierarchy of the six cubes (four nesting levels) and the one whose dimension codes are partly numeric. Two views sit side by side. The headline block (D0_0) gives counts, turnover and a turnover ratio, each as a total (T0/T1), a daily maximum (MT0/MT1/MT2) and an average per working day (DA0/DA1/DA2). The by-size block (D0_1) breaks the same number of transactions and turnover into three payment-size bands, encoded with the quirky numeric ids 149990 / 50009999990 / 1MM0 (and the parallel ...91/1MM1 for turnover). Those ids read as the band edges: 149990 = CHF 1-4,999, 50009999990 = CHF 5,000-999,999, 1MM0 = CHF 1 million and larger. Counts are number of transactions; turnover is in CHF million. The long history makes it a useful proxy for the digitisation and growth of Swiss interbank payment volume.",
-  "fetched_utc": "2026-07-21 09:18:22"
+  "fetched_utc": "2026-08-05 13:12:03"
 }

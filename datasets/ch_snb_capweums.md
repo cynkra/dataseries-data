@@ -1,7 +1,7 @@
 # Securities turnover on the Swiss stock exchange
 
 - **id**: ch_snb_capweums
-- **title**: Securities turnover
+- **title**: Securities turnover | de: Effektenumsätze | fr: Transactions sur titres | it: Transazioni in titoli
 - **concept**: Financial markets / Securities turnover
 - **canonical**: yes
 - **source**: snb

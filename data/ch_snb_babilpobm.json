@@ -10,7 +10,10 @@
   "start": "1987-12-01",
   "end": "2026-05-01",
   "title": {
-    "en": "Bank balance sheets by currency"
+    "en": "Bank balance sheets by currency",
+    "de": "Bankbilanzen nach Währung",
+    "fr": "Bilans bancaires par monnaie",
+    "it": "Bilanci bancari per valuta"
   },
   "source": {
     "name": {
@@ -27,240 +30,320 @@
   "dimensions": {
     "D0": {
       "label": {
-        "en": "Balance sheet items"
+        "en": "Balance sheet items",
+        "de": "Bilanzpositionen",
+        "fr": "Postes du bilan"
       },
       "levels": {
         "AKT": {
           "label": {
-            "en": "Assets"
+            "en": "Assets",
+            "de": "Aktiven",
+            "fr": "Actifs"
           },
           "data": false
         },
         "FMI": {
           "label": {
-            "en": "Liquid assets"
+            "en": "Liquid assets",
+            "de": "Flüssige Mittel",
+            "fr": "Liquidités"
           },
           "data": true
         },
         "FBA": {
           "label": {
-            "en": "Amounts due from banks"
+            "en": "Amounts due from banks",
+            "de": "Forderungen gegenüber Banken",
+            "fr": "Créances sur les banques"
           },
           "data": true
         },
         "WFG": {
           "label": {
-            "en": "Amounts due from securities financing transactions"
+            "en": "Amounts due from securities financing transactions",
+            "de": "Forderungen aus Wertpapierfinanzierungsgeschäften",
+            "fr": "Créances résultant d’opérations de financement de titres"
           },
           "data": true
         },
         "FKU": {
           "label": {
-            "en": "Amounts due from customers"
+            "en": "Amounts due from customers",
+            "de": "Forderungen gegenüber Kunden",
+            "fr": "Créances sur la clientèle"
           },
           "data": true
         },
         "HYP": {
           "label": {
-            "en": "Mortgage loans"
+            "en": "Mortgage loans",
+            "de": "Hypothekarforderungen",
+            "fr": "Créances hypothécaires"
           },
           "data": true
         },
         "HGE": {
           "label": {
-            "en": "Trading portfolio assets"
+            "en": "Trading portfolio assets",
+            "de": "Handelsgeschäft",
+            "fr": "Opérations de négoce"
           },
           "data": true
         },
         "WBW": {
           "label": {
-            "en": "Positive replacement values of derivative financial instruments"
+            "en": "Positive replacement values of derivative financial instruments",
+            "de": "Positive Wiederbeschaffungswerte derivativer Finanzinstrumente",
+            "fr": "Valeurs de remplacement positives d’instruments financiers dérivés"
           },
           "data": true
         },
         "FFV": {
           "label": {
-            "en": "Other financial instruments at fair value"
+            "en": "Other financial instruments at fair value",
+            "de": "Übrige Finanzinstrumente mit Fair-Value-Bewertung",
+            "fr": "Autres instruments financiers évalués à la juste valeur"
           },
           "data": true
         },
         "FAN": {
           "label": {
-            "en": "Financial investments"
+            "en": "Financial investments",
+            "de": "Finanzanlagen",
+            "fr": "Immobilisations financières"
           },
           "data": true
         },
         "REA": {
           "label": {
-            "en": "Accrued income and prepaid expenses"
+            "en": "Accrued income and prepaid expenses",
+            "de": "Aktive Rechnungsabgrenzungen",
+            "fr": "Comptes de régularisation"
           },
           "data": true
         },
         "BET": {
           "label": {
-            "en": "Participations"
+            "en": "Participations",
+            "de": "Beteiligungen",
+            "fr": "Participations"
           },
           "data": true
         },
         "SAN": {
           "label": {
-            "en": "Tangible fixed assets"
+            "en": "Tangible fixed assets",
+            "de": "Sachanlagen",
+            "fr": "Immobilisations corporelles"
           },
           "data": true
         },
         "IMW": {
           "label": {
-            "en": "Intangible assets"
+            "en": "Intangible assets",
+            "de": "Immaterielle Werte",
+            "fr": "Valeurs immatérielles"
           },
           "data": true
         },
         "SON": {
           "label": {
-            "en": "Other assets"
+            "en": "Other assets",
+            "de": "Sonstige Aktiven",
+            "fr": "Autres actifs"
           },
           "data": true
         },
         "NVW": {
           "label": {
-            "en": "Non-eligible value adjustments according to transitional provisions (negative item)"
+            "en": "Non-eligible value adjustments according to transitional provisions (negative item)",
+            "de": "Nicht verrechenbare Wertberichtigungen gemäss Übergangsbestimmungen (Minusposition)",
+            "fr": "Corrections de valeur non compensables selon les dispositions transitoires"
           },
           "data": true
         },
         "NEG": {
           "label": {
-            "en": "Capital not paid in"
+            "en": "Capital not paid in",
+            "de": "Nicht einbezahltes Gesellschaftskapital",
+            "fr": "Capital social non libéré"
           },
           "data": true
         },
         "TOT": {
           "label": {
-            "en": "Total assets"
+            "en": "Total assets",
+            "de": "Total Aktiven",
+            "fr": "Total des actifs"
           },
           "data": true
         },
         "PAS": {
           "label": {
-            "en": "Liabilities"
+            "en": "Liabilities",
+            "de": "Passiven",
+            "fr": "Passifs"
           },
           "data": false
         },
         "VBA": {
           "label": {
-            "en": "Amounts due to banks"
+            "en": "Amounts due to banks",
+            "de": "Verpflichtungen gegenüber Banken",
+            "fr": "Engagements envers les banques"
           },
           "data": true
         },
         "WFG1": {
           "label": {
-            "en": "Liabilities from securities financing transactions"
+            "en": "Liabilities from securities financing transactions",
+            "de": "Verpflichtungen aus Wertpapierfinanzierungsgeschäften",
+            "fr": "Engagements résultant d’opérations de financement de titres"
           },
           "data": true
         },
         "VKE": {
           "label": {
-            "en": "Amounts due in respect of customer deposits"
+            "en": "Amounts due in respect of customer deposits",
+            "de": "Verpflichtungen aus Kundeneinlagen",
+            "fr": "Engagements résultant des dépôts de la clientèle"
           },
           "data": true
         },
         "HGE1": {
           "label": {
-            "en": "Trading portfolio liabilities"
+            "en": "Trading portfolio liabilities",
+            "de": "Verpflichtungen aus Handelsgeschäften",
+            "fr": "Engagements résultant d’opérations de négoce"
           },
           "data": true
         },
         "WBW1": {
           "label": {
-            "en": "Negative replacement values of derivative financial instruments"
+            "en": "Negative replacement values of derivative financial instruments",
+            "de": "Negative Wiederbeschaffungswerte derivativer Finanzinstrumente",
+            "fr": "Valeurs de remplacement négatives d’instruments financiers dérivés"
           },
           "data": true
         },
         "FFV1": {
           "label": {
-            "en": "Liabilities from other financial instruments at fair value"
+            "en": "Liabilities from other financial instruments at fair value",
+            "de": "Verpflichtungen aus übrigen Finanzinstrumenten mit Fair-Value-Bewertung",
+            "fr": "Engagements résultant des autres instruments financiers évalués à la juste valeur"
           },
           "data": true
         },
         "KOB": {
           "label": {
-            "en": "Cash bonds"
+            "en": "Cash bonds",
+            "de": "Kassenobligationen",
+            "fr": "Obligations de caisse"
           },
           "data": true
         },
         "APF": {
           "label": {
-            "en": "Bond issues and central mortgage institution loans"
+            "en": "Bond issues and central mortgage institution loans",
+            "de": "Anleihen und Pfandbriefdarlehen",
+            "fr": "Emprunts et prêts des centrales d’émission de lettres de gage"
           },
           "data": true
         },
         "REA1": {
           "label": {
-            "en": "Accrued expenses and deferred income"
+            "en": "Accrued expenses and deferred income",
+            "de": "Passive Rechnungsabgrenzungen",
+            "fr": "Comptes de régularisation"
           },
           "data": true
         },
         "SON1": {
           "label": {
-            "en": "Other liabilities"
+            "en": "Other liabilities",
+            "de": "Sonstige Passiven",
+            "fr": "Autres passifs"
           },
           "data": true
         },
         "RUE": {
           "label": {
-            "en": "Provisions"
+            "en": "Provisions",
+            "de": "Rückstellungen",
+            "fr": "Provisions"
           },
           "data": true
         },
         "RAB": {
           "label": {
-            "en": "Reserves for general banking risks"
+            "en": "Reserves for general banking risks",
+            "de": "Reserven für allgemeine Bankrisiken",
+            "fr": "Réserves pour risques bancaires généraux"
           },
           "data": true
         },
         "GKA": {
           "label": {
-            "en": "Bank capital"
+            "en": "Bank capital",
+            "de": "Gesellschaftskapital",
+            "fr": "Capital social"
           },
           "data": true
         },
         "KRE": {
           "label": {
-            "en": "Statutory capital reserve"
+            "en": "Statutory capital reserve",
+            "de": "Gesetzliche Kapitalreserve",
+            "fr": "Réserve légale issue du capital"
           },
           "data": true
         },
         "GRE": {
           "label": {
-            "en": "Statutory earnings reserve"
+            "en": "Statutory earnings reserve",
+            "de": "Gesetzliche Gewinnreserve",
+            "fr": "Réserve légale issue du bénéfice"
           },
           "data": true
         },
         "FGR": {
           "label": {
-            "en": "Voluntary retained earnings reserves"
+            "en": "Voluntary retained earnings reserves",
+            "de": "Freiwillige Gewinnreserven",
+            "fr": "Réserves facultatives issues du bénéfice"
           },
           "data": true
         },
         "EKA": {
           "label": {
-            "en": "Own shares (negative item)"
+            "en": "Own shares (negative item)",
+            "de": "Eigene Kapitalanteile (Minusposition)",
+            "fr": "Propres parts du capital (poste négatif)"
           },
           "data": true
         },
         "GVO": {
           "label": {
-            "en": "Profit carried forward / loss carried forward"
+            "en": "Profit carried forward / loss carried forward",
+            "de": "Gewinnvortrag / Verlustvortrag",
+            "fr": "Bénéfice reporté / Perte reportée"
           },
           "data": true
         },
         "GEV": {
           "label": {
-            "en": "Profit / loss (result of the period)"
+            "en": "Profit / loss (result of the period)",
+            "de": "Gewinn / Verlust (Periodenerfolg)",
+            "fr": "Bénéfice / Perte (résultat de la période)"
           },
           "data": true
         },
         "TOT1": {
           "label": {
-            "en": "Total liabilities"
+            "en": "Total liabilities",
+            "de": "Total Passiven",
+            "fr": "Total des passifs"
           },
           "data": true
         }
@@ -311,24 +394,32 @@
     },
     "INLANDAUSLAND": {
       "label": {
-        "en": "Domestic and foreign"
+        "en": "Domestic and foreign",
+        "de": "Inland und Ausland",
+        "fr": "Suisse et étranger"
       },
       "levels": {
         "T": {
           "label": {
-            "en": "Total domestic and foreign"
+            "en": "Total domestic and foreign",
+            "de": "Total Inland und Ausland",
+            "fr": "Total Suisse et étranger"
           },
           "data": true
         },
         "I": {
           "label": {
-            "en": "Domestic"
+            "en": "Domestic",
+            "de": "Inland",
+            "fr": "Suisse"
           },
           "data": true
         },
         "A": {
           "label": {
-            "en": "Foreign"
+            "en": "Foreign",
+            "de": "Ausland",
+            "fr": "Étranger"
           },
           "data": true
         }
@@ -341,30 +432,40 @@
     },
     "WAEHRUNG": {
       "label": {
-        "en": "Currency"
+        "en": "Currency",
+        "de": "Währung",
+        "fr": "Monnaie"
       },
       "levels": {
         "T": {
           "label": {
-            "en": "All currencies"
+            "en": "All currencies",
+            "de": "Alle Währungen",
+            "fr": "Toutes les monnaies"
           },
           "data": true
         },
         "CHF": {
           "label": {
-            "en": "Swiss franc"
+            "en": "Swiss franc",
+            "de": "Schweizer Franken",
+            "fr": "Franc suisse"
           },
           "data": true
         },
         "EUR": {
           "label": {
-            "en": "Euro"
+            "en": "Euro",
+            "de": "Euro",
+            "fr": "Euro"
           },
           "data": true
         },
         "USD": {
           "label": {
-            "en": "US dollar"
+            "en": "US dollar",
+            "de": "US-Dollar",
+            "fr": "Dollar des États-Unis"
           },
           "data": true
         }
@@ -378,18 +479,24 @@
     },
     "BANKENGRUPPE": {
       "label": {
-        "en": "Bank category"
+        "en": "Bank category",
+        "de": "Bankengruppe",
+        "fr": "Catégories de banques"
       },
       "levels": {
         "A40": {
           "label": {
-            "en": "All banks"
+            "en": "All banks",
+            "de": "Alle Banken",
+            "fr": "Toutes les banques"
           },
           "data": true
         },
         "G15": {
           "label": {
-            "en": "Big banks"
+            "en": "Big banks",
+            "de": "Grossbanken",
+            "fr": "Grandes banques"
           },
           "data": true
         }
@@ -414,5 +521,5 @@
     "BANKENGRUPPE": "A40"
   },
   "description": "The full monthly balance sheet of banks in Switzerland, line by line, back to 1987. Every position from the regulatory balance sheet appears as a code: on the asset side liquid assets, amounts due from banks/customers, mortgage loans, trading portfolio, replacement values, financial investments, participations, down to total assets; on the liabilities side amounts due to banks/customers, cash bonds, bond issues, provisions, the equity components (bank capital, reserves, own shares, period profit) and total liabilities. What makes this cube large is the three-way slicing: each balance-sheet item is crossed with a currency split (all / CHF / EUR / USD) and a bank-category split (all banks vs big banks), which is why it expands to 872 stored series. The currency breakdown is the distinctive feature; it lets you watch FX composition of the banking system's book, not just totals.",
-  "fetched_utc": "2026-07-21 09:18:21"
+  "fetched_utc": "2026-08-05 13:12:01"
 }

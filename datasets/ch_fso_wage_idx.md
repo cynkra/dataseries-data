@@ -1,7 +1,7 @@
 # Swiss Wage Index
 
 - **id**: ch_fso_wage_idx
-- **title**: Swiss Wage Index
+- **title**: Swiss Wage Index | de: Schweizerischer Lohnindex | fr: Indice suisse des salaires | it: Indice svizzero dei salari
 - **concept**: Labour / Wages
 - **canonical**: yes
 - **source**: fso
@@ -52,19 +52,19 @@ duplicate a button. Keeping only the index collapses the former `measure` dimens
 
 ## Labels
 - dim: breakdown
-  - **label**: Breakdown
-  - tot: Total
-  - by_sex: By sex
-  - m: Men
-  - f: Women
-  - by_sector: By sector
-  - bf1: Secondary sector
-  - f41: Construction
-  - gs4: Tertiary sector
+  - **label**: Breakdown | de: Gliederung | fr: Ventilation | it: Suddivisione
+  - tot: Total | de: Total | fr: Total | it: Totale
+  - by_sex: By sex | de: Nach Geschlecht | fr: Selon le sexe | it: Secondo il sesso
+  - m: Men | de: Männer | fr: Hommes | it: Uomini
+  - f: Women | de: Frauen | fr: Femmes | it: Donne
+  - by_sector: By sector | de: Nach Sektor | fr: Selon le secteur | it: Secondo il settore
+  - bf1: Secondary sector | de: Sekundärer Sektor | fr: Secteur secondaire | it: Settore secondario
+  - f41: Construction | de: Bau | fr: Construction | it: Costruzioni
+  - gs4: Tertiary sector | de: Tertiärer Sektor | fr: Secteur tertiaire | it: Settore terziario
 - dim: adjustment
-  - **label**: Adjustment
-  - nominal: Nominal wage index
-  - real: Real wage index
+  - **label**: Adjustment | de: Bereinigung | fr: Correction | it: Correzione
+  - nominal: Nominal wage index | de: Nominallohnindex | fr: Indice des salaires nominaux | it: Indice dei salari nominali
+  - real: Real wage index | de: Reallohnindex | fr: Indice des salaires réels | it: Indice dei salari reali
 
 ## Hierarchy
 The Total and its two non-crossing cuts on one overlay axis; by_sex / by_sector are

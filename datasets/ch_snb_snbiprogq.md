@@ -1,7 +1,7 @@
 # SNB conditional inflation forecast (quarterly)
 
 - **id**: ch_snb_snbiprogq
-- **title**: Inflation forecast (SNB)
+- **title**: Inflation forecast (SNB) | de: Inflationsprognose (SNB) | fr: Prévision d'inflation (BNS) | it: Previsione d'inflazione (BNS)
 - **concept**: Prices / Inflation forecast
 - **canonical**: yes (sole canonical for this concept; an annual view is derived on demand by calendar-year averaging the quarterly forecast)
 - **source**: snb

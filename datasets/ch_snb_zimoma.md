@@ -1,7 +1,7 @@
 # Money market rates
 
 - **id**: ch_snb_zimoma
-- **title**: Money market rates
+- **title**: Money market rates | de: Geldmarktsätze | fr: Taux du marché monétaire | it: Tassi del mercato monetario
 - **concept**: Interest rates & yields / Money-market rates
 - **canonical**: yes (the headline money-market-rate cube; `zikredlauf` and `zikrepro` are the lending/published-rate alternates under the same concept)
 - **featured**: SARON

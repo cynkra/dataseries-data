@@ -64,10 +64,10 @@ snb_last_update <- function(cube_id) {
   if (length(m) == 6L) sprintf("%s-%s-%s %s:%s", m[2], m[3], m[4], m[5], m[6]) else ed
 }
 
-snb_fetch <- function(cube_id, title = NULL, lang = "en") {
+snb_fetch <- function(cube_id, title = NULL, langs = c("en", "de", "fr")) {
   base <- "https://data.snb.ch/api/cube"
-  dims_doc <- get_json(sprintf("%s/%s/dimensions/%s", base, cube_id, lang))
-  data_doc <- get_json(sprintf("%s/%s/data/json/%s", base, cube_id, lang))
+  dims_doc <- get_json(sprintf("%s/%s/dimensions/%s", base, cube_id, "en"))
+  data_doc <- get_json(sprintf("%s/%s/data/json/%s", base, cube_id, "en"))
 
   dims <- dims_doc$dimensions
   dim_ids <- vapply(dims, function(d) d$id, "")
@@ -78,6 +78,30 @@ snb_fetch <- function(cube_id, title = NULL, lang = "en") {
   dim_trees <- setNames(
     lapply(dims, function(d) .snb_hierarchy(d$dimensionItems %||% list())), dim_ids
   )
+
+  # Label translations: one extra ~50 KB /dimensions/{lang} doc per language (the
+  # data cube itself is fetched once, in en). SNB has NO Italian — /dimensions/it
+  # returns byte-identical German with HTTP 200 (verified 2026-08-05, see
+  # spec/multilingual/1-feasibility-review.md §2) — so `it` is deliberately not in
+  # the default. A failed language doc skips that language, never the dataset.
+  xdims <- list()
+  for (L in setdiff(langs, "en")) {
+    doc <- tryCatch(get_json(sprintf("%s/%s/dimensions/%s", base, cube_id, L)),
+                    error = function(e) NULL)
+    if (is.null(doc)) next
+    dl <- doc$dimensions
+    ids <- vapply(dl, function(d) d$id, "")
+    xdims[[L]] <- list(
+      names = setNames(vapply(dl, function(d) d$name, ""), ids),
+      labels = setNames(lapply(dl, function(d) .snb_flatten(d$dimensionItems %||% list())), ids)
+    )
+  }
+  lab_of <- function(id, code = NULL) {
+    per <- lapply(xdims, function(x)
+      if (is.null(code)) x$names[[id]] else x$labels[[id]][[code]])
+    ds_label_obj(if (is.null(code)) dim_names[[id]] else dim_labels[[id]][[code]],
+                 de = per$de, fr = per$fr, it = per$it)
+  }
 
   rows <- list()
   raw_periods <- character(0)
@@ -100,20 +124,20 @@ snb_fetch <- function(cube_id, title = NULL, lang = "en") {
 
   dimensions <- setNames(lapply(dim_ids, function(id) {
     levels <- setNames(
-      lapply(names(dim_labels[[id]]), function(code) {
-        list(label = setNames(list(dim_labels[[id]][[code]]), lang))
-      }),
+      lapply(names(dim_labels[[id]]), function(code) list(label = lab_of(id, code))),
       names(dim_labels[[id]])
     )
-    d <- list(label = setNames(list(dim_names[[id]]), lang), levels = levels)
+    d <- list(label = lab_of(id), levels = levels)
     if (length(dim_trees[[id]]) > 0) d$hierarchy <- dim_trees[[id]]
     d
   }), dim_ids)
 
   meta <- list(
-    title = title %||% setNames(list(cube_id), lang),
+    # The curated title lives in the datasheet (all 38 SNB datasheets carry one);
+    # the cube id is only the no-datasheet fallback. source$name resolves from the
+    # sources.json vocabulary (apply_vocab), the url stays cube-specific.
+    title = title %||% list(en = cube_id),
     source = list(
-      name = list(en = "Swiss National Bank"),
       url = sprintf("https://data.snb.ch/en/topics/snb/cube/%s", cube_id)
     ),
     license = "snb",

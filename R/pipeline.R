@@ -205,6 +205,11 @@ load_dataset <- function(id, dir) {
 # outage degrades safely to current behavior. Honors .ONLY like .try_fetch.
 .try_fetch_if_unchanged <- function(label, probe, expr, topic = NULL) {
   if (!is.null(.ONLY) && !label %in% .ONLY) return(NULL)
+  # ETL_FORCE_REFETCH=1 bypasses the unchanged-skip: needed when the PIPELINE's
+  # output changed while the source did not (e.g. labels now fetched in more
+  # languages) — a plain run would keep the stale-shaped sidecar until the
+  # source's next edition.
+  if (nzchar(Sys.getenv("ETL_FORCE_REFETCH"))) return(.try_fetch(label, expr, topic))
   token  <- tryCatch(probe(), error = function(e) NA_character_)
   stored <- .stored_updated(label, DATA_DIR)
   unchanged <- !is.na(token) && !is.null(stored) &&
@@ -246,7 +251,7 @@ build <- function(only = NULL) {
     add(.try_fetch_if_unchanged(
       paste0("ch_snb_", cube),
       local({ id <- cube; function() snb_last_update(id) }),
-      snb_fetch(cube, title = list(en = cu$title)), cu$topic))
+      snb_fetch(cube), cu$topic))
   }
 
   # SECO: full GDP, swissdata format at source (rich multilingual + deep
@@ -267,17 +272,14 @@ build <- function(only = NULL) {
   # industry + construction = quarterly DF_KEU_Q1 (NOGA B-E + F, divisions 41-43).
   add(.try_fetch("ch_fso_retail",
                  fso_sdmx_fetch("ch_fso_retail", "CH1.KEU", "DF_KEU_M1", "1.0.0",
-                                title = list(en = "Retail trade turnover (monthly)"),
                                 noga_keep = .SDMX_RETAIL_NOGA),
                  "Domestic economy"))
   add(.try_fetch("ch_fso_production",
                  fso_sdmx_fetch("ch_fso_production", "CH1.KEU", "DF_KEU_Q1", "1.0.0",
-                                title = list(en = "Industry & construction turnover (quarterly)"),
                                 noga_keep = .SDMX_PRODUCTION_NOGA),
                  "Domestic economy"))
   add(.try_fetch("ch_fso_services",
                  fso_sdmx_fetch("ch_fso_services", "CH1.KEU", "DF_KEU_Q1", "1.0.0",
-                                title = list(en = "Services-sector turnover (quarterly)"),
                                 noga_keep = .SDMX_SERVICES_NOGA),
                  "Domestic economy"))
 
@@ -294,19 +296,17 @@ build <- function(only = NULL) {
   # aggregates — revenue, expenditure, balance, gross/net debt, debt-to-GDP), annual,
   # by government level. From opendata.swiss (CKAN) -> data.finance.admin.ch CSV.
   add(.try_fetch("ch_ffa_finances",
-                 ffa_fetch("ch_ffa_finances",
-                           title = list(en = "Public finances: general government main aggregates")),
+                 ffa_fetch("ch_ffa_finances"),
                  "Public finances"))
 
   # KOF: the Economic Barometer (single monthly series).
   add(.try_fetch("ch_kof_barometer",
-                 kof_fetch("ch.kof.barometer", title = list(en = "KOF Economic Barometer")),
+                 kof_fetch("ch.kof.barometer"),
                  "Business cycle"))
   # KOF Economic Sentiment Index (ESI), monthly, via the open OGD /sets endpoint
   # (two methodology versions: pre-Brexit + standard 2018).
   add(.try_fetch("ch_kof_esi",
                  kof_set_fetch("ogd_ch.kof.esi",
-                               title = list(en = "KOF Economic Sentiment Index"),
                                source_url = "https://kof.ethz.ch/en/forecasts-and-indicators/indicators/kof-economic-sentiment-indicator.html"),
                  "Business cycle"))
 
@@ -324,7 +324,7 @@ build <- function(only = NULL) {
   )
   add(.try_fetch("ch_fso_hesta",
                  fso_fetch("ch_fso_hesta", "px-x-1003020000_103", fso_query,
-                           title = list(en = "Hotel sector: overnight stays by tourism region")),
+                           ),
                  "Tourism"))
 
   # FSO: jobs by economic division, quarterly (the BESTA employment headline).
@@ -339,18 +339,17 @@ build <- function(only = NULL) {
   )
   add(.try_fetch("ch_fso_besta",
                  fso_fetch("ch_fso_besta", "px-x-0602000000_101", besta_query,
-                           title = list(en = "Jobs by economic division (quarterly)"),
                            quarter_col = "Quartal", chunk_by = "Quartal", chunk_size = 40L),
                  "Labour"))
 
   # FSO labour depth: job vacancies (leading indicator) + jobs by sex.
   add(.try_fetch("ch_fso_vacancies",
                  fso_fetch_auto("ch_fso_vacancies", "px-x-0602000000_103",
-                                title = list(en = "Job vacancies by economic division")),
+                                ),
                  "Labour"))
   add(.try_fetch("ch_fso_jobs_sex",
                  fso_fetch_auto("ch_fso_jobs_sex", "px-x-0602000000_102",
-                                title = list(en = "Jobs by economic division and sex")),
+                                ),
                  "Labour"))
   # FSO BESTA employment-outlook index (forward-looking labour indicator), quarterly.
   # The composite index (code 5), weighted by jobs (code 1); the two pinned dims drop
@@ -364,7 +363,6 @@ build <- function(only = NULL) {
   )
   add(.try_fetch("ch_fso_besta_outlook",
                  fso_fetch("ch_fso_besta_outlook", "px-x-0602000000_105", besta_outlook_query,
-                           title = list(en = "Employment outlook index by economic division"),
                            quarter_col = "Quartal"),
                  "Labour"))
 
@@ -430,6 +428,8 @@ RETRY_MAX_INPROCESS <- as.integer(Sys.getenv("ETL_RETRY_MAX_INPROCESS", "3"))
 # read it). Shared by the full run (main) and the afternoon retry (retry_skipped) so
 # both finalize identically.
 finalize_dataset <- function(ds) {
+  # Guard source-derived labels before anything curated is layered on top.
+  ds$meta$dimensions <- drop_lang_echo(ds$meta$dimensions)
   sheet <- ds_read(ds$id, DATASHEET_DIR)   # one read; every consumer shares the lines
   ds$meta <- modifyList(ds$meta, read_datasheet_meta(ds$id, DATASHEET_DIR, lines = sheet))
   ds <- drop_redundant_levels(ds)

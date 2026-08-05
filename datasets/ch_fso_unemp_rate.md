@@ -1,7 +1,7 @@
 # Unemployment rate (ILO)
 
 - **id**: ch_fso_unemp_rate
-- **title**: Unemployment rate (ILO)
+- **title**: Unemployment rate (ILO) | de: Erwerbslosenquote (ILO) | fr: Taux de chômage (BIT) | it: Tasso di disoccupazione (ILO)
 - **concept**: Labour / Unemployment
 - **canonical**: no (alternate — ILO definition; the registered/SECO `ch_snb_amarbma` is canonical)
 - **source**: fso
@@ -40,15 +40,15 @@ other at total), giving 5 series:
 
 ## Labels
 - dim: origin
-  - **label**: Nationality
-  - tot: Total
-  - ch: Swiss nationals
-  - ex: Foreign nationals
+  - **label**: Nationality | de: Staatsangehörigkeit | fr: Nationalité | it: Nazionalità
+  - tot: Total | de: Total | fr: Total | it: Totale
+  - ch: Swiss nationals | de: Schweizerinnen und Schweizer | fr: Suisses | it: Svizzeri
+  - ex: Foreign nationals | de: Ausländerinnen und Ausländer | fr: Étrangers | it: Stranieri
 - dim: sex
-  - **label**: Sex
-  - tot: Total
-  - men: Men
-  - wom: Women
+  - **label**: Sex | de: Geschlecht | fr: Sexe | it: Sesso
+  - tot: Total | de: Total | fr: Total | it: Totale
+  - men: Men | de: Männer | fr: Hommes | it: Uomini
+  - wom: Women | de: Frauen | fr: Femmes | it: Donne
 
 ## Display
 - **split**: origin

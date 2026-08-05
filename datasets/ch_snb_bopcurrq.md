@@ -1,7 +1,7 @@
 # Swiss balance of payments – Current account – Quarter
 
 - **id**: ch_snb_bopcurrq
-- **title**: Balance of payments: current account
+- **title**: Balance of payments: current account | de: Zahlungsbilanz: Leistungsbilanz | fr: Balance des paiements : compte courant | it: Bilancia dei pagamenti: conto corrente
 - **concept**: External sector / Balance of payments
 - **canonical**: yes
 - **source**: snb

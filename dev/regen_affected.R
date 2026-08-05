@@ -13,8 +13,6 @@ txt <- sub("\nmain()", "\n", txt, fixed = TRUE)
 eval(parse(text = txt), envir = globalenv())
 stopifnot(exists("drop_redundant_levels"), exists("drop_degenerate_dims"))
 
-cubes <- read_snb_cubes()
-title_of <- function(id) { for (c in cubes) if (c$cube_id == id) return(c$title); id }
 
 hesta_query <- list(
   list(code = "Jahr", selection = list(filter = "all", values = list("*"))),
@@ -41,11 +39,11 @@ jobs <- list(
   function() fso_fetch("ch_fso_besta", "px-x-0602000000_101", besta_query,
                title = list(en = "Jobs by economic division (quarterly)"),
                quarter_col = "Quartal", chunk_by = "Quartal", chunk_size = 40L),
-  function() snb_fetch("devwkibiim", title = list(en = title_of("devwkibiim"))),
-  function() snb_fetch("devwkieffid", title = list(en = title_of("devwkieffid"))),
-  function() snb_fetch("snbmonagg", title = list(en = title_of("snbmonagg"))),
-  function() snb_fetch("plkopr", title = list(en = title_of("plkopr"))),
-  function() snb_fetch("ausshawarm", title = list(en = title_of("ausshawarm")))
+  function() snb_fetch("devwkibiim"),
+  function() snb_fetch("devwkieffid"),
+  function() snb_fetch("snbmonagg"),
+  function() snb_fetch("plkopr"),
+  function() snb_fetch("ausshawarm")
 )
 
 for (thunk in jobs) {

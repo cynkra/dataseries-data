@@ -61,24 +61,16 @@ adecco_fetch <- function(dataset_id = "ch_adecco_sjmi", title = NULL) {
     dplyr::arrange(index, date)
 
   meta <- list(
-    title = title %||% list(en = "Adecco Group Swiss Job Market Index"),
-    source = list(
-      name = list(en = "University of Zurich (Stellenmarkt-Monitor Schweiz)"),
-      url  = .ADECCO_PAGE
-    ),
-    license   = "Stellenmarkt-Monitor Schweiz, University of Zurich (free use, attribution required; Adecco Group Swiss Job Market Index)",
+    title = title,                     # datasheet title wins; NULL is fine
+    source = list(url = .ADECCO_PAGE),
+    license   = "uzh-smm",
     frequency = "quarterly",
     topic     = "Labour",
-    units     = list(en = "Index, Q1 2008 = 100"),
     dimensions = list(
       index = list(
-        label = list(en = "Index"),
         levels = list(
-          gesamt    = list(label = list(en = "Total")),
-          gesamt_sa = list(label = list(en = "Total, seasonally adjusted")),
-          internet  = list(label = list(en = "Internet job portals")),
-          company   = list(label = list(en = "Company websites")),
-          press     = list(label = list(en = "Press (newspapers)"))
+          gesamt = list(), gesamt_sa = list(), internet = list(),
+          company = list(), press = list()
         ),
         # The three channels decompose the headline (Total); the seasonally
         # adjusted headline sits alongside it as its own overlay line.

@@ -1,7 +1,7 @@
 # Services-sector turnover (quarterly)
 
 - **id**: ch_fso_services
-- **title**: Services turnover
+- **title**: Services turnover | de: Umsätze Dienstleistungssektor | fr: Chiffres d'affaires des services | it: Fatturato dei servizi
 - **concept**: Domestic economy / Services turnover
 - **canonical**: yes
 - **source**: fso

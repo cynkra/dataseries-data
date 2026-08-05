@@ -1,7 +1,7 @@
 # Gross domestic product (GDP)
 
 - **id**: ch_seco_gdp
-- **title**: Gross domestic product (GDP)
+- **title**: Gross domestic product (GDP) | de: Bruttoinlandprodukt (BIP) | fr: Produit intérieur brut (PIB) | it: Prodotto interno lordo (PIL)
 - **concept**: National accounts / GDP (output, expenditure, income)
 - **canonical**: yes
 - **featured**: GDP

@@ -1,7 +1,7 @@
 # Labour productivity (GDP per hour worked)
 
 - **id**: ch_fso_labour_productivity
-- **title**: Labour productivity
+- **title**: Labour productivity | de: Arbeitsproduktivität | fr: Productivité du travail | it: Produttività del lavoro
 - **concept**: National accounts / Labour productivity
 - **canonical**: yes
 - **source**: fso
@@ -34,12 +34,12 @@ the long-run Swiss productivity-growth story (≈ +0.9%/yr) at a glance.
   hour worked (the default).
 
 ## Labels
-- **units**: Index (1991 = 100), chained volume (previous year's prices)
+- **units**: Index (1991 = 100), chained volume (previous year's prices) | de: Index (1991 = 100), verkettete Volumen (Vorjahrespreise) | fr: Indice (1991 = 100), volumes chaînés (prix de l'année précédente) | it: Indice (1991 = 100), volumi concatenati (prezzi dell'anno precedente)
 - dim: indicator
-  - **label**: Indicator
-  - gdp: Gross domestic product (volume)
-  - hours: Actual hours worked
-  - productivity: Labour productivity (GDP per hour worked)
+  - **label**: Indicator | de: Indikator | fr: Indicateur | it: Indicatore
+  - gdp: Gross domestic product (volume) | de: Bruttoinlandprodukt (Volumen) | fr: Produit intérieur brut (volume) | it: Prodotto interno lordo (volume)
+  - hours: Actual hours worked | de: Tatsächliche Arbeitsstunden | fr: Heures effectives de travail | it: Ore di lavoro effettive
+  - productivity: Labour productivity (GDP per hour worked) | de: Arbeitsproduktivität (BIP pro Arbeitsstunde) | fr: Productivité du travail (PIB par heure travaillée) | it: Produttività del lavoro (PIL per ora lavorata)
 
 ## Display
 - **split**: indicator

@@ -1,7 +1,7 @@
 # Jobs by economic division and sex
 
 - **id**: ch_fso_jobs_sex
-- **title**: Jobs by economic division and sex
+- **title**: Jobs by economic division and sex | de: Beschäftigte nach Wirtschaftsabteilung und Geschlecht | fr: Emplois par division économique et sexe | it: Impieghi per divisione economica e sesso
 - **concept**: Labour / Employment / jobs
 - **canonical**: no (alternate / breakdown of `ch_fso_besta`)
 - **source**: fso

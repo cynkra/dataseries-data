@@ -7,7 +7,10 @@
   "start": "2014-12-01",
   "end": "2026-05-01",
   "title": {
-    "en": "E-money"
+    "en": "E-money",
+    "de": "E-Geld",
+    "fr": "Monnaie électronique",
+    "it": "Moneta elettronica"
   },
   "source": {
     "name": {
@@ -24,54 +27,72 @@
   "dimensions": {
     "D0": {
       "label": {
-        "en": "Overview"
+        "en": "Overview",
+        "de": "Übersicht",
+        "fr": "Vue d’ensemble"
       },
       "levels": {
         "D0_0": {
           "label": {
-            "en": "Loading"
+            "en": "Loading",
+            "de": "Ladungen",
+            "fr": "Chargements"
           },
           "data": false
         },
         "D0_0_0": {
           "label": {
-            "en": "Domestic payment cards"
+            "en": "Domestic payment cards",
+            "de": "Inländische Zahlungskarten",
+            "fr": "Cartes de paiement suisses"
           },
           "data": false
         },
         "TT": {
           "label": {
-            "en": "Transactions in thousands"
+            "en": "Transactions in thousands",
+            "de": "Transaktionen in Tausend",
+            "fr": "Nombre de transactions en milliers"
           },
           "data": true
         },
         "BMF0": {
           "label": {
-            "en": "Amount in CHF millions"
+            "en": "Amount in CHF millions",
+            "de": "Betrag in Millionen Franken",
+            "fr": "Montant en millions de francs"
           },
           "data": true
         },
         "BTF": {
           "label": {
-            "en": "Amount per transaction in CHF"
+            "en": "Amount per transaction in CHF",
+            "de": "Betrag pro Transaktion in Franken",
+            "fr": "Montant par transaction en francs"
           },
           "data": true
         },
         "D0_1": {
           "label": {
-            "en": "Float"
+            "en": "Float",
+            "de": "Float",
+            "fr": "Float"
           },
           "data": false
         },
         "D0_1_0": {
           "label": {
-            "en": "Domestic payment cards"
+            "en": "Domestic payment cards",
+            "de": "Inländische Zahlungskarten",
+            "fr": "Cartes de paiement suisses"
           },
           "data": false
         },
         "BMF1": {
           "label": {
-            "en": "Amount in CHF millions"
+            "en": "Amount in CHF millions",
+            "de": "Betrag in Millionen Franken",
+            "fr": "Montant en millions de francs"
           },
           "data": true
         }
@@ -103,5 +124,5 @@
     "D0": "BMF0"
   },
   "description": "A narrow, niche payments series: the loading and float of e-money on Swiss domestic payment cards (prepaid / stored-value card balances), monthly from 2014. The smallest cube in this group at just 4 series. It splits into two halves in the hierarchy. Loading (the act of topping up a card) carries three measures of the same flow: TT transactions in thousands, BMF0 amount in CHF millions, and BTF amount per transaction in CHF (a derived average, value / count). Float (the outstanding balance sitting on cards) is a single stock: BMF1 amount in CHF millions. So in one short table you get a flow (loading) with its per-transaction average and the corresponding stock (float), which is the distinctive flow-vs-stock pairing for the e-money niche. It is the youngest history of the six and one of the zave payment-system family.",
-  "fetched_utc": "2026-07-21 09:18:22"
+  "fetched_utc": "2026-08-05 13:12:03"
 }

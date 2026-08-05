@@ -1,7 +1,7 @@
 # Foreign trade by partner country
 
 - **id**: ch_fso_trade_partner
-- **title**: Foreign trade by partner country
+- **title**: Foreign trade by partner country | de: Aussenhandel nach Partnerland | fr: Commerce extérieur par pays partenaire | it: Commercio estero per paese partner
 - **concept**: External sector / Foreign trade
 - **canonical**: yes
 - **source**: fso-focbs
@@ -62,17 +62,17 @@ trade-by-goods value series — the SNB cubes carry no partner-country dimension
   aggregates. (It is not dropped as degenerate because it carries two genuine values.)
 
 ## Labels
-- **units**: CHF millions
+- **units**: CHF millions | de: Mio. CHF | fr: Millions de CHF | it: Milioni di CHF
 - dim: flow
-  - **label**: Trade flow
-  - export: Exports
-  - import: Imports
+  - **label**: Trade flow | de: Handelsrichtung | fr: Flux commercial | it: Flusso commerciale
+  - export: Exports | de: Exporte | fr: Exportations | it: Esportazioni
+  - import: Imports | de: Importe | fr: Importations | it: Importazioni
 - dim: partner
-  - **label**: Partner country / region
+  - **label**: Partner country / region | de: Partnerland / Region | fr: Pays partenaire / région | it: Paese partner / regione
 - dim: level
-  - **label**: Aggregation level
-  - group: Continent / economic area
-  - country: Individual country
+  - **label**: Aggregation level | de: Aggregationsstufe | fr: Niveau d'agrégation | it: Livello di aggregazione
+  - group: Continent / economic area | de: Kontinent / Wirtschaftsraum | fr: Continent / espace économique | it: Continente / area economica
+  - country: Individual country | de: Einzelnes Land | fr: Pays individuel | it: Singolo paese
 
 ## Display
 - **split**: partner

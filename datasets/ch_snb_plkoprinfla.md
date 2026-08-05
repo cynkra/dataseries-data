@@ -1,7 +1,7 @@
 # Consumer prices – SNB and SFSO core inflation rates
 
 - **id**: ch_snb_plkoprinfla
-- **title**: Core inflation
+- **title**: Core inflation | de: Kerninflation | fr: Inflation sous-jacente | it: Inflazione di fondo
 - **concept**: Prices / Core inflation
 - **canonical**: yes
 - **source**: snb

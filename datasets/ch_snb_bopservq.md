@@ -1,7 +1,7 @@
 # Swiss balance of payments – Current account services, by country – Quarter
 
 - **id**: ch_snb_bopservq
-- **title**: Balance of payments: services
+- **title**: Balance of payments: services | de: Zahlungsbilanz: Dienstleistungen | fr: Balance des paiements : services | it: Bilancia dei pagamenti: servizi
 - **concept**: External sector / Balance of payments
 - **canonical**: no (alternate for Balance of payments)
 - **source**: snb

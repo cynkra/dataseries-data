@@ -10,7 +10,10 @@
   "start": "2002-01-01",
   "end": "2026-05-01",
   "title": {
-    "en": "Corporate loans by company size"
+    "en": "Corporate loans by company size",
+    "de": "Unternehmenskredite nach Unternehmensgrösse",
+    "fr": "Crédits aux entreprises par taille d'entreprise",
+    "it": "Crediti alle imprese per dimensione dell'impresa"
   },
   "source": {
     "name": {
@@ -27,36 +30,48 @@
   "dimensions": {
     "D0": {
       "label": {
-        "en": "Bank category"
+        "en": "Bank category",
+        "de": "Bankengruppe",
+        "fr": "Catégories de banques"
       },
       "levels": {
         "AV1": {
           "label": {
-            "en": "Banks in Switzerland"
+            "en": "Banks in Switzerland",
+            "de": "Banken in der Schweiz",
+            "fr": "Banques établies en Suisse"
           },
           "data": true
         },
         "AV10": {
           "label": {
-            "en": "Raiffeisen banks"
+            "en": "Raiffeisen banks",
+            "de": "Raiffeisenbanken",
+            "fr": "Banques Raiffeisen"
           },
           "data": true
         },
         "AV2": {
           "label": {
-            "en": "Cantonal banks"
+            "en": "Cantonal banks",
+            "de": "Kantonalbanken",
+            "fr": "Banques cantonales"
           },
           "data": true
         },
         "AV3": {
           "label": {
-            "en": "Big banks"
+            "en": "Big banks",
+            "de": "Grossbanken",
+            "fr": "Grandes banques"
           },
           "data": true
         },
         "AV4": {
           "label": {
-            "en": "Regional and savings banks"
+            "en": "Regional and savings banks",
+            "de": "Regionalbanken und Sparkassen",
+            "fr": "Banques régionales et caisses d'épargne"
           },
           "data": true
         }
@@ -71,36 +86,48 @@
     },
     "D1": {
       "label": {
-        "en": "Company size"
+        "en": "Company size",
+        "de": "Unternehmensgrösse",
+        "fr": "Entreprises selon leur taille"
       },
       "levels": {
         "KC5A": {
           "label": {
-            "en": "Companies with up to 9 employees"
+            "en": "Companies with up to 9 employees",
+            "de": "Unternehmen bis und mit 9 MA",
+            "fr": "Entreprises comptant jusqu’à 9 collaborateurs"
           },
           "data": true
         },
         "KC5B": {
           "label": {
-            "en": "Companies with 10 to 49 employees"
+            "en": "Companies with 10 to 49 employees",
+            "de": "Unternehmen von 10 bis 49 MA",
+            "fr": "Entreprises comptant entre 10 et 49 collaborateurs"
           },
           "data": true
         },
         "KC5C": {
           "label": {
-            "en": "Companies with 50 to 249 employes"
+            "en": "Companies with 50 to 249 employes",
+            "de": "Unternehmen von 50 bis 249 MA",
+            "fr": "Entreprises comptant entre 50 et 250 collaborateurs"
           },
           "data": true
         },
         "KC5D": {
           "label": {
-            "en": "Companies with 250 employees and more"
+            "en": "Companies with 250 employees and more",
+            "de": "Unternehmen mit 250 MA und mehr",
+            "fr": "Entreprises comptant 250 collaborateurs et davantage"
           },
           "data": true
         },
         "KC5E": {
           "label": {
-            "en": "Public sector entities"
+            "en": "Public sector entities",
+            "de": "Öffentlich-rechtliche Körperschaften",
+            "fr": "Collectivités de droit public"
           },
           "data": true
         }
@@ -115,42 +142,56 @@
     },
     "D2": {
       "label": {
-        "en": "Type of loan"
+        "en": "Type of loan",
+        "de": "Kreditart",
+        "fr": "Type de crédit"
       },
       "levels": {
         "T1": {
           "label": {
-            "en": "Total loans"
+            "en": "Total loans",
+            "de": "Total Kredite",
+            "fr": "Total crédits"
           },
           "data": true
         },
         "H": {
           "label": {
-            "en": "Mortgage loans"
+            "en": "Mortgage loans",
+            "de": "Hypothekarkredite",
+            "fr": "Prêts hypothécaires"
           },
           "data": true
         },
         "K": {
           "label": {
-            "en": "Other loans"
+            "en": "Other loans",
+            "de": "Übrige Kredite",
+            "fr": "Autres crédits"
           },
           "data": false
         },
         "T2": {
           "label": {
-            "en": "Total"
+            "en": "Total",
+            "de": "Total",
+            "fr": "Total"
           },
           "data": true
         },
         "G": {
           "label": {
-            "en": "secured"
+            "en": "secured",
+            "de": "gedeckt",
+            "fr": "gagées"
           },
           "data": true
         },
         "U": {
           "label": {
-            "en": "unsecured"
+            "en": "unsecured",
+            "de": "ungedeckt",
+            "fr": "en blanc"
           },
           "data": true
         }
@@ -167,18 +208,24 @@
     },
     "D3": {
       "label": {
-        "en": "Utilisation and credit lines"
+        "en": "Utilisation and credit lines",
+        "de": "Benützung und Limiten",
+        "fr": "Utilisation et limites"
       },
       "levels": {
         "F": {
           "label": {
-            "en": "Utilisation"
+            "en": "Utilisation",
+            "de": "Benützung",
+            "fr": "Utilisation"
           },
           "data": true
         },
         "B": {
           "label": {
-            "en": "Credit lines"
+            "en": "Credit lines",
+            "de": "Limiten",
+            "fr": "Limites"
           },
           "data": true
         }
@@ -203,5 +250,5 @@
     "D3": "F"
   },
   "description": "Bank lending to companies, cut by firm size (number of employees): up to 9, 10-49, 50-249, 250+, plus public-sector entities. This is the SME-credit view of the loan book, useful for tracking whether small firms are getting financed. Each size band is further split by bank category, loan type (mortgage vs other, secured vs unsecured) and by whether the figure is the drawn amount (utilisation) or the granted credit line. The utilisation-vs-credit-line pairing is the distinctive twist: it shows both how much credit banks have committed and how much firms are actually using, so you can read headroom. Shorter history than the sector and domestic/foreign loan cubes (starts 2002).",
-  "fetched_utc": "2026-07-21 09:18:21"
+  "fetched_utc": "2026-08-05 13:12:01"
 }

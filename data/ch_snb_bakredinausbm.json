@@ -10,7 +10,10 @@
   "start": "1985-06-01",
   "end": "2026-05-01",
   "title": {
-    "en": "Mortgage & other loans"
+    "en": "Mortgage & other loans",
+    "de": "Hypothekar- und übrige Kredite",
+    "fr": "Crédits hypothécaires et autres",
+    "it": "Crediti ipotecari e altri crediti"
   },
   "source": {
     "name": {
@@ -27,36 +30,48 @@
   "dimensions": {
     "D0": {
       "label": {
-        "en": "Bank category"
+        "en": "Bank category",
+        "de": "Bankengruppe",
+        "fr": "Catégories de banques"
       },
       "levels": {
         "AV1": {
           "label": {
-            "en": "Banks in Switzerland"
+            "en": "Banks in Switzerland",
+            "de": "Banken in der Schweiz",
+            "fr": "Banques établies en Suisse"
           },
           "data": true
         },
         "AV10": {
           "label": {
-            "en": "Raiffeisen banks"
+            "en": "Raiffeisen banks",
+            "de": "Raiffeisenbanken",
+            "fr": "Banques Raiffeisen"
           },
           "data": true
         },
         "AV2": {
           "label": {
-            "en": "Cantonal banks"
+            "en": "Cantonal banks",
+            "de": "Kantonalbanken",
+            "fr": "Banques cantonales"
           },
           "data": true
         },
         "AV3": {
           "label": {
-            "en": "Big banks"
+            "en": "Big banks",
+            "de": "Grossbanken",
+            "fr": "Grandes banques"
           },
           "data": true
         },
         "AV4": {
           "label": {
-            "en": "Regional and savings banks"
+            "en": "Regional and savings banks",
+            "de": "Regionalbanken und Sparkassen",
+            "fr": "Banques régionales et caisses d’épargne"
           },
           "data": true
         }
@@ -71,24 +86,32 @@
     },
     "D1": {
       "label": {
-        "en": "Domestic and foreign"
+        "en": "Domestic and foreign",
+        "de": "Inland und Ausland",
+        "fr": "Suisse et étranger"
       },
       "levels": {
         "T0": {
           "label": {
-            "en": "Total domestic and foreign"
+            "en": "Total domestic and foreign",
+            "de": "Total Inland und Ausland",
+            "fr": "Total Suisse et étranger"
           },
           "data": true
         },
         "I": {
           "label": {
-            "en": "Domestic"
+            "en": "Domestic",
+            "de": "Inland",
+            "fr": "Suisse"
           },
           "data": true
         },
         "A": {
           "label": {
-            "en": "Foreign"
+            "en": "Foreign",
+            "de": "Ausland",
+            "fr": "Étranger"
           },
           "data": true
         }
@@ -101,42 +124,56 @@
     },
     "D2": {
       "label": {
-        "en": "Type of loan"
+        "en": "Type of loan",
+        "de": "Kreditart",
+        "fr": "Type de crédit"
       },
       "levels": {
         "T1": {
           "label": {
-            "en": "Total loans"
+            "en": "Total loans",
+            "de": "Total Kredite",
+            "fr": "Total crédits"
           },
           "data": true
         },
         "H": {
           "label": {
-            "en": "Mortgage loans"
+            "en": "Mortgage loans",
+            "de": "Hypothekarkredite",
+            "fr": "Prêts hypothécaires"
           },
           "data": true
         },
         "K": {
           "label": {
-            "en": "Other loans"
+            "en": "Other loans",
+            "de": "Übrige Kredite",
+            "fr": "Autres crédits"
           },
           "data": false
         },
         "T2": {
           "label": {
-            "en": "Total"
+            "en": "Total",
+            "de": "Total",
+            "fr": "Total"
           },
           "data": true
         },
         "G": {
           "label": {
-            "en": "secured"
+            "en": "secured",
+            "de": "gedeckt",
+            "fr": "gagées"
           },
           "data": true
         },
         "U": {
           "label": {
-            "en": "unsecured"
+            "en": "unsecured",
+            "de": "ungedeckt",
+            "fr": "en blanc"
           },
           "data": true
         }
@@ -153,18 +190,24 @@
     },
     "D3": {
       "label": {
-        "en": "Utilisation and credit lines"
+        "en": "Utilisation and credit lines",
+        "de": "Benützung und Limiten",
+        "fr": "Utilisation et limites"
       },
       "levels": {
         "F": {
           "label": {
-            "en": "Utilisation"
+            "en": "Utilisation",
+            "de": "Benützung",
+            "fr": "Utilisation"
           },
           "data": true
         },
         "B": {
           "label": {
-            "en": "Credit lines"
+            "en": "Credit lines",
+            "de": "Limiten",
+            "fr": "Limites"
           },
           "data": true
         }
@@ -189,5 +232,5 @@
     "D3": "F"
   },
   "description": "Bank loans split by domestic vs foreign counterparty, back to 1985. This is the geography cut of the loan book: it separates mortgage and other lending into claims on borrowers in Switzerland versus abroad, which the company-size and economic-sector cubes do not do. The long history (from 1985) and the domestic/foreign axis make it the reference for total credit exposure by location. Each combination is further crossed by bank category, loan type (mortgage / other, secured / unsecured) and the utilisation-vs-credit-line pair, the same utilisation/headroom logic as the other bakred cubes.",
-  "fetched_utc": "2026-07-21 09:18:21"
+  "fetched_utc": "2026-08-05 13:12:01"
 }

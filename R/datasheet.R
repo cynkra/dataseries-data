@@ -131,6 +131,19 @@ ds_bullets <- function(lines) {
   specs
 }
 
+# Assemble a label object from per-language strings: en required, the rest kept
+# only when non-empty and different from a bare echo of another language's value
+# is NOT checked here (that is the health guard's job) — this only drops NULL/NA/
+# empty. Used by fetchers that read per-language source documents.
+ds_label_obj <- function(en, de = NULL, fr = NULL, it = NULL) {
+  out <- list(en = as.character(en))
+  for (L in c("de", "fr", "it")) {
+    v <- switch(L, de = de, fr = fr, it = it)
+    if (!is.null(v) && !is.na(v) && nzchar(v)) out[[L]] <- as.character(v)
+  }
+  out
+}
+
 # Fold an ordered list of {depth, code} into a nested named list (a node's children
 # are the deeper bullets that follow it before depth returns to its level). Shared
 # by the Hierarchy tree and any future tree-shaped block.

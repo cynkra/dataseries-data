@@ -1,7 +1,7 @@
 # Jobs by economic division (quarterly)
 
 - **id**: ch_fso_besta
-- **title**: Jobs by economic division
+- **title**: Jobs by economic division | de: Beschäftigte nach Wirtschaftsabteilung | fr: Emplois par division économique | it: Impieghi per divisione economica
 - **concept**: Labour / Employment / jobs
 - **canonical**: yes
 - **featured**: Employment

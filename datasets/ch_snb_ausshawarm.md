@@ -1,7 +1,7 @@
 # Foreign trade by goods category
 
 - **id**: ch_snb_ausshawarm
-- **title**: Foreign trade by goods category
+- **title**: Foreign trade by goods category | de: Aussenhandel nach Warengruppe | fr: Commerce extérieur par catégorie de marchandises | it: Commercio estero per categoria di merci
 - **concept**: External sector / Foreign trade
 - **canonical**: yes
 - **featured**: Foreign trade

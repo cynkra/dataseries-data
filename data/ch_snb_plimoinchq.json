@@ -8,7 +8,10 @@
   "start": "1970-01-01",
   "end": "2026-04-01",
   "title": {
-    "en": "Real estate prices"
+    "en": "Real estate prices",
+    "de": "Immobilienpreise",
+    "fr": "Prix de l'immobilier",
+    "it": "Prezzi immobiliari"
   },
   "source": {
     "name": {
@@ -25,60 +28,80 @@
   "dimensions": {
     "D0": {
       "label": {
-        "en": "Property type"
+        "en": "Property type",
+        "de": "Objekttyp",
+        "fr": "Type de bien immobilier "
       },
       "levels": {
         "D0_0": {
           "label": {
-            "en": "Residential property prices"
+            "en": "Residential property prices",
+            "de": "Wohnimmobilienpreise",
+            "fr": "Prix de l’immobilier résidentiel"
           },
           "data": false
         },
         "EW": {
           "label": {
-            "en": "Privately owned apartments"
+            "en": "Privately owned apartments",
+            "de": "Eigentumswohnungen",
+            "fr": "Appartements en propriété par étage"
           },
           "data": true
         },
         "EH": {
           "label": {
-            "en": "Single-family houses"
+            "en": "Single-family houses",
+            "de": "Einfamilienhäuser",
+            "fr": "Maisons individuelles"
           },
           "data": true
         },
         "MH": {
           "label": {
-            "en": "Apartment buildings (residential investment property)"
+            "en": "Apartment buildings (residential investment property)",
+            "de": "Mehrfamilienhäuser (Wohnrenditeliegenschaften)",
+            "fr": "Immeubles résidentiels (immeubles locatifs de rendement)"
           },
           "data": true
         },
         "D0_1": {
           "label": {
-            "en": "Rents"
+            "en": "Rents",
+            "de": "Mieten",
+            "fr": "Loyers"
           },
           "data": false
         },
         "MW": {
           "label": {
-            "en": "Rental housing units"
+            "en": "Rental housing units",
+            "de": "Mietwohnungen",
+            "fr": "Logements en location"
           },
           "data": true
         },
         "BF": {
           "label": {
-            "en": "Office space"
+            "en": "Office space",
+            "de": "Büroflächen",
+            "fr": "Surfaces de bureaux"
           },
           "data": true
         },
         "GF": {
           "label": {
-            "en": "Industrial and commercial space"
+            "en": "Industrial and commercial space",
+            "de": "Gewerbeflächen",
+            "fr": "Surfaces industrielles et artisanales"
           },
           "data": true
         },
         "VF": {
           "label": {
-            "en": "Retail space"
+            "en": "Retail space",
+            "de": "Verkaufsflächen",
+            "fr": "Surfaces de vente"
           },
           "data": true
         }
@@ -99,60 +122,80 @@
     },
     "D1": {
       "label": {
-        "en": "Data provider"
+        "en": "Data provider",
+        "de": "Anbieter",
+        "fr": "Fournisseur de données"
       },
       "levels": {
         "D0_3": {
           "label": {
-            "en": "Swiss Federal Statistical Office"
+            "en": "Swiss Federal Statistical Office",
+            "de": "Bundesamt für Statistik",
+            "fr": "Office fédéral de la statistique"
           },
           "data": false
         },
         "TP3": {
           "label": {
-            "en": "Transaction price"
+            "en": "Transaction price",
+            "de": "Transaktionspreis",
+            "fr": "Prix de transaction"
           },
           "data": true
         },
         "D0_1": {
           "label": {
-            "en": "Fahrländer Partner"
+            "en": "Fahrländer Partner",
+            "de": "Fahrländer Partner",
+            "fr": "Fahrländer Partner"
           },
           "data": false
         },
         "TP1": {
           "label": {
-            "en": "Transaction price"
+            "en": "Transaction price",
+            "de": "Transaktionspreis",
+            "fr": "Prix de transaction"
           },
           "data": true
         },
         "D0_2": {
           "label": {
-            "en": "IAZI"
+            "en": "IAZI",
+            "de": "IAZI",
+            "fr": "CIFI"
           },
           "data": false
         },
         "TP2": {
           "label": {
-            "en": "Transaction price"
+            "en": "Transaction price",
+            "de": "Transaktionspreis",
+            "fr": "Prix de transaction"
           },
           "data": true
         },
         "D0_0": {
           "label": {
-            "en": "Wüest Partner"
+            "en": "Wüest Partner",
+            "de": "Wüest Partner",
+            "fr": "Wüest Partner"
           },
           "data": false
         },
         "AP": {
           "label": {
-            "en": "Asking price"
+            "en": "Asking price",
+            "de": "Angebotspreis",
+            "fr": "Prix de l’offre"
           },
           "data": true
         },
         "TP": {
           "label": {
-            "en": "Transaction price"
+            "en": "Transaction price",
+            "de": "Transaktionspreis",
+            "fr": "Prix de transaction"
           },
           "data": true
         }
@@ -186,5 +229,5 @@
     "D1": "AP"
   },
   "description": "The Swiss real estate price index, quarterly back to 1970, and the only real estate price series in the catalog (no FSO equivalent in the set). Its distinctive feature is a second dimension keyed on the data provider: the same property types are sourced from four different private/official providers, so the cube is really a matrix of property type x provider, letting users compare methodologies. The provider dimension nests provider -> price basis: Swiss Federal Statistical Office (transaction price), Fahrländer Partner (transaction price), IAZI (transaction price), and Wüest Partner (both asking price AP and transaction price TP). Not every property type exists for every provider, so the 17 series are a sparse cross of the two dimensions, not the full 8 x 5 product. Property types span residential (privately owned apartments, single-family houses, apartment buildings) and rents/commercial (rental housing, office, industrial/ commercial, retail).",
-  "fetched_utc": "2026-07-21 09:18:22"
+  "fetched_utc": "2026-08-05 13:12:02"
 }

@@ -7,7 +7,10 @@
   "start": "2011-01-01",
   "end": "2026-04-01",
   "title": {
-    "en": "Business cycle signals"
+    "en": "Business cycle signals",
+    "de": "Konjunktursignale",
+    "fr": "Signaux conjoncturels",
+    "it": "Segnali congiunturali"
   },
   "source": {
     "name": {
@@ -24,156 +27,208 @@
   "dimensions": {
     "D0": {
       "label": {
-        "en": "Overview"
+        "en": "Overview",
+        "de": "Übersicht",
+        "fr": "Vue d'ensemble"
       },
       "levels": {
         "UVJQ": {
           "label": {
-            "en": "Turnover compared to year-back quarter (Index)"
+            "en": "Turnover compared to year-back quarter (Index)",
+            "de": "Umsätze gegenüber dem Vorjahresquartal (Index)",
+            "fr": "Chiffres d’affaires – Évolution annuelle (Indice)"
           },
           "data": true
         },
         "UVQ": {
           "label": {
-            "en": "Turnover compared to previous quarter (Index)"
+            "en": "Turnover compared to previous quarter (Index)",
+            "de": "Umsätze gegenüber dem Vorquartal (Index)",
+            "fr": "Chiffres d’affaires – Évolution trimestrielle (Indice)"
           },
           "data": true
         },
         "KA": {
           "label": {
-            "en": "Capacity utilisation (Index)"
+            "en": "Capacity utilisation (Index)",
+            "de": "Kapazitätsauslastung (Index)",
+            "fr": "Utilisation des capacités de production (Indice)"
           },
           "data": true
         },
         "BS": {
           "label": {
-            "en": "Procurement difficulties (Index)"
+            "en": "Procurement difficulties (Index)",
+            "de": "Beschaffungsschwierigkeiten (Index)",
+            "fr": "Difficultés d’approvisionnement (Indice)"
           },
           "data": true
         },
         "EML": {
           "label": {
-            "en": "Stock of purchased materials (Index)"
+            "en": "Stock of purchased materials (Index)",
+            "de": "Einkaufsmateriallager (Index)",
+            "fr": "Stock de produits d’approvisionnement (Indice)"
           },
           "data": true
         },
         "ML": {
           "label": {
-            "en": "Margin situation (Index)"
+            "en": "Margin situation (Index)",
+            "de": "Margenlage (Index)",
+            "fr": "Marges des entreprises (Indice)"
           },
           "data": true
         },
         "NM": {
           "label": {
-            "en": "Sustainability of margins (Index)"
+            "en": "Sustainability of margins (Index)",
+            "de": "Nachhaltigkeit der Margen (Index)",
+            "fr": "Caractérisation des marges (Indice)"
           },
           "data": true
         },
         "KVK": {
           "label": {
-            "en": "Lending conditions (Index)"
+            "en": "Lending conditions (Index)",
+            "de": "Kreditvergabekonditionen (Index)",
+            "fr": "Conditions de prêt (Indice)"
           },
           "data": true
         },
         "LS": {
           "label": {
-            "en": "Liquidity situation (Index)"
+            "en": "Liquidity situation (Index)",
+            "de": "Liquiditätssituation (Index)",
+            "fr": "Liquidité des entreprises (Indice)"
           },
           "data": true
         },
         "PK": {
           "label": {
-            "en": "Staff shortages (Index)"
+            "en": "Staff shortages (Index)",
+            "de": "Personalknappheit (Index)",
+            "fr": "État des effectifs (Indice)"
           },
           "data": true
         },
         "RS": {
           "label": {
-            "en": "Recruitment difficulties (Index)"
+            "en": "Recruitment difficulties (Index)",
+            "de": "Rekrutierungsschwierigkeiten (Index)",
+            "fr": "Difficultés de recrutement (Indice)"
           },
           "data": true
         },
         "LELJ": {
           "label": {
-            "en": "Wage increases for current year (%)"
+            "en": "Wage increases for current year (%)",
+            "de": "Lohnerhöhungen laufendes Jahr (%)",
+            "fr": "Augmentations de salaire pour l’année en cours (%)"
           },
           "data": true
         },
         "LEFJ": {
           "label": {
-            "en": "Wage increases for next year (%)"
+            "en": "Wage increases for next year (%)",
+            "de": "Lohnerhöhungen folgendes Jahr (%)",
+            "fr": "Augmentations de salaire pour l’année suivante (%)"
           },
           "data": true
         },
         "UERW": {
           "label": {
-            "en": "Expected turnover (Index)"
+            "en": "Expected turnover (Index)",
+            "de": "Erwartete Umsätze (Index)",
+            "fr": "Chiffres d’affaires – Évolution attendue (Indice)"
           },
           "data": true
         },
         "UEG": {
           "label": {
-            "en": "Uncertainty about the development of business (Index)"
+            "en": "Uncertainty about the development of business (Index)",
+            "de": "Unsicherheit über die Entwicklung des Geschäftsgangs (Index)",
+            "fr": "Marche des affaires – incertitude (Indice)"
           },
           "data": true
         },
         "BERW": {
           "label": {
-            "en": "Expected employment (Index)"
+            "en": "Expected employment (Index)",
+            "de": "Erwartete Beschäftigung (Index)",
+            "fr": "Évolution attendue des effectifs (Indice)"
           },
           "data": true
         },
         "EPE": {
           "label": {
-            "en": "Expected change in purchase prices (Index)"
+            "en": "Expected change in purchase prices (Index)",
+            "de": "Einkaufspreiserwartungen (Index)",
+            "fr": "Évolution attendue des prix d’achat (Indice)"
           },
           "data": true
         },
         "VPE": {
           "label": {
-            "en": "Expected change in sales prices (Index)"
+            "en": "Expected change in sales prices (Index)",
+            "de": "Verkaufspreiserwartungen (Index)",
+            "fr": "Évolution attendue des prix de vente (Indice)"
           },
           "data": true
         },
         "AI": {
           "label": {
-            "en": "Planned equipment investment (Index)"
+            "en": "Planned equipment investment (Index)",
+            "de": "Geplante Ausrüstungsinvestitionen (Index)",
+            "fr": "Investissements prévus en biens d’équipement (Indice)"
           },
           "data": true
         },
         "BI": {
           "label": {
-            "en": "Planned construction investment (Index)"
+            "en": "Planned construction investment (Index)",
+            "de": "Geplante Bauinvestitionen (Index)",
+            "fr": "Investissements prévus en constructions (Indice)"
           },
           "data": true
         },
         "EPNV": {
           "label": {
-            "en": "Expected change in price level (Index)"
+            "en": "Expected change in price level (Index)",
+            "de": "Erwartete Preisniveauveränderung (Index)",
+            "fr": "Évolution attendue du niveau des prix (Indice)"
           },
           "data": true
         },
         "IERW": {
           "label": {
-            "en": "Expected inflation (%)"
+            "en": "Expected inflation (%)",
+            "de": "Erwartete Inflation (%)",
+            "fr": "Inflation attendue (%)"
           },
           "data": false
         },
         "IERWM": {
           "label": {
-            "en": "In 6 to 12 months"
+            "en": "In 6 to 12 months",
+            "de": "In 6 bis 12 Monaten",
+            "fr": "Dans 6 à 12 mois"
           },
           "data": true
         },
         "IERWJ": {
           "label": {
-            "en": "In 3 to 5 years"
+            "en": "In 3 to 5 years",
+            "de": "In 3 bis 5 Jahren",
+            "fr": "Dans 3 à 5 ans"
           },
           "data": true
         },
         "F25": {
           "label": {
-            "en": "Developments in sales prices compared to the year-back quarter (index)"
+            "en": "Developments in sales prices compared to the year-back quarter (index)",
+            "de": "Entwicklung der Verkaufspreise im Vergleich zum Vorjahresquartal (Index)",
+            "fr": "Évolution des prix de vente en termes réels par rapport au même trimestre de l’année précédente (indice)"
           },
           "data": true
         }
@@ -219,5 +274,5 @@
     "D0": "KA"
   },
   "description": "This is the SNB's own read of the business cycle, distilled from its quarterly talks with companies across Switzerland (the SNB regional network / company survey). Unlike a single composite barometer, it ships 24 separate qualitative signals on one flat dimension: turnover vs the year-back quarter and vs the previous quarter, capacity utilisation, procurement difficulties, margins, lending conditions, liquidity, staff shortages, expected turnover and employment, expected purchase- and sales-price changes, planned equipment and construction investment, and quantitative wage- and inflation-expectation series. Most signals are diffusion-style indices; a handful (LELJ, LEFJ wage increases, IERW inflation expectations) are in percent. The one nested item is IERW -> {IERWM, IERWJ} (inflation expected in 6-12 months vs 3-5 years). Shorter history than the price/money cubes (starts 2011), and it is the only catalog series that captures firm-level sentiment direct from the central bank rather than a survey institute. KOF's barometer is the canonical leading indicator; this sits beside it as the SNB's qualitative companion.",
-  "fetched_utc": "2026-06-25 09:25:37"
+  "fetched_utc": "2026-08-05 13:12:03"
 }

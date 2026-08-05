@@ -1,7 +1,7 @@
 # Construction Price Index
 
 - **id**: ch_fso_construction_prices
-- **title**: Construction prices
+- **title**: Construction prices | de: Baupreise | fr: Prix de la construction | it: Prezzi delle costruzioni
 - **concept**: Prices / Construction prices
 - **canonical**: yes
 - **source**: fso
@@ -46,12 +46,12 @@ semi-annual price series in the catalog.
   `hochbau` (Building construction), `tiefbau` (Civil engineering).
 
 ## Labels
-- **units**: Index (October 2020 = 100)
+- **units**: Index (October 2020 = 100) | de: Index (Oktober 2020 = 100) | fr: Indice (octobre 2020 = 100) | it: Indice (ottobre 2020 = 100)
 - dim: worktype
-  - **label**: Type of work
-  - total: Construction: Total
-  - hochbau: Building construction (Hochbau)
-  - tiefbau: Civil engineering (Tiefbau)
+  - **label**: Type of work | de: Arbeitsart | fr: Type de travaux | it: Tipo di lavori
+  - total: Construction: Total | de: Baugewerbe: Total | fr: Construction : total | it: Costruzioni: totale
+  - hochbau: Building construction (Hochbau) | de: Hochbau | fr: Bâtiment | it: Edilizia
+  - tiefbau: Civil engineering (Tiefbau) | de: Tiefbau | fr: Génie civil | it: Genio civile
 
 ## Display
 - **split**: worktype

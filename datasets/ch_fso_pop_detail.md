@@ -1,7 +1,7 @@
 # Permanent resident population by nationality and sex
 
 - **id**: ch_fso_pop_detail
-- **title**: Resident population by nationality
+- **title**: Resident population by nationality | de: Ständige Wohnbevölkerung nach Staatsangehörigkeit | fr: Population résidante permanente par nationalité | it: Popolazione residente permanente per nazionalità
 - **concept**: Population & demographics / Resident population by nationality
 - **canonical**: no (the headline resident population is `ch_fso_pop`, the 1861– demographic balance; this is the recent nationality × sex stock detail)
 - **source**: fso
@@ -33,17 +33,17 @@ foreign-population share — ~27.4% foreign in 2024.
 - `sex`: Total / Male / Female.
 
 ## Labels
-- **units**: Number of permanent residents (year-end stock)
+- **units**: Number of permanent residents (year-end stock) | de: Ständige Wohnbevölkerung (Jahresendbestand) | fr: Population résidante permanente (état en fin d'année) | it: Popolazione residente permanente (stato a fine anno)
 - dim: nationality
-  - **label**: Nationality
-  - _T: Total
-  - 1: Swiss
-  - 2: Foreign
+  - **label**: Nationality | de: Staatsangehörigkeit | fr: Nationalité | it: Nazionalità
+  - _T: Total | de: Total | fr: Total | it: Totale
+  - 1: Swiss | de: Schweizer | fr: Suisses | it: Svizzeri
+  - 2: Foreign | de: Ausländer | fr: Étrangers | it: Stranieri
 - dim: sex
-  - **label**: Sex
-  - _T: Total
-  - 1: Male
-  - 2: Female
+  - **label**: Sex | de: Geschlecht | fr: Sexe | it: Sesso
+  - _T: Total | de: Total | fr: Total | it: Totale
+  - 1: Male | de: Männlich | fr: Hommes | it: Maschi
+  - 2: Female | de: Weiblich | fr: Femmes | it: Femmine
 
 ## Display
 - **split**: nationality

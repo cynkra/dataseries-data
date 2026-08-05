@@ -7,9 +7,6 @@
   ],
   "start": "2010-01-01",
   "end": "2024-01-01",
-  "title": {
-    "en": "Resident population by nationality"
-  },
   "source": {
     "name": {
       "en": "Swiss Federal Statistical Office (FSO)",
@@ -23,30 +20,39 @@
   "license": "fso",
   "frequency": "annual",
   "topic": "Population & demographics",
-  "units": {
-    "en": "Number of permanent residents (year-end stock)"
-  },
   "dimensions": {
     "nationality": {
       "label": {
-        "en": "Nationality"
+        "en": "Nationality",
+        "de": "Staatsangehörigkeit",
+        "fr": "Nationalité",
+        "it": "Nazionalità"
       },
       "levels": {
         "_T": {
           "label": {
-            "en": "Total"
+            "en": "Total",
+            "de": "Total",
+            "fr": "Total",
+            "it": "Totale"
           },
           "data": true
         },
         "1": {
           "label": {
-            "en": "Swiss"
+            "en": "Swiss",
+            "de": "Schweizer",
+            "fr": "Suisses",
+            "it": "Svizzeri"
           },
           "data": true
         },
         "2": {
           "label": {
-            "en": "Foreign"
+            "en": "Foreign",
+            "de": "Ausländer",
+            "fr": "Étrangers",
+            "it": "Stranieri"
           },
           "data": true
         }
@@ -60,24 +66,36 @@
     },
     "sex": {
       "label": {
-        "en": "Sex"
+        "en": "Sex",
+        "de": "Geschlecht",
+        "fr": "Sexe",
+        "it": "Sesso"
       },
       "levels": {
         "_T": {
           "label": {
-            "en": "Total"
+            "en": "Total",
+            "de": "Total",
+            "fr": "Total",
+            "it": "Totale"
           },
           "data": true
         },
         "1": {
           "label": {
-            "en": "Male"
+            "en": "Male",
+            "de": "Männlich",
+            "fr": "Hommes",
+            "it": "Maschi"
           },
           "data": true
         },
         "2": {
           "label": {
-            "en": "Female"
+            "en": "Female",
+            "de": "Weiblich",
+            "fr": "Femmes",
+            "it": "Femmine"
           },
           "data": true
         }
@@ -92,6 +110,12 @@
   },
   "concept": "Population & demographics / Resident population by nationality",
   "canonical": false,
+  "title": {
+    "en": "Resident population by nationality",
+    "de": "Ständige Wohnbevölkerung nach Staatsangehörigkeit",
+    "fr": "Population résidante permanente par nationalité",
+    "it": "Popolazione residente permanente per nazionalità"
+  },
   "split": "nationality",
   "single_select": [],
   "default_transform": "level",
@@ -100,5 +124,11 @@
     "sex": "_T"
   },
   "description": "The permanent resident population broken down by nationality (Swiss / foreign) × sex, annual year-end stock from the STATPOP register. Complements ch_fso_pop (the long 1861– demographic balance with births/deaths) with the modern foreign-population share — ~27.4% foreign in 2024.",
-  "fetched_utc": "2026-07-31 09:17:55"
+  "units": {
+    "en": "Number of permanent residents (year-end stock)",
+    "de": "Ständige Wohnbevölkerung (Jahresendbestand)",
+    "fr": "Population résidante permanente (état en fin d'année)",
+    "it": "Popolazione residente permanente (stato a fine anno)"
+  },
+  "fetched_utc": "2026-08-05 13:12:05"
 }

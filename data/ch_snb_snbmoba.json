@@ -7,7 +7,10 @@
   "start": "1950-01-01",
   "end": "2026-06-01",
   "title": {
-    "en": "Monetary base"
+    "en": "Monetary base",
+    "de": "Notenbankgeldmenge",
+    "fr": "Monnaie centrale",
+    "it": "Base monetaria"
   },
   "source": {
     "name": {
@@ -24,84 +27,112 @@
   "dimensions": {
     "D0": {
       "label": {
-        "en": "Overview"
+        "en": "Overview",
+        "de": "Übersicht",
+        "fr": "Vue d’ensemble"
       },
       "levels": {
         "D0_0": {
           "label": {
-            "en": "Origination"
+            "en": "Origination",
+            "de": "Entstehung",
+            "fr": "Formation"
           },
           "data": false
         },
         "RF": {
           "label": {
-            "en": "Relevant foreign currency positions"
+            "en": "Relevant foreign currency positions",
+            "de": "Relevante Fremdwährungspositionen",
+            "fr": "Positions importantes en monnaies étrangères"
           },
           "data": true
         },
         "W": {
           "label": {
-            "en": "Securities portfolio"
+            "en": "Securities portfolio",
+            "de": "Wertschriftenportefeuille",
+            "fr": "Portefeuille de titres"
           },
           "data": true
         },
         "G": {
           "label": {
-            "en": "Money market transactions"
+            "en": "Money market transactions",
+            "de": "Geldmarktgeschäfte",
+            "fr": "Opérations sur le marché monétaire"
           },
           "data": true
         },
         "S0": {
           "label": {
-            "en": "Other"
+            "en": "Other",
+            "de": "Sonstiges",
+            "fr": "Autres"
           },
           "data": true
         },
         "N0": {
           "label": {
-            "en": "Monetary base"
+            "en": "Monetary base",
+            "de": "Notenbankgeldmenge",
+            "fr": "Monnaie centrale"
           },
           "data": true
         },
         "D0_1": {
           "label": {
-            "en": "Utilisation"
+            "en": "Utilisation",
+            "de": "Verwendung",
+            "fr": "Utilisation"
           },
           "data": false
         },
         "N1": {
           "label": {
-            "en": "Banknotes in circulation"
+            "en": "Banknotes in circulation",
+            "de": "Notenumlauf",
+            "fr": "Billets en circulation"
           },
           "data": true
         },
         "GB": {
           "label": {
-            "en": "Sight deposit accounts of domestic banks"
+            "en": "Sight deposit accounts of domestic banks",
+            "de": "Girokonten inländischer Banken",
+            "fr": "Comptes de virement des banques en Suisse"
           },
           "data": true
         },
         "N2": {
           "label": {
-            "en": "Monetary base"
+            "en": "Monetary base",
+            "de": "Notenbankgeldmenge",
+            "fr": "Monnaie centrale"
           },
           "data": true
         },
         "D0_2": {
           "label": {
-            "en": "Seasonally adjusted"
+            "en": "Seasonally adjusted",
+            "de": "Saisonbereinigt",
+            "fr": "Désaisonnalisée"
           },
           "data": false
         },
         "N3": {
           "label": {
-            "en": "Monetary base"
+            "en": "Monetary base",
+            "de": "Notenbankgeldmenge",
+            "fr": "Monnaie centrale"
           },
           "data": true
         },
         "S1": {
           "label": {
-            "en": "Seasonal factor"
+            "en": "Seasonal factor",
+            "de": "Saisonfaktor",
+            "fr": "Coefficient saisonnier"
           },
           "data": true
         }
@@ -137,5 +168,5 @@
     "D0": "N0"
   },
   "description": "The Swiss monetary base, monthly back to 1950, one of the longest-running money series in the catalog. Distinctive because it gives both sides of the central bank's money creation in one cube. The flat D0 codes split into three groups in the hierarchy: Origination (RF relevant foreign-currency positions, W securities portfolio, G money-market transactions, S0 other, N0 base) and Utilisation (N1 banknotes in circulation, GB sight deposit accounts of domestic banks, N2 base) sum to the same total from the asset vs liability side, and a Seasonally adjusted block (N3 base, S1 seasonal factor). So the seasonal adjustment here is encoded as its own series rather than a toggle, which matches the rest of SNB (no SA switch). Levels are in CHF millions. As a money concept it is the base-money companion to the M1-M3 aggregates; in the curated view M1-M3 (snbmonagg) is the headline aggregate, with the base, target range (snbband) and SNB balance sheet (snbbipo) kept alongside it.",
-  "fetched_utc": "2026-07-21 09:18:22"
+  "fetched_utc": "2026-08-05 13:12:03"
 }

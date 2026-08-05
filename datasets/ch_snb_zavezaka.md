@@ -1,7 +1,7 @@
 # Payment cards and ATMs
 
 - **id**: ch_snb_zavezaka
-- **title**: Payment cards and ATMs
+- **title**: Payment cards and ATMs | de: Zahlungskarten und Geldautomaten | fr: Cartes de paiement et distributeurs | it: Carte di pagamento e bancomat
 - **concept**: Payment systems / Payments & cash
 - **canonical**: no (alternate for Payments & cash; the `zave*` family covers SIC, cards, ATMs and e-money, this cube is the card-and-ATM stock view)
 - **source**: snb

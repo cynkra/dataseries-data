@@ -1,7 +1,7 @@
 # Gross fixed capital formation by institutional sector and asset type
 
 - **id**: ch_fso_gfcf_detail
-- **title**: Investment (GFCF) detail
+- **title**: Investment (GFCF) detail | de: Investitionen (Bruttoanlageinvestitionen) im Detail | fr: Investissements (FBCF) en détail | it: Investimenti (IFL) in dettaglio
 - **concept**: National accounts / Investment (gross fixed capital formation)
 - **canonical**: no (headline total-economy GFCF is in `ch_seco_gdp` as part of the GDP expenditure breakdown; this is the institutional-sector × asset-type detail)
 - **source**: fso
@@ -52,25 +52,25 @@ government civil-engineering vs corporate equipment).
   assets (construction, building, civil engineering, equipment) exist for all 9 sectors.
 
 ## Labels
-- **units**: CHF million, current prices
+- **units**: CHF million, current prices | de: Mio. CHF, zu laufenden Preisen | fr: Millions de CHF, aux prix courants | it: Milioni di CHF, a prezzi correnti
 - dim: sector
-  - **label**: Institutional sector
-  - S1: Total economy
-  - S11: Non-financial corporations
-  - S12: Financial corporations
-  - S121T127: Financial institutions (other than S128 S129)
-  - S12Q: Insurance corporations and pension funds
-  - S13: General government
-  - S1314: Social security funds
-  - S14: Households
-  - S15: Non-profit institutions serving households
+  - **label**: Institutional sector | de: Institutioneller Sektor | fr: Secteur institutionnel | it: Settore istituzionale
+  - S1: Total economy | de: Gesamtwirtschaft | fr: Économie totale | it: Economia totale
+  - S11: Non-financial corporations | de: Nichtfinanzielle Kapitalgesellschaften | fr: Sociétés non financières | it: Società non finanziarie
+  - S12: Financial corporations | de: Finanzielle Kapitalgesellschaften | fr: Sociétés financières | it: Società finanziarie
+  - S121T127: Financial institutions (other than S128 S129) | de: Finanzinstitute (ohne S128, S129) | fr: Institutions financières (hors S128, S129) | it: Istituzioni finanziarie (esclusi S128, S129)
+  - S12Q: Insurance corporations and pension funds | de: Versicherungen und Pensionskassen | fr: Sociétés d'assurance et caisses de pension | it: Imprese di assicurazione e casse pensioni
+  - S13: General government | de: Staat | fr: Administrations publiques | it: Amministrazioni pubbliche
+  - S1314: Social security funds | de: Sozialversicherungen | fr: Assurances sociales | it: Assicurazioni sociali
+  - S14: Households | de: Private Haushalte | fr: Ménages | it: Famiglie
+  - S15: Non-profit institutions serving households | de: Private Organisationen ohne Erwerbszweck | fr: Institutions sans but lucratif au service des ménages | it: Istituzioni senza scopo di lucro al servizio delle famiglie
 - dim: asset
-  - **label**: Asset type
-  - P51G: Gross fixed capital formation (total)
-  - P5111_N111_112G: Construction
-  - 6011: Building construction
-  - 6010: Civil engineering
-  - P5111_N113T117G: Equipment, fixed assets and software
+  - **label**: Asset type | de: Anlagekategorie | fr: Type d'actif | it: Tipo di attivo
+  - P51G: Gross fixed capital formation (total) | de: Bruttoanlageinvestitionen (Total) | fr: Formation brute de capital fixe (total) | it: Investimenti fissi lordi (totale)
+  - P5111_N111_112G: Construction | de: Bau | fr: Construction | it: Costruzioni
+  - 6011: Building construction | de: Hochbau | fr: Bâtiment | it: Edilizia
+  - 6010: Civil engineering | de: Tiefbau | fr: Génie civil | it: Genio civile
+  - P5111_N113T117G: Equipment, fixed assets and software | de: Ausrüstungen, Anlagen und Software | fr: Équipements, actifs fixes et logiciels | it: Attrezzature, impianti e software
 
 ## Display
 - **split**: sector

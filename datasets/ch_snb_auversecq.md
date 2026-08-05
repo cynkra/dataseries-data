@@ -1,7 +1,7 @@
 # Switzerland's international investment position by sector (quarterly)
 
 - **id**: ch_snb_auversecq
-- **title**: Investment position by sector
+- **title**: Investment position by sector | de: Auslandvermögen nach Sektor | fr: Position extérieure par secteur | it: Posizione sull'estero per settore
 - **concept**: External sector / International investment position
 - **canonical**: yes
 - **source**: snb

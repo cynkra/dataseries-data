@@ -1,7 +1,7 @@
 # Public finances: general government main aggregates
 
 - **id**: ch_ffa_finances
-- **title**: Government finances
+- **title**: Government finances | de: Öffentliche Finanzen | fr: Finances publiques | it: Finanze pubbliche
 - **concept**: National accounts / Government finance
 - **canonical**: yes
 
@@ -82,60 +82,60 @@ budget / forecast.
   financial plan, or a forecast. Lets the app separate realized from projected years.
 
 ## Labels
-- **units**: CHF million (levels) / share of GDP, 0-1 (ratios)
+- **units**: CHF million (levels) / share of GDP, 0-1 (ratios) | de: Mio. CHF (Niveaus) / Anteil am BIP, 0-1 (Quoten) | fr: Millions de CHF (niveaux) / part du PIB, 0-1 (quotes-parts) | it: Milioni di CHF (livelli) / quota del PIL, 0-1 (quote)
 - dim: level
-  - **label**: Government level
-  - staat: General government
-  - bund: Confederation
-  - ktn: Cantons
-  - gdn: Communes
-  - sv: Social security funds
-  - bund_ktn_gdn: Confederation, cantons and communes
+  - **label**: Government level | de: Staatsebene | fr: Niveau de l'État | it: Livello statale
+  - staat: General government | de: Staat | fr: Administrations publiques | it: Amministrazioni pubbliche
+  - bund: Confederation | de: Bund | fr: Confédération | it: Confederazione
+  - ktn: Cantons | de: Kantone | fr: Cantons | it: Cantoni
+  - gdn: Communes | de: Gemeinden | fr: Communes | it: Comuni
+  - sv: Social security funds | de: Sozialversicherungen | fr: Assurances sociales | it: Assicurazioni sociali
+  - bund_ktn_gdn: Confederation, cantons and communes | de: Bund, Kantone und Gemeinden | fr: Confédération, cantons et communes | it: Confederazione, cantoni e comuni
 - dim: model
-  - **label**: Accounting model
-  - fs: FS model (financial statistics)
-  - gfs: GFS model (Maastricht / SNA basis)
+  - **label**: Accounting model | de: Rechnungsmodell | fr: Modèle comptable | it: Modello contabile
+  - fs: FS model (financial statistics) | de: FS-Modell (Finanzstatistik) | fr: Modèle SF (statistique financière) | it: Modello SF (statistica finanziaria)
+  - gfs: GFS model (Maastricht / SNA basis) | de: GFS-Modell (Maastricht / VGR-Basis) | fr: Modèle SFP (base Maastricht / SCN) | it: Modello SFP (base Maastricht / SCN)
 - dim: indicator
-  - **label**: Indicator
-  - einnahmen: Receipts
-  - ausgaben: Expenditure
-  - saldo: Balance
-  - einnahmen_ord: Ordinary receipts
-  - ausgaben_ord: Ordinary expenditure
-  - saldo_ord: Ordinary balance
-  - ertrag: Revenue
-  - aufwand: Expenses
-  - fiskalertrag: Fiscal revenue (taxes)
-  - bruttoschuld_fs: Gross debt
-  - nettoschulden_fs: Net debt
-  - maastricht_schuld: Gross debt (Maastricht)
-  - nettoschuld: Net debt
-  - defizit_ueberschuss: Deficit / surplus
-  - nettozugang_sachvermoegen: Net acquisition of non-financial assets
-  - aktiven: Assets
-  - fremdkapital: Liabilities
-  - eigenkapital: Equity / net worth
-  - bip: Gross domestic product
-  - fiskalquote: Fiscal ratio (tax-to-GDP)
-  - einnahmenquote: Receipts-to-GDP ratio
-  - staatsquote: Expenditure-to-GDP ratio
-  - bruttoschuldenquote: Gross-debt-to-GDP ratio (Maastricht)
-  - schuldenquote: Debt-to-GDP ratio
-  - nettoschuldenquote: Net-debt-to-GDP ratio
-  - grp_fs: Financing view (receipts, expenditure, balance)
-  - grp_gfs: Accrual view (revenue, expenses, balance)
-  - grp_bs: Balance sheet
-  - grp_debt: Debt
-  - grp_ratio: Ratios (% of GDP)
+  - **label**: Indicator | de: Indikator | fr: Indicateur | it: Indicatore
+  - einnahmen: Receipts | de: Einnahmen | fr: Recettes | it: Entrate
+  - ausgaben: Expenditure | de: Ausgaben | fr: Dépenses | it: Uscite
+  - saldo: Balance | de: Saldo | fr: Solde | it: Saldo
+  - einnahmen_ord: Ordinary receipts | de: Ordentliche Einnahmen | fr: Recettes ordinaires | it: Entrate ordinarie
+  - ausgaben_ord: Ordinary expenditure | de: Ordentliche Ausgaben | fr: Dépenses ordinaires | it: Uscite ordinarie
+  - saldo_ord: Ordinary balance | de: Ordentlicher Saldo | fr: Solde ordinaire | it: Saldo ordinario
+  - ertrag: Revenue | de: Ertrag | fr: Revenus | it: Ricavi
+  - aufwand: Expenses | de: Aufwand | fr: Charges | it: Oneri
+  - fiskalertrag: Fiscal revenue (taxes) | de: Fiskalertrag (Steuern) | fr: Recettes fiscales (impôts) | it: Gettito fiscale (imposte)
+  - bruttoschuld_fs: Gross debt | de: Bruttoschulden | fr: Dette brute | it: Debito lordo
+  - nettoschulden_fs: Net debt | de: Nettoschulden | fr: Dette nette | it: Debito netto
+  - maastricht_schuld: Gross debt (Maastricht) | de: Bruttoschulden (Maastricht) | fr: Dette brute (Maastricht) | it: Debito lordo (Maastricht)
+  - nettoschuld: Net debt | de: Nettoschulden | fr: Dette nette | it: Debito netto
+  - defizit_ueberschuss: Deficit / surplus | de: Defizit / Überschuss | fr: Déficit / excédent | it: Disavanzo / avanzo
+  - nettozugang_sachvermoegen: Net acquisition of non-financial assets | de: Nettozugang an Sachvermögen | fr: Acquisition nette d'actifs non financiers | it: Acquisizione netta di attività non finanziarie
+  - aktiven: Assets | de: Aktiven | fr: Actifs | it: Attivi
+  - fremdkapital: Liabilities | de: Fremdkapital | fr: Capitaux de tiers | it: Capitale di terzi
+  - eigenkapital: Equity / net worth | de: Eigenkapital | fr: Fonds propres | it: Capitale proprio
+  - bip: Gross domestic product | de: Bruttoinlandprodukt | fr: Produit intérieur brut | it: Prodotto interno lordo
+  - fiskalquote: Fiscal ratio (tax-to-GDP) | de: Fiskalquote | fr: Quote-part fiscale | it: Quota fiscale
+  - einnahmenquote: Receipts-to-GDP ratio | de: Einnahmenquote | fr: Quote-part des recettes | it: Quota delle entrate
+  - staatsquote: Expenditure-to-GDP ratio | de: Staatsquote | fr: Quote-part de l'État | it: Quota statale
+  - bruttoschuldenquote: Gross-debt-to-GDP ratio (Maastricht) | de: Bruttoschuldenquote (Maastricht) | fr: Taux d'endettement brut (Maastricht) | it: Tasso d'indebitamento lordo (Maastricht)
+  - schuldenquote: Debt-to-GDP ratio | de: Schuldenquote | fr: Taux d'endettement | it: Tasso d'indebitamento
+  - nettoschuldenquote: Net-debt-to-GDP ratio | de: Nettoschuldenquote | fr: Taux d'endettement net | it: Tasso d'indebitamento netto
+  - grp_fs: Financing view (receipts, expenditure, balance) | de: Finanzierungssicht (Einnahmen, Ausgaben, Saldo) | fr: Optique du financement (recettes, dépenses, solde) | it: Ottica del finanziamento (entrate, uscite, saldo)
+  - grp_gfs: Accrual view (revenue, expenses, balance) | de: Erfolgssicht (Ertrag, Aufwand, Saldo) | fr: Optique des résultats (revenus, charges, solde) | it: Ottica dei risultati (ricavi, oneri, saldo)
+  - grp_bs: Balance sheet | de: Bilanz | fr: Bilan | it: Bilancio
+  - grp_debt: Debt | de: Schulden | fr: Dette | it: Debito
+  - grp_ratio: Ratios (% of GDP) | de: Quoten (% des BIP) | fr: Quotes-parts (% du PIB) | it: Quote (% del PIL)
 - dim: estimate
-  - **label**: Estimate type
-  - `Financial statements`: Financial statements (actual)
-  - `Provisional financial statements`: Provisional financial statements
-  - `Survey financial statements`: Survey financial statements
-  - `Survey budget`: Survey budget
-  - `Budget/financial plans`: Budget / financial plans
-  - Forecasts: Forecasts
-  - `Data available`: Data available
+  - **label**: Estimate type | de: Erhebungsart | fr: Type d'estimation | it: Tipo di stima
+  - `Financial statements`: Financial statements (actual) | de: Rechnung (Ist) | fr: Comptes (effectif) | it: Conti (effettivo)
+  - `Provisional financial statements`: Provisional financial statements | de: Provisorische Rechnung | fr: Comptes provisoires | it: Conti provvisori
+  - `Survey financial statements`: Survey financial statements | de: Erhebung Rechnung | fr: Enquête comptes | it: Rilevazione conti
+  - `Survey budget`: Survey budget | de: Erhebung Budget | fr: Enquête budget | it: Rilevazione preventivo
+  - `Budget/financial plans`: Budget / financial plans | de: Budget / Finanzpläne | fr: Budget / plans financiers | it: Preventivo / piani finanziari
+  - Forecasts: Forecasts | de: Prognosen | fr: Prévisions | it: Previsioni
+  - `Data available`: Data available | de: Daten verfügbar | fr: Données disponibles | it: Dati disponibili
 
 ## Display
 - **split**: indicator

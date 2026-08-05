@@ -9,7 +9,10 @@
   "start": "1999-01-01",
   "end": "2026-01-01",
   "title": {
-    "en": "Industry & construction turnover"
+    "en": "Industry & construction turnover",
+    "de": "Umsätze Industrie und Bau",
+    "fr": "Chiffres d'affaires industrie et construction",
+    "it": "Fatturato industria e costruzioni"
   },
   "source": {
     "name": {
@@ -31,55 +34,82 @@
       "levels": {
         "41": {
           "label": {
-            "en": "41 Building construction"
+            "en": "41 Building construction",
+            "de": "41 Hochbau",
+            "fr": "41 Bâtiment",
+            "it": "41 Edilizia"
           },
           "data": true
         },
         "41_43": {
           "label": {
-            "en": "41_43 Construction of buildings and specialised construction activities"
+            "en": "41_43 Construction of buildings and specialised construction activities",
+            "de": "41_43 Hochbau und Sonstiges Baugewerbe",
+            "fr": "41_43 Construction de bâtiments et travaux de construction spécialisés",
+            "it": "41_43 Construzioni di edifici e lavori di costruzione specializzati"
           },
           "data": true
         },
         "42": {
           "label": {
-            "en": "42 Civil engineering"
+            "en": "42 Civil engineering",
+            "de": "42 Tiefbau",
+            "fr": "42 Génie civil",
+            "it": "42 Genio civile"
           },
           "data": true
         },
         "43": {
           "label": {
-            "en": "43 Specialised construction activities"
+            "en": "43 Specialised construction activities",
+            "de": "43 Sonstiges Baugewerbe",
+            "fr": "43 Travaux de construction spécialisés",
+            "it": "43 Lavori di costruzione specializzati"
           },
           "data": true
         },
         "B": {
           "label": {
-            "en": "B MINING AND QUARRYING"
+            "en": "B MINING AND QUARRYING",
+            "de": "B BERGBAU UND GEWINNUNG VON STEINEN UND ERDEN",
+            "fr": "B INDUSTRIES EXTRACTIVES",
+            "it": "B ATTIVITÀ ESTRATTIVA"
           },
           "data": true
         },
         "B-E": {
           "label": {
-            "en": "B-E Industry"
+            "en": "B-E Industry",
+            "de": "B-E Industrie",
+            "fr": "B-E Industrie",
+            "it": "B-E Industria"
           },
           "data": true
         },
         "C": {
           "label": {
-            "en": "C MANUFACTURING"
+            "en": "C MANUFACTURING",
+            "de": "C VERARBEITENDES GEWERBE/HERSTELLUNG VON WAREN",
+            "fr": "C INDUSTRIE MANUFACTURIÈRE",
+            "it": "C ATTIVITÀ MANIFATTURIERE"
           },
           "data": true
         },
         "D": {
           "label": {
-            "en": "D ELECTRICITY, GAS, STEAM AND AIR-CONDITIONING SUPPLY"
+            "en": "D ELECTRICITY, GAS, STEAM AND AIR-CONDITIONING SUPPLY",
+            "de": "D ENERGIEVERSORGUNG",
+            "fr": "D PRODUCTION ET DISTRIBUTION D'ÉLECTRICITÉ, DE GAZ, DE VAPEUR ET D'AIR CONDITIONNÉ",
+            "it": "D FORNITURA DI ENERGIA ELETTRICA, GAS, VAPORE E ARIA CONDIZIONATA"
           },
           "data": true
         },
         "F": {
           "label": {
-            "en": "F CONSTRUCTION"
+            "en": "F CONSTRUCTION",
+            "de": "F BAUGEWERBE/BAU",
+            "fr": "F CONSTRUCTION",
+            "it": "F COSTRUZIONI"
           },
           "data": true
         }
@@ -105,19 +135,28 @@
       "levels": {
         "N": {
           "label": {
-            "en": "Neither seasonally adjusted nor calendar adjusted data"
+            "en": "Neither seasonally adjusted nor calendar adjusted data",
+            "de": "Weder saisonbereinigte noch kalenderbereinigte Daten",
+            "fr": "Données ni corrigées des variations saisonnières ni corrigées des effets de calendrier",
+            "it": "Dati non destagionalizzati né corretti per il calendario"
           },
           "data": true
         },
         "W": {
           "label": {
-            "en": "Calendar adjusted data, not seasonally adjusted"
+            "en": "Calendar adjusted data, not seasonally adjusted",
+            "de": "Kalenderbereinigte Daten, nicht saisonal bereinigt",
+            "fr": "Données corrigées du calendrier, non corrigées des variations saisonnières",
+            "it": "Dati corretti per il calendario, non destagionalizzati"
           },
           "data": true
         },
         "Y": {
           "label": {
-            "en": "Calendar and seasonally adjusted data"
+            "en": "Calendar and seasonally adjusted data",
+            "de": "Kalender- und saisonbereinigte Daten",
+            "fr": "Données corrigées du calendrier et des variations saisonnières",
+            "it": "Dati corretti per il calendario e per la stagione"
           },
           "data": true
         }
@@ -130,25 +169,37 @@
       "levels": {
         "PTOT": {
           "label": {
-            "en": "Production / Total turnover (real)"
+            "en": "Production / Total turnover (real)",
+            "de": "Produktion / Gesamtumsatz (real)",
+            "fr": "Production / Chiffre d'affaires total (réel)",
+            "it": "Produzione / Cifre d'affari totali (reale)"
           },
           "data": true
         },
         "UINL": {
           "label": {
-            "en": "Domestic turnover (nominal)"
+            "en": "Domestic turnover (nominal)",
+            "de": "Inlandumsatz (nominal)",
+            "fr": "Chiffre d'affaires à l'intérieur (nominal)",
+            "it": "Cifre d'affari sul mercato interno (nominale)"
           },
           "data": true
         },
         "UTOT": {
           "label": {
-            "en": "Total turnover (nominal)"
+            "en": "Total turnover (nominal)",
+            "de": "Gesamtumsatz (nominal)",
+            "fr": "Chiffre d'affaires total (nominal)",
+            "it": "Cifre d'affari totali (nominale)"
           },
           "data": true
         },
         "UEXP": {
           "label": {
-            "en": "Foreign turnover (nominal)"
+            "en": "Foreign turnover (nominal)",
+            "de": "Auslandumsatz (nominal)",
+            "fr": "Chiffre d'affaires à l'extérieur (nominal)",
+            "it": "Cifre d'affari all'estero (nominale)"
           },
           "data": true
         }
@@ -167,5 +218,5 @@
     "INDICATOR_KE": "PTOT"
   },
   "description": "The quarterly turnover / production index for the secondary sector — industry (NOGA sections B–E) and construction (section F) — published as one dataset split by NOGA section. FSO migrated this series off the dead PX-Web STAT-TAB onto its new SDMX 2.1 endpoint (disseminate.stats.swiss, agency CH1.KEU, flow DF_KEU_Q1), so it shares the R/source_fso_sdmx.R reader with ch_fso_retail. We keep the secondary-sector slice: the industry aggregate B-E (and its sections B mining, C manufacturing, D energy), construction F, and the construction divisions 41 (buildings), 42 (civil engineering), 43 (specialised construction), plus their aggregate 41_43.",
-  "fetched_utc": "2026-07-31 09:17:55"
+  "fetched_utc": "2026-08-05 13:12:05"
 }

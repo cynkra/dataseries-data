@@ -39,9 +39,12 @@ suppressPackageStartupMessages({
 )
 
 # An httr2 GET with a given Accept header + the shared retry/backoff policy.
-.sdmx_get <- function(url, accept) {
-  request(url) |>
-    req_headers(Accept = accept) |>
+# `lang` sets Accept-Language: disseminate.stats.swiss serves its structure
+# (codelist names) localized per header — verified de/fr/it on CL_NOGA_KE.
+.sdmx_get <- function(url, accept, lang = NULL) {
+  req <- request(url) |> req_headers(Accept = accept)
+  if (!is.null(lang)) req <- req |> req_headers(`Accept-Language` = lang)
+  req |>
     req_timeout(120) |>
     .with_retry() |>
     req_perform()
@@ -56,22 +59,36 @@ suppressPackageStartupMessages({
                   col_types = readr::cols(.default = readr::col_character()))
 }
 
-# GET the structure and return a named list codelist_id -> (code -> english label).
-# Only the four enumerated codelists we publish are read.
+# GET the structure once per language and return a named list
+# codelist_id -> (code -> i18n label object). Only the four enumerated codelists
+# we publish are read; a failed non-en language skips that language.
 .sdmx_codelists <- function(agency, flow, version) {
   url <- sprintf("%s/dataflow/%s/%s/%s?references=all", .SDMX_BASE, agency, flow, version)
-  resp <- .sdmx_get(url, "application/vnd.sdmx.structure+json")
-  doc <- jsonlite::fromJSON(resp_body_string(resp), simplifyVector = FALSE)
-  cls <- doc$data$codelists
-  out <- list()
-  for (cl in cls) {
-    if (!cl$id %in% .SDMX_DIM_CODELISTS) next
-    lbls <- list()
-    for (code in cl$codes) {
-      nm <- code$name %||% code$names$en %||% code$names[[1]] %||% code$id
-      lbls[[code$id]] <- as.character(nm)
+  read_one <- function(lang) {
+    resp <- .sdmx_get(url, "application/vnd.sdmx.structure+json",
+                      lang = if (lang == "en") NULL else lang)
+    doc <- jsonlite::fromJSON(resp_body_string(resp), simplifyVector = FALSE)
+    out <- list()
+    for (cl in doc$data$codelists) {
+      if (!cl$id %in% .SDMX_DIM_CODELISTS) next
+      lbls <- list()
+      for (code in cl$codes) {
+        nm <- code$name %||% code$names[[lang]] %||% code$names[[1]] %||% code$id
+        lbls[[code$id]] <- as.character(nm)
+      }
+      out[[cl$id]] <- lbls
     }
-    out[[cl$id]] <- lbls
+    out
+  }
+  base <- read_one("en")
+  out <- lapply(base, function(lbls) lapply(lbls, function(l) list(en = l)))
+  for (L in c("de", "fr", "it")) {
+    loc <- tryCatch(read_one(L), error = function(e) NULL)
+    if (is.null(loc)) next
+    for (clid in names(out)) for (code in names(out[[clid]])) {
+      v <- loc[[clid]][[code]]
+      if (!is.null(v) && nzchar(v)) out[[clid]][[code]][[L]] <- v
+    }
   }
   out
 }
@@ -87,7 +104,7 @@ suppressPackageStartupMessages({
     list(
       label = list(en = d),
       levels = setNames(lapply(present, function(code) {
-        list(label = list(en = unname(lbls[[code]] %||% code)))
+        list(label = lbls[[code]] %||% list(en = code))
       }), present)
     )
   }), dim_cols)
@@ -129,9 +146,8 @@ fso_sdmx_fetch <- function(dataset_id, agency, flow, version, title = NULL,
     dplyr::arrange(dplyr::across(dplyr::all_of(c(dim_cols, "date"))))
 
   meta <- list(
-    title = title %||% setNames(list(flow), "en"),
+    title = title %||% list(en = flow),   # curated title = the datasheet's
     source = list(
-      name = list(en = "Swiss Federal Statistical Office (FSO)"),
       url = sprintf("https://www.bfs.admin.ch/asset/en/%s", flow)
     ),
     license = "fso",
@@ -173,23 +189,18 @@ fso_sdmx_new_vehicles <- function(dataset_id = "ch_fso_new_vehicles") {
   data <- data.frame(fuel = d$UV_RV_FUEL, date = d$date, value = d$value, stringsAsFactors = FALSE)
   data <- data[order(data$fuel, data$date), ]
 
-  fuel_lab <- c("_T" = "Total", PC = "Petrol", PH = "Petrol hybrid (HEV)",
-    DC = "Diesel", DH = "Diesel hybrid (HEV)", HP = "Plug-in hybrid (petrol)",
-    HD = "Plug-in hybrid (diesel)", EL = "Electric (BEV)", FC = "Fuel cell (hydrogen)",
-    GA = "Gas", "_O" = "Other", NM = "No motor")
-  fuel_lab <- fuel_lab[names(fuel_lab) %in% unique(data$fuel)]
-  levels <- setNames(lapply(unname(fuel_lab), function(l) list(label = list(en = l))), names(fuel_lab))
-  kids   <- setNames(lapply(setdiff(names(fuel_lab), "_T"), function(x) list()),
-                     setdiff(names(fuel_lab), "_T"))
+  # Curated fuel codes + display order; the labels live in the datasheet
+  # ## Labels block (attach_labels), not here.
+  fuel_codes <- c("_T", "PC", "PH", "DC", "DH", "HP", "HD", "EL", "FC", "GA", "_O", "NM")
+  fuel_codes <- fuel_codes[fuel_codes %in% unique(data$fuel)]
+  levels <- setNames(lapply(fuel_codes, function(x) list()), fuel_codes)
+  kids   <- setNames(lapply(setdiff(fuel_codes, "_T"), function(x) list()),
+                     setdiff(fuel_codes, "_T"))
 
   meta <- list(
-    title  = list(en = "New registrations of passenger cars by fuel"),
-    source = list(name = list(en = "Swiss Federal Statistical Office (FSO)"),
-                  url  = "https://www.bfs.admin.ch/asset/en/px-x-1103020200_120"),
+    source = list(url = "https://www.bfs.admin.ch/asset/en/px-x-1103020200_120"),
     license = "fso", frequency = "monthly", topic = "Mobility",
-    units = list(en = "Number of new registrations"),
     dimensions = list(fuel = list(
-      label = list(en = "Fuel"),
       levels = levels,
       hierarchy = list("_T" = kids)   # Total decomposes into the fuel types
     ))
@@ -207,15 +218,12 @@ fso_sdmx_vacant_dwellings <- function(dataset_id = "ch_fso_vacant_dwellings") {
   data <- data[order(data$measure, data$date), ]
 
   meta <- list(
-    title  = list(en = "Vacant dwellings"),
-    source = list(name = list(en = "Swiss Federal Statistical Office (FSO)"),
-                  url  = "https://www.bfs.admin.ch/asset/en/px-x-0902020100_104"),
+    source = list(url = "https://www.bfs.admin.ch/asset/en/px-x-0902020100_104"),
     license = "fso", frequency = "annual", topic = "Construction and housing",
     dimensions = list(measure = list(
-      label = list(en = "Measure"),
       levels = list(
-        PC = list(label = list(en = "Vacancy rate (%)")),
-        V  = list(label = list(en = "Vacant dwellings (number)"))
+        PC = list(),
+        V  = list()
       )
     ))
   )
@@ -234,29 +242,15 @@ fso_sdmx_cross_border_commuters <- function(dataset_id = "ch_fso_cross_border_co
   data <- data[order(data$canton, data$date), , drop = FALSE]
 
   # Standard BFS canton numbering (1=ZH .. 26=JU); _T = Switzerland total.
-  canton_lab <- c(
-    "_T" = "Switzerland (total)",
-    "1" = "Zurich", "2" = "Bern", "3" = "Lucerne", "4" = "Uri", "5" = "Schwyz",
-    "6" = "Obwalden", "7" = "Nidwalden", "8" = "Glarus", "9" = "Zug",
-    "10" = "Fribourg", "11" = "Solothurn", "12" = "Basel-Stadt",
-    "13" = "Basel-Landschaft", "14" = "Schaffhausen", "15" = "Appenzell A.Rh.",
-    "16" = "Appenzell I.Rh.", "17" = "St. Gallen", "18" = "Grisons",
-    "19" = "Aargau", "20" = "Thurgau", "21" = "Ticino", "22" = "Vaud",
-    "23" = "Valais", "24" = "Neuchatel", "25" = "Geneva", "26" = "Jura"
-  )
+  # Canton display labels live in the datasheet ## Labels block.
   present <- unique(as.character(data$canton))
-  lab <- vapply(present, function(c) unname(canton_lab[c]) %||% c, "")
-  levels <- setNames(lapply(lab, function(l) list(label = list(en = l))), present)
+  levels <- setNames(lapply(present, function(x) list()), present)
   kids <- setdiff(present, "_T")
 
   meta <- list(
-    title  = list(en = "Foreign cross-border commuters by canton of work"),
-    source = list(name = list(en = "Swiss Federal Statistical Office (FSO)"),
-                  url  = "https://www.bfs.admin.ch/asset/en/px-x-0302010000_101"),
+    source = list(url = "https://www.bfs.admin.ch/asset/en/px-x-0302010000_101"),
     license = "fso", frequency = "quarterly", topic = "Labour",
-    units = list(en = "Number of cross-border commuters (estimate)"),
     dimensions = list(canton = list(
-      label = list(en = "Canton of work"),
       levels = levels,
       hierarchy = if (length(kids)) list("_T" = setNames(lapply(kids, function(x) list()), kids))
     ))
@@ -277,26 +271,21 @@ fso_sdmx_pop_detail <- function(dataset_id = "ch_fso_pop_detail") {
                      date = d$date, value = d$value, stringsAsFactors = FALSE)
   data <- data[order(data$nationality, data$sex, data$date), , drop = FALSE]
 
-  nat_lab <- c("_T" = "Total", "1" = "Swiss", "2" = "Foreign")
-  sex_lab <- c("_T" = "Total", "1" = "Male", "2" = "Female")
-  mk <- function(present, lab, label_en, total = "_T") {
+  # Total-first level order; the labels live in the datasheet ## Labels block.
+  mk <- function(present, total = "_T") {
     keys <- intersect(c(total, setdiff(present, total)), present)
-    levels <- setNames(lapply(keys, function(c)
-      list(label = list(en = unname(lab[c]) %||% c))), keys)
+    levels <- setNames(lapply(keys, function(x) list()), keys)
     kids <- setdiff(keys, total)
-    list(label = list(en = label_en), levels = levels,
+    list(levels = levels,
          hierarchy = if (length(kids)) setNames(list(setNames(lapply(kids, function(x) list()), kids)), total))
   }
 
   meta <- list(
-    title  = list(en = "Permanent resident population by nationality and sex"),
-    source = list(name = list(en = "Swiss Federal Statistical Office (FSO)"),
-                  url  = "https://www.bfs.admin.ch/asset/en/px-x-0102010000_101"),
+    source = list(url = "https://www.bfs.admin.ch/asset/en/px-x-0102010000_101"),
     license = "fso", frequency = "annual", topic = "Population",
-    units = list(en = "Number of permanent residents (year-end stock)"),
     dimensions = list(
-      nationality = mk(unique(as.character(data$nationality)), nat_lab, "Nationality"),
-      sex         = mk(unique(as.character(data$sex)), sex_lab, "Sex")
+      nationality = mk(unique(as.character(data$nationality))),
+      sex         = mk(unique(as.character(data$sex)))
     )
   )
   list(id = dataset_id, data = data, meta = meta)

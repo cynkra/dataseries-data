@@ -7,7 +7,10 @@
   "start": "1985-01-01",
   "end": "2026-01-01",
   "title": {
-    "en": "Balance of payments: overview"
+    "en": "Balance of payments: overview",
+    "de": "Zahlungsbilanz: Übersicht",
+    "fr": "Balance des paiements : vue d'ensemble",
+    "it": "Bilancia dei pagamenti: panoramica"
   },
   "source": {
     "name": {
@@ -24,348 +27,464 @@
   "dimensions": {
     "D0": {
       "label": {
-        "en": "Component"
+        "en": "Component",
+        "de": "Komponenten",
+        "fr": "Composantes"
       },
       "levels": {
         "D0_0": {
           "label": {
-            "en": "Current account"
+            "en": "Current account",
+            "de": "Leistungsbilanz",
+            "fr": "Balance des transactions courantes"
           },
           "data": false
         },
         "S0": {
           "label": {
-            "en": "Net"
+            "en": "Net",
+            "de": "Saldo",
+            "fr": "Solde"
           },
           "data": true
         },
         "E0": {
           "label": {
-            "en": "Receipts"
+            "en": "Receipts",
+            "de": "Einnahmen",
+            "fr": "Recettes"
           },
           "data": true
         },
         "A0": {
           "label": {
-            "en": "Expenses"
+            "en": "Expenses",
+            "de": "Ausgaben",
+            "fr": "Dépenses"
           },
           "data": true
         },
         "D0_0_3": {
           "label": {
-            "en": "Goods and services"
+            "en": "Goods and services",
+            "de": "Waren und Dienste",
+            "fr": "Marchandises et services"
           },
           "data": false
         },
         "S1": {
           "label": {
-            "en": "Net"
+            "en": "Net",
+            "de": "Saldo",
+            "fr": "Solde"
           },
           "data": true
         },
         "E1": {
           "label": {
-            "en": "Receipts"
+            "en": "Receipts",
+            "de": "Einnahmen",
+            "fr": "Recettes"
           },
           "data": true
         },
         "A1": {
           "label": {
-            "en": "Expenses"
+            "en": "Expenses",
+            "de": "Ausgaben",
+            "fr": "Dépenses"
           },
           "data": true
         },
         "D0_0_3_3": {
           "label": {
-            "en": "Goods"
+            "en": "Goods",
+            "de": "Waren",
+            "fr": "Marchandises"
           },
           "data": false
         },
         "S2": {
           "label": {
-            "en": "Net"
+            "en": "Net",
+            "de": "Saldo",
+            "fr": "Solde"
           },
           "data": true
         },
         "E2": {
           "label": {
-            "en": "Receipts"
+            "en": "Receipts",
+            "de": "Einnahmen",
+            "fr": "Recettes"
           },
           "data": true
         },
         "A2": {
           "label": {
-            "en": "Expenses"
+            "en": "Expenses",
+            "de": "Ausgaben",
+            "fr": "Dépenses"
           },
           "data": true
         },
         "D0_0_3_4": {
           "label": {
-            "en": "Services"
+            "en": "Services",
+            "de": "Dienste",
+            "fr": "Services"
           },
           "data": false
         },
         "S3": {
           "label": {
-            "en": "Net"
+            "en": "Net",
+            "de": "Saldo",
+            "fr": "Solde"
           },
           "data": true
         },
         "E3": {
           "label": {
-            "en": "Receipts"
+            "en": "Receipts",
+            "de": "Einnahmen",
+            "fr": "Recettes"
           },
           "data": true
         },
         "A3": {
           "label": {
-            "en": "Expenses"
+            "en": "Expenses",
+            "de": "Ausgaben",
+            "fr": "Dépenses"
           },
           "data": true
         },
         "D0_0_4": {
           "label": {
-            "en": "Primary income"
+            "en": "Primary income",
+            "de": "Primäreinkommen",
+            "fr": "Revenus primaires"
           },
           "data": false
         },
         "S4": {
           "label": {
-            "en": "Net"
+            "en": "Net",
+            "de": "Saldo",
+            "fr": "Solde"
           },
           "data": true
         },
         "E4": {
           "label": {
-            "en": "Receipts"
+            "en": "Receipts",
+            "de": "Einnahmen",
+            "fr": "Recettes"
           },
           "data": true
         },
         "A4": {
           "label": {
-            "en": "Expenses"
+            "en": "Expenses",
+            "de": "Ausgaben",
+            "fr": "Dépenses"
           },
           "data": true
         },
         "D0_0_4_3": {
           "label": {
-            "en": "Labour income"
+            "en": "Labour income",
+            "de": "Arbeitseinkommen",
+            "fr": "Revenus du travail"
           },
           "data": false
         },
         "S5": {
           "label": {
-            "en": "Net"
+            "en": "Net",
+            "de": "Saldo",
+            "fr": "Solde"
           },
           "data": true
         },
         "E5": {
           "label": {
-            "en": "Receipts"
+            "en": "Receipts",
+            "de": "Einnahmen",
+            "fr": "Recettes"
           },
           "data": true
         },
         "A5": {
           "label": {
-            "en": "Expenses"
+            "en": "Expenses",
+            "de": "Ausgaben",
+            "fr": "Dépenses"
           },
           "data": true
         },
         "D0_0_4_4": {
           "label": {
-            "en": "Investment income"
+            "en": "Investment income",
+            "de": "Kapitaleinkommen",
+            "fr": "Revenus de capitaux"
           },
           "data": false
         },
         "S6": {
           "label": {
-            "en": "Net"
+            "en": "Net",
+            "de": "Saldo",
+            "fr": "Solde"
           },
           "data": true
         },
         "E6": {
           "label": {
-            "en": "Receipts"
+            "en": "Receipts",
+            "de": "Einnahmen",
+            "fr": "Recettes"
           },
           "data": true
         },
         "A6": {
           "label": {
-            "en": "Expenses"
+            "en": "Expenses",
+            "de": "Ausgaben",
+            "fr": "Dépenses"
           },
           "data": true
         },
         "D0_0_5": {
           "label": {
-            "en": "Secondary income"
+            "en": "Secondary income",
+            "de": "Sekundäreinkommen",
+            "fr": "Revenus secondaires"
           },
           "data": false
         },
         "S7": {
           "label": {
-            "en": "Net"
+            "en": "Net",
+            "de": "Saldo",
+            "fr": "Solde"
           },
           "data": true
         },
         "E7": {
           "label": {
-            "en": "Receipts"
+            "en": "Receipts",
+            "de": "Einnahmen",
+            "fr": "Recettes"
           },
           "data": true
         },
         "A7": {
           "label": {
-            "en": "Expenses"
+            "en": "Expenses",
+            "de": "Ausgaben",
+            "fr": "Dépenses"
           },
           "data": true
         },
         "D0_1": {
           "label": {
-            "en": "Capital account"
+            "en": "Capital account",
+            "de": "Bilanz der Vermögensübertragungen",
+            "fr": "Compte de capital"
           },
           "data": false
         },
         "S8": {
           "label": {
-            "en": "Net"
+            "en": "Net",
+            "de": "Saldo",
+            "fr": "Solde"
           },
           "data": true
         },
         "E8": {
           "label": {
-            "en": "Receipts"
+            "en": "Receipts",
+            "de": "Einnahmen",
+            "fr": "Recettes"
           },
           "data": true
         },
         "A8": {
           "label": {
-            "en": "Expenses"
+            "en": "Expenses",
+            "de": "Ausgaben",
+            "fr": "Dépenses"
           },
           "data": true
         },
         "D0_2": {
           "label": {
-            "en": "Financial account (excluding derivatives)"
+            "en": "Financial account (excluding derivatives)",
+            "de": "Kapitalbilanz (ohne Derivate)",
+            "fr": "Compte financier (hors produits dérivés)"
           },
           "data": false
         },
         "S9": {
           "label": {
-            "en": "Net"
+            "en": "Net",
+            "de": "Saldo",
+            "fr": "Solde"
           },
           "data": true
         },
         "NA0": {
           "label": {
-            "en": "Net acquisition of financial assets"
+            "en": "Net acquisition of financial assets",
+            "de": "Nettozugang von Aktiven",
+            "fr": "Acquisition nette d’actifs financiers"
           },
           "data": true
         },
         "NP0": {
           "label": {
-            "en": "Net incurrence of liabilities"
+            "en": "Net incurrence of liabilities",
+            "de": "Nettozugang von Passiven",
+            "fr": "Accroissement net des passifs"
           },
           "data": true
         },
         "D0_2_3": {
           "label": {
-            "en": "Direct investment"
+            "en": "Direct investment",
+            "de": "Direktinvestitionen",
+            "fr": "Investissements directs"
           },
           "data": false
         },
         "S10": {
           "label": {
-            "en": "Net"
+            "en": "Net",
+            "de": "Saldo",
+            "fr": "Solde"
           },
           "data": true
         },
         "NA1": {
           "label": {
-            "en": "Net acquisition of financial assets"
+            "en": "Net acquisition of financial assets",
+            "de": "Nettozugang von Aktiven",
+            "fr": "Acquisition nette d’actifs financiers"
           },
           "data": true
         },
         "NP1": {
           "label": {
-            "en": "Net incurrence of liabilities"
+            "en": "Net incurrence of liabilities",
+            "de": "Nettozugang von Passiven",
+            "fr": "Accroissement net des passifs"
           },
           "data": true
         },
         "D0_2_4": {
           "label": {
-            "en": "Portfolio investment"
+            "en": "Portfolio investment",
+            "de": "Portfolioinvestitionen",
+            "fr": "Investissements de portefeuille"
           },
           "data": false
         },
         "S11": {
           "label": {
-            "en": "Net"
+            "en": "Net",
+            "de": "Saldo",
+            "fr": "Solde"
           },
           "data": true
         },
         "NA2": {
           "label": {
-            "en": "Net acquisition of financial assets"
+            "en": "Net acquisition of financial assets",
+            "de": "Nettozugang von Aktiven",
+            "fr": "Acquisition nette d’actifs financiers"
           },
           "data": true
         },
         "NP2": {
           "label": {
-            "en": "Net incurrence of liabilities"
+            "en": "Net incurrence of liabilities",
+            "de": "Nettozugang von Passiven",
+            "fr": "Accroissement net des passifs"
           },
           "data": true
         },
         "D0_2_5": {
           "label": {
-            "en": "Other investment"
+            "en": "Other investment",
+            "de": "Übrige Investitionen",
+            "fr": "Autres investissements"
           },
           "data": false
         },
         "S12": {
           "label": {
-            "en": "Net"
+            "en": "Net",
+            "de": "Saldo",
+            "fr": "Solde"
           },
           "data": true
         },
         "NA3": {
           "label": {
-            "en": "Net acquisition of financial assets"
+            "en": "Net acquisition of financial assets",
+            "de": "Nettozugang von Aktiven",
+            "fr": "Acquisition nette d’actifs financiers"
           },
           "data": true
         },
         "NP3": {
           "label": {
-            "en": "Net incurrence of liabilities"
+            "en": "Net incurrence of liabilities",
+            "de": "Nettozugang von Passiven",
+            "fr": "Accroissement net des passifs"
           },
           "data": true
         },
         "D0_2_6": {
           "label": {
-            "en": "Reserve assets"
+            "en": "Reserve assets",
+            "de": "Währungsreserven",
+            "fr": "Réserves monétaires"
           },
           "data": false
         },
         "S13": {
           "label": {
-            "en": "Net"
+            "en": "Net",
+            "de": "Saldo",
+            "fr": "Solde"
           },
           "data": true
         },
         "D0_3": {
           "label": {
-            "en": "Derivatives"
+            "en": "Derivatives",
+            "de": "Derivate",
+            "fr": "Produits dérivés"
           },
           "data": false
         },
         "S14": {
           "label": {
-            "en": "Net"
+            "en": "Net",
+            "de": "Saldo",
+            "fr": "Solde"
           },
           "data": true
         },
         "SD": {
           "label": {
-            "en": "Statistical difference"
+            "en": "Statistical difference",
+            "de": "Statistische Differenz",
+            "fr": "Écart statistique"
           },
           "data": true
         }
@@ -457,5 +576,5 @@
     "D0": "S0"
   },
   "description": "The one-page overview of the Swiss balance of payments: the headline aggregates of all four accounts in a single cube. Unlike the current-account detail cube, this one folds the accounting entry into the component codes, so each line is named for its account and its entry at once. It carries the top-level structure rarely shown elsewhere: the financial account (direct, portfolio, other, reserve assets, each as net acquisition of assets NA vs net incurrence of liabilities NP), the capital account (S8/E8/A8), derivatives (S14), and the statistical difference (SD) that closes the BoP identity. It is the alternate to the detailed ch_snb_bopcurrq for the same concept: same producer, broader account coverage but shallower component detail, so it is kept and labelled rather than dropped.",
-  "fetched_utc": "2026-06-23 09:28:10"
+  "fetched_utc": "2026-08-05 13:12:02"
 }

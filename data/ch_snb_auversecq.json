@@ -9,7 +9,10 @@
   "start": "1985-01-01",
   "end": "2026-01-01",
   "title": {
-    "en": "Investment position by sector"
+    "en": "Investment position by sector",
+    "de": "Auslandvermögen nach Sektor",
+    "fr": "Position extérieure par secteur",
+    "it": "Posizione sull'estero per settore"
   },
   "source": {
     "name": {
@@ -26,24 +29,32 @@
   "dimensions": {
     "D0": {
       "label": {
-        "en": "Accounting entry"
+        "en": "Accounting entry",
+        "de": "Buchungseintrag",
+        "fr": "Enregistrement comptable"
       },
       "levels": {
         "A": {
           "label": {
-            "en": "Assets"
+            "en": "Assets",
+            "de": "Aktiven",
+            "fr": "Actifs"
           },
           "data": true
         },
         "P": {
           "label": {
-            "en": "Liabilities"
+            "en": "Liabilities",
+            "de": "Passiven",
+            "fr": "Passifs"
           },
           "data": true
         },
         "N": {
           "label": {
-            "en": "Net international investment position"
+            "en": "Net international investment position",
+            "de": "Nettovermögen",
+            "fr": "Position extérieure nette"
           },
           "data": true
         }
@@ -56,36 +67,48 @@
     },
     "D1": {
       "label": {
-        "en": "Sector"
+        "en": "Sector",
+        "de": "Sektor",
+        "fr": "Secteur"
       },
       "levels": {
         "T": {
           "label": {
-            "en": "Total"
+            "en": "Total",
+            "de": "Total",
+            "fr": "Total"
           },
           "data": true
         },
         "N": {
           "label": {
-            "en": "Swiss National Bank"
+            "en": "Swiss National Bank",
+            "de": "Nationalbank",
+            "fr": "Banque nationale"
           },
           "data": true
         },
         "B": {
           "label": {
-            "en": "Banks"
+            "en": "Banks",
+            "de": "Banken",
+            "fr": "Banques"
           },
           "data": true
         },
         "OH": {
           "label": {
-            "en": "Public sector"
+            "en": "Public sector",
+            "de": "Öffentliche Hand",
+            "fr": "Collectivités publiques"
           },
           "data": true
         },
         "US": {
           "label": {
-            "en": "Other sectors"
+            "en": "Other sectors",
+            "de": "Übrige Sektoren",
+            "fr": "Autres secteurs"
           },
           "data": true
         }
@@ -101,42 +124,56 @@
     },
     "D2": {
       "label": {
-        "en": "Component"
+        "en": "Component",
+        "de": "Komponente",
+        "fr": "Composante"
       },
       "levels": {
         "T": {
           "label": {
-            "en": "Total"
+            "en": "Total",
+            "de": "Total",
+            "fr": "Total"
           },
           "data": true
         },
         "D1": {
           "label": {
-            "en": "Direct investment"
+            "en": "Direct investment",
+            "de": "Direktinvestitionen",
+            "fr": "Investissements directs"
           },
           "data": true
         },
         "P": {
           "label": {
-            "en": "Portfolio investment"
+            "en": "Portfolio investment",
+            "de": "Portfolioinvestitionen",
+            "fr": "Investissements de portefeuille"
           },
           "data": true
         },
         "D0": {
           "label": {
-            "en": "Derivatives"
+            "en": "Derivatives",
+            "de": "Derivate",
+            "fr": "Produits dérivés"
           },
           "data": true
         },
         "UI": {
           "label": {
-            "en": "Other investment"
+            "en": "Other investment",
+            "de": "Übrige Investitionen",
+            "fr": "Autres investissements"
           },
           "data": true
         },
         "W": {
           "label": {
-            "en": "Reserve assets"
+            "en": "Reserve assets",
+            "de": "Währungsreserven",
+            "fr": "Réserves monétaires"
           },
           "data": true
         }
@@ -165,5 +202,5 @@
     "D2": "T"
   },
   "description": "The stock counterpart to the balance-of-payments flows: Switzerland's foreign assets and liabilities, and the resulting net international investment position (NIIP), back to 1985. The distinctive cut here is the sector breakdown: assets and liabilities are split across SNB, banks, public sector and other sectors, so you can see who holds the foreign claims. Crossed with the IIP component grid (direct, portfolio, derivatives, other investment, reserve assets), this exposes Switzerland's large net creditor position and where it sits. The reserve-assets component only carries on the assets side and only for the SNB, so many sector/component cells are empty; the stored 71 series are the populated combinations, not the full 3x5x6 grid.",
-  "fetched_utc": "2026-06-23 09:28:09"
+  "fetched_utc": "2026-08-05 13:12:01"
 }

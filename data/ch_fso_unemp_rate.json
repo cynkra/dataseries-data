@@ -7,9 +7,6 @@
   ],
   "start": "1991-01-01",
   "end": "2026-03-01",
-  "title": {
-    "en": "Unemployment rate (ILO)"
-  },
   "source": {
     "name": {
       "en": "Swiss Federal Statistical Office (FSO)",
@@ -27,24 +24,36 @@
   "dimensions": {
     "origin": {
       "label": {
-        "en": "Nationality"
+        "en": "Nationality",
+        "de": "Staatsangehörigkeit",
+        "fr": "Nationalité",
+        "it": "Nazionalità"
       },
       "levels": {
         "tot": {
           "label": {
-            "en": "Total"
+            "en": "Total",
+            "de": "Total",
+            "fr": "Total",
+            "it": "Totale"
           },
           "data": true
         },
         "ch": {
           "label": {
-            "en": "Swiss nationals"
+            "en": "Swiss nationals",
+            "de": "Schweizerinnen und Schweizer",
+            "fr": "Suisses",
+            "it": "Svizzeri"
           },
           "data": true
         },
         "ex": {
           "label": {
-            "en": "Foreign nationals"
+            "en": "Foreign nationals",
+            "de": "Ausländerinnen und Ausländer",
+            "fr": "Étrangers",
+            "it": "Stranieri"
           },
           "data": true
         }
@@ -52,24 +61,36 @@
     },
     "sex": {
       "label": {
-        "en": "Sex"
+        "en": "Sex",
+        "de": "Geschlecht",
+        "fr": "Sexe",
+        "it": "Sesso"
       },
       "levels": {
         "tot": {
           "label": {
-            "en": "Total"
+            "en": "Total",
+            "de": "Total",
+            "fr": "Total",
+            "it": "Totale"
           },
           "data": true
         },
         "men": {
           "label": {
-            "en": "Men"
+            "en": "Men",
+            "de": "Männer",
+            "fr": "Hommes",
+            "it": "Uomini"
           },
           "data": true
         },
         "wom": {
           "label": {
-            "en": "Women"
+            "en": "Women",
+            "de": "Frauen",
+            "fr": "Femmes",
+            "it": "Donne"
           },
           "data": true
         }
@@ -78,6 +99,12 @@
   },
   "concept": "Labour / Unemployment",
   "canonical": false,
+  "title": {
+    "en": "Unemployment rate (ILO)",
+    "de": "Erwerbslosenquote (ILO)",
+    "fr": "Taux de chômage (BIT)",
+    "it": "Tasso di disoccupazione (ILO)"
+  },
   "split": "origin",
   "single_select": [],
   "default_transform": "level",
@@ -86,5 +113,5 @@
     "sex": "tot"
   },
   "description": "The ILO unemployment rate (%), the internationally comparable definition. This is deliberately kept alongside the SNB/SECO registered unemployment series (ch_snb_amarbma): they measure different things (ILO survey-based vs registered at job centres) and should not be deduplicated into one. Monthly averages.",
-  "fetched_utc": "2026-07-31 09:17:56"
+  "fetched_utc": "2026-08-05 13:12:07"
 }

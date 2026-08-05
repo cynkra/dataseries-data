@@ -6,9 +6,6 @@
   ],
   "start": "1998-10-01",
   "end": "2026-04-01",
-  "title": {
-    "en": "Construction prices"
-  },
   "source": {
     "name": {
       "en": "Swiss Federal Statistical Office (FSO)",
@@ -22,31 +19,40 @@
   "license": "fso",
   "frequency": "semi-annual",
   "topic": "Prices",
-  "units": {
-    "en": "Index (October 2020 = 100)"
-  },
   "updated": "2026-06-18",
   "dimensions": {
     "worktype": {
       "label": {
-        "en": "Type of work"
+        "en": "Type of work",
+        "de": "Arbeitsart",
+        "fr": "Type de travaux",
+        "it": "Tipo di lavori"
       },
       "levels": {
         "total": {
           "label": {
-            "en": "Construction: Total"
+            "en": "Construction: Total",
+            "de": "Baugewerbe: Total",
+            "fr": "Construction : total",
+            "it": "Costruzioni: totale"
           },
           "data": true
         },
         "hochbau": {
           "label": {
-            "en": "Building construction (Hochbau)"
+            "en": "Building construction (Hochbau)",
+            "de": "Hochbau",
+            "fr": "Bâtiment",
+            "it": "Edilizia"
           },
           "data": true
         },
         "tiefbau": {
           "label": {
-            "en": "Civil engineering (Tiefbau)"
+            "en": "Civil engineering (Tiefbau)",
+            "de": "Tiefbau",
+            "fr": "Génie civil",
+            "it": "Genio civile"
           },
           "data": true
         }
@@ -55,6 +61,12 @@
   },
   "concept": "Prices / Construction prices",
   "canonical": true,
+  "title": {
+    "en": "Construction prices",
+    "de": "Baupreise",
+    "fr": "Prix de la construction",
+    "it": "Prezzi delle costruzioni"
+  },
   "split": "worktype",
   "single_select": [],
   "default_transform": "yoy",
@@ -62,5 +74,11 @@
     "worktype": "total"
   },
   "description": "The Swiss Construction Price Index (Baupreisindex, BAP) measures the price development of construction work in Switzerland, surveyed semi-annually with reference months April and October. The headline series for the whole of Switzerland is captured on three work-type levels: the overall index (Baugewerbe: Total), building construction (Hochbau) and civil engineering (Tiefbau). Levels are on the October 2020 = 100 base. One of the few semi-annual price series in the catalog.",
-  "fetched_utc": "2026-07-31 09:17:56"
+  "units": {
+    "en": "Index (October 2020 = 100)",
+    "de": "Index (Oktober 2020 = 100)",
+    "fr": "Indice (octobre 2020 = 100)",
+    "it": "Indice (ottobre 2020 = 100)"
+  },
+  "fetched_utc": "2026-08-05 13:12:07"
 }

@@ -1,7 +1,7 @@
 # Swiss balance of payments – Overview – Quarter
 
 - **id**: ch_snb_bopoverq
-- **title**: Balance of payments: overview
+- **title**: Balance of payments: overview | de: Zahlungsbilanz: Übersicht | fr: Balance des paiements : vue d'ensemble | it: Bilancia dei pagamenti: panoramica
 - **concept**: External sector / Balance of payments
 - **canonical**: no (alternate for Balance of payments)
 - **source**: snb

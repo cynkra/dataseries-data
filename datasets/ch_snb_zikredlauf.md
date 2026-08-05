@@ -1,7 +1,7 @@
 # Interest rates on new loan agreements, by product and maturity
 
 - **id**: ch_snb_zikredlauf
-- **title**: New lending rates
+- **title**: New lending rates | de: Zinssätze Neugeschäft | fr: Taux des nouveaux crédits | it: Tassi sui nuovi crediti
 - **concept**: Interest rates & yields / Money-market rates
 - **canonical**: no (alternate; one of the three money-market-rate cubes `zimoma` / `zikredlauf` / `zikrepro`, this one is the new-business lending-rate distribution)
 - **source**: snb

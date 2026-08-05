@@ -1,7 +1,7 @@
 # Permanent resident population (demographic balance)
 
 - **id**: ch_fso_pop
-- **title**: Resident population
+- **title**: Resident population | de: Ständige Wohnbevölkerung | fr: Population résidante permanente | it: Popolazione residente permanente
 - **concept**: Population & demographics / Resident population
 - **canonical**: yes
 - **featured**: Population
@@ -43,17 +43,17 @@ naturalisations, absolute change).
 
 ## Labels
 - dim: item
-  - **label**: Demographic component
-  - pop_stock_jan: Population on 1 January
-  - live_births: Live births
-  - deaths: Deaths
-  - birth_surplus: Excess of births over deaths
-  - immigration: Immigration
-  - emigration: Emigration
-  - migration_bal: Net migration
-  - naturalisation: Acquisition of Swiss citizenship
-  - adjustments: Adjustments
-  - pop_stock_dec: Population on 31 December
+  - **label**: Demographic component | de: Demografische Komponente | fr: Composante démographique | it: Componente demografica
+  - pop_stock_jan: Population on 1 January | de: Bevölkerung am 1. Januar | fr: Population au 1er janvier | it: Popolazione al 1° gennaio
+  - live_births: Live births | de: Lebendgeburten | fr: Naissances vivantes | it: Nati vivi
+  - deaths: Deaths | de: Todesfälle | fr: Décès | it: Decessi
+  - birth_surplus: Excess of births over deaths | de: Geburtenüberschuss | fr: Excédent des naissances | it: Eccedenza delle nascite
+  - immigration: Immigration | de: Einwanderung | fr: Immigration | it: Immigrazione
+  - emigration: Emigration | de: Auswanderung | fr: Émigration | it: Emigrazione
+  - migration_bal: Net migration | de: Wanderungssaldo | fr: Solde migratoire | it: Saldo migratorio
+  - naturalisation: Acquisition of Swiss citizenship | de: Erwerb des Schweizer Bürgerrechts | fr: Acquisition de la nationalité suisse | it: Acquisizione della cittadinanza svizzera
+  - adjustments: Adjustments | de: Bereinigungen | fr: Ajustements | it: Rettifiche
+  - pop_stock_dec: Population on 31 December | de: Bevölkerung am 31. Dezember | fr: Population au 31 décembre | it: Popolazione al 31 dicembre
 
 ## Display
 - **split**: item

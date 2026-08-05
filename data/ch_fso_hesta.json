@@ -5,9 +5,12 @@
     "Tourismusregion"
   ],
   "start": "2005-01-01",
-  "end": "2026-05-01",
+  "end": "2026-06-01",
   "title": {
-    "en": "Hotel overnight stays"
+    "en": "Hotel overnight stays",
+    "de": "Hotellogiernächte",
+    "fr": "Nuitées hôtelières",
+    "it": "Pernottamenti alberghieri"
   },
   "source": {
     "name": {
@@ -24,90 +27,135 @@
   "dimensions": {
     "Tourismusregion": {
       "label": {
-        "en": "Tourist region"
+        "en": "Tourist region",
+        "de": "Tourismusregion",
+        "fr": "Région touristique",
+        "it": "Regione turistica"
       },
       "levels": {
         "8100": {
           "label": {
-            "en": "Switzerland"
+            "en": "Switzerland",
+            "de": "Schweiz",
+            "fr": "Suisse",
+            "it": "Svizzera"
           },
           "data": true
         },
         "1": {
           "label": {
-            "en": "Graubünden"
+            "en": "Graubünden",
+            "de": "Graubünden",
+            "fr": "Grisons",
+            "it": "Grigioni"
           },
           "data": true
         },
         "2": {
           "label": {
-            "en": "Eastern Switzerland"
+            "en": "Eastern Switzerland",
+            "de": "Ostschweiz",
+            "fr": "Suisse orientale",
+            "it": "Svizzera orientale"
           },
           "data": true
         },
         "3": {
           "label": {
-            "en": "Zurich Region"
+            "en": "Zurich Region",
+            "de": "Zürich Region",
+            "fr": "Région zurichoise",
+            "it": "Regione Zurigo"
           },
           "data": true
         },
         "4": {
           "label": {
-            "en": "Lucerne / Lake Lucerne"
+            "en": "Lucerne / Lake Lucerne",
+            "de": "Luzern / Vierwaldstättersee",
+            "fr": "Lucerne / Lac des Quatre Cantons",
+            "it": "Lucerna/Lago dei Quattro Cantoni"
           },
           "data": true
         },
         "5": {
           "label": {
-            "en": "Basel Region"
+            "en": "Basel Region",
+            "de": "Basel Region",
+            "fr": "Région Bâloise",
+            "it": "Regione Basilea"
           },
           "data": true
         },
         "6": {
           "label": {
-            "en": "Bern Region"
+            "en": "Bern Region",
+            "de": "Bern Region",
+            "fr": "Région Berne",
+            "it": "Regione Berna"
           },
           "data": true
         },
         "8": {
           "label": {
-            "en": "Jura & Three-Lakes"
+            "en": "Jura & Three-Lakes",
+            "de": "Jura & Drei-Seen-Land",
+            "fr": "Jura & Trois-Lacs",
+            "it": "Giura & Tre Laghi"
           },
           "data": true
         },
         "9": {
           "label": {
-            "en": "Vaud"
+            "en": "Vaud",
+            "de": "Waadt",
+            "fr": "Vaud",
+            "it": "Vaud"
           },
           "data": true
         },
         "10": {
           "label": {
-            "en": "Geneva"
+            "en": "Geneva",
+            "de": "Genf",
+            "fr": "Genève",
+            "it": "Ginevra"
           },
           "data": true
         },
         "11": {
           "label": {
-            "en": "Valais"
+            "en": "Valais",
+            "de": "Wallis",
+            "fr": "Valais",
+            "it": "Vallese"
           },
           "data": true
         },
         "12": {
           "label": {
-            "en": "Ticino"
+            "en": "Ticino",
+            "de": "Tessin",
+            "fr": "Tessin",
+            "it": "Ticino"
           },
           "data": true
         },
         "13": {
           "label": {
-            "en": "Fribourg Region"
+            "en": "Fribourg Region",
+            "de": "Fribourg Region",
+            "fr": "Fribourg",
+            "it": "Regione Friburgo"
           },
           "data": true
         },
         "14": {
           "label": {
-            "en": "Aargau and Solothurn Region"
+            "en": "Aargau and Solothurn Region",
+            "de": "Aargau und Solothurn Region",
+            "fr": "Région Argovie et Soleure",
+            "it": "Regione Argovia e Soletta"
           },
           "data": true
         }
@@ -141,5 +189,5 @@
     "Tourismusregion": "8100"
   },
   "description": "The HESTA accommodation statistics: monthly hotel overnight stays for Switzerland and its 13 official tourism regions, back to 2005. The strong seasonal swing is visible in the raw data (a region's January is several times its November), which is why this is kept as the canonical tourism series rather than an annual roll-up. The region breakdown is the distinctive axis: alpine regions (Graubünden, Valais, Ticino) and the urban regions (Zurich, Geneva, Basel) move on very different seasonal calendars, so the series is most useful sliced by Tourismusregion. Code 8100 is the Switzerland total; the numeric codes 1..14 are the regions. Only one indicator (overnight stays) is pulled; the table also carries arrivals, which this dataset deliberately omits.",
-  "fetched_utc": "2026-07-31 09:17:55"
+  "fetched_utc": "2026-08-05 13:12:06"
 }

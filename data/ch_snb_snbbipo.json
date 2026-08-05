@@ -7,7 +7,10 @@
   "start": "1996-12-01",
   "end": "2026-06-01",
   "title": {
-    "en": "SNB balance sheet"
+    "en": "SNB balance sheet",
+    "de": "SNB-Bilanz",
+    "fr": "Bilan de la BNS",
+    "it": "Bilancio della BNS"
   },
   "source": {
     "name": {
@@ -24,186 +27,248 @@
   "dimensions": {
     "D0": {
       "label": {
-        "en": "Overview"
+        "en": "Overview",
+        "de": "Übersicht",
+        "fr": "Vue d’ensemble"
       },
       "levels": {
         "D0_0": {
           "label": {
-            "en": "Assets"
+            "en": "Assets",
+            "de": "Aktiven",
+            "fr": "Actif"
           },
           "data": false
         },
         "GFG": {
           "label": {
-            "en": "Gold holdings and claims from gold transactions"
+            "en": "Gold holdings and claims from gold transactions",
+            "de": "Gold und Forderungen aus Goldgeschäften",
+            "fr": "Or et créances résultant d’opérations sur or"
           },
           "data": true
         },
         "D": {
           "label": {
-            "en": "Foreign currency investments"
+            "en": "Foreign currency investments",
+            "de": "Devisenanlagen",
+            "fr": "Placements de devises"
           },
           "data": true
         },
         "RIWF": {
           "label": {
-            "en": "Reserve position in the IMF"
+            "en": "Reserve position in the IMF",
+            "de": "Reserveposition beim IWF",
+            "fr": "Position de réserve au FMI"
           },
           "data": true
         },
         "IZ": {
           "label": {
-            "en": "International payment instruments"
+            "en": "International payment instruments",
+            "de": "Internationale Zahlungsmittel",
+            "fr": "Moyens de paiement internationaux"
           },
           "data": true
         },
         "W": {
           "label": {
-            "en": "Monetary assistance loans"
+            "en": "Monetary assistance loans",
+            "de": "Währungshilfekredite",
+            "fr": "Crédits d’aide monétaire"
           },
           "data": true
         },
         "FRGSF": {
           "label": {
-            "en": "Claims from CHF repo transactions"
+            "en": "Claims from CHF repo transactions",
+            "de": "Forderungen aus Repo-Geschäften in Schweizer Franken",
+            "fr": "Créances en francs résultant de pensions de titres"
           },
           "data": true
         },
         "FRGUSD": {
           "label": {
-            "en": "Claims from USD repo transactions"
+            "en": "Claims from USD repo transactions",
+            "de": "Forderungen aus Repo-Geschäften in US-Dollar",
+            "fr": "Créances en dollars des États-Unis résultant de pensions de titres"
           },
           "data": true
         },
         "GSGSF": {
           "label": {
-            "en": "Balances from swap transactions against CHF"
+            "en": "Balances from swap transactions against CHF",
+            "de": "Guthaben aus Swap-Geschäften gegen Schweizer Franken",
+            "fr": "Avoirs résultant de swaps devises contre francs suisses"
           },
           "data": true
         },
         "IG": {
           "label": {
-            "en": "Domestic money market claims"
+            "en": "Domestic money market claims",
+            "de": "Inländische Geldmarktforderungen",
+            "fr": "Créances à court terme sur débiteurs suisses"
           },
           "data": true
         },
         "GD": {
           "label": {
-            "en": "Secured loans"
+            "en": "Secured loans",
+            "de": "Gedeckte Darlehen",
+            "fr": "Prêts gagés"
           },
           "data": true
         },
         "FI": {
           "label": {
-            "en": "Amounts due from domestic correspondents"
+            "en": "Amounts due from domestic correspondents",
+            "de": "Forderungen gegenüber Inlandkorrespondenten",
+            "fr": "Créances sur les correspondants en Suisse"
           },
           "data": true
         },
         "WSF": {
           "label": {
-            "en": "CHF securities"
+            "en": "CHF securities",
+            "de": "Wertschriften in Schweizer Franken",
+            "fr": "Titres en francs suisses"
           },
           "data": true
         },
         "DS": {
           "label": {
-            "en": "Loan to stabilisation fund"
+            "en": "Loan to stabilisation fund",
+            "de": "Darlehen an Stabilisierungsfonds",
+            "fr": "Prêt au fonds de stabilisation"
           },
           "data": true
         },
         "UA": {
           "label": {
-            "en": "Other assets"
+            "en": "Other assets",
+            "de": "Übrige Aktiven",
+            "fr": "Autres actifs"
           },
           "data": true
         },
         "T0": {
           "label": {
-            "en": "Total"
+            "en": "Total",
+            "de": "Total",
+            "fr": "Total"
           },
           "data": true
         },
         "D0_1": {
           "label": {
-            "en": "Liabilities"
+            "en": "Liabilities",
+            "de": "Passiven",
+            "fr": "Passif"
           },
           "data": false
         },
         "N": {
           "label": {
-            "en": "Banknotes in circulation"
+            "en": "Banknotes in circulation",
+            "de": "Notenumlauf",
+            "fr": "Billets de banque en circulation"
           },
           "data": true
         },
         "GB": {
           "label": {
-            "en": "Sight deposits of domestic banks"
+            "en": "Sight deposits of domestic banks",
+            "de": "Girokonten inländischer Banken",
+            "fr": "Comptes de virement des banques en Suisse"
           },
           "data": true
         },
         "VB": {
           "label": {
-            "en": "Amounts due to the Confederation"
+            "en": "Amounts due to the Confederation",
+            "de": "Verbindlichkeiten gegenüber dem Bund",
+            "fr": "Engagements envers la Confédération"
           },
           "data": true
         },
         "GBI": {
           "label": {
-            "en": "Sight deposits of foreign banks and institutions"
+            "en": "Sight deposits of foreign banks and institutions",
+            "de": "Girokonten ausländischer Banken und Institutionen",
+            "fr": "Comptes de virement de banques et d’institutions étrangères"
           },
           "data": true
         },
         "US": {
           "label": {
-            "en": "Other sight liabilities"
+            "en": "Other sight liabilities",
+            "de": "Übrige Sichtverbindlichkeiten",
+            "fr": "Autres engagements à vue"
           },
           "data": true
         },
         "VRGSF": {
           "label": {
-            "en": "Liabilities from CHF repo transactions"
+            "en": "Liabilities from CHF repo transactions",
+            "de": "Verbindlichkeiten aus Repo-Geschäften in Schweizer Franken",
+            "fr": "Engagements en francs résultant de pensions de titres"
           },
           "data": true
         },
         "ES": {
           "label": {
-            "en": "SNB debt certificates"
+            "en": "SNB debt certificates",
+            "de": "Eigene Schuldverschreibungen",
+            "fr": "Propres titres de créance"
           },
           "data": true
         },
         "UT": {
           "label": {
-            "en": "Other time liabilities"
+            "en": "Other time liabilities",
+            "de": "Übrige Terminverbindlichkeiten",
+            "fr": "Autres engagements à terme"
           },
           "data": true
         },
         "VF": {
           "label": {
-            "en": "Foreign currency liabilities"
+            "en": "Foreign currency liabilities",
+            "de": "Verbindlichkeiten in Fremdwährungen",
+            "fr": "Engagements en monnaies étrangères"
           },
           "data": true
         },
         "AIWFS": {
           "label": {
-            "en": "Counterpart of special drawing rights allocated by the IMF"
+            "en": "Counterpart of special drawing rights allocated by the IMF",
+            "de": "Ausgleichsposten für vom IWF zugeteilte Sonderziehungsrechte",
+            "fr": "Contrepartie des droits de tirage spéciaux alloués par le FMI"
           },
           "data": true
         },
         "SP": {
           "label": {
-            "en": "Other liabilities"
+            "en": "Other liabilities",
+            "de": "Sonstige Passiven",
+            "fr": "Autres passifs"
           },
           "data": true
         },
         "RE": {
           "label": {
-            "en": "Provisions and equity capital"
+            "en": "Provisions and equity capital",
+            "de": "Rückstellungen und Eigenkapital",
+            "fr": "Provisions et fonds propres"
           },
           "data": true
         },
         "T1": {
           "label": {
-            "en": "Total"
+            "en": "Total",
+            "de": "Total",
+            "fr": "Total"
           },
           "data": true
         }
@@ -255,5 +320,5 @@
     "D0": "T0"
   },
   "description": "The full monthly balance sheet of the Swiss National Bank, asset side and liability side, broken into 28 line items. The asset side is dominated by D foreign currency investments (the default view) and GFG gold, which together explain the dramatic post-2008 balance-sheet expansion from FX-market intervention. The liability side carries N banknotes in circulation and GB sight deposits of domestic banks, the latter being the operational counterpart of the SNB's large reserves. Both sides include an explicit T0/T1 total row, so the cube is internally summable and you can reconstruct the headline balance-sheet size directly. Some items only begin later than 1996 (e.g. AIWFS, the SDR counterpart, starts 2009), so the panel is ragged. This is the canonical view of the SNB's own balance sheet, which is why CONCEPT-UNIVERSE lists it as a supporting money-and-banking series next to the monetary base and aggregates.",
-  "fetched_utc": "2026-07-31 09:17:54"
+  "fetched_utc": "2026-08-05 13:12:03"
 }

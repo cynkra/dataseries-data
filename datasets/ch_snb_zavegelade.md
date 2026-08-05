@@ -1,7 +1,7 @@
 # E-money - loading and float
 
 - **id**: ch_snb_zavegelade
-- **title**: E-money
+- **title**: E-money | de: E-Geld | fr: Monnaie électronique | it: Moneta elettronica
 - **concept**: Payment systems / Payments & cash
 - **canonical**: no (alternate within Payments & cash; one of several `ch_snb_zave*` payment series)
 - **source**: snb

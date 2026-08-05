@@ -1,7 +1,7 @@
 # Producer and Import Price Index
 
 - **id**: ch_fso_ppi
-- **title**: Producer & import prices
+- **title**: Producer & import prices | de: Produzenten- und Importpreise | fr: Prix à la production et à l'importation | it: Prezzi alla produzione e all'importazione
 - **concept**: Prices / Producer & import prices
 - **canonical**: yes
 - **source**: fso
@@ -38,7 +38,7 @@ the old parser's `idx_type` dimension. Longest price history in the catalog.
 
 ## Labels
 - dim: base
-  - **label**: Index base
+  - **label**: Index base | de: Indexbasis | fr: Base de l'indice | it: Base dell'indice
 
 ## Display
 - **split**: base

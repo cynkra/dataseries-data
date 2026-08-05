@@ -7,7 +7,10 @@
   "start": "1999-10-01",
   "end": "2026-01-01",
   "title": {
-    "en": "External debt"
+    "en": "External debt",
+    "de": "Auslandschulden",
+    "fr": "Dette extérieure",
+    "it": "Debito estero"
   },
   "source": {
     "name": {
@@ -24,342 +27,456 @@
   "dimensions": {
     "D0": {
       "label": {
-        "en": "Overview"
+        "en": "Overview",
+        "de": "Übersicht",
+        "fr": "Vue d’ensemble"
       },
       "levels": {
         "D0_0": {
           "label": {
-            "en": "Total"
+            "en": "Total",
+            "de": "Total",
+            "fr": "Total"
           },
           "data": false
         },
         "T0": {
           "label": {
-            "en": "Total"
+            "en": "Total",
+            "de": "Total",
+            "fr": "Total"
           },
           "data": true
         },
         "D0_0_1": {
           "label": {
-            "en": "Breakdown by sector"
+            "en": "Breakdown by sector",
+            "de": "nach Sektoren",
+            "fr": "Selon le secteur"
           },
           "data": false
         },
         "OH": {
           "label": {
-            "en": "Public sector"
+            "en": "Public sector",
+            "de": "Öffentliche Hand",
+            "fr": "Collectivités publiques"
           },
           "data": true
         },
         "N": {
           "label": {
-            "en": "Swiss National Bank"
+            "en": "Swiss National Bank",
+            "de": "Nationalbank",
+            "fr": "Banque nationale"
           },
           "data": true
         },
         "B": {
           "label": {
-            "en": "Banks"
+            "en": "Banks",
+            "de": "Banken",
+            "fr": "Banques"
           },
           "data": true
         },
         "US": {
           "label": {
-            "en": "Other sectors"
+            "en": "Other sectors",
+            "de": "Übrige Sektoren",
+            "fr": "Autres secteurs"
           },
           "data": true
         },
         "D0_0_2": {
           "label": {
-            "en": "Breakdown by maturity"
+            "en": "Breakdown by maturity",
+            "de": "nach Fristigkeit",
+            "fr": "Selon l’échéance"
           },
           "data": false
         },
         "K": {
           "label": {
-            "en": "Short-term"
+            "en": "Short-term",
+            "de": "Kurzfristig",
+            "fr": "À court terme"
           },
           "data": true
         },
         "L": {
           "label": {
-            "en": "Long-term"
+            "en": "Long-term",
+            "de": "Langfristig",
+            "fr": "À long terme"
           },
           "data": true
         },
         "D0_1": {
           "label": {
-            "en": "Public sector"
+            "en": "Public sector",
+            "de": "Öffentliche Hand",
+            "fr": "Collectivités publiques"
           },
           "data": false
         },
         "T1": {
           "label": {
-            "en": "Total"
+            "en": "Total",
+            "de": "Total",
+            "fr": "Total"
           },
           "data": true
         },
         "D0_1_1": {
           "label": {
-            "en": "Short-term"
+            "en": "Short-term",
+            "de": "Kurzfristig",
+            "fr": "À court terme"
           },
           "data": false
         },
         "T2": {
           "label": {
-            "en": "Total"
+            "en": "Total",
+            "de": "Total",
+            "fr": "Total"
           },
           "data": true
         },
         "S0": {
           "label": {
-            "en": "Debt securities"
+            "en": "Debt securities",
+            "de": "Schuldtitel",
+            "fr": "Titres de créance"
           },
           "data": true
         },
         "V0": {
           "label": {
-            "en": "Liabilities"
+            "en": "Liabilities",
+            "de": "Verpflichtungen",
+            "fr": "Engagements"
           },
           "data": true
         },
         "D0_1_2": {
           "label": {
-            "en": "Long-term"
+            "en": "Long-term",
+            "de": "Langfristig",
+            "fr": "À long terme"
           },
           "data": false
         },
         "T3": {
           "label": {
-            "en": "Total"
+            "en": "Total",
+            "de": "Total",
+            "fr": "Total"
           },
           "data": true
         },
         "S1": {
           "label": {
-            "en": "Debt securities"
+            "en": "Debt securities",
+            "de": "Schuldtitel",
+            "fr": "Titres de créance"
           },
           "data": true
         },
         "V1": {
           "label": {
-            "en": "Liabilities"
+            "en": "Liabilities",
+            "de": "Verpflichtungen",
+            "fr": "Engagements"
           },
           "data": true
         },
         "D0_2": {
           "label": {
-            "en": "Swiss National Bank"
+            "en": "Swiss National Bank",
+            "de": "Nationalbank",
+            "fr": "Banque nationale"
           },
           "data": false
         },
         "T4": {
           "label": {
-            "en": "Total"
+            "en": "Total",
+            "de": "Total",
+            "fr": "Total"
           },
           "data": true
         },
         "D0_2_1": {
           "label": {
-            "en": "Short-term"
+            "en": "Short-term",
+            "de": "Kurzfristig",
+            "fr": "À court terme"
           },
           "data": false
         },
         "T5": {
           "label": {
-            "en": "Total"
+            "en": "Total",
+            "de": "Total",
+            "fr": "Total"
           },
           "data": true
         },
         "S2": {
           "label": {
-            "en": "Debt securities"
+            "en": "Debt securities",
+            "de": "Schuldtitel",
+            "fr": "Titres de créance"
           },
           "data": true
         },
         "V2": {
           "label": {
-            "en": "Liabilities"
+            "en": "Liabilities",
+            "de": "Verpflichtungen",
+            "fr": "Engagements"
           },
           "data": true
         },
         "D0_2_2": {
           "label": {
-            "en": "Long-term"
+            "en": "Long-term",
+            "de": "Langfristig",
+            "fr": "À long terme"
           },
           "data": false
         },
         "T6": {
           "label": {
-            "en": "Total"
+            "en": "Total",
+            "de": "Total",
+            "fr": "Total"
           },
           "data": true
         },
         "S3": {
           "label": {
-            "en": "Debt securities"
+            "en": "Debt securities",
+            "de": "Schuldtitel",
+            "fr": "Titres de créance"
           },
           "data": true
         },
         "V3": {
           "label": {
-            "en": "Liabilities"
+            "en": "Liabilities",
+            "de": "Verpflichtungen",
+            "fr": "Engagements"
           },
           "data": true
         },
         "D0_3": {
           "label": {
-            "en": "Banks"
+            "en": "Banks",
+            "de": "Banken",
+            "fr": "Banques"
           },
           "data": false
         },
         "T7": {
           "label": {
-            "en": "Total"
+            "en": "Total",
+            "de": "Total",
+            "fr": "Total"
           },
           "data": true
         },
         "D0_3_1": {
           "label": {
-            "en": "Short-term"
+            "en": "Short-term",
+            "de": "Kurzfristig",
+            "fr": "À court terme"
           },
           "data": false
         },
         "T8": {
           "label": {
-            "en": "Total"
+            "en": "Total",
+            "de": "Total",
+            "fr": "Total"
           },
           "data": true
         },
         "S4": {
           "label": {
-            "en": "Debt securities"
+            "en": "Debt securities",
+            "de": "Schuldtitel",
+            "fr": "Titres de créance"
           },
           "data": false
         },
         "V4": {
           "label": {
-            "en": "Liabilities"
+            "en": "Liabilities",
+            "de": "Verpflichtungen",
+            "fr": "Engagements"
           },
           "data": true
         },
         "D0_3_2": {
           "label": {
-            "en": "Long-term"
+            "en": "Long-term",
+            "de": "Langfristig",
+            "fr": "À long terme"
           },
           "data": false
         },
         "T9": {
           "label": {
-            "en": "Total"
+            "en": "Total",
+            "de": "Total",
+            "fr": "Total"
           },
           "data": true
         },
         "S5": {
           "label": {
-            "en": "Debt securities"
+            "en": "Debt securities",
+            "de": "Schuldtitel",
+            "fr": "Titres de créance"
           },
           "data": true
         },
         "V5": {
           "label": {
-            "en": "Liabilities"
+            "en": "Liabilities",
+            "de": "Verpflichtungen",
+            "fr": "Engagements"
           },
           "data": true
         },
         "D0_4": {
           "label": {
-            "en": "Other sectors"
+            "en": "Other sectors",
+            "de": "Übrige Sektoren",
+            "fr": "Autres secteurs"
           },
           "data": false
         },
         "T10": {
           "label": {
-            "en": "Total"
+            "en": "Total",
+            "de": "Total",
+            "fr": "Total"
           },
           "data": true
         },
         "D0_4_1": {
           "label": {
-            "en": "Short-term"
+            "en": "Short-term",
+            "de": "Kurzfristig",
+            "fr": "À court terme"
           },
           "data": false
         },
         "T11": {
           "label": {
-            "en": "Total"
+            "en": "Total",
+            "de": "Total",
+            "fr": "Total"
           },
           "data": true
         },
         "S6": {
           "label": {
-            "en": "Debt securities"
+            "en": "Debt securities",
+            "de": "Schuldtitel",
+            "fr": "Titres de créance"
           },
           "data": true
         },
         "V6": {
           "label": {
-            "en": "Liabilities"
+            "en": "Liabilities",
+            "de": "Verpflichtungen",
+            "fr": "Engagements"
           },
           "data": true
         },
         "D0_4_2": {
           "label": {
-            "en": "Long-term"
+            "en": "Long-term",
+            "de": "Langfristig",
+            "fr": "À long terme"
           },
           "data": false
         },
         "T12": {
           "label": {
-            "en": "Total"
+            "en": "Total",
+            "de": "Total",
+            "fr": "Total"
           },
           "data": true
         },
         "S7": {
           "label": {
-            "en": "Debt securities"
+            "en": "Debt securities",
+            "de": "Schuldtitel",
+            "fr": "Titres de créance"
           },
           "data": true
         },
         "V7": {
           "label": {
-            "en": "Liabilities"
+            "en": "Liabilities",
+            "de": "Verpflichtungen",
+            "fr": "Engagements"
           },
           "data": true
         },
         "D0_5": {
           "label": {
-            "en": "Direct investment loans"
+            "en": "Direct investment loans",
+            "de": "Direktinvestitionskredite",
+            "fr": "Prêts imputés aux investissements directs"
           },
           "data": false
         },
         "D0_5_0": {
           "label": {
-            "en": "Liabilities Total"
+            "en": "Liabilities Total",
+            "de": "Verpflichtungen Total",
+            "fr": "Engagements Total"
           },
           "data": false
         },
         "T13": {
           "label": {
-            "en": "Total"
+            "en": "Total",
+            "de": "Total",
+            "fr": "Total"
           },
           "data": true
         },
         "GTA": {
           "label": {
-            "en": "Towards subsidiaries abroad"
+            "en": "Towards subsidiaries abroad",
+            "de": "Gegenüber den Tochtergesellschaften im Ausland",
+            "fr": "Envers les filiales à l’étranger"
           },
           "data": true
         },
         "GDA": {
           "label": {
-            "en": "Towards direct investors abroad"
+            "en": "Towards direct investors abroad",
+            "de": "Gegenüber den Direktinvestoren im Ausland",
+            "fr": "Envers les investisseurs directs à l’étranger"
           },
           "data": true
         },
         "GSA": {
           "label": {
-            "en": "Towards fellow companies abroad"
+            "en": "Towards fellow companies abroad",
+            "de": "Gegenüber Schwestergesellschaften im Ausland",
+            "fr": "Envers sociétés soeurs à l’étranger"
           },
           "data": true
         }
@@ -452,5 +569,5 @@
     "D0": "T0"
   },
   "description": "Switzerland's gross external debt: the liabilities side of the external balance sheet, the IMF/SDDS external-debt presentation. It complements the auvekomq IIP overview and auvercurrq currency cut, focusing only on debt liabilities. Starts later than its companions (1999-Q4) because the standardized external-debt template post-dates the IIP series. The whole cube rides on a single Overview dimension whose hierarchy encodes two cross-classifications at once: sector (public, SNB, banks, other sectors, direct-investment loans) and maturity (short-term / long-term), each further split into debt securities vs other liabilities. So one flat dim id (D0) carries a sector x maturity x instrument tree expressed entirely as codes. Values are CHF-million stocks at end of quarter.",
-  "fetched_utc": "2026-06-23 09:28:09"
+  "fetched_utc": "2026-08-05 13:12:01"
 }

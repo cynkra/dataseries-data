@@ -8,7 +8,10 @@
   "start": "2001-01-01",
   "end": "2029-01-01",
   "title": {
-    "en": "Inflation forecast (SNB)"
+    "en": "Inflation forecast (SNB)",
+    "de": "Inflationsprognose (SNB)",
+    "fr": "Prévision d'inflation (BNS)",
+    "it": "Previsione d'inflazione (BNS)"
   },
   "source": {
     "name": {
@@ -25,678 +28,904 @@
   "dimensions": {
     "D0": {
       "label": {
-        "en": "Assessment of"
+        "en": "Assessment of",
+        "de": "Lagebeurteilung vom",
+        "fr": "Examen du"
       },
       "levels": {
         "2004": {
           "label": {
-            "en": "2004"
+            "en": "2004",
+            "de": "2004",
+            "fr": "2004"
           },
           "data": false
         },
         "J2004PL05P": {
           "label": {
-            "en": "June 2004 (Forecast with Libor at 0.50%)"
+            "en": "June 2004 (Forecast with Libor at 0.50%)",
+            "de": "Juni 2004 (Prognose mit Libor 0,50%)",
+            "fr": "Juin 2004 (prévision avec Libor à 0,50%)"
           },
           "data": true
         },
         "S2004PL075P": {
           "label": {
-            "en": "September 2004 (Forecast with Libor at 0.75%)"
+            "en": "September 2004 (Forecast with Libor at 0.75%)",
+            "de": "September 2004 (Prognose mit Libor 0,75%)",
+            "fr": "Septembre 2004 (prévision avec Libor à 0,75%)"
           },
           "data": true
         },
         "D2004PL075P": {
           "label": {
-            "en": "December 2004 (Forecast with Libor at 0.75%)"
+            "en": "December 2004 (Forecast with Libor at 0.75%)",
+            "de": "Dezember 2004 (Prognose mit Libor 0,75%)",
+            "fr": "Décembre 2004 (prévision avec Libor à 0,75%)"
           },
           "data": true
         },
         "2005": {
           "label": {
-            "en": "2005"
+            "en": "2005",
+            "de": "2005",
+            "fr": "2005"
           },
           "data": false
         },
         "M2005PL075P": {
           "label": {
-            "en": "March 2005 (Forecast with Libor at 0.75%)"
+            "en": "March 2005 (Forecast with Libor at 0.75%)",
+            "de": "März 2005 (Prognose mit Libor 0,75%)",
+            "fr": "Mars 2005 (prévision avec Libor à 0,75%)"
           },
           "data": true
         },
         "J2005PL075P": {
           "label": {
-            "en": "June 2005 (Forecast with Libor at 0.75%)"
+            "en": "June 2005 (Forecast with Libor at 0.75%)",
+            "de": "Juni 2005 (Prognose mit Libor 0,75%)",
+            "fr": "Juin 2005 (prévision avec Libor à 0,75%)"
           },
           "data": true
         },
         "S2005PL075P": {
           "label": {
-            "en": "September 2005 (Forecast with Libor at 0.75%)"
+            "en": "September 2005 (Forecast with Libor at 0.75%)",
+            "de": "September 2005 (Prognose mit Libor 0,75%)",
+            "fr": "Septembre 2005 (prévision avec Libor à 0,75%)"
           },
           "data": true
         },
         "D2005PL100P": {
           "label": {
-            "en": "December 2005 (Forecast with Libor at 1.00%)"
+            "en": "December 2005 (Forecast with Libor at 1.00%)",
+            "de": "Dezember 2005 (Prognose mit Libor 1,00%)",
+            "fr": "Décembre 2005 (prévision avec Libor à 1,00%)"
           },
           "data": true
         },
         "2006": {
           "label": {
-            "en": "2006"
+            "en": "2006",
+            "de": "2006",
+            "fr": "2006"
           },
           "data": false
         },
         "M2006PL125P": {
           "label": {
-            "en": "March 2006 (Forecast with Libor at 1.25%)"
+            "en": "March 2006 (Forecast with Libor at 1.25%)",
+            "de": "März 2006 (Prognose mit Libor 1,25%)",
+            "fr": "Mars 2006 (prévision avec Libor à 1,25%)"
           },
           "data": true
         },
         "J2006PL15P": {
           "label": {
-            "en": "June 2006 (Forecast with Libor at 1.50%)"
+            "en": "June 2006 (Forecast with Libor at 1.50%)",
+            "de": "Juni 2006 (Prognose mit Libor 1,50%)",
+            "fr": "Juin 2006 (prévision avec Libor à 1,50%)"
           },
           "data": true
         },
         "S2006PL175P": {
           "label": {
-            "en": "September 2006 (Forecast with Libor at 1.75%)"
+            "en": "September 2006 (Forecast with Libor at 1.75%)",
+            "de": "September 2006 (Prognose mit Libor 1,75%)",
+            "fr": "Septembre 2006 (prévision avec Libor à 1,75%)"
           },
           "data": true
         },
         "D2006PL200P": {
           "label": {
-            "en": "December 2006 (Forecast with Libor at 2.00%)"
+            "en": "December 2006 (Forecast with Libor at 2.00%)",
+            "de": "Dezember 2006 (Prognose mit Libor 2,00%)",
+            "fr": "Décembre 2006 (prévision avec Libor à 2,00%)"
           },
           "data": true
         },
         "2007": {
           "label": {
-            "en": "2007"
+            "en": "2007",
+            "de": "2007",
+            "fr": "2007"
           },
           "data": false
         },
         "M2007PL225P": {
           "label": {
-            "en": "March 2007 (Forecast with Libor at 2.25%)"
+            "en": "March 2007 (Forecast with Libor at 2.25%)",
+            "de": "März 2007 (Prognose mit Libor 2,25%)",
+            "fr": "Mars 2007 (prévision avec Libor à 2,25%)"
           },
           "data": true
         },
         "J2007PL250P": {
           "label": {
-            "en": "June 2007 (Forecast with Libor at 2.50%)"
+            "en": "June 2007 (Forecast with Libor at 2.50%)",
+            "de": "Juni 2007 (Prognose mit Libor 2,50%)",
+            "fr": "Juin 2007 (prévision avec Libor à 2,50%)"
           },
           "data": true
         },
         "S2007PL275P": {
           "label": {
-            "en": "September 2007 (Forecast with Libor at 2.75%)"
+            "en": "September 2007 (Forecast with Libor at 2.75%)",
+            "de": "September 2007 (Prognose mit Libor 2,75%)",
+            "fr": "Septembre 2007 (prévision avec Libor à 2,75%)"
           },
           "data": true
         },
         "D2007PL275P": {
           "label": {
-            "en": "December 2007 (Forecast with Libor at 2.75%)"
+            "en": "December 2007 (Forecast with Libor at 2.75%)",
+            "de": "Dezember 2007 (Prognose mit Libor 2,75%)",
+            "fr": "Décembre 2007 (prévision avec Libor à 2,75%)"
           },
           "data": true
         },
         "2008": {
           "label": {
-            "en": "2008"
+            "en": "2008",
+            "de": "2008",
+            "fr": "2008"
           },
           "data": false
         },
         "M2008PL275P": {
           "label": {
-            "en": "March 2008 (Forecast with Libor at 2.75%)"
+            "en": "March 2008 (Forecast with Libor at 2.75%)",
+            "de": "März 2008 (Prognose mit Libor 2,75%)",
+            "fr": "Mars 2008 (prévision avec Libor à 2,75%)"
           },
           "data": true
         },
         "J2008PL275P": {
           "label": {
-            "en": "June 2008 (Forecast with Libor at 2.75%)"
+            "en": "June 2008 (Forecast with Libor at 2.75%)",
+            "de": "Juni 2008 (Prognose mit Libor 2,75%)",
+            "fr": "Juin 2008 (prévision avec Libor à 2,75%)"
           },
           "data": true
         },
         "S2008PL275P": {
           "label": {
-            "en": "September 2008 (Forecast with Libor at 2.75%)"
+            "en": "September 2008 (Forecast with Libor at 2.75%)",
+            "de": "September 2008 (Prognose mit Libor 2,75%)",
+            "fr": "Septembre 2008 (prévision avec Libor à 2,75%)"
           },
           "data": true
         },
         "D2008PL050P": {
           "label": {
-            "en": "December 2008 (Forecast with Libor at 0.50%)"
+            "en": "December 2008 (Forecast with Libor at 0.50%)",
+            "de": "Dezember 2008 (Prognose mit Libor 0,50%)",
+            "fr": "Décembre 2008 (prévision avec Libor à 0,50%)"
           },
           "data": true
         },
         "2009": {
           "label": {
-            "en": "2009"
+            "en": "2009",
+            "de": "2009",
+            "fr": "2009"
           },
           "data": false
         },
         "M2009PL025P": {
           "label": {
-            "en": "March 2009 (Forecast with Libor at 0.25%)"
+            "en": "March 2009 (Forecast with Libor at 0.25%)",
+            "de": "März 2009 (Prognose mit Libor 0,25%)",
+            "fr": "Mars 2009 (prévision avec Libor à 0,25%)"
           },
           "data": true
         },
         "J2009PL025P": {
           "label": {
-            "en": "June 2009 (Forecast with Libor at 0.25%)"
+            "en": "June 2009 (Forecast with Libor at 0.25%)",
+            "de": "Juni 2009 (Prognose mit Libor 0,25%)",
+            "fr": "Juin 2009 (prévision avec Libor à 0,25%)"
           },
           "data": true
         },
         "S2009PL025P": {
           "label": {
-            "en": "September 2009 (Forecast with Libor at 0.25%)"
+            "en": "September 2009 (Forecast with Libor at 0.25%)",
+            "de": "September 2009 (Prognose mit Libor 0,25%)",
+            "fr": "Septembre 2009 (prévision avec Libor à 0,25%)"
           },
           "data": true
         },
         "D2009PL025P": {
           "label": {
-            "en": "December 2009 (Forecast with Libor at 0.25%)"
+            "en": "December 2009 (Forecast with Libor at 0.25%)",
+            "de": "Dezember 2009 (Prognose mit Libor 0,25%)",
+            "fr": "Décembre 2009 (prévision avec Libor à 0,25%)"
           },
           "data": true
         },
         "2010": {
           "label": {
-            "en": "2010"
+            "en": "2010",
+            "de": "2010",
+            "fr": "2010"
           },
           "data": false
         },
         "M2010PL025P": {
           "label": {
-            "en": "March 2010 (Forecast with Libor at 0.25%)"
+            "en": "March 2010 (Forecast with Libor at 0.25%)",
+            "de": "März 2010 (Prognose mit Libor 0,25%)",
+            "fr": "Mars 2010 (prévision avec Libor à 0,25%)"
           },
           "data": true
         },
         "J2010PL025P": {
           "label": {
-            "en": "June 2010 (Forecast with Libor at 0.25%)"
+            "en": "June 2010 (Forecast with Libor at 0.25%)",
+            "de": "Juni 2010 (Prognose mit Libor 0,25%)",
+            "fr": "Juin 2010 (prévision avec Libor à 0,25%)"
           },
           "data": true
         },
         "S2010PL025P": {
           "label": {
-            "en": "September 2010 (Forecast with Libor at 0.25%)"
+            "en": "September 2010 (Forecast with Libor at 0.25%)",
+            "de": "September 2010 (Prognose mit Libor 0,25%)",
+            "fr": "Septembre 2010 (prévision avec Libor à 0,25%)"
           },
           "data": true
         },
         "D2010PL025P": {
           "label": {
-            "en": "December 2010 (Forecast with Libor at 0.25%)"
+            "en": "December 2010 (Forecast with Libor at 0.25%)",
+            "de": "Dezember 2010 (Prognose mit Libor 0,25%)",
+            "fr": "Décembre 2010 (prévision avec Libor à 0,25%)"
           },
           "data": true
         },
         "2011": {
           "label": {
-            "en": "2011"
+            "en": "2011",
+            "de": "2011",
+            "fr": "2011"
           },
           "data": false
         },
         "M2011PL025P": {
           "label": {
-            "en": "March 2011 (Forecast with Libor at 0.25%)"
+            "en": "March 2011 (Forecast with Libor at 0.25%)",
+            "de": "März 2011 (Prognose mit Libor 0,25%)",
+            "fr": "Mars 2011 (prévision avec Libor à 0,25%)"
           },
           "data": true
         },
         "J2011PL025P": {
           "label": {
-            "en": "June 2011 (Forecast with Libor at 0.25%)"
+            "en": "June 2011 (Forecast with Libor at 0.25%)",
+            "de": "Juni 2011 (Prognose mit Libor 0,25%)",
+            "fr": "Juin 2011 (prévision avec Libor à 0,25%)"
           },
           "data": true
         },
         "S2011PL000P": {
           "label": {
-            "en": "September 2011 (Forecast with Libor at 0.00%)"
+            "en": "September 2011 (Forecast with Libor at 0.00%)",
+            "de": "September 2011 (Prognose mit Libor 0,00%)",
+            "fr": "Septembre 2011 (prévision avec Libor à 0,00%)"
           },
           "data": true
         },
         "D2011PL000P": {
           "label": {
-            "en": "December 2011 (Forecast with Libor at 0.00%)"
+            "en": "December 2011 (Forecast with Libor at 0.00%)",
+            "de": "Dezember 2011 (Prognose mit Libor 0,00%)",
+            "fr": "Décembre 2011 (prévision avec Libor à 0,00%)"
           },
           "data": true
         },
         "2012": {
           "label": {
-            "en": "2012"
+            "en": "2012",
+            "de": "2012",
+            "fr": "2012"
           },
           "data": false
         },
         "M2012PL000P": {
           "label": {
-            "en": "March 2012 (Forecast with Libor at 0.00%)"
+            "en": "March 2012 (Forecast with Libor at 0.00%)",
+            "de": "März 2012 (Prognose mit Libor 0,00%)",
+            "fr": "Mars 2012 (prévision avec Libor à 0,00%)"
           },
           "data": true
         },
         "J2012PL000P": {
           "label": {
-            "en": "June 2012 (Forecast with Libor at 0.00%)"
+            "en": "June 2012 (Forecast with Libor at 0.00%)",
+            "de": "Juni 2012 (Prognose mit Libor 0,00%)",
+            "fr": "Juin 2012 (prévision avec Libor à 0,00%)"
           },
           "data": true
         },
         "S2012PL000P": {
           "label": {
-            "en": "September 2012 (Forecast with Libor at 0.00%)"
+            "en": "September 2012 (Forecast with Libor at 0.00%)",
+            "de": "September 2012 (Prognose mit Libor 0,00%)",
+            "fr": "Septembre 2012 (prévision avec Libor à 0,00%)"
           },
           "data": true
         },
         "D2012PL000P": {
           "label": {
-            "en": "December 2012 (Forecast with Libor at 0.00%)"
+            "en": "December 2012 (Forecast with Libor at 0.00%)",
+            "de": "Dezember 2012 (Prognose mit Libor 0,00%)",
+            "fr": "Décembre 2012 (prévision avec Libor à 0,00%)"
           },
           "data": true
         },
         "2013": {
           "label": {
-            "en": "2013"
+            "en": "2013",
+            "de": "2013",
+            "fr": "2013"
           },
           "data": false
         },
         "M2013PL000P": {
           "label": {
-            "en": "March 2013 (Forecast with Libor at 0.00%)"
+            "en": "March 2013 (Forecast with Libor at 0.00%)",
+            "de": "März 2013 (Prognose mit Libor 0,00%)",
+            "fr": "Mars 2013 (prévision avec Libor à 0,00%)"
           },
           "data": true
         },
         "J2013PL000P": {
           "label": {
-            "en": "June 2013 (Forecast with Libor at 0.00%)"
+            "en": "June 2013 (Forecast with Libor at 0.00%)",
+            "de": "Juni 2013 (Prognose mit Libor 0,00%)",
+            "fr": "Juin 2013 (prévision avec Libor à 0,00%)"
           },
           "data": true
         },
         "S2013PL000P": {
           "label": {
-            "en": "September 2013 (Forecast with Libor at 0.00%)"
+            "en": "September 2013 (Forecast with Libor at 0.00%)",
+            "de": "September 2013 (Prognose mit Libor 0,00%)",
+            "fr": "Septembre 2013 (prévision avec Libor à 0,00%)"
           },
           "data": true
         },
         "D2013PL000P": {
           "label": {
-            "en": "December 2013 (Forecast with Libor at 0.00%)"
+            "en": "December 2013 (Forecast with Libor at 0.00%)",
+            "de": "Dezember 2013 (Prognose mit Libor 0,00%)",
+            "fr": "Décembre 2013 (prévision avec Libor à 0,00%)"
           },
           "data": true
         },
         "2014": {
           "label": {
-            "en": "2014"
+            "en": "2014",
+            "de": "2014",
+            "fr": "2014"
           },
           "data": false
         },
         "M2014PL000P": {
           "label": {
-            "en": "March 2014 (Forecast with Libor at 0.00%)"
+            "en": "March 2014 (Forecast with Libor at 0.00%)",
+            "de": "März 2014 (Prognose mit Libor 0,00%)",
+            "fr": "Mars 2014 (prévision avec Libor à 0,00%)"
           },
           "data": true
         },
         "J2014PL000P": {
           "label": {
-            "en": "June 2014 (Forecast with Libor at 0.00%)"
+            "en": "June 2014 (Forecast with Libor at 0.00%)",
+            "de": "Juni 2014 (Prognose mit Libor 0,00%)",
+            "fr": "Juin 2014 (prévision avec Libor à 0,00%)"
           },
           "data": true
         },
         "S2014PL000P": {
           "label": {
-            "en": "September 2014 (Forecast with Libor at 0.00%)"
+            "en": "September 2014 (Forecast with Libor at 0.00%)",
+            "de": "September 2014 (Prognose mit Libor 0,00%)",
+            "fr": "Septembre 2014 (prévision avec Libor à 0,00%)"
           },
           "data": true
         },
         "D2014PL000P": {
           "label": {
-            "en": "December 2014 (Forecast with Libor at 0.00%)"
+            "en": "December 2014 (Forecast with Libor at 0.00%)",
+            "de": "Dezember 2014 (Prognose mit Libor 0,00%)",
+            "fr": "Décembre 2014 (prévision avec Libor à 0,00%)"
           },
           "data": true
         },
         "2015": {
           "label": {
-            "en": "2015"
+            "en": "2015",
+            "de": "2015",
+            "fr": "2015"
           },
           "data": false
         },
         "M2015PL075P": {
           "label": {
-            "en": "March 2015 (Forecast with Libor at -0.75%)"
+            "en": "March 2015 (Forecast with Libor at -0.75%)",
+            "de": "März 2015 (Prognose mit Libor -0,75%)",
+            "fr": "Mars 2015 (prévision avec Libor à -0,75%)"
           },
           "data": true
         },
         "J2015PL075P": {
           "label": {
-            "en": "June 2015 (Forecast with Libor at -0.75%)"
+            "en": "June 2015 (Forecast with Libor at -0.75%)",
+            "de": "Juni 2015 (Prognose mit Libor -0,75%)",
+            "fr": "Juin 2015 (prévision avec Libor à -0,75%)"
           },
           "data": true
         },
         "S2015PL075P": {
           "label": {
-            "en": "September 2015 (Forecast with Libor at -0.75%)"
+            "en": "September 2015 (Forecast with Libor at -0.75%)",
+            "de": "September 2015 (Prognose mit Libor -0,75%)",
+            "fr": "Septembre 2015 (prévision avec Libor à -0,75%)"
           },
           "data": true
         },
         "D2015PL075P": {
           "label": {
-            "en": "December 2015 (Forecast with Libor at -0.75%)"
+            "en": "December 2015 (Forecast with Libor at -0.75%)",
+            "de": "Dezember 2015 (Prognose mit Libor -0,75%)",
+            "fr": "Décembre 2015 (prévision avec Libor à 0,75%)"
           },
           "data": true
         },
         "2016": {
           "label": {
-            "en": "2016"
+            "en": "2016",
+            "de": "2016",
+            "fr": "2016"
           },
           "data": false
         },
         "M2016PL075P": {
           "label": {
-            "en": "March 2016 (Forecast with Libor at -0.75%)"
+            "en": "March 2016 (Forecast with Libor at -0.75%)",
+            "de": "März 2016 (Prognose mit Libor -0,75%)",
+            "fr": "Mars 2016 (prévision avec Libor à -0,75%)"
           },
           "data": true
         },
         "J2016PL075P": {
           "label": {
-            "en": "June 2016 (Forecast with Libor at -0.75%)"
+            "en": "June 2016 (Forecast with Libor at -0.75%)",
+            "de": "Juni 2016 (Prognose mit Libor -0,75%)",
+            "fr": "Juin 2016 (prévision avec Libor à -0,75%)"
           },
           "data": true
         },
         "S2016PL075P": {
           "label": {
-            "en": "September 2016 (Forecast with Libor at -0.75%)"
+            "en": "September 2016 (Forecast with Libor at -0.75%)",
+            "de": "September 2016 (Prognose mit Libor -0,75%)",
+            "fr": "Septembre 2016 (prévision avec Libor à -0,75%)"
           },
           "data": true
         },
         "D2016PL075P": {
           "label": {
-            "en": "December 2016 (Forecast with Libor at -0.75%)"
+            "en": "December 2016 (Forecast with Libor at -0.75%)",
+            "de": "Dezember 2016 (Prognose mit Libor -0,75%)",
+            "fr": "Décembre 2016 (prévision avec Libor à 0,75%)"
           },
           "data": true
         },
         "2017": {
           "label": {
-            "en": "2017"
+            "en": "2017",
+            "de": "2017",
+            "fr": "2017"
           },
           "data": false
         },
         "M2017PL075P": {
           "label": {
-            "en": "March 2017 (Forecast with Libor at -0.75%)"
+            "en": "March 2017 (Forecast with Libor at -0.75%)",
+            "de": "März 2017 (Prognose mit Libor -0,75%)",
+            "fr": "Mars 2017 (prévision avec Libor à -0,75%)"
           },
           "data": true
         },
         "J2017PL075P": {
           "label": {
-            "en": "June 2017 (Forecast with Libor at -0.75%)"
+            "en": "June 2017 (Forecast with Libor at -0.75%)",
+            "de": "Juni 2017 (Prognose mit Libor -0,75%)",
+            "fr": "Juin 2017 (prévision avec Libor à -0,75%)"
           },
           "data": true
         },
         "S2017PL075P": {
           "label": {
-            "en": "September 2017 (Forecast with Libor at -0.75%)"
+            "en": "September 2017 (Forecast with Libor at -0.75%)",
+            "de": "September 2017 (Prognose mit Libor -0,75%)",
+            "fr": "Septembre 2017 (prévision avec Libor à -0,75%)"
           },
           "data": true
         },
         "D2017PL075P": {
           "label": {
-            "en": "December 2017 (Forecast with Libor at -0.75%)"
+            "en": "December 2017 (Forecast with Libor at -0.75%)",
+            "de": "Dezember 2017 (Prognose mit Libor -0,75%)",
+            "fr": "Décembre 2017 (prévision avec Libor à 0,75%)"
           },
           "data": true
         },
         "2018": {
           "label": {
-            "en": "2018"
+            "en": "2018",
+            "de": "2018",
+            "fr": "2018"
           },
           "data": false
         },
         "M2018PL075P": {
           "label": {
-            "en": "March 2018 (Forecast with Libor at -0.75%)"
+            "en": "March 2018 (Forecast with Libor at -0.75%)",
+            "de": "März 2018 (Prognose mit Libor -0,75%)",
+            "fr": "Mars 2018 (prévision avec Libor à -0,75%)"
           },
           "data": true
         },
         "J2018PL075P": {
           "label": {
-            "en": "June 2018 (Forecast with Libor at -0.75%)"
+            "en": "June 2018 (Forecast with Libor at -0.75%)",
+            "de": "Juni 2018 (Prognose mit Libor -0,75%)",
+            "fr": "Juin 2018 (prévision avec Libor à -0,75%)"
           },
           "data": true
         },
         "S2018PL075P": {
           "label": {
-            "en": "September 2018 (Forecast with Libor at -0.75%)"
+            "en": "September 2018 (Forecast with Libor at -0.75%)",
+            "de": "September 2018 (Prognose mit Libor -0,75%)",
+            "fr": "Septembre 2018 (prévision avec Libor à -0,75%)"
           },
           "data": true
         },
         "D2018PL075P": {
           "label": {
-            "en": "December 2018 (Forecast with Libor at -0.75%)"
+            "en": "December 2018 (Forecast with Libor at -0.75%)",
+            "de": "Dezember 2018 (Prognose mit Libor -0,75%)",
+            "fr": "Décembre 2018 (prévision avec Libor à 0,75%)"
           },
           "data": true
         },
         "2019": {
           "label": {
-            "en": "2019"
+            "en": "2019",
+            "de": "2019",
+            "fr": "2019"
           },
           "data": false
         },
         "M2019PL075P": {
           "label": {
-            "en": "March 2019 (Forecast with Libor at -0.75%)"
+            "en": "March 2019 (Forecast with Libor at -0.75%)",
+            "de": "März 2019 (Prognose mit Libor -0,75%)",
+            "fr": "Mars 2019 (prévision avec Libor à -0,75%)"
           },
           "data": true
         },
         "J2019PL075P": {
           "label": {
-            "en": "June 2019 (Forecast with SNB policy rate at -0.75%)"
+            "en": "June 2019 (Forecast with SNB policy rate at -0.75%)",
+            "de": "Juni 2019 (Prognose mit SNB-Leitzins -0,75%)",
+            "fr": "Juin 2019 (prévision avec taux directeur BNS à -0,75%)"
           },
           "data": true
         },
         "S2019PL075P": {
           "label": {
-            "en": "September 2019 (Forecast with SNB policy rate at -0.75%)"
+            "en": "September 2019 (Forecast with SNB policy rate at -0.75%)",
+            "de": "September 2019 (Prognose mit SNB-Leitzins -0,75%)",
+            "fr": "Septembre 2019 (prévision avec taux directeur BNS à -0,75%)"
           },
           "data": true
         },
         "D2019PP075P": {
           "label": {
-            "en": "December 2019 (Forecast with SNB policy rate at -0.75%)"
+            "en": "December 2019 (Forecast with SNB policy rate at -0.75%)",
+            "de": "Dezember 2019 (Prognose mit SNB-Leitzins -0,75%)",
+            "fr": "Décembre 2019 (prévision avec taux directeur BNS à -0,75%)"
           },
           "data": true
         },
         "2020": {
           "label": {
-            "en": "2020"
+            "en": "2020",
+            "de": "2020",
+            "fr": "2020"
           },
           "data": false
         },
         "M2020PP075P": {
           "label": {
-            "en": "March 2020 (Forecast with SNB policy rate at -0.75%)"
+            "en": "March 2020 (Forecast with SNB policy rate at -0.75%)",
+            "de": "März 2020 (Prognose mit SNB-Leitzins -0,75%)",
+            "fr": "Mars 2020 (prévision avec taux directeur BNS à -0,75%)"
           },
           "data": true
         },
         "J2020PP075P": {
           "label": {
-            "en": "June 2020 (Forecast with SNB policy rate at -0.75%)"
+            "en": "June 2020 (Forecast with SNB policy rate at -0.75%)",
+            "de": "Juni 2020 (Prognose mit SNB-Leitzins -0,75%)",
+            "fr": "Juin 2020 (prévision avec taux directeur BNS à -0,75%)"
           },
           "data": true
         },
         "S2020PP075P": {
           "label": {
-            "en": "September 2020 (Forecast with SNB policy rate at -0.75%)"
+            "en": "September 2020 (Forecast with SNB policy rate at -0.75%)",
+            "de": "September 2020 (Prognose mit SNB-Leitzins -0,75%)",
+            "fr": "Septembre 2020 (prévision avec taux directeur BNS à -0,75%)"
           },
           "data": true
         },
         "D2020PP075P": {
           "label": {
-            "en": "December 2020 (Forecast with SNB policy rate at -0.75%)"
+            "en": "December 2020 (Forecast with SNB policy rate at -0.75%)",
+            "de": "Dezember 2020 (Prognose mit SNB-Leitzins -0,75%)",
+            "fr": "Décembre 2020 (prévision avec taux directeur BNS à -0,75%)"
           },
           "data": true
         },
         "2021": {
           "label": {
-            "en": "2021"
+            "en": "2021",
+            "de": "2021",
+            "fr": "2021"
           },
           "data": false
         },
         "M2021PP075P": {
           "label": {
-            "en": "March 2021 (Forecast with SNB policy rate at -0.75%)"
+            "en": "March 2021 (Forecast with SNB policy rate at -0.75%)",
+            "de": "März 2021 (Prognose mit SNB-Leitzins -0,75%)",
+            "fr": "Mars 2021 (prévision avec taux directeur BNS à -0,75%)"
           },
           "data": true
         },
         "J2021POFFP": {
           "label": {
-            "en": "June 2021 (Forecast with SNB policy rate at -0.75%)"
+            "en": "June 2021 (Forecast with SNB policy rate at -0.75%)",
+            "de": "Juni 2021 (Prognose mit SNB-Leitzins -0,75%)",
+            "fr": "Juin 2021 (prévision avec taux directeur BNS à -0,75%)"
           },
           "data": true
         },
         "S2021POFFP": {
           "label": {
-            "en": "September 2021 (Forecast with SNB policy rate at -0.75%)"
+            "en": "September 2021 (Forecast with SNB policy rate at -0.75%)",
+            "de": "September 2021 (Prognose mit SNB-Leitzins -0,75%)",
+            "fr": "Septembre 2021 (prévision avec taux directeur BNS à -0,75%)"
           },
           "data": true
         },
         "D2021POFFP": {
           "label": {
-            "en": "December 2021 (Forecast with SNB policy rate at -0.75%)"
+            "en": "December 2021 (Forecast with SNB policy rate at -0.75%)",
+            "de": "Dezember 2021 (Prognose mit SNB-Leitzins -0,75%)",
+            "fr": "Décembre 2021 (prévision avec taux directeur BNS à -0,75%)"
           },
           "data": true
         },
         "2022": {
           "label": {
-            "en": "2022"
+            "en": "2022",
+            "de": "2022",
+            "fr": "2022"
           },
           "data": false
         },
         "M2022POFFP": {
           "label": {
-            "en": "March 2022 (Forecast with SNB policy rate at -0.75%)"
+            "en": "March 2022 (Forecast with SNB policy rate at -0.75%)",
+            "de": "März 2022 (Prognose mit SNB-Leitzins -0,75%)",
+            "fr": "Mars 2022 (prévision avec taux directeur BNS à -0,75%)"
           },
           "data": true
         },
         "J2022POFFP": {
           "label": {
-            "en": "June 2022 (Forecast with SNB policy rate at -0.25%)"
+            "en": "June 2022 (Forecast with SNB policy rate at -0.25%)",
+            "de": "Juni 2022 (Prognose mit SNB-Leitzins -0,25%)",
+            "fr": "Juin 2022 (prévision avec taux directeur BNS à -0,25%)"
           },
           "data": true
         },
         "S2022POFFP": {
           "label": {
-            "en": "September 2022 (Forecast with SNB policy rate at 0.50%)"
+            "en": "September 2022 (Forecast with SNB policy rate at 0.50%)",
+            "de": "September 2022 (Prognose mit SNB-Leitzins 0,50%)",
+            "fr": "Septembre 2022 (prévision avec taux directeur BNS à 0,50%)"
           },
           "data": true
         },
         "D2022POFFP": {
           "label": {
-            "en": "December 2022 (Forecast with SNB policy rate at 1.00%)"
+            "en": "December 2022 (Forecast with SNB policy rate at 1.00%)",
+            "de": "Dezember 2022 (Prognose mit SNB-Leitzins 1,00%)",
+            "fr": "Décembre 2022 (prévision avec taux directeur BNS à 1,00%)"
           },
           "data": true
         },
         "2023": {
           "label": {
-            "en": "2023"
+            "en": "2023",
+            "de": "2023",
+            "fr": "2023"
           },
           "data": false
         },
         "M2023POFFP": {
           "label": {
-            "en": "March 2023 (Forecast with SNB policy rate at 1.50%)"
+            "en": "March 2023 (Forecast with SNB policy rate at 1.50%)",
+            "de": "März 2023 (Prognose mit SNB-Leitzins 1,50%)",
+            "fr": "Mars 2023 (prévision avec taux directeur BNS à 1,50%)"
           },
           "data": true
         },
         "J2023POFFP": {
           "label": {
-            "en": "June 2023 (Forecast with SNB policy rate at 1.75%)"
+            "en": "June 2023 (Forecast with SNB policy rate at 1.75%)",
+            "de": "Juni 2023 (Prognose mit SNB-Leitzins 1,75%)",
+            "fr": "Juin 2023 (prévision avec taux directeur BNS à 1,75%)"
           },
           "data": true
         },
         "S2023POFFP": {
           "label": {
-            "en": "September 2023 (Forecast with SNB policy rate at 1.75%)"
+            "en": "September 2023 (Forecast with SNB policy rate at 1.75%)",
+            "de": "September 2023 (Prognose mit SNB-Leitzins 1,75%)",
+            "fr": "Septembre 2023 (prévision avec taux directeur BNS à 1,75%)"
           },
           "data": true
         },
         "D2023POFFP": {
           "label": {
-            "en": "December 2023 (Forecast with SNB policy rate at 1.75%)"
+            "en": "December 2023 (Forecast with SNB policy rate at 1.75%)",
+            "de": "Dezember 2023 (Prognose mit SNB-Leitzins 1,75%)",
+            "fr": "Décembre 2023 (prévision avec taux directeur BNS à 1,75%)"
           },
           "data": true
         },
         "2024": {
           "label": {
-            "en": "2024"
+            "en": "2024",
+            "de": "2024",
+            "fr": "2024"
           },
           "data": false
         },
         "M2024POFFP": {
           "label": {
-            "en": "March 2024 (Forecast with SNB policy rate at 1.50%)"
+            "en": "March 2024 (Forecast with SNB policy rate at 1.50%)",
+            "de": "März 2024 (Prognose mit SNB-Leitzins 1,50%)",
+            "fr": "Mars 2024 (prévision avec taux directeur BNS à 1,50%)"
           },
           "data": true
         },
         "J2024POFFP": {
           "label": {
-            "en": "June 2024 (Forecast with SNB policy rate at 1.25%)"
+            "en": "June 2024 (Forecast with SNB policy rate at 1.25%)",
+            "de": "Juni 2024 (Prognose mit SNB-Leitzins 1,25%)",
+            "fr": "Juin 2024 (prévision avec taux directeur BNS à 1,25%)"
           },
           "data": true
         },
         "S2024POFFP": {
           "label": {
-            "en": "September 2024 (Forecast with SNB policy rate at 1.00%)"
+            "en": "September 2024 (Forecast with SNB policy rate at 1.00%)",
+            "de": "September 2024 (Prognose mit SNB-Leitzins 1,00%)",
+            "fr": "Septembre 2024 (prévision avec taux directeur BNS à 1,00%)"
           },
           "data": true
         },
         "D2024POFFP": {
           "label": {
-            "en": "December 2024 (Forecast with SNB policy rate at 0.50%)"
+            "en": "December 2024 (Forecast with SNB policy rate at 0.50%)",
+            "de": "Dezember 2024 (Prognose mit SNB-Leitzins 0,50%)",
+            "fr": "Décembre 2024 (prévision avec taux directeur BNS à 0,50%)"
           },
           "data": true
         },
         "2025": {
           "label": {
-            "en": "2025"
+            "en": "2025",
+            "de": "2025",
+            "fr": "2025"
           },
           "data": false
         },
         "M2025POFFP": {
           "label": {
-            "en": "March 2025 (Forecast with SNB policy rate at 0.25%)"
+            "en": "March 2025 (Forecast with SNB policy rate at 0.25%)",
+            "de": "März 2025 (Prognose mit SNB-Leitzins 0,25%)",
+            "fr": "Mars 2025 (prévision avec taux directeur BNS à 0,25%)"
           },
           "data": true
         },
         "J2025POFFP": {
           "label": {
-            "en": "June 2025 (Forecast with SNB policy rate at 0.00%)"
+            "en": "June 2025 (Forecast with SNB policy rate at 0.00%)",
+            "de": "Juni 2025 (Prognose mit SNB-Leitzins 0,00%)",
+            "fr": "Juin 2025 (prévision avec taux directeur BNS à 0,00%)"
           },
           "data": true
         },
         "S2025POFFP": {
           "label": {
-            "en": "September 2025 (Forecast with SNB policy rate at 0.00%)"
+            "en": "September 2025 (Forecast with SNB policy rate at 0.00%)",
+            "de": "September 2025 (Prognose mit SNB-Leitzins 0,00%)",
+            "fr": "Septembre 2025 (prévision avec taux directeur BNS à 0,00%)"
           },
           "data": true
         },
         "D2025POFFP": {
           "label": {
-            "en": "December 2025 (Forecast with SNB policy rate at 0.00%)"
+            "en": "December 2025 (Forecast with SNB policy rate at 0.00%)",
+            "de": "Dezember 2025 (Prognose mit SNB-Leitzins 0,00%)",
+            "fr": "Décembre 2025 (prévision avec taux directeur BNS à 0,00%)"
           },
           "data": true
         },
         "2026": {
           "label": {
-            "en": "2026"
+            "en": "2026",
+            "de": "2026",
+            "fr": "2026"
           },
           "data": false
         },
         "M2026POFFP": {
           "label": {
-            "en": "March 2026 (Forecast with SNB policy rate at 0.00%)"
+            "en": "March 2026 (Forecast with SNB policy rate at 0.00%)",
+            "de": "März 2026 (Prognose mit SNB-Leitzins 0,00%)",
+            "fr": "Mars 2026 (prévision avec taux directeur BNS à 0,00%)"
           },
           "data": true
         },
         "J2026POFFP": {
           "label": {
-            "en": "June 2026 (Forecast with SNB policy rate at 0.00%)"
+            "en": "June 2026 (Forecast with SNB policy rate at 0.00%)",
+            "de": "Juni 2026 (Prognose mit SNB-Leitzins 0,00%)",
+            "fr": "Juin 2026 (prévision avec taux directeur BNS à 0,00%)"
           },
           "data": true
         }
@@ -841,18 +1070,24 @@
     },
     "D1": {
       "label": {
-        "en": "Overview"
+        "en": "Overview",
+        "de": "Übersicht",
+        "fr": "Vue d’ensemble"
       },
       "levels": {
         "BI": {
           "label": {
-            "en": "Observed inflation"
+            "en": "Observed inflation",
+            "de": "Beobachtete Inflation",
+            "fr": "Inflation observée"
           },
           "data": true
         },
         "P": {
           "label": {
-            "en": "Forecast"
+            "en": "Forecast",
+            "de": "Prognose",
+            "fr": "Prévision"
           },
           "data": true
         }
@@ -875,5 +1110,5 @@
     "D1": "BI"
   },
   "description": "The quarterly resolution of the SNB's conditional inflation forecast, and the fuller of the two forecast cubes. Like the annual cube, D0 is a forecast vintage (one item per quarterly monetary-policy assessment since 2004), each labelled with its conditioning policy rate; the label text traces the Libor-to-policy-rate instrument change at mid-2019, the negative-rate era and the 2022-2024 hikes. What sets the quarterly cube apart: the stored data start in 2001 (earlier than the annual cube's 2004) because the D1 BI \"observed inflation\" path is carried back further, and the default view here is BI rather than the forecast. So this cube lets you align each historical forecast fan against the realised quarterly CPI it was later measured against. It also reaches further forward (end 2028-10) at quarterly steps. Values are future-dated by construction, since each vintage projects ahead. This is the single canonical cube for the conditional inflation forecast. The former annual cube snbiproga was dropped as redundant: its annual figures are just the calendar-year average of these quarterly forecasts (verified against the data — exact bar SNB rounding), and this quarterly cube is strictly richer (it also carries the observed BI path, starts earlier in 2001, and reaches further forward). An annual view, if needed, is derived on demand by year-averaging the quarterly P series rather than stored as a separate dataset.",
-  "fetched_utc": "2026-06-25 09:25:37"
+  "fetched_utc": "2026-08-05 13:12:03"
 }

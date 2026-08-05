@@ -1,7 +1,7 @@
 # Consumer Price Index (LIK) – national index, long history
 
 - **id**: ch_snb_plkopr
-- **title**: Consumer prices (CPI)
+- **title**: Consumer prices (CPI) | de: Konsumentenpreise (LIK) | fr: Prix à la consommation (IPC) | it: Prezzi al consumo (IPC)
 - **concept**: Prices / Consumer prices
 - **canonical**: yes
 - **featured**: Inflation

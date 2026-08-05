@@ -6,9 +6,6 @@
   ],
   "start": "2002-07-01",
   "end": "2026-01-01",
-  "title": {
-    "en": "Cross-border commuters"
-  },
   "source": {
     "name": {
       "en": "Swiss Federal Statistical Office (FSO)",
@@ -22,174 +19,255 @@
   "license": "fso",
   "frequency": "quarterly",
   "topic": "Labour",
-  "units": {
-    "en": "Number of cross-border commuters (estimate)"
-  },
   "dimensions": {
     "canton": {
       "label": {
-        "en": "Canton of work"
+        "en": "Canton of work",
+        "de": "Arbeitskanton",
+        "fr": "Canton de travail",
+        "it": "Cantone di lavoro"
       },
       "levels": {
         "_T": {
           "label": {
-            "en": "Switzerland (total)"
+            "en": "Switzerland (total)",
+            "de": "Schweiz (Total)",
+            "fr": "Suisse (total)",
+            "it": "Svizzera (totale)"
           },
           "data": true
         },
         "1": {
           "label": {
-            "en": "Zurich"
+            "en": "Zurich",
+            "de": "Zürich",
+            "fr": "Zurich",
+            "it": "Zurigo"
           },
           "data": true
         },
         "10": {
           "label": {
-            "en": "Fribourg"
+            "en": "Fribourg",
+            "de": "Freiburg",
+            "fr": "Fribourg",
+            "it": "Friburgo"
           },
           "data": true
         },
         "11": {
           "label": {
-            "en": "Solothurn"
+            "en": "Solothurn",
+            "de": "Solothurn",
+            "fr": "Soleure",
+            "it": "Soletta"
           },
           "data": true
         },
         "12": {
           "label": {
-            "en": "Basel-Stadt"
+            "en": "Basel-Stadt",
+            "de": "Basel-Stadt",
+            "fr": "Bâle-Ville",
+            "it": "Basilea Città"
           },
           "data": true
         },
         "13": {
           "label": {
-            "en": "Basel-Landschaft"
+            "en": "Basel-Landschaft",
+            "de": "Basel-Landschaft",
+            "fr": "Bâle-Campagne",
+            "it": "Basilea Campagna"
           },
           "data": true
         },
         "14": {
           "label": {
-            "en": "Schaffhausen"
+            "en": "Schaffhausen",
+            "de": "Schaffhausen",
+            "fr": "Schaffhouse",
+            "it": "Sciaffusa"
           },
           "data": true
         },
         "15": {
           "label": {
-            "en": "Appenzell A.Rh."
+            "en": "Appenzell A.Rh.",
+            "de": "Appenzell A.Rh.",
+            "fr": "Appenzell Rh.-Ext.",
+            "it": "Appenzello Esterno"
           },
           "data": true
         },
         "16": {
           "label": {
-            "en": "Appenzell I.Rh."
+            "en": "Appenzell I.Rh.",
+            "de": "Appenzell I.Rh.",
+            "fr": "Appenzell Rh.-Int.",
+            "it": "Appenzello Interno"
           },
           "data": true
         },
         "17": {
           "label": {
-            "en": "St. Gallen"
+            "en": "St. Gallen",
+            "de": "St. Gallen",
+            "fr": "Saint-Gall",
+            "it": "San Gallo"
           },
           "data": true
         },
         "18": {
           "label": {
-            "en": "Grisons"
+            "en": "Grisons",
+            "de": "Graubünden",
+            "fr": "Grisons",
+            "it": "Grigioni"
           },
           "data": true
         },
         "19": {
           "label": {
-            "en": "Aargau"
+            "en": "Aargau",
+            "de": "Aargau",
+            "fr": "Argovie",
+            "it": "Argovia"
           },
           "data": true
         },
         "2": {
           "label": {
-            "en": "Bern"
+            "en": "Bern",
+            "de": "Bern",
+            "fr": "Berne",
+            "it": "Berna"
           },
           "data": true
         },
         "20": {
           "label": {
-            "en": "Thurgau"
+            "en": "Thurgau",
+            "de": "Thurgau",
+            "fr": "Thurgovie",
+            "it": "Turgovia"
           },
           "data": true
         },
         "21": {
           "label": {
-            "en": "Ticino"
+            "en": "Ticino",
+            "de": "Tessin",
+            "fr": "Tessin",
+            "it": "Ticino"
           },
           "data": true
         },
         "22": {
           "label": {
-            "en": "Vaud"
+            "en": "Vaud",
+            "de": "Waadt",
+            "fr": "Vaud",
+            "it": "Vaud"
           },
           "data": true
         },
         "23": {
           "label": {
-            "en": "Valais"
+            "en": "Valais",
+            "de": "Wallis",
+            "fr": "Valais",
+            "it": "Vallese"
           },
           "data": true
         },
         "24": {
           "label": {
-            "en": "Neuchatel"
+            "en": "Neuchatel",
+            "de": "Neuenburg",
+            "fr": "Neuchâtel",
+            "it": "Neuchâtel"
           },
           "data": true
         },
         "25": {
           "label": {
-            "en": "Geneva"
+            "en": "Geneva",
+            "de": "Genf",
+            "fr": "Genève",
+            "it": "Ginevra"
           },
           "data": true
         },
         "26": {
           "label": {
-            "en": "Jura"
+            "en": "Jura",
+            "de": "Jura",
+            "fr": "Jura",
+            "it": "Giura"
           },
           "data": true
         },
         "3": {
           "label": {
-            "en": "Lucerne"
+            "en": "Lucerne",
+            "de": "Luzern",
+            "fr": "Lucerne",
+            "it": "Lucerna"
           },
           "data": true
         },
         "4": {
           "label": {
-            "en": "Uri"
+            "en": "Uri",
+            "de": "Uri",
+            "fr": "Uri",
+            "it": "Uri"
           },
           "data": true
         },
         "5": {
           "label": {
-            "en": "Schwyz"
+            "en": "Schwyz",
+            "de": "Schwyz",
+            "fr": "Schwytz",
+            "it": "Svitto"
           },
           "data": true
         },
         "6": {
           "label": {
-            "en": "Obwalden"
+            "en": "Obwalden",
+            "de": "Obwalden",
+            "fr": "Obwald",
+            "it": "Obvaldo"
           },
           "data": true
         },
         "7": {
           "label": {
-            "en": "Nidwalden"
+            "en": "Nidwalden",
+            "de": "Nidwalden",
+            "fr": "Nidwald",
+            "it": "Nidvaldo"
           },
           "data": true
         },
         "8": {
           "label": {
-            "en": "Glarus"
+            "en": "Glarus",
+            "de": "Glarus",
+            "fr": "Glaris",
+            "it": "Glarona"
           },
           "data": true
         },
         "9": {
           "label": {
-            "en": "Zug"
+            "en": "Zug",
+            "de": "Zug",
+            "fr": "Zoug",
+            "it": "Zugo"
           },
           "data": true
         }
@@ -228,6 +306,12 @@
   },
   "concept": "Labour / Cross-border commuters",
   "canonical": true,
+  "title": {
+    "en": "Cross-border commuters",
+    "de": "Grenzgängerinnen und Grenzgänger",
+    "fr": "Frontaliers",
+    "it": "Frontalieri"
+  },
   "split": "canton",
   "single_select": [],
   "default_transform": "level",
@@ -235,5 +319,11 @@
     "canton": "_T"
   },
   "description": "Foreign cross-border commuters (Grenzgänger) working in Switzerland, by canton of work, quarterly since 2002. A distinctive feature of the Swiss labour market (~410k people, concentrated in Geneva, Ticino, Basel, Vaud). The successor to the legacy ch.fso.ggs series.",
-  "fetched_utc": "2026-07-31 09:17:55"
+  "units": {
+    "en": "Number of cross-border commuters (estimate)",
+    "de": "Anzahl Grenzgängerinnen und Grenzgänger (Schätzung)",
+    "fr": "Nombre de frontaliers (estimation)",
+    "it": "Numero di frontalieri (stima)"
+  },
+  "fetched_utc": "2026-08-05 13:12:05"
 }

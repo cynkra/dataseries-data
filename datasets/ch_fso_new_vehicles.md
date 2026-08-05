@@ -1,7 +1,7 @@
 # New registrations of passenger cars by fuel
 
 - **id**: ch_fso_new_vehicles
-- **title**: New car registrations by fuel
+- **title**: New car registrations by fuel | de: Neuzulassungen von Personenwagen nach Treibstoff | fr: Nouvelles immatriculations de voitures par carburant | it: Nuove immatricolazioni di automobili per carburante
 - **concept**: Domestic economy / New vehicle registrations
 - **canonical**: yes
 - **source**: fso
@@ -40,21 +40,21 @@ are ~25% of new-car registrations.
   nested under Total as a hierarchy.
 
 ## Labels
-- **units**: Number of new registrations
+- **units**: Number of new registrations | de: Anzahl Neuzulassungen | fr: Nombre de nouvelles immatriculations | it: Numero di nuove immatricolazioni
 - dim: fuel
-  - **label**: Fuel
-  - _T: Total
-  - PC: Petrol
-  - PH: Petrol hybrid (HEV)
-  - DC: Diesel
-  - DH: Diesel hybrid (HEV)
-  - HP: Plug-in hybrid (petrol)
-  - HD: Plug-in hybrid (diesel)
-  - EL: Electric (BEV)
-  - FC: Fuel cell (hydrogen)
-  - GA: Gas
-  - _O: Other
-  - NM: No motor
+  - **label**: Fuel | de: Treibstoff | fr: Carburant | it: Carburante
+  - _T: Total | de: Total | fr: Total | it: Totale
+  - PC: Petrol | de: Benzin | fr: Essence | it: Benzina
+  - PH: Petrol hybrid (HEV) | de: Benzin-Hybrid (HEV) | fr: Hybride essence (HEV) | it: Ibrido benzina (HEV)
+  - DC: Diesel | de: Diesel | fr: Diesel | it: Diesel
+  - DH: Diesel hybrid (HEV) | de: Diesel-Hybrid (HEV) | fr: Hybride diesel (HEV) | it: Ibrido diesel (HEV)
+  - HP: Plug-in hybrid (petrol) | de: Plug-in-Hybrid (Benzin) | fr: Hybride rechargeable (essence) | it: Ibrido plug-in (benzina)
+  - HD: Plug-in hybrid (diesel) | de: Plug-in-Hybrid (Diesel) | fr: Hybride rechargeable (diesel) | it: Ibrido plug-in (diesel)
+  - EL: Electric (BEV) | de: Elektrisch (BEV) | fr: Électrique (BEV) | it: Elettrico (BEV)
+  - FC: Fuel cell (hydrogen) | de: Brennstoffzelle (Wasserstoff) | fr: Pile à combustible (hydrogène) | it: Cella a combustibile (idrogeno)
+  - GA: Gas | de: Gas | fr: Gaz | it: Gas
+  - _O: Other | de: Andere | fr: Autres | it: Altri
+  - NM: No motor | de: Ohne Motor | fr: Sans moteur | it: Senza motore
 
 ## Display
 - **split**: fuel

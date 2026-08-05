@@ -1,7 +1,7 @@
 # Banks' balance sheet items by currency for selected bank categories (monthly)
 
 - **id**: ch_snb_babilpobm
-- **title**: Bank balance sheets by currency
+- **title**: Bank balance sheets by currency | de: Bankbilanzen nach Währung | fr: Bilans bancaires par monnaie | it: Bilanci bancari per valuta
 - **concept**: Money & banking / Banking & credit
 - **canonical**: yes
 - **source**: snb

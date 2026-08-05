@@ -6,9 +6,6 @@
   ],
   "start": "1995-01-01",
   "end": "2025-01-01",
-  "title": {
-    "en": "Vacant dwellings"
-  },
   "source": {
     "name": {
       "en": "Swiss Federal Statistical Office (FSO)",
@@ -25,18 +22,27 @@
   "dimensions": {
     "measure": {
       "label": {
-        "en": "Measure"
+        "en": "Measure",
+        "de": "Messgrösse",
+        "fr": "Mesure",
+        "it": "Misura"
       },
       "levels": {
         "PC": {
           "label": {
-            "en": "Vacancy rate (%)"
+            "en": "Vacancy rate (%)",
+            "de": "Leerwohnungsziffer (%)",
+            "fr": "Taux de logements vacants (%)",
+            "it": "Tasso di abitazioni vuote (%)"
           },
           "data": true
         },
         "V": {
           "label": {
-            "en": "Vacant dwellings (number)"
+            "en": "Vacant dwellings (number)",
+            "de": "Leerwohnungen (Anzahl)",
+            "fr": "Logements vacants (nombre)",
+            "it": "Abitazioni vuote (numero)"
           },
           "data": true
         }
@@ -45,6 +51,12 @@
   },
   "concept": "Domestic economy / Vacant dwellings",
   "canonical": true,
+  "title": {
+    "en": "Vacant dwellings",
+    "de": "Leerwohnungen",
+    "fr": "Logements vacants",
+    "it": "Abitazioni vuote"
+  },
   "split": "measure",
   "single_select": [],
   "default_transform": "level",
@@ -52,5 +64,5 @@
     "measure": "PC"
   },
   "description": "The official Swiss vacancy rate (Leerwohnungsziffer) and the absolute count of vacant dwellings, national, annual since 1995. The vacancy rate is the headline housing-market tightness indicator — it fell to ~1.0% by 2025, the tightest in years.",
-  "fetched_utc": "2026-07-31 09:17:55"
+  "fetched_utc": "2026-08-05 13:12:05"
 }

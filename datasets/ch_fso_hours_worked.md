@@ -1,7 +1,7 @@
 # Actual hours worked (annual working volume)
 
 - **id**: ch_fso_hours_worked
-- **title**: Hours worked
+- **title**: Hours worked | de: Arbeitsstunden | fr: Heures de travail | it: Ore di lavoro
 - **concept**: Labour / Working time and working volume
 - **canonical**: yes
 - **source**: fso
@@ -45,22 +45,22 @@ feature — reads directly.
 
 ## Labels
 - dim: measure
-  - **label**: Measure
-  - weekly: Usual hours worked per week per job
-  - annual: Annual hours worked per job
-  - volume: Annual volume of hours worked (total)
+  - **label**: Measure | de: Messgrösse | fr: Mesure | it: Misura
+  - weekly: Usual hours worked per week per job | de: Normalarbeitszeit pro Woche und Stelle | fr: Heures hebdomadaires habituelles par emploi | it: Ore settimanali abituali per impiego
+  - annual: Annual hours worked per job | de: Jahresarbeitszeit pro Stelle | fr: Heures annuelles par emploi | it: Ore annue per impiego
+  - volume: Annual volume of hours worked (total) | de: Jahresarbeitsvolumen (Total) | fr: Volume annuel d'heures travaillées (total) | it: Volume annuo di ore lavorate (totale)
 - dim: sex
-  - **label**: Sex
-  - _T: Total
-  - M: Men
-  - F: Women
+  - **label**: Sex | de: Geschlecht | fr: Sexe | it: Sesso
+  - _T: Total | de: Total | fr: Total | it: Totale
+  - M: Men | de: Männer | fr: Hommes | it: Uomini
+  - F: Women | de: Frauen | fr: Femmes | it: Donne
 - dim: worktime
-  - **label**: Working time
-  - _T: Total
-  - FT: Full-time
-  - PT: Part-time
-  - PT_I: Part-time I (50-89%)
-  - PT_II: Part-time II (under 50%)
+  - **label**: Working time | de: Arbeitszeit | fr: Temps de travail | it: Tempo di lavoro
+  - _T: Total | de: Total | fr: Total | it: Totale
+  - FT: Full-time | de: Vollzeit | fr: Plein temps | it: Tempo pieno
+  - PT: Part-time | de: Teilzeit | fr: Temps partiel | it: Tempo parziale
+  - PT_I: Part-time I (50-89%) | de: Teilzeit I (50-89%) | fr: Temps partiel I (50-89%) | it: Tempo parziale I (50-89%)
+  - PT_II: Part-time II (under 50%) | de: Teilzeit II (unter 50%) | fr: Temps partiel II (moins de 50%) | it: Tempo parziale II (meno del 50%)
 
 ## Display
 - **split**: worktime

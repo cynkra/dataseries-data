@@ -1,7 +1,7 @@
 # Swiss Interbank Clearing (SIC) - payment transactions
 
 - **id**: ch_snb_zavesic
-- **title**: Interbank clearing (SIC)
+- **title**: Interbank clearing (SIC) | de: Interbank-Clearing (SIC) | fr: Clearing interbancaire (SIC) | it: Clearing interbancario (SIC)
 - **concept**: Payment systems / Payments & cash
 - **canonical**: no (alternate within Payments & cash; one of several `ch_snb_zave*` payment series)
 - **source**: snb

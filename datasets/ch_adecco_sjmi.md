@@ -1,7 +1,7 @@
 # Adecco Group Swiss Job Market Index
 
 - **id**: ch_adecco_sjmi
-- **title**: Adecco Group Swiss Job Market Index
+- **title**: Adecco Group Swiss Job Market Index | de: Adecco Group Swiss Job Market Index | fr: Adecco Group Swiss Job Market Index | it: Adecco Group Swiss Job Market Index
 - **concept**: Labour / Job market
 - **canonical**: yes
 - **source**: uzh-smm
@@ -43,14 +43,14 @@ captures the long structural shift from print to online recruiting.
   `internet` / `company` / `press` nested under Total as a hierarchy.
 
 ## Labels
-- **units**: Index, Q1 2008 = 100
+- **units**: Index, Q1 2008 = 100 | de: Index, Q1 2008 = 100 | fr: Indice, T1 2008 = 100 | it: Indice, T1 2008 = 100
 - dim: index
-  - **label**: Index
-  - gesamt: Total
-  - gesamt_sa: Total, seasonally adjusted
-  - internet: Internet job portals
-  - company: Company websites
-  - press: Press (newspapers)
+  - **label**: Index | de: Index | fr: Indice | it: Indice
+  - gesamt: Total | de: Total | fr: Total | it: Totale
+  - gesamt_sa: Total, seasonally adjusted | de: Total, saisonbereinigt | fr: Total, corrigé des variations saisonnières | it: Totale, destagionalizzato
+  - internet: Internet job portals | de: Internet-Stellenportale | fr: Portails d'emploi en ligne | it: Portali di lavoro online
+  - company: Company websites | de: Unternehmens-Webseiten | fr: Sites web d'entreprises | it: Siti web aziendali
+  - press: Press (newspapers) | de: Presse (Zeitungen) | fr: Presse (journaux) | it: Stampa (giornali)
 
 ## Display
 - **split**: index

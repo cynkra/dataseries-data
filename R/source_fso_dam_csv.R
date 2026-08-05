@@ -20,15 +20,10 @@ fso_dam_csv_download <- function(order_nr) {
   list(path = path, pubdate = m$pubdate)
 }
 
-# Build the standard one-dimension `dimensions` meta from a code->label map.
-.dam_csv_dim <- function(label_en, level_labels) {
-  list(
-    label = list(en = label_en),
-    levels = setNames(
-      lapply(unname(level_labels), function(l) list(label = list(en = l))),
-      names(level_labels)
-    )
-  )
+# Build the standard one-dimension `dimensions` meta from an ordered code vector.
+# Labels (dim + levels) live in the datasheet ## Labels block (attach_labels).
+.dam_csv_dim <- function(codes) {
+  list(levels = setNames(lapply(codes, function(x) list()), codes))
 }
 
 # Labour productivity: GDP, actual hours worked, and productivity, all as a chained
@@ -56,20 +51,11 @@ fso_labour_productivity <- function(dataset_id = "ch_fso_labour_productivity") {
   data <- data[order(data$indicator, data$date), , drop = FALSE]
 
   meta <- list(
-    title = list(en = "Labour productivity (GDP per hour worked, index)"),
-    source = list(
-      name = list(en = "Swiss Federal Statistical Office (FSO)"),
-      url = "https://www.bfs.admin.ch/asset/en/ts-x-04.07.01.01"
-    ),
+    source = list(url = "https://www.bfs.admin.ch/asset/en/ts-x-04.07.01.01"),
     license = "fso",
     frequency = "annual",
     updated = if (!is.na(dl$pubdate)) as.character(dl$pubdate) else NULL,
-    units = list(en = "Index (1991 = 100), chained volume (previous year's prices)"),
-    dimensions = list(indicator = .dam_csv_dim("Indicator", c(
-      gdp = "Gross domestic product (volume)",
-      hours = "Actual hours worked",
-      productivity = "Labour productivity (GDP per hour worked)"
-    )))
+    dimensions = list(indicator = .dam_csv_dim(c("gdp", "hours", "productivity")))
   )
   list(id = dataset_id, data = data, meta = meta)
 }
@@ -114,41 +100,15 @@ fso_ets <- function(dataset_id = "ch_fso_ets") {
   data <- data[!is.na(data$value) & !is.na(data$date), , drop = FALSE]
   data <- data[order(data$sector, data$sex, data$date), , drop = FALSE]
 
-  # Authored EN labels for the 23 INDICATORS_HRCHY sector codes (NOGA 2008
-  # sections in DETAILS_DE: A; B-F; G-T; and the single-letter divisions).
-  sector_labels <- c(
-    P      = "Total",
-    P_1    = "Sector 1: Agriculture, forestry and fishing",
-    P_1_1  = "A Agriculture, forestry and fishing",
-    P_2    = "Sector 2: Industry and construction",
-    P_2_1  = "B-C Mining, quarrying and manufacturing",
-    P_2_2  = "D Electricity, gas, steam and air conditioning supply",
-    P_2_3  = "E Water supply; sewerage, waste management and remediation",
-    P_2_4  = "F Construction",
-    P_3    = "Sector 3: Services",
-    P_3_1  = "G Wholesale and retail trade; repair of motor vehicles",
-    P_3_2  = "H Transportation and storage",
-    P_3_3  = "I Accommodation and food service activities",
-    P_3_4  = "J Information and communication",
-    P_3_5  = "K Financial and insurance activities",
-    P_3_6  = "L Real estate activities",
-    P_3_7  = "M Professional, scientific and technical activities",
-    P_3_8  = "N Administrative and support service activities",
-    P_3_9  = "O Public administration and defence; compulsory social security",
-    P_3_10 = "P Education",
-    P_3_11 = "Q Human health and social work activities",
-    P_3_12 = "R Arts, entertainment and recreation",
-    P_3_13 = "S Other service activities",
-    P_3_14 = "T Activities of households as employers"
-  )
-  miss <- setdiff(unique(data$sector), names(sector_labels))
+  # The 23 INDICATORS_HRCHY sector codes (NOGA 2008 sections), in display order.
+  # Their EN/DE/FR labels live in the datasheet ## Labels block.
+  sector_codes <- c("P", "P_1", "P_1_1", "P_2", "P_2_1", "P_2_2", "P_2_3", "P_2_4",
+                    "P_3", paste0("P_3_", 1:14))
+  miss <- setdiff(unique(data$sector), sector_codes)
   if (length(miss)) stop("ch_fso_ets: unlabelled sector code(s): ",
                          paste(miss, collapse = ", "))
 
-  sector_levels <- setNames(
-    lapply(sector_labels, function(l) list(label = list(en = l))),
-    names(sector_labels)
-  )
+  sector_levels <- setNames(lapply(sector_codes, function(x) list()), sector_codes)
   # Hierarchy: total P -> three sectors -> their NOGA sections.
   leaf <- function(codes) setNames(lapply(codes, function(x) list()), codes)
   sector_hierarchy <- list(P = list(
@@ -158,22 +118,16 @@ fso_ets <- function(dataset_id = "ch_fso_ets") {
   ))
 
   meta <- list(
-    title = list(en = "Employed persons by economic sector and sex (ETS, quarterly)"),
-    source = list(
-      name = list(en = "Swiss Federal Statistical Office (FSO)"),
-      url  = "https://www.bfs.admin.ch/asset/en/ts-x-03.02.01.08"
-    ),
+    source = list(url = "https://www.bfs.admin.ch/asset/en/ts-x-03.02.01.08"),
     license = "fso",
     frequency = "quarterly",
     updated = if (!is.na(dl$pubdate)) as.character(dl$pubdate) else NULL,
-    units = list(en = "Number of employed persons (domestic concept, quarterly average)"),
     dimensions = list(
       sector = list(
-        label     = list(en = "Economic sector"),
         levels    = sector_levels,
         hierarchy = sector_hierarchy
       ),
-      sex = .dam_csv_dim("Sex", c(total = "Total", male = "Men", female = "Women"))
+      sex = .dam_csv_dim(c("total", "male", "female"))
     )
   )
   list(id = dataset_id, data = data, meta = meta)
@@ -195,33 +149,18 @@ fso_gfcf_detail <- function(dataset_id = "ch_fso_gfcf_detail") {
   # Keep CHF-million LEVELS only (drop the AC / ACPP %-change leaves).
   raw <- raw[raw$UNIT_MEAS == "MCHF", , drop = FALSE]
 
-  sector_labels <- c(
-    S1       = "Total economy",
-    S11      = "Non-financial corporations",
-    S12      = "Financial corporations",
-    S121T127 = "Financial institutions (other than S128 S129)",
-    S12Q     = "Insurance corporations and pension funds",
-    S13      = "General government",
-    S1314    = "Social security funds",
-    S14      = "Households",
-    S15      = "Non-profit institutions serving households"
-  )
-  asset_labels <- c(
-    P51G            = "Gross fixed capital formation (total)",
-    P5111_N111_112G = "Construction",
-    `6011`          = "Building construction",
-    `6010`          = "Civil engineering",
-    P5111_N113T117G = "Equipment, fixed assets and software"
-  )
+  # Curated code sets + display order; labels live in the datasheet ## Labels block.
+  sector_codes <- c("S1", "S11", "S12", "S121T127", "S12Q", "S13", "S1314", "S14", "S15")
+  asset_codes  <- c("P51G", "P5111_N111_112G", "6011", "6010", "P5111_N113T117G")
 
   sec <- as.character(raw$SECTOR)
   ast <- as.character(raw$CLASSIFICATION)
-  if (!all(sec %in% names(sector_labels)))
+  if (!all(sec %in% sector_codes))
     stop("ch_fso_gfcf_detail: unmapped SECTOR: ",
-         paste(unique(sec[!sec %in% names(sector_labels)]), collapse = ", "))
-  if (!all(ast %in% names(asset_labels)))
+         paste(unique(sec[!sec %in% sector_codes]), collapse = ", "))
+  if (!all(ast %in% asset_codes))
     stop("ch_fso_gfcf_detail: unmapped CLASSIFICATION: ",
-         paste(unique(ast[!ast %in% names(asset_labels)]), collapse = ", "))
+         paste(unique(ast[!ast %in% asset_codes]), collapse = ", "))
 
   data <- data.frame(
     sector = sec,
@@ -234,22 +173,17 @@ fso_gfcf_detail <- function(dataset_id = "ch_fso_gfcf_detail") {
   data <- data[order(data$sector, data$asset, data$date), , drop = FALSE]
 
   meta <- list(
-    title = list(en = "Gross fixed capital formation by institutional sector and asset type"),
-    source = list(
-      name = list(en = "Swiss Federal Statistical Office (FSO)"),
-      url  = "https://www.bfs.admin.ch/asset/en/ts-x-04.02.05.02"
-    ),
+    source = list(url  = "https://www.bfs.admin.ch/asset/en/ts-x-04.02.05.02"),
     license   = "fso",
     frequency = "annual",
     updated   = if (!is.na(dl$pubdate)) as.character(dl$pubdate) else NULL,
-    units     = list(en = "CHF million, current prices"),
     dimensions = list(
-      sector = .dam_csv_dim("Institutional sector", sector_labels),
+      sector = .dam_csv_dim(sector_codes),
       # Asset type is hierarchical: P51G = Construction + Equipment, and Construction
       # = Building construction + Civil engineering. P51G (the total) is only present
       # for S1 (total economy) in the source.
       asset  = c(
-        .dam_csv_dim("Asset type", asset_labels),
+        .dam_csv_dim(asset_codes),
         list(hierarchy = list(
           P51G = list(
             P5111_N111_112G = list(`6011` = list(), `6010` = list()),
@@ -297,30 +231,14 @@ fso_hours_worked <- function(dataset_id = "ch_fso_hours_worked") {
   data <- data[order(data$measure, data$sex, data$worktime, data$date), , drop = FALSE]
 
   meta <- list(
-    title = list(en = "Actual hours worked (annual working volume)"),
-    source = list(
-      name = list(en = "Swiss Federal Statistical Office (FSO)"),
-      url = "https://www.bfs.admin.ch/asset/en/ts-x-03.02.03.01.02.01"
-    ),
+    source = list(url = "https://www.bfs.admin.ch/asset/en/ts-x-03.02.03.01.02.01"),
     license = "fso",
     frequency = "annual",
     updated = if (!is.na(dl$pubdate)) as.character(dl$pubdate) else NULL,
     dimensions = list(
-      measure = .dam_csv_dim("Measure", c(
-        weekly = "Usual hours worked per week per job",
-        annual = "Annual hours worked per job",
-        volume = "Annual volume of hours worked (total)"
-      )),
-      sex = .dam_csv_dim("Sex", c(
-        `_T` = "Total", M = "Men", F = "Women"
-      )),
-      worktime = .dam_csv_dim("Working time", c(
-        `_T`   = "Total",
-        FT     = "Full-time",
-        PT     = "Part-time",
-        PT_I   = "Part-time I (50-89%)",
-        PT_II  = "Part-time II (under 50%)"
-      ))
+      measure  = .dam_csv_dim(c("weekly", "annual", "volume")),
+      sex      = .dam_csv_dim(c("_T", "M", "F")),
+      worktime = .dam_csv_dim(c("_T", "FT", "PT", "PT_I", "PT_II"))
     )
   )
   list(id = dataset_id, data = data, meta = meta)

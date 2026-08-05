@@ -1,7 +1,7 @@
 # Harmonised Index of Consumer Prices (HICP)
 
 - **id**: ch_fso_hicp
-- **title**: Harmonised CPI (HICP)
+- **title**: Harmonised CPI (HICP) | de: Harmonisierter Konsumentenpreisindex (HVPI) | fr: IPC harmonisé (IPCH) | it: IPC armonizzato (IPCA)
 - **concept**: Prices / Consumer prices
 - **canonical**: no (alternate for Consumer prices — the EU-harmonised methodology, for cross-country comparison)
 - **source**: eurostat
@@ -53,9 +53,9 @@ the domestic headline / detailed basket.
   hotels, Miscellaneous). Hierarchy: CP00 → CP01..CP12.
 
 ## Labels
-- **units**: Index (2015 = 100)
+- **units**: Index (2015 = 100) | de: Index (2015 = 100) | fr: Indice (2015 = 100) | it: Indice (2015 = 100)
 - dim: coicop
-  - **label**: COICOP consumption purpose
+  - **label**: COICOP consumption purpose | de: COICOP-Verwendungszweck | fr: Fonction de consommation COICOP | it: Funzione di consumo COICOP
 
 ## Display
 - **split**: coicop

@@ -1,7 +1,7 @@
 # Bilateral exchange rate indices – Monthly
 
 - **id**: ch_snb_devwkibiim
-- **title**: Bilateral exchange-rate indices
+- **title**: Bilateral exchange-rate indices | de: Bilaterale Wechselkursindizes | fr: Indices de taux de change bilatéraux | it: Indici dei tassi di cambio bilaterali
 - **concept**: Exchange rates / Bilateral FX
 - **canonical**: yes
 - **source**: snb

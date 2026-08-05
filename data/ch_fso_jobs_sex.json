@@ -10,7 +10,10 @@
   "start": "1995-07-01",
   "end": "2026-01-01",
   "title": {
-    "en": "Jobs by economic division and sex"
+    "en": "Jobs by economic division and sex",
+    "de": "Beschäftigte nach Wirtschaftsabteilung und Geschlecht",
+    "fr": "Emplois par division économique et sexe",
+    "it": "Impieghi per divisione economica e sesso"
   },
   "source": {
     "name": {
@@ -27,54 +30,81 @@
   "dimensions": {
     "Grossregion": {
       "label": {
-        "en": "Major region"
+        "en": "Major region",
+        "de": "Grossregion",
+        "fr": "Grande région",
+        "it": "Grande Regione"
       },
       "levels": {
         "0": {
           "label": {
-            "en": "Switzerland"
+            "en": "Switzerland",
+            "de": "Schweiz",
+            "fr": "Suisse",
+            "it": "Svizzera"
           },
           "data": true
         },
         "1": {
           "label": {
-            "en": "Lake Geneva region"
+            "en": "Lake Geneva region",
+            "de": "Genferseeregion",
+            "fr": "Région lémanique",
+            "it": "Regione del Lemano"
           },
           "data": true
         },
         "2": {
           "label": {
-            "en": "Espace Mittelland"
+            "en": "Espace Mittelland",
+            "de": "Espace Mittelland",
+            "fr": "Espace Mittelland",
+            "it": "Espace Mittelland"
           },
           "data": true
         },
         "3": {
           "label": {
-            "en": "North-Western Switzerland"
+            "en": "North-Western Switzerland",
+            "de": "Nordwestschweiz",
+            "fr": "Suisse du Nord-Ouest",
+            "it": "Svizzera nordoccidentale"
           },
           "data": true
         },
         "4": {
           "label": {
-            "en": "Zurich Region"
+            "en": "Zurich Region",
+            "de": "Zürich",
+            "fr": "Zurich",
+            "it": "Zurigo"
           },
           "data": true
         },
         "5": {
           "label": {
-            "en": "Eastern Switzerland"
+            "en": "Eastern Switzerland",
+            "de": "Ostschweiz",
+            "fr": "Suisse orientale",
+            "it": "Svizzera orientale"
           },
           "data": true
         },
         "6": {
           "label": {
-            "en": "Central Switzerland"
+            "en": "Central Switzerland",
+            "de": "Zentralschweiz",
+            "fr": "Suisse centrale",
+            "it": "Svizzera centrale"
           },
           "data": true
         },
         "7": {
           "label": {
-            "en": "Ticino"
+            "en": "Ticino",
+            "de": "Tessin",
+            "fr": "Tessin",
+            "it": "Ticino"
           },
           "data": true
         }
@@ -93,24 +123,36 @@
     },
     "Wirtschaftssektor": {
       "label": {
-        "en": "Economic sector"
+        "en": "Economic sector",
+        "de": "Wirtschaftssektor",
+        "fr": "Secteur économique",
+        "it": "Settore economico"
       },
       "levels": {
         "TOT": {
           "label": {
-            "en": "Sectors 2-3"
+            "en": "Sectors 2-3",
+            "de": "Sektoren 2-3",
+            "fr": "Secteurs 2-3",
+            "it": "Settori 2-3"
           },
           "data": true
         },
         "2": {
           "label": {
-            "en": "Sector 2"
+            "en": "Sector 2",
+            "de": "Sektor 2",
+            "fr": "Secteur 2",
+            "it": "Settore 2"
           },
           "data": true
         },
         "3": {
           "label": {
-            "en": "Sector 3"
+            "en": "Sector 3",
+            "de": "Sektor 3",
+            "fr": "Secteur 3",
+            "it": "Settore 3"
           },
           "data": true
         }
@@ -118,42 +160,63 @@
     },
     "Beschäftigungsgrad": {
       "label": {
-        "en": "Employment rate"
+        "en": "Employment rate",
+        "de": "Beschäftigungsgrad",
+        "fr": "Taux d'occupation",
+        "it": "Grado di occupazione"
       },
       "levels": {
         "TOT": {
           "label": {
-            "en": "Employment rate - total"
+            "en": "Employment rate - total",
+            "de": "Beschäftigungsgrad - Total",
+            "fr": "Taux d'occupation - total",
+            "it": "Grado di occupazione - totale"
           },
           "data": true
         },
         "1": {
           "label": {
-            "en": "Full time"
+            "en": "Full time",
+            "de": "Vollzeit",
+            "fr": "Plein temps",
+            "it": "Tempo pieno"
           },
           "data": true
         },
         "2": {
           "label": {
-            "en": "Part time"
+            "en": "Part time",
+            "de": "Teilzeit",
+            "fr": "Temps partiel",
+            "it": "Tempo parziale"
           },
           "data": true
         },
         "3": {
           "label": {
-            "en": "Total, seasonally adjusted"
+            "en": "Total, seasonally adjusted",
+            "de": "Total, saisonbereinigt",
+            "fr": "Total, désaisonnalisé",
+            "it": "Totale, destagionalizzato"
           },
           "data": true
         },
         "4": {
           "label": {
-            "en": "Full time equivalents"
+            "en": "Full time equivalents",
+            "de": "Vollzeitäquivalente",
+            "fr": "Equivalents plein temps",
+            "it": "Equivalenti a tempo pieno"
           },
           "data": true
         },
         "4.1": {
           "label": {
-            "en": "Full time equivalents, seasonally adjusted"
+            "en": "Full time equivalents, seasonally adjusted",
+            "de": "Vollzeitäquivalente, saisonbereinigt",
+            "fr": "Equivalents plein temps, désaisonnalisés",
+            "it": "Equivalenti a tempo pieno, destagionalizzati"
           },
           "data": true
         }
@@ -161,24 +224,36 @@
     },
     "Geschlecht": {
       "label": {
-        "en": "Gender"
+        "en": "Gender",
+        "de": "Geschlecht",
+        "fr": "Sexe",
+        "it": "Sesso"
       },
       "levels": {
         "TOT": {
           "label": {
-            "en": "Gender - total"
+            "en": "Gender - total",
+            "de": "Geschlecht - Total",
+            "fr": "Sexe - total",
+            "it": "Sesso - totale"
           },
           "data": true
         },
         "1": {
           "label": {
-            "en": "Man"
+            "en": "Man",
+            "de": "Mann",
+            "fr": "Homme",
+            "it": "Uomo"
           },
           "data": true
         },
         "2": {
           "label": {
-            "en": "Woman"
+            "en": "Woman",
+            "de": "Frau",
+            "fr": "Femme",
+            "it": "Donna"
           },
           "data": true
         }
@@ -198,5 +273,5 @@
     "Beschäftigungsgrad": "TOT"
   },
   "description": "The cross-tabulated companion to BESTA: jobs by major region, broad economic sector, employment level and sex, quarterly back to 1995. It is not canonical for the employment concept; ch_fso_besta (by fine NOGA division) is the headline. This dataset exists for the breakdown axes BESTA collapses to total: it splits jobs by sex (men/women), by full-time vs part-time, and by the seven major regions (Grossregion). With 336 dimension combinations it is by far the largest of the FSO labour tables in this catalog. Two of its employment-rate levels are seasonally adjusted variants (3 total SA, 4.1 full-time equivalents SA), so seasonal adjustment appears here as a dimension level rather than a separate dataset. It trades BESTA's NOGA depth (60 divisions) for only three sector aggregates (total, Sector 2, Sector 3).",
-  "fetched_utc": "2026-07-31 09:17:55"
+  "fetched_utc": "2026-08-05 13:12:06"
 }

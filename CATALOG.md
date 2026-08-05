@@ -22,7 +22,7 @@ See [`docs/concepts.md`](docs/concepts.md) for the concept tree and canonical/al
 |---|---|---|---|---|---|
 | `ch_fso_construction_prices` | Construction prices |  | semi-annual | 1998-10-01..2026-04-01 | FSO (free reuse, attribution) |
 | `ch_snb_plkopr` | Consumer prices (CPI) |  | monthly | 1921-01-01..2026-06-01 | SNB (non-commercial, attribution) |
-| `ch_fso_cpi` | Consumer prices (detailed basket) _(alt)_ |  | monthly | 1982-12-01..2026-06-01 | FSO (free reuse, attribution) |
+| `ch_fso_cpi` | Consumer prices (detailed basket) _(alt)_ |  | monthly | 1982-12-01..2026-07-01 | FSO (free reuse, attribution) |
 | `ch_fso_hicp` | Harmonised CPI (HICP) _(alt)_ |  | monthly | 2004-12-01..2025-12-01 | eurostat |
 | `ch_snb_plkoprinfla` | Core inflation |  | monthly | 1983-12-01..2026-06-01 | SNB (non-commercial, attribution) |
 | `ch_snb_snbiprogq` | Inflation forecast (SNB) |  | quarterly | 2001-01-01..2029-01-01 | SNB (non-commercial, attribution) |
@@ -62,17 +62,17 @@ See [`docs/concepts.md`](docs/concepts.md) for the concept tree and canonical/al
 
 | ID | Title | Source | Frequency | Coverage | License |
 |---|---|---|---|---|---|
-| `ch_snb_rendeiduebd` | Bond yields (spot rates) |  | daily | 1988-01-04..2026-06-30 | SNB (non-commercial, attribution) |
-| `ch_snb_zimoma` | Money market rates |  | monthly | 1972-01-01..2026-06-01 | SNB (non-commercial, attribution) |
+| `ch_snb_rendeiduebd` | Bond yields (spot rates) |  | daily | 1988-01-04..2026-07-31 | SNB (non-commercial, attribution) |
+| `ch_snb_zimoma` | Money market rates |  | monthly | 1972-01-01..2026-07-01 | SNB (non-commercial, attribution) |
 | `ch_snb_zikredlauf` | New lending rates _(alt)_ |  | monthly | 2009-05-01..2026-04-01 | SNB (non-commercial, attribution) |
-| `ch_snb_zikrepro` | Published interest rates _(alt)_ |  | monthly | 1933-01-01..2026-05-01 | SNB (non-commercial, attribution) |
+| `ch_snb_zikrepro` | Published interest rates _(alt)_ |  | monthly | 1933-01-01..2026-06-01 | SNB (non-commercial, attribution) |
 | `ch_snb_snboffzisa` | Official interest rates |  | monthly | 2000-01-01..2026-06-01 | SNB (non-commercial, attribution) |
 
 ## Exchange rates
 
 | ID | Title | Source | Frequency | Coverage | License |
 |---|---|---|---|---|---|
-| `ch_snb_devkum` | Bilateral exchange rates |  | monthly | 1914-01-01..2026-06-01 | SNB (non-commercial, attribution) |
+| `ch_snb_devkum` | Bilateral exchange rates |  | monthly | 1914-01-01..2026-07-01 | SNB (non-commercial, attribution) |
 | `ch_snb_devwkibiim` | Bilateral exchange-rate indices |  | monthly | 1973-01-01..2026-06-01 | SNB (non-commercial, attribution) |
 | `ch_snb_devwkieffid` | Effective exchange-rate index |  | daily | 1999-01-01..2026-06-30 | SNB (non-commercial, attribution) |
 
@@ -99,7 +99,7 @@ See [`docs/concepts.md`](docs/concepts.md) for the concept tree and canonical/al
 | `ch_seco_concon` | Consumer confidence |  | quarterly | 1972-10-01..2026-04-01 | quarterly |
 | `ch_seco_wwa` | Weekly economic activity (WEA) |  | weekly | 2005-01-03..2026-07-13 | SECO open data |
 | `ch_kof_barometer` | KOF Economic Barometer |  | monthly | 1991-01-01..2026-07-01 | KOF / CC BY 4.0 |
-| `ch_kof_esi` | KOF Economic Sentiment Index |  | monthly | 2007-04-01..2026-05-01 | KOF / CC BY 4.0 |
+| `ch_kof_esi` | KOF Economic Sentiment Index |  | monthly | 2007-04-01..2026-06-01 | KOF / CC BY 4.0 |
 
 ## Financial markets
 
@@ -129,7 +129,7 @@ See [`docs/concepts.md`](docs/concepts.md) for the concept tree and canonical/al
 
 | ID | Title | Source | Frequency | Coverage | License |
 |---|---|---|---|---|---|
-| `ch_fso_hesta` | Hotel overnight stays |  | monthly | 2005-01-01..2026-05-01 | FSO (free reuse, attribution) |
+| `ch_fso_hesta` | Hotel overnight stays |  | monthly | 2005-01-01..2026-06-01 | FSO (free reuse, attribution) |
 | `ch_fso_production` | Industry & construction turnover |  | quarterly | 1999-01-01..2026-01-01 | quarterly |
 | `ch_fso_new_vehicles` | New car registrations by fuel |  | monthly | 2005-01-01..2026-06-01 | FSO (free reuse, attribution) |
 | `ch_fso_retail` | Retail trade turnover |  | monthly | 2000-01-01..2026-06-01 | monthly |

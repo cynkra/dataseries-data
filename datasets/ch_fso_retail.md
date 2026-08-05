@@ -1,7 +1,7 @@
 # Retail trade turnover (monthly)
 
 - **id**: ch_fso_retail
-- **title**: Retail trade turnover
+- **title**: Retail trade turnover | de: Detailhandelsumsätze | fr: Chiffres d'affaires du commerce de détail | it: Fatturato del commercio al dettaglio
 - **concept**: Domestic economy / Retail trade turnover
 - **canonical**: yes
 - **featured**: Retail trade

@@ -101,26 +101,15 @@ seco_wwa_fetch <- function(id = "ch_seco_wwa",
     dplyr::arrange(dplyr::across(dplyr::all_of(c("structure", "date"))))
 
   meta <- list(
-    title = list(en = "Weekly Economic Activity index (WEA)"),
-    source = list(
-      name = list(en = "State Secretariat for Economic Affairs (SECO)"),
-      url = "https://www.seco.admin.ch/wea"),
+    source = list(url = "https://www.seco.admin.ch/wea"),
     license = "seco",
     frequency = infer_frequency(raw_periods),
+    # labels + units: datasheet ## Labels block
     dimensions = list(
       structure = list(
-        label = list(en = "Series"),
-        levels = list(
-          seco_wwa = list(label = list(
-            en = "Index of weekly economic activity (WEA)")),
-          seco_wwa_pre_covid = list(label = list(
-            en = "WEA compared with the pre-crisis level (discontinued)"))
-        )
+        levels = list(seco_wwa = list(), seco_wwa_pre_covid = list())
       )
     ),
-    units = list(en = paste0("Scaled to the rate of growth of real, seasonally, ",
-                             "calendar and sport-event adjusted GDP versus the ",
-                             "same quarter of the previous year (percent)")),
     notes = paste0("Weekly indicator published by SECO. The headline series ",
                    "(seco_wwa) runs from 2005; seco_wwa_pre_covid is a ",
                    "discontinued variant (2019-2022) measuring activity relative ",

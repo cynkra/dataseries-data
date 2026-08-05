@@ -55,6 +55,21 @@ fso_excel_ch_fso_cpi <- function(path, pubdate) {
   code     <- body[[hcol("Code")]]      # position code (series key)
   item_e   <- body[[hcol("Item_E")]]    # parent group (English)
   postxt_e <- body[[hcol("PosTxt_E")]]  # position text (English)
+  # The same sheet carries the position text in all four national-language
+  # conventions (PosTxt_D/F/I with Position/Posizione fallbacks) — the labels are
+  # already in the workbook, no extra request. Optional: a missing column just
+  # drops that language.
+  hcol_opt <- function(nm) { i <- which(hdr == nm); if (length(i) == 1L) body[[i]] else NULL }
+  txt_of <- function(primary, fallback) {
+    p <- hcol_opt(primary); f <- hcol_opt(fallback)
+    if (is.null(p) && is.null(f)) return(NULL)
+    out <- if (is.null(p)) rep(NA_character_, nrow(body)) else as.character(p)
+    if (!is.null(f)) { miss <- is.na(out) | out == ""; out[miss] <- as.character(f)[miss] }
+    trimws(out)
+  }
+  postxt_d <- txt_of("PosTxt_D", "Position_D")
+  postxt_f <- txt_of("PosTxt_F", "Position_F")
+  postxt_i <- txt_of("PosTxt_I", "Posizione_I")
   # COICOP tree depth (1 = Total). Optional: if FSO ever drops the column the dim just
   # stays flat rather than the whole CPI fetch failing.
   lvl_col  <- which(hdr == "Level")
@@ -66,6 +81,9 @@ fso_excel_ch_fso_cpi <- function(path, pubdate) {
   code     <- code[keep]
   item_e   <- item_e[keep]
   postxt_e <- postxt_e[keep]
+  postxt_d <- postxt_d[keep]
+  postxt_f <- postxt_f[keep]
+  postxt_i <- postxt_i[keep]
   depth    <- depth[keep]
   vals     <- body[keep, date_cols, drop = FALSE]
 
@@ -96,16 +114,19 @@ fso_excel_ch_fso_cpi <- function(path, pubdate) {
               value = as.numeric(value)) %>%
     dplyr::arrange(item, date)
 
-  # --- build dimension levels (English labels) --------------------------------
+  # --- build dimension levels (labels in all four languages) ------------------
   lab_df <- tibble::tibble(
     code  = code,
-    label = ifelse(is.na(postxt_e) | postxt_e == "", item_e, postxt_e)
+    label = ifelse(is.na(postxt_e) | postxt_e == "", item_e, postxt_e),
+    label_de = postxt_d, label_fr = postxt_f, label_it = postxt_i
   ) %>%
     dplyr::filter(code %in% unique(data$item)) %>%
     dplyr::distinct(code, .keep_all = TRUE)
 
   levels <- stats::setNames(
-    lapply(lab_df$label, function(l) list(label = list(en = as.character(l)))),
+    lapply(seq_len(nrow(lab_df)), function(i) list(label = ds_label_obj(
+      as.character(lab_df$label[i]),
+      de = lab_df$label_de[i], fr = lab_df$label_fr[i], it = lab_df$label_it[i]))),
     lab_df$code
   )
 
@@ -141,13 +162,11 @@ fso_excel_ch_fso_cpi <- function(path, pubdate) {
   hierarchy <- { roots <- hcode[is.na(parent[hcode])]
     out <- list(); for (r in roots) out[[r]] <- build_subtree(r); out }
 
-  item_dim <- list(label = list(en = "CPI position"), levels = levels)
+  item_dim <- list(levels = levels)   # dim label: datasheet ## Labels
   if (length(hierarchy)) item_dim$hierarchy <- hierarchy  # omit if no depth was available
 
   meta <- list(
-    title = list(en = "Consumer Price Index (LIK)"),
     source = list(
-      name = list(en = "Swiss Federal Statistical Office (FSO)"),
       url  = "https://www.bfs.admin.ch/asset/de/su-d-05.02.66"
     ),
     license = "fso",
@@ -218,18 +237,13 @@ fso_excel_ch_fso_ppi <- function(path, pubdate) {
     id   = "ch_fso_ppi",
     data = as.data.frame(data),
     meta = list(
-      title  = list(en = "Producer and Import Price Index"),
-      source = list(
-        name = list(en = "Swiss Federal Statistical Office (FSO)"),
-        url  = "https://www.bfs.admin.ch/asset/de/su-q-05.04.03.01-ppi-ipp"
-      ),
+      source = list(url = "https://www.bfs.admin.ch/asset/de/su-q-05.04.03.01-ppi-ipp"),
       license   = "fso",
       frequency = "monthly",
       topic     = "Prices",
       updated   = as.character(pubdate),
       dimensions = list(
         base = list(
-          label  = list(en = "Index base"),
           levels = levels
         )
       )
@@ -305,11 +319,7 @@ fso_excel_ch_fso_wage_idx <- function(path, pubdate) {
   data <- dplyr::arrange(data, adjustment, measure, breakdown, date)
 
   meta <- list(
-    title  = list(en = "Swiss Wage Index"),
-    source = list(
-      name = list(en = "Swiss Federal Statistical Office (FSO)"),
-      url  = "https://www.bfs.admin.ch/asset/de/je-e-03.04.03.00.04"
-    ),
+    source = list(url = "https://www.bfs.admin.ch/asset/de/je-e-03.04.03.00.04"),
     license   = "fso",
     frequency = "annual",
     topic     = "Wages",
@@ -319,38 +329,21 @@ fso_excel_ch_fso_wage_idx <- function(path, pubdate) {
       # (by sex, by sector). Encoded as a hierarchy so the picker renders the
       # "By sex" / "By sector" groups as headers and Men/Women can be overlaid
       # in the same chart. Construction is nested under Secondary (sub-position).
+      # Labels + the breakdown tree live in the datasheet (## Labels /
+      # ## Hierarchy); this only declares the codes + their order. The `measure`
+      # dim never ships (change is dropped as redundant, then the single-valued
+      # dim collapses), so it needs no datasheet entry.
       breakdown = list(
-        label = list(en = "Breakdown"),
         levels = list(
-          tot       = list(label = list(en = "Total")),
-          by_sex    = list(label = list(en = "By sex")),
-          m         = list(label = list(en = "Men")),
-          f         = list(label = list(en = "Women")),
-          by_sector = list(label = list(en = "By sector")),
-          bf1       = list(label = list(en = "Secondary sector")),
-          f41       = list(label = list(en = "Construction")),
-          gs4       = list(label = list(en = "Tertiary sector"))
-        ),
-        hierarchy = list(
-          tot = list(
-            by_sex    = list(m = list(), f = list()),
-            by_sector = list(bf1 = list(f41 = list()), gs4 = list())
-          )
+          tot = list(), by_sex = list(), m = list(), f = list(),
+          by_sector = list(), bf1 = list(), f41 = list(), gs4 = list()
         )
       ),
       measure = list(
-        label = list(en = "Measure"),
-        levels = list(
-          index  = list(label = list(en = "Index (1993 = 100)")),
-          change = list(label = list(en = "Variation in % compared with previous year"))
-        )
+        levels = list(index = list(), change = list())
       ),
       adjustment = list(
-        label = list(en = "Adjustment"),
-        levels = list(
-          nominal = list(label = list(en = "Nominal wage index")),
-          real    = list(label = list(en = "Real wage index"))
-        )
+        levels = list(nominal = list(), real = list())
       )
     )
   )
@@ -369,17 +362,19 @@ fso_excel_ch_fso_pop <- function(path, pubdate) {
   # column can't silently shift the data. The source's `change_abs` / `in %`
   # columns are intentionally not matched (the first is a trivial first difference
   # we drop, the second a percentage). `pat` -> (code, English label).
+  # `pat` anchors each component; the display labels live in the datasheet
+  # ## Labels block (attach_labels).
   items <- list(
-    pop_stock_jan  = list(pat = "Januar",        en = "Population on 1 January"),
-    live_births    = list(pat = "Lebend",        en = "Live births"),
-    deaths         = list(pat = "Todes",         en = "Deaths"),
-    birth_surplus  = list(pat = "schuss",        en = "Excess of births over deaths"),
-    immigration    = list(pat = "Einwanderung",  en = "Immigration"),
-    emigration     = list(pat = "Auswanderung",  en = "Emigration"),
-    migration_bal  = list(pat = "saldo",         en = "Net migration"),
-    naturalisation = list(pat = "Bürgerrecht", en = "Acquisition of Swiss citizenship"),
-    adjustments    = list(pat = "bereini",       en = "Adjustments"),
-    pop_stock_dec  = list(pat = "Dezember",      en = "Population on 31 December")
+    pop_stock_jan  = list(pat = "Januar"),
+    live_births    = list(pat = "Lebend"),
+    deaths         = list(pat = "Todes"),
+    birth_surplus  = list(pat = "schuss"),
+    immigration    = list(pat = "Einwanderung"),
+    emigration     = list(pat = "Auswanderung"),
+    migration_bal  = list(pat = "saldo"),
+    naturalisation = list(pat = "Bürgerrecht"),
+    adjustments    = list(pat = "bereini"),
+    pop_stock_dec  = list(pat = "Dezember")
   )
 
   hdr_band <- apply(raw[2:5, , drop = FALSE], 2,
@@ -419,27 +414,19 @@ fso_excel_ch_fso_pop <- function(path, pubdate) {
   data <- data[!is.na(data$value) & !is.na(data$date), , drop = FALSE]
   data <- dplyr::arrange(data, .data$item, .data$date)
 
-  levels <- lapply(names(items), function(code) {
-    list(label = list(en = items[[code]]$en))
-  })
-  names(levels) <- names(items)
+  levels <- setNames(lapply(names(items), function(x) list()), names(items))
 
   list(
     id   = "ch_fso_pop",
     data = data,
     meta = list(
-      title  = list(en = "Permanent resident population"),
-      source = list(
-        name = list(en = "Swiss Federal Statistical Office (FSO)"),
-        url  = "https://www.bfs.admin.ch/asset/de/su-d-01.02.04.05"
-      ),
+      source = list(url = "https://www.bfs.admin.ch/asset/de/su-d-01.02.04.05"),
       license   = "fso",
       frequency = "annual",
       topic     = "Population",
       updated   = as.character(pubdate),
       dimensions = list(
         item = list(
-          label  = list(en = "Demographic component"),
           levels = levels
         )
       )
@@ -523,31 +510,17 @@ fso_excel_ch_fso_unemp_rate <- function(path, pubdate) {
     select(origin, sex, date, value)
 
   meta <- list(
-    title = list(en = "Unemployment rate (ILO) by sex and nationality, Switzerland"),
-    source = list(
-      name = list(en = "Swiss Federal Statistical Office (FSO)"),
-      url  = "https://www.bfs.admin.ch/asset/de/je-d-03.03.01.03"
-    ),
+    source = list(url = "https://www.bfs.admin.ch/asset/de/je-d-03.03.01.03"),
     license   = "fso",
     frequency = "monthly",
     topic     = "Labour",
     updated   = as.character(pubdate),
     dimensions = list(
       origin = list(
-        label = list(en = "Nationality"),
-        levels = list(
-          tot = list(label = list(en = "Total")),
-          ch  = list(label = list(en = "Swiss nationals")),
-          ex  = list(label = list(en = "Foreign nationals"))
-        )
+        levels = list(tot = list(), ch = list(), ex = list())
       ),
       sex = list(
-        label = list(en = "Sex"),
-        levels = list(
-          tot = list(label = list(en = "Total")),
-          men = list(label = list(en = "Men")),
-          wom = list(label = list(en = "Women"))
-        )
+        levels = list(tot = list(), men = list(), wom = list())
       )
     )
   )
@@ -662,34 +635,20 @@ fso_excel_ch_fso_trade_partner <- function(pubdate = NULL) {
     partners$partner)
 
   meta <- list(
-    title = list(en = "Foreign trade by partner country"),
-    source = list(
-      name = list(en = "Swiss Federal Statistical Office (FSO) / Federal Office for Customs and Border Security (FOCBS)"),
-      url  = "https://www.bfs.admin.ch/asset/en/36664830"
-    ),
+    source = list(url = "https://www.bfs.admin.ch/asset/en/36664830"),
     license   = "fso",
     frequency = "annual",
     topic     = "External sector",
-    units     = list(en = "CHF millions"),
     updated   = if (is.null(pubdate)) NA_character_ else as.character(pubdate),
     dimensions = list(
       flow = list(
-        label = list(en = "Trade flow"),
-        levels = list(
-          export = list(label = list(en = "Exports")),
-          import = list(label = list(en = "Imports"))
-        )
+        levels = list(export = list(), import = list())
       ),
       partner = list(
-        label  = list(en = "Partner country / region"),
-        levels = partner_levels
+        levels = partner_levels   # country names from the sheet (source-derived)
       ),
       level = list(
-        label = list(en = "Aggregation level"),
-        levels = list(
-          group   = list(label = list(en = "Continent / economic area")),
-          country = list(label = list(en = "Individual country"))
-        )
+        levels = list(group = list(), country = list())
       )
     )
   )
@@ -853,19 +812,13 @@ fso_excel_ch_fso_gdp_region <- function(path, pubdate) {
   )
 
   meta <- list(
-    title = list(en = "Regional gross domestic product (GDP), current prices"),
-    source = list(
-      name = list(en = "Swiss Federal Statistical Office (FSO)"),
-      url  = "https://www.bfs.admin.ch/asset/en/je-e-04.02.06.01"
-    ),
+    source = list(url = "https://www.bfs.admin.ch/asset/en/je-e-04.02.06.01"),
     license   = "fso",
     frequency = "annual",
     topic     = "National accounts",
-    units     = list(en = "CHF million, at current prices"),
     updated   = as.character(pubdate),
     dimensions = list(
       region = list(
-        label     = list(en = "Region"),
         levels    = region_levels,
         hierarchy = region_hierarchy
       )
@@ -917,10 +870,11 @@ fso_excel_ch_fso_construction_prices <- function(path, pubdate) {
   block <- (r01 + 1L):block_end
 
   # --- three headline work-types matched by OBJ tag (Total / building / civil) -
+  # tags anchor the rows; display labels live in the datasheet ## Labels block
   worktypes <- list(
-    total   = list(tag = "<OBJ_02>", en = "Construction: Total"),
-    hochbau = list(tag = "<OBJ_03>", en = "Building construction (Hochbau)"),
-    tiefbau = list(tag = "<OBJ_13>", en = "Civil engineering (Tiefbau)")
+    total   = list(tag = "<OBJ_02>"),
+    hochbau = list(tag = "<OBJ_03>"),
+    tiefbau = list(tag = "<OBJ_13>")
   )
 
   parse_num <- function(x) {
@@ -951,30 +905,21 @@ fso_excel_ch_fso_construction_prices <- function(path, pubdate) {
   data <- dplyr::arrange(data, .data$worktype, .data$date)
   data <- as.data.frame(data, stringsAsFactors = FALSE)
 
-  levels <- lapply(names(worktypes), function(code) {
-    list(label = list(en = worktypes[[code]]$en))
-  })
-  names(levels) <- names(worktypes)
+  levels <- setNames(lapply(names(worktypes), function(x) list()), names(worktypes))
 
   list(
     id   = "ch_fso_construction_prices",
     data = data,
     meta = list(
-      title  = list(en = "Construction Price Index"),
-      source = list(
-        name = list(en = "Swiss Federal Statistical Office (FSO)"),
-        url  = "https://www.bfs.admin.ch/asset/de/cc-t-05.05.01"
-      ),
+      source = list(url = "https://www.bfs.admin.ch/asset/de/cc-t-05.05.01"),
       license   = "fso",
       # Semi-annual (Apr & Oct reference months); infer_frequency has no such
       # bucket, so it is set manually here.
       frequency = "semi-annual",
       topic     = "Prices",
-      units     = list(en = "Index (October 2020 = 100)"),
       updated   = as.character(pubdate),
       dimensions = list(
         worktype = list(
-          label  = list(en = "Type of work"),
           levels = levels
         )
       )

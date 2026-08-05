@@ -6,9 +6,6 @@
   ],
   "start": "2005-01-03",
   "end": "2026-07-13",
-  "title": {
-    "en": "Weekly economic activity (WEA)"
-  },
   "source": {
     "name": {
       "en": "State Secretariat for Economic Affairs (SECO)",
@@ -24,31 +21,43 @@
   "dimensions": {
     "structure": {
       "label": {
-        "en": "Series"
+        "en": "Series",
+        "de": "Serie",
+        "fr": "Série",
+        "it": "Serie"
       },
       "levels": {
         "seco_wwa": {
           "label": {
-            "en": "Index of weekly economic activity (WEA)"
+            "en": "Index of weekly economic activity (WEA)",
+            "de": "Index der wöchentlichen Wirtschaftsaktivität (WWA)",
+            "fr": "Indice de l'activité économique hebdomadaire (WEA)",
+            "it": "Indice dell'attività economica settimanale (WEA)"
           },
           "data": true
         },
         "seco_wwa_pre_covid": {
           "label": {
-            "en": "WEA compared with the pre-crisis level (discontinued)"
+            "en": "WEA compared with the pre-crisis level (discontinued)",
+            "de": "WWA im Vergleich zum Vorkrisenniveau (eingestellt)",
+            "fr": "WEA par rapport au niveau d'avant-crise (abandonné)",
+            "it": "WEA rispetto al livello pre-crisi (interrotto)"
           },
           "data": true
         }
       }
     }
   },
-  "units": {
-    "en": "Scaled to the rate of growth of real, seasonally, calendar and sport-event adjusted GDP versus the same quarter of the previous year (percent)"
-  },
   "notes": "Weekly indicator published by SECO. The headline series (seco_wwa) runs from 2005; seco_wwa_pre_covid is a discontinued variant (2019-2022) measuring activity relative to the Q4 2019 level.",
   "topic": "Business cycle & sentiment",
   "concept": "Business cycle & sentiment / High-frequency activity tracker",
   "canonical": true,
+  "title": {
+    "en": "Weekly economic activity (WEA)",
+    "de": "Wöchentliche Wirtschaftsaktivität (WWA)",
+    "fr": "Activité économique hebdomadaire (WEA)",
+    "it": "Attività economica settimanale (WEA)"
+  },
   "split": "structure",
   "single_select": "structure",
   "default_transform": "level",
@@ -56,5 +65,11 @@
     "structure": "seco_wwa"
   },
   "description": "The catalog's first weekly series. SECO's Weekly Economic Activity index (WEA, German WWA) is a high-frequency nowcasting indicator built from a basket of weekly real-economy signals (electricity consumption, payment transactions, freight, foot traffic, etc.). It is scaled to the year-on-year growth rate of real, seasonally / calendar / sport-event adjusted GDP, so a WEA value of 2.0 reads as \"activity running about 2% above the same week a year earlier\" — it is a level on a growth-rate scale, not something to be differenced again. SECO publishes it in the swissdata long-CSV format, like ch_seco_gdp, but without the _json.txt meta sidecar, so the dimension/label metadata is built by hand in the parser (optionally cross-checked against the companion wwa.xlsx beschriftung sheet, which carries the en/de/fr/it labels). The structure dimension carries two series: the headline seco_wwa index (2005-> , the default) and seco_wwa_pre_covid, a discontinued variant (2019-12 .. 2022-12) that measured weekly activity relative to the Q4 2019 pre-crisis level rather than YoY.",
-  "fetched_utc": "2026-07-31 09:17:56"
+  "units": {
+    "en": "Scaled to the rate of growth of real, seasonally, calendar and sport-event adjusted GDP versus the same quarter of the previous year (percent)",
+    "de": "Skaliert auf die Wachstumsrate des realen, saison-, kalender- und sportanlassbereinigten BIP gegenüber dem Vorjahresquartal (Prozent)",
+    "fr": "Mis à l'échelle du taux de croissance du PIB réel corrigé des variations saisonnières, calendaires et des grands événements sportifs, par rapport au même trimestre de l'année précédente (pour cent)",
+    "it": "Scalato al tasso di crescita del PIL reale destagionalizzato, corretto per gli effetti di calendario e dei grandi eventi sportivi, rispetto allo stesso trimestre dell'anno precedente (per cento)"
+  },
+  "fetched_utc": "2026-08-05 13:12:08"
 }

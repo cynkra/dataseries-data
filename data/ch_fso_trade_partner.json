@@ -8,9 +8,6 @@
   ],
   "start": "1990-01-01",
   "end": "2025-01-01",
-  "title": {
-    "en": "Foreign trade by partner country"
-  },
   "source": {
     "name": {
       "en": "Swiss Federal Statistical Office (FSO) / Federal Office for Customs and Border Security (FOCBS)",
@@ -24,25 +21,31 @@
   "license": "fso",
   "frequency": "annual",
   "topic": "External sector",
-  "units": {
-    "en": "CHF millions"
-  },
   "updated": null,
   "dimensions": {
     "flow": {
       "label": {
-        "en": "Trade flow"
+        "en": "Trade flow",
+        "de": "Handelsrichtung",
+        "fr": "Flux commercial",
+        "it": "Flusso commerciale"
       },
       "levels": {
         "export": {
           "label": {
-            "en": "Exports"
+            "en": "Exports",
+            "de": "Exporte",
+            "fr": "Exportations",
+            "it": "Esportazioni"
           },
           "data": true
         },
         "import": {
           "label": {
-            "en": "Imports"
+            "en": "Imports",
+            "de": "Importe",
+            "fr": "Importations",
+            "it": "Importazioni"
           },
           "data": true
         }
@@ -50,7 +53,10 @@
     },
     "partner": {
       "label": {
-        "en": "Partner country / region"
+        "en": "Partner country / region",
+        "de": "Partnerland / Region",
+        "fr": "Pays partenaire / région",
+        "it": "Paese partner / regione"
       },
       "levels": {
         "Africa": {
@@ -346,18 +352,27 @@
     },
     "level": {
       "label": {
-        "en": "Aggregation level"
+        "en": "Aggregation level",
+        "de": "Aggregationsstufe",
+        "fr": "Niveau d'agrégation",
+        "it": "Livello di aggregazione"
       },
       "levels": {
         "group": {
           "label": {
-            "en": "Continent / economic area"
+            "en": "Continent / economic area",
+            "de": "Kontinent / Wirtschaftsraum",
+            "fr": "Continent / espace économique",
+            "it": "Continente / area economica"
           },
           "data": true
         },
         "country": {
           "label": {
-            "en": "Individual country"
+            "en": "Individual country",
+            "de": "Einzelnes Land",
+            "fr": "Pays individuel",
+            "it": "Singolo paese"
           },
           "data": true
         }
@@ -366,6 +381,12 @@
   },
   "concept": "External sector / Foreign trade",
   "canonical": true,
+  "title": {
+    "en": "Foreign trade by partner country",
+    "de": "Aussenhandel nach Partnerland",
+    "fr": "Commerce extérieur par pays partenaire",
+    "it": "Commercio estero per paese partner"
+  },
   "split": "partner",
   "single_select": "level",
   "default_transform": "level",
@@ -375,5 +396,11 @@
     "level": "group"
   },
   "description": "Swiss foreign trade broken down by partner country and region, for both flows (exports and imports), in CHF millions, back to 1990. Covers the major trading partners (Germany, USA, China, …) plus the continent / economic-area aggregates (Europe, EU, Asia, North America, …) and the grand Total. This is the partner-country cut of the customs trade statistics, complementary to the SNB's trade-by-goods value series — the SNB cubes carry no partner-country dimension.",
-  "fetched_utc": "2026-07-31 09:17:56"
+  "units": {
+    "en": "CHF millions",
+    "de": "Mio. CHF",
+    "fr": "Millions de CHF",
+    "it": "Milioni di CHF"
+  },
+  "fetched_utc": "2026-08-05 13:12:07"
 }

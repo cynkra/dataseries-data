@@ -1,7 +1,7 @@
 # Consumer Price Index (LIK)
 
 - **id**: ch_fso_cpi
-- **title**: Consumer prices (detailed basket)
+- **title**: Consumer prices (detailed basket) | de: Konsumentenpreise (detaillierter Warenkorb) | fr: Prix à la consommation (panier détaillé) | it: Prezzi al consumo (paniere dettagliato)
 - **concept**: Prices / Consumer prices
 - **canonical**: no (alternate for Consumer prices — the detailed basket breakdown)
 - **source**: fso
@@ -47,7 +47,7 @@ Dec-2020=100 asset `su-d-05.02.67`). History to December 1982.
 
 ## Labels
 - dim: item
-  - **label**: CPI position
+  - **label**: CPI position | de: LIK-Position | fr: Position de l'IPC | it: Posizione dell'IPC
 
 ## Display
 - **split**: item

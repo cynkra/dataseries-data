@@ -1,7 +1,7 @@
 # Weekly Economic Activity index (WEA)
 
 - **id**: ch_seco_wwa
-- **title**: Weekly economic activity (WEA)
+- **title**: Weekly economic activity (WEA) | de: Wöchentliche Wirtschaftsaktivität (WWA) | fr: Activité économique hebdomadaire (WEA) | it: Attività economica settimanale (WEA)
 - **concept**: Business cycle & sentiment / High-frequency activity tracker
 - **canonical**: yes
 - **source**: seco
@@ -61,11 +61,11 @@ pre-crisis level rather than YoY.
   This is the split / single-select dimension.
 
 ## Labels
-- **units**: Scaled to the rate of growth of real, seasonally, calendar and sport-event adjusted GDP versus the same quarter of the previous year (percent)
+- **units**: Scaled to the rate of growth of real, seasonally, calendar and sport-event adjusted GDP versus the same quarter of the previous year (percent) | de: Skaliert auf die Wachstumsrate des realen, saison-, kalender- und sportanlassbereinigten BIP gegenüber dem Vorjahresquartal (Prozent) | fr: Mis à l'échelle du taux de croissance du PIB réel corrigé des variations saisonnières, calendaires et des grands événements sportifs, par rapport au même trimestre de l'année précédente (pour cent) | it: Scalato al tasso di crescita del PIL reale destagionalizzato, corretto per gli effetti di calendario e dei grandi eventi sportivi, rispetto allo stesso trimestre dell'anno precedente (per cento)
 - dim: structure
-  - **label**: Series
-  - seco_wwa: Index of weekly economic activity (WEA)
-  - seco_wwa_pre_covid: WEA compared with the pre-crisis level (discontinued)
+  - **label**: Series | de: Serie | fr: Série | it: Serie
+  - seco_wwa: Index of weekly economic activity (WEA) | de: Index der wöchentlichen Wirtschaftsaktivität (WWA) | fr: Indice de l'activité économique hebdomadaire (WEA) | it: Indice dell'attività economica settimanale (WEA)
+  - seco_wwa_pre_covid: WEA compared with the pre-crisis level (discontinued) | de: WWA im Vergleich zum Vorkrisenniveau (eingestellt) | fr: WEA par rapport au niveau d'avant-crise (abandonné) | it: WEA rispetto al livello pre-crisi (interrotto)
 
 ## Display
 - **split**: structure

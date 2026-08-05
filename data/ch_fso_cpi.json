@@ -5,10 +5,7 @@
     "item"
   ],
   "start": "1982-12-01",
-  "end": "2026-06-01",
-  "title": {
-    "en": "Consumer prices (detailed basket)"
-  },
+  "end": "2026-07-01",
   "source": {
     "name": {
       "en": "Swiss Federal Statistical Office (FSO)",
@@ -22,3580 +19,5368 @@
   "license": "fso",
   "frequency": "monthly",
   "topic": "Prices",
-  "updated": "2026-07-02",
+  "updated": "2026-08-03",
   "dimensions": {
     "item": {
       "label": {
-        "en": "CPI position"
+        "en": "CPI position",
+        "de": "LIK-Position",
+        "fr": "Position de l'IPC",
+        "it": "Posizione dell'IPC"
       },
       "levels": {
         "100_100": {
           "label": {
-            "en": "Total"
+            "en": "Total",
+            "de": "Total",
+            "fr": "Total",
+            "it": "Totale"
           },
           "data": true
         },
         "100_1": {
           "label": {
-            "en": "Food and non-alcoholic beverages"
+            "en": "Food and non-alcoholic beverages",
+            "de": "Nahrungsmittel und alkoholfreie Getränke",
+            "fr": "Alimentation et boissons non alcoolisées",
+            "it": "Prodotti alimentari e bevande analcoliche"
           },
           "data": true
         },
         "100_1001": {
           "label": {
-            "en": "Food"
+            "en": "Food",
+            "de": "Nahrungsmittel",
+            "fr": "Alimentation",
+            "it": "Prodotti alimentari"
           },
           "data": true
         },
         "100_1002": {
           "label": {
-            "en": "Bread, flour and cereal products"
+            "en": "Bread, flour and cereal products",
+            "de": "Brot, Mehl und Getreideprodukte",
+            "fr": "Pain, farine et produits céréaliers",
+            "it": "Pane, farina e cereali"
           },
           "data": true
         },
         "100_1010": {
           "label": {
-            "en": "Rice and cereal grains"
+            "en": "Rice and cereal grains",
+            "de": "Reis und Getreidekörner",
+            "fr": "Riz et grains de céréales",
+            "it": "Riso e chicchi di cereali"
           },
           "data": true
         },
         "100_1020": {
           "label": {
-            "en": "Flour"
+            "en": "Flour",
+            "de": "Mehl",
+            "fr": "Farine",
+            "it": "Farina"
           },
           "data": true
         },
         "100_1030": {
           "label": {
-            "en": "Bread, pastries and other baked products"
+            "en": "Bread, pastries and other baked products",
+            "de": "Brot, Konditorei- und andere Backwaren",
+            "fr": "Pain, pâtisserie et autres produits de boulangerie",
+            "it": "Pane, prodotti di pasticceria e altra panetteria"
           },
           "data": true
         },
         "100_1031": {
           "label": {
-            "en": "Bread"
+            "en": "Bread",
+            "de": "Brot",
+            "fr": "Pain",
+            "it": "Pane"
           },
           "data": true
         },
         "100_1038": {
           "label": {
-            "en": "Other bakery products"
+            "en": "Other bakery products",
+            "de": "Andere Backwaren",
+            "fr": "Autres produits de boulangerie",
+            "it": "Altri prodotti di panetteria"
           },
           "data": true
         },
         "100_1039": {
           "label": {
-            "en": "Small baked goods"
+            "en": "Small baked goods",
+            "de": "Kleinbrot und -gebäck",
+            "fr": "Produits de petite boulangerie",
+            "it": "Piccola panetteria"
           },
           "data": true
         },
         "100_1046": {
           "label": {
-            "en": "Viennese pastries, pastry products"
+            "en": "Viennese pastries, pastry products",
+            "de": "Feingebäck und Konditoreiwaren",
+            "fr": "Viennoiseries et produits de pâtisserie",
+            "it": "Prodotti di pasticceria"
           },
           "data": true
         },
         "100_1055": {
           "label": {
-            "en": "Biscuit/rusk products"
+            "en": "Biscuit/rusk products",
+            "de": "Dauerbackwaren",
+            "fr": "Produits de biscuiterie, biscotterie",
+            "it": "Pasticceria a lunga conservazione"
           },
           "data": true
         },
         "100_1070": {
           "label": {
-            "en": "Breakfast cereals"
+            "en": "Breakfast cereals",
+            "de": "Frühstückscerealien",
+            "fr": "Céréales du petit déjeuner",
+            "it": "Cereali per la colazione"
           },
           "data": true
         },
         "100_1080": {
           "label": {
-            "en": "Pasta"
+            "en": "Pasta",
+            "de": "Teigwaren",
+            "fr": "Pâtes alimentaires",
+            "it": "Pasta alimentare"
           },
           "data": true
         },
         "100_1090": {
           "label": {
-            "en": "Other cereal products"
+            "en": "Other cereal products",
+            "de": "Andere Getreideprodukte",
+            "fr": "Autres produits céréaliers",
+            "it": "Altri prodotti cereali"
           },
           "data": true
         },
         "100_1100": {
           "label": {
-            "en": "Meat, meat products"
+            "en": "Meat, meat products",
+            "de": "Fleisch, Fleischwaren",
+            "fr": "Viande, produits à base de viande",
+            "it": "Carne, prodotti a base di carne"
           },
           "data": true
         },
         "100_1101": {
           "label": {
-            "en": "Meat, fresh or frozen"
+            "en": "Meat, fresh or frozen",
+            "de": "Fleisch, frisch oder tiefgekühlt",
+            "fr": "Viande, fraîche ou congelée",
+            "it": "Carne, fresca o surgelata"
           },
           "data": true
         },
         "100_1102": {
           "label": {
-            "en": "Beef and veal"
+            "en": "Beef and veal",
+            "de": "Rind- und Kalbfleisch",
+            "fr": "Viande de boeuf et de veau",
+            "it": "Carne di manzo e di vitello"
           },
           "data": true
         },
         "100_1103": {
           "label": {
-            "en": "Beef"
+            "en": "Beef",
+            "de": "Rindfleisch",
+            "fr": "Viande de boeuf",
+            "it": "Carne di manzo"
           },
           "data": true
         },
         "100_1114": {
           "label": {
-            "en": "Veal"
+            "en": "Veal",
+            "de": "Kalbfleisch",
+            "fr": "Viande de veau",
+            "it": "Carne di vitello"
           },
           "data": true
         },
         "100_1130": {
           "label": {
-            "en": "Pork"
+            "en": "Pork",
+            "de": "Schweinefleisch",
+            "fr": "Viande de porc",
+            "it": "Carne di maiale"
           },
           "data": true
         },
         "100_1140": {
           "label": {
-            "en": "Lamb"
+            "en": "Lamb",
+            "de": "Lammfleisch",
+            "fr": "Viande d'agneau",
+            "it": "Carne di agnello"
           },
           "data": true
         },
         "100_1150": {
           "label": {
-            "en": "Poultry"
+            "en": "Poultry",
+            "de": "Geflügel",
+            "fr": "Volaille",
+            "it": "Pollame"
           },
           "data": true
         },
         "100_1170": {
           "label": {
-            "en": "Other meat, fresh"
+            "en": "Other meat, fresh",
+            "de": "Anderes Fleisch, frisch",
+            "fr": "Autre viande fraîche",
+            "it": "Altra carne fresca"
           },
           "data": true
         },
         "100_1180": {
           "label": {
-            "en": "Cold cuts, salted and dried meat"
+            "en": "Cold cuts, salted and dried meat",
+            "de": "Aufschnitt, gesalzenes und getrocknetes Fleisch",
+            "fr": "Charcuterie, viande salée et séchée",
+            "it": "Affettati, salumi e carne secca"
           },
           "data": true
         },
         "100_1200": {
           "label": {
-            "en": "Offal"
+            "en": "Offal",
+            "de": "Innereien",
+            "fr": "Abats",
+            "it": "Frattaglie"
           },
           "data": true
         },
         "100_1210": {
           "label": {
-            "en": "Sausages and meat preparations"
+            "en": "Sausages and meat preparations",
+            "de": "Wurstwaren und Fleischzubereitungen",
+            "fr": "Saucisses et préparations de viande",
+            "it": "Salumi e preparazioni di carne"
           },
           "data": true
         },
         "100_1211": {
           "label": {
-            "en": "Sausages"
+            "en": "Sausages",
+            "de": "Wurstwaren",
+            "fr": "Saucisses",
+            "it": "Salsicce"
           },
           "data": true
         },
         "100_1221": {
           "label": {
-            "en": "Preparations of raw meat ready to cook"
+            "en": "Preparations of raw meat ready to cook",
+            "de": "Pfannenfertige Fleischzubereitungen, roh",
+            "fr": "Préparations de viande crues prêtes à cuire",
+            "it": "Preparazioni di carne crude pronte per la cottura"
           },
           "data": true
         },
         "100_1240": {
           "label": {
-            "en": "Fish and seafood"
+            "en": "Fish and seafood",
+            "de": "Fische und Meeresfrüchte",
+            "fr": "Poissons et fruits de mer",
+            "it": "Pesce e frutti di mare"
           },
           "data": true
         },
         "100_1241": {
           "label": {
-            "en": "Fisch, fresh and frozen"
+            "en": "Fisch, fresh and frozen",
+            "de": "Fische, frisch und gefroren",
+            "fr": "Poissons, frais et congelés",
+            "it": "Pesci, freschi et congelati"
           },
           "data": true
         },
         "100_1242": {
           "label": {
-            "en": "Fresh fish"
+            "en": "Fresh fish",
+            "de": "Fische, frisch",
+            "fr": "Poissons frais",
+            "it": "Pesce fresco"
           },
           "data": true
         },
         "100_1250": {
           "label": {
-            "en": "Frozen fish"
+            "en": "Frozen fish",
+            "de": "Fische, tiefgekühlt",
+            "fr": "Poissons congelés",
+            "it": "Pesce surgelato"
           },
           "data": true
         },
         "100_1260": {
           "label": {
-            "en": "Canned fish and fish preparations"
+            "en": "Canned fish and fish preparations",
+            "de": "Fischkonserven und Fischzubereitungen",
+            "fr": "Conserves et préparations à base de poisson",
+            "it": "Conserve e preparati a base di pesce"
           },
           "data": true
         },
         "100_1264": {
           "label": {
-            "en": "Seafood"
+            "en": "Seafood",
+            "de": "Meeresfrüchte",
+            "fr": "Fruits de mer",
+            "it": "Frutti di mare"
           },
           "data": true
         },
         "100_1300": {
           "label": {
-            "en": "Milk, cheese and eggs"
+            "en": "Milk, cheese and eggs",
+            "de": "Milch, Käse, Eier",
+            "fr": "Lait, fromage, oeufs",
+            "it": "Latte, formaggi, uova"
           },
           "data": true
         },
         "100_1301": {
           "label": {
-            "en": "Whole milk"
+            "en": "Whole milk",
+            "de": "Vollmilch",
+            "fr": "Lait entier",
+            "it": "Latte intero"
           },
           "data": true
         },
         "100_1304": {
           "label": {
-            "en": "Low fat milk"
+            "en": "Low fat milk",
+            "de": "Drinkmilch",
+            "fr": "Lait partiellement écrémé",
+            "it": "Latte parzialmente scremato"
           },
           "data": true
         },
         "100_1310": {
           "label": {
-            "en": "Cream"
+            "en": "Cream",
+            "de": "Rahm",
+            "fr": "Crème",
+            "it": "Panna"
           },
           "data": true
         },
         "100_1322": {
           "label": {
-            "en": "Plant-based milk"
+            "en": "Plant-based milk",
+            "de": "Milch auf pflanzlicher Basis",
+            "fr": "Lait à base végétale",
+            "it": "Latte su base vegetale"
           },
           "data": true
         },
         "100_1330": {
           "label": {
-            "en": "Cheese"
+            "en": "Cheese",
+            "de": "Käse",
+            "fr": "Fromage",
+            "it": "Formaggio"
           },
           "data": true
         },
         "100_1331": {
           "label": {
-            "en": "Hard and semi-hard cheese"
+            "en": "Hard and semi-hard cheese",
+            "de": "Halbhart- und Hartkäse",
+            "fr": "Fromage à pâte dure et mi-dure",
+            "it": "Formaggio a pasta dura e semidura"
           },
           "data": true
         },
         "100_1346": {
           "label": {
-            "en": "Fresh, soft and melted cheese"
+            "en": "Fresh, soft and melted cheese",
+            "de": "Frisch-, Weich- und Schmelzkäse",
+            "fr": "Fromage frais, à pâte molle et fondu",
+            "it": "Formaggio fresco, a pasta molle e fuso"
           },
           "data": true
         },
         "100_1370": {
           "label": {
-            "en": "Yoghurt and sour milk products"
+            "en": "Yoghurt and sour milk products",
+            "de": "Joghurt und Sauermilchprodukte",
+            "fr": "Yogourt et produits à base de lait fermenté",
+            "it": "Yogurt e prodotti a base di latte acido"
           },
           "data": true
         },
         "100_1380": {
           "label": {
-            "en": "Drink and milk desserts"
+            "en": "Drink and milk desserts",
+            "de": "Milchmischgetränke und Milchdesserts",
+            "fr": "Boissons et desserts lactés",
+            "it": "Bevande a base di latte e budini"
           },
           "data": true
         },
         "100_1390": {
           "label": {
-            "en": "Eggs"
+            "en": "Eggs",
+            "de": "Eier",
+            "fr": "Oeufs",
+            "it": "Uova"
           },
           "data": true
         },
         "100_1400": {
           "label": {
-            "en": "Fats and edible oils"
+            "en": "Fats and edible oils",
+            "de": "Speisefette und -öle",
+            "fr": "Graisses et huiles comestibles",
+            "it": "Grassi e oli commestibili"
           },
           "data": true
         },
         "100_1401": {
           "label": {
-            "en": "Vegetable cooking oils"
+            "en": "Vegetable cooking oils",
+            "de": "Pflanzliche Speiseöle",
+            "fr": "Huiles végétales alimentaires",
+            "it": "Oli alimentari vegetali"
           },
           "data": true
         },
         "100_1402": {
           "label": {
-            "en": "Olive oil"
+            "en": "Olive oil",
+            "de": "Olivenöl",
+            "fr": "Huile d'olive",
+            "it": "Olio d'oliva"
           },
           "data": true
         },
         "100_1404": {
           "label": {
-            "en": "Other edible oils"
+            "en": "Other edible oils",
+            "de": "Andere Speiseöle",
+            "fr": "Autres huiles comestibles",
+            "it": "Altri oli commestibili"
           },
           "data": true
         },
         "100_1420": {
           "label": {
-            "en": "Butter"
+            "en": "Butter",
+            "de": "Butter",
+            "fr": "Beurre",
+            "it": "Burro"
           },
           "data": true
         },
         "100_1430": {
           "label": {
-            "en": "Margarine and edible fats"
+            "en": "Margarine and edible fats",
+            "de": "Margarine und Speisefett",
+            "fr": "Margarine et graisses comestibles",
+            "it": "Margarina e grassi commestibili"
           },
           "data": true
         },
         "100_1499": {
           "label": {
-            "en": "Fruit, vegetables, potatoes and mushrooms"
+            "en": "Fruit, vegetables, potatoes and mushrooms",
+            "de": "Früchte, Gemüse, Kartoffeln und Pilze",
+            "fr": "Fruits, légumes, pommes de terre et champignons",
+            "it": "Frutta, verdura, patate e funghi"
           },
           "data": true
         },
         "100_1500": {
           "label": {
-            "en": "Fruit"
+            "en": "Fruit",
+            "de": "Früchte",
+            "fr": "Fruits",
+            "it": "Frutta"
           },
           "data": true
         },
         "100_1501": {
           "label": {
-            "en": "Fresh fruit"
+            "en": "Fresh fruit",
+            "de": "Frische Früchte",
+            "fr": "Fruits frais",
+            "it": "Frutta fresca"
           },
           "data": true
         },
         "100_1502": {
           "label": {
-            "en": "Tropical fruit"
+            "en": "Tropical fruit",
+            "de": "Tropische Früchte",
+            "fr": "Fruits tropicaux",
+            "it": "Frutta tropicale"
           },
           "data": true
         },
         "100_1503": {
           "label": {
-            "en": "Bananas"
+            "en": "Bananas",
+            "de": "Bananen",
+            "fr": "Bananes",
+            "it": "Banane"
           },
           "data": true
         },
         "100_1505": {
           "label": {
-            "en": "Other tropical fruits"
+            "en": "Other tropical fruits",
+            "de": "Andere tropische Früchte",
+            "fr": "Autres fruits tropicaux",
+            "it": "Altri frutti tropicali"
           },
           "data": true
         },
         "100_1520": {
           "label": {
-            "en": "Citrus fruit"
+            "en": "Citrus fruit",
+            "de": "Zitrusfrüchte",
+            "fr": "Agrumes",
+            "it": "Agrumi"
           },
           "data": true
         },
         "100_1530": {
           "label": {
-            "en": "Stone and pome fruit"
+            "en": "Stone and pome fruit",
+            "de": "Stein- und Kernobst",
+            "fr": "Fruits à noyaux et à pépins",
+            "it": "Frutta con nocciolo e a semi"
           },
           "data": true
         },
         "100_1531": {
           "label": {
-            "en": "Stone fruit"
+            "en": "Stone fruit",
+            "de": "Steinobst",
+            "fr": "Fruits à noyaux",
+            "it": "Frutta con nocciolo"
           },
           "data": true
         },
         "100_1537": {
           "label": {
-            "en": "Pome fruit"
+            "en": "Pome fruit",
+            "de": "Kernobst",
+            "fr": "Fruits à pépins",
+            "it": "Frutta a semi"
           },
           "data": true
         },
         "100_1550": {
           "label": {
-            "en": "Berries"
+            "en": "Berries",
+            "de": "Beeren",
+            "fr": "Baies",
+            "it": "Bacche"
           },
           "data": true
         },
         "100_1560": {
           "label": {
-            "en": "Other fruit"
+            "en": "Other fruit",
+            "de": "Andere Früchte",
+            "fr": "Autres fruits",
+            "it": "Altra frutta"
           },
           "data": true
         },
         "100_1570": {
           "label": {
-            "en": "Frozen fruit"
+            "en": "Frozen fruit",
+            "de": "Tiefgekühlte Früchte",
+            "fr": "Fruits surgelés",
+            "it": "Frutta surgelata"
           },
           "data": true
         },
         "100_1572": {
           "label": {
-            "en": "Dried fruit"
+            "en": "Dried fruit",
+            "de": "Trockenfrüchte",
+            "fr": "Fruits secs",
+            "it": "Frutta secca"
           },
           "data": true
         },
         "100_1580": {
           "label": {
-            "en": "Nuts"
+            "en": "Nuts",
+            "de": "Nüsse",
+            "fr": "Noix",
+            "it": "Noci"
           },
           "data": true
         },
         "100_1590": {
           "label": {
-            "en": "Preserved fruit"
+            "en": "Preserved fruit",
+            "de": "Konservierte Früchte",
+            "fr": "Fruits en conserve",
+            "it": "Frutta conservata"
           },
           "data": true
         },
         "100_1600": {
           "label": {
-            "en": "Vegetables, mushrooms and potatoes"
+            "en": "Vegetables, mushrooms and potatoes",
+            "de": "Gemüse, Pilze und Kartoffeln",
+            "fr": "Légumes, champignons et pommes de terre",
+            "it": "Verdura, funghi e patate"
           },
           "data": true
         },
         "100_1601": {
           "label": {
-            "en": "Fresh vegetables and mushrooms"
+            "en": "Fresh vegetables and mushrooms",
+            "de": "Frisches Gemüse und Pilze",
+            "fr": "Légumes frais et champignons",
+            "it": "Verdura fresca e funghi"
           },
           "data": true
         },
         "100_1602": {
           "label": {
-            "en": "Leafy and stem vegetables"
+            "en": "Leafy and stem vegetables",
+            "de": "Blatt- und Stengelgemüse",
+            "fr": "Légumes à feuilles et légumes-tiges",
+            "it": "Verdure a foglia e a stelo"
           },
           "data": true
         },
         "100_1603": {
           "label": {
-            "en": "Leafy vegetables"
+            "en": "Leafy vegetables",
+            "de": "Blattgemüse",
+            "fr": "Légumes à feuilles",
+            "it": "Verdure a foglia"
           },
           "data": true
         },
         "100_1610": {
           "label": {
-            "en": "Stem vegetables"
+            "en": "Stem vegetables",
+            "de": "Stengelgemüse",
+            "fr": "Légumes à tige",
+            "it": "Verdure a stelo"
           },
           "data": true
         },
         "100_1620": {
           "label": {
-            "en": "Fruiting vegetables"
+            "en": "Fruiting vegetables",
+            "de": "Fruchtgemüse",
+            "fr": "Légumes-fruits",
+            "it": "Ortaggi"
           },
           "data": true
         },
         "100_1630": {
           "label": {
-            "en": "Beans"
+            "en": "Beans",
+            "de": "Bohnen",
+            "fr": "Haricots",
+            "it": "Fagioli"
           },
           "data": true
         },
         "100_1632": {
           "label": {
-            "en": "Root, bulb and other vegetables"
+            "en": "Root, bulb and other vegetables",
+            "de": "Wurzel-, Zwiebel und anderes Gemüse",
+            "fr": "Racines, oignons et autres légumes",
+            "it": "Radici, cipolle e altri ortaggi"
           },
           "data": true
         },
         "100_1633": {
           "label": {
-            "en": "Root vegetables"
+            "en": "Root vegetables",
+            "de": "Wurzelgemüse",
+            "fr": "Légumes-racines",
+            "it": "Radici commestibili"
           },
           "data": true
         },
         "100_1639": {
           "label": {
-            "en": "Onions and leeks"
+            "en": "Onions and leeks",
+            "de": "Zwiebeln und Lauch",
+            "fr": "Oignons et poireaux",
+            "it": "Cipolle e porri"
           },
           "data": true
         },
         "100_1644": {
           "label": {
-            "en": "Other vegetables and mushrooms"
+            "en": "Other vegetables and mushrooms",
+            "de": "Andere Gemüse und Pilze",
+            "fr": "Autres légumes et champignons",
+            "it": "Altra verdura e funghi"
           },
           "data": true
         },
         "100_1650": {
           "label": {
-            "en": "Tubers"
+            "en": "Tubers",
+            "de": "Knollengewächse",
+            "fr": "Tubercules",
+            "it": "Tuberi"
           },
           "data": true
         },
         "100_1651": {
           "label": {
-            "en": "Potatoes"
+            "en": "Potatoes",
+            "de": "Kartoffeln",
+            "fr": "Pommes de terre",
+            "it": "Patate"
           },
           "data": true
         },
         "100_1660": {
           "label": {
-            "en": "Dried vegetables and mushrooms"
+            "en": "Dried vegetables and mushrooms",
+            "de": "Getrocknete Gemüse und Pilze",
+            "fr": "Légumes et champignons séchés",
+            "it": "Verdure e funghi essiccati"
           },
           "data": true
         },
         "100_1663": {
           "label": {
-            "en": "Preserved vegetables"
+            "en": "Preserved vegetables",
+            "de": "Tiefkühlgemüse",
+            "fr": "Légumes surgelés",
+            "it": "Ortaggi surgelati"
           },
           "data": true
         },
         "100_1670": {
           "label": {
-            "en": "Canned vegetables and potato-based products"
+            "en": "Canned vegetables and potato-based products",
+            "de": "Gemüsekonserven und kartoffelhaltige Produkte",
+            "fr": "Conserves de légumes et produits à base de pommes de terre",
+            "it": "Conserve di verdure e prodotti a base di patate"
           },
           "data": true
         },
         "100_1671": {
           "label": {
-            "en": "Dried and tinned vegetables and mushrooms"
+            "en": "Dried and tinned vegetables and mushrooms",
+            "de": "Konservierte Gemüse und Pilze",
+            "fr": "Légumes et champignons séchés et en conserve",
+            "it": "Ortaggi e funghi secchi e in conserve"
           },
           "data": true
         },
         "100_1680": {
           "label": {
-            "en": "Potato products"
+            "en": "Potato products",
+            "de": "Kartoffelhaltige Produkte",
+            "fr": "Dérivés de la pomme de terre",
+            "it": "Derivati dalle patate"
           },
           "data": true
         },
         "100_1687": {
           "label": {
-            "en": "Crisps"
+            "en": "Crisps",
+            "de": "Chips",
+            "fr": "Chips",
+            "it": "Chips"
           },
           "data": true
         },
         "100_1700": {
           "label": {
-            "en": "Sugar, jams, honey, chocolate and other sweets"
+            "en": "Sugar, jams, honey, chocolate and other sweets",
+            "de": "Zucker, Konfitüren, Honig, Schokolade und andere Süsswaren",
+            "fr": "Sucre, confiture, miel, chocolat et autres aliments sucrés",
+            "it": "Zucchero, marmellata, miele, cioccolata e altri dolciumi"
           },
           "data": true
         },
         "100_1701": {
           "label": {
-            "en": "Sugar"
+            "en": "Sugar",
+            "de": "Zucker",
+            "fr": "Sucre",
+            "it": "Zucchero"
           },
           "data": true
         },
         "100_1705": {
           "label": {
-            "en": "Jam and honey"
+            "en": "Jam and honey",
+            "de": "Konfitüren und Bienenhonig",
+            "fr": "Confitures et miel d'abeilles",
+            "it": "Marmellata e miele d'api"
           },
           "data": true
         },
         "100_1708": {
           "label": {
-            "en": "Chocolate"
+            "en": "Chocolate",
+            "de": "Schokolade",
+            "fr": "Chocolat",
+            "it": "Cioccolato"
           },
           "data": true
         },
         "100_1720": {
           "label": {
-            "en": "Ice-cream"
+            "en": "Ice-cream",
+            "de": "Speiseeis",
+            "fr": "Glaces",
+            "it": "Gelati"
           },
           "data": true
         },
         "100_1730": {
           "label": {
-            "en": "Sweets and chewing gum"
+            "en": "Sweets and chewing gum",
+            "de": "Süsswaren",
+            "fr": "Bonbons et chewing-gum",
+            "it": "Dolciumi"
           },
           "data": true
         },
         "100_1800": {
           "label": {
-            "en": "Other food products"
+            "en": "Other food products",
+            "de": "Sonstige Nahrungsmittel",
+            "fr": "Autres produits alimentaires",
+            "it": "Altri prodotti alimentari"
           },
           "data": true
         },
         "100_1801": {
           "label": {
-            "en": "Pizzas and ready-made meals"
+            "en": "Pizzas and ready-made meals",
+            "de": "Pizzas und Fertigmahlzeiten",
+            "fr": "Pizzas et plats préparés",
+            "it": "Pizze e pasti pronti"
           },
           "data": true
         },
         "100_1802": {
           "label": {
-            "en": "Pizzas and quiches"
+            "en": "Pizzas and quiches",
+            "de": "Pizzas und Quiches",
+            "fr": "Pizzas et quiches",
+            "it": "Pizze e torte salate"
           },
           "data": true
         },
         "100_1807": {
           "label": {
-            "en": "Ready-made meals"
+            "en": "Ready-made meals",
+            "de": "Fertigmahlzeiten",
+            "fr": "Plats préparés",
+            "it": "Pasti pronti"
           },
           "data": true
         },
         "100_1840": {
           "label": {
-            "en": "Baby food"
+            "en": "Baby food",
+            "de": "Babynahrung",
+            "fr": "Aliments pour bébé",
+            "it": "Alimenti per neonati"
           },
           "data": true
         },
         "100_1850": {
           "label": {
-            "en": "Salt, sauces and condiments"
+            "en": "Salt, sauces and condiments",
+            "de": "Salz, Saucen und Würzen",
+            "fr": "Sel, sauces et condiments",
+            "it": "Sale, salse e condimenti"
           },
           "data": true
         },
         "100_1870": {
           "label": {
-            "en": "Spices, culinary herbs, seeds and kernels"
+            "en": "Spices, culinary herbs, seeds and kernels",
+            "de": "Gewürze, Küchenkräuter, Samen und Kerne",
+            "fr": "Epices, herbes aromatiques, graines et pépins",
+            "it": "Spezie, erbe aromatiche, semi e noccioli"
           },
           "data": true
         },
         "100_1880": {
           "label": {
-            "en": "Other food products"
+            "en": "Other food products",
+            "de": "Andere Nahrungsmittel",
+            "fr": "Autres produits d'alimentation",
+            "it": "Altri prodotti alimentari"
           },
           "data": true
         },
         "100_1900": {
           "label": {
-            "en": "Non-alcoholic beverages (retail)"
+            "en": "Non-alcoholic beverages (retail)",
+            "de": "Alkoholfreie Getränke (Detailhandel)",
+            "fr": "Boissons non alcoolisées (commerce de détail)",
+            "it": "Bevande analcoliche (commercio al dettaglio)"
           },
           "data": true
         },
         "100_1901": {
           "label": {
-            "en": "Fruit and vegetable juices"
+            "en": "Fruit and vegetable juices",
+            "de": "Frucht- und Gemüsesäfte",
+            "fr": "Jus de fruits et de légumes",
+            "it": "Succhi di frutta e verdura"
           },
           "data": true
         },
         "100_1902": {
           "label": {
-            "en": "Fruit and vegetable juices"
+            "en": "Fruit and vegetable juices",
+            "de": "Frucht- und Gemüsesäfte",
+            "fr": "Jus de fruits et de légumes",
+            "it": "Succhi di frutta e di ortaggi"
           },
           "data": true
         },
         "100_1909": {
           "label": {
-            "en": "Coffee, tea, cocoa and nutritional beverages"
+            "en": "Coffee, tea, cocoa and nutritional beverages",
+            "de": "Kaffee, Tee, Kakao und Nährgetränke",
+            "fr": "Café, thé, cacao et boissons nutritives",
+            "it": "Caffè, tè, cacao e bevande fortificanti"
           },
           "data": true
         },
         "100_1910": {
           "label": {
-            "en": "Coffee (retail)"
+            "en": "Coffee (retail)",
+            "de": "Kaffee (Detailhandel)",
+            "fr": "Café (commerce de détail)",
+            "it": "Caffè (commercio al dettaglio)"
           },
           "data": true
         },
         "100_1911": {
           "label": {
-            "en": "Coffee (retail)"
+            "en": "Coffee (retail)",
+            "de": "Kaffee (Detailhandel)",
+            "fr": "Café (commerce de détail)",
+            "it": "Caffè (commercio al dettaglio)"
           },
           "data": true
         },
         "100_1930": {
           "label": {
-            "en": "Tea and iced tea (retail)"
+            "en": "Tea and iced tea (retail)",
+            "de": "Tee und Eistee (Detailhandel)",
+            "fr": "Thé et thé froid (commerce de détail)",
+            "it": "Tè e tè freddo (commercio al dettaglio)"
           },
           "data": true
         },
         "100_1931": {
           "label": {
-            "en": "Tea and iced tea (retail)"
+            "en": "Tea and iced tea (retail)",
+            "de": "Tee und Eistee (Detailhandel)",
+            "fr": "Thé et thé froid (commerce de détail)",
+            "it": "Tè e tè freddo (commercio al dettaglio)"
           },
           "data": true
         },
         "100_1940": {
           "label": {
-            "en": "Cocoa and chocolate powder"
+            "en": "Cocoa and chocolate powder",
+            "de": "Kakao und Schokoladenpulver",
+            "fr": "Cacao et chocolat en poudre",
+            "it": "Cacao e cioccolato in polvere"
           },
           "data": true
         },
         "100_1941": {
           "label": {
-            "en": "Cocoa and chocolate powder"
+            "en": "Cocoa and chocolate powder",
+            "de": "Kakao und Schokoladenpulver",
+            "fr": "Cacaos et chocolats en poudre",
+            "it": "Cacao e cioccolato in polvere"
           },
           "data": true
         },
         "100_1949": {
           "label": {
-            "en": "Mineral waters and soft drinks"
+            "en": "Mineral waters and soft drinks",
+            "de": "Mineralwasser und Süssgetränke",
+            "fr": "Eaux minérales et boissons sucrées",
+            "it": "Acqua minerale e bevande edulcorate"
           },
           "data": true
         },
         "100_1950": {
           "label": {
-            "en": "Natural mineral water"
+            "en": "Natural mineral water",
+            "de": "Natürliche Mineralwasser",
+            "fr": "Eaux minérales naturelles",
+            "it": "Acqua minerale naturale"
           },
           "data": true
         },
         "100_1951": {
           "label": {
-            "en": "Natural mineral water"
+            "en": "Natural mineral water",
+            "de": "Natürliche Mineralwasser",
+            "fr": "Eaux minérales naturelles",
+            "it": "Acqua minerale naturale"
           },
           "data": true
         },
         "100_1960": {
           "label": {
-            "en": "Soft drinks"
+            "en": "Soft drinks",
+            "de": "Aromagetränke",
+            "fr": "Boissons aromatisées",
+            "it": "Bevande aromatizzate"
           },
           "data": true
         },
         "100_1961": {
           "label": {
-            "en": "Soft drinks"
+            "en": "Soft drinks",
+            "de": "Aromagetränke",
+            "fr": "Boissons aromatisées",
+            "it": "Bevande aromatizzate"
           },
           "data": true
         },
         "100_1970": {
           "label": {
-            "en": "Syrup and energy drinks"
+            "en": "Syrup and energy drinks",
+            "de": "Sirup und Energydrinks",
+            "fr": "Sirop et boissons énergisantes",
+            "it": "Sciroppi e bevande energetiche"
           },
           "data": true
         },
         "100_1971": {
           "label": {
-            "en": "Syrup and energy drinks"
+            "en": "Syrup and energy drinks",
+            "de": "Sirup und Energydrinks",
+            "fr": "Sirop et boissons énergisantes",
+            "it": "Sciroppi e bevande energetiche"
           },
           "data": true
         },
         "100_2": {
           "label": {
-            "en": "Alcoholic beverages and tobacco"
+            "en": "Alcoholic beverages and tobacco",
+            "de": "Alkoholische Getränke und Tabak",
+            "fr": "Boissons alcoolisées et tabacs",
+            "it": "Bevande alcoliche e tabacchi"
           },
           "data": true
         },
         "100_2001": {
           "label": {
-            "en": "Alcoholic beverages (retail)"
+            "en": "Alcoholic beverages (retail)",
+            "de": "Alkoholische Getränke (Detailhandel)",
+            "fr": "Boissons alcoolisées (Commerce de détail)",
+            "it": "Bevande alcoliche (commercio al dettaglio)"
           },
           "data": true
         },
         "100_2100": {
           "label": {
-            "en": "Spirits (retail)"
+            "en": "Spirits (retail)",
+            "de": "Spirituosen (Detailhandel)",
+            "fr": "Spiritueux (commerce de détail)",
+            "it": "Acquaviti e liquori (commercio al dettaglio)"
           },
           "data": true
         },
         "100_2101": {
           "label": {
-            "en": "Spirits (retail)"
+            "en": "Spirits (retail)",
+            "de": "Spirituosen (Detailhandel)",
+            "fr": "Spiritueux (commerce de détail)",
+            "it": "Acquaviti e liquori (commercio al dettaglio)"
           },
           "data": true
         },
         "100_2102": {
           "label": {
-            "en": "Spirits and brandies"
+            "en": "Spirits and brandies",
+            "de": "Brände",
+            "fr": "Eau-de-vie",
+            "it": "Acquavite"
           },
           "data": true
         },
         "100_2109": {
           "label": {
-            "en": "Liqueurs and aperitifs"
+            "en": "Liqueurs and aperitifs",
+            "de": "Likör und Apéro-Getränke",
+            "fr": "Liqueurs et apéritifs",
+            "it": "Liquori e aperitivi"
           },
           "data": true
         },
         "100_2200": {
           "label": {
-            "en": "Wine (retail)"
+            "en": "Wine (retail)",
+            "de": "Wein (Detailhandel)",
+            "fr": "Vin (commerce de détail)",
+            "it": "Vino (commercio al dettaglio)"
           },
           "data": true
         },
         "100_2201": {
           "label": {
-            "en": "Wine (Retail)"
+            "en": "Wine (Retail)",
+            "de": "Wein (Detailhandel)",
+            "fr": "Vin (Commerce de détail)",
+            "it": "Vino (commercio al dettaglio)"
           },
           "data": true
         },
         "100_2202": {
           "label": {
-            "en": "Red Wine"
+            "en": "Red Wine",
+            "de": "Rotwein",
+            "fr": "Vin rouge",
+            "it": "Vino rosso"
           },
           "data": true
         },
         "100_2203": {
           "label": {
-            "en": "Swiss red wine"
+            "en": "Swiss red wine",
+            "de": "Rotwein, inländisch",
+            "fr": "Vin rouge indigène",
+            "it": "Vino rosso indigeno"
           },
           "data": true
         },
         "100_2208": {
           "label": {
-            "en": "Foreign red wine"
+            "en": "Foreign red wine",
+            "de": "Rotwein, ausländisch",
+            "fr": "Vin rouge étranger",
+            "it": "Vino rosso importato"
           },
           "data": true
         },
         "100_2214": {
           "label": {
-            "en": "White wine"
+            "en": "White wine",
+            "de": "Weisswein",
+            "fr": "Vin blanc",
+            "it": "Vino bianco"
           },
           "data": true
         },
         "100_2215": {
           "label": {
-            "en": "Swiss white wine"
+            "en": "Swiss white wine",
+            "de": "Weisswein, inländisch",
+            "fr": "Vin blanc indigène",
+            "it": "Vino bianco indigeno"
           },
           "data": true
         },
         "100_2219": {
           "label": {
-            "en": "Foreign white wine"
+            "en": "Foreign white wine",
+            "de": "Weisswein, ausländisch",
+            "fr": "Vin blanc étranger",
+            "it": "Vino bianco importato"
           },
           "data": true
         },
         "100_2221": {
           "label": {
-            "en": "Wine-based aperitif drinks"
+            "en": "Wine-based aperitif drinks",
+            "de": "Weinhaltige Aperogetränke",
+            "fr": "Apéritifs à base de vin",
+            "it": "Aperitivi a base di vino"
           },
           "data": true
         },
         "100_2223": {
           "label": {
-            "en": "Sparkling wine"
+            "en": "Sparkling wine",
+            "de": "Schaumwein",
+            "fr": "Vin mousseux",
+            "it": "Vini spumanti"
           },
           "data": true
         },
         "100_2300": {
           "label": {
-            "en": "Beer (retail)"
+            "en": "Beer (retail)",
+            "de": "Bier (Detailhandel)",
+            "fr": "Bière (commerce de détail)",
+            "it": "Birra (commercio al dettaglio)"
           },
           "data": true
         },
         "100_2301": {
           "label": {
-            "en": "Beer (retail)"
+            "en": "Beer (retail)",
+            "de": "Bier (Detailhandel)",
+            "fr": "Bière (commerce de détail)",
+            "it": "Birra (commercio al dettaglio)"
           },
           "data": true
         },
         "100_2302": {
           "label": {
-            "en": "Lagerbeer, blonde"
+            "en": "Lagerbeer, blonde",
+            "de": "Lagerbier, hell",
+            "fr": "Bière lager, blonde",
+            "it": "Birra lager, bionda"
           },
           "data": true
         },
         "100_2307": {
           "label": {
-            "en": "Special beer"
+            "en": "Special beer",
+            "de": "Bierspezialitäten",
+            "fr": "Spécialités de bière",
+            "it": "Specialità di birra"
           },
           "data": true
         },
         "100_2310": {
           "label": {
-            "en": "Alcohol-free beers"
+            "en": "Alcohol-free beers",
+            "de": "Alkoholfreie Biere",
+            "fr": "Bière sans alcool",
+            "it": "Birre senza alcool"
           },
           "data": true
         },
         "100_2400": {
           "label": {
-            "en": "Tobacco"
+            "en": "Tobacco",
+            "de": "Tabakwaren",
+            "fr": "Tabacs",
+            "it": "Tabacchi"
           },
           "data": true
         },
         "100_2401": {
           "label": {
-            "en": "Tobacco"
+            "en": "Tobacco",
+            "de": "Tabakwaren",
+            "fr": "Tabacs",
+            "it": "Tabacchi"
           },
           "data": true
         },
         "100_2402": {
           "label": {
-            "en": "Cigarettes"
+            "en": "Cigarettes",
+            "de": "Zigaretten",
+            "fr": "Cigarettes",
+            "it": "Sigarette"
           },
           "data": true
         },
         "100_2405": {
           "label": {
-            "en": "Cigars and cigarillos"
+            "en": "Cigars and cigarillos",
+            "de": "Zigarren und Zigarillos",
+            "fr": "Cigares et cigarillos",
+            "it": "Sigari e cigarillos"
           },
           "data": true
         },
         "100_2408": {
           "label": {
-            "en": "Other tobaccos"
+            "en": "Other tobaccos",
+            "de": "Andere Tabakwaren",
+            "fr": "Autres tabacs",
+            "it": "Altri tabacchi"
           },
           "data": true
         },
         "100_3": {
           "label": {
-            "en": "Clothing and footwear"
+            "en": "Clothing and footwear",
+            "de": "Bekleidung und Schuhe",
+            "fr": "Habillement et chaussures",
+            "it": "Indumenti e calzature"
           },
           "data": true
         },
         "100_3001": {
           "label": {
-            "en": "Clothing"
+            "en": "Clothing",
+            "de": "Bekleidung",
+            "fr": "Habillement",
+            "it": "Indumenti"
           },
           "data": true
         },
         "100_3002": {
           "label": {
-            "en": "Articles of clothing"
+            "en": "Articles of clothing",
+            "de": "Bekleidungsartikel",
+            "fr": "Articles d'habillement",
+            "it": "Articoli d'abbigliamento"
           },
           "data": true
         },
         "100_3100": {
           "label": {
-            "en": "Men's and boys' clothing"
+            "en": "Men's and boys' clothing",
+            "de": "Herren- und Knabenbekleidung",
+            "fr": "Vêtements pour hommes et garçons",
+            "it": "Indumenti da uomo e da ragazzo"
           },
           "data": true
         },
         "100_3101": {
           "label": {
-            "en": "Men's clothing"
+            "en": "Men's clothing",
+            "de": "Herrenbekleidung",
+            "fr": "Vêtements pour hommes",
+            "it": "Indumenti da uomo"
           },
           "data": true
         },
         "100_3102": {
           "label": {
-            "en": "Jackets for men"
+            "en": "Jackets for men",
+            "de": "Jacken, Herren",
+            "fr": "Vestes pour hommes",
+            "it": "Giacche da uomo"
           },
           "data": true
         },
         "100_3105": {
           "label": {
-            "en": "Men's suits"
+            "en": "Men's suits",
+            "de": "Anzüge, Herren",
+            "fr": "Costumes pour hommes",
+            "it": "Completi da uomo"
           },
           "data": true
         },
         "100_3108": {
           "label": {
-            "en": "Men's trousers"
+            "en": "Men's trousers",
+            "de": "Hosen, Herren",
+            "fr": "Pantalons pour hommes",
+            "it": "Pantaloni da uomo"
           },
           "data": true
         },
         "100_3113": {
           "label": {
-            "en": "Men's shirts"
+            "en": "Men's shirts",
+            "de": "Oberhemden, Herren",
+            "fr": "Chemises pour hommes",
+            "it": "Camicie da uomo"
           },
           "data": true
         },
         "100_3116": {
           "label": {
-            "en": "Men's knitwear"
+            "en": "Men's knitwear",
+            "de": "Strickwaren, Herren",
+            "fr": "Tricots pour hommes",
+            "it": "Maglieria da uomo"
           },
           "data": true
         },
         "100_3123": {
           "label": {
-            "en": "Men's underwear"
+            "en": "Men's underwear",
+            "de": "Unterwäsche, Herren",
+            "fr": "Sous-vêtements pour hommes",
+            "it": "Biancheria intima da uomo"
           },
           "data": true
         },
         "100_3140": {
           "label": {
-            "en": "Boys' clothing"
+            "en": "Boys' clothing",
+            "de": "Knabenbekleidung",
+            "fr": "Vêtements pour garçons",
+            "it": "Abbigliamento per ragazzi"
           },
           "data": true
         },
         "100_3141": {
           "label": {
-            "en": "Jackets, boys"
+            "en": "Jackets, boys",
+            "de": "Jacken, Knaben",
+            "fr": "Vestes, garçons",
+            "it": "Giacche, ragazzi"
           },
           "data": true
         },
         "100_3144": {
           "label": {
-            "en": "Trousers, boys"
+            "en": "Trousers, boys",
+            "de": "Hosen, Knaben",
+            "fr": "Pantalons, garçons",
+            "it": "Pantaloni, ragazzi"
           },
           "data": true
         },
         "100_3149": {
           "label": {
-            "en": "Knitwear, boys"
+            "en": "Knitwear, boys",
+            "de": "Strickwaren, Knaben",
+            "fr": "Tricots, garçons",
+            "it": "Maglieria, ragazzi"
           },
           "data": true
         },
         "100_3156": {
           "label": {
-            "en": "Underwear, boys"
+            "en": "Underwear, boys",
+            "de": "Unterwäsche, Knaben",
+            "fr": "Sous-vêtements, garçons",
+            "it": "Intimo, ragazzi"
           },
           "data": true
         },
         "100_3200": {
           "label": {
-            "en": "Women's and girls' clothing"
+            "en": "Women's and girls' clothing",
+            "de": "Damen- und Mädchen-Bekleidung",
+            "fr": "Vêtements pour femmes et filles",
+            "it": "Indumenti per donna e ragazza"
           },
           "data": true
         },
         "100_3201": {
           "label": {
-            "en": "Women's clothing"
+            "en": "Women's clothing",
+            "de": "Damenbekleidung",
+            "fr": "Vêtements pour femmes",
+            "it": "Indumenti da donna"
           },
           "data": true
         },
         "100_3202": {
           "label": {
-            "en": "Women's coats and jackets"
+            "en": "Women's coats and jackets",
+            "de": "Mäntel und Jacken, Damen",
+            "fr": "Manteaux et vestes pour femmes",
+            "it": "Cappotti e giacche da donna"
           },
           "data": true
         },
         "100_3207": {
           "label": {
-            "en": "Women's skirts and dresses"
+            "en": "Women's skirts and dresses",
+            "de": "Jupes und Kleider, Damen",
+            "fr": "Jupes et robes pour femmes",
+            "it": "Gonne e vestiti da donna"
           },
           "data": true
         },
         "100_3211": {
           "label": {
-            "en": "Women's trousers"
+            "en": "Women's trousers",
+            "de": "Hosen, Damen",
+            "fr": "Pantalons pour femmes",
+            "it": "Pantaloni da donna"
           },
           "data": true
         },
         "100_3217": {
           "label": {
-            "en": "Women's blouses"
+            "en": "Women's blouses",
+            "de": "Blusen und Hemdblusen, Damen",
+            "fr": "Blouses et chemisiers pour femmes",
+            "it": "Camicette e bluse da donna"
           },
           "data": true
         },
         "100_3220": {
           "label": {
-            "en": "Women's jumpers"
+            "en": "Women's jumpers",
+            "de": "Strickwaren, Damen",
+            "fr": "Tricots pour femmes",
+            "it": "Maglieria da donna"
           },
           "data": true
         },
         "100_3226": {
           "label": {
-            "en": "Women's underwear"
+            "en": "Women's underwear",
+            "de": "Unterwäsche, Damen",
+            "fr": "Sous-vêtements pour femmes",
+            "it": "Biancheria intima da donna"
           },
           "data": true
         },
         "100_3250": {
           "label": {
-            "en": "Girls' clothing"
+            "en": "Girls' clothing",
+            "de": "Mädchenbekleidung",
+            "fr": "Vêtements pour filles",
+            "it": "Indumenti da bambina"
           },
           "data": true
         },
         "100_3251": {
           "label": {
-            "en": "Girls' jackets"
+            "en": "Girls' jackets",
+            "de": "Jacken, Mädchen",
+            "fr": "Vestes pour filles",
+            "it": "Giacche da bambina"
           },
           "data": true
         },
         "100_3254": {
           "label": {
-            "en": "Trousers and skirts for girls"
+            "en": "Trousers and skirts for girls",
+            "de": "Hosen und Jupe, Mädchen",
+            "fr": "Pantalons et jupes pour filles",
+            "it": "Pantaloni e gonne da bambina"
           },
           "data": true
         },
         "100_3261": {
           "label": {
-            "en": "Girls' knitwear"
+            "en": "Girls' knitwear",
+            "de": "Strickwaren, Mädchen",
+            "fr": "Tricots pour filles",
+            "it": "Maglieria da bambina"
           },
           "data": true
         },
         "100_3268": {
           "label": {
-            "en": "Underwear for girls"
+            "en": "Underwear for girls",
+            "de": "Unterwäsche, Mädchen",
+            "fr": "Sous-vêtements pour filles",
+            "it": "Intimo da bambina"
           },
           "data": true
         },
         "100_3300": {
           "label": {
-            "en": "Babies' clothing"
+            "en": "Babies' clothing",
+            "de": "Babybekleidung",
+            "fr": "Vêtements de bébés",
+            "it": "Indumenti per neonati"
           },
           "data": true
         },
         "100_3400": {
           "label": {
-            "en": "Other clothing items"
+            "en": "Other clothing items",
+            "de": "Andere Bekleidungsartikel",
+            "fr": "Autres articles d'habillement",
+            "it": "Altri articoli di abbigliamento"
           },
           "data": true
         },
         "100_3401": {
           "label": {
-            "en": "Other clothing items"
+            "en": "Other clothing items",
+            "de": "Andere Bekleidungsartikel",
+            "fr": "Autres articles d'habillement",
+            "it": "Altri articoli di abbigliamento"
           },
           "data": true
         },
         "100_3410": {
           "label": {
-            "en": "Dry-cleaning and repair of garments"
+            "en": "Dry-cleaning and repair of garments",
+            "de": "Reinigung und Reparatur von Bekleidung",
+            "fr": "Nettoyage et réparation de vêtements",
+            "it": "Pulizia e riparazione di vestiti"
           },
           "data": true
         },
         "100_3411": {
           "label": {
-            "en": "Dry cleaning"
+            "en": "Dry cleaning",
+            "de": "Textilreinigung",
+            "fr": "Nettoyage à sec",
+            "it": "Pulitura a secco"
           },
           "data": true
         },
         "100_3420": {
           "label": {
-            "en": "Garment alterations"
+            "en": "Garment alterations",
+            "de": "Kleideränderungen",
+            "fr": "Retouches aux vêtements",
+            "it": "Riparazioni di vestiti"
           },
           "data": true
         },
         "100_3500": {
           "label": {
-            "en": "Footwear including repairs"
+            "en": "Footwear including repairs",
+            "de": "Schuhe einschliesslich Reparatur",
+            "fr": "Chaussures y compris réparation",
+            "it": "Calzature, riparazione compresa"
           },
           "data": true
         },
         "100_3501": {
           "label": {
-            "en": "Footwear"
+            "en": "Footwear",
+            "de": "Schuhe",
+            "fr": "Chaussures",
+            "it": "Calzature"
           },
           "data": true
         },
         "100_3502": {
           "label": {
-            "en": "Men's footwear"
+            "en": "Men's footwear",
+            "de": "Herrenschuhe",
+            "fr": "Chaussures pour hommes",
+            "it": "Calzature da uomo"
           },
           "data": true
         },
         "100_3520": {
           "label": {
-            "en": "Women's footwear"
+            "en": "Women's footwear",
+            "de": "Damenschuhe",
+            "fr": "Chaussures pour femmes",
+            "it": "Calzature da donna"
           },
           "data": true
         },
         "100_3540": {
           "label": {
-            "en": "Children's footwear"
+            "en": "Children's footwear",
+            "de": "Kinderschuhe",
+            "fr": "Chaussures pour enfants",
+            "it": "Calzature da bambino"
           },
           "data": true
         },
         "100_3570": {
           "label": {
-            "en": "Shoe repair"
+            "en": "Shoe repair",
+            "de": "Reparatur von Schuhen",
+            "fr": "Réparation de chaussures",
+            "it": "Riparazione di scarpe"
           },
           "data": true
         },
         "100_3571": {
           "label": {
-            "en": "Shoe repairs"
+            "en": "Shoe repairs",
+            "de": "Reparatur von Schuhen",
+            "fr": "Réparations de chaussures",
+            "it": "Riparazioni di calzature"
           },
           "data": true
         },
         "100_4": {
           "label": {
-            "en": "Housing and energy"
+            "en": "Housing and energy",
+            "de": "Wohnen und Energie",
+            "fr": "Logement et énergie",
+            "it": "Abitazione ed energia"
           },
           "data": true
         },
         "100_4001": {
           "label": {
-            "en": "Rent"
+            "en": "Rent",
+            "de": "Miete",
+            "fr": "Loyer",
+            "it": "Affitto"
           },
           "data": true
         },
         "100_4100": {
           "label": {
-            "en": "Actual rent paid"
+            "en": "Actual rent paid",
+            "de": "Tatsächlich bezahlte Wohnungsmiete",
+            "fr": "Loyer d'habitation effectivement payé",
+            "it": "Affitto effettivamente pagato"
           },
           "data": true
         },
         "100_4101": {
           "label": {
-            "en": "Rent of main residence"
+            "en": "Rent of main residence",
+            "de": "Wohnungsmiete für Hauptwohnsitz",
+            "fr": "Loyer du logement principal",
+            "it": "Affitto dell'abitazione principale"
           },
           "data": true
         },
         "100_4102": {
           "label": {
-            "en": "Housing rentals (Rental index)"
+            "en": "Housing rentals (Rental index)",
+            "de": "Wohnungsmiete (Mietpreisindex)",
+            "fr": "Loyer du logement (Indice des loyers)",
+            "it": "Affitto dell'abitazione (indice degli affitti)"
           },
           "data": true
         },
         "100_4110": {
           "label": {
-            "en": "Other actual rentals"
+            "en": "Other actual rentals",
+            "de": "Andere tatsächliche Mietzahlungen",
+            "fr": "Autres loyers effectifs",
+            "it": "Altri fitti effettivi"
           },
           "data": true
         },
         "100_4111": {
           "label": {
-            "en": "Rental of garages, parking spaces"
+            "en": "Rental of garages, parking spaces",
+            "de": "Garagen- und Parkplatzmiete",
+            "fr": "Location de garages et de places de parc",
+            "it": "Affitto garage e posteggio"
           },
           "data": true
         },
         "100_4200": {
           "label": {
-            "en": "Imputed rent"
+            "en": "Imputed rent",
+            "de": "Unterstellte Wohnungsmiete",
+            "fr": "Loyer imputé",
+            "it": "Affitto imputato"
           },
           "data": true
         },
         "100_4201": {
           "label": {
-            "en": "Imputed rental for owner-occupied main residence"
+            "en": "Imputed rental for owner-occupied main residence",
+            "de": "Unterstellte Miete für selbstgenutzten Hauptwohnsitz",
+            "fr": "Loyer imputé pour la résidence principale occupée par le propriétaire",
+            "it": "Affitto imputato per la residenza principale ad uso proprio"
           },
           "data": true
         },
         "100_4202": {
           "label": {
-            "en": "Imputed rent for owner-occupied dwellings"
+            "en": "Imputed rent for owner-occupied dwellings",
+            "de": "Unterstellte Miete für selbstgenutztes Wohneigentum",
+            "fr": "Loyer imputé pour les logements occupés par leur propriétaire",
+            "it": "Affitto imputato per le abitazioni occupate dai loro proprietari"
           },
           "data": true
         },
         "100_4300": {
           "label": {
-            "en": "Regular dwelling repairs"
+            "en": "Regular dwelling repairs",
+            "de": "Laufende Wohnungsreparaturen",
+            "fr": "Réparation courante du logement",
+            "it": "Riparazioni correnti dell'abitazione"
           },
           "data": true
         },
         "100_4301": {
           "label": {
-            "en": "Material for dwelling repairs"
+            "en": "Material for dwelling repairs",
+            "de": "Material für Wohnungsreparaturen",
+            "fr": "Matériel pour la réparation du logement",
+            "it": "Materiali per le riparazioni dell'abitazione"
           },
           "data": true
         },
         "100_4302": {
           "label": {
-            "en": "Material for dwelling repairs"
+            "en": "Material for dwelling repairs",
+            "de": "Material für Wohnungsreparaturen",
+            "fr": "Matériel pour la réparation du logement",
+            "it": "Materiali per le riparazioni dell'abitazione"
           },
           "data": true
         },
         "100_4320": {
           "label": {
-            "en": "House maintenance services"
+            "en": "House maintenance services",
+            "de": "Dienstleistungen für laufende Wohnungsreparaturen",
+            "fr": "Services de réparation courante du logement",
+            "it": "Servizi per riparazioni correnti dell'abitazione"
           },
           "data": true
         },
         "100_4321": {
           "label": {
-            "en": "House maintenance services"
+            "en": "House maintenance services",
+            "de": "Dienstleistungen für laufende Wohnungsreparaturen",
+            "fr": "Services de réparation courante du logement",
+            "it": "Servizi per riparazioni correnti dell'abitazione"
           },
           "data": true
         },
         "100_4322": {
           "label": {
-            "en": "Plumbing services"
+            "en": "Plumbing services",
+            "de": "Dienstleistungen für Sanitärinstallation",
+            "fr": "Services d'installation sanitaire",
+            "it": "Servizi per l'installazione di impianti sanitari"
           },
           "data": true
         },
         "100_4324": {
           "label": {
-            "en": "Electric installlation services"
+            "en": "Electric installlation services",
+            "de": "Dienstleistungen für Elektroinstallation",
+            "fr": "Services d'installation électrique",
+            "it": "Servizi per l'installazione elettrica"
           },
           "data": true
         },
         "100_4326": {
           "label": {
-            "en": "Painting and plastering services"
+            "en": "Painting and plastering services",
+            "de": "Dienstleistungen für Malerei/Gipserei",
+            "fr": "Services de peinture et plâtrage",
+            "it": "Servizi di pittura / gessista"
           },
           "data": true
         },
         "100_4328": {
           "label": {
-            "en": "Carpentry services"
+            "en": "Carpentry services",
+            "de": "Dienstleistungen für Schreinerei",
+            "fr": "Services de menuiserie",
+            "it": "Servizi di falegnameria"
           },
           "data": true
         },
         "100_4400": {
           "label": {
-            "en": "Services for dwelling provision and maintenance"
+            "en": "Services for dwelling provision and maintenance",
+            "de": "Dienstleistungen für Versorgung und Unterhalt der Wohnung",
+            "fr": "Services pour fourniture et entretien du logement",
+            "it": "Servizi di rifornimento e manutenzione dell'abitazione"
           },
           "data": true
         },
         "100_4401": {
           "label": {
-            "en": "Charges for water provision"
+            "en": "Charges for water provision",
+            "de": "Wassergebühren",
+            "fr": "Taxe d'alimentation en eau",
+            "it": "Tassa per la fornitura dell'acqua"
           },
           "data": true
         },
         "100_4402": {
           "label": {
-            "en": "Charges for water provision"
+            "en": "Charges for water provision",
+            "de": "Wassergebühren",
+            "fr": "Taxe d'alimentation en eau",
+            "it": "Tassa per la fornitura dell'acqua"
           },
           "data": true
         },
         "100_4410": {
           "label": {
-            "en": "Charges for household waste elimination"
+            "en": "Charges for household waste elimination",
+            "de": "Kehrichtgebühren",
+            "fr": "Taxe d'élimination des ordures ménagères",
+            "it": "Tassa per l'eliminazione dei rifiuti domestici"
           },
           "data": true
         },
         "100_4411": {
           "label": {
-            "en": "Charges for household waste elimination"
+            "en": "Charges for household waste elimination",
+            "de": "Kehrichtgebühren",
+            "fr": "Taxe d'élimination des ordures ménagères",
+            "it": "Tassa per l'eliminazione dei rifiuti domestici"
           },
           "data": true
         },
         "100_4420": {
           "label": {
-            "en": "Charges for wastewater treatment"
+            "en": "Charges for wastewater treatment",
+            "de": "Abwassergebühren",
+            "fr": "Taxe d'épuration des eaux usées",
+            "it": "Tassa depurazione delle acque di scarico"
           },
           "data": true
         },
         "100_4421": {
           "label": {
-            "en": "Charges for wastewater treatment"
+            "en": "Charges for wastewater treatment",
+            "de": "Abwassergebühren",
+            "fr": "Taxe d'épuration des eaux usées",
+            "it": "Tassa depurazione delle acque di scarico"
           },
           "data": true
         },
         "100_4430": {
           "label": {
-            "en": "Maintenance and caretaking"
+            "en": "Maintenance and caretaking",
+            "de": "Unterhalt und Hauswartung",
+            "fr": "Entretien et conciergerie",
+            "it": "Manutenzione e portineria"
           },
           "data": true
         },
         "100_4431": {
           "label": {
-            "en": "Maintenance and caretaking"
+            "en": "Maintenance and caretaking",
+            "de": "Unterhalt und Hauswartung",
+            "fr": "Entretien et conciergerie",
+            "it": "Manutenzione e portineria"
           },
           "data": true
         },
         "100_4500": {
           "label": {
-            "en": "Energy"
+            "en": "Energy",
+            "de": "Energie",
+            "fr": "Energie",
+            "it": "Energia"
           },
           "data": true
         },
         "100_4501": {
           "label": {
-            "en": "Electricity"
+            "en": "Electricity",
+            "de": "Elektrizität",
+            "fr": "Electricité",
+            "it": "Elettricità"
           },
           "data": true
         },
         "100_4502": {
           "label": {
-            "en": "Electricity"
+            "en": "Electricity",
+            "de": "Elektrizität",
+            "fr": "Electricité",
+            "it": "Elettricità"
           },
           "data": true
         },
         "100_4503": {
           "label": {
-            "en": "Electricity, consumption type1"
+            "en": "Electricity, consumption type1",
+            "de": "Elektrizität, Verbrauchstyp 1",
+            "fr": "Electricité, type de consommation 1",
+            "it": "Elettricità, tipo di consumo 1"
           },
           "data": true
         },
         "100_4505": {
           "label": {
-            "en": "Electricity, consumption type 2"
+            "en": "Electricity, consumption type 2",
+            "de": "Elektrizität, Verbrauchstyp 2",
+            "fr": "Electricité, type de consommation 2",
+            "it": "Elettricità, tipo di consumo 2"
           },
           "data": true
         },
         "100_4507": {
           "label": {
-            "en": "Electricity, consumption type 3"
+            "en": "Electricity, consumption type 3",
+            "de": "Elektrizität, Verbrauchstyp 3",
+            "fr": "Electricité, type de consommation 3",
+            "it": "Elettricità, tipo di consumo 3"
           },
           "data": true
         },
         "100_4509": {
           "label": {
-            "en": "Electricity, consumption type 4"
+            "en": "Electricity, consumption type 4",
+            "de": "Elektrizität, Verbrauchstyp 4",
+            "fr": "Electricité, type de consommation 4",
+            "it": "Elettricità, tipo di consumo 4"
           },
           "data": true
         },
         "100_4511": {
           "label": {
-            "en": "Electricity, consumption type 5"
+            "en": "Electricity, consumption type 5",
+            "de": "Elektrizität, Verbrauchstyp 5",
+            "fr": "Electricité, type de consommation 5",
+            "it": "Elettricità, tipo di consumo 5"
           },
           "data": true
         },
         "100_4513": {
           "label": {
-            "en": "Electricity, consumption type 6"
+            "en": "Electricity, consumption type 6",
+            "de": "Elektrizität, Verbrauchstyp 6",
+            "fr": "Electricité, type de consommation 6",
+            "it": "Elettricità, tipo di consumo 6"
           },
           "data": true
         },
         "100_4515": {
           "label": {
-            "en": "Electricity, consumption type 7"
+            "en": "Electricity, consumption type 7",
+            "de": "Elektrizität, Verbrauchstyp 7",
+            "fr": "Electricité, type de consommation 7",
+            "it": "Elettricità, tipo di consumo 7"
           },
           "data": true
         },
         "100_4520": {
           "label": {
-            "en": "Gas"
+            "en": "Gas",
+            "de": "Gas",
+            "fr": "Gaz",
+            "it": "Gas"
           },
           "data": true
         },
         "100_4521": {
           "label": {
-            "en": "Gas"
+            "en": "Gas",
+            "de": "Gas",
+            "fr": "Gaz",
+            "it": "Gas"
           },
           "data": true
         },
         "100_4522": {
           "label": {
-            "en": "Gas, consumption type 2"
+            "en": "Gas, consumption type 2",
+            "de": "Gas, Verbrauchstyp 2",
+            "fr": "Gaz, type de consommation 2",
+            "it": "Gas, tipo di consumo 2"
           },
           "data": true
         },
         "100_4524": {
           "label": {
-            "en": "Gas, consumption type 3"
+            "en": "Gas, consumption type 3",
+            "de": "Gas, Verbrauchstyp 3",
+            "fr": "Gaz, type de consommation 3",
+            "it": "Gas, tipo di consumo 3"
           },
           "data": true
         },
         "100_4526": {
           "label": {
-            "en": "Gas, consumption type 4"
+            "en": "Gas, consumption type 4",
+            "de": "Gas, Verbrauchstyp 4",
+            "fr": "Gaz, type de consommation 4",
+            "it": "Gas, tipo di consumo 4"
           },
           "data": true
         },
         "100_4528": {
           "label": {
-            "en": "Gas, consumption type 5"
+            "en": "Gas, consumption type 5",
+            "de": "Gas, Verbrauchstyp 5",
+            "fr": "Gaz, type de consommation 5",
+            "it": "Gas, tipo di consumo 5"
           },
           "data": true
         },
         "100_4540": {
           "label": {
-            "en": "Heating oil"
+            "en": "Heating oil",
+            "de": "Heizöl",
+            "fr": "Mazout",
+            "it": "Olio da riscaldamento"
           },
           "data": true
         },
         "100_4541": {
           "label": {
-            "en": "Heating oil"
+            "en": "Heating oil",
+            "de": "Heizöl",
+            "fr": "Mazout",
+            "it": "Olio da riscaldamento"
           },
           "data": true
         },
         "100_4550": {
           "label": {
-            "en": "Firewood"
+            "en": "Firewood",
+            "de": "Brennholz",
+            "fr": "Bois de chauffage",
+            "it": "Legno da riscaldamento"
           },
           "data": true
         },
         "100_4551": {
           "label": {
-            "en": "Firewood"
+            "en": "Firewood",
+            "de": "Brennholz",
+            "fr": "Bois de chauffage",
+            "it": "Legno da riscaldamento"
           },
           "data": true
         },
         "100_4552": {
           "label": {
-            "en": "Wood pellets"
+            "en": "Wood pellets",
+            "de": "Holzpellets",
+            "fr": "Pellets de bois",
+            "it": "Pellet di legno"
           },
           "data": true
         },
         "100_4554": {
           "label": {
-            "en": "Wood logs"
+            "en": "Wood logs",
+            "de": "Holzscheite",
+            "fr": "Bûches de bois",
+            "it": "Ceppi di legno"
           },
           "data": true
         },
         "100_4560": {
           "label": {
-            "en": "District heating"
+            "en": "District heating",
+            "de": "Fernwärme",
+            "fr": "Chauffage à distance",
+            "it": "Riscaldamento a distanza"
           },
           "data": true
         },
         "100_4561": {
           "label": {
-            "en": "District heating"
+            "en": "District heating",
+            "de": "Fernwärme",
+            "fr": "Chauffage à distance",
+            "it": "Riscaldamento a distanza"
           },
           "data": true
         },
         "100_5": {
           "label": {
-            "en": "Household goods and services"
+            "en": "Household goods and services",
+            "de": "Hausrat und Haushaltsführung",
+            "fr": "Equipement et entretien ménager",
+            "it": "Articoli e servizi per la casa"
           },
           "data": true
         },
         "100_5100": {
           "label": {
-            "en": "Furniture, furnishings and lose carpets"
+            "en": "Furniture, furnishings and lose carpets",
+            "de": "Möbel, Einrichtungsgegenstände und lose Teppiche",
+            "fr": "Meubles, ameublement et tapis",
+            "it": "Mobili, arredi e tappeti sciolti"
           },
           "data": true
         },
         "100_5101": {
           "label": {
-            "en": "Furniture and furnishings"
+            "en": "Furniture and furnishings",
+            "de": "Möbel und Einrichtungszubehör",
+            "fr": "Ameublement et équipement",
+            "it": "Mobili ed arredamenti"
           },
           "data": true
         },
         "100_5102": {
           "label": {
-            "en": "Household furniture"
+            "en": "Household furniture",
+            "de": "Wohnmöbel",
+            "fr": "Meubles de maison",
+            "it": "Mobili per la casa"
           },
           "data": true
         },
         "100_5103": {
           "label": {
-            "en": "Living room and home office furniture"
+            "en": "Living room and home office furniture",
+            "de": "Wohnzimmer- und Büromöbel",
+            "fr": "Meubles de séjour et de bureau",
+            "it": "Mobili da soggiorno e da ufficio"
           },
           "data": true
         },
         "100_5117": {
           "label": {
-            "en": "Bedroom furniture"
+            "en": "Bedroom furniture",
+            "de": "Schlafzimmermöbel",
+            "fr": "Meubles de chambre à coucher",
+            "it": "Mobili da camera da letto"
           },
           "data": true
         },
         "100_5124": {
           "label": {
-            "en": "Kitchen and dining room furniture"
+            "en": "Kitchen and dining room furniture",
+            "de": "Küchen- und Esszimmermöbel",
+            "fr": "Meubles de cuisine et de salle à manger",
+            "it": "Mobili da cucina e da sala da pranzo"
           },
           "data": true
         },
         "100_5140": {
           "label": {
-            "en": "Garden furniture"
+            "en": "Garden furniture",
+            "de": "Gartenmöbel",
+            "fr": "Meubles de jardin",
+            "it": "Mobili da giardino"
           },
           "data": true
         },
         "100_5150": {
           "label": {
-            "en": "Lighting equipment"
+            "en": "Lighting equipment",
+            "de": "Beleuchtungskörper",
+            "fr": "Equipement d'éclairage",
+            "it": "Lampade"
           },
           "data": true
         },
         "100_5160": {
           "label": {
-            "en": "Furnishing accessories and loose rugs"
+            "en": "Furnishing accessories and loose rugs",
+            "de": "Einrichtungszubehör und lose Teppiche",
+            "fr": "Accessoires d'ameublement et tapis",
+            "it": "Accessori per l'arredamento e tappeti sfusi"
           },
           "data": true
         },
         "100_5200": {
           "label": {
-            "en": "Household textiles"
+            "en": "Household textiles",
+            "de": "Heimtextilien, Haushaltswäsche und Zubehör",
+            "fr": "Articles de ménage en textile, linges et accessoires",
+            "it": "Tessili per la casa, biancheria e accessori"
           },
           "data": true
         },
         "100_5201": {
           "label": {
-            "en": "Home textiles"
+            "en": "Home textiles",
+            "de": "Heimtextilien",
+            "fr": "Textiles d'intérieur",
+            "it": "Tessuti per la casa"
           },
           "data": true
         },
         "100_5202": {
           "label": {
-            "en": "Curtains and curtain accessories"
+            "en": "Curtains and curtain accessories",
+            "de": "Vorhänge und Zubehör",
+            "fr": "Rideaux et éléments de rideaux",
+            "it": "Tende ed accessori"
           },
           "data": true
         },
         "100_5220": {
           "label": {
-            "en": "Bed linen and accessories"
+            "en": "Bed linen and accessories",
+            "de": "Bettzeug und Zubehör",
+            "fr": "Linge de lit et accessoires",
+            "it": "Biancheria da letto e accessori"
           },
           "data": true
         },
         "100_5240": {
           "label": {
-            "en": "Table and bathroom textiles"
+            "en": "Table and bathroom textiles",
+            "de": "Tisch- und Badezimmertextilien",
+            "fr": "Linge de table et de toilette",
+            "it": "Tessili per tavoli e bagni"
           },
           "data": true
         },
         "100_5300": {
           "label": {
-            "en": "Household appliances"
+            "en": "Household appliances",
+            "de": "Haushaltsgeräte",
+            "fr": "Appareils ménagers",
+            "it": "Elettrodomestici"
           },
           "data": true
         },
         "100_5301": {
           "label": {
-            "en": "Major household appliances"
+            "en": "Major household appliances",
+            "de": "Grosse elektrische Haushaltsgeräte",
+            "fr": "Appareils électroménagers de grandes dimensions",
+            "it": "Grandi elettrodomestici"
           },
           "data": true
         },
         "100_5302": {
           "label": {
-            "en": "Kitchen appliances"
+            "en": "Kitchen appliances",
+            "de": "Haushaltsgeräte für die Küche",
+            "fr": "Appareils ménagers pour la cuisine",
+            "it": "Elettrodomestici per la cucina"
           },
           "data": true
         },
         "100_5303": {
           "label": {
-            "en": "Refrigerators and freezers"
+            "en": "Refrigerators and freezers",
+            "de": "Kühlschränke und Gefriergeräte",
+            "fr": "Réfrigérateurs et congélateurs",
+            "it": "Frigoriferi e congelatori"
           },
           "data": true
         },
         "100_5307": {
           "label": {
-            "en": "Dishwasher"
+            "en": "Dishwasher",
+            "de": "Geschirrspüler",
+            "fr": "Lave-vaisselle",
+            "it": "Lavastoviglie"
           },
           "data": true
         },
         "100_5309": {
           "label": {
-            "en": "Cookers and ovens"
+            "en": "Cookers and ovens",
+            "de": "Kochherde und Backöfen",
+            "fr": "Cuisinières et fours",
+            "it": "Cucine e forni"
           },
           "data": true
         },
         "100_5320": {
           "label": {
-            "en": "Laundry appliances"
+            "en": "Laundry appliances",
+            "de": "Geräte für Wäschepflege",
+            "fr": "Appareils pour l'entretien du linge",
+            "it": "Apparecchi per la cura della biancheria"
           },
           "data": true
         },
         "100_5330": {
           "label": {
-            "en": "Air conditioning units"
+            "en": "Air conditioning units",
+            "de": "Geräte für Raumklima",
+            "fr": "Appareils de régulation de l'air ambiant",
+            "it": "Elettrodomestici per la regolazione dell'aria ambiente"
           },
           "data": true
         },
         "100_5336": {
           "label": {
-            "en": "Cleaning equipment"
+            "en": "Cleaning equipment",
+            "de": "Reinigungsgeräte",
+            "fr": "Appareils de nettoyage",
+            "it": "Apparecchi per la pulizia"
           },
           "data": true
         },
         "100_5340": {
           "label": {
-            "en": "Small household appliances"
+            "en": "Small household appliances",
+            "de": "Kleine Haushaltsgeräte",
+            "fr": "Petits appareils ménagers",
+            "it": "Piccoli elettrodomestici"
           },
           "data": true
         },
         "100_5341": {
           "label": {
-            "en": "Small appliances for food preparation"
+            "en": "Small appliances for food preparation",
+            "de": "Kleingeräte zur Lebensmittelzubereitung",
+            "fr": "Petits appareils pour la préparation des aliments",
+            "it": "Piccoli apparecchi per la preparazione di alimenti"
           },
           "data": true
         },
         "100_5350": {
           "label": {
-            "en": "Small appliances for preparing drinks"
+            "en": "Small appliances for preparing drinks",
+            "de": "Kleingeräte zur Getränkezubereitung",
+            "fr": "Petits appareils pour la préparation de boissons",
+            "it": "Piccoli apparecchi per la preparazione di bevande"
           },
           "data": true
         },
         "100_5360": {
           "label": {
-            "en": "Other small household appliances"
+            "en": "Other small household appliances",
+            "de": "Andere kleine Haushaltsgeräte",
+            "fr": "Autres petits appareils ménagers",
+            "it": "Altri piccoli elettrodomestici"
           },
           "data": true
         },
         "100_5400": {
           "label": {
-            "en": "Glassware, tableware and other household utensils"
+            "en": "Glassware, tableware and other household utensils",
+            "de": "Glaswaren, Geschirr und andere Gebrauchsgüter für den Haushalt",
+            "fr": "Verrerie, vaisselle et autres ustensiles de ménage",
+            "it": "Oggetti di vetro, stoviglie e altri utensili domestici"
           },
           "data": true
         },
         "100_5401": {
           "label": {
-            "en": "Glassware, tableware and other household utensils"
+            "en": "Glassware, tableware and other household utensils",
+            "de": "Glaswaren, Geschirr und andere Gebrauchsgüter für den Haushalt",
+            "fr": "Verrerie, vaisselle et autres ustensiles de ménage",
+            "it": "Oggetti di vetro, stoviglie e altri utensili domestici"
           },
           "data": true
         },
         "100_5402": {
           "label": {
-            "en": "Glassware and tableware"
+            "en": "Glassware and tableware",
+            "de": "Glaswaren und Geschirr",
+            "fr": "Verrerie et vaisselle",
+            "it": "Oggetti di vetro e stoviglie"
           },
           "data": true
         },
         "100_5420": {
           "label": {
-            "en": "Cutlery"
+            "en": "Cutlery",
+            "de": "Besteck",
+            "fr": "Couverts",
+            "it": "Posate"
           },
           "data": true
         },
         "100_5430": {
           "label": {
-            "en": "Non-electric kitchen and household equipment"
+            "en": "Non-electric kitchen and household equipment",
+            "de": "Nichtelektrische Gebrauchsgüter für Küche und Haushalt",
+            "fr": "Ustensiles non électriques de cuisine et de ménage",
+            "it": "Utensili non elettrici da cucina e utensili domestici"
           },
           "data": true
         },
         "100_5431": {
           "label": {
-            "en": "Kitchen utensils"
+            "en": "Kitchen utensils",
+            "de": "Küchen- und Kochgeräte",
+            "fr": "Ustensiles de cuisine",
+            "it": "Utensili da cucina"
           },
           "data": true
         },
         "100_5440": {
           "label": {
-            "en": "Other household equipment"
+            "en": "Other household equipment",
+            "de": "Andere Gebrauchsgüter für die Haushaltsführung",
+            "fr": "Autres ustensiles de ménage",
+            "it": "Altri utensili domestici"
           },
           "data": true
         },
         "100_5500": {
           "label": {
-            "en": "Tools, equipment and accessories for house and garden"
+            "en": "Tools, equipment and accessories for house and garden",
+            "de": "Werkzeuge, Kleinmaterial und Zubehör für Haus und Garten",
+            "fr": "Outillage, petit matériel et accessoires pour la maison et le jardin",
+            "it": "Utensili, attrezzature e accessori per la casa e il giardino"
           },
           "data": true
         },
         "100_5501": {
           "label": {
-            "en": "Motorized tools for DIY and garden"
+            "en": "Motorized tools for DIY and garden",
+            "de": "Motorbetriebene Werkzeuge für Haus und Garten",
+            "fr": "Outillage motorisé pour la maison et le jardin",
+            "it": "Utensili e attrezzature a motore per la casa e il giardino"
           },
           "data": true
         },
         "100_5502": {
           "label": {
-            "en": "Motorized tools for DIY and garden"
+            "en": "Motorized tools for DIY and garden",
+            "de": "Motorbetriebene Werkzeuge für Haus und Garten",
+            "fr": "Outillage motorisé pour la maison et le jardin",
+            "it": "Utensili e attrezzature a motore per la casa e il giardino"
           },
           "data": true
         },
         "100_5520": {
           "label": {
-            "en": "Tools for house and garden"
+            "en": "Tools for house and garden",
+            "de": "Handwerkzeuge und Zubehör für Haus und Garten",
+            "fr": "Outillage et accessoires pour la maison et le jardin",
+            "it": "Utensili e attrezzature per la casa e il giardino"
           },
           "data": true
         },
         "100_5521": {
           "label": {
-            "en": "Non-motorized tools for house and garden"
+            "en": "Non-motorized tools for house and garden",
+            "de": "Handwerkzeuge für Haus und Garten",
+            "fr": "Outillage à mains pour la maison et le jardin",
+            "it": "Attrezzi manuali per la casa e il giardino"
           },
           "data": true
         },
         "100_5530": {
           "label": {
-            "en": "Equipment and other accessories for house and garden"
+            "en": "Equipment and other accessories for house and garden",
+            "de": "Kleinmaterial und Zubehör für Haus und Garten",
+            "fr": "Petit matériel et accessoires pour la maison et le jardin",
+            "it": "Piccolo materiale e accessori per la casa e il giardino"
           },
           "data": true
         },
         "100_5600": {
           "label": {
-            "en": "Routine household maintenance"
+            "en": "Routine household maintenance",
+            "de": "Laufende Haushaltsführung",
+            "fr": "Entretien courant de l'habitation",
+            "it": "Manutenzione corrente dell'abitazione"
           },
           "data": true
         },
         "100_5601": {
           "label": {
-            "en": "Goods for routine household maintenance"
+            "en": "Goods for routine household maintenance",
+            "de": "Waren für die laufende Haushaltsführung",
+            "fr": "Biens pour l'entretien courant de l'habitation",
+            "it": "Beni per la manutenzione corrente dell'abitazione"
           },
           "data": true
         },
         "100_5602": {
           "label": {
-            "en": "Cleaning and washing materials"
+            "en": "Cleaning and washing materials",
+            "de": "Waschmittel und Putzmaterial",
+            "fr": "Lessives et produits d'entretien",
+            "it": "Detersivi e materiale per la pulizia"
           },
           "data": true
         },
         "100_5603": {
           "label": {
-            "en": "Detergents and cleaning products"
+            "en": "Detergents and cleaning products",
+            "de": "Wasch- und Reinigungsmittel",
+            "fr": "Produits de lessive et de nettoyage",
+            "it": "Detersivi e prodotti per la pulizia"
           },
           "data": true
         },
         "100_5622": {
           "label": {
-            "en": "Cleaning articles"
+            "en": "Cleaning articles",
+            "de": "Putzmaterial",
+            "fr": "Matériel de nettoyage",
+            "it": "Materiale per la pulizia"
           },
           "data": true
         },
         "100_5640": {
           "label": {
-            "en": "Household articles"
+            "en": "Household articles",
+            "de": "Verbrauchsmaterial",
+            "fr": "Matériel ménager",
+            "it": "Materiale per la casa"
           },
           "data": true
         },
         "100_5660": {
           "label": {
-            "en": "Household cleaning services"
+            "en": "Household cleaning services",
+            "de": "Dienstleistungen für Wohnungsreinigung",
+            "fr": "Service de nettoyage du logement",
+            "it": "Servizio di pulizia dell'abitazione"
           },
           "data": true
         },
         "100_5661": {
           "label": {
-            "en": "Household cleaning services"
+            "en": "Household cleaning services",
+            "de": "Dienstleistungen für Wohnungsreinigung",
+            "fr": "Service de nettoyage du logement",
+            "it": "Servizio di pulizia dell'abitazione"
           },
           "data": true
         },
         "100_6": {
           "label": {
-            "en": "Healthcare"
+            "en": "Healthcare",
+            "de": "Gesundheit",
+            "fr": "Santé",
+            "it": "Sanità"
           },
           "data": true
         },
         "100_6100": {
           "label": {
-            "en": "Medicines and medical products"
+            "en": "Medicines and medical products",
+            "de": "Medikamente und medizinische Produkte",
+            "fr": "Médicaments et produits médicaux",
+            "it": "Farmaci e prodotti medici"
           },
           "data": true
         },
         "100_6101": {
           "label": {
-            "en": "Medicines and remedies"
+            "en": "Medicines and remedies",
+            "de": "Medikamente und Heilmittel",
+            "fr": "Médicaments et remèdes",
+            "it": "Farmaci e rimedi"
           },
           "data": true
         },
         "100_6102": {
           "label": {
-            "en": "Medicines"
+            "en": "Medicines",
+            "de": "Medikamente",
+            "fr": "Médicaments",
+            "it": "Medicamenti"
           },
           "data": true
         },
         "100_6104": {
           "label": {
-            "en": "Herbal and homeopathic remedies"
+            "en": "Herbal and homeopathic remedies",
+            "de": "Pflanzliche und homöopathische Heilmittel",
+            "fr": "Remèdes à base de plantes et homéopathiques",
+            "it": "Rimedi vegetali e omeopatici"
           },
           "data": true
         },
         "100_6120": {
           "label": {
-            "en": "Medical products"
+            "en": "Medical products",
+            "de": "Medizinische Produkte",
+            "fr": "Produits médicaux",
+            "it": "Prodotti medici"
           },
           "data": true
         },
         "100_6121": {
           "label": {
-            "en": "Diagnostic products"
+            "en": "Diagnostic products",
+            "de": "Diagnoseprodukte",
+            "fr": "Produits de diagnostic",
+            "it": "Prodotti per la diagnosi"
           },
           "data": true
         },
         "100_6127": {
           "label": {
-            "en": "Prevention and protection products"
+            "en": "Prevention and protection products",
+            "de": "Präventions- und Schutzprodukte",
+            "fr": "Produits de prévention et de protection",
+            "it": "Prodotti per la prevenzione e la protezione"
           },
           "data": true
         },
         "100_6140": {
           "label": {
-            "en": "Medical products for personal use"
+            "en": "Medical products for personal use",
+            "de": "Medizinische Produkte für den persönlichen Gebrauch",
+            "fr": "Produits médicaux à usage personnel",
+            "it": "Prodotti medici per uso personale"
           },
           "data": true
         },
         "100_6150": {
           "label": {
-            "en": "Therapeutic devices"
+            "en": "Therapeutic devices",
+            "de": "Medizinische Hilfsmittel",
+            "fr": "Appareils thérapeutiques",
+            "it": "Apparecchi terapeutici"
           },
           "data": true
         },
         "100_6151": {
           "label": {
-            "en": "Glasses and contact lenses"
+            "en": "Glasses and contact lenses",
+            "de": "Brillen und Kontaktlinsen",
+            "fr": "Lunettes et verres de contact",
+            "it": "Occhiali e lenti a contatto"
           },
           "data": true
         },
         "100_6154": {
           "label": {
-            "en": "Hearing aids"
+            "en": "Hearing aids",
+            "de": "Hörgeräte",
+            "fr": "Appareils auditifs",
+            "it": "Apparecchi acustici"
           },
           "data": true
         },
         "100_6156": {
           "label": {
-            "en": "Assistive products for mobility and daily living"
+            "en": "Assistive products for mobility and daily living",
+            "de": "Hilfsmittel für Mobilität und Alltag",
+            "fr": "Produits d'assistance pour la mobilité et la vie quotidienne",
+            "it": "Prodotti di assistenza per la mobilità e la vita quotidiana"
           },
           "data": true
         },
         "100_6200": {
           "label": {
-            "en": "Outpatient healthcare services"
+            "en": "Outpatient healthcare services",
+            "de": "Ambulante Gesundheitsdienstleistungen",
+            "fr": "Services de santé ambulatoires",
+            "it": "Servizi sanitari ambulatoriali"
           },
           "data": true
         },
         "100_6201": {
           "label": {
-            "en": "Dental services"
+            "en": "Dental services",
+            "de": "Zahnärztliche Behandlungen",
+            "fr": "Soins dentaires",
+            "it": "Prestazioni odontoiatriche"
           },
           "data": true
         },
         "100_6202": {
           "label": {
-            "en": "Dental services"
+            "en": "Dental services",
+            "de": "Zahnärztliche Behandlungen",
+            "fr": "Soins dentaires",
+            "it": "Prestazioni odontoiatriche"
           },
           "data": true
         },
         "100_6230": {
           "label": {
-            "en": "Medical services, physiotherapy and Spitex"
+            "en": "Medical services, physiotherapy and Spitex",
+            "de": "Ärztliche Leistungen, Physiotherapie und Spitex",
+            "fr": "Services médicaux, physiothérapie et soins à domicile",
+            "it": "Prestazioni mediche, fisioterapia e Spitex"
           },
           "data": true
         },
         "100_6231": {
           "label": {
-            "en": "Medical services and physiotherapy"
+            "en": "Medical services and physiotherapy",
+            "de": "Ärztliche Leistungen und Physiotherapie",
+            "fr": "Services médicaux et physiothérapie",
+            "it": "Prestazioni mediche e fisioterapia"
           },
           "data": true
         },
         "100_6232": {
           "label": {
-            "en": "Medical services"
+            "en": "Medical services",
+            "de": "Ärztliche Leistungen",
+            "fr": "Prestations médicales",
+            "it": "Prestazioni mediche"
           },
           "data": true
         },
         "100_6233": {
           "label": {
-            "en": "Medical services at local surgery"
+            "en": "Medical services at local surgery",
+            "de": "Ärztliche Leistungen der Arztpraxen",
+            "fr": "Prestations médicales des cabinets médicaux",
+            "it": "Prestazioni mediche degli studi medici"
           },
           "data": true
         },
         "100_6235": {
           "label": {
-            "en": "Outpatient medical services in hospitals"
+            "en": "Outpatient medical services in hospitals",
+            "de": "Ambulante ärztliche Leistungen im Spital",
+            "fr": "Prestations médicales ambulatoires des hôpitaux",
+            "it": "Prestazioni mediche ambulatoriali degli ospedali"
           },
           "data": true
         },
         "100_6237": {
           "label": {
-            "en": "Physiotherapy"
+            "en": "Physiotherapy",
+            "de": "Physiotherapie",
+            "fr": "Physiothérapie",
+            "it": "Fisioterapia"
           },
           "data": true
         },
         "100_6250": {
           "label": {
-            "en": "Medical care services Spitex"
+            "en": "Medical care services Spitex",
+            "de": "Medizinische Pflegeleistungen Spitex",
+            "fr": "Services de soins médicaux à domicile",
+            "it": "Servizi di assistenza medica Spitex"
           },
           "data": true
         },
         "100_6300": {
           "label": {
-            "en": "Inpatient medical services"
+            "en": "Inpatient medical services",
+            "de": "Stationäre medizinische Leistungen",
+            "fr": "Services médicaux stationnaires",
+            "it": "Prestazioni mediche stazionarie"
           },
           "data": true
         },
         "100_6301": {
           "label": {
-            "en": "Inpatient hospital services"
+            "en": "Inpatient hospital services",
+            "de": "Stationäre Spitalleistungen",
+            "fr": "Services hospitaliers stationnaires",
+            "it": "Prestazioni ospedaliere stazionarie"
           },
           "data": true
         },
         "100_6302": {
           "label": {
-            "en": "In-patient hospital services"
+            "en": "In-patient hospital services",
+            "de": "Stationäre Spitalleistungen",
+            "fr": "Services hospitaliers stationnaires",
+            "it": "Servizi ospedalieri stazionari"
           },
           "data": true
         },
         "100_6310": {
           "label": {
-            "en": "Long-term inpatient care in retirement homes"
+            "en": "Long-term inpatient care in retirement homes",
+            "de": "Stationäre Langzeitpflege in Pflegeheimen",
+            "fr": "Soins stationnaires de longue durée dans des établissements médico-sociaux",
+            "it": "Assistenza stazionaria a lungo termine nelle case di cura"
           },
           "data": true
         },
         "100_6311": {
           "label": {
-            "en": "Long-term inpatient care in retirement homes"
+            "en": "Long-term inpatient care in retirement homes",
+            "de": "Stationäre Langzeitpflege in Pflegeheimen",
+            "fr": "Soins stationnaires de longue durée dans des établissements médico-sociaux",
+            "it": "Assistenza stazionaria a lungo termine nelle case di cura"
           },
           "data": true
         },
         "100_6400": {
           "label": {
-            "en": "Other medical services"
+            "en": "Other medical services",
+            "de": "Andere medizinische Dienstleistungen",
+            "fr": "Autres services médicaux",
+            "it": "Altri servizi medici"
           },
           "data": true
         },
         "100_6401": {
           "label": {
-            "en": "Medical laboratory services"
+            "en": "Medical laboratory services",
+            "de": "Dienstleistungen medizinischer Laboratorien",
+            "fr": "Services des laboratoires médicaux",
+            "it": "Servizi di laboratori medici"
           },
           "data": true
         },
         "100_6402": {
           "label": {
-            "en": "Medical laboratory services"
+            "en": "Medical laboratory services",
+            "de": "Dienstleistungen medizinischer Laboratorien",
+            "fr": "Services des laboratoires médicaux",
+            "it": "Servizi di laboratori medici"
           },
           "data": true
         },
         "100_7": {
           "label": {
-            "en": "Transport"
+            "en": "Transport",
+            "de": "Verkehr",
+            "fr": "Transports",
+            "it": "Trasporti"
           },
           "data": true
         },
         "100_7001": {
           "label": {
-            "en": "Cars, motorcycles, bicycles"
+            "en": "Cars, motorcycles, bicycles",
+            "de": "Automobile, Motor- und Fahrräder",
+            "fr": "Voitures, motocycles et bicyclettes",
+            "it": "Automobili, motocicli e biciclette"
           },
           "data": true
         },
         "100_7100": {
           "label": {
-            "en": "Purchase of cars motorcycles, bicycles"
+            "en": "Purchase of cars motorcycles, bicycles",
+            "de": "Kauf von Automobilen, Motor- und Fahrrädern",
+            "fr": "Achat de voitures, motocycles et bicyclettes",
+            "it": "Acquisto di automobili, motocicli e biciclette"
           },
           "data": true
         },
         "100_7101": {
           "label": {
-            "en": "Cars"
+            "en": "Cars",
+            "de": "Automobile",
+            "fr": "Voitures",
+            "it": "Automobili"
           },
           "data": true
         },
         "100_7102": {
           "label": {
-            "en": "New cars"
+            "en": "New cars",
+            "de": "Neue Automobile",
+            "fr": "Voitures neuves",
+            "it": "Automobili nuove"
           },
           "data": true
         },
         "100_7120": {
           "label": {
-            "en": "Second-hand cars"
+            "en": "Second-hand cars",
+            "de": "Occasions-Automobile",
+            "fr": "Voitures d'occasion",
+            "it": "Automobili d'occasione"
           },
           "data": true
         },
         "100_7140": {
           "label": {
-            "en": "Motorcycles"
+            "en": "Motorcycles",
+            "de": "Motorräder",
+            "fr": "Motocycles",
+            "it": "Motocicli"
           },
           "data": true
         },
         "100_7141": {
           "label": {
-            "en": "Motorcycles"
+            "en": "Motorcycles",
+            "de": "Motorräder",
+            "fr": "Motocycles",
+            "it": "Motocicli"
           },
           "data": true
         },
         "100_7150": {
           "label": {
-            "en": "Bicycles and electric bicycles"
+            "en": "Bicycles and electric bicycles",
+            "de": "Fahrräder und Elektrofahrräder",
+            "fr": "Bicyclettes et bicyclettes électriques",
+            "it": "Biciclette e biciclette elettriche"
           },
           "data": true
         },
         "100_7151": {
           "label": {
-            "en": "Bicycles and electric bicycles"
+            "en": "Bicycles and electric bicycles",
+            "de": "Fahrräder und Elektrofahrräder",
+            "fr": "Bicyclettes et bicyclettes électriques",
+            "it": "Biciclette e biciclette elettriche"
           },
           "data": true
         },
         "100_7152": {
           "label": {
-            "en": "Bicycles"
+            "en": "Bicycles",
+            "de": "Fahrräder",
+            "fr": "Bicyclettes",
+            "it": "Biciclette"
           },
           "data": true
         },
         "100_7156": {
           "label": {
-            "en": "Electric bicycles"
+            "en": "Electric bicycles",
+            "de": "Elektrofahrräder",
+            "fr": "Bicyclettes électriques",
+            "it": "Biciclette elettriche"
           },
           "data": true
         },
         "100_7200": {
           "label": {
-            "en": "Use and maintenance of cars, motorcycles, bicycles"
+            "en": "Use and maintenance of cars, motorcycles, bicycles",
+            "de": "Betrieb und Unterhalt von Automobilen, Motor- und Fahrrädern",
+            "fr": "Utilisation et maintenance de voitures, motocycles et bicyclettes",
+            "it": "Utilizzazione e manutenzione di automobili, motocicli e biciclette"
           },
           "data": true
         },
         "100_7201": {
           "label": {
-            "en": "Spare parts and accessories"
+            "en": "Spare parts and accessories",
+            "de": "Ersatzteile und Zubehör",
+            "fr": "Pièces de rechange et accessoires",
+            "it": "Pezzi di ricambio e accessori"
           },
           "data": true
         },
         "100_7202": {
           "label": {
-            "en": "Tyres"
+            "en": "Tyres",
+            "de": "Pneus",
+            "fr": "Pneus",
+            "it": "Pneumatici"
           },
           "data": true
         },
         "100_7220": {
           "label": {
-            "en": "Spare parts"
+            "en": "Spare parts",
+            "de": "Ersatzteile",
+            "fr": "Pièces de rechange",
+            "it": "Pezzi di ricambio"
           },
           "data": true
         },
         "100_7240": {
           "label": {
-            "en": "Vehicle accessories"
+            "en": "Vehicle accessories",
+            "de": "Fahrzeugzubehör",
+            "fr": "Accessoires pour véhicules",
+            "it": "Accessori per veicoli"
           },
           "data": true
         },
         "100_7250": {
           "label": {
-            "en": "Fuel"
+            "en": "Fuel",
+            "de": "Treibstoff",
+            "fr": "Carburant",
+            "it": "Carburante"
           },
           "data": true
         },
         "100_7251": {
           "label": {
-            "en": "Diesel"
+            "en": "Diesel",
+            "de": "Diesel",
+            "fr": "Diesel",
+            "it": "Diesel"
           },
           "data": true
         },
         "100_7253": {
           "label": {
-            "en": "Petrol"
+            "en": "Petrol",
+            "de": "Benzin",
+            "fr": "Essence",
+            "it": "Benzina"
           },
           "data": true
         },
         "100_7257": {
           "label": {
-            "en": "Electricity from public charging stations"
+            "en": "Electricity from public charging stations",
+            "de": "Elektrizität von öffentlichen Ladestationen",
+            "fr": "Electricité des bornes de recharge publique",
+            "it": "Elettricità delle stazioni di ricarica pubbliche"
           },
           "data": true
         },
         "100_7260": {
           "label": {
-            "en": "Maintenance and repair of private vehicles"
+            "en": "Maintenance and repair of private vehicles",
+            "de": "Wartung und Reparatur von privaten Verkehrsmitteln",
+            "fr": "Entretien et réparation de véhicules personnels",
+            "it": "Manutenzione e riparazione di mezzi di trasporto privati"
           },
           "data": true
         },
         "100_7261": {
           "label": {
-            "en": "Maintenance and repair of private vehicles"
+            "en": "Maintenance and repair of private vehicles",
+            "de": "Wartung und Reparatur von privaten Verkehrsmitteln",
+            "fr": "Entretien et réparation de véhicules personnels",
+            "it": "Manutenzione e riparazione di mezzi di trasporto privati"
           },
           "data": true
         },
         "100_7262": {
           "label": {
-            "en": "Service and repairs of motorised vehicles"
+            "en": "Service and repairs of motorised vehicles",
+            "de": "Service- und Reparaturarbeiten für Motorfahrzeuge",
+            "fr": "Services et travaux de réparations pour véhicules motorisés",
+            "it": "Servizi e lavori di riparazione per veicoli motorizzati"
           },
           "data": true
         },
         "100_7264": {
           "label": {
-            "en": "Bicycle maintenance"
+            "en": "Bicycle maintenance",
+            "de": "Service für Fahrräder",
+            "fr": "Service pour bicyclettes",
+            "it": "Servizio per biciclette"
           },
           "data": true
         },
         "100_7270": {
           "label": {
-            "en": "Other private vehicle services"
+            "en": "Other private vehicle services",
+            "de": "Sonstige Dienstleistungen für Individualverkehr",
+            "fr": "Autres prestations pour le transport individuel",
+            "it": "Altri servizi di trasporto individuale"
           },
           "data": true
         },
         "100_7271": {
           "label": {
-            "en": "Parking fees and long-term parking spaces"
+            "en": "Parking fees and long-term parking spaces",
+            "de": "Parkgebühren und Dauerparkplätze",
+            "fr": "Taxes de stationnement et places de stationnement longue durée",
+            "it": "Tariffe di parcheggio e parcheggi a sosta lunga"
           },
           "data": true
         },
         "100_7272": {
           "label": {
-            "en": "Parking fees"
+            "en": "Parking fees",
+            "de": "Parkgebühren",
+            "fr": "Taxes de parking",
+            "it": "Tasse di parcheggio"
           },
           "data": true
         },
         "100_7275": {
           "label": {
-            "en": "Rent of permanent parking spaces"
+            "en": "Rent of permanent parking spaces",
+            "de": "Miete von Dauerparkplätzen",
+            "fr": "Location de places de stationnement permanent",
+            "it": "Noleggio di parcheggi permanenti"
           },
           "data": true
         },
         "100_7280": {
           "label": {
-            "en": "Taxes for private vehicles and driving school"
+            "en": "Taxes for private vehicles and driving school",
+            "de": "Gebühren für Privatfahrzeuge und Fahrschule",
+            "fr": "Taxes pour les véhicules privés et auto-école",
+            "it": "Tasse per i veicoli privati e scuola guida"
           },
           "data": true
         },
         "100_7290": {
           "label": {
-            "en": "Car rental and car sharing"
+            "en": "Car rental and car sharing",
+            "de": "Automiete und Carsharing",
+            "fr": "Location de voitures et autopartage",
+            "it": "Noleggio auto e car sharing"
           },
           "data": true
         },
         "100_7300": {
           "label": {
-            "en": "Passenger transport services"
+            "en": "Passenger transport services",
+            "de": "Transportdienstleistungen für Passagiere",
+            "fr": "Services de transport de passagers",
+            "it": "Servizi di trasporto passeggeri"
           },
           "data": true
         },
         "100_7301": {
           "label": {
-            "en": "Public long distance transport"
+            "en": "Public long distance transport",
+            "de": "Öffentlicher Fernverkehr",
+            "fr": "Transports publics longue distance",
+            "it": "Trasporti pubblici a lunga distanza"
           },
           "data": true
         },
         "100_7302": {
           "label": {
-            "en": "Public long distance transport"
+            "en": "Public long distance transport",
+            "de": "Öffentlicher Fernverkehr",
+            "fr": "Transports publics longue distance",
+            "it": "Trasporti pubblici a lunga distanza"
           },
           "data": true
         },
         "100_7303": {
           "label": {
-            "en": "Domestic long-distance public transport"
+            "en": "Domestic long-distance public transport",
+            "de": "Öffentlicher Fernverkehr im Inland",
+            "fr": "Transport public longue distance national",
+            "it": "Trasporto pubblico a lunga percorrenza nazionale"
           },
           "data": true
         },
         "100_7305": {
           "label": {
-            "en": "Public transport abroad"
+            "en": "Public transport abroad",
+            "de": "Öffentlicher Verkehr ins Ausland",
+            "fr": "Transports publics vers l'étranger",
+            "it": "Trasporti pubblici all'estero"
           },
           "data": true
         },
         "100_7310": {
           "label": {
-            "en": "Taxi"
+            "en": "Taxi",
+            "de": "Taxi",
+            "fr": "Taxi",
+            "it": "Taxi"
           },
           "data": true
         },
         "100_7311": {
           "label": {
-            "en": "Taxi"
+            "en": "Taxi",
+            "de": "Taxi",
+            "fr": "Taxi",
+            "it": "Taxi"
           },
           "data": true
         },
         "100_7330": {
           "label": {
-            "en": "Air transport"
+            "en": "Air transport",
+            "de": "Luftverkehr",
+            "fr": "Transports aériens",
+            "it": "Trasporti aerei"
           },
           "data": true
         },
         "100_7331": {
           "label": {
-            "en": "International air transport"
+            "en": "International air transport",
+            "de": "Internationaler Luftverkehr",
+            "fr": "Transport aérien international",
+            "it": "Trasporto aereo internazionale"
           },
           "data": true
         },
         "100_7340": {
           "label": {
-            "en": "Passenger transport by ship"
+            "en": "Passenger transport by ship",
+            "de": "Passagiertransport mit Schiff",
+            "fr": "Transport de passagers par bateau",
+            "it": "Trasporto di passeggeri in barca"
           },
           "data": true
         },
         "100_7341": {
           "label": {
-            "en": "Passenger transport by ship"
+            "en": "Passenger transport by ship",
+            "de": "Passagiertransport mit Schiff",
+            "fr": "Transport de passagers par bateau",
+            "it": "Trasporto di passeggeri in barca"
           },
           "data": true
         },
         "100_7350": {
           "label": {
-            "en": "Intermodal passenger transport"
+            "en": "Intermodal passenger transport",
+            "de": "Intermodaler Personentransport",
+            "fr": "Transport intermodal de passagers",
+            "it": "Trasporto intermodale di passeggeri"
           },
           "data": true
         },
         "100_7351": {
           "label": {
-            "en": "Regional public transport"
+            "en": "Regional public transport",
+            "de": "Öffentlicher Regionalverkehr",
+            "fr": "Transports publics régionaux",
+            "it": "Trasporti pubblici regionali"
           },
           "data": true
         },
         "100_7400": {
           "label": {
-            "en": "Transport services for goods"
+            "en": "Transport services for goods",
+            "de": "Transportdienstleistungen für Waren",
+            "fr": "Services de transport de marchandises",
+            "it": "Servizi di trasporto merci"
           },
           "data": true
         },
         "100_7401": {
           "label": {
-            "en": "Postal services"
+            "en": "Postal services",
+            "de": "Postdienste",
+            "fr": "Services postaux",
+            "it": "Servizi postali"
           },
           "data": true
         },
         "100_7402": {
           "label": {
-            "en": "Letter post"
+            "en": "Letter post",
+            "de": "Briefpost",
+            "fr": "Courrier postal",
+            "it": "Posta lettere"
           },
           "data": true
         },
         "100_7404": {
           "label": {
-            "en": "Parcel post"
+            "en": "Parcel post",
+            "de": "Paketpost",
+            "fr": "Colis postal",
+            "it": "Posta a pacchetto"
           },
           "data": true
         },
         "100_7410": {
           "label": {
-            "en": "Delivery charges"
+            "en": "Delivery charges",
+            "de": "Liefergebühren",
+            "fr": "Frais de livraison",
+            "it": "Spese di consegna"
           },
           "data": true
         },
         "100_7411": {
           "label": {
-            "en": "Delivery charges"
+            "en": "Delivery charges",
+            "de": "Liefergebühren",
+            "fr": "Frais de livraison",
+            "it": "Spese di consegna"
           },
           "data": true
         },
         "100_8": {
           "label": {
-            "en": "Information and communication"
+            "en": "Information and communication",
+            "de": "Information und Kommunikation",
+            "fr": "Information et communication",
+            "it": "Informazione e comunicazione"
           },
           "data": true
         },
         "100_8100": {
           "label": {
-            "en": "Information and communication equipment"
+            "en": "Information and communication equipment",
+            "de": "Geräte für Information und Kommunikation",
+            "fr": "Appareils pour l'information et la communication",
+            "it": "Apparecchiature per l'informazione e la comunicazione"
           },
           "data": true
         },
         "100_8120": {
           "label": {
-            "en": "Mobile phones"
+            "en": "Mobile phones",
+            "de": "Mobiltelefone",
+            "fr": "Téléphones mobiles",
+            "it": "Telefoni cellulari"
           },
           "data": true
         },
         "100_8121": {
           "label": {
-            "en": "Mobile phones"
+            "en": "Mobile phones",
+            "de": "Mobiltelefone",
+            "fr": "Téléphones mobiles",
+            "it": "Telefoni cellulari"
           },
           "data": true
         },
         "100_8130": {
           "label": {
-            "en": "Personal computers and accessories"
+            "en": "Personal computers and accessories",
+            "de": "Personalcomputer und Zubehör",
+            "fr": "Ordinateurs personnels et accessoires",
+            "it": "Personal computer e accessori"
           },
           "data": true
         },
         "100_8131": {
           "label": {
-            "en": "Personal computers"
+            "en": "Personal computers",
+            "de": "Personalcomputer",
+            "fr": "Ordinateurs personnels",
+            "it": "Personal computer"
           },
           "data": true
         },
         "100_8135": {
           "label": {
-            "en": "IT peripherical devices and accessories"
+            "en": "IT peripherical devices and accessories",
+            "de": "IT-Peripherie und Zubehör",
+            "fr": "Périphériques informatiques et accessoires",
+            "it": "Periferiche informatiche e accessori"
           },
           "data": true
         },
         "100_8150": {
           "label": {
-            "en": "Television sets and audiovisual appliances"
+            "en": "Television sets and audiovisual appliances",
+            "de": "Fernseh-, Audio- und Videogeräte",
+            "fr": "Téléviseurs et appareils audio-visuels",
+            "it": "Televisori e apparecchi audiovisivi"
           },
           "data": true
         },
         "100_8151": {
           "label": {
-            "en": "Televisions and audiovisual equipment"
+            "en": "Televisions and audiovisual equipment",
+            "de": "Fernseh-, Audio- und Videogeräte",
+            "fr": "Téléviseurs et appareils audio-visuels",
+            "it": "Televisori e apparecchi audiovisivi"
           },
           "data": true
         },
         "100_8152": {
           "label": {
-            "en": "Television sets"
+            "en": "Television sets",
+            "de": "Fernsehgeräte",
+            "fr": "Téléviseurs",
+            "it": "Televisori"
           },
           "data": true
         },
         "100_8154": {
           "label": {
-            "en": "Audiovisual equipment"
+            "en": "Audiovisual equipment",
+            "de": "Audio/Video-Geräte",
+            "fr": "Appareils audio-visuels",
+            "it": "Apparecchi audiovisivi"
           },
           "data": true
         },
         "100_8190": {
           "label": {
-            "en": "Smartwatches and e-book readers"
+            "en": "Smartwatches and e-book readers",
+            "de": "Smartwatches und Ebook Readers",
+            "fr": "Montres connectées et liseuses",
+            "it": "Smartwatch ed e-reader"
           },
           "data": true
         },
         "100_8191": {
           "label": {
-            "en": "Smartwatches and e-book readers"
+            "en": "Smartwatches and e-book readers",
+            "de": "Smartwatches und Ebook Readers",
+            "fr": "Montres connectées et liseuses",
+            "it": "Smartwatch ed e-reader"
           },
           "data": true
         },
         "100_8200": {
           "label": {
-            "en": "Software for computers"
+            "en": "Software for computers",
+            "de": "Software für Computer",
+            "fr": "Logiciels pour ordinateurs",
+            "it": "Software per computer"
           },
           "data": true
         },
         "100_8201": {
           "label": {
-            "en": "Software for computers"
+            "en": "Software for computers",
+            "de": "Software für Computer",
+            "fr": "Logiciels pour ordinateurs",
+            "it": "Software per computer"
           },
           "data": true
         },
         "100_8202": {
           "label": {
-            "en": "Computer software"
+            "en": "Computer software",
+            "de": "Software für Computer",
+            "fr": "Logiciel pour ordinateurs",
+            "it": "Software per computer"
           },
           "data": true
         },
         "100_8300": {
           "label": {
-            "en": "Information and communication services"
+            "en": "Information and communication services",
+            "de": "Informations- und Kommunikationsdienstleistungen",
+            "fr": "Services d'information et de communication",
+            "it": "Servizi di informazione e comunicazione"
           },
           "data": true
         },
         "100_8320": {
           "label": {
-            "en": "Mobile network communication"
+            "en": "Mobile network communication",
+            "de": "Mobilnetz-Kommunikation",
+            "fr": "Communication réseau mobile",
+            "it": "Comunicazione rete mobile"
           },
           "data": true
         },
         "100_8321": {
           "label": {
-            "en": "Mobile communication"
+            "en": "Mobile communication",
+            "de": "Mobilnetz-Kommunikation",
+            "fr": "Communication réseau mobile",
+            "it": "Comunicazione rete mobile"
           },
           "data": true
         },
         "100_8340": {
           "label": {
-            "en": "Combined offers for telecommunication"
+            "en": "Combined offers for telecommunication",
+            "de": "Kombiangebote Telekommunikation",
+            "fr": "Offres combinées de télécommunication",
+            "it": "Offerte combinate di telecommunicazione"
           },
           "data": true
         },
         "100_8341": {
           "label": {
-            "en": "Combined offers for telecommunication"
+            "en": "Combined offers for telecommunication",
+            "de": "Kombiangebote Telekommunikation",
+            "fr": "Offres combinées de télécommunication",
+            "it": "Offerte combinate di telecommunicazione"
           },
           "data": true
         },
         "100_8342": {
           "label": {
-            "en": "Wireline combined offers"
+            "en": "Wireline combined offers",
+            "de": "Kombiangebote Festnetz",
+            "fr": "Offres combinées réseau fixe",
+            "it": "Offerte combinate rete fissa"
           },
           "data": true
         },
         "100_8346": {
           "label": {
-            "en": "Wireline and wireless combined offers"
+            "en": "Wireline and wireless combined offers",
+            "de": "Kombiangebote Fest- und Mobilnetz",
+            "fr": "Offres combinées réseau fixe et mobile",
+            "it": "Offerte combinate rete fissa et mobile"
           },
           "data": true
         },
         "100_8350": {
           "label": {
-            "en": "Radio and TV repair and installation"
+            "en": "Radio and TV repair and installation",
+            "de": "Reparatur und Installationen Radio und TV",
+            "fr": "Réparations et installations radio-TV",
+            "it": "Riparazioni e installazioni radio e TV"
           },
           "data": true
         },
         "100_8351": {
           "label": {
-            "en": "Radio and TV repair and installation"
+            "en": "Radio and TV repair and installation",
+            "de": "Reparatur und Installationen Radio und TV",
+            "fr": "Réparations et installations radio-TV",
+            "it": "Riparazioni e installazioni radio e TV"
           },
           "data": true
         },
         "100_8390": {
           "label": {
-            "en": "Reception of paid audiovisual content"
+            "en": "Reception of paid audiovisual content",
+            "de": "Empfang von kostenpflichtigen Audio/Video-Inhalten",
+            "fr": "Réception de contenu audio-visuel payant",
+            "it": "Contenuto audiovisivo a pagamento"
           },
           "data": true
         },
         "100_8391": {
           "label": {
-            "en": "Reception of paid audiovisual content"
+            "en": "Reception of paid audiovisual content",
+            "de": "Empfang von kostenpflichtigen Audio/Video-Inhalten",
+            "fr": "Réception de contenu audio-visuel payant",
+            "it": "Contenuto audiovisivo a pagamento"
           },
           "data": true
         },
         "100_9": {
           "label": {
-            "en": "Recreation, sport and culture"
+            "en": "Recreation, sport and culture",
+            "de": "Freizeit, Sport und Kultur",
+            "fr": "Loisirs, sport et culture",
+            "it": "Tempo libero, sport e cultura"
           },
           "data": true
         },
         "100_9100": {
           "label": {
-            "en": "Consumer durables for leisure"
+            "en": "Consumer durables for leisure",
+            "de": "Dauerhafte Gebrauchsgüter für die Freizeit",
+            "fr": "Biens de consommation durables pour les loisirs",
+            "it": "Beni durevoli per il tempo libero"
           },
           "data": true
         },
         "100_9101": {
           "label": {
-            "en": "Photographic and video equipment"
+            "en": "Photographic and video equipment",
+            "de": "Foto- und Videoausrüstung",
+            "fr": "Équipement photo et vidéo",
+            "it": "Attrezzatura fotografica e video"
           },
           "data": true
         },
         "100_9102": {
           "label": {
-            "en": "Cameras"
+            "en": "Cameras",
+            "de": "Kameras",
+            "fr": "Caméras",
+            "it": "Fotocamere"
           },
           "data": true
         },
         "100_9108": {
           "label": {
-            "en": "Photo accessories"
+            "en": "Photo accessories",
+            "de": "Foto-Zubehör",
+            "fr": "Accessoires photo",
+            "it": "Accessori fotografici"
           },
           "data": true
         },
         "100_9120": {
           "label": {
-            "en": "Other major durables for leisure"
+            "en": "Other major durables for leisure",
+            "de": "Andere dauerhafte Gebrauchsgüter für die Freizeit",
+            "fr": "Autres biens de consommation durables pour les loisirs",
+            "it": "Altri beni durevoli per il tempo libero"
           },
           "data": true
         },
         "100_9121": {
           "label": {
-            "en": "Camper vans"
+            "en": "Camper vans",
+            "de": "Wohnmobile",
+            "fr": "Camping-cars",
+            "it": "Camping car"
           },
           "data": true
         },
         "100_9123": {
           "label": {
-            "en": "Recreational boats"
+            "en": "Recreational boats",
+            "de": "Freizeitschiffe",
+            "fr": "Bateaux de plaisance",
+            "it": "Navi per il tempo libero"
           },
           "data": true
         },
         "100_9200": {
           "label": {
-            "en": "Toys and sports equipment"
+            "en": "Toys and sports equipment",
+            "de": "Spiel- und Sportartikel",
+            "fr": "Articles de sport et de jeu",
+            "it": "Articoli per il gioco e lo sport"
           },
           "data": true
         },
         "100_9201": {
           "label": {
-            "en": "Games, toys and hobbies"
+            "en": "Games, toys and hobbies",
+            "de": "Spiel- und Hobbywaren",
+            "fr": "Jeux, jouets et passe-temps",
+            "it": "Giochi, giocattoli e passatempi"
           },
           "data": true
         },
         "100_9202": {
           "label": {
-            "en": "Game consoles and electronic games"
+            "en": "Game consoles and electronic games",
+            "de": "Spielkonsolen und elektronische Spiele",
+            "fr": "Consoles de jeux et jeux électroniques",
+            "it": "Console per videogiochi e giochi elettronici"
           },
           "data": true
         },
         "100_9210": {
           "label": {
-            "en": "Toys"
+            "en": "Toys",
+            "de": "Spielwaren",
+            "fr": "Jouets",
+            "it": "Giocattoli"
           },
           "data": true
         },
         "100_9220": {
           "label": {
-            "en": "Sports and camping equipment"
+            "en": "Sports and camping equipment",
+            "de": "Sportgeräte und Campingausrüstung",
+            "fr": "Equipement de sport et camping",
+            "it": "Attrezzatura sport e campeggio"
           },
           "data": true
         },
         "100_9221": {
           "label": {
-            "en": "Sports equipment"
+            "en": "Sports equipment",
+            "de": "Sportausrüstung",
+            "fr": "Equipement de sport",
+            "it": "Attrezzatura sport"
           },
           "data": true
         },
         "100_9222": {
           "label": {
-            "en": "Sporting goods"
+            "en": "Sporting goods",
+            "de": "Sportartikel",
+            "fr": "Articles de sport",
+            "it": "Articoli di sport"
           },
           "data": true
         },
         "100_9223": {
           "label": {
-            "en": "Winter sports equipment"
+            "en": "Winter sports equipment",
+            "de": "Wintersportartikel",
+            "fr": "Articles de sport d'hiver",
+            "it": "Articoli di sport invernali"
           },
           "data": true
         },
         "100_9233": {
           "label": {
-            "en": "Summer/year-round sports articles"
+            "en": "Summer/year-round sports articles",
+            "de": "Sommer- und Ganzjahressportartikel",
+            "fr": "Articles de sport d'été et toutes saisons",
+            "it": "Articoli di sport estivi e per tutto l'anno"
           },
           "data": true
         },
         "100_9250": {
           "label": {
-            "en": "Sportswear"
+            "en": "Sportswear",
+            "de": "Sportbekleidung",
+            "fr": "Vêtements de sport",
+            "it": "Indumenti per sport"
           },
           "data": true
         },
         "100_9251": {
           "label": {
-            "en": "Winter sportswear"
+            "en": "Winter sportswear",
+            "de": "Wintersportbekleidung",
+            "fr": "Vêtements de sport d'hiver",
+            "it": "Indumenti per sport invernali"
           },
           "data": true
         },
         "100_9268": {
           "label": {
-            "en": "Summer and all-season sportswear"
+            "en": "Summer and all-season sportswear",
+            "de": "Sommer- und Ganzjahrsportbekleidung",
+            "fr": "Vêtements de sport d'été et pour toute l'année",
+            "it": "Indumenti per sport estivi e per tutto l'anno"
           },
           "data": true
         },
         "100_9290": {
           "label": {
-            "en": "Camping and outdoor articles"
+            "en": "Camping and outdoor articles",
+            "de": "Camping- und Outdoorartikel",
+            "fr": "Articles de camping et outdoor",
+            "it": "Articoli da campeggio e outdoor"
           },
           "data": true
         },
         "100_9300": {
           "label": {
-            "en": "Articles for gardens and pets"
+            "en": "Articles for gardens and pets",
+            "de": "Artikel für Garten und Heimtiere",
+            "fr": "Articles pour le jardin et les animaux domestiques",
+            "it": "Articoli per il giardino e gli animali domestici"
           },
           "data": true
         },
         "100_9301": {
           "label": {
-            "en": "Plants, flowers and garden products"
+            "en": "Plants, flowers and garden products",
+            "de": "Pflanzen, Blumen und Gartenprodukte",
+            "fr": "Plantes, fleurs et produits pour le jardin",
+            "it": "Piante, fiori e prodotti per il giardino"
           },
           "data": true
         },
         "100_9302": {
           "label": {
-            "en": "Garden products"
+            "en": "Garden products",
+            "de": "Gartenprodukte",
+            "fr": "Produits pour le jardin",
+            "it": "Prodotti per il giardino"
           },
           "data": true
         },
         "100_9310": {
           "label": {
-            "en": "Plants and flowers"
+            "en": "Plants and flowers",
+            "de": "Pflanzen und Blumen",
+            "fr": "Plantes et fleurs",
+            "it": "Piante e fiori"
           },
           "data": true
         },
         "100_9330": {
           "label": {
-            "en": "Pet related products"
+            "en": "Pet related products",
+            "de": "Heimtierartikel",
+            "fr": "Produits pour animaux domestiques",
+            "it": "Prodotti per animali domestici"
           },
           "data": true
         },
         "100_9331": {
           "label": {
-            "en": "Pet related products"
+            "en": "Pet related products",
+            "de": "Heimtierartikel",
+            "fr": "Produits pour animaux domestiques",
+            "it": "Prodotti per animali domestici"
           },
           "data": true
         },
         "100_9400": {
           "label": {
-            "en": "Recreational services"
+            "en": "Recreational services",
+            "de": "Freizeitdienstleistungen",
+            "fr": "Services récréatifs",
+            "it": "Servizi ricreativi"
           },
           "data": true
         },
         "100_9401": {
           "label": {
-            "en": "Rental and subscriptions for games and hobby items"
+            "en": "Rental and subscriptions for games and hobby items",
+            "de": "Miete und Abonnemente von Spielen und Hobbywaren",
+            "fr": "Location et abonnements de jeux et articles de loisirs",
+            "it": "Noleggio e abbonamenti di giochi e articoli per hobby"
           },
           "data": true
         },
         "100_9402": {
           "label": {
-            "en": "Subscriptions for online games"
+            "en": "Subscriptions for online games",
+            "de": "Abonnemente für Online-Spiele",
+            "fr": "Abonnements à des jeux en ligne",
+            "it": "Abbonamenti per giochi online"
           },
           "data": true
         },
         "100_9410": {
           "label": {
-            "en": "Services for winter sports equipment"
+            "en": "Services for winter sports equipment",
+            "de": "Dienstleistungen für Wintersportartikel",
+            "fr": "Services pour articles de sport d'hiver",
+            "it": "Servizi di articoli per sport invernali"
           },
           "data": true
         },
         "100_9411": {
           "label": {
-            "en": "Services for winter sports equipment"
+            "en": "Services for winter sports equipment",
+            "de": "Dienstleistungen für Wintersportartikel",
+            "fr": "Services pour articles de sport d'hiver",
+            "it": "Servizi di articoli per sport invernali"
           },
           "data": true
         },
         "100_9420": {
           "label": {
-            "en": "Veterinary services for pets"
+            "en": "Veterinary services for pets",
+            "de": "Tierärztliche Leistungen für Heimtiere",
+            "fr": "Services vétérinaires pour animaux domestiques",
+            "it": "Servizi veterinari per animali domestici"
           },
           "data": true
         },
         "100_9421": {
           "label": {
-            "en": "Veterinary services for pets"
+            "en": "Veterinary services for pets",
+            "de": "Tierärztliche Leistungen für Heimtiere",
+            "fr": "Services vétérinaires pour animaux domestiques",
+            "it": "Servizi veterinari per animali domestici"
           },
           "data": true
         },
         "100_9440": {
           "label": {
-            "en": "Sporting and recreational services"
+            "en": "Sporting and recreational services",
+            "de": "Dienstleistungen für Sport und Freizeit",
+            "fr": "Services sportifs et récréatifs",
+            "it": "Servizi sportivi e ricreativi"
           },
           "data": true
         },
         "100_9441": {
           "label": {
-            "en": "Leisure-time courses"
+            "en": "Leisure-time courses",
+            "de": "Freizeitkurse",
+            "fr": "Cours de loisirs",
+            "it": "Corsi per il tempo libero"
           },
           "data": true
         },
         "100_9450": {
           "label": {
-            "en": "Sports activities"
+            "en": "Sports activities",
+            "de": "Sportaktivitäten",
+            "fr": "Activités sportives",
+            "it": "Attività sportive"
           },
           "data": true
         },
         "100_9451": {
           "label": {
-            "en": "Admission to sport facilities"
+            "en": "Admission to sport facilities",
+            "de": "Eintritte in Sporteinrichtungen",
+            "fr": "Entrées à des installations sportives",
+            "it": "Entrate agli impianti sportivi"
           },
           "data": true
         },
         "100_9458": {
           "label": {
-            "en": "Mountain railways, skilifts"
+            "en": "Mountain railways, skilifts",
+            "de": "Bergbahnen und Skilifte",
+            "fr": "Chemins de fer de montagne, remontées mécaniques",
+            "it": "Funivie e sci-lift"
           },
           "data": true
         },
         "100_9480": {
           "label": {
-            "en": "Sporting events"
+            "en": "Sporting events",
+            "de": "Sportveranstaltungen",
+            "fr": "Manifestations sportives",
+            "it": "Manifestazioni sportive"
           },
           "data": true
         },
         "100_9490": {
           "label": {
-            "en": "Games of chance"
+            "en": "Games of chance",
+            "de": "Glücksspiele",
+            "fr": "Jeux de hasard",
+            "it": "Giochi d'azzardo"
           },
           "data": true
         },
         "100_9491": {
           "label": {
-            "en": "Games of chance"
+            "en": "Games of chance",
+            "de": "Glücksspiele",
+            "fr": "Jeux de hasard",
+            "it": "Giochi d'azzardo"
           },
           "data": true
         },
         "100_9500": {
           "label": {
-            "en": "Goods for culture"
+            "en": "Goods for culture",
+            "de": "Waren für Kultur",
+            "fr": "Produits pour la culture",
+            "it": "Articoli per la cultura"
           },
           "data": true
         },
         "100_9501": {
           "label": {
-            "en": "Musical instruments"
+            "en": "Musical instruments",
+            "de": "Musikinstrumente",
+            "fr": "Instruments de musique",
+            "it": "Strumenti musicali"
           },
           "data": true
         },
         "100_9502": {
           "label": {
-            "en": "Musical instruments"
+            "en": "Musical instruments",
+            "de": "Musikinstrumente",
+            "fr": "Instruments de musique",
+            "it": "Strumenti musicali"
           },
           "data": true
         },
         "100_9520": {
           "label": {
-            "en": "Image and sound media"
+            "en": "Image and sound media",
+            "de": "Bild- und Tonträger",
+            "fr": "Supports visuels et sonores",
+            "it": "Supporti audiovisivi"
           },
           "data": true
         },
         "100_9521": {
           "label": {
-            "en": "Image and sound media"
+            "en": "Image and sound media",
+            "de": "Bild- und Tonträger",
+            "fr": "Supports visuels et sonores",
+            "it": "Supporti audiovisivi"
           },
           "data": true
         },
         "100_9522": {
           "label": {
-            "en": "Recorded media"
+            "en": "Recorded media",
+            "de": "Bespielte Bild- und Tonträger",
+            "fr": "Supports audiovisuels enregistrés",
+            "it": "Supporti registrati"
           },
           "data": true
         },
         "100_9600": {
           "label": {
-            "en": "Culture services"
+            "en": "Culture services",
+            "de": "Kulturdienstleistungen",
+            "fr": "Services culturels",
+            "it": "Servizi culturali"
           },
           "data": true
         },
         "100_9601": {
           "label": {
-            "en": "Cinema, theatre and concerts"
+            "en": "Cinema, theatre and concerts",
+            "de": "Kino, Theater und Konzerte",
+            "fr": "Cinéma, théâtre et concerts",
+            "it": "Cinema, teatro e concerti"
           },
           "data": true
         },
         "100_9602": {
           "label": {
-            "en": "Cinema, theatre and concerts"
+            "en": "Cinema, theatre and concerts",
+            "de": "Kino, Theater und Konzerte",
+            "fr": "Cinéma, théâtre et concerts",
+            "it": "Cinema, teatro e concerti"
           },
           "data": true
         },
         "100_9603": {
           "label": {
-            "en": "Cinema"
+            "en": "Cinema",
+            "de": "Kino",
+            "fr": "Cinéma",
+            "it": "Cinema"
           },
           "data": true
         },
         "100_9605": {
           "label": {
-            "en": "Theatre and concerts"
+            "en": "Theatre and concerts",
+            "de": "Theater und Konzerte",
+            "fr": "Théâtre et concerts",
+            "it": "Teatro e concerti"
           },
           "data": true
         },
         "100_9620": {
           "label": {
-            "en": "Museums and zoological gardens"
+            "en": "Museums and zoological gardens",
+            "de": "Museen und Zoos",
+            "fr": "Musées et zoos",
+            "it": "Musei e zoo"
           },
           "data": true
         },
         "100_9621": {
           "label": {
-            "en": "Museums and zoological gardens"
+            "en": "Museums and zoological gardens",
+            "de": "Museen und Zoos",
+            "fr": "Musées et zoos",
+            "it": "Musei e zoo"
           },
           "data": true
         },
         "100_9630": {
           "label": {
-            "en": "Photographic services"
+            "en": "Photographic services",
+            "de": "Fotodienstleistungen",
+            "fr": "Services photographiques",
+            "it": "Servizi fotografici"
           },
           "data": true
         },
         "100_9631": {
           "label": {
-            "en": "Photographic services"
+            "en": "Photographic services",
+            "de": "Fotodienstleistungen",
+            "fr": "Services photographiques",
+            "it": "Servizi fotografici"
           },
           "data": true
         },
         "100_9700": {
           "label": {
-            "en": "Books, Newspapers and stationery"
+            "en": "Books, Newspapers and stationery",
+            "de": "Zeitungen, Bücher und Schreibwaren",
+            "fr": "Edition, presse et papeterie",
+            "it": "Giornali, libri e articoli di cartoleria"
           },
           "data": true
         },
         "100_9701": {
           "label": {
-            "en": "Books"
+            "en": "Books",
+            "de": "Bücher",
+            "fr": "Livres",
+            "it": "Libri"
           },
           "data": true
         },
         "100_9702": {
           "label": {
-            "en": "School and educational books"
+            "en": "School and educational books",
+            "de": "Schul- und Lehrbücher",
+            "fr": "Livres scolaires et éducatifs",
+            "it": "Libri scolastici e didattici"
           },
           "data": true
         },
         "100_9705": {
           "label": {
-            "en": "Fiction books and other books"
+            "en": "Fiction books and other books",
+            "de": "Belletristik und andere Bücher",
+            "fr": "Livres fictions et autres livres",
+            "it": "Libri finzione e altri libri"
           },
           "data": true
         },
         "100_9706": {
           "label": {
-            "en": "Fiction books"
+            "en": "Fiction books",
+            "de": "Belletristik-Bücher",
+            "fr": "Livres fictions",
+            "it": "Libri finzione"
           },
           "data": true
         },
         "100_9709": {
           "label": {
-            "en": "Other books"
+            "en": "Other books",
+            "de": "Andere Bücher",
+            "fr": "Autres livres",
+            "it": "Altri libri"
           },
           "data": true
         },
         "100_9720": {
           "label": {
-            "en": "Newspapers and magazines"
+            "en": "Newspapers and magazines",
+            "de": "Zeitungen und Zeitschriften",
+            "fr": "Journaux et revues",
+            "it": "Giornali e riviste"
           },
           "data": true
         },
         "100_9721": {
           "label": {
-            "en": "Newspapers"
+            "en": "Newspapers",
+            "de": "Zeitungen",
+            "fr": "Journaux",
+            "it": "Giornali"
           },
           "data": true
         },
         "100_9726": {
           "label": {
-            "en": "Magazines"
+            "en": "Magazines",
+            "de": "Zeitschriften",
+            "fr": "Revues",
+            "it": "Riviste"
           },
           "data": true
         },
         "100_9730": {
           "label": {
-            "en": "Other printed matter"
+            "en": "Other printed matter",
+            "de": "Sonstige Druckprodukte",
+            "fr": "Autres imprimés",
+            "it": "Altri stampati"
           },
           "data": true
         },
         "100_9731": {
           "label": {
-            "en": "Other printed matter"
+            "en": "Other printed matter",
+            "de": "Sonstige Druckprodukte",
+            "fr": "Autres imprimés",
+            "it": "Altri stampati"
           },
           "data": true
         },
         "100_9740": {
           "label": {
-            "en": "Writing and drawing materials"
+            "en": "Writing and drawing materials",
+            "de": "Schreib- und Zeichenmaterial",
+            "fr": "Matériel d'écriture et de dessin",
+            "it": "Materiale per scrivere e disegnare"
           },
           "data": true
         },
         "100_9741": {
           "label": {
-            "en": "Writing and drawing materials"
+            "en": "Writing and drawing materials",
+            "de": "Schreib- und Zeichenmaterial",
+            "fr": "Matériel d'écriture et de dessin",
+            "it": "Materiale per scrivere e disegnare"
           },
           "data": true
         },
         "100_9800": {
           "label": {
-            "en": "Package holidays"
+            "en": "Package holidays",
+            "de": "Pauschalreisen",
+            "fr": "Voyages à forfait",
+            "it": "Viaggi forfetari"
           },
           "data": true
         },
         "100_9801": {
           "label": {
-            "en": "Package holidays"
+            "en": "Package holidays",
+            "de": "Pauschalreisen",
+            "fr": "Voyages à forfait",
+            "it": "Viaggi forfetari"
           },
           "data": true
         },
         "100_9802": {
           "label": {
-            "en": "Package holidays"
+            "en": "Package holidays",
+            "de": "Pauschalreisen",
+            "fr": "Voyages à forfait",
+            "it": "Viaggi forfetari"
           },
           "data": true
         },
         "100_9803": {
           "label": {
-            "en": "International package holidays"
+            "en": "International package holidays",
+            "de": "Pauschalreisen ins Ausland",
+            "fr": "Voyages à forfait internationaux",
+            "it": "Viaggi forfetari internazionali"
           },
           "data": true
         },
         "100_9808": {
           "label": {
-            "en": "Domestic package holidays"
+            "en": "Domestic package holidays",
+            "de": "Pauschalreisen im Inland",
+            "fr": "Voyages à forfait nationaux",
+            "it": "Viaggi forfetari nazionali"
           },
           "data": true
         },
         "100_10": {
           "label": {
-            "en": "Education"
+            "en": "Education",
+            "de": "Bildung",
+            "fr": "Enseignement",
+            "it": "Insegnamento"
           },
           "data": true
         },
         "100_10100": {
           "label": {
-            "en": "Primary education"
+            "en": "Primary education",
+            "de": "Primarschulbildung",
+            "fr": "Enseignement primaire",
+            "it": "Istruzione primaria"
           },
           "data": true
         },
         "100_10101": {
           "label": {
-            "en": "Primary education"
+            "en": "Primary education",
+            "de": "Primarschulbildung",
+            "fr": "Enseignement primaire",
+            "it": "Istruzione primaria"
           },
           "data": true
         },
         "100_10102": {
           "label": {
-            "en": "Primary education"
+            "en": "Primary education",
+            "de": "Primarschulbildung",
+            "fr": "Enseignement primaire",
+            "it": "Istruzione primaria"
           },
           "data": true
         },
         "100_10200": {
           "label": {
-            "en": "Secondary education"
+            "en": "Secondary education",
+            "de": "Sekundarschulbildung",
+            "fr": "Enseignement secondaire",
+            "it": "Istruzione secondaria"
           },
           "data": true
         },
         "100_10201": {
           "label": {
-            "en": "Secondary education"
+            "en": "Secondary education",
+            "de": "Sekundarschulbildung",
+            "fr": "Enseignement secondaire",
+            "it": "Istruzione secondaria"
           },
           "data": true
         },
         "100_10202": {
           "label": {
-            "en": "Secondary education"
+            "en": "Secondary education",
+            "de": "Sekundarschulbildung",
+            "fr": "Enseignement secondaire",
+            "it": "Istruzione secondaria"
           },
           "data": true
         },
         "100_10300": {
           "label": {
-            "en": "Post-compulsory education"
+            "en": "Post-compulsory education",
+            "de": "Nachobligatorische Bildung",
+            "fr": "Enseignement postobligatoire",
+            "it": "Istruzione post-obbligatoria"
           },
           "data": true
         },
         "100_10301": {
           "label": {
-            "en": "Post-compulsory education"
+            "en": "Post-compulsory education",
+            "de": "Nachobligatorische Bildung",
+            "fr": "Enseignement postobligatoire",
+            "it": "Istruzione post-obbligatoria"
           },
           "data": true
         },
         "100_10302": {
           "label": {
-            "en": "Post-compulsory education"
+            "en": "Post-compulsory education",
+            "de": "Nachobligatorische Bildung",
+            "fr": "Enseignement postobligatoire",
+            "it": "Istruzione post-obbligatoria"
           },
           "data": true
         },
         "100_10400": {
           "label": {
-            "en": "Higher vocational and university education"
+            "en": "Higher vocational and university education",
+            "de": "Höhere Berufs- und Hochschulbildung",
+            "fr": "Formation professionnelle supérieure et universitaire",
+            "it": "Formazione professionale superiore e universitaria"
           },
           "data": true
         },
         "100_10401": {
           "label": {
-            "en": "Higher vocational and university education"
+            "en": "Higher vocational and university education",
+            "de": "Höhere Berufs- und Hochschulbildung",
+            "fr": "Formation professionnelle supérieure et universitaire",
+            "it": "Formazione professionale superiore e universitaria"
           },
           "data": true
         },
         "100_10402": {
           "label": {
-            "en": "Higher vocational and university education"
+            "en": "Higher vocational and university education",
+            "de": "Höhere Berufs- und Hochschulbildung",
+            "fr": "Formation professionnelle supérieure et universitaire",
+            "it": "Formazione professionale superiore e universitaria"
           },
           "data": true
         },
         "100_10500": {
           "label": {
-            "en": "Continuing education"
+            "en": "Continuing education",
+            "de": "Weiterbildung",
+            "fr": "Formation continue",
+            "it": "Formazione continua"
           },
           "data": true
         },
         "100_10501": {
           "label": {
-            "en": "Continuing education"
+            "en": "Continuing education",
+            "de": "Weiterbildung",
+            "fr": "Formation continue",
+            "it": "Formazione continua"
           },
           "data": true
         },
         "100_10502": {
           "label": {
-            "en": "Continuing education"
+            "en": "Continuing education",
+            "de": "Weiterbildung",
+            "fr": "Formation continue",
+            "it": "Formazione continua"
           },
           "data": true
         },
         "100_11": {
           "label": {
-            "en": "Restaurants and hotels"
+            "en": "Restaurants and hotels",
+            "de": "Restaurants und Hotels",
+            "fr": "Restaurants et hôtels",
+            "it": "Ristoranti e alberghi"
           },
           "data": true
         },
         "100_11100": {
           "label": {
-            "en": "Catering services"
+            "en": "Catering services",
+            "de": "Gaststätten",
+            "fr": "Restauration",
+            "it": "Ristoranti"
           },
           "data": true
         },
         "100_11101": {
           "label": {
-            "en": "Restaurants, cafés and fast food"
+            "en": "Restaurants, cafés and fast food",
+            "de": "Restaurants, Cafés und Schnellverpflegung",
+            "fr": "Restaurants, cafés et restauration rapide",
+            "it": "Ristoranti, caffè e ristorazione da asporto"
           },
           "data": true
         },
         "100_11102": {
           "label": {
-            "en": "Restaurants and cafés"
+            "en": "Restaurants and cafés",
+            "de": "Restaurants und Cafés",
+            "fr": "Restaurants et cafés",
+            "it": "Ristoranti e caffè"
           },
           "data": true
         },
         "100_11103": {
           "label": {
-            "en": "Meals taken in restaurants and cafés"
+            "en": "Meals taken in restaurants and cafés",
+            "de": "Mahlzeiten in Restaurants und Cafés",
+            "fr": "Repas dans les restaurants et cafés",
+            "it": "Pasti nei ristoranti e caffè"
           },
           "data": true
         },
         "100_11150": {
           "label": {
-            "en": "Beverages in restaurants and cafés"
+            "en": "Beverages in restaurants and cafés",
+            "de": "Getränke in Restaurants und Cafés",
+            "fr": "Boissons dans les restaurants et cafés",
+            "it": "Bevande nei ristoranti e caffè"
           },
           "data": true
         },
         "100_11151": {
           "label": {
-            "en": "Alcoholic beverages"
+            "en": "Alcoholic beverages",
+            "de": "Alkoholische Getränke",
+            "fr": "Boissons alcoolisées",
+            "it": "Bevande alcoliche"
           },
           "data": true
         },
         "100_11152": {
           "label": {
-            "en": "Wine"
+            "en": "Wine",
+            "de": "Wein",
+            "fr": "Vin",
+            "it": "Vino"
           },
           "data": true
         },
         "100_11158": {
           "label": {
-            "en": "Beer"
+            "en": "Beer",
+            "de": "Bier",
+            "fr": "Bière",
+            "it": "Birra"
           },
           "data": true
         },
         "100_11163": {
           "label": {
-            "en": "Spirits, other alcoholic drinks"
+            "en": "Spirits, other alcoholic drinks",
+            "de": "Spirituosen und andere alkoholische Getränke",
+            "fr": "Spiritueux et autres boissons alcoolisées",
+            "it": "Acquaviti e altre bevande alcoliche"
           },
           "data": true
         },
         "100_11180": {
           "label": {
-            "en": "Non-alcoholic beverages"
+            "en": "Non-alcoholic beverages",
+            "de": "Alkoholfreie Getränke",
+            "fr": "Boissons non alcoolisées",
+            "it": "Bevande analcoliche"
           },
           "data": true
         },
         "100_11181": {
           "label": {
-            "en": "Coffee and tea"
+            "en": "Coffee and tea",
+            "de": "Kaffee und Tee",
+            "fr": "Café et thé",
+            "it": "Caffè e tè"
           },
           "data": true
         },
         "100_11185": {
           "label": {
-            "en": "Mineral water and soft drinks"
+            "en": "Mineral water and soft drinks",
+            "de": "Mineralwasser und Süssgetränke",
+            "fr": "Eaux minérales et boissons sucrées",
+            "it": "Acque minerali e bevande edulcorate"
           },
           "data": true
         },
         "100_11200": {
           "label": {
-            "en": "Fast food and self-service restaurants"
+            "en": "Fast food and self-service restaurants",
+            "de": "Schnellverpflegung und Self-Service Restaurants",
+            "fr": "Restauration rapide et Self-Service Restaurants",
+            "it": "Ristorazione da asporto e ristoranti libero servizio"
           },
           "data": true
         },
         "100_11201": {
           "label": {
-            "en": "Fast food"
+            "en": "Fast food",
+            "de": "Schnellverpflegung",
+            "fr": "Restauration rapide",
+            "it": "Ristorazione da asporto"
           },
           "data": true
         },
         "100_11202": {
           "label": {
-            "en": "Fast food meals"
+            "en": "Fast food meals",
+            "de": "Mahlzeiten Schnellverpflegung",
+            "fr": "Repas restauration rapide",
+            "it": "Pasti ristorazione da asporto"
           },
           "data": true
         },
         "100_11210": {
           "label": {
-            "en": "Fast food non-alcoholic beverages"
+            "en": "Fast food non-alcoholic beverages",
+            "de": "Alkoholfreie Getränke Schnellverpflegung",
+            "fr": "Boissons non alcoolisées restauration rapide",
+            "it": "Bevande analcoliche ristorazione da asporto"
           },
           "data": true
         },
         "100_11213": {
           "label": {
-            "en": "Fast food alcoholic beverages"
+            "en": "Fast food alcoholic beverages",
+            "de": "Alkoholische Getränke Schnellverpflegung",
+            "fr": "Boissons alcoolisées restauration rapide",
+            "it": "Bevande alcoliche ristorazione da asporto"
           },
           "data": true
         },
         "100_11250": {
           "label": {
-            "en": "Self-service restaurants"
+            "en": "Self-service restaurants",
+            "de": "Self-Service Restaurants",
+            "fr": "Restaurants self-service",
+            "it": "Ristorante libero servizio"
           },
           "data": true
         },
         "100_11300": {
           "label": {
-            "en": "Canteens"
+            "en": "Canteens",
+            "de": "Personalrestaurants, Kantinen",
+            "fr": "Cantines",
+            "it": "Mense"
           },
           "data": true
         },
         "100_11301": {
           "label": {
-            "en": "Higher education and school canteens"
+            "en": "Higher education and school canteens",
+            "de": "Kantinen in Hochschulen und Schulen",
+            "fr": "Cantines dans les hautes écoles et les écoles",
+            "it": "Pasti nelle mense scolastiche e delle scuole superiori"
           },
           "data": true
         },
         "100_11302": {
           "label": {
-            "en": "Meals in higher education and school canteens"
+            "en": "Meals in higher education and school canteens",
+            "de": "Mahlzeiten in Hochschul- und Schulkantinen",
+            "fr": "Repas dans les cantines des hautes écoles et scolaires",
+            "it": "Pasti nelle mense scolastiche e delle scuole superiori"
           },
           "data": true
         },
         "100_11306": {
           "label": {
-            "en": "Bevande nelle mense delle scuole superiori"
+            "en": "Bevande nelle mense delle scuole superiori",
+            "de": "Getränke in Hochschul- und Schulkantinen",
+            "fr": "Boissons dans les cantines des hautes écoles et scolaires",
+            "it": "Bevande nelle mense delle scuole superiori"
           },
           "data": true
         },
         "100_11400": {
           "label": {
-            "en": "Staff restaurants"
+            "en": "Staff restaurants",
+            "de": "Personalrestaurants",
+            "fr": "Restaurants d'entreprise",
+            "it": "Mense aziendali"
           },
           "data": true
         },
         "100_11401": {
           "label": {
-            "en": "Meals in staff restaurants"
+            "en": "Meals in staff restaurants",
+            "de": "Mahlzeiten in Personalrestaurants",
+            "fr": "Repas dans les restaurants d'entreprise",
+            "it": "Pasti nelle mense aziendali"
           },
           "data": true
         },
         "100_11404": {
           "label": {
-            "en": "Drinks in staff restaurants"
+            "en": "Drinks in staff restaurants",
+            "de": "Getränke in Personalrestaurants",
+            "fr": "Boissons dans les restaurants du personnel",
+            "it": "Bevande nelle mense aziendali"
           },
           "data": true
         },
         "100_11500": {
           "label": {
-            "en": "Accommodation"
+            "en": "Accommodation",
+            "de": "Beherbergung",
+            "fr": "Hébergement",
+            "it": "Pernottamenti"
           },
           "data": true
         },
         "100_11501": {
           "label": {
-            "en": "Hotel and parahotel accomodation"
+            "en": "Hotel and parahotel accomodation",
+            "de": "Hotellerie und Parahotellerie",
+            "fr": "Hôtellerie et parahôtellerie",
+            "it": "Settore alberghiero et paralberghiero"
           },
           "data": true
         },
         "100_11502": {
           "label": {
-            "en": "Hotels"
+            "en": "Hotels",
+            "de": "Hotellerie",
+            "fr": "Hôtellerie",
+            "it": "Settore alberghiero"
           },
           "data": true
         },
         "100_11520": {
           "label": {
-            "en": "Parahotel accommodation"
+            "en": "Parahotel accommodation",
+            "de": "Parahotellerie",
+            "fr": "Parahôtellerie",
+            "it": "Settore paralberghiero"
           },
           "data": true
         },
         "100_12": {
           "label": {
-            "en": "Insurance and financial services"
+            "en": "Insurance and financial services",
+            "de": "Versicherungen und Finanzdienstleistungen",
+            "fr": "Assurances et services financiers",
+            "it": "Assicurazioni e servizi finanziari"
           },
           "data": true
         },
         "100_12100": {
           "label": {
-            "en": "Insurance"
+            "en": "Insurance",
+            "de": "Versicherungen",
+            "fr": "Assurances",
+            "it": "Assicurazioni"
           },
           "data": true
         },
         "100_12120": {
           "label": {
-            "en": "Private health insurance"
+            "en": "Private health insurance",
+            "de": "Private Krankenversicherung",
+            "fr": "Assurance-maladie privée",
+            "it": "Assicurazione malattia privata"
           },
           "data": true
         },
         "100_12121": {
           "label": {
-            "en": "Private health insurance"
+            "en": "Private health insurance",
+            "de": "Private Krankenversicherung",
+            "fr": "Assurance-maladie privée",
+            "it": "Assicurazione malattia privata"
           },
           "data": true
         },
         "100_12130": {
           "label": {
-            "en": "Household insurance"
+            "en": "Household insurance",
+            "de": "Haushaltsversicherung",
+            "fr": "Assurance-ménage",
+            "it": "Assicurazione mobilia domestica"
           },
           "data": true
         },
         "100_12131": {
           "label": {
-            "en": "Household insurance"
+            "en": "Household insurance",
+            "de": "Haushaltsversicherung",
+            "fr": "Assurance-ménage",
+            "it": "Assicurazione mobilia domestica"
           },
           "data": true
         },
         "100_12140": {
           "label": {
-            "en": "Motor vehicle insurance"
+            "en": "Motor vehicle insurance",
+            "de": "Motorfahrzeugversicherung",
+            "fr": "Assurance véhicules",
+            "it": "Assicurazione veicoli"
           },
           "data": true
         },
         "100_12141": {
           "label": {
-            "en": "Motor vehicle insurance"
+            "en": "Motor vehicle insurance",
+            "de": "Motorfahrzeugversicherung",
+            "fr": "Assurance véhicules",
+            "it": "Assicurazione veicoli"
           },
           "data": true
         },
         "100_12190": {
           "label": {
-            "en": "Private liability insurance and legal protection"
+            "en": "Private liability insurance and legal protection",
+            "de": "Privathaftpflicht- und Rechtsschutzversicherung",
+            "fr": "Assurance responsabilité civile privée et protection juridique",
+            "it": "Assicurazione responsabilità civile privata e protezione giuridica"
           },
           "data": true
         },
         "100_12191": {
           "label": {
-            "en": "Private liability insurance and legal protection"
+            "en": "Private liability insurance and legal protection",
+            "de": "Privathaftpflicht- und Rechtsschutzversicherung",
+            "fr": "Assurance responsabilité civile privée et protection juridique",
+            "it": "Assicurazione responsabilità civile privata e protezione giuridica"
           },
           "data": true
         },
         "100_12200": {
           "label": {
-            "en": "Financial services"
+            "en": "Financial services",
+            "de": "Finanzielle Dienstleistungen",
+            "fr": "Services financiers",
+            "it": "Servizi finanziari"
           },
           "data": true
         },
         "100_12201": {
           "label": {
-            "en": "Financial services provided"
+            "en": "Financial services provided",
+            "de": "Finanzielle Dienstleistungen",
+            "fr": "Services financiers",
+            "it": "Servizi finanziai"
           },
           "data": true
         },
         "100_12202": {
           "label": {
-            "en": "Financial services provided"
+            "en": "Financial services provided",
+            "de": "Finanzielle Dienstleistungen",
+            "fr": "Services financiers",
+            "it": "Servizi finanziari"
           },
           "data": true
         },
         "100_12203": {
           "label": {
-            "en": "Bank account fees"
+            "en": "Bank account fees",
+            "de": "Kontogebühren",
+            "fr": "Frais de comptes",
+            "it": "Spese conto"
           },
           "data": true
         },
         "100_12207": {
           "label": {
-            "en": "Fees for securities accounts"
+            "en": "Fees for securities accounts",
+            "de": "Gebühren für Wertschriftendepots",
+            "fr": "Frais pour les dépôts de titres",
+            "it": "Spese deposito titoli"
           },
           "data": true
         },
         "100_13": {
           "label": {
-            "en": "Other goods and services"
+            "en": "Other goods and services",
+            "de": "Sonstige Waren und Dienstleistungen",
+            "fr": "Autres biens et services",
+            "it": "Altri beni e servizi"
           },
           "data": true
         },
         "100_13100": {
           "label": {
-            "en": "Personal care"
+            "en": "Personal care",
+            "de": "Körperpflege",
+            "fr": "Soins corporels",
+            "it": "Igiene personale"
           },
           "data": true
         },
         "100_13101": {
           "label": {
-            "en": "Electric body care appliances"
+            "en": "Electric body care appliances",
+            "de": "Elektrische Geräte für die Körperpflege",
+            "fr": "Appareils électriques pour soins corporels",
+            "it": "Apparecchi elettrici per l'igiene personale"
           },
           "data": true
         },
         "100_13102": {
           "label": {
-            "en": "Electrical appliances for personal care"
+            "en": "Electrical appliances for personal care",
+            "de": "Elektrische Geräte für die Körperpflege",
+            "fr": "Appareils électriques pour soins corporels",
+            "it": "Apparecchi elettrici per l'igiene personale"
           },
           "data": true
         },
         "100_13120": {
           "label": {
-            "en": "Personal hygiene articles"
+            "en": "Personal hygiene articles",
+            "de": "Waren für die Körperpflege",
+            "fr": "Articles de soins corporels",
+            "it": "Articoli per l'igiene personale"
           },
           "data": true
         },
         "100_13121": {
           "label": {
-            "en": "Personal hygiene articles"
+            "en": "Personal hygiene articles",
+            "de": "Waren für die Körperpflege",
+            "fr": "Articles de soins corporels",
+            "it": "Articoli per l'igiene personale"
           },
           "data": true
         },
         "100_13122": {
           "label": {
-            "en": "Non-electrical appliances for personal care"
+            "en": "Non-electrical appliances for personal care",
+            "de": "Nichtelektrische Geräte für die Körperpflege",
+            "fr": "Appareils non électriques pour soins corporels",
+            "it": "Apparecchi non elettrici per l'igiene personale"
           },
           "data": true
         },
         "100_13130": {
           "label": {
-            "en": "Soaps and foam baths"
+            "en": "Soaps and foam baths",
+            "de": "Seifen und Badezusätze",
+            "fr": "Savons et mousse pour le bain",
+            "it": "Saponi e schiume da bagno"
           },
           "data": true
         },
         "100_13134": {
           "label": {
-            "en": "Hair-care products"
+            "en": "Hair-care products",
+            "de": "Haarpflegemittel",
+            "fr": "Produits de soins pour les cheveux",
+            "it": "Prodotti per la cura dei capelli"
           },
           "data": true
         },
         "100_13140": {
           "label": {
-            "en": "Dental-care products"
+            "en": "Dental-care products",
+            "de": "Zahnpflegemittel",
+            "fr": "Produits de soins dentaires",
+            "it": "Prodotti per la cura dei denti"
           },
           "data": true
         },
         "100_13150": {
           "label": {
-            "en": "Beauty products and cosmetics"
+            "en": "Beauty products and cosmetics",
+            "de": "Schönheitspflegemittel und Kosmetika",
+            "fr": "Produits de beauté et cosmétiques",
+            "it": "Prodotti di bellezza e cosmetici"
           },
           "data": true
         },
         "100_13151": {
           "label": {
-            "en": "Products for personal care"
+            "en": "Products for personal care",
+            "de": "Produkte für die Körperpflege",
+            "fr": "Produits de soins pour le corps",
+            "it": "Prodotti per trattamenti del corpo"
           },
           "data": true
         },
         "100_13161": {
           "label": {
-            "en": "Products for face care and make-up"
+            "en": "Products for face care and make-up",
+            "de": "Gesichtspflegeprodukte und Make-Up",
+            "fr": "Produits de soins du visage et maquillage",
+            "it": "Prodotti per trattamenti del viso e make up"
           },
           "data": true
         },
         "100_13170": {
           "label": {
-            "en": "Paper articles for personal hygiene"
+            "en": "Paper articles for personal hygiene",
+            "de": "Papierwaren für die Körperpflege",
+            "fr": "Articles de soins corporels en papier",
+            "it": "Articoli in carta per la cura del corpo"
           },
           "data": true
         },
         "100_13180": {
           "label": {
-            "en": "Hairdresser and beauty salon services"
+            "en": "Hairdresser and beauty salon services",
+            "de": "Coiffeur- und Kosmetikleistungen",
+            "fr": "Services des coiffeurs et instituts de beauté",
+            "it": "Servizi di parrucchiere e istituto di bellezza"
           },
           "data": true
         },
         "100_13181": {
           "label": {
-            "en": "Hairdressers"
+            "en": "Hairdressers",
+            "de": "Coiffeur",
+            "fr": "Coiffeur",
+            "it": "Parrucchiere"
           },
           "data": true
         },
         "100_13182": {
           "label": {
-            "en": "Hairdresser for men and children"
+            "en": "Hairdresser for men and children",
+            "de": "Coiffeur für Herren und Kinder",
+            "fr": "Coiffeur pour hommes et enfants",
+            "it": "Parrucchiere per uomini e bambini"
           },
           "data": true
         },
         "100_13186": {
           "label": {
-            "en": "Women's hairdressers"
+            "en": "Women's hairdressers",
+            "de": "Coiffeur für Damen",
+            "fr": "Coiffeur pour dames",
+            "it": "Parrucchiere per donne"
           },
           "data": true
         },
         "100_13190": {
           "label": {
-            "en": "Cosmetic treatment"
+            "en": "Cosmetic treatment",
+            "de": "Schönheitspflege",
+            "fr": "Soins de beauté",
+            "it": "Trattamenti di bellezza"
           },
           "data": true
         },
         "100_13200": {
           "label": {
-            "en": "Personal effects"
+            "en": "Personal effects",
+            "de": "Persönliche Gebrauchsgegenstände",
+            "fr": "Effets personnels",
+            "it": "Effetti personali"
           },
           "data": true
         },
         "100_13201": {
           "label": {
-            "en": "Jewellery and watches"
+            "en": "Jewellery and watches",
+            "de": "Schmuck und Uhren",
+            "fr": "Bijoux et montres",
+            "it": "Gioielli e orologi"
           },
           "data": true
         },
         "100_13202": {
           "label": {
-            "en": "Jewellery and watches"
+            "en": "Jewellery and watches",
+            "de": "Schmuck und Uhren",
+            "fr": "Bijoux et montres",
+            "it": "Gioielli e orologi"
           },
           "data": true
         },
         "100_13203": {
           "label": {
-            "en": "Jewellery"
+            "en": "Jewellery",
+            "de": "Schmuck",
+            "fr": "Bijoux",
+            "it": "Gioielli"
           },
           "data": true
         },
         "100_13220": {
           "label": {
-            "en": "Watches"
+            "en": "Watches",
+            "de": "Uhren",
+            "fr": "Montres",
+            "it": "Orologi"
           },
           "data": true
         },
         "100_13250": {
           "label": {
-            "en": "Travel equipment and accessories"
+            "en": "Travel equipment and accessories",
+            "de": "Reiseartikel und Accessoires",
+            "fr": "Articles de voyage et accessoires",
+            "it": "Articoli da viaggio e accessori"
           },
           "data": true
         },
         "100_13251": {
           "label": {
-            "en": "Travel equipment and accessories"
+            "en": "Travel equipment and accessories",
+            "de": "Reiseartikel und Accessoires",
+            "fr": "Articles de voyage et accessoires",
+            "it": "Articoli da viaggio e accessori"
           },
           "data": true
         },
         "100_13300": {
           "label": {
-            "en": "Care services"
+            "en": "Care services",
+            "de": "Betreuungsleistungen",
+            "fr": "Services de prise en charge",
+            "it": "Servizi di assistenza"
           },
           "data": true
         },
         "100_13301": {
           "label": {
-            "en": "Care services"
+            "en": "Care services",
+            "de": "Betreuungsleistungen",
+            "fr": "Services de prise en charge",
+            "it": "Servizi di assistenza"
           },
           "data": true
         },
         "100_13302": {
           "label": {
-            "en": "Childcare"
+            "en": "Childcare",
+            "de": "Kinderbetreuung",
+            "fr": "Garde d'enfants",
+            "it": "Custodia dei bambini"
           },
           "data": true
         },
         "100_13320": {
           "label": {
-            "en": "Home assistance (Spitex)"
+            "en": "Home assistance (Spitex)",
+            "de": "Haushalthilfe (Spitex)",
+            "fr": "Aide ménagère (Spitex)",
+            "it": "Assistenza a domicilio (Spitex)"
           },
           "data": true
         },
         "100_13900": {
           "label": {
-            "en": "Other goods and services"
+            "en": "Other goods and services",
+            "de": "Sonstige Dienstleistungen",
+            "fr": "Autres services",
+            "it": "Altri servizi"
           },
           "data": true
         },
         "100_13901": {
           "label": {
-            "en": "Other goods and services"
+            "en": "Other goods and services",
+            "de": "Sonstige Dienstleistungen",
+            "fr": "Autres services",
+            "it": "Altri servizi"
           },
           "data": true
         },
         "100_13902": {
           "label": {
-            "en": "Other Services"
+            "en": "Other Services",
+            "de": "Sonstige Dienstleistungen",
+            "fr": "Autres services",
+            "it": "Altri servizi"
           },
           "data": true
         },
         "100_13903": {
           "label": {
-            "en": "Official documents"
+            "en": "Official documents",
+            "de": "Amtsdokumente",
+            "fr": "Documents officiels",
+            "it": "Documenti ufficiali"
           },
           "data": true
         },
         "100_13905": {
           "label": {
-            "en": "Services of lawyers"
+            "en": "Services of lawyers",
+            "de": "Dienste von Rechtsanwälten",
+            "fr": "Services d'avocats",
+            "it": "Servizi di avvocati"
           },
           "data": true
         },
         "100_13920": {
           "label": {
-            "en": "Funeral services"
+            "en": "Funeral services",
+            "de": "Bestattungsdienste",
+            "fr": "Services funéraires",
+            "it": "Servizi funebri"
           },
           "data": true
         },
         "100_13930": {
           "label": {
-            "en": "Advertisements"
+            "en": "Advertisements",
+            "de": "Inserate",
+            "fr": "Annonces",
+            "it": "Annunci"
           },
           "data": true
         },
         "110_101": {
           "label": {
-            "en": "Goods"
+            "en": "Goods",
+            "de": "Waren",
+            "fr": "Biens",
+            "it": "Beni"
           },
           "data": true
         },
         "110_111": {
           "label": {
-            "en": "Non durables"
+            "en": "Non durables",
+            "de": "Nichtdauerhafte Waren",
+            "fr": "Biens non durables",
+            "it": "Beni non durevoli"
           },
           "data": true
         },
         "110_112": {
           "label": {
-            "en": "Semi durables"
+            "en": "Semi durables",
+            "de": "Semidauerhafte Waren",
+            "fr": "Biens semi-durables",
+            "it": "Beni semidurevoli"
           },
           "data": true
         },
         "110_113": {
           "label": {
-            "en": "Durables"
+            "en": "Durables",
+            "de": "Dauerhafte Waren",
+            "fr": "Biens durables",
+            "it": "Beni durevoli"
           },
           "data": true
         },
         "110_102": {
           "label": {
-            "en": "Services"
+            "en": "Services",
+            "de": "Dienstleistungen",
+            "fr": "Services",
+            "it": "Servizi"
           },
           "data": true
         },
         "110_116": {
           "label": {
-            "en": "Private services"
+            "en": "Private services",
+            "de": "Private Dienstleistungen",
+            "fr": "Services privés",
+            "it": "Servizi privati"
           },
           "data": true
         },
         "110_117": {
           "label": {
-            "en": "Public services"
+            "en": "Public services",
+            "de": "Öffentliche Dienstleistungen",
+            "fr": "Services publics",
+            "it": "Servizi pubblici"
           },
           "data": true
         },
         "1819_118": {
           "label": {
-            "en": "Domestic products"
+            "en": "Domestic products",
+            "de": "Inlandgüter",
+            "fr": "Produits indigènes",
+            "it": "Prodotti indigeni"
           },
           "data": true
         },
         "1819_119": {
           "label": {
-            "en": "Imported products"
+            "en": "Imported products",
+            "de": "Importgüter",
+            "fr": "Produits importés",
+            "it": "Prodotti importati"
           },
           "data": true
         },
         "116_101": {
           "label": {
-            "en": "Healthcare"
+            "en": "Healthcare",
+            "de": "Gesundheit",
+            "fr": "Santé",
+            "it": "Sanità"
           },
           "data": true
         },
         "116_102": {
           "label": {
-            "en": "Index without healthcare"
+            "en": "Index without healthcare",
+            "de": "Index ohne Gesundheit",
+            "fr": "Indice sans santé",
+            "it": "Indice senza sanità"
           },
           "data": true
         },
         "113_101": {
           "label": {
-            "en": "Housing rental"
+            "en": "Housing rental",
+            "de": "Wohnungsmiete",
+            "fr": "Loyer du logement",
+            "it": "Affitto dell'abitazione"
           },
           "data": true
         },
         "113_102": {
           "label": {
-            "en": "Index without housing rental"
+            "en": "Index without housing rental",
+            "de": "Index ohne Wohnungsmiete",
+            "fr": "Indice sans loyer du logement",
+            "it": "Indice senza affitto dell'abitazione"
           },
           "data": true
         },
         "112_101": {
           "label": {
-            "en": "Petroleum products"
+            "en": "Petroleum products",
+            "de": "Erdölprodukte",
+            "fr": "Produits pétroliers",
+            "it": "Prodotti petroliferi"
           },
           "data": true
         },
         "112_102": {
           "label": {
-            "en": "Index without petroleum products"
+            "en": "Index without petroleum products",
+            "de": "Index ohne Erdölprodukte",
+            "fr": "Indice sans produits pétroliers",
+            "it": "Indice senza prodotti petroliferi"
           },
           "data": true
         },
         "114_101": {
           "label": {
-            "en": "Tobacco products"
+            "en": "Tobacco products",
+            "de": "Tabakwaren",
+            "fr": "Tabacs",
+            "it": "Tabacchi"
           },
           "data": true
         },
         "114_102": {
           "label": {
-            "en": "Index without tobacco products"
+            "en": "Index without tobacco products",
+            "de": "Index ohne Tabakwaren",
+            "fr": "Indice sans tabacs",
+            "it": "Indice senza tabacchi"
           },
           "data": true
         },
         "115_101": {
           "label": {
-            "en": "Alcoholic beverages"
+            "en": "Alcoholic beverages",
+            "de": "Alkoholische Getränke",
+            "fr": "Boissons alcoolisées",
+            "it": "Bevande alcoliche"
           },
           "data": true
         },
         "115_104": {
           "label": {
-            "en": "Index without alcoholic beverages"
+            "en": "Index without alcoholic beverages",
+            "de": "Index ohne alkoholische Getränke",
+            "fr": "Indice sans boissons alcoolisées",
+            "it": "Indice senza bevande alcoliche"
           },
           "data": true
         },
         "160_101": {
           "label": {
-            "en": "Clothing and footwear"
+            "en": "Clothing and footwear",
+            "de": "Bekleidung und Schuhe",
+            "fr": "Habillement et chaussures",
+            "it": "Indumenti e calzature"
           },
           "data": true
         },
         "160_102": {
           "label": {
-            "en": "Index without clothing and footwear"
+            "en": "Index without clothing and footwear",
+            "de": "Index ohne Bekleidung und Schuhe",
+            "fr": "Indice sans habillement et chaussures",
+            "it": "Indice senza indumenti e calzature"
           },
           "data": true
         },
         "170_100": {
           "label": {
-            "en": "Administered prices"
+            "en": "Administered prices",
+            "de": "Administrierte Preise",
+            "fr": "Prix administrés",
+            "it": "Prezzi amministrati"
           },
           "data": true
         },
         "170_110": {
           "label": {
-            "en": "Index without administered prices"
+            "en": "Index without administered prices",
+            "de": "Index ohne administrierte Preise",
+            "fr": "Indices sans prix administrés",
+            "it": "Indice senza prezzi amministrati"
           },
           "data": true
         },
         "1170_103": {
           "label": {
-            "en": "Core inflation 1"
+            "en": "Core inflation 1",
+            "de": "Kerninflation 1",
+            "fr": "Inflation sous-jacente 1",
+            "it": "Zoccolo dell'inflazione 1"
           },
           "data": true
         },
         "1170_101": {
           "label": {
-            "en": "Fresh and seasonal products"
+            "en": "Fresh and seasonal products",
+            "de": "Frische und saisonale Produkte",
+            "fr": "Produits frais et saisonniers",
+            "it": "Prodotti freschi e stagionali"
           },
           "data": true
         },
         "1170_102": {
           "label": {
-            "en": "Energy and fuels"
+            "en": "Energy and fuels",
+            "de": "Energie und Treibstoffe",
+            "fr": "Energie et carburants",
+            "it": "Energia e carburanti"
           },
           "data": true
         },
         "1170_302": {
           "label": {
-            "en": "Core inflation 2"
+            "en": "Core inflation 2",
+            "de": "Kerninflation 2",
+            "fr": "Inflation sous-jacente 2",
+            "it": "Zoccolo dell'inflazione 2"
           },
           "data": true
         }
@@ -4455,6 +6240,12 @@
   },
   "concept": "Prices / Consumer prices",
   "canonical": false,
+  "title": {
+    "en": "Consumer prices (detailed basket)",
+    "de": "Konsumentenpreise (detaillierter Warenkorb)",
+    "fr": "Prix à la consommation (panier détaillé)",
+    "it": "Prezzi al consumo (paniere dettagliato)"
+  },
   "split": "item",
   "single_select": [],
   "default_transform": "yoy",
@@ -4462,5 +6253,5 @@
     "item": "100_100"
   },
   "description": "The Swiss CPI (Landesindex der Konsumentenpreise) with the full position hierarchy: 595 positions from the total index down to COICOP sub-baskets (food, housing, transport, ...), not just the headline total. This is the detailed alternate to the canonical SNB headline series (ch_snb_plkopr): reach for this one when you want the basket breakdown, and for ch_snb_plkopr when you want the headline total or YoY inflation across the long history (the FSO asset only carries the hierarchy from December 1982, whereas the SNB chain reaches back to 1921). Base period December 2025 = 100 (asset su-d-05.02.66, which superseded the frozen Dec-2020=100 asset su-d-05.02.67). History to December 1982.",
-  "fetched_utc": "2026-07-31 09:17:56"
+  "fetched_utc": "2026-08-05 13:12:07"
 }

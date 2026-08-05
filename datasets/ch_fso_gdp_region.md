@@ -1,7 +1,7 @@
 # Regional GDP (cantons & greater regions)
 
 - **id**: ch_fso_gdp_region
-- **title**: Regional GDP
+- **title**: Regional GDP | de: Regionales BIP | fr: PIB régional | it: PIL regionale
 - **concept**: National accounts / Regional GDP
 - **canonical**: yes
 - **source**: fso
@@ -63,9 +63,9 @@ the Zurich / Lake-Geneva / Northwestern cluster visible at a glance.
   Central = LU/UR/SZ/OW/NW/ZG; Ticino = TI.
 
 ## Labels
-- **units**: CHF million, at current prices
+- **units**: CHF million, at current prices | de: Mio. CHF, zu laufenden Preisen | fr: Millions de CHF, aux prix courants | it: Milioni di CHF, a prezzi correnti
 - dim: region
-  - **label**: Region
+  - **label**: Region | de: Region | fr: Région | it: Regione
 
 ## Display
 - **split**: region

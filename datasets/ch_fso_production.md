@@ -1,7 +1,7 @@
 # Industry & construction turnover (quarterly)
 
 - **id**: ch_fso_production
-- **title**: Industry & construction turnover
+- **title**: Industry & construction turnover | de: Umsätze Industrie und Bau | fr: Chiffres d'affaires industrie et construction | it: Fatturato industria e costruzioni
 - **concept**: Domestic economy / Industry & construction turnover
 - **canonical**: yes
 

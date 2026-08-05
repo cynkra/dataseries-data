@@ -7,7 +7,10 @@
   "start": "1993-01-01",
   "end": "2026-06-01",
   "title": {
-    "en": "Securities turnover"
+    "en": "Securities turnover",
+    "de": "Effektenumsätze",
+    "fr": "Transactions sur titres",
+    "it": "Transazioni in titoli"
   },
   "source": {
     "name": {
@@ -24,78 +27,104 @@
   "dimensions": {
     "D0": {
       "label": {
-        "en": "Overview"
+        "en": "Overview",
+        "de": "Übersicht",
+        "fr": "Vue d’ensemble"
       },
       "levels": {
         "D0_0": {
           "label": {
-            "en": "Shares"
+            "en": "Shares",
+            "de": "Aktien",
+            "fr": "Actions"
           },
           "data": false
         },
         "IT0": {
           "label": {
-            "en": "Domestic securities"
+            "en": "Domestic securities",
+            "de": "Inländische Titel",
+            "fr": "Titres suisses"
           },
           "data": true
         },
         "AT0": {
           "label": {
-            "en": "Foreign securities"
+            "en": "Foreign securities",
+            "de": "Ausländische Titel",
+            "fr": "Titres étrangers"
           },
           "data": true
         },
         "T0": {
           "label": {
-            "en": "Total"
+            "en": "Total",
+            "de": "Total",
+            "fr": "Total"
           },
           "data": true
         },
         "D0_1": {
           "label": {
-            "en": "Bond issues"
+            "en": "Bond issues",
+            "de": "Obligationen",
+            "fr": "Obligations"
           },
           "data": false
         },
         "IT1": {
           "label": {
-            "en": "Domestic securities"
+            "en": "Domestic securities",
+            "de": "Inländische Titel",
+            "fr": "Titres suisses"
           },
           "data": true
         },
         "AT1": {
           "label": {
-            "en": "Foreign securities"
+            "en": "Foreign securities",
+            "de": "Ausländische Titel",
+            "fr": "Titres étrangers"
           },
           "data": true
         },
         "T1": {
           "label": {
-            "en": "Total"
+            "en": "Total",
+            "de": "Total",
+            "fr": "Total"
           },
           "data": true
         },
         "A": {
           "label": {
-            "en": "Investment funds"
+            "en": "Investment funds",
+            "de": "Anlagefonds",
+            "fr": "Fonds de placement"
           },
           "data": true
         },
         "SPO": {
           "label": {
-            "en": "Structured products and options"
+            "en": "Structured products and options",
+            "de": "Strukturierte Produkte und Optionen",
+            "fr": "Produits structurés et options"
           },
           "data": true
         },
         "T2": {
           "label": {
-            "en": "Total"
+            "en": "Total",
+            "de": "Total",
+            "fr": "Total"
           },
           "data": true
         },
         "ISMIT": {
           "label": {
-            "en": "Securities included in the SMI"
+            "en": "Securities included in the SMI",
+            "de": "Im SMI enthaltene Titel",
+            "fr": "Titres entrant dans le SMI"
           },
           "data": true
         }
@@ -130,5 +159,5 @@
     "D0": "T2"
   },
   "description": "Monthly trading turnover on the Swiss stock exchange (SIX), the canonical securities-turnover series, back to 1993. The distinctive cut is the domestic-vs-foreign split applied to each asset class: shares and bond issues each break into domestic (IT0/IT1), foreign (AT0/AT1) and total (T0/T1), which makes visible how much of the venue's volume is foreign paper. Beyond those it carries investment funds (A), structured products and options (SPO), a grand total (T2), and turnover in SMI-constituent securities (ISMIT). A compact 10-series companion to the daily index cube ch_snb_capchstocki: where that measures price levels, this measures traded volume.",
-  "fetched_utc": "2026-07-21 09:18:21"
+  "fetched_utc": "2026-08-05 13:12:02"
 }
