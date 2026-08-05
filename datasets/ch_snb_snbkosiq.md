@@ -12,21 +12,12 @@
 - **updated**: 2026-01 (use API PublishingDate header for exact day)
 
 ## What is special
-This is the SNB's own read of the business cycle, distilled from its quarterly
-talks with companies across Switzerland (the SNB regional network / company
-survey). Unlike a single composite barometer, it ships 24 separate qualitative
-signals on one flat dimension: turnover vs the year-back quarter and vs the
-previous quarter, capacity utilisation, procurement difficulties, margins,
-lending conditions, liquidity, staff shortages, expected turnover and employment,
-expected purchase- and sales-price changes, planned equipment and construction
-investment, and quantitative wage- and inflation-expectation series. Most signals
-are diffusion-style indices; a handful (`LELJ`, `LEFJ` wage increases, `IERW`
-inflation expectations) are in percent. The one nested item is `IERW` ->
-`{IERWM, IERWJ}` (inflation expected in 6-12 months vs 3-5 years). Shorter history
-than the price/money cubes (starts 2011), and it is the only catalog series that
-captures firm-level sentiment direct from the central bank rather than a survey
-institute. KOF's barometer is the canonical leading indicator; this sits beside it
-as the SNB's qualitative companion.
+The SNB's own read of the business cycle, distilled from its quarterly talks with
+companies across Switzerland. Twenty-four qualitative signals: turnover, capacity
+utilisation, procurement difficulties, margins, lending conditions, liquidity,
+staff shortages, expected turnover and employment, expected price changes,
+investment plans, and firms' wage and inflation expectations. Most are diffusion
+indices; the wage and inflation expectations are in percent.
 
 ## Access
 - **type**: snb-cube — SNB cube API

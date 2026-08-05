@@ -12,16 +12,11 @@
 - **updated**: not published (live PX-Web pull; latest observation 2026-03)
 
 ## What is special
-The HESTA accommodation statistics: monthly hotel overnight stays for
-Switzerland and its 13 official tourism regions, back to 2005. The strong
-seasonal swing is visible in the raw data (a region's January is several times
-its November), which is why this is kept as the canonical tourism series rather
-than an annual roll-up. The region breakdown is the distinctive axis: alpine
-regions (Graubünden, Valais, Ticino) and the urban regions (Zurich, Geneva,
-Basel) move on very different seasonal calendars, so the series is most useful
-sliced by `Tourismusregion`. Code `8100` is the Switzerland total; the numeric
-codes 1..14 are the regions. Only one indicator (overnight stays) is pulled; the
-table also carries arrivals, which this dataset deliberately omits.
+Monthly hotel overnight stays for Switzerland and its 13 official tourism regions.
+The seasonal swing is large and regionally opposed — alpine regions peak in
+winter, urban regions do not — so the series is most informative sliced by region.
+Arrivals are published by the FSO alongside overnight stays but are not carried
+here.
 
 ## Access
 - **type**: fso-pxweb — FSO PX-Web (json-stat2)

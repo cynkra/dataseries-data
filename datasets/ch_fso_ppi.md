@@ -12,11 +12,10 @@
 - **updated**: 2026-05-12
 
 ## What is special
-Producer and import prices for Switzerland, monthly back to 1963. The seven
-"series" are the same total index expressed on **seven successive original base
-years** (1963, 1993, 2003, 2010, 2015, 2020, 2025), each a re-indexed view of the
-same Producer Price Index, all fully populated over the whole span. This mirrors
-the old parser's `idx_type` dimension. Longest price history in the catalog.
+Producer and import prices for Switzerland. The seven series are the same index
+expressed on seven successive base years (1963, 1993, 2003, 2010, 2015, 2020,
+2025); each is a re-indexed view of the same underlying price development, fully
+populated across the whole span.
 
 ## Access
 - **type**: fso-dam-excel — FSO DAM Excel asset

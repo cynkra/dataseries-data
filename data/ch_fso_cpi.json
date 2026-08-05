@@ -18,7 +18,15 @@
   },
   "license": "fso",
   "frequency": "monthly",
-  "topic": "Prices",
+  "topic": {
+    "key": "prices",
+    "name": {
+      "en": "Prices",
+      "de": "Preise",
+      "fr": "Prix",
+      "it": "Prezzi"
+    }
+  },
   "updated": "2026-08-03",
   "dimensions": {
     "item": {
@@ -6253,7 +6261,7 @@
     "item": "100_100"
   },
   "description": {
-    "en": "The Swiss CPI (Landesindex der Konsumentenpreise) with the full position hierarchy: 595 positions from the total index down to COICOP sub-baskets (food, housing, transport, ...), not just the headline total. This is the detailed alternate to the canonical SNB headline series (ch_snb_plkopr): reach for this one when you want the basket breakdown, and for ch_snb_plkopr when you want the headline total or YoY inflation across the long history (the FSO asset only carries the hierarchy from December 1982, whereas the SNB chain reaches back to 1921). Base period December 2025 = 100; history to December 1982."
+    "en": "The Swiss consumer price index with its full basket breakdown: 595 COICOP positions from the total index down to individual goods and services (food, housing, transport). Base December 2025 = 100. For the headline index alone over a much longer history, use ch_snb_plkopr."
   },
   "fetched_utc": "2026-08-05 13:12:07"
 }

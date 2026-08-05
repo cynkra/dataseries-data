@@ -45,7 +45,15 @@
       }
     }
   },
-  "topic": "Business cycle & sentiment",
+  "topic": {
+    "key": "business-cycle-sentiment",
+    "name": {
+      "en": "Business cycle & sentiment",
+      "de": "Konjunktur & Stimmung",
+      "fr": "Conjoncture & climat",
+      "it": "Congiuntura e clima"
+    }
+  },
   "concept": "Business cycle & sentiment / Sentiment composite",
   "canonical": true,
   "split": "indicator",
@@ -55,7 +63,7 @@
     "indicator": "ch.kof.esi.index.v2018"
   },
   "description": {
-    "en": "KOF's Economic Sentiment Index — a survey-based sentiment composite, sibling to the KOF Economic Barometer (ch_kof_barometer) but capturing firms' assessment of the current and expected business situation. Two methodology vintages run in parallel: the original \"pre-Brexit\" version and the standard 2018 version."
+    "en": "The KOF Economic Sentiment Index, a survey-based composite of firms' assessment of their current and expected business situation. Sibling to the KOF Economic Barometer (ch_kof_barometer), which is built from hard predictors rather than survey responses. Two methodology vintages run in parallel: the original pre-Brexit version and the standard 2018 version."
   },
   "fetched_utc": "2026-08-05 13:12:06"
 }

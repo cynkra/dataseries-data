@@ -13,15 +13,13 @@
 - **updated**: 2026-04 (latest observation; PublishingDate in CSV header is the freshness signal)
 
 ## What is special
-The registered (administrative) view of Swiss unemployment, sourced from SECO and
-republished by the SNB. It is the deliberate alternate to the FSO ILO survey rate:
-different definition, not a format re-export, so both are kept and labelled. History
-runs back to 1948, the longest labour series in the catalog. One `Overview` dimension
-packs several distinct concepts at once: registered unemployed, jobless rate,
-notified vacancies (each as raw Total and Seasonally adjusted), plus short-time
-working, registered job seekers, and the labour force. Note the unusual mix of units
-on a single axis: counts of persons, a percentage rate, and vacancy counts all live
-under the same `D0` codes, so consumers must split by code before charting.
+Registered unemployment in Switzerland: people enrolled at regional job centres,
+compiled by SECO and republished by the SNB. Alongside the count and rate it
+carries notified vacancies, short-time working, registered job seekers and the
+labour force, each raw and seasonally adjusted. The units differ across the
+series — persons, percentages and vacancy counts share one axis — so select a
+single code before charting. For the survey-based international definition, see
+`ch_fso_unemp_rate`.
 
 ## Access
 - **type**: snb-cube — SNB cube API
@@ -64,43 +62,3 @@ under the same `D0` codes, so consumers must split by code before charting.
 ## Provenance
 Script: `R/source_snb.R::snb_fetch` via `R/snb_cubes.tsv` (cube_id `amarbma`).
 Datasheet 2026-06-01; parser verified 2026-06-01 (6,540 rows, 9 series).
-
-## What is special (de)
-Die registrierte (administrative) Sicht auf die Schweizer Arbeitslosigkeit,
-erhoben vom SECO und von der SNB weiterveröffentlicht. Sie ist die bewusste
-Alternative zur ILO-Erwerbslosenquote des BFS: eine andere Definition, kein
-Formatreexport, weshalb beide geführt und entsprechend gekennzeichnet werden. Die
-Historie reicht zurück bis 1948, die längste Arbeitsmarktreihe im Katalog. Eine
-einzige `Overview`-Dimension bündelt mehrere verschiedene Konzepte: registrierte
-Arbeitslose, Arbeitslosenquote, gemeldete offene Stellen (je unbereinigt als Total
-und saisonbereinigt), dazu Kurzarbeit, registrierte Stellensuchende und
-Erwerbspersonen. Zu beachten ist die ungewöhnliche Mischung von Einheiten auf einer
-Achse: Personenzahlen, eine Prozentquote und Stellenzahlen liegen unter denselben
-`D0`-Codes, weshalb vor dem Zeichnen nach Code getrennt werden muss.
-
-## What is special (fr)
-La vision enregistrée (administrative) du chômage suisse, relevée par le SECO et
-republiée par la BNS. C'est l'alternative assumée au taux de chômage BIT de l'OFS :
-définition différente, et non une réexportation de format ; les deux sont donc
-conservées et étiquetées. L'historique remonte à 1948, la plus longue série du
-marché du travail dans le catalogue. Une seule dimension `Overview` réunit
-plusieurs concepts distincts : chômeurs inscrits, taux de chômage, places vacantes
-annoncées (chacun en total brut et en corrigé des variations saisonnières), plus
-le chômage partiel, les demandeurs d'emploi inscrits et la population active. À
-noter, le mélange inhabituel d'unités sur un même axe : des effectifs de
-personnes, un taux en pour-cent et des nombres de places vacantes cohabitent sous
-les mêmes codes `D0` ; il faut donc séparer par code avant de tracer.
-
-## What is special (it)
-La visione registrata (amministrativa) della disoccupazione svizzera, rilevata
-dalla SECO e ripubblicata dalla BNS. È l'alternativa deliberata al tasso di
-disoccupazione ILO dell'UST: definizione diversa, non una riesportazione di
-formato, quindi entrambe sono mantenute ed etichettate. La storia risale al 1948,
-la serie del mercato del lavoro più lunga del catalogo. Un'unica dimensione
-`Overview` raccoglie più concetti distinti: disoccupati iscritti, tasso di
-disoccupazione, posti vacanti annunciati (ciascuno come totale grezzo e
-destagionalizzato), più il lavoro ridotto, le persone in cerca d'impiego iscritte
-e la popolazione attiva. Da notare l'insolita mescolanza di unità su un solo asse:
-numeri di persone, un tasso percentuale e conteggi di posti vacanti stanno sotto
-gli stessi codici `D0`, per cui occorre separare per codice prima di
-rappresentarli.

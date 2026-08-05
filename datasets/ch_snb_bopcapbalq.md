@@ -12,18 +12,12 @@
 - **updated**: 2025 Q4 release (PublishingDate in CSV header)
 
 ## What is special
-The financial account of the Swiss balance of payments, quarterly back to 1985:
-the flow side of cross-border investment that the international investment
-position (`ch_snb_auversecq`) shows as stocks. The distinctive structure is its
-**deep nested hierarchy** under the single Component dimension. The standard BPM6
-breakdown is unrolled to several levels: direct investment (equity, reinvested
-earnings, debt instruments), portfolio investment (debt securities split
-short/long term, equity split shares vs collective schemes), other investment
-(currency and deposits and loans, each split by holding sector SNB / banks /
-public / other, with "of which" amounts due from/to banks and customers), and
-reserve assets (gold, IMF reserve position, SDRs, foreign-currency investments in
-securities and deposits). Each component carries a three-way accounting entry:
-net acquisition of assets, net incurrence of liabilities, and the net of the two.
+The financial account of the Swiss balance of payments: the cross-border
+investment flows whose accumulated result appears as stocks in the international
+investment position (`ch_snb_auversecq`). Follows the standard BPM6 breakdown into
+direct, portfolio and other investment plus reserve assets, unrolled several
+levels deep. Each component carries three entries: net acquisition of assets, net
+incurrence of liabilities, and the net of the two.
 
 ## Access
 - **type**: snb-cube — SNB cube API

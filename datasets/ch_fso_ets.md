@@ -12,14 +12,10 @@
 - **updated**: 2026-03-17
 
 ## What is special
-The Employment Statistics (ETS) headcount of **employed persons on the domestic
-concept (Inlandkonzept)**, quarterly averages back to 1991, cut by economic
-sector and sex. Where BESTA tracks *jobs* by fine NOGA division, ETS tracks
-*persons* and exposes the full sector tree on one axis: total `P`, the three
-economic sectors (`P_1` agriculture, `P_2` industry & construction, `P_3`
-services), and 18 NOGA-2008 sections beneath them. Crossing 23 sector codes with
-three sexes (total / men / women) gives 69 series on a single headcount scale, so
-the male/female split of any sector reads straight off the chart.
+Employment statistics (ETS): the number of employed persons on the domestic
+concept, cut by economic sector and by sex. Where BESTA counts jobs by fine NOGA
+division, ETS counts people and carries the full sector tree on one axis, so the
+male/female split of any sector reads directly off the chart.
 
 ## Access
 - **type**: fso-dam-csv — FSO DAM asset, master is a long CSV (not xlsx)

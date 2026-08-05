@@ -224,7 +224,15 @@
     }
   },
   "updated": "2026-07-21 09:00",
-  "topic": "Interest rates & yields",
+  "topic": {
+    "key": "interest-rates-yields",
+    "name": {
+      "en": "Interest rates & yields",
+      "de": "Zinsen & Renditen",
+      "fr": "Taux d'intérêt & rendements",
+      "it": "Tassi d'interesse e rendimenti"
+    }
+  },
   "concept": "Interest rates & yields / Money-market rates",
   "canonical": false,
   "split": "D1",
@@ -236,7 +244,7 @@
     "D2": "MP1"
   },
   "description": {
-    "en": "The rate banks actually charge on newly agreed loans, broken down by product and by maturity bucket, and reported as a full distribution rather than a single number. For each product/maturity cell the cube gives the mean, the 25% quantile, the median, the 75% quantile and the count of loan agreements (AK). That quantile spread is the distinctive feature: it shows the dispersion of pricing across borrowers, not just the average. Products cover fixed-rate mortgages, base-rate-linked variable mortgages and fixed-rate investment loans, each across up to ten maturity buckets from \"over 1 month\" to \"over 10 up to 15 years\". History starts 2009-05."
+    "en": "The interest rates banks actually charge on newly agreed loans, by product and maturity, reported as a distribution rather than a single number: mean, quartiles, median and the number of agreements. The quartile spread shows how widely pricing varies across borrowers. Covers fixed-rate mortgages, variable mortgages linked to a base rate, and fixed-rate investment loans across maturities from one month to fifteen years."
   },
   "fetched_utc": "2026-08-05 13:12:03"
 }

@@ -1,5 +1,6 @@
 [
  {
+  "key": "national-accounts",
   "name": {
    "en": "National accounts",
    "de": "Volkswirtschaftliche Gesamtrechnung",
@@ -14,6 +15,7 @@
   }
  },
  {
+  "key": "prices",
   "name": {
    "en": "Prices",
    "de": "Preise",
@@ -28,6 +30,7 @@
   }
  },
  {
+  "key": "labour",
   "name": {
    "en": "Labour",
    "de": "Arbeit",
@@ -42,6 +45,7 @@
   }
  },
  {
+  "key": "business-cycle-sentiment",
   "name": {
    "en": "Business cycle & sentiment",
    "de": "Konjunktur & Stimmung",
@@ -56,6 +60,7 @@
   }
  },
  {
+  "key": "interest-rates-yields",
   "name": {
    "en": "Interest rates & yields",
    "de": "Zinsen & Renditen",
@@ -70,6 +75,7 @@
   }
  },
  {
+  "key": "exchange-rates",
   "name": {
    "en": "Exchange rates",
    "de": "Wechselkurse",
@@ -84,6 +90,7 @@
   }
  },
  {
+  "key": "financial-markets",
   "name": {
    "en": "Financial markets",
    "de": "Finanzmärkte",
@@ -98,6 +105,7 @@
   }
  },
  {
+  "key": "external-sector",
   "name": {
    "en": "External sector",
    "de": "Aussenwirtschaft",
@@ -112,6 +120,7 @@
   }
  },
  {
+  "key": "money-banking",
   "name": {
    "en": "Money & banking",
    "de": "Geld & Banken",
@@ -126,6 +135,7 @@
   }
  },
  {
+  "key": "domestic-economy",
   "name": {
    "en": "Domestic economy",
    "de": "Binnenwirtschaft",
@@ -140,6 +150,7 @@
   }
  },
  {
+  "key": "population-demographics",
   "name": {
    "en": "Population & demographics",
    "de": "Bevölkerung & Demografie",
@@ -154,6 +165,7 @@
   }
  },
  {
+  "key": "payment-systems",
   "name": {
    "en": "Payment systems",
    "de": "Zahlungsverkehr",

@@ -12,17 +12,12 @@
 - **updated**: 2026-03 (latest published period)
 
 ## What is special
-The longest and most finely structured of the SNB rate cubes: published interest rates
-on new banking transactions back to 1933, across an unusually deep product hierarchy
-(`D1`). It spans mortgages (variable, fixed by maturity 1..15 years, and money-market
-linked via SARON and the historic Libor maturities), consumer credit, private and
-corporate payment/savings accounts, tied pension provision (pillar 2 vested benefits,
-pillar 3a), term deposits and cash bonds by maturity. The SARON-linked branch
-(`FGM_SAR`) and the legacy Libor branch (`LIB`) coexist, capturing the reference-rate
-transition. Each product carries the same four-statistic distribution (`D0`): mean,
-0.25 quantile, median, 0.75 quantile. With 228 series this is the largest cube in this
-group; the 1933 start applies only to long-running products, most retail and pension
-series begin much later.
+Published interest rates on new banking business across a deep product tree:
+mortgages (variable, fixed by maturity, and money-market linked via SARON and the
+historic Libor maturities), consumer credit, payment and savings accounts, tied
+pension provision, term deposits and cash bonds. Each product is reported as a
+distribution — mean, quartiles and median. The SARON and legacy Libor branches
+coexist, capturing the reference-rate transition.
 
 ## Access
 - **type**: snb-cube — SNB cube API

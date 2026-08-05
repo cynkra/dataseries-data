@@ -134,6 +134,27 @@ ds_sources <- local({
   }
 })
 
+# data/categories.json — the overview grouping vocabulary (hand-maintained).
+ds_categories <- local({
+  cache <- NULL
+  function(data_dir) {
+    if (is.null(cache)) cache <<- jsonlite::fromJSON(
+      file.path(data_dir, "categories.json"), simplifyVector = FALSE)
+    cache
+  }
+})
+
+# The concept's top group -> a STABLE category key + its i18n name. The website
+# used to group datasets by matching the English `topic` string against the
+# category NAME; translating the names broke that join (0/12 matched in German).
+# Joining on a key instead makes the grouping language-independent by
+# construction — the same "never join on display text" rule as everywhere else.
+ds_topic_of <- function(group_en, data_dir) {
+  for (c in ds_categories(data_dir))
+    if (identical(c$name$en, group_en)) return(list(key = c$key, name = c$name))
+  list(key = NA_character_, name = list(en = group_en))   # uncategorised, still renders
+}
+
 # Resolve the datasheet-declared vocab keys onto one dataset meta:
 #   - **source**: <key>   -> meta$source$name from sources.json (+ $key; the
 #                            fetcher's url survives, vocab url is the fallback)
@@ -141,6 +162,8 @@ ds_sources <- local({
 # Both lines live in the datasheet top block; prose tails are ignored.
 apply_vocab <- function(meta, lines, data_dir) {
   f <- ds_fields(ds_top(lines))
+  if (is.character(meta$topic) && nzchar(meta$topic))
+    meta$topic <- ds_topic_of(meta$topic, data_dir)
   lic <- sub("\\s.*$", "", f$license %||% "")
   if (nzchar(lic)) meta$license <- lic
   key <- sub("\\s.*$", "", f$source %||% "")

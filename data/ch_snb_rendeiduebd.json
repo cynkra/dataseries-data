@@ -268,7 +268,15 @@
     }
   },
   "updated": "2026-08-03 14:30",
-  "topic": "Interest rates & yields",
+  "topic": {
+    "key": "interest-rates-yields",
+    "name": {
+      "en": "Interest rates & yields",
+      "de": "Zinsen & Renditen",
+      "fr": "Taux d'intérêt & rendements",
+      "it": "Tassi d'interesse e rendimenti"
+    }
+  },
   "concept": "Interest rates & yields / Bond yields",
   "canonical": true,
   "split": "D0",
@@ -278,7 +286,7 @@
     "D1": "10J"
   },
   "description": {
-    "en": "This is the SNB spot-rate (zero-coupon yield) cube and the canonical Bond yields series for the catalog. Its CHF × 10J cell is the live 10-year Swiss Confederation benchmark — the most-watched Swiss long rate (the default view). It is live and current (daily, updated within days), unlike the older par-yield cube rendoblid, which the SNB discontinued (last observation 2025-07-31); that cube's content is fully covered here by the CHF curve, so it is not ingested. It crosses two dimensions: a bond category and a maturity, giving a full term structure rather than a single benchmark. The maturity dimension runs 1J through 10J plus 20J and 30J, so you can read an entire spot curve for one day. The category dimension splits into two branches: a market branch (CHF Swiss Confederation issues, EUR euro-area government bonds) and a Swiss issuer-rating branch (cantons by rating tier, mortgage-bond institutions, commercial banks by rating, manufacturing/trade by rating). That issuer-by-rating breakdown is the distinctive part: it lets you see the credit spread of, say, AA cantons or A-rated banks over the Confederation curve. Daily since 1988, so it carries the long Swiss-franc rate history including the negative-rate years."
+    "en": "Swiss bond yields as a full term structure: spot (zero-coupon) rates from 1 to 10 years plus 20 and 30 years, so an entire yield curve can be read for a single day. The 10-year Confederation rate is the benchmark Swiss long rate. Alongside Confederation and euro-area government bonds, the series breaks out Swiss issuers by credit rating — cantons, mortgage-bond institutions, banks and industry — which makes credit spreads over the Confederation curve directly visible."
   },
   "fetched_utc": "2026-08-05 13:12:03"
 }

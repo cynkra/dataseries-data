@@ -11,15 +11,11 @@
 - **series**: 324
 
 ## What is special
-Bilateral exchange-rate **indices** (not levels) of the Swiss franc against ~54
-partner currencies, the largest series count in this group at 324. The
-nominal/real split is itself nested: `D0` offers `N` nominal and a non-data `R` real
-node that expands into two real measures, **CPI-based** (K) and **PPI-based** (P), so
-"real" is delivered as two distinct deflator variants rather than one. Each
-bilateral index is published both as the **index** (I) and as the **year-on-year %
-change** (V), which is why the series count is large (3 deflators x ~54 countries x 2
-representations). It is the live, currently-updated companion to the discontinued
-country-level `devlandm`. Defaults to CPI-based, Austria, index.
+Bilateral exchange-rate indices of the Swiss franc against about 54 partner
+currencies. Real rates come in two deflator variants, consumer-price and
+producer-price based, alongside the nominal index, and each is given both as an
+index and as a year-on-year percentage change. For the trade-weighted summary
+rather than individual partners, see `ch_snb_devwkieffid`.
 
 ## Access
 - **type**: snb-cube — SNB cube API

@@ -12,15 +12,11 @@
 - **updated**: 2026-04 (latest observation)
 
 ## What is special
-Monthly trading turnover on the Swiss stock exchange (SIX), the canonical
-securities-turnover series, back to 1993. The distinctive cut is the
-**domestic-vs-foreign** split applied to each asset class: shares and bond issues each
-break into domestic (`IT0/IT1`), foreign (`AT0/AT1`) and total (`T0/T1`), which makes
-visible how much of the venue's volume is foreign paper. Beyond those it carries
-investment funds (`A`), structured products and options (`SPO`), a grand total (`T2`),
-and turnover in SMI-constituent securities (`ISMIT`). A compact 10-series companion to
-the daily index cube `ch_snb_capchstocki`: where that measures price levels, this
-measures traded volume.
+Monthly trading turnover on the Swiss stock exchange (SIX). Shares and bonds are
+each split into domestic, foreign and total, which shows how much of the venue's
+volume is foreign paper. Also covers investment funds, structured products and
+options, and turnover in SMI constituents. Where `ch_snb_capchstocki` measures
+price levels, this measures traded volume.
 
 ## Access
 - **type**: snb-cube — SNB cube API

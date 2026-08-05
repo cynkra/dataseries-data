@@ -18,7 +18,15 @@
   },
   "license": "fso",
   "frequency": "quarterly",
-  "topic": "Labour",
+  "topic": {
+    "key": "labour",
+    "name": {
+      "en": "Labour",
+      "de": "Arbeit",
+      "fr": "Travail",
+      "it": "Lavoro"
+    }
+  },
   "dimensions": {
     "canton": {
       "label": {
@@ -319,7 +327,7 @@
     "canton": "_T"
   },
   "description": {
-    "en": "Foreign cross-border commuters (Grenzgänger) working in Switzerland, by canton of work, quarterly since 2002. A distinctive feature of the Swiss labour market (~410k people, concentrated in Geneva, Ticino, Basel, Vaud). The successor to the legacy ch.fso.ggs series."
+    "en": "Foreign residents commuting into Switzerland for work (Grenzgänger), by canton of employment. About 410,000 people, concentrated in Geneva, Ticino, Basel and Vaud — a structural feature of the Swiss labour market with no equivalent in most countries."
   },
   "units": {
     "en": "Number of cross-border commuters (estimate)",

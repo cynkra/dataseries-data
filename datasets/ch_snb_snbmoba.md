@@ -12,19 +12,12 @@
 - **updated**: 2026-04 (use API PublishingDate header for exact day)
 
 ## What is special
-The Swiss monetary base, monthly back to 1950, one of the longest-running money
-series in the catalog. Distinctive because it gives both sides of the central
-bank's money creation in one cube. The flat `D0` codes split into three groups in
-the hierarchy: Origination (`RF` relevant foreign-currency positions, `W`
-securities portfolio, `G` money-market transactions, `S0` other, `N0` base) and
-Utilisation (`N1` banknotes in circulation, `GB` sight deposit accounts of
-domestic banks, `N2` base) sum to the same total from the asset vs liability side,
-and a Seasonally adjusted block (`N3` base, `S1` seasonal factor). So the seasonal
-adjustment here is encoded as its own series rather than a toggle, which matches
-the rest of SNB (no SA switch). Levels are in CHF millions. As a money concept it
-is the base-money companion to the M1-M3 aggregates; in the curated view M1-M3
-(`snbmonagg`) is the headline aggregate, with the base, target range (`snbband`)
-and SNB balance sheet (`snbbipo`) kept alongside it.
+The Swiss monetary base, giving both sides of central-bank money creation in one
+table. The origination side (foreign-currency positions, securities portfolio,
+money-market transactions) and the utilisation side (banknotes in circulation,
+sight deposits of domestic banks) sum to the same total. Seasonal adjustment is
+carried as its own series rather than a toggle. For money held by the public
+rather than central-bank money, see `ch_snb_snbmonagg`.
 
 ## Access
 - **type**: snb-cube — SNB cube API

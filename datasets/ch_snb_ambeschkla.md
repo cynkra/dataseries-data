@@ -12,13 +12,11 @@
 - **updated**: 2025-Q4 (latest observation; PublishingDate in CSV header is the freshness signal)
 
 ## What is special
-Employees broken down by economic activity (NACE-style sectors) crossed with an
-employment type. The SNB version overlaps FSO `ch_fso_besta` (jobs by division); the
-concept universe flags this and keeps FSO as the intended canonical, so this is the
-labelled alternate. The distinctive feature is the two-axis cross: four head-count
-bases (Total, full-time, part-time, full-time-equivalents) times ~14 leaf sectors,
-which lets you read part-time intensity and FTE conversion by sector, something the
-FSO jobs cube does not expose the same way. Values are in thousands of persons.
+Employees by economic activity, crossed with an employment basis: total,
+full-time, part-time and full-time equivalents. That cross is the point — it makes
+part-time intensity and the FTE conversion readable per sector, which the FSO job
+statistics (`ch_fso_besta`) do not expose the same way. Values are in thousands of
+persons.
 
 ## Access
 - **type**: snb-cube — SNB cube API

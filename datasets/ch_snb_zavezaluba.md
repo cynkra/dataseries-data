@@ -12,15 +12,12 @@
 - **updated**: 2026-03 (latest published period)
 
 ## What is special
-The card-payment flow cube, and the most cross-cut of the `zave*` family: five
-stacked dimensions describe each transaction (what kind of payment, which card type,
-where the card was issued, where it was used, and which metric). It separates
-card-present from card-not-present (online) payments, breaks out contactless within
-card-present, and isolates cash withdrawals at ATMs. The domestic/foreign split on
-both card origin (`D2`) and place of transaction (`D3`) makes it usable for inbound
-tourism spend (foreign cards used domestically) and Swiss spending abroad. The
-contactless and enhanced-cash subtotals begin mid-2017, later than the 2005 base, so
-many of the 113 series are short.
+Card payment flows, described along five axes: the kind of payment, the card type,
+where the card was issued, where it was used, and the metric. Separates
+card-present from online payments, breaks out contactless, and isolates cash
+withdrawals at ATMs. Because both card origin and place of transaction carry a
+domestic/foreign split, it can be read for inbound tourism spending or for Swiss
+spending abroad.
 
 ## Access
 - **type**: snb-cube — SNB cube API

@@ -13,16 +13,11 @@
 - **updated**: not published (live PX-Web pull; latest observation 2026Q1)
 
 ## What is special
-BESTA, the FSO employment statistics: the number of jobs in Switzerland by
-economic division (NOGA), quarterly back to 1991. This is the canonical Swiss
-employment series. Its defining feature is the **deep division hierarchy**: 60
-NOGA aggregates from the grand total `5-96` down through sectors (`5-43` Sector
-II, `45-96` Sector III) to individual two-digit divisions (e.g. `21`
-Pharmaceuticals, `64` Financial services, `86` Human health). This lets you read
-the structural shift of the Swiss economy (manufacturing flat, health and
-business services up) off one table. CONCEPT-UNIVERSE flags an overlap with SNB
-`ambeschkla` (employees by activity); BESTA is chosen as canonical because it is
-the FSO authoritative jobs series with the finer NOGA breakdown.
+The Federal Statistical Office's job statistics (BESTA): the number of jobs in
+Switzerland by economic division (NOGA), from the grand total down to two-digit
+divisions such as pharmaceuticals, financial services and human health. The
+division depth is what makes the structural shift of the Swiss economy readable
+from a single table.
 
 ## Access
 - **type**: fso-pxweb — FSO PX-Web (json-stat2)
@@ -82,42 +77,3 @@ derived from those ranges.
 ## Provenance
 Script: `R/source_fso.R::fso_fetch` (explicit chunked query built in
 `R/pipeline.R`). Datasheet authored 2026-06-01.
-
-## What is special (de)
-BESTA, die Beschäftigungsstatistik des BFS: die Zahl der Stellen in der Schweiz
-nach Wirtschaftsabteilung (NOGA), vierteljährlich zurück bis 1991. Dies ist die
-kanonische Schweizer Beschäftigungsreihe. Ihr prägendes Merkmal ist die **tiefe
-Abteilungshierarchie**: 60 NOGA-Aggregate vom Gesamttotal `5-96` über die Sektoren
-(`5-43` Sektor II, `45-96` Sektor III) bis zu einzelnen zweistelligen Abteilungen
-(z. B. `21` Pharma, `64` Finanzdienstleistungen, `86` Gesundheitswesen). So lässt
-sich der Strukturwandel der Schweizer Wirtschaft (Industrie flach, Gesundheit und
-Unternehmensdienstleistungen im Aufwärtstrend) aus einer einzigen Tabelle
-ablesen. CONCEPT-UNIVERSE markiert eine Überschneidung mit dem SNB-Würfel
-`ambeschkla` (Beschäftigte nach Wirtschaftszweig); BESTA gilt als kanonisch, weil
-es die massgebende BFS-Stellenreihe mit der feineren NOGA-Gliederung ist.
-
-## What is special (fr)
-BESTA, la statistique de l'emploi de l'OFS : le nombre d'emplois en Suisse par
-division économique (NOGA), trimestriel depuis 1991. C'est la série suisse de
-l'emploi de référence. Sa caractéristique majeure est la **hiérarchie détaillée
-des divisions** : 60 agrégats NOGA, du total général `5-96` aux secteurs
-(`5-43` secteur II, `45-96` secteur III) jusqu'aux divisions à deux chiffres
-(p. ex. `21` pharmacie, `64` services financiers, `86` santé humaine). On y lit
-la mutation structurelle de l'économie suisse (industrie stable, santé et
-services aux entreprises en hausse) dans un seul tableau. CONCEPT-UNIVERSE
-signale un recoupement avec le cube BNS `ambeschkla` (emplois par branche) ;
-BESTA est retenue comme canonique parce qu'elle est la série de référence de
-l'OFS avec la ventilation NOGA la plus fine.
-
-## What is special (it)
-BESTA, la statistica dell'impiego dell'UST: il numero di posti di lavoro in
-Svizzera per divisione economica (NOGA), trimestrale a partire dal 1991. È la
-serie svizzera dell'impiego di riferimento. Il suo tratto distintivo è la
-**gerarchia dettagliata delle divisioni**: 60 aggregati NOGA, dal totale
-generale `5-96` ai settori (`5-43` settore II, `45-96` settore III) fino alle
-singole divisioni a due cifre (p. es. `21` farmaceutica, `64` servizi
-finanziari, `86` sanità). Permette di leggere il mutamento strutturale
-dell'economia svizzera (industria stabile, sanità e servizi alle imprese in
-crescita) da un'unica tabella. CONCEPT-UNIVERSE segnala una sovrapposizione con
-il cubo BNS `ambeschkla` (impieghi per ramo economico); BESTA è scelta come
-canonica perché è la serie UST autorevole con la ripartizione NOGA più fine.

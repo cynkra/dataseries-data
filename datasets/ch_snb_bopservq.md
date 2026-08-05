@@ -12,16 +12,12 @@
 - **updated**: 2025-Q4 (latest observation; SNB publishes ~3 months in arrears)
 
 ## What is special
-The services trade of the current account broken down **by counterpart country**,
-which the headline BoP cubes do not provide. It is the widest cube in this group:
-three dimensions (country x service component x accounting entry) multiply out to
-1,755 leaf series, the largest in the SNB balance-of-payments set. Country coverage
-(`D0`) runs from regional totals (Europe, EU, EU27, Africa, America, Asia, Oceania)
-down to ~50 individual partners (Germany, US, China, UK, Singapore, Gulf Arabian
-countries, ...). Service components (`D1`) match the bopcurrq services split. Shorter
-history than the other BoP cubes, starting only 2012, because country-level services
-detail was introduced with the BPM6 standard. Alternate to `ch_snb_bopcurrq` for the
-concept: same producer, the unique value is the geographic dimension.
+Trade in services broken down by counterpart country, which the headline
+balance-of-payments series do not provide. Coverage runs from regional totals
+(Europe, the EU, Africa, the Americas, Asia, Oceania) down to about 50 individual
+partners, crossed with the service components and the accounting entry. Country
+detail for services was introduced with the BPM6 standard, so the history is
+shorter than for the other balance-of-payments series.
 
 ## Access
 - **type**: snb-cube — SNB cube API

@@ -11,16 +11,11 @@
 - **series**: 4
 
 ## What is special
-The **core inflation** series, kept as a deliberate alternate to headline CPI
-(`ch_fso_cpi`) because it is an analytical, derived measure, not a re-export of the
-raw price index. It is the canonical series for the Core inflation concept. The cube
-bundles **four core-inflation definitions** from two producers under one flat `D0`
-dimension: the SNB's **trimmed mean** (KGM, the headline default) and the SFSO's
-**Core inflation 1** (K1), **Core inflation 2** (K2), plus the **headline national
-CPI inflation rate** (TLK) for reference. Values are **year-on-year inflation rates
-in percent**, not index levels. The KGM trimmed-mean history reaches back to
-**1983-12**; the SFSO K1/K2 series start later (K1 from 2001-05 in the CSV), so the
-full span is driven by the SNB measure.
+Core inflation for Switzerland: the price trend with the most volatile components
+stripped out, which is what central banks watch instead of the headline rate. Four
+definitions sit side by side — the SNB's trimmed mean and two Federal Statistical
+Office measures, plus the headline rate for reference. Values are year-on-year
+rates in percent, not index levels.
 
 ## Access
 - **type**: snb-cube — SNB cube API

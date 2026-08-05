@@ -186,7 +186,15 @@
       }
     }
   },
-  "topic": "Domestic economy",
+  "topic": {
+    "key": "domestic-economy",
+    "name": {
+      "en": "Domestic economy",
+      "de": "Binnenwirtschaft",
+      "fr": "Économie intérieure",
+      "it": "Economia interna"
+    }
+  },
   "concept": "Domestic economy / Services turnover",
   "canonical": true,
   "split": "NOGA",
@@ -198,7 +206,7 @@
     "INDICATOR_KE": "UTOT"
   },
   "description": {
-    "en": "The turnover index for the tertiary (services) sector, completing the sector-turnover triad alongside retail (ch_fso_retail) and industry/construction (ch_fso_production). Same FSO source as the production series, disjoint NOGA codes. History is genuinely short — services turnover is a newer FSO product, base 2021 = 100; the secondary-sector codes in the same flow reach back to 1999, the tertiary ones do not."
+    "en": "The turnover index for the tertiary sector, completing the picture alongside retail (ch_fso_retail) and industry and construction (ch_fso_production). A newer FSO product on a 2021 = 100 base, so its history is much shorter than for the secondary sector."
   },
   "fetched_utc": "2026-08-05 13:12:05"
 }

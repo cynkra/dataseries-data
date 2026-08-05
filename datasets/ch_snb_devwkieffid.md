@@ -11,16 +11,11 @@
 - **series**: 12
 
 ## What is special
-The **trade-weighted effective exchange rate** of the Swiss franc, the single most
-watched FX summary for franc strength, published **daily**. Two country-group
-aggregates are offered: the **overall index** (G) and a **euro-area index** (E).
-As with the bilateral indices, the nominal/real split nests into nominal (N), real
-CPI-based (K) and real PPI-based (P), and each is given both as index (I) and as
-**day-on-day % change** (V). This daily cube is the **canonical effective-FX series**;
-the monthly roll-up `devwkieffim` is the dropped lower-frequency duplicate per the
-native-frequency rule. The JSON `start` is 1999-01 but the daily observations in the
-CSV begin late 2000 for the index level (`K,E,I` from 2000-11-30); earlier history is
-sparse and series-dependent.
+The trade-weighted effective exchange rate of the Swiss franc, the standard
+summary measure of franc strength, published daily. Two aggregates are offered:
+the overall index and a euro-area index. As with the bilateral indices, nominal
+and the two real variants (consumer-price and producer-price deflated) are each
+given as an index and as a percentage change.
 
 ## Access
 - **type**: snb-cube — SNB cube API

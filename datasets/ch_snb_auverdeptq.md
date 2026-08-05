@@ -12,16 +12,12 @@
 - **updated**: 2025-Q4 (latest observation; PublishingDate in CSV header is the freshness signal)
 
 ## What is special
-Switzerland's gross external debt: the liabilities side of the external balance sheet,
-the IMF/SDDS external-debt presentation. It complements the `auvekomq` IIP overview
-and `auvercurrq` currency cut, focusing only on debt liabilities. Starts later than
-its companions (1999-Q4) because the standardized external-debt template post-dates
-the IIP series. The whole cube rides on a single `Overview` dimension whose hierarchy
-encodes two cross-classifications at once: sector (public, SNB, banks, other sectors,
-direct-investment loans) and maturity (short-term / long-term), each further split
-into debt securities vs other liabilities. So one flat dim id (`D0`) carries a
-sector x maturity x instrument tree expressed entirely as codes. Values are
-CHF-million stocks at end of quarter.
+Switzerland's gross external debt on the IMF standard presentation: the liabilities
+side of the external balance sheet only. A single hierarchy encodes two
+classifications at once — borrowing sector (public, SNB, banks, other sectors,
+direct-investment loans) and maturity (short or long term), each split further
+into debt securities and other liabilities. Starts later than the wider investment
+position because the standardised template post-dates it.
 
 ## Access
 - **type**: snb-cube — SNB cube API

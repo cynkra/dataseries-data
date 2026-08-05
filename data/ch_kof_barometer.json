@@ -23,11 +23,19 @@
   "license": "kof",
   "frequency": "monthly",
   "dimensions": {},
-  "topic": "Business cycle & sentiment",
+  "topic": {
+    "key": "business-cycle-sentiment",
+    "name": {
+      "en": "Business cycle & sentiment",
+      "de": "Konjunktur & Stimmung",
+      "fr": "Conjoncture & climat",
+      "it": "Congiuntura e clima"
+    }
+  },
   "concept": "Business cycle & sentiment / Leading barometer",
   "canonical": true,
   "description": {
-    "en": "The headline Swiss leading indicator for the business cycle, published monthly near month-end. A single composite index built from a large basket of underlying predictors, designed to anticipate the year-over-year growth rate of Swiss GDP a few months ahead. Normalised so the long-run mean sits around 100; readings above 100 signal above-average expected growth, below 100 the reverse. Plain one-column time series, no dimensions, monthly back to 1991. Note: on API v2 the per-key ts endpoint serves every public key (the v1 HTTP 412 gate is gone), but the wider open KOF family is still most convenient as whole collections — see ch_kof_esi (R/source_kof.R::kof_set_fetch), which reads ogd_ch.kof.esi, ogd_ch.kof.globalbaro, ogd_ch.kof.bts_total."
+    "en": "The KOF Economic Barometer, Switzerland's headline leading indicator for the business cycle, published monthly near month-end by the KOF Swiss Economic Institute at ETH Zurich. A composite of a large basket of predictors, designed to anticipate the year-on-year growth of Swiss GDP a few months ahead and normalised so the long-run mean sits near 100: above 100 signals above-average expected growth, below 100 the reverse."
   },
   "fetched_utc": "2026-08-05 13:12:05"
 }

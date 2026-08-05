@@ -13,24 +13,13 @@
 - **updated**: 2025-03 (CKAN `modified`)
 
 ## What is special
-The headline read on Swiss **public finances** — the one genuine concept gap in the
-catalog. The Federal Finance Administration consolidates the whole of general
-government (Confederation, the 26 cantons, the communes, and the social-security
-funds) into a single coherent set of fiscal aggregates, published on opendata.swiss
-as *"Main aggregates and forecasts with FS- and GFS-Model"*. It is the only catalog
-dataset sourced from the FFA, and the only one that carries both the Swiss
-administrative **FS model** (financial statistics) and the internationally
-comparable **GFS model** (Government Finance Statistics, the Maastricht / SNA basis)
-side by side.
-
-It delivers the textbook public-finance headline set — receipts, expenditure, the
-budget balance, gross and net debt, and the GDP ratios (tax-to-GDP / fiscal ratio,
-expenditure ratio, gross-debt ratio incl. the Maastricht debt ratio) — broken down
-by **government level**, so the user can see e.g. the Confederation's deficit against
-the cantons' surplus, or the general-government Maastricht debt ratio over three
-decades. It also extends past the latest closed financial statement into the FFA's
-official budget / financial-plan and forecast years (flagged in the `estimate`
-dimension), which is unusual for the catalog: most series stop at the last actual.
+Consolidated Swiss public finances from the Federal Finance Administration:
+receipts, expenditure, the budget balance, gross and net debt, and the GDP ratios,
+for the Confederation, the 26 cantons, the communes and the social-security funds.
+Reported on both the Swiss FS model and the internationally comparable GFS
+(Maastricht) basis. Unlike most series here it extends past the last closed
+accounts into official budget and forecast years, flagged in the estimate
+dimension.
 
 ## Access
 - **type**: scraped — opendata.swiss (CKAN) → data.finance.admin.ch CSV asset

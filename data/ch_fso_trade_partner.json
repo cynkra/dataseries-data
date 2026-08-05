@@ -20,7 +20,15 @@
   },
   "license": "fso",
   "frequency": "annual",
-  "topic": "External sector",
+  "topic": {
+    "key": "external-sector",
+    "name": {
+      "en": "External sector",
+      "de": "Aussenwirtschaft",
+      "fr": "Secteur extérieur",
+      "it": "Settore estero"
+    }
+  },
   "updated": null,
   "dimensions": {
     "flow": {
@@ -396,7 +404,7 @@
     "level": "group"
   },
   "description": {
-    "en": "Swiss foreign trade broken down by partner country and region, for both flows (exports and imports), in CHF millions, back to 1990. Covers the major trading partners (Germany, USA, China, …) plus the continent / economic-area aggregates (Europe, EU, Asia, North America, …) and the grand Total. This is the partner-country cut of the customs trade statistics, complementary to the SNB's trade-by-goods value series — the SNB cubes carry no partner-country dimension."
+    "en": "Swiss foreign trade by partner country and region, for exports and imports, in CHF millions. Covers the major partners (Germany, the United States, China) alongside continent and economic-area aggregates. The SNB trade series break down by goods category but carry no partner country."
   },
   "units": {
     "en": "CHF millions",

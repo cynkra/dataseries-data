@@ -12,12 +12,10 @@
 - **updated**: 2026-06-02
 
 ## What is special
-Swiss foreign trade broken down by partner country and region, for both flows
-(exports and imports), in CHF millions, back to 1990. Covers the major trading
-partners (Germany, USA, China, …) plus the continent / economic-area aggregates
-(Europe, EU, Asia, North America, …) and the grand Total. This is the
-partner-country cut of the customs trade statistics, complementary to the SNB's
-trade-by-goods value series — the SNB cubes carry no partner-country dimension.
+Swiss foreign trade by partner country and region, for exports and imports, in
+CHF millions. Covers the major partners (Germany, the United States, China)
+alongside continent and economic-area aggregates. The SNB trade series break down
+by goods category but carry no partner country.
 
 ## Access
 - **type**: fso-dam-excel — FSO DAM Excel asset (two single-sheet workbooks, pinned by asset id)

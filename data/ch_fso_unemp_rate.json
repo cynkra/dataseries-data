@@ -19,7 +19,15 @@
   },
   "license": "fso",
   "frequency": "monthly",
-  "topic": "Labour",
+  "topic": {
+    "key": "labour",
+    "name": {
+      "en": "Labour",
+      "de": "Arbeit",
+      "fr": "Travail",
+      "it": "Lavoro"
+    }
+  },
   "updated": "2026-05-18",
   "dimensions": {
     "origin": {
@@ -113,7 +121,7 @@
     "sex": "tot"
   },
   "description": {
-    "en": "The ILO unemployment rate (%), the internationally comparable definition. This is deliberately kept alongside the SNB/SECO registered unemployment series (ch_snb_amarbma): they measure different things (ILO survey-based vs registered at job centres) and should not be deduplicated into one. Monthly averages."
+    "en": "The unemployment rate on the ILO definition, derived from labour-force survey data, which is the internationally comparable measure. It differs from registered unemployment (ch_snb_amarbma), which counts people enrolled at regional job centres; the two are not interchangeable."
   },
   "fetched_utc": "2026-08-05 13:12:07"
 }

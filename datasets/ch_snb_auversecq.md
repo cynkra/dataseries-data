@@ -12,16 +12,11 @@
 - **updated**: 2025 Q4 release (PublishingDate in CSV header)
 
 ## What is special
-The stock counterpart to the balance-of-payments flows: Switzerland's foreign
-assets and liabilities, and the resulting net international investment position
-(NIIP), back to 1985. The distinctive cut here is the **sector breakdown**:
-assets and liabilities are split across SNB, banks, public sector and other
-sectors, so you can see who holds the foreign claims. Crossed with the IIP
-component grid (direct, portfolio, derivatives, other investment, reserve
-assets), this exposes Switzerland's large net creditor position and where it
-sits. The reserve-assets component only carries on the assets side and only for
-the SNB, so many sector/component cells are empty; the stored 71 series are the
-populated combinations, not the full 3x5x6 grid.
+Switzerland's foreign assets and liabilities and the resulting net international
+investment position, split by holding sector: SNB, banks, public sector and other
+sectors. The sector cut shows who holds the foreign claims behind Switzerland's
+large net creditor position. Reserve assets appear only on the asset side and only
+for the SNB, so many sector and component combinations are legitimately empty.
 
 ## Access
 - **type**: snb-cube — SNB cube API

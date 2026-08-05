@@ -18,7 +18,15 @@
   },
   "license": "fso",
   "frequency": "annual",
-  "topic": "Domestic economy",
+  "topic": {
+    "key": "domestic-economy",
+    "name": {
+      "en": "Domestic economy",
+      "de": "Binnenwirtschaft",
+      "fr": "Économie intérieure",
+      "it": "Economia interna"
+    }
+  },
   "dimensions": {
     "measure": {
       "label": {
@@ -64,7 +72,7 @@
     "measure": "PC"
   },
   "description": {
-    "en": "The official Swiss vacancy rate (Leerwohnungsziffer) and the absolute count of vacant dwellings, national, annual since 1995. The vacancy rate is the headline housing-market tightness indicator — it fell to ~1.0% by 2025, the tightest in years."
+    "en": "The official Swiss vacancy rate (Leerwohnungsziffer) and the absolute number of vacant dwellings, nationally. The vacancy rate is the standard measure of housing market tightness; it had fallen to about 1.0% by 2025."
   },
   "fetched_utc": "2026-08-05 13:12:05"
 }

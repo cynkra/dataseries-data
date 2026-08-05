@@ -12,16 +12,11 @@
 - **updated**: 2025-Q4 (latest observation; SNB publishes ~3 months in arrears)
 
 ## What is special
-The one-page overview of the Swiss balance of payments: the headline aggregates of all
-four accounts in a single cube. Unlike the current-account detail cube, this one folds
-the accounting entry into the component codes, so each line is named for its account
-and its entry at once. It carries the top-level structure rarely shown elsewhere: the
-**financial account** (direct, portfolio, other, reserve assets, each as net
-acquisition of assets `NA*` vs net incurrence of liabilities `NP*`), the **capital
-account** (`S8/E8/A8`), **derivatives** (`S14`), and the **statistical difference**
-(`SD`) that closes the BoP identity. It is the alternate to the detailed
-`ch_snb_bopcurrq` for the same concept: same producer, broader account coverage but
-shallower component detail, so it is kept and labelled rather than dropped.
+The one-page overview of the Swiss balance of payments: the headline aggregates of
+all four accounts in a single table, including the capital account, derivatives
+and the statistical difference that closes the balance-of-payments identity. Each
+line names its account and its accounting entry together. Broader account coverage
+but far less component detail than `ch_snb_bopcurrq`.
 
 ## Access
 - **type**: snb-cube — SNB cube API

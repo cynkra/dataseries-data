@@ -12,15 +12,11 @@
 - **updated**: 2025-Q4 (latest observation; PublishingDate in CSV header is the freshness signal)
 
 ## What is special
-The headline overview of Switzerland's international investment position (IIP): the
-stock of foreign assets, liabilities and the net position, back to 1985. This is the
-canonical IIP cube; `auvercurrq` (currency breakdown) and `auverdeptq` (external
-debt) are companion cuts of the same external balance sheet. The distinctive feature
-is the very deep functional `Component` hierarchy (direct / portfolio / derivatives /
-other investment / reserve assets), four levels deep in places, drilling from a total
-down to bank/customer sub-balances and the SNB's reserve-asset composition (gold, IMF
-reserve position, SDRs, FX investments). Values are CHF-million stocks at end of
-quarter.
+Switzerland's international investment position: the stock of foreign assets,
+liabilities and the resulting net position, at end of quarter in CHF millions. The
+component hierarchy runs four levels deep in places, from the total down to
+bank and customer sub-balances and the composition of the SNB's reserve assets
+(gold, IMF reserve position, SDRs, foreign-currency investments).
 
 ## Access
 - **type**: snb-cube — SNB cube API

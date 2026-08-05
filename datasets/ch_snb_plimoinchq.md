@@ -11,19 +11,12 @@
 - **series**: 17
 
 ## What is special
-The Swiss real estate price index, quarterly back to **1970**, and the only real
-estate price series in the catalog (no FSO equivalent in the set). Its distinctive
-feature is a **second dimension keyed on the data provider**: the same property types
-are sourced from four different private/official providers, so the cube is really a
-matrix of property type x provider, letting users compare methodologies. The
-provider dimension nests provider -> price basis: **Swiss Federal Statistical Office**
-(transaction price), **Fahrländer Partner** (transaction price), **IAZI**
-(transaction price), and **Wüest Partner** (both **asking price** AP and
-**transaction price** TP). Not every property type exists for every provider, so the
-17 series are a sparse cross of the two dimensions, not the full 8 x 5 product.
-Property types span residential (privately owned apartments, single-family houses,
-apartment buildings) and rents/commercial (rental housing, office, industrial/
-commercial, retail).
+The Swiss real estate price index, covering residential property (owner-occupied
+apartments, single-family houses, apartment buildings) and rental, office,
+industrial and retail space. The second dimension is the data provider: the same
+property types are compiled by the Federal Statistical Office, Fahrländer Partner,
+IAZI and Wüest Partner, so methodologies can be compared directly. Not every
+property type exists for every provider.
 
 ## Access
 - **type**: snb-cube — SNB cube API

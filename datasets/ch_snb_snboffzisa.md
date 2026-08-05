@@ -12,18 +12,12 @@
 - **updated**: 2026-04 (use API PublishingDate header for exact day)
 
 ## What is special
-The official policy rates set by the major central banks, monthly from 2000, on a
-single cube. Distinctive because it is not just the Swiss rate: the hierarchy is
-organised by country, so it doubles as a cross-central-bank policy-rate comparison.
-Switzerland carries the `LZ` SNB policy rate plus the historical SNB target range
-for 3-month CHF Libor (`UG0` lower, `OG0` upper). The United States block is the
-Fed target range (`UG1`/`OG1`). The Euro area/ECB block has three distinct
-facility rates: `H` main refinancing, `SRF` marginal lending, `EF` deposit
-facility. The UK is `L0` (Bank of England Bank Rate) and Japan `L1` (BoJ
-uncollateralised overnight call rate). All values are in percent. This captures
-the regime change in Swiss monetary policy (the move from a Libor target band to a
-single SNB policy rate) inside one series, because both the old range bounds and
-the current single rate live here.
+Official policy rates of the major central banks in one table, organised by
+country, so it doubles as a cross-central-bank comparison. Switzerland carries the
+SNB policy rate and the historical target range for three-month franc Libor, which
+captures the regime change from a target band to a single policy rate. The euro
+area has three facility rates; the United States, the United Kingdom and Japan one
+each.
 
 ## Access
 - **type**: snb-cube — SNB cube API

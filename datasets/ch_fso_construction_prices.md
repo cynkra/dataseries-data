@@ -12,13 +12,9 @@
 - **updated**: 2025-12-18
 
 ## What is special
-The Swiss Construction Price Index (Baupreisindex, BAP) measures the price
-development of construction work in Switzerland, surveyed semi-annually with
-reference months **April and October**. The headline series for the whole of
-Switzerland is captured on three work-type levels: the overall index
-(Baugewerbe: Total), building construction (Hochbau) and civil engineering
-(Tiefbau). Levels are on the **October 2020 = 100** base. One of the few
-semi-annual price series in the catalog.
+The Swiss Construction Price Index, surveyed twice a year with April and October
+reference months (October 2020 = 100). Covers construction as a whole plus its two
+branches, building construction (Hochbau) and civil engineering (Tiefbau).
 
 ## Access
 - **type**: fso-dam-excel — FSO DAM Excel asset

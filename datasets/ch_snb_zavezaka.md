@@ -12,14 +12,10 @@
 - **updated**: 2026-03 (latest published period)
 
 ## What is special
-Monthly stock of the Swiss card landscape: number of credit cards, debit cards and
-e-money cards in circulation, plus the count of ATMs. It is a counts-only cube (no
-turnover), so it reads as the installed base behind the flow cube `zavezaluba`. The
-distinctive feature is the "of which with contactless payment function" subtotal
-(`DZ0`/`DZ1`/`DZ2`), which only begins in late 2014 once contactless rolled out, so
-those three series start 2014-12 while the card totals run back to 2005. The single
-`Total` ATM series (`T3`) sits in the same cube despite being a different unit
-(machines, not cards).
+The installed base of the Swiss card landscape: credit, debit and e-money cards in
+circulation, plus the number of ATMs. Counts only, no turnover — for payment flows
+see `ch_snb_zavezaluba`. A contactless subtotal is reported separately and begins
+in late 2014, once contactless cards had rolled out.
 
 ## Access
 - **type**: snb-cube — SNB cube API

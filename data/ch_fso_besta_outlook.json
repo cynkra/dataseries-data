@@ -243,7 +243,15 @@
       }
     }
   },
-  "topic": "Labour",
+  "topic": {
+    "key": "labour",
+    "name": {
+      "en": "Labour",
+      "de": "Arbeit",
+      "fr": "Travail",
+      "it": "Lavoro"
+    }
+  },
   "concept": "Labour / Employment outlook",
   "canonical": true,
   "split": "Wirtschaftsabteilung",
@@ -253,7 +261,7 @@
     "Wirtschaftsabteilung": "5-96"
   },
   "description": {
-    "en": "The forward-looking labour indicator from the FSO employment barometer (BESTA): firms' employment-outlook index by economic division, quarterly. A reading above 1.0 signals net hiring intent over the coming three months, below 1.0 net reduction — the leading complement to the jobs (ch_fso_besta) and vacancies (ch_fso_vacancies) series."
+    "en": "Firms' employment intentions for the coming three months, from the FSO employment barometer, by economic division. A reading above 1.0 signals net hiring intent, below 1.0 net reduction — the forward-looking companion to jobs (ch_fso_besta) and vacancies (ch_fso_vacancies)."
   },
   "fetched_utc": "2026-08-05 13:12:06"
 }

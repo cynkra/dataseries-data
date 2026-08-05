@@ -12,22 +12,13 @@
 - **updated**: 2026-06-02
 
 ## What is special
-The catalog's **first weekly series**. SECO's Weekly Economic Activity index
-(WEA, German WWA) is a high-frequency nowcasting indicator built from a basket of
-weekly real-economy signals (electricity consumption, payment transactions,
-freight, foot traffic, etc.). It is **scaled to the year-on-year growth rate of
-real, seasonally / calendar / sport-event adjusted GDP**, so a WEA value of `2.0`
-reads as "activity running about 2% above the same week a year earlier" — it is a
-level on a growth-rate scale, not something to be differenced again.
-
-SECO publishes it in the swissdata long-CSV format, like `ch_seco_gdp`, but without
-the machine-readable label sidecar the GDP release carries, so the series labels are
-curated here rather than taken from the source.
-
-The `structure` dimension carries two series: the headline **seco_wwa** index
-(2005-> , the default) and **seco_wwa_pre_covid**, a discontinued variant
-(2019-12 .. 2022-12) that measured weekly activity relative to the Q4 2019
-pre-crisis level rather than YoY.
+SECO's Weekly Economic Activity index (WEA), a high-frequency nowcasting indicator
+built from weekly real-economy signals such as electricity consumption, payment
+transactions and freight. It is scaled to the year-on-year growth rate of real
+adjusted GDP, so a value of 2.0 means activity is running about 2% above the same
+week a year earlier. It is already a growth rate and should not be differenced
+again. A discontinued companion series measured activity against the pre-2020
+level instead.
 
 ## Access
 - **type**: seco-swissdata — SECO swissdata long CSV (native format; a JSON meta sidecar now exists, but the two series + units are stable so dimensions are built by hand)

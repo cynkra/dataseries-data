@@ -547,7 +547,15 @@
     }
   },
   "updated": "2026-06-23 09:00",
-  "topic": "External sector",
+  "topic": {
+    "key": "external-sector",
+    "name": {
+      "en": "External sector",
+      "de": "Aussenwirtschaft",
+      "fr": "Secteur extérieur",
+      "it": "Settore estero"
+    }
+  },
   "concept": "External sector / Balance of payments",
   "canonical": true,
   "split": "D0",
@@ -558,7 +566,7 @@
     "D1": "S"
   },
   "description": {
-    "en": "The detailed current account of the Swiss balance of payments, quarterly back to 1983. This is the canonical BoP series for the current-account concept. Its value is the deep component hierarchy on D0: goods (foreign trade, non-monetary gold, merchanting), services (transport split into passengers/freight/other, tourism, insurance, financial services, licence fees, R&D, business services), primary income (labour income plus investment income broken into direct/portfolio/other/reserves with dividends, reinvested earnings and interest), and secondary income. Crossed with the D1 accounting entry (Receipts / Expenses / Net), so one component such as \"Financial services\" is three series. Switzerland's structural current-account surplus and the large role of merchanting and investment income are visible here. Grouping nodes (data:false, e.g. \"Goods\", \"Services\") carry no observations and are dropped; only data:true leaves and totals appear in the CSV."
+    "en": "The detailed current account of the Swiss balance of payments: goods (including merchanting), services (transport, tourism, insurance, financial services, licence fees, R&D and business services), primary income from labour and investment, and secondary income. Each component is reported as receipts, expenses and the net of the two, which is where Switzerland's structural current-account surplus and the weight of merchanting and investment income become visible."
   },
   "fetched_utc": "2026-08-05 13:12:02"
 }

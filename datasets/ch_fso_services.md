@@ -11,12 +11,10 @@
 - **series**: 132
 
 ## What is special
-The turnover index for the **tertiary (services) sector**, completing the
-sector-turnover triad alongside retail (`ch_fso_retail`) and industry/construction
-(`ch_fso_production`). Same FSO source as the production series, disjoint NOGA
-codes. History is genuinely short — services turnover is a newer FSO product, base
-2021 = 100; the secondary-sector codes in the same flow reach back to 1999, the
-tertiary ones do not.
+The turnover index for the tertiary sector, completing the picture alongside
+retail (`ch_fso_retail`) and industry and construction (`ch_fso_production`). A
+newer FSO product on a 2021 = 100 base, so its history is much shorter than for
+the secondary sector.
 
 ## Access
 - **type**: fso-sdmx — FSO SDMX (disseminate.stats.swiss)

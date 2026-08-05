@@ -12,17 +12,10 @@
 - **updated**: 2026-03 (use API PublishingDate header for exact day)
 
 ## What is special
-A narrow, niche payments series: the loading and float of e-money on Swiss
-domestic payment cards (prepaid / stored-value card balances), monthly from 2014.
-The smallest cube in this group at just 4 series. It splits into two halves in the
-hierarchy. Loading (the act of topping up a card) carries three measures of the
-same flow: `TT` transactions in thousands, `BMF0` amount in CHF millions, and
-`BTF` amount per transaction in CHF (a derived average, value / count). Float (the
-outstanding balance sitting on cards) is a single stock: `BMF1` amount in CHF
-millions. So in one short table you get a flow (loading) with its per-transaction
-average and the corresponding stock (float), which is the distinctive flow-vs-stock
-pairing for the e-money niche. It is the youngest history of the six and one of the
-`zave*` payment-system family.
+Loading and float of e-money on Swiss prepaid and stored-value payment cards.
+Loading is the flow of top-ups, reported as a transaction count, a total amount
+and an average per transaction; float is the balance left sitting on cards. The
+flow and its corresponding stock in one short table.
 
 ## Access
 - **type**: snb-cube — SNB cube API

@@ -10,7 +10,15 @@
     "concept": "Labour / Unemployment",
     "canonical": true,
     "featured": "Unemployment",
-    "topic": "Labour",
+    "topic": {
+      "key": "labour",
+      "name": {
+        "en": "Labour",
+        "de": "Arbeit",
+        "fr": "Travail",
+        "it": "Lavoro"
+      }
+    },
     "source": {
       "key": "snb",
       "name": {
@@ -42,7 +50,15 @@
     "concept": "Labour / Employment / jobs",
     "canonical": false,
     "featured": null,
-    "topic": "Labour",
+    "topic": {
+      "key": "labour",
+      "name": {
+        "en": "Labour",
+        "de": "Arbeit",
+        "fr": "Travail",
+        "it": "Lavoro"
+      }
+    },
     "source": {
       "key": "snb",
       "name": {
@@ -74,7 +90,15 @@
     "concept": "External sector / Foreign trade",
     "canonical": true,
     "featured": "Foreign trade",
-    "topic": "External sector",
+    "topic": {
+      "key": "external-sector",
+      "name": {
+        "en": "External sector",
+        "de": "Aussenwirtschaft",
+        "fr": "Secteur extérieur",
+        "it": "Settore estero"
+      }
+    },
     "source": {
       "key": "snb",
       "name": {
@@ -106,7 +130,15 @@
     "concept": "External sector / International investment position",
     "canonical": true,
     "featured": null,
-    "topic": "External sector",
+    "topic": {
+      "key": "external-sector",
+      "name": {
+        "en": "External sector",
+        "de": "Aussenwirtschaft",
+        "fr": "Secteur extérieur",
+        "it": "Settore estero"
+      }
+    },
     "source": {
       "key": "snb",
       "name": {
@@ -138,7 +170,15 @@
     "concept": "External sector / International investment position",
     "canonical": false,
     "featured": null,
-    "topic": "External sector",
+    "topic": {
+      "key": "external-sector",
+      "name": {
+        "en": "External sector",
+        "de": "Aussenwirtschaft",
+        "fr": "Secteur extérieur",
+        "it": "Settore estero"
+      }
+    },
     "source": {
       "key": "snb",
       "name": {
@@ -170,7 +210,15 @@
     "concept": "External sector / International investment position",
     "canonical": false,
     "featured": null,
-    "topic": "External sector",
+    "topic": {
+      "key": "external-sector",
+      "name": {
+        "en": "External sector",
+        "de": "Aussenwirtschaft",
+        "fr": "Secteur extérieur",
+        "it": "Settore estero"
+      }
+    },
     "source": {
       "key": "snb",
       "name": {
@@ -202,7 +250,15 @@
     "concept": "External sector / International investment position",
     "canonical": true,
     "featured": null,
-    "topic": "External sector",
+    "topic": {
+      "key": "external-sector",
+      "name": {
+        "en": "External sector",
+        "de": "Aussenwirtschaft",
+        "fr": "Secteur extérieur",
+        "it": "Settore estero"
+      }
+    },
     "source": {
       "key": "snb",
       "name": {
@@ -234,7 +290,15 @@
     "concept": "Money & banking / Banking & credit",
     "canonical": true,
     "featured": null,
-    "topic": "Money & banking",
+    "topic": {
+      "key": "money-banking",
+      "name": {
+        "en": "Money & banking",
+        "de": "Geld & Banken",
+        "fr": "Monnaie & banques",
+        "it": "Moneta e banche"
+      }
+    },
     "source": {
       "key": "snb",
       "name": {
@@ -266,7 +330,15 @@
     "concept": "Money & banking / Banking & credit",
     "canonical": true,
     "featured": null,
-    "topic": "Money & banking",
+    "topic": {
+      "key": "money-banking",
+      "name": {
+        "en": "Money & banking",
+        "de": "Geld & Banken",
+        "fr": "Monnaie & banques",
+        "it": "Moneta e banche"
+      }
+    },
     "source": {
       "key": "snb",
       "name": {
@@ -298,7 +370,15 @@
     "concept": "Money & banking / Banking & credit",
     "canonical": true,
     "featured": null,
-    "topic": "Money & banking",
+    "topic": {
+      "key": "money-banking",
+      "name": {
+        "en": "Money & banking",
+        "de": "Geld & Banken",
+        "fr": "Monnaie & banques",
+        "it": "Moneta e banche"
+      }
+    },
     "source": {
       "key": "snb",
       "name": {
@@ -330,7 +410,15 @@
     "concept": "Money & banking / Banking & credit",
     "canonical": true,
     "featured": null,
-    "topic": "Money & banking",
+    "topic": {
+      "key": "money-banking",
+      "name": {
+        "en": "Money & banking",
+        "de": "Geld & Banken",
+        "fr": "Monnaie & banques",
+        "it": "Moneta e banche"
+      }
+    },
     "source": {
       "key": "snb",
       "name": {
@@ -362,7 +450,15 @@
     "concept": "External sector / Balance of payments",
     "canonical": true,
     "featured": null,
-    "topic": "External sector",
+    "topic": {
+      "key": "external-sector",
+      "name": {
+        "en": "External sector",
+        "de": "Aussenwirtschaft",
+        "fr": "Secteur extérieur",
+        "it": "Settore estero"
+      }
+    },
     "source": {
       "key": "snb",
       "name": {
@@ -394,7 +490,15 @@
     "concept": "External sector / Balance of payments",
     "canonical": true,
     "featured": null,
-    "topic": "External sector",
+    "topic": {
+      "key": "external-sector",
+      "name": {
+        "en": "External sector",
+        "de": "Aussenwirtschaft",
+        "fr": "Secteur extérieur",
+        "it": "Settore estero"
+      }
+    },
     "source": {
       "key": "snb",
       "name": {
@@ -426,7 +530,15 @@
     "concept": "External sector / Balance of payments",
     "canonical": false,
     "featured": null,
-    "topic": "External sector",
+    "topic": {
+      "key": "external-sector",
+      "name": {
+        "en": "External sector",
+        "de": "Aussenwirtschaft",
+        "fr": "Secteur extérieur",
+        "it": "Settore estero"
+      }
+    },
     "source": {
       "key": "snb",
       "name": {
@@ -458,7 +570,15 @@
     "concept": "External sector / Balance of payments",
     "canonical": false,
     "featured": null,
-    "topic": "External sector",
+    "topic": {
+      "key": "external-sector",
+      "name": {
+        "en": "External sector",
+        "de": "Aussenwirtschaft",
+        "fr": "Secteur extérieur",
+        "it": "Settore estero"
+      }
+    },
     "source": {
       "key": "snb",
       "name": {
@@ -490,7 +610,15 @@
     "concept": "Financial markets / Swiss stock indices",
     "canonical": true,
     "featured": "Stock market",
-    "topic": "Financial markets",
+    "topic": {
+      "key": "financial-markets",
+      "name": {
+        "en": "Financial markets",
+        "de": "Finanzmärkte",
+        "fr": "Marchés financiers",
+        "it": "Mercati finanziari"
+      }
+    },
     "source": {
       "key": "snb",
       "name": {
@@ -522,7 +650,15 @@
     "concept": "Financial markets / Securities turnover",
     "canonical": true,
     "featured": null,
-    "topic": "Financial markets",
+    "topic": {
+      "key": "financial-markets",
+      "name": {
+        "en": "Financial markets",
+        "de": "Finanzmärkte",
+        "fr": "Marchés financiers",
+        "it": "Mercati finanziari"
+      }
+    },
     "source": {
       "key": "snb",
       "name": {
@@ -554,7 +690,15 @@
     "concept": "Exchange rates / Bilateral FX",
     "canonical": true,
     "featured": "Exchange rates",
-    "topic": "Exchange rates",
+    "topic": {
+      "key": "exchange-rates",
+      "name": {
+        "en": "Exchange rates",
+        "de": "Wechselkurse",
+        "fr": "Taux de change",
+        "it": "Tassi di cambio"
+      }
+    },
     "source": {
       "key": "snb",
       "name": {
@@ -586,7 +730,15 @@
     "concept": "Exchange rates / Bilateral FX",
     "canonical": true,
     "featured": null,
-    "topic": "Exchange rates",
+    "topic": {
+      "key": "exchange-rates",
+      "name": {
+        "en": "Exchange rates",
+        "de": "Wechselkurse",
+        "fr": "Taux de change",
+        "it": "Tassi di cambio"
+      }
+    },
     "source": {
       "key": "snb",
       "name": {
@@ -618,7 +770,15 @@
     "concept": "Exchange rates / Effective FX index",
     "canonical": true,
     "featured": null,
-    "topic": "Exchange rates",
+    "topic": {
+      "key": "exchange-rates",
+      "name": {
+        "en": "Exchange rates",
+        "de": "Wechselkurse",
+        "fr": "Taux de change",
+        "it": "Tassi di cambio"
+      }
+    },
     "source": {
       "key": "snb",
       "name": {
@@ -650,7 +810,15 @@
     "concept": "Prices / Real estate prices",
     "canonical": true,
     "featured": null,
-    "topic": "Prices",
+    "topic": {
+      "key": "prices",
+      "name": {
+        "en": "Prices",
+        "de": "Preise",
+        "fr": "Prix",
+        "it": "Prezzi"
+      }
+    },
     "source": {
       "key": "snb",
       "name": {
@@ -682,7 +850,15 @@
     "concept": "Prices / Consumer prices",
     "canonical": true,
     "featured": "Inflation",
-    "topic": "Prices",
+    "topic": {
+      "key": "prices",
+      "name": {
+        "en": "Prices",
+        "de": "Preise",
+        "fr": "Prix",
+        "it": "Prezzi"
+      }
+    },
     "source": {
       "key": "snb",
       "name": {
@@ -714,7 +890,15 @@
     "concept": "Prices / Core inflation",
     "canonical": true,
     "featured": null,
-    "topic": "Prices",
+    "topic": {
+      "key": "prices",
+      "name": {
+        "en": "Prices",
+        "de": "Preise",
+        "fr": "Prix",
+        "it": "Prezzi"
+      }
+    },
     "source": {
       "key": "snb",
       "name": {
@@ -746,7 +930,15 @@
     "concept": "Interest rates & yields / Bond yields",
     "canonical": true,
     "featured": null,
-    "topic": "Interest rates & yields",
+    "topic": {
+      "key": "interest-rates-yields",
+      "name": {
+        "en": "Interest rates & yields",
+        "de": "Zinsen & Renditen",
+        "fr": "Taux d'intérêt & rendements",
+        "it": "Tassi d'interesse e rendimenti"
+      }
+    },
     "source": {
       "key": "snb",
       "name": {
@@ -778,7 +970,15 @@
     "concept": "Money & banking / Monetary aggregates",
     "canonical": false,
     "featured": null,
-    "topic": "Money & banking",
+    "topic": {
+      "key": "money-banking",
+      "name": {
+        "en": "Money & banking",
+        "de": "Geld & Banken",
+        "fr": "Monnaie & banques",
+        "it": "Moneta e banche"
+      }
+    },
     "source": {
       "key": "snb",
       "name": {
@@ -810,7 +1010,15 @@
     "concept": "Prices / Inflation forecast",
     "canonical": true,
     "featured": null,
-    "topic": "Prices",
+    "topic": {
+      "key": "prices",
+      "name": {
+        "en": "Prices",
+        "de": "Preise",
+        "fr": "Prix",
+        "it": "Prezzi"
+      }
+    },
     "source": {
       "key": "snb",
       "name": {
@@ -842,7 +1050,15 @@
     "concept": "Business cycle & sentiment / Business cycle signals",
     "canonical": true,
     "featured": null,
-    "topic": "Business cycle & sentiment",
+    "topic": {
+      "key": "business-cycle-sentiment",
+      "name": {
+        "en": "Business cycle & sentiment",
+        "de": "Konjunktur & Stimmung",
+        "fr": "Conjoncture & climat",
+        "it": "Congiuntura e clima"
+      }
+    },
     "source": {
       "key": "snb",
       "name": {
@@ -874,7 +1090,15 @@
     "concept": "Money & banking / Monetary aggregates",
     "canonical": false,
     "featured": null,
-    "topic": "Money & banking",
+    "topic": {
+      "key": "money-banking",
+      "name": {
+        "en": "Money & banking",
+        "de": "Geld & Banken",
+        "fr": "Monnaie & banques",
+        "it": "Moneta e banche"
+      }
+    },
     "source": {
       "key": "snb",
       "name": {
@@ -906,7 +1130,15 @@
     "concept": "Money & banking / Monetary aggregates",
     "canonical": true,
     "featured": "Money supply",
-    "topic": "Money & banking",
+    "topic": {
+      "key": "money-banking",
+      "name": {
+        "en": "Money & banking",
+        "de": "Geld & Banken",
+        "fr": "Monnaie & banques",
+        "it": "Moneta e banche"
+      }
+    },
     "source": {
       "key": "snb",
       "name": {
@@ -938,7 +1170,15 @@
     "concept": "Interest rates & yields / Policy & official rates",
     "canonical": true,
     "featured": null,
-    "topic": "Interest rates & yields",
+    "topic": {
+      "key": "interest-rates-yields",
+      "name": {
+        "en": "Interest rates & yields",
+        "de": "Zinsen & Renditen",
+        "fr": "Taux d'intérêt & rendements",
+        "it": "Tassi d'interesse e rendimenti"
+      }
+    },
     "source": {
       "key": "snb",
       "name": {
@@ -970,7 +1210,15 @@
     "concept": "Payment systems / Payments & cash",
     "canonical": false,
     "featured": null,
-    "topic": "Payment systems",
+    "topic": {
+      "key": "payment-systems",
+      "name": {
+        "en": "Payment systems",
+        "de": "Zahlungsverkehr",
+        "fr": "Systèmes de paiement",
+        "it": "Sistemi di pagamento"
+      }
+    },
     "source": {
       "key": "snb",
       "name": {
@@ -1002,7 +1250,15 @@
     "concept": "Payment systems / Payments & cash",
     "canonical": false,
     "featured": null,
-    "topic": "Payment systems",
+    "topic": {
+      "key": "payment-systems",
+      "name": {
+        "en": "Payment systems",
+        "de": "Zahlungsverkehr",
+        "fr": "Systèmes de paiement",
+        "it": "Sistemi di pagamento"
+      }
+    },
     "source": {
       "key": "snb",
       "name": {
@@ -1034,7 +1290,15 @@
     "concept": "Payment systems / Payments & cash",
     "canonical": false,
     "featured": null,
-    "topic": "Payment systems",
+    "topic": {
+      "key": "payment-systems",
+      "name": {
+        "en": "Payment systems",
+        "de": "Zahlungsverkehr",
+        "fr": "Systèmes de paiement",
+        "it": "Sistemi di pagamento"
+      }
+    },
     "source": {
       "key": "snb",
       "name": {
@@ -1066,7 +1330,15 @@
     "concept": "Payment systems / Payments & cash",
     "canonical": false,
     "featured": null,
-    "topic": "Payment systems",
+    "topic": {
+      "key": "payment-systems",
+      "name": {
+        "en": "Payment systems",
+        "de": "Zahlungsverkehr",
+        "fr": "Systèmes de paiement",
+        "it": "Sistemi di pagamento"
+      }
+    },
     "source": {
       "key": "snb",
       "name": {
@@ -1098,7 +1370,15 @@
     "concept": "Payment systems / Payments & cash",
     "canonical": false,
     "featured": null,
-    "topic": "Payment systems",
+    "topic": {
+      "key": "payment-systems",
+      "name": {
+        "en": "Payment systems",
+        "de": "Zahlungsverkehr",
+        "fr": "Systèmes de paiement",
+        "it": "Sistemi di pagamento"
+      }
+    },
     "source": {
       "key": "snb",
       "name": {
@@ -1130,7 +1410,15 @@
     "concept": "Interest rates & yields / Money-market rates",
     "canonical": false,
     "featured": null,
-    "topic": "Interest rates & yields",
+    "topic": {
+      "key": "interest-rates-yields",
+      "name": {
+        "en": "Interest rates & yields",
+        "de": "Zinsen & Renditen",
+        "fr": "Taux d'intérêt & rendements",
+        "it": "Tassi d'interesse e rendimenti"
+      }
+    },
     "source": {
       "key": "snb",
       "name": {
@@ -1162,7 +1450,15 @@
     "concept": "Interest rates & yields / Money-market rates",
     "canonical": false,
     "featured": null,
-    "topic": "Interest rates & yields",
+    "topic": {
+      "key": "interest-rates-yields",
+      "name": {
+        "en": "Interest rates & yields",
+        "de": "Zinsen & Renditen",
+        "fr": "Taux d'intérêt & rendements",
+        "it": "Tassi d'interesse e rendimenti"
+      }
+    },
     "source": {
       "key": "snb",
       "name": {
@@ -1194,7 +1490,15 @@
     "concept": "Interest rates & yields / Money-market rates",
     "canonical": true,
     "featured": "SARON",
-    "topic": "Interest rates & yields",
+    "topic": {
+      "key": "interest-rates-yields",
+      "name": {
+        "en": "Interest rates & yields",
+        "de": "Zinsen & Renditen",
+        "fr": "Taux d'intérêt & rendements",
+        "it": "Tassi d'interesse e rendimenti"
+      }
+    },
     "source": {
       "key": "snb",
       "name": {
@@ -1226,7 +1530,15 @@
     "concept": "National accounts / GDP (output, expenditure, income)",
     "canonical": true,
     "featured": "GDP",
-    "topic": "National accounts",
+    "topic": {
+      "key": "national-accounts",
+      "name": {
+        "en": "National accounts",
+        "de": "Volkswirtschaftliche Gesamtrechnung",
+        "fr": "Comptes nationaux",
+        "it": "Conti nazionali"
+      }
+    },
     "source": {
       "key": "seco",
       "name": {
@@ -1258,7 +1570,15 @@
     "concept": "Business cycle & sentiment / Consumer confidence",
     "canonical": true,
     "featured": "Consumer confidence",
-    "topic": "Business cycle & sentiment",
+    "topic": {
+      "key": "business-cycle-sentiment",
+      "name": {
+        "en": "Business cycle & sentiment",
+        "de": "Konjunktur & Stimmung",
+        "fr": "Conjoncture & climat",
+        "it": "Congiuntura e clima"
+      }
+    },
     "source": {
       "key": "seco",
       "name": {
@@ -1290,7 +1610,15 @@
     "concept": "Domestic economy / Retail trade turnover",
     "canonical": true,
     "featured": "Retail trade",
-    "topic": "Domestic economy",
+    "topic": {
+      "key": "domestic-economy",
+      "name": {
+        "en": "Domestic economy",
+        "de": "Binnenwirtschaft",
+        "fr": "Économie intérieure",
+        "it": "Economia interna"
+      }
+    },
     "source": {
       "key": "fso",
       "name": {
@@ -1322,7 +1650,15 @@
     "concept": "Domestic economy / Industry & construction turnover",
     "canonical": true,
     "featured": null,
-    "topic": "Domestic economy",
+    "topic": {
+      "key": "domestic-economy",
+      "name": {
+        "en": "Domestic economy",
+        "de": "Binnenwirtschaft",
+        "fr": "Économie intérieure",
+        "it": "Economia interna"
+      }
+    },
     "source": {
       "key": "fso",
       "name": {
@@ -1354,7 +1690,15 @@
     "concept": "Domestic economy / Services turnover",
     "canonical": true,
     "featured": null,
-    "topic": "Domestic economy",
+    "topic": {
+      "key": "domestic-economy",
+      "name": {
+        "en": "Domestic economy",
+        "de": "Binnenwirtschaft",
+        "fr": "Économie intérieure",
+        "it": "Economia interna"
+      }
+    },
     "source": {
       "key": "fso",
       "name": {
@@ -1386,7 +1730,15 @@
     "concept": "Domestic economy / New vehicle registrations",
     "canonical": true,
     "featured": null,
-    "topic": "Domestic economy",
+    "topic": {
+      "key": "domestic-economy",
+      "name": {
+        "en": "Domestic economy",
+        "de": "Binnenwirtschaft",
+        "fr": "Économie intérieure",
+        "it": "Economia interna"
+      }
+    },
     "source": {
       "key": "fso",
       "name": {
@@ -1418,7 +1770,15 @@
     "concept": "Domestic economy / Vacant dwellings",
     "canonical": true,
     "featured": null,
-    "topic": "Domestic economy",
+    "topic": {
+      "key": "domestic-economy",
+      "name": {
+        "en": "Domestic economy",
+        "de": "Binnenwirtschaft",
+        "fr": "Économie intérieure",
+        "it": "Economia interna"
+      }
+    },
     "source": {
       "key": "fso",
       "name": {
@@ -1450,7 +1810,15 @@
     "concept": "Labour / Cross-border commuters",
     "canonical": true,
     "featured": null,
-    "topic": "Labour",
+    "topic": {
+      "key": "labour",
+      "name": {
+        "en": "Labour",
+        "de": "Arbeit",
+        "fr": "Travail",
+        "it": "Lavoro"
+      }
+    },
     "source": {
       "key": "fso",
       "name": {
@@ -1482,7 +1850,15 @@
     "concept": "Population & demographics / Resident population by nationality",
     "canonical": false,
     "featured": null,
-    "topic": "Population & demographics",
+    "topic": {
+      "key": "population-demographics",
+      "name": {
+        "en": "Population & demographics",
+        "de": "Bevölkerung & Demografie",
+        "fr": "Population & démographie",
+        "it": "Popolazione e demografia"
+      }
+    },
     "source": {
       "key": "fso",
       "name": {
@@ -1514,7 +1890,15 @@
     "concept": "National accounts / Government finance",
     "canonical": true,
     "featured": null,
-    "topic": "National accounts",
+    "topic": {
+      "key": "national-accounts",
+      "name": {
+        "en": "National accounts",
+        "de": "Volkswirtschaftliche Gesamtrechnung",
+        "fr": "Comptes nationaux",
+        "it": "Conti nazionali"
+      }
+    },
     "source": {
       "key": "ffa",
       "name": {
@@ -1546,7 +1930,15 @@
     "concept": "Business cycle & sentiment / Leading barometer",
     "canonical": true,
     "featured": null,
-    "topic": "Business cycle & sentiment",
+    "topic": {
+      "key": "business-cycle-sentiment",
+      "name": {
+        "en": "Business cycle & sentiment",
+        "de": "Konjunktur & Stimmung",
+        "fr": "Conjoncture & climat",
+        "it": "Congiuntura e clima"
+      }
+    },
     "source": {
       "key": "kof",
       "name": {
@@ -1578,7 +1970,15 @@
     "concept": "Business cycle & sentiment / Sentiment composite",
     "canonical": true,
     "featured": null,
-    "topic": "Business cycle & sentiment",
+    "topic": {
+      "key": "business-cycle-sentiment",
+      "name": {
+        "en": "Business cycle & sentiment",
+        "de": "Konjunktur & Stimmung",
+        "fr": "Conjoncture & climat",
+        "it": "Congiuntura e clima"
+      }
+    },
     "source": {
       "key": "kof",
       "name": {
@@ -1610,7 +2010,15 @@
     "concept": "Labour / Job market",
     "canonical": true,
     "featured": null,
-    "topic": "Labour",
+    "topic": {
+      "key": "labour",
+      "name": {
+        "en": "Labour",
+        "de": "Arbeit",
+        "fr": "Travail",
+        "it": "Lavoro"
+      }
+    },
     "source": {
       "key": "uzh-smm",
       "name": {
@@ -1642,7 +2050,15 @@
     "concept": "Domestic economy / Hotel overnight stays",
     "canonical": true,
     "featured": null,
-    "topic": "Domestic economy",
+    "topic": {
+      "key": "domestic-economy",
+      "name": {
+        "en": "Domestic economy",
+        "de": "Binnenwirtschaft",
+        "fr": "Économie intérieure",
+        "it": "Economia interna"
+      }
+    },
     "source": {
       "key": "fso",
       "name": {
@@ -1674,7 +2090,15 @@
     "concept": "Labour / Employment / jobs",
     "canonical": true,
     "featured": "Employment",
-    "topic": "Labour",
+    "topic": {
+      "key": "labour",
+      "name": {
+        "en": "Labour",
+        "de": "Arbeit",
+        "fr": "Travail",
+        "it": "Lavoro"
+      }
+    },
     "source": {
       "key": "fso",
       "name": {
@@ -1706,7 +2130,15 @@
     "concept": "Labour / Job vacancies",
     "canonical": true,
     "featured": null,
-    "topic": "Labour",
+    "topic": {
+      "key": "labour",
+      "name": {
+        "en": "Labour",
+        "de": "Arbeit",
+        "fr": "Travail",
+        "it": "Lavoro"
+      }
+    },
     "source": {
       "key": "fso",
       "name": {
@@ -1738,7 +2170,15 @@
     "concept": "Labour / Employment / jobs",
     "canonical": false,
     "featured": null,
-    "topic": "Labour",
+    "topic": {
+      "key": "labour",
+      "name": {
+        "en": "Labour",
+        "de": "Arbeit",
+        "fr": "Travail",
+        "it": "Lavoro"
+      }
+    },
     "source": {
       "key": "fso",
       "name": {
@@ -1770,7 +2210,15 @@
     "concept": "Labour / Employment outlook",
     "canonical": true,
     "featured": null,
-    "topic": "Labour",
+    "topic": {
+      "key": "labour",
+      "name": {
+        "en": "Labour",
+        "de": "Arbeit",
+        "fr": "Travail",
+        "it": "Lavoro"
+      }
+    },
     "source": {
       "key": "fso",
       "name": {
@@ -1802,7 +2250,15 @@
     "concept": "Prices / Consumer prices",
     "canonical": false,
     "featured": null,
-    "topic": "Prices",
+    "topic": {
+      "key": "prices",
+      "name": {
+        "en": "Prices",
+        "de": "Preise",
+        "fr": "Prix",
+        "it": "Prezzi"
+      }
+    },
     "source": {
       "key": "fso",
       "name": {
@@ -1834,7 +2290,15 @@
     "concept": "Prices / Producer & import prices",
     "canonical": true,
     "featured": null,
-    "topic": "Prices",
+    "topic": {
+      "key": "prices",
+      "name": {
+        "en": "Prices",
+        "de": "Preise",
+        "fr": "Prix",
+        "it": "Prezzi"
+      }
+    },
     "source": {
       "key": "fso",
       "name": {
@@ -1866,7 +2330,15 @@
     "concept": "Labour / Wages",
     "canonical": true,
     "featured": null,
-    "topic": "Labour",
+    "topic": {
+      "key": "labour",
+      "name": {
+        "en": "Labour",
+        "de": "Arbeit",
+        "fr": "Travail",
+        "it": "Lavoro"
+      }
+    },
     "source": {
       "key": "fso",
       "name": {
@@ -1898,7 +2370,15 @@
     "concept": "Population & demographics / Resident population",
     "canonical": true,
     "featured": "Population",
-    "topic": "Population & demographics",
+    "topic": {
+      "key": "population-demographics",
+      "name": {
+        "en": "Population & demographics",
+        "de": "Bevölkerung & Demografie",
+        "fr": "Population & démographie",
+        "it": "Popolazione e demografia"
+      }
+    },
     "source": {
       "key": "fso",
       "name": {
@@ -1930,7 +2410,15 @@
     "concept": "Labour / Unemployment",
     "canonical": false,
     "featured": null,
-    "topic": "Labour",
+    "topic": {
+      "key": "labour",
+      "name": {
+        "en": "Labour",
+        "de": "Arbeit",
+        "fr": "Travail",
+        "it": "Lavoro"
+      }
+    },
     "source": {
       "key": "fso",
       "name": {
@@ -1962,7 +2450,15 @@
     "concept": "National accounts / Labour productivity",
     "canonical": true,
     "featured": null,
-    "topic": "National accounts",
+    "topic": {
+      "key": "national-accounts",
+      "name": {
+        "en": "National accounts",
+        "de": "Volkswirtschaftliche Gesamtrechnung",
+        "fr": "Comptes nationaux",
+        "it": "Conti nazionali"
+      }
+    },
     "source": {
       "key": "fso",
       "name": {
@@ -1994,7 +2490,15 @@
     "concept": "Labour / Employment / employed persons",
     "canonical": false,
     "featured": null,
-    "topic": "Labour",
+    "topic": {
+      "key": "labour",
+      "name": {
+        "en": "Labour",
+        "de": "Arbeit",
+        "fr": "Travail",
+        "it": "Lavoro"
+      }
+    },
     "source": {
       "key": "fso",
       "name": {
@@ -2026,7 +2530,15 @@
     "concept": "National accounts / Investment (gross fixed capital formation)",
     "canonical": false,
     "featured": null,
-    "topic": "National accounts",
+    "topic": {
+      "key": "national-accounts",
+      "name": {
+        "en": "National accounts",
+        "de": "Volkswirtschaftliche Gesamtrechnung",
+        "fr": "Comptes nationaux",
+        "it": "Conti nazionali"
+      }
+    },
     "source": {
       "key": "fso",
       "name": {
@@ -2058,7 +2570,15 @@
     "concept": "Labour / Working time and working volume",
     "canonical": true,
     "featured": null,
-    "topic": "Labour",
+    "topic": {
+      "key": "labour",
+      "name": {
+        "en": "Labour",
+        "de": "Arbeit",
+        "fr": "Travail",
+        "it": "Lavoro"
+      }
+    },
     "source": {
       "key": "fso",
       "name": {
@@ -2090,7 +2610,15 @@
     "concept": "National accounts / Regional GDP",
     "canonical": true,
     "featured": null,
-    "topic": "National accounts",
+    "topic": {
+      "key": "national-accounts",
+      "name": {
+        "en": "National accounts",
+        "de": "Volkswirtschaftliche Gesamtrechnung",
+        "fr": "Comptes nationaux",
+        "it": "Conti nazionali"
+      }
+    },
     "source": {
       "key": "fso",
       "name": {
@@ -2122,7 +2650,15 @@
     "concept": "Prices / Construction prices",
     "canonical": true,
     "featured": null,
-    "topic": "Prices",
+    "topic": {
+      "key": "prices",
+      "name": {
+        "en": "Prices",
+        "de": "Preise",
+        "fr": "Prix",
+        "it": "Prezzi"
+      }
+    },
     "source": {
       "key": "fso",
       "name": {
@@ -2154,7 +2690,15 @@
     "concept": "External sector / Foreign trade",
     "canonical": true,
     "featured": null,
-    "topic": "External sector",
+    "topic": {
+      "key": "external-sector",
+      "name": {
+        "en": "External sector",
+        "de": "Aussenwirtschaft",
+        "fr": "Secteur extérieur",
+        "it": "Settore estero"
+      }
+    },
     "source": {
       "key": "fso-focbs",
       "name": {
@@ -2186,7 +2730,15 @@
     "concept": "Prices / Consumer prices",
     "canonical": false,
     "featured": null,
-    "topic": "Prices",
+    "topic": {
+      "key": "prices",
+      "name": {
+        "en": "Prices",
+        "de": "Preise",
+        "fr": "Prix",
+        "it": "Prezzi"
+      }
+    },
     "source": {
       "key": "eurostat",
       "name": {
@@ -2218,7 +2770,15 @@
     "concept": "Business cycle & sentiment / High-frequency activity tracker",
     "canonical": true,
     "featured": null,
-    "topic": "Business cycle & sentiment",
+    "topic": {
+      "key": "business-cycle-sentiment",
+      "name": {
+        "en": "Business cycle & sentiment",
+        "de": "Konjunktur & Stimmung",
+        "fr": "Conjoncture & climat",
+        "it": "Congiuntura e clima"
+      }
+    },
     "source": {
       "key": "seco",
       "name": {

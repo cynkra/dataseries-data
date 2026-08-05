@@ -18,7 +18,15 @@
   },
   "license": "fso",
   "frequency": "annual",
-  "topic": "National accounts",
+  "topic": {
+    "key": "national-accounts",
+    "name": {
+      "en": "National accounts",
+      "de": "Volkswirtschaftliche Gesamtrechnung",
+      "fr": "Comptes nationaux",
+      "it": "Conti nazionali"
+    }
+  },
   "updated": "2024-10-28",
   "dimensions": {
     "region": {
@@ -294,7 +302,7 @@
     "region": "ch"
   },
   "description": {
-    "en": "Gross domestic product broken down by canton (all 26) and by the 7 greater regions (NUTS-2), at current prices in CHF million — the regional decomposition of the national GDP that the SNB cubes and the SECO national-accounts series do not carry. Switzerland (the national total) is the root of a single drill-down tree: Switzerland → greater region → canton, so the share of any canton in its region, or of any region in the country, is one division away. Switzerland is among the most economically concentrated small economies, and this dataset makes the Zurich / Lake-Geneva / Northwestern cluster visible at a glance."
+    "en": "Gross domestic product by canton and by the seven greater regions (NUTS-2), at current prices. The tree runs Switzerland → greater region → canton, so any canton's share of its region, or of the country, is one division away. The national accounts carry no regional breakdown."
   },
   "units": {
     "en": "CHF million, at current prices",

@@ -12,15 +12,12 @@
 - **updated**: 2025-Q4 (latest observation; PublishingDate in CSV header is the freshness signal)
 
 ## What is special
-The currency-denomination cut of the same international investment position covered
-by `auvekomq`. Its value is the currency axis: it shows how much of Switzerland's
-foreign assets and liabilities are held in CHF, USD, EUR, other currencies and
-precious metals, which is what makes the IIP exposed to exchange-rate moves. Three
-dimensions cross currency by accounting entry by functional component, so you can ask
-e.g. "USD-denominated portfolio-investment liabilities" directly. Same 1985 start and
-CHF-million end-of-quarter stocks as the overview. Kept as a non-canonical companion,
-not a re-export: the currency breakdown is a genuinely different view, but the
-headline IIP story lives in `auvekomq`.
+The currency cut of Switzerland's international investment position: how much of
+the country's foreign assets and liabilities are denominated in Swiss francs, US
+dollars, euros, other currencies and precious metals. This is what makes the
+external balance sheet sensitive to exchange-rate moves. Currency is crossed with
+accounting entry and functional component, so a query such as US-dollar portfolio
+liabilities is direct. For the headline position, see `ch_snb_auvekomq`.
 
 ## Access
 - **type**: snb-cube — SNB cube API

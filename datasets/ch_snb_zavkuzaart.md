@@ -12,14 +12,12 @@
 - **updated**: 2026-03 (latest published period)
 
 ## What is special
-Non-card retail payments: customer credit transfers, direct debits and other outgoing
-payments processed by banks. It is the cube that captures how Swiss customers actually
-send money, with a deep order-type hierarchy (`D1`) that distinguishes paper-based from
-non-paper-based transfers, then within non-paper-based splits eBanking, direct channels,
-standing orders and other types. This is where the migration away from paper payment
-slips is visible. It also separates whether a payment stays between resident banks or
-involves a non-resident bank (`D0`), giving a domestic-versus-cross-border read on the
-payment plumbing. History starts only 2012-03, later than the card cubes.
+Non-card retail payments: customer credit transfers, direct debits and other
+outgoing payments processed by banks. The order-type breakdown separates
+paper-based from electronic transfers and, within electronic, eBanking, direct
+channels and standing orders — which is where the migration away from paper
+payment slips is visible. It also separates payments between resident banks from
+those involving a bank abroad.
 
 ## Access
 - **type**: snb-cube — SNB cube API

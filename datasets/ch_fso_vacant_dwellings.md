@@ -11,10 +11,9 @@
 - **series**: 2
 
 ## What is special
-The official Swiss **vacancy rate** (Leerwohnungsziffer) and the absolute count of
-vacant dwellings, national, annual since 1995. The vacancy rate is the headline
-housing-market tightness indicator — it fell to ~1.0% by 2025, the tightest in
-years.
+The official Swiss vacancy rate (Leerwohnungsziffer) and the absolute number of
+vacant dwellings, nationally. The vacancy rate is the standard measure of housing
+market tightness; it had fallen to about 1.0% by 2025.
 
 ## Access
 - **type**: fso-sdmx — FSO SDMX (disseminate.stats.swiss), sliced to the national total

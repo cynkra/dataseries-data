@@ -12,14 +12,10 @@
 - **updated**: 2026-05-05
 
 ## What is special
-The Swiss CPI (Landesindex der Konsumentenpreise) with the **full position
-hierarchy**: 595 positions from the total index down to COICOP sub-baskets (food,
-housing, transport, ...), not just the headline total. This is the **detailed
-alternate** to the canonical SNB headline series (`ch_snb_plkopr`): reach for this
-one when you want the basket breakdown, and for `ch_snb_plkopr` when you want the
-headline total or YoY inflation across the long history (the FSO asset only carries
-the hierarchy from December 1982, whereas the SNB chain reaches back to 1921). Base
-period December 2025 = 100; history to December 1982.
+The Swiss consumer price index with its full basket breakdown: 595 COICOP
+positions from the total index down to individual goods and services (food,
+housing, transport). Base December 2025 = 100. For the headline index alone over a
+much longer history, use `ch_snb_plkopr`.
 
 ## Access
 - **type**: fso-dam-excel — FSO DAM Excel asset

@@ -12,17 +12,10 @@
 - **updated**: not published (live PX-Web pull; latest observation 2026Q1)
 
 ## What is special
-The cross-tabulated companion to BESTA: jobs by major region, broad economic
-sector, employment level and sex, quarterly back to 1995. It is **not canonical**
-for the employment concept; `ch_fso_besta` (by fine NOGA division) is the
-headline. This dataset exists for the **breakdown axes** BESTA collapses to
-total: it splits jobs by sex (men/women), by full-time vs part-time, and by the
-seven major regions (Grossregion). With 336 dimension combinations it is by far
-the largest of the FSO labour tables in this catalog. Two of its employment-rate
-levels are **seasonally adjusted** variants (`3` total SA, `4.1` full-time
-equivalents SA), so seasonal adjustment appears here as a dimension level rather
-than a separate dataset. It trades BESTA's NOGA depth (60 divisions) for only
-three sector aggregates (total, Sector 2, Sector 3).
+Jobs cut by major region, broad economic sector, employment level and sex — the
+breakdown axes that BESTA collapses into a total. Use it for the
+full-time/part-time and male/female splits or for regional detail; use
+`ch_fso_besta` when you need depth by NOGA division instead.
 
 ## Access
 - **type**: fso-pxweb — FSO PX-Web (json-stat2)

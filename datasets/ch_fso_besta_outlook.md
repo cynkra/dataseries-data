@@ -11,11 +11,10 @@
 - **series**: 20
 
 ## What is special
-The **forward-looking** labour indicator from the FSO employment barometer (BESTA):
-firms' employment-outlook index by economic division, quarterly. A reading above 1.0
-signals net hiring intent over the coming three months, below 1.0 net reduction —
-the leading complement to the jobs (`ch_fso_besta`) and vacancies
-(`ch_fso_vacancies`) series.
+Firms' employment intentions for the coming three months, from the FSO employment
+barometer, by economic division. A reading above 1.0 signals net hiring intent,
+below 1.0 net reduction — the forward-looking companion to jobs
+(`ch_fso_besta`) and vacancies (`ch_fso_vacancies`).
 
 ## Access
 - **type**: fso-pxweb — FSO PX-Web / STAT-TAB (the BESTA theme-0602 family is reachable, unlike

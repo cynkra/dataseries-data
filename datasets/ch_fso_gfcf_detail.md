@@ -11,14 +11,10 @@
 - **series**: 37
 
 ## What is special
-Gross fixed capital formation (investment) broken down by **institutional sector**
-(total economy, non-financial / financial corporations, general government,
-households, NPISH, …) **and asset type** (construction vs equipment/software, with
-construction split into building vs civil engineering), in CHF-million current
-prices, annual 1995–2024. Non-duplicative with `ch_seco_gdp`, which carries only the
-single total-economy GFCF aggregate inside the GDP expenditure split — this is the
-who-invests-in-what cut underneath it (e.g. how much of total investment is
-government civil-engineering vs corporate equipment).
+Investment (gross fixed capital formation) by institutional sector and asset type:
+who invests, and in what. Construction is split into building and civil
+engineering, and equipment and software are separated out. The national accounts
+(`ch_seco_gdp`) carry only the single economy-wide total.
 
 ## Access
 - **type**: fso-dam-csv — FSO DAM asset, master is a long CSV (not xlsx)

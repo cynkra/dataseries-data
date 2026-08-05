@@ -12,15 +12,11 @@
 - **updated**: 2026-03 release (PublishingDate in CSV header)
 
 ## What is special
-Bank lending to companies, cut by **firm size** (number of employees): up to 9,
-10-49, 50-249, 250+, plus public-sector entities. This is the SME-credit view of
-the loan book, useful for tracking whether small firms are getting financed. Each
-size band is further split by bank category, loan type (mortgage vs other,
-secured vs unsecured) and by whether the figure is the drawn amount (utilisation)
-or the granted credit line. The utilisation-vs-credit-line pairing is the
-distinctive twist: it shows both how much credit banks have committed and how
-much firms are actually using, so you can read headroom. Shorter history than the
-sector and domestic/foreign loan cubes (starts 2002).
+Bank lending to companies by firm size, measured in employees: up to 9, 10 to 49,
+50 to 249, 250 and more, plus public-sector entities. The SME credit view of the
+loan book. Each band is reported both as the amount actually drawn and as the
+credit line granted, so the headroom between commitment and use is readable
+directly.
 
 ## Access
 - **type**: snb-cube — SNB cube API

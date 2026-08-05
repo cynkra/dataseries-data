@@ -12,10 +12,10 @@
 - **updated**: 2026-05-18
 
 ## What is special
-The **ILO unemployment rate** (%), the internationally comparable definition. This
-is deliberately kept alongside the SNB/SECO **registered** unemployment series
-(`ch_snb_amarbma`): they measure different things (ILO survey-based vs registered
-at job centres) and should not be deduplicated into one. Monthly averages.
+The unemployment rate on the ILO definition, derived from labour-force survey
+data, which is the internationally comparable measure. It differs from registered
+unemployment (`ch_snb_amarbma`), which counts people enrolled at regional job
+centres; the two are not interchangeable.
 
 ## Access
 - **type**: fso-dam-excel — FSO DAM Excel asset

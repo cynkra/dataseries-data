@@ -12,16 +12,11 @@
 - **updated**: 2026-03 release (PublishingDate in CSV header)
 
 ## What is special
-Domestic bank loans broken down by **borrower industry** (NOGA/NACE sections):
-private households plus the full sector list from agriculture and manufacturing
-through construction, trade, hospitality, finance, health, public administration
-and a non-classifiable bucket. This is the most granular of the `bakred*`
-credit cubes, the one that tells you which parts of the Swiss economy are
-borrowing. The industry axis is crossed with bank category, loan type
-(mortgage / other, secured / unsecured) and the utilisation-vs-credit-line pair,
-which is what pushes it to 540 stored series. Long history from 1985, and the
-sector dimension is the distinctive feature; household mortgage utilisation is
-the default cell.
+Domestic bank loans by borrower industry: private households plus the full sector
+list from agriculture and manufacturing through construction, trade, hospitality,
+finance, health and public administration. The most granular of the SNB credit
+series, and the one that shows which parts of the Swiss economy are borrowing.
+Each industry is reported as both the amount drawn and the credit line granted.
 
 ## Access
 - **type**: snb-cube — SNB cube API

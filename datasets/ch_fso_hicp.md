@@ -12,20 +12,11 @@
 - **updated**: 2026-02-06
 
 ## What is special
-The **EU-harmonised** consumer price index for Switzerland (Harmonised Index of
-Consumer Prices, 2015 = 100), published by **Eurostat** — not the FSO. It is the
-internationally comparable inflation measure: all 27+ HICP economies are computed
-on a common COICOP basket and method, so this is the series to use when comparing
-Swiss inflation against the euro area or EU. We carry the all-items aggregate
-**CP00** plus the **12 main COICOP divisions** CP01..CP12 (= 13 series).
-
-This is **distinct from `ch_fso_cpi`** (the national Landesindex der
-Konsumentenpreise, LIK): the LIK is the FSO's domestic-method index with a far
-deeper position hierarchy (~595 positions) and a Dec-2025=100 base, whereas the
-HICP is the harmonised method on a 2015=100 base with a different (smaller)
-basket — notably the HICP excludes owner-occupied housing costs, which the LIK
-includes. Reach for `ch_fso_hicp` for EU comparability and for `ch_fso_cpi` for
-the domestic headline / detailed basket.
+The EU-harmonised consumer price index for Switzerland, published by Eurostat on a
+common method and basket across all HICP economies (2015 = 100). Use it when
+comparing Swiss inflation with the euro area or the EU. It differs from the
+national index (`ch_fso_cpi`) in both method and coverage — notably it excludes
+owner-occupied housing costs.
 
 ## Access
 - **type**: eurostat-sdmx — Eurostat SDMX 2.1 REST (SDMX-CSV)

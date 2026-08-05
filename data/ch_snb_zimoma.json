@@ -385,7 +385,15 @@
     }
   },
   "updated": "2026-08-03 14:30",
-  "topic": "Interest rates & yields",
+  "topic": {
+    "key": "interest-rates-yields",
+    "name": {
+      "en": "Interest rates & yields",
+      "de": "Zinsen & Renditen",
+      "fr": "Taux d'intérêt & rendements",
+      "it": "Tassi d'interesse e rendimenti"
+    }
+  },
   "concept": "Interest rates & yields / Money-market rates",
   "canonical": true,
   "featured": "SARON",
@@ -396,7 +404,7 @@
     "D0": "1TGT"
   },
   "description": {
-    "en": "The core money-market reference rates, monthly back to 1972. The distinctive feature is the country grouping (D0): Switzerland alongside the US, Japan, the UK and the euro area, so the same cube lets you compare CHF rates against the major currencies on one axis. It also spans the reference-rate transition end to end: the modern overnight benchmarks SARON, SOFR, TONA, SONIA and ESTR sit next to the legacy 3-month LIBOR series and EURIBOR. The Swiss block additionally carries the call money rate (tomorrow-next) and the 3-month money-market debt-register claims of the Confederation. With only 13 leaf series it is small but conceptually wide, and the Swiss 1TGT series gives the longest continuous CHF money-market history in the cube (from 1972).",
+    "en": "Money-market reference rates for Switzerland and the major currency areas — the United States, Japan, the United Kingdom and the euro area — on one axis, so franc rates compare directly against them. Spans the reference-rate transition, with the overnight benchmarks SARON, SOFR, TONA, SONIA and ESTR alongside the legacy three-month Libor and Euribor series.",
     "de": "Die zentralen Referenzzinssätze des Geldmarkts, monatlich zurück bis 1972. Das prägende Merkmal ist die Ländergruppierung (D0): die Schweiz neben den USA, Japan, dem Vereinigten Königreich und dem Euroraum, sodass sich Frankensätze im selben Würfel auf einer Achse mit den grossen Währungen vergleichen lassen. Der Würfel deckt zudem den Übergang der Referenzzinssätze lückenlos ab: Die modernen Tagesgeld-Benchmarks SARON, SOFR, TONA, SONIA und ESTR stehen neben den früheren 3-Monats-LIBOR-Reihen und dem EURIBOR. Der Schweizer Block enthält zusätzlich den Tagesgeldsatz (Tom-Next) und die 3-monatigen Geldmarktbuchforderungen des Bundes. Mit nur 13 Blattreihen ist er klein, aber konzeptionell breit; die Schweizer Reihe 1TGT liefert die längste durchgehende Frankengeldmarkt-Historie im Würfel (ab 1972).",
     "fr": "Les taux de référence du marché monétaire, mensuels depuis 1972. Sa caractéristique distinctive est le regroupement par pays (D0) : la Suisse aux côtés des États-Unis, du Japon, du Royaume-Uni et de la zone euro, de sorte qu'un même cube permet de comparer les taux du franc aux grandes devises sur un seul axe. Il couvre aussi la transition des taux de référence de bout en bout : les références au jour le jour modernes SARON, SOFR, TONA, SONIA et ESTR côtoient les anciennes séries LIBOR à 3 mois et l'EURIBOR. Le bloc suisse porte en outre le taux de l'argent au jour le jour (tom-next) et les créances comptables à 3 mois de la Confédération sur le marché monétaire. Avec seulement 13 séries terminales, il est petit mais conceptuellement large, et la série suisse 1TGT offre le plus long historique continu du marché monétaire en francs du cube (depuis 1972).",
     "it": "I tassi di riferimento del mercato monetario, mensili a partire dal 1972. Il tratto distintivo è il raggruppamento per paese (D0): la Svizzera accanto a Stati Uniti, Giappone, Regno Unito e area euro, così che lo stesso cubo consente di confrontare i tassi del franco con le principali valute su un unico asse. Copre inoltre per intero la transizione dei tassi di riferimento: i moderni benchmark overnight SARON, SOFR, TONA, SONIA ed ESTR affiancano le precedenti serie LIBOR a 3 mesi e l'EURIBOR. Il blocco svizzero riporta anche il tasso del denaro a un giorno (tom-next) e i crediti contabili a 3 mesi della Confederazione sul mercato monetario. Con sole 13 serie terminali è piccolo ma concettualmente ampio, e la serie svizzera 1TGT offre la più lunga storia continua del mercato monetario in franchi presente nel cubo (dal 1972)."

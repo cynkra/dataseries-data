@@ -12,13 +12,11 @@
 - **updated**: 2026 Q1
 
 ## What is special
-The canonical Swiss **labour-demand** index: it tracks the number of publicly
-advertised job openings, base Q1 2008 = 100. A genuine leading indicator of the
-labour market and one of the few **non-government providers** in the catalog —
-compiled by the Stellenmarkt-Monitor Schweiz at the University of Zurich and
-branded the Adecco Group Swiss Job Market Index. The headline decomposes by where
-the vacancy was advertised (internet job portals, company websites, press), which
-captures the long structural shift from print to online recruiting.
+Index of publicly advertised job vacancies in Switzerland, compiled by the
+Stellenmarkt-Monitor at the University of Zurich and published as the Adecco Group
+Swiss Job Market Index (Q1 2008 = 100). A leading indicator of labour demand,
+broken down by where the vacancy was advertised: online job portals, company
+websites and print.
 
 ## Access
 - **type**: scraped

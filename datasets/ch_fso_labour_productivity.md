@@ -11,10 +11,10 @@
 - **series**: 3
 
 ## What is special
-The headline **labour-productivity** decomposition: real GDP, actual hours worked,
-and productivity (GDP per hour), all as a chained-volume index, base 1991 = 100.
-Productivity is the ratio of the other two, so the three plot together on one scale —
-the long-run Swiss productivity-growth story (≈ +0.9%/yr) at a glance.
+Real GDP, hours actually worked, and labour productivity (GDP per hour), as
+chained-volume indices on a common base of 1991 = 100. Productivity is the ratio
+of the other two, so all three plot on one scale and the long-run Swiss trend of
+roughly +0.9% a year is readable directly.
 
 ## Access
 - **type**: fso-dam-csv — FSO DAM asset, master is a long CSV (not xlsx)
