@@ -60,6 +60,13 @@ pre-crisis level rather than YoY.
     discontinued (2019-2022). Non-default alternate.
   This is the split / single-select dimension.
 
+## Labels
+- **units**: Scaled to the rate of growth of real, seasonally, calendar and sport-event adjusted GDP versus the same quarter of the previous year (percent)
+- dim: structure
+  - **label**: Series
+  - seco_wwa: Index of weekly economic activity (WEA)
+  - seco_wwa_pre_covid: WEA compared with the pre-crisis level (discontinued)
+
 ## Display
 - **split**: structure
 - **single-select**: structure

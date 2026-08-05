@@ -52,6 +52,11 @@ the domestic headline / detailed basket.
   Transport, Communications, Recreation and culture, Education, Restaurants and
   hotels, Miscellaneous). Hierarchy: CP00 → CP01..CP12.
 
+## Labels
+- **units**: Index (2015 = 100)
+- dim: coicop
+  - **label**: COICOP consumption purpose
+
 ## Display
 - **split**: coicop
 - **single-select**:

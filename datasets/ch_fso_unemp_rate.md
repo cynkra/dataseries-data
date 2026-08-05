@@ -38,6 +38,18 @@ other at total), giving 5 series:
 - `origin`: total / Swiss / foreign.
 - `sex`: total / men / women.
 
+## Labels
+- dim: origin
+  - **label**: Nationality
+  - tot: Total
+  - ch: Swiss nationals
+  - ex: Foreign nationals
+- dim: sex
+  - **label**: Sex
+  - tot: Total
+  - men: Men
+  - wom: Women
+
 ## Display
 - **split**: origin
 - **single-select**:

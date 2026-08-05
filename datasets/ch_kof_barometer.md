@@ -1,6 +1,7 @@
 # KOF Economic Barometer
 
 - **id**: ch_kof_barometer
+- **title**: KOF Economic Barometer
 - **concept**: Business cycle & sentiment / Leading barometer
 - **canonical**: yes
 - **source**: KOF Swiss Economic Institute (ETH Zurich)

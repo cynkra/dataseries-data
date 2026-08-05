@@ -62,6 +62,11 @@ the Zurich / Lake-Geneva / Northwestern cluster visible at a glance.
   BE/FR/SO/NE/JU; Northwestern = BS/BL/AG; Zurich = ZH; Eastern = GL/SH/AR/AI/SG/GR/TG;
   Central = LU/UR/SZ/OW/NW/ZG; Ticino = TI.
 
+## Labels
+- **units**: CHF million, at current prices
+- dim: region
+  - **label**: Region
+
 ## Display
 - **split**: region
 - **default**: region=ch

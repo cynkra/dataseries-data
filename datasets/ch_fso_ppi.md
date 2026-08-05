@@ -36,6 +36,10 @@ the old parser's `idx_type` dimension. Longest price history in the catalog.
 - `base`: the index original base year (1963, 1993, 2003, 2010, 2015, 2020, 2025).
   Month labels translated for English (Mai -> May, Dez -> Dec).
 
+## Labels
+- dim: base
+  - **label**: Index base
+
 ## Display
 - **split**: base
 - **single-select**: 

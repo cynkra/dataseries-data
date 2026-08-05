@@ -1,6 +1,7 @@
 # Swiss Wage Index
 
 - **id**: ch_fso_wage_idx
+- **title**: Swiss Wage Index
 - **concept**: Labour / Wages
 - **canonical**: yes
 - **source**: Swiss Federal Statistical Office (FSO)
@@ -48,6 +49,35 @@ sector and sex. Captures wage development the SNB cubes do not carry at all.
 The published `change` (year-on-year %) series is dropped: it is exactly the app's
 YoY % transform, recomputed on the fly from the index, so storing it would just
 duplicate a button. Keeping only the index collapses the former `measure` dimension.
+
+## Labels
+- dim: breakdown
+  - **label**: Breakdown
+  - tot: Total
+  - by_sex: By sex
+  - m: Men
+  - f: Women
+  - by_sector: By sector
+  - bf1: Secondary sector
+  - f41: Construction
+  - gs4: Tertiary sector
+- dim: adjustment
+  - **label**: Adjustment
+  - nominal: Nominal wage index
+  - real: Real wage index
+
+## Hierarchy
+The Total and its two non-crossing cuts on one overlay axis; by_sex / by_sector are
+real grouping levels (no data of their own), Construction nests under Secondary as a
+sub-position.
+- tot
+  - by_sex
+    - m
+    - f
+  - by_sector
+    - bf1
+      - f41
+    - gs4
 
 ## Display
 - **split**: breakdown

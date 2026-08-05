@@ -49,6 +49,39 @@ the male/female split of any sector reads straight off the chart.
   D, `P_2_3` E, `P_2_4` F; `P_3_1` G … `P_3_14` T). 23 codes.
 - `sex` (Sex): `total` Total, `male` Men, `female` Women.
 
+## Labels
+- **units**: Number of employed persons (domestic concept, quarterly average)
+- dim: sector
+  - **label**: Economic sector
+  - P: Total
+  - P_1: Sector 1: Agriculture, forestry and fishing
+  - P_1_1: A Agriculture, forestry and fishing
+  - P_2: Sector 2: Industry and construction
+  - P_2_1: B-C Mining, quarrying and manufacturing
+  - P_2_2: D Electricity, gas, steam and air conditioning supply
+  - P_2_3: E Water supply; sewerage, waste management and remediation
+  - P_2_4: F Construction
+  - P_3: Sector 3: Services
+  - P_3_1: G Wholesale and retail trade; repair of motor vehicles
+  - P_3_2: H Transportation and storage
+  - P_3_3: I Accommodation and food service activities
+  - P_3_4: J Information and communication
+  - P_3_5: K Financial and insurance activities
+  - P_3_6: L Real estate activities
+  - P_3_7: M Professional, scientific and technical activities
+  - P_3_8: N Administrative and support service activities
+  - P_3_9: O Public administration and defence; compulsory social security
+  - P_3_10: P Education
+  - P_3_11: Q Human health and social work activities
+  - P_3_12: R Arts, entertainment and recreation
+  - P_3_13: S Other service activities
+  - P_3_14: T Activities of households as employers
+- dim: sex
+  - **label**: Sex
+  - total: Total
+  - male: Men
+  - female: Women
+
 ## Display
 - **split**: sector
 - **single-select**:

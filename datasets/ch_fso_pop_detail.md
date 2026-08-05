@@ -32,6 +32,19 @@ foreign-population share — ~27.4% foreign in 2024.
 - `nationality`: Total / Swiss / Foreign.
 - `sex`: Total / Male / Female.
 
+## Labels
+- **units**: Number of permanent residents (year-end stock)
+- dim: nationality
+  - **label**: Nationality
+  - _T: Total
+  - 1: Swiss
+  - 2: Foreign
+- dim: sex
+  - **label**: Sex
+  - _T: Total
+  - 1: Male
+  - 2: Female
+
 ## Display
 - **split**: nationality
 - **single-select**:

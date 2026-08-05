@@ -13,7 +13,7 @@ root <- tryCatch(
   dirname(normalizePath(sub("--file=", "", grep("--file=", commandArgs(FALSE), value = TRUE)))),
   error = function(e) "R"
 )
-for (f in c("dates.R", "http.R", "datasheet.R", "io.R", "hierarchy.R", "source_snb.R", "source_kof.R",
+for (f in c("dates.R", "http.R", "datasheet.R", "io.R", "labels.R", "hierarchy.R", "source_snb.R", "source_kof.R",
             "source_fso.R", "source_fso_excel.R", "source_fso_excel_sets.R",
             "source_fso_dam_csv.R", "source_fso_sdmx.R", "source_eurostat.R",
             "source_seco.R", "source_ffa.R", "source_adecco.R")) {
@@ -434,7 +434,8 @@ finalize_dataset <- function(ds) {
   ds$meta <- modifyList(ds$meta, read_datasheet_meta(ds$id, DATASHEET_DIR, lines = sheet))
   ds <- drop_redundant_levels(ds)
   ds <- drop_degenerate_dims(ds)
-  ds <- attach_hierarchy(ds, DATASHEET_DIR, lines = sheet)
+  ds <- attach_labels(ds, DATASHEET_DIR, lines = sheet)     # curated text first …
+  ds <- attach_hierarchy(ds, DATASHEET_DIR, lines = sheet)  # … then structure
   ds <- write_dataset(ds, DATA_DIR)
   cat(sprintf("wrote %-22s %7d rows, %4d series  [%s]\n",
               ds$id, nrow(ds$data), n_series(ds$data),

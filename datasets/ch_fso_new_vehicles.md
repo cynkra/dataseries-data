@@ -39,6 +39,23 @@ are ~25% of new-car registrations.
   (petrol, diesel) / Electric (BEV) / Fuel cell / Gas / Other / No motor — all
   nested under Total as a hierarchy.
 
+## Labels
+- **units**: Number of new registrations
+- dim: fuel
+  - **label**: Fuel
+  - _T: Total
+  - PC: Petrol
+  - PH: Petrol hybrid (HEV)
+  - DC: Diesel
+  - DH: Diesel hybrid (HEV)
+  - HP: Plug-in hybrid (petrol)
+  - HD: Plug-in hybrid (diesel)
+  - EL: Electric (BEV)
+  - FC: Fuel cell (hydrogen)
+  - GA: Gas
+  - _O: Other
+  - NM: No motor
+
 ## Display
 - **split**: fuel
 - **single-select**:

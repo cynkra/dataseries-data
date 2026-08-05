@@ -1,6 +1,7 @@
 # Monetary base
 
 - **id**: ch_snb_snbmoba
+- **title**: Monetary base
 - **concept**: Money & banking / Monetary aggregates
 - **canonical**: no (alternate for Monetary aggregates; `ch_snb_snbmonagg` M1-M3 is canonical)
 - **source**: Swiss National Bank (SNB)

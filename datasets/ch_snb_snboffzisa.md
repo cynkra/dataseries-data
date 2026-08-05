@@ -1,6 +1,7 @@
 # Official interest rates
 
 - **id**: ch_snb_snboffzisa
+- **title**: Official interest rates
 - **concept**: Interest rates & yields / Policy & official rates
 - **canonical**: yes
 - **source**: Swiss National Bank (SNB)

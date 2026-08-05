@@ -81,6 +81,62 @@ budget / forecast.
   provisional financial statement, survey financial statement / budget, budget /
   financial plan, or a forecast. Lets the app separate realized from projected years.
 
+## Labels
+- **units**: CHF million (levels) / share of GDP, 0-1 (ratios)
+- dim: level
+  - **label**: Government level
+  - staat: General government
+  - bund: Confederation
+  - ktn: Cantons
+  - gdn: Communes
+  - sv: Social security funds
+  - bund_ktn_gdn: Confederation, cantons and communes
+- dim: model
+  - **label**: Accounting model
+  - fs: FS model (financial statistics)
+  - gfs: GFS model (Maastricht / SNA basis)
+- dim: indicator
+  - **label**: Indicator
+  - einnahmen: Receipts
+  - ausgaben: Expenditure
+  - saldo: Balance
+  - einnahmen_ord: Ordinary receipts
+  - ausgaben_ord: Ordinary expenditure
+  - saldo_ord: Ordinary balance
+  - ertrag: Revenue
+  - aufwand: Expenses
+  - fiskalertrag: Fiscal revenue (taxes)
+  - bruttoschuld_fs: Gross debt
+  - nettoschulden_fs: Net debt
+  - maastricht_schuld: Gross debt (Maastricht)
+  - nettoschuld: Net debt
+  - defizit_ueberschuss: Deficit / surplus
+  - nettozugang_sachvermoegen: Net acquisition of non-financial assets
+  - aktiven: Assets
+  - fremdkapital: Liabilities
+  - eigenkapital: Equity / net worth
+  - bip: Gross domestic product
+  - fiskalquote: Fiscal ratio (tax-to-GDP)
+  - einnahmenquote: Receipts-to-GDP ratio
+  - staatsquote: Expenditure-to-GDP ratio
+  - bruttoschuldenquote: Gross-debt-to-GDP ratio (Maastricht)
+  - schuldenquote: Debt-to-GDP ratio
+  - nettoschuldenquote: Net-debt-to-GDP ratio
+  - grp_fs: Financing view (receipts, expenditure, balance)
+  - grp_gfs: Accrual view (revenue, expenses, balance)
+  - grp_bs: Balance sheet
+  - grp_debt: Debt
+  - grp_ratio: Ratios (% of GDP)
+- dim: estimate
+  - **label**: Estimate type
+  - `Financial statements`: Financial statements (actual)
+  - `Provisional financial statements`: Provisional financial statements
+  - `Survey financial statements`: Survey financial statements
+  - `Survey budget`: Survey budget
+  - `Budget/financial plans`: Budget / financial plans
+  - Forecasts: Forecasts
+  - `Data available`: Data available
+
 ## Display
 - **split**: indicator
 - **single-select**: level, model, estimate
@@ -96,29 +152,29 @@ The indicators have no single total; they are grouped by accounting view — the
 financing view (receipts / expenditure / balance), the GFS accrual view (revenue /
 expenses / balance), the balance sheet, the debt measures and the GDP-ratio block —
 with GDP itself on its own.
-- @grp_fs: Financing view (receipts, expenditure, balance)
+- @grp_fs
   - einnahmen
   - ausgaben
   - saldo
   - einnahmen_ord
   - ausgaben_ord
   - saldo_ord
-- @grp_gfs: Accrual view (revenue, expenses, balance)
+- @grp_gfs
   - ertrag
   - aufwand
   - fiskalertrag
   - defizit_ueberschuss
   - nettozugang_sachvermoegen
-- @grp_bs: Balance sheet
+- @grp_bs
   - aktiven
   - fremdkapital
   - eigenkapital
-- @grp_debt: Debt
+- @grp_debt
   - bruttoschuld_fs
   - nettoschulden_fs
   - maastricht_schuld
   - nettoschuld
-- @grp_ratio: Ratios (% of GDP)
+- @grp_ratio
   - fiskalquote
   - einnahmenquote
   - staatsquote

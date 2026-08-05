@@ -51,6 +51,27 @@ government civil-engineering vs corporate equipment).
   `P51G` (the grand total) is present only for `S1` in the source; the breakdown
   assets (construction, building, civil engineering, equipment) exist for all 9 sectors.
 
+## Labels
+- **units**: CHF million, current prices
+- dim: sector
+  - **label**: Institutional sector
+  - S1: Total economy
+  - S11: Non-financial corporations
+  - S12: Financial corporations
+  - S121T127: Financial institutions (other than S128 S129)
+  - S12Q: Insurance corporations and pension funds
+  - S13: General government
+  - S1314: Social security funds
+  - S14: Households
+  - S15: Non-profit institutions serving households
+- dim: asset
+  - **label**: Asset type
+  - P51G: Gross fixed capital formation (total)
+  - P5111_N111_112G: Construction
+  - 6011: Building construction
+  - 6010: Civil engineering
+  - P5111_N113T117G: Equipment, fixed assets and software
+
 ## Display
 - **split**: sector
 - **single-select**:

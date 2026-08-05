@@ -45,6 +45,14 @@ semi-annual price series in the catalog.
 - `worktype`: the type of construction work — `total` (Construction: Total),
   `hochbau` (Building construction), `tiefbau` (Civil engineering).
 
+## Labels
+- **units**: Index (October 2020 = 100)
+- dim: worktype
+  - **label**: Type of work
+  - total: Construction: Total
+  - hochbau: Building construction (Hochbau)
+  - tiefbau: Civil engineering (Tiefbau)
+
 ## Display
 - **split**: worktype
 - **single-select**:

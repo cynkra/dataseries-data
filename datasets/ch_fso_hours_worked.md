@@ -43,6 +43,25 @@ feature — reads directly.
 - `worktime`: `_T` total, `FT` full-time, `PT` part-time, `PT_I` part-time I (50-89%),
   `PT_II` part-time II (under 50%).
 
+## Labels
+- dim: measure
+  - **label**: Measure
+  - weekly: Usual hours worked per week per job
+  - annual: Annual hours worked per job
+  - volume: Annual volume of hours worked (total)
+- dim: sex
+  - **label**: Sex
+  - _T: Total
+  - M: Men
+  - F: Women
+- dim: worktime
+  - **label**: Working time
+  - _T: Total
+  - FT: Full-time
+  - PT: Part-time
+  - PT_I: Part-time I (50-89%)
+  - PT_II: Part-time II (under 50%)
+
 ## Display
 - **split**: worktime
 - **single-select**: measure

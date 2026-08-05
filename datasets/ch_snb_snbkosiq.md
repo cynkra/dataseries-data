@@ -1,6 +1,7 @@
 # Business cycle signals
 
 - **id**: ch_snb_snbkosiq
+- **title**: Business cycle signals
 - **concept**: Business cycle & sentiment / Business cycle signals
 - **canonical**: yes
 - **source**: Swiss National Bank (SNB)

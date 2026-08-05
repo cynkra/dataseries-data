@@ -1,6 +1,7 @@
 # Vacant dwellings
 
 - **id**: ch_fso_vacant_dwellings
+- **title**: Vacant dwellings
 - **concept**: Domestic economy / Vacant dwellings
 - **canonical**: yes
 - **source**: Swiss Federal Statistical Office (FSO)
@@ -32,6 +33,12 @@ years.
 ## Dimensions
 - `measure`: `PC` Vacancy rate (%) — the default/headline — and `V` Vacant dwellings
   (number). Two different units, so single-select rather than a meaningful overlay.
+
+## Labels
+- dim: measure
+  - **label**: Measure
+  - PC: Vacancy rate (%)
+  - V: Vacant dwellings (number)
 
 ## Display
 - **split**: measure

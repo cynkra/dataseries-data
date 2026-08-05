@@ -1,6 +1,7 @@
 # Gross domestic product (GDP)
 
 - **id**: ch_seco_gdp
+- **title**: Gross domestic product (GDP)
 - **concept**: National accounts / GDP (output, expenditure, income)
 - **canonical**: yes
 - **featured**: GDP

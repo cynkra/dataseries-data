@@ -1,6 +1,7 @@
 # Jobs by economic division and sex
 
 - **id**: ch_fso_jobs_sex
+- **title**: Jobs by economic division and sex
 - **concept**: Labour / Employment / jobs
 - **canonical**: no (alternate / breakdown of `ch_fso_besta`)
 - **source**: Swiss Federal Statistical Office (FSO)

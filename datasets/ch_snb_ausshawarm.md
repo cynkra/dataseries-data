@@ -1,6 +1,7 @@
 # Foreign trade by goods category
 
 - **id**: ch_snb_ausshawarm
+- **title**: Foreign trade by goods category
 - **concept**: External sector / Foreign trade
 - **canonical**: yes
 - **featured**: Foreign trade

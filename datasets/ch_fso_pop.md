@@ -41,6 +41,20 @@ naturalisations, absolute change).
   it is the first difference of the population stock, a trivial and rarely-used
   derivative the user can read straight off the stock series.
 
+## Labels
+- dim: item
+  - **label**: Demographic component
+  - pop_stock_jan: Population on 1 January
+  - live_births: Live births
+  - deaths: Deaths
+  - birth_surplus: Excess of births over deaths
+  - immigration: Immigration
+  - emigration: Emigration
+  - migration_bal: Net migration
+  - naturalisation: Acquisition of Swiss citizenship
+  - adjustments: Adjustments
+  - pop_stock_dec: Population on 31 December
+
 ## Display
 - **split**: item
 - **single-select**: 

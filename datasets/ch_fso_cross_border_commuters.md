@@ -31,6 +31,38 @@ legacy `ch.fso.ggs` series.
 ## Dimensions
 - `canton`: 26 cantons of work plus `_T` Switzerland total (the default).
 
+## Labels
+- **units**: Number of cross-border commuters (estimate)
+- dim: canton
+  - **label**: Canton of work
+  - _T: Switzerland (total)
+  - 1: Zurich
+  - 10: Fribourg
+  - 11: Solothurn
+  - 12: Basel-Stadt
+  - 13: Basel-Landschaft
+  - 14: Schaffhausen
+  - 15: Appenzell A.Rh.
+  - 16: Appenzell I.Rh.
+  - 17: St. Gallen
+  - 18: Grisons
+  - 19: Aargau
+  - 2: Bern
+  - 20: Thurgau
+  - 21: Ticino
+  - 22: Vaud
+  - 23: Valais
+  - 24: Neuchatel
+  - 25: Geneva
+  - 26: Jura
+  - 3: Lucerne
+  - 4: Uri
+  - 5: Schwyz
+  - 6: Obwalden
+  - 7: Nidwalden
+  - 8: Glarus
+  - 9: Zug
+
 ## Display
 - **split**: canton
 - **single-select**:

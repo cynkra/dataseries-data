@@ -60,6 +60,12 @@ this datasheet, not from a hierarchy heuristic).
 - `type` — `index` (index points) or `sd` (standard deviation).
 - `seas_adj` — `na` (raw) or `csa` (seasonally + calendar adjusted).
 
+## Labels
+- dim: structure
+  - grp_prices: Prices
+  - grp_jobs: Employment
+  - grp_saving: Saving
+
 ## Display
 - **split**: structure
 - **single-select**: type, seas_adj
@@ -80,13 +86,13 @@ grouped by theme; the retired 6.2 index variant sits on its own.
   - ks_i42_fin_pos_exp_q
   - ks_i52_spend_q
 - ks_i11_econ_hist_q
-- @grp_prices: Prices
+- @grp_prices
   - ks_i21_price_hist_q
   - ks_i22_price_exp_q
-- @grp_jobs: Employment
+- @grp_jobs
   - ks_i31_job_secure_q
   - ks_i32_unemp_exp_q
-- @grp_saving: Saving
+- @grp_saving
   - ks_i51_save_q
   - ks_i53_save_exp_q
 - ks_i62_index_q

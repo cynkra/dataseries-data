@@ -1,6 +1,7 @@
 # Swiss stock indices
 
 - **id**: ch_snb_capchstocki
+- **title**: Swiss stock indices
 - **concept**: Financial markets / Swiss stock indices
 - **canonical**: yes
 - **featured**: Stock market

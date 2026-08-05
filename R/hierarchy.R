@@ -39,16 +39,17 @@ read_hierarchy_block <- function(lines) {
   lapply(specs, function(s) {
     out <- list(dim = s$dim)
     if (!is.null(s$derive)) { out$derive <- s$derive; return(out) }
-    # Interpret the raw bullet text: "@code: Label" declares a synthetic grouping
-    # header; anything else is a real level code.
+    # Interpret the raw bullet text: "@code" declares a synthetic grouping header
+    # (its display text lives in the ## Labels block); the legacy "@code: Label"
+    # form still carries the text inline. Anything else is a real level code.
     groups <- character(0)
     items <- lapply(s$items, function(it) {
       txt <- it$text
       if (startsWith(txt, "@")) {
-        kv <- regmatches(txt, regexec("^@(\\S+?):\\s*(.+)$", txt))[[1]]
-        if (length(kv) != 3)
-          stop(sprintf("hierarchy: malformed group line '%s' (want '@code: Label')", txt), call. = FALSE)
-        groups[[kv[2]]] <<- kv[3]
+        kv <- regmatches(txt, regexec("^@([^\\s:]+)(?::\\s*(.+))?$", txt, perl = TRUE))[[1]]
+        if (length(kv) < 2 || !nzchar(kv[2]))
+          stop(sprintf("hierarchy: malformed group line '%s' (want '@code' or '@code: Label')", txt), call. = FALSE)
+        groups[[kv[2]]] <<- if (length(kv) == 3 && nzchar(kv[3])) kv[3] else NA_character_
         list(depth = it$depth, code = kv[2])
       } else {
         list(depth = it$depth, code = txt)
@@ -163,9 +164,18 @@ apply_hierarchy_spec <- function(ds, spec) {
   } else {
     # A declared tree OVERRIDES a source-supplied hierarchy (you only write the block
     # when the source tree is missing or wrong — e.g. SNB ships the M1/M2/M3 aggregates
-    # flat, but they nest). Register synthetic group labels, then validate the codes.
-    for (g in names(spec$groups))
-      levels[[g]] <- list(label = list(en = spec$groups[[g]]), data = FALSE)
+    # flat, but they nest). Register synthetic group codes, then validate the codes.
+    # Bare "@code" groups (NA label) keep the label the ## Labels block already set;
+    # the legacy inline form still writes its text here.
+    for (g in names(spec$groups)) {
+      if (is.na(spec$groups[[g]])) {
+        lv <- levels[[g]] %||% list()
+        lv$data <- FALSE
+        levels[[g]] <- lv
+      } else {
+        levels[[g]] <- list(label = list(en = spec$groups[[g]]), data = FALSE)
+      }
+    }
     declared <- tree_codes(spec$tree)
     unknown <- setdiff(declared, c(codes, names(spec$groups)))
     if (length(unknown))

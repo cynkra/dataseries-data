@@ -1,6 +1,7 @@
 # Foreign trade by partner country
 
 - **id**: ch_fso_trade_partner
+- **title**: Foreign trade by partner country
 - **concept**: External sector / Foreign trade
 - **canonical**: yes
 - **source**: Swiss Federal Statistical Office (FSO) / Federal Office for Customs and Border Security (FOCBS)
@@ -59,6 +60,19 @@ trade-by-goods value series — the SNB cubes carry no partner-country dimension
   economic area). Functionally determined by `partner`; surfaced as its own
   single-select so a user can hold the chart to either just the countries or just the
   aggregates. (It is not dropped as degenerate because it carries two genuine values.)
+
+## Labels
+- **units**: CHF millions
+- dim: flow
+  - **label**: Trade flow
+  - export: Exports
+  - import: Imports
+- dim: partner
+  - **label**: Partner country / region
+- dim: level
+  - **label**: Aggregation level
+  - group: Continent / economic area
+  - country: Individual country
 
 ## Display
 - **split**: partner

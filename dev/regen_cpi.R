@@ -5,7 +5,7 @@
 #
 # Run: Rscript dev/regen_cpi.R
 root <- "R"
-for (f in c("dates.R", "http.R", "datasheet.R", "io.R", "hierarchy.R",
+for (f in c("dates.R", "http.R", "datasheet.R", "io.R", "labels.R", "hierarchy.R",
             "source_fso_excel.R", "source_fso_excel_sets.R")) source(file.path(root, f))
 
 DATA_DIR <- "data"; DATASHEET_DIR <- "datasets"
@@ -15,6 +15,7 @@ DATA_DIR <- "data"; DATASHEET_DIR <- "datasets"
 dl <- fso_excel_download(read_access("ch_fso_cpi", DATASHEET_DIR)$identifier)
 ds <- fso_excel_ch_fso_cpi(dl$path, dl$pubdate)
 ds$meta <- modifyList(ds$meta, read_datasheet_meta(ds$id, DATASHEET_DIR))
+ds <- attach_labels(ds, DATASHEET_DIR)
 ds <- attach_hierarchy(ds, DATASHEET_DIR)            # no-op: parser already set the tree
 ds <- write_dataset(ds, DATA_DIR)
 h <- ds$meta$dimensions$item$hierarchy

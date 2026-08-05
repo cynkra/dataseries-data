@@ -45,6 +45,10 @@ Dec-2020=100 asset `su-d-05.02.67`). History to December 1982.
   non-alcoholic beverages). English level labels come from `PosTxt_E` (falling back
   to `Item_E`).
 
+## Labels
+- dim: item
+  - **label**: CPI position
+
 ## Display
 - **split**: item
 - **single-select**:

@@ -33,6 +33,14 @@ the long-run Swiss productivity-growth story (≈ +0.9%/yr) at a glance.
 - `indicator`: `gdp` GDP volume, `hours` actual hours worked, `productivity` GDP per
   hour worked (the default).
 
+## Labels
+- **units**: Index (1991 = 100), chained volume (previous year's prices)
+- dim: indicator
+  - **label**: Indicator
+  - gdp: Gross domestic product (volume)
+  - hours: Actual hours worked
+  - productivity: Labour productivity (GDP per hour worked)
+
 ## Display
 - **split**: indicator
 - **single-select**:
