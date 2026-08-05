@@ -21,7 +21,7 @@ Switzerland is captured on three work-type levels: the overall index
 semi-annual price series in the catalog.
 
 ## Access
-- **type**: FSO DAM Excel asset
+- **type**: fso-dam-excel — FSO DAM Excel asset
 - **order number**: cc-t-05.05.01 (currently DAM asset 36269766)
 - **call**: `fso_excel_download("cc-t-05.05.01")`
 

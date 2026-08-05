@@ -24,7 +24,8 @@ the SNB, so many sector/component cells are empty; the stored 71 series are the
 populated combinations, not the full 3x5x6 grid.
 
 ## Access
-- **type**: SNB cube API
+- **type**: snb-cube — SNB cube API
+- **cube**: `auversecq`
 - **endpoint**: `https://data.snb.ch/api/cube/auversecq/data/json/en`
 - **call**: `snb_fetch("auversecq", title = "Switzerland's international investment position - Breakdown by sector - Quarter")`
 

@@ -27,7 +27,8 @@ CONCEPT-UNIVERSE lists it as a supporting money-and-banking series next to the
 monetary base and aggregates.
 
 ## Access
-- **type**: SNB cube API
+- **type**: snb-cube — SNB cube API
+- **cube**: `snbbipo`
 - **endpoint**: `https://data.snb.ch/api/cube/snbbipo/data/json/en`
 - **call**: `snb_fetch("snbbipo")` (cube_id = id minus `ch_snb_` prefix)
 

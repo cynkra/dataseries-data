@@ -23,7 +23,8 @@ With only 13 leaf series it is small but conceptually wide, and the Swiss `1TGT`
 gives the longest continuous CHF money-market history in the cube (from 1972).
 
 ## Access
-- **type**: SNB cube API
+- **type**: snb-cube — SNB cube API
+- **cube**: `zimoma`
 - **endpoint**: `https://data.snb.ch/api/cube/zimoma/data/json/en`
 - **call**: `snb_fetch("zimoma", title = "Money market rates")`
 

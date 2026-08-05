@@ -17,8 +17,8 @@ long 1861– demographic balance with births/deaths) with the modern
 foreign-population share — ~27.4% foreign in 2024.
 
 ## Access
-- **type**: FSO SDMX (disseminate.stats.swiss), sliced to the national total
-- **flow**: agency `CH1.STATPOP`, dataflow `DF_STATPOP_REGLING`, version 1.0.0
+- **type**: fso-sdmx — FSO SDMX (disseminate.stats.swiss), sliced to the national total
+- **flow**: `CH1.STATPOP/DF_STATPOP_REGLING/1.0.0` (agency `CH1.STATPOP`, dataflow `DF_STATPOP_REGLING`, version 1.0.0)
 - **call**: `fso_sdmx_pop_detail("ch_fso_pop_detail")`
 
 ## Parsing recipe

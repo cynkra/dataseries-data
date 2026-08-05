@@ -33,7 +33,8 @@ forward). An annual view, if needed, is derived on demand by year-averaging the
 quarterly `P` series rather than stored as a separate dataset.
 
 ## Access
-- **type**: SNB cube API
+- **type**: snb-cube — SNB cube API
+- **cube**: `snbiprogq`
 - **endpoint**: `https://data.snb.ch/api/cube/snbiprogq/data/json/en`
 - **call**: `snb_fetch("snbiprogq")` (cube_id = id minus `ch_snb_` prefix)
 

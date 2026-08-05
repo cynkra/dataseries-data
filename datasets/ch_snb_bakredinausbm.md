@@ -22,7 +22,8 @@ location. Each combination is further crossed by bank category, loan type
 the same utilisation/headroom logic as the other `bakred*` cubes.
 
 ## Access
-- **type**: SNB cube API
+- **type**: snb-cube — SNB cube API
+- **cube**: `bakredinausbm`
 - **endpoint**: `https://data.snb.ch/api/cube/bakredinausbm/data/json/en`
 - **call**: `snb_fetch("bakredinausbm", title = "Mortgage loans and other domestic and foreign loans")`
 

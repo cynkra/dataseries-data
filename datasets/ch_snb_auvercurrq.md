@@ -23,7 +23,8 @@ not a re-export: the currency breakdown is a genuinely different view, but the
 headline IIP story lives in `auvekomq`.
 
 ## Access
-- **type**: SNB cube API
+- **type**: snb-cube — SNB cube API
+- **cube**: `auvercurrq`
 - **endpoint**: `GET https://data.snb.ch/api/cube/auvercurrq/data/json/en`
 - **call**: `snb_fetch("auvercurrq", title = "Switzerland's international investment position - Breakdown by currency - Quarter")`
 

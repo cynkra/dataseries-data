@@ -8,15 +8,16 @@ for (f in c("dates.R", "http.R", "datasheet.R", "io.R", "source_snb.R", "source_
             "source_seco.R")) source(file.path(root, f))
 DATA_DIR <- "data"; DATASHEET_DIR <- "datasets"
 
-fso_excel_dataset <- function(id, order_nr, topic = NULL) {
+fso_excel_dataset <- function(id, order_nr = NULL, topic = NULL) {
+  order_nr <- order_nr %||% read_access(id, DATASHEET_DIR)$identifier
   dl <- fso_excel_download(order_nr)
   ds <- get(paste0("fso_excel_", id), mode = "function")(dl$path, dl$pubdate)
   if (!is.null(topic)) ds$meta$topic <- topic
   ds
 }
 
-# 1) refresh CPI from the asset wired in pipeline.R (su-d-05.02.66)
-cpi <- fso_excel_dataset("ch_fso_cpi", "su-d-05.02.66")
+# 1) refresh CPI from the asset declared in the datasheet ## Access block
+cpi <- fso_excel_dataset("ch_fso_cpi")
 cpi$meta <- modifyList(cpi$meta, read_datasheet_meta("ch_fso_cpi", DATASHEET_DIR))
 write_dataset(cpi, DATA_DIR)
 cat(sprintf("CPI refreshed: %d rows, %d series, span %s .. %s\n",

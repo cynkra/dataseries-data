@@ -20,7 +20,7 @@ balance the workbook provides (stocks, births, deaths, birth surplus, migration,
 naturalisations, absolute change).
 
 ## Access
-- **type**: FSO DAM Excel asset
+- **type**: fso-dam-excel — FSO DAM Excel asset
 - **order number**: su-d-01.02.04.05
 - **call**: `fso_excel_download("su-d-01.02.04.05")`
 

@@ -25,7 +25,8 @@ single SNB policy rate) inside one series, because both the old range bounds and
 the current single rate live here.
 
 ## Access
-- **type**: SNB cube API
+- **type**: snb-cube — SNB cube API
+- **cube**: `snboffzisa`
 - **endpoint**: `https://data.snb.ch/api/cube/snboffzisa/data/json/en`
 - **call**: `snb_fetch("snboffzisa", title = "Official interest rates")`
 

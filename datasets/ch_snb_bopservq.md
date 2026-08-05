@@ -24,7 +24,8 @@ detail was introduced with the BPM6 standard. Alternate to `ch_snb_bopcurrq` for
 concept: same producer, the unique value is the geographic dimension.
 
 ## Access
-- **type**: SNB cube API
+- **type**: snb-cube — SNB cube API
+- **cube**: `bopservq`
 - **endpoint**: cube id `bopservq`
 - **call**: `snb_fetch("bopservq", title = "Swiss balance of payments – Current account services, by country – Quarter")`,
   hitting `https://data.snb.ch/api/cube/bopservq/dimensions/en` and `.../data/json/en`

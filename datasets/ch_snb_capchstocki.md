@@ -24,7 +24,8 @@ the sector sub-indices begin later (the CSV sample for SIX banks `B` starts 2000
 because SIX/ICB sector breakdowns were backfilled only from their introduction.
 
 ## Access
-- **type**: SNB cube API
+- **type**: snb-cube — SNB cube API
+- **cube**: `capchstocki`
 - **endpoint**: cube id `capchstocki`
 - **call**: `snb_fetch("capchstocki", title = "Swiss stock indices")`, hitting
   `https://data.snb.ch/api/cube/capchstocki/dimensions/en` and `.../data/json/en`

@@ -24,7 +24,8 @@ sector dimension is the distinctive feature; household mortgage utilisation is
 the default cell.
 
 ## Access
-- **type**: SNB cube API
+- **type**: snb-cube — SNB cube API
+- **cube**: `bakredsekbm`
 - **endpoint**: `https://data.snb.ch/api/cube/bakredsekbm/data/json/en`
 - **call**: `snb_fetch("bakredsekbm", title = "Domestic loans, broken down by economic sector and industry")`
 

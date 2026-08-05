@@ -16,10 +16,10 @@ the current and expected business situation. Two methodology vintages run in
 parallel: the original "pre-Brexit" version and the standard 2018 version.
 
 ## Access
-- **type**: KOF Time Series Database API **v2**, public **collection** (v1 called
+- **type**: kof-api — KOF Time Series Database API **v2**, public **collection** (v1 called
   these "sets"; collections owned by the `public` user are open OGD)
 - **endpoint**: `https://tsdb-api.kof.ethz.ch/v2/collections/public/<collection>/ts`
-- **set**: `ogd_ch.kof.esi`
+- **key**: `ogd_ch.kof.esi`
 - **call**: `kof_set_fetch("ogd_ch.kof.esi")`
 - `access_type=public` keeps the call anonymous; without it the API redirects to
   KOF's Keycloak login. (API v1 on `datenservice.kof.ethz.ch` was discontinued in

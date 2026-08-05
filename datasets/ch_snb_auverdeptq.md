@@ -24,7 +24,8 @@ sector x maturity x instrument tree expressed entirely as codes. Values are
 CHF-million stocks at end of quarter.
 
 ## Access
-- **type**: SNB cube API
+- **type**: snb-cube — SNB cube API
+- **cube**: `auverdeptq`
 - **endpoint**: `GET https://data.snb.ch/api/cube/auverdeptq/data/json/en`
 - **call**: `snb_fetch("auverdeptq", title = "Switzerland's external debt - Quarter")`
 

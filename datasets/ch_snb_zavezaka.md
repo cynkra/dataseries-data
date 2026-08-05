@@ -21,7 +21,8 @@ those three series start 2014-12 while the card totals run back to 2005. The sin
 (machines, not cards).
 
 ## Access
-- **type**: SNB cube API
+- **type**: snb-cube — SNB cube API
+- **cube**: `zavezaka`
 - **endpoint**: `https://data.snb.ch/api/cube/zavezaka/data/json/en`
 - **call**: `snb_fetch("zavezaka", title = "Payment cards and ATMs")`
 

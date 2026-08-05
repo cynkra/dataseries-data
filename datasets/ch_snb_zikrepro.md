@@ -25,7 +25,8 @@ group; the 1933 start applies only to long-running products, most retail and pen
 series begin much later.
 
 ## Access
-- **type**: SNB cube API
+- **type**: snb-cube — SNB cube API
+- **cube**: `zikrepro`
 - **endpoint**: `https://data.snb.ch/api/cube/zikrepro/data/json/en`
 - **call**: `snb_fetch("zikrepro", title = "Published interest rates for new transactions")`
 

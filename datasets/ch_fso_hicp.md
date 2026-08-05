@@ -28,9 +28,9 @@ includes. Reach for `ch_fso_hicp` for EU comparability and for `ch_fso_cpi` for
 the domestic headline / detailed basket.
 
 ## Access
-- **type**: Eurostat SDMX 2.1 REST (SDMX-CSV)
+- **type**: eurostat-sdmx — Eurostat SDMX 2.1 REST (SDMX-CSV)
 - **flow**: `prc_hicp_midx` (monthly index)
-- **key**: `M.I15.{COICOP}.CH` — freq=M, unit=I15 (2015=100), geo=CH
+- **dataflow**: `prc_hicp_midx`
 - **call**: `eurostat_hicp_fetch("ch_fso_hicp")` issues one SDMX-CSV GET per COICOP code
 
 ## Parsing recipe

@@ -26,7 +26,8 @@ is the base-money companion to the M1-M3 aggregates; in the curated view M1-M3
 and SNB balance sheet (`snbbipo`) kept alongside it.
 
 ## Access
-- **type**: SNB cube API
+- **type**: snb-cube — SNB cube API
+- **cube**: `snbmoba`
 - **endpoint**: `https://data.snb.ch/api/cube/snbmoba/data/json/en`
 - **call**: `snb_fetch("snbmoba", title = "Monetary base")`
 

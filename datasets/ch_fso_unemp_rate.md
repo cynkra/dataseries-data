@@ -18,7 +18,7 @@ is deliberately kept alongside the SNB/SECO **registered** unemployment series
 at job centres) and should not be deduplicated into one. Monthly averages.
 
 ## Access
-- **type**: FSO DAM Excel asset
+- **type**: fso-dam-excel — FSO DAM Excel asset
 - **order number**: je-d-03.03.01.03
 - **call**: `fso_excel_download("je-d-03.03.01.03")`
 

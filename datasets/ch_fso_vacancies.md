@@ -24,7 +24,8 @@ column. The 20 NOGA divisions are a coarser cut than BESTA's 60 (e.g. one
 codes). Pairs with `ch_fso_besta` (jobs) as the demand-side counterpart.
 
 ## Access
-- **type**: FSO PX-Web (json-stat2)
+- **type**: fso-pxweb — FSO PX-Web (json-stat2)
+- **table id**: `px-x-0602000000_103`
 - **endpoint / table id**: `px-x-0602000000_103` (node; real table at
   `.../px-x-0602000000_103/px-x-0602000000_103.px`)
 - **call**: `fso_fetch_auto("ch_fso_vacancies", "px-x-0602000000_103", ...)`

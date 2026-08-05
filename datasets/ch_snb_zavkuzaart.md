@@ -22,7 +22,8 @@ involves a non-resident bank (`D0`), giving a domestic-versus-cross-border read 
 payment plumbing. History starts only 2012-03, later than the card cubes.
 
 ## Access
-- **type**: SNB cube API
+- **type**: snb-cube — SNB cube API
+- **cube**: `zavkuzaart`
 - **endpoint**: `https://data.snb.ch/api/cube/zavkuzaart/data/json/en`
 - **call**: `snb_fetch("zavkuzaart", title = "Customer payments at banks – Outgoing payments, by type of order")`
 

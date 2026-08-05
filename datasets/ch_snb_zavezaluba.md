@@ -22,7 +22,8 @@ contactless and enhanced-cash subtotals begin mid-2017, later than the 2005 base
 many of the 113 series are short.
 
 ## Access
-- **type**: SNB cube API
+- **type**: snb-cube — SNB cube API
+- **cube**: `zavezaluba`
 - **endpoint**: `https://data.snb.ch/api/cube/zavezaluba/data/json/en`
 - **call**: `snb_fetch("zavezaluba", title = "Payments and cash withdrawals")`
 

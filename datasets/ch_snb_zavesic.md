@@ -27,7 +27,8 @@ long history makes it a useful proxy for the digitisation and growth of Swiss
 interbank payment volume.
 
 ## Access
-- **type**: SNB cube API
+- **type**: snb-cube — SNB cube API
+- **cube**: `zavesic`
 - **endpoint**: `https://data.snb.ch/api/cube/zavesic/data/json/en`
 - **call**: `snb_fetch("zavesic", title = "Swiss Interbank Clearing (SIC) - payment transactions")`
 

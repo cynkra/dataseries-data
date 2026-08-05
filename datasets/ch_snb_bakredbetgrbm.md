@@ -23,7 +23,8 @@ much firms are actually using, so you can read headroom. Shorter history than th
 sector and domestic/foreign loan cubes (starts 2002).
 
 ## Access
-- **type**: SNB cube API
+- **type**: snb-cube — SNB cube API
+- **cube**: `bakredbetgrbm`
 - **endpoint**: `https://data.snb.ch/api/cube/bakredbetgrbm/data/json/en`
 - **call**: `snb_fetch("bakredbetgrbm", title = "Corporate loans, broken down by company size")`
 

@@ -17,8 +17,8 @@ of work, quarterly since 2002. A distinctive feature of the Swiss labour market
 legacy `ch.fso.ggs` series.
 
 ## Access
-- **type**: FSO SDMX (disseminate.stats.swiss), sliced to the national total
-- **flow**: agency `CH1.GGS`, dataflow `DF_GGS_1`, version 1.0.0
+- **type**: fso-sdmx — FSO SDMX (disseminate.stats.swiss), sliced to the national total
+- **flow**: `CH1.GGS/DF_GGS_1/1.0.0` (agency `CH1.GGS`, dataflow `DF_GGS_1`, version 1.0.0)
 - **call**: `fso_sdmx_cross_border_commuters("ch_fso_cross_border_commuters")`
 
 ## Parsing recipe

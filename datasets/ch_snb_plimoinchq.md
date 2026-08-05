@@ -26,7 +26,8 @@ apartment buildings) and rents/commercial (rental housing, office, industrial/
 commercial, retail).
 
 ## Access
-- **type**: SNB cube API
+- **type**: snb-cube — SNB cube API
+- **cube**: `plimoinchq`
 - **endpoint**: `https://data.snb.ch/api/cube/plimoinchq/data/json/en`
 - **call**: `snb_fetch("plimoinchq", title = "Real estate price indices – total for Switzerland – by quarter")`
 

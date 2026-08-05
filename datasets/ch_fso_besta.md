@@ -25,7 +25,8 @@ business services up) off one table. CONCEPT-UNIVERSE flags an overlap with SNB
 the FSO authoritative jobs series with the finer NOGA breakdown.
 
 ## Access
-- **type**: FSO PX-Web (json-stat2)
+- **type**: fso-pxweb — FSO PX-Web (json-stat2)
+- **table id**: `px-x-0602000000_101`
 - **endpoint / table id**: `px-x-0602000000_101` (node; real table at
   `.../px-x-0602000000_101/px-x-0602000000_101.px`)
 - **call**: `fso_fetch("ch_fso_besta", "px-x-0602000000_101", besta_query,

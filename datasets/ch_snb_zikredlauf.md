@@ -22,7 +22,8 @@ fixed-rate investment loans, each across up to ten maturity buckets from "over 1
 to "over 10 up to 15 years". History starts 2009-05.
 
 ## Access
-- **type**: SNB cube API
+- **type**: snb-cube — SNB cube API
+- **cube**: `zikredlauf`
 - **endpoint**: `https://data.snb.ch/api/cube/zikredlauf/data/json/en`
 - **call**: `snb_fetch("zikredlauf", title = "Interest rates on new loan agreements, by product and maturity")`
 

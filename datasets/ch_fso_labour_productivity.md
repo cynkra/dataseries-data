@@ -17,8 +17,8 @@ Productivity is the ratio of the other two, so the three plot together on one sc
 the long-run Swiss productivity-growth story (≈ +0.9%/yr) at a glance.
 
 ## Access
-- **type**: FSO DAM asset, master is a long CSV (not xlsx)
-- **order**: `ts-x-04.07.01.01` (asset 36178401)
+- **type**: fso-dam-csv — FSO DAM asset, master is a long CSV (not xlsx)
+- **order number**: `ts-x-04.07.01.01` (asset 36178401)
 - **call**: `fso_labour_productivity("ch_fso_labour_productivity")`
 
 ## Parsing recipe

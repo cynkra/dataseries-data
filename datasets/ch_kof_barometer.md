@@ -24,7 +24,8 @@ gate is gone), but the wider open KOF family is still most convenient as whole
 `ogd_ch.kof.esi`, `ogd_ch.kof.globalbaro`, `ogd_ch.kof.bts_total`.
 
 ## Access
-- **type**: KOF Time Series Database API **v2**
+- **type**: kof-api — KOF Time Series Database API **v2**
+- **key**: `ch.kof.barometer`
 - **endpoint**: `https://tsdb-api.kof.ethz.ch/v2/ts`
 - **call**: `kof_fetch("ch.kof.barometer")`
   (`GET .../ts?keys=ch.kof.barometer&mime=csv&access_type=public`, no key required)

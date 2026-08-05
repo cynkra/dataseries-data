@@ -37,7 +37,8 @@ Three things make it distinctive:
   expenditure table (`ch_fso_gdp_use`) is a redundant alternate.
 
 ## Access
-- **type**: SECO swissdata (long CSV + JSON meta sidecar, native format)
+- **type**: seco-swissdata — SECO swissdata (long CSV + JSON meta sidecar, native format)
+- **set**: `ch-seco-gdp`
 - **endpoint** (2026-06: SECO retired the old `/dam/...download` URLs — they now 502 — and serves the machine-readable files via `scheduler.swissdatas.ch`, linked from the new page `seco.admin.ch/gross-domestic-product`):
   - data: `https://scheduler.swissdatas.ch/scheduled/ch-seco-gdp.csv`
   - meta: `https://scheduler.swissdatas.ch/scheduled/ch-seco-gdp.json`

@@ -19,8 +19,8 @@ high-frequency consumption + technology-shift indicator. As of spring 2026, BEVs
 are ~25% of new-car registrations.
 
 ## Access
-- **type**: FSO SDMX (disseminate.stats.swiss), sliced to the national total
-- **flow**: agency `CH1.MFZ_IVS`, dataflow `DF_IVS_0_GENERAL_M`, version 1.0.0
+- **type**: fso-sdmx — FSO SDMX (disseminate.stats.swiss), sliced to the national total
+- **flow**: `CH1.MFZ_IVS/DF_IVS_0_GENERAL_M/1.0.0` (agency `CH1.MFZ_IVS`, dataflow `DF_IVS_0_GENERAL_M`, version 1.0.0)
 - **call**: `fso_sdmx_new_vehicles("ch_fso_new_vehicles")`
 
 ## Parsing recipe

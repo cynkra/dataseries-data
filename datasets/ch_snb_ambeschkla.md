@@ -20,7 +20,8 @@ which lets you read part-time intensity and FTE conversion by sector, something 
 FSO jobs cube does not expose the same way. Values are in thousands of persons.
 
 ## Access
-- **type**: SNB cube API
+- **type**: snb-cube — SNB cube API
+- **cube**: `ambeschkla`
 - **endpoint**: `GET https://data.snb.ch/api/cube/ambeschkla/data/json/en`
 - **call**: `snb_fetch("ambeschkla", title = "Employees, by economic activity")`
 

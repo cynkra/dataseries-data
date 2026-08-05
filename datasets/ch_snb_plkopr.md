@@ -26,7 +26,8 @@ the app's YoY % toggle applied to the index), so this is a single-series dataset
 just the index level.
 
 ## Access
-- **type**: SNB cube API
+- **type**: snb-cube — SNB cube API
+- **cube**: `plkopr`
 - **endpoint**: `https://data.snb.ch/api/cube/plkopr/data/json/en`
 - **call**: `snb_fetch("plkopr", title = "Consumer Price Index (LIK) – national index, long history")`
 

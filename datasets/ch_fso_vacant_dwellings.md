@@ -16,8 +16,8 @@ housing-market tightness indicator — it fell to ~1.0% by 2025, the tightest in
 years.
 
 ## Access
-- **type**: FSO SDMX (disseminate.stats.swiss), sliced to the national total
-- **flow**: agency `CH1.LWZ`, dataflow `DF_LWZ_1`, version 1.0.0
+- **type**: fso-sdmx — FSO SDMX (disseminate.stats.swiss), sliced to the national total
+- **flow**: `CH1.LWZ/DF_LWZ_1/1.0.0` (agency `CH1.LWZ`, dataflow `DF_LWZ_1`, version 1.0.0)
 - **call**: `fso_sdmx_vacant_dwellings("ch_fso_vacant_dwellings")`
 
 ## Parsing recipe

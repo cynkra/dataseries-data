@@ -28,7 +28,8 @@ institute. KOF's barometer is the canonical leading indicator; this sits beside 
 as the SNB's qualitative companion.
 
 ## Access
-- **type**: SNB cube API
+- **type**: snb-cube — SNB cube API
+- **cube**: `snbkosiq`
 - **endpoint**: `https://data.snb.ch/api/cube/snbkosiq/data/json/en`
 - **call**: `snb_fetch("snbkosiq", title = "Business cycle signals")`
 

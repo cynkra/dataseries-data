@@ -22,7 +22,8 @@ representations). It is the live, currently-updated companion to the discontinue
 country-level `devlandm`. Defaults to CPI-based, Austria, index.
 
 ## Access
-- **type**: SNB cube API
+- **type**: snb-cube — SNB cube API
+- **cube**: `devwkibiim`
 - **endpoint**: `https://data.snb.ch/api/cube/devwkibiim/data/json/en`
 - **call**: `snb_fetch("devwkibiim", title = "Bilateral exchange rate indices – Monthly")`
 

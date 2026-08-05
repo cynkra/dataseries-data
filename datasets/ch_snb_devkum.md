@@ -26,7 +26,8 @@ nodes are non-data headers. Note the CSV begins well after 1914 for most currenc
 European), not every pair.
 
 ## Access
-- **type**: SNB cube API
+- **type**: snb-cube — SNB cube API
+- **cube**: `devkum`
 - **endpoint**: `https://data.snb.ch/api/cube/devkum/data/json/en`
 - **call**: `snb_fetch("devkum", title = "Foreign exchange rates – Month")`
 

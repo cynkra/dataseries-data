@@ -22,8 +22,8 @@ three sexes (total / men / women) gives 69 series on a single headcount scale, s
 the male/female split of any sector reads straight off the chart.
 
 ## Access
-- **type**: FSO DAM asset, master is a long CSV (not xlsx)
-- **order**: `ts-x-03.02.01.08` (asset 36461448)
+- **type**: fso-dam-csv — FSO DAM asset, master is a long CSV (not xlsx)
+- **order number**: `ts-x-03.02.01.08` (asset 36461448)
 - **call**: `fso_ets("ch_fso_ets")`
 
 ## Parsing recipe

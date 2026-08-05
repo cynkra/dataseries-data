@@ -67,6 +67,45 @@ read_datasheet_meta <- function(id, datasheet_dir, lines = NULL) {
   out
 }
 
+# ---- the parsed ## Access block ---------------------------------------------
+# The access recipe is DECLARED in the datasheet (type slug + one canonical
+# identifier per family); the pipeline reads it from here instead of repeating it
+# in code — a wrong identifier now fails the fetch loudly instead of shipping a
+# stale value (the CPI .67/.66 drift). Slug vocabulary + identifier keys:
+# spec/multilingual/2-design.md §4 (dataseries.org repo).
+DS_ACCESS_ID_KEYS <- list(
+  "snb-cube"       = "cube",
+  "fso-dam-excel"  = c("order number", "asset ids"),  # trade_partner pins asset ids
+  "fso-dam-csv"    = "order number",
+  "fso-pxweb"      = "table id",
+  "fso-sdmx"       = "flow",            # compact agency/dataflow/version
+  "seco-swissdata" = "set",
+  "kof-api"        = "key",
+  "eurostat-sdmx"  = "dataflow",
+  "scraped"        = "url"
+)
+
+# Parse a datasheet's ## Access block: list(type = <slug>, identifier = <string>,
+# fields = <raw field list>), or NULL when there is no datasheet / no block.
+# The type line is "<slug> — <free prose>"; identifier values may be written as
+# `code` with a parenthetical tail, both stripped here.
+read_access <- function(id, datasheet_dir, lines = NULL) {
+  lines <- lines %||% ds_read(id, datasheet_dir)
+  if (is.null(lines)) return(NULL)
+  f <- ds_fields(ds_section(lines, "Access"))
+  if (is.null(f$type)) return(NULL)
+  slug <- trimws(sub("—.*$", "", f$type))   # slug — prose
+  keys <- DS_ACCESS_ID_KEYS[[slug]]
+  if (is.null(keys))
+    stop(sprintf("%s: unknown access type slug '%s'", id, slug), call. = FALSE)
+  ident <- NULL
+  for (k in keys) if (!is.null(f[[k]])) { ident <- f[[k]]; break }
+  clean <- function(v) gsub("`", "", trimws(sub("\\s*\\(.*$", "", v)))
+  list(type = slug,
+       identifier = if (is.null(ident)) NULL else clean(ident),
+       fields = f)
+}
+
 # Add `$data = TRUE/FALSE` to every level of every dimension, flagging whether
 # that code actually appears in the data (vs being a grouping-only hierarchy
 # node). Dimension-agnostic; a no-op for datasets without dimensions (e.g. KOF).

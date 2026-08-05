@@ -22,7 +22,7 @@ among the most economically concentrated small economies, and this dataset makes
 the Zurich / Lake-Geneva / Northwestern cluster visible at a glance.
 
 ## Access
-- **type**: FSO DAM Excel asset
+- **type**: fso-dam-excel — FSO DAM Excel asset
 - **order number**: je-e-04.02.06.01 (EN; asset 32627406. DE sibling: je-d-04.02.06.01, asset 32627391)
 - **call**: `fso_excel_download("je-e-04.02.06.01")` (resolves the current master xlsx)
 

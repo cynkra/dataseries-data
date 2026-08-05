@@ -23,7 +23,8 @@ reserve position, SDRs, FX investments). Values are CHF-million stocks at end of
 quarter.
 
 ## Access
-- **type**: SNB cube API
+- **type**: snb-cube — SNB cube API
+- **cube**: `auvekomq`
 - **endpoint**: `GET https://data.snb.ch/api/cube/auvekomq/data/json/en`
 - **call**: `snb_fetch("auvekomq", title = "Switzerland's international investment position - Overview - Quarter")`
 

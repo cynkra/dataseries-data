@@ -24,7 +24,8 @@ account** (`S8/E8/A8`), **derivatives** (`S14`), and the **statistical differenc
 shallower component detail, so it is kept and labelled rather than dropped.
 
 ## Access
-- **type**: SNB cube API
+- **type**: snb-cube — SNB cube API
+- **cube**: `bopoverq`
 - **endpoint**: cube id `bopoverq`
 - **call**: `snb_fetch("bopoverq", title = "Swiss balance of payments – Overview – Quarter")`, hitting
   `https://data.snb.ch/api/cube/bopoverq/dimensions/en` and `.../data/json/en`

@@ -33,7 +33,8 @@ official budget / financial-plan and forecast years (flagged in the `estimate`
 dimension), which is unusual for the catalog: most series stop at the last actual.
 
 ## Access
-- **type**: opendata.swiss (CKAN) → data.finance.admin.ch CSV asset
+- **type**: scraped — opendata.swiss (CKAN) → data.finance.admin.ch CSV asset
+- **url**: `https://opendata.swiss/en/dataset/hauptaggregate-und-prognosen-im-fs-und-gfs-modell`
 - **endpoint / order number**: CKAN package `hauptaggregate-und-prognosen-im-fs-und-gfs-modell`
   - dataset page: `https://opendata.swiss/en/dataset/hauptaggregate-und-prognosen-im-fs-und-gfs-modell`
   - CKAN show: `https://opendata.swiss/api/3/action/package_show?id=hauptaggregate-und-prognosen-im-fs-und-gfs-modell` (302 → `ckan.opendata.swiss`)

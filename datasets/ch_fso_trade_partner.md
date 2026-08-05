@@ -19,8 +19,8 @@ partner-country cut of the customs trade statistics, complementary to the SNB's
 trade-by-goods value series — the SNB cubes carry no partner-country dimension.
 
 ## Access
-- **type**: FSO DAM Excel asset (two single-sheet workbooks, pinned by asset id)
-- **asset ids**: exports `36664830`, imports `36664836` (the English masters)
+- **type**: fso-dam-excel — FSO DAM Excel asset (two single-sheet workbooks, pinned by asset id)
+- **asset ids**: `36664830 36664836` (exports, imports — the English masters)
 - **call**: `fso_excel_ch_fso_trade_partner()` — the fetcher downloads both masters
   itself via `download_binary("https://dam-api.bfs.admin.ch/hub/api/dam/assets/{id}/master", …)`.
   We pin the asset ids (not an order number) because the order number resolves to

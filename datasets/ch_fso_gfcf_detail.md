@@ -21,8 +21,8 @@ who-invests-in-what cut underneath it (e.g. how much of total investment is
 government civil-engineering vs corporate equipment).
 
 ## Access
-- **type**: FSO DAM asset, master is a long CSV (not xlsx)
-- **order**: `ts-x-04.02.05.02` (asset 36182144)
+- **type**: fso-dam-csv — FSO DAM asset, master is a long CSV (not xlsx)
+- **order number**: `ts-x-04.02.05.02` (asset 36182144)
 - **codelist appendix** (level labels, ODS): `https://dam-api.bfs.admin.ch/hub/api/dam/assets/36182144/appendix` — EN labels are transcribed into the parser (file labels are FR/DE/IT only).
 - **call**: `fso_gfcf_detail("ch_fso_gfcf_detail")`
 

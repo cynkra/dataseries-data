@@ -31,7 +31,8 @@ both raw (`na`) and seasonally + calendar adjusted (`csa`). The historical level
 (1972–2023) has been re-aligned with the current methodology in use since 2024.
 
 ## Access
-- **type**: SECO swissdata
+- **type**: seco-swissdata — SECO swissdata
+- **set**: `ks-q`
 - **endpoint** (2026-06: SECO retired the old `/dam/...download` URLs — they now 502 — and serves the machine-readable files via `scheduler.swissdatas.ch`, linked from the new page `seco.admin.ch/consumer-sentiment`. This is the long quarterly series since 1972 — `ks-q`; SECO also publishes a monthly `ks-m` and an experimental `ks-exp-m`):
   - data: `https://scheduler.swissdatas.ch/scheduled/ks-q.csv`
   - meta: `https://scheduler.swissdatas.ch/scheduled/ch-seco-ks-q.json`

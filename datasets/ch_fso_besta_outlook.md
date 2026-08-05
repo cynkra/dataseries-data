@@ -18,7 +18,8 @@ the leading complement to the jobs (`ch_fso_besta`) and vacancies
 (`ch_fso_vacancies`) series.
 
 ## Access
-- **type**: FSO PX-Web / STAT-TAB (the BESTA theme-0602 family is reachable, unlike
+- **type**: fso-pxweb — FSO PX-Web / STAT-TAB (the BESTA theme-0602 family is reachable, unlike
+- **table id**: `px-x-0602000000_105`
   most PX-Web cubes)
 - **table**: `px-x-0602000000_105`
 - **call**: `fso_fetch("ch_fso_besta_outlook", "px-x-0602000000_105", besta_outlook_query, quarter_col = "Quartal")`

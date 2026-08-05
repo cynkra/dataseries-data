@@ -24,7 +24,8 @@ on a single axis: counts of persons, a percentage rate, and vacancy counts all l
 under the same `D0` codes, so consumers must split by code before charting.
 
 ## Access
-- **type**: SNB cube API
+- **type**: snb-cube — SNB cube API
+- **cube**: `amarbma`
 - **endpoint**: `GET https://data.snb.ch/api/cube/amarbma/data/json/en`
 - **call**: `snb_fetch("amarbma", title = "Labour market (registered unemployment, SECO)")`
 

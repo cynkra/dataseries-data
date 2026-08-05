@@ -20,8 +20,8 @@ the vacancy was advertised (internet job portals, company websites, press), whic
 captures the long structural shift from print to online recruiting.
 
 ## Access
-- **type**: scraped DAM xlsx (CMS asset)
-- **page**: `https://www.stellenmarktmonitor.uzh.ch/de/indices/asjmi.html`
+- **type**: scraped
+- **url**: `https://www.stellenmarktmonitor.uzh.ch/de/indices/asjmi.html`
 - **call**: `adecco_fetch("ch_adecco_sjmi")`
 
 ## Parsing recipe

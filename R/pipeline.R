@@ -37,8 +37,12 @@ options(timeout = 30)
 .SDMX_SERVICES_NOGA <- c("G-NxK", "G", "H", "I", "J", "L", "M", "N")
 
 # Download an FSO Excel asset and run its bespoke parser, tagging the topic.
-# The per-dataset parsers live in source_fso_excel_sets.R.
-fso_excel_dataset <- function(id, order_nr, topic = NULL) {
+# The per-dataset parsers live in source_fso_excel_sets.R. The order number is
+# DECLARED in the datasheet ## Access block (read_access); passing it explicitly
+# is only for one-off scripts pinning a different asset.
+fso_excel_dataset <- function(id, order_nr = NULL, topic = NULL) {
+  order_nr <- order_nr %||% read_access(id, DATASHEET_DIR)$identifier
+  if (is.null(order_nr)) stop(sprintf("%s: no order number in datasheet ## Access", id))
   dl <- fso_excel_download(order_nr)
   ds <- get(paste0("fso_excel_", id), mode = "function")(dl$path, dl$pubdate)
   if (!is.null(topic)) ds$meta$topic <- topic
@@ -369,11 +373,11 @@ build <- function(only = NULL) {
   # DAM xlsx download parsed by a bespoke fso_excel_<id>() in source_fso_excel_sets.R.
   # su-d-05.02.66 = LIK on the Dec-2025=100 base (full history since 1982). It
   # superseded su-d-05.02.67 (Dec-2020=100), which FSO froze at the Dec-2025 rebasing.
-  add(.try_fetch("ch_fso_cpi",        fso_excel_dataset("ch_fso_cpi",        "su-d-05.02.66")))
-  add(.try_fetch("ch_fso_ppi",        fso_excel_dataset("ch_fso_ppi",        "su-q-05.04.03.01-ppi-ipp")))
-  add(.try_fetch("ch_fso_wage_idx",   fso_excel_dataset("ch_fso_wage_idx",   "je-e-03.04.03.00.04")))
-  add(.try_fetch("ch_fso_pop",        fso_excel_dataset("ch_fso_pop",        "su-d-01.02.04.05")))
-  add(.try_fetch("ch_fso_unemp_rate", fso_excel_dataset("ch_fso_unemp_rate", "je-d-03.03.01.03")))
+  add(.try_fetch("ch_fso_cpi",        fso_excel_dataset("ch_fso_cpi")))
+  add(.try_fetch("ch_fso_ppi",        fso_excel_dataset("ch_fso_ppi")))
+  add(.try_fetch("ch_fso_wage_idx",   fso_excel_dataset("ch_fso_wage_idx")))
+  add(.try_fetch("ch_fso_pop",        fso_excel_dataset("ch_fso_pop")))
+  add(.try_fetch("ch_fso_unemp_rate", fso_excel_dataset("ch_fso_unemp_rate")))
 
   # FSO DAM CSV-master assets (already-long CSVs, no sheet reshaping):
   # labour productivity (index), employed persons (ETS), GFCF by sector/asset,
@@ -387,9 +391,9 @@ build <- function(only = NULL) {
   # region → canton tree), the construction price index, and foreign trade by
   # partner country (self-contained, pins the English-master asset ids).
   add(.try_fetch("ch_fso_gdp_region",
-                 fso_excel_dataset("ch_fso_gdp_region", "je-e-04.02.06.01"), "National accounts"))
+                 fso_excel_dataset("ch_fso_gdp_region"), "National accounts"))
   add(.try_fetch("ch_fso_construction_prices",
-                 fso_excel_dataset("ch_fso_construction_prices", "cc-t-05.05.01"), "Prices"))
+                 fso_excel_dataset("ch_fso_construction_prices"), "Prices"))
   add(.try_fetch("ch_fso_trade_partner", fso_excel_ch_fso_trade_partner(), "External sector"))
 
   # Eurostat (NOT FSO): Swiss HICP, the EU-harmonised CPI (2015=100), all-items +

@@ -26,7 +26,8 @@ nodes (`data:false`, e.g. "Goods", "Services") carry no observations and are dro
 only `data:true` leaves and totals appear in the CSV.
 
 ## Access
-- **type**: SNB cube API
+- **type**: snb-cube — SNB cube API
+- **cube**: `bopcurrq`
 - **endpoint**: cube id `bopcurrq` (id minus the `ch_snb_` prefix)
 - **call**: `snb_fetch("bopcurrq", title = "Swiss balance of payments – Current account – Quarter")`, which issues
   `GET https://data.snb.ch/api/cube/bopcurrq/dimensions/en` and

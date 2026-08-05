@@ -26,7 +26,8 @@ securities and deposits). Each component carries a three-way accounting entry:
 net acquisition of assets, net incurrence of liabilities, and the net of the two.
 
 ## Access
-- **type**: SNB cube API
+- **type**: snb-cube — SNB cube API
+- **cube**: `bopcapbalq`
 - **endpoint**: `https://data.snb.ch/api/cube/bopcapbalq/data/json/en`
 - **call**: `snb_fetch("bopcapbalq", title = "Swiss balance of payments - Financial account - Quarter")`
 

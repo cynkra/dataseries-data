@@ -23,9 +23,9 @@ period December 2025 = 100 (asset `su-d-05.02.66`, which superseded the frozen
 Dec-2020=100 asset `su-d-05.02.67`). History to December 1982.
 
 ## Access
-- **type**: FSO DAM Excel asset
-- **order number**: su-d-05.02.67
-- **call**: `fso_excel_download("su-d-05.02.67")` returns the master xlsx + publish date
+- **type**: fso-dam-excel — FSO DAM Excel asset
+- **order number**: su-d-05.02.66
+- **call**: `fso_excel_download("su-d-05.02.66")` returns the master xlsx + publish date
 
 ## Parsing recipe
 - Sheet `INDEX_m` (monthly index levels). Sister sheets `VAR_m-1`/`VAR_m-12`

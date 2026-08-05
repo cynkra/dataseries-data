@@ -28,7 +28,8 @@ CHF-million level rows begin 2012 while the %-change rows begin 2013 (a year of 
 needed first).
 
 ## Access
-- **type**: SNB cube API
+- **type**: snb-cube — SNB cube API
+- **cube**: `ausshawarm`
 - **endpoint**: `GET https://data.snb.ch/api/cube/ausshawarm/data/json/en`
 - **call**: `snb_fetch("ausshawarm", title = "Foreign trade by goods category")`
 

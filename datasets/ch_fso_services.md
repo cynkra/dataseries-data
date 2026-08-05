@@ -19,8 +19,8 @@ codes. History is genuinely short — services turnover is a newer FSO product, 
 tertiary ones do not.
 
 ## Access
-- **type**: FSO SDMX (disseminate.stats.swiss)
-- **flow**: agency `CH1.KEU`, dataflow `DF_KEU_Q1`, version 1.0.0
+- **type**: fso-sdmx — FSO SDMX (disseminate.stats.swiss)
+- **flow**: `CH1.KEU/DF_KEU_Q1/1.0.0` (agency `CH1.KEU`, dataflow `DF_KEU_Q1`, version 1.0.0)
 - **call**: `fso_sdmx_fetch("ch_fso_services", "CH1.KEU", "DF_KEU_Q1", "1.0.0", noga_keep = .SDMX_SERVICES_NOGA)`
 
 ## Parsing recipe

@@ -23,7 +23,8 @@ the daily index cube `ch_snb_capchstocki`: where that measures price levels, thi
 measures traded volume.
 
 ## Access
-- **type**: SNB cube API
+- **type**: snb-cube — SNB cube API
+- **cube**: `capweums`
 - **endpoint**: cube id `capweums`
 - **call**: `snb_fetch("capweums", title = "Securities turnover on the Swiss stock exchange")`,
   hitting `https://data.snb.ch/api/cube/capweums/dimensions/en` and `.../data/json/en`

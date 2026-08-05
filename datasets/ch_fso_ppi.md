@@ -19,7 +19,7 @@ same Producer Price Index, all fully populated over the whole span. This mirrors
 the old parser's `idx_type` dimension. Longest price history in the catalog.
 
 ## Access
-- **type**: FSO DAM Excel asset
+- **type**: fso-dam-excel — FSO DAM Excel asset
 - **order number**: su-q-05.04.03.01-ppi-ipp
 - **call**: `fso_excel_download("su-q-05.04.03.01-ppi-ipp")`
 

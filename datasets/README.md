@@ -46,8 +46,15 @@ full edit→regenerate workflow.)
 the quirks a user or a maintainer must know.>
 
 ## Access
-- **type**: <SNB cube API | KOF API | SECO swissdata | FSO PX-Web | FSO DAM Excel>
-- **endpoint / order number**: <...>
+- **type**: <slug — optional free prose>  (slug ∈ snb-cube | fso-dam-excel |
+  fso-dam-csv | fso-pxweb | fso-sdmx | seco-swissdata | kof-api | eurostat-sdmx |
+  scraped; the machine-readable family, parsed by `read_access()` in `R/io.R`)
+- **<identifier>**: <the family's canonical identifier line — `cube` |
+  `order number` | `table id` | `flow` (agency/dataflow/version) | `set` |
+  `key` | `dataflow` | `url`. PARSED, not prose: the pipeline fetches what is
+  declared here (e.g. `fso_excel_dataset()` reads the order number from this
+  block), and `tests/test_access.R` cross-checks every declared identifier, so
+  a stale value fails loudly instead of drifting.>
 - **call**: <the exact fetch call>
 
 ## Parsing recipe

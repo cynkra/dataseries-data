@@ -23,7 +23,8 @@ in percent**, not index levels. The KGM trimmed-mean history reaches back to
 full span is driven by the SNB measure.
 
 ## Access
-- **type**: SNB cube API
+- **type**: snb-cube — SNB cube API
+- **cube**: `plkoprinfla`
 - **endpoint**: `https://data.snb.ch/api/cube/plkoprinfla/data/json/en`
 - **call**: `snb_fetch("plkoprinfla", title = "Consumer prices – SNB and SFSO core inflation rates")`
 

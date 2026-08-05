@@ -12,7 +12,7 @@ DATA_DIR <- "data"; DATASHEET_DIR <- "datasets"
 
 # fso_excel_dataset() lives in pipeline.R; reproduce its two lines here to avoid
 # sourcing the whole pipeline (which would run main()).
-dl <- fso_excel_download("su-d-05.02.66")
+dl <- fso_excel_download(read_access("ch_fso_cpi", DATASHEET_DIR)$identifier)
 ds <- fso_excel_ch_fso_cpi(dl$path, dl$pubdate)
 ds$meta <- modifyList(ds$meta, read_datasheet_meta(ds$id, DATASHEET_DIR))
 ds <- attach_hierarchy(ds, DATASHEET_DIR)            # no-op: parser already set the tree

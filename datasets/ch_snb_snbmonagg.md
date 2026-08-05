@@ -28,7 +28,8 @@ measure money held by the public, which is why this is the canonical aggregate a
 the base is the alternate.
 
 ## Access
-- **type**: SNB cube API
+- **type**: snb-cube — SNB cube API
+- **cube**: `snbmonagg`
 - **endpoint**: `https://data.snb.ch/api/cube/snbmonagg/data/json/en`
 - **call**: `snb_fetch("snbmonagg", title = "Monetary aggregates M1, M2 and M3")`
 

@@ -26,7 +26,8 @@ breakdown is the distinctive feature; it lets you watch FX composition of the
 banking system's book, not just totals.
 
 ## Access
-- **type**: SNB cube API
+- **type**: snb-cube — SNB cube API
+- **cube**: `babilpobm`
 - **endpoint**: `https://data.snb.ch/api/cube/babilpobm/data/json/en`
 - **call**: `snb_fetch("babilpobm", title = "Banks' balance sheet items by currency for selected bank categories - monthly")`
 

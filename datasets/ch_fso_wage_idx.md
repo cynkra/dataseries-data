@@ -15,7 +15,7 @@ The official Swiss wage index (Lohnindex, base 1993 = 100), nominal and real, by
 sector and sex. Captures wage development the SNB cubes do not carry at all.
 
 ## Access
-- **type**: FSO DAM Excel asset
+- **type**: fso-dam-excel — FSO DAM Excel asset
 - **order number**: je-e-03.04.03.00.04
 - **call**: `fso_excel_download("je-e-03.04.03.00.04")`
 

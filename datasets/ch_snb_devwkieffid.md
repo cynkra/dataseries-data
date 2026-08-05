@@ -23,7 +23,8 @@ CSV begin late 2000 for the index level (`K,E,I` from 2000-11-30); earlier histo
 sparse and series-dependent.
 
 ## Access
-- **type**: SNB cube API
+- **type**: snb-cube — SNB cube API
+- **cube**: `devwkieffid`
 - **endpoint**: `https://data.snb.ch/api/cube/devwkieffid/data/json/en`
 - **call**: `snb_fetch("devwkieffid", title = "Effective exchange rate indices – Daily")`
 

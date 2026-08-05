@@ -31,7 +31,8 @@ The `structure` dimension carries two series: the headline **seco_wwa** index
 pre-crisis level rather than YoY.
 
 ## Access
-- **type**: SECO swissdata long CSV (native format; a JSON meta sidecar now exists, but the two series + units are stable so dimensions are built by hand)
+- **type**: seco-swissdata — SECO swissdata long CSV (native format; a JSON meta sidecar now exists, but the two series + units are stable so dimensions are built by hand)
+- **set**: `wwa`
 - **endpoint** (2026-06: SECO retired the old `/dam/...download` URLs — they now 502 — and serves the machine-readable files via `scheduler.swissdatas.ch`, linked from the new page `seco.admin.ch/wea`):
   - data: `https://scheduler.swissdatas.ch/scheduled/wwa.csv`
   - meta (optional, unused — dimensions hand-built): `https://scheduler.swissdatas.ch/scheduled/ch-seco-wwa.json`

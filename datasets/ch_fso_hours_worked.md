@@ -20,8 +20,8 @@ part-time bands), so the part-time gender split — Switzerland's defining labou
 feature — reads directly.
 
 ## Access
-- **type**: FSO DAM asset, master is a long SDMX-style CSV (not xlsx)
-- **order**: `ts-x-03.02.03.01.02.01` (asset 36577051)
+- **type**: fso-dam-csv — FSO DAM asset, master is a long SDMX-style CSV (not xlsx)
+- **order number**: `ts-x-03.02.03.01.02.01` (asset 36577051)
 - **call**: `fso_hours_worked("ch_fso_hours_worked")`
 
 ## Parsing recipe

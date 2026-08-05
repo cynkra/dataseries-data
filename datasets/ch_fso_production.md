@@ -24,7 +24,8 @@ C manufacturing, D energy), construction `F`, and the construction divisions
 aggregate `41_43`.
 
 ## Access
-- **type**: FSO SDMX (disseminate.stats.swiss, agency CH1.KEU)
+- **type**: fso-sdmx — FSO SDMX (disseminate.stats.swiss, agency CH1.KEU)
+- **flow**: `CH1.KEU/DF_KEU_Q1/1.0.0`
 - **endpoint / order number**: flow `DF_KEU_Q1` version `1.0.0`
   - data: `https://disseminate.stats.swiss/rest/data/CH1.KEU,DF_KEU_Q1,1.0.0/all?detail=dataonly` (Accept: `application/vnd.sdmx.data+csv`)
   - structure: `https://disseminate.stats.swiss/rest/dataflow/CH1.KEU/DF_KEU_Q1/1.0.0?references=all` (Accept: `application/vnd.sdmx.structure+json`)

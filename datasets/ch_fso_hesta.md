@@ -24,7 +24,8 @@ codes 1..14 are the regions. Only one indicator (overnight stays) is pulled; the
 table also carries arrivals, which this dataset deliberately omits.
 
 ## Access
-- **type**: FSO PX-Web (json-stat2)
+- **type**: fso-pxweb — FSO PX-Web (json-stat2)
+- **table id**: `px-x-1003020000_103`
 - **endpoint / table id**: `px-x-1003020000_103` (node; real table at
   `https://www.pxweb.bfs.admin.ch/api/v1/en/px-x-1003020000_103/px-x-1003020000_103.px`)
 - **call**: `fso_fetch("ch_fso_hesta", "px-x-1003020000_103", fso_query, ...)`

@@ -30,7 +30,8 @@ banks over the Confederation curve. Daily since 1988, so it carries the long
 Swiss-franc rate history including the negative-rate years.
 
 ## Access
-- **type**: SNB cube API
+- **type**: snb-cube — SNB cube API
+- **cube**: `rendeiduebd`
 - **endpoint**: `https://data.snb.ch/api/cube/rendeiduebd/data/json/en`
 - **call**: `snb_fetch("rendeiduebd")` (cube_id = id minus `ch_snb_` prefix)
 

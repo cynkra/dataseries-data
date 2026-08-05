@@ -25,7 +25,8 @@ pairing for the e-money niche. It is the youngest history of the six and one of 
 `zave*` payment-system family.
 
 ## Access
-- **type**: SNB cube API
+- **type**: snb-cube — SNB cube API
+- **cube**: `zavegelade`
 - **endpoint**: `https://data.snb.ch/api/cube/zavegelade/data/json/en`
 - **call**: `snb_fetch("zavegelade", title = "E-money - loading and float")`
 
