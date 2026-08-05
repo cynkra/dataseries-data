@@ -20,10 +20,9 @@ real, seasonally / calendar / sport-event adjusted GDP**, so a WEA value of `2.0
 reads as "activity running about 2% above the same week a year earlier" — it is a
 level on a growth-rate scale, not something to be differenced again.
 
-SECO publishes it in the swissdata long-CSV format, like `ch_seco_gdp`, but
-**without the `_json.txt` meta sidecar**, so the dimension/label metadata is built
-by hand in the parser (optionally cross-checked against the companion `wwa.xlsx`
-`beschriftung` sheet, which carries the en/de/fr/it labels).
+SECO publishes it in the swissdata long-CSV format, like `ch_seco_gdp`, but without
+the machine-readable label sidecar the GDP release carries, so the series labels are
+curated here rather than taken from the source.
 
 The `structure` dimension carries two series: the headline **seco_wwa** index
 (2005-> , the default) and **seco_wwa_pre_covid**, a discontinued variant

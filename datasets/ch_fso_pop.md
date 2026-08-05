@@ -75,3 +75,26 @@ deaths, migration, naturalisations) are picked from the same list.
 ## Provenance
 Script: `R/source_fso_excel_sets.R::fso_excel_ch_fso_pop`. Datasheet 2026-06-01;
 parser verified 2026-06-01 (1,395 rows, 11 series, 0 NA values).
+
+## What is special (de)
+Die jährliche Bevölkerungsbilanz der ständigen Wohnbevölkerung, **zurück bis
+1861** (die längste Reihe im Katalog). Breiter als der frühere Ansatz, der nur
+den Bevölkerungsstand per 1. Januar führte; hier wird die vollständige
+demografische Bilanz erfasst, die die Quelle liefert (Bestände, Geburten,
+Todesfälle, Geburtenüberschuss, Wanderung, Einbürgerungen, absolute
+Veränderung).
+
+## What is special (fr)
+Le bilan démographique annuel de la population résidante permanente, **remontant
+à 1861** (la plus longue série du catalogue). Plus large que l'approche
+précédente, qui ne retenait que l'effectif au 1er janvier ; on reprend ici le
+bilan démographique complet fourni par la source (effectifs, naissances, décès,
+excédent des naissances, migration, naturalisations, variation absolue).
+
+## What is special (it)
+Il bilancio demografico annuale della popolazione residente permanente,
+**risalente al 1861** (la serie più lunga del catalogo). Più ampio
+dell'impostazione precedente, che riportava solo la popolazione al 1° gennaio:
+qui è ripreso il bilancio demografico completo fornito dalla fonte (effettivi,
+nascite, decessi, eccedenza delle nascite, migrazione, naturalizzazioni,
+variazione assoluta).

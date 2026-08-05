@@ -62,3 +62,47 @@ European), not every pair.
 ## Provenance
 Script: `R/source_snb.R::snb_fetch` (title/topic from `R/snb_cubes.tsv`). Datasheet
 authored 2026-06-01.
+
+## What is special (de)
+Die zentrale Tabelle der bilateralen Frankenkurse, mit einer Historie zurück bis
+**1914** — der längste Devisenkurs-Datensatz im Katalog. Notiert wird CHF je
+Fremdwährungseinheit, wobei die Einheit im Währungslabel steckt (EUR 1, GBP 1, aber
+DKK 100, JPY 100 usw.); beim Vergleich von Kursen ist der Multiplikator daher
+wesentlich. Jede Währung erscheint sowohl als **Monatsdurchschnitt** (M0) wie auch
+als **Monatsendwert** (M1). Über die Kassakurse hinaus enthält sie zwei
+**USD-Terminkurse** (3 und 6 Monate, CHF je 1 USD), was für eine Kassakurstabelle
+ungewöhnlich ist. Die Währungen sind nach Region gruppiert (Europa, Amerika, Afrika,
+Asien und Australien, SZR, USD-Terminkurse); die Gruppenknoten sind Überschriften
+ohne eigene Daten. Zu beachten: Für die meisten Währungen beginnt die CSV deutlich
+nach 1914 (z. B. ARS ab 1999); der Beginn 1914 spiegelt die frühesten langen Reihen
+(USD und wichtige europäische Währungen), nicht jedes Währungspaar.
+
+## What is special (fr)
+Le tableau de référence des taux de change bilatéraux du franc, avec un historique
+remontant à **1914** — le plus long relevé de change du catalogue. Les cotations
+sont en CHF par unité de devise étrangère, l'unité étant intégrée au libellé de
+chaque monnaie (EUR 1, GBP 1, mais DKK 100, JPY 100, etc.) ; le multiplicateur
+compte donc lorsqu'on compare des taux. Chaque monnaie est publiée à la fois en
+**moyenne mensuelle** (M0) et en **valeur de fin de mois** (M1). Au-delà des taux
+au comptant, le tableau porte deux **taux à terme USD** (3 et 6 mois, CHF pour
+1 USD), ce qui est inhabituel pour une table de taux au comptant. Les monnaies sont
+groupées par région (Europe, Amérique, Afrique, Asie et Australie, DTS, taux à
+terme USD) ; les nœuds de groupe sont des en-têtes sans données. À noter : pour la
+plupart des monnaies, le CSV commence bien après 1914 (p. ex. ARS dès 1999) ; le
+début en 1914 reflète les séries longues les plus anciennes (USD et grandes devises
+européennes), pas chaque paire.
+
+## What is special (it)
+La tabella di riferimento dei tassi di cambio bilaterali del franco, con una
+storia che risale al **1914** — la più lunga rilevazione di cambi del catalogo. Le
+quotazioni sono in CHF per unità di valuta estera, con l'unità inclusa
+nell'etichetta di ogni valuta (EUR 1, GBP 1, ma DKK 100, JPY 100 ecc.); il
+moltiplicatore conta quindi nel confronto tra tassi. Ogni valuta è pubblicata sia
+come **media mensile** (M0) sia come **valore di fine mese** (M1). Oltre ai tassi a
+pronti, la tabella riporta due **tassi a termine USD** (3 e 6 mesi, CHF per 1 USD),
+cosa insolita per una tabella di tassi a pronti. Le valute sono raggruppate per
+regione (Europa, America, Africa, Asia e Australia, DSP, tassi a termine USD); i
+nodi di gruppo sono intestazioni senza dati. Da notare: per la maggior parte delle
+valute il CSV inizia ben dopo il 1914 (p. es. ARS dal 1999); l'inizio nel 1914
+riflette le serie lunghe più antiche (USD e principali valute europee), non ogni
+coppia.

@@ -14,10 +14,9 @@
 
 ## What is special
 The monthly retail trade turnover index — the headline read on Swiss consumer
-spending. FSO **migrated this series off the dead PX-Web STAT-TAB onto its new SDMX
-2.1 endpoint** (`disseminate.stats.swiss`, agency `CH1.KEU`, flow `DF_KEU_M1`), so
-this dataset is the first to use `R/source_fso_sdmx.R`. We keep the retail slice of
-the flow: NOGA division 47 (retail trade) and its sub-classes. Each series comes in
+spending. FSO **moved this series off the retired PX-Web STAT-TAB onto its SDMX
+endpoint**. We keep the retail slice: NOGA division 47 (retail trade) and its
+sub-classes. Each series comes in
 several adjustment variants (raw, calendar-adjusted, seasonally + calendar adjusted)
 and several indicator/result-type combinations (nominal total/domestic/foreign
 turnover, real production volume; index vs. year-on-year change).
@@ -94,3 +93,35 @@ classes and the alternative totals sit under it, with the by-class-of-goods brea
 ## Provenance
 Script: `R/source_fso_sdmx.R::fso_sdmx_fetch` (wired in `R/pipeline.R`). Datasheet
 authored 2026-06-01; parser verified 2026-06-01.
+
+## What is special (de)
+Der monatliche Detailhandelsumsatzindex — der Leitindikator für den Schweizer
+Konsum. Das BFS hat diese Reihe **von der abgelösten STAT-TAB-Plattform auf
+seinen SDMX-Endpunkt verschoben**. Wir übernehmen den Detailhandels-Ausschnitt:
+NOGA-Abteilung 47 (Detailhandel) und ihre Unterklassen. Jede Reihe liegt in
+mehreren Bereinigungsvarianten vor (unbereinigt, kalenderbereinigt, saison- und
+kalenderbereinigt) sowie in mehreren Indikator- und Ergebnistyp-Kombinationen
+(nominaler Gesamt-, Inland- und Auslandumsatz, reales Produktionsvolumen; Index
+oder Veränderung gegenüber dem Vorjahr).
+
+## What is special (fr)
+L'indice mensuel du chiffre d'affaires du commerce de détail — l'indicateur
+phare de la consommation suisse. L'OFS a **déplacé cette série de l'ancienne
+plateforme STAT-TAB vers son point d'accès SDMX**. Nous reprenons la partie
+commerce de détail : la division NOGA 47 (commerce de détail) et ses
+sous-classes. Chaque série existe en plusieurs variantes de correction (brute,
+corrigée des effets de calendrier, corrigée des variations saisonnières et des
+effets de calendrier) et en plusieurs combinaisons d'indicateur et de type de
+résultat (chiffre d'affaires nominal total, intérieur, étranger ; volume de
+production réel ; indice ou variation sur un an).
+
+## What is special (it)
+L'indice mensile del fatturato del commercio al dettaglio — l'indicatore
+principale dei consumi svizzeri. L'UST ha **spostato questa serie dalla
+piattaforma STAT-TAB dismessa al proprio endpoint SDMX**. Riprendiamo la parte
+relativa al commercio al dettaglio: la divisione NOGA 47 (commercio al
+dettaglio) e le sue sottoclassi. Ogni serie è disponibile in più varianti di
+correzione (grezza, corretta per gli effetti di calendario, destagionalizzata e
+corretta per gli effetti di calendario) e in più combinazioni di indicatore e
+tipo di risultato (fatturato nominale totale, interno ed estero; volume di
+produzione reale; indice o variazione rispetto all'anno precedente).

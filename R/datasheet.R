@@ -39,7 +39,10 @@ ds_top <- function(lines) {
 # One section's body: the lines under "## <name>" up to (excluding) the next "## "
 # heading, or NULL when the section is absent. `name` is matched literally.
 ds_section <- function(lines, name) {
-  h <- grep(sprintf("^##\\s+%s\\s*$", name), lines)
+  # `name` is matched literally: escape regex metacharacters so a heading like
+  # "What is special (de)" works.
+  pat <- gsub("([][.^$*+?(){}|\\\\])", "\\\\\\1", name, perl = TRUE)
+  h <- grep(sprintf("^##\\s+%s\\s*$", pat), lines)
   if (!length(h)) return(NULL)
   nxt <- grep("^##\\s", lines)
   nxt <- nxt[nxt > h[1]]

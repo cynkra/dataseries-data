@@ -520,6 +520,8 @@
     "WAEHRUNG": "T",
     "BANKENGRUPPE": "A40"
   },
-  "description": "The full monthly balance sheet of banks in Switzerland, line by line, back to 1987. Every position from the regulatory balance sheet appears as a code: on the asset side liquid assets, amounts due from banks/customers, mortgage loans, trading portfolio, replacement values, financial investments, participations, down to total assets; on the liabilities side amounts due to banks/customers, cash bonds, bond issues, provisions, the equity components (bank capital, reserves, own shares, period profit) and total liabilities. What makes this cube large is the three-way slicing: each balance-sheet item is crossed with a currency split (all / CHF / EUR / USD) and a bank-category split (all banks vs big banks), which is why it expands to 872 stored series. The currency breakdown is the distinctive feature; it lets you watch FX composition of the banking system's book, not just totals.",
+  "description": {
+    "en": "The full monthly balance sheet of banks in Switzerland, line by line, back to 1987. Every position from the regulatory balance sheet appears as a code: on the asset side liquid assets, amounts due from banks/customers, mortgage loans, trading portfolio, replacement values, financial investments, participations, down to total assets; on the liabilities side amounts due to banks/customers, cash bonds, bond issues, provisions, the equity components (bank capital, reserves, own shares, period profit) and total liabilities. What makes this cube large is the three-way slicing: each balance-sheet item is crossed with a currency split (all / CHF / EUR / USD) and a bank-category split (all banks vs big banks), which is why it expands to 872 stored series. The currency breakdown is the distinctive feature; it lets you watch FX composition of the banking system's book, not just totals."
+  },
   "fetched_utc": "2026-08-05 13:12:01"
 }

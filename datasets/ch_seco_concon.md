@@ -107,3 +107,62 @@ grouped by theme; the retired 6.2 index variant sits on its own.
 ## Provenance
 Script: `R/source_seco.R::seco_fetch` (wired in `R/pipeline.R`). Datasheet authored
 2026-06-01; parser verified 2026-06-01.
+
+## What is special (de)
+Die Schweizer Konsumentenstimmungserhebung, die kanonische Stimmungsreihe,
+zurück bis 1972 — eine der längsten Umfragehistorien im Katalog. Das SECO
+(Staatssekretariat für Wirtschaft) **führt** die Erhebung durch und
+**publiziert** die Daten direkt im swissdata-Format, weshalb dieser Datensatz an
+der Quelle bezogen und dem tatsächlichen Produzenten zugeschrieben wird. Er
+**ersetzt** den früheren SNB-Reexport `ch_snb_concon`, der dieselben Zahlen aus
+zweiter Hand über die SNB-Würfel-API führte: Der Wechsel korrigiert die
+Zuschreibung und ergänzt die saisonbereinigte Variante, die das SECO neben den
+Rohsalden veröffentlicht.
+
+Der Datensatz enthält den **Index der Konsumentenstimmung** (`ks_i63_index_q`)
+sowie die zugrunde liegenden Saldokomponenten: vergangene und erwartete
+Wirtschaftslage, vergangene und erwartete Preise, Arbeitsplatzsicherheit und
+Arbeitslosigkeitserwartung, vergangene und künftige Finanzlage der Haushalte,
+Sparsituation und Sparaussichten sowie der Zeitpunkt für grössere Anschaffungen.
+Jede Reihe erscheint sowohl unbereinigt (`na`) als auch saison- und
+kalenderbereinigt (`csa`). Das historische Niveau (1972–2023) wurde an die seit
+2024 verwendete Methodik angeglichen.
+
+## What is special (fr)
+L'enquête suisse sur le climat de consommation, la série de référence en matière
+de climat, remontant à 1972 — l'un des historiques d'enquête les plus longs du
+catalogue. Le SECO (Secrétariat d'État à l'économie) **réalise** l'enquête et
+**publie** les données directement au format swissdata ; ce jeu de données est
+donc repris à la source et attribué au véritable producteur. Il **remplace** la
+réexportation BNS `ch_snb_concon`, qui reprenait les mêmes chiffres de seconde
+main via l'API des cubes de la BNS : le changement corrige l'attribution et
+ajoute la variante corrigée des variations saisonnières que le SECO publie à
+côté des soldes bruts.
+
+Le jeu de données expose l'**indice du climat de consommation**
+(`ks_i63_index_q`) ainsi que les composantes de solde sous-jacentes : situation
+économique passée et attendue, prix passés et attendus, sécurité de l'emploi et
+perspectives de chômage, situation financière passée et future des ménages,
+situation et perspectives d'épargne, et opportunité des achats importants.
+Chaque série paraît aussi bien brute (`na`) que corrigée des variations
+saisonnières et des effets de calendrier (`csa`). Le niveau historique
+(1972–2023) a été réaligné sur la méthodologie en vigueur depuis 2024.
+
+## What is special (it)
+L'indagine svizzera sul clima di consumo, la serie di riferimento in materia di
+clima, risalente al 1972 — una delle storie d'indagine più lunghe del catalogo.
+La SECO (Segreteria di Stato dell'economia) **conduce** l'indagine e
+**pubblica** i dati direttamente nel formato swissdata; questo set di dati è
+quindi ripreso alla fonte e attribuito al vero produttore. **Sostituisce** la
+riesportazione BNS `ch_snb_concon`, che riportava le stesse cifre di seconda
+mano tramite l'API dei cubi BNS: il passaggio corregge l'attribuzione e aggiunge
+la variante destagionalizzata che la SECO pubblica accanto ai saldi grezzi.
+
+Il set di dati espone l'**indice del clima di consumo** (`ks_i63_index_q`) e le
+componenti di saldo sottostanti: situazione economica passata e attesa, prezzi
+passati e attesi, sicurezza del posto di lavoro e prospettive di disoccupazione,
+situazione finanziaria passata e futura delle economie domestiche, situazione e
+prospettive di risparmio e momento opportuno per gli acquisti importanti. Ogni
+serie è pubblicata sia grezza (`na`) sia destagionalizzata e corretta per gli
+effetti di calendario (`csa`). Il livello storico (1972–2023) è stato riallineato
+alla metodologia in uso dal 2024.

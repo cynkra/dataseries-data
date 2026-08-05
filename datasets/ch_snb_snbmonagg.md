@@ -84,3 +84,49 @@ definitions of the money supply (European standard).
 ## Provenance
 Script: `R/source_snb.R::snb_fetch` (cube `snbmonagg`, title from
 `R/snb_cubes.tsv`, topic "Money and banking"). Datasheet authored 2026-06-01.
+
+## What is special (de)
+Die zentralen Schweizer Geldmengenaggregate, monatlich ab 1984. Dies ist die
+kanonische Geldmengenreihe. Der Quellwürfel hat zwei Dimensionen — `D0` Niveau
+gegenüber Vorjahresveränderung, `D1` die Komponente oder das Aggregat —, doch `D0`
+wird weggelassen: Seine Stufe `VV` (Vorjahresveränderung) ist exakt die
+YoY-%-Transformation der App, abgeleitet aus der Niveaustufe `B`. Behält man nur
+`B`, fällt `D0` weg und `D1` bleibt als einzige Dimension. Die Komponenten sind
+konstruktionsbedingt in den Aggregaten enthalten: Bargeldumlauf + Sichteinlagen +
+Einlagen in Transaktionskonten -> **M1**; M1 + Spareinlagen -> **M2**; M2 +
+Termineinlagen -> **M3**. Der Würfel liefert somit die Bausteine (`B`, `S0`, `ET`,
+`S1`, `T`) und die drei Totale (`GM1`, `GM2`, `GM3`) nebeneinander als Niveaus in
+Mio. CHF — 8 gespeicherte Reihen. Im Vergleich zu `snbmoba` (Notenbankgeldmenge,
+den eigenen Verbindlichkeiten der Zentralbank) messen diese Aggregate das vom
+Publikum gehaltene Geld; deshalb ist dies das kanonische Aggregat und die
+Notenbankgeldmenge die Alternative.
+
+## What is special (fr)
+Les agrégats monétaires suisses de référence, mensuels depuis 1984. C'est la série
+canonique de la masse monétaire. Le cube source a deux dimensions — `D0` niveau
+contre variation sur un an, `D1` la composante ou l'agrégat — mais `D0` est écartée :
+son niveau `VV` (variation sur un an) est exactement la transformation annuelle de
+l'application, dérivée du niveau `B`. En ne gardant que `B`, `D0` disparaît et `D1`
+reste la seule dimension. Les composantes s'emboîtent dans les agrégats par
+construction : monnaie en circulation + dépôts à vue + dépôts en comptes de
+transaction -> **M1** ; M1 + dépôts d'épargne -> **M2** ; M2 + dépôts à terme ->
+**M3**. Le cube livre donc les briques (`B`, `S0`, `ET`, `S1`, `T`) et les trois
+totaux (`GM1`, `GM2`, `GM3`) côte à côte, en niveaux de millions de CHF — 8 séries
+stockées. Par rapport à `snbmoba` (monnaie centrale, les engagements propres de la
+banque centrale), ces agrégats mesurent la monnaie détenue par le public : c'est
+pourquoi celui-ci est l'agrégat canonique et la monnaie centrale l'alternative.
+
+## What is special (it)
+Gli aggregati monetari svizzeri di riferimento, mensili dal 1984. È la serie
+canonica della massa monetaria. Il cubo di origine ha due dimensioni — `D0` livello
+contro variazione annua, `D1` la componente o l'aggregato — ma `D0` viene esclusa:
+il suo livello `VV` (variazione annua) è esattamente la trasformazione annua
+dell'applicazione, derivata dal livello `B`. Mantenendo solo `B`, `D0` decade e `D1`
+resta l'unica dimensione. Le componenti confluiscono negli aggregati per
+costruzione: circolante + depositi a vista + depositi in conti di transazione ->
+**M1**; M1 + depositi a risparmio -> **M2**; M2 + depositi a termine -> **M3**. Il
+cubo fornisce quindi i mattoni (`B`, `S0`, `ET`, `S1`, `T`) e i tre totali (`GM1`,
+`GM2`, `GM3`) affiancati come livelli in milioni di CHF — 8 serie memorizzate.
+Rispetto a `snbmoba` (base monetaria, gli impegni propri della banca centrale),
+questi aggregati misurano la moneta detenuta dal pubblico: per questo è l'aggregato
+canonico e la base monetaria l'alternativa.

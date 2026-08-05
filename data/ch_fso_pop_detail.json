@@ -123,7 +123,9 @@
     "nationality": "_T",
     "sex": "_T"
   },
-  "description": "The permanent resident population broken down by nationality (Swiss / foreign) × sex, annual year-end stock from the STATPOP register. Complements ch_fso_pop (the long 1861– demographic balance with births/deaths) with the modern foreign-population share — ~27.4% foreign in 2024.",
+  "description": {
+    "en": "The permanent resident population broken down by nationality (Swiss / foreign) × sex, annual year-end stock from the STATPOP register. Complements ch_fso_pop (the long 1861– demographic balance with births/deaths) with the modern foreign-population share — ~27.4% foreign in 2024."
+  },
   "units": {
     "en": "Number of permanent residents (year-end stock)",
     "de": "Ständige Wohnbevölkerung (Jahresendbestand)",

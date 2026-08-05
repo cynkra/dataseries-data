@@ -19,8 +19,7 @@ alternate** to the canonical SNB headline series (`ch_snb_plkopr`): reach for th
 one when you want the basket breakdown, and for `ch_snb_plkopr` when you want the
 headline total or YoY inflation across the long history (the FSO asset only carries
 the hierarchy from December 1982, whereas the SNB chain reaches back to 1921). Base
-period December 2025 = 100 (asset `su-d-05.02.66`, which superseded the frozen
-Dec-2020=100 asset `su-d-05.02.67`). History to December 1982.
+period December 2025 = 100; history to December 1982.
 
 ## Access
 - **type**: fso-dam-excel — FSO DAM Excel asset

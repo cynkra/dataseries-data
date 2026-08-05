@@ -60,10 +60,21 @@ read_datasheet_meta <- function(id, datasheet_dir, lines = NULL) {
     if (length(kv)) out$default <- kv
   }
 
-  # Description: the "## What is special" prose — the human/LLM-facing blurb the
-  # website surfaces on the series page + JSON-LD.
+  # Description: the "## What is special" prose — the ONE datasheet section that is
+  # published to users (page lede, <meta description>, JSON-LD). Translations live
+  # in sibling sections at the end of the same file, "## What is special (de)" etc.,
+  # so an English edit and a stale translation show up in the same diff. Every other
+  # prose section (Access, Parsing recipe, Dimensions, Caveats, Provenance) is
+  # internal and stays English.
   desc <- ds_prose(lines, "What is special")
-  if (!is.null(desc)) out$description <- desc
+  if (!is.null(desc)) {
+    obj <- list(en = desc)
+    for (L in DS_I18N_LANGS) {
+      tr <- ds_prose(lines, sprintf("What is special (%s)", L))
+      if (!is.null(tr)) obj[[L]] <- tr
+    }
+    out$description <- obj
+  }
   out
 }
 

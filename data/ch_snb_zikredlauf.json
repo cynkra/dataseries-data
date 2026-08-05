@@ -235,6 +235,8 @@
     "D1": "L35J",
     "D2": "MP1"
   },
-  "description": "The rate banks actually charge on newly agreed loans, broken down by product and by maturity bucket, and reported as a full distribution rather than a single number. For each product/maturity cell the cube gives the mean, the 25% quantile, the median, the 75% quantile and the count of loan agreements (AK). That quantile spread is the distinctive feature: it shows the dispersion of pricing across borrowers, not just the average. Products cover fixed-rate mortgages, base-rate-linked variable mortgages and fixed-rate investment loans, each across up to ten maturity buckets from \"over 1 month\" to \"over 10 up to 15 years\". History starts 2009-05.",
+  "description": {
+    "en": "The rate banks actually charge on newly agreed loans, broken down by product and by maturity bucket, and reported as a full distribution rather than a single number. For each product/maturity cell the cube gives the mean, the 25% quantile, the median, the 75% quantile and the count of loan agreements (AK). That quantile spread is the distinctive feature: it shows the dispersion of pricing across borrowers, not just the average. Products cover fixed-rate mortgages, base-rate-linked variable mortgages and fixed-rate investment loans, each across up to ten maturity buckets from \"over 1 month\" to \"over 10 up to 15 years\". History starts 2009-05."
+  },
   "fetched_utc": "2026-08-05 13:12:03"
 }
