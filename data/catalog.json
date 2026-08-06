@@ -1,5 +1,1566 @@
 [
   {
+    "id": "ch_seco_gdp",
+    "title": {
+      "en": "Gross domestic product (GDP)",
+      "de": "Bruttoinlandprodukt (BIP)",
+      "fr": "Produit intérieur brut (PIB)",
+      "it": "Prodotto interno lordo (PIL)"
+    },
+    "concept": {
+      "en": "National accounts / GDP (output, expenditure, income)",
+      "leaf": {
+        "en": "GDP (output, expenditure, income)",
+        "de": "BIP (Produktion, Verwendung, Einkommen)",
+        "fr": "PIB (production, dépenses, revenus)",
+        "it": "PIL (produzione, spesa, redditi)"
+      }
+    },
+    "canonical": true,
+    "featured": {
+      "en": "GDP",
+      "de": "BIP",
+      "fr": "PIB",
+      "it": "PIL"
+    },
+    "topic": {
+      "key": "national-accounts",
+      "name": {
+        "en": "National accounts",
+        "de": "Volkswirtschaftliche Gesamtrechnung",
+        "fr": "Comptes nationaux",
+        "it": "Conti nazionali"
+      }
+    },
+    "source": {
+      "key": "seco",
+      "name": {
+        "en": "State Secretariat for Economic Affairs (SECO)",
+        "de": "Staatssekretariat für Wirtschaft (SECO)",
+        "fr": "Secrétariat d'État à l'économie (SECO)",
+        "it": "Segreteria di Stato dell'economia (SECO)"
+      }
+    },
+    "license": "seco",
+    "frequency": "quarterly",
+    "start": "1980-01-01",
+    "end": "2026-01-01",
+    "n_series": 660,
+    "updated": "2026-02-23 16:51:17",
+    "fetched": "2026-08-06 09:14:02",
+    "load": "whole",
+    "data": "ch_seco_gdp.csv",
+    "meta": "ch_seco_gdp.json"
+  },
+  {
+    "id": "ch_seco_concon",
+    "title": {
+      "en": "Consumer confidence",
+      "de": "Konsumentenstimmung",
+      "fr": "Climat de consommation",
+      "it": "Clima di consumo"
+    },
+    "concept": {
+      "en": "Business cycle & sentiment / Consumer confidence",
+      "leaf": {
+        "en": "Consumer confidence",
+        "de": "Konsumentenstimmung",
+        "fr": "Climat de consommation",
+        "it": "Clima di consumo"
+      }
+    },
+    "canonical": true,
+    "featured": {
+      "en": "Consumer confidence",
+      "de": "Konsumentenstimmung",
+      "fr": "Climat de consommation",
+      "it": "Clima di consumo"
+    },
+    "topic": {
+      "key": "business-cycle-sentiment",
+      "name": {
+        "en": "Business cycle & sentiment",
+        "de": "Konjunktur & Stimmung",
+        "fr": "Conjoncture & climat",
+        "it": "Congiuntura e clima"
+      }
+    },
+    "source": {
+      "key": "seco",
+      "name": {
+        "en": "State Secretariat for Economic Affairs (SECO)",
+        "de": "Staatssekretariat für Wirtschaft (SECO)",
+        "fr": "Secrétariat d'État à l'économie (SECO)",
+        "it": "Segreteria di Stato dell'economia (SECO)"
+      }
+    },
+    "license": "quarterly",
+    "frequency": "quarterly",
+    "start": "1972-10-01",
+    "end": "2026-04-01",
+    "n_series": 39,
+    "updated": "2026-05-23 16:49:08",
+    "fetched": "2026-08-06 09:14:02",
+    "load": "whole",
+    "data": "ch_seco_concon.csv",
+    "meta": "ch_seco_concon.json"
+  },
+  {
+    "id": "ch_fso_retail",
+    "title": {
+      "en": "Retail trade turnover",
+      "de": "Detailhandelsumsätze",
+      "fr": "Chiffres d'affaires du commerce de détail",
+      "it": "Fatturato del commercio al dettaglio"
+    },
+    "concept": {
+      "en": "Domestic economy / Retail trade turnover",
+      "leaf": {
+        "en": "Retail trade turnover",
+        "de": "Detailhandelsumsätze",
+        "fr": "Chiffres d'affaires du commerce de détail",
+        "it": "Fatturato del commercio al dettaglio"
+      }
+    },
+    "canonical": true,
+    "featured": {
+      "en": "Retail trade",
+      "de": "Detailhandel",
+      "fr": "Commerce de détail",
+      "it": "Commercio al dettaglio"
+    },
+    "topic": {
+      "key": "domestic-economy",
+      "name": {
+        "en": "Domestic economy",
+        "de": "Binnenwirtschaft",
+        "fr": "Économie intérieure",
+        "it": "Economia interna"
+      }
+    },
+    "source": {
+      "key": "fso",
+      "name": {
+        "en": "Swiss Federal Statistical Office (FSO)",
+        "de": "Bundesamt für Statistik (BFS)",
+        "fr": "Office fédéral de la statistique (OFS)",
+        "it": "Ufficio federale di statistica (UST)"
+      }
+    },
+    "license": "monthly",
+    "frequency": "monthly",
+    "start": "2000-01-01",
+    "end": "2026-06-01",
+    "n_series": 171,
+    "updated": null,
+    "fetched": "2026-08-06 09:14:02",
+    "load": "whole",
+    "data": "ch_fso_retail.csv",
+    "meta": "ch_fso_retail.json"
+  },
+  {
+    "id": "ch_fso_production",
+    "title": {
+      "en": "Industry & construction turnover",
+      "de": "Umsätze Industrie und Bau",
+      "fr": "Chiffres d'affaires industrie et construction",
+      "it": "Fatturato industria e costruzioni"
+    },
+    "concept": {
+      "en": "Domestic economy / Industry & construction turnover",
+      "leaf": {
+        "en": "Industry & construction turnover",
+        "de": "Umsätze Industrie & Bau",
+        "fr": "Chiffres d'affaires industrie & construction",
+        "it": "Fatturato industria e costruzioni"
+      }
+    },
+    "canonical": true,
+    "featured": null,
+    "topic": {
+      "key": "domestic-economy",
+      "name": {
+        "en": "Domestic economy",
+        "de": "Binnenwirtschaft",
+        "fr": "Économie intérieure",
+        "it": "Economia interna"
+      }
+    },
+    "source": {
+      "key": "fso",
+      "name": {
+        "en": "Swiss Federal Statistical Office (FSO)",
+        "de": "Bundesamt für Statistik (BFS)",
+        "fr": "Office fédéral de la statistique (OFS)",
+        "it": "Ufficio federale di statistica (UST)"
+      }
+    },
+    "license": "quarterly",
+    "frequency": "quarterly",
+    "start": "1999-01-01",
+    "end": "2026-01-01",
+    "n_series": 87,
+    "updated": null,
+    "fetched": "2026-08-06 09:14:02",
+    "load": "whole",
+    "data": "ch_fso_production.csv",
+    "meta": "ch_fso_production.json"
+  },
+  {
+    "id": "ch_fso_services",
+    "title": {
+      "en": "Services turnover",
+      "de": "Umsätze Dienstleistungssektor",
+      "fr": "Chiffres d'affaires des services",
+      "it": "Fatturato dei servizi"
+    },
+    "concept": {
+      "en": "Domestic economy / Services turnover",
+      "leaf": {
+        "en": "Services turnover",
+        "de": "Umsätze Dienstleistungen",
+        "fr": "Chiffres d'affaires des services",
+        "it": "Fatturato dei servizi"
+      }
+    },
+    "canonical": true,
+    "featured": null,
+    "topic": {
+      "key": "domestic-economy",
+      "name": {
+        "en": "Domestic economy",
+        "de": "Binnenwirtschaft",
+        "fr": "Économie intérieure",
+        "it": "Economia interna"
+      }
+    },
+    "source": {
+      "key": "fso",
+      "name": {
+        "en": "Swiss Federal Statistical Office (FSO)",
+        "de": "Bundesamt für Statistik (BFS)",
+        "fr": "Office fédéral de la statistique (OFS)",
+        "it": "Ufficio federale di statistica (UST)"
+      }
+    },
+    "license": "fso",
+    "frequency": "quarterly",
+    "start": "2021-01-01",
+    "end": "2026-01-01",
+    "n_series": 66,
+    "updated": null,
+    "fetched": "2026-08-06 09:14:02",
+    "load": "whole",
+    "data": "ch_fso_services.csv",
+    "meta": "ch_fso_services.json"
+  },
+  {
+    "id": "ch_fso_new_vehicles",
+    "title": {
+      "en": "New car registrations by fuel",
+      "de": "Neuzulassungen von Personenwagen nach Treibstoff",
+      "fr": "Nouvelles immatriculations de voitures par carburant",
+      "it": "Nuove immatricolazioni di automobili per carburante"
+    },
+    "concept": {
+      "en": "Domestic economy / New vehicle registrations",
+      "leaf": {
+        "en": "New vehicle registrations",
+        "de": "Neuzulassungen von Fahrzeugen",
+        "fr": "Nouvelles immatriculations",
+        "it": "Nuove immatricolazioni"
+      }
+    },
+    "canonical": true,
+    "featured": null,
+    "topic": {
+      "key": "domestic-economy",
+      "name": {
+        "en": "Domestic economy",
+        "de": "Binnenwirtschaft",
+        "fr": "Économie intérieure",
+        "it": "Economia interna"
+      }
+    },
+    "source": {
+      "key": "fso",
+      "name": {
+        "en": "Swiss Federal Statistical Office (FSO)",
+        "de": "Bundesamt für Statistik (BFS)",
+        "fr": "Office fédéral de la statistique (OFS)",
+        "it": "Ufficio federale di statistica (UST)"
+      }
+    },
+    "license": "fso",
+    "frequency": "monthly",
+    "start": "2005-01-01",
+    "end": "2026-06-01",
+    "n_series": 12,
+    "updated": null,
+    "fetched": "2026-08-06 09:14:02",
+    "load": "whole",
+    "data": "ch_fso_new_vehicles.csv",
+    "meta": "ch_fso_new_vehicles.json"
+  },
+  {
+    "id": "ch_fso_vacant_dwellings",
+    "title": {
+      "en": "Vacant dwellings",
+      "de": "Leerwohnungen",
+      "fr": "Logements vacants",
+      "it": "Abitazioni vuote"
+    },
+    "concept": {
+      "en": "Domestic economy / Vacant dwellings",
+      "leaf": {
+        "en": "Vacant dwellings",
+        "de": "Leerwohnungen",
+        "fr": "Logements vacants",
+        "it": "Abitazioni vuote"
+      }
+    },
+    "canonical": true,
+    "featured": null,
+    "topic": {
+      "key": "domestic-economy",
+      "name": {
+        "en": "Domestic economy",
+        "de": "Binnenwirtschaft",
+        "fr": "Économie intérieure",
+        "it": "Economia interna"
+      }
+    },
+    "source": {
+      "key": "fso",
+      "name": {
+        "en": "Swiss Federal Statistical Office (FSO)",
+        "de": "Bundesamt für Statistik (BFS)",
+        "fr": "Office fédéral de la statistique (OFS)",
+        "it": "Ufficio federale di statistica (UST)"
+      }
+    },
+    "license": "fso",
+    "frequency": "annual",
+    "start": "1995-01-01",
+    "end": "2025-01-01",
+    "n_series": 2,
+    "updated": null,
+    "fetched": "2026-08-06 09:14:02",
+    "load": "whole",
+    "data": "ch_fso_vacant_dwellings.csv",
+    "meta": "ch_fso_vacant_dwellings.json"
+  },
+  {
+    "id": "ch_fso_cross_border_commuters",
+    "title": {
+      "en": "Cross-border commuters",
+      "de": "Grenzgängerinnen und Grenzgänger",
+      "fr": "Frontaliers",
+      "it": "Frontalieri"
+    },
+    "concept": {
+      "en": "Labour / Cross-border commuters",
+      "leaf": {
+        "en": "Cross-border commuters",
+        "de": "Grenzgänger",
+        "fr": "Frontaliers",
+        "it": "Frontalieri"
+      }
+    },
+    "canonical": true,
+    "featured": null,
+    "topic": {
+      "key": "labour",
+      "name": {
+        "en": "Labour",
+        "de": "Arbeit",
+        "fr": "Travail",
+        "it": "Lavoro"
+      }
+    },
+    "source": {
+      "key": "fso",
+      "name": {
+        "en": "Swiss Federal Statistical Office (FSO)",
+        "de": "Bundesamt für Statistik (BFS)",
+        "fr": "Office fédéral de la statistique (OFS)",
+        "it": "Ufficio federale di statistica (UST)"
+      }
+    },
+    "license": "fso",
+    "frequency": "quarterly",
+    "start": "2002-07-01",
+    "end": "2026-04-01",
+    "n_series": 27,
+    "updated": null,
+    "fetched": "2026-08-06 09:14:02",
+    "load": "whole",
+    "data": "ch_fso_cross_border_commuters.csv",
+    "meta": "ch_fso_cross_border_commuters.json"
+  },
+  {
+    "id": "ch_fso_pop_detail",
+    "title": {
+      "en": "Resident population by nationality",
+      "de": "Ständige Wohnbevölkerung nach Staatsangehörigkeit",
+      "fr": "Population résidante permanente par nationalité",
+      "it": "Popolazione residente permanente per nazionalità"
+    },
+    "concept": {
+      "en": "Population & demographics / Resident population by nationality",
+      "leaf": {
+        "en": "Resident population by nationality",
+        "de": "Wohnbevölkerung nach Staatsangehörigkeit",
+        "fr": "Population résidante par nationalité",
+        "it": "Popolazione residente per nazionalità"
+      }
+    },
+    "canonical": false,
+    "featured": null,
+    "topic": {
+      "key": "population-demographics",
+      "name": {
+        "en": "Population & demographics",
+        "de": "Bevölkerung & Demografie",
+        "fr": "Population & démographie",
+        "it": "Popolazione e demografia"
+      }
+    },
+    "source": {
+      "key": "fso",
+      "name": {
+        "en": "Swiss Federal Statistical Office (FSO)",
+        "de": "Bundesamt für Statistik (BFS)",
+        "fr": "Office fédéral de la statistique (OFS)",
+        "it": "Ufficio federale di statistica (UST)"
+      }
+    },
+    "license": "fso",
+    "frequency": "annual",
+    "start": "2010-01-01",
+    "end": "2024-01-01",
+    "n_series": 9,
+    "updated": null,
+    "fetched": "2026-08-06 09:14:02",
+    "load": "whole",
+    "data": "ch_fso_pop_detail.csv",
+    "meta": "ch_fso_pop_detail.json"
+  },
+  {
+    "id": "ch_ffa_finances",
+    "title": {
+      "en": "Government finances",
+      "de": "Öffentliche Finanzen",
+      "fr": "Finances publiques",
+      "it": "Finanze pubbliche"
+    },
+    "concept": {
+      "en": "National accounts / Government finance",
+      "leaf": {
+        "en": "Government finance",
+        "de": "Öffentliche Finanzen",
+        "fr": "Finances publiques",
+        "it": "Finanze pubbliche"
+      }
+    },
+    "canonical": true,
+    "featured": null,
+    "topic": {
+      "key": "national-accounts",
+      "name": {
+        "en": "National accounts",
+        "de": "Volkswirtschaftliche Gesamtrechnung",
+        "fr": "Comptes nationaux",
+        "it": "Conti nazionali"
+      }
+    },
+    "source": {
+      "key": "ffa",
+      "name": {
+        "en": "Federal Finance Administration (FFA)",
+        "de": "Eidgenössische Finanzverwaltung (EFV)",
+        "fr": "Administration fédérale des finances (AFF)",
+        "it": "Amministrazione federale delle finanze (AFF)"
+      }
+    },
+    "license": "opendata-swiss",
+    "frequency": "annual",
+    "start": "1990-01-01",
+    "end": "2029-01-01",
+    "n_series": 387,
+    "updated": "2025-03-18",
+    "fetched": "2026-08-06 09:14:02",
+    "load": "whole",
+    "data": "ch_ffa_finances.csv",
+    "meta": "ch_ffa_finances.json"
+  },
+  {
+    "id": "ch_kof_barometer",
+    "title": {
+      "en": "KOF Economic Barometer",
+      "de": "KOF Konjunkturbarometer",
+      "fr": "Baromètre conjoncturel KOF",
+      "it": "Barometro congiunturale KOF"
+    },
+    "concept": {
+      "en": "Business cycle & sentiment / Leading barometer",
+      "leaf": {
+        "en": "Leading barometer",
+        "de": "Vorlaufendes Barometer",
+        "fr": "Baromètre avancé",
+        "it": "Barometro anticipatore"
+      }
+    },
+    "canonical": true,
+    "featured": null,
+    "topic": {
+      "key": "business-cycle-sentiment",
+      "name": {
+        "en": "Business cycle & sentiment",
+        "de": "Konjunktur & Stimmung",
+        "fr": "Conjoncture & climat",
+        "it": "Congiuntura e clima"
+      }
+    },
+    "source": {
+      "key": "kof",
+      "name": {
+        "en": "KOF Swiss Economic Institute",
+        "de": "KOF Konjunkturforschungsstelle der ETH Zürich",
+        "fr": "KOF Centre de recherches conjoncturelles (EPF Zurich)",
+        "it": "KOF Centro di ricerche congiunturali (PF Zurigo)"
+      }
+    },
+    "license": "kof",
+    "frequency": "monthly",
+    "start": "1991-01-01",
+    "end": "2026-07-01",
+    "n_series": 1,
+    "updated": null,
+    "fetched": "2026-08-06 09:14:02",
+    "load": "whole",
+    "data": "ch_kof_barometer.csv",
+    "meta": "ch_kof_barometer.json"
+  },
+  {
+    "id": "ch_kof_esi",
+    "title": {
+      "en": "KOF Economic Sentiment Index",
+      "de": "KOF Economic Sentiment Index",
+      "fr": "KOF Economic Sentiment Index",
+      "it": "KOF Economic Sentiment Index"
+    },
+    "concept": {
+      "en": "Business cycle & sentiment / Sentiment composite",
+      "leaf": {
+        "en": "Sentiment composite",
+        "de": "Stimmungsindikator",
+        "fr": "Indice de climat",
+        "it": "Indice di clima"
+      }
+    },
+    "canonical": true,
+    "featured": null,
+    "topic": {
+      "key": "business-cycle-sentiment",
+      "name": {
+        "en": "Business cycle & sentiment",
+        "de": "Konjunktur & Stimmung",
+        "fr": "Conjoncture & climat",
+        "it": "Congiuntura e clima"
+      }
+    },
+    "source": {
+      "key": "kof",
+      "name": {
+        "en": "KOF Swiss Economic Institute",
+        "de": "KOF Konjunkturforschungsstelle der ETH Zürich",
+        "fr": "KOF Centre de recherches conjoncturelles (EPF Zurich)",
+        "it": "KOF Centro di ricerche congiunturali (PF Zurigo)"
+      }
+    },
+    "license": "kof",
+    "frequency": "monthly",
+    "start": "2007-04-01",
+    "end": "2026-06-01",
+    "n_series": 2,
+    "updated": null,
+    "fetched": "2026-08-06 09:14:02",
+    "load": "whole",
+    "data": "ch_kof_esi.csv",
+    "meta": "ch_kof_esi.json"
+  },
+  {
+    "id": "ch_adecco_sjmi",
+    "title": {
+      "en": "Adecco Group Swiss Job Market Index",
+      "de": "Adecco Group Swiss Job Market Index",
+      "fr": "Adecco Group Swiss Job Market Index",
+      "it": "Adecco Group Swiss Job Market Index"
+    },
+    "concept": {
+      "en": "Labour / Job market",
+      "leaf": {
+        "en": "Job market",
+        "de": "Arbeitsmarkt",
+        "fr": "Marché du travail",
+        "it": "Mercato del lavoro"
+      }
+    },
+    "canonical": true,
+    "featured": null,
+    "topic": {
+      "key": "labour",
+      "name": {
+        "en": "Labour",
+        "de": "Arbeit",
+        "fr": "Travail",
+        "it": "Lavoro"
+      }
+    },
+    "source": {
+      "key": "uzh-smm",
+      "name": {
+        "en": "University of Zurich (Stellenmarkt-Monitor Schweiz)",
+        "de": "Universität Zürich (Stellenmarkt-Monitor Schweiz)",
+        "fr": "Université de Zurich (Stellenmarkt-Monitor Schweiz)",
+        "it": "Università di Zurigo (Stellenmarkt-Monitor Schweiz)"
+      }
+    },
+    "license": "uzh-smm",
+    "frequency": "quarterly",
+    "start": "2003-03-01",
+    "end": "2026-06-01",
+    "n_series": 4,
+    "updated": null,
+    "fetched": "2026-08-06 09:14:02",
+    "load": "whole",
+    "data": "ch_adecco_sjmi.csv",
+    "meta": "ch_adecco_sjmi.json"
+  },
+  {
+    "id": "ch_fso_hesta",
+    "title": {
+      "en": "Hotel overnight stays",
+      "de": "Hotellogiernächte",
+      "fr": "Nuitées hôtelières",
+      "it": "Pernottamenti alberghieri"
+    },
+    "concept": {
+      "en": "Domestic economy / Hotel overnight stays",
+      "leaf": {
+        "en": "Hotel overnight stays",
+        "de": "Hotellogiernächte",
+        "fr": "Nuitées hôtelières",
+        "it": "Pernottamenti alberghieri"
+      }
+    },
+    "canonical": true,
+    "featured": null,
+    "topic": {
+      "key": "domestic-economy",
+      "name": {
+        "en": "Domestic economy",
+        "de": "Binnenwirtschaft",
+        "fr": "Économie intérieure",
+        "it": "Economia interna"
+      }
+    },
+    "source": {
+      "key": "fso",
+      "name": {
+        "en": "Swiss Federal Statistical Office (FSO)",
+        "de": "Bundesamt für Statistik (BFS)",
+        "fr": "Office fédéral de la statistique (OFS)",
+        "it": "Ufficio federale di statistica (UST)"
+      }
+    },
+    "license": "fso",
+    "frequency": "monthly",
+    "start": "2005-01-01",
+    "end": "2026-06-01",
+    "n_series": 14,
+    "updated": null,
+    "fetched": "2026-08-06 09:14:02",
+    "load": "whole",
+    "data": "ch_fso_hesta.csv",
+    "meta": "ch_fso_hesta.json"
+  },
+  {
+    "id": "ch_fso_besta",
+    "title": {
+      "en": "Jobs by economic division",
+      "de": "Beschäftigte nach Wirtschaftsabteilung",
+      "fr": "Emplois par division économique",
+      "it": "Impieghi per divisione economica"
+    },
+    "concept": {
+      "en": "Labour / Employment / jobs",
+      "leaf": {
+        "en": "Employment",
+        "de": "Beschäftigung",
+        "fr": "Emploi",
+        "it": "Occupazione"
+      }
+    },
+    "canonical": true,
+    "featured": {
+      "en": "Employment",
+      "de": "Beschäftigung",
+      "fr": "Emploi",
+      "it": "Occupazione"
+    },
+    "topic": {
+      "key": "labour",
+      "name": {
+        "en": "Labour",
+        "de": "Arbeit",
+        "fr": "Travail",
+        "it": "Lavoro"
+      }
+    },
+    "source": {
+      "key": "fso",
+      "name": {
+        "en": "Swiss Federal Statistical Office (FSO)",
+        "de": "Bundesamt für Statistik (BFS)",
+        "fr": "Office fédéral de la statistique (OFS)",
+        "it": "Ufficio federale di statistica (UST)"
+      }
+    },
+    "license": "fso",
+    "frequency": "quarterly",
+    "start": "1991-07-01",
+    "end": "2026-01-01",
+    "n_series": 60,
+    "updated": null,
+    "fetched": "2026-08-06 09:14:03",
+    "load": "whole",
+    "data": "ch_fso_besta.csv",
+    "meta": "ch_fso_besta.json"
+  },
+  {
+    "id": "ch_fso_vacancies",
+    "title": {
+      "en": "Job vacancies",
+      "de": "Offene Stellen",
+      "fr": "Postes vacants",
+      "it": "Posti vacanti"
+    },
+    "concept": {
+      "en": "Labour / Job vacancies",
+      "leaf": {
+        "en": "Job vacancies",
+        "de": "Offene Stellen",
+        "fr": "Postes vacants",
+        "it": "Posti vacanti"
+      }
+    },
+    "canonical": true,
+    "featured": null,
+    "topic": {
+      "key": "labour",
+      "name": {
+        "en": "Labour",
+        "de": "Arbeit",
+        "fr": "Travail",
+        "it": "Lavoro"
+      }
+    },
+    "source": {
+      "key": "fso",
+      "name": {
+        "en": "Swiss Federal Statistical Office (FSO)",
+        "de": "Bundesamt für Statistik (BFS)",
+        "fr": "Office fédéral de la statistique (OFS)",
+        "it": "Ufficio federale di statistica (UST)"
+      }
+    },
+    "license": "fso",
+    "frequency": "quarterly",
+    "start": "1992-04-01",
+    "end": "2026-01-01",
+    "n_series": 60,
+    "updated": null,
+    "fetched": "2026-08-06 09:14:03",
+    "load": "whole",
+    "data": "ch_fso_vacancies.csv",
+    "meta": "ch_fso_vacancies.json"
+  },
+  {
+    "id": "ch_fso_jobs_sex",
+    "title": {
+      "en": "Jobs by economic division and sex",
+      "de": "Beschäftigte nach Wirtschaftsabteilung und Geschlecht",
+      "fr": "Emplois par division économique et sexe",
+      "it": "Impieghi per divisione economica e sesso"
+    },
+    "concept": {
+      "en": "Labour / Employment / jobs",
+      "leaf": {
+        "en": "Employment",
+        "de": "Beschäftigung",
+        "fr": "Emploi",
+        "it": "Occupazione"
+      }
+    },
+    "canonical": false,
+    "featured": null,
+    "topic": {
+      "key": "labour",
+      "name": {
+        "en": "Labour",
+        "de": "Arbeit",
+        "fr": "Travail",
+        "it": "Lavoro"
+      }
+    },
+    "source": {
+      "key": "fso",
+      "name": {
+        "en": "Swiss Federal Statistical Office (FSO)",
+        "de": "Bundesamt für Statistik (BFS)",
+        "fr": "Office fédéral de la statistique (OFS)",
+        "it": "Ufficio federale di statistica (UST)"
+      }
+    },
+    "license": "fso",
+    "frequency": "quarterly",
+    "start": "1995-07-01",
+    "end": "2026-01-01",
+    "n_series": 336,
+    "updated": null,
+    "fetched": "2026-08-06 09:14:03",
+    "load": "whole",
+    "data": "ch_fso_jobs_sex.csv",
+    "meta": "ch_fso_jobs_sex.json"
+  },
+  {
+    "id": "ch_fso_besta_outlook",
+    "title": {
+      "en": "Employment outlook",
+      "de": "Beschäftigungsaussichten",
+      "fr": "Perspectives d'emploi",
+      "it": "Prospettive occupazionali"
+    },
+    "concept": {
+      "en": "Labour / Employment outlook",
+      "leaf": {
+        "en": "Employment outlook",
+        "de": "Beschäftigungsaussichten",
+        "fr": "Perspectives d'emploi",
+        "it": "Prospettive occupazionali"
+      }
+    },
+    "canonical": true,
+    "featured": null,
+    "topic": {
+      "key": "labour",
+      "name": {
+        "en": "Labour",
+        "de": "Arbeit",
+        "fr": "Travail",
+        "it": "Lavoro"
+      }
+    },
+    "source": {
+      "key": "fso",
+      "name": {
+        "en": "Swiss Federal Statistical Office (FSO)",
+        "de": "Bundesamt für Statistik (BFS)",
+        "fr": "Office fédéral de la statistique (OFS)",
+        "it": "Ufficio federale di statistica (UST)"
+      }
+    },
+    "license": "fso",
+    "frequency": "quarterly",
+    "start": "2004-01-01",
+    "end": "2026-01-01",
+    "n_series": 20,
+    "updated": null,
+    "fetched": "2026-08-06 09:14:03",
+    "load": "whole",
+    "data": "ch_fso_besta_outlook.csv",
+    "meta": "ch_fso_besta_outlook.json"
+  },
+  {
+    "id": "ch_fso_cpi",
+    "title": {
+      "en": "Consumer prices (detailed basket)",
+      "de": "Konsumentenpreise (detaillierter Warenkorb)",
+      "fr": "Prix à la consommation (panier détaillé)",
+      "it": "Prezzi al consumo (paniere dettagliato)"
+    },
+    "concept": {
+      "en": "Prices / Consumer prices",
+      "leaf": {
+        "en": "Consumer prices",
+        "de": "Konsumentenpreise",
+        "fr": "Prix à la consommation",
+        "it": "Prezzi al consumo"
+      }
+    },
+    "canonical": false,
+    "featured": null,
+    "topic": {
+      "key": "prices",
+      "name": {
+        "en": "Prices",
+        "de": "Preise",
+        "fr": "Prix",
+        "it": "Prezzi"
+      }
+    },
+    "source": {
+      "key": "fso",
+      "name": {
+        "en": "Swiss Federal Statistical Office (FSO)",
+        "de": "Bundesamt für Statistik (BFS)",
+        "fr": "Office fédéral de la statistique (OFS)",
+        "it": "Ufficio federale di statistica (UST)"
+      }
+    },
+    "license": "fso",
+    "frequency": "monthly",
+    "start": "1982-12-01",
+    "end": "2026-07-01",
+    "n_series": 595,
+    "updated": "2026-08-03",
+    "fetched": "2026-08-06 09:14:03",
+    "load": "whole",
+    "data": "ch_fso_cpi.csv",
+    "meta": "ch_fso_cpi.json"
+  },
+  {
+    "id": "ch_fso_ppi",
+    "title": {
+      "en": "Producer & import prices",
+      "de": "Produzenten- und Importpreise",
+      "fr": "Prix à la production et à l'importation",
+      "it": "Prezzi alla produzione e all'importazione"
+    },
+    "concept": {
+      "en": "Prices / Producer & import prices",
+      "leaf": {
+        "en": "Producer & import prices",
+        "de": "Produzenten- & Importpreise",
+        "fr": "Prix à la production & à l'importation",
+        "it": "Prezzi alla produzione e all'importazione"
+      }
+    },
+    "canonical": true,
+    "featured": null,
+    "topic": {
+      "key": "prices",
+      "name": {
+        "en": "Prices",
+        "de": "Preise",
+        "fr": "Prix",
+        "it": "Prezzi"
+      }
+    },
+    "source": {
+      "key": "fso",
+      "name": {
+        "en": "Swiss Federal Statistical Office (FSO)",
+        "de": "Bundesamt für Statistik (BFS)",
+        "fr": "Office fédéral de la statistique (OFS)",
+        "it": "Ufficio federale di statistica (UST)"
+      }
+    },
+    "license": "fso",
+    "frequency": "monthly",
+    "start": "1963-01-01",
+    "end": "2026-06-01",
+    "n_series": 7,
+    "updated": "2026-07-14",
+    "fetched": "2026-08-06 09:14:03",
+    "load": "whole",
+    "data": "ch_fso_ppi.csv",
+    "meta": "ch_fso_ppi.json"
+  },
+  {
+    "id": "ch_fso_wage_idx",
+    "title": {
+      "en": "Swiss Wage Index",
+      "de": "Schweizerischer Lohnindex",
+      "fr": "Indice suisse des salaires",
+      "it": "Indice svizzero dei salari"
+    },
+    "concept": {
+      "en": "Labour / Wages",
+      "leaf": {
+        "en": "Wages",
+        "de": "Löhne",
+        "fr": "Salaires",
+        "it": "Salari"
+      }
+    },
+    "canonical": true,
+    "featured": null,
+    "topic": {
+      "key": "labour",
+      "name": {
+        "en": "Labour",
+        "de": "Arbeit",
+        "fr": "Travail",
+        "it": "Lavoro"
+      }
+    },
+    "source": {
+      "key": "fso",
+      "name": {
+        "en": "Swiss Federal Statistical Office (FSO)",
+        "de": "Bundesamt für Statistik (BFS)",
+        "fr": "Office fédéral de la statistique (OFS)",
+        "it": "Ufficio federale di statistica (UST)"
+      }
+    },
+    "license": "fso",
+    "frequency": "annual",
+    "start": "1994-01-01",
+    "end": "2025-01-01",
+    "n_series": 12,
+    "updated": "2026-04-21",
+    "fetched": "2026-08-06 09:14:03",
+    "load": "whole",
+    "data": "ch_fso_wage_idx.csv",
+    "meta": "ch_fso_wage_idx.json"
+  },
+  {
+    "id": "ch_fso_pop",
+    "title": {
+      "en": "Resident population",
+      "de": "Ständige Wohnbevölkerung",
+      "fr": "Population résidante permanente",
+      "it": "Popolazione residente permanente"
+    },
+    "concept": {
+      "en": "Population & demographics / Resident population",
+      "leaf": {
+        "en": "Resident population",
+        "de": "Wohnbevölkerung",
+        "fr": "Population résidante",
+        "it": "Popolazione residente"
+      }
+    },
+    "canonical": true,
+    "featured": {
+      "en": "Population",
+      "de": "Bevölkerung",
+      "fr": "Population",
+      "it": "Popolazione"
+    },
+    "topic": {
+      "key": "population-demographics",
+      "name": {
+        "en": "Population & demographics",
+        "de": "Bevölkerung & Demografie",
+        "fr": "Population & démographie",
+        "it": "Popolazione e demografia"
+      }
+    },
+    "source": {
+      "key": "fso",
+      "name": {
+        "en": "Swiss Federal Statistical Office (FSO)",
+        "de": "Bundesamt für Statistik (BFS)",
+        "fr": "Office fédéral de la statistique (OFS)",
+        "it": "Ufficio federale di statistica (UST)"
+      }
+    },
+    "license": "fso",
+    "frequency": "annual",
+    "start": "1861-01-01",
+    "end": "2024-01-01",
+    "n_series": 10,
+    "updated": "2025-08-27",
+    "fetched": "2026-08-06 09:14:03",
+    "load": "whole",
+    "data": "ch_fso_pop.csv",
+    "meta": "ch_fso_pop.json"
+  },
+  {
+    "id": "ch_fso_unemp_rate",
+    "title": {
+      "en": "Unemployment rate (ILO)",
+      "de": "Erwerbslosenquote (ILO)",
+      "fr": "Taux de chômage (BIT)",
+      "it": "Tasso di disoccupazione (ILO)"
+    },
+    "concept": {
+      "en": "Labour / Unemployment",
+      "leaf": {
+        "en": "Unemployment",
+        "de": "Arbeitslosigkeit",
+        "fr": "Chômage",
+        "it": "Disoccupazione"
+      }
+    },
+    "canonical": false,
+    "featured": null,
+    "topic": {
+      "key": "labour",
+      "name": {
+        "en": "Labour",
+        "de": "Arbeit",
+        "fr": "Travail",
+        "it": "Lavoro"
+      }
+    },
+    "source": {
+      "key": "fso",
+      "name": {
+        "en": "Swiss Federal Statistical Office (FSO)",
+        "de": "Bundesamt für Statistik (BFS)",
+        "fr": "Office fédéral de la statistique (OFS)",
+        "it": "Ufficio federale di statistica (UST)"
+      }
+    },
+    "license": "fso",
+    "frequency": "monthly",
+    "start": "1991-01-01",
+    "end": "2026-03-01",
+    "n_series": 5,
+    "updated": "2026-05-18",
+    "fetched": "2026-08-06 09:14:03",
+    "load": "whole",
+    "data": "ch_fso_unemp_rate.csv",
+    "meta": "ch_fso_unemp_rate.json"
+  },
+  {
+    "id": "ch_fso_labour_productivity",
+    "title": {
+      "en": "Labour productivity",
+      "de": "Arbeitsproduktivität",
+      "fr": "Productivité du travail",
+      "it": "Produttività del lavoro"
+    },
+    "concept": {
+      "en": "National accounts / Labour productivity",
+      "leaf": {
+        "en": "Labour productivity",
+        "de": "Arbeitsproduktivität",
+        "fr": "Productivité du travail",
+        "it": "Produttività del lavoro"
+      }
+    },
+    "canonical": true,
+    "featured": null,
+    "topic": {
+      "key": "national-accounts",
+      "name": {
+        "en": "National accounts",
+        "de": "Volkswirtschaftliche Gesamtrechnung",
+        "fr": "Comptes nationaux",
+        "it": "Conti nazionali"
+      }
+    },
+    "source": {
+      "key": "fso",
+      "name": {
+        "en": "Swiss Federal Statistical Office (FSO)",
+        "de": "Bundesamt für Statistik (BFS)",
+        "fr": "Office fédéral de la statistique (OFS)",
+        "it": "Ufficio federale di statistica (UST)"
+      }
+    },
+    "license": "fso",
+    "frequency": "annual",
+    "start": "1991-01-01",
+    "end": "2024-01-01",
+    "n_series": 3,
+    "updated": "2025-09-29",
+    "fetched": "2026-08-06 09:14:03",
+    "load": "whole",
+    "data": "ch_fso_labour_productivity.csv",
+    "meta": "ch_fso_labour_productivity.json"
+  },
+  {
+    "id": "ch_fso_ets",
+    "title": {
+      "en": "Employed persons (ETS)",
+      "de": "Erwerbstätige (ETS)",
+      "fr": "Personnes actives occupées (SPAO)",
+      "it": "Persone occupate (SPO)"
+    },
+    "concept": {
+      "en": "Labour / Employment / employed persons",
+      "leaf": {
+        "en": "Employment",
+        "de": "Beschäftigung",
+        "fr": "Emploi",
+        "it": "Occupazione"
+      }
+    },
+    "canonical": false,
+    "featured": null,
+    "topic": {
+      "key": "labour",
+      "name": {
+        "en": "Labour",
+        "de": "Arbeit",
+        "fr": "Travail",
+        "it": "Lavoro"
+      }
+    },
+    "source": {
+      "key": "fso",
+      "name": {
+        "en": "Swiss Federal Statistical Office (FSO)",
+        "de": "Bundesamt für Statistik (BFS)",
+        "fr": "Office fédéral de la statistique (OFS)",
+        "it": "Ufficio federale di statistica (UST)"
+      }
+    },
+    "license": "fso",
+    "frequency": "quarterly",
+    "start": "1991-04-01",
+    "end": "2026-01-01",
+    "n_series": 69,
+    "updated": "2026-06-16",
+    "fetched": "2026-08-06 09:14:03",
+    "load": "whole",
+    "data": "ch_fso_ets.csv",
+    "meta": "ch_fso_ets.json"
+  },
+  {
+    "id": "ch_fso_gfcf_detail",
+    "title": {
+      "en": "Investment (GFCF) detail",
+      "de": "Investitionen (Bruttoanlageinvestitionen) im Detail",
+      "fr": "Investissements (FBCF) en détail",
+      "it": "Investimenti (IFL) in dettaglio"
+    },
+    "concept": {
+      "en": "National accounts / Investment (gross fixed capital formation)",
+      "leaf": {
+        "en": "Investment (gross fixed capital formation)",
+        "de": "Investitionen (Bruttoanlageinvestitionen)",
+        "fr": "Investissements (FBCF)",
+        "it": "Investimenti (investimenti fissi lordi)"
+      }
+    },
+    "canonical": false,
+    "featured": null,
+    "topic": {
+      "key": "national-accounts",
+      "name": {
+        "en": "National accounts",
+        "de": "Volkswirtschaftliche Gesamtrechnung",
+        "fr": "Comptes nationaux",
+        "it": "Conti nazionali"
+      }
+    },
+    "source": {
+      "key": "fso",
+      "name": {
+        "en": "Swiss Federal Statistical Office (FSO)",
+        "de": "Bundesamt für Statistik (BFS)",
+        "fr": "Office fédéral de la statistique (OFS)",
+        "it": "Ufficio federale di statistica (UST)"
+      }
+    },
+    "license": "fso",
+    "frequency": "annual",
+    "start": "1995-01-01",
+    "end": "2024-01-01",
+    "n_series": 37,
+    "updated": "2025-09-29",
+    "fetched": "2026-08-06 09:14:03",
+    "load": "whole",
+    "data": "ch_fso_gfcf_detail.csv",
+    "meta": "ch_fso_gfcf_detail.json"
+  },
+  {
+    "id": "ch_fso_hours_worked",
+    "title": {
+      "en": "Hours worked",
+      "de": "Arbeitsstunden",
+      "fr": "Heures de travail",
+      "it": "Ore di lavoro"
+    },
+    "concept": {
+      "en": "Labour / Working time and working volume",
+      "leaf": {
+        "en": "Working time and working volume",
+        "de": "Arbeitszeit und Arbeitsvolumen",
+        "fr": "Temps et volume de travail",
+        "it": "Tempo e volume di lavoro"
+      }
+    },
+    "canonical": true,
+    "featured": null,
+    "topic": {
+      "key": "labour",
+      "name": {
+        "en": "Labour",
+        "de": "Arbeit",
+        "fr": "Travail",
+        "it": "Lavoro"
+      }
+    },
+    "source": {
+      "key": "fso",
+      "name": {
+        "en": "Swiss Federal Statistical Office (FSO)",
+        "de": "Bundesamt für Statistik (BFS)",
+        "fr": "Office fédéral de la statistique (OFS)",
+        "it": "Ufficio federale di statistica (UST)"
+      }
+    },
+    "license": "fso",
+    "frequency": "annual",
+    "start": "2010-01-01",
+    "end": "2025-01-01",
+    "n_series": 45,
+    "updated": "2026-05-21",
+    "fetched": "2026-08-06 09:14:03",
+    "load": "whole",
+    "data": "ch_fso_hours_worked.csv",
+    "meta": "ch_fso_hours_worked.json"
+  },
+  {
+    "id": "ch_fso_gdp_region",
+    "title": {
+      "en": "Regional GDP",
+      "de": "Regionales BIP",
+      "fr": "PIB régional",
+      "it": "PIL regionale"
+    },
+    "concept": {
+      "en": "National accounts / Regional GDP",
+      "leaf": {
+        "en": "Regional GDP",
+        "de": "Regionales BIP",
+        "fr": "PIB régional",
+        "it": "PIL regionale"
+      }
+    },
+    "canonical": true,
+    "featured": null,
+    "topic": {
+      "key": "national-accounts",
+      "name": {
+        "en": "National accounts",
+        "de": "Volkswirtschaftliche Gesamtrechnung",
+        "fr": "Comptes nationaux",
+        "it": "Conti nazionali"
+      }
+    },
+    "source": {
+      "key": "fso",
+      "name": {
+        "en": "Swiss Federal Statistical Office (FSO)",
+        "de": "Bundesamt für Statistik (BFS)",
+        "fr": "Office fédéral de la statistique (OFS)",
+        "it": "Ufficio federale di statistica (UST)"
+      }
+    },
+    "license": "fso",
+    "frequency": "annual",
+    "start": "2008-01-01",
+    "end": "2022-01-01",
+    "n_series": 34,
+    "updated": "2024-10-28",
+    "fetched": "2026-08-06 09:14:04",
+    "load": "whole",
+    "data": "ch_fso_gdp_region.csv",
+    "meta": "ch_fso_gdp_region.json"
+  },
+  {
+    "id": "ch_fso_construction_prices",
+    "title": {
+      "en": "Construction prices",
+      "de": "Baupreise",
+      "fr": "Prix de la construction",
+      "it": "Prezzi delle costruzioni"
+    },
+    "concept": {
+      "en": "Prices / Construction prices",
+      "leaf": {
+        "en": "Construction prices",
+        "de": "Baupreise",
+        "fr": "Prix de la construction",
+        "it": "Prezzi delle costruzioni"
+      }
+    },
+    "canonical": true,
+    "featured": null,
+    "topic": {
+      "key": "prices",
+      "name": {
+        "en": "Prices",
+        "de": "Preise",
+        "fr": "Prix",
+        "it": "Prezzi"
+      }
+    },
+    "source": {
+      "key": "fso",
+      "name": {
+        "en": "Swiss Federal Statistical Office (FSO)",
+        "de": "Bundesamt für Statistik (BFS)",
+        "fr": "Office fédéral de la statistique (OFS)",
+        "it": "Ufficio federale di statistica (UST)"
+      }
+    },
+    "license": "fso",
+    "frequency": "semi-annual",
+    "start": "1998-10-01",
+    "end": "2026-04-01",
+    "n_series": 3,
+    "updated": "2026-06-18",
+    "fetched": "2026-08-06 09:14:04",
+    "load": "whole",
+    "data": "ch_fso_construction_prices.csv",
+    "meta": "ch_fso_construction_prices.json"
+  },
+  {
+    "id": "ch_fso_trade_partner",
+    "title": {
+      "en": "Foreign trade by partner country",
+      "de": "Aussenhandel nach Partnerland",
+      "fr": "Commerce extérieur par pays partenaire",
+      "it": "Commercio estero per paese partner"
+    },
+    "concept": {
+      "en": "External sector / Foreign trade",
+      "leaf": {
+        "en": "Foreign trade",
+        "de": "Aussenhandel",
+        "fr": "Commerce extérieur",
+        "it": "Commercio estero"
+      }
+    },
+    "canonical": true,
+    "featured": null,
+    "topic": {
+      "key": "external-sector",
+      "name": {
+        "en": "External sector",
+        "de": "Aussenwirtschaft",
+        "fr": "Secteur extérieur",
+        "it": "Settore estero"
+      }
+    },
+    "source": {
+      "key": "fso-focbs",
+      "name": {
+        "en": "Swiss Federal Statistical Office (FSO) / Federal Office for Customs and Border Security (FOCBS)",
+        "de": "Bundesamt für Statistik (BFS) / Bundesamt für Zoll und Grenzsicherheit (BAZG)",
+        "fr": "Office fédéral de la statistique (OFS) / Office fédéral de la douane et de la sécurité des frontières (OFDF)",
+        "it": "Ufficio federale di statistica (UST) / Ufficio federale della dogana e della sicurezza dei confini (UDSC)"
+      }
+    },
+    "license": "fso",
+    "frequency": "annual",
+    "start": "1990-01-01",
+    "end": "2025-01-01",
+    "n_series": 66,
+    "updated": null,
+    "fetched": "2026-08-06 09:14:04",
+    "load": "whole",
+    "data": "ch_fso_trade_partner.csv",
+    "meta": "ch_fso_trade_partner.json"
+  },
+  {
+    "id": "ch_fso_hicp",
+    "title": {
+      "en": "Harmonised CPI (HICP)",
+      "de": "Harmonisierter Konsumentenpreisindex (HVPI)",
+      "fr": "IPC harmonisé (IPCH)",
+      "it": "IPC armonizzato (IPCA)"
+    },
+    "concept": {
+      "en": "Prices / Consumer prices",
+      "leaf": {
+        "en": "Consumer prices",
+        "de": "Konsumentenpreise",
+        "fr": "Prix à la consommation",
+        "it": "Prezzi al consumo"
+      }
+    },
+    "canonical": false,
+    "featured": null,
+    "topic": {
+      "key": "prices",
+      "name": {
+        "en": "Prices",
+        "de": "Preise",
+        "fr": "Prix",
+        "it": "Prezzi"
+      }
+    },
+    "source": {
+      "key": "eurostat",
+      "name": {
+        "en": "Eurostat",
+        "de": "Eurostat",
+        "fr": "Eurostat",
+        "it": "Eurostat"
+      }
+    },
+    "license": "eurostat",
+    "frequency": "monthly",
+    "start": "2004-12-01",
+    "end": "2025-12-01",
+    "n_series": 13,
+    "updated": "2026-02-06",
+    "fetched": "2026-08-06 09:14:04",
+    "load": "whole",
+    "data": "ch_fso_hicp.csv",
+    "meta": "ch_fso_hicp.json"
+  },
+  {
+    "id": "ch_seco_wwa",
+    "title": {
+      "en": "Weekly economic activity (WEA)",
+      "de": "Wöchentliche Wirtschaftsaktivität (WWA)",
+      "fr": "Activité économique hebdomadaire (WEA)",
+      "it": "Attività economica settimanale (WEA)"
+    },
+    "concept": {
+      "en": "Business cycle & sentiment / High-frequency activity tracker",
+      "leaf": {
+        "en": "High-frequency activity tracker",
+        "de": "Hochfrequenz-Aktivitätsindikator",
+        "fr": "Indicateur d'activité à haute fréquence",
+        "it": "Indicatore di attività ad alta frequenza"
+      }
+    },
+    "canonical": true,
+    "featured": null,
+    "topic": {
+      "key": "business-cycle-sentiment",
+      "name": {
+        "en": "Business cycle & sentiment",
+        "de": "Konjunktur & Stimmung",
+        "fr": "Conjoncture & climat",
+        "it": "Congiuntura e clima"
+      }
+    },
+    "source": {
+      "key": "seco",
+      "name": {
+        "en": "State Secretariat for Economic Affairs (SECO)",
+        "de": "Staatssekretariat für Wirtschaft (SECO)",
+        "fr": "Secrétariat d'État à l'économie (SECO)",
+        "it": "Segreteria di Stato dell'economia (SECO)"
+      }
+    },
+    "license": "seco",
+    "frequency": "weekly",
+    "start": "2005-01-03",
+    "end": "2026-07-13",
+    "n_series": 2,
+    "updated": null,
+    "fetched": "2026-08-06 09:14:04",
+    "load": "whole",
+    "data": "ch_seco_wwa.csv",
+    "meta": "ch_seco_wwa.json"
+  },
+  {
     "id": "ch_snb_amarbma",
     "title": {
       "en": "Registered unemployment",
@@ -1857,1566 +3418,5 @@
     "load": "whole",
     "data": "ch_snb_zimoma.csv",
     "meta": "ch_snb_zimoma.json"
-  },
-  {
-    "id": "ch_seco_gdp",
-    "title": {
-      "en": "Gross domestic product (GDP)",
-      "de": "Bruttoinlandprodukt (BIP)",
-      "fr": "Produit intérieur brut (PIB)",
-      "it": "Prodotto interno lordo (PIL)"
-    },
-    "concept": {
-      "en": "National accounts / GDP (output, expenditure, income)",
-      "leaf": {
-        "en": "GDP (output, expenditure, income)",
-        "de": "BIP (Produktion, Verwendung, Einkommen)",
-        "fr": "PIB (production, dépenses, revenus)",
-        "it": "PIL (produzione, spesa, redditi)"
-      }
-    },
-    "canonical": true,
-    "featured": {
-      "en": "GDP",
-      "de": "BIP",
-      "fr": "PIB",
-      "it": "PIL"
-    },
-    "topic": {
-      "key": "national-accounts",
-      "name": {
-        "en": "National accounts",
-        "de": "Volkswirtschaftliche Gesamtrechnung",
-        "fr": "Comptes nationaux",
-        "it": "Conti nazionali"
-      }
-    },
-    "source": {
-      "key": "seco",
-      "name": {
-        "en": "State Secretariat for Economic Affairs (SECO)",
-        "de": "Staatssekretariat für Wirtschaft (SECO)",
-        "fr": "Secrétariat d'État à l'économie (SECO)",
-        "it": "Segreteria di Stato dell'economia (SECO)"
-      }
-    },
-    "license": "seco",
-    "frequency": "quarterly",
-    "start": "1980-01-01",
-    "end": "2026-01-01",
-    "n_series": 660,
-    "updated": "2026-02-23 16:51:17",
-    "fetched": "2026-08-05 13:12:04",
-    "load": "whole",
-    "data": "ch_seco_gdp.csv",
-    "meta": "ch_seco_gdp.json"
-  },
-  {
-    "id": "ch_seco_concon",
-    "title": {
-      "en": "Consumer confidence",
-      "de": "Konsumentenstimmung",
-      "fr": "Climat de consommation",
-      "it": "Clima di consumo"
-    },
-    "concept": {
-      "en": "Business cycle & sentiment / Consumer confidence",
-      "leaf": {
-        "en": "Consumer confidence",
-        "de": "Konsumentenstimmung",
-        "fr": "Climat de consommation",
-        "it": "Clima di consumo"
-      }
-    },
-    "canonical": true,
-    "featured": {
-      "en": "Consumer confidence",
-      "de": "Konsumentenstimmung",
-      "fr": "Climat de consommation",
-      "it": "Clima di consumo"
-    },
-    "topic": {
-      "key": "business-cycle-sentiment",
-      "name": {
-        "en": "Business cycle & sentiment",
-        "de": "Konjunktur & Stimmung",
-        "fr": "Conjoncture & climat",
-        "it": "Congiuntura e clima"
-      }
-    },
-    "source": {
-      "key": "seco",
-      "name": {
-        "en": "State Secretariat for Economic Affairs (SECO)",
-        "de": "Staatssekretariat für Wirtschaft (SECO)",
-        "fr": "Secrétariat d'État à l'économie (SECO)",
-        "it": "Segreteria di Stato dell'economia (SECO)"
-      }
-    },
-    "license": "quarterly",
-    "frequency": "quarterly",
-    "start": "1972-10-01",
-    "end": "2026-04-01",
-    "n_series": 39,
-    "updated": "2026-05-23 16:49:08",
-    "fetched": "2026-08-05 13:12:04",
-    "load": "whole",
-    "data": "ch_seco_concon.csv",
-    "meta": "ch_seco_concon.json"
-  },
-  {
-    "id": "ch_fso_retail",
-    "title": {
-      "en": "Retail trade turnover",
-      "de": "Detailhandelsumsätze",
-      "fr": "Chiffres d'affaires du commerce de détail",
-      "it": "Fatturato del commercio al dettaglio"
-    },
-    "concept": {
-      "en": "Domestic economy / Retail trade turnover",
-      "leaf": {
-        "en": "Retail trade turnover",
-        "de": "Detailhandelsumsätze",
-        "fr": "Chiffres d'affaires du commerce de détail",
-        "it": "Fatturato del commercio al dettaglio"
-      }
-    },
-    "canonical": true,
-    "featured": {
-      "en": "Retail trade",
-      "de": "Detailhandel",
-      "fr": "Commerce de détail",
-      "it": "Commercio al dettaglio"
-    },
-    "topic": {
-      "key": "domestic-economy",
-      "name": {
-        "en": "Domestic economy",
-        "de": "Binnenwirtschaft",
-        "fr": "Économie intérieure",
-        "it": "Economia interna"
-      }
-    },
-    "source": {
-      "key": "fso",
-      "name": {
-        "en": "Swiss Federal Statistical Office (FSO)",
-        "de": "Bundesamt für Statistik (BFS)",
-        "fr": "Office fédéral de la statistique (OFS)",
-        "it": "Ufficio federale di statistica (UST)"
-      }
-    },
-    "license": "monthly",
-    "frequency": "monthly",
-    "start": "2000-01-01",
-    "end": "2026-06-01",
-    "n_series": 171,
-    "updated": null,
-    "fetched": "2026-08-05 13:12:05",
-    "load": "whole",
-    "data": "ch_fso_retail.csv",
-    "meta": "ch_fso_retail.json"
-  },
-  {
-    "id": "ch_fso_production",
-    "title": {
-      "en": "Industry & construction turnover",
-      "de": "Umsätze Industrie und Bau",
-      "fr": "Chiffres d'affaires industrie et construction",
-      "it": "Fatturato industria e costruzioni"
-    },
-    "concept": {
-      "en": "Domestic economy / Industry & construction turnover",
-      "leaf": {
-        "en": "Industry & construction turnover",
-        "de": "Umsätze Industrie & Bau",
-        "fr": "Chiffres d'affaires industrie & construction",
-        "it": "Fatturato industria e costruzioni"
-      }
-    },
-    "canonical": true,
-    "featured": null,
-    "topic": {
-      "key": "domestic-economy",
-      "name": {
-        "en": "Domestic economy",
-        "de": "Binnenwirtschaft",
-        "fr": "Économie intérieure",
-        "it": "Economia interna"
-      }
-    },
-    "source": {
-      "key": "fso",
-      "name": {
-        "en": "Swiss Federal Statistical Office (FSO)",
-        "de": "Bundesamt für Statistik (BFS)",
-        "fr": "Office fédéral de la statistique (OFS)",
-        "it": "Ufficio federale di statistica (UST)"
-      }
-    },
-    "license": "quarterly",
-    "frequency": "quarterly",
-    "start": "1999-01-01",
-    "end": "2026-01-01",
-    "n_series": 87,
-    "updated": null,
-    "fetched": "2026-08-05 13:12:05",
-    "load": "whole",
-    "data": "ch_fso_production.csv",
-    "meta": "ch_fso_production.json"
-  },
-  {
-    "id": "ch_fso_services",
-    "title": {
-      "en": "Services turnover",
-      "de": "Umsätze Dienstleistungssektor",
-      "fr": "Chiffres d'affaires des services",
-      "it": "Fatturato dei servizi"
-    },
-    "concept": {
-      "en": "Domestic economy / Services turnover",
-      "leaf": {
-        "en": "Services turnover",
-        "de": "Umsätze Dienstleistungen",
-        "fr": "Chiffres d'affaires des services",
-        "it": "Fatturato dei servizi"
-      }
-    },
-    "canonical": true,
-    "featured": null,
-    "topic": {
-      "key": "domestic-economy",
-      "name": {
-        "en": "Domestic economy",
-        "de": "Binnenwirtschaft",
-        "fr": "Économie intérieure",
-        "it": "Economia interna"
-      }
-    },
-    "source": {
-      "key": "fso",
-      "name": {
-        "en": "Swiss Federal Statistical Office (FSO)",
-        "de": "Bundesamt für Statistik (BFS)",
-        "fr": "Office fédéral de la statistique (OFS)",
-        "it": "Ufficio federale di statistica (UST)"
-      }
-    },
-    "license": "fso",
-    "frequency": "quarterly",
-    "start": "2021-01-01",
-    "end": "2026-01-01",
-    "n_series": 66,
-    "updated": null,
-    "fetched": "2026-08-05 13:12:05",
-    "load": "whole",
-    "data": "ch_fso_services.csv",
-    "meta": "ch_fso_services.json"
-  },
-  {
-    "id": "ch_fso_new_vehicles",
-    "title": {
-      "en": "New car registrations by fuel",
-      "de": "Neuzulassungen von Personenwagen nach Treibstoff",
-      "fr": "Nouvelles immatriculations de voitures par carburant",
-      "it": "Nuove immatricolazioni di automobili per carburante"
-    },
-    "concept": {
-      "en": "Domestic economy / New vehicle registrations",
-      "leaf": {
-        "en": "New vehicle registrations",
-        "de": "Neuzulassungen von Fahrzeugen",
-        "fr": "Nouvelles immatriculations",
-        "it": "Nuove immatricolazioni"
-      }
-    },
-    "canonical": true,
-    "featured": null,
-    "topic": {
-      "key": "domestic-economy",
-      "name": {
-        "en": "Domestic economy",
-        "de": "Binnenwirtschaft",
-        "fr": "Économie intérieure",
-        "it": "Economia interna"
-      }
-    },
-    "source": {
-      "key": "fso",
-      "name": {
-        "en": "Swiss Federal Statistical Office (FSO)",
-        "de": "Bundesamt für Statistik (BFS)",
-        "fr": "Office fédéral de la statistique (OFS)",
-        "it": "Ufficio federale di statistica (UST)"
-      }
-    },
-    "license": "fso",
-    "frequency": "monthly",
-    "start": "2005-01-01",
-    "end": "2026-06-01",
-    "n_series": 12,
-    "updated": null,
-    "fetched": "2026-08-05 13:12:05",
-    "load": "whole",
-    "data": "ch_fso_new_vehicles.csv",
-    "meta": "ch_fso_new_vehicles.json"
-  },
-  {
-    "id": "ch_fso_vacant_dwellings",
-    "title": {
-      "en": "Vacant dwellings",
-      "de": "Leerwohnungen",
-      "fr": "Logements vacants",
-      "it": "Abitazioni vuote"
-    },
-    "concept": {
-      "en": "Domestic economy / Vacant dwellings",
-      "leaf": {
-        "en": "Vacant dwellings",
-        "de": "Leerwohnungen",
-        "fr": "Logements vacants",
-        "it": "Abitazioni vuote"
-      }
-    },
-    "canonical": true,
-    "featured": null,
-    "topic": {
-      "key": "domestic-economy",
-      "name": {
-        "en": "Domestic economy",
-        "de": "Binnenwirtschaft",
-        "fr": "Économie intérieure",
-        "it": "Economia interna"
-      }
-    },
-    "source": {
-      "key": "fso",
-      "name": {
-        "en": "Swiss Federal Statistical Office (FSO)",
-        "de": "Bundesamt für Statistik (BFS)",
-        "fr": "Office fédéral de la statistique (OFS)",
-        "it": "Ufficio federale di statistica (UST)"
-      }
-    },
-    "license": "fso",
-    "frequency": "annual",
-    "start": "1995-01-01",
-    "end": "2025-01-01",
-    "n_series": 2,
-    "updated": null,
-    "fetched": "2026-08-05 13:12:05",
-    "load": "whole",
-    "data": "ch_fso_vacant_dwellings.csv",
-    "meta": "ch_fso_vacant_dwellings.json"
-  },
-  {
-    "id": "ch_fso_cross_border_commuters",
-    "title": {
-      "en": "Cross-border commuters",
-      "de": "Grenzgängerinnen und Grenzgänger",
-      "fr": "Frontaliers",
-      "it": "Frontalieri"
-    },
-    "concept": {
-      "en": "Labour / Cross-border commuters",
-      "leaf": {
-        "en": "Cross-border commuters",
-        "de": "Grenzgänger",
-        "fr": "Frontaliers",
-        "it": "Frontalieri"
-      }
-    },
-    "canonical": true,
-    "featured": null,
-    "topic": {
-      "key": "labour",
-      "name": {
-        "en": "Labour",
-        "de": "Arbeit",
-        "fr": "Travail",
-        "it": "Lavoro"
-      }
-    },
-    "source": {
-      "key": "fso",
-      "name": {
-        "en": "Swiss Federal Statistical Office (FSO)",
-        "de": "Bundesamt für Statistik (BFS)",
-        "fr": "Office fédéral de la statistique (OFS)",
-        "it": "Ufficio federale di statistica (UST)"
-      }
-    },
-    "license": "fso",
-    "frequency": "quarterly",
-    "start": "2002-07-01",
-    "end": "2026-01-01",
-    "n_series": 27,
-    "updated": null,
-    "fetched": "2026-08-05 13:12:05",
-    "load": "whole",
-    "data": "ch_fso_cross_border_commuters.csv",
-    "meta": "ch_fso_cross_border_commuters.json"
-  },
-  {
-    "id": "ch_fso_pop_detail",
-    "title": {
-      "en": "Resident population by nationality",
-      "de": "Ständige Wohnbevölkerung nach Staatsangehörigkeit",
-      "fr": "Population résidante permanente par nationalité",
-      "it": "Popolazione residente permanente per nazionalità"
-    },
-    "concept": {
-      "en": "Population & demographics / Resident population by nationality",
-      "leaf": {
-        "en": "Resident population by nationality",
-        "de": "Wohnbevölkerung nach Staatsangehörigkeit",
-        "fr": "Population résidante par nationalité",
-        "it": "Popolazione residente per nazionalità"
-      }
-    },
-    "canonical": false,
-    "featured": null,
-    "topic": {
-      "key": "population-demographics",
-      "name": {
-        "en": "Population & demographics",
-        "de": "Bevölkerung & Demografie",
-        "fr": "Population & démographie",
-        "it": "Popolazione e demografia"
-      }
-    },
-    "source": {
-      "key": "fso",
-      "name": {
-        "en": "Swiss Federal Statistical Office (FSO)",
-        "de": "Bundesamt für Statistik (BFS)",
-        "fr": "Office fédéral de la statistique (OFS)",
-        "it": "Ufficio federale di statistica (UST)"
-      }
-    },
-    "license": "fso",
-    "frequency": "annual",
-    "start": "2010-01-01",
-    "end": "2024-01-01",
-    "n_series": 9,
-    "updated": null,
-    "fetched": "2026-08-05 13:12:05",
-    "load": "whole",
-    "data": "ch_fso_pop_detail.csv",
-    "meta": "ch_fso_pop_detail.json"
-  },
-  {
-    "id": "ch_ffa_finances",
-    "title": {
-      "en": "Government finances",
-      "de": "Öffentliche Finanzen",
-      "fr": "Finances publiques",
-      "it": "Finanze pubbliche"
-    },
-    "concept": {
-      "en": "National accounts / Government finance",
-      "leaf": {
-        "en": "Government finance",
-        "de": "Öffentliche Finanzen",
-        "fr": "Finances publiques",
-        "it": "Finanze pubbliche"
-      }
-    },
-    "canonical": true,
-    "featured": null,
-    "topic": {
-      "key": "national-accounts",
-      "name": {
-        "en": "National accounts",
-        "de": "Volkswirtschaftliche Gesamtrechnung",
-        "fr": "Comptes nationaux",
-        "it": "Conti nazionali"
-      }
-    },
-    "source": {
-      "key": "ffa",
-      "name": {
-        "en": "Federal Finance Administration (FFA)",
-        "de": "Eidgenössische Finanzverwaltung (EFV)",
-        "fr": "Administration fédérale des finances (AFF)",
-        "it": "Amministrazione federale delle finanze (AFF)"
-      }
-    },
-    "license": "opendata-swiss",
-    "frequency": "annual",
-    "start": "1990-01-01",
-    "end": "2029-01-01",
-    "n_series": 387,
-    "updated": "2025-03-18",
-    "fetched": "2026-08-05 13:12:05",
-    "load": "whole",
-    "data": "ch_ffa_finances.csv",
-    "meta": "ch_ffa_finances.json"
-  },
-  {
-    "id": "ch_kof_barometer",
-    "title": {
-      "en": "KOF Economic Barometer",
-      "de": "KOF Konjunkturbarometer",
-      "fr": "Baromètre conjoncturel KOF",
-      "it": "Barometro congiunturale KOF"
-    },
-    "concept": {
-      "en": "Business cycle & sentiment / Leading barometer",
-      "leaf": {
-        "en": "Leading barometer",
-        "de": "Vorlaufendes Barometer",
-        "fr": "Baromètre avancé",
-        "it": "Barometro anticipatore"
-      }
-    },
-    "canonical": true,
-    "featured": null,
-    "topic": {
-      "key": "business-cycle-sentiment",
-      "name": {
-        "en": "Business cycle & sentiment",
-        "de": "Konjunktur & Stimmung",
-        "fr": "Conjoncture & climat",
-        "it": "Congiuntura e clima"
-      }
-    },
-    "source": {
-      "key": "kof",
-      "name": {
-        "en": "KOF Swiss Economic Institute",
-        "de": "KOF Konjunkturforschungsstelle der ETH Zürich",
-        "fr": "KOF Centre de recherches conjoncturelles (EPF Zurich)",
-        "it": "KOF Centro di ricerche congiunturali (PF Zurigo)"
-      }
-    },
-    "license": "kof",
-    "frequency": "monthly",
-    "start": "1991-01-01",
-    "end": "2026-07-01",
-    "n_series": 1,
-    "updated": null,
-    "fetched": "2026-08-05 13:12:05",
-    "load": "whole",
-    "data": "ch_kof_barometer.csv",
-    "meta": "ch_kof_barometer.json"
-  },
-  {
-    "id": "ch_kof_esi",
-    "title": {
-      "en": "KOF Economic Sentiment Index",
-      "de": "KOF Economic Sentiment Index",
-      "fr": "KOF Economic Sentiment Index",
-      "it": "KOF Economic Sentiment Index"
-    },
-    "concept": {
-      "en": "Business cycle & sentiment / Sentiment composite",
-      "leaf": {
-        "en": "Sentiment composite",
-        "de": "Stimmungsindikator",
-        "fr": "Indice de climat",
-        "it": "Indice di clima"
-      }
-    },
-    "canonical": true,
-    "featured": null,
-    "topic": {
-      "key": "business-cycle-sentiment",
-      "name": {
-        "en": "Business cycle & sentiment",
-        "de": "Konjunktur & Stimmung",
-        "fr": "Conjoncture & climat",
-        "it": "Congiuntura e clima"
-      }
-    },
-    "source": {
-      "key": "kof",
-      "name": {
-        "en": "KOF Swiss Economic Institute",
-        "de": "KOF Konjunkturforschungsstelle der ETH Zürich",
-        "fr": "KOF Centre de recherches conjoncturelles (EPF Zurich)",
-        "it": "KOF Centro di ricerche congiunturali (PF Zurigo)"
-      }
-    },
-    "license": "kof",
-    "frequency": "monthly",
-    "start": "2007-04-01",
-    "end": "2026-06-01",
-    "n_series": 2,
-    "updated": null,
-    "fetched": "2026-08-05 13:12:06",
-    "load": "whole",
-    "data": "ch_kof_esi.csv",
-    "meta": "ch_kof_esi.json"
-  },
-  {
-    "id": "ch_adecco_sjmi",
-    "title": {
-      "en": "Adecco Group Swiss Job Market Index",
-      "de": "Adecco Group Swiss Job Market Index",
-      "fr": "Adecco Group Swiss Job Market Index",
-      "it": "Adecco Group Swiss Job Market Index"
-    },
-    "concept": {
-      "en": "Labour / Job market",
-      "leaf": {
-        "en": "Job market",
-        "de": "Arbeitsmarkt",
-        "fr": "Marché du travail",
-        "it": "Mercato del lavoro"
-      }
-    },
-    "canonical": true,
-    "featured": null,
-    "topic": {
-      "key": "labour",
-      "name": {
-        "en": "Labour",
-        "de": "Arbeit",
-        "fr": "Travail",
-        "it": "Lavoro"
-      }
-    },
-    "source": {
-      "key": "uzh-smm",
-      "name": {
-        "en": "University of Zurich (Stellenmarkt-Monitor Schweiz)",
-        "de": "Universität Zürich (Stellenmarkt-Monitor Schweiz)",
-        "fr": "Université de Zurich (Stellenmarkt-Monitor Schweiz)",
-        "it": "Università di Zurigo (Stellenmarkt-Monitor Schweiz)"
-      }
-    },
-    "license": "uzh-smm",
-    "frequency": "quarterly",
-    "start": "2003-03-01",
-    "end": "2026-06-01",
-    "n_series": 4,
-    "updated": null,
-    "fetched": "2026-08-05 13:12:06",
-    "load": "whole",
-    "data": "ch_adecco_sjmi.csv",
-    "meta": "ch_adecco_sjmi.json"
-  },
-  {
-    "id": "ch_fso_hesta",
-    "title": {
-      "en": "Hotel overnight stays",
-      "de": "Hotellogiernächte",
-      "fr": "Nuitées hôtelières",
-      "it": "Pernottamenti alberghieri"
-    },
-    "concept": {
-      "en": "Domestic economy / Hotel overnight stays",
-      "leaf": {
-        "en": "Hotel overnight stays",
-        "de": "Hotellogiernächte",
-        "fr": "Nuitées hôtelières",
-        "it": "Pernottamenti alberghieri"
-      }
-    },
-    "canonical": true,
-    "featured": null,
-    "topic": {
-      "key": "domestic-economy",
-      "name": {
-        "en": "Domestic economy",
-        "de": "Binnenwirtschaft",
-        "fr": "Économie intérieure",
-        "it": "Economia interna"
-      }
-    },
-    "source": {
-      "key": "fso",
-      "name": {
-        "en": "Swiss Federal Statistical Office (FSO)",
-        "de": "Bundesamt für Statistik (BFS)",
-        "fr": "Office fédéral de la statistique (OFS)",
-        "it": "Ufficio federale di statistica (UST)"
-      }
-    },
-    "license": "fso",
-    "frequency": "monthly",
-    "start": "2005-01-01",
-    "end": "2026-06-01",
-    "n_series": 14,
-    "updated": null,
-    "fetched": "2026-08-05 13:12:06",
-    "load": "whole",
-    "data": "ch_fso_hesta.csv",
-    "meta": "ch_fso_hesta.json"
-  },
-  {
-    "id": "ch_fso_besta",
-    "title": {
-      "en": "Jobs by economic division",
-      "de": "Beschäftigte nach Wirtschaftsabteilung",
-      "fr": "Emplois par division économique",
-      "it": "Impieghi per divisione economica"
-    },
-    "concept": {
-      "en": "Labour / Employment / jobs",
-      "leaf": {
-        "en": "Employment",
-        "de": "Beschäftigung",
-        "fr": "Emploi",
-        "it": "Occupazione"
-      }
-    },
-    "canonical": true,
-    "featured": {
-      "en": "Employment",
-      "de": "Beschäftigung",
-      "fr": "Emploi",
-      "it": "Occupazione"
-    },
-    "topic": {
-      "key": "labour",
-      "name": {
-        "en": "Labour",
-        "de": "Arbeit",
-        "fr": "Travail",
-        "it": "Lavoro"
-      }
-    },
-    "source": {
-      "key": "fso",
-      "name": {
-        "en": "Swiss Federal Statistical Office (FSO)",
-        "de": "Bundesamt für Statistik (BFS)",
-        "fr": "Office fédéral de la statistique (OFS)",
-        "it": "Ufficio federale di statistica (UST)"
-      }
-    },
-    "license": "fso",
-    "frequency": "quarterly",
-    "start": "1991-07-01",
-    "end": "2026-01-01",
-    "n_series": 60,
-    "updated": null,
-    "fetched": "2026-08-05 13:12:06",
-    "load": "whole",
-    "data": "ch_fso_besta.csv",
-    "meta": "ch_fso_besta.json"
-  },
-  {
-    "id": "ch_fso_vacancies",
-    "title": {
-      "en": "Job vacancies",
-      "de": "Offene Stellen",
-      "fr": "Postes vacants",
-      "it": "Posti vacanti"
-    },
-    "concept": {
-      "en": "Labour / Job vacancies",
-      "leaf": {
-        "en": "Job vacancies",
-        "de": "Offene Stellen",
-        "fr": "Postes vacants",
-        "it": "Posti vacanti"
-      }
-    },
-    "canonical": true,
-    "featured": null,
-    "topic": {
-      "key": "labour",
-      "name": {
-        "en": "Labour",
-        "de": "Arbeit",
-        "fr": "Travail",
-        "it": "Lavoro"
-      }
-    },
-    "source": {
-      "key": "fso",
-      "name": {
-        "en": "Swiss Federal Statistical Office (FSO)",
-        "de": "Bundesamt für Statistik (BFS)",
-        "fr": "Office fédéral de la statistique (OFS)",
-        "it": "Ufficio federale di statistica (UST)"
-      }
-    },
-    "license": "fso",
-    "frequency": "quarterly",
-    "start": "1992-04-01",
-    "end": "2026-01-01",
-    "n_series": 60,
-    "updated": null,
-    "fetched": "2026-08-05 13:12:06",
-    "load": "whole",
-    "data": "ch_fso_vacancies.csv",
-    "meta": "ch_fso_vacancies.json"
-  },
-  {
-    "id": "ch_fso_jobs_sex",
-    "title": {
-      "en": "Jobs by economic division and sex",
-      "de": "Beschäftigte nach Wirtschaftsabteilung und Geschlecht",
-      "fr": "Emplois par division économique et sexe",
-      "it": "Impieghi per divisione economica e sesso"
-    },
-    "concept": {
-      "en": "Labour / Employment / jobs",
-      "leaf": {
-        "en": "Employment",
-        "de": "Beschäftigung",
-        "fr": "Emploi",
-        "it": "Occupazione"
-      }
-    },
-    "canonical": false,
-    "featured": null,
-    "topic": {
-      "key": "labour",
-      "name": {
-        "en": "Labour",
-        "de": "Arbeit",
-        "fr": "Travail",
-        "it": "Lavoro"
-      }
-    },
-    "source": {
-      "key": "fso",
-      "name": {
-        "en": "Swiss Federal Statistical Office (FSO)",
-        "de": "Bundesamt für Statistik (BFS)",
-        "fr": "Office fédéral de la statistique (OFS)",
-        "it": "Ufficio federale di statistica (UST)"
-      }
-    },
-    "license": "fso",
-    "frequency": "quarterly",
-    "start": "1995-07-01",
-    "end": "2026-01-01",
-    "n_series": 336,
-    "updated": null,
-    "fetched": "2026-08-05 13:12:06",
-    "load": "whole",
-    "data": "ch_fso_jobs_sex.csv",
-    "meta": "ch_fso_jobs_sex.json"
-  },
-  {
-    "id": "ch_fso_besta_outlook",
-    "title": {
-      "en": "Employment outlook",
-      "de": "Beschäftigungsaussichten",
-      "fr": "Perspectives d'emploi",
-      "it": "Prospettive occupazionali"
-    },
-    "concept": {
-      "en": "Labour / Employment outlook",
-      "leaf": {
-        "en": "Employment outlook",
-        "de": "Beschäftigungsaussichten",
-        "fr": "Perspectives d'emploi",
-        "it": "Prospettive occupazionali"
-      }
-    },
-    "canonical": true,
-    "featured": null,
-    "topic": {
-      "key": "labour",
-      "name": {
-        "en": "Labour",
-        "de": "Arbeit",
-        "fr": "Travail",
-        "it": "Lavoro"
-      }
-    },
-    "source": {
-      "key": "fso",
-      "name": {
-        "en": "Swiss Federal Statistical Office (FSO)",
-        "de": "Bundesamt für Statistik (BFS)",
-        "fr": "Office fédéral de la statistique (OFS)",
-        "it": "Ufficio federale di statistica (UST)"
-      }
-    },
-    "license": "fso",
-    "frequency": "quarterly",
-    "start": "2004-01-01",
-    "end": "2026-01-01",
-    "n_series": 20,
-    "updated": null,
-    "fetched": "2026-08-05 13:12:06",
-    "load": "whole",
-    "data": "ch_fso_besta_outlook.csv",
-    "meta": "ch_fso_besta_outlook.json"
-  },
-  {
-    "id": "ch_fso_cpi",
-    "title": {
-      "en": "Consumer prices (detailed basket)",
-      "de": "Konsumentenpreise (detaillierter Warenkorb)",
-      "fr": "Prix à la consommation (panier détaillé)",
-      "it": "Prezzi al consumo (paniere dettagliato)"
-    },
-    "concept": {
-      "en": "Prices / Consumer prices",
-      "leaf": {
-        "en": "Consumer prices",
-        "de": "Konsumentenpreise",
-        "fr": "Prix à la consommation",
-        "it": "Prezzi al consumo"
-      }
-    },
-    "canonical": false,
-    "featured": null,
-    "topic": {
-      "key": "prices",
-      "name": {
-        "en": "Prices",
-        "de": "Preise",
-        "fr": "Prix",
-        "it": "Prezzi"
-      }
-    },
-    "source": {
-      "key": "fso",
-      "name": {
-        "en": "Swiss Federal Statistical Office (FSO)",
-        "de": "Bundesamt für Statistik (BFS)",
-        "fr": "Office fédéral de la statistique (OFS)",
-        "it": "Ufficio federale di statistica (UST)"
-      }
-    },
-    "license": "fso",
-    "frequency": "monthly",
-    "start": "1982-12-01",
-    "end": "2026-07-01",
-    "n_series": 595,
-    "updated": "2026-08-03",
-    "fetched": "2026-08-05 13:12:07",
-    "load": "whole",
-    "data": "ch_fso_cpi.csv",
-    "meta": "ch_fso_cpi.json"
-  },
-  {
-    "id": "ch_fso_ppi",
-    "title": {
-      "en": "Producer & import prices",
-      "de": "Produzenten- und Importpreise",
-      "fr": "Prix à la production et à l'importation",
-      "it": "Prezzi alla produzione e all'importazione"
-    },
-    "concept": {
-      "en": "Prices / Producer & import prices",
-      "leaf": {
-        "en": "Producer & import prices",
-        "de": "Produzenten- & Importpreise",
-        "fr": "Prix à la production & à l'importation",
-        "it": "Prezzi alla produzione e all'importazione"
-      }
-    },
-    "canonical": true,
-    "featured": null,
-    "topic": {
-      "key": "prices",
-      "name": {
-        "en": "Prices",
-        "de": "Preise",
-        "fr": "Prix",
-        "it": "Prezzi"
-      }
-    },
-    "source": {
-      "key": "fso",
-      "name": {
-        "en": "Swiss Federal Statistical Office (FSO)",
-        "de": "Bundesamt für Statistik (BFS)",
-        "fr": "Office fédéral de la statistique (OFS)",
-        "it": "Ufficio federale di statistica (UST)"
-      }
-    },
-    "license": "fso",
-    "frequency": "monthly",
-    "start": "1963-01-01",
-    "end": "2026-06-01",
-    "n_series": 7,
-    "updated": "2026-07-14",
-    "fetched": "2026-08-05 13:12:07",
-    "load": "whole",
-    "data": "ch_fso_ppi.csv",
-    "meta": "ch_fso_ppi.json"
-  },
-  {
-    "id": "ch_fso_wage_idx",
-    "title": {
-      "en": "Swiss Wage Index",
-      "de": "Schweizerischer Lohnindex",
-      "fr": "Indice suisse des salaires",
-      "it": "Indice svizzero dei salari"
-    },
-    "concept": {
-      "en": "Labour / Wages",
-      "leaf": {
-        "en": "Wages",
-        "de": "Löhne",
-        "fr": "Salaires",
-        "it": "Salari"
-      }
-    },
-    "canonical": true,
-    "featured": null,
-    "topic": {
-      "key": "labour",
-      "name": {
-        "en": "Labour",
-        "de": "Arbeit",
-        "fr": "Travail",
-        "it": "Lavoro"
-      }
-    },
-    "source": {
-      "key": "fso",
-      "name": {
-        "en": "Swiss Federal Statistical Office (FSO)",
-        "de": "Bundesamt für Statistik (BFS)",
-        "fr": "Office fédéral de la statistique (OFS)",
-        "it": "Ufficio federale di statistica (UST)"
-      }
-    },
-    "license": "fso",
-    "frequency": "annual",
-    "start": "1994-01-01",
-    "end": "2025-01-01",
-    "n_series": 12,
-    "updated": "2026-04-21",
-    "fetched": "2026-08-05 13:12:07",
-    "load": "whole",
-    "data": "ch_fso_wage_idx.csv",
-    "meta": "ch_fso_wage_idx.json"
-  },
-  {
-    "id": "ch_fso_pop",
-    "title": {
-      "en": "Resident population",
-      "de": "Ständige Wohnbevölkerung",
-      "fr": "Population résidante permanente",
-      "it": "Popolazione residente permanente"
-    },
-    "concept": {
-      "en": "Population & demographics / Resident population",
-      "leaf": {
-        "en": "Resident population",
-        "de": "Wohnbevölkerung",
-        "fr": "Population résidante",
-        "it": "Popolazione residente"
-      }
-    },
-    "canonical": true,
-    "featured": {
-      "en": "Population",
-      "de": "Bevölkerung",
-      "fr": "Population",
-      "it": "Popolazione"
-    },
-    "topic": {
-      "key": "population-demographics",
-      "name": {
-        "en": "Population & demographics",
-        "de": "Bevölkerung & Demografie",
-        "fr": "Population & démographie",
-        "it": "Popolazione e demografia"
-      }
-    },
-    "source": {
-      "key": "fso",
-      "name": {
-        "en": "Swiss Federal Statistical Office (FSO)",
-        "de": "Bundesamt für Statistik (BFS)",
-        "fr": "Office fédéral de la statistique (OFS)",
-        "it": "Ufficio federale di statistica (UST)"
-      }
-    },
-    "license": "fso",
-    "frequency": "annual",
-    "start": "1861-01-01",
-    "end": "2024-01-01",
-    "n_series": 10,
-    "updated": "2025-08-27",
-    "fetched": "2026-08-05 13:12:07",
-    "load": "whole",
-    "data": "ch_fso_pop.csv",
-    "meta": "ch_fso_pop.json"
-  },
-  {
-    "id": "ch_fso_unemp_rate",
-    "title": {
-      "en": "Unemployment rate (ILO)",
-      "de": "Erwerbslosenquote (ILO)",
-      "fr": "Taux de chômage (BIT)",
-      "it": "Tasso di disoccupazione (ILO)"
-    },
-    "concept": {
-      "en": "Labour / Unemployment",
-      "leaf": {
-        "en": "Unemployment",
-        "de": "Arbeitslosigkeit",
-        "fr": "Chômage",
-        "it": "Disoccupazione"
-      }
-    },
-    "canonical": false,
-    "featured": null,
-    "topic": {
-      "key": "labour",
-      "name": {
-        "en": "Labour",
-        "de": "Arbeit",
-        "fr": "Travail",
-        "it": "Lavoro"
-      }
-    },
-    "source": {
-      "key": "fso",
-      "name": {
-        "en": "Swiss Federal Statistical Office (FSO)",
-        "de": "Bundesamt für Statistik (BFS)",
-        "fr": "Office fédéral de la statistique (OFS)",
-        "it": "Ufficio federale di statistica (UST)"
-      }
-    },
-    "license": "fso",
-    "frequency": "monthly",
-    "start": "1991-01-01",
-    "end": "2026-03-01",
-    "n_series": 5,
-    "updated": "2026-05-18",
-    "fetched": "2026-08-05 13:12:07",
-    "load": "whole",
-    "data": "ch_fso_unemp_rate.csv",
-    "meta": "ch_fso_unemp_rate.json"
-  },
-  {
-    "id": "ch_fso_labour_productivity",
-    "title": {
-      "en": "Labour productivity",
-      "de": "Arbeitsproduktivität",
-      "fr": "Productivité du travail",
-      "it": "Produttività del lavoro"
-    },
-    "concept": {
-      "en": "National accounts / Labour productivity",
-      "leaf": {
-        "en": "Labour productivity",
-        "de": "Arbeitsproduktivität",
-        "fr": "Productivité du travail",
-        "it": "Produttività del lavoro"
-      }
-    },
-    "canonical": true,
-    "featured": null,
-    "topic": {
-      "key": "national-accounts",
-      "name": {
-        "en": "National accounts",
-        "de": "Volkswirtschaftliche Gesamtrechnung",
-        "fr": "Comptes nationaux",
-        "it": "Conti nazionali"
-      }
-    },
-    "source": {
-      "key": "fso",
-      "name": {
-        "en": "Swiss Federal Statistical Office (FSO)",
-        "de": "Bundesamt für Statistik (BFS)",
-        "fr": "Office fédéral de la statistique (OFS)",
-        "it": "Ufficio federale di statistica (UST)"
-      }
-    },
-    "license": "fso",
-    "frequency": "annual",
-    "start": "1991-01-01",
-    "end": "2024-01-01",
-    "n_series": 3,
-    "updated": "2025-09-29",
-    "fetched": "2026-08-05 13:12:07",
-    "load": "whole",
-    "data": "ch_fso_labour_productivity.csv",
-    "meta": "ch_fso_labour_productivity.json"
-  },
-  {
-    "id": "ch_fso_ets",
-    "title": {
-      "en": "Employed persons (ETS)",
-      "de": "Erwerbstätige (ETS)",
-      "fr": "Personnes actives occupées (SPAO)",
-      "it": "Persone occupate (SPO)"
-    },
-    "concept": {
-      "en": "Labour / Employment / employed persons",
-      "leaf": {
-        "en": "Employment",
-        "de": "Beschäftigung",
-        "fr": "Emploi",
-        "it": "Occupazione"
-      }
-    },
-    "canonical": false,
-    "featured": null,
-    "topic": {
-      "key": "labour",
-      "name": {
-        "en": "Labour",
-        "de": "Arbeit",
-        "fr": "Travail",
-        "it": "Lavoro"
-      }
-    },
-    "source": {
-      "key": "fso",
-      "name": {
-        "en": "Swiss Federal Statistical Office (FSO)",
-        "de": "Bundesamt für Statistik (BFS)",
-        "fr": "Office fédéral de la statistique (OFS)",
-        "it": "Ufficio federale di statistica (UST)"
-      }
-    },
-    "license": "fso",
-    "frequency": "quarterly",
-    "start": "1991-04-01",
-    "end": "2026-01-01",
-    "n_series": 69,
-    "updated": "2026-06-16",
-    "fetched": "2026-08-05 13:12:07",
-    "load": "whole",
-    "data": "ch_fso_ets.csv",
-    "meta": "ch_fso_ets.json"
-  },
-  {
-    "id": "ch_fso_gfcf_detail",
-    "title": {
-      "en": "Investment (GFCF) detail",
-      "de": "Investitionen (Bruttoanlageinvestitionen) im Detail",
-      "fr": "Investissements (FBCF) en détail",
-      "it": "Investimenti (IFL) in dettaglio"
-    },
-    "concept": {
-      "en": "National accounts / Investment (gross fixed capital formation)",
-      "leaf": {
-        "en": "Investment (gross fixed capital formation)",
-        "de": "Investitionen (Bruttoanlageinvestitionen)",
-        "fr": "Investissements (FBCF)",
-        "it": "Investimenti (investimenti fissi lordi)"
-      }
-    },
-    "canonical": false,
-    "featured": null,
-    "topic": {
-      "key": "national-accounts",
-      "name": {
-        "en": "National accounts",
-        "de": "Volkswirtschaftliche Gesamtrechnung",
-        "fr": "Comptes nationaux",
-        "it": "Conti nazionali"
-      }
-    },
-    "source": {
-      "key": "fso",
-      "name": {
-        "en": "Swiss Federal Statistical Office (FSO)",
-        "de": "Bundesamt für Statistik (BFS)",
-        "fr": "Office fédéral de la statistique (OFS)",
-        "it": "Ufficio federale di statistica (UST)"
-      }
-    },
-    "license": "fso",
-    "frequency": "annual",
-    "start": "1995-01-01",
-    "end": "2024-01-01",
-    "n_series": 37,
-    "updated": "2025-09-29",
-    "fetched": "2026-08-05 13:12:07",
-    "load": "whole",
-    "data": "ch_fso_gfcf_detail.csv",
-    "meta": "ch_fso_gfcf_detail.json"
-  },
-  {
-    "id": "ch_fso_hours_worked",
-    "title": {
-      "en": "Hours worked",
-      "de": "Arbeitsstunden",
-      "fr": "Heures de travail",
-      "it": "Ore di lavoro"
-    },
-    "concept": {
-      "en": "Labour / Working time and working volume",
-      "leaf": {
-        "en": "Working time and working volume",
-        "de": "Arbeitszeit und Arbeitsvolumen",
-        "fr": "Temps et volume de travail",
-        "it": "Tempo e volume di lavoro"
-      }
-    },
-    "canonical": true,
-    "featured": null,
-    "topic": {
-      "key": "labour",
-      "name": {
-        "en": "Labour",
-        "de": "Arbeit",
-        "fr": "Travail",
-        "it": "Lavoro"
-      }
-    },
-    "source": {
-      "key": "fso",
-      "name": {
-        "en": "Swiss Federal Statistical Office (FSO)",
-        "de": "Bundesamt für Statistik (BFS)",
-        "fr": "Office fédéral de la statistique (OFS)",
-        "it": "Ufficio federale di statistica (UST)"
-      }
-    },
-    "license": "fso",
-    "frequency": "annual",
-    "start": "2010-01-01",
-    "end": "2025-01-01",
-    "n_series": 45,
-    "updated": "2026-05-21",
-    "fetched": "2026-08-05 13:12:07",
-    "load": "whole",
-    "data": "ch_fso_hours_worked.csv",
-    "meta": "ch_fso_hours_worked.json"
-  },
-  {
-    "id": "ch_fso_gdp_region",
-    "title": {
-      "en": "Regional GDP",
-      "de": "Regionales BIP",
-      "fr": "PIB régional",
-      "it": "PIL regionale"
-    },
-    "concept": {
-      "en": "National accounts / Regional GDP",
-      "leaf": {
-        "en": "Regional GDP",
-        "de": "Regionales BIP",
-        "fr": "PIB régional",
-        "it": "PIL regionale"
-      }
-    },
-    "canonical": true,
-    "featured": null,
-    "topic": {
-      "key": "national-accounts",
-      "name": {
-        "en": "National accounts",
-        "de": "Volkswirtschaftliche Gesamtrechnung",
-        "fr": "Comptes nationaux",
-        "it": "Conti nazionali"
-      }
-    },
-    "source": {
-      "key": "fso",
-      "name": {
-        "en": "Swiss Federal Statistical Office (FSO)",
-        "de": "Bundesamt für Statistik (BFS)",
-        "fr": "Office fédéral de la statistique (OFS)",
-        "it": "Ufficio federale di statistica (UST)"
-      }
-    },
-    "license": "fso",
-    "frequency": "annual",
-    "start": "2008-01-01",
-    "end": "2022-01-01",
-    "n_series": 34,
-    "updated": "2024-10-28",
-    "fetched": "2026-08-05 13:12:07",
-    "load": "whole",
-    "data": "ch_fso_gdp_region.csv",
-    "meta": "ch_fso_gdp_region.json"
-  },
-  {
-    "id": "ch_fso_construction_prices",
-    "title": {
-      "en": "Construction prices",
-      "de": "Baupreise",
-      "fr": "Prix de la construction",
-      "it": "Prezzi delle costruzioni"
-    },
-    "concept": {
-      "en": "Prices / Construction prices",
-      "leaf": {
-        "en": "Construction prices",
-        "de": "Baupreise",
-        "fr": "Prix de la construction",
-        "it": "Prezzi delle costruzioni"
-      }
-    },
-    "canonical": true,
-    "featured": null,
-    "topic": {
-      "key": "prices",
-      "name": {
-        "en": "Prices",
-        "de": "Preise",
-        "fr": "Prix",
-        "it": "Prezzi"
-      }
-    },
-    "source": {
-      "key": "fso",
-      "name": {
-        "en": "Swiss Federal Statistical Office (FSO)",
-        "de": "Bundesamt für Statistik (BFS)",
-        "fr": "Office fédéral de la statistique (OFS)",
-        "it": "Ufficio federale di statistica (UST)"
-      }
-    },
-    "license": "fso",
-    "frequency": "semi-annual",
-    "start": "1998-10-01",
-    "end": "2026-04-01",
-    "n_series": 3,
-    "updated": "2026-06-18",
-    "fetched": "2026-08-05 13:12:07",
-    "load": "whole",
-    "data": "ch_fso_construction_prices.csv",
-    "meta": "ch_fso_construction_prices.json"
-  },
-  {
-    "id": "ch_fso_trade_partner",
-    "title": {
-      "en": "Foreign trade by partner country",
-      "de": "Aussenhandel nach Partnerland",
-      "fr": "Commerce extérieur par pays partenaire",
-      "it": "Commercio estero per paese partner"
-    },
-    "concept": {
-      "en": "External sector / Foreign trade",
-      "leaf": {
-        "en": "Foreign trade",
-        "de": "Aussenhandel",
-        "fr": "Commerce extérieur",
-        "it": "Commercio estero"
-      }
-    },
-    "canonical": true,
-    "featured": null,
-    "topic": {
-      "key": "external-sector",
-      "name": {
-        "en": "External sector",
-        "de": "Aussenwirtschaft",
-        "fr": "Secteur extérieur",
-        "it": "Settore estero"
-      }
-    },
-    "source": {
-      "key": "fso-focbs",
-      "name": {
-        "en": "Swiss Federal Statistical Office (FSO) / Federal Office for Customs and Border Security (FOCBS)",
-        "de": "Bundesamt für Statistik (BFS) / Bundesamt für Zoll und Grenzsicherheit (BAZG)",
-        "fr": "Office fédéral de la statistique (OFS) / Office fédéral de la douane et de la sécurité des frontières (OFDF)",
-        "it": "Ufficio federale di statistica (UST) / Ufficio federale della dogana e della sicurezza dei confini (UDSC)"
-      }
-    },
-    "license": "fso",
-    "frequency": "annual",
-    "start": "1990-01-01",
-    "end": "2025-01-01",
-    "n_series": 66,
-    "updated": null,
-    "fetched": "2026-08-05 13:12:07",
-    "load": "whole",
-    "data": "ch_fso_trade_partner.csv",
-    "meta": "ch_fso_trade_partner.json"
-  },
-  {
-    "id": "ch_fso_hicp",
-    "title": {
-      "en": "Harmonised CPI (HICP)",
-      "de": "Harmonisierter Konsumentenpreisindex (HVPI)",
-      "fr": "IPC harmonisé (IPCH)",
-      "it": "IPC armonizzato (IPCA)"
-    },
-    "concept": {
-      "en": "Prices / Consumer prices",
-      "leaf": {
-        "en": "Consumer prices",
-        "de": "Konsumentenpreise",
-        "fr": "Prix à la consommation",
-        "it": "Prezzi al consumo"
-      }
-    },
-    "canonical": false,
-    "featured": null,
-    "topic": {
-      "key": "prices",
-      "name": {
-        "en": "Prices",
-        "de": "Preise",
-        "fr": "Prix",
-        "it": "Prezzi"
-      }
-    },
-    "source": {
-      "key": "eurostat",
-      "name": {
-        "en": "Eurostat",
-        "de": "Eurostat",
-        "fr": "Eurostat",
-        "it": "Eurostat"
-      }
-    },
-    "license": "eurostat",
-    "frequency": "monthly",
-    "start": "2004-12-01",
-    "end": "2025-12-01",
-    "n_series": 13,
-    "updated": "2026-02-06",
-    "fetched": "2026-08-05 13:12:08",
-    "load": "whole",
-    "data": "ch_fso_hicp.csv",
-    "meta": "ch_fso_hicp.json"
-  },
-  {
-    "id": "ch_seco_wwa",
-    "title": {
-      "en": "Weekly economic activity (WEA)",
-      "de": "Wöchentliche Wirtschaftsaktivität (WWA)",
-      "fr": "Activité économique hebdomadaire (WEA)",
-      "it": "Attività economica settimanale (WEA)"
-    },
-    "concept": {
-      "en": "Business cycle & sentiment / High-frequency activity tracker",
-      "leaf": {
-        "en": "High-frequency activity tracker",
-        "de": "Hochfrequenz-Aktivitätsindikator",
-        "fr": "Indicateur d'activité à haute fréquence",
-        "it": "Indicatore di attività ad alta frequenza"
-      }
-    },
-    "canonical": true,
-    "featured": null,
-    "topic": {
-      "key": "business-cycle-sentiment",
-      "name": {
-        "en": "Business cycle & sentiment",
-        "de": "Konjunktur & Stimmung",
-        "fr": "Conjoncture & climat",
-        "it": "Congiuntura e clima"
-      }
-    },
-    "source": {
-      "key": "seco",
-      "name": {
-        "en": "State Secretariat for Economic Affairs (SECO)",
-        "de": "Staatssekretariat für Wirtschaft (SECO)",
-        "fr": "Secrétariat d'État à l'économie (SECO)",
-        "it": "Segreteria di Stato dell'economia (SECO)"
-      }
-    },
-    "license": "seco",
-    "frequency": "weekly",
-    "start": "2005-01-03",
-    "end": "2026-07-13",
-    "n_series": 2,
-    "updated": null,
-    "fetched": "2026-08-05 13:12:08",
-    "load": "whole",
-    "data": "ch_seco_wwa.csv",
-    "meta": "ch_seco_wwa.json"
   }
 ]
