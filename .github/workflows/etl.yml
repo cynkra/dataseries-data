@@ -38,8 +38,15 @@ jobs:
         run: |
           # Binaries from P3M -> fast, no system-dep compilation. This repo is
           # plain scripts (no DESCRIPTION), so install the list explicitly.
+          #
+          # digest is used by NOTHING in the pipeline -- only by the datasheet
+          # guards (tests/test_description_i18n.R hashes the English description
+          # to spot a translation that outlived it). Leaving it out therefore
+          # cannot fail the ETL, only the guard step, which reports instead of
+          # gating: the symptom is a daily `data-guard` issue reading "there is
+          # no package called 'digest'" while every run stays green.
           install.packages(c(
-            "arrow", "dplyr", "httr2", "jsonlite", "readr",
+            "arrow", "digest", "dplyr", "httr2", "jsonlite", "readr",
             "readxl", "stringr", "tibble", "tidyr"
           ))
 
