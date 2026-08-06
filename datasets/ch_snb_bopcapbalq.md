@@ -1,10 +1,10 @@
 # Swiss balance of payments, financial account (quarterly)
 
 - **id**: ch_snb_bopcapbalq
-- **title**: Balance of payments: financial account
+- **title**: Balance of payments: financial account | de: Zahlungsbilanz: Kapitalbilanz | fr: Balance des paiements : compte financier | it: Bilancia dei pagamenti: conto finanziario
 - **concept**: External sector / Balance of payments
 - **canonical**: yes
-- **source**: Swiss National Bank (SNB)
+- **source**: snb
 - **license**: snb (free reuse, attribution required)
 - **frequency**: quarterly
 - **coverage**: 1985-01 .. 2025-10
@@ -12,21 +12,11 @@
 - **updated**: 2025 Q4 release (PublishingDate in CSV header)
 
 ## What is special
-The financial account of the Swiss balance of payments, quarterly back to 1985:
-the flow side of cross-border investment that the international investment
-position (`ch_snb_auversecq`) shows as stocks. The distinctive structure is its
-**deep nested hierarchy** under the single Component dimension. The standard BPM6
-breakdown is unrolled to several levels: direct investment (equity, reinvested
-earnings, debt instruments), portfolio investment (debt securities split
-short/long term, equity split shares vs collective schemes), other investment
-(currency and deposits and loans, each split by holding sector SNB / banks /
-public / other, with "of which" amounts due from/to banks and customers), and
-reserve assets (gold, IMF reserve position, SDRs, foreign-currency investments in
-securities and deposits). Each component carries a three-way accounting entry:
-net acquisition of assets, net incurrence of liabilities, and the net of the two.
+Cross-border investment flows in and out of Switzerland: direct, portfolio and other investment plus reserve assets, quarterly.
 
 ## Access
-- **type**: SNB cube API
+- **type**: snb-cube — SNB cube API
+- **cube**: `bopcapbalq`
 - **endpoint**: `https://data.snb.ch/api/cube/bopcapbalq/data/json/en`
 - **call**: `snb_fetch("bopcapbalq", title = "Swiss balance of payments - Financial account - Quarter")`
 
@@ -73,3 +63,12 @@ net acquisition of assets, net incurrence of liabilities, and the net of the two
 ## Provenance
 Script: `R/source_snb.R::snb_fetch` (cube `bopcapbalq`, title/topic from
 `R/snb_cubes.tsv`). Datasheet authored 2026-06-01.
+
+## What is special (de)
+Grenzüberschreitende Investitionsströme in die Schweiz und aus ihr heraus: Direkt-, Portfolio- und übrige Investitionen sowie Währungsreserven, vierteljährlich.
+
+## What is special (fr)
+Flux d'investissement transfrontaliers vers et depuis la Suisse : investissements directs, de portefeuille et autres, plus les réserves monétaires, par trimestre.
+
+## What is special (it)
+Flussi d'investimento transfrontalieri verso e dalla Svizzera: investimenti diretti, di portafoglio e altri, più le riserve monetarie, per trimestre.

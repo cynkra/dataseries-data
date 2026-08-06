@@ -1,10 +1,11 @@
 # Money market rates
 
 - **id**: ch_snb_zimoma
+- **title**: Money market rates | de: Geldmarktsätze | fr: Taux du marché monétaire | it: Tassi del mercato monetario
 - **concept**: Interest rates & yields / Money-market rates
 - **canonical**: yes (the headline money-market-rate cube; `zikredlauf` and `zikrepro` are the lending/published-rate alternates under the same concept)
 - **featured**: SARON
-- **source**: Swiss National Bank (SNB)
+- **source**: snb
 - **license**: snb (free reuse, attribution required)
 - **frequency**: monthly
 - **coverage**: 1972-01 .. 2026-04
@@ -12,18 +13,11 @@
 - **updated**: 2026-04 (latest published period)
 
 ## What is special
-The core money-market reference rates, monthly back to 1972. The distinctive feature is
-the country grouping (`D0`): Switzerland alongside the US, Japan, the UK and the euro
-area, so the same cube lets you compare CHF rates against the major currencies on one
-axis. It also spans the reference-rate transition end to end: the modern overnight
-benchmarks SARON, SOFR, TONA, SONIA and ESTR sit next to the legacy 3-month LIBOR
-series and EURIBOR. The Swiss block additionally carries the call money rate
-(tomorrow-next) and the 3-month money-market debt-register claims of the Confederation.
-With only 13 leaf series it is small but conceptually wide, and the Swiss `1TGT` series
-gives the longest continuous CHF money-market history in the cube (from 1972).
+Money-market rates for Switzerland, the US, Japan, the UK and the euro area on one chart, spanning the switch from Libor to SARON and SOFR.
 
 ## Access
-- **type**: SNB cube API
+- **type**: snb-cube — SNB cube API
+- **cube**: `zimoma`
 - **endpoint**: `https://data.snb.ch/api/cube/zimoma/data/json/en`
 - **call**: `snb_fetch("zimoma", title = "Money market rates")`
 
@@ -60,3 +54,12 @@ gives the longest continuous CHF money-market history in the cube (from 1972).
 ## Provenance
 Script: `R/source_snb.R::snb_fetch` (cube list + title from `R/snb_cubes.tsv`).
 Datasheet authored 2026-06-01; parser verified 2026-06-01 (4,741 data rows, 13 series).
+
+## What is special (de)
+Geldmarktsätze für die Schweiz, die USA, Japan, Grossbritannien und den Euroraum in einer Grafik, über den Wechsel von Libor zu SARON und SOFR hinweg.
+
+## What is special (fr)
+Taux du marché monétaire pour la Suisse, les États-Unis, le Japon, le Royaume-Uni et la zone euro sur un même graphique, à travers le passage du Libor au SARON et au SOFR.
+
+## What is special (it)
+Tassi del mercato monetario per Svizzera, Stati Uniti, Giappone, Regno Unito e area euro in un unico grafico, attraverso il passaggio da Libor a SARON e SOFR.

@@ -184,10 +184,15 @@ fso_fetch <- function(dataset_id, table_id, query,
     dplyr::select(dplyr::all_of(c(dim_cols, "date", "value"))) |>
     dplyr::arrange(dplyr::across(dplyr::all_of(c(dim_cols, "date"))))
 
+  # Label translations: PX-Web serves the same table under /de|/fr|/it with
+  # language-invariant codes (dimension codes stay German even on /en — verified),
+  # so three light metadata GETs localise every dim + level label. A failed
+  # language GET skips that language, never the dataset.
+  dimensions <- .fso_i18n_dims(table_id, dimensions)
+
   meta <- list(
-    title = title %||% setNames(list(table_id), "en"),
+    title = title %||% list(en = table_id),   # curated title = the datasheet's
     source = list(
-      name = list(en = "Swiss Federal Statistical Office (FSO)"),
       url = sprintf("https://www.pxweb.bfs.admin.ch/pxweb/en/%s", table_id)
     ),
     license = "fso",
@@ -196,6 +201,31 @@ fso_fetch <- function(dataset_id, table_id, query,
   )
 
   list(id = dataset_id, data = data, meta = meta)
+}
+
+# Merge de/fr/it dimension + level labels from the per-language metadata GETs
+# onto en-labelled `dimensions`. Codes are the merge key; unknown codes/dims are
+# ignored (time dims are already consumed by then).
+.fso_i18n_dims <- function(table_id, dimensions) {
+  for (L in c("de", "fr", "it")) {
+    doc <- tryCatch(get_json(sprintf(
+      "https://www.pxweb.bfs.admin.ch/api/v1/%s/%s/%s.px", L, table_id, table_id)),
+      error = function(e) NULL)
+    if (is.null(doc)) next
+    for (v in doc$variables) {
+      d <- v$code
+      if (is.null(dimensions[[d]])) next
+      if (!is.null(v$text) && nzchar(v$text)) dimensions[[d]]$label[[L]] <- v$text
+      codes <- unlist(v$values)
+      texts <- unlist(v$valueTexts)
+      for (i in seq_along(codes)) {
+        if (i > length(texts) || !nzchar(texts[[i]])) next
+        if (!is.null(dimensions[[d]]$levels[[codes[[i]]]]))
+          dimensions[[d]]$levels[[codes[[i]]]]$label[[L]] <- texts[[i]]
+      }
+    }
+  }
+  dimensions
 }
 
 `%||%` <- function(a, b) if (is.null(a)) b else a

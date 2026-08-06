@@ -1,9 +1,10 @@
 # Payments and cash withdrawals
 
 - **id**: ch_snb_zavezaluba
+- **title**: Payments and cash withdrawals | de: Zahlungen und Bargeldbezüge | fr: Paiements et retraits d'espèces | it: Pagamenti e prelievi di contante
 - **concept**: Payment systems / Payments & cash
 - **canonical**: no (alternate for Payments & cash; the flow cube of the `zave*` family, paired with the stock cube `zavezaka`)
-- **source**: Swiss National Bank (SNB)
+- **source**: snb
 - **license**: snb (free reuse, attribution required)
 - **frequency**: monthly
 - **coverage**: 2005-01 .. 2026-03
@@ -11,18 +12,11 @@
 - **updated**: 2026-03 (latest published period)
 
 ## What is special
-The card-payment flow cube, and the most cross-cut of the `zave*` family: five
-stacked dimensions describe each transaction (what kind of payment, which card type,
-where the card was issued, where it was used, and which metric). It separates
-card-present from card-not-present (online) payments, breaks out contactless within
-card-present, and isolates cash withdrawals at ATMs. The domestic/foreign split on
-both card origin (`D2`) and place of transaction (`D3`) makes it usable for inbound
-tourism spend (foreign cards used domestically) and Swiss spending abroad. The
-contactless and enhanced-cash subtotals begin mid-2017, later than the 2005 base, so
-many of the 113 series are short.
+What Swiss card payments are spent on and where, in shops or online, at home or abroad, plus cash withdrawn at ATMs.
 
 ## Access
-- **type**: SNB cube API
+- **type**: snb-cube — SNB cube API
+- **cube**: `zavezaluba`
 - **endpoint**: `https://data.snb.ch/api/cube/zavezaluba/data/json/en`
 - **call**: `snb_fetch("zavezaluba", title = "Payments and cash withdrawals")`
 
@@ -62,3 +56,12 @@ many of the 113 series are short.
 ## Provenance
 Script: `R/source_snb.R::snb_fetch` (cube list + title from `R/snb_cubes.tsv`).
 Datasheet authored 2026-06-01; parser verified 2026-06-01 (19,462 data rows, 113 series).
+
+## What is special (de)
+Wofür und wo mit Schweizer Karten bezahlt wird — im Laden oder online, im In- oder Ausland — sowie Bargeldbezüge am Automaten.
+
+## What is special (fr)
+Pour quoi et où l'on paie avec des cartes suisses — en magasin ou en ligne, en Suisse ou à l'étranger — ainsi que les retraits aux distributeurs.
+
+## What is special (it)
+Per cosa e dove si paga con le carte svizzere — in negozio o online, in Svizzera o all'estero — nonché i prelievi ai bancomat.

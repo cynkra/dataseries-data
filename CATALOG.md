@@ -10,129 +10,129 @@ See [`docs/concepts.md`](docs/concepts.md) for the concept tree and canonical/al
 
 | ID | Title | Source | Frequency | Coverage | License |
 |---|---|---|---|---|---|
-| `ch_seco_gdp` | Gross domestic product (GDP) | State Secretariat for Economic Affairs (SECO) | quarterly | 1980-01-01..2026-01-01 | SECO open data |
-| `ch_ffa_finances` | Government finances | Federal Finance Administration (FFA) | annual | 1990-01-01..2029-01-01 | opendata.swiss terms of use (open use, attribution required: Federal Finance Administration FFA) |
-| `ch_fso_gfcf_detail` | Investment (GFCF) detail _(alt)_ | Swiss Federal Statistical Office (FSO) | annual | 1995-01-01..2024-01-01 | FSO (free reuse, attribution) |
-| `ch_fso_labour_productivity` | Labour productivity | Swiss Federal Statistical Office (FSO) | annual | 1991-01-01..2024-01-01 | FSO (free reuse, attribution) |
-| `ch_fso_gdp_region` | Regional GDP | Swiss Federal Statistical Office (FSO) | annual | 2008-01-01..2022-01-01 | FSO (free reuse, attribution) |
+| `ch_seco_gdp` | Gross domestic product (GDP) | State Secretariat for Economic Affairs (SECO) | quarterly | 1980-01-01..2026-01-01 | SECO open data — free use, attribution required |
+| `ch_ffa_finances` | Government finances | Federal Finance Administration (FFA) | annual | 1990-01-01..2029-01-01 | opendata.swiss terms of use — open use, attribution required |
+| `ch_fso_gfcf_detail` | Investment (GFCF) detail _(alt)_ | Swiss Federal Statistical Office (FSO) | annual | 1995-01-01..2024-01-01 | FSO open data — free use, attribution required |
+| `ch_fso_labour_productivity` | Labour productivity | Swiss Federal Statistical Office (FSO) | annual | 1991-01-01..2024-01-01 | FSO open data — free use, attribution required |
+| `ch_fso_gdp_region` | Regional GDP | Swiss Federal Statistical Office (FSO) | annual | 2008-01-01..2022-01-01 | FSO open data — free use, attribution required |
 
 ## Prices
 
 | ID | Title | Source | Frequency | Coverage | License |
 |---|---|---|---|---|---|
-| `ch_fso_construction_prices` | Construction prices | Swiss Federal Statistical Office (FSO) | semi-annual | 1998-10-01..2025-10-01 | FSO (free reuse, attribution) |
-| `ch_snb_plkopr` | Consumer prices (CPI) | Swiss National Bank | monthly | 1921-01-01..2026-04-01 | SNB (non-commercial, attribution) |
-| `ch_fso_cpi` | Consumer prices (detailed basket) _(alt)_ | Swiss Federal Statistical Office (FSO) | monthly | 1982-12-01..2026-05-01 | FSO (free reuse, attribution) |
-| `ch_fso_hicp` | Harmonised CPI (HICP) _(alt)_ | Eurostat | monthly | 2004-12-01..2025-12-01 | eurostat |
-| `ch_snb_plkoprinfla` | Core inflation | Swiss National Bank | monthly | 1983-12-01..2026-04-01 | SNB (non-commercial, attribution) |
-| `ch_snb_snbiprogq` | Inflation forecast (SNB) | Swiss National Bank | quarterly | 2001-01-01..2028-10-01 | SNB (non-commercial, attribution) |
-| `ch_fso_ppi` | Producer & import prices | Swiss Federal Statistical Office (FSO) | monthly | 1963-01-01..2026-04-01 | FSO (free reuse, attribution) |
-| `ch_snb_plimoinchq` | Real estate prices | Swiss National Bank | quarterly | 1970-01-01..2026-01-01 | SNB (non-commercial, attribution) |
+| `ch_fso_construction_prices` | Construction prices | Swiss Federal Statistical Office (FSO) | semi-annual | 1998-10-01..2026-04-01 | FSO open data — free use, attribution required |
+| `ch_snb_plkopr` | Consumer prices (CPI) | Swiss National Bank | monthly | 1921-01-01..2026-06-01 | Swiss National Bank — terms of use (non-commercial) |
+| `ch_fso_cpi` | Consumer prices (detailed basket) _(alt)_ | Swiss Federal Statistical Office (FSO) | monthly | 1982-12-01..2026-07-01 | FSO open data — free use, attribution required |
+| `ch_fso_hicp` | Harmonised CPI (HICP) _(alt)_ | Eurostat | monthly | 2004-12-01..2025-12-01 | Eurostat — CC BY 4.0 |
+| `ch_snb_plkoprinfla` | Core inflation | Swiss National Bank | monthly | 1983-12-01..2026-06-01 | Swiss National Bank — terms of use (non-commercial) |
+| `ch_snb_snbiprogq` | Inflation forecast (SNB) | Swiss National Bank | quarterly | 2001-01-01..2029-01-01 | Swiss National Bank — terms of use (non-commercial) |
+| `ch_fso_ppi` | Producer & import prices | Swiss Federal Statistical Office (FSO) | monthly | 1963-01-01..2026-06-01 | FSO open data — free use, attribution required |
+| `ch_snb_plimoinchq` | Real estate prices | Swiss National Bank | quarterly | 1970-01-01..2026-04-01 | Swiss National Bank — terms of use (non-commercial) |
 
 ## Labour
 
 | ID | Title | Source | Frequency | Coverage | License |
 |---|---|---|---|---|---|
-| `ch_fso_cross_border_commuters` | Cross-border commuters | Swiss Federal Statistical Office (FSO) | quarterly | 2002-07-01..2026-01-01 | FSO (free reuse, attribution) |
-| `ch_fso_ets` | Employed persons (ETS) _(alt)_ | Swiss Federal Statistical Office (FSO) | quarterly | 1991-04-01..2025-10-01 | FSO (free reuse, attribution) |
-| `ch_fso_besta` | Jobs by economic division | Swiss Federal Statistical Office (FSO) | quarterly | 1991-07-01..2026-01-01 | FSO (free reuse, attribution) |
-| `ch_fso_jobs_sex` | Jobs by economic division and sex _(alt)_ | Swiss Federal Statistical Office (FSO) | quarterly | 1995-07-01..2026-01-01 | FSO (free reuse, attribution) |
-| `ch_snb_ambeschkla` | Employees, by economic activity _(alt)_ | Swiss National Bank | quarterly | 1991-07-01..2025-10-01 | SNB (non-commercial, attribution) |
-| `ch_fso_besta_outlook` | Employment outlook | Swiss Federal Statistical Office (FSO) | quarterly | 2004-01-01..2026-01-01 | FSO (free reuse, attribution) |
-| `ch_adecco_sjmi` | Adecco Group Swiss Job Market Index | University of Zurich (Stellenmarkt-Monitor Schweiz) | quarterly | 2003-03-01..2026-03-01 | Stellenmarkt-Monitor Schweiz, University of Zurich (free use, attribution required; Adecco Group Swiss Job Market Index) |
-| `ch_fso_vacancies` | Job vacancies | Swiss Federal Statistical Office (FSO) | quarterly | 1992-04-01..2026-01-01 | FSO (free reuse, attribution) |
-| `ch_snb_amarbma` | Registered unemployment | Swiss National Bank | monthly | 1948-01-01..2026-04-01 | SNB (non-commercial, attribution) |
-| `ch_fso_unemp_rate` | Unemployment rate (ILO) _(alt)_ | Swiss Federal Statistical Office (FSO) | monthly | 1991-01-01..2026-03-01 | FSO (free reuse, attribution) |
-| `ch_fso_wage_idx` | Swiss Wage Index | Swiss Federal Statistical Office (FSO) | annual | 1994-01-01..2025-01-01 | FSO (free reuse, attribution) |
-| `ch_fso_hours_worked` | Hours worked | Swiss Federal Statistical Office (FSO) | annual | 2010-01-01..2025-01-01 | FSO (free reuse, attribution) |
+| `ch_fso_cross_border_commuters` | Cross-border commuters | Swiss Federal Statistical Office (FSO) | quarterly | 2002-07-01..2026-01-01 | FSO open data — free use, attribution required |
+| `ch_fso_ets` | Employed persons (ETS) _(alt)_ | Swiss Federal Statistical Office (FSO) | quarterly | 1991-04-01..2026-01-01 | FSO open data — free use, attribution required |
+| `ch_fso_besta` | Jobs by economic division | Swiss Federal Statistical Office (FSO) | quarterly | 1991-07-01..2026-01-01 | FSO open data — free use, attribution required |
+| `ch_fso_jobs_sex` | Jobs by economic division and sex _(alt)_ | Swiss Federal Statistical Office (FSO) | quarterly | 1995-07-01..2026-01-01 | FSO open data — free use, attribution required |
+| `ch_snb_ambeschkla` | Employees, by economic activity _(alt)_ | Swiss National Bank | quarterly | 1991-07-01..2026-01-01 | Swiss National Bank — terms of use (non-commercial) |
+| `ch_fso_besta_outlook` | Employment outlook | Swiss Federal Statistical Office (FSO) | quarterly | 2004-01-01..2026-01-01 | FSO open data — free use, attribution required |
+| `ch_adecco_sjmi` | Adecco Group Swiss Job Market Index | University of Zurich (Stellenmarkt-Monitor Schweiz) | quarterly | 2003-03-01..2026-06-01 | Stellenmarkt-Monitor Schweiz, University of Zurich — free use, attribution required |
+| `ch_fso_vacancies` | Job vacancies | Swiss Federal Statistical Office (FSO) | quarterly | 1992-04-01..2026-01-01 | FSO open data — free use, attribution required |
+| `ch_snb_amarbma` | Registered unemployment | Swiss National Bank | monthly | 1948-01-01..2026-06-01 | Swiss National Bank — terms of use (non-commercial) |
+| `ch_fso_unemp_rate` | Unemployment rate (ILO) _(alt)_ | Swiss Federal Statistical Office (FSO) | monthly | 1991-01-01..2026-03-01 | FSO open data — free use, attribution required |
+| `ch_fso_wage_idx` | Swiss Wage Index | Swiss Federal Statistical Office (FSO) | annual | 1994-01-01..2025-01-01 | FSO open data — free use, attribution required |
+| `ch_fso_hours_worked` | Hours worked | Swiss Federal Statistical Office (FSO) | annual | 2010-01-01..2025-01-01 | FSO open data — free use, attribution required |
 
 ## Money & banking
 
 | ID | Title | Source | Frequency | Coverage | License |
 |---|---|---|---|---|---|
-| `ch_snb_babilpobm` | Bank balance sheets by currency | Swiss National Bank | monthly | 1987-12-01..2026-03-01 | SNB (non-commercial, attribution) |
-| `ch_snb_bakredbetgrbm` | Corporate loans by company size | Swiss National Bank | monthly | 2002-01-01..2026-03-01 | SNB (non-commercial, attribution) |
-| `ch_snb_bakredinausbm` | Mortgage & other loans | Swiss National Bank | monthly | 1985-06-01..2026-03-01 | SNB (non-commercial, attribution) |
-| `ch_snb_bakredsekbm` | Domestic loans by sector | Swiss National Bank | monthly | 1985-06-01..2026-03-01 | SNB (non-commercial, attribution) |
-| `ch_snb_snbmonagg` | Monetary aggregates (M1–M3) | Swiss National Bank | monthly | 1984-12-01..2026-04-01 | SNB (non-commercial, attribution) |
-| `ch_snb_snbbipo` | SNB balance sheet _(alt)_ | Swiss National Bank | monthly | 1996-12-01..2026-04-01 | SNB (non-commercial, attribution) |
-| `ch_snb_snbmoba` | Monetary base _(alt)_ | Swiss National Bank | monthly | 1950-01-01..2026-04-01 | SNB (non-commercial, attribution) |
+| `ch_snb_babilpobm` | Bank balance sheets by currency | Swiss National Bank | monthly | 1987-12-01..2026-05-01 | Swiss National Bank — terms of use (non-commercial) |
+| `ch_snb_bakredbetgrbm` | Corporate loans by company size | Swiss National Bank | monthly | 2002-01-01..2026-05-01 | Swiss National Bank — terms of use (non-commercial) |
+| `ch_snb_bakredinausbm` | Mortgage & other loans | Swiss National Bank | monthly | 1985-06-01..2026-05-01 | Swiss National Bank — terms of use (non-commercial) |
+| `ch_snb_bakredsekbm` | Domestic loans by sector | Swiss National Bank | monthly | 1985-06-01..2026-05-01 | Swiss National Bank — terms of use (non-commercial) |
+| `ch_snb_snbmonagg` | Monetary aggregates (M1–M3) | Swiss National Bank | monthly | 1984-12-01..2026-06-01 | Swiss National Bank — terms of use (non-commercial) |
+| `ch_snb_snbbipo` | SNB balance sheet _(alt)_ | Swiss National Bank | monthly | 1996-12-01..2026-06-01 | Swiss National Bank — terms of use (non-commercial) |
+| `ch_snb_snbmoba` | Monetary base _(alt)_ | Swiss National Bank | monthly | 1950-01-01..2026-06-01 | Swiss National Bank — terms of use (non-commercial) |
 
 ## Interest rates & yields
 
 | ID | Title | Source | Frequency | Coverage | License |
 |---|---|---|---|---|---|
-| `ch_snb_rendeiduebd` | Bond yields (spot rates) | Swiss National Bank | daily | 1988-01-04..2026-05-29 | SNB (non-commercial, attribution) |
-| `ch_snb_zimoma` | Money market rates | Swiss National Bank | monthly | 1972-01-01..2026-05-01 | SNB (non-commercial, attribution) |
-| `ch_snb_zikredlauf` | New lending rates _(alt)_ | Swiss National Bank | monthly | 2009-05-01..2026-02-01 | SNB (non-commercial, attribution) |
-| `ch_snb_zikrepro` | Published interest rates _(alt)_ | Swiss National Bank | monthly | 1933-01-01..2026-04-01 | SNB (non-commercial, attribution) |
-| `ch_snb_snboffzisa` | Official interest rates | Swiss National Bank | monthly | 2000-01-01..2026-04-01 | SNB (non-commercial, attribution) |
+| `ch_snb_rendeiduebd` | Bond yields (spot rates) | Swiss National Bank | daily | 1988-01-04..2026-07-31 | Swiss National Bank — terms of use (non-commercial) |
+| `ch_snb_zimoma` | Money market rates | Swiss National Bank | monthly | 1972-01-01..2026-07-01 | Swiss National Bank — terms of use (non-commercial) |
+| `ch_snb_zikredlauf` | New lending rates _(alt)_ | Swiss National Bank | monthly | 2009-05-01..2026-04-01 | Swiss National Bank — terms of use (non-commercial) |
+| `ch_snb_zikrepro` | Published interest rates _(alt)_ | Swiss National Bank | monthly | 1933-01-01..2026-06-01 | Swiss National Bank — terms of use (non-commercial) |
+| `ch_snb_snboffzisa` | Official interest rates | Swiss National Bank | monthly | 2000-01-01..2026-06-01 | Swiss National Bank — terms of use (non-commercial) |
 
 ## Exchange rates
 
 | ID | Title | Source | Frequency | Coverage | License |
 |---|---|---|---|---|---|
-| `ch_snb_devkum` | Bilateral exchange rates | Swiss National Bank | monthly | 1914-01-01..2026-05-01 | SNB (non-commercial, attribution) |
-| `ch_snb_devwkibiim` | Bilateral exchange-rate indices | Swiss National Bank | monthly | 1973-01-01..2026-05-01 | SNB (non-commercial, attribution) |
-| `ch_snb_devwkieffid` | Effective exchange-rate index | Swiss National Bank | daily | 1999-01-01..2026-05-29 | SNB (non-commercial, attribution) |
+| `ch_snb_devkum` | Bilateral exchange rates | Swiss National Bank | monthly | 1914-01-01..2026-07-01 | Swiss National Bank — terms of use (non-commercial) |
+| `ch_snb_devwkibiim` | Bilateral exchange-rate indices | Swiss National Bank | monthly | 1973-01-01..2026-06-01 | Swiss National Bank — terms of use (non-commercial) |
+| `ch_snb_devwkieffid` | Effective exchange-rate index | Swiss National Bank | daily | 1999-01-01..2026-06-30 | Swiss National Bank — terms of use (non-commercial) |
 
 ## External sector
 
 | ID | Title | Source | Frequency | Coverage | License |
 |---|---|---|---|---|---|
-| `ch_snb_bopcapbalq` | Balance of payments: financial account | Swiss National Bank | quarterly | 1985-01-01..2025-10-01 | SNB (non-commercial, attribution) |
-| `ch_snb_bopcurrq` | Balance of payments: current account | Swiss National Bank | quarterly | 1983-01-01..2025-10-01 | SNB (non-commercial, attribution) |
-| `ch_snb_bopoverq` | Balance of payments: overview _(alt)_ | Swiss National Bank | quarterly | 1985-01-01..2025-10-01 | SNB (non-commercial, attribution) |
-| `ch_snb_bopservq` | Balance of payments: services _(alt)_ | Swiss National Bank | quarterly | 2012-01-01..2025-10-01 | SNB (non-commercial, attribution) |
-| `ch_fso_trade_partner` | Foreign trade by partner country | Swiss Federal Statistical Office (FSO) / Federal Office for Customs and Border Security (FOCBS) | annual | 1990-01-01..2025-01-01 | FSO (free reuse, attribution) |
-| `ch_snb_ausshawarm` | Foreign trade by goods category | Swiss National Bank | monthly | 2012-01-01..2026-03-01 | SNB (non-commercial, attribution) |
-| `ch_snb_auvekomq` | International investment position | Swiss National Bank | quarterly | 1985-01-01..2025-10-01 | SNB (non-commercial, attribution) |
-| `ch_snb_auversecq` | Investment position by sector | Swiss National Bank | quarterly | 1985-01-01..2025-10-01 | SNB (non-commercial, attribution) |
-| `ch_snb_auvercurrq` | Investment position by currency _(alt)_ | Swiss National Bank | quarterly | 1985-01-01..2025-10-01 | SNB (non-commercial, attribution) |
-| `ch_snb_auverdeptq` | External debt _(alt)_ | Swiss National Bank | quarterly | 1999-10-01..2025-10-01 | SNB (non-commercial, attribution) |
+| `ch_snb_bopcapbalq` | Balance of payments: financial account | Swiss National Bank | quarterly | 1985-01-01..2026-01-01 | Swiss National Bank — terms of use (non-commercial) |
+| `ch_snb_bopcurrq` | Balance of payments: current account | Swiss National Bank | quarterly | 1983-01-01..2026-01-01 | Swiss National Bank — terms of use (non-commercial) |
+| `ch_snb_bopoverq` | Balance of payments: overview _(alt)_ | Swiss National Bank | quarterly | 1985-01-01..2026-01-01 | Swiss National Bank — terms of use (non-commercial) |
+| `ch_snb_bopservq` | Balance of payments: services _(alt)_ | Swiss National Bank | quarterly | 2012-01-01..2026-01-01 | Swiss National Bank — terms of use (non-commercial) |
+| `ch_fso_trade_partner` | Foreign trade by partner country | Swiss Federal Statistical Office (FSO) / Federal Office for Customs and Border Security (FOCBS) | annual | 1990-01-01..2025-01-01 | FSO open data — free use, attribution required |
+| `ch_snb_ausshawarm` | Foreign trade by goods category | Swiss National Bank | monthly | 2012-01-01..2026-05-01 | Swiss National Bank — terms of use (non-commercial) |
+| `ch_snb_auvekomq` | International investment position | Swiss National Bank | quarterly | 1985-01-01..2026-01-01 | Swiss National Bank — terms of use (non-commercial) |
+| `ch_snb_auversecq` | Investment position by sector | Swiss National Bank | quarterly | 1985-01-01..2026-01-01 | Swiss National Bank — terms of use (non-commercial) |
+| `ch_snb_auvercurrq` | Investment position by currency _(alt)_ | Swiss National Bank | quarterly | 1985-01-01..2026-01-01 | Swiss National Bank — terms of use (non-commercial) |
+| `ch_snb_auverdeptq` | External debt _(alt)_ | Swiss National Bank | quarterly | 1999-10-01..2026-01-01 | Swiss National Bank — terms of use (non-commercial) |
 
 ## Business cycle & sentiment
 
 | ID | Title | Source | Frequency | Coverage | License |
 |---|---|---|---|---|---|
-| `ch_snb_snbkosiq` | Business cycle signals | Swiss National Bank | quarterly | 2011-01-01..2026-01-01 | SNB (non-commercial, attribution) |
-| `ch_seco_concon` | Consumer confidence | State Secretariat for Economic Affairs (SECO) | quarterly | 1972-10-01..2026-04-01 | SECO open data |
-| `ch_seco_wwa` | Weekly economic activity (WEA) | State Secretariat for Economic Affairs (SECO) | weekly | 2005-01-03..2026-05-18 | SECO open data |
-| `ch_kof_barometer` | KOF Economic Barometer | KOF Swiss Economic Institute | monthly | 1991-01-01..2026-05-01 | KOF / CC BY 4.0 |
-| `ch_kof_esi` | KOF Economic Sentiment Index | KOF Swiss Economic Institute | monthly | 2007-04-01..2026-05-01 | KOF / CC BY 4.0 |
+| `ch_snb_snbkosiq` | Business cycle signals | Swiss National Bank | quarterly | 2011-01-01..2026-04-01 | Swiss National Bank — terms of use (non-commercial) |
+| `ch_seco_concon` | Consumer confidence | State Secretariat for Economic Affairs (SECO) | quarterly | 1972-10-01..2026-04-01 | quarterly |
+| `ch_seco_wwa` | Weekly economic activity (WEA) | State Secretariat for Economic Affairs (SECO) | weekly | 2005-01-03..2026-07-13 | SECO open data — free use, attribution required |
+| `ch_kof_barometer` | KOF Economic Barometer | KOF Swiss Economic Institute | monthly | 1991-01-01..2026-07-01 | KOF Swiss Economic Institute — CC BY 4.0 |
+| `ch_kof_esi` | KOF Economic Sentiment Index | KOF Swiss Economic Institute | monthly | 2007-04-01..2026-06-01 | KOF Swiss Economic Institute — CC BY 4.0 |
 
 ## Financial markets
 
 | ID | Title | Source | Frequency | Coverage | License |
 |---|---|---|---|---|---|
-| `ch_snb_capweums` | Securities turnover | Swiss National Bank | monthly | 1993-01-01..2026-04-01 | SNB (non-commercial, attribution) |
-| `ch_snb_capchstocki` | Swiss stock indices | Swiss National Bank | daily | 1989-01-03..2026-05-15 | SNB (non-commercial, attribution) |
+| `ch_snb_capweums` | Securities turnover | Swiss National Bank | monthly | 1993-01-01..2026-06-01 | Swiss National Bank — terms of use (non-commercial) |
+| `ch_snb_capchstocki` | Swiss stock indices | Swiss National Bank | daily | 1989-01-03..2026-07-15 | Swiss National Bank — terms of use (non-commercial) |
 
 ## Payment systems
 
 | ID | Title | Source | Frequency | Coverage | License |
 |---|---|---|---|---|---|
-| `ch_snb_zavegelade` | E-money _(alt)_ | Swiss National Bank | monthly | 2014-12-01..2026-03-01 | SNB (non-commercial, attribution) |
-| `ch_snb_zavesic` | Interbank clearing (SIC) _(alt)_ | Swiss National Bank | monthly | 1987-07-01..2026-04-01 | SNB (non-commercial, attribution) |
-| `ch_snb_zavezaka` | Payment cards and ATMs _(alt)_ | Swiss National Bank | monthly | 2005-01-01..2026-03-01 | SNB (non-commercial, attribution) |
-| `ch_snb_zavezaluba` | Payments and cash withdrawals _(alt)_ | Swiss National Bank | monthly | 2005-01-01..2026-03-01 | SNB (non-commercial, attribution) |
-| `ch_snb_zavkuzaart` | Customer payments (outgoing) _(alt)_ | Swiss National Bank | monthly | 2012-03-01..2026-03-01 | SNB (non-commercial, attribution) |
+| `ch_snb_zavegelade` | E-money _(alt)_ | Swiss National Bank | monthly | 2014-12-01..2026-05-01 | Swiss National Bank — terms of use (non-commercial) |
+| `ch_snb_zavesic` | Interbank clearing (SIC) _(alt)_ | Swiss National Bank | monthly | 1987-07-01..2026-06-01 | Swiss National Bank — terms of use (non-commercial) |
+| `ch_snb_zavezaka` | Payment cards and ATMs _(alt)_ | Swiss National Bank | monthly | 2005-01-01..2026-05-01 | Swiss National Bank — terms of use (non-commercial) |
+| `ch_snb_zavezaluba` | Payments and cash withdrawals _(alt)_ | Swiss National Bank | monthly | 2005-01-01..2026-05-01 | Swiss National Bank — terms of use (non-commercial) |
+| `ch_snb_zavkuzaart` | Customer payments (outgoing) _(alt)_ | Swiss National Bank | monthly | 2012-03-01..2026-05-01 | Swiss National Bank — terms of use (non-commercial) |
 
 ## Population & demographics
 
 | ID | Title | Source | Frequency | Coverage | License |
 |---|---|---|---|---|---|
-| `ch_fso_pop` | Resident population | Swiss Federal Statistical Office (FSO) | annual | 1861-01-01..2024-01-01 | FSO (free reuse, attribution) |
-| `ch_fso_pop_detail` | Resident population by nationality _(alt)_ | Swiss Federal Statistical Office (FSO) | annual | 2010-01-01..2024-01-01 | FSO (free reuse, attribution) |
+| `ch_fso_pop` | Resident population | Swiss Federal Statistical Office (FSO) | annual | 1861-01-01..2024-01-01 | FSO open data — free use, attribution required |
+| `ch_fso_pop_detail` | Resident population by nationality _(alt)_ | Swiss Federal Statistical Office (FSO) | annual | 2010-01-01..2024-01-01 | FSO open data — free use, attribution required |
 
 ## Domestic economy
 
 | ID | Title | Source | Frequency | Coverage | License |
 |---|---|---|---|---|---|
-| `ch_fso_hesta` | Hotel overnight stays | Swiss Federal Statistical Office (FSO) | monthly | 2005-01-01..2026-04-01 | FSO (free reuse, attribution) |
-| `ch_fso_production` | Industry & construction turnover | Swiss Federal Statistical Office (FSO) | quarterly | 1999-01-01..2026-01-01 | FSO (free reuse, attribution) |
-| `ch_fso_new_vehicles` | New car registrations by fuel | Swiss Federal Statistical Office (FSO) | monthly | 2005-01-01..2026-05-01 | FSO (free reuse, attribution) |
-| `ch_fso_retail` | Retail trade turnover | Swiss Federal Statistical Office (FSO) | monthly | 2000-01-01..2026-04-01 | FSO (free reuse, attribution) |
-| `ch_fso_services` | Services turnover | Swiss Federal Statistical Office (FSO) | quarterly | 2021-01-01..2026-01-01 | FSO (free reuse, attribution) |
-| `ch_fso_vacant_dwellings` | Vacant dwellings | Swiss Federal Statistical Office (FSO) | annual | 1995-01-01..2025-01-01 | FSO (free reuse, attribution) |
+| `ch_fso_hesta` | Hotel overnight stays | Swiss Federal Statistical Office (FSO) | monthly | 2005-01-01..2026-06-01 | FSO open data — free use, attribution required |
+| `ch_fso_production` | Industry & construction turnover | Swiss Federal Statistical Office (FSO) | quarterly | 1999-01-01..2026-01-01 | quarterly |
+| `ch_fso_new_vehicles` | New car registrations by fuel | Swiss Federal Statistical Office (FSO) | monthly | 2005-01-01..2026-06-01 | FSO open data — free use, attribution required |
+| `ch_fso_retail` | Retail trade turnover | Swiss Federal Statistical Office (FSO) | monthly | 2000-01-01..2026-06-01 | monthly |
+| `ch_fso_services` | Services turnover | Swiss Federal Statistical Office (FSO) | quarterly | 2021-01-01..2026-01-01 | FSO open data — free use, attribution required |
+| `ch_fso_vacant_dwellings` | Vacant dwellings | Swiss Federal Statistical Office (FSO) | annual | 1995-01-01..2025-01-01 | FSO open data — free use, attribution required |
 

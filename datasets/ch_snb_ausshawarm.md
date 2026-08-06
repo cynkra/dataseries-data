@@ -1,10 +1,11 @@
 # Foreign trade by goods category
 
 - **id**: ch_snb_ausshawarm
+- **title**: Foreign trade by goods category | de: Aussenhandel nach Warengruppe | fr: Commerce extérieur par catégorie de marchandises | it: Commercio estero per categoria di merci
 - **concept**: External sector / Foreign trade
 - **canonical**: yes
 - **featured**: Foreign trade
-- **source**: Swiss National Bank
+- **source**: snb
 - **license**: snb (free reuse, attribution required)
 - **frequency**: monthly
 - **coverage**: 2012-01 .. 2026-03
@@ -12,23 +13,11 @@
 - **updated**: 2026-03 (latest observation; PublishingDate in CSV header is the freshness signal)
 
 ## What is special
-Switzerland's monthly foreign trade split by goods category, the canonical trade
-series in the catalog. It is a three-way cube: trade flow (exports / imports /
-balance) times a deep goods hierarchy times a value-or-change axis. The goods axis
-goes two levels deep (e.g. group `CHEM` -> `C21` pharma preparations, `C20`
-chemicals), which surfaces the pharma and watches drivers that dominate Swiss
-exports (`C21`, `C2652`). The quirky axis is `D2` "Value/Change": the source nests a
-level (`WMF` value in CHF millions) with two year-on-year %-change leaves (`N` nominal,
-`R` real) under one dimension. The nominal change `N` is exactly the YoY % of `WMF`, so
-it is dropped as redundant with the app's YoY toggle; the real change `R` (price-deflated,
-not recomputable from the value) is kept. That leaves `D2` = {`WMF` nominal value, `R`
-real change} — two genuinely different series, so the `value` column still means CHF
-millions for `WMF` and a percent change for `R`. Despite a 2012 catalog start, the
-CHF-million level rows begin 2012 while the %-change rows begin 2013 (a year of base
-needed first).
+What Switzerland exports and imports by product group each month, in CHF millions and as a real, inflation-adjusted change.
 
 ## Access
-- **type**: SNB cube API
+- **type**: snb-cube — SNB cube API
+- **cube**: `ausshawarm`
 - **endpoint**: `GET https://data.snb.ch/api/cube/ausshawarm/data/json/en`
 - **call**: `snb_fetch("ausshawarm", title = "Foreign trade by goods category")`
 
@@ -78,3 +67,12 @@ non-selectable grouping headers, now correctly placed under Total.
 ## Provenance
 Script: `R/source_snb.R::snb_fetch` via `R/snb_cubes.tsv` (cube_id `ausshawarm`).
 Datasheet 2026-06-01; parser verified 2026-06-01 (28,285 rows, 175 series).
+
+## What is special (de)
+Was die Schweiz monatlich nach Warengruppe exportiert und importiert, in Mio. CHF und als reale, teuerungsbereinigte Veränderung.
+
+## What is special (fr)
+Ce que la Suisse exporte et importe chaque mois par groupe de marchandises, en millions de CHF et en variation réelle, corrigée de l'inflation.
+
+## What is special (it)
+Cosa la Svizzera esporta e importa ogni mese per gruppo di merci, in milioni di CHF e come variazione reale, corretta per l'inflazione.

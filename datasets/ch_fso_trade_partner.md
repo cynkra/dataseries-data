@@ -1,9 +1,10 @@
 # Foreign trade by partner country
 
 - **id**: ch_fso_trade_partner
+- **title**: Foreign trade by partner country | de: Aussenhandel nach Partnerland | fr: Commerce extérieur par pays partenaire | it: Commercio estero per paese partner
 - **concept**: External sector / Foreign trade
 - **canonical**: yes
-- **source**: Swiss Federal Statistical Office (FSO) / Federal Office for Customs and Border Security (FOCBS)
+- **source**: fso-focbs
 - **license**: fso (free reuse, attribution required)
 - **frequency**: annual
 - **coverage**: 1990 .. 2025
@@ -11,16 +12,11 @@
 - **updated**: 2026-06-02
 
 ## What is special
-Swiss foreign trade broken down by partner country and region, for both flows
-(exports and imports), in CHF millions, back to 1990. Covers the major trading
-partners (Germany, USA, China, …) plus the continent / economic-area aggregates
-(Europe, EU, Asia, North America, …) and the grand Total. This is the
-partner-country cut of the customs trade statistics, complementary to the SNB's
-trade-by-goods value series — the SNB cubes carry no partner-country dimension.
+Swiss exports and imports by country in CHF millions: Germany, the US, China and the rest, plus continent and economic-area totals.
 
 ## Access
-- **type**: FSO DAM Excel asset (two single-sheet workbooks, pinned by asset id)
-- **asset ids**: exports `36664830`, imports `36664836` (the English masters)
+- **type**: fso-dam-excel — FSO DAM Excel asset (two single-sheet workbooks, pinned by asset id)
+- **asset ids**: `36664830 36664836` (exports, imports — the English masters)
 - **call**: `fso_excel_ch_fso_trade_partner()` — the fetcher downloads both masters
   itself via `download_binary("https://dam-api.bfs.admin.ch/hub/api/dam/assets/{id}/master", …)`.
   We pin the asset ids (not an order number) because the order number resolves to
@@ -59,6 +55,19 @@ trade-by-goods value series — the SNB cubes carry no partner-country dimension
   economic area). Functionally determined by `partner`; surfaced as its own
   single-select so a user can hold the chart to either just the countries or just the
   aggregates. (It is not dropped as degenerate because it carries two genuine values.)
+
+## Labels
+- **units**: CHF millions | de: Mio. CHF | fr: Millions de CHF | it: Milioni di CHF
+- dim: flow
+  - **label**: Trade flow | de: Handelsrichtung | fr: Flux commercial | it: Flusso commerciale
+  - export: Exports | de: Exporte | fr: Exportations | it: Esportazioni
+  - import: Imports | de: Importe | fr: Importations | it: Importazioni
+- dim: partner
+  - **label**: Partner country / region | de: Partnerland / Region | fr: Pays partenaire / région | it: Paese partner / regione
+- dim: level
+  - **label**: Aggregation level | de: Aggregationsstufe | fr: Niveau d'agrégation | it: Livello di aggregazione
+  - group: Continent / economic area | de: Kontinent / Wirtschaftsraum | fr: Continent / espace économique | it: Continente / area economica
+  - country: Individual country | de: Einzelnes Land | fr: Pays individuel | it: Singolo paese
 
 ## Display
 - **split**: partner
@@ -133,3 +142,12 @@ and Türkiye under Europe).
 Script: `R/source_fso_excel_sets.R::fso_excel_ch_fso_trade_partner` (+ `.trade_partner_sheet`,
 `.TRADE_GROUPS`). Datasheet 2026-06-02; parser verified live 2026-06-02
 (2367 rows, 66 series, 40 partners, 1990 .. 2025, 0 NA values; four value anchors pass).
+
+## What is special (de)
+Schweizer Exporte und Importe nach Land in Mio. CHF: Deutschland, die USA, China und andere, dazu Kontinent- und Wirtschaftsraum-Totale.
+
+## What is special (fr)
+Exportations et importations suisses par pays en millions de CHF : Allemagne, États-Unis, Chine et autres, plus les totaux par continent et espace économique.
+
+## What is special (it)
+Esportazioni e importazioni svizzere per paese in milioni di CHF: Germania, Stati Uniti, Cina e altri, più i totali per continente e area economica.

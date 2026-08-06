@@ -1,5 +1,5 @@
 {
-  "schema_version": "1.0",
+  "schema_version": "1.1",
   "id": "ch_snb_zavezaka",
   "dim_order": [
     "D0"
@@ -7,109 +7,148 @@
   "start": "2005-01-01",
   "end": "2026-05-01",
   "title": {
-    "en": "Payment cards and ATMs"
+    "en": "Payment cards and ATMs",
+    "de": "Zahlungskarten und Geldautomaten",
+    "fr": "Cartes de paiement et distributeurs",
+    "it": "Carte di pagamento e bancomat"
   },
   "source": {
     "name": {
-      "en": "Swiss National Bank"
+      "en": "Swiss National Bank",
+      "de": "Schweizerische Nationalbank (SNB)",
+      "fr": "Banque nationale suisse (BNS)",
+      "it": "Banca nazionale svizzera (BNS)"
     },
-    "url": "https://data.snb.ch/en/topics/snb/cube/zavezaka"
+    "url": "https://data.snb.ch/en/topics/snb/cube/zavezaka",
+    "key": "snb"
   },
   "license": "snb",
   "frequency": "monthly",
   "dimensions": {
     "D0": {
       "label": {
-        "en": "Overview"
+        "en": "Overview",
+        "de": "Übersicht",
+        "fr": "Vue d’ensemble"
       },
       "levels": {
         "D0_0": {
           "label": {
-            "en": "Credit cards"
+            "en": "Credit cards",
+            "de": "Kreditkarten",
+            "fr": "Cartes de crédit"
           },
           "data": false
         },
         "D0_0_0": {
           "label": {
-            "en": "Number of cards"
+            "en": "Number of cards",
+            "de": "Anzahl Karten",
+            "fr": "Nombre de cartes"
           },
           "data": false
         },
         "T0": {
           "label": {
-            "en": "Total"
+            "en": "Total",
+            "de": "Total",
+            "fr": "Total"
           },
           "data": true
         },
         "DZ0": {
           "label": {
-            "en": "Of which with contactless payment function"
+            "en": "Of which with contactless payment function",
+            "de": "davon mit kontaktloser Zahlungsfunktion",
+            "fr": "dont avec fonction de paiement sans contact"
           },
           "data": true
         },
         "D0_1": {
           "label": {
-            "en": "Debit cards"
+            "en": "Debit cards",
+            "de": "Debitkarten",
+            "fr": "Cartes de débit"
           },
           "data": false
         },
         "D0_1_0": {
           "label": {
-            "en": "Number of cards"
+            "en": "Number of cards",
+            "de": "Anzahl Karten",
+            "fr": "Nombre de cartes"
           },
           "data": false
         },
         "T1": {
           "label": {
-            "en": "Total"
+            "en": "Total",
+            "de": "Total",
+            "fr": "Total"
           },
           "data": true
         },
         "DZ1": {
           "label": {
-            "en": "of which with contactless payment function"
+            "en": "of which with contactless payment function",
+            "de": "davon mit kontaktloser Zahlungsfunktion",
+            "fr": "dont avec fonction de paiement sans contact"
           },
           "data": true
         },
         "D0_2": {
           "label": {
-            "en": "E-money"
+            "en": "E-money",
+            "de": "E-Geld",
+            "fr": "Monnaie électronique"
           },
           "data": false
         },
         "D0_2_0": {
           "label": {
-            "en": "Number of cards"
+            "en": "Number of cards",
+            "de": "Anzahl Karten",
+            "fr": "Nombre de cartes"
           },
           "data": false
         },
         "T2": {
           "label": {
-            "en": "Total"
+            "en": "Total",
+            "de": "Total",
+            "fr": "Total"
           },
           "data": true
         },
         "DZ2": {
           "label": {
-            "en": "of which with contactless payment function"
+            "en": "of which with contactless payment function",
+            "de": "davon mit kontaktloser Zahlungsfunktion",
+            "fr": "dont avec fonction de paiement sans contact"
           },
           "data": true
         },
         "D0_3": {
           "label": {
-            "en": "Automated teller machines (ATMs)"
+            "en": "Automated teller machines (ATMs)",
+            "de": "Geldausgabeautomaten (ATM)",
+            "fr": "Distributeurs automatiques de billets (DAB)"
           },
           "data": false
         },
         "D0_3_0": {
           "label": {
-            "en": "Number of ATMs"
+            "en": "Number of ATMs",
+            "de": "Anzahl Automaten",
+            "fr": "Nombre de distributeurs"
           },
           "data": false
         },
         "T3": {
           "label": {
-            "en": "Total"
+            "en": "Total",
+            "de": "Total",
+            "fr": "Total"
           },
           "data": true
         }
@@ -142,8 +181,24 @@
     }
   },
   "updated": "2026-07-21 09:00",
-  "topic": "Payment systems",
-  "concept": "Payment systems / Payments & cash",
+  "topic": {
+    "key": "payment-systems",
+    "name": {
+      "en": "Payment systems",
+      "de": "Zahlungsverkehr",
+      "fr": "Systèmes de paiement",
+      "it": "Sistemi di pagamento"
+    }
+  },
+  "concept": {
+    "en": "Payment systems / Payments & cash",
+    "leaf": {
+      "en": "Payments & cash",
+      "de": "Zahlungsverkehr & Bargeld",
+      "fr": "Paiements & espèces",
+      "it": "Pagamenti e contante"
+    }
+  },
   "canonical": false,
   "split": "D0",
   "single_select": [],
@@ -151,6 +206,11 @@
   "default": {
     "D0": "T0"
   },
-  "description": "Monthly stock of the Swiss card landscape: number of credit cards, debit cards and e-money cards in circulation, plus the count of ATMs. It is a counts-only cube (no turnover), so it reads as the installed base behind the flow cube zavezaluba. The distinctive feature is the \"of which with contactless payment function\" subtotal (DZ0/DZ1/DZ2), which only begins in late 2014 once contactless rolled out, so those three series start 2014-12 while the card totals run back to 2005. The single Total ATM series (T3) sits in the same cube despite being a different unit (machines, not cards).",
-  "fetched_utc": "2026-07-21 09:18:22"
+  "description": {
+    "en": "How many credit, debit and prepaid cards are in circulation in Switzerland, plus the number of ATMs. Counts only, no spending.",
+    "de": "Wie viele Kredit-, Debit- und Vorauszahlungskarten in der Schweiz im Umlauf sind, dazu die Zahl der Geldautomaten. Nur Bestände, keine Umsätze.",
+    "fr": "Combien de cartes de crédit, de débit et prépayées circulent en Suisse, plus le nombre de distributeurs. Effectifs seulement, pas de dépenses.",
+    "it": "Quante carte di credito, di debito e prepagate circolano in Svizzera, più il numero di bancomat. Solo consistenze, nessuna spesa."
+  },
+  "fetched_utc": "2026-08-05 13:12:03"
 }

@@ -1,14 +1,182 @@
 [
-  { "name": "National accounts", "blurb": "GDP, regional output, investment, productivity and public finances." },
-  { "name": "Prices", "blurb": "Consumer, producer, real-estate and construction prices, plus the inflation forecast." },
-  { "name": "Labour", "blurb": "Employment, unemployment, wages, vacancies, hours and the wider job market." },
-  { "name": "Business cycle & sentiment", "blurb": "Leading barometers, sentiment surveys and high-frequency activity." },
-  { "name": "Interest rates & yields", "blurb": "Policy, money-market and bond-market interest rates." },
-  { "name": "Exchange rates", "blurb": "Bilateral and effective Swiss franc exchange rates." },
-  { "name": "Financial markets", "blurb": "Swiss equity indices and securities turnover." },
-  { "name": "External sector", "blurb": "Foreign trade, balance of payments and the international investment position." },
-  { "name": "Money & banking", "blurb": "Monetary aggregates, the SNB balance sheet and bank credit." },
-  { "name": "Domestic economy", "blurb": "Turnover in industry, retail and services, plus tourism, vehicles and housing." },
-  { "name": "Population & demographics", "blurb": "Resident population, nationality breakdown and the demographic balance." },
-  { "name": "Payment systems", "blurb": "Cashless payments, cards, ATMs and interbank clearing." }
+ {
+  "key": "national-accounts",
+  "name": {
+   "en": "National accounts",
+   "de": "Volkswirtschaftliche Gesamtrechnung",
+   "fr": "Comptes nationaux",
+   "it": "Conti nazionali"
+  },
+  "blurb": {
+   "en": "GDP, regional output, investment, productivity and public finances.",
+   "de": "BIP, regionale Wertschöpfung, Investitionen, Produktivität und öffentliche Finanzen.",
+   "fr": "PIB, production régionale, investissement, productivité et finances publiques.",
+   "it": "PIL, produzione regionale, investimenti, produttività e finanze pubbliche."
+  }
+ },
+ {
+  "key": "prices",
+  "name": {
+   "en": "Prices",
+   "de": "Preise",
+   "fr": "Prix",
+   "it": "Prezzi"
+  },
+  "blurb": {
+   "en": "Consumer, producer, real-estate and construction prices, plus the inflation forecast.",
+   "de": "Konsumenten-, Produzenten-, Immobilien- und Baupreise sowie die Inflationsprognose.",
+   "fr": "Prix à la consommation, à la production, de l'immobilier et de la construction, plus la prévision d'inflation.",
+   "it": "Prezzi al consumo, alla produzione, immobiliari e delle costruzioni, più la previsione d'inflazione."
+  }
+ },
+ {
+  "key": "labour",
+  "name": {
+   "en": "Labour",
+   "de": "Arbeit",
+   "fr": "Travail",
+   "it": "Lavoro"
+  },
+  "blurb": {
+   "en": "Employment, unemployment, wages, vacancies, hours and the wider job market.",
+   "de": "Beschäftigung, Arbeitslosigkeit, Löhne, offene Stellen, Arbeitsstunden und der weitere Arbeitsmarkt.",
+   "fr": "Emploi, chômage, salaires, postes vacants, heures de travail et le marché du travail au sens large.",
+   "it": "Occupazione, disoccupazione, salari, posti vacanti, ore di lavoro e il mercato del lavoro in generale."
+  }
+ },
+ {
+  "key": "business-cycle-sentiment",
+  "name": {
+   "en": "Business cycle & sentiment",
+   "de": "Konjunktur & Stimmung",
+   "fr": "Conjoncture & climat",
+   "it": "Congiuntura e clima"
+  },
+  "blurb": {
+   "en": "Leading barometers, sentiment surveys and high-frequency activity.",
+   "de": "Vorlaufende Barometer, Stimmungsumfragen und hochfrequente Aktivität.",
+   "fr": "Baromètres avancés, enquêtes de climat et activité à haute fréquence.",
+   "it": "Barometri anticipatori, indagini sul clima e attività ad alta frequenza."
+  }
+ },
+ {
+  "key": "interest-rates-yields",
+  "name": {
+   "en": "Interest rates & yields",
+   "de": "Zinsen & Renditen",
+   "fr": "Taux d'intérêt & rendements",
+   "it": "Tassi d'interesse e rendimenti"
+  },
+  "blurb": {
+   "en": "Policy, money-market and bond-market interest rates.",
+   "de": "Leit-, Geldmarkt- und Obligationenzinssätze.",
+   "fr": "Taux directeurs, du marché monétaire et obligataires.",
+   "it": "Tassi di riferimento, del mercato monetario e obbligazionari."
+  }
+ },
+ {
+  "key": "exchange-rates",
+  "name": {
+   "en": "Exchange rates",
+   "de": "Wechselkurse",
+   "fr": "Taux de change",
+   "it": "Tassi di cambio"
+  },
+  "blurb": {
+   "en": "Bilateral and effective Swiss franc exchange rates.",
+   "de": "Bilaterale und effektive Frankenkurse.",
+   "fr": "Taux de change bilatéraux et effectifs du franc suisse.",
+   "it": "Tassi di cambio bilaterali ed effettivi del franco svizzero."
+  }
+ },
+ {
+  "key": "financial-markets",
+  "name": {
+   "en": "Financial markets",
+   "de": "Finanzmärkte",
+   "fr": "Marchés financiers",
+   "it": "Mercati finanziari"
+  },
+  "blurb": {
+   "en": "Swiss equity indices and securities turnover.",
+   "de": "Schweizer Aktienindizes und Effektenumsätze.",
+   "fr": "Indices boursiers suisses et transactions sur titres.",
+   "it": "Indici azionari svizzeri e transazioni in titoli."
+  }
+ },
+ {
+  "key": "external-sector",
+  "name": {
+   "en": "External sector",
+   "de": "Aussenwirtschaft",
+   "fr": "Secteur extérieur",
+   "it": "Settore estero"
+  },
+  "blurb": {
+   "en": "Foreign trade, balance of payments and the international investment position.",
+   "de": "Aussenhandel, Zahlungsbilanz und Auslandvermögen.",
+   "fr": "Commerce extérieur, balance des paiements et position extérieure.",
+   "it": "Commercio estero, bilancia dei pagamenti e posizione patrimoniale sull'estero."
+  }
+ },
+ {
+  "key": "money-banking",
+  "name": {
+   "en": "Money & banking",
+   "de": "Geld & Banken",
+   "fr": "Monnaie & banques",
+   "it": "Moneta e banche"
+  },
+  "blurb": {
+   "en": "Monetary aggregates, the SNB balance sheet and bank credit.",
+   "de": "Geldmengen, SNB-Bilanz und Bankkredite.",
+   "fr": "Agrégats monétaires, bilan de la BNS et crédits bancaires.",
+   "it": "Aggregati monetari, bilancio della BNS e crediti bancari."
+  }
+ },
+ {
+  "key": "domestic-economy",
+  "name": {
+   "en": "Domestic economy",
+   "de": "Binnenwirtschaft",
+   "fr": "Économie intérieure",
+   "it": "Economia interna"
+  },
+  "blurb": {
+   "en": "Turnover in industry, retail and services, plus tourism, vehicles and housing.",
+   "de": "Umsätze in Industrie, Handel und Dienstleistungen sowie Tourismus, Fahrzeuge und Wohnungsmarkt.",
+   "fr": "Chiffres d'affaires de l'industrie, du commerce et des services, plus tourisme, véhicules et logement.",
+   "it": "Fatturato di industria, commercio e servizi, più turismo, veicoli e abitazioni."
+  }
+ },
+ {
+  "key": "population-demographics",
+  "name": {
+   "en": "Population & demographics",
+   "de": "Bevölkerung & Demografie",
+   "fr": "Population & démographie",
+   "it": "Popolazione e demografia"
+  },
+  "blurb": {
+   "en": "Resident population, nationality breakdown and the demographic balance.",
+   "de": "Wohnbevölkerung, Staatsangehörigkeit und die demografische Bilanz.",
+   "fr": "Population résidante, nationalité et le bilan démographique.",
+   "it": "Popolazione residente, nazionalità e il bilancio demografico."
+  }
+ },
+ {
+  "key": "payment-systems",
+  "name": {
+   "en": "Payment systems",
+   "de": "Zahlungsverkehr",
+   "fr": "Systèmes de paiement",
+   "it": "Sistemi di pagamento"
+  },
+  "blurb": {
+   "en": "Cashless payments, cards, ATMs and interbank clearing.",
+   "de": "Bargeldloser Zahlungsverkehr, Karten, Geldautomaten und Interbank-Clearing.",
+   "fr": "Paiements sans espèces, cartes, distributeurs et clearing interbancaire.",
+   "it": "Pagamenti senza contanti, carte, bancomat e clearing interbancario."
+  }
+ }
 ]

@@ -1,29 +1,21 @@
 # Consumer prices – SNB and SFSO core inflation rates
 
 - **id**: ch_snb_plkoprinfla
-- **title**: Core inflation
+- **title**: Core inflation | de: Kerninflation | fr: Inflation sous-jacente | it: Inflazione di fondo
 - **concept**: Prices / Core inflation
 - **canonical**: yes
-- **source**: Swiss National Bank (SNB)
+- **source**: snb
 - **license**: snb (free reuse, attribution required)
 - **frequency**: monthly
 - **coverage**: 1983-12 .. 2026-04
 - **series**: 4
 
 ## What is special
-The **core inflation** series, kept as a deliberate alternate to headline CPI
-(`ch_fso_cpi`) because it is an analytical, derived measure, not a re-export of the
-raw price index. It is the canonical series for the Core inflation concept. The cube
-bundles **four core-inflation definitions** from two producers under one flat `D0`
-dimension: the SNB's **trimmed mean** (KGM, the headline default) and the SFSO's
-**Core inflation 1** (K1), **Core inflation 2** (K2), plus the **headline national
-CPI inflation rate** (TLK) for reference. Values are **year-on-year inflation rates
-in percent**, not index levels. The KGM trimmed-mean history reaches back to
-**1983-12**; the SFSO K1/K2 series start later (K1 from 2001-05 in the CSV), so the
-full span is driven by the SNB measure.
+Swiss inflation with volatile items stripped out, the measure central banks watch. Four definitions side by side, as yearly rates not index levels.
 
 ## Access
-- **type**: SNB cube API
+- **type**: snb-cube — SNB cube API
+- **cube**: `plkoprinfla`
 - **endpoint**: `https://data.snb.ch/api/cube/plkoprinfla/data/json/en`
 - **call**: `snb_fetch("plkoprinfla", title = "Consumer prices – SNB and SFSO core inflation rates")`
 
@@ -54,3 +46,12 @@ full span is driven by the SNB measure.
 ## Provenance
 Script: `R/source_snb.R::snb_fetch` (title/topic from `R/snb_cubes.tsv`). Datasheet
 authored 2026-06-01.
+
+## What is special (de)
+Schweizer Teuerung ohne die schwankungsanfälligen Positionen, das Mass, auf das Zentralbanken schauen. Vier Definitionen nebeneinander, als Jahresraten statt Indexstände.
+
+## What is special (fr)
+Inflation suisse hors postes volatils, la mesure que suivent les banques centrales. Quatre définitions côte à côte, en taux annuels et non en niveaux d'indice.
+
+## What is special (it)
+Inflazione svizzera al netto delle voci volatili, la misura seguita dalle banche centrali. Quattro definizioni affiancate, come tassi annui e non livelli d'indice.

@@ -1,5 +1,5 @@
 {
-  "schema_version": "1.0",
+  "schema_version": "1.1",
   "id": "ch_fso_wage_idx",
   "dim_order": [
     "breakdown",
@@ -7,70 +7,106 @@
   ],
   "start": "1994-01-01",
   "end": "2025-01-01",
-  "title": {
-    "en": "Swiss Wage Index"
-  },
   "source": {
     "name": {
-      "en": "Swiss Federal Statistical Office (FSO)"
+      "en": "Swiss Federal Statistical Office (FSO)",
+      "de": "Bundesamt für Statistik (BFS)",
+      "fr": "Office fédéral de la statistique (OFS)",
+      "it": "Ufficio federale di statistica (UST)"
     },
-    "url": "https://www.bfs.admin.ch/asset/de/je-e-03.04.03.00.04"
+    "url": "https://www.bfs.admin.ch/asset/de/je-e-03.04.03.00.04",
+    "key": "fso"
   },
   "license": "fso",
   "frequency": "annual",
-  "topic": "Labour",
+  "topic": {
+    "key": "labour",
+    "name": {
+      "en": "Labour",
+      "de": "Arbeit",
+      "fr": "Travail",
+      "it": "Lavoro"
+    }
+  },
   "updated": "2026-04-21",
   "dimensions": {
     "breakdown": {
       "label": {
-        "en": "Breakdown"
+        "en": "Breakdown",
+        "de": "Gliederung",
+        "fr": "Ventilation",
+        "it": "Suddivisione"
       },
       "levels": {
         "tot": {
           "label": {
-            "en": "Total"
+            "en": "Total",
+            "de": "Total",
+            "fr": "Total",
+            "it": "Totale"
           },
           "data": true
         },
         "by_sex": {
           "label": {
-            "en": "By sex"
+            "en": "By sex",
+            "de": "Nach Geschlecht",
+            "fr": "Selon le sexe",
+            "it": "Secondo il sesso"
           },
           "data": false
         },
         "m": {
           "label": {
-            "en": "Men"
+            "en": "Men",
+            "de": "Männer",
+            "fr": "Hommes",
+            "it": "Uomini"
           },
           "data": true
         },
         "f": {
           "label": {
-            "en": "Women"
+            "en": "Women",
+            "de": "Frauen",
+            "fr": "Femmes",
+            "it": "Donne"
           },
           "data": true
         },
         "by_sector": {
           "label": {
-            "en": "By sector"
+            "en": "By sector",
+            "de": "Nach Sektor",
+            "fr": "Selon le secteur",
+            "it": "Secondo il settore"
           },
           "data": false
         },
         "bf1": {
           "label": {
-            "en": "Secondary sector"
+            "en": "Secondary sector",
+            "de": "Sekundärer Sektor",
+            "fr": "Secteur secondaire",
+            "it": "Settore secondario"
           },
           "data": true
         },
         "f41": {
           "label": {
-            "en": "Construction"
+            "en": "Construction",
+            "de": "Bau",
+            "fr": "Construction",
+            "it": "Costruzioni"
           },
           "data": true
         },
         "gs4": {
           "label": {
-            "en": "Tertiary sector"
+            "en": "Tertiary sector",
+            "de": "Tertiärer Sektor",
+            "fr": "Secteur tertiaire",
+            "it": "Settore terziario"
           },
           "data": true
         }
@@ -92,26 +128,49 @@
     },
     "adjustment": {
       "label": {
-        "en": "Adjustment"
+        "en": "Adjustment",
+        "de": "Bereinigung",
+        "fr": "Correction",
+        "it": "Correzione"
       },
       "levels": {
         "nominal": {
           "label": {
-            "en": "Nominal wage index"
+            "en": "Nominal wage index",
+            "de": "Nominallohnindex",
+            "fr": "Indice des salaires nominaux",
+            "it": "Indice dei salari nominali"
           },
           "data": true
         },
         "real": {
           "label": {
-            "en": "Real wage index"
+            "en": "Real wage index",
+            "de": "Reallohnindex",
+            "fr": "Indice des salaires réels",
+            "it": "Indice dei salari reali"
           },
           "data": true
         }
       }
     }
   },
-  "concept": "Labour / Wages",
+  "concept": {
+    "en": "Labour / Wages",
+    "leaf": {
+      "en": "Wages",
+      "de": "Löhne",
+      "fr": "Salaires",
+      "it": "Salari"
+    }
+  },
   "canonical": true,
+  "title": {
+    "en": "Swiss Wage Index",
+    "de": "Schweizerischer Lohnindex",
+    "fr": "Indice suisse des salaires",
+    "it": "Indice svizzero dei salari"
+  },
   "split": "breakdown",
   "single_select": "adjustment",
   "default_transform": "level",
@@ -119,6 +178,11 @@
     "breakdown": "tot",
     "adjustment": "real"
   },
-  "description": "The official Swiss wage index (Lohnindex, base 1993 = 100), nominal and real, by sector and sex. Captures wage development the SNB cubes do not carry at all.",
-  "fetched_utc": "2026-08-05 09:13:32"
+  "description": {
+    "en": "How Swiss pay has developed since 1993, nominal and after inflation, by sector and sex. Real wages show whether pay kept pace with prices.",
+    "de": "Wie sich die Schweizer Löhne seit 1993 entwickelt haben, nominal und teuerungsbereinigt, nach Sektor und Geschlecht. Reallöhne zeigen, ob die Löhne mit den Preisen Schritt hielten.",
+    "fr": "Comment les salaires suisses ont évolué depuis 1993, nominaux et corrigés de l'inflation, par secteur et par sexe. Les salaires réels montrent si la paie a suivi les prix.",
+    "it": "Come sono evoluti i salari svizzeri dal 1993, nominali e corretti per l'inflazione, per settore e sesso. I salari reali mostrano se le paghe hanno tenuto il passo dei prezzi."
+  },
+  "fetched_utc": "2026-08-05 13:12:07"
 }

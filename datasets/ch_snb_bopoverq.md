@@ -1,10 +1,10 @@
 # Swiss balance of payments – Overview – Quarter
 
 - **id**: ch_snb_bopoverq
-- **title**: Balance of payments: overview
+- **title**: Balance of payments: overview | de: Zahlungsbilanz: Übersicht | fr: Balance des paiements : vue d'ensemble | it: Bilancia dei pagamenti: panoramica
 - **concept**: External sector / Balance of payments
 - **canonical**: no (alternate for Balance of payments)
-- **source**: Swiss National Bank (SNB)
+- **source**: snb
 - **license**: snb (free reuse, attribution required)
 - **frequency**: quarterly
 - **coverage**: 1985-Q1 .. 2025-Q4
@@ -12,19 +12,11 @@
 - **updated**: 2025-Q4 (latest observation; SNB publishes ~3 months in arrears)
 
 ## What is special
-The one-page overview of the Swiss balance of payments: the headline aggregates of all
-four accounts in a single cube. Unlike the current-account detail cube, this one folds
-the accounting entry into the component codes, so each line is named for its account
-and its entry at once. It carries the top-level structure rarely shown elsewhere: the
-**financial account** (direct, portfolio, other, reserve assets, each as net
-acquisition of assets `NA*` vs net incurrence of liabilities `NP*`), the **capital
-account** (`S8/E8/A8`), **derivatives** (`S14`), and the **statistical difference**
-(`SD`) that closes the BoP identity. It is the alternate to the detailed
-`ch_snb_bopcurrq` for the same concept: same producer, broader account coverage but
-shallower component detail, so it is kept and labelled rather than dropped.
+Switzerland's balance of payments on one page: all four accounts including the statistical difference that closes the books.
 
 ## Access
-- **type**: SNB cube API
+- **type**: snb-cube — SNB cube API
+- **cube**: `bopoverq`
 - **endpoint**: cube id `bopoverq`
 - **call**: `snb_fetch("bopoverq", title = "Swiss balance of payments – Overview – Quarter")`, hitting
   `https://data.snb.ch/api/cube/bopoverq/dimensions/en` and `.../data/json/en`
@@ -61,3 +53,12 @@ shallower component detail, so it is kept and labelled rather than dropped.
 Script: `R/source_snb.R::snb_fetch` via `R/snb_cubes.tsv` (cube `bopoverq`, topic
 "Balance of payments"). Datasheet authored 2026-06-01; parser verified 2026-06-01
 (6,676 rows, 42 series).
+
+## What is special (de)
+Die Schweizer Zahlungsbilanz auf einer Seite: alle vier Teilbilanzen samt der statistischen Differenz, die die Rechnung schliesst.
+
+## What is special (fr)
+La balance des paiements suisse sur une page : les quatre comptes, y compris la différence statistique qui boucle les comptes.
+
+## What is special (it)
+La bilancia dei pagamenti svizzera in una pagina: tutti e quattro i conti, inclusa la differenza statistica che chiude i conti.

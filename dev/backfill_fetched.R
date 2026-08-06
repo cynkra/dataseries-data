@@ -7,7 +7,7 @@
 # Run from repo root:  Rscript dev/backfill_fetched.R
 suppressPackageStartupMessages({ library(dplyr); library(jsonlite) })
 root <- "R"
-for (f in c("io.R")) source(file.path(root, f))
+for (f in c("datasheet.R", "io.R")) source(file.path(root, f))
 DATA_DIR <- "data"
 
 # 1) Backfill fetched_utc into each <id>.json that lacks it, from the CSV mtime.

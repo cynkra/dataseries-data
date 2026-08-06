@@ -10,8 +10,8 @@ Three binary daily metrics, one row per day (history in [`data/uptime.csv`](data
 
 | Metric | Uptime 30d | Uptime 90d | Worst incident |
 |---|---:|---:|---:|
-| Pipeline | 100% | 98.4% | 1 d |
-| Run-through (upstream) | 60% | 76.6% | 7 d |
+| Pipeline | 100% | 98.5% | 1 d |
+| Run-through (upstream) | 60% | 76.9% | 7 d |
 | Recently updated | 100% | 100% | 0 d |
 
 ![Uptime timeline](data/uptime.svg)
@@ -28,6 +28,7 @@ Three binary daily metrics, one row per day (history in [`data/uptime.csv`](data
 
 | Date | Pipeline | Run-through | Recently updated | Skips | Stale |
 |---|---|---|---|---:|---:|
+| 2026-08-06 | 🟢 | 🟢 | 🟢 | 0 | 0 |
 | 2026-08-05 | 🟢 | 🟢 | 🟢 | 0 | 0 |
 | 2026-08-04 | 🟢 | 🟢 | 🟢 | 0 | 0 |
 | 2026-08-03 | 🟢 | 🟢 | 🟢 | 0 | 0 |
@@ -57,4 +58,3 @@ Three binary daily metrics, one row per day (history in [`data/uptime.csv`](data
 | 2026-07-10 | 🟢 | 🔴 | 🟢 | 1 | 0 |
 | 2026-07-09 | 🟢 | 🔴 | 🟢 | 1 | 0 |
 | 2026-07-08 | 🟢 | 🟢 | 🟢 | 0 | 0 |
-| 2026-07-07 | 🟢 | 🟢 | 🟢 | 0 | 0 |

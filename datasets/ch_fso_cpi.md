@@ -1,10 +1,10 @@
 # Consumer Price Index (LIK)
 
 - **id**: ch_fso_cpi
-- **title**: Consumer prices (detailed basket)
+- **title**: Consumer prices (detailed basket) | de: Konsumentenpreise (detaillierter Warenkorb) | fr: Prix à la consommation (panier détaillé) | it: Prezzi al consumo (paniere dettagliato)
 - **concept**: Prices / Consumer prices
 - **canonical**: no (alternate for Consumer prices — the detailed basket breakdown)
-- **source**: Swiss Federal Statistical Office (FSO)
+- **source**: fso
 - **license**: fso (free reuse, attribution required)
 - **frequency**: monthly
 - **coverage**: 1982-12 .. 2026-04
@@ -12,20 +12,12 @@
 - **updated**: 2026-05-05
 
 ## What is special
-The Swiss CPI (Landesindex der Konsumentenpreise) with the **full position
-hierarchy**: 595 positions from the total index down to COICOP sub-baskets (food,
-housing, transport, ...), not just the headline total. This is the **detailed
-alternate** to the canonical SNB headline series (`ch_snb_plkopr`): reach for this
-one when you want the basket breakdown, and for `ch_snb_plkopr` when you want the
-headline total or YoY inflation across the long history (the FSO asset only carries
-the hierarchy from December 1982, whereas the SNB chain reaches back to 1921). Base
-period December 2025 = 100 (asset `su-d-05.02.66`, which superseded the frozen
-Dec-2020=100 asset `su-d-05.02.67`). History to December 1982.
+Swiss inflation with the full shopping basket: 595 items from the total index down to food, housing and transport. Base December 2025 = 100.
 
 ## Access
-- **type**: FSO DAM Excel asset
-- **order number**: su-d-05.02.67
-- **call**: `fso_excel_download("su-d-05.02.67")` returns the master xlsx + publish date
+- **type**: fso-dam-excel — FSO DAM Excel asset
+- **order number**: su-d-05.02.66
+- **call**: `fso_excel_download("su-d-05.02.66")` returns the master xlsx + publish date
 
 ## Parsing recipe
 - Sheet `INDEX_m` (monthly index levels). Sister sheets `VAR_m-1`/`VAR_m-12`
@@ -44,6 +36,10 @@ Dec-2020=100 asset `su-d-05.02.67`). History to December 1982.
 - `item`: the FSO position **Code** (e.g. `100_100` = Total, `100_1` = Food and
   non-alcoholic beverages). English level labels come from `PosTxt_E` (falling back
   to `Item_E`).
+
+## Labels
+- dim: item
+  - **label**: CPI position | de: LIK-Position | fr: Position de l'IPC | it: Posizione dell'IPC
 
 ## Display
 - **split**: item
@@ -73,3 +69,12 @@ its own series, so every level is selectable.
 ## Provenance
 Script: `R/source_fso_excel_sets.R::fso_excel_ch_fso_cpi`. Datasheet 2026-06-01;
 parser verified 2026-06-01 (177,589 rows, 443 series, 0 NA values).
+
+## What is special (de)
+Schweizer Teuerung mit dem vollständigen Warenkorb: 595 Positionen vom Gesamtindex bis zu Nahrung, Wohnen und Verkehr. Basis Dezember 2025 = 100.
+
+## What is special (fr)
+Inflation suisse avec le panier complet : 595 positions, de l'indice total à l'alimentation, au logement et aux transports. Base décembre 2025 = 100.
+
+## What is special (it)
+Inflazione svizzera con il paniere completo: 595 posizioni, dall'indice totale ad alimentari, abitazione e trasporti. Base dicembre 2025 = 100.

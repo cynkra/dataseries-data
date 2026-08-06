@@ -96,15 +96,11 @@ eurostat_hicp_fetch <- function(dataset_id = "ch_fso_hicp") {
   kids <- intersect(sprintf("CP%02d", 1:12), present)
 
   meta <- list(
-    title  = list(en = "Harmonised Index of Consumer Prices (HICP)"),
-    source = list(name = list(en = "Eurostat"),
-                  url  = "https://ec.europa.eu/eurostat/databrowser/view/prc_hicp_midx/default/table"),
+    source = list(url = "https://ec.europa.eu/eurostat/databrowser/view/prc_hicp_midx/default/table"),
     license = "eurostat",
     frequency = "monthly",
-    units = list(en = "Index (2015 = 100)"),
     updated = if (!is.na(upd)) as.character(upd) else NULL,
     dimensions = list(coicop = list(
-      label = list(en = "COICOP consumption purpose"),
       levels = levels,
       hierarchy = if (length(kids))
         list(CP00 = setNames(lapply(kids, function(x) list()), kids))

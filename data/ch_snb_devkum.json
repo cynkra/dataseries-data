@@ -1,5 +1,5 @@
 {
-  "schema_version": "1.0",
+  "schema_version": "1.1",
   "id": "ch_snb_devkum",
   "dim_order": [
     "D0",
@@ -8,31 +8,44 @@
   "start": "1914-01-01",
   "end": "2026-07-01",
   "title": {
-    "en": "Bilateral exchange rates"
+    "en": "Bilateral exchange rates",
+    "de": "Bilaterale Wechselkurse",
+    "fr": "Taux de change bilatéraux",
+    "it": "Tassi di cambio bilaterali"
   },
   "source": {
     "name": {
-      "en": "Swiss National Bank"
+      "en": "Swiss National Bank",
+      "de": "Schweizerische Nationalbank (SNB)",
+      "fr": "Banque nationale suisse (BNS)",
+      "it": "Banca nazionale svizzera (BNS)"
     },
-    "url": "https://data.snb.ch/en/topics/snb/cube/devkum"
+    "url": "https://data.snb.ch/en/topics/snb/cube/devkum",
+    "key": "snb"
   },
   "license": "snb",
   "frequency": "monthly",
   "dimensions": {
     "D0": {
       "label": {
-        "en": "Monthly average/End of month"
+        "en": "Monthly average/End of month",
+        "de": "Monatsmittel/-ende",
+        "fr": "Moyenne mensuelle/Fin de mois"
       },
       "levels": {
         "M0": {
           "label": {
-            "en": "Monthly average"
+            "en": "Monthly average",
+            "de": "Monatsmittel",
+            "fr": "Moyenne mensuelle"
           },
           "data": true
         },
         "M1": {
           "label": {
-            "en": "End of month"
+            "en": "End of month",
+            "de": "Monatsende",
+            "fr": "Fin de mois"
           },
           "data": true
         }
@@ -44,210 +57,280 @@
     },
     "D1": {
       "label": {
-        "en": "Currency"
+        "en": "Currency",
+        "de": "Währung",
+        "fr": "Monnaie"
       },
       "levels": {
         "D1_0": {
           "label": {
-            "en": "Europe"
+            "en": "Europe",
+            "de": "Europa",
+            "fr": "Europe"
           },
           "data": false
         },
         "EUR1": {
           "label": {
-            "en": "EUR 1"
+            "en": "EUR 1",
+            "de": "EUR 1.-",
+            "fr": "EUR 1.-"
           },
           "data": true
         },
         "GBP1": {
           "label": {
-            "en": "United Kingdom – GBP 1"
+            "en": "United Kingdom – GBP 1",
+            "de": "Vereinigtes Königreich – GBP 1.-",
+            "fr": "Royaume-Uni – GBP 1.-"
           },
           "data": true
         },
         "DKK100": {
           "label": {
-            "en": "Denmark – DKK 100"
+            "en": "Denmark – DKK 100",
+            "de": "Dänemark – DKK 100.-",
+            "fr": "Danemark – DKK 100.-"
           },
           "data": true
         },
         "NOK100": {
           "label": {
-            "en": "Norway – NOK 100"
+            "en": "Norway – NOK 100",
+            "de": "Norwegen – NOK 100.-",
+            "fr": "Norvège – NOK 100.-"
           },
           "data": true
         },
         "CZK100": {
           "label": {
-            "en": "Czech Republic – CZK 100"
+            "en": "Czech Republic – CZK 100",
+            "de": "Tschechische Republik – CZK 100.-",
+            "fr": "République tchèque – CZK 100.-"
           },
           "data": true
         },
         "HUF100": {
           "label": {
-            "en": "Hungary – HUF 100"
+            "en": "Hungary – HUF 100",
+            "de": "Ungarn – HUF 100.-",
+            "fr": "Hongrie – HUF 100.-"
           },
           "data": true
         },
         "PLN100": {
           "label": {
-            "en": "Poland – PLN 100"
+            "en": "Poland – PLN 100",
+            "de": "Polen – PLN 100.-",
+            "fr": "Pologne – PLN 100.-"
           },
           "data": true
         },
         "RUB1": {
           "label": {
-            "en": "Russian Federation – RUB 1"
+            "en": "Russian Federation – RUB 1",
+            "de": "Russische Föderation – RUB 1.-",
+            "fr": "Fédération de Russie – RUB 1.-"
           },
           "data": true
         },
         "SEK100": {
           "label": {
-            "en": "Sweden – SEK 100"
+            "en": "Sweden – SEK 100",
+            "de": "Schweden – SEK 100.-",
+            "fr": "Suède – SEK 100.-"
           },
           "data": true
         },
         "TRY100": {
           "label": {
-            "en": "Turkey – TRY 100"
+            "en": "Turkey – TRY 100",
+            "de": "Türkei – TRY 100.-",
+            "fr": "Turquie – TRY 100.-"
           },
           "data": true
         },
         "D1_1": {
           "label": {
-            "en": "America"
+            "en": "America",
+            "de": "Amerika",
+            "fr": "Amérique"
           },
           "data": false
         },
         "USD1": {
           "label": {
-            "en": "United States – USD 1"
+            "en": "United States – USD 1",
+            "de": "USA – USD 1.-",
+            "fr": "États-Unis – USD 1.-"
           },
           "data": true
         },
         "CAD1": {
           "label": {
-            "en": "Canada – CAD 1"
+            "en": "Canada – CAD 1",
+            "de": "Kanada – CAD 1.-",
+            "fr": "Canada – CAD 1.-"
           },
           "data": true
         },
         "ARS1": {
           "label": {
-            "en": "Argentina – ARS 1"
+            "en": "Argentina – ARS 1",
+            "de": "Argentinien – ARS 1.-",
+            "fr": "Argentine – ARS 1.-"
           },
           "data": true
         },
         "BRL100": {
           "label": {
-            "en": "Brazil – BRL 100"
+            "en": "Brazil – BRL 100",
+            "de": "Brasilien – BRL 100.-",
+            "fr": "Brésil – BRL 100.-"
           },
           "data": true
         },
         "MXN100": {
           "label": {
-            "en": "Mexico – MXN 100"
+            "en": "Mexico – MXN 100",
+            "de": "Mexiko – MXN 100.-",
+            "fr": "Mexique – MXN 100.-"
           },
           "data": true
         },
         "D1_2": {
           "label": {
-            "en": "Africa"
+            "en": "Africa",
+            "de": "Afrika",
+            "fr": "Afrique"
           },
           "data": false
         },
         "ZAR1": {
           "label": {
-            "en": "South Africa – ZAR 1"
+            "en": "South Africa – ZAR 1",
+            "de": "Südafrika – ZAR 1.-",
+            "fr": "Afrique du Sud – ZAR 1.-"
           },
           "data": true
         },
         "D1_3": {
           "label": {
-            "en": "Asia and Australia"
+            "en": "Asia and Australia",
+            "de": "Asien und Australien",
+            "fr": "Asie et Australie"
           },
           "data": false
         },
         "JPY100": {
           "label": {
-            "en": "Japan – JPY 100"
+            "en": "Japan – JPY 100",
+            "de": "Japan – JPY 100.-",
+            "fr": "Japon – JPY 100.-"
           },
           "data": true
         },
         "AUD1": {
           "label": {
-            "en": "Australia – AUD 1"
+            "en": "Australia – AUD 1",
+            "de": "Australien – AUD 1.-",
+            "fr": "Australie – AUD 1.-"
           },
           "data": true
         },
         "CNY100": {
           "label": {
-            "en": "China – CNY 100"
+            "en": "China – CNY 100",
+            "de": "China – CNY 100.-",
+            "fr": "Chine – CNY 100.-"
           },
           "data": true
         },
         "HKD100": {
           "label": {
-            "en": "Hong Kong – HKD 100"
+            "en": "Hong Kong – HKD 100",
+            "de": "Hongkong – HKD 100.-",
+            "fr": "Hong Kong – HKD 100.-"
           },
           "data": true
         },
         "KRW100": {
           "label": {
-            "en": "Korea, Republic of (South Korea) – KRW 100"
+            "en": "Korea, Republic of (South Korea) – KRW 100",
+            "de": "Korea Republik (Süd-) – KRW 100.-",
+            "fr": "Corée, République de (Corée du Sud) – KRW 100.-"
           },
           "data": true
         },
         "MYR100": {
           "label": {
-            "en": "Malaysia – MYR 100"
+            "en": "Malaysia – MYR 100",
+            "de": "Malaysia MYR – 100.-",
+            "fr": "Malaisie – MYR 100.-"
           },
           "data": true
         },
         "NZD1": {
           "label": {
-            "en": "New Zealand – NZD 1"
+            "en": "New Zealand – NZD 1",
+            "de": "Neuseeland – NZD 1.-",
+            "fr": "Nouvelle-Zélande – NZD 1.-"
           },
           "data": true
         },
         "SGD1": {
           "label": {
-            "en": "Singapore – SGD 1"
+            "en": "Singapore – SGD 1",
+            "de": "Singapur – SGD 1.-",
+            "fr": "Singapour – SGD 1.-"
           },
           "data": true
         },
         "THB100": {
           "label": {
-            "en": "Thailand – THB 100"
+            "en": "Thailand – THB 100",
+            "de": "Thailand – THB 100.-",
+            "fr": "Thaïlande – THB 100.-"
           },
           "data": true
         },
         "D1_4": {
           "label": {
-            "en": "SDR"
+            "en": "SDR",
+            "de": "SZR",
+            "fr": "DTS"
           },
           "data": false
         },
         "XDR1": {
           "label": {
-            "en": "XDR 1"
+            "en": "XDR 1",
+            "de": "XDR 1.-",
+            "fr": "XDR 1.-"
           },
           "data": true
         },
         "D1_5": {
           "label": {
-            "en": "USD Forward rates"
+            "en": "USD Forward rates",
+            "de": "USD Terminkurse",
+            "fr": "USD cours à terme"
           },
           "data": false
         },
         "USD3M": {
           "label": {
-            "en": "US Dollar 3-month forward rate (CHF per 1 USD)"
+            "en": "US Dollar 3-month forward rate (CHF per 1 USD)",
+            "de": "US-Dollar 3-Monats-Terminkurs (CHF pro 1 USD)",
+            "fr": "Cours de change à 3 mois du dollar des États-Unis (CHF pour 1 USD)"
           },
           "data": true
         },
         "USD6M": {
           "label": {
-            "en": "US Dollar 6-month forward rate (CHF per 1 USD)"
+            "en": "US Dollar 6-month forward rate (CHF per 1 USD)",
+            "de": "US-Dollar 6-Monats-Terminkurs (CHF pro 1 USD)",
+            "fr": "Cours de change à 6 mois du dollar des États-Unis (CHF pour 1 USD)"
           },
           "data": true
         }
@@ -297,10 +380,31 @@
     }
   },
   "updated": "2026-08-03 14:30",
-  "topic": "Exchange rates",
-  "concept": "Exchange rates / Bilateral FX",
+  "topic": {
+    "key": "exchange-rates",
+    "name": {
+      "en": "Exchange rates",
+      "de": "Wechselkurse",
+      "fr": "Taux de change",
+      "it": "Tassi di cambio"
+    }
+  },
+  "concept": {
+    "en": "Exchange rates / Bilateral FX",
+    "leaf": {
+      "en": "Bilateral FX",
+      "de": "Bilaterale Wechselkurse",
+      "fr": "Change bilatéral",
+      "it": "Cambi bilaterali"
+    }
+  },
   "canonical": true,
-  "featured": "Exchange rates",
+  "featured": {
+    "en": "Exchange rates",
+    "de": "Wechselkurse",
+    "fr": "Taux de change",
+    "it": "Tassi di cambio"
+  },
   "split": "D1",
   "single_select": "D0",
   "default_transform": "level",
@@ -308,6 +412,11 @@
     "D1": "USD1",
     "D0": "M0"
   },
-  "description": "The headline bilateral CHF exchange-rate table, with a history reaching back to 1914, the longest FX record in the catalog. Quotes are CHF per foreign-currency unit, with the unit baked into each currency label (EUR 1, GBP 1, but DKK 100, JPY 100, etc.), so the multiplier matters when comparing rates. Each currency is published as both a monthly average (M0) and an end-of-month value (M1). Beyond spot rates it carries two USD forward rates (3-month and 6-month, CHF per 1 USD), which is unusual for a spot-rate table. Currencies are grouped by region (Europe, America, Africa, Asia and Australia, SDR, USD forward rates); the group nodes are non-data headers. Note the CSV begins well after 1914 for most currencies (e.g. ARS from 1999); the 1914 start reflects the earliest long series (USD/major European), not every pair.",
-  "fetched_utc": "2026-08-04 09:20:30"
+  "description": {
+    "en": "Swiss franc exchange rates against the major currencies, monthly average and month end. Quoted per unit, but per 100 for yen, krone and others.",
+    "de": "Frankenkurse gegenüber den wichtigsten Währungen, Monatsdurchschnitt und Monatsende. Notiert je Einheit, aber je 100 bei Yen, Kronen und anderen.",
+    "fr": "Cours du franc suisse face aux principales monnaies, moyenne mensuelle et fin de mois. Cotés par unité, mais par 100 pour le yen, les couronnes et d'autres.",
+    "it": "Corsi del franco svizzero rispetto alle principali valute, media mensile e fine mese. Quotati per unità, ma per 100 per yen, corone e altre."
+  },
+  "fetched_utc": "2026-08-05 13:12:02"
 }

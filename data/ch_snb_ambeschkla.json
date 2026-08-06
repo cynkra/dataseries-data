@@ -1,5 +1,5 @@
 {
-  "schema_version": "1.0",
+  "schema_version": "1.1",
   "id": "ch_snb_ambeschkla",
   "dim_order": [
     "D0",
@@ -8,43 +8,60 @@
   "start": "1991-07-01",
   "end": "2026-01-01",
   "title": {
-    "en": "Employees, by economic activity"
+    "en": "Employees, by economic activity",
+    "de": "Beschäftigte nach Wirtschaftszweig",
+    "fr": "Emplois par branche économique",
+    "it": "Impieghi per ramo economico"
   },
   "source": {
     "name": {
-      "en": "Swiss National Bank"
+      "en": "Swiss National Bank",
+      "de": "Schweizerische Nationalbank (SNB)",
+      "fr": "Banque nationale suisse (BNS)",
+      "it": "Banca nazionale svizzera (BNS)"
     },
-    "url": "https://data.snb.ch/en/topics/snb/cube/ambeschkla"
+    "url": "https://data.snb.ch/en/topics/snb/cube/ambeschkla",
+    "key": "snb"
   },
   "license": "snb",
   "frequency": "quarterly",
   "dimensions": {
     "D0": {
       "label": {
-        "en": "Employees"
+        "en": "Employees",
+        "de": "Beschäftigte",
+        "fr": "Emplois"
       },
       "levels": {
         "VT": {
           "label": {
-            "en": "Total"
+            "en": "Total",
+            "de": "Total",
+            "fr": "Total"
           },
           "data": true
         },
         "V": {
           "label": {
-            "en": "Full-time employees"
+            "en": "Full-time employees",
+            "de": "Vollzeitbeschäftigte",
+            "fr": "Emplois  à plein temps"
           },
           "data": true
         },
         "T": {
           "label": {
-            "en": "Part-time employees"
+            "en": "Part-time employees",
+            "de": "Teilzeitbeschäftigte",
+            "fr": "Emplois  à temps partiel"
           },
           "data": true
         },
         "IV": {
           "label": {
-            "en": "In full-time equivalents"
+            "en": "In full-time equivalents",
+            "de": "In Vollzeitäquivalent",
+            "fr": "Emplois en équivalents plein temps"
           },
           "data": true
         }
@@ -59,114 +76,152 @@
     },
     "D1": {
       "label": {
-        "en": "Economic activity"
+        "en": "Economic activity",
+        "de": "Wirtschaftsabteilungen",
+        "fr": "Divisions économiques"
       },
       "levels": {
         "D1_0": {
           "label": {
-            "en": "Secondary and tertiary sectors"
+            "en": "Secondary and tertiary sectors",
+            "de": "Sektor 2 und Sektor 3",
+            "fr": "Secteur secondaire et secteur tertiaire"
           },
           "data": false
         },
         "T0": {
           "label": {
-            "en": "Total"
+            "en": "Total",
+            "de": "Total",
+            "fr": "Total"
           },
           "data": true
         },
         "D1_1": {
           "label": {
-            "en": "Secondary sector"
+            "en": "Secondary sector",
+            "de": "Sektor 2",
+            "fr": "Secteur secondaire"
           },
           "data": false
         },
         "T1": {
           "label": {
-            "en": "Total"
+            "en": "Total",
+            "de": "Total",
+            "fr": "Total"
           },
           "data": true
         },
         "VGHW": {
           "label": {
-            "en": "Manufacturing"
+            "en": "Manufacturing",
+            "de": "Verarbeitendes Gewerbe/Herstellung von Waren",
+            "fr": "Industrie manufacturière"
           },
           "data": true
         },
         "BB": {
           "label": {
-            "en": "Construction"
+            "en": "Construction",
+            "de": "Baugewerbe/Bau",
+            "fr": "Construction"
           },
           "data": true
         },
         "D1_2": {
           "label": {
-            "en": "Tertiary sector"
+            "en": "Tertiary sector",
+            "de": "Sektor 3",
+            "fr": "Secteur tertiaire"
           },
           "data": false
         },
         "T2": {
           "label": {
-            "en": "Total"
+            "en": "Total",
+            "de": "Total",
+            "fr": "Total"
           },
           "data": true
         },
         "HIRK": {
           "label": {
-            "en": "Trading, maintenance and repair of motor vehicles"
+            "en": "Trading, maintenance and repair of motor vehicles",
+            "de": "Handel, Instandhaltung und Reparatur von Kraftfahrzeugen",
+            "fr": "Commerce; réparation d’automobiles et de motocycles"
           },
           "data": true
         },
         "GBG": {
           "label": {
-            "en": "Hospitality/Accommodation and food service activities"
+            "en": "Hospitality/Accommodation and food service activities",
+            "de": "Gastgewerbe/Beherbergung und Gastronomie",
+            "fr": "Hébergement et restauration"
           },
           "data": true
         },
         "VL": {
           "label": {
-            "en": "Transport, storage and warehousing"
+            "en": "Transport, storage and warehousing",
+            "de": "Verkehr und Lagerei",
+            "fr": "Transport et entreposage"
           },
           "data": true
         },
         "EF": {
           "label": {
-            "en": "Provision of financial services"
+            "en": "Provision of financial services",
+            "de": "Erbringung von Finanzdienstleistungen",
+            "fr": "Activités des services financiers"
           },
           "data": true
         },
         "V": {
           "label": {
-            "en": "Insurance"
+            "en": "Insurance",
+            "de": "Versicherungen",
+            "fr": "Assurances"
           },
           "data": true
         },
         "GW": {
           "label": {
-            "en": "Real estate activities"
+            "en": "Real estate activities",
+            "de": "Grundstücks- und Wohnungswesen",
+            "fr": "Activités immobilières"
           },
           "data": true
         },
         "EU": {
           "label": {
-            "en": "Education"
+            "en": "Education",
+            "de": "Erziehung und Unterricht",
+            "fr": "Education et enseignement"
           },
           "data": true
         },
         "GS": {
           "label": {
-            "en": "Health and social work activities"
+            "en": "Health and social work activities",
+            "de": "Gesundheits- und Sozialwesen",
+            "fr": "Santé et action sociale"
           },
           "data": true
         },
         "ED": {
           "label": {
-            "en": "Other service activities"
+            "en": "Other service activities",
+            "de": "Erbringung von sonstigen Dienstleistungen",
+            "fr": "Autres services"
           },
           "data": true
         },
         "OV": {
           "label": {
-            "en": "Public administration"
+            "en": "Public administration",
+            "de": "Öffentliche Verwaltung",
+            "fr": "Administration publique"
           },
           "data": true
         }
@@ -197,8 +252,24 @@
     }
   },
   "updated": "2026-07-21 09:00",
-  "topic": "Labour",
-  "concept": "Labour / Employment / jobs",
+  "topic": {
+    "key": "labour",
+    "name": {
+      "en": "Labour",
+      "de": "Arbeit",
+      "fr": "Travail",
+      "it": "Lavoro"
+    }
+  },
+  "concept": {
+    "en": "Labour / Employment / jobs",
+    "leaf": {
+      "en": "Employment",
+      "de": "Beschäftigung",
+      "fr": "Emploi",
+      "it": "Occupazione"
+    }
+  },
   "canonical": false,
   "split": "D1",
   "single_select": [],
@@ -207,6 +278,11 @@
     "D0": "VT",
     "D1": "T0"
   },
-  "description": "Employees broken down by economic activity (NACE-style sectors) crossed with an employment type. The SNB version overlaps FSO ch_fso_besta (jobs by division); the concept universe flags this and keeps FSO as the intended canonical, so this is the labelled alternate. The distinctive feature is the two-axis cross: four head-count bases (Total, full-time, part-time, full-time-equivalents) times ~14 leaf sectors, which lets you read part-time intensity and FTE conversion by sector, something the FSO jobs cube does not expose the same way. Values are in thousands of persons.",
-  "fetched_utc": "2026-07-21 09:18:21"
+  "description": {
+    "en": "Swiss employees by industry, split into full-time, part-time and full-time equivalents, so part-time intensity per sector reads directly.",
+    "de": "Schweizer Beschäftigte nach Branche, aufgeteilt in Voll-, Teilzeit und Vollzeitäquivalente, sodass die Teilzeitintensität je Sektor direkt ablesbar ist.",
+    "fr": "Salariés suisses par branche, répartis en temps plein, temps partiel et équivalents plein temps, si bien que l'intensité du temps partiel par secteur se lit directement.",
+    "it": "Occupati svizzeri per ramo, ripartiti in tempo pieno, tempo parziale ed equivalenti a tempo pieno, così l'intensità del tempo parziale per settore è leggibile direttamente."
+  },
+  "fetched_utc": "2026-08-05 13:12:00"
 }

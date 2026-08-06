@@ -1,10 +1,10 @@
 # Corporate loans, broken down by company size (monthly)
 
 - **id**: ch_snb_bakredbetgrbm
-- **title**: Corporate loans by company size
+- **title**: Corporate loans by company size | de: Unternehmenskredite nach Unternehmensgrösse | fr: Crédits aux entreprises par taille d'entreprise | it: Crediti alle imprese per dimensione dell'impresa
 - **concept**: Money & banking / Banking & credit
 - **canonical**: yes
-- **source**: Swiss National Bank (SNB)
+- **source**: snb
 - **license**: snb (free reuse, attribution required)
 - **frequency**: monthly
 - **coverage**: 2002-01 .. 2026-03
@@ -12,18 +12,11 @@
 - **updated**: 2026-03 release (PublishingDate in CSV header)
 
 ## What is special
-Bank lending to companies, cut by **firm size** (number of employees): up to 9,
-10-49, 50-249, 250+, plus public-sector entities. This is the SME-credit view of
-the loan book, useful for tracking whether small firms are getting financed. Each
-size band is further split by bank category, loan type (mortgage vs other,
-secured vs unsecured) and by whether the figure is the drawn amount (utilisation)
-or the granted credit line. The utilisation-vs-credit-line pairing is the
-distinctive twist: it shows both how much credit banks have committed and how
-much firms are actually using, so you can read headroom. Shorter history than the
-sector and domestic/foreign loan cubes (starts 2002).
+How much Swiss banks lend to companies by company size, shown both as credit granted and credit actually drawn, so headroom is visible.
 
 ## Access
-- **type**: SNB cube API
+- **type**: snb-cube — SNB cube API
+- **cube**: `bakredbetgrbm`
 - **endpoint**: `https://data.snb.ch/api/cube/bakredbetgrbm/data/json/en`
 - **call**: `snb_fetch("bakredbetgrbm", title = "Corporate loans, broken down by company size")`
 
@@ -64,3 +57,12 @@ sector and domestic/foreign loan cubes (starts 2002).
 ## Provenance
 Script: `R/source_snb.R::snb_fetch` (cube `bakredbetgrbm`, title/topic from
 `R/snb_cubes.tsv`). Datasheet authored 2026-06-01.
+
+## What is special (de)
+Wie viel Schweizer Banken Unternehmen nach Unternehmensgrösse ausleihen, als gewährter Kredit und als tatsächlich beanspruchter Betrag, sodass der Spielraum sichtbar wird.
+
+## What is special (fr)
+Combien les banques suisses prêtent aux entreprises selon leur taille, en crédit accordé et en montant effectivement utilisé, si bien que la marge est visible.
+
+## What is special (it)
+Quanto le banche svizzere prestano alle imprese per dimensione, come credito concesso e come importo effettivamente utilizzato, così il margine è visibile.

@@ -1,5 +1,5 @@
 {
-  "schema_version": "1.0",
+  "schema_version": "1.1",
   "id": "ch_snb_snbmonagg",
   "dim_order": [
     "D1"
@@ -7,67 +7,92 @@
   "start": "1984-12-01",
   "end": "2026-06-01",
   "title": {
-    "en": "Monetary aggregates (M1–M3)"
+    "en": "Monetary aggregates (M1–M3)",
+    "de": "Geldmengen (M1–M3)",
+    "fr": "Agrégats monétaires (M1–M3)",
+    "it": "Aggregati monetari (M1–M3)"
   },
   "source": {
     "name": {
-      "en": "Swiss National Bank"
+      "en": "Swiss National Bank",
+      "de": "Schweizerische Nationalbank (SNB)",
+      "fr": "Banque nationale suisse (BNS)",
+      "it": "Banca nazionale svizzera (BNS)"
     },
-    "url": "https://data.snb.ch/en/topics/snb/cube/snbmonagg"
+    "url": "https://data.snb.ch/en/topics/snb/cube/snbmonagg",
+    "key": "snb"
   },
   "license": "snb",
   "frequency": "monthly",
   "dimensions": {
     "D1": {
       "label": {
-        "en": "Monetary aggregates"
+        "en": "Monetary aggregates",
+        "de": "Geldmengenaggregate",
+        "fr": "Agrégats monétaires"
       },
       "levels": {
         "B": {
           "label": {
-            "en": "Currency in circulation"
+            "en": "Currency in circulation",
+            "de": "Bargeldumlauf",
+            "fr": "Numéraire en circulation"
           },
           "data": true
         },
         "S0": {
           "label": {
-            "en": "Sight deposits"
+            "en": "Sight deposits",
+            "de": "Sichteinlagen",
+            "fr": "Dépôts à vue"
           },
           "data": true
         },
         "ET": {
           "label": {
-            "en": "Deposits in transaction accounts"
+            "en": "Deposits in transaction accounts",
+            "de": "Einlagen auf Transaktionskonti",
+            "fr": "Comptes de transactions"
           },
           "data": true
         },
         "GM1": {
           "label": {
-            "en": "Monetary aggregate M1"
+            "en": "Monetary aggregate M1",
+            "de": "Geldmenge M1",
+            "fr": "Agrégat monétaire M1"
           },
           "data": true
         },
         "S1": {
           "label": {
-            "en": "Savings deposits"
+            "en": "Savings deposits",
+            "de": "Spareinlagen",
+            "fr": "Dépôts d’épargne"
           },
           "data": true
         },
         "GM2": {
           "label": {
-            "en": "Monetary aggregate M2"
+            "en": "Monetary aggregate M2",
+            "de": "Geldmenge M2",
+            "fr": "Agrégat monétaire M2"
           },
           "data": true
         },
         "T": {
           "label": {
-            "en": "Time deposits"
+            "en": "Time deposits",
+            "de": "Termineinlagen",
+            "fr": "Dépôts à terme"
           },
           "data": true
         },
         "GM3": {
           "label": {
-            "en": "Monetary aggregate M3"
+            "en": "Monetary aggregate M3",
+            "de": "Geldmenge M3",
+            "fr": "Agrégat monétaire M3"
           },
           "data": true
         }
@@ -88,16 +113,42 @@
     }
   },
   "updated": "2026-07-21 09:00",
-  "topic": "Money & banking",
-  "concept": "Money & banking / Monetary aggregates",
+  "topic": {
+    "key": "money-banking",
+    "name": {
+      "en": "Money & banking",
+      "de": "Geld & Banken",
+      "fr": "Monnaie & banques",
+      "it": "Moneta e banche"
+    }
+  },
+  "concept": {
+    "en": "Money & banking / Monetary aggregates",
+    "leaf": {
+      "en": "Monetary aggregates",
+      "de": "Geldmengen",
+      "fr": "Agrégats monétaires",
+      "it": "Aggregati monetari"
+    }
+  },
   "canonical": true,
-  "featured": "Money supply",
+  "featured": {
+    "en": "Money supply",
+    "de": "Geldmenge",
+    "fr": "Masse monétaire",
+    "it": "Massa monetaria"
+  },
   "split": "D1",
   "single_select": [],
   "default_transform": "level",
   "default": {
     "D1": "GM3"
   },
-  "description": "The headline Swiss monetary aggregates, monthly from 1984. This is the canonical money-supply series. The source cube has two dimensions — D0 level vs year-on-year change, D1 the component or aggregate — but D0 is dropped: its VV (year-on-year change) level is exactly the app's YoY % transform, derived from the B level, so keeping only B collapses D0 away and leaves D1 as the single dimension. The components nest into the aggregates by construction: currency in circulation + sight deposits + deposits in transaction accounts -> M1; M1 + savings deposits -> M2; M2 + time deposits -> M3. So the cube ships the building blocks (B, S0, ET, S1, T) and the three totals (GM1, GM2, GM3) side by side as CHF-million levels — 8 stored series. Compared with snbmoba (base money, the central bank's own liabilities), these aggregates measure money held by the public, which is why this is the canonical aggregate and the base is the alternate.",
-  "fetched_utc": "2026-07-21 09:18:22"
+  "description": {
+    "en": "Swiss money supply M1, M2 and M3 with the cash and deposits they are built from: money held by the public, not by the central bank.",
+    "de": "Die Schweizer Geldmengen M1, M2 und M3 samt Bargeld und Einlagen, aus denen sie bestehen: Geld in den Händen des Publikums, nicht der Notenbank.",
+    "fr": "Les agrégats monétaires suisses M1, M2 et M3 avec les espèces et dépôts qui les composent : la monnaie détenue par le public, non par la banque centrale.",
+    "it": "Gli aggregati monetari svizzeri M1, M2 e M3 con il contante e i depositi che li compongono: moneta detenuta dal pubblico, non dalla banca centrale."
+  },
+  "fetched_utc": "2026-08-05 13:12:03"
 }

@@ -1,10 +1,10 @@
 # Domestic loans, broken down by economic sector and industry (monthly)
 
 - **id**: ch_snb_bakredsekbm
-- **title**: Domestic loans by sector
+- **title**: Domestic loans by sector | de: Inlandkredite nach Sektor | fr: Crédits en Suisse par secteur | it: Crediti interni per settore
 - **concept**: Money & banking / Banking & credit
 - **canonical**: yes
-- **source**: Swiss National Bank (SNB)
+- **source**: snb
 - **license**: snb (free reuse, attribution required)
 - **frequency**: monthly
 - **coverage**: 1985-06 .. 2026-03
@@ -12,19 +12,11 @@
 - **updated**: 2026-03 release (PublishingDate in CSV header)
 
 ## What is special
-Domestic bank loans broken down by **borrower industry** (NOGA/NACE sections):
-private households plus the full sector list from agriculture and manufacturing
-through construction, trade, hospitality, finance, health, public administration
-and a non-classifiable bucket. This is the most granular of the `bakred*`
-credit cubes, the one that tells you which parts of the Swiss economy are
-borrowing. The industry axis is crossed with bank category, loan type
-(mortgage / other, secured / unsecured) and the utilisation-vs-credit-line pair,
-which is what pushes it to 540 stored series. Long history from 1985, and the
-sector dimension is the distinctive feature; household mortgage utilisation is
-the default cell.
+Which industries Swiss banks lend to: households, manufacturing, construction, trade, finance, health and the rest of the economy.
 
 ## Access
-- **type**: SNB cube API
+- **type**: snb-cube — SNB cube API
+- **cube**: `bakredsekbm`
 - **endpoint**: `https://data.snb.ch/api/cube/bakredsekbm/data/json/en`
 - **call**: `snb_fetch("bakredsekbm", title = "Domestic loans, broken down by economic sector and industry")`
 
@@ -72,3 +64,12 @@ the default cell.
 ## Provenance
 Script: `R/source_snb.R::snb_fetch` (cube `bakredsekbm`, title/topic from
 `R/snb_cubes.tsv`). Datasheet authored 2026-06-01.
+
+## What is special (de)
+Welchen Branchen Schweizer Banken Kredite geben: Haushalte, Industrie, Bau, Handel, Finanz, Gesundheit und die übrige Wirtschaft.
+
+## What is special (fr)
+À quelles branches les banques suisses prêtent : ménages, industrie, construction, commerce, finance, santé et le reste de l'économie.
+
+## What is special (it)
+A quali rami le banche svizzere concedono crediti: economie domestiche, industria, costruzioni, commercio, finanza, sanità e resto dell'economia.

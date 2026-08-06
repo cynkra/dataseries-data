@@ -13,7 +13,7 @@ root <- tryCatch(
   dirname(normalizePath(sub("--file=", "", grep("--file=", commandArgs(FALSE), value = TRUE)))),
   error = function(e) "R"
 )
-for (f in c("dates.R", "http.R", "io.R", "hierarchy.R", "source_snb.R", "source_kof.R",
+for (f in c("dates.R", "http.R", "datasheet.R", "io.R", "labels.R", "hierarchy.R", "source_snb.R", "source_kof.R",
             "source_fso.R", "source_fso_excel.R", "source_fso_excel_sets.R",
             "source_fso_dam_csv.R", "source_fso_sdmx.R", "source_eurostat.R",
             "source_seco.R", "source_ffa.R", "source_adecco.R")) {
@@ -37,8 +37,12 @@ options(timeout = 30)
 .SDMX_SERVICES_NOGA <- c("G-NxK", "G", "H", "I", "J", "L", "M", "N")
 
 # Download an FSO Excel asset and run its bespoke parser, tagging the topic.
-# The per-dataset parsers live in source_fso_excel_sets.R.
-fso_excel_dataset <- function(id, order_nr, topic = NULL) {
+# The per-dataset parsers live in source_fso_excel_sets.R. The order number is
+# DECLARED in the datasheet ## Access block (read_access); passing it explicitly
+# is only for one-off scripts pinning a different asset.
+fso_excel_dataset <- function(id, order_nr = NULL, topic = NULL) {
+  order_nr <- order_nr %||% read_access(id, DATASHEET_DIR)$identifier
+  if (is.null(order_nr)) stop(sprintf("%s: no order number in datasheet ## Access", id))
   dl <- fso_excel_download(order_nr)
   ds <- get(paste0("fso_excel_", id), mode = "function")(dl$path, dl$pubdate)
   if (!is.null(topic)) ds$meta$topic <- topic
@@ -201,6 +205,11 @@ load_dataset <- function(id, dir) {
 # outage degrades safely to current behavior. Honors .ONLY like .try_fetch.
 .try_fetch_if_unchanged <- function(label, probe, expr, topic = NULL) {
   if (!is.null(.ONLY) && !label %in% .ONLY) return(NULL)
+  # ETL_FORCE_REFETCH=1 bypasses the unchanged-skip: needed when the PIPELINE's
+  # output changed while the source did not (e.g. labels now fetched in more
+  # languages) — a plain run would keep the stale-shaped sidecar until the
+  # source's next edition.
+  if (nzchar(Sys.getenv("ETL_FORCE_REFETCH"))) return(.try_fetch(label, expr, topic))
   token  <- tryCatch(probe(), error = function(e) NA_character_)
   stored <- .stored_updated(label, DATA_DIR)
   unchanged <- !is.na(token) && !is.null(stored) &&
@@ -242,7 +251,7 @@ build <- function(only = NULL) {
     add(.try_fetch_if_unchanged(
       paste0("ch_snb_", cube),
       local({ id <- cube; function() snb_last_update(id) }),
-      snb_fetch(cube, title = list(en = cu$title)), cu$topic))
+      snb_fetch(cube), cu$topic))
   }
 
   # SECO: full GDP, swissdata format at source (rich multilingual + deep
@@ -263,17 +272,14 @@ build <- function(only = NULL) {
   # industry + construction = quarterly DF_KEU_Q1 (NOGA B-E + F, divisions 41-43).
   add(.try_fetch("ch_fso_retail",
                  fso_sdmx_fetch("ch_fso_retail", "CH1.KEU", "DF_KEU_M1", "1.0.0",
-                                title = list(en = "Retail trade turnover (monthly)"),
                                 noga_keep = .SDMX_RETAIL_NOGA),
                  "Domestic economy"))
   add(.try_fetch("ch_fso_production",
                  fso_sdmx_fetch("ch_fso_production", "CH1.KEU", "DF_KEU_Q1", "1.0.0",
-                                title = list(en = "Industry & construction turnover (quarterly)"),
                                 noga_keep = .SDMX_PRODUCTION_NOGA),
                  "Domestic economy"))
   add(.try_fetch("ch_fso_services",
                  fso_sdmx_fetch("ch_fso_services", "CH1.KEU", "DF_KEU_Q1", "1.0.0",
-                                title = list(en = "Services-sector turnover (quarterly)"),
                                 noga_keep = .SDMX_SERVICES_NOGA),
                  "Domestic economy"))
 
@@ -290,19 +296,17 @@ build <- function(only = NULL) {
   # aggregates — revenue, expenditure, balance, gross/net debt, debt-to-GDP), annual,
   # by government level. From opendata.swiss (CKAN) -> data.finance.admin.ch CSV.
   add(.try_fetch("ch_ffa_finances",
-                 ffa_fetch("ch_ffa_finances",
-                           title = list(en = "Public finances: general government main aggregates")),
+                 ffa_fetch("ch_ffa_finances"),
                  "Public finances"))
 
   # KOF: the Economic Barometer (single monthly series).
   add(.try_fetch("ch_kof_barometer",
-                 kof_fetch("ch.kof.barometer", title = list(en = "KOF Economic Barometer")),
+                 kof_fetch("ch.kof.barometer"),
                  "Business cycle"))
   # KOF Economic Sentiment Index (ESI), monthly, via the open OGD /sets endpoint
   # (two methodology versions: pre-Brexit + standard 2018).
   add(.try_fetch("ch_kof_esi",
                  kof_set_fetch("ogd_ch.kof.esi",
-                               title = list(en = "KOF Economic Sentiment Index"),
                                source_url = "https://kof.ethz.ch/en/forecasts-and-indicators/indicators/kof-economic-sentiment-indicator.html"),
                  "Business cycle"))
 
@@ -320,7 +324,7 @@ build <- function(only = NULL) {
   )
   add(.try_fetch("ch_fso_hesta",
                  fso_fetch("ch_fso_hesta", "px-x-1003020000_103", fso_query,
-                           title = list(en = "Hotel sector: overnight stays by tourism region")),
+                           ),
                  "Tourism"))
 
   # FSO: jobs by economic division, quarterly (the BESTA employment headline).
@@ -335,18 +339,17 @@ build <- function(only = NULL) {
   )
   add(.try_fetch("ch_fso_besta",
                  fso_fetch("ch_fso_besta", "px-x-0602000000_101", besta_query,
-                           title = list(en = "Jobs by economic division (quarterly)"),
                            quarter_col = "Quartal", chunk_by = "Quartal", chunk_size = 40L),
                  "Labour"))
 
   # FSO labour depth: job vacancies (leading indicator) + jobs by sex.
   add(.try_fetch("ch_fso_vacancies",
                  fso_fetch_auto("ch_fso_vacancies", "px-x-0602000000_103",
-                                title = list(en = "Job vacancies by economic division")),
+                                ),
                  "Labour"))
   add(.try_fetch("ch_fso_jobs_sex",
                  fso_fetch_auto("ch_fso_jobs_sex", "px-x-0602000000_102",
-                                title = list(en = "Jobs by economic division and sex")),
+                                ),
                  "Labour"))
   # FSO BESTA employment-outlook index (forward-looking labour indicator), quarterly.
   # The composite index (code 5), weighted by jobs (code 1); the two pinned dims drop
@@ -360,7 +363,6 @@ build <- function(only = NULL) {
   )
   add(.try_fetch("ch_fso_besta_outlook",
                  fso_fetch("ch_fso_besta_outlook", "px-x-0602000000_105", besta_outlook_query,
-                           title = list(en = "Employment outlook index by economic division"),
                            quarter_col = "Quartal"),
                  "Labour"))
 
@@ -369,11 +371,11 @@ build <- function(only = NULL) {
   # DAM xlsx download parsed by a bespoke fso_excel_<id>() in source_fso_excel_sets.R.
   # su-d-05.02.66 = LIK on the Dec-2025=100 base (full history since 1982). It
   # superseded su-d-05.02.67 (Dec-2020=100), which FSO froze at the Dec-2025 rebasing.
-  add(.try_fetch("ch_fso_cpi",        fso_excel_dataset("ch_fso_cpi",        "su-d-05.02.66")))
-  add(.try_fetch("ch_fso_ppi",        fso_excel_dataset("ch_fso_ppi",        "su-q-05.04.03.01-ppi-ipp")))
-  add(.try_fetch("ch_fso_wage_idx",   fso_excel_dataset("ch_fso_wage_idx",   "je-e-03.04.03.00.04")))
-  add(.try_fetch("ch_fso_pop",        fso_excel_dataset("ch_fso_pop",        "su-d-01.02.04.05")))
-  add(.try_fetch("ch_fso_unemp_rate", fso_excel_dataset("ch_fso_unemp_rate", "je-d-03.03.01.03")))
+  add(.try_fetch("ch_fso_cpi",        fso_excel_dataset("ch_fso_cpi")))
+  add(.try_fetch("ch_fso_ppi",        fso_excel_dataset("ch_fso_ppi")))
+  add(.try_fetch("ch_fso_wage_idx",   fso_excel_dataset("ch_fso_wage_idx")))
+  add(.try_fetch("ch_fso_pop",        fso_excel_dataset("ch_fso_pop")))
+  add(.try_fetch("ch_fso_unemp_rate", fso_excel_dataset("ch_fso_unemp_rate")))
 
   # FSO DAM CSV-master assets (already-long CSVs, no sheet reshaping):
   # labour productivity (index), employed persons (ETS), GFCF by sector/asset,
@@ -387,9 +389,9 @@ build <- function(only = NULL) {
   # region → canton tree), the construction price index, and foreign trade by
   # partner country (self-contained, pins the English-master asset ids).
   add(.try_fetch("ch_fso_gdp_region",
-                 fso_excel_dataset("ch_fso_gdp_region", "je-e-04.02.06.01"), "National accounts"))
+                 fso_excel_dataset("ch_fso_gdp_region"), "National accounts"))
   add(.try_fetch("ch_fso_construction_prices",
-                 fso_excel_dataset("ch_fso_construction_prices", "cc-t-05.05.01"), "Prices"))
+                 fso_excel_dataset("ch_fso_construction_prices"), "Prices"))
   add(.try_fetch("ch_fso_trade_partner", fso_excel_ch_fso_trade_partner(), "External sector"))
 
   # Eurostat (NOT FSO): Swiss HICP, the EU-harmonised CPI (2015=100), all-items +
@@ -426,10 +428,15 @@ RETRY_MAX_INPROCESS <- as.integer(Sys.getenv("ETL_RETRY_MAX_INPROCESS", "3"))
 # read it). Shared by the full run (main) and the afternoon retry (retry_skipped) so
 # both finalize identically.
 finalize_dataset <- function(ds) {
-  ds$meta <- modifyList(ds$meta, read_datasheet_meta(ds$id, DATASHEET_DIR))
+  # Guard source-derived labels before anything curated is layered on top.
+  ds$meta$dimensions <- drop_lang_echo(ds$meta$dimensions)
+  sheet <- ds_read(ds$id, DATASHEET_DIR)   # one read; every consumer shares the lines
+  ds$meta <- modifyList(ds$meta, read_datasheet_meta(ds$id, DATASHEET_DIR, lines = sheet))
   ds <- drop_redundant_levels(ds)
   ds <- drop_degenerate_dims(ds)
-  ds <- attach_hierarchy(ds, DATASHEET_DIR)
+  ds <- attach_labels(ds, DATASHEET_DIR, lines = sheet)     # curated text first …
+  ds <- attach_hierarchy(ds, DATASHEET_DIR, lines = sheet)  # … then structure
+  if (!is.null(sheet)) ds$meta <- apply_vocab(ds$meta, sheet, DATA_DIR)
   ds <- write_dataset(ds, DATA_DIR)
   cat(sprintf("wrote %-22s %7d rows, %4d series  [%s]\n",
               ds$id, nrow(ds$data), n_series(ds$data),

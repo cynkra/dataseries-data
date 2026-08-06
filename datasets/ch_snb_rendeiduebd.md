@@ -1,10 +1,10 @@
 # Spot interest rates on Confederation, euro area and CHF issuer bonds (daily)
 
 - **id**: ch_snb_rendeiduebd
-- **title**: Bond yields (spot rates)
+- **title**: Bond yields (spot rates) | de: Obligationenrenditen (Kassazinssätze) | fr: Rendements obligataires (taux au comptant) | it: Rendimenti obbligazionari (tassi a pronti)
 - **concept**: Interest rates & yields / Bond yields
 - **canonical**: yes (the live Bond yields series; the older `rendoblid` par-yield cube was discontinued by the SNB — last data 2025-07-31)
-- **source**: Swiss National Bank
+- **source**: snb
 - **license**: snb (free reuse, attribution required)
 - **frequency**: daily
 - **coverage**: 1988-01-04 .. 2026-04-30
@@ -12,25 +12,11 @@
 - **updated**: 2026-04-30
 
 ## What is special
-This is the SNB spot-rate (zero-coupon yield) cube and the **canonical Bond yields
-series** for the catalog. Its `CHF × 10J` cell is the live 10-year Swiss
-Confederation benchmark — the most-watched Swiss long rate (the default view). It is
-live and current (daily, updated within days), unlike the older par-yield cube
-`rendoblid`, which the SNB **discontinued** (last observation 2025-07-31); that cube's
-content is fully covered here by the CHF curve, so it is not ingested. It crosses two
-dimensions: a bond category and a maturity, giving a full **term structure** rather
-than a single benchmark. The maturity dimension runs 1J through 10J plus 20J and 30J,
-so you can read an entire spot curve for one day.
-The category dimension splits into two branches: a market branch (CHF Swiss
-Confederation issues, EUR euro-area government bonds) and a Swiss issuer-rating
-branch (cantons by rating tier, mortgage-bond institutions, commercial banks by
-rating, manufacturing/trade by rating). That issuer-by-rating breakdown is the
-distinctive part: it lets you see the credit spread of, say, AA cantons or A-rated
-banks over the Confederation curve. Daily since 1988, so it carries the long
-Swiss-franc rate history including the negative-rate years.
+Swiss government bond yields for every maturity from 1 to 30 years, plus cantons, banks and industry by credit rating, so spreads are visible.
 
 ## Access
-- **type**: SNB cube API
+- **type**: snb-cube — SNB cube API
+- **cube**: `rendeiduebd`
 - **endpoint**: `https://data.snb.ch/api/cube/rendeiduebd/data/json/en`
 - **call**: `snb_fetch("rendeiduebd")` (cube_id = id minus `ch_snb_` prefix)
 
@@ -73,3 +59,12 @@ Swiss-franc rate history including the negative-rate years.
 Script: `R/source_snb.R::snb_fetch`, cube discovered via `R/snb_cubes.tsv`
 (`rendeiduebd`, topic "Interest rates"). Datasheet authored 2026-06-01; parser
 verified 2026-06-01 (184,434 rows, 48 series).
+
+## What is special (de)
+Renditen Schweizer Staatsanleihen für jede Laufzeit von 1 bis 30 Jahren, dazu Kantone, Banken und Industrie nach Rating, sodass Spreads sichtbar werden.
+
+## What is special (fr)
+Rendements des emprunts d'État suisses pour chaque échéance de 1 à 30 ans, plus cantons, banques et industrie par notation, si bien que les écarts sont visibles.
+
+## What is special (it)
+Rendimenti dei titoli di Stato svizzeri per ogni scadenza da 1 a 30 anni, più Cantoni, banche e industria per rating, così gli spread sono visibili.

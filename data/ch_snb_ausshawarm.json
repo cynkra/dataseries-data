@@ -1,5 +1,5 @@
 {
-  "schema_version": "1.0",
+  "schema_version": "1.1",
   "id": "ch_snb_ausshawarm",
   "dim_order": [
     "D0",
@@ -9,37 +9,52 @@
   "start": "2012-01-01",
   "end": "2026-05-01",
   "title": {
-    "en": "Foreign trade by goods category"
+    "en": "Foreign trade by goods category",
+    "de": "Aussenhandel nach Warengruppe",
+    "fr": "Commerce extérieur par catégorie de marchandises",
+    "it": "Commercio estero per categoria di merci"
   },
   "source": {
     "name": {
-      "en": "Swiss National Bank"
+      "en": "Swiss National Bank",
+      "de": "Schweizerische Nationalbank (SNB)",
+      "fr": "Banque nationale suisse (BNS)",
+      "it": "Banca nazionale svizzera (BNS)"
     },
-    "url": "https://data.snb.ch/en/topics/snb/cube/ausshawarm"
+    "url": "https://data.snb.ch/en/topics/snb/cube/ausshawarm",
+    "key": "snb"
   },
   "license": "snb",
   "frequency": "monthly",
   "dimensions": {
     "D0": {
       "label": {
-        "en": "Overview"
+        "en": "Overview",
+        "de": "Übersicht",
+        "fr": "Vue d’ensemble"
       },
       "levels": {
         "A": {
           "label": {
-            "en": "Exports"
+            "en": "Exports",
+            "de": "Ausfuhr",
+            "fr": "Exportations"
           },
           "data": true
         },
         "E": {
           "label": {
-            "en": "Imports"
+            "en": "Imports",
+            "de": "Einfuhr",
+            "fr": "Importations"
           },
           "data": true
         },
         "H": {
           "label": {
-            "en": "Trade surplus/deficit"
+            "en": "Trade surplus/deficit",
+            "de": "Handelsbilanzsaldo",
+            "fr": "Solde de la balance commerciale"
           },
           "data": true
         }
@@ -52,198 +67,264 @@
     },
     "D1": {
       "label": {
-        "en": "Goods category"
+        "en": "Goods category",
+        "de": "Warenarten",
+        "fr": "Nature des marchandises"
       },
       "levels": {
         "GT": {
           "label": {
-            "en": "Total"
+            "en": "Total",
+            "de": "Total",
+            "fr": "Total"
           },
           "data": true
         },
         "CHEM": {
           "label": {
-            "en": "Chemical and pharmaceutical products"
+            "en": "Chemical and pharmaceutical products",
+            "de": "Chemische und Pharmazeutische Erzeugnisse",
+            "fr": "Produits chimiques et pharmaceutiques"
           },
           "data": false
         },
         "C21": {
           "label": {
-            "en": "Basic pharmaceutical products and pharmaceutical preparations"
+            "en": "Basic pharmaceutical products and pharmaceutical preparations",
+            "de": "Pharmazeutische Erzeugnisse",
+            "fr": "Produits pharmaceutiques de base et préparations pharmaceutiques"
           },
           "data": true
         },
         "C20": {
           "label": {
-            "en": "Chemicals and chemical products"
+            "en": "Chemicals and chemical products",
+            "de": "Chemische Erzeugnisse",
+            "fr": "Produits chimiques"
           },
           "data": true
         },
         "ME": {
           "label": {
-            "en": "Machinery, electronics and appliances"
+            "en": "Machinery, electronics and appliances",
+            "de": "Maschinen, Elektronik und Apparate",
+            "fr": "Machines électroniques et appareils"
           },
           "data": false
         },
         "C26": {
           "label": {
-            "en": "Computer, electronic and optical products"
+            "en": "Computer, electronic and optical products",
+            "de": "Datenverarbeitungsgeräte, elektronische und optische Erzeugnisse",
+            "fr": "Produits informatiques, électroniques et optiques"
           },
           "data": true
         },
         "C28": {
           "label": {
-            "en": "Machinery and equipment n.e.c."
+            "en": "Machinery and equipment n.e.c.",
+            "de": "Maschinen",
+            "fr": "Machines et équipements n.c.a."
           },
           "data": true
         },
         "C27": {
           "label": {
-            "en": "Electrical equipment"
+            "en": "Electrical equipment",
+            "de": "Elektrische Ausrüstungen",
+            "fr": "Équipements électriques"
           },
           "data": true
         },
         "C2652": {
           "label": {
-            "en": "Watches and clocks"
+            "en": "Watches and clocks",
+            "de": "Uhren",
+            "fr": "Articles d'horlogerie"
           },
           "data": true
         },
         "MET": {
           "label": {
-            "en": "Metals and metal products"
+            "en": "Metals and metal products",
+            "de": "Metalle und Metallerzeugnisse",
+            "fr": "Métaux et produits métalliques"
           },
           "data": false
         },
         "C24": {
           "label": {
-            "en": "Basic metals"
+            "en": "Basic metals",
+            "de": "Metalle",
+            "fr": "Produits métallurgiques"
           },
           "data": true
         },
         "C25": {
           "label": {
-            "en": "Fabricated metal products, except machinery and equipment"
+            "en": "Fabricated metal products, except machinery and equipment",
+            "de": "Metallerzeugnisse",
+            "fr": "Produits métalliques, à l'exclusion des machines et équipements"
           },
           "data": true
         },
         "NFG": {
           "label": {
-            "en": "Food, beverages and tobacco"
+            "en": "Food, beverages and tobacco",
+            "de": "Nahrungs-, Futter- und Genussmittel",
+            "fr": "Denrées alimentaires, boissons et tabacs"
           },
           "data": false
         },
         "A01": {
           "label": {
-            "en": "Products of agriculture, hunting and related services"
+            "en": "Products of agriculture, hunting and related services",
+            "de": "Erzeugnisse der Landwirtschaft und Jagd sowie damit verbundene Dienstleistungen",
+            "fr": "Produits de l'agriculture et de la chasse et services annexes"
           },
           "data": true
         },
         "A03": {
           "label": {
-            "en": "Fish and other fishing products, aquaculture products, support services to fishing"
+            "en": "Fish and other fishing products, aquaculture products, support services to fishing",
+            "de": "Fische und Fischereierzeugnisse, Aquakulturerzeugnisse, Dienstleistungen für die Fischerei",
+            "fr": "Produits de la pêche et de l'aquaculture, services de soutien à la pêche"
           },
           "data": true
         },
         "C10": {
           "label": {
-            "en": "Food products"
+            "en": "Food products",
+            "de": "Nahrungs- und Futtermittel",
+            "fr": "Produits des industries alimentaires"
           },
           "data": true
         },
         "C11": {
           "label": {
-            "en": "Beverages"
+            "en": "Beverages",
+            "de": "Getränke",
+            "fr": "Boissons"
           },
           "data": true
         },
         "C12": {
           "label": {
-            "en": "Tobacco products"
+            "en": "Tobacco products",
+            "de": "Tabakerzeugnisse",
+            "fr": "Produits à base de tabac"
           },
           "data": true
         },
         "FZ": {
           "label": {
-            "en": "Vehicles"
+            "en": "Vehicles",
+            "de": "Fahrzeuge",
+            "fr": "Véhicules"
           },
           "data": false
         },
         "C29": {
           "label": {
-            "en": "Motor vehicles, trailers and semi-trailers"
+            "en": "Motor vehicles, trailers and semi-trailers",
+            "de": "Kraftwagen und Kraftwagenteile",
+            "fr": "Véhicules automobiles, remorques et semi-remorques"
           },
           "data": true
         },
         "C30": {
           "label": {
-            "en": "Other transport equipment"
+            "en": "Other transport equipment",
+            "de": "Sonstige Fahrzeuge",
+            "fr": "Autres matériels de transport"
           },
           "data": true
         },
         "EN": {
           "label": {
-            "en": "Energy sources"
+            "en": "Energy sources",
+            "de": "Energieträger",
+            "fr": "Produits énergétiques"
           },
           "data": false
         },
         "B05": {
           "label": {
-            "en": "Coal and lignite"
+            "en": "Coal and lignite",
+            "de": "Kohle",
+            "fr": "Houille et lignite"
           },
           "data": true
         },
         "B06": {
           "label": {
-            "en": "Crude petroleum and natural gas"
+            "en": "Crude petroleum and natural gas",
+            "de": "Erdöl und Erdgas",
+            "fr": "Hydrocarbures"
           },
           "data": true
         },
         "C19": {
           "label": {
-            "en": "Coke and refined petroleum products"
+            "en": "Coke and refined petroleum products",
+            "de": "Kokereierzeugnisse und Mineralölerzeugnisse",
+            "fr": "Produits de la cokéfaction et du raffinage"
           },
           "data": true
         },
         "D35": {
           "label": {
-            "en": "Electricity, gas, steam and air conditioning supply"
+            "en": "Electricity, gas, steam and air conditioning supply",
+            "de": "Energie und Dienstleistungen der Energieversorgung",
+            "fr": "Électricité, gaz, vapeur et air conditionné"
           },
           "data": true
         },
         "TB": {
           "label": {
-            "en": "Textiles, clothing and leather"
+            "en": "Textiles, clothing and leather",
+            "de": "Textilien, Bekleidung und Leder",
+            "fr": "Textiles, habillement et cuir"
           },
           "data": false
         },
         "C13": {
           "label": {
-            "en": "Textiles"
+            "en": "Textiles",
+            "de": "Textilien",
+            "fr": "Produits de l'industrie textile"
           },
           "data": true
         },
         "C14": {
           "label": {
-            "en": "Wearing apparel"
+            "en": "Wearing apparel",
+            "de": "Bekleidung",
+            "fr": "Articles d'habillement"
           },
           "data": true
         },
         "C15": {
           "label": {
-            "en": "Leather and related products of other materials"
+            "en": "Leather and related products of other materials",
+            "de": "Leder, Lederwaren und ähnliche Produkte aus anderen Materialen",
+            "fr": "Cuir, articles en cuir et produits similaires dans d’autres matières"
           },
           "data": true
         },
         "C22": {
           "label": {
-            "en": "Rubber and plastic products"
+            "en": "Rubber and plastic products",
+            "de": "Gummi- und Kunststoffwaren",
+            "fr": "Produits en caoutchouc et en plastique"
           },
           "data": true
         },
         "C17": {
           "label": {
-            "en": "Paper and paper products"
+            "en": "Paper and paper products",
+            "de": "Papier, Pappe und Waren daraus",
+            "fr": "Papier et carton"
           },
           "data": true
         }
@@ -293,24 +374,32 @@
     },
     "D2": {
       "label": {
-        "en": "Value/Change"
+        "en": "Value/Change",
+        "de": "Wert/Veränderung",
+        "fr": "Valeur/variation"
       },
       "levels": {
         "WMF": {
           "label": {
-            "en": "Value, in CHF millions"
+            "en": "Value, in CHF millions",
+            "de": "Wert in Millionen Franken",
+            "fr": "Valeur en millions de francs"
           },
           "data": true
         },
         "D2_1": {
           "label": {
-            "en": "Change compared to the same month one year earlier in %"
+            "en": "Change compared to the same month one year earlier in %",
+            "de": "Veränderung gegenüber dem Vorjahresmonat in %",
+            "fr": "Variation en % par rapport au mois correspondant de l’année précédente"
           },
           "data": false
         },
         "R": {
           "label": {
-            "en": "real"
+            "en": "real",
+            "de": "real",
+            "fr": "en termes réels"
           },
           "data": true
         }
@@ -324,10 +413,31 @@
     }
   },
   "updated": "2026-07-21 09:00",
-  "topic": "External sector",
-  "concept": "External sector / Foreign trade",
+  "topic": {
+    "key": "external-sector",
+    "name": {
+      "en": "External sector",
+      "de": "Aussenwirtschaft",
+      "fr": "Secteur extérieur",
+      "it": "Settore estero"
+    }
+  },
+  "concept": {
+    "en": "External sector / Foreign trade",
+    "leaf": {
+      "en": "Foreign trade",
+      "de": "Aussenhandel",
+      "fr": "Commerce extérieur",
+      "it": "Commercio estero"
+    }
+  },
   "canonical": true,
-  "featured": "Foreign trade",
+  "featured": {
+    "en": "Foreign trade",
+    "de": "Aussenhandel",
+    "fr": "Commerce extérieur",
+    "it": "Commercio estero"
+  },
   "split": "D1",
   "single_select": "D2",
   "default_transform": "level",
@@ -336,6 +446,11 @@
     "D1": "GT",
     "D2": "WMF"
   },
-  "description": "Switzerland's monthly foreign trade split by goods category, the canonical trade series in the catalog. It is a three-way cube: trade flow (exports / imports / balance) times a deep goods hierarchy times a value-or-change axis. The goods axis goes two levels deep (e.g. group CHEM -> C21 pharma preparations, C20 chemicals), which surfaces the pharma and watches drivers that dominate Swiss exports (C21, C2652). The quirky axis is D2 \"Value/Change\": the source nests a level (WMF value in CHF millions) with two year-on-year %-change leaves (N nominal, R real) under one dimension. The nominal change N is exactly the YoY % of WMF, so it is dropped as redundant with the app's YoY toggle; the real change R (price-deflated, not recomputable from the value) is kept. That leaves D2 = {WMF nominal value, R real change} — two genuinely different series, so the value column still means CHF millions for WMF and a percent change for R. Despite a 2012 catalog start, the CHF-million level rows begin 2012 while the %-change rows begin 2013 (a year of base needed first).",
-  "fetched_utc": "2026-07-21 09:18:21"
+  "description": {
+    "en": "What Switzerland exports and imports by product group each month, in CHF millions and as a real, inflation-adjusted change.",
+    "de": "Was die Schweiz monatlich nach Warengruppe exportiert und importiert, in Mio. CHF und als reale, teuerungsbereinigte Veränderung.",
+    "fr": "Ce que la Suisse exporte et importe chaque mois par groupe de marchandises, en millions de CHF et en variation réelle, corrigée de l'inflation.",
+    "it": "Cosa la Svizzera esporta e importa ogni mese per gruppo di merci, in milioni di CHF e come variazione reale, corretta per l'inflazione."
+  },
+  "fetched_utc": "2026-08-05 13:12:01"
 }

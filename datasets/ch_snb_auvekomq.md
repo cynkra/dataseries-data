@@ -1,10 +1,10 @@
 # Switzerland's international investment position - Overview - Quarter
 
 - **id**: ch_snb_auvekomq
-- **title**: International investment position
+- **title**: International investment position | de: Auslandvermögen | fr: Position extérieure | it: Posizione patrimoniale sull'estero
 - **concept**: External sector / International investment position
 - **canonical**: yes (IIP overview; the by-currency `auvercurrq` and external-debt `auverdeptq` cuts are companions)
-- **source**: Swiss National Bank
+- **source**: snb
 - **license**: snb (free reuse, attribution required)
 - **frequency**: quarterly
 - **coverage**: 1985-Q1 .. 2025-Q4
@@ -12,18 +12,11 @@
 - **updated**: 2025-Q4 (latest observation; PublishingDate in CSV header is the freshness signal)
 
 ## What is special
-The headline overview of Switzerland's international investment position (IIP): the
-stock of foreign assets, liabilities and the net position, back to 1985. This is the
-canonical IIP cube; `auvercurrq` (currency breakdown) and `auverdeptq` (external
-debt) are companion cuts of the same external balance sheet. The distinctive feature
-is the very deep functional `Component` hierarchy (direct / portfolio / derivatives /
-other investment / reserve assets), four levels deep in places, drilling from a total
-down to bank/customer sub-balances and the SNB's reserve-asset composition (gold, IMF
-reserve position, SDRs, FX investments). Values are CHF-million stocks at end of
-quarter.
+What Switzerland owns abroad and owes abroad, and the net position, as end-of-quarter stocks down to the central bank's reserve assets.
 
 ## Access
-- **type**: SNB cube API
+- **type**: snb-cube — SNB cube API
+- **cube**: `auvekomq`
 - **endpoint**: `GET https://data.snb.ch/api/cube/auvekomq/data/json/en`
 - **call**: `snb_fetch("auvekomq", title = "Switzerland's international investment position - Overview - Quarter")`
 
@@ -66,3 +59,12 @@ quarter.
 ## Provenance
 Script: `R/source_snb.R::snb_fetch` via `R/snb_cubes.tsv` (cube_id `auvekomq`).
 Datasheet 2026-06-01; parser verified 2026-06-01 (10,056 rows, 63 series).
+
+## What is special (de)
+Was die Schweiz im Ausland besitzt und schuldet, samt Nettoposition, als Bestände per Quartalsende bis hin zu den Währungsreserven der Nationalbank.
+
+## What is special (fr)
+Ce que la Suisse possède et doit à l'étranger, et la position nette, en stocks de fin de trimestre jusqu'aux réserves monétaires de la banque centrale.
+
+## What is special (it)
+Cosa la Svizzera possiede e deve all'estero, e la posizione netta, come stock di fine trimestre fino alle riserve monetarie della banca centrale.

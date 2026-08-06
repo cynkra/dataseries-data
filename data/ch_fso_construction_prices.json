@@ -1,62 +1,105 @@
 {
-  "schema_version": "1.0",
+  "schema_version": "1.1",
   "id": "ch_fso_construction_prices",
   "dim_order": [
     "worktype"
   ],
   "start": "1998-10-01",
   "end": "2026-04-01",
-  "title": {
-    "en": "Construction prices"
-  },
   "source": {
     "name": {
-      "en": "Swiss Federal Statistical Office (FSO)"
+      "en": "Swiss Federal Statistical Office (FSO)",
+      "de": "Bundesamt für Statistik (BFS)",
+      "fr": "Office fédéral de la statistique (OFS)",
+      "it": "Ufficio federale di statistica (UST)"
     },
-    "url": "https://www.bfs.admin.ch/asset/de/cc-t-05.05.01"
+    "url": "https://www.bfs.admin.ch/asset/de/cc-t-05.05.01",
+    "key": "fso"
   },
   "license": "fso",
   "frequency": "semi-annual",
-  "topic": "Prices",
-  "units": {
-    "en": "Index (October 2020 = 100)"
+  "topic": {
+    "key": "prices",
+    "name": {
+      "en": "Prices",
+      "de": "Preise",
+      "fr": "Prix",
+      "it": "Prezzi"
+    }
   },
   "updated": "2026-06-18",
   "dimensions": {
     "worktype": {
       "label": {
-        "en": "Type of work"
+        "en": "Type of work",
+        "de": "Arbeitsart",
+        "fr": "Type de travaux",
+        "it": "Tipo di lavori"
       },
       "levels": {
         "total": {
           "label": {
-            "en": "Construction: Total"
+            "en": "Construction: Total",
+            "de": "Baugewerbe: Total",
+            "fr": "Construction : total",
+            "it": "Costruzioni: totale"
           },
           "data": true
         },
         "hochbau": {
           "label": {
-            "en": "Building construction (Hochbau)"
+            "en": "Building construction (Hochbau)",
+            "de": "Hochbau",
+            "fr": "Bâtiment",
+            "it": "Edilizia"
           },
           "data": true
         },
         "tiefbau": {
           "label": {
-            "en": "Civil engineering (Tiefbau)"
+            "en": "Civil engineering (Tiefbau)",
+            "de": "Tiefbau",
+            "fr": "Génie civil",
+            "it": "Genio civile"
           },
           "data": true
         }
       }
     }
   },
-  "concept": "Prices / Construction prices",
+  "concept": {
+    "en": "Prices / Construction prices",
+    "leaf": {
+      "en": "Construction prices",
+      "de": "Baupreise",
+      "fr": "Prix de la construction",
+      "it": "Prezzi delle costruzioni"
+    }
+  },
   "canonical": true,
+  "title": {
+    "en": "Construction prices",
+    "de": "Baupreise",
+    "fr": "Prix de la construction",
+    "it": "Prezzi delle costruzioni"
+  },
   "split": "worktype",
   "single_select": [],
   "default_transform": "yoy",
   "default": {
     "worktype": "total"
   },
-  "description": "The Swiss Construction Price Index (Baupreisindex, BAP) measures the price development of construction work in Switzerland, surveyed semi-annually with reference months April and October. The headline series for the whole of Switzerland is captured on three work-type levels: the overall index (Baugewerbe: Total), building construction (Hochbau) and civil engineering (Tiefbau). Levels are on the October 2020 = 100 base. One of the few semi-annual price series in the catalog.",
-  "fetched_utc": "2026-08-05 09:13:33"
+  "description": {
+    "en": "Price index for construction work in Switzerland, surveyed each April and October. Covers building construction and civil engineering separately.",
+    "de": "Preisindex für Bauarbeiten in der Schweiz, halbjährlich im April und Oktober erhoben. Erfasst Hochbau und Tiefbau getrennt.",
+    "fr": "Indice des prix des travaux de construction en Suisse, relevé chaque avril et octobre. Bâtiment et génie civil sont couverts séparément.",
+    "it": "Indice dei prezzi dei lavori di costruzione in Svizzera, rilevato ogni aprile e ottobre. Edilizia e genio civile sono coperti separatamente."
+  },
+  "units": {
+    "en": "Index (October 2020 = 100)",
+    "de": "Index (Oktober 2020 = 100)",
+    "fr": "Indice (octobre 2020 = 100)",
+    "it": "Indice (ottobre 2020 = 100)"
+  },
+  "fetched_utc": "2026-08-05 13:12:07"
 }

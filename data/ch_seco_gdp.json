@@ -1,5 +1,5 @@
 {
-  "schema_version": "1.0",
+  "schema_version": "1.1",
   "id": "ch_seco_gdp",
   "dim_order": [
     "type",
@@ -10,7 +10,7 @@
   "end": "2026-01-01",
   "title": {
     "en": "Gross domestic product (GDP)",
-    "de": "Bruttoninlandprodukt (BIP)",
+    "de": "Bruttoinlandprodukt (BIP)",
     "fr": "Produit intérieur brut (PIB)",
     "it": "Prodotto interno lordo (PIL)"
   },
@@ -18,10 +18,11 @@
     "name": {
       "en": "State Secretariat for Economic Affairs (SECO)",
       "de": "Staatssekretariat für Wirtschaft (SECO)",
-      "fr": "Secrétariat d'Etat à l'économie (SECO)",
-      "it": "Segretaria di Stato dell'economia (SECO)"
+      "fr": "Secrétariat d'État à l'économie (SECO)",
+      "it": "Segreteria di Stato dell'economia (SECO)"
     },
-    "url": "https://www.seco.admin.ch/de/bruttoinlandprodukt"
+    "url": "https://www.seco.admin.ch/de/bruttoinlandprodukt",
+    "key": "seco"
   },
   "license": "seco",
   "frequency": "quarterly",
@@ -864,31 +865,29 @@
     }
   },
   "units": {
-    "type": {
-      "nom": {
-        "en": "Swiss Francs, at current prices",
-        "de": "Schweizer Franken, zu laufenden Preisen",
-        "fr": "Francs suisses, aux prix courants",
-        "it": "Franchi, a prezzi correnti"
-      },
-      "real": {
-        "en": "Swiss Francs, chain-linked volumes, reference year 2020",
-        "de": "Schweizer Franken, verkettete reale Werte, Referenzjahr 2020",
-        "fr": "Francs suisses, valeurs réelles chainées, année de réference 2020",
-        "it": "Franchi svizzeri, valori concatenati, anno di referenza 2020"
-      },
-      "gc_q": {
-        "en": "Percentage points",
-        "de": "Prozentpunkte",
-        "fr": "Points de pourcentage",
-        "it": "Punti percentuali"
-      },
-      "gc_y": {
-        "en": "Percentage points",
-        "de": "Prozentpunkte",
-        "fr": "Points de pourcentage",
-        "it": "Punti percentuali"
-      }
+    "nom": {
+      "en": "Swiss Francs, at current prices",
+      "de": "Schweizer Franken, zu laufenden Preisen",
+      "fr": "Francs suisses, aux prix courants",
+      "it": "Franchi, a prezzi correnti"
+    },
+    "real": {
+      "en": "Swiss Francs, chain-linked volumes, reference year 2020",
+      "de": "Schweizer Franken, verkettete reale Werte, Referenzjahr 2020",
+      "fr": "Francs suisses, valeurs réelles chainées, année de réference 2020",
+      "it": "Franchi svizzeri, valori concatenati, anno di referenza 2020"
+    },
+    "gc_q": {
+      "en": "Percentage points",
+      "de": "Prozentpunkte",
+      "fr": "Points de pourcentage",
+      "it": "Punti percentuali"
+    },
+    "gc_y": {
+      "en": "Percentage points",
+      "de": "Prozentpunkte",
+      "fr": "Points de pourcentage",
+      "it": "Punti percentuali"
     }
   },
   "updated": "2026-02-23 16:51:17",
@@ -898,10 +897,31 @@
     "fr": "Données des comptes nationaux trimestriels suisses. Approche de la production, de la dépense et du revenu. Données nominales et réelles. Données corrigées des variations saisonnières et du calendrier ainsi que données non corrigées.",
     "it": "Dati della contabilità nazionale trimestrale svizzera. Approccio della produzione, delle spese e del reddito. Valori nominali e reali. Dati destagionalizzati e corretti per gli effetti di calendario e dati non corretti."
   },
-  "topic": "National accounts",
-  "concept": "National accounts / GDP (output, expenditure, income)",
+  "topic": {
+    "key": "national-accounts",
+    "name": {
+      "en": "National accounts",
+      "de": "Volkswirtschaftliche Gesamtrechnung",
+      "fr": "Comptes nationaux",
+      "it": "Conti nazionali"
+    }
+  },
+  "concept": {
+    "en": "National accounts / GDP (output, expenditure, income)",
+    "leaf": {
+      "en": "GDP (output, expenditure, income)",
+      "de": "BIP (Produktion, Verwendung, Einkommen)",
+      "fr": "PIB (production, dépenses, revenus)",
+      "it": "PIL (produzione, spesa, redditi)"
+    }
+  },
   "canonical": true,
-  "featured": "GDP",
+  "featured": {
+    "en": "GDP",
+    "de": "BIP",
+    "fr": "PIB",
+    "it": "PIL"
+  },
   "split": "structure",
   "single_select": ["type", "seas_adj"],
   "default_transform": "level",
@@ -910,6 +930,11 @@
     "type": "real",
     "seas_adj": "cssa"
   },
-  "description": "The Swiss quarterly national accounts, and the single richest dataset in the catalog. SECO publishes it already in the swissdata format at source (a tidy long CSV plus a JSON meta sidecar with full en/de/fr/it labels), so our fetcher is a passthrough rather than a scrape. Three things make it distinctive: - Deep hierarchy. The structure dimension is a 68-code tree covering all three accounting views of GDP under one root (gdp): the production approach (gross value added by NOGA industry, down to chem/pharma vs other manufacturing and finance vs insurance), the expenditure approach (consumption, investment, the trade balance, exports/imports of goods and services), and the income approach (compensation of employees, operating surplus, GNI, disposable income). production, expenditure and income are non-leaf grouping nodes carried as data: false. - Seasonal adjustment is a real dimension, not a separate dataset. seas_adj has four levels: raw (na), seasonally+calendar adjusted (csa), sports-event adjusted (nasa), and seasonally+calendar+sports-event adjusted (cssa). The sports-event correction (large international sporting bodies are domiciled in Switzerland and book revenue in event years) is a Swiss-specific quirk. - Canonical GDP for the catalog. The SNB re-exports of the same series (gdppn, gdpap) were dropped in favour of this one, which is the original and carries the full breakdown and the native quarterly frequency. The FSO annual expenditure table (ch_fso_gdp_use) is a redundant alternate.",
-  "fetched_utc": "2026-08-05 09:13:31"
+  "description": {
+    "en": "Swiss economic output each quarter from all three angles, production, spending and income, including a correction for sporting-body revenue.",
+    "de": "Schweizer Wirtschaftsleistung pro Quartal aus allen drei Blickwinkeln — Produktion, Verwendung und Einkommen — inklusive einer Korrektur für Erträge von Sportverbänden.",
+    "fr": "Production économique suisse par trimestre sous les trois optiques — production, dépenses et revenus — avec une correction pour les recettes des fédérations sportives.",
+    "it": "Produzione economica svizzera per trimestre nelle tre ottiche — produzione, spesa e redditi — con una correzione per i ricavi delle federazioni sportive."
+  },
+  "fetched_utc": "2026-08-05 13:12:04"
 }

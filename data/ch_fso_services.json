@@ -1,5 +1,5 @@
 {
-  "schema_version": "1.0",
+  "schema_version": "1.1",
   "id": "ch_fso_services",
   "dim_order": [
     "NOGA",
@@ -9,13 +9,20 @@
   "start": "2021-01-01",
   "end": "2026-01-01",
   "title": {
-    "en": "Services turnover"
+    "en": "Services turnover",
+    "de": "Umsätze Dienstleistungssektor",
+    "fr": "Chiffres d'affaires des services",
+    "it": "Fatturato dei servizi"
   },
   "source": {
     "name": {
-      "en": "Swiss Federal Statistical Office (FSO)"
+      "en": "Swiss Federal Statistical Office (FSO)",
+      "de": "Bundesamt für Statistik (BFS)",
+      "fr": "Office fédéral de la statistique (OFS)",
+      "it": "Ufficio federale di statistica (UST)"
     },
-    "url": "https://www.bfs.admin.ch/asset/en/DF_KEU_Q1"
+    "url": "https://www.bfs.admin.ch/asset/en/DF_KEU_Q1",
+    "key": "fso"
   },
   "license": "fso",
   "frequency": "quarterly",
@@ -27,49 +34,73 @@
       "levels": {
         "G": {
           "label": {
-            "en": "G WHOLESALE AND RETAIL TRADE; REPAIR OF MOTOR VEHICLES AND MOTORCYCLES"
+            "en": "G WHOLESALE AND RETAIL TRADE; REPAIR OF MOTOR VEHICLES AND MOTORCYCLES",
+            "de": "G HANDEL; INSTANDHALTUNG UND REPARATUR VON MOTORFAHRZEUGE",
+            "fr": "G COMMERCE; RÉPARATION D'AUTOMOBILES ET DE MOTOCYCLES",
+            "it": "G COMMERCIO ALL'INGROSSO E AL DETTAGLIO; RIPARAZIONE DI AUTOVEICOLI E MOTOCICLI"
           },
           "data": true
         },
         "G-NxK": {
           "label": {
-            "en": "G-NxK Tertiärer Sektor (ohne Erbringung von Finanz- und Versicherungsdienstleistungen)"
+            "en": "G-NxK Tertiary sector (except financial and insurance activities)",
+            "de": "G-NxK Tertiärer Sektor (ohne Erbringung von Finanz- und Versicherungsdienstleistungen)",
+            "fr": "G-NxK Secteur tertiaire (sans activités financières et d’assurance)",
+            "it": "G-NxK Settore terziario (senza attività finanziarie e assicurative)"
           },
           "data": true
         },
         "H": {
           "label": {
-            "en": "H TRANSPORTATION AND STORAGE"
+            "en": "H TRANSPORTATION AND STORAGE",
+            "de": "H VERKEHR UND LAGEREI",
+            "fr": "H TRANSPORTS ET ENTREPOSAGE",
+            "it": "H TRASPORTO E MAGAZZINAGGIO"
           },
           "data": true
         },
         "I": {
           "label": {
-            "en": "I ACCOMMODATION AND FOOD SERVICE ACTIVITIES"
+            "en": "I ACCOMMODATION AND FOOD SERVICE ACTIVITIES",
+            "de": "I GASTGEWERBE/BEHERBERGUNG UND GASTRONOMIE",
+            "fr": "I HÉBERGEMENT ET RESTAURATION",
+            "it": "I SERVIZI DI ALLOGGIO E DI RISTORAZIONE"
           },
           "data": true
         },
         "J": {
           "label": {
-            "en": "J INFORMATION AND COMMUNICATION"
+            "en": "J INFORMATION AND COMMUNICATION",
+            "de": "J INFORMATION UND KOMMUNIKATION",
+            "fr": "J INFORMATION ET COMMUNICATION",
+            "it": "J SERVIZI DI INFORMAZIONE E COMUNICAZIONE"
           },
           "data": true
         },
         "L": {
           "label": {
-            "en": "L REAL ESTATE ACTIVITIES"
+            "en": "L REAL ESTATE ACTIVITIES",
+            "de": "L GRUNDSTÜCKS- UND WOHNUNGSWESEN",
+            "fr": "L ACTIVITÉS IMMOBILIÈRES",
+            "it": "L ATTIVITÀ IMMOBILIARI"
           },
           "data": true
         },
         "M": {
           "label": {
-            "en": "M PROFESSIONAL, SCIENTIFIC AND TECHNICAL ACTIVITIES"
+            "en": "M PROFESSIONAL, SCIENTIFIC AND TECHNICAL ACTIVITIES",
+            "de": "M ERBRINGUNG VON FREIBERUFLICHEN, WISSENSCHAFTLICHEN UND TECHNISCHEN DIENSTLEISTUNGEN",
+            "fr": "M ACTIVITÉS SPÉCIALISÉES, SCIENTIFIQUES ET TECHNIQUES",
+            "it": "M ATTIVITÀ PROFESSIONALI, SCIENTIFICHE E TECNICHE"
           },
           "data": true
         },
         "N": {
           "label": {
-            "en": "N ADMINISTRATIVE AND SUPPORT SERVICE ACTIVITIES"
+            "en": "N ADMINISTRATIVE AND SUPPORT SERVICE ACTIVITIES",
+            "de": "N ERBRINGUNG VON SONSTIGEN WIRTSCHAFTLICHEN DIENSTLEISTUNGEN",
+            "fr": "N ACTIVITÉS DE SERVICES ADMINISTRATIFS ET DE SOUTIEN",
+            "it": "N ATTIVITÀ AMMINISTRATIVE E DI SERVIZI DI SUPPORTO"
           },
           "data": true
         }
@@ -93,19 +124,28 @@
       "levels": {
         "N": {
           "label": {
-            "en": "Neither seasonally adjusted nor calendar adjusted data"
+            "en": "Neither seasonally adjusted nor calendar adjusted data",
+            "de": "Weder saisonbereinigte noch kalenderbereinigte Daten",
+            "fr": "Données ni corrigées des variations saisonnières ni corrigées des effets de calendrier",
+            "it": "Dati non destagionalizzati né corretti per il calendario"
           },
           "data": true
         },
         "W": {
           "label": {
-            "en": "Calendar adjusted data, not seasonally adjusted"
+            "en": "Calendar adjusted data, not seasonally adjusted",
+            "de": "Kalenderbereinigte Daten, nicht saisonal bereinigt",
+            "fr": "Données corrigées du calendrier, non corrigées des variations saisonnières",
+            "it": "Dati corretti per il calendario, non destagionalizzati"
           },
           "data": true
         },
         "Y": {
           "label": {
-            "en": "Calendar and seasonally adjusted data"
+            "en": "Calendar and seasonally adjusted data",
+            "de": "Kalender- und saisonbereinigte Daten",
+            "fr": "Données corrigées du calendrier et des variations saisonnières",
+            "it": "Dati corretti per il calendario e per la stagione"
           },
           "data": true
         }
@@ -118,27 +158,52 @@
       "levels": {
         "UEXP": {
           "label": {
-            "en": "Foreign turnover (nominal)"
+            "en": "Foreign turnover (nominal)",
+            "de": "Auslandumsatz (nominal)",
+            "fr": "Chiffre d'affaires à l'extérieur (nominal)",
+            "it": "Cifre d'affari all'estero (nominale)"
           },
           "data": true
         },
         "UINL": {
           "label": {
-            "en": "Domestic turnover (nominal)"
+            "en": "Domestic turnover (nominal)",
+            "de": "Inlandumsatz (nominal)",
+            "fr": "Chiffre d'affaires à l'intérieur (nominal)",
+            "it": "Cifre d'affari sul mercato interno (nominale)"
           },
           "data": true
         },
         "UTOT": {
           "label": {
-            "en": "Total turnover (nominal)"
+            "en": "Total turnover (nominal)",
+            "de": "Gesamtumsatz (nominal)",
+            "fr": "Chiffre d'affaires total (nominal)",
+            "it": "Cifre d'affari totali (nominale)"
           },
           "data": true
         }
       }
     }
   },
-  "topic": "Domestic economy",
-  "concept": "Domestic economy / Services turnover",
+  "topic": {
+    "key": "domestic-economy",
+    "name": {
+      "en": "Domestic economy",
+      "de": "Binnenwirtschaft",
+      "fr": "Économie intérieure",
+      "it": "Economia interna"
+    }
+  },
+  "concept": {
+    "en": "Domestic economy / Services turnover",
+    "leaf": {
+      "en": "Services turnover",
+      "de": "Umsätze Dienstleistungen",
+      "fr": "Chiffres d'affaires des services",
+      "it": "Fatturato dei servizi"
+    }
+  },
   "canonical": true,
   "split": "NOGA",
   "single_select": ["ADJUSTMENT", "INDICATOR_KE"],
@@ -148,6 +213,11 @@
     "ADJUSTMENT": "Y",
     "INDICATOR_KE": "UTOT"
   },
-  "description": "The turnover index for the tertiary (services) sector, completing the sector-turnover triad alongside retail (ch_fso_retail) and industry/construction (ch_fso_production). Same FSO SDMX flow as production (DF_KEU_Q1), disjoint NOGA codes. History is genuinely short — services turnover is a newer FSO product, base 2021 = 100; the secondary-sector codes in the same flow reach back to 1999, the tertiary ones do not.",
-  "fetched_utc": "2026-08-05 09:13:31"
+  "description": {
+    "en": "Turnover of the Swiss services sector each quarter, completing the picture alongside retail and industry. Base 2021 = 100, so history is short.",
+    "de": "Umsatz des Schweizer Dienstleistungssektors pro Quartal, als Ergänzung zu Detailhandel und Industrie. Basis 2021 = 100, daher kurze Historie.",
+    "fr": "Chiffre d'affaires du secteur suisse des services par trimestre, en complément du commerce de détail et de l'industrie. Base 2021 = 100, donc historique court.",
+    "it": "Fatturato del settore svizzero dei servizi per trimestre, a completamento di commercio al dettaglio e industria. Base 2021 = 100, quindi storia breve."
+  },
+  "fetched_utc": "2026-08-05 13:12:05"
 }

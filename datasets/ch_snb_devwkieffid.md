@@ -1,29 +1,21 @@
 # Effective exchange rate indices – Daily
 
 - **id**: ch_snb_devwkieffid
-- **title**: Effective exchange-rate index
+- **title**: Effective exchange-rate index | de: Effektiver Wechselkursindex | fr: Indice de taux de change effectif | it: Indice del tasso di cambio effettivo
 - **concept**: Exchange rates / Effective FX index
 - **canonical**: yes
-- **source**: Swiss National Bank (SNB)
+- **source**: snb
 - **license**: snb (free reuse, attribution required)
 - **frequency**: daily
 - **coverage**: 1999-01 .. 2026-04-30
 - **series**: 12
 
 ## What is special
-The **trade-weighted effective exchange rate** of the Swiss franc, the single most
-watched FX summary for franc strength, published **daily**. Two country-group
-aggregates are offered: the **overall index** (G) and a **euro-area index** (E).
-As with the bilateral indices, the nominal/real split nests into nominal (N), real
-CPI-based (K) and real PPI-based (P), and each is given both as index (I) and as
-**day-on-day % change** (V). This daily cube is the **canonical effective-FX series**;
-the monthly roll-up `devwkieffim` is the dropped lower-frequency duplicate per the
-native-frequency rule. The JSON `start` is 1999-01 but the daily observations in the
-CSV begin late 2000 for the index level (`K,E,I` from 2000-11-30); earlier history is
-sparse and series-dependent.
+The trade-weighted franc index, the standard daily measure of how strong the Swiss franc is overall and against the euro area.
 
 ## Access
-- **type**: SNB cube API
+- **type**: snb-cube — SNB cube API
+- **cube**: `devwkieffid`
 - **endpoint**: `https://data.snb.ch/api/cube/devwkieffid/data/json/en`
 - **call**: `snb_fetch("devwkieffid", title = "Effective exchange rate indices – Daily")`
 
@@ -59,3 +51,12 @@ Keeping only `I` collapses `D2` away.
 ## Provenance
 Script: `R/source_snb.R::snb_fetch` (title/topic from `R/snb_cubes.tsv`). Datasheet
 authored 2026-06-01.
+
+## What is special (de)
+Der handelsgewichtete Frankenindex, das tägliche Standardmass dafür, wie stark der Franken insgesamt und gegenüber dem Euroraum ist.
+
+## What is special (fr)
+L'indice du franc pondéré par les échanges, la mesure quotidienne de référence de la force du franc, globalement et face à la zone euro.
+
+## What is special (it)
+L'indice del franco ponderato per gli scambi, la misura giornaliera di riferimento della forza del franco, complessiva e verso l'area euro.

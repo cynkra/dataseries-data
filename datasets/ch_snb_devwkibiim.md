@@ -1,28 +1,21 @@
 # Bilateral exchange rate indices – Monthly
 
 - **id**: ch_snb_devwkibiim
-- **title**: Bilateral exchange-rate indices
+- **title**: Bilateral exchange-rate indices | de: Bilaterale Wechselkursindizes | fr: Indices de taux de change bilatéraux | it: Indici dei tassi di cambio bilaterali
 - **concept**: Exchange rates / Bilateral FX
 - **canonical**: yes
-- **source**: Swiss National Bank (SNB)
+- **source**: snb
 - **license**: snb (free reuse, attribution required)
 - **frequency**: monthly
 - **coverage**: 1973-01 .. 2026-04
 - **series**: 324
 
 ## What is special
-Bilateral exchange-rate **indices** (not levels) of the Swiss franc against ~54
-partner currencies, the largest series count in this group at 324. The
-nominal/real split is itself nested: `D0` offers `N` nominal and a non-data `R` real
-node that expands into two real measures, **CPI-based** (K) and **PPI-based** (P), so
-"real" is delivered as two distinct deflator variants rather than one. Each
-bilateral index is published both as the **index** (I) and as the **year-on-year %
-change** (V), which is why the series count is large (3 deflators x ~54 countries x 2
-representations). It is the live, currently-updated companion to the discontinued
-country-level `devlandm`. Defaults to CPI-based, Austria, index.
+Swiss franc exchange-rate indices against about 54 currencies, nominal and inflation-adjusted, as index levels and as yearly changes.
 
 ## Access
-- **type**: SNB cube API
+- **type**: snb-cube — SNB cube API
+- **cube**: `devwkibiim`
 - **endpoint**: `https://data.snb.ch/api/cube/devwkibiim/data/json/en`
 - **call**: `snb_fetch("devwkibiim", title = "Bilateral exchange rate indices – Monthly")`
 
@@ -59,3 +52,12 @@ duplicate a button. Keeping only `I` collapses `D2` away.
 ## Provenance
 Script: `R/source_snb.R::snb_fetch` (title/topic from `R/snb_cubes.tsv`). Datasheet
 authored 2026-06-01.
+
+## What is special (de)
+Frankenkurs-Indizes gegenüber rund 54 Währungen, nominal und teuerungsbereinigt, als Indexstände und als Jahresveränderungen.
+
+## What is special (fr)
+Indices de cours du franc face à environ 54 monnaies, nominaux et corrigés de l'inflation, en niveaux d'indice et en variations annuelles.
+
+## What is special (it)
+Indici del corso del franco rispetto a circa 54 valute, nominali e corretti per l'inflazione, come livelli d'indice e variazioni annue.

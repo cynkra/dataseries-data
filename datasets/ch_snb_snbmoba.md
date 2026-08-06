@@ -1,9 +1,10 @@
 # Monetary base
 
 - **id**: ch_snb_snbmoba
+- **title**: Monetary base | de: Notenbankgeldmenge | fr: Monnaie centrale | it: Base monetaria
 - **concept**: Money & banking / Monetary aggregates
 - **canonical**: no (alternate for Monetary aggregates; `ch_snb_snbmonagg` M1-M3 is canonical)
-- **source**: Swiss National Bank (SNB)
+- **source**: snb
 - **license**: snb (free reuse, attribution required)
 - **frequency**: monthly
 - **coverage**: 1950-01 .. 2026-04
@@ -11,22 +12,11 @@
 - **updated**: 2026-04 (use API PublishingDate header for exact day)
 
 ## What is special
-The Swiss monetary base, monthly back to 1950, one of the longest-running money
-series in the catalog. Distinctive because it gives both sides of the central
-bank's money creation in one cube. The flat `D0` codes split into three groups in
-the hierarchy: Origination (`RF` relevant foreign-currency positions, `W`
-securities portfolio, `G` money-market transactions, `S0` other, `N0` base) and
-Utilisation (`N1` banknotes in circulation, `GB` sight deposit accounts of
-domestic banks, `N2` base) sum to the same total from the asset vs liability side,
-and a Seasonally adjusted block (`N3` base, `S1` seasonal factor). So the seasonal
-adjustment here is encoded as its own series rather than a toggle, which matches
-the rest of SNB (no SA switch). Levels are in CHF millions. As a money concept it
-is the base-money companion to the M1-M3 aggregates; in the curated view M1-M3
-(`snbmonagg`) is the headline aggregate, with the base, target range (`snbband`)
-and SNB balance sheet (`snbbipo`) kept alongside it.
+Central bank money in Switzerland, shown from both sides: how it is created, and banknotes plus the sight deposits banks hold.
 
 ## Access
-- **type**: SNB cube API
+- **type**: snb-cube — SNB cube API
+- **cube**: `snbmoba`
 - **endpoint**: `https://data.snb.ch/api/cube/snbmoba/data/json/en`
 - **call**: `snb_fetch("snbmoba", title = "Monetary base")`
 
@@ -69,3 +59,12 @@ and SNB balance sheet (`snbbipo`) kept alongside it.
 ## Provenance
 Script: `R/source_snb.R::snb_fetch` (cube `snbmoba`, title from `R/snb_cubes.tsv`,
 topic "Money and banking"). Datasheet authored 2026-06-01.
+
+## What is special (de)
+Notenbankgeld in der Schweiz, von beiden Seiten gezeigt: wie es entsteht, und Notenumlauf plus Giroguthaben der Banken.
+
+## What is special (fr)
+La monnaie centrale en Suisse, montrée des deux côtés : comment elle est créée, et les billets en circulation plus les avoirs à vue des banques.
+
+## What is special (it)
+La moneta centrale in Svizzera, mostrata da entrambi i lati: come viene creata, e le banconote in circolazione più gli averi a vista delle banche.

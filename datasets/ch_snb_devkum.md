@@ -1,11 +1,11 @@
 # Foreign exchange rates – Month
 
 - **id**: ch_snb_devkum
-- **title**: Bilateral exchange rates
+- **title**: Bilateral exchange rates | de: Bilaterale Wechselkurse | fr: Taux de change bilatéraux | it: Tassi di cambio bilaterali
 - **concept**: Exchange rates / Bilateral FX
 - **canonical**: yes
 - **featured**: Exchange rates
-- **source**: Swiss National Bank (SNB)
+- **source**: snb
 - **license**: snb (free reuse, attribution required)
 - **frequency**: monthly
 - **coverage**: 1914-01 .. 2026-04
@@ -13,20 +13,11 @@
 - **updated**: 2026-04 (latest observation)
 
 ## What is special
-The headline bilateral CHF exchange-rate table, with a history reaching back to
-**1914**, the longest FX record in the catalog. Quotes are CHF per foreign-currency
-unit, with the unit baked into each currency label (EUR 1, GBP 1, but DKK 100, JPY
-100, etc.), so the multiplier matters when comparing rates. Each currency is
-published as both a **monthly average** (M0) and an **end-of-month** value (M1).
-Beyond spot rates it carries two **USD forward rates** (3-month and 6-month, CHF per
-1 USD), which is unusual for a spot-rate table. Currencies are grouped by region
-(Europe, America, Africa, Asia and Australia, SDR, USD forward rates); the group
-nodes are non-data headers. Note the CSV begins well after 1914 for most currencies
-(e.g. ARS from 1999); the 1914 start reflects the earliest long series (USD/major
-European), not every pair.
+Swiss franc exchange rates against the major currencies, monthly average and month end. Quoted per unit, but per 100 for yen, krone and others.
 
 ## Access
-- **type**: SNB cube API
+- **type**: snb-cube — SNB cube API
+- **cube**: `devkum`
 - **endpoint**: `https://data.snb.ch/api/cube/devkum/data/json/en`
 - **call**: `snb_fetch("devkum", title = "Foreign exchange rates – Month")`
 
@@ -61,3 +52,12 @@ European), not every pair.
 ## Provenance
 Script: `R/source_snb.R::snb_fetch` (title/topic from `R/snb_cubes.tsv`). Datasheet
 authored 2026-06-01.
+
+## What is special (de)
+Frankenkurse gegenüber den wichtigsten Währungen, Monatsdurchschnitt und Monatsende. Notiert je Einheit, aber je 100 bei Yen, Kronen und anderen.
+
+## What is special (fr)
+Cours du franc suisse face aux principales monnaies, moyenne mensuelle et fin de mois. Cotés par unité, mais par 100 pour le yen, les couronnes et d'autres.
+
+## What is special (it)
+Corsi del franco svizzero rispetto alle principali valute, media mensile e fine mese. Quotati per unità, ma per 100 per yen, corone e altre.

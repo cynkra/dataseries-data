@@ -1,10 +1,10 @@
 # Producer and Import Price Index
 
 - **id**: ch_fso_ppi
-- **title**: Producer & import prices
+- **title**: Producer & import prices | de: Produzenten- und Importpreise | fr: Prix à la production et à l'importation | it: Prezzi alla produzione e all'importazione
 - **concept**: Prices / Producer & import prices
 - **canonical**: yes
-- **source**: Swiss Federal Statistical Office (FSO)
+- **source**: fso
 - **license**: fso (free reuse, attribution required)
 - **frequency**: monthly
 - **coverage**: 1963-01 .. 2026-04
@@ -12,14 +12,10 @@
 - **updated**: 2026-05-12
 
 ## What is special
-Producer and import prices for Switzerland, monthly back to 1963. The seven
-"series" are the same total index expressed on **seven successive original base
-years** (1963, 1993, 2003, 2010, 2015, 2020, 2025), each a re-indexed view of the
-same Producer Price Index, all fully populated over the whole span. This mirrors
-the old parser's `idx_type` dimension. Longest price history in the catalog.
+Prices Swiss producers charge and importers pay, monthly. The seven series are the same index rebased on successive years from 1963 to 2025.
 
 ## Access
-- **type**: FSO DAM Excel asset
+- **type**: fso-dam-excel — FSO DAM Excel asset
 - **order number**: su-q-05.04.03.01-ppi-ipp
 - **call**: `fso_excel_download("su-q-05.04.03.01-ppi-ipp")`
 
@@ -35,6 +31,10 @@ the old parser's `idx_type` dimension. Longest price history in the catalog.
 ## Dimensions
 - `base`: the index original base year (1963, 1993, 2003, 2010, 2015, 2020, 2025).
   Month labels translated for English (Mai -> May, Dez -> Dec).
+
+## Labels
+- dim: base
+  - **label**: Index base | de: Indexbasis | fr: Base de l'indice | it: Base dell'indice
 
 ## Display
 - **split**: base
@@ -60,3 +60,12 @@ the headline transform is year-on-year (`yoy`) rather than the raw index level.
 ## Provenance
 Script: `R/source_fso_excel_sets.R::fso_excel_ch_fso_ppi`. Datasheet 2026-06-01;
 parser verified 2026-06-01 (5,320 rows, 7 series, 0 NA values).
+
+## What is special (de)
+Preise, die Schweizer Produzenten verlangen und Importeure zahlen, monatlich. Die sieben Reihen sind derselbe Index, neu basiert auf den Jahren 1963 bis 2025.
+
+## What is special (fr)
+Prix pratiqués par les producteurs suisses et payés par les importateurs, mensuel. Les sept séries sont le même indice rebasé sur les années 1963 à 2025.
+
+## What is special (it)
+Prezzi praticati dai produttori svizzeri e pagati dagli importatori, mensile. Le sette serie sono lo stesso indice ribasato sugli anni dal 1963 al 2025.

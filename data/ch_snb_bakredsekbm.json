@@ -1,5 +1,5 @@
 {
-  "schema_version": "1.0",
+  "schema_version": "1.1",
   "id": "ch_snb_bakredsekbm",
   "dim_order": [
     "D0",
@@ -10,49 +10,68 @@
   "start": "1985-06-01",
   "end": "2026-05-01",
   "title": {
-    "en": "Domestic loans by sector"
+    "en": "Domestic loans by sector",
+    "de": "Inlandkredite nach Sektor",
+    "fr": "Crédits en Suisse par secteur",
+    "it": "Crediti interni per settore"
   },
   "source": {
     "name": {
-      "en": "Swiss National Bank"
+      "en": "Swiss National Bank",
+      "de": "Schweizerische Nationalbank (SNB)",
+      "fr": "Banque nationale suisse (BNS)",
+      "it": "Banca nazionale svizzera (BNS)"
     },
-    "url": "https://data.snb.ch/en/topics/snb/cube/bakredsekbm"
+    "url": "https://data.snb.ch/en/topics/snb/cube/bakredsekbm",
+    "key": "snb"
   },
   "license": "snb",
   "frequency": "monthly",
   "dimensions": {
     "D0": {
       "label": {
-        "en": "Bank category"
+        "en": "Bank category",
+        "de": "Bankengruppe",
+        "fr": "Catégories de banques"
       },
       "levels": {
         "AV1": {
           "label": {
-            "en": "Banks in Switzerland"
+            "en": "Banks in Switzerland",
+            "de": "Banken in der Schweiz",
+            "fr": "Banques établies en Suisse"
           },
           "data": true
         },
         "AV10": {
           "label": {
-            "en": "Raiffeisen banks"
+            "en": "Raiffeisen banks",
+            "de": "Raiffeisenbanken",
+            "fr": "Banques Raiffeisen"
           },
           "data": true
         },
         "AV2": {
           "label": {
-            "en": "Cantonal banks"
+            "en": "Cantonal banks",
+            "de": "Kantonalbanken",
+            "fr": "Banques cantonales"
           },
           "data": true
         },
         "AV3": {
           "label": {
-            "en": "Big banks"
+            "en": "Big banks",
+            "de": "Grossbanken",
+            "fr": "Grandes banques"
           },
           "data": true
         },
         "AV4": {
           "label": {
-            "en": "Regional and savings banks"
+            "en": "Regional and savings banks",
+            "de": "Regionalbanken und Sparkassen",
+            "fr": "Banques régionales et caisses d'épargne"
           },
           "data": true
         }
@@ -67,42 +86,56 @@
     },
     "D1": {
       "label": {
-        "en": "Type of loan"
+        "en": "Type of loan",
+        "de": "Kreditart",
+        "fr": "Type de crédit"
       },
       "levels": {
         "T0": {
           "label": {
-            "en": "Total loans"
+            "en": "Total loans",
+            "de": "Total Kredite",
+            "fr": "Total crédits"
           },
           "data": true
         },
         "H": {
           "label": {
-            "en": "Mortgage loans"
+            "en": "Mortgage loans",
+            "de": "Hypothekarkredite",
+            "fr": "Prêts hypothécaires"
           },
           "data": true
         },
         "K": {
           "label": {
-            "en": "Other loans"
+            "en": "Other loans",
+            "de": "Übrige Kredite",
+            "fr": "Autres crédits"
           },
           "data": false
         },
         "T2": {
           "label": {
-            "en": "Total"
+            "en": "Total",
+            "de": "Total",
+            "fr": "Total"
           },
           "data": true
         },
         "GE": {
           "label": {
-            "en": "secured"
+            "en": "secured",
+            "de": "gedeckt",
+            "fr": "gagés"
           },
           "data": true
         },
         "UN": {
           "label": {
-            "en": "unsecured"
+            "en": "unsecured",
+            "de": "ungedeckt",
+            "fr": "en blanc"
           },
           "data": true
         }
@@ -119,18 +152,24 @@
     },
     "D2": {
       "label": {
-        "en": "Utilisation and credit lines"
+        "en": "Utilisation and credit lines",
+        "de": "Benützung und Limiten",
+        "fr": "Utilisation et limites"
       },
       "levels": {
         "F": {
           "label": {
-            "en": "Utilisation"
+            "en": "Utilisation",
+            "de": "Benützung",
+            "fr": "Utilisation"
           },
           "data": true
         },
         "B": {
           "label": {
-            "en": "Credit lines"
+            "en": "Credit lines",
+            "de": "Limiten",
+            "fr": "Limites"
           },
           "data": true
         }
@@ -142,114 +181,152 @@
     },
     "D3": {
       "label": {
-        "en": "Economic activities and sectors"
+        "en": "Economic activities and sectors",
+        "de": "Branchen und Sektoren",
+        "fr": "Branches et secteurs"
       },
       "levels": {
         "T1": {
           "label": {
-            "en": "Total domestic"
+            "en": "Total domestic",
+            "de": "Total Inland",
+            "fr": "Total Suisse"
           },
           "data": true
         },
         "AA": {
           "label": {
-            "en": "Private households"
+            "en": "Private households",
+            "de": "Private Haushalte",
+            "fr": "Ménages"
           },
           "data": true
         },
         "A": {
           "label": {
-            "en": "Agriculture, forestry and fishing"
+            "en": "Agriculture, forestry and fishing",
+            "de": "Land- und Forstwirtschaft, Fischerei",
+            "fr": "Agriculture, sylviculture et pêche"
           },
           "data": true
         },
         "B": {
           "label": {
-            "en": "Mining and quarrying"
+            "en": "Mining and quarrying",
+            "de": "Bergbau und Gewinnung von Steinen und Erden",
+            "fr": "Industries extractives"
           },
           "data": true
         },
         "C": {
           "label": {
-            "en": "Manufacturing"
+            "en": "Manufacturing",
+            "de": "Verarbeitendes Gewerbe, Herstellung von Waren",
+            "fr": "Industries manufacturières"
           },
           "data": true
         },
         "DE": {
           "label": {
-            "en": "Electricity, gas, steam and air conditioning supply; Water supply; Sewerage, waste management and remediation activities"
+            "en": "Electricity, gas, steam and air conditioning supply; Water supply; Sewerage, waste management and remediation activities",
+            "de": "Energieversorgung; Wasserversorgung; Abwasser- und Abfallentsorgung und Beseitigung von Umweltverschmutzungen",
+            "fr": "Production et distribution d’électrictité, de gaz, de vapeur et d’air conditionné; Production et distribution d’eau; assainissement, gestion des déchets et dépollution"
           },
           "data": true
         },
         "F": {
           "label": {
-            "en": "Construction"
+            "en": "Construction",
+            "de": "Baugewerbe, Bau",
+            "fr": "Construction"
           },
           "data": true
         },
         "G": {
           "label": {
-            "en": "Wholesale and retail trade; repair of motor vehicles and motorcycles"
+            "en": "Wholesale and retail trade; repair of motor vehicles and motorcycles",
+            "de": "Handel; Instandhaltung und Reparatur von Motorfahrzeugen",
+            "fr": "Commerce; réparation d’automobiles et de motocycles"
           },
           "data": true
         },
         "H": {
           "label": {
-            "en": "Transportation and storage"
+            "en": "Transportation and storage",
+            "de": "Verkehr und Lagerei",
+            "fr": "Transport et entreposage"
           },
           "data": true
         },
         "I": {
           "label": {
-            "en": "Accommodation and food service activities"
+            "en": "Accommodation and food service activities",
+            "de": "Gastgewerbe, Beherbergung und Gastronomie",
+            "fr": "Hébergement et restauration"
           },
           "data": true
         },
         "JLMN": {
           "label": {
-            "en": "Information and communication; Real estate activities; Professional, scientific and technical acitivities; Administrative and support service activities"
+            "en": "Information and communication; Real estate activities; Professional, scientific and technical acitivities; Administrative and support service activities",
+            "de": "Information  und Kommunikation; Grundstücks- und Wohnungswesen; Erbringung von freiberuflichen, wissenschaftlichen und technischen Dienstleistungen; Erbringung von sonstigen wirtschaftlichen Dienstleistungen",
+            "fr": "Information et communication; Activités immobilières; Activités spécialisées, scientifiques et techniques; Activités de services administratifs et de soutien"
           },
           "data": true
         },
         "K": {
           "label": {
-            "en": "Financial and insurance activities"
+            "en": "Financial and insurance activities",
+            "de": "Erbringung von Finanz- und Versicherungsdienstleistungen",
+            "fr": "Activités financières et d’assurance"
           },
           "data": true
         },
         "O": {
           "label": {
-            "en": "Public adminstration and defence; compulsory social security"
+            "en": "Public adminstration and defence; compulsory social security",
+            "de": "Öffentliche Verwaltung, Verteidigung; Sozialversicherung",
+            "fr": "Administration publique"
           },
           "data": true
         },
         "P": {
           "label": {
-            "en": "Education"
+            "en": "Education",
+            "de": "Erziehung und Unterricht",
+            "fr": "Enseignement"
           },
           "data": true
         },
         "Q": {
           "label": {
-            "en": "Human health and social work activities"
+            "en": "Human health and social work activities",
+            "de": "Gesundheits- und Sozialwesen",
+            "fr": "Santé humaine et action sociale"
           },
           "data": true
         },
         "RS": {
           "label": {
-            "en": "Arts, entertainment and recreation; Other service activities"
+            "en": "Arts, entertainment and recreation; Other service activities",
+            "de": "Kunst, Unterhaltung und Erholung; Erbringung sonstiger Dienstleistungen",
+            "fr": "Arts, spectacles et activités récréatives; Autres activités de services"
           },
           "data": true
         },
         "U": {
           "label": {
-            "en": "Activities of extraterritorial organisations and bodies"
+            "en": "Activities of extraterritorial organisations and bodies",
+            "de": "Exterritoriale Organisationen und Körperschaften",
+            "fr": "Organisations et organismes extraterritoriaux"
           },
           "data": true
         },
         "SX1": {
           "label": {
-            "en": "Non-classifiable loans"
+            "en": "Non-classifiable loans",
+            "de": "Nicht zuordenbare Kredite",
+            "fr": "Crédits non attribuables"
           },
           "data": true
         }
@@ -278,8 +355,24 @@
     }
   },
   "updated": "2026-07-21 09:00",
-  "topic": "Money & banking",
-  "concept": "Money & banking / Banking & credit",
+  "topic": {
+    "key": "money-banking",
+    "name": {
+      "en": "Money & banking",
+      "de": "Geld & Banken",
+      "fr": "Monnaie & banques",
+      "it": "Moneta e banche"
+    }
+  },
+  "concept": {
+    "en": "Money & banking / Banking & credit",
+    "leaf": {
+      "en": "Banking & credit",
+      "de": "Banken & Kredit",
+      "fr": "Banques & crédit",
+      "it": "Banche e credito"
+    }
+  },
   "canonical": true,
   "split": "D3",
   "single_select": ["D0", "D1", "D2"],
@@ -290,6 +383,11 @@
     "D1": "T0",
     "D2": "F"
   },
-  "description": "Domestic bank loans broken down by borrower industry (NOGA/NACE sections): private households plus the full sector list from agriculture and manufacturing through construction, trade, hospitality, finance, health, public administration and a non-classifiable bucket. This is the most granular of the bakred credit cubes, the one that tells you which parts of the Swiss economy are borrowing. The industry axis is crossed with bank category, loan type (mortgage / other, secured / unsecured) and the utilisation-vs-credit-line pair, which is what pushes it to 540 stored series. Long history from 1985, and the sector dimension is the distinctive feature; household mortgage utilisation is the default cell.",
-  "fetched_utc": "2026-07-21 09:18:21"
+  "description": {
+    "en": "Which industries Swiss banks lend to: households, manufacturing, construction, trade, finance, health and the rest of the economy.",
+    "de": "Welchen Branchen Schweizer Banken Kredite geben: Haushalte, Industrie, Bau, Handel, Finanz, Gesundheit und die übrige Wirtschaft.",
+    "fr": "À quelles branches les banques suisses prêtent : ménages, industrie, construction, commerce, finance, santé et le reste de l'économie.",
+    "it": "A quali rami le banche svizzere concedono crediti: economie domestiche, industria, costruzioni, commercio, finanza, sanità e resto dell'economia."
+  },
+  "fetched_utc": "2026-08-05 13:12:01"
 }

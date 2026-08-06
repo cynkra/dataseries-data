@@ -1,9 +1,10 @@
 # Official interest rates
 
 - **id**: ch_snb_snboffzisa
+- **title**: Official interest rates | de: Offizielle Zinssätze | fr: Taux d'intérêt officiels | it: Tassi d'interesse ufficiali
 - **concept**: Interest rates & yields / Policy & official rates
 - **canonical**: yes
-- **source**: Swiss National Bank (SNB)
+- **source**: snb
 - **license**: snb (free reuse, attribution required)
 - **frequency**: monthly
 - **coverage**: 2000-01 .. 2026-04
@@ -11,21 +12,11 @@
 - **updated**: 2026-04 (use API PublishingDate header for exact day)
 
 ## What is special
-The official policy rates set by the major central banks, monthly from 2000, on a
-single cube. Distinctive because it is not just the Swiss rate: the hierarchy is
-organised by country, so it doubles as a cross-central-bank policy-rate comparison.
-Switzerland carries the `LZ` SNB policy rate plus the historical SNB target range
-for 3-month CHF Libor (`UG0` lower, `OG0` upper). The United States block is the
-Fed target range (`UG1`/`OG1`). The Euro area/ECB block has three distinct
-facility rates: `H` main refinancing, `SRF` marginal lending, `EF` deposit
-facility. The UK is `L0` (Bank of England Bank Rate) and Japan `L1` (BoJ
-uncollateralised overnight call rate). All values are in percent. This captures
-the regime change in Swiss monetary policy (the move from a Libor target band to a
-single SNB policy rate) inside one series, because both the old range bounds and
-the current single rate live here.
+Policy interest rates of the SNB, Fed, ECB, Bank of England and Bank of Japan in one table, including the old Swiss Libor target range.
 
 ## Access
-- **type**: SNB cube API
+- **type**: snb-cube — SNB cube API
+- **cube**: `snboffzisa`
 - **endpoint**: `https://data.snb.ch/api/cube/snboffzisa/data/json/en`
 - **call**: `snb_fetch("snboffzisa", title = "Official interest rates")`
 
@@ -68,3 +59,12 @@ the current single rate live here.
 ## Provenance
 Script: `R/source_snb.R::snb_fetch` (cube `snboffzisa`, title from
 `R/snb_cubes.tsv`, topic "Interest rates"). Datasheet authored 2026-06-01.
+
+## What is special (de)
+Leitzinsen von SNB, Fed, EZB, Bank of England und Bank of Japan in einer Tabelle, inklusive des früheren Schweizer Libor-Zielbands.
+
+## What is special (fr)
+Taux directeurs de la BNS, de la Fed, de la BCE, de la Banque d'Angleterre et de la Banque du Japon dans un même tableau, y compris l'ancienne marge cible Libor suisse.
+
+## What is special (it)
+Tassi di riferimento di BNS, Fed, BCE, Bank of England e Bank of Japan in un'unica tabella, incluso il precedente margine obiettivo Libor svizzero.

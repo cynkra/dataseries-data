@@ -1,9 +1,10 @@
 # Business cycle signals
 
 - **id**: ch_snb_snbkosiq
+- **title**: Business cycle signals | de: Konjunktursignale | fr: Signaux conjoncturels | it: Segnali congiunturali
 - **concept**: Business cycle & sentiment / Business cycle signals
 - **canonical**: yes
-- **source**: Swiss National Bank (SNB)
+- **source**: snb
 - **license**: snb (free reuse, attribution required)
 - **frequency**: quarterly
 - **coverage**: 2011-01 .. 2026-01
@@ -11,24 +12,11 @@
 - **updated**: 2026-01 (use API PublishingDate header for exact day)
 
 ## What is special
-This is the SNB's own read of the business cycle, distilled from its quarterly
-talks with companies across Switzerland (the SNB regional network / company
-survey). Unlike a single composite barometer, it ships 24 separate qualitative
-signals on one flat dimension: turnover vs the year-back quarter and vs the
-previous quarter, capacity utilisation, procurement difficulties, margins,
-lending conditions, liquidity, staff shortages, expected turnover and employment,
-expected purchase- and sales-price changes, planned equipment and construction
-investment, and quantitative wage- and inflation-expectation series. Most signals
-are diffusion-style indices; a handful (`LELJ`, `LEFJ` wage increases, `IERW`
-inflation expectations) are in percent. The one nested item is `IERW` ->
-`{IERWM, IERWJ}` (inflation expected in 6-12 months vs 3-5 years). Shorter history
-than the price/money cubes (starts 2011), and it is the only catalog series that
-captures firm-level sentiment direct from the central bank rather than a survey
-institute. KOF's barometer is the canonical leading indicator; this sits beside it
-as the SNB's qualitative companion.
+What Swiss companies tell the National Bank each quarter about turnover, capacity, hiring, margins, prices and wage expectations.
 
 ## Access
-- **type**: SNB cube API
+- **type**: snb-cube — SNB cube API
+- **cube**: `snbkosiq`
 - **endpoint**: `https://data.snb.ch/api/cube/snbkosiq/data/json/en`
 - **call**: `snb_fetch("snbkosiq", title = "Business cycle signals")`
 
@@ -80,3 +68,12 @@ as the SNB's qualitative companion.
 ## Provenance
 Script: `R/source_snb.R::snb_fetch` (cube `snbkosiq`, title from `R/snb_cubes.tsv`,
 topic "Business surveys"). Datasheet authored 2026-06-01.
+
+## What is special (de)
+Was Schweizer Unternehmen der Nationalbank vierteljährlich zu Umsatz, Kapazität, Personalsuche, Margen, Preisen und Lohnerwartungen berichten.
+
+## What is special (fr)
+Ce que les entreprises suisses rapportent chaque trimestre à la Banque nationale sur le chiffre d'affaires, les capacités, l'embauche, les marges, les prix et les salaires attendus.
+
+## What is special (it)
+Cosa le imprese svizzere riferiscono trimestralmente alla Banca nazionale su fatturato, capacità, assunzioni, margini, prezzi e attese salariali.

@@ -1,5 +1,5 @@
 {
-  "schema_version": "1.0",
+  "schema_version": "1.1",
   "id": "ch_snb_zikrepro",
   "dim_order": [
     "D0",
@@ -8,43 +8,60 @@
   "start": "1933-01-01",
   "end": "2026-06-01",
   "title": {
-    "en": "Published interest rates"
+    "en": "Published interest rates",
+    "de": "Publizierte Zinssätze",
+    "fr": "Taux d'intérêt publiés",
+    "it": "Tassi d'interesse pubblicati"
   },
   "source": {
     "name": {
-      "en": "Swiss National Bank"
+      "en": "Swiss National Bank",
+      "de": "Schweizerische Nationalbank (SNB)",
+      "fr": "Banque nationale suisse (BNS)",
+      "it": "Banca nazionale svizzera (BNS)"
     },
-    "url": "https://data.snb.ch/en/topics/snb/cube/zikrepro"
+    "url": "https://data.snb.ch/en/topics/snb/cube/zikrepro",
+    "key": "snb"
   },
   "license": "snb",
   "frequency": "monthly",
   "dimensions": {
     "D0": {
       "label": {
-        "en": "Reference values"
+        "en": "Reference values",
+        "de": "Verteilungsmasse",
+        "fr": "Chiffres repères"
       },
       "levels": {
         "M": {
           "label": {
-            "en": "Mean value"
+            "en": "Mean value",
+            "de": "Mittelwert",
+            "fr": "Moyenne"
           },
           "data": true
         },
         "025Q": {
           "label": {
-            "en": "0.25 quantile"
+            "en": "0.25 quantile",
+            "de": "Quantil 25%",
+            "fr": "Premier quartile"
           },
           "data": true
         },
         "05Q": {
           "label": {
-            "en": "Median"
+            "en": "Median",
+            "de": "Median",
+            "fr": "Médiane"
           },
           "data": true
         },
         "075Q": {
           "label": {
-            "en": "0.75 quantile"
+            "en": "0.75 quantile",
+            "de": "Quantil 75%",
+            "fr": "Troisième quartile"
           },
           "data": true
         }
@@ -58,486 +75,648 @@
     },
     "D1": {
       "label": {
-        "en": "Products"
+        "en": "Products",
+        "de": "Produkte",
+        "fr": "Produits"
       },
       "levels": {
         "D1_HYP": {
           "label": {
-            "en": "Mortgages"
+            "en": "Mortgages",
+            "de": "Hypotheken",
+            "fr": "Prêts hypothécaires"
           },
           "data": false
         },
         "MV": {
           "label": {
-            "en": "Variable mortgages"
+            "en": "Variable mortgages",
+            "de": "Variable Hypotheken",
+            "fr": "Prêts hypothécaires à taux variable"
           },
           "data": true
         },
         "FVZ": {
           "label": {
-            "en": "With fixed interest rates"
+            "en": "With fixed interest rates",
+            "de": "Mit fester Verzinsung",
+            "fr": "À taux fixe"
           },
           "data": false
         },
         "FVZ_LZJ": {
           "label": {
-            "en": "Maturity, in years"
+            "en": "Maturity, in years",
+            "de": "Laufzeit in Jahren",
+            "fr": "Durée en années"
           },
           "data": false
         },
         "11": {
           "label": {
-            "en": "1"
+            "en": "1",
+            "de": "1",
+            "fr": "1"
           },
           "data": true
         },
         "20": {
           "label": {
-            "en": "2"
+            "en": "2",
+            "de": "2",
+            "fr": "2"
           },
           "data": true
         },
         "30": {
           "label": {
-            "en": "3"
+            "en": "3",
+            "de": "3",
+            "fr": "3"
           },
           "data": true
         },
         "40": {
           "label": {
-            "en": "4"
+            "en": "4",
+            "de": "4",
+            "fr": "4"
           },
           "data": true
         },
         "50": {
           "label": {
-            "en": "5"
+            "en": "5",
+            "de": "5",
+            "fr": "5"
           },
           "data": true
         },
         "60": {
           "label": {
-            "en": "6"
+            "en": "6",
+            "de": "6",
+            "fr": "6"
           },
           "data": true
         },
         "70": {
           "label": {
-            "en": "7"
+            "en": "7",
+            "de": "7",
+            "fr": "7"
           },
           "data": true
         },
         "80": {
           "label": {
-            "en": "8"
+            "en": "8",
+            "de": "8",
+            "fr": "8"
           },
           "data": true
         },
         "9": {
           "label": {
-            "en": "9"
+            "en": "9",
+            "de": "9",
+            "fr": "9"
           },
           "data": true
         },
         "10": {
           "label": {
-            "en": "10"
+            "en": "10",
+            "de": "10",
+            "fr": "10"
           },
           "data": true
         },
         "HYP_11": {
           "label": {
-            "en": "11"
+            "en": "11",
+            "de": "11",
+            "fr": "11"
           },
           "data": true
         },
         "HYP_12": {
           "label": {
-            "en": "12"
+            "en": "12",
+            "de": "12",
+            "fr": "12"
           },
           "data": true
         },
         "HYP_13": {
           "label": {
-            "en": "13"
+            "en": "13",
+            "de": "13",
+            "fr": "13"
           },
           "data": true
         },
         "HYP_14": {
           "label": {
-            "en": "14"
+            "en": "14",
+            "de": "14",
+            "fr": "14"
           },
           "data": true
         },
         "HYP_15": {
           "label": {
-            "en": "15"
+            "en": "15",
+            "de": "15",
+            "fr": "15"
           },
           "data": true
         },
         "FGM": {
           "label": {
-            "en": "Linked to money market interest rates"
+            "en": "Linked to money market interest rates",
+            "de": "Mit Bindung an Geldmarktzinssätze",
+            "fr": "A taux lié au taux du marché monétaire"
           },
           "data": false
         },
         "FGM_SAR": {
           "label": {
-            "en": "With SARON-linked rates"
+            "en": "With SARON-linked rates",
+            "de": "Mit Bindung an den SARON-Zinssatz",
+            "fr": "Lié au SARON"
           },
           "data": false
         },
         "LZ_SAR": {
           "label": {
-            "en": "Maturity, in years"
+            "en": "Maturity, in years",
+            "de": "Laufzeit in Jahren",
+            "fr": "Durée en années"
           },
           "data": false
         },
         "SARJ03": {
           "label": {
-            "en": "3"
+            "en": "3",
+            "de": "3",
+            "fr": "3"
           },
           "data": true
         },
         "SARJ05": {
           "label": {
-            "en": "5"
+            "en": "5",
+            "de": "5",
+            "fr": "5"
           },
           "data": true
         },
         "SARJOBD": {
           "label": {
-            "en": "Unlimited"
+            "en": "Unlimited",
+            "de": "Unbefristet",
+            "fr": "Durée indéterminée"
           },
           "data": true
         },
         "LIB": {
           "label": {
-            "en": "With Libor-linked rates"
+            "en": "With Libor-linked rates",
+            "de": "Mit Bindung an den Libor-Zinssatz",
+            "fr": "Lié à un Libor"
           },
           "data": false
         },
         "LIB_LZJ": {
           "label": {
-            "en": "Maturity, in years"
+            "en": "Maturity, in years",
+            "de": "Laufzeit in Jahren",
+            "fr": "Durée en années"
           },
           "data": false
         },
         "LIB_LZJ_3": {
           "label": {
-            "en": "3"
+            "en": "3",
+            "de": "3",
+            "fr": "3"
           },
           "data": false
         },
         "LIB_LZJ_3_LZM": {
           "label": {
-            "en": "Libor maturity in months"
+            "en": "Libor maturity in months",
+            "de": "Libor-Zinssatz in Monaten",
+            "fr": "Libor en mois"
           },
           "data": false
         },
         "31": {
           "label": {
-            "en": "3"
+            "en": "3",
+            "de": "3",
+            "fr": "3"
           },
           "data": true
         },
         "61": {
           "label": {
-            "en": "6"
+            "en": "6",
+            "de": "6",
+            "fr": "6"
           },
           "data": true
         },
         "LIB_LZJ_3_12": {
           "label": {
-            "en": "12"
+            "en": "12",
+            "de": "12",
+            "fr": "12"
           },
           "data": true
         },
         "LIB_LZJ_5": {
           "label": {
-            "en": "5"
+            "en": "5",
+            "de": "5",
+            "fr": "5"
           },
           "data": false
         },
         "LIB_LZJ_5_LZM": {
           "label": {
-            "en": "Libor maturity in months"
+            "en": "Libor maturity in months",
+            "de": "Libor-Zinssatz in Monaten",
+            "fr": "Libor en mois"
           },
           "data": false
         },
         "32": {
           "label": {
-            "en": "3"
+            "en": "3",
+            "de": "3",
+            "fr": "3"
           },
           "data": true
         },
         "62": {
           "label": {
-            "en": "6"
+            "en": "6",
+            "de": "6",
+            "fr": "6"
           },
           "data": true
         },
         "LIB_LZJ_5_12": {
           "label": {
-            "en": "12"
+            "en": "12",
+            "de": "12",
+            "fr": "12"
           },
           "data": true
         },
         "LIB_LZJ_UNBFR": {
           "label": {
-            "en": "Unlimited"
+            "en": "Unlimited",
+            "de": "Unbefristet",
+            "fr": "Durée indéterminée"
           },
           "data": false
         },
         "LIB_LZJ_UNBFR_LZM": {
           "label": {
-            "en": "Libor maturity in months"
+            "en": "Libor maturity in months",
+            "de": "Libor-Zinssatz in Monaten",
+            "fr": "Libor en mois"
           },
           "data": false
         },
         "LIB_LZJ_UNBFR_3": {
           "label": {
-            "en": "3"
+            "en": "3",
+            "de": "3",
+            "fr": "3"
           },
           "data": true
         },
         "LIB_LZJ_UNBFR_6": {
           "label": {
-            "en": "6"
+            "en": "6",
+            "de": "6",
+            "fr": "6"
           },
           "data": true
         },
         "LIB_LZJ_UNBFR_12": {
           "label": {
-            "en": "12"
+            "en": "12",
+            "de": "12",
+            "fr": "12"
           },
           "data": true
         },
         "D1_BKK": {
           "label": {
-            "en": "Consumer credit lending"
+            "en": "Consumer credit lending",
+            "de": "Konsumkredite",
+            "fr": "Crédits à la consommation"
           },
           "data": true
         },
         "D1_PHA": {
           "label": {
-            "en": "Private clients"
+            "en": "Private clients",
+            "de": "Privatkunden",
+            "fr": "Particuliers"
           },
           "data": false
         },
         "S0": {
           "label": {
-            "en": "Payment accounts without withdrawal restrictions"
+            "en": "Payment accounts without withdrawal restrictions",
+            "de": "Zahlungskonten ohne Rückzugsbeschränkung",
+            "fr": "Comptes courants sans limitation de retrait"
           },
           "data": true
         },
         "PHA_UEB": {
           "label": {
-            "en": "Payment accounts with withdrawal restrictions"
+            "en": "Payment accounts with withdrawal restrictions",
+            "de": "Zahlungskonten mit Rückzugsbeschränkung",
+            "fr": "Comptes courants avec limitation de retrait"
           },
           "data": true
         },
         "S1": {
           "label": {
-            "en": "Savings deposits"
+            "en": "Savings deposits",
+            "de": "Spareinlagen",
+            "fr": "Dépôts d’épargne"
           },
           "data": true
         },
         "GVG": {
           "label": {
-            "en": "Tied pension provision"
+            "en": "Tied pension provision",
+            "de": "Gebundene Vorsorgegelder",
+            "fr": "Fonds de la prévoyance liée"
           },
           "data": false
         },
         "GVG_F2S": {
           "label": {
-            "en": "Vested benefits accounts (pillar 2)"
+            "en": "Vested benefits accounts (pillar 2)",
+            "de": "Freizügigkeitskonten 2. Säule",
+            "fr": "Comptes de libre passage (2e pilier)"
           },
           "data": true
         },
         "GVG_S3A": {
           "label": {
-            "en": "Tied pension provision (pillar 3a)"
+            "en": "Tied pension provision (pillar 3a)",
+            "de": "Gebundene Vorsorge Säule 3a",
+            "fr": "Prévoyance liée (pilier 3a)"
           },
           "data": true
         },
         "D1_FIK": {
           "label": {
-            "en": "Corporate clients"
+            "en": "Corporate clients",
+            "de": "Firmenkunden",
+            "fr": "Entreprises"
           },
           "data": false
         },
         "FIK_ASI": {
           "label": {
-            "en": "Payment accounts without withdrawal restrictions"
+            "en": "Payment accounts without withdrawal restrictions",
+            "de": "Zahlungskonten ohne Rückzugsbeschränkung",
+            "fr": "Comptes courants sans limitation de retrait"
           },
           "data": true
         },
         "D1_3": {
           "label": {
-            "en": "Term deposits (minimal amount equal to CHF 100,000)"
+            "en": "Term deposits (minimal amount equal to CHF 100,000)",
+            "de": "Festgelder und Termingeldanlagen (Mindestbetrag 100 000 Schweizer Franken)",
+            "fr": "Dépôts à terme (montant minimal: 100 000 francs)"
           },
           "data": false
         },
         "D1_3_LZM": {
           "label": {
-            "en": "Maturity, in months"
+            "en": "Maturity, in months",
+            "de": "Laufzeit in Monaten",
+            "fr": "Durée en mois"
           },
           "data": false
         },
         "13": {
           "label": {
-            "en": "1"
+            "en": "1",
+            "de": "1",
+            "fr": "1"
           },
           "data": true
         },
         "33": {
           "label": {
-            "en": "3"
+            "en": "3",
+            "de": "3",
+            "fr": "3"
           },
           "data": true
         },
         "63": {
           "label": {
-            "en": "6"
+            "en": "6",
+            "de": "6",
+            "fr": "6"
           },
           "data": true
         },
         "12": {
           "label": {
-            "en": "12"
+            "en": "12",
+            "de": "12",
+            "fr": "12"
           },
           "data": true
         },
         "D1_5": {
           "label": {
-            "en": "Term deposits"
+            "en": "Term deposits",
+            "de": "Festgelder und Termingeldanlagen",
+            "fr": "Dépôts à terme"
           },
           "data": false
         },
         "D1_5_LZM": {
           "label": {
-            "en": "Maturity, in years"
+            "en": "Maturity, in years",
+            "de": "Laufzeit in Jahren",
+            "fr": "Durée en années"
           },
           "data": false
         },
         "D1_5_2": {
           "label": {
-            "en": "2"
+            "en": "2",
+            "de": "2",
+            "fr": "2"
           },
           "data": true
         },
         "D1_5_3": {
           "label": {
-            "en": "3"
+            "en": "3",
+            "de": "3",
+            "fr": "3"
           },
           "data": true
         },
         "D1_5_4": {
           "label": {
-            "en": "4"
+            "en": "4",
+            "de": "4",
+            "fr": "4"
           },
           "data": true
         },
         "D1_5_5": {
           "label": {
-            "en": "5"
+            "en": "5",
+            "de": "5",
+            "fr": "5"
           },
           "data": true
         },
         "D1_5_6": {
           "label": {
-            "en": "6"
+            "en": "6",
+            "de": "6",
+            "fr": "6"
           },
           "data": true
         },
         "D1_5_7": {
           "label": {
-            "en": "7"
+            "en": "7",
+            "de": "7",
+            "fr": "7"
           },
           "data": true
         },
         "D1_5_8": {
           "label": {
-            "en": "8"
+            "en": "8",
+            "de": "8",
+            "fr": "8"
           },
           "data": true
         },
         "D1_5_9": {
           "label": {
-            "en": "9"
+            "en": "9",
+            "de": "9",
+            "fr": "9"
           },
           "data": true
         },
         "D1_5_10": {
           "label": {
-            "en": "10"
+            "en": "10",
+            "de": "10",
+            "fr": "10"
           },
           "data": true
         },
         "D1_4": {
           "label": {
-            "en": "Cash bonds"
+            "en": "Cash bonds",
+            "de": "Kassenobligationen",
+            "fr": "Obligations de caisse"
           },
           "data": false
         },
         "D1_4_LZM": {
           "label": {
-            "en": "Maturity, in years"
+            "en": "Maturity, in years",
+            "de": "Laufzeit in Jahren",
+            "fr": "Durée en années"
           },
           "data": false
         },
         "21": {
           "label": {
-            "en": "2"
+            "en": "2",
+            "de": "2",
+            "fr": "2"
           },
           "data": true
         },
         "34": {
           "label": {
-            "en": "3"
+            "en": "3",
+            "de": "3",
+            "fr": "3"
           },
           "data": true
         },
         "41": {
           "label": {
-            "en": "4"
+            "en": "4",
+            "de": "4",
+            "fr": "4"
           },
           "data": true
         },
         "51": {
           "label": {
-            "en": "5"
+            "en": "5",
+            "de": "5",
+            "fr": "5"
           },
           "data": true
         },
         "64": {
           "label": {
-            "en": "6"
+            "en": "6",
+            "de": "6",
+            "fr": "6"
           },
           "data": true
         },
         "71": {
           "label": {
-            "en": "7"
+            "en": "7",
+            "de": "7",
+            "fr": "7"
           },
           "data": true
         },
         "81": {
           "label": {
-            "en": "8"
+            "en": "8",
+            "de": "8",
+            "fr": "8"
           },
           "data": true
         },
         "D1_4_9": {
           "label": {
-            "en": "9"
+            "en": "9",
+            "de": "9",
+            "fr": "9"
           },
           "data": true
         },
         "D1_4_10": {
           "label": {
-            "en": "10"
+            "en": "10",
+            "de": "10",
+            "fr": "10"
           },
           "data": true
         }
@@ -650,8 +829,24 @@
     }
   },
   "updated": "2026-08-03 14:30",
-  "topic": "Interest rates & yields",
-  "concept": "Interest rates & yields / Money-market rates",
+  "topic": {
+    "key": "interest-rates-yields",
+    "name": {
+      "en": "Interest rates & yields",
+      "de": "Zinsen & Renditen",
+      "fr": "Taux d'intérêt & rendements",
+      "it": "Tassi d'interesse e rendimenti"
+    }
+  },
+  "concept": {
+    "en": "Interest rates & yields / Money-market rates",
+    "leaf": {
+      "en": "Money-market rates",
+      "de": "Geldmarktsätze",
+      "fr": "Taux du marché monétaire",
+      "it": "Tassi del mercato monetario"
+    }
+  },
   "canonical": false,
   "split": "D1",
   "single_select": "D0",
@@ -660,6 +855,11 @@
     "D0": "M",
     "D1": "MV"
   },
-  "description": "The longest and most finely structured of the SNB rate cubes: published interest rates on new banking transactions back to 1933, across an unusually deep product hierarchy (D1). It spans mortgages (variable, fixed by maturity 1..15 years, and money-market linked via SARON and the historic Libor maturities), consumer credit, private and corporate payment/savings accounts, tied pension provision (pillar 2 vested benefits, pillar 3a), term deposits and cash bonds by maturity. The SARON-linked branch (FGM_SAR) and the legacy Libor branch (LIB) coexist, capturing the reference-rate transition. Each product carries the same four-statistic distribution (D0): mean, 0.25 quantile, median, 0.75 quantile. With 228 series this is the largest cube in this group; the 1933 start applies only to long-running products, most retail and pension series begin much later.",
-  "fetched_utc": "2026-08-04 09:20:30"
+  "description": {
+    "en": "Interest rates on new Swiss banking business: mortgages, consumer credit, savings, pensions and term deposits, given as a distribution.",
+    "de": "Zinssätze im Schweizer Neugeschäft: Hypotheken, Konsumkredite, Spar- und Vorsorgekonten sowie Festgelder, angegeben als Verteilung.",
+    "fr": "Taux d'intérêt sur les nouvelles affaires bancaires suisses : hypothèques, crédits à la consommation, épargne, prévoyance et dépôts à terme, donnés en distribution.",
+    "it": "Tassi d'interesse sui nuovi affari bancari svizzeri: ipoteche, crediti al consumo, risparmio, previdenza e depositi a termine, indicati come distribuzione."
+  },
+  "fetched_utc": "2026-08-05 13:12:04"
 }

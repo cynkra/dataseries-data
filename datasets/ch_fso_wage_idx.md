@@ -1,9 +1,10 @@
 # Swiss Wage Index
 
 - **id**: ch_fso_wage_idx
+- **title**: Swiss Wage Index | de: Schweizerischer Lohnindex | fr: Indice suisse des salaires | it: Indice svizzero dei salari
 - **concept**: Labour / Wages
 - **canonical**: yes
-- **source**: Swiss Federal Statistical Office (FSO)
+- **source**: fso
 - **license**: fso (free reuse, attribution required)
 - **frequency**: annual
 - **coverage**: 1994 .. 2025
@@ -11,11 +12,10 @@
 - **updated**: 2026-04-21
 
 ## What is special
-The official Swiss wage index (Lohnindex, base 1993 = 100), nominal and real, by
-sector and sex. Captures wage development the SNB cubes do not carry at all.
+How Swiss pay has developed since 1993, nominal and after inflation, by sector and sex. Real wages show whether pay kept pace with prices.
 
 ## Access
-- **type**: FSO DAM Excel asset
+- **type**: fso-dam-excel — FSO DAM Excel asset
 - **order number**: je-e-03.04.03.00.04
 - **call**: `fso_excel_download("je-e-03.04.03.00.04")`
 
@@ -49,6 +49,35 @@ The published `change` (year-on-year %) series is dropped: it is exactly the app
 YoY % transform, recomputed on the fly from the index, so storing it would just
 duplicate a button. Keeping only the index collapses the former `measure` dimension.
 
+## Labels
+- dim: breakdown
+  - **label**: Breakdown | de: Gliederung | fr: Ventilation | it: Suddivisione
+  - tot: Total | de: Total | fr: Total | it: Totale
+  - by_sex: By sex | de: Nach Geschlecht | fr: Selon le sexe | it: Secondo il sesso
+  - m: Men | de: Männer | fr: Hommes | it: Uomini
+  - f: Women | de: Frauen | fr: Femmes | it: Donne
+  - by_sector: By sector | de: Nach Sektor | fr: Selon le secteur | it: Secondo il settore
+  - bf1: Secondary sector | de: Sekundärer Sektor | fr: Secteur secondaire | it: Settore secondario
+  - f41: Construction | de: Bau | fr: Construction | it: Costruzioni
+  - gs4: Tertiary sector | de: Tertiärer Sektor | fr: Secteur tertiaire | it: Settore terziario
+- dim: adjustment
+  - **label**: Adjustment | de: Bereinigung | fr: Correction | it: Correzione
+  - nominal: Nominal wage index | de: Nominallohnindex | fr: Indice des salaires nominaux | it: Indice dei salari nominali
+  - real: Real wage index | de: Reallohnindex | fr: Indice des salaires réels | it: Indice dei salari reali
+
+## Hierarchy
+The Total and its two non-crossing cuts on one overlay axis; by_sex / by_sector are
+real grouping levels (no data of their own), Construction nests under Secondary as a
+sub-position.
+- tot
+  - by_sex
+    - m
+    - f
+  - by_sector
+    - bf1
+      - f41
+    - gs4
+
 ## Display
 - **split**: breakdown
 - **single-select**: adjustment
@@ -64,3 +93,12 @@ duplicate a button. Keeping only the index collapses the former `measure` dimens
 ## Provenance
 Script: `R/source_fso_excel_sets.R::fso_excel_ch_fso_wage_idx`. Datasheet 2026-06-01;
 parser verified 2026-06-01 (768 rows, 24 series, 0 NA values).
+
+## What is special (de)
+Wie sich die Schweizer Löhne seit 1993 entwickelt haben, nominal und teuerungsbereinigt, nach Sektor und Geschlecht. Reallöhne zeigen, ob die Löhne mit den Preisen Schritt hielten.
+
+## What is special (fr)
+Comment les salaires suisses ont évolué depuis 1993, nominaux et corrigés de l'inflation, par secteur et par sexe. Les salaires réels montrent si la paie a suivi les prix.
+
+## What is special (it)
+Come sono evoluti i salari svizzeri dal 1993, nominali e corretti per l'inflazione, per settore e sesso. I salari reali mostrano se le paghe hanno tenuto il passo dei prezzi.

@@ -1,10 +1,10 @@
 # Hotel sector: overnight stays by tourism region
 
 - **id**: ch_fso_hesta
-- **title**: Hotel overnight stays
+- **title**: Hotel overnight stays | de: Hotellogiernächte | fr: Nuitées hôtelières | it: Pernottamenti alberghieri
 - **concept**: Domestic economy / Hotel overnight stays
 - **canonical**: yes
-- **source**: Swiss Federal Statistical Office (FSO)
+- **source**: fso
 - **license**: fso (free reuse, attribution required)
 - **frequency**: monthly
 - **coverage**: 2005-01 .. 2026-03
@@ -12,19 +12,11 @@
 - **updated**: not published (live PX-Web pull; latest observation 2026-03)
 
 ## What is special
-The HESTA accommodation statistics: monthly hotel overnight stays for
-Switzerland and its 13 official tourism regions, back to 2005. The strong
-seasonal swing is visible in the raw data (a region's January is several times
-its November), which is why this is kept as the canonical tourism series rather
-than an annual roll-up. The region breakdown is the distinctive axis: alpine
-regions (Graubünden, Valais, Ticino) and the urban regions (Zurich, Geneva,
-Basel) move on very different seasonal calendars, so the series is most useful
-sliced by `Tourismusregion`. Code `8100` is the Switzerland total; the numeric
-codes 1..14 are the regions. Only one indicator (overnight stays) is pulled; the
-table also carries arrivals, which this dataset deliberately omits.
+Hotel overnight stays in Switzerland each month, for the country and its 13 tourism regions. Alpine and urban regions peak in opposite seasons.
 
 ## Access
-- **type**: FSO PX-Web (json-stat2)
+- **type**: fso-pxweb — FSO PX-Web (json-stat2)
+- **table id**: `px-x-1003020000_103`
 - **endpoint / table id**: `px-x-1003020000_103` (node; real table at
   `https://www.pxweb.bfs.admin.ch/api/v1/en/px-x-1003020000_103/px-x-1003020000_103.px`)
 - **call**: `fso_fetch("ch_fso_hesta", "px-x-1003020000_103", fso_query, ...)`
@@ -75,3 +67,12 @@ by the dataset title. That leaves `Tourismusregion` as the single dimension.
 ## Provenance
 Script: `R/source_fso.R::fso_fetch` (explicit query built in
 `R/pipeline.R`). Datasheet authored 2026-06-01.
+
+## What is special (de)
+Hotellogiernächte in der Schweiz pro Monat, für das Land und seine 13 Tourismusregionen. Alpine und städtische Regionen haben gegenläufige Saisons.
+
+## What is special (fr)
+Nuitées hôtelières en Suisse chaque mois, pour le pays et ses 13 régions touristiques. Les régions alpines et urbaines culminent à des saisons opposées.
+
+## What is special (it)
+Pernottamenti alberghieri in Svizzera ogni mese, per il Paese e le sue 13 regioni turistiche. Le regioni alpine e urbane hanno stagioni opposte.

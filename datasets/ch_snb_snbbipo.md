@@ -1,11 +1,11 @@
 # Balance sheet items of the SNB (monthly)
 
 - **id**: ch_snb_snbbipo
-- **title**: SNB balance sheet
+- **title**: SNB balance sheet | de: SNB-Bilanz | fr: Bilan de la BNS | it: Bilancio della BNS
 - **concept**: Money & banking / Monetary aggregates
 - **canonical**: no (supporting series under Monetary aggregates;
   `ch_snb_snbmonagg` is canonical)
-- **source**: Swiss National Bank
+- **source**: snb
 - **license**: snb (free reuse, attribution required)
 - **frequency**: monthly
 - **coverage**: 1996-12-01 .. 2026-04-01
@@ -13,21 +13,11 @@
 - **updated**: 2026-04-01
 
 ## What is special
-The full monthly balance sheet of the Swiss National Bank, asset side and liability
-side, broken into 28 line items. The asset side is dominated by `D` foreign currency
-investments (the default view) and `GFG` gold, which together explain the dramatic
-post-2008 balance-sheet expansion from FX-market intervention. The liability side
-carries `N` banknotes in circulation and `GB` sight deposits of domestic banks, the
-latter being the operational counterpart of the SNB's large reserves. Both sides
-include an explicit `T0`/`T1` total row, so the cube is internally summable and you
-can reconstruct the headline balance-sheet size directly. Some items only begin
-later than 1996 (e.g. `AIWFS`, the SDR counterpart, starts 2009), so the panel is
-ragged. This is the canonical view of the SNB's own balance sheet, which is why
-CONCEPT-UNIVERSE lists it as a supporting money-and-banking series next to the
-monetary base and aggregates.
+What the Swiss National Bank owns and owes each month. Foreign-currency investments and gold explain the expansion after 2008.
 
 ## Access
-- **type**: SNB cube API
+- **type**: snb-cube — SNB cube API
+- **cube**: `snbbipo`
 - **endpoint**: `https://data.snb.ch/api/cube/snbbipo/data/json/en`
 - **call**: `snb_fetch("snbbipo")` (cube_id = id minus `ch_snb_` prefix)
 
@@ -70,3 +60,12 @@ monetary base and aggregates.
 Script: `R/source_snb.R::snb_fetch`, cube from `R/snb_cubes.tsv` (`snbbipo`, topic
 "Money and banking"). Datasheet authored 2026-06-01; parser verified 2026-06-01
 (8,699 rows, 28 series).
+
+## What is special (de)
+Was die Schweizerische Nationalbank monatlich besitzt und schuldet. Devisenanlagen und Gold erklären die Ausweitung nach 2008.
+
+## What is special (fr)
+Ce que la Banque nationale suisse possède et doit chaque mois. Les placements en devises et l'or expliquent l'expansion après 2008.
+
+## What is special (it)
+Cosa la Banca nazionale svizzera possiede e deve ogni mese. Gli investimenti in valuta estera e l'oro spiegano l'espansione dopo il 2008.

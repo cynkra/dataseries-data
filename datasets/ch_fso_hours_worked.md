@@ -1,27 +1,21 @@
 # Actual hours worked (annual working volume)
 
 - **id**: ch_fso_hours_worked
-- **title**: Hours worked
+- **title**: Hours worked | de: Arbeitsstunden | fr: Heures de travail | it: Ore di lavoro
 - **concept**: Labour / Working time and working volume
 - **canonical**: yes
-- **source**: Swiss Federal Statistical Office (FSO)
+- **source**: fso
 - **license**: fso (free reuse, attribution required)
 - **frequency**: annual
 - **coverage**: 2010 .. 2025
 - **series**: 45
 
 ## What is special
-The **annual working volume (AVOL)** statistic: the total hours actually worked in
-the Swiss economy, plus its two per-job intensities. One cube carries three measures —
-the headline **usual weekly hours per job** (the "Swiss work ~31h/week, not 42" number),
-the **annual hours worked per job**, and the **absolute annual volume of hours** (~8.1
-billion hours). All three cut by sex and by working-time category (full-time vs the two
-part-time bands), so the part-time gender split — Switzerland's defining labour-market
-feature — reads directly.
+How many hours the Swiss actually work: total volume, hours per job, and usual weekly hours, split by sex and by full-time or part-time.
 
 ## Access
-- **type**: FSO DAM asset, master is a long SDMX-style CSV (not xlsx)
-- **order**: `ts-x-03.02.03.01.02.01` (asset 36577051)
+- **type**: fso-dam-csv — FSO DAM asset, master is a long SDMX-style CSV (not xlsx)
+- **order number**: `ts-x-03.02.03.01.02.01` (asset 36577051)
 - **call**: `fso_hours_worked("ch_fso_hours_worked")`
 
 ## Parsing recipe
@@ -42,6 +36,25 @@ feature — reads directly.
 - `sex`: `_T` total, `M` men, `F` women.
 - `worktime`: `_T` total, `FT` full-time, `PT` part-time, `PT_I` part-time I (50-89%),
   `PT_II` part-time II (under 50%).
+
+## Labels
+- dim: measure
+  - **label**: Measure | de: Messgrösse | fr: Mesure | it: Misura
+  - weekly: Usual hours worked per week per job | de: Normalarbeitszeit pro Woche und Stelle | fr: Heures hebdomadaires habituelles par emploi | it: Ore settimanali abituali per impiego
+  - annual: Annual hours worked per job | de: Jahresarbeitszeit pro Stelle | fr: Heures annuelles par emploi | it: Ore annue per impiego
+  - volume: Annual volume of hours worked (total) | de: Jahresarbeitsvolumen (Total) | fr: Volume annuel d'heures travaillées (total) | it: Volume annuo di ore lavorate (totale)
+- dim: sex
+  - **label**: Sex | de: Geschlecht | fr: Sexe | it: Sesso
+  - _T: Total | de: Total | fr: Total | it: Totale
+  - M: Men | de: Männer | fr: Hommes | it: Uomini
+  - F: Women | de: Frauen | fr: Femmes | it: Donne
+- dim: worktime
+  - **label**: Working time | de: Arbeitszeit | fr: Temps de travail | it: Tempo di lavoro
+  - _T: Total | de: Total | fr: Total | it: Totale
+  - FT: Full-time | de: Vollzeit | fr: Plein temps | it: Tempo pieno
+  - PT: Part-time | de: Teilzeit | fr: Temps partiel | it: Tempo parziale
+  - PT_I: Part-time I (50-89%) | de: Teilzeit I (50-89%) | fr: Temps partiel I (50-89%) | it: Tempo parziale I (50-89%)
+  - PT_II: Part-time II (under 50%) | de: Teilzeit II (unter 50%) | fr: Temps partiel II (moins de 50%) | it: Tempo parziale II (meno del 50%)
 
 ## Display
 - **split**: worktime
@@ -81,3 +94,12 @@ Datasheet authored 2026-06-02; verified live 2026-06-02 (weekly _T/_T 2024 = 30.
 = FSO "30h56min"; annual volume _T/_T 2024 = 8.117 bn hours — both exact matches).
 Display verified live 2026-06-03 (45/45 cube combos populated, default + spot-checks all
 return 16 rows; all dim levels flag data:true; validate_dataset() passes).
+
+## What is special (de)
+Wie viele Stunden in der Schweiz tatsächlich gearbeitet wird: Gesamtvolumen, Stunden pro Stelle und übliche Wochenstunden, nach Geschlecht sowie Voll- und Teilzeit.
+
+## What is special (fr)
+Combien d'heures on travaille réellement en Suisse : volume total, heures par emploi et heures hebdomadaires usuelles, selon le sexe et le temps plein ou partiel.
+
+## What is special (it)
+Quante ore si lavora effettivamente in Svizzera: volume totale, ore per impiego e ore settimanali abituali, per sesso e per tempo pieno o parziale.

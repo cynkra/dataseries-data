@@ -1,30 +1,23 @@
 # Retail trade turnover (monthly)
 
 - **id**: ch_fso_retail
-- **title**: Retail trade turnover
+- **title**: Retail trade turnover | de: Detailhandelsumsätze | fr: Chiffres d'affaires du commerce de détail | it: Fatturato del commercio al dettaglio
 - **concept**: Domestic economy / Retail trade turnover
 - **canonical**: yes
 - **featured**: Retail trade
 
-- **source**: Swiss Federal Statistical Office (FSO)
-- **license**: fso
-- **frequency**: monthly
+- **source**: fso
+- **license**: fso - **frequency**: monthly
 - **coverage**: 2000-01 .. 2026-04
 - **series**: see provenance
 - **updated**: 2026-05 (latest observation)
 
 ## What is special
-The monthly retail trade turnover index — the headline read on Swiss consumer
-spending. FSO **migrated this series off the dead PX-Web STAT-TAB onto its new SDMX
-2.1 endpoint** (`disseminate.stats.swiss`, agency `CH1.KEU`, flow `DF_KEU_M1`), so
-this dataset is the first to use `R/source_fso_sdmx.R`. We keep the retail slice of
-the flow: NOGA division 47 (retail trade) and its sub-classes. Each series comes in
-several adjustment variants (raw, calendar-adjusted, seasonally + calendar adjusted)
-and several indicator/result-type combinations (nominal total/domestic/foreign
-turnover, real production volume; index vs. year-on-year change).
+How much Swiss shops sell each month, the standard read on consumer spending. Raw, calendar-adjusted and seasonally adjusted; nominal or real.
 
 ## Access
-- **type**: FSO SDMX (disseminate.stats.swiss, agency CH1.KEU)
+- **type**: fso-sdmx — FSO SDMX (disseminate.stats.swiss, agency CH1.KEU)
+- **flow**: `CH1.KEU/DF_KEU_M1/1.0.0`
 - **endpoint / order number**: flow `DF_KEU_M1` version `1.0.0`
   - data: `https://disseminate.stats.swiss/rest/data/CH1.KEU,DF_KEU_M1,1.0.0/all?detail=dataonly` (Accept: `application/vnd.sdmx.data+csv`)
   - structure: `https://disseminate.stats.swiss/rest/dataflow/CH1.KEU/DF_KEU_M1/1.0.0?references=all` (Accept: `application/vnd.sdmx.structure+json`)
@@ -94,3 +87,12 @@ classes and the alternative totals sit under it, with the by-class-of-goods brea
 ## Provenance
 Script: `R/source_fso_sdmx.R::fso_sdmx_fetch` (wired in `R/pipeline.R`). Datasheet
 authored 2026-06-01; parser verified 2026-06-01.
+
+## What is special (de)
+Wie viel Schweizer Läden monatlich verkaufen, der Standardindikator für den Konsum. Unbereinigt, kalender- und saisonbereinigt; nominal oder real.
+
+## What is special (fr)
+Ce que vendent les commerces suisses chaque mois, l'indicateur de référence de la consommation. Brut, corrigé du calendrier et désaisonnalisé ; nominal ou réel.
+
+## What is special (it)
+Quanto vendono i negozi svizzeri ogni mese, l'indicatore di riferimento dei consumi. Grezzo, corretto per il calendario e destagionalizzato; nominale o reale.

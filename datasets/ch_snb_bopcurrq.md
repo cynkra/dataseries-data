@@ -1,10 +1,10 @@
 # Swiss balance of payments – Current account – Quarter
 
 - **id**: ch_snb_bopcurrq
-- **title**: Balance of payments: current account
+- **title**: Balance of payments: current account | de: Zahlungsbilanz: Leistungsbilanz | fr: Balance des paiements : compte courant | it: Bilancia dei pagamenti: conto corrente
 - **concept**: External sector / Balance of payments
 - **canonical**: yes
-- **source**: Swiss National Bank (SNB)
+- **source**: snb
 - **license**: snb (free reuse, attribution required)
 - **frequency**: quarterly
 - **coverage**: 1983-Q1 .. 2025-Q4
@@ -12,21 +12,11 @@
 - **updated**: 2025-Q4 (latest observation; SNB publishes ~3 months in arrears)
 
 ## What is special
-The detailed current account of the Swiss balance of payments, quarterly back to
-1983. This is the canonical BoP series for the current-account concept. Its value is
-the deep component hierarchy on `D0`: goods (foreign trade, non-monetary gold,
-merchanting), services (transport split into passengers/freight/other, tourism,
-insurance, financial services, licence fees, R&D, business services), primary income
-(labour income plus investment income broken into direct/portfolio/other/reserves
-with dividends, reinvested earnings and interest), and secondary income. Crossed with
-the `D1` accounting entry (Receipts / Expenses / Net), so one component such as
-"Financial services" is three series. Switzerland's structural current-account surplus
-and the large role of merchanting and investment income are visible here. Grouping
-nodes (`data:false`, e.g. "Goods", "Services") carry no observations and are dropped;
-only `data:true` leaves and totals appear in the CSV.
+Switzerland's current account in detail, goods, services and income from work and investment, showing where the structural surplus comes from.
 
 ## Access
-- **type**: SNB cube API
+- **type**: snb-cube — SNB cube API
+- **cube**: `bopcurrq`
 - **endpoint**: cube id `bopcurrq` (id minus the `ch_snb_` prefix)
 - **call**: `snb_fetch("bopcurrq", title = "Swiss balance of payments – Current account – Quarter")`, which issues
   `GET https://data.snb.ch/api/cube/bopcurrq/dimensions/en` and
@@ -71,3 +61,12 @@ only `data:true` leaves and totals appear in the CSV.
 Script: `R/source_snb.R::snb_fetch` via `R/snb_cubes.tsv` (cube `bopcurrq`, topic
 "Balance of payments"). Datasheet authored 2026-06-01; parser verified 2026-06-01
 (18,868 rows, 116 series).
+
+## What is special (de)
+Die Schweizer Leistungsbilanz im Detail — Waren, Dienstleistungen sowie Arbeits- und Kapitaleinkommen — und woher der strukturelle Überschuss stammt.
+
+## What is special (fr)
+Le compte courant suisse en détail — biens, services, revenus du travail et des investissements — et d'où vient l'excédent structurel.
+
+## What is special (it)
+Il conto corrente svizzero in dettaglio — beni, servizi, redditi da lavoro e da investimenti — e da dove proviene l'avanzo strutturale.

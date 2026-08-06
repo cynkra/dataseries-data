@@ -1,10 +1,10 @@
 # SNB conditional inflation forecast (quarterly)
 
 - **id**: ch_snb_snbiprogq
-- **title**: Inflation forecast (SNB)
+- **title**: Inflation forecast (SNB) | de: Inflationsprognose (SNB) | fr: Prévision d'inflation (BNS) | it: Previsione d'inflazione (BNS)
 - **concept**: Prices / Inflation forecast
 - **canonical**: yes (sole canonical for this concept; an annual view is derived on demand by calendar-year averaging the quarterly forecast)
-- **source**: Swiss National Bank
+- **source**: snb
 - **license**: snb (free reuse, attribution required)
 - **frequency**: quarterly
 - **coverage**: 2001-01-01 .. 2028-10-01
@@ -12,28 +12,11 @@
 - **updated**: 2026-03
 
 ## What is special
-The quarterly resolution of the SNB's conditional inflation forecast, and the
-fuller of the two forecast cubes. Like the annual cube, D0 is a **forecast vintage**
-(one item per quarterly monetary-policy assessment since 2004), each labelled with
-its conditioning policy rate; the label text traces the Libor-to-policy-rate
-instrument change at mid-2019, the negative-rate era and the 2022-2024 hikes. What
-sets the quarterly cube apart: the stored data start in **2001** (earlier than the
-annual cube's 2004) because the D1 `BI` "observed inflation" path is carried back
-further, and the default view here is `BI` rather than the forecast. So this cube
-lets you align each historical forecast fan against the realised quarterly CPI it
-was later measured against. It also reaches further forward (end 2028-10) at quarterly
-steps. Values are future-dated by construction, since each vintage projects ahead.
-
-This is the single canonical cube for the conditional inflation forecast. The
-former annual cube `snbiproga` was dropped as redundant: its annual figures are
-just the calendar-year average of these quarterly forecasts (verified against the
-data — exact bar SNB rounding), and this quarterly cube is strictly richer (it
-also carries the observed `BI` path, starts earlier in 2001, and reaches further
-forward). An annual view, if needed, is derived on demand by year-averaging the
-quarterly `P` series rather than stored as a separate dataset.
+The Swiss National Bank's inflation forecast, one path per quarterly policy meeting, alongside the inflation that actually followed.
 
 ## Access
-- **type**: SNB cube API
+- **type**: snb-cube — SNB cube API
+- **cube**: `snbiprogq`
 - **endpoint**: `https://data.snb.ch/api/cube/snbiprogq/data/json/en`
 - **call**: `snb_fetch("snbiprogq")` (cube_id = id minus `ch_snb_` prefix)
 
@@ -81,3 +64,12 @@ quarterly `P` series rather than stored as a separate dataset.
 Script: `R/source_snb.R::snb_fetch`, cube from `R/snb_cubes.tsv` (`snbiprogq`, topic
 "SNB forecasts"). Datasheet authored 2026-06-01; parser verified 2026-06-01 (2,312
 rows, 176 series).
+
+## What is special (de)
+Die Inflationsprognose der Schweizerischen Nationalbank, ein Pfad je vierteljährlicher Lagebeurteilung, neben der tatsächlich eingetretenen Teuerung.
+
+## What is special (fr)
+La prévision d'inflation de la Banque nationale suisse, un profil par appréciation trimestrielle, à côté de l'inflation effectivement observée.
+
+## What is special (it)
+La previsione d'inflazione della Banca nazionale svizzera, un profilo per ogni valutazione trimestrale, accanto all'inflazione effettivamente osservata.

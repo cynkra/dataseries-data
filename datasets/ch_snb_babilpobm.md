@@ -1,10 +1,10 @@
 # Banks' balance sheet items by currency for selected bank categories (monthly)
 
 - **id**: ch_snb_babilpobm
-- **title**: Bank balance sheets by currency
+- **title**: Bank balance sheets by currency | de: Bankbilanzen nach Währung | fr: Bilans bancaires par monnaie | it: Bilanci bancari per valuta
 - **concept**: Money & banking / Banking & credit
 - **canonical**: yes
-- **source**: Swiss National Bank (SNB)
+- **source**: snb
 - **license**: snb (free reuse, attribution required)
 - **frequency**: monthly
 - **coverage**: 1987-12 .. 2026-03
@@ -12,21 +12,11 @@
 - **updated**: 2026-03 release (PublishingDate in CSV header)
 
 ## What is special
-The full monthly balance sheet of banks in Switzerland, line by line, back to
-1987. Every position from the regulatory balance sheet appears as a code: on the
-asset side liquid assets, amounts due from banks/customers, mortgage loans,
-trading portfolio, replacement values, financial investments, participations,
-down to total assets; on the liabilities side amounts due to banks/customers,
-cash bonds, bond issues, provisions, the equity components (bank capital,
-reserves, own shares, period profit) and total liabilities. What makes this cube
-large is the three-way slicing: each balance-sheet item is crossed with a
-**currency** split (all / CHF / EUR / USD) and a **bank-category** split (all
-banks vs big banks), which is why it expands to 872 stored series. The currency
-breakdown is the distinctive feature; it lets you watch FX composition of the
-banking system's book, not just totals.
+Assets and liabilities of banks in Switzerland month by month, item by item, split by currency and by bank size.
 
 ## Access
-- **type**: SNB cube API
+- **type**: snb-cube — SNB cube API
+- **cube**: `babilpobm`
 - **endpoint**: `https://data.snb.ch/api/cube/babilpobm/data/json/en`
 - **call**: `snb_fetch("babilpobm", title = "Banks' balance sheet items by currency for selected bank categories - monthly")`
 
@@ -67,3 +57,12 @@ banking system's book, not just totals.
 ## Provenance
 Script: `R/source_snb.R::snb_fetch` (cube `babilpobm`, title/topic from
 `R/snb_cubes.tsv`). Datasheet authored 2026-06-01.
+
+## What is special (de)
+Aktiven und Passiven der Banken in der Schweiz Monat für Monat, Position für Position, nach Währung und Bankengrösse.
+
+## What is special (fr)
+Actifs et passifs des banques en Suisse mois par mois, poste par poste, par monnaie et par taille de banque.
+
+## What is special (it)
+Attivi e passivi delle banche in Svizzera mese per mese, voce per voce, per valuta e per dimensione della banca.

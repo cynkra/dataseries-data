@@ -1,32 +1,22 @@
 # Consumer Price Index (LIK) – national index, long history
 
 - **id**: ch_snb_plkopr
-- **title**: Consumer prices (CPI)
+- **title**: Consumer prices (CPI) | de: Konsumentenpreise (LIK) | fr: Prix à la consommation (IPC) | it: Prezzi al consumo (IPC)
 - **concept**: Prices / Consumer prices
 - **canonical**: yes
 - **featured**: Inflation
-- **source**: Swiss National Bank (SNB)
+- **source**: snb
 - **license**: snb (free reuse, attribution required)
 - **frequency**: monthly
 - **coverage**: 1921-01 .. 2026-04
 - **series**: 1
 
 ## What is special
-The Swiss headline consumer price index (Landesindex der Konsumentenpreise), as
-re-disseminated by the SNB. It is the **canonical CPI for the long view**: the SNB
-chain reaches back to **January 1921** — over a century — whereas the detailed FSO
-asset (`ch_fso_cpi`, the labelled alternate) only carries the full COICOP position
-hierarchy from December 1982. So this is the series to reach for when you want the
-headline index or year-on-year inflation across the whole modern history of the
-Swiss franc; `ch_fso_cpi` is the one to reach for when you want the 443-position
-basket breakdown. The cube carries the **total index only** (no sub-baskets). The
-source ships two measures under one flat `D0` dimension — the index level (rebased
-December 2025 = 100) and its year-on-year change — but the change is dropped (it is
-the app's YoY % toggle applied to the index), so this is a single-series dataset:
-just the index level.
+Swiss inflation, the headline consumer price index only. For the breakdown into 595 basket items such as food, rent and transport, see the detailed series.
 
 ## Access
-- **type**: SNB cube API
+- **type**: snb-cube — SNB cube API
+- **cube**: `plkopr`
 - **endpoint**: `https://data.snb.ch/api/cube/plkopr/data/json/en`
 - **call**: `snb_fetch("plkopr", title = "Consumer Price Index (LIK) – national index, long history")`
 
@@ -62,3 +52,12 @@ just the index level.
 ## Provenance
 Script: `R/source_snb.R::snb_fetch` (title/topic from `R/snb_cubes.tsv`). Datasheet
 authored 2026-06-02; coverage verified live 2026-06-02 (1921-01 .. 2026-04).
+
+## What is special (de)
+Schweizer Teuerung, nur der Gesamtindex der Konsumentenpreise. Für die Gliederung in 595 Warenkorbpositionen wie Nahrung, Miete und Verkehr siehe die Detailreihe.
+
+## What is special (fr)
+Inflation suisse, uniquement l'indice global des prix à la consommation. Pour la ventilation en 595 positions du panier — alimentation, loyer, transports — voir la série détaillée.
+
+## What is special (it)
+Inflazione svizzera, solo l'indice generale dei prezzi al consumo. Per la ripartizione nelle 595 posizioni del paniere come alimentari, pigioni e trasporti, si veda la serie dettagliata.

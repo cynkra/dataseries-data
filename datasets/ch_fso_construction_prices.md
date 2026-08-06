@@ -1,10 +1,10 @@
 # Construction Price Index
 
 - **id**: ch_fso_construction_prices
-- **title**: Construction prices
+- **title**: Construction prices | de: Baupreise | fr: Prix de la construction | it: Prezzi delle costruzioni
 - **concept**: Prices / Construction prices
 - **canonical**: yes
-- **source**: Swiss Federal Statistical Office (FSO)
+- **source**: fso
 - **license**: fso (free reuse, attribution required)
 - **frequency**: semi-annual
 - **coverage**: 1998-10 .. 2025-10
@@ -12,16 +12,10 @@
 - **updated**: 2025-12-18
 
 ## What is special
-The Swiss Construction Price Index (Baupreisindex, BAP) measures the price
-development of construction work in Switzerland, surveyed semi-annually with
-reference months **April and October**. The headline series for the whole of
-Switzerland is captured on three work-type levels: the overall index
-(Baugewerbe: Total), building construction (Hochbau) and civil engineering
-(Tiefbau). Levels are on the **October 2020 = 100** base. One of the few
-semi-annual price series in the catalog.
+Price index for construction work in Switzerland, surveyed each April and October. Covers building construction and civil engineering separately.
 
 ## Access
-- **type**: FSO DAM Excel asset
+- **type**: fso-dam-excel — FSO DAM Excel asset
 - **order number**: cc-t-05.05.01 (currently DAM asset 36269766)
 - **call**: `fso_excel_download("cc-t-05.05.01")`
 
@@ -44,6 +38,14 @@ semi-annual price series in the catalog.
 ## Dimensions
 - `worktype`: the type of construction work — `total` (Construction: Total),
   `hochbau` (Building construction), `tiefbau` (Civil engineering).
+
+## Labels
+- **units**: Index (October 2020 = 100) | de: Index (Oktober 2020 = 100) | fr: Indice (octobre 2020 = 100) | it: Indice (ottobre 2020 = 100)
+- dim: worktype
+  - **label**: Type of work | de: Arbeitsart | fr: Type de travaux | it: Tipo di lavori
+  - total: Construction: Total | de: Baugewerbe: Total | fr: Construction : total | it: Costruzioni: totale
+  - hochbau: Building construction (Hochbau) | de: Hochbau | fr: Bâtiment | it: Edilizia
+  - tiefbau: Civil engineering (Tiefbau) | de: Tiefbau | fr: Génie civil | it: Genio civile
 
 ## Display
 - **split**: worktype
@@ -75,3 +77,12 @@ Script: `R/source_fso_excel_sets.R::fso_excel_ch_fso_construction_prices`.
 Datasheet 2026-06-02; parser verified live 2026-06-02 (165 rows, 3 series, 0 NA
 values; anchors Total/Switzerland Oct1998=78.7, Oct2020=100.0, Apr2025=115.8,
 Oct2025=116.2 reproduced).
+
+## What is special (de)
+Preisindex für Bauarbeiten in der Schweiz, halbjährlich im April und Oktober erhoben. Erfasst Hochbau und Tiefbau getrennt.
+
+## What is special (fr)
+Indice des prix des travaux de construction en Suisse, relevé chaque avril et octobre. Bâtiment et génie civil sont couverts séparément.
+
+## What is special (it)
+Indice dei prezzi dei lavori di costruzione in Svizzera, rilevato ogni aprile e ottobre. Edilizia e genio civile sono coperti separatamente.

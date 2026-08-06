@@ -1,10 +1,11 @@
 # Swiss stock indices
 
 - **id**: ch_snb_capchstocki
+- **title**: Swiss stock indices | de: Schweizer Aktienindizes | fr: Indices boursiers suisses | it: Indici azionari svizzeri
 - **concept**: Financial markets / Swiss stock indices
 - **canonical**: yes
 - **featured**: Stock market
-- **source**: Swiss National Bank (SNB)
+- **source**: snb
 - **license**: snb (free reuse, attribution required)
 - **frequency**: daily
 - **coverage**: 1989-01-03 .. 2026-05-15
@@ -12,19 +13,11 @@
 - **updated**: 2026-05-15 (latest observation)
 
 ## What is special
-Daily levels of the Swiss equity market, the canonical stock-index series. It pairs
-the two headline indices, the **SPI Swiss Performance Index** (total return, with
-dividend reinvestment, code `GDR`) and the **SMI Swiss Market Index** (price index,
-excluding dividend reinvestment, code `SMISMIDR`), with SPI sub-indices split two ways:
-by **SIX** sector classification (`BA/FD/VS/NGT/GW`) and by **ICB** classification
-(`B/F/V/NG/G`), so banks, financial services, insurance, food/beverages and health care
-each appear under both schemes. Also `N` registered shares and `IPS` bearer
-shares/participation certificates. Daily frequency back to 1989 for the headline SPI;
-the sector sub-indices begin later (the CSV sample for SIX banks `B` starts 2000),
-because SIX/ICB sector breakdowns were backfilled only from their introduction.
+Daily levels of the SPI and SMI Swiss share indices, with sector sub-indices. The SPI includes reinvested dividends, the SMI does not.
 
 ## Access
-- **type**: SNB cube API
+- **type**: snb-cube — SNB cube API
+- **cube**: `capchstocki`
 - **endpoint**: cube id `capchstocki`
 - **call**: `snb_fetch("capchstocki", title = "Swiss stock indices")`, hitting
   `https://data.snb.ch/api/cube/capchstocki/dimensions/en` and `.../data/json/en`
@@ -60,3 +53,12 @@ because SIX/ICB sector breakdowns were backfilled only from their introduction.
 Script: `R/source_snb.R::snb_fetch` via `R/snb_cubes.tsv` (cube `capchstocki`, topic
 "Financial markets"). Datasheet authored 2026-06-01; parser verified 2026-06-01
 (70,324 rows, 14 series).
+
+## What is special (de)
+Tägliche Stände der Schweizer Aktienindizes SPI und SMI, mit Sektor-Subindizes. Der SPI enthält reinvestierte Dividenden, der SMI nicht.
+
+## What is special (fr)
+Niveaux quotidiens des indices boursiers suisses SPI et SMI, avec des sous-indices sectoriels. Le SPI inclut les dividendes réinvestis, le SMI non.
+
+## What is special (it)
+Livelli giornalieri degli indici azionari svizzeri SPI e SMI, con sottoindici settoriali. Lo SPI include i dividendi reinvestiti, lo SMI no.

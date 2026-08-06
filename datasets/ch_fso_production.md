@@ -1,30 +1,22 @@
 # Industry & construction turnover (quarterly)
 
 - **id**: ch_fso_production
-- **title**: Industry & construction turnover
+- **title**: Industry & construction turnover | de: Umsätze Industrie und Bau | fr: Chiffres d'affaires industrie et construction | it: Fatturato industria e costruzioni
 - **concept**: Domestic economy / Industry & construction turnover
 - **canonical**: yes
 
-- **source**: Swiss Federal Statistical Office (FSO)
-- **license**: fso
-- **frequency**: quarterly
+- **source**: fso
+- **license**: fso - **frequency**: quarterly
 - **coverage**: 1999-Q1 .. 2026-Q1
 - **series**: see provenance
 - **updated**: 2026-Q1 (latest observation)
 
 ## What is special
-The quarterly turnover / production index for the secondary sector — industry
-(NOGA sections B–E) and construction (section F) — published as **one** dataset split
-by NOGA section. FSO **migrated this series off the dead PX-Web STAT-TAB onto its new
-SDMX 2.1 endpoint** (`disseminate.stats.swiss`, agency `CH1.KEU`, flow `DF_KEU_Q1`),
-so it shares the `R/source_fso_sdmx.R` reader with `ch_fso_retail`. We keep the
-secondary-sector slice: the industry aggregate `B-E` (and its sections B mining,
-C manufacturing, D energy), construction `F`, and the construction divisions
-41 (buildings), 42 (civil engineering), 43 (specialised construction), plus their
-aggregate `41_43`.
+Turnover and output of Swiss industry and construction each quarter, by branch, including buildings, civil engineering and specialised works.
 
 ## Access
-- **type**: FSO SDMX (disseminate.stats.swiss, agency CH1.KEU)
+- **type**: fso-sdmx — FSO SDMX (disseminate.stats.swiss, agency CH1.KEU)
+- **flow**: `CH1.KEU/DF_KEU_Q1/1.0.0`
 - **endpoint / order number**: flow `DF_KEU_Q1` version `1.0.0`
   - data: `https://disseminate.stats.swiss/rest/data/CH1.KEU,DF_KEU_Q1,1.0.0/all?detail=dataonly` (Accept: `application/vnd.sdmx.data+csv`)
   - structure: `https://disseminate.stats.swiss/rest/dataflow/CH1.KEU/DF_KEU_Q1/1.0.0?references=all` (Accept: `application/vnd.sdmx.structure+json`)
@@ -82,3 +74,12 @@ Two NOGA aggregates head the tree: `B-E` Industry (mining, manufacturing, energy
 ## Provenance
 Script: `R/source_fso_sdmx.R::fso_sdmx_fetch` (wired in `R/pipeline.R`). Datasheet
 authored 2026-06-01; parser verified 2026-06-01.
+
+## What is special (de)
+Umsatz und Produktion der Schweizer Industrie und des Baugewerbes pro Quartal, nach Branche, inklusive Hochbau, Tiefbau und Ausbaugewerbe.
+
+## What is special (fr)
+Chiffre d'affaires et production de l'industrie et de la construction suisses par trimestre, par branche, y compris bâtiment, génie civil et travaux spécialisés.
+
+## What is special (it)
+Fatturato e produzione dell'industria e delle costruzioni svizzere per trimestre, per ramo, inclusi edilizia, genio civile e lavori specializzati.

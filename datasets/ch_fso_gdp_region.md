@@ -1,10 +1,10 @@
 # Regional GDP (cantons & greater regions)
 
 - **id**: ch_fso_gdp_region
-- **title**: Regional GDP
+- **title**: Regional GDP | de: Regionales BIP | fr: PIB régional | it: PIL regionale
 - **concept**: National accounts / Regional GDP
 - **canonical**: yes
-- **source**: Swiss Federal Statistical Office (FSO)
+- **source**: fso
 - **license**: fso (free reuse, attribution required)
 - **frequency**: annual
 - **coverage**: 2008 .. 2022
@@ -12,17 +12,10 @@
 - **updated**: 2024-10-28
 
 ## What is special
-Gross domestic product broken down by **canton** (all 26) and by the **7 greater
-regions** (NUTS-2), at current prices in CHF million — the regional decomposition
-of the national GDP that the SNB cubes and the SECO national-accounts series do
-not carry. Switzerland (the national total) is the root of a single drill-down
-tree: **Switzerland → greater region → canton**, so the share of any canton in
-its region, or of any region in the country, is one division away. Switzerland is
-among the most economically concentrated small economies, and this dataset makes
-the Zurich / Lake-Geneva / Northwestern cluster visible at a glance.
+Swiss economic output per canton and per greater region, at current prices. Shows each canton's share of its region and of the country.
 
 ## Access
-- **type**: FSO DAM Excel asset
+- **type**: fso-dam-excel — FSO DAM Excel asset
 - **order number**: je-e-04.02.06.01 (EN; asset 32627406. DE sibling: je-d-04.02.06.01, asset 32627391)
 - **call**: `fso_excel_download("je-e-04.02.06.01")` (resolves the current master xlsx)
 
@@ -62,6 +55,11 @@ the Zurich / Lake-Geneva / Northwestern cluster visible at a glance.
   BE/FR/SO/NE/JU; Northwestern = BS/BL/AG; Zurich = ZH; Eastern = GL/SH/AR/AI/SG/GR/TG;
   Central = LU/UR/SZ/OW/NW/ZG; Ticino = TI.
 
+## Labels
+- **units**: CHF million, at current prices | de: Mio. CHF, zu laufenden Preisen | fr: Millions de CHF, aux prix courants | it: Milioni di CHF, a prezzi correnti
+- dim: region
+  - **label**: Region | de: Region | fr: Région | it: Regione
+
 ## Display
 - **split**: region
 - **default**: region=ch
@@ -86,3 +84,12 @@ hierarchical `region` dimension (CH → greater region → canton; the `level`
 dimension was removed). Spot-checks match raw values exactly: Zurich canton
 2008 = 135763.7 and 2022 = 164494.8; Geneva 2022 = 61231.3; Ticino 2022 = 36083.6;
 Switzerland 2022 = 791087.2.
+
+## What is special (de)
+Schweizer Wirtschaftsleistung je Kanton und Grossregion, zu laufenden Preisen. Zeigt den Anteil jedes Kantons an seiner Region und am Land.
+
+## What is special (fr)
+Production économique suisse par canton et par grande région, aux prix courants. Montre la part de chaque canton dans sa région et dans le pays.
+
+## What is special (it)
+Produzione economica svizzera per Cantone e grande regione, a prezzi correnti. Mostra la quota di ogni Cantone nella sua regione e nel Paese.

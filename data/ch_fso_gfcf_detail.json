@@ -1,5 +1,5 @@
 {
-  "schema_version": "1.0",
+  "schema_version": "1.1",
   "id": "ch_fso_gfcf_detail",
   "dim_order": [
     "sector",
@@ -7,78 +7,106 @@
   ],
   "start": "1995-01-01",
   "end": "2024-01-01",
-  "title": {
-    "en": "Investment (GFCF) detail"
-  },
   "source": {
     "name": {
-      "en": "Swiss Federal Statistical Office (FSO)"
+      "en": "Swiss Federal Statistical Office (FSO)",
+      "de": "Bundesamt für Statistik (BFS)",
+      "fr": "Office fédéral de la statistique (OFS)",
+      "it": "Ufficio federale di statistica (UST)"
     },
-    "url": "https://www.bfs.admin.ch/asset/en/ts-x-04.02.05.02"
+    "url": "https://www.bfs.admin.ch/asset/en/ts-x-04.02.05.02",
+    "key": "fso"
   },
   "license": "fso",
   "frequency": "annual",
   "updated": "2025-09-29",
-  "units": {
-    "en": "CHF million, current prices"
-  },
   "dimensions": {
     "sector": {
       "label": {
-        "en": "Institutional sector"
+        "en": "Institutional sector",
+        "de": "Institutioneller Sektor",
+        "fr": "Secteur institutionnel",
+        "it": "Settore istituzionale"
       },
       "levels": {
         "S1": {
           "label": {
-            "en": "Total economy"
+            "en": "Total economy",
+            "de": "Gesamtwirtschaft",
+            "fr": "Économie totale",
+            "it": "Economia totale"
           },
           "data": true
         },
         "S11": {
           "label": {
-            "en": "Non-financial corporations"
+            "en": "Non-financial corporations",
+            "de": "Nichtfinanzielle Kapitalgesellschaften",
+            "fr": "Sociétés non financières",
+            "it": "Società non finanziarie"
           },
           "data": true
         },
         "S12": {
           "label": {
-            "en": "Financial corporations"
+            "en": "Financial corporations",
+            "de": "Finanzielle Kapitalgesellschaften",
+            "fr": "Sociétés financières",
+            "it": "Società finanziarie"
           },
           "data": true
         },
         "S121T127": {
           "label": {
-            "en": "Financial institutions (other than S128 S129)"
+            "en": "Financial institutions (other than S128 S129)",
+            "de": "Finanzinstitute (ohne S128, S129)",
+            "fr": "Institutions financières (hors S128, S129)",
+            "it": "Istituzioni finanziarie (esclusi S128, S129)"
           },
           "data": true
         },
         "S12Q": {
           "label": {
-            "en": "Insurance corporations and pension funds"
+            "en": "Insurance corporations and pension funds",
+            "de": "Versicherungen und Pensionskassen",
+            "fr": "Sociétés d'assurance et caisses de pension",
+            "it": "Imprese di assicurazione e casse pensioni"
           },
           "data": true
         },
         "S13": {
           "label": {
-            "en": "General government"
+            "en": "General government",
+            "de": "Staat",
+            "fr": "Administrations publiques",
+            "it": "Amministrazioni pubbliche"
           },
           "data": true
         },
         "S1314": {
           "label": {
-            "en": "Social security funds"
+            "en": "Social security funds",
+            "de": "Sozialversicherungen",
+            "fr": "Assurances sociales",
+            "it": "Assicurazioni sociali"
           },
           "data": true
         },
         "S14": {
           "label": {
-            "en": "Households"
+            "en": "Households",
+            "de": "Private Haushalte",
+            "fr": "Ménages",
+            "it": "Famiglie"
           },
           "data": true
         },
         "S15": {
           "label": {
-            "en": "Non-profit institutions serving households"
+            "en": "Non-profit institutions serving households",
+            "de": "Private Organisationen ohne Erwerbszweck",
+            "fr": "Institutions sans but lucratif au service des ménages",
+            "it": "Istituzioni senza scopo di lucro al servizio delle famiglie"
           },
           "data": true
         }
@@ -100,36 +128,54 @@
     },
     "asset": {
       "label": {
-        "en": "Asset type"
+        "en": "Asset type",
+        "de": "Anlagekategorie",
+        "fr": "Type d'actif",
+        "it": "Tipo di attivo"
       },
       "levels": {
         "P51G": {
           "label": {
-            "en": "Gross fixed capital formation (total)"
+            "en": "Gross fixed capital formation (total)",
+            "de": "Bruttoanlageinvestitionen (Total)",
+            "fr": "Formation brute de capital fixe (total)",
+            "it": "Investimenti fissi lordi (totale)"
           },
           "data": true
         },
         "P5111_N111_112G": {
           "label": {
-            "en": "Construction"
+            "en": "Construction",
+            "de": "Bau",
+            "fr": "Construction",
+            "it": "Costruzioni"
           },
           "data": true
         },
         "6011": {
           "label": {
-            "en": "Building construction"
+            "en": "Building construction",
+            "de": "Hochbau",
+            "fr": "Bâtiment",
+            "it": "Edilizia"
           },
           "data": true
         },
         "6010": {
           "label": {
-            "en": "Civil engineering"
+            "en": "Civil engineering",
+            "de": "Tiefbau",
+            "fr": "Génie civil",
+            "it": "Genio civile"
           },
           "data": true
         },
         "P5111_N113T117G": {
           "label": {
-            "en": "Equipment, fixed assets and software"
+            "en": "Equipment, fixed assets and software",
+            "de": "Ausrüstungen, Anlagen und Software",
+            "fr": "Équipements, actifs fixes et logiciels",
+            "it": "Attrezzature, impianti e software"
           },
           "data": true
         }
@@ -145,9 +191,31 @@
       }
     }
   },
-  "topic": "National accounts",
-  "concept": "National accounts / Investment (gross fixed capital formation)",
+  "topic": {
+    "key": "national-accounts",
+    "name": {
+      "en": "National accounts",
+      "de": "Volkswirtschaftliche Gesamtrechnung",
+      "fr": "Comptes nationaux",
+      "it": "Conti nazionali"
+    }
+  },
+  "concept": {
+    "en": "National accounts / Investment (gross fixed capital formation)",
+    "leaf": {
+      "en": "Investment (gross fixed capital formation)",
+      "de": "Investitionen (Bruttoanlageinvestitionen)",
+      "fr": "Investissements (FBCF)",
+      "it": "Investimenti (investimenti fissi lordi)"
+    }
+  },
   "canonical": false,
+  "title": {
+    "en": "Investment (GFCF) detail",
+    "de": "Investitionen (Bruttoanlageinvestitionen) im Detail",
+    "fr": "Investissements (FBCF) en détail",
+    "it": "Investimenti (IFL) in dettaglio"
+  },
   "split": "sector",
   "single_select": [],
   "default_transform": "level",
@@ -155,6 +223,17 @@
     "sector": "S1",
     "asset": "P5111_N111_112G"
   },
-  "description": "Gross fixed capital formation (investment) broken down by institutional sector (total economy, non-financial / financial corporations, general government, households, NPISH, …) and asset type (construction vs equipment/software, with construction split into building vs civil engineering), in CHF-million current prices, annual 1995–2024. Non-duplicative with ch_seco_gdp, which carries only the single total-economy GFCF aggregate inside the GDP expenditure split — this is the who-invests-in-what cut underneath it (e.g. how much of total investment is government civil-engineering vs corporate equipment).",
-  "fetched_utc": "2026-08-05 09:13:33"
+  "description": {
+    "en": "Who invests in what: Swiss capital spending by sector (companies, government, households) and by type, from buildings to equipment and software.",
+    "de": "Wer investiert worin: Schweizer Anlageinvestitionen nach Sektor (Unternehmen, Staat, Haushalte) und nach Art, von Bauten bis Ausrüstung und Software.",
+    "fr": "Qui investit dans quoi : les investissements suisses par secteur (entreprises, État, ménages) et par type, du bâtiment aux équipements et logiciels.",
+    "it": "Chi investe in cosa: gli investimenti svizzeri per settore (imprese, Stato, economie domestiche) e per tipo, dalle costruzioni alle attrezzature e al software."
+  },
+  "units": {
+    "en": "CHF million, current prices",
+    "de": "Mio. CHF, zu laufenden Preisen",
+    "fr": "Millions de CHF, aux prix courants",
+    "it": "Milioni di CHF, a prezzi correnti"
+  },
+  "fetched_utc": "2026-08-05 13:12:07"
 }

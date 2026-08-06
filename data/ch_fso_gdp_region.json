@@ -1,31 +1,40 @@
 {
-  "schema_version": "1.0",
+  "schema_version": "1.1",
   "id": "ch_fso_gdp_region",
   "dim_order": [
     "region"
   ],
   "start": "2008-01-01",
   "end": "2022-01-01",
-  "title": {
-    "en": "Regional GDP"
-  },
   "source": {
     "name": {
-      "en": "Swiss Federal Statistical Office (FSO)"
+      "en": "Swiss Federal Statistical Office (FSO)",
+      "de": "Bundesamt für Statistik (BFS)",
+      "fr": "Office fédéral de la statistique (OFS)",
+      "it": "Ufficio federale di statistica (UST)"
     },
-    "url": "https://www.bfs.admin.ch/asset/en/je-e-04.02.06.01"
+    "url": "https://www.bfs.admin.ch/asset/en/je-e-04.02.06.01",
+    "key": "fso"
   },
   "license": "fso",
   "frequency": "annual",
-  "topic": "National accounts",
-  "units": {
-    "en": "CHF million, at current prices"
+  "topic": {
+    "key": "national-accounts",
+    "name": {
+      "en": "National accounts",
+      "de": "Volkswirtschaftliche Gesamtrechnung",
+      "fr": "Comptes nationaux",
+      "it": "Conti nazionali"
+    }
   },
   "updated": "2024-10-28",
   "dimensions": {
     "region": {
       "label": {
-        "en": "Region"
+        "en": "Region",
+        "de": "Region",
+        "fr": "Région",
+        "it": "Regione"
       },
       "levels": {
         "ch": {
@@ -279,13 +288,38 @@
       }
     }
   },
-  "concept": "National accounts / Regional GDP",
+  "concept": {
+    "en": "National accounts / Regional GDP",
+    "leaf": {
+      "en": "Regional GDP",
+      "de": "Regionales BIP",
+      "fr": "PIB régional",
+      "it": "PIL regionale"
+    }
+  },
   "canonical": true,
+  "title": {
+    "en": "Regional GDP",
+    "de": "Regionales BIP",
+    "fr": "PIB régional",
+    "it": "PIL regionale"
+  },
   "split": "region",
   "default_transform": "level",
   "default": {
     "region": "ch"
   },
-  "description": "Gross domestic product broken down by canton (all 26) and by the 7 greater regions (NUTS-2), at current prices in CHF million — the regional decomposition of the national GDP that the SNB cubes and the SECO national-accounts series do not carry. Switzerland (the national total) is the root of a single drill-down tree: Switzerland → greater region → canton, so the share of any canton in its region, or of any region in the country, is one division away. Switzerland is among the most economically concentrated small economies, and this dataset makes the Zurich / Lake-Geneva / Northwestern cluster visible at a glance.",
-  "fetched_utc": "2026-08-05 09:13:33"
+  "description": {
+    "en": "Swiss economic output per canton and per greater region, at current prices. Shows each canton's share of its region and of the country.",
+    "de": "Schweizer Wirtschaftsleistung je Kanton und Grossregion, zu laufenden Preisen. Zeigt den Anteil jedes Kantons an seiner Region und am Land.",
+    "fr": "Production économique suisse par canton et par grande région, aux prix courants. Montre la part de chaque canton dans sa région et dans le pays.",
+    "it": "Produzione economica svizzera per Cantone e grande regione, a prezzi correnti. Mostra la quota di ogni Cantone nella sua regione e nel Paese."
+  },
+  "units": {
+    "en": "CHF million, at current prices",
+    "de": "Mio. CHF, zu laufenden Preisen",
+    "fr": "Millions de CHF, aux prix courants",
+    "it": "Milioni di CHF, a prezzi correnti"
+  },
+  "fetched_utc": "2026-08-05 13:12:07"
 }

@@ -1,5 +1,5 @@
 {
-  "schema_version": "1.0",
+  "schema_version": "1.1",
   "id": "ch_kof_esi",
   "dim_order": [
     "indicator"
@@ -7,13 +7,20 @@
   "start": "2007-04-01",
   "end": "2026-06-01",
   "title": {
-    "en": "KOF Economic Sentiment Index"
+    "en": "KOF Economic Sentiment Index",
+    "de": "KOF Economic Sentiment Index",
+    "fr": "KOF Economic Sentiment Index",
+    "it": "KOF Economic Sentiment Index"
   },
   "source": {
     "name": {
-      "en": "KOF Swiss Economic Institute"
+      "en": "KOF Swiss Economic Institute",
+      "de": "KOF Konjunkturforschungsstelle der ETH Zürich",
+      "fr": "KOF Centre de recherches conjoncturelles (EPF Zurich)",
+      "it": "KOF Centro di ricerche congiunturali (PF Zurigo)"
     },
-    "url": "https://kof.ethz.ch/en/forecasts-and-indicators/indicators/kof-economic-sentiment-indicator.html"
+    "url": "https://kof.ethz.ch/en/forecasts-and-indicators/indicators/kof-economic-sentiment-indicator.html",
+    "key": "kof"
   },
   "license": "kof",
   "frequency": "monthly",
@@ -38,8 +45,24 @@
       }
     }
   },
-  "topic": "Business cycle & sentiment",
-  "concept": "Business cycle & sentiment / Sentiment composite",
+  "topic": {
+    "key": "business-cycle-sentiment",
+    "name": {
+      "en": "Business cycle & sentiment",
+      "de": "Konjunktur & Stimmung",
+      "fr": "Conjoncture & climat",
+      "it": "Congiuntura e clima"
+    }
+  },
+  "concept": {
+    "en": "Business cycle & sentiment / Sentiment composite",
+    "leaf": {
+      "en": "Sentiment composite",
+      "de": "Stimmungsindikator",
+      "fr": "Indice de climat",
+      "it": "Indice di clima"
+    }
+  },
   "canonical": true,
   "split": "indicator",
   "single_select": [],
@@ -47,6 +70,11 @@
   "default": {
     "indicator": "ch.kof.esi.index.v2018"
   },
-  "description": "KOF's Economic Sentiment Index — a survey-based sentiment composite, sibling to the KOF Economic Barometer (ch_kof_barometer) but capturing firms' assessment of the current and expected business situation. Two methodology vintages run in parallel: the original \"pre-Brexit\" version and the standard 2018 version.",
-  "fetched_utc": "2026-08-05 09:13:32"
+  "description": {
+    "en": "How Swiss firms rate their current and expected business situation, from ETH Zurich survey data. Two methodology versions run side by side.",
+    "de": "Wie Schweizer Firmen ihre aktuelle und erwartete Geschäftslage einschätzen, aus Umfragedaten der ETH Zürich. Zwei Methodikvarianten laufen parallel.",
+    "fr": "Comment les entreprises suisses jugent leur situation actuelle et attendue, à partir des enquêtes de l'EPF de Zurich. Deux versions méthodologiques coexistent.",
+    "it": "Come le imprese svizzere valutano la situazione attuale e attesa, dai sondaggi del PF di Zurigo. Due versioni metodologiche coesistono."
+  },
+  "fetched_utc": "2026-08-05 13:12:06"
 }

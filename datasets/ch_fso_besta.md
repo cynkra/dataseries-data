@@ -1,11 +1,11 @@
 # Jobs by economic division (quarterly)
 
 - **id**: ch_fso_besta
-- **title**: Jobs by economic division
+- **title**: Jobs by economic division | de: Beschäftigte nach Wirtschaftsabteilung | fr: Emplois par division économique | it: Impieghi per divisione economica
 - **concept**: Labour / Employment / jobs
 - **canonical**: yes
 - **featured**: Employment
-- **source**: Swiss Federal Statistical Office (FSO)
+- **source**: fso
 - **license**: fso (free reuse, attribution required)
 - **frequency**: quarterly
 - **coverage**: 1991-07 .. 2026-01
@@ -13,19 +13,11 @@
 - **updated**: not published (live PX-Web pull; latest observation 2026Q1)
 
 ## What is special
-BESTA, the FSO employment statistics: the number of jobs in Switzerland by
-economic division (NOGA), quarterly back to 1991. This is the canonical Swiss
-employment series. Its defining feature is the **deep division hierarchy**: 60
-NOGA aggregates from the grand total `5-96` down through sectors (`5-43` Sector
-II, `45-96` Sector III) to individual two-digit divisions (e.g. `21`
-Pharmaceuticals, `64` Financial services, `86` Human health). This lets you read
-the structural shift of the Swiss economy (manufacturing flat, health and
-business services up) off one table. CONCEPT-UNIVERSE flags an overlap with SNB
-`ambeschkla` (employees by activity); BESTA is chosen as canonical because it is
-the FSO authoritative jobs series with the finer NOGA breakdown.
+Number of jobs in Switzerland by industry, quarterly, down to two-digit divisions such as pharmaceuticals, financial services and health.
 
 ## Access
-- **type**: FSO PX-Web (json-stat2)
+- **type**: fso-pxweb — FSO PX-Web (json-stat2)
+- **table id**: `px-x-0602000000_101`
 - **endpoint / table id**: `px-x-0602000000_101` (node; real table at
   `.../px-x-0602000000_101/px-x-0602000000_101.px`)
 - **call**: `fso_fetch("ch_fso_besta", "px-x-0602000000_101", besta_query,
@@ -81,3 +73,12 @@ derived from those ranges.
 ## Provenance
 Script: `R/source_fso.R::fso_fetch` (explicit chunked query built in
 `R/pipeline.R`). Datasheet authored 2026-06-01.
+
+## What is special (de)
+Zahl der Stellen in der Schweiz nach Branche, vierteljährlich, bis auf zweistellige Abteilungen wie Pharma, Finanzdienstleistungen und Gesundheit.
+
+## What is special (fr)
+Nombre d'emplois en Suisse par branche, trimestriel, jusqu'aux divisions à deux chiffres comme la pharma, la finance et la santé.
+
+## What is special (it)
+Numero di posti di lavoro in Svizzera per ramo, trimestrale, fino alle divisioni a due cifre come farmaceutica, finanza e sanità.

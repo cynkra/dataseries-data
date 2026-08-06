@@ -1,37 +1,23 @@
 # Consumer sentiment index
 
 - **id**: ch_seco_concon
-- **title**: Consumer confidence
+- **title**: Consumer confidence | de: Konsumentenstimmung | fr: Climat de consommation | it: Clima di consumo
 - **concept**: Business cycle & sentiment / Consumer confidence
 - **canonical**: yes
 - **featured**: Consumer confidence
 
-- **source**: State Secretariat for Economic Affairs (SECO)
-- **license**: seco
-- **frequency**: quarterly
+- **source**: seco
+- **license**: seco - **frequency**: quarterly
 - **coverage**: 1972-Q4 .. 2026-Q2
 - **series**: 26
 - **updated**: 2026-05-05 (source publish date)
 
 ## What is special
-The Swiss consumer sentiment survey, the canonical sentiment series, back to 1972 —
-one of the longest survey histories in the catalog. SECO (the State Secretariat for
-Economic Affairs) **runs** the survey and **publishes** the data directly in the
-swissdata format, so this dataset is fetched at source and attributed to the true
-producer. It **replaces** the earlier SNB re-export `ch_snb_concon`, which carried
-the same numbers second-hand through the SNB cube API: the move corrects the
-attribution and adds the seasonally-adjusted track that SECO publishes alongside the
-raw balances.
-
-The dataset exposes the headline **consumer sentiment index** (`ks_i63_index_q`) plus
-the underlying balance components: past/expected economic situation, past/expected
-prices, job security and unemployment outlook, past/future personal finances,
-savings situation and outlook, and major-purchase timing. Each series is published
-both raw (`na`) and seasonally + calendar adjusted (`csa`). The historical level
-(1972–2023) has been re-aligned with the current methodology in use since 2024.
+How Swiss households see the economy, prices, job security, their own finances and whether to make big purchases. Raw and seasonally adjusted.
 
 ## Access
-- **type**: SECO swissdata
+- **type**: seco-swissdata — SECO swissdata
+- **set**: `ks-q`
 - **endpoint** (2026-06: SECO retired the old `/dam/...download` URLs — they now 502 — and serves the machine-readable files via `scheduler.swissdatas.ch`, linked from the new page `seco.admin.ch/consumer-sentiment`. This is the long quarterly series since 1972 — `ks-q`; SECO also publishes a monthly `ks-m` and an experimental `ks-exp-m`):
   - data: `https://scheduler.swissdatas.ch/scheduled/ks-q.csv`
   - meta: `https://scheduler.swissdatas.ch/scheduled/ch-seco-ks-q.json`
@@ -59,6 +45,12 @@ this datasheet, not from a hierarchy heuristic).
 - `type` — `index` (index points) or `sd` (standard deviation).
 - `seas_adj` — `na` (raw) or `csa` (seasonally + calendar adjusted).
 
+## Labels
+- dim: structure
+  - grp_prices: Prices | de: Preise | fr: Prix | it: Prezzi
+  - grp_jobs: Employment | de: Beschäftigung | fr: Emploi | it: Occupazione
+  - grp_saving: Saving | de: Sparen | fr: Épargne | it: Risparmio
+
 ## Display
 - **split**: structure
 - **single-select**: type, seas_adj
@@ -79,13 +71,13 @@ grouped by theme; the retired 6.2 index variant sits on its own.
   - ks_i42_fin_pos_exp_q
   - ks_i52_spend_q
 - ks_i11_econ_hist_q
-- @grp_prices: Prices
+- @grp_prices
   - ks_i21_price_hist_q
   - ks_i22_price_exp_q
-- @grp_jobs: Employment
+- @grp_jobs
   - ks_i31_job_secure_q
   - ks_i32_unemp_exp_q
-- @grp_saving: Saving
+- @grp_saving
   - ks_i51_save_q
   - ks_i53_save_exp_q
 - ks_i62_index_q
@@ -101,3 +93,12 @@ grouped by theme; the retired 6.2 index variant sits on its own.
 ## Provenance
 Script: `R/source_seco.R::seco_fetch` (wired in `R/pipeline.R`). Datasheet authored
 2026-06-01; parser verified 2026-06-01.
+
+## What is special (de)
+Wie Schweizer Haushalte die Wirtschaft, die Preise, die Arbeitsplatzsicherheit, ihre eigenen Finanzen und grössere Anschaffungen einschätzen. Unbereinigt und saisonbereinigt.
+
+## What is special (fr)
+Comment les ménages suisses voient l'économie, les prix, la sécurité de l'emploi, leurs propres finances et les achats importants. Brut et désaisonnalisé.
+
+## What is special (it)
+Come le economie domestiche svizzere vedono l'economia, i prezzi, la sicurezza del posto di lavoro, le proprie finanze e i grandi acquisti. Grezzo e destagionalizzato.

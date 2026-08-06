@@ -1,5 +1,5 @@
 {
-  "schema_version": "1.0",
+  "schema_version": "1.1",
   "id": "ch_seco_concon",
   "dim_order": [
     "type",
@@ -10,20 +10,21 @@
   "end": "2026-04-01",
   "title": {
     "en": "Consumer confidence",
-    "de": "Konsumentenstimmungsindex",
-    "fr": "Indice du climat de consommation",
-    "it": "Indice del clima di fiducia dei consumatori"
+    "de": "Konsumentenstimmung",
+    "fr": "Climat de consommation",
+    "it": "Clima di consumo"
   },
   "source": {
     "name": {
       "en": "State Secretariat for Economic Affairs (SECO)",
       "de": "Staatssekretariat für Wirtschaft (SECO)",
-      "fr": "Secrétariat d'Etat à l'économie (SECO)",
-      "it": "Segretaria di Stato dell'economia (SECO)"
+      "fr": "Secrétariat d'État à l'économie (SECO)",
+      "it": "Segreteria di Stato dell'economia (SECO)"
     },
-    "url": "https://www.seco.admin.ch/de/konsumentenstimmung"
+    "url": "https://www.seco.admin.ch/de/konsumentenstimmung",
+    "key": "seco"
   },
-  "license": "seco",
+  "license": "quarterly",
   "frequency": "quarterly",
   "dimensions": {
     "type": {
@@ -181,19 +182,28 @@
         },
         "grp_prices": {
           "label": {
-            "en": "Prices"
+            "en": "Prices",
+            "de": "Preise",
+            "fr": "Prix",
+            "it": "Prezzi"
           },
           "data": false
         },
         "grp_jobs": {
           "label": {
-            "en": "Employment"
+            "en": "Employment",
+            "de": "Beschäftigung",
+            "fr": "Emploi",
+            "it": "Occupazione"
           },
           "data": false
         },
         "grp_saving": {
           "label": {
-            "en": "Saving"
+            "en": "Saving",
+            "de": "Sparen",
+            "fr": "Épargne",
+            "it": "Risparmio"
           },
           "data": false
         }
@@ -251,19 +261,17 @@
     }
   },
   "units": {
-    "type": {
-      "index": {
-        "en": "Index",
-        "de": "Index",
-        "fr": "Indice",
-        "it": "Indice"
-      },
-      "sd": {
-        "en": "Standard deviation",
-        "de": "Standardabweichung",
-        "fr": "Écart-type",
-        "it": "Deviazione standard"
-      }
+    "index": {
+      "en": "Index",
+      "de": "Index",
+      "fr": "Indice",
+      "it": "Indice"
+    },
+    "sd": {
+      "en": "Standard deviation",
+      "de": "Standardabweichung",
+      "fr": "Écart-type",
+      "it": "Deviazione standard"
     }
   },
   "updated": "2026-05-23 16:49:08",
@@ -273,10 +281,31 @@
     "fr": "Indice du climat de consommation. Données corrigées des variations saisonnières et du calendrier ainsi que données non corrigées. Le niveau des données historiques collectées entre 1972 et 2023 a été adapté à celui des données actuelles, relevées depuis 2024. Vous trouverez de plus amples informations dans le document méthodologique.",
     "it": "Indice del clima di fiducia dei consumatori. Dati destagionalizzati e corretti per gli effetti di calendario e dati non corretti. Il livello dei dati storici 1972-2023 è stato adeguato a quello dei dati attuali, rilevati a partire dal 2024. Per maggiori informazioni leggere il documento sulla metodologia impiegata."
   },
-  "topic": "Business cycle & sentiment",
-  "concept": "Business cycle & sentiment / Consumer confidence",
+  "topic": {
+    "key": "business-cycle-sentiment",
+    "name": {
+      "en": "Business cycle & sentiment",
+      "de": "Konjunktur & Stimmung",
+      "fr": "Conjoncture & climat",
+      "it": "Congiuntura e clima"
+    }
+  },
+  "concept": {
+    "en": "Business cycle & sentiment / Consumer confidence",
+    "leaf": {
+      "en": "Consumer confidence",
+      "de": "Konsumentenstimmung",
+      "fr": "Climat de consommation",
+      "it": "Clima di consumo"
+    }
+  },
   "canonical": true,
-  "featured": "Consumer confidence",
+  "featured": {
+    "en": "Consumer confidence",
+    "de": "Konsumentenstimmung",
+    "fr": "Climat de consommation",
+    "it": "Clima di consumo"
+  },
   "split": "structure",
   "single_select": ["type", "seas_adj"],
   "default_transform": "level",
@@ -285,6 +314,11 @@
     "type": "index",
     "seas_adj": "csa"
   },
-  "description": "The Swiss consumer sentiment survey, the canonical sentiment series, back to 1972 — one of the longest survey histories in the catalog. SECO (the State Secretariat for Economic Affairs) runs the survey and publishes the data directly in the swissdata format, so this dataset is fetched at source and attributed to the true producer. It replaces the earlier SNB re-export ch_snb_concon, which carried the same numbers second-hand through the SNB cube API: the move corrects the attribution and adds the seasonally-adjusted track that SECO publishes alongside the raw balances. The dataset exposes the headline consumer sentiment index (ks_i63_index_q) plus the underlying balance components: past/expected economic situation, past/expected prices, job security and unemployment outlook, past/future personal finances, savings situation and outlook, and major-purchase timing. Each series is published both raw (na) and seasonally + calendar adjusted (csa). The historical level (1972–2023) has been re-aligned with the current methodology in use since 2024.",
-  "fetched_utc": "2026-08-05 09:13:31"
+  "description": {
+    "en": "How Swiss households see the economy, prices, job security, their own finances and whether to make big purchases. Raw and seasonally adjusted.",
+    "de": "Wie Schweizer Haushalte die Wirtschaft, die Preise, die Arbeitsplatzsicherheit, ihre eigenen Finanzen und grössere Anschaffungen einschätzen. Unbereinigt und saisonbereinigt.",
+    "fr": "Comment les ménages suisses voient l'économie, les prix, la sécurité de l'emploi, leurs propres finances et les achats importants. Brut et désaisonnalisé.",
+    "it": "Come le economie domestiche svizzere vedono l'economia, i prezzi, la sicurezza del posto di lavoro, le proprie finanze e i grandi acquisti. Grezzo e destagionalizzato."
+  },
+  "fetched_utc": "2026-08-05 13:12:04"
 }

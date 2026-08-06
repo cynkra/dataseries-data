@@ -1,5 +1,5 @@
 {
-  "schema_version": "1.0",
+  "schema_version": "1.1",
   "id": "ch_snb_capchstocki",
   "dim_order": [
     "D0"
@@ -7,121 +7,164 @@
   "start": "1989-01-03",
   "end": "2026-07-15",
   "title": {
-    "en": "Swiss stock indices"
+    "en": "Swiss stock indices",
+    "de": "Schweizer Aktienindizes",
+    "fr": "Indices boursiers suisses",
+    "it": "Indici azionari svizzeri"
   },
   "source": {
     "name": {
-      "en": "Swiss National Bank"
+      "en": "Swiss National Bank",
+      "de": "Schweizerische Nationalbank (SNB)",
+      "fr": "Banque nationale suisse (BNS)",
+      "it": "Banca nazionale svizzera (BNS)"
     },
-    "url": "https://data.snb.ch/en/topics/snb/cube/capchstocki"
+    "url": "https://data.snb.ch/en/topics/snb/cube/capchstocki",
+    "key": "snb"
   },
   "license": "snb",
   "frequency": "daily",
   "dimensions": {
     "D0": {
       "label": {
-        "en": "Overview"
+        "en": "Overview",
+        "de": "Übersicht",
+        "fr": "Vue d’ensemble"
       },
       "levels": {
         "D0_0": {
           "label": {
-            "en": "SPI Swiss Performance Index"
+            "en": "SPI Swiss Performance Index",
+            "de": "SPI Swiss Performance Index",
+            "fr": "SPI Swiss Performance Index"
           },
           "data": false
         },
         "GDR": {
           "label": {
-            "en": "Index total (including dividend reinvestment)"
+            "en": "Index total (including dividend reinvestment)",
+            "de": "Gesamtindex (mit Dividenden-Reinvestition)",
+            "fr": "Indice global (avec réinvestissement des dividendes)"
           },
           "data": true
         },
         "SIX": {
           "label": {
-            "en": "Breakdown by industry in accordance with SIX"
+            "en": "Breakdown by industry in accordance with SIX",
+            "de": "Sektorgliederung nach SIX",
+            "fr": "Répartition par secteurs selon SIX"
           },
           "data": false
         },
         "BA": {
           "label": {
-            "en": "Banks"
+            "en": "Banks",
+            "de": "Banken",
+            "fr": "Banques"
           },
           "data": true
         },
         "FD": {
           "label": {
-            "en": "Financial services"
+            "en": "Financial services",
+            "de": "Finanzdienstleistungen",
+            "fr": "Services financiers"
           },
           "data": true
         },
         "VS": {
           "label": {
-            "en": "Insurance"
+            "en": "Insurance",
+            "de": "Versicherungen",
+            "fr": "Assurances"
           },
           "data": true
         },
         "NGT": {
           "label": {
-            "en": "Food, beverages and tobacco"
+            "en": "Food, beverages and tobacco",
+            "de": "Nahrungsmittel, Getränke und Tabak",
+            "fr": "Alimentation, boissons et tabac"
           },
           "data": true
         },
         "GW": {
           "label": {
-            "en": "Health care"
+            "en": "Health care",
+            "de": "Gesundheitswesen",
+            "fr": "Santé"
           },
           "data": true
         },
         "ICB": {
           "label": {
-            "en": "Breakdown by industry in accordance with ICB"
+            "en": "Breakdown by industry in accordance with ICB",
+            "de": "Sektorgliederung nach ICB",
+            "fr": "Répartition par secteurs selon ICB"
           },
           "data": false
         },
         "B": {
           "label": {
-            "en": "Banks"
+            "en": "Banks",
+            "de": "Banken",
+            "fr": "Banques"
           },
           "data": true
         },
         "F": {
           "label": {
-            "en": "Financial services"
+            "en": "Financial services",
+            "de": "Finanzdienstleistungen",
+            "fr": "Services financiers"
           },
           "data": true
         },
         "V": {
           "label": {
-            "en": "Insurance"
+            "en": "Insurance",
+            "de": "Versicherungen",
+            "fr": "Assurances"
           },
           "data": true
         },
         "NG": {
           "label": {
-            "en": "Food and beverages"
+            "en": "Food and beverages",
+            "de": "Nahrungsmittel und Getränke",
+            "fr": "Alimentation et boissons"
           },
           "data": true
         },
         "G": {
           "label": {
-            "en": "Health care"
+            "en": "Health care",
+            "de": "Gesundheitswesen",
+            "fr": "Santé"
           },
           "data": true
         },
         "N": {
           "label": {
-            "en": "Registered shares"
+            "en": "Registered shares",
+            "de": "Namenaktien",
+            "fr": "Actions nominatives"
           },
           "data": true
         },
         "IPS": {
           "label": {
-            "en": "Bearer shares and participation certificates"
+            "en": "Bearer shares and participation certificates",
+            "de": "Inhaberaktien und PS",
+            "fr": "Actions au porteur et BP"
           },
           "data": true
         },
         "SMISMIDR": {
           "label": {
-            "en": "SMI Swiss Market Index (excluding dividend reinvestment)"
+            "en": "SMI Swiss Market Index (excluding dividend reinvestment)",
+            "de": "SMI Swiss Market Index (ohne Dividenden-Reinvestition)",
+            "fr": "SMI Swiss Market Index (sans réinvestissement des dividendes)"
           },
           "data": true
         }
@@ -151,16 +194,42 @@
     }
   },
   "updated": "2026-07-21 09:00",
-  "topic": "Financial markets",
-  "concept": "Financial markets / Swiss stock indices",
+  "topic": {
+    "key": "financial-markets",
+    "name": {
+      "en": "Financial markets",
+      "de": "Finanzmärkte",
+      "fr": "Marchés financiers",
+      "it": "Mercati finanziari"
+    }
+  },
+  "concept": {
+    "en": "Financial markets / Swiss stock indices",
+    "leaf": {
+      "en": "Swiss stock indices",
+      "de": "Schweizer Aktienindizes",
+      "fr": "Indices boursiers suisses",
+      "it": "Indici azionari svizzeri"
+    }
+  },
   "canonical": true,
-  "featured": "Stock market",
+  "featured": {
+    "en": "Stock market",
+    "de": "Aktienmarkt",
+    "fr": "Marché des actions",
+    "it": "Mercato azionario"
+  },
   "split": "D0",
   "single_select": [],
   "default_transform": "level",
   "default": {
     "D0": "GDR"
   },
-  "description": "Daily levels of the Swiss equity market, the canonical stock-index series. It pairs the two headline indices, the SPI Swiss Performance Index (total return, with dividend reinvestment, code GDR) and the SMI Swiss Market Index (price index, excluding dividend reinvestment, code SMISMIDR), with SPI sub-indices split two ways: by SIX sector classification (BA/FD/VS/NGT/GW) and by ICB classification (B/F/V/NG/G), so banks, financial services, insurance, food/beverages and health care each appear under both schemes. Also N registered shares and IPS bearer shares/participation certificates. Daily frequency back to 1989 for the headline SPI; the sector sub-indices begin later (the CSV sample for SIX banks B starts 2000), because SIX/ICB sector breakdowns were backfilled only from their introduction.",
-  "fetched_utc": "2026-07-21 09:18:21"
+  "description": {
+    "en": "Daily levels of the SPI and SMI Swiss share indices, with sector sub-indices. The SPI includes reinvested dividends, the SMI does not.",
+    "de": "Tägliche Stände der Schweizer Aktienindizes SPI und SMI, mit Sektor-Subindizes. Der SPI enthält reinvestierte Dividenden, der SMI nicht.",
+    "fr": "Niveaux quotidiens des indices boursiers suisses SPI et SMI, avec des sous-indices sectoriels. Le SPI inclut les dividendes réinvestis, le SMI non.",
+    "it": "Livelli giornalieri degli indici azionari svizzeri SPI e SMI, con sottoindici settoriali. Lo SPI include i dividendi reinvestiti, lo SMI no."
+  },
+  "fetched_utc": "2026-08-05 13:12:02"
 }

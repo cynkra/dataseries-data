@@ -1,10 +1,10 @@
 # Interest rates on new loan agreements, by product and maturity
 
 - **id**: ch_snb_zikredlauf
-- **title**: New lending rates
+- **title**: New lending rates | de: Zinssätze Neugeschäft | fr: Taux des nouveaux crédits | it: Tassi sui nuovi crediti
 - **concept**: Interest rates & yields / Money-market rates
 - **canonical**: no (alternate; one of the three money-market-rate cubes `zimoma` / `zikredlauf` / `zikrepro`, this one is the new-business lending-rate distribution)
-- **source**: Swiss National Bank (SNB)
+- **source**: snb
 - **license**: snb (free reuse, attribution required)
 - **frequency**: monthly
 - **coverage**: 2009-05 .. 2026-02
@@ -12,17 +12,11 @@
 - **updated**: 2026-02 (latest published period)
 
 ## What is special
-The rate banks actually charge on newly agreed loans, broken down by product and by
-maturity bucket, and reported as a full distribution rather than a single number. For
-each product/maturity cell the cube gives the mean, the 25% quantile, the median, the
-75% quantile and the count of loan agreements (`AK`). That quantile spread is the
-distinctive feature: it shows the dispersion of pricing across borrowers, not just the
-average. Products cover fixed-rate mortgages, base-rate-linked variable mortgages and
-fixed-rate investment loans, each across up to ten maturity buckets from "over 1 month"
-to "over 10 up to 15 years". History starts 2009-05.
+What Swiss banks charge on new loans and mortgages by maturity, as a full spread: mean, quartiles and median, not just an average.
 
 ## Access
-- **type**: SNB cube API
+- **type**: snb-cube — SNB cube API
+- **cube**: `zikredlauf`
 - **endpoint**: `https://data.snb.ch/api/cube/zikredlauf/data/json/en`
 - **call**: `snb_fetch("zikredlauf", title = "Interest rates on new loan agreements, by product and maturity")`
 
@@ -60,3 +54,12 @@ to "over 10 up to 15 years". History starts 2009-05.
 ## Provenance
 Script: `R/source_snb.R::snb_fetch` (cube list + title from `R/snb_cubes.tsv`).
 Datasheet authored 2026-06-01; parser verified 2026-06-01 (19,555 data rows, 105 series).
+
+## What is special (de)
+Was Schweizer Banken für neue Kredite und Hypotheken nach Laufzeit verlangen, als ganze Spanne: Mittelwert, Quartile und Median statt nur eines Durchschnitts.
+
+## What is special (fr)
+Ce que les banques suisses facturent sur les nouveaux crédits et hypothèques par échéance, en fourchette complète : moyenne, quartiles et médiane, pas seulement une moyenne.
+
+## What is special (it)
+Quanto applicano le banche svizzere su nuovi crediti e ipoteche per scadenza, come intera distribuzione: media, quartili e mediana, non solo una media.

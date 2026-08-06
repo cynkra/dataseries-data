@@ -1,23 +1,21 @@
 # Vacant dwellings
 
 - **id**: ch_fso_vacant_dwellings
+- **title**: Vacant dwellings | de: Leerwohnungen | fr: Logements vacants | it: Abitazioni vuote
 - **concept**: Domestic economy / Vacant dwellings
 - **canonical**: yes
-- **source**: Swiss Federal Statistical Office (FSO)
+- **source**: fso
 - **license**: fso (free reuse, attribution required)
 - **frequency**: annual
 - **coverage**: 1995 .. 2025
 - **series**: 2
 
 ## What is special
-The official Swiss **vacancy rate** (Leerwohnungsziffer) and the absolute count of
-vacant dwellings, national, annual since 1995. The vacancy rate is the headline
-housing-market tightness indicator — it fell to ~1.0% by 2025, the tightest in
-years.
+How many Swiss homes stand empty, and the official vacancy rate, the standard measure of housing shortage. Down to about 1.0% by 2025.
 
 ## Access
-- **type**: FSO SDMX (disseminate.stats.swiss), sliced to the national total
-- **flow**: agency `CH1.LWZ`, dataflow `DF_LWZ_1`, version 1.0.0
+- **type**: fso-sdmx — FSO SDMX (disseminate.stats.swiss), sliced to the national total
+- **flow**: `CH1.LWZ/DF_LWZ_1/1.0.0` (agency `CH1.LWZ`, dataflow `DF_LWZ_1`, version 1.0.0)
 - **call**: `fso_sdmx_vacant_dwellings("ch_fso_vacant_dwellings")`
 
 ## Parsing recipe
@@ -32,6 +30,12 @@ years.
 ## Dimensions
 - `measure`: `PC` Vacancy rate (%) — the default/headline — and `V` Vacant dwellings
   (number). Two different units, so single-select rather than a meaningful overlay.
+
+## Labels
+- dim: measure
+  - **label**: Measure | de: Messgrösse | fr: Mesure | it: Misura
+  - PC: Vacancy rate (%) | de: Leerwohnungsziffer (%) | fr: Taux de logements vacants (%) | it: Tasso di abitazioni vuote (%)
+  - V: Vacant dwellings (number) | de: Leerwohnungen (Anzahl) | fr: Logements vacants (nombre) | it: Abitazioni vuote (numero)
 
 ## Display
 - **split**: measure
@@ -49,3 +53,12 @@ years.
 ## Provenance
 Script: `R/source_fso_sdmx.R::fso_sdmx_vacant_dwellings` (wired in `R/pipeline.R`).
 Datasheet authored 2026-06-02; SDMX slice verified live 2026-06-02 (1995 .. 2025).
+
+## What is special (de)
+Wie viele Schweizer Wohnungen leer stehen, und die offizielle Leerwohnungsziffer, das Standardmass für Wohnungsknappheit. 2025 bei rund 1.0%.
+
+## What is special (fr)
+Combien de logements suisses sont vacants, et le taux de vacance officiel, la mesure de référence de la pénurie de logements. Environ 1.0% en 2025.
+
+## What is special (it)
+Quante abitazioni svizzere sono vuote, e il tasso di sfitto ufficiale, la misura di riferimento della penuria di alloggi. Circa l'1.0% nel 2025.

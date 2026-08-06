@@ -1,10 +1,10 @@
 # Employed persons by economic sector and sex (ETS)
 
 - **id**: ch_fso_ets
-- **title**: Employed persons (ETS)
+- **title**: Employed persons (ETS) | de: Erwerbstätige (ETS) | fr: Personnes actives occupées (SPAO) | it: Persone occupate (SPO)
 - **concept**: Labour / Employment / employed persons
 - **canonical**: no (alternate / sector-and-sex breakdown of the employment concept; `ch_fso_besta` is the headline)
-- **source**: Swiss Federal Statistical Office (FSO)
+- **source**: fso
 - **license**: fso (free reuse, attribution required)
 - **frequency**: quarterly
 - **coverage**: 1991-04 .. 2025-10
@@ -12,18 +12,11 @@
 - **updated**: 2026-03-17
 
 ## What is special
-The Employment Statistics (ETS) headcount of **employed persons on the domestic
-concept (Inlandkonzept)**, quarterly averages back to 1991, cut by economic
-sector and sex. Where BESTA tracks *jobs* by fine NOGA division, ETS tracks
-*persons* and exposes the full sector tree on one axis: total `P`, the three
-economic sectors (`P_1` agriculture, `P_2` industry & construction, `P_3`
-services), and 18 NOGA-2008 sections beneath them. Crossing 23 sector codes with
-three sexes (total / men / women) gives 69 series on a single headcount scale, so
-the male/female split of any sector reads straight off the chart.
+How many people work in Switzerland, by sector and sex, counting persons rather than jobs, so the male and female split reads directly.
 
 ## Access
-- **type**: FSO DAM asset, master is a long CSV (not xlsx)
-- **order**: `ts-x-03.02.01.08` (asset 36461448)
+- **type**: fso-dam-csv — FSO DAM asset, master is a long CSV (not xlsx)
+- **order number**: `ts-x-03.02.01.08` (asset 36461448)
 - **call**: `fso_ets("ch_fso_ets")`
 
 ## Parsing recipe
@@ -49,6 +42,39 @@ the male/female split of any sector reads straight off the chart.
   D, `P_2_3` E, `P_2_4` F; `P_3_1` G … `P_3_14` T). 23 codes.
 - `sex` (Sex): `total` Total, `male` Men, `female` Women.
 
+## Labels
+- **units**: Number of employed persons (domestic concept, quarterly average) | de: Anzahl Erwerbstätige (Inlandkonzept, Quartalsdurchschnitt) | fr: Nombre de personnes actives occupées (concept intérieur, moyenne trimestrielle) | it: Numero di persone occupate (concetto interno, media trimestrale)
+- dim: sector
+  - **label**: Economic sector | de: Wirtschaftssektor | fr: Secteur économique | it: Settore economico
+  - P: Total | de: Total | fr: Total | it: Totale
+  - P_1: Sector 1: Agriculture, forestry and fishing | de: Sektor 1: Land- und Forstwirtschaft, Fischerei | fr: Secteur 1 : agriculture, sylviculture et pêche | it: Settore 1: agricoltura, silvicoltura e pesca
+  - P_1_1: A Agriculture, forestry and fishing | de: A Land- und Forstwirtschaft, Fischerei | fr: A Agriculture, sylviculture et pêche | it: A Agricoltura, silvicoltura e pesca
+  - P_2: Sector 2: Industry and construction | de: Sektor 2: Industrie und Bau | fr: Secteur 2 : industrie et construction | it: Settore 2: industria e costruzioni
+  - P_2_1: B-C Mining, quarrying and manufacturing | de: B-C Bergbau und verarbeitendes Gewerbe | fr: B-C Industries extractives et manufacturières | it: B-C Attività estrattive e manifatturiere
+  - P_2_2: D Electricity, gas, steam and air conditioning supply | de: D Energieversorgung | fr: D Production et distribution d'énergie | it: D Fornitura di energia
+  - P_2_3: E Water supply; sewerage, waste management and remediation | de: E Wasserversorgung und Abfallentsorgung | fr: E Production et distribution d'eau; gestion des déchets | it: E Fornitura d'acqua; gestione dei rifiuti
+  - P_2_4: F Construction | de: F Baugewerbe | fr: F Construction | it: F Costruzioni
+  - P_3: Sector 3: Services | de: Sektor 3: Dienstleistungen | fr: Secteur 3 : services | it: Settore 3: servizi
+  - P_3_1: G Wholesale and retail trade; repair of motor vehicles | de: G Handel; Reparatur von Motorfahrzeugen | fr: G Commerce; réparation d'automobiles | it: G Commercio; riparazione di autoveicoli
+  - P_3_2: H Transportation and storage | de: H Verkehr und Lagerei | fr: H Transports et entreposage | it: H Trasporto e magazzinaggio
+  - P_3_3: I Accommodation and food service activities | de: I Gastgewerbe | fr: I Hébergement et restauration | it: I Alloggio e ristorazione
+  - P_3_4: J Information and communication | de: J Information und Kommunikation | fr: J Information et communication | it: J Informazione e comunicazione
+  - P_3_5: K Financial and insurance activities | de: K Finanz- und Versicherungsdienstleistungen | fr: K Activités financières et d'assurance | it: K Attività finanziarie e assicurative
+  - P_3_6: L Real estate activities | de: L Grundstücks- und Wohnungswesen | fr: L Activités immobilières | it: L Attività immobiliari
+  - P_3_7: M Professional, scientific and technical activities | de: M Freiberufliche, wissenschaftliche und technische Dienstleistungen | fr: M Activités spécialisées, scientifiques et techniques | it: M Attività professionali, scientifiche e tecniche
+  - P_3_8: N Administrative and support service activities | de: N Sonstige wirtschaftliche Dienstleistungen | fr: N Activités de services administratifs et de soutien | it: N Attività amministrative e di servizi di supporto
+  - P_3_9: O Public administration and defence; compulsory social security | de: O Öffentliche Verwaltung, Verteidigung, Sozialversicherung | fr: O Administration publique, défense, sécurité sociale | it: O Amministrazione pubblica, difesa, sicurezza sociale
+  - P_3_10: P Education | de: P Erziehung und Unterricht | fr: P Enseignement | it: P Istruzione
+  - P_3_11: Q Human health and social work activities | de: Q Gesundheits- und Sozialwesen | fr: Q Santé humaine et action sociale | it: Q Sanità e assistenza sociale
+  - P_3_12: R Arts, entertainment and recreation | de: R Kunst, Unterhaltung und Erholung | fr: R Arts, spectacles et activités récréatives | it: R Attività artistiche e di intrattenimento
+  - P_3_13: S Other service activities | de: S Sonstige Dienstleistungen | fr: S Autres activités de services | it: S Altre attività di servizi
+  - P_3_14: T Activities of households as employers | de: T Private Haushalte als Arbeitgeber | fr: T Ménages en tant qu'employeurs | it: T Famiglie come datori di lavoro
+- dim: sex
+  - **label**: Sex | de: Geschlecht | fr: Sexe | it: Sesso
+  - total: Total | de: Total | fr: Total | it: Totale
+  - male: Men | de: Männer | fr: Hommes | it: Uomini
+  - female: Women | de: Frauen | fr: Femmes | it: Donne
+
 ## Display
 - **split**: sector
 - **single-select**:
@@ -73,3 +99,12 @@ Datasheet authored 2026-06-02; verified live 2026-06-02 (Total P both sexes
 Display reworked 2026-06-03: split = sector (the hierarchical industry tree is the
 set of lines), sex = exclusive single-select (Total / Men / Women); sector×sex is
 a clean 23×3 rectangle so every chip is populated.
+
+## What is special (de)
+Wie viele Menschen in der Schweiz arbeiten, nach Sektor und Geschlecht — gezählt werden Personen statt Stellen, sodass der Frauen- und Männeranteil direkt ablesbar ist.
+
+## What is special (fr)
+Combien de personnes travaillent en Suisse, par secteur et par sexe : on compte des personnes et non des emplois, si bien que la répartition hommes-femmes se lit directement.
+
+## What is special (it)
+Quante persone lavorano in Svizzera, per settore e sesso: si contano persone e non posti di lavoro, così la ripartizione tra uomini e donne è leggibile direttamente.

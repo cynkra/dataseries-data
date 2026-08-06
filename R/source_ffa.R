@@ -33,63 +33,26 @@ suppressPackageStartupMessages({
 .FFA_CKAN <- "https://opendata.swiss/api/3/action/package_show?id=hauptaggregate-und-prognosen-im-fs-und-gfs-modell"
 .FFA_CSV_FALLBACK <- "https://www.data.finance.admin.ch/static/assets/datasets/fs_dashboard/main_extern.csv"
 
-# Government level (hh) -> English label. `bund_ktn_gdn` is the cantons+communes+
-# Confederation aggregate the FFA reports alongside the consolidated general govt.
-.FFA_LEVELS <- list(
-  staat        = "General government",
-  bund         = "Confederation",
-  ktn          = "Cantons",
-  gdn          = "Communes",
-  sv           = "Social security funds",
-  bund_ktn_gdn = "Confederation, cantons and communes"
+# Government level (hh) codes, in display order. `bund_ktn_gdn` is the cantons+
+# communes+Confederation aggregate the FFA reports alongside the consolidated
+# general govt. Display labels live in the datasheet ## Labels block.
+.FFA_LEVELS <- c("staat", "bund", "ktn", "gdn", "sv", "bund_ktn_gdn")
+
+# Accounting model codes.
+.FFA_MODELS <- c("fs", "gfs")
+
+# variable (source German code) — the curated headline indicators, in display
+# order. Only these are kept; the deep debt-decomposition codes (debt_*, FBE_*,
+# FS_SR*, ...) are dropped (see datasheet caveats). Display labels live in the
+# datasheet ## Labels block.
+.FFA_INDICATORS <- c(
+  "einnahmen", "ausgaben", "saldo", "einnahmen_ord", "ausgaben_ord", "saldo_ord", "ertrag", "aufwand", "fiskalertrag", "bruttoschuld_fs", "nettoschulden_fs", "maastricht_schuld", "nettoschuld", "defizit_ueberschuss", "nettozugang_sachvermoegen", "aktiven", "fremdkapital", "eigenkapital", "bip", "fiskalquote", "einnahmenquote", "staatsquote", "bruttoschuldenquote", "schuldenquote", "nettoschuldenquote"
 )
 
-# Accounting model -> English label.
-.FFA_MODELS <- list(
-  fs  = "FS model (financial statistics)",
-  gfs = "GFS model (Maastricht / SNA basis)"
-)
-
-# variable (source German code) -> English headline-indicator label. Only the
-# headline aggregates the project curates are kept; the deep debt-decomposition
-# codes (debt_*, FBE_*, FS_SR*, ...) are dropped (see datasheet caveats).
-.FFA_INDICATORS <- list(
-  einnahmen           = "Receipts",
-  ausgaben            = "Expenditure",
-  saldo               = "Balance",
-  einnahmen_ord       = "Ordinary receipts",
-  ausgaben_ord        = "Ordinary expenditure",
-  saldo_ord           = "Ordinary balance",
-  ertrag              = "Revenue",
-  aufwand             = "Expenses",
-  fiskalertrag        = "Fiscal revenue (taxes)",
-  bruttoschuld_fs     = "Gross debt",
-  nettoschulden_fs    = "Net debt",
-  maastricht_schuld   = "Gross debt (Maastricht)",
-  nettoschuld         = "Net debt",
-  defizit_ueberschuss = "Deficit / surplus",
-  nettozugang_sachvermoegen = "Net acquisition of non-financial assets",
-  aktiven             = "Assets",
-  fremdkapital        = "Liabilities",
-  eigenkapital        = "Equity / net worth",
-  bip                 = "Gross domestic product",
-  fiskalquote         = "Fiscal ratio (tax-to-GDP)",
-  einnahmenquote      = "Receipts-to-GDP ratio",
-  staatsquote         = "Expenditure-to-GDP ratio",
-  bruttoschuldenquote = "Gross-debt-to-GDP ratio (Maastricht)",
-  schuldenquote       = "Debt-to-GDP ratio",
-  nettoschuldenquote  = "Net-debt-to-GDP ratio"
-)
-
-# source flag (German) -> English estimate-type label.
-.FFA_ESTIMATE <- list(
-  "Financial statements"             = "Financial statements (actual)",
-  "Provisional financial statements" = "Provisional financial statements",
-  "Survey financial statements"      = "Survey financial statements",
-  "Survey budget"                    = "Survey budget",
-  "Budget/financial plans"           = "Budget / financial plans",
-  "Forecasts"                        = "Forecasts",
-  "Data available"                   = "Data available"
+# Estimate-type codes (the source column values). Display labels live in the
+# datasheet ## Labels block.
+.FFA_ESTIMATE <- c(
+  "Financial statements", "Provisional financial statements", "Survey financial statements", "Survey budget", "Budget/financial plans", "Forecasts", "Data available"
 )
 
 # A browser-like GET (the WAF rejects bare clients) with the shared retry policy.
@@ -137,21 +100,17 @@ suppressPackageStartupMessages({
   }, error = function(e) NA_character_)
 }
 
-# Build the contract `dimensions` meta for one dim column from a code->label map,
-# keeping only codes actually present in the data, in the map's declared order.
-.ffa_dim <- function(data, col, label_map, dim_label) {
-  present <- unique(as.character(data[[col]]))
-  codes <- intersect(names(label_map), present)
+# Build the contract `dimensions` meta for one dim column from an ordered code
+# vector, keeping only codes actually present in the data, in declared order.
+# Dim + level labels live in the datasheet ## Labels block (attach_labels).
+.ffa_dim <- function(data, col, code_order) {
+  codes <- intersect(code_order, unique(as.character(data[[col]])))
   list(
-    label = list(en = dim_label),
-    levels = setNames(lapply(codes, function(code) {
-      list(label = list(en = unname(label_map[[code]] %||% code)))
-    }), codes)
+    levels = setNames(lapply(codes, function(x) list()), codes)
   )
 }
 
-ffa_fetch <- function(dataset_id = "ch_ffa_finances",
-                      title = list(en = "Public finances: general government main aggregates")) {
+ffa_fetch <- function(dataset_id = "ch_ffa_finances") {
   csv_url <- .ffa_resolve_csv()
   resp <- .ffa_get(csv_url)
   raw <- readr::read_csv(I(resp_body_string(resp)), show_col_types = FALSE,
@@ -171,7 +130,7 @@ ffa_fetch <- function(dataset_id = "ch_ffa_finances",
     # Keep only the curated headline indicators. The GDP reference row carries
     # hh=NA / model=NA in the source; place it under General government / GFS so it
     # sits in the tree as a real series rather than an orphan NA branch.
-    dplyr::filter(indicator %in% names(.FFA_INDICATORS), !is.na(value)) |>
+    dplyr::filter(indicator %in% .FFA_INDICATORS, !is.na(value)) |>
     dplyr::mutate(
       level = dplyr::if_else(indicator == "bip" & (is.na(level) | level == "NA"),
                              "staat", level),
@@ -180,26 +139,23 @@ ffa_fetch <- function(dataset_id = "ch_ffa_finances",
       estimate = dplyr::if_else(is.na(estimate) | estimate == "NA",
                                 "Financial statements", estimate)
     ) |>
-    dplyr::filter(level %in% names(.FFA_LEVELS), model %in% names(.FFA_MODELS)) |>
+    dplyr::filter(level %in% .FFA_LEVELS, model %in% .FFA_MODELS) |>
     dplyr::mutate(date = as.Date(to_iso(jahr))) |>
     dplyr::select(level, model, indicator, estimate, date, value) |>
     dplyr::arrange(level, model, indicator, estimate, date)
 
   meta <- list(
-    title = title,
     source = list(
-      name = list(en = "Federal Finance Administration (FFA)"),
       url = "https://opendata.swiss/en/dataset/hauptaggregate-und-prognosen-im-fs-und-gfs-modell"
     ),
-    license = "opendata.swiss terms of use (open use, attribution required: Federal Finance Administration FFA)",
+    license = "opendata-swiss",
     frequency = "annual",
     dimensions = list(
-      level     = .ffa_dim(data, "level",     .FFA_LEVELS,     "Government level"),
-      model     = .ffa_dim(data, "model",     .FFA_MODELS,     "Accounting model"),
-      indicator = .ffa_dim(data, "indicator", .FFA_INDICATORS, "Indicator"),
-      estimate  = .ffa_dim(data, "estimate",  .FFA_ESTIMATE,   "Estimate type")
+      level     = .ffa_dim(data, "level",     .FFA_LEVELS),
+      model     = .ffa_dim(data, "model",     .FFA_MODELS),
+      indicator = .ffa_dim(data, "indicator", .FFA_INDICATORS),
+      estimate  = .ffa_dim(data, "estimate",  .FFA_ESTIMATE)
     ),
-    units = list(en = "CHF million (levels) / share of GDP, 0-1 (ratios)"),
     updated = .ffa_updated(),
     notes = list(en = paste(
       "Headline general-government finance aggregates from the FFA FS- and GFS-model",

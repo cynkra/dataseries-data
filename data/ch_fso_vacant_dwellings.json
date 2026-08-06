@@ -1,52 +1,89 @@
 {
-  "schema_version": "1.0",
+  "schema_version": "1.1",
   "id": "ch_fso_vacant_dwellings",
   "dim_order": [
     "measure"
   ],
   "start": "1995-01-01",
   "end": "2025-01-01",
-  "title": {
-    "en": "Vacant dwellings"
-  },
   "source": {
     "name": {
-      "en": "Swiss Federal Statistical Office (FSO)"
+      "en": "Swiss Federal Statistical Office (FSO)",
+      "de": "Bundesamt für Statistik (BFS)",
+      "fr": "Office fédéral de la statistique (OFS)",
+      "it": "Ufficio federale di statistica (UST)"
     },
-    "url": "https://www.bfs.admin.ch/asset/en/px-x-0902020100_104"
+    "url": "https://www.bfs.admin.ch/asset/en/px-x-0902020100_104",
+    "key": "fso"
   },
   "license": "fso",
   "frequency": "annual",
-  "topic": "Domestic economy",
+  "topic": {
+    "key": "domestic-economy",
+    "name": {
+      "en": "Domestic economy",
+      "de": "Binnenwirtschaft",
+      "fr": "Économie intérieure",
+      "it": "Economia interna"
+    }
+  },
   "dimensions": {
     "measure": {
       "label": {
-        "en": "Measure"
+        "en": "Measure",
+        "de": "Messgrösse",
+        "fr": "Mesure",
+        "it": "Misura"
       },
       "levels": {
         "PC": {
           "label": {
-            "en": "Vacancy rate (%)"
+            "en": "Vacancy rate (%)",
+            "de": "Leerwohnungsziffer (%)",
+            "fr": "Taux de logements vacants (%)",
+            "it": "Tasso di abitazioni vuote (%)"
           },
           "data": true
         },
         "V": {
           "label": {
-            "en": "Vacant dwellings (number)"
+            "en": "Vacant dwellings (number)",
+            "de": "Leerwohnungen (Anzahl)",
+            "fr": "Logements vacants (nombre)",
+            "it": "Abitazioni vuote (numero)"
           },
           "data": true
         }
       }
     }
   },
-  "concept": "Domestic economy / Vacant dwellings",
+  "concept": {
+    "en": "Domestic economy / Vacant dwellings",
+    "leaf": {
+      "en": "Vacant dwellings",
+      "de": "Leerwohnungen",
+      "fr": "Logements vacants",
+      "it": "Abitazioni vuote"
+    }
+  },
   "canonical": true,
+  "title": {
+    "en": "Vacant dwellings",
+    "de": "Leerwohnungen",
+    "fr": "Logements vacants",
+    "it": "Abitazioni vuote"
+  },
   "split": "measure",
   "single_select": [],
   "default_transform": "level",
   "default": {
     "measure": "PC"
   },
-  "description": "The official Swiss vacancy rate (Leerwohnungsziffer) and the absolute count of vacant dwellings, national, annual since 1995. The vacancy rate is the headline housing-market tightness indicator — it fell to ~1.0% by 2025, the tightest in years.",
-  "fetched_utc": "2026-08-05 09:13:31"
+  "description": {
+    "en": "How many Swiss homes stand empty, and the official vacancy rate, the standard measure of housing shortage. Down to about 1.0% by 2025.",
+    "de": "Wie viele Schweizer Wohnungen leer stehen, und die offizielle Leerwohnungsziffer, das Standardmass für Wohnungsknappheit. 2025 bei rund 1.0%.",
+    "fr": "Combien de logements suisses sont vacants, et le taux de vacance officiel, la mesure de référence de la pénurie de logements. Environ 1.0% en 2025.",
+    "it": "Quante abitazioni svizzere sono vuote, e il tasso di sfitto ufficiale, la misura di riferimento della penuria di alloggi. Circa l'1.0% nel 2025."
+  },
+  "fetched_utc": "2026-08-05 13:12:05"
 }

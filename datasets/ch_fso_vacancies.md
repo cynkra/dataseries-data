@@ -1,10 +1,10 @@
 # Job vacancies by economic division
 
 - **id**: ch_fso_vacancies
-- **title**: Job vacancies
+- **title**: Job vacancies | de: Offene Stellen | fr: Postes vacants | it: Posti vacanti
 - **concept**: Labour / Job vacancies
 - **canonical**: yes
-- **source**: Swiss Federal Statistical Office (FSO)
+- **source**: fso
 - **license**: fso (free reuse, attribution required)
 - **frequency**: quarterly
 - **coverage**: 1992-04 .. 2026-01
@@ -12,19 +12,11 @@
 - **updated**: not published (live PX-Web pull; latest observation 2026Q1)
 
 ## What is special
-The FSO job-vacancies statistics, a **leading indicator** for the labour market:
-when firms post more openings, employment tends to follow. Quarterly back to
-1992, by economic division. What makes this dataset distinctive is the
-`Offene Stellen` dimension, which carries three different units of the same
-concept in one table: the **count** of vacancies (`1`), an **index** rebased to
-2015Q2 = 100 (`2`), and the **vacancy rate** in % of jobs (`3`). The mixed units
-are why the value span runs from 0.2 (a rate) to 127017 (a count) in the same
-column. The 20 NOGA divisions are a coarser cut than BESTA's 60 (e.g. one
-`68-75` aggregate instead of separate real-estate and professional-services
-codes). Pairs with `ch_fso_besta` (jobs) as the demand-side counterpart.
+Job vacancies posted by Swiss firms, by industry, as a count, an index and a rate. A leading signal: postings move before employment does.
 
 ## Access
-- **type**: FSO PX-Web (json-stat2)
+- **type**: fso-pxweb — FSO PX-Web (json-stat2)
+- **table id**: `px-x-0602000000_103`
 - **endpoint / table id**: `px-x-0602000000_103` (node; real table at
   `.../px-x-0602000000_103/px-x-0602000000_103.px`)
 - **call**: `fso_fetch_auto("ch_fso_vacancies", "px-x-0602000000_103", ...)`
@@ -73,6 +65,8 @@ NOGA division ranges nest by containment (`5-96` ⊃ `5-43`/`45-96` ⊃ groups);
 - derive: noga-range
 
 ## Caveats / simplifications
+- The `Offene Stellen` dimension mixes three units of the same concept (count,
+  index, rate), so a chart spanning all three has a meaningless scale. Select one.
 - The three `Offene Stellen` measures share one `value` column; consumers must
   read the unit from that dimension, not the value magnitude.
 - Coverage start differs by slice: the count/rate begin earlier than the index
@@ -82,3 +76,12 @@ NOGA division ranges nest by containment (`5-96` ⊃ `5-43`/`45-96` ⊃ groups);
 ## Provenance
 Script: `R/source_fso.R::fso_fetch_auto` (auto-query; entry in `R/pipeline.R`).
 Datasheet authored 2026-06-01.
+
+## What is special (de)
+Von Schweizer Firmen ausgeschriebene offene Stellen, nach Branche, als Anzahl, Index und Quote. Ein Frühindikator: Ausschreibungen bewegen sich vor der Beschäftigung.
+
+## What is special (fr)
+Postes vacants publiés par les entreprises suisses, par branche, en nombre, en indice et en taux. Un indicateur avancé : les annonces bougent avant l'emploi.
+
+## What is special (it)
+Posti vacanti pubblicati dalle imprese svizzere, per ramo, come numero, indice e tasso. Un indicatore anticipatore: gli annunci si muovono prima dell'occupazione.

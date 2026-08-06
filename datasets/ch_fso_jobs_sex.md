@@ -1,9 +1,10 @@
 # Jobs by economic division and sex
 
 - **id**: ch_fso_jobs_sex
+- **title**: Jobs by economic division and sex | de: Beschäftigte nach Wirtschaftsabteilung und Geschlecht | fr: Emplois par division économique et sexe | it: Impieghi per divisione economica e sesso
 - **concept**: Labour / Employment / jobs
 - **canonical**: no (alternate / breakdown of `ch_fso_besta`)
-- **source**: Swiss Federal Statistical Office (FSO)
+- **source**: fso
 - **license**: fso (free reuse, attribution required)
 - **frequency**: quarterly
 - **coverage**: 1995-07 .. 2026-01
@@ -11,20 +12,11 @@
 - **updated**: not published (live PX-Web pull; latest observation 2026Q1)
 
 ## What is special
-The cross-tabulated companion to BESTA: jobs by major region, broad economic
-sector, employment level and sex, quarterly back to 1995. It is **not canonical**
-for the employment concept; `ch_fso_besta` (by fine NOGA division) is the
-headline. This dataset exists for the **breakdown axes** BESTA collapses to
-total: it splits jobs by sex (men/women), by full-time vs part-time, and by the
-seven major regions (Grossregion). With 336 dimension combinations it is by far
-the largest of the FSO labour tables in this catalog. Two of its employment-rate
-levels are **seasonally adjusted** variants (`3` total SA, `4.1` full-time
-equivalents SA), so seasonal adjustment appears here as a dimension level rather
-than a separate dataset. It trades BESTA's NOGA depth (60 divisions) for only
-three sector aggregates (total, Sector 2, Sector 3).
+Swiss jobs split by region, sector, full-time or part-time, and sex, the breakdowns the headline employment series reports only as a total.
 
 ## Access
-- **type**: FSO PX-Web (json-stat2)
+- **type**: fso-pxweb — FSO PX-Web (json-stat2)
+- **table id**: `px-x-0602000000_102`
 - **endpoint / table id**: `px-x-0602000000_102` (node; real table at
   `.../px-x-0602000000_102/px-x-0602000000_102.px`)
 - **call**: `fso_fetch_auto("ch_fso_jobs_sex", "px-x-0602000000_102", ...)`
@@ -81,3 +73,12 @@ three sector aggregates (total, Sector 2, Sector 3).
 ## Provenance
 Script: `R/source_fso.R::fso_fetch_auto` (auto-query; entry in `R/pipeline.R`).
 Datasheet authored 2026-06-01.
+
+## What is special (de)
+Schweizer Stellen nach Region, Sektor, Voll- oder Teilzeit und Geschlecht — die Gliederungen, welche die Hauptreihe nur als Total ausweist.
+
+## What is special (fr)
+Emplois suisses par région, secteur, temps plein ou partiel et sexe : les ventilations que la série principale ne publie qu'en total.
+
+## What is special (it)
+Posti di lavoro svizzeri per regione, settore, tempo pieno o parziale e sesso: le ripartizioni che la serie principale riporta solo come totale.

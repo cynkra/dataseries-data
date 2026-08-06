@@ -1,9 +1,10 @@
 # KOF Economic Barometer
 
 - **id**: ch_kof_barometer
+- **title**: KOF Economic Barometer | de: KOF Konjunkturbarometer | fr: Baromètre conjoncturel KOF | it: Barometro congiunturale KOF
 - **concept**: Business cycle & sentiment / Leading barometer
 - **canonical**: yes
-- **source**: KOF Swiss Economic Institute (ETH Zurich)
+- **source**: kof
 - **license**: kof (CC BY, redistributable with attribution)
 - **frequency**: monthly
 - **coverage**: 1991-01 .. 2026-05
@@ -11,20 +12,11 @@
 - **updated**: 2026-05
 
 ## What is special
-The headline Swiss leading indicator for the business cycle, published monthly
-near month-end. A single composite index built from a large basket of underlying
-predictors, designed to anticipate the year-over-year growth rate of Swiss GDP a
-few months ahead. Normalised so the long-run mean sits around 100; readings above
-100 signal above-average expected growth, below 100 the reverse. Plain one-column
-time series, no dimensions, monthly back to 1991.
-
-Note: on API v2 the per-key `ts` endpoint serves every public key (the v1 HTTP 412
-gate is gone), but the wider open KOF family is still most convenient as whole
-**collections** — see `ch_kof_esi` (`R/source_kof.R::kof_set_fetch`), which reads
-`ogd_ch.kof.esi`, `ogd_ch.kof.globalbaro`, `ogd_ch.kof.bts_total`.
+Switzerland's leading business-cycle indicator, published monthly by ETH Zurich. Around 100 is average; above signals faster growth ahead.
 
 ## Access
-- **type**: KOF Time Series Database API **v2**
+- **type**: kof-api — KOF Time Series Database API **v2**
+- **key**: `ch.kof.barometer`
 - **endpoint**: `https://tsdb-api.kof.ethz.ch/v2/ts`
 - **call**: `kof_fetch("ch.kof.barometer")`
   (`GET .../ts?keys=ch.kof.barometer&mime=csv&access_type=public`, no key required)
@@ -57,3 +49,12 @@ None. The dataset is a single undifferentiated series (`dim_order` empty).
 Script: `R/source_kof.R::kof_fetch` (key `ch.kof.barometer`). Datasheet authored
 2026-06-01; parser verified 2026-06-01 (425 rows, 1 series). Migrated to KOF API v2
 and re-verified 2026-07-30.
+
+## What is special (de)
+Der führende Schweizer Konjunkturindikator, monatlich von der ETH Zürich publiziert. Rund 100 ist der Durchschnitt; darüber deutet auf stärkeres Wachstum hin.
+
+## What is special (fr)
+L'indicateur avancé de la conjoncture suisse, publié mensuellement par l'EPF de Zurich. Environ 100 correspond à la moyenne ; au-dessus signale une croissance plus forte.
+
+## What is special (it)
+L'indicatore anticipatore della congiuntura svizzera, pubblicato mensilmente dal PF di Zurigo. Circa 100 è la media; sopra segnala una crescita più forte.

@@ -1,5 +1,5 @@
 {
-  "schema_version": "1.0",
+  "schema_version": "1.1",
   "id": "ch_snb_auvercurrq",
   "dim_order": [
     "D0",
@@ -9,55 +9,76 @@
   "start": "1985-01-01",
   "end": "2026-01-01",
   "title": {
-    "en": "Investment position by currency"
+    "en": "Investment position by currency",
+    "de": "Auslandvermögen nach Währung",
+    "fr": "Position extérieure par monnaie",
+    "it": "Posizione sull'estero per valuta"
   },
   "source": {
     "name": {
-      "en": "Swiss National Bank"
+      "en": "Swiss National Bank",
+      "de": "Schweizerische Nationalbank (SNB)",
+      "fr": "Banque nationale suisse (BNS)",
+      "it": "Banca nazionale svizzera (BNS)"
     },
-    "url": "https://data.snb.ch/en/topics/snb/cube/auvercurrq"
+    "url": "https://data.snb.ch/en/topics/snb/cube/auvercurrq",
+    "key": "snb"
   },
   "license": "snb",
   "frequency": "quarterly",
   "dimensions": {
     "D0": {
       "label": {
-        "en": "Currency"
+        "en": "Currency",
+        "de": "Währung",
+        "fr": "Monnaie"
       },
       "levels": {
         "T": {
           "label": {
-            "en": "Total"
+            "en": "Total",
+            "de": "Total",
+            "fr": "Total"
           },
           "data": true
         },
         "CHF": {
           "label": {
-            "en": "CHF"
+            "en": "CHF",
+            "de": "CHF",
+            "fr": "CHF"
           },
           "data": true
         },
         "USD": {
           "label": {
-            "en": "USD"
+            "en": "USD",
+            "de": "USD",
+            "fr": "USD"
           },
           "data": true
         },
         "EUR": {
           "label": {
-            "en": "EUR"
+            "en": "EUR",
+            "de": "EUR",
+            "fr": "EUR"
           },
           "data": true
         },
         "UW": {
           "label": {
-            "en": "Other currencies"
+            "en": "Other currencies",
+            "de": "Übrige Währungen",
+            "fr": "Autres monnaies"
           },
           "data": true
         },
         "E": {
           "label": {
-            "en": "Precious metals"
+            "en": "Precious metals",
+            "de": "Edelmetalle",
+            "fr": "Métaux précieux"
           },
           "data": true
         }
@@ -74,24 +95,32 @@
     },
     "D1": {
       "label": {
-        "en": "Accounting entry"
+        "en": "Accounting entry",
+        "de": "Buchungseintrag",
+        "fr": "Enregistrement comptable"
       },
       "levels": {
         "A": {
           "label": {
-            "en": "Assets"
+            "en": "Assets",
+            "de": "Aktiven",
+            "fr": "Actifs"
           },
           "data": true
         },
         "P": {
           "label": {
-            "en": "Liabilities"
+            "en": "Liabilities",
+            "de": "Passiven",
+            "fr": "Passifs"
           },
           "data": true
         },
         "N": {
           "label": {
-            "en": "Net international investment position"
+            "en": "Net international investment position",
+            "de": "Nettovermögen",
+            "fr": "Position extérieure nette"
           },
           "data": true
         }
@@ -104,42 +133,56 @@
     },
     "D2": {
       "label": {
-        "en": "Component"
+        "en": "Component",
+        "de": "Komponente",
+        "fr": "Composante"
       },
       "levels": {
         "T": {
           "label": {
-            "en": "Total"
+            "en": "Total",
+            "de": "Total",
+            "fr": "Total"
           },
           "data": true
         },
         "D0": {
           "label": {
-            "en": "Direct investment"
+            "en": "Direct investment",
+            "de": "Direktinvestitionen",
+            "fr": "Investissements directs"
           },
           "data": true
         },
         "P": {
           "label": {
-            "en": "Portfolio investment"
+            "en": "Portfolio investment",
+            "de": "Portfolioinvestitionen",
+            "fr": "Investissements de portefeuille"
           },
           "data": true
         },
         "D1": {
           "label": {
-            "en": "Derivatives"
+            "en": "Derivatives",
+            "de": "Derivate",
+            "fr": "Produits dérivés"
           },
           "data": true
         },
         "UI": {
           "label": {
-            "en": "Other investment"
+            "en": "Other investment",
+            "de": "Übrige Investitionen",
+            "fr": "Autres investissements"
           },
           "data": true
         },
         "W": {
           "label": {
-            "en": "Reserve assets"
+            "en": "Reserve assets",
+            "de": "Währungsreserven",
+            "fr": "Réserves monétaires"
           },
           "data": true
         }
@@ -156,8 +199,24 @@
     }
   },
   "updated": "2026-06-23 09:00",
-  "topic": "External sector",
-  "concept": "External sector / International investment position",
+  "topic": {
+    "key": "external-sector",
+    "name": {
+      "en": "External sector",
+      "de": "Aussenwirtschaft",
+      "fr": "Secteur extérieur",
+      "it": "Settore estero"
+    }
+  },
+  "concept": {
+    "en": "External sector / International investment position",
+    "leaf": {
+      "en": "International investment position",
+      "de": "Auslandvermögen",
+      "fr": "Position extérieure",
+      "it": "Posizione sull'estero"
+    }
+  },
   "canonical": false,
   "split": "D2",
   "single_select": "D1",
@@ -167,6 +226,11 @@
     "D1": "N",
     "D2": "T"
   },
-  "description": "The currency-denomination cut of the same international investment position covered by auvekomq. Its value is the currency axis: it shows how much of Switzerland's foreign assets and liabilities are held in CHF, USD, EUR, other currencies and precious metals, which is what makes the IIP exposed to exchange-rate moves. Three dimensions cross currency by accounting entry by functional component, so you can ask e.g. \"USD-denominated portfolio-investment liabilities\" directly. Same 1985 start and CHF-million end-of-quarter stocks as the overview. Kept as a non-canonical companion, not a re-export: the currency breakdown is a genuinely different view, but the headline IIP story lives in auvekomq.",
-  "fetched_utc": "2026-06-23 09:28:09"
+  "description": {
+    "en": "Which currencies Switzerland's foreign assets and debts are held in, francs, dollars, euros or precious metals, and so how exposed they are.",
+    "de": "In welchen Währungen die Schweizer Auslandguthaben und -schulden gehalten werden — Franken, Dollar, Euro oder Edelmetalle — und wie exponiert sie damit sind.",
+    "fr": "Dans quelles monnaies sont détenus les avoirs et engagements suisses à l'étranger — francs, dollars, euros ou métaux précieux — et donc leur exposition.",
+    "it": "In quali valute sono detenuti gli attivi e i debiti svizzeri sull'estero — franchi, dollari, euro o metalli preziosi — e quindi quanto sono esposti."
+  },
+  "fetched_utc": "2026-08-05 13:12:01"
 }

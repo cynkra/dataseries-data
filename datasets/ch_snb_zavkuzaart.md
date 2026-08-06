@@ -1,10 +1,10 @@
 # Customer payments at banks – Outgoing payments, by type of order
 
 - **id**: ch_snb_zavkuzaart
-- **title**: Customer payments (outgoing)
+- **title**: Customer payments (outgoing) | de: Kundenzahlungen (ausgehend) | fr: Paiements des clients (sortants) | it: Pagamenti dei clienti (in uscita)
 - **concept**: Payment systems / Payments & cash
 - **canonical**: no (alternate for Payments & cash; the credit-transfer / direct-debit view of the `zave*` family, complementary to the card cubes)
-- **source**: Swiss National Bank (SNB)
+- **source**: snb
 - **license**: snb (free reuse, attribution required)
 - **frequency**: monthly
 - **coverage**: 2012-03 .. 2026-03
@@ -12,17 +12,11 @@
 - **updated**: 2026-03 (latest published period)
 
 ## What is special
-Non-card retail payments: customer credit transfers, direct debits and other outgoing
-payments processed by banks. It is the cube that captures how Swiss customers actually
-send money, with a deep order-type hierarchy (`D1`) that distinguishes paper-based from
-non-paper-based transfers, then within non-paper-based splits eBanking, direct channels,
-standing orders and other types. This is where the migration away from paper payment
-slips is visible. It also separates whether a payment stays between resident banks or
-involves a non-resident bank (`D0`), giving a domestic-versus-cross-border read on the
-payment plumbing. History starts only 2012-03, later than the card cubes.
+How Swiss customers send money without a card: credit transfers, direct debits and standing orders, paper versus electronic.
 
 ## Access
-- **type**: SNB cube API
+- **type**: snb-cube — SNB cube API
+- **cube**: `zavkuzaart`
 - **endpoint**: `https://data.snb.ch/api/cube/zavkuzaart/data/json/en`
 - **call**: `snb_fetch("zavkuzaart", title = "Customer payments at banks – Outgoing payments, by type of order")`
 
@@ -64,3 +58,12 @@ payment plumbing. History starts only 2012-03, later than the card cubes.
 ## Provenance
 Script: `R/source_snb.R::snb_fetch` (cube list + title from `R/snb_cubes.tsv`).
 Datasheet authored 2026-06-01; parser verified 2026-06-01 (4,932 data rows, 90 series).
+
+## What is special (de)
+Wie Schweizer Kundinnen und Kunden ohne Karte Geld überweisen: Zahlungsaufträge, Lastschriften und Daueraufträge, papierbasiert oder elektronisch.
+
+## What is special (fr)
+Comment la clientèle suisse transfère de l'argent sans carte : virements, prélèvements et ordres permanents, sur papier ou par voie électronique.
+
+## What is special (it)
+Come la clientela svizzera trasferisce denaro senza carta: bonifici, addebiti diretti e ordini permanenti, su carta o in forma elettronica.

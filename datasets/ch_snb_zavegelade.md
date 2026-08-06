@@ -1,10 +1,10 @@
 # E-money - loading and float
 
 - **id**: ch_snb_zavegelade
-- **title**: E-money
+- **title**: E-money | de: E-Geld | fr: Monnaie électronique | it: Moneta elettronica
 - **concept**: Payment systems / Payments & cash
 - **canonical**: no (alternate within Payments & cash; one of several `ch_snb_zave*` payment series)
-- **source**: Swiss National Bank (SNB)
+- **source**: snb
 - **license**: snb (free reuse, attribution required)
 - **frequency**: monthly
 - **coverage**: 2014-12 .. 2026-03
@@ -12,20 +12,11 @@
 - **updated**: 2026-03 (use API PublishingDate header for exact day)
 
 ## What is special
-A narrow, niche payments series: the loading and float of e-money on Swiss
-domestic payment cards (prepaid / stored-value card balances), monthly from 2014.
-The smallest cube in this group at just 4 series. It splits into two halves in the
-hierarchy. Loading (the act of topping up a card) carries three measures of the
-same flow: `TT` transactions in thousands, `BMF0` amount in CHF millions, and
-`BTF` amount per transaction in CHF (a derived average, value / count). Float (the
-outstanding balance sitting on cards) is a single stock: `BMF1` amount in CHF
-millions. So in one short table you get a flow (loading) with its per-transaction
-average and the corresponding stock (float), which is the distinctive flow-vs-stock
-pairing for the e-money niche. It is the youngest history of the six and one of the
-`zave*` payment-system family.
+Top-ups and outstanding balances on Swiss prepaid and stored-value payment cards.
 
 ## Access
-- **type**: SNB cube API
+- **type**: snb-cube — SNB cube API
+- **cube**: `zavegelade`
 - **endpoint**: `https://data.snb.ch/api/cube/zavegelade/data/json/en`
 - **call**: `snb_fetch("zavegelade", title = "E-money - loading and float")`
 
@@ -65,3 +56,12 @@ pairing for the e-money niche. It is the youngest history of the six and one of 
 ## Provenance
 Script: `R/source_snb.R::snb_fetch` (cube `zavegelade`, title from
 `R/snb_cubes.tsv`, topic "Payment systems"). Datasheet authored 2026-06-01.
+
+## What is special (de)
+Aufladungen und ausstehende Guthaben auf Schweizer Vorauszahlungs- und Wertkarten.
+
+## What is special (fr)
+Chargements et soldes en circulation sur les cartes suisses prépayées et à valeur stockée.
+
+## What is special (it)
+Ricariche e saldi in circolazione sulle carte svizzere prepagate e a valore memorizzato.

@@ -1,5 +1,5 @@
 {
-  "schema_version": "1.0",
+  "schema_version": "1.1",
   "id": "ch_snb_bopcurrq",
   "dim_order": [
     "D0",
@@ -8,325 +8,436 @@
   "start": "1983-01-01",
   "end": "2026-01-01",
   "title": {
-    "en": "Balance of payments: current account"
+    "en": "Balance of payments: current account",
+    "de": "Zahlungsbilanz: Leistungsbilanz",
+    "fr": "Balance des paiements : compte courant",
+    "it": "Bilancia dei pagamenti: conto corrente"
   },
   "source": {
     "name": {
-      "en": "Swiss National Bank"
+      "en": "Swiss National Bank",
+      "de": "Schweizerische Nationalbank (SNB)",
+      "fr": "Banque nationale suisse (BNS)",
+      "it": "Banca nazionale svizzera (BNS)"
     },
-    "url": "https://data.snb.ch/en/topics/snb/cube/bopcurrq"
+    "url": "https://data.snb.ch/en/topics/snb/cube/bopcurrq",
+    "key": "snb"
   },
   "license": "snb",
   "frequency": "quarterly",
   "dimensions": {
     "D0": {
       "label": {
-        "en": "Component"
+        "en": "Component",
+        "de": "Komponente",
+        "fr": "Composante"
       },
       "levels": {
         "L0": {
           "label": {
-            "en": "Current account"
+            "en": "Current account",
+            "de": "Leistungsbilanz",
+            "fr": "Balance des transactions courantes"
           },
           "data": true
         },
         "D0_1": {
           "label": {
-            "en": "Goods"
+            "en": "Goods",
+            "de": "Waren",
+            "fr": "Marchandises"
           },
           "data": false
         },
         "T0": {
           "label": {
-            "en": "Total"
+            "en": "Total",
+            "de": "Total",
+            "fr": "Total"
           },
           "data": true
         },
         "D0_1_1": {
           "label": {
-            "en": "Foreign trade"
+            "en": "Foreign trade",
+            "de": "Aussenhandel",
+            "fr": "Commerce extérieur"
           },
           "data": false
         },
         "T1": {
           "label": {
-            "en": "Total"
+            "en": "Total",
+            "de": "Total",
+            "fr": "Total"
           },
           "data": true
         },
         "DAT1": {
           "label": {
-            "en": "of which foreign trade total 1"
+            "en": "of which foreign trade total 1",
+            "de": "davon Aussenhandel Total 1",
+            "fr": "dont commerce extérieur, total 1"
           },
           "data": true
         },
         "DGZ": {
           "label": {
-            "en": "of which non-monetary gold"
+            "en": "of which non-monetary gold",
+            "de": "davon Gold zu nicht-monetären Zwecken",
+            "fr": "dont or non monétaire"
           },
           "data": true
         },
         "D0_1_2": {
           "label": {
-            "en": "Supplements to foreign trade"
+            "en": "Supplements to foreign trade",
+            "de": "Ergänzungen zum Aussenhandel",
+            "fr": "Compléments concernant le commerce extérieur"
           },
           "data": false
         },
         "T2": {
           "label": {
-            "en": "Total"
+            "en": "Total",
+            "de": "Total",
+            "fr": "Total"
           },
           "data": true
         },
         "H": {
           "label": {
-            "en": "Additions"
+            "en": "Additions",
+            "de": "Hinzufügungen",
+            "fr": "Éléments ajoutés"
           },
           "data": true
         },
         "V0": {
           "label": {
-            "en": "Subtractions"
+            "en": "Subtractions",
+            "de": "Verminderungen",
+            "fr": "Éléments déduits"
           },
           "data": true
         },
         "T3": {
           "label": {
-            "en": "Merchanting"
+            "en": "Merchanting",
+            "de": "Transithandel",
+            "fr": "Commerce de transit"
           },
           "data": true
         },
         "D0_2": {
           "label": {
-            "en": "Services"
+            "en": "Services",
+            "de": "Dienste",
+            "fr": "Services"
           },
           "data": false
         },
         "T4": {
           "label": {
-            "en": "Total"
+            "en": "Total",
+            "de": "Total",
+            "fr": "Total"
           },
           "data": true
         },
         "T5": {
           "label": {
-            "en": "Transport services"
+            "en": "Transport services",
+            "de": "Transportdienste",
+            "fr": "Services Transports"
           },
           "data": false
         },
         "T51": {
           "label": {
-            "en": "Total"
+            "en": "Total",
+            "de": "Total",
+            "fr": "Total"
           },
           "data": true
         },
         "T52": {
           "label": {
-            "en": "Passengers"
+            "en": "Passengers",
+            "de": "Personen",
+            "fr": "Personnes"
           },
           "data": true
         },
         "T53": {
           "label": {
-            "en": "Freight"
+            "en": "Freight",
+            "de": "Waren",
+            "fr": "Marchandises"
           },
           "data": true
         },
         "T54": {
           "label": {
-            "en": "Other"
+            "en": "Other",
+            "de": "Übrige Transportdienste",
+            "fr": "Autres services en matière de transports"
           },
           "data": true
         },
         "T6": {
           "label": {
-            "en": "Tourism"
+            "en": "Tourism",
+            "de": "Tourismus",
+            "fr": "Tourisme"
           },
           "data": true
         },
         "V1": {
           "label": {
-            "en": "Insurance and pension services"
+            "en": "Insurance and pension services",
+            "de": "Versicherungsdienste",
+            "fr": "Prestations d’assurances"
           },
           "data": true
         },
         "F": {
           "label": {
-            "en": "Financial services"
+            "en": "Financial services",
+            "de": "Finanzdienste",
+            "fr": "Services financiers"
           },
           "data": true
         },
         "L1": {
           "label": {
-            "en": "Licence fees"
+            "en": "Licence fees",
+            "de": "Lizenzgebühren",
+            "fr": "Droits de licence"
           },
           "data": true
         },
         "TCI": {
           "label": {
-            "en": "Telecommunications, computer and information services"
+            "en": "Telecommunications, computer and information services",
+            "de": "Telekommunikation-, Computer- und Informationsdienste",
+            "fr": "Services de télécommunications, d’informatique et d’information"
           },
           "data": true
         },
         "FWRB": {
           "label": {
-            "en": "Manufacturing services, maintenance and repair services, construction services"
+            "en": "Manufacturing services, maintenance and repair services, construction services",
+            "de": "Fertigungsdienste, Wartung und Reparatur, Baudienste",
+            "fr": "Services de production manufacturière, maintenance et réparation, services de construction"
           },
           "data": true
         },
         "FE": {
           "label": {
-            "en": "Research and development services"
+            "en": "Research and development services",
+            "de": "Forschung und Entwicklung",
+            "fr": "Recherche et développement (R&D)"
           },
           "data": true
         },
         "G": {
           "label": {
-            "en": "Business services"
+            "en": "Business services",
+            "de": "Geschäftsdienste",
+            "fr": "Services aux entreprises"
           },
           "data": true
         },
         "UD": {
           "label": {
-            "en": "Other services"
+            "en": "Other services",
+            "de": "Übrige Dienste",
+            "fr": "Autres services"
           },
           "data": true
         },
         "D0_3": {
           "label": {
-            "en": "Primary income"
+            "en": "Primary income",
+            "de": "Primäreinkommen",
+            "fr": "Revenus primaires"
           },
           "data": false
         },
         "T7": {
           "label": {
-            "en": "Total"
+            "en": "Total",
+            "de": "Total",
+            "fr": "Total"
           },
           "data": true
         },
         "A": {
           "label": {
-            "en": "Labour income"
+            "en": "Labour income",
+            "de": "Arbeitseinkommen",
+            "fr": "Revenus du travail"
           },
           "data": true
         },
         "D0_3_2": {
           "label": {
-            "en": "Investment income"
+            "en": "Investment income",
+            "de": "Kapitaleinkommen",
+            "fr": "Revenus de capitaux"
           },
           "data": false
         },
         "T8": {
           "label": {
-            "en": "Total"
+            "en": "Total",
+            "de": "Total",
+            "fr": "Total"
           },
           "data": true
         },
         "TDI": {
           "label": {
-            "en": "Direct investment"
+            "en": "Direct investment",
+            "de": "Direktinvestitionen",
+            "fr": "Investissements directs"
           },
           "data": false
         },
         "D": {
           "label": {
-            "en": "Total"
+            "en": "Total",
+            "de": "Total",
+            "fr": "Total"
           },
           "data": true
         },
         "DDIV": {
           "label": {
-            "en": "Dividends"
+            "en": "Dividends",
+            "de": "Dividenden",
+            "fr": "Dividendes"
           },
           "data": true
         },
         "DRE": {
           "label": {
-            "en": "Reinvested earnings"
+            "en": "Reinvested earnings",
+            "de": "Reinvestierte Erträge",
+            "fr": "Bénéfices réinvestis"
           },
           "data": true
         },
         "DZ": {
           "label": {
-            "en": "Interest"
+            "en": "Interest",
+            "de": "Zinsen",
+            "fr": "Intérêts"
           },
           "data": true
         },
         "TP0": {
           "label": {
-            "en": "Portfolio investment"
+            "en": "Portfolio investment",
+            "de": "Portfolioinvestitionen",
+            "fr": "Investissements de portefeuille"
           },
           "data": false
         },
         "P0": {
           "label": {
-            "en": "Total"
+            "en": "Total",
+            "de": "Total",
+            "fr": "Total"
           },
           "data": true
         },
         "P0DP": {
           "label": {
-            "en": "Equity securities"
+            "en": "Equity securities",
+            "de": "Dividendenpapiere",
+            "fr": "Titres de participation"
           },
           "data": true
         },
         "P0ST": {
           "label": {
-            "en": "Debt securities"
+            "en": "Debt securities",
+            "de": "Schuldtitel",
+            "fr": "Titres de créance"
           },
           "data": true
         },
         "UI": {
           "label": {
-            "en": "Other investment"
+            "en": "Other investment",
+            "de": "Übrige Investitionen",
+            "fr": "Autres investissements"
           },
           "data": true
         },
         "W": {
           "label": {
-            "en": "Reserve assets"
+            "en": "Reserve assets",
+            "de": "Währungsreserven",
+            "fr": "Réserves monétaires"
           },
           "data": true
         },
         "D0_4": {
           "label": {
-            "en": "Secondary income"
+            "en": "Secondary income",
+            "de": "Sekundäreinkommen",
+            "fr": "Revenus secondaires"
           },
           "data": false
         },
         "T9": {
           "label": {
-            "en": "Total"
+            "en": "Total",
+            "de": "Total",
+            "fr": "Total"
           },
           "data": true
         },
         "OH": {
           "label": {
-            "en": "Public sector"
+            "en": "Public sector",
+            "de": "Öffentliche Hand",
+            "fr": "Collectivités publiques"
           },
           "data": true
         },
         "P1": {
           "label": {
-            "en": "Private sector"
+            "en": "Private sector",
+            "de": "Privatsektor",
+            "fr": "Secteur privé"
           },
           "data": false
         },
         "T91": {
           "label": {
-            "en": "Total"
+            "en": "Total",
+            "de": "Total",
+            "fr": "Total"
           },
           "data": true
         },
         "IM": {
           "label": {
-            "en": "of which transfers by immigrants"
+            "en": "of which transfers by immigrants",
+            "de": "davon Übertragungen Immigranten",
+            "fr": "dont transferts par les immigrés"
           },
           "data": true
         },
         "PMTWV": {
           "label": {
-            "en": "Pro memoria Merchanting: Goods purchases/sales"
+            "en": "Pro memoria Merchanting: Goods purchases/sales",
+            "de": "Pro Memoria Transithandel Wareneinkäufe/-verkäufe",
+            "fr": "Pour mémoire – Commerce de transit: achats/ventes de marchandises"
           },
           "data": true
         }
@@ -398,24 +509,32 @@
     },
     "D1": {
       "label": {
-        "en": "Accounting entry"
+        "en": "Accounting entry",
+        "de": "Buchungseintrag",
+        "fr": "Enregistrement comptable"
       },
       "levels": {
         "E": {
           "label": {
-            "en": "Receipts"
+            "en": "Receipts",
+            "de": "Einnahmen",
+            "fr": "Recettes"
           },
           "data": true
         },
         "A": {
           "label": {
-            "en": "Expenses"
+            "en": "Expenses",
+            "de": "Ausgaben",
+            "fr": "Dépenses"
           },
           "data": true
         },
         "S": {
           "label": {
-            "en": "Net"
+            "en": "Net",
+            "de": "Saldo",
+            "fr": "Solde"
           },
           "data": true
         }
@@ -428,8 +547,24 @@
     }
   },
   "updated": "2026-06-23 09:00",
-  "topic": "External sector",
-  "concept": "External sector / Balance of payments",
+  "topic": {
+    "key": "external-sector",
+    "name": {
+      "en": "External sector",
+      "de": "Aussenwirtschaft",
+      "fr": "Secteur extérieur",
+      "it": "Settore estero"
+    }
+  },
+  "concept": {
+    "en": "External sector / Balance of payments",
+    "leaf": {
+      "en": "Balance of payments",
+      "de": "Zahlungsbilanz",
+      "fr": "Balance des paiements",
+      "it": "Bilancia dei pagamenti"
+    }
+  },
   "canonical": true,
   "split": "D0",
   "single_select": "D1",
@@ -438,6 +573,11 @@
     "D0": "L0",
     "D1": "S"
   },
-  "description": "The detailed current account of the Swiss balance of payments, quarterly back to 1983. This is the canonical BoP series for the current-account concept. Its value is the deep component hierarchy on D0: goods (foreign trade, non-monetary gold, merchanting), services (transport split into passengers/freight/other, tourism, insurance, financial services, licence fees, R&D, business services), primary income (labour income plus investment income broken into direct/portfolio/other/reserves with dividends, reinvested earnings and interest), and secondary income. Crossed with the D1 accounting entry (Receipts / Expenses / Net), so one component such as \"Financial services\" is three series. Switzerland's structural current-account surplus and the large role of merchanting and investment income are visible here. Grouping nodes (data:false, e.g. \"Goods\", \"Services\") carry no observations and are dropped; only data:true leaves and totals appear in the CSV.",
-  "fetched_utc": "2026-06-23 09:28:09"
+  "description": {
+    "en": "Switzerland's current account in detail, goods, services and income from work and investment, showing where the structural surplus comes from.",
+    "de": "Die Schweizer Leistungsbilanz im Detail — Waren, Dienstleistungen sowie Arbeits- und Kapitaleinkommen — und woher der strukturelle Überschuss stammt.",
+    "fr": "Le compte courant suisse en détail — biens, services, revenus du travail et des investissements — et d'où vient l'excédent structurel.",
+    "it": "Il conto corrente svizzero in dettaglio — beni, servizi, redditi da lavoro e da investimenti — e da dove proviene l'avanzo strutturale."
+  },
+  "fetched_utc": "2026-08-05 13:12:02"
 }

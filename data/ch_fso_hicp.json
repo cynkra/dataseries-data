@@ -1,30 +1,31 @@
 {
-  "schema_version": "1.0",
+  "schema_version": "1.1",
   "id": "ch_fso_hicp",
   "dim_order": [
     "coicop"
   ],
   "start": "2004-12-01",
   "end": "2025-12-01",
-  "title": {
-    "en": "Harmonised CPI (HICP)"
-  },
   "source": {
     "name": {
-      "en": "Eurostat"
+      "en": "Eurostat",
+      "de": "Eurostat",
+      "fr": "Eurostat",
+      "it": "Eurostat"
     },
-    "url": "https://ec.europa.eu/eurostat/databrowser/view/prc_hicp_midx/default/table"
+    "url": "https://ec.europa.eu/eurostat/databrowser/view/prc_hicp_midx/default/table",
+    "key": "eurostat"
   },
   "license": "eurostat",
   "frequency": "monthly",
-  "units": {
-    "en": "Index (2015 = 100)"
-  },
   "updated": "2026-02-06",
   "dimensions": {
     "coicop": {
       "label": {
-        "en": "COICOP consumption purpose"
+        "en": "COICOP consumption purpose",
+        "de": "COICOP-Verwendungszweck",
+        "fr": "Fonction de consommation COICOP",
+        "it": "Funzione di consumo COICOP"
       },
       "levels": {
         "CP00": {
@@ -124,15 +125,48 @@
       }
     }
   },
-  "topic": "Prices",
-  "concept": "Prices / Consumer prices",
+  "topic": {
+    "key": "prices",
+    "name": {
+      "en": "Prices",
+      "de": "Preise",
+      "fr": "Prix",
+      "it": "Prezzi"
+    }
+  },
+  "concept": {
+    "en": "Prices / Consumer prices",
+    "leaf": {
+      "en": "Consumer prices",
+      "de": "Konsumentenpreise",
+      "fr": "Prix à la consommation",
+      "it": "Prezzi al consumo"
+    }
+  },
   "canonical": false,
+  "title": {
+    "en": "Harmonised CPI (HICP)",
+    "de": "Harmonisierter Konsumentenpreisindex (HVPI)",
+    "fr": "IPC harmonisé (IPCH)",
+    "it": "IPC armonizzato (IPCA)"
+  },
   "split": "coicop",
   "single_select": [],
   "default_transform": "yoy",
   "default": {
     "coicop": "CP00"
   },
-  "description": "The EU-harmonised consumer price index for Switzerland (Harmonised Index of Consumer Prices, 2015 = 100), published by Eurostat — not the FSO. It is the internationally comparable inflation measure: all 27+ HICP economies are computed on a common COICOP basket and method, so this is the series to use when comparing Swiss inflation against the euro area or EU. We carry the all-items aggregate CP00 plus the 12 main COICOP divisions CP01..CP12 (= 13 series). This is distinct from ch_fso_cpi (the national Landesindex der Konsumentenpreise, LIK): the LIK is the FSO's domestic-method index with a far deeper position hierarchy (~595 positions) and a Dec-2025=100 base, whereas the HICP is the harmonised method on a 2015=100 base with a different (smaller) basket — notably the HICP excludes owner-occupied housing costs, which the LIK includes. Reach for ch_fso_hicp for EU comparability and for ch_fso_cpi for the domestic headline / detailed basket.",
-  "fetched_utc": "2026-08-05 09:13:33"
+  "description": {
+    "en": "Swiss inflation on the EU-harmonised method, from Eurostat, for comparison with the euro area. Excludes owner-occupied housing, unlike the national index.",
+    "de": "Schweizer Teuerung nach der EU-harmonisierten Methode, von Eurostat, für den Vergleich mit dem Euroraum. Ohne Wohneigentumskosten, anders als der Landesindex.",
+    "fr": "Inflation suisse selon la méthode harmonisée de l'UE, d'Eurostat, pour la comparaison avec la zone euro. Exclut le logement en propriété, contrairement à l'indice national.",
+    "it": "Inflazione svizzera secondo il metodo armonizzato UE, di Eurostat, per il confronto con l'area euro. Esclude i costi dell'abitazione di proprietà, a differenza dell'indice nazionale."
+  },
+  "units": {
+    "en": "Index (2015 = 100)",
+    "de": "Index (2015 = 100)",
+    "fr": "Indice (2015 = 100)",
+    "it": "Indice (2015 = 100)"
+  },
+  "fetched_utc": "2026-08-05 13:12:08"
 }

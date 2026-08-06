@@ -1,10 +1,10 @@
 # Switzerland's international investment position by sector (quarterly)
 
 - **id**: ch_snb_auversecq
-- **title**: Investment position by sector
+- **title**: Investment position by sector | de: Auslandvermögen nach Sektor | fr: Position extérieure par secteur | it: Posizione sull'estero per settore
 - **concept**: External sector / International investment position
 - **canonical**: yes
-- **source**: Swiss National Bank (SNB)
+- **source**: snb
 - **license**: snb (free reuse, attribution required)
 - **frequency**: quarterly
 - **coverage**: 1985-01 .. 2025-10
@@ -12,19 +12,11 @@
 - **updated**: 2025 Q4 release (PublishingDate in CSV header)
 
 ## What is special
-The stock counterpart to the balance-of-payments flows: Switzerland's foreign
-assets and liabilities, and the resulting net international investment position
-(NIIP), back to 1985. The distinctive cut here is the **sector breakdown**:
-assets and liabilities are split across SNB, banks, public sector and other
-sectors, so you can see who holds the foreign claims. Crossed with the IIP
-component grid (direct, portfolio, derivatives, other investment, reserve
-assets), this exposes Switzerland's large net creditor position and where it
-sits. The reserve-assets component only carries on the assets side and only for
-the SNB, so many sector/component cells are empty; the stored 71 series are the
-populated combinations, not the full 3x5x6 grid.
+Who holds Switzerland's foreign assets and debts, the central bank, banks, government or others, and the resulting net creditor position.
 
 ## Access
-- **type**: SNB cube API
+- **type**: snb-cube — SNB cube API
+- **cube**: `auversecq`
 - **endpoint**: `https://data.snb.ch/api/cube/auversecq/data/json/en`
 - **call**: `snb_fetch("auversecq", title = "Switzerland's international investment position - Breakdown by sector - Quarter")`
 
@@ -72,3 +64,12 @@ and the functional-component line dim (D2, IMF BPM6).
 ## Provenance
 Script: `R/source_snb.R::snb_fetch` (cube `auversecq`, title/topic from
 `R/snb_cubes.tsv`). Datasheet authored 2026-06-01.
+
+## What is special (de)
+Wer die Schweizer Auslandguthaben und -schulden hält — Nationalbank, Banken, Staat oder übrige Sektoren — und die daraus folgende Nettogläubigerposition.
+
+## What is special (fr)
+Qui détient les avoirs et engagements suisses à l'étranger — banque centrale, banques, État ou autres secteurs — et la position créditrice nette qui en résulte.
+
+## What is special (it)
+Chi detiene gli attivi e i debiti svizzeri sull'estero — banca centrale, banche, Stato o altri settori — e la posizione creditoria netta che ne risulta.

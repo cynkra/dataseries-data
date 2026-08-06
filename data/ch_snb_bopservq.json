@@ -1,5 +1,5 @@
 {
-  "schema_version": "1.0",
+  "schema_version": "1.1",
   "id": "ch_snb_bopservq",
   "dim_order": [
     "D0",
@@ -9,409 +9,548 @@
   "start": "2012-01-01",
   "end": "2026-01-01",
   "title": {
-    "en": "Balance of payments: services"
+    "en": "Balance of payments: services",
+    "de": "Zahlungsbilanz: Dienstleistungen",
+    "fr": "Balance des paiements : services",
+    "it": "Bilancia dei pagamenti: servizi"
   },
   "source": {
     "name": {
-      "en": "Swiss National Bank"
+      "en": "Swiss National Bank",
+      "de": "Schweizerische Nationalbank (SNB)",
+      "fr": "Banque nationale suisse (BNS)",
+      "it": "Banca nazionale svizzera (BNS)"
     },
-    "url": "https://data.snb.ch/en/topics/snb/cube/bopservq"
+    "url": "https://data.snb.ch/en/topics/snb/cube/bopservq",
+    "key": "snb"
   },
   "license": "snb",
   "frequency": "quarterly",
   "dimensions": {
     "D0": {
       "label": {
-        "en": "Countries"
+        "en": "Countries",
+        "de": "Länder",
+        "fr": "Pays"
       },
       "levels": {
         "D0_0": {
           "label": {
-            "en": "All countries"
+            "en": "All countries",
+            "de": "Total alle Länder",
+            "fr": "Ensemble des pays"
           },
           "data": false
         },
         "T0": {
           "label": {
-            "en": "Total"
+            "en": "Total",
+            "de": "Total",
+            "fr": "Total"
           },
           "data": true
         },
         "D0_1": {
           "label": {
-            "en": "Europe"
+            "en": "Europe",
+            "de": "Europa",
+            "fr": "Europe"
           },
           "data": false
         },
         "T1": {
           "label": {
-            "en": "Total"
+            "en": "Total",
+            "de": "Total",
+            "fr": "Total"
           },
           "data": true
         },
         "EU": {
           "label": {
-            "en": "EU"
+            "en": "EU",
+            "de": "EU",
+            "fr": "UE"
           },
           "data": true
         },
         "EU27": {
           "label": {
-            "en": "EU27"
+            "en": "EU27",
+            "de": "EU27",
+            "fr": "UE27"
           },
           "data": true
         },
         "O": {
           "label": {
-            "en": "Austria"
+            "en": "Austria",
+            "de": "Österreich",
+            "fr": "Autriche"
           },
           "data": true
         },
         "B0": {
           "label": {
-            "en": "Belgium"
+            "en": "Belgium",
+            "de": "Belgien",
+            "fr": "Belgique"
           },
           "data": true
         },
         "B1": {
           "label": {
-            "en": "Bulgaria"
+            "en": "Bulgaria",
+            "de": "Bulgarien",
+            "fr": "Bulgarie"
           },
           "data": true
         },
         "T2": {
           "label": {
-            "en": "Czechia"
+            "en": "Czechia",
+            "de": "Tschechien",
+            "fr": "Tchéquie"
           },
           "data": true
         },
         "D1": {
           "label": {
-            "en": "Germany"
+            "en": "Germany",
+            "de": "Deutschland",
+            "fr": "Allemagne"
           },
           "data": true
         },
         "D2": {
           "label": {
-            "en": "Denmark"
+            "en": "Denmark",
+            "de": "Dänemark",
+            "fr": "Danemark"
           },
           "data": true
         },
         "S0": {
           "label": {
-            "en": "Spain"
+            "en": "Spain",
+            "de": "Spanien",
+            "fr": "Espagne"
           },
           "data": true
         },
         "F0": {
           "label": {
-            "en": "Finland"
+            "en": "Finland",
+            "de": "Finnland",
+            "fr": "Finlande"
           },
           "data": true
         },
         "F1": {
           "label": {
-            "en": "France"
+            "en": "France",
+            "de": "Frankreich",
+            "fr": "France"
           },
           "data": true
         },
         "VK": {
           "label": {
-            "en": "United Kingdom"
+            "en": "United Kingdom",
+            "de": "Vereinigtes Königreich",
+            "fr": "Royaume-Uni"
           },
           "data": true
         },
         "G": {
           "label": {
-            "en": "Greece"
+            "en": "Greece",
+            "de": "Griechenland",
+            "fr": "Grèce"
           },
           "data": true
         },
         "K0": {
           "label": {
-            "en": "Croatia"
+            "en": "Croatia",
+            "de": "Kroatien",
+            "fr": "Croatie"
           },
           "data": true
         },
         "U": {
           "label": {
-            "en": "Hungary"
+            "en": "Hungary",
+            "de": "Ungarn",
+            "fr": "Hongrie"
           },
           "data": true
         },
         "I0": {
           "label": {
-            "en": "Ireland"
+            "en": "Ireland",
+            "de": "Irland",
+            "fr": "Irlande"
           },
           "data": true
         },
         "I1": {
           "label": {
-            "en": "Italy"
+            "en": "Italy",
+            "de": "Italien",
+            "fr": "Italie"
           },
           "data": true
         },
         "L": {
           "label": {
-            "en": "Luxembourg"
+            "en": "Luxembourg",
+            "de": "Luxemburg",
+            "fr": "Luxembourg"
           },
           "data": true
         },
         "N0": {
           "label": {
-            "en": "Netherlands"
+            "en": "Netherlands",
+            "de": "Niederlande",
+            "fr": "Pays-Bas"
           },
           "data": true
         },
         "N1": {
           "label": {
-            "en": "Norway"
+            "en": "Norway",
+            "de": "Norwegen",
+            "fr": "Norvège"
           },
           "data": true
         },
         "P0": {
           "label": {
-            "en": "Poland"
+            "en": "Poland",
+            "de": "Polen",
+            "fr": "Pologne"
           },
           "data": true
         },
         "P1": {
           "label": {
-            "en": "Portugal"
+            "en": "Portugal",
+            "de": "Portugal",
+            "fr": "Portugal"
           },
           "data": true
         },
         "R": {
           "label": {
-            "en": "Romania"
+            "en": "Romania",
+            "de": "Rumänien",
+            "fr": "Roumanie"
           },
           "data": true
         },
         "RF": {
           "label": {
-            "en": "Russia"
+            "en": "Russia",
+            "de": "Russland",
+            "fr": "Russie"
           },
           "data": true
         },
         "S1": {
           "label": {
-            "en": "Sweden"
+            "en": "Sweden",
+            "de": "Schweden",
+            "fr": "Suède"
           },
           "data": true
         },
         "S2": {
           "label": {
-            "en": "Slovenia"
+            "en": "Slovenia",
+            "de": "Slowenien",
+            "fr": "Slovénie"
           },
           "data": true
         },
         "T3": {
           "label": {
-            "en": "Turkey"
+            "en": "Turkey",
+            "de": "Türkei",
+            "fr": "Turquie"
           },
           "data": true
         },
         "E": {
           "label": {
-            "en": "Europe (not allocated)"
+            "en": "Europe (not allocated)",
+            "de": "Europa (nicht zugewiesen)",
+            "fr": "Europe non attribué"
           },
           "data": true
         },
         "D0_2": {
           "label": {
-            "en": "Africa"
+            "en": "Africa",
+            "de": "Afrika",
+            "fr": "Afrique"
           },
           "data": false
         },
         "T4": {
           "label": {
-            "en": "Total"
+            "en": "Total",
+            "de": "Total",
+            "fr": "Total"
           },
           "data": true
         },
         "RS": {
           "label": {
-            "en": "South Africa"
+            "en": "South Africa",
+            "de": "Republik Südafrika",
+            "fr": "Afrique du Sud"
           },
           "data": true
         },
         "D0_2_2": {
           "label": {
-            "en": "North Africa"
+            "en": "North Africa",
+            "de": "NordAfrika",
+            "fr": "Afrique du Nord"
           },
           "data": false
         },
         "T5": {
           "label": {
-            "en": "Total"
+            "en": "Total",
+            "de": "Total",
+            "fr": "Total"
           },
           "data": true
         },
         "A0": {
           "label": {
-            "en": "Africa (not allocated)"
+            "en": "Africa (not allocated)",
+            "de": "Afrika (nicht zugewiesen)",
+            "fr": "Afrique non attribué"
           },
           "data": true
         },
         "D0_3": {
           "label": {
-            "en": "America"
+            "en": "America",
+            "de": "Amerika",
+            "fr": "Amérique"
           },
           "data": false
         },
         "T6": {
           "label": {
-            "en": "Total"
+            "en": "Total",
+            "de": "Total",
+            "fr": "Total"
           },
           "data": true
         },
         "K1": {
           "label": {
-            "en": "Canada"
+            "en": "Canada",
+            "de": "Kanada",
+            "fr": "Canada"
           },
           "data": true
         },
         "VS": {
           "label": {
-            "en": "US"
+            "en": "US",
+            "de": "Vereinigte Staaten",
+            "fr": "États-Unis"
           },
           "data": true
         },
         "M0": {
           "label": {
-            "en": "Mexico"
+            "en": "Mexico",
+            "de": "Mexiko",
+            "fr": "Mexique"
           },
           "data": true
         },
         "B2": {
           "label": {
-            "en": "Brazil"
+            "en": "Brazil",
+            "de": "Brasilien",
+            "fr": "Brésil"
           },
           "data": true
         },
         "C0": {
           "label": {
-            "en": "Chile"
+            "en": "Chile",
+            "de": "Chile",
+            "fr": "Chili"
           },
           "data": true
         },
         "A1": {
           "label": {
-            "en": "America (not allocated)"
+            "en": "America (not allocated)",
+            "de": "Amerika (nicht zugewiesen)",
+            "fr": "Amérique non attribué"
           },
           "data": true
         },
         "D0_4": {
           "label": {
-            "en": "Asia"
+            "en": "Asia",
+            "de": "Asien",
+            "fr": "Asie"
           },
           "data": false
         },
         "T7": {
           "label": {
-            "en": "Total"
+            "en": "Total",
+            "de": "Total",
+            "fr": "Total"
           },
           "data": true
         },
         "I2": {
           "label": {
-            "en": "Israel"
+            "en": "Israel",
+            "de": "Israel",
+            "fr": "Israël"
           },
           "data": true
         },
         "AG": {
           "label": {
-            "en": "Gulf Arabian countries"
+            "en": "Gulf Arabian countries",
+            "de": "Arabischer Golf",
+            "fr": "Pays arabes bordant le Golfe Persique"
           },
           "data": true
         },
         "C1": {
           "label": {
-            "en": "China"
+            "en": "China",
+            "de": "China",
+            "fr": "Chine"
           },
           "data": true
         },
         "H": {
           "label": {
-            "en": "Hong Kong SAR"
+            "en": "Hong Kong SAR",
+            "de": "Hongkong",
+            "fr": "Hong Kong"
           },
           "data": true
         },
         "I3": {
           "label": {
-            "en": "India"
+            "en": "India",
+            "de": "Indien",
+            "fr": "Inde"
           },
           "data": true
         },
         "J": {
           "label": {
-            "en": "Japan"
+            "en": "Japan",
+            "de": "Japan",
+            "fr": "Japon"
           },
           "data": true
         },
         "M1": {
           "label": {
-            "en": "Malaysia"
+            "en": "Malaysia",
+            "de": "Malaysia",
+            "fr": "Malaisie"
           },
           "data": true
         },
         "S3": {
           "label": {
-            "en": "Singapore"
+            "en": "Singapore",
+            "de": "Singapur",
+            "fr": "Singapour"
           },
           "data": true
         },
         "A2": {
           "label": {
-            "en": "Asia (not allocated)"
+            "en": "Asia (not allocated)",
+            "de": "Asien (nicht zugewiesen)",
+            "fr": "Asie non attribué"
           },
           "data": true
         },
         "D0_5": {
           "label": {
-            "en": "Australia, Oceania and Polar regions"
+            "en": "Australia, Oceania and Polar regions",
+            "de": "Australien, Ozeanien und Polargebiet",
+            "fr": "Australie, Océanie et régions polaires"
           },
           "data": false
         },
         "T8": {
           "label": {
-            "en": "Total"
+            "en": "Total",
+            "de": "Total",
+            "fr": "Total"
           },
           "data": true
         },
         "A3": {
           "label": {
-            "en": "Australia"
+            "en": "Australia",
+            "de": "Australien",
+            "fr": "Australie"
           },
           "data": true
         },
         "AOP": {
           "label": {
-            "en": "Australia, Oceania and Polar regions (not allocated)"
+            "en": "Australia, Oceania and Polar regions (not allocated)",
+            "de": "Australien, Ozeanien und Polargebiet (nicht zugewiesen)",
+            "fr": "Australie, Océanie et régions polaires non attribué"
           },
           "data": true
         },
         "D0_6": {
           "label": {
-            "en": "Rest of the world (not allocated), international organisations"
+            "en": "Rest of the world (not allocated), international organisations",
+            "de": "Rest der Welt (nicht zugewiesen), internationale Organisationen",
+            "fr": "Reste du monde non attribué, organisations internationales"
           },
           "data": false
         },
         "T9": {
           "label": {
-            "en": "Total"
+            "en": "Total",
+            "de": "Total",
+            "fr": "Total"
           },
           "data": true
         },
         "D0_7": {
           "label": {
-            "en": "All countries (excluding Rest of the world, international organisations)"
+            "en": "All countries (excluding Rest of the world, international organisations)",
+            "de": "Total alle Länder (exkl. Rest der Welt, internationale Organisationen)",
+            "fr": "Tous les pays (hors reste du monde et organisations internationales)"
           },
           "data": false
         },
         "T10": {
           "label": {
-            "en": "Total"
+            "en": "Total",
+            "de": "Total",
+            "fr": "Total"
           },
           "data": true
         }
@@ -495,72 +634,96 @@
     },
     "D1": {
       "label": {
-        "en": "Component"
+        "en": "Component",
+        "de": "Komponente",
+        "fr": "Composante"
       },
       "levels": {
         "DT": {
           "label": {
-            "en": "Total for all services"
+            "en": "Total for all services",
+            "de": "Total alle Dienste",
+            "fr": "Services Total"
           },
           "data": true
         },
         "T0": {
           "label": {
-            "en": "Transport"
+            "en": "Transport",
+            "de": "Transportdienste",
+            "fr": "Transports"
           },
           "data": true
         },
         "T1": {
           "label": {
-            "en": "Tourism"
+            "en": "Tourism",
+            "de": "Tourismus",
+            "fr": "Tourisme"
           },
           "data": true
         },
         "V": {
           "label": {
-            "en": "Insurance and pension services"
+            "en": "Insurance and pension services",
+            "de": "Versicherungsdienste",
+            "fr": "Prestations d’ assurances"
           },
           "data": true
         },
         "F": {
           "label": {
-            "en": "Financial services"
+            "en": "Financial services",
+            "de": "Finanzdienste",
+            "fr": "Services financiers"
           },
           "data": true
         },
         "L": {
           "label": {
-            "en": "Licence fees"
+            "en": "Licence fees",
+            "de": "Lizenzgebühren",
+            "fr": "Droits de licence"
           },
           "data": true
         },
         "TCI": {
           "label": {
-            "en": "Telecommunications, computer and information services"
+            "en": "Telecommunications, computer and information services",
+            "de": "Telekommunikation-, Computer- und Informationsdienste",
+            "fr": "Services de télécommunications, services informatiques et services d’information"
           },
           "data": true
         },
         "FE": {
           "label": {
-            "en": "Research and development services"
+            "en": "Research and development services",
+            "de": "Forschung und Entwicklung",
+            "fr": "Recherche et développement (R&D)"
           },
           "data": true
         },
         "B": {
           "label": {
-            "en": "Consulting services"
+            "en": "Consulting services",
+            "de": "Beratungsdienste",
+            "fr": "Services de conseil en gestion"
           },
           "data": true
         },
         "THG": {
           "label": {
-            "en": "Technical, trade-related, and other business services"
+            "en": "Technical, trade-related, and other business services",
+            "de": "Technische, Handelsbezogene und andere Geschäftsdienste",
+            "fr": "Services techniques, liés au commerce et autres services aux entreprises"
           },
           "data": true
         },
         "UD": {
           "label": {
-            "en": "Other services"
+            "en": "Other services",
+            "de": "Übrige Dienste",
+            "fr": "Autres services"
           },
           "data": true
         }
@@ -582,24 +745,32 @@
     },
     "D2": {
       "label": {
-        "en": "Accounting entry"
+        "en": "Accounting entry",
+        "de": "Buchungseintrag",
+        "fr": "Enregistrement comptable"
       },
       "levels": {
         "E": {
           "label": {
-            "en": "Receipts"
+            "en": "Receipts",
+            "de": "Einnahmen",
+            "fr": "Recettes"
           },
           "data": true
         },
         "A": {
           "label": {
-            "en": "Expenses"
+            "en": "Expenses",
+            "de": "Ausgaben",
+            "fr": "Dépenses"
           },
           "data": true
         },
         "S": {
           "label": {
-            "en": "Net"
+            "en": "Net",
+            "de": "Saldo",
+            "fr": "Solde"
           },
           "data": true
         }
@@ -612,8 +783,24 @@
     }
   },
   "updated": "2026-06-23 09:00",
-  "topic": "External sector",
-  "concept": "External sector / Balance of payments",
+  "topic": {
+    "key": "external-sector",
+    "name": {
+      "en": "External sector",
+      "de": "Aussenwirtschaft",
+      "fr": "Secteur extérieur",
+      "it": "Settore estero"
+    }
+  },
+  "concept": {
+    "en": "External sector / Balance of payments",
+    "leaf": {
+      "en": "Balance of payments",
+      "de": "Zahlungsbilanz",
+      "fr": "Balance des paiements",
+      "it": "Bilancia dei pagamenti"
+    }
+  },
   "canonical": false,
   "split": "D0",
   "single_select": "D2",
@@ -623,6 +810,11 @@
     "D1": "DT",
     "D2": "S"
   },
-  "description": "The services trade of the current account broken down by counterpart country, which the headline BoP cubes do not provide. It is the widest cube in this group: three dimensions (country x service component x accounting entry) multiply out to 1,755 leaf series, the largest in the SNB balance-of-payments set. Country coverage (D0) runs from regional totals (Europe, EU, EU27, Africa, America, Asia, Oceania) down to ~50 individual partners (Germany, US, China, UK, Singapore, Gulf Arabian countries, ...). Service components (D1) match the bopcurrq services split. Shorter history than the other BoP cubes, starting only 2012, because country-level services detail was introduced with the BPM6 standard. Alternate to ch_snb_bopcurrq for the concept: same producer, the unique value is the geographic dimension.",
-  "fetched_utc": "2026-06-23 09:28:10"
+  "description": {
+    "en": "Which countries Switzerland trades services with, around 50 partners plus regional totals, by service type and direction.",
+    "de": "Mit welchen Ländern die Schweiz Dienstleistungen handelt — rund 50 Partner plus Regionentotale — nach Dienstleistungsart und Richtung.",
+    "fr": "Avec quels pays la Suisse échange des services — environ 50 partenaires plus les totaux régionaux — par type de service et par sens.",
+    "it": "Con quali paesi la Svizzera scambia servizi — circa 50 partner più i totali regionali — per tipo di servizio e direzione."
+  },
+  "fetched_utc": "2026-08-05 13:12:02"
 }

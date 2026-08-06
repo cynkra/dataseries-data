@@ -1,10 +1,10 @@
 # Mortgage loans and other domestic and foreign loans (monthly)
 
 - **id**: ch_snb_bakredinausbm
-- **title**: Mortgage & other loans
+- **title**: Mortgage & other loans | de: Hypothekar- und übrige Kredite | fr: Crédits hypothécaires et autres | it: Crediti ipotecari e altri crediti
 - **concept**: Money & banking / Banking & credit
 - **canonical**: yes
-- **source**: Swiss National Bank (SNB)
+- **source**: snb
 - **license**: snb (free reuse, attribution required)
 - **frequency**: monthly
 - **coverage**: 1985-06 .. 2026-03
@@ -12,17 +12,11 @@
 - **updated**: 2026-03 release (PublishingDate in CSV header)
 
 ## What is special
-Bank loans split by **domestic vs foreign** counterparty, back to 1985. This is
-the geography cut of the loan book: it separates mortgage and other lending into
-claims on borrowers in Switzerland versus abroad, which the company-size and
-economic-sector cubes do not do. The long history (from 1985) and the
-domestic/foreign axis make it the reference for total credit exposure by
-location. Each combination is further crossed by bank category, loan type
-(mortgage / other, secured / unsecured) and the utilisation-vs-credit-line pair,
-the same utilisation/headroom logic as the other `bakred*` cubes.
+Swiss bank lending split by whether the borrower is at home or abroad, for mortgages and other loans.
 
 ## Access
-- **type**: SNB cube API
+- **type**: snb-cube — SNB cube API
+- **cube**: `bakredinausbm`
 - **endpoint**: `https://data.snb.ch/api/cube/bakredinausbm/data/json/en`
 - **call**: `snb_fetch("bakredinausbm", title = "Mortgage loans and other domestic and foreign loans")`
 
@@ -59,3 +53,12 @@ the same utilisation/headroom logic as the other `bakred*` cubes.
 ## Provenance
 Script: `R/source_snb.R::snb_fetch` (cube `bakredinausbm`, title/topic from
 `R/snb_cubes.tsv`). Datasheet authored 2026-06-01.
+
+## What is special (de)
+Schweizer Bankkredite danach aufgeteilt, ob der Schuldner im In- oder Ausland sitzt, für Hypotheken und übrige Kredite.
+
+## What is special (fr)
+Crédits bancaires suisses selon que l'emprunteur se trouve en Suisse ou à l'étranger, pour les hypothèques et les autres prêts.
+
+## What is special (it)
+Crediti bancari svizzeri a seconda che il debitore sia in Svizzera o all'estero, per ipoteche e altri prestiti.

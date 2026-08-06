@@ -1,10 +1,10 @@
 # Securities turnover on the Swiss stock exchange
 
 - **id**: ch_snb_capweums
-- **title**: Securities turnover
+- **title**: Securities turnover | de: Effektenumsätze | fr: Transactions sur titres | it: Transazioni in titoli
 - **concept**: Financial markets / Securities turnover
 - **canonical**: yes
-- **source**: Swiss National Bank (SNB)
+- **source**: snb
 - **license**: snb (free reuse, attribution required)
 - **frequency**: monthly
 - **coverage**: 1993-01 .. 2026-04
@@ -12,18 +12,11 @@
 - **updated**: 2026-04 (latest observation)
 
 ## What is special
-Monthly trading turnover on the Swiss stock exchange (SIX), the canonical
-securities-turnover series, back to 1993. The distinctive cut is the
-**domestic-vs-foreign** split applied to each asset class: shares and bond issues each
-break into domestic (`IT0/IT1`), foreign (`AT0/AT1`) and total (`T0/T1`), which makes
-visible how much of the venue's volume is foreign paper. Beyond those it carries
-investment funds (`A`), structured products and options (`SPO`), a grand total (`T2`),
-and turnover in SMI-constituent securities (`ISMIT`). A compact 10-series companion to
-the daily index cube `ch_snb_capchstocki`: where that measures price levels, this
-measures traded volume.
+How much is traded on the Swiss exchange each month, with shares and bonds split into domestic and foreign paper.
 
 ## Access
-- **type**: SNB cube API
+- **type**: snb-cube — SNB cube API
+- **cube**: `capweums`
 - **endpoint**: cube id `capweums`
 - **call**: `snb_fetch("capweums", title = "Securities turnover on the Swiss stock exchange")`,
   hitting `https://data.snb.ch/api/cube/capweums/dimensions/en` and `.../data/json/en`
@@ -59,3 +52,12 @@ measures traded volume.
 Script: `R/source_snb.R::snb_fetch` via `R/snb_cubes.tsv` (cube `capweums`, topic
 "Financial markets"). Datasheet authored 2026-06-01; parser verified 2026-06-01
 (3,973 rows, 10 series).
+
+## What is special (de)
+Wie viel an der Schweizer Börse monatlich gehandelt wird, mit Aktien und Anleihen getrennt nach inländischen und ausländischen Titeln.
+
+## What is special (fr)
+Combien s'échange chaque mois à la bourse suisse, actions et obligations séparées en titres suisses et étrangers.
+
+## What is special (it)
+Quanto viene scambiato ogni mese alla borsa svizzera, con azioni e obbligazioni separate in titoli svizzeri ed esteri.

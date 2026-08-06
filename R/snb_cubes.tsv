@@ -1,39 +1,39 @@
-cube_id	topic	title
-amarbma	Labour market	Labour market (registered unemployment, SECO)
-ambeschkla	Labour market	Employees, by economic activity
-ausshawarm	Foreign trade	Foreign trade by goods category
-auvekomq	Balance of payments	Switzerland’s international investment position – Overview – Quarter
-auvercurrq	Balance of payments	Switzerland’s international investment position – Breakdown by currency – Quarter
-auverdeptq	Balance of payments	Switzerland’s external debt – Quarter
-auversecq	Balance of payments	Switzerland’s international investment position – Breakdown by sector – Quarter
-babilpobm	Banking	Banks' balance sheet items by currency for selected bank categories – monthly
-bakredbetgrbm	Banking	Corporate loans, broken down by company size
-bakredinausbm	Banking	Mortgage loans and other domestic and foreign loans
-bakredsekbm	Banking	Domestic loans, broken down by economic sector and industry
-bopcapbalq	Balance of payments	Swiss balance of payments – Financial account – Quarter
-bopcurrq	Balance of payments	Swiss balance of payments – Current account – Quarter
-bopoverq	Balance of payments	Swiss balance of payments – Overview – Quarter
-bopservq	Balance of payments	Swiss balance of payments – Current account services, by country – Quarter
-capchstocki	Financial markets	Swiss stock indices
-capweums	Financial markets	Securities turnover on the Swiss stock exchange
-devkum	Exchange rates	Foreign exchange rates – Month
-devwkibiim	Exchange rates	Bilateral exchange rate indices – Monthly
-devwkieffid	Exchange rates	Effective exchange rate indices – Daily
-plimoinchq	Prices	Real estate price indices – total for Switzerland – by quarter
-plkopr	Prices	Consumer Price Index (LIK) – national index, long history
-plkoprinfla	Prices	Consumer prices – SNB and SFSO core inflation rates
-rendeiduebd	Interest rates	Spot interest rates on Swiss Confederation bonds, euro area government bonds and CHF bond issues for various borrower categories – Day
-snbbipo	Money and banking	Balance sheet items of the SNB
-snbiprogq	SNB forecasts	SNB conditional inflation forecast
-snbkosiq	Business surveys	Business cycle signals
-snbmoba	Money and banking	Monetary base
-snbmonagg	Money and banking	Monetary aggregates M1, M2 and M3
-snboffzisa	Interest rates	Official interest rates
-zavegelade	Payment systems	E-money – loading and float
-zavesic	Payment systems	Swiss Interbank Clearing (SIC) – payment transactions
-zavezaka	Payment systems	Payment cards and ATMs
-zavezaluba	Payment systems	Payments and cash withdrawals
-zavkuzaart	Payment systems	Customer payments at banks – Outgoing payments, by type of order
-zikredlauf	Interest rates	Interest rates on new loan agreements, by product and maturity
-zikrepro	Interest rates	Published interest rates for new transactions
-zimoma	Interest rates	Money market rates
+cube_id	topic
+amarbma	Labour market
+ambeschkla	Labour market
+ausshawarm	Foreign trade
+auvekomq	Balance of payments
+auvercurrq	Balance of payments
+auverdeptq	Balance of payments
+auversecq	Balance of payments
+babilpobm	Banking
+bakredbetgrbm	Banking
+bakredinausbm	Banking
+bakredsekbm	Banking
+bopcapbalq	Balance of payments
+bopcurrq	Balance of payments
+bopoverq	Balance of payments
+bopservq	Balance of payments
+capchstocki	Financial markets
+capweums	Financial markets
+devkum	Exchange rates
+devwkibiim	Exchange rates
+devwkieffid	Exchange rates
+plimoinchq	Prices
+plkopr	Prices
+plkoprinfla	Prices
+rendeiduebd	Interest rates
+snbbipo	Money and banking
+snbiprogq	SNB forecasts
+snbkosiq	Business surveys
+snbmoba	Money and banking
+snbmonagg	Money and banking
+snboffzisa	Interest rates
+zavegelade	Payment systems
+zavesic	Payment systems
+zavezaka	Payment systems
+zavezaluba	Payment systems
+zavkuzaart	Payment systems
+zikredlauf	Interest rates
+zikrepro	Interest rates
+zimoma	Interest rates

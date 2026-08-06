@@ -1,5 +1,5 @@
 {
-  "schema_version": "1.0",
+  "schema_version": "1.1",
   "id": "ch_ffa_finances",
   "dim_order": [
     "level",
@@ -9,56 +9,78 @@
   ],
   "start": "1990-01-01",
   "end": "2029-01-01",
-  "title": {
-    "en": "Government finances"
-  },
   "source": {
     "name": {
-      "en": "Federal Finance Administration (FFA)"
+      "en": "Federal Finance Administration (FFA)",
+      "de": "Eidgenössische Finanzverwaltung (EFV)",
+      "fr": "Administration fédérale des finances (AFF)",
+      "it": "Amministrazione federale delle finanze (AFF)"
     },
-    "url": "https://opendata.swiss/en/dataset/hauptaggregate-und-prognosen-im-fs-und-gfs-modell"
+    "url": "https://opendata.swiss/en/dataset/hauptaggregate-und-prognosen-im-fs-und-gfs-modell",
+    "key": "ffa"
   },
-  "license": "opendata.swiss terms of use (open use, attribution required: Federal Finance Administration FFA)",
+  "license": "opendata-swiss",
   "frequency": "annual",
   "dimensions": {
     "level": {
       "label": {
-        "en": "Government level"
+        "en": "Government level",
+        "de": "Staatsebene",
+        "fr": "Niveau de l'État",
+        "it": "Livello statale"
       },
       "levels": {
         "staat": {
           "label": {
-            "en": "General government"
+            "en": "General government",
+            "de": "Staat",
+            "fr": "Administrations publiques",
+            "it": "Amministrazioni pubbliche"
           },
           "data": true
         },
         "bund": {
           "label": {
-            "en": "Confederation"
+            "en": "Confederation",
+            "de": "Bund",
+            "fr": "Confédération",
+            "it": "Confederazione"
           },
           "data": true
         },
         "ktn": {
           "label": {
-            "en": "Cantons"
+            "en": "Cantons",
+            "de": "Kantone",
+            "fr": "Cantons",
+            "it": "Cantoni"
           },
           "data": true
         },
         "gdn": {
           "label": {
-            "en": "Communes"
+            "en": "Communes",
+            "de": "Gemeinden",
+            "fr": "Communes",
+            "it": "Comuni"
           },
           "data": true
         },
         "sv": {
           "label": {
-            "en": "Social security funds"
+            "en": "Social security funds",
+            "de": "Sozialversicherungen",
+            "fr": "Assurances sociales",
+            "it": "Assicurazioni sociali"
           },
           "data": true
         },
         "bund_ktn_gdn": {
           "label": {
-            "en": "Confederation, cantons and communes"
+            "en": "Confederation, cantons and communes",
+            "de": "Bund, Kantone und Gemeinden",
+            "fr": "Confédération, cantons et communes",
+            "it": "Confederazione, cantoni e comuni"
           },
           "data": true
         }
@@ -66,18 +88,27 @@
     },
     "model": {
       "label": {
-        "en": "Accounting model"
+        "en": "Accounting model",
+        "de": "Rechnungsmodell",
+        "fr": "Modèle comptable",
+        "it": "Modello contabile"
       },
       "levels": {
         "fs": {
           "label": {
-            "en": "FS model (financial statistics)"
+            "en": "FS model (financial statistics)",
+            "de": "FS-Modell (Finanzstatistik)",
+            "fr": "Modèle SF (statistique financière)",
+            "it": "Modello SF (statistica finanziaria)"
           },
           "data": true
         },
         "gfs": {
           "label": {
-            "en": "GFS model (Maastricht / SNA basis)"
+            "en": "GFS model (Maastricht / SNA basis)",
+            "de": "GFS-Modell (Maastricht / VGR-Basis)",
+            "fr": "Modèle SFP (base Maastricht / SCN)",
+            "it": "Modello SFP (base Maastricht / SCN)"
           },
           "data": true
         }
@@ -85,186 +116,279 @@
     },
     "indicator": {
       "label": {
-        "en": "Indicator"
+        "en": "Indicator",
+        "de": "Indikator",
+        "fr": "Indicateur",
+        "it": "Indicatore"
       },
       "levels": {
         "einnahmen": {
           "label": {
-            "en": "Receipts"
+            "en": "Receipts",
+            "de": "Einnahmen",
+            "fr": "Recettes",
+            "it": "Entrate"
           },
           "data": true
         },
         "ausgaben": {
           "label": {
-            "en": "Expenditure"
+            "en": "Expenditure",
+            "de": "Ausgaben",
+            "fr": "Dépenses",
+            "it": "Uscite"
           },
           "data": true
         },
         "saldo": {
           "label": {
-            "en": "Balance"
+            "en": "Balance",
+            "de": "Saldo",
+            "fr": "Solde",
+            "it": "Saldo"
           },
           "data": true
         },
         "einnahmen_ord": {
           "label": {
-            "en": "Ordinary receipts"
+            "en": "Ordinary receipts",
+            "de": "Ordentliche Einnahmen",
+            "fr": "Recettes ordinaires",
+            "it": "Entrate ordinarie"
           },
           "data": true
         },
         "ausgaben_ord": {
           "label": {
-            "en": "Ordinary expenditure"
+            "en": "Ordinary expenditure",
+            "de": "Ordentliche Ausgaben",
+            "fr": "Dépenses ordinaires",
+            "it": "Uscite ordinarie"
           },
           "data": true
         },
         "saldo_ord": {
           "label": {
-            "en": "Ordinary balance"
+            "en": "Ordinary balance",
+            "de": "Ordentlicher Saldo",
+            "fr": "Solde ordinaire",
+            "it": "Saldo ordinario"
           },
           "data": true
         },
         "ertrag": {
           "label": {
-            "en": "Revenue"
+            "en": "Revenue",
+            "de": "Ertrag",
+            "fr": "Revenus",
+            "it": "Ricavi"
           },
           "data": true
         },
         "aufwand": {
           "label": {
-            "en": "Expenses"
+            "en": "Expenses",
+            "de": "Aufwand",
+            "fr": "Charges",
+            "it": "Oneri"
           },
           "data": true
         },
         "fiskalertrag": {
           "label": {
-            "en": "Fiscal revenue (taxes)"
+            "en": "Fiscal revenue (taxes)",
+            "de": "Fiskalertrag (Steuern)",
+            "fr": "Recettes fiscales (impôts)",
+            "it": "Gettito fiscale (imposte)"
           },
           "data": true
         },
         "bruttoschuld_fs": {
           "label": {
-            "en": "Gross debt"
+            "en": "Gross debt",
+            "de": "Bruttoschulden",
+            "fr": "Dette brute",
+            "it": "Debito lordo"
           },
           "data": true
         },
         "nettoschulden_fs": {
           "label": {
-            "en": "Net debt"
+            "en": "Net debt",
+            "de": "Nettoschulden",
+            "fr": "Dette nette",
+            "it": "Debito netto"
           },
           "data": true
         },
         "maastricht_schuld": {
           "label": {
-            "en": "Gross debt (Maastricht)"
+            "en": "Gross debt (Maastricht)",
+            "de": "Bruttoschulden (Maastricht)",
+            "fr": "Dette brute (Maastricht)",
+            "it": "Debito lordo (Maastricht)"
           },
           "data": true
         },
         "nettoschuld": {
           "label": {
-            "en": "Net debt"
+            "en": "Net debt",
+            "de": "Nettoschulden",
+            "fr": "Dette nette",
+            "it": "Debito netto"
           },
           "data": true
         },
         "defizit_ueberschuss": {
           "label": {
-            "en": "Deficit / surplus"
+            "en": "Deficit / surplus",
+            "de": "Defizit / Überschuss",
+            "fr": "Déficit / excédent",
+            "it": "Disavanzo / avanzo"
           },
           "data": true
         },
         "nettozugang_sachvermoegen": {
           "label": {
-            "en": "Net acquisition of non-financial assets"
+            "en": "Net acquisition of non-financial assets",
+            "de": "Nettozugang an Sachvermögen",
+            "fr": "Acquisition nette d'actifs non financiers",
+            "it": "Acquisizione netta di attività non finanziarie"
           },
           "data": true
         },
         "aktiven": {
           "label": {
-            "en": "Assets"
+            "en": "Assets",
+            "de": "Aktiven",
+            "fr": "Actifs",
+            "it": "Attivi"
           },
           "data": true
         },
         "fremdkapital": {
           "label": {
-            "en": "Liabilities"
+            "en": "Liabilities",
+            "de": "Fremdkapital",
+            "fr": "Capitaux de tiers",
+            "it": "Capitale di terzi"
           },
           "data": true
         },
         "eigenkapital": {
           "label": {
-            "en": "Equity / net worth"
+            "en": "Equity / net worth",
+            "de": "Eigenkapital",
+            "fr": "Fonds propres",
+            "it": "Capitale proprio"
           },
           "data": true
         },
         "bip": {
           "label": {
-            "en": "Gross domestic product"
+            "en": "Gross domestic product",
+            "de": "Bruttoinlandprodukt",
+            "fr": "Produit intérieur brut",
+            "it": "Prodotto interno lordo"
           },
           "data": true
         },
         "fiskalquote": {
           "label": {
-            "en": "Fiscal ratio (tax-to-GDP)"
+            "en": "Fiscal ratio (tax-to-GDP)",
+            "de": "Fiskalquote",
+            "fr": "Quote-part fiscale",
+            "it": "Quota fiscale"
           },
           "data": true
         },
         "einnahmenquote": {
           "label": {
-            "en": "Receipts-to-GDP ratio"
+            "en": "Receipts-to-GDP ratio",
+            "de": "Einnahmenquote",
+            "fr": "Quote-part des recettes",
+            "it": "Quota delle entrate"
           },
           "data": true
         },
         "staatsquote": {
           "label": {
-            "en": "Expenditure-to-GDP ratio"
+            "en": "Expenditure-to-GDP ratio",
+            "de": "Staatsquote",
+            "fr": "Quote-part de l'État",
+            "it": "Quota statale"
           },
           "data": true
         },
         "bruttoschuldenquote": {
           "label": {
-            "en": "Gross-debt-to-GDP ratio (Maastricht)"
+            "en": "Gross-debt-to-GDP ratio (Maastricht)",
+            "de": "Bruttoschuldenquote (Maastricht)",
+            "fr": "Taux d'endettement brut (Maastricht)",
+            "it": "Tasso d'indebitamento lordo (Maastricht)"
           },
           "data": true
         },
         "schuldenquote": {
           "label": {
-            "en": "Debt-to-GDP ratio"
+            "en": "Debt-to-GDP ratio",
+            "de": "Schuldenquote",
+            "fr": "Taux d'endettement",
+            "it": "Tasso d'indebitamento"
           },
           "data": true
         },
         "nettoschuldenquote": {
           "label": {
-            "en": "Net-debt-to-GDP ratio"
+            "en": "Net-debt-to-GDP ratio",
+            "de": "Nettoschuldenquote",
+            "fr": "Taux d'endettement net",
+            "it": "Tasso d'indebitamento netto"
           },
           "data": true
         },
         "grp_fs": {
           "label": {
-            "en": "Financing view (receipts, expenditure, balance)"
+            "en": "Financing view (receipts, expenditure, balance)",
+            "de": "Finanzierungssicht (Einnahmen, Ausgaben, Saldo)",
+            "fr": "Optique du financement (recettes, dépenses, solde)",
+            "it": "Ottica del finanziamento (entrate, uscite, saldo)"
           },
           "data": false
         },
         "grp_gfs": {
           "label": {
-            "en": "Accrual view (revenue, expenses, balance)"
+            "en": "Accrual view (revenue, expenses, balance)",
+            "de": "Erfolgssicht (Ertrag, Aufwand, Saldo)",
+            "fr": "Optique des résultats (revenus, charges, solde)",
+            "it": "Ottica dei risultati (ricavi, oneri, saldo)"
           },
           "data": false
         },
         "grp_bs": {
           "label": {
-            "en": "Balance sheet"
+            "en": "Balance sheet",
+            "de": "Bilanz",
+            "fr": "Bilan",
+            "it": "Bilancio"
           },
           "data": false
         },
         "grp_debt": {
           "label": {
-            "en": "Debt"
+            "en": "Debt",
+            "de": "Schulden",
+            "fr": "Dette",
+            "it": "Debito"
           },
           "data": false
         },
         "grp_ratio": {
           "label": {
-            "en": "Ratios (% of GDP)"
+            "en": "Ratios (% of GDP)",
+            "de": "Quoten (% des BIP)",
+            "fr": "Quotes-parts (% du PIB)",
+            "it": "Quote (% del PIL)"
           },
           "data": false
         }
@@ -309,64 +433,107 @@
     },
     "estimate": {
       "label": {
-        "en": "Estimate type"
+        "en": "Estimate type",
+        "de": "Erhebungsart",
+        "fr": "Type d'estimation",
+        "it": "Tipo di stima"
       },
       "levels": {
         "Financial statements": {
           "label": {
-            "en": "Financial statements (actual)"
+            "en": "Financial statements (actual)",
+            "de": "Rechnung (Ist)",
+            "fr": "Comptes (effectif)",
+            "it": "Conti (effettivo)"
           },
           "data": true
         },
         "Provisional financial statements": {
           "label": {
-            "en": "Provisional financial statements"
+            "en": "Provisional financial statements",
+            "de": "Provisorische Rechnung",
+            "fr": "Comptes provisoires",
+            "it": "Conti provvisori"
           },
           "data": true
         },
         "Survey financial statements": {
           "label": {
-            "en": "Survey financial statements"
+            "en": "Survey financial statements",
+            "de": "Erhebung Rechnung",
+            "fr": "Enquête comptes",
+            "it": "Rilevazione conti"
           },
           "data": true
         },
         "Survey budget": {
           "label": {
-            "en": "Survey budget"
+            "en": "Survey budget",
+            "de": "Erhebung Budget",
+            "fr": "Enquête budget",
+            "it": "Rilevazione preventivo"
           },
           "data": true
         },
         "Budget/financial plans": {
           "label": {
-            "en": "Budget / financial plans"
+            "en": "Budget / financial plans",
+            "de": "Budget / Finanzpläne",
+            "fr": "Budget / plans financiers",
+            "it": "Preventivo / piani finanziari"
           },
           "data": true
         },
         "Forecasts": {
           "label": {
-            "en": "Forecasts"
+            "en": "Forecasts",
+            "de": "Prognosen",
+            "fr": "Prévisions",
+            "it": "Previsioni"
           },
           "data": true
         },
         "Data available": {
           "label": {
-            "en": "Data available"
+            "en": "Data available",
+            "de": "Daten verfügbar",
+            "fr": "Données disponibles",
+            "it": "Dati disponibili"
           },
           "data": true
         }
       }
     }
   },
-  "units": {
-    "en": "CHF million (levels) / share of GDP, 0-1 (ratios)"
-  },
   "updated": "2025-03-18",
   "notes": {
     "en": "Headline general-government finance aggregates from the FFA FS- and GFS-model dashboard. Level figures are in CHF million; the *quote (ratio) indicators are expressed as a share of GDP on a 0-1 scale. Years beyond the latest financial statement are budget / financial-plan or forecast figures (see the estimate dimension)."
   },
-  "topic": "National accounts",
-  "concept": "National accounts / Government finance",
+  "topic": {
+    "key": "national-accounts",
+    "name": {
+      "en": "National accounts",
+      "de": "Volkswirtschaftliche Gesamtrechnung",
+      "fr": "Comptes nationaux",
+      "it": "Conti nazionali"
+    }
+  },
+  "concept": {
+    "en": "National accounts / Government finance",
+    "leaf": {
+      "en": "Government finance",
+      "de": "Öffentliche Finanzen",
+      "fr": "Finances publiques",
+      "it": "Finanze pubbliche"
+    }
+  },
   "canonical": true,
+  "title": {
+    "en": "Government finances",
+    "de": "Öffentliche Finanzen",
+    "fr": "Finances publiques",
+    "it": "Finanze pubbliche"
+  },
   "split": "indicator",
   "single_select": ["level", "model", "estimate"],
   "default_transform": "level",
@@ -376,6 +543,17 @@
     "model": "gfs",
     "indicator": "bruttoschuldenquote"
   },
-  "description": "The headline read on Swiss public finances — the one genuine concept gap in the catalog. The Federal Finance Administration consolidates the whole of general government (Confederation, the 26 cantons, the communes, and the social-security funds) into a single coherent set of fiscal aggregates, published on opendata.swiss as \"Main aggregates and forecasts with FS- and GFS-Model\". It is the only catalog dataset sourced from the FFA, and the only one that carries both the Swiss administrative FS model (financial statistics) and the internationally comparable GFS model (Government Finance Statistics, the Maastricht / SNA basis) side by side. It delivers the textbook public-finance headline set — receipts, expenditure, the budget balance, gross and net debt, and the GDP ratios (tax-to-GDP / fiscal ratio, expenditure ratio, gross-debt ratio incl. the Maastricht debt ratio) — broken down by government level, so the user can see e.g. the Confederation's deficit against the cantons' surplus, or the general-government Maastricht debt ratio over three decades. It also extends past the latest closed financial statement into the FFA's official budget / financial-plan and forecast years (flagged in the estimate dimension), which is unusual for the catalog: most series stop at the last actual.",
-  "fetched_utc": "2026-08-05 09:13:32"
+  "description": {
+    "en": "Receipts, spending, deficit and debt for the Swiss Confederation, cantons, communes and social security, on both the national and Maastricht basis.",
+    "de": "Einnahmen, Ausgaben, Defizit und Schulden von Bund, Kantonen, Gemeinden und Sozialversicherungen, sowohl national als auch nach Maastricht.",
+    "fr": "Recettes, dépenses, déficit et dette de la Confédération, des cantons, des communes et des assurances sociales, en base nationale et Maastricht.",
+    "it": "Entrate, uscite, disavanzo e debito di Confederazione, Cantoni, Comuni e assicurazioni sociali, su base nazionale e Maastricht."
+  },
+  "units": {
+    "en": "CHF million (levels) / share of GDP, 0-1 (ratios)",
+    "de": "Mio. CHF (Niveaus) / Anteil am BIP, 0-1 (Quoten)",
+    "fr": "Millions de CHF (niveaux) / part du PIB, 0-1 (quotes-parts)",
+    "it": "Milioni di CHF (livelli) / quota del PIL, 0-1 (quote)"
+  },
+  "fetched_utc": "2026-08-05 13:12:05"
 }

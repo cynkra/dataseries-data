@@ -1,9 +1,10 @@
 # Employees, by economic activity
 
 - **id**: ch_snb_ambeschkla
+- **title**: Employees, by economic activity | de: Beschäftigte nach Wirtschaftszweig | fr: Emplois par branche économique | it: Impieghi per ramo economico
 - **concept**: Labour / Employment / jobs
 - **canonical**: no (alternate for Employment; overlaps FSO `ch_fso_besta`, flagged in CONCEPT-UNIVERSE; FSO is the intended canonical employment series)
-- **source**: Swiss National Bank
+- **source**: snb
 - **license**: snb (free reuse, attribution required)
 - **frequency**: quarterly
 - **coverage**: 1991-Q3 .. 2025-Q4
@@ -11,16 +12,11 @@
 - **updated**: 2025-Q4 (latest observation; PublishingDate in CSV header is the freshness signal)
 
 ## What is special
-Employees broken down by economic activity (NACE-style sectors) crossed with an
-employment type. The SNB version overlaps FSO `ch_fso_besta` (jobs by division); the
-concept universe flags this and keeps FSO as the intended canonical, so this is the
-labelled alternate. The distinctive feature is the two-axis cross: four head-count
-bases (Total, full-time, part-time, full-time-equivalents) times ~14 leaf sectors,
-which lets you read part-time intensity and FTE conversion by sector, something the
-FSO jobs cube does not expose the same way. Values are in thousands of persons.
+Swiss employees by industry, split into full-time, part-time and full-time equivalents, so part-time intensity per sector reads directly.
 
 ## Access
-- **type**: SNB cube API
+- **type**: snb-cube — SNB cube API
+- **cube**: `ambeschkla`
 - **endpoint**: `GET https://data.snb.ch/api/cube/ambeschkla/data/json/en`
 - **call**: `snb_fetch("ambeschkla", title = "Employees, by economic activity")`
 
@@ -62,3 +58,12 @@ The overview line dimension D0 carries a `VT Total` (employment level) shipped a
 ## Provenance
 Script: `R/source_snb.R::snb_fetch` via `R/snb_cubes.tsv` (cube_id `ambeschkla`).
 Datasheet 2026-06-01; parser verified 2026-06-01 (8,280 rows, 60 series).
+
+## What is special (de)
+Schweizer Beschäftigte nach Branche, aufgeteilt in Voll-, Teilzeit und Vollzeitäquivalente, sodass die Teilzeitintensität je Sektor direkt ablesbar ist.
+
+## What is special (fr)
+Salariés suisses par branche, répartis en temps plein, temps partiel et équivalents plein temps, si bien que l'intensité du temps partiel par secteur se lit directement.
+
+## What is special (it)
+Occupati svizzeri per ramo, ripartiti in tempo pieno, tempo parziale ed equivalenti a tempo pieno, così l'intensità del tempo parziale per settore è leggibile direttamente.

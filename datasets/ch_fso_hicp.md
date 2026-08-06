@@ -1,10 +1,10 @@
 # Harmonised Index of Consumer Prices (HICP)
 
 - **id**: ch_fso_hicp
-- **title**: Harmonised CPI (HICP)
+- **title**: Harmonised CPI (HICP) | de: Harmonisierter Konsumentenpreisindex (HVPI) | fr: IPC harmonisé (IPCH) | it: IPC armonizzato (IPCA)
 - **concept**: Prices / Consumer prices
 - **canonical**: no (alternate for Consumer prices — the EU-harmonised methodology, for cross-country comparison)
-- **source**: Eurostat
+- **source**: eurostat
 - **license**: eurostat (free reuse, attribution required)
 - **frequency**: monthly
 - **coverage**: 2004-12 .. 2025-12
@@ -12,25 +12,12 @@
 - **updated**: 2026-02-06
 
 ## What is special
-The **EU-harmonised** consumer price index for Switzerland (Harmonised Index of
-Consumer Prices, 2015 = 100), published by **Eurostat** — not the FSO. It is the
-internationally comparable inflation measure: all 27+ HICP economies are computed
-on a common COICOP basket and method, so this is the series to use when comparing
-Swiss inflation against the euro area or EU. We carry the all-items aggregate
-**CP00** plus the **12 main COICOP divisions** CP01..CP12 (= 13 series).
-
-This is **distinct from `ch_fso_cpi`** (the national Landesindex der
-Konsumentenpreise, LIK): the LIK is the FSO's domestic-method index with a far
-deeper position hierarchy (~595 positions) and a Dec-2025=100 base, whereas the
-HICP is the harmonised method on a 2015=100 base with a different (smaller)
-basket — notably the HICP excludes owner-occupied housing costs, which the LIK
-includes. Reach for `ch_fso_hicp` for EU comparability and for `ch_fso_cpi` for
-the domestic headline / detailed basket.
+Swiss inflation on the EU-harmonised method, from Eurostat, for comparison with the euro area. Excludes owner-occupied housing, unlike the national index.
 
 ## Access
-- **type**: Eurostat SDMX 2.1 REST (SDMX-CSV)
+- **type**: eurostat-sdmx — Eurostat SDMX 2.1 REST (SDMX-CSV)
 - **flow**: `prc_hicp_midx` (monthly index)
-- **key**: `M.I15.{COICOP}.CH` — freq=M, unit=I15 (2015=100), geo=CH
+- **dataflow**: `prc_hicp_midx`
 - **call**: `eurostat_hicp_fetch("ch_fso_hicp")` issues one SDMX-CSV GET per COICOP code
 
 ## Parsing recipe
@@ -51,6 +38,11 @@ the domestic headline / detailed basket.
   Alcoholic beverages/tobacco, Clothing, Housing/utilities, Furnishings, Health,
   Transport, Communications, Recreation and culture, Education, Restaurants and
   hotels, Miscellaneous). Hierarchy: CP00 → CP01..CP12.
+
+## Labels
+- **units**: Index (2015 = 100) | de: Index (2015 = 100) | fr: Indice (2015 = 100) | it: Indice (2015 = 100)
+- dim: coicop
+  - **label**: COICOP consumption purpose | de: COICOP-Verwendungszweck | fr: Fonction de consommation COICOP | it: Funzione di consumo COICOP
 
 ## Display
 - **split**: coicop
@@ -75,3 +67,12 @@ Source: **Eurostat** (NOT the FSO) — flow `prc_hicp_midx`, key `M.I15.{COICOP}
 Script: `R/source_eurostat.R::eurostat_hicp_fetch`. Datasheet 2026-06-02; parser
 verified live 2026-06-02 (3,289 rows, 13 series, 0 NA values; CP00 2004-12 = 96.90,
 CP00 2025-12 = 107.07, CP00 2015 mean = 100.00).
+
+## What is special (de)
+Schweizer Teuerung nach der EU-harmonisierten Methode, von Eurostat, für den Vergleich mit dem Euroraum. Ohne Wohneigentumskosten, anders als der Landesindex.
+
+## What is special (fr)
+Inflation suisse selon la méthode harmonisée de l'UE, d'Eurostat, pour la comparaison avec la zone euro. Exclut le logement en propriété, contrairement à l'indice national.
+
+## What is special (it)
+Inflazione svizzera secondo il metodo armonizzato UE, di Eurostat, per il confronto con l'area euro. Esclude i costi dell'abitazione di proprietà, a differenza dell'indice nazionale.

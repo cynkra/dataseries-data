@@ -46,8 +46,15 @@ full edit→regenerate workflow.)
 the quirks a user or a maintainer must know.>
 
 ## Access
-- **type**: <SNB cube API | KOF API | SECO swissdata | FSO PX-Web | FSO DAM Excel>
-- **endpoint / order number**: <...>
+- **type**: <slug — optional free prose>  (slug ∈ snb-cube | fso-dam-excel |
+  fso-dam-csv | fso-pxweb | fso-sdmx | seco-swissdata | kof-api | eurostat-sdmx |
+  scraped; the machine-readable family, parsed by `read_access()` in `R/io.R`)
+- **<identifier>**: <the family's canonical identifier line — `cube` |
+  `order number` | `table id` | `flow` (agency/dataflow/version) | `set` |
+  `key` | `dataflow` | `url`. PARSED, not prose: the pipeline fetches what is
+  declared here (e.g. `fso_excel_dataset()` reads the order number from this
+  block), and `tests/test_access.R` cross-checks every declared identifier, so
+  a stale value fails loudly instead of drifting.>
 - **call**: <the exact fetch call>
 
 ## Parsing recipe
@@ -57,6 +64,20 @@ reshape, rows to drop.>
 
 ## Dimensions
 <each dimension column: what it means, key codes>
+
+## Labels
+<curated display text — ONLY strings a human wrote (hand-authored dimension/level
+labels, units, synthetic hierarchy group headers). Source-derived labels (SNB
+cubes, PX-Web valueTexts, SDMX codelists, the CPI workbook columns) do NOT get a
+block: they stay fetched, per language. Every value uses the i18n grammar
+`<en text> | de: … | fr: …` (omit a language rather than stub it). Applied
+sparsely on top of the fetched meta by `attach_labels()` (R/labels.R); regenerate
+with `Rscript dev/rebuild_from_datasheets.R`; `tests/test_labels.R` fails if a
+block and its sidecar drift.>
+- **units**: <dataset-wide units, i18n>
+- dim: <dimension>
+  - **label**: <the dimension's own label, i18n>
+  - <code>: <level label, i18n>   (backtick-quote a code containing spaces/colons)
 
 ## Display
 <presentation decisions the app derives from here>

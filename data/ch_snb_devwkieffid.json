@@ -1,5 +1,5 @@
 {
-  "schema_version": "1.0",
+  "schema_version": "1.1",
   "id": "ch_snb_devwkieffid",
   "dim_order": [
     "D0",
@@ -8,43 +8,60 @@
   "start": "1999-01-01",
   "end": "2026-06-30",
   "title": {
-    "en": "Effective exchange-rate index"
+    "en": "Effective exchange-rate index",
+    "de": "Effektiver Wechselkursindex",
+    "fr": "Indice de taux de change effectif",
+    "it": "Indice del tasso di cambio effettivo"
   },
   "source": {
     "name": {
-      "en": "Swiss National Bank"
+      "en": "Swiss National Bank",
+      "de": "Schweizerische Nationalbank (SNB)",
+      "fr": "Banque nationale suisse (BNS)",
+      "it": "Banca nazionale svizzera (BNS)"
     },
-    "url": "https://data.snb.ch/en/topics/snb/cube/devwkieffid"
+    "url": "https://data.snb.ch/en/topics/snb/cube/devwkieffid",
+    "key": "snb"
   },
   "license": "snb",
   "frequency": "daily",
   "dimensions": {
     "D0": {
       "label": {
-        "en": "Real/Nominal"
+        "en": "Real/Nominal",
+        "de": "Real/Nominal",
+        "fr": "Réel/Nominal"
       },
       "levels": {
         "N": {
           "label": {
-            "en": "Nominal"
+            "en": "Nominal",
+            "de": "Nominal",
+            "fr": "Nominal"
           },
           "data": true
         },
         "R": {
           "label": {
-            "en": "Real"
+            "en": "Real",
+            "de": "Real",
+            "fr": "Réel"
           },
           "data": false
         },
         "K": {
           "label": {
-            "en": "CPI-based"
+            "en": "CPI-based",
+            "de": "KPI basiert",
+            "fr": "Basé sur l’IPC"
           },
           "data": true
         },
         "P": {
           "label": {
-            "en": "PPI-based"
+            "en": "PPI-based",
+            "de": "PPI basiert",
+            "fr": "Basé sur l’IPP"
           },
           "data": true
         }
@@ -59,18 +76,24 @@
     },
     "D1": {
       "label": {
-        "en": "Index country group"
+        "en": "Index country group",
+        "de": "Index-Länderkreis",
+        "fr": "Groupe de pays entrant dans les indices"
       },
       "levels": {
         "G": {
           "label": {
-            "en": "Overall index"
+            "en": "Overall index",
+            "de": "Gesamtindex",
+            "fr": "Indice total"
           },
           "data": true
         },
         "E": {
           "label": {
-            "en": "Euro area index"
+            "en": "Euro area index",
+            "de": "Index Euroraum",
+            "fr": "Indice zone euro"
           },
           "data": true
         }
@@ -82,8 +105,24 @@
     }
   },
   "updated": "2026-07-07 09:00",
-  "topic": "Exchange rates",
-  "concept": "Exchange rates / Effective FX index",
+  "topic": {
+    "key": "exchange-rates",
+    "name": {
+      "en": "Exchange rates",
+      "de": "Wechselkurse",
+      "fr": "Taux de change",
+      "it": "Tassi di cambio"
+    }
+  },
+  "concept": {
+    "en": "Exchange rates / Effective FX index",
+    "leaf": {
+      "en": "Effective FX index",
+      "de": "Effektiver Wechselkursindex",
+      "fr": "Indice de change effectif",
+      "it": "Indice di cambio effettivo"
+    }
+  },
   "canonical": true,
   "split": "D1",
   "single_select": "D0",
@@ -92,6 +131,11 @@
     "D1": "G",
     "D0": "K"
   },
-  "description": "The trade-weighted effective exchange rate of the Swiss franc, the single most watched FX summary for franc strength, published daily. Two country-group aggregates are offered: the overall index (G) and a euro-area index (E). As with the bilateral indices, the nominal/real split nests into nominal (N), real CPI-based (K) and real PPI-based (P), and each is given both as index (I) and as day-on-day % change (V). This daily cube is the canonical effective-FX series; the monthly roll-up devwkieffim is the dropped lower-frequency duplicate per the native-frequency rule. The JSON start is 1999-01 but the daily observations in the CSV begin late 2000 for the index level (K,E,I from 2000-11-30); earlier history is sparse and series-dependent.",
-  "fetched_utc": "2026-07-07 09:28:35"
+  "description": {
+    "en": "The trade-weighted franc index, the standard daily measure of how strong the Swiss franc is overall and against the euro area.",
+    "de": "Der handelsgewichtete Frankenindex, das tägliche Standardmass dafür, wie stark der Franken insgesamt und gegenüber dem Euroraum ist.",
+    "fr": "L'indice du franc pondéré par les échanges, la mesure quotidienne de référence de la force du franc, globalement et face à la zone euro.",
+    "it": "L'indice del franco ponderato per gli scambi, la misura giornaliera di riferimento della forza del franco, complessiva e verso l'area euro."
+  },
+  "fetched_utc": "2026-08-05 13:12:02"
 }

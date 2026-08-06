@@ -1,11 +1,11 @@
 # Labour market (registered unemployment, SECO)
 
 - **id**: ch_snb_amarbma
-- **title**: Registered unemployment
+- **title**: Registered unemployment | de: Registrierte Arbeitslosigkeit | fr: Chômage inscrit | it: Disoccupazione registrata
 - **concept**: Labour / Unemployment
 - **canonical**: yes (registered/SECO definition — the headline unemployment series; the ILO `ch_fso_unemp_rate` is the labelled alternate)
 - **featured**: Unemployment
-- **source**: Swiss National Bank (data originate from SECO)
+- **source**: snb (data originate from SECO)
 - **license**: snb (free reuse, attribution required)
 - **frequency**: monthly
 - **coverage**: 1948-01 .. 2026-04
@@ -13,18 +13,11 @@
 - **updated**: 2026-04 (latest observation; PublishingDate in CSV header is the freshness signal)
 
 ## What is special
-The registered (administrative) view of Swiss unemployment, sourced from SECO and
-republished by the SNB. It is the deliberate alternate to the FSO ILO survey rate:
-different definition, not a format re-export, so both are kept and labelled. History
-runs back to 1948, the longest labour series in the catalog. One `Overview` dimension
-packs several distinct concepts at once: registered unemployed, jobless rate,
-notified vacancies (each as raw Total and Seasonally adjusted), plus short-time
-working, registered job seekers, and the labour force. Note the unusual mix of units
-on a single axis: counts of persons, a percentage rate, and vacancy counts all live
-under the same `D0` codes, so consumers must split by code before charting.
+People registered unemployed at Swiss job centres, with the unemployment rate, notified vacancies and short-time working.
 
 ## Access
-- **type**: SNB cube API
+- **type**: snb-cube — SNB cube API
+- **cube**: `amarbma`
 - **endpoint**: `GET https://data.snb.ch/api/cube/amarbma/data/json/en`
 - **call**: `snb_fetch("amarbma", title = "Labour market (registered unemployment, SECO)")`
 
@@ -56,6 +49,8 @@ under the same `D0` codes, so consumers must split by code before charting.
   only pair with their own raw Total (T0<->S0, T1<->S1, T2<->S2).
 
 ## Caveats / simplifications
+- Units differ across the levels of the single `Overview` dimension: persons, a
+  percentage rate and vacancy counts share one axis. Select a code before charting.
 - Heterogeneous units within one dimension (persons, %, vacancy counts); no unit
   column, the meaning is encoded in the `D0` code.
 - Default series for previews is `E` (labour force).
@@ -63,3 +58,12 @@ under the same `D0` codes, so consumers must split by code before charting.
 ## Provenance
 Script: `R/source_snb.R::snb_fetch` via `R/snb_cubes.tsv` (cube_id `amarbma`).
 Datasheet 2026-06-01; parser verified 2026-06-01 (6,540 rows, 9 series).
+
+## What is special (de)
+Bei den Schweizer RAV registrierte Arbeitslose, mit Arbeitslosenquote, gemeldeten offenen Stellen und Kurzarbeit.
+
+## What is special (fr)
+Personnes inscrites au chômage auprès des offices régionaux suisses, avec le taux de chômage, les places vacantes annoncées et le chômage partiel.
+
+## What is special (it)
+Persone iscritte alla disoccupazione presso gli uffici regionali svizzeri, con tasso di disoccupazione, posti vacanti annunciati e lavoro ridotto.

@@ -1,25 +1,23 @@
 # KOF Economic Sentiment Index (ESI)
 
 - **id**: ch_kof_esi
+- **title**: KOF Economic Sentiment Index | de: KOF Economic Sentiment Index | fr: KOF Economic Sentiment Index | it: KOF Economic Sentiment Index
 - **concept**: Business cycle & sentiment / Sentiment composite
 - **canonical**: yes
-- **source**: KOF Swiss Economic Institute
+- **source**: kof
 - **license**: kof (CC BY, attribution required)
 - **frequency**: monthly
 - **coverage**: 2007-04 .. 2026-05
 - **series**: 2
 
 ## What is special
-KOF's **Economic Sentiment Index** — a survey-based sentiment composite, sibling to
-the KOF Economic Barometer (`ch_kof_barometer`) but capturing firms' assessment of
-the current and expected business situation. Two methodology vintages run in
-parallel: the original "pre-Brexit" version and the standard 2018 version.
+How Swiss firms rate their current and expected business situation, from ETH Zurich survey data. Two methodology versions run side by side.
 
 ## Access
-- **type**: KOF Time Series Database API **v2**, public **collection** (v1 called
+- **type**: kof-api — KOF Time Series Database API **v2**, public **collection** (v1 called
   these "sets"; collections owned by the `public` user are open OGD)
 - **endpoint**: `https://tsdb-api.kof.ethz.ch/v2/collections/public/<collection>/ts`
-- **set**: `ogd_ch.kof.esi`
+- **key**: `ogd_ch.kof.esi`
 - **call**: `kof_set_fetch("ogd_ch.kof.esi")`
 - `access_type=public` keeps the call anonymous; without it the API redirects to
   KOF's Keycloak login. (API v1 on `datenservice.kof.ethz.ch` was discontinued in
@@ -53,3 +51,12 @@ parallel: the original "pre-Brexit" version and the standard 2018 version.
 Script: `R/source_kof.R::kof_set_fetch` (wired in `R/pipeline.R`).
 Datasheet authored 2026-06-02; verified live 2026-06-02 (2 series, 460 rows, to 2026-05).
 Migrated to KOF API v2 and re-verified 2026-07-30.
+
+## What is special (de)
+Wie Schweizer Firmen ihre aktuelle und erwartete Geschäftslage einschätzen, aus Umfragedaten der ETH Zürich. Zwei Methodikvarianten laufen parallel.
+
+## What is special (fr)
+Comment les entreprises suisses jugent leur situation actuelle et attendue, à partir des enquêtes de l'EPF de Zurich. Deux versions méthodologiques coexistent.
+
+## What is special (it)
+Come le imprese svizzere valutano la situazione attuale e attesa, dai sondaggi del PF di Zurigo. Due versioni metodologiche coesistono.

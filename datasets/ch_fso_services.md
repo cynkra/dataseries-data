@@ -1,26 +1,21 @@
 # Services-sector turnover (quarterly)
 
 - **id**: ch_fso_services
-- **title**: Services turnover
+- **title**: Services turnover | de: Umsätze Dienstleistungssektor | fr: Chiffres d'affaires des services | it: Fatturato dei servizi
 - **concept**: Domestic economy / Services turnover
 - **canonical**: yes
-- **source**: Swiss Federal Statistical Office (FSO)
+- **source**: fso
 - **license**: fso (free reuse, attribution required)
 - **frequency**: quarterly
 - **coverage**: 2021-Q1 .. 2026-Q1
 - **series**: 132
 
 ## What is special
-The turnover index for the **tertiary (services) sector**, completing the
-sector-turnover triad alongside retail (`ch_fso_retail`) and industry/construction
-(`ch_fso_production`). Same FSO SDMX flow as production (`DF_KEU_Q1`), disjoint NOGA
-codes. History is genuinely short — services turnover is a newer FSO product, base
-2021 = 100; the secondary-sector codes in the same flow reach back to 1999, the
-tertiary ones do not.
+Turnover of the Swiss services sector each quarter, completing the picture alongside retail and industry. Base 2021 = 100, so history is short.
 
 ## Access
-- **type**: FSO SDMX (disseminate.stats.swiss)
-- **flow**: agency `CH1.KEU`, dataflow `DF_KEU_Q1`, version 1.0.0
+- **type**: fso-sdmx — FSO SDMX (disseminate.stats.swiss)
+- **flow**: `CH1.KEU/DF_KEU_Q1/1.0.0` (agency `CH1.KEU`, dataflow `DF_KEU_Q1`, version 1.0.0)
 - **call**: `fso_sdmx_fetch("ch_fso_services", "CH1.KEU", "DF_KEU_Q1", "1.0.0", noga_keep = .SDMX_SERVICES_NOGA)`
 
 ## Parsing recipe
@@ -63,3 +58,12 @@ tertiary ones do not.
 ## Provenance
 Script: `R/source_fso_sdmx.R::fso_sdmx_fetch` (wired in `R/pipeline.R`).
 Datasheet authored 2026-06-02; SDMX slice verified live 2026-06-02 (2574 rows, 132 series).
+
+## What is special (de)
+Umsatz des Schweizer Dienstleistungssektors pro Quartal, als Ergänzung zu Detailhandel und Industrie. Basis 2021 = 100, daher kurze Historie.
+
+## What is special (fr)
+Chiffre d'affaires du secteur suisse des services par trimestre, en complément du commerce de détail et de l'industrie. Base 2021 = 100, donc historique court.
+
+## What is special (it)
+Fatturato del settore svizzero dei servizi per trimestre, a completamento di commercio al dettaglio e industria. Base 2021 = 100, quindi storia breve.

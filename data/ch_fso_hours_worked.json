@@ -1,5 +1,5 @@
 {
-  "schema_version": "1.0",
+  "schema_version": "1.1",
   "id": "ch_fso_hours_worked",
   "dim_order": [
     "sex",
@@ -8,14 +8,15 @@
   ],
   "start": "2010-01-01",
   "end": "2025-01-01",
-  "title": {
-    "en": "Hours worked"
-  },
   "source": {
     "name": {
-      "en": "Swiss Federal Statistical Office (FSO)"
+      "en": "Swiss Federal Statistical Office (FSO)",
+      "de": "Bundesamt für Statistik (BFS)",
+      "fr": "Office fédéral de la statistique (OFS)",
+      "it": "Ufficio federale di statistica (UST)"
     },
-    "url": "https://www.bfs.admin.ch/asset/en/ts-x-03.02.03.01.02.01"
+    "url": "https://www.bfs.admin.ch/asset/en/ts-x-03.02.03.01.02.01",
+    "key": "fso"
   },
   "license": "fso",
   "frequency": "annual",
@@ -23,24 +24,36 @@
   "dimensions": {
     "measure": {
       "label": {
-        "en": "Measure"
+        "en": "Measure",
+        "de": "Messgrösse",
+        "fr": "Mesure",
+        "it": "Misura"
       },
       "levels": {
         "weekly": {
           "label": {
-            "en": "Usual hours worked per week per job"
+            "en": "Usual hours worked per week per job",
+            "de": "Normalarbeitszeit pro Woche und Stelle",
+            "fr": "Heures hebdomadaires habituelles par emploi",
+            "it": "Ore settimanali abituali per impiego"
           },
           "data": true
         },
         "annual": {
           "label": {
-            "en": "Annual hours worked per job"
+            "en": "Annual hours worked per job",
+            "de": "Jahresarbeitszeit pro Stelle",
+            "fr": "Heures annuelles par emploi",
+            "it": "Ore annue per impiego"
           },
           "data": true
         },
         "volume": {
           "label": {
-            "en": "Annual volume of hours worked (total)"
+            "en": "Annual volume of hours worked (total)",
+            "de": "Jahresarbeitsvolumen (Total)",
+            "fr": "Volume annuel d'heures travaillées (total)",
+            "it": "Volume annuo di ore lavorate (totale)"
           },
           "data": true
         }
@@ -48,24 +61,36 @@
     },
     "sex": {
       "label": {
-        "en": "Sex"
+        "en": "Sex",
+        "de": "Geschlecht",
+        "fr": "Sexe",
+        "it": "Sesso"
       },
       "levels": {
         "_T": {
           "label": {
-            "en": "Total"
+            "en": "Total",
+            "de": "Total",
+            "fr": "Total",
+            "it": "Totale"
           },
           "data": true
         },
         "M": {
           "label": {
-            "en": "Men"
+            "en": "Men",
+            "de": "Männer",
+            "fr": "Hommes",
+            "it": "Uomini"
           },
           "data": true
         },
         "F": {
           "label": {
-            "en": "Women"
+            "en": "Women",
+            "de": "Frauen",
+            "fr": "Femmes",
+            "it": "Donne"
           },
           "data": true
         }
@@ -73,36 +98,54 @@
     },
     "worktime": {
       "label": {
-        "en": "Working time"
+        "en": "Working time",
+        "de": "Arbeitszeit",
+        "fr": "Temps de travail",
+        "it": "Tempo di lavoro"
       },
       "levels": {
         "_T": {
           "label": {
-            "en": "Total"
+            "en": "Total",
+            "de": "Total",
+            "fr": "Total",
+            "it": "Totale"
           },
           "data": true
         },
         "FT": {
           "label": {
-            "en": "Full-time"
+            "en": "Full-time",
+            "de": "Vollzeit",
+            "fr": "Plein temps",
+            "it": "Tempo pieno"
           },
           "data": true
         },
         "PT": {
           "label": {
-            "en": "Part-time"
+            "en": "Part-time",
+            "de": "Teilzeit",
+            "fr": "Temps partiel",
+            "it": "Tempo parziale"
           },
           "data": true
         },
         "PT_I": {
           "label": {
-            "en": "Part-time I (50-89%)"
+            "en": "Part-time I (50-89%)",
+            "de": "Teilzeit I (50-89%)",
+            "fr": "Temps partiel I (50-89%)",
+            "it": "Tempo parziale I (50-89%)"
           },
           "data": true
         },
         "PT_II": {
           "label": {
-            "en": "Part-time II (under 50%)"
+            "en": "Part-time II (under 50%)",
+            "de": "Teilzeit II (unter 50%)",
+            "fr": "Temps partiel II (moins de 50%)",
+            "it": "Tempo parziale II (meno del 50%)"
           },
           "data": true
         }
@@ -118,9 +161,31 @@
       }
     }
   },
-  "topic": "Labour",
-  "concept": "Labour / Working time and working volume",
+  "topic": {
+    "key": "labour",
+    "name": {
+      "en": "Labour",
+      "de": "Arbeit",
+      "fr": "Travail",
+      "it": "Lavoro"
+    }
+  },
+  "concept": {
+    "en": "Labour / Working time and working volume",
+    "leaf": {
+      "en": "Working time and working volume",
+      "de": "Arbeitszeit und Arbeitsvolumen",
+      "fr": "Temps et volume de travail",
+      "it": "Tempo e volume di lavoro"
+    }
+  },
   "canonical": true,
+  "title": {
+    "en": "Hours worked",
+    "de": "Arbeitsstunden",
+    "fr": "Heures de travail",
+    "it": "Ore di lavoro"
+  },
   "split": "worktime",
   "single_select": "measure",
   "default_transform": "level",
@@ -129,6 +194,11 @@
     "sex": "_T",
     "worktime": "_T"
   },
-  "description": "The annual working volume (AVOL) statistic: the total hours actually worked in the Swiss economy, plus its two per-job intensities. One cube carries three measures — the headline usual weekly hours per job (the \"Swiss work ~31h/week, not 42\" number), the annual hours worked per job, and the absolute annual volume of hours (~8.1 billion hours). All three cut by sex and by working-time category (full-time vs the two part-time bands), so the part-time gender split — Switzerland's defining labour-market feature — reads directly.",
-  "fetched_utc": "2026-08-05 09:13:33"
+  "description": {
+    "en": "How many hours the Swiss actually work: total volume, hours per job, and usual weekly hours, split by sex and by full-time or part-time.",
+    "de": "Wie viele Stunden in der Schweiz tatsächlich gearbeitet wird: Gesamtvolumen, Stunden pro Stelle und übliche Wochenstunden, nach Geschlecht sowie Voll- und Teilzeit.",
+    "fr": "Combien d'heures on travaille réellement en Suisse : volume total, heures par emploi et heures hebdomadaires usuelles, selon le sexe et le temps plein ou partiel.",
+    "it": "Quante ore si lavora effettivamente in Svizzera: volume totale, ore per impiego e ore settimanali abituali, per sesso e per tempo pieno o parziale."
+  },
+  "fetched_utc": "2026-08-05 13:12:07"
 }

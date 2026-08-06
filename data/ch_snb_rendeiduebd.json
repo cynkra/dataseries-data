@@ -1,5 +1,5 @@
 {
-  "schema_version": "1.0",
+  "schema_version": "1.1",
   "id": "ch_snb_rendeiduebd",
   "dim_order": [
     "D0",
@@ -8,91 +8,124 @@
   "start": "1988-01-04",
   "end": "2026-07-31",
   "title": {
-    "en": "Bond yields (spot rates)"
+    "en": "Bond yields (spot rates)",
+    "de": "Obligationenrenditen (Kassazinssätze)",
+    "fr": "Rendements obligataires (taux au comptant)",
+    "it": "Rendimenti obbligazionari (tassi a pronti)"
   },
   "source": {
     "name": {
-      "en": "Swiss National Bank"
+      "en": "Swiss National Bank",
+      "de": "Schweizerische Nationalbank (SNB)",
+      "fr": "Banque nationale suisse (BNS)",
+      "it": "Banca nazionale svizzera (BNS)"
     },
-    "url": "https://data.snb.ch/en/topics/snb/cube/rendeiduebd"
+    "url": "https://data.snb.ch/en/topics/snb/cube/rendeiduebd",
+    "key": "snb"
   },
   "license": "snb",
   "frequency": "daily",
   "dimensions": {
     "D0": {
       "label": {
-        "en": "Bond categories"
+        "en": "Bond categories",
+        "de": "Anleihensklassen",
+        "fr": "Classes d’obligations"
       },
       "levels": {
         "D0_0": {
           "label": {
-            "en": "Spot interest rates on Swiss Confederation bonds and euro area government bonds"
+            "en": "Spot interest rates on Swiss Confederation bonds and euro area government bonds",
+            "de": "Kassazinssätze von Eidgenössischen Anleihen und Staatsanleihen der Euro-Mitgliedsländer",
+            "fr": "Taux d’intérêt au comptant d’obligations de la Confédération et des États membres de la zone euro"
           },
           "data": false
         },
         "CHF": {
           "label": {
-            "en": "CHF Swiss Confederation bond issues"
+            "en": "CHF Swiss Confederation bond issues",
+            "de": "CHF Anleihen der Eidgenossenschaft",
+            "fr": "Obligations en francs de la Confédération"
           },
           "data": true
         },
         "EUR": {
           "label": {
-            "en": "Euro area government bonds"
+            "en": "Euro area government bonds",
+            "de": "EUR Staatsanleihen der Euro-Mitgliedsländer",
+            "fr": "Obligations en euros des États membres de la zone euro"
           },
           "data": true
         },
         "D1_1": {
           "label": {
-            "en": "Spot interest rates on CHF bond issues for various borrower categories"
+            "en": "Spot interest rates on CHF bond issues for various borrower categories",
+            "de": "Kassazinssätze von CHF Anleihen verschiedener Schuldnerkategorien",
+            "fr": "Taux d’intérêt au comptant d’obligations en francs de diverses catégories de débiteurs"
           },
           "data": false
         },
         "KTA": {
           "label": {
-            "en": "Cantons AAA, AA+"
+            "en": "Cantons AAA, AA+",
+            "de": "Kantone AAA, AA+",
+            "fr": "Cantons AAA, AA+"
           },
           "data": true
         },
         "KTB": {
           "label": {
-            "en": "Cantons AA, AA-"
+            "en": "Cantons AA, AA-",
+            "de": "Kantone AA, AA-",
+            "fr": "Cantons AA, AA-"
           },
           "data": true
         },
         "PFI": {
           "label": {
-            "en": "Mortgage bond institutions"
+            "en": "Mortgage bond institutions",
+            "de": "Pfandbriefinstitute",
+            "fr": "Centrales de lettres de gage"
           },
           "data": true
         },
         "GBA": {
           "label": {
-            "en": "Commercial banks (incl. cantonal banks) AAA, AA+"
+            "en": "Commercial banks (incl. cantonal banks) AAA, AA+",
+            "de": "Geschäftsbanken (inkl. Kantonalbanken) AAA, AA+",
+            "fr": "Banques commerciales (y compris les banques cantonales) AAA, AA+"
           },
           "data": true
         },
         "GBB": {
           "label": {
-            "en": "Commercial banks (incl. cantonal banks) AA, AA-"
+            "en": "Commercial banks (incl. cantonal banks) AA, AA-",
+            "de": "Geschäftsbanken (inkl. Kantonalbanken) AA, AA-",
+            "fr": "Banques commerciales (y compris les banques cantonales) AA, AA-"
           },
           "data": true
         },
         "GBC": {
           "label": {
-            "en": "Commercial banks (incl. cantonal banks) A+, A, A-"
+            "en": "Commercial banks (incl. cantonal banks) A+, A, A-",
+            "de": "Geschäftsbanken (inkl. Kantonalbanken) A+, A, A-",
+            "fr": "Banques commerciales (y compris les banques cantonales) A+, A, A-"
           },
           "data": true
         },
         "IHA": {
           "label": {
-            "en": "Manufacturing (incl. power plants) and trade A+, A, A-"
+            "en": "Manufacturing (incl. power plants) and trade A+, A, A-",
+            "de": "Industrie (inkl. Kraftwerke) und Handel A+, A, A-",
+            "fr": "Industrie (y compris électricité, gaz et eau) et commerce A+, A, A-"
           },
           "data": true
         },
         "IHB": {
           "label": {
-            "en": "Manufacturing (incl. power plants) and trade BBB+, BBB, BBB-"
+            "en": "Manufacturing (incl. power plants) and trade BBB+, BBB, BBB-",
+            "de": "Industrie (inkl. Kraftwerke) und Handel BBB+, BBB, BBB-",
+            "fr": "Industrie (y compris électricité, gaz et eau) et commerce BBB+, BBB, BBB-"
           },
           "data": true
         }
@@ -116,78 +149,104 @@
     },
     "D1": {
       "label": {
-        "en": "Maturity"
+        "en": "Maturity",
+        "de": "Laufzeiten",
+        "fr": "La durée"
       },
       "levels": {
         "1J": {
           "label": {
-            "en": "1 year"
+            "en": "1 year",
+            "de": "1 Jahr",
+            "fr": "1 an"
           },
           "data": true
         },
         "2J": {
           "label": {
-            "en": "2 years"
+            "en": "2 years",
+            "de": "2 Jahre",
+            "fr": "2 ans"
           },
           "data": true
         },
         "3J": {
           "label": {
-            "en": "3 years"
+            "en": "3 years",
+            "de": "3 Jahre",
+            "fr": "3 ans"
           },
           "data": true
         },
         "4J": {
           "label": {
-            "en": "4 years"
+            "en": "4 years",
+            "de": "4 Jahre",
+            "fr": "4 ans"
           },
           "data": true
         },
         "5J": {
           "label": {
-            "en": "5 years"
+            "en": "5 years",
+            "de": "5 Jahre",
+            "fr": "5 ans"
           },
           "data": true
         },
         "6J": {
           "label": {
-            "en": "6 years"
+            "en": "6 years",
+            "de": "6 Jahre",
+            "fr": "6 ans"
           },
           "data": true
         },
         "7J": {
           "label": {
-            "en": "7 years"
+            "en": "7 years",
+            "de": "7 Jahre",
+            "fr": "7 ans"
           },
           "data": true
         },
         "8J": {
           "label": {
-            "en": "8 years"
+            "en": "8 years",
+            "de": "8 Jahre",
+            "fr": "8 ans"
           },
           "data": true
         },
         "9J": {
           "label": {
-            "en": "9 years"
+            "en": "9 years",
+            "de": "9 Jahre",
+            "fr": "9 ans"
           },
           "data": true
         },
         "10J": {
           "label": {
-            "en": "10 years"
+            "en": "10 years",
+            "de": "10 Jahre",
+            "fr": "10 ans"
           },
           "data": true
         },
         "20J": {
           "label": {
-            "en": "20 years"
+            "en": "20 years",
+            "de": "20 Jahre",
+            "fr": "20 ans"
           },
           "data": true
         },
         "30J": {
           "label": {
-            "en": "30 years"
+            "en": "30 years",
+            "de": "30 Jahre",
+            "fr": "30 ans"
           },
           "data": true
         }
@@ -209,8 +268,24 @@
     }
   },
   "updated": "2026-08-03 14:30",
-  "topic": "Interest rates & yields",
-  "concept": "Interest rates & yields / Bond yields",
+  "topic": {
+    "key": "interest-rates-yields",
+    "name": {
+      "en": "Interest rates & yields",
+      "de": "Zinsen & Renditen",
+      "fr": "Taux d'intérêt & rendements",
+      "it": "Tassi d'interesse e rendimenti"
+    }
+  },
+  "concept": {
+    "en": "Interest rates & yields / Bond yields",
+    "leaf": {
+      "en": "Bond yields",
+      "de": "Obligationenrenditen",
+      "fr": "Rendements obligataires",
+      "it": "Rendimenti obbligazionari"
+    }
+  },
   "canonical": true,
   "split": "D0",
   "default_transform": "level",
@@ -218,6 +293,11 @@
     "D0": "CHF",
     "D1": "10J"
   },
-  "description": "This is the SNB spot-rate (zero-coupon yield) cube and the canonical Bond yields series for the catalog. Its CHF × 10J cell is the live 10-year Swiss Confederation benchmark — the most-watched Swiss long rate (the default view). It is live and current (daily, updated within days), unlike the older par-yield cube rendoblid, which the SNB discontinued (last observation 2025-07-31); that cube's content is fully covered here by the CHF curve, so it is not ingested. It crosses two dimensions: a bond category and a maturity, giving a full term structure rather than a single benchmark. The maturity dimension runs 1J through 10J plus 20J and 30J, so you can read an entire spot curve for one day. The category dimension splits into two branches: a market branch (CHF Swiss Confederation issues, EUR euro-area government bonds) and a Swiss issuer-rating branch (cantons by rating tier, mortgage-bond institutions, commercial banks by rating, manufacturing/trade by rating). That issuer-by-rating breakdown is the distinctive part: it lets you see the credit spread of, say, AA cantons or A-rated banks over the Confederation curve. Daily since 1988, so it carries the long Swiss-franc rate history including the negative-rate years.",
-  "fetched_utc": "2026-08-04 09:20:30"
+  "description": {
+    "en": "Swiss government bond yields for every maturity from 1 to 30 years, plus cantons, banks and industry by credit rating, so spreads are visible.",
+    "de": "Renditen Schweizer Staatsanleihen für jede Laufzeit von 1 bis 30 Jahren, dazu Kantone, Banken und Industrie nach Rating, sodass Spreads sichtbar werden.",
+    "fr": "Rendements des emprunts d'État suisses pour chaque échéance de 1 à 30 ans, plus cantons, banques et industrie par notation, si bien que les écarts sont visibles.",
+    "it": "Rendimenti dei titoli di Stato svizzeri per ogni scadenza da 1 a 30 anni, più Cantoni, banche e industria per rating, così gli spread sono visibili."
+  },
+  "fetched_utc": "2026-08-05 13:12:03"
 }

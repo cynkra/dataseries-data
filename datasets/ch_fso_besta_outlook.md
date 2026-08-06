@@ -1,24 +1,21 @@
 # Employment outlook index by economic division
 
 - **id**: ch_fso_besta_outlook
-- **title**: Employment outlook
+- **title**: Employment outlook | de: Beschäftigungsaussichten | fr: Perspectives d'emploi | it: Prospettive occupazionali
 - **concept**: Labour / Employment outlook
 - **canonical**: yes
-- **source**: Swiss Federal Statistical Office (FSO)
+- **source**: fso
 - **license**: fso (free reuse, attribution required)
 - **frequency**: quarterly
 - **coverage**: 2004-Q1 .. 2026-Q1
 - **series**: 20
 
 ## What is special
-The **forward-looking** labour indicator from the FSO employment barometer (BESTA):
-firms' employment-outlook index by economic division, quarterly. A reading above 1.0
-signals net hiring intent over the coming three months, below 1.0 net reduction —
-the leading complement to the jobs (`ch_fso_besta`) and vacancies
-(`ch_fso_vacancies`) series.
+Swiss firms' hiring intentions for the next three months, by industry. Above 1.0 means net hiring planned, below 1.0 net cuts.
 
 ## Access
-- **type**: FSO PX-Web / STAT-TAB (the BESTA theme-0602 family is reachable, unlike
+- **type**: fso-pxweb — FSO PX-Web / STAT-TAB (the BESTA theme-0602 family is reachable, unlike
+- **table id**: `px-x-0602000000_105`
   most PX-Web cubes)
 - **table**: `px-x-0602000000_105`
 - **call**: `fso_fetch("ch_fso_besta_outlook", "px-x-0602000000_105", besta_outlook_query, quarter_col = "Quartal")`
@@ -56,3 +53,12 @@ NOGA division ranges nest by containment (`5-96` ⊃ `5-43`/`45-96` ⊃ groups);
 ## Provenance
 Script: `R/source_fso.R::fso_fetch` (wired in `R/pipeline.R`).
 Datasheet authored 2026-06-02; verified live 2026-06-02 (1780 rows, 20 divisions, Total Q1 2026 ≈ 1.03).
+
+## What is special (de)
+Einstellungsabsichten Schweizer Firmen für die nächsten drei Monate, nach Branche. Über 1.0 bedeutet geplanter Stellenaufbau, unter 1.0 Abbau.
+
+## What is special (fr)
+Intentions d'embauche des entreprises suisses pour les trois prochains mois, par branche. Au-dessus de 1.0 : embauches nettes ; en dessous : réductions.
+
+## What is special (it)
+Intenzioni di assunzione delle imprese svizzere per i prossimi tre mesi, per ramo. Sopra 1.0 assunzioni nette, sotto 1.0 riduzioni.

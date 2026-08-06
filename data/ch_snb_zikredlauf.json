@@ -1,5 +1,5 @@
 {
-  "schema_version": "1.0",
+  "schema_version": "1.1",
   "id": "ch_snb_zikredlauf",
   "dim_order": [
     "D0",
@@ -9,37 +9,52 @@
   "start": "2009-05-01",
   "end": "2026-04-01",
   "title": {
-    "en": "New lending rates"
+    "en": "New lending rates",
+    "de": "Zinssätze Neugeschäft",
+    "fr": "Taux des nouveaux crédits",
+    "it": "Tassi sui nuovi crediti"
   },
   "source": {
     "name": {
-      "en": "Swiss National Bank"
+      "en": "Swiss National Bank",
+      "de": "Schweizerische Nationalbank (SNB)",
+      "fr": "Banque nationale suisse (BNS)",
+      "it": "Banca nazionale svizzera (BNS)"
     },
-    "url": "https://data.snb.ch/en/topics/snb/cube/zikredlauf"
+    "url": "https://data.snb.ch/en/topics/snb/cube/zikredlauf",
+    "key": "snb"
   },
   "license": "snb",
   "frequency": "monthly",
   "dimensions": {
     "D0": {
       "label": {
-        "en": "Product"
+        "en": "Product",
+        "de": "Produkte",
+        "fr": "Produits"
       },
       "levels": {
         "FH": {
           "label": {
-            "en": "Mortgages with fixed interest rates"
+            "en": "Mortgages with fixed interest rates",
+            "de": "Festverzinsliche Hypotheken",
+            "fr": "Prêts hypothécaires à taux fixe"
           },
           "data": true
         },
         "VHBB": {
           "label": {
-            "en": "Mortgages with variable interest rates (linked to a base rate of interest)"
+            "en": "Mortgages with variable interest rates (linked to a base rate of interest)",
+            "de": "Variabelverzinsliche Hypotheken (mit Bindung an einen Basiszinssatz)",
+            "fr": "Prêts hypothécaires à taux variable (liés à un taux de base)"
           },
           "data": true
         },
         "FI": {
           "label": {
-            "en": "Investment loans with fixed interest rates"
+            "en": "Investment loans with fixed interest rates",
+            "de": "Festverzinsliche Investitionskredite",
+            "fr": "Crédits d’investissement à taux fixe"
           },
           "data": true
         }
@@ -52,66 +67,88 @@
     },
     "D1": {
       "label": {
-        "en": "Maturity"
+        "en": "Maturity",
+        "de": "Laufzeiten",
+        "fr": "La durée"
       },
       "levels": {
         "L16M": {
           "label": {
-            "en": "Maturity of over 1 month up to 6 months"
+            "en": "Maturity of over 1 month up to 6 months",
+            "de": "Laufzeit über 1 bis 6 Monate",
+            "fr": "De plus de 1 mois à 6 mois"
           },
           "data": true
         },
         "L6M1J": {
           "label": {
-            "en": "Maturity of over 6 months up to 1 year"
+            "en": "Maturity of over 6 months up to 1 year",
+            "de": "Laufzeit über 6 Monate bis 1 Jahr",
+            "fr": "De plus de 6 mois à 1 an"
           },
           "data": true
         },
         "L1J2J": {
           "label": {
-            "en": "Maturity of over 1 year up to 2 years"
+            "en": "Maturity of over 1 year up to 2 years",
+            "de": "Laufzeit über 1 Jahr bis 2 Jahre",
+            "fr": "De plus de 1 an à 2 ans"
           },
           "data": true
         },
         "L23J": {
           "label": {
-            "en": "Maturity of over 2 years up to 3 years"
+            "en": "Maturity of over 2 years up to 3 years",
+            "de": "Laufzeit über 2 bis 3 Jahre",
+            "fr": "De plus de 2 ans à 3 ans"
           },
           "data": true
         },
         "L35J": {
           "label": {
-            "en": "Maturity of over 3 years up to 5 years"
+            "en": "Maturity of over 3 years up to 5 years",
+            "de": "Laufzeit über 3 bis 5 Jahre",
+            "fr": "De plus de 3 ans à 5 ans"
           },
           "data": true
         },
         "L57J": {
           "label": {
-            "en": "Maturity of over 5 years up to 7 years"
+            "en": "Maturity of over 5 years up to 7 years",
+            "de": "Laufzeit über 5 bis 7 Jahre",
+            "fr": "De plus de 5 ans à 7 ans"
           },
           "data": true
         },
         "L515J": {
           "label": {
-            "en": "Maturity of over 5 years up to 15 years"
+            "en": "Maturity of over 5 years up to 15 years",
+            "de": "Laufzeit über 5 bis 15 Jahre",
+            "fr": "De plus de 5 ans à 15 ans"
           },
           "data": true
         },
         "L710J": {
           "label": {
-            "en": "Maturity of over 7 years up to 10 years"
+            "en": "Maturity of over 7 years up to 10 years",
+            "de": "Laufzeit über 7 bis 10 Jahre",
+            "fr": "De plus de 7 ans à 10 ans"
           },
           "data": true
         },
         "L715J": {
           "label": {
-            "en": "Maturity of over 7 years up to 15 years"
+            "en": "Maturity of over 7 years up to 15 years",
+            "de": "Laufzeit über 7 bis 15 Jahre",
+            "fr": "De plus de 7 ans à 15 ans"
           },
           "data": true
         },
         "L1015J": {
           "label": {
-            "en": "Maturity of over 10 years up to 15 years"
+            "en": "Maturity of over 10 years up to 15 years",
+            "de": "Laufzeit über 10 bis 15 Jahre",
+            "fr": "De plus de 10 ans à 15 ans"
           },
           "data": true
         }
@@ -131,36 +168,48 @@
     },
     "D2": {
       "label": {
-        "en": "Reference values"
+        "en": "Reference values",
+        "de": "Verteilungsmasse",
+        "fr": "Valeurs repères"
       },
       "levels": {
         "MP0": {
           "label": {
-            "en": "Mean value in %"
+            "en": "Mean value in %",
+            "de": "Mittelwert in %",
+            "fr": "Moyenne, en %"
           },
           "data": true
         },
         "25PQP": {
           "label": {
-            "en": "25% quantile in %"
+            "en": "25% quantile in %",
+            "de": "25%-Quantil in %",
+            "fr": "Premier quartile, en %"
           },
           "data": true
         },
         "MP1": {
           "label": {
-            "en": "Median in %"
+            "en": "Median in %",
+            "de": "Median in %",
+            "fr": "Médiane, en %"
           },
           "data": true
         },
         "75PQP": {
           "label": {
-            "en": "75% quantile in %"
+            "en": "75% quantile in %",
+            "de": "75%-Quantil in %",
+            "fr": "Troisième quartile, en %"
           },
           "data": true
         },
         "AK": {
           "label": {
-            "en": "Number of loan agreements"
+            "en": "Number of loan agreements",
+            "de": "Anzahl der Kreditabschlüsse",
+            "fr": "Nombre de contrats de crédit"
           },
           "data": true
         }
@@ -175,8 +224,24 @@
     }
   },
   "updated": "2026-07-21 09:00",
-  "topic": "Interest rates & yields",
-  "concept": "Interest rates & yields / Money-market rates",
+  "topic": {
+    "key": "interest-rates-yields",
+    "name": {
+      "en": "Interest rates & yields",
+      "de": "Zinsen & Renditen",
+      "fr": "Taux d'intérêt & rendements",
+      "it": "Tassi d'interesse e rendimenti"
+    }
+  },
+  "concept": {
+    "en": "Interest rates & yields / Money-market rates",
+    "leaf": {
+      "en": "Money-market rates",
+      "de": "Geldmarktsätze",
+      "fr": "Taux du marché monétaire",
+      "it": "Tassi del mercato monetario"
+    }
+  },
   "canonical": false,
   "split": "D1",
   "single_select": ["D0", "D2"],
@@ -186,6 +251,11 @@
     "D1": "L35J",
     "D2": "MP1"
   },
-  "description": "The rate banks actually charge on newly agreed loans, broken down by product and by maturity bucket, and reported as a full distribution rather than a single number. For each product/maturity cell the cube gives the mean, the 25% quantile, the median, the 75% quantile and the count of loan agreements (AK). That quantile spread is the distinctive feature: it shows the dispersion of pricing across borrowers, not just the average. Products cover fixed-rate mortgages, base-rate-linked variable mortgages and fixed-rate investment loans, each across up to ten maturity buckets from \"over 1 month\" to \"over 10 up to 15 years\". History starts 2009-05.",
-  "fetched_utc": "2026-07-21 09:18:22"
+  "description": {
+    "en": "What Swiss banks charge on new loans and mortgages by maturity, as a full spread: mean, quartiles and median, not just an average.",
+    "de": "Was Schweizer Banken für neue Kredite und Hypotheken nach Laufzeit verlangen, als ganze Spanne: Mittelwert, Quartile und Median statt nur eines Durchschnitts.",
+    "fr": "Ce que les banques suisses facturent sur les nouveaux crédits et hypothèques par échéance, en fourchette complète : moyenne, quartiles et médiane, pas seulement une moyenne.",
+    "it": "Quanto applicano le banche svizzere su nuovi crediti e ipoteche per scadenza, come intera distribuzione: media, quartili e mediana, non solo una media."
+  },
+  "fetched_utc": "2026-08-05 13:12:03"
 }

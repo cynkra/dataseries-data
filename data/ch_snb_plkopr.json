@@ -1,29 +1,62 @@
 {
-  "schema_version": "1.0",
+  "schema_version": "1.1",
   "id": "ch_snb_plkopr",
   "dim_order": [],
   "start": "1921-01-01",
   "end": "2026-06-01",
   "title": {
-    "en": "Consumer prices (CPI)"
+    "en": "Consumer prices (CPI)",
+    "de": "Konsumentenpreise (LIK)",
+    "fr": "Prix à la consommation (IPC)",
+    "it": "Prezzi al consumo (IPC)"
   },
   "source": {
     "name": {
-      "en": "Swiss National Bank"
+      "en": "Swiss National Bank",
+      "de": "Schweizerische Nationalbank (SNB)",
+      "fr": "Banque nationale suisse (BNS)",
+      "it": "Banca nazionale svizzera (BNS)"
     },
-    "url": "https://data.snb.ch/en/topics/snb/cube/plkopr"
+    "url": "https://data.snb.ch/en/topics/snb/cube/plkopr",
+    "key": "snb"
   },
   "license": "snb",
   "frequency": "monthly",
   "dimensions": {},
   "updated": "2026-07-21 09:00",
-  "topic": "Prices",
-  "concept": "Prices / Consumer prices",
+  "topic": {
+    "key": "prices",
+    "name": {
+      "en": "Prices",
+      "de": "Preise",
+      "fr": "Prix",
+      "it": "Prezzi"
+    }
+  },
+  "concept": {
+    "en": "Prices / Consumer prices",
+    "leaf": {
+      "en": "Consumer prices",
+      "de": "Konsumentenpreise",
+      "fr": "Prix à la consommation",
+      "it": "Prezzi al consumo"
+    }
+  },
   "canonical": true,
-  "featured": "Inflation",
+  "featured": {
+    "en": "Inflation",
+    "de": "Teuerung",
+    "fr": "Inflation",
+    "it": "Inflazione"
+  },
   "single_select": [],
   "default_transform": "yoy",
-  "description": "The Swiss headline consumer price index (Landesindex der Konsumentenpreise), as re-disseminated by the SNB. It is the canonical CPI for the long view: the SNB chain reaches back to January 1921 — over a century — whereas the detailed FSO asset (ch_fso_cpi, the labelled alternate) only carries the full COICOP position hierarchy from December 1982. So this is the series to reach for when you want the headline index or year-on-year inflation across the whole modern history of the Swiss franc; ch_fso_cpi is the one to reach for when you want the 443-position basket breakdown. The cube carries the total index only (no sub-baskets). The source ships two measures under one flat D0 dimension — the index level (rebased December 2025 = 100) and its year-on-year change — but the change is dropped (it is the app's YoY % toggle applied to the index), so this is a single-series dataset: just the index level.",
+  "description": {
+    "en": "Swiss inflation, the headline consumer price index only. For the breakdown into 595 basket items such as food, rent and transport, see the detailed series.",
+    "de": "Schweizer Teuerung, nur der Gesamtindex der Konsumentenpreise. Für die Gliederung in 595 Warenkorbpositionen wie Nahrung, Miete und Verkehr siehe die Detailreihe.",
+    "fr": "Inflation suisse, uniquement l'indice global des prix à la consommation. Pour la ventilation en 595 positions du panier — alimentation, loyer, transports — voir la série détaillée.",
+    "it": "Inflazione svizzera, solo l'indice generale dei prezzi al consumo. Per la ripartizione nelle 595 posizioni del paniere come alimentari, pigioni e trasporti, si veda la serie dettagliata."
+  },
   "default": [],
-  "fetched_utc": "2026-07-21 09:18:22"
+  "fetched_utc": "2026-08-05 13:12:02"
 }

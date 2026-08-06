@@ -1,10 +1,10 @@
 # Swiss balance of payments – Current account services, by country – Quarter
 
 - **id**: ch_snb_bopservq
-- **title**: Balance of payments: services
+- **title**: Balance of payments: services | de: Zahlungsbilanz: Dienstleistungen | fr: Balance des paiements : services | it: Bilancia dei pagamenti: servizi
 - **concept**: External sector / Balance of payments
 - **canonical**: no (alternate for Balance of payments)
-- **source**: Swiss National Bank (SNB)
+- **source**: snb
 - **license**: snb (free reuse, attribution required)
 - **frequency**: quarterly
 - **coverage**: 2012-Q1 .. 2025-Q4
@@ -12,19 +12,11 @@
 - **updated**: 2025-Q4 (latest observation; SNB publishes ~3 months in arrears)
 
 ## What is special
-The services trade of the current account broken down **by counterpart country**,
-which the headline BoP cubes do not provide. It is the widest cube in this group:
-three dimensions (country x service component x accounting entry) multiply out to
-1,755 leaf series, the largest in the SNB balance-of-payments set. Country coverage
-(`D0`) runs from regional totals (Europe, EU, EU27, Africa, America, Asia, Oceania)
-down to ~50 individual partners (Germany, US, China, UK, Singapore, Gulf Arabian
-countries, ...). Service components (`D1`) match the bopcurrq services split. Shorter
-history than the other BoP cubes, starting only 2012, because country-level services
-detail was introduced with the BPM6 standard. Alternate to `ch_snb_bopcurrq` for the
-concept: same producer, the unique value is the geographic dimension.
+Which countries Switzerland trades services with, around 50 partners plus regional totals, by service type and direction.
 
 ## Access
-- **type**: SNB cube API
+- **type**: snb-cube — SNB cube API
+- **cube**: `bopservq`
 - **endpoint**: cube id `bopservq`
 - **call**: `snb_fetch("bopservq", title = "Swiss balance of payments – Current account services, by country – Quarter")`,
   hitting `https://data.snb.ch/api/cube/bopservq/dimensions/en` and `.../data/json/en`
@@ -68,3 +60,12 @@ The service-component line dimension D1 carries a `DT Total for all services` sh
 Script: `R/source_snb.R::snb_fetch` via `R/snb_cubes.tsv` (cube `bopservq`, topic
 "Balance of payments"). Datasheet authored 2026-06-01; parser verified 2026-06-01
 (98,280 rows, 1,755 series).
+
+## What is special (de)
+Mit welchen Ländern die Schweiz Dienstleistungen handelt — rund 50 Partner plus Regionentotale — nach Dienstleistungsart und Richtung.
+
+## What is special (fr)
+Avec quels pays la Suisse échange des services — environ 50 partenaires plus les totaux régionaux — par type de service et par sens.
+
+## What is special (it)
+Con quali paesi la Svizzera scambia servizi — circa 50 partner più i totali regionali — per tipo di servizio e direzione.

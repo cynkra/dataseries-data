@@ -1,10 +1,10 @@
 # Weekly Economic Activity index (WEA)
 
 - **id**: ch_seco_wwa
-- **title**: Weekly economic activity (WEA)
+- **title**: Weekly economic activity (WEA) | de: Wöchentliche Wirtschaftsaktivität (WWA) | fr: Activité économique hebdomadaire (WEA) | it: Attività economica settimanale (WEA)
 - **concept**: Business cycle & sentiment / High-frequency activity tracker
 - **canonical**: yes
-- **source**: State Secretariat for Economic Affairs (SECO)
+- **source**: seco
 - **license**: seco (free reuse, attribution required)
 - **frequency**: weekly
 - **coverage**: 2005-01-03 .. 2026-05-11
@@ -12,26 +12,11 @@
 - **updated**: 2026-06-02
 
 ## What is special
-The catalog's **first weekly series**. SECO's Weekly Economic Activity index
-(WEA, German WWA) is a high-frequency nowcasting indicator built from a basket of
-weekly real-economy signals (electricity consumption, payment transactions,
-freight, foot traffic, etc.). It is **scaled to the year-on-year growth rate of
-real, seasonally / calendar / sport-event adjusted GDP**, so a WEA value of `2.0`
-reads as "activity running about 2% above the same week a year earlier" — it is a
-level on a growth-rate scale, not something to be differenced again.
-
-SECO publishes it in the swissdata long-CSV format, like `ch_seco_gdp`, but
-**without the `_json.txt` meta sidecar**, so the dimension/label metadata is built
-by hand in the parser (optionally cross-checked against the companion `wwa.xlsx`
-`beschriftung` sheet, which carries the en/de/fr/it labels).
-
-The `structure` dimension carries two series: the headline **seco_wwa** index
-(2005-> , the default) and **seco_wwa_pre_covid**, a discontinued variant
-(2019-12 .. 2022-12) that measured weekly activity relative to the Q4 2019
-pre-crisis level rather than YoY.
+How the Swiss economy is doing this week, tracked from electricity use, card payments and freight rather than waiting for quarterly GDP.
 
 ## Access
-- **type**: SECO swissdata long CSV (native format; a JSON meta sidecar now exists, but the two series + units are stable so dimensions are built by hand)
+- **type**: seco-swissdata — SECO swissdata long CSV (native format; a JSON meta sidecar now exists, but the two series + units are stable so dimensions are built by hand)
+- **set**: `wwa`
 - **endpoint** (2026-06: SECO retired the old `/dam/...download` URLs — they now 502 — and serves the machine-readable files via `scheduler.swissdatas.ch`, linked from the new page `seco.admin.ch/wea`):
   - data: `https://scheduler.swissdatas.ch/scheduled/wwa.csv`
   - meta (optional, unused — dimensions hand-built): `https://scheduler.swissdatas.ch/scheduled/ch-seco-wwa.json`
@@ -59,6 +44,13 @@ pre-crisis level rather than YoY.
     discontinued (2019-2022). Non-default alternate.
   This is the split / single-select dimension.
 
+## Labels
+- **units**: Scaled to the rate of growth of real, seasonally, calendar and sport-event adjusted GDP versus the same quarter of the previous year (percent) | de: Skaliert auf die Wachstumsrate des realen, saison-, kalender- und sportanlassbereinigten BIP gegenüber dem Vorjahresquartal (Prozent) | fr: Mis à l'échelle du taux de croissance du PIB réel corrigé des variations saisonnières, calendaires et des grands événements sportifs, par rapport au même trimestre de l'année précédente (pour cent) | it: Scalato al tasso di crescita del PIL reale destagionalizzato, corretto per gli effetti di calendario e dei grandi eventi sportivi, rispetto allo stesso trimestre dell'anno precedente (per cento)
+- dim: structure
+  - **label**: Series | de: Serie | fr: Série | it: Serie
+  - seco_wwa: Index of weekly economic activity (WEA) | de: Index der wöchentlichen Wirtschaftsaktivität (WWA) | fr: Indice de l'activité économique hebdomadaire (WEA) | it: Indice dell'attività economica settimanale (WEA)
+  - seco_wwa_pre_covid: WEA compared with the pre-crisis level (discontinued) | de: WWA im Vergleich zum Vorkrisenniveau (eingestellt) | fr: WEA par rapport au niveau d'avant-crise (abandonné) | it: WEA rispetto al livello pre-crisi (interrotto)
+
 ## Display
 - **split**: structure
 - **single-select**: structure
@@ -70,6 +62,8 @@ pre-crisis level rather than YoY.
   the values are *already* a (scaled) YoY GDP growth rate.
 
 ## Caveats / simplifications
+- The index is already expressed as a year-on-year growth rate. Do not difference
+  it again; a value of 2.0 means activity about 2% above the same week a year earlier.
 - Values are a level on a growth-rate scale (scaled YoY real-GDP growth), so
   `transform=level` — applying `yoy` would double-difference and produce nonsense.
 - `seco_wwa_pre_covid` is discontinued (last obs 2022-12-05) and measures a
@@ -84,3 +78,12 @@ pre-crisis level rather than YoY.
 Script: `R/source_seco.R::seco_wwa_fetch`. Datasheet 2026-06-02; parser verified
 live 2026-06-02 (1,265 rows, 2 series, span 2005-01-03 .. 2026-05-11; anchors
 seco_wwa 2026-05-11 = 2.07064226892172, 2005-01-03 = 3.9011681763975).
+
+## What is special (de)
+Wie es der Schweizer Wirtschaft diese Woche geht, gemessen an Stromverbrauch, Kartenzahlungen und Güterverkehr statt erst am Quartals-BIP.
+
+## What is special (fr)
+Comment se porte l'économie suisse cette semaine, mesurée par la consommation d'électricité, les paiements par carte et le fret, sans attendre le PIB trimestriel.
+
+## What is special (it)
+Come va l'economia svizzera questa settimana, misurata con consumo di elettricità, pagamenti con carta e trasporto merci, senza attendere il PIL trimestrale.

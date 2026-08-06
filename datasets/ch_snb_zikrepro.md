@@ -1,10 +1,10 @@
 # Published interest rates for new transactions
 
 - **id**: ch_snb_zikrepro
-- **title**: Published interest rates
+- **title**: Published interest rates | de: Publizierte Zinssätze | fr: Taux d'intérêt publiés | it: Tassi d'interesse pubblicati
 - **concept**: Interest rates & yields / Money-market rates
 - **canonical**: no (alternate; one of the three money-market-rate cubes `zimoma` / `zikredlauf` / `zikrepro`, this one is the published retail rates with the deepest product tree)
-- **source**: Swiss National Bank (SNB)
+- **source**: snb
 - **license**: snb (free reuse, attribution required)
 - **frequency**: monthly
 - **coverage**: 1933-01 .. 2026-03
@@ -12,20 +12,11 @@
 - **updated**: 2026-03 (latest published period)
 
 ## What is special
-The longest and most finely structured of the SNB rate cubes: published interest rates
-on new banking transactions back to 1933, across an unusually deep product hierarchy
-(`D1`). It spans mortgages (variable, fixed by maturity 1..15 years, and money-market
-linked via SARON and the historic Libor maturities), consumer credit, private and
-corporate payment/savings accounts, tied pension provision (pillar 2 vested benefits,
-pillar 3a), term deposits and cash bonds by maturity. The SARON-linked branch
-(`FGM_SAR`) and the legacy Libor branch (`LIB`) coexist, capturing the reference-rate
-transition. Each product carries the same four-statistic distribution (`D0`): mean,
-0.25 quantile, median, 0.75 quantile. With 228 series this is the largest cube in this
-group; the 1933 start applies only to long-running products, most retail and pension
-series begin much later.
+Interest rates on new Swiss banking business: mortgages, consumer credit, savings, pensions and term deposits, given as a distribution.
 
 ## Access
-- **type**: SNB cube API
+- **type**: snb-cube — SNB cube API
+- **cube**: `zikrepro`
 - **endpoint**: `https://data.snb.ch/api/cube/zikrepro/data/json/en`
 - **call**: `snb_fetch("zikrepro", title = "Published interest rates for new transactions")`
 
@@ -68,3 +59,12 @@ series begin much later.
 ## Provenance
 Script: `R/source_snb.R::snb_fetch` (cube list + title from `R/snb_cubes.tsv`).
 Datasheet authored 2026-06-01; parser verified 2026-06-01 (40,857 data rows, 228 series).
+
+## What is special (de)
+Zinssätze im Schweizer Neugeschäft: Hypotheken, Konsumkredite, Spar- und Vorsorgekonten sowie Festgelder, angegeben als Verteilung.
+
+## What is special (fr)
+Taux d'intérêt sur les nouvelles affaires bancaires suisses : hypothèques, crédits à la consommation, épargne, prévoyance et dépôts à terme, donnés en distribution.
+
+## What is special (it)
+Tassi d'interesse sui nuovi affari bancari svizzeri: ipoteche, crediti al consumo, risparmio, previdenza e depositi a termine, indicati come distribuzione.

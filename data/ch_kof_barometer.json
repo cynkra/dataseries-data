@@ -1,24 +1,52 @@
 {
-  "schema_version": "1.0",
+  "schema_version": "1.1",
   "id": "ch_kof_barometer",
   "dim_order": [],
   "start": "1991-01-01",
   "end": "2026-07-01",
   "title": {
-    "en": "KOF Economic Barometer"
+    "en": "KOF Economic Barometer",
+    "de": "KOF Konjunkturbarometer",
+    "fr": "Baromètre conjoncturel KOF",
+    "it": "Barometro congiunturale KOF"
   },
   "source": {
     "name": {
-      "en": "KOF Swiss Economic Institute"
+      "en": "KOF Swiss Economic Institute",
+      "de": "KOF Konjunkturforschungsstelle der ETH Zürich",
+      "fr": "KOF Centre de recherches conjoncturelles (EPF Zurich)",
+      "it": "KOF Centro di ricerche congiunturali (PF Zurigo)"
     },
-    "url": "https://kof.ethz.ch/en/forecasts-and-indicators/indicators/kof-economic-barometer.html"
+    "url": "https://kof.ethz.ch/en/forecasts-and-indicators/indicators/kof-economic-barometer.html",
+    "key": "kof"
   },
   "license": "kof",
   "frequency": "monthly",
   "dimensions": {},
-  "topic": "Business cycle & sentiment",
-  "concept": "Business cycle & sentiment / Leading barometer",
+  "topic": {
+    "key": "business-cycle-sentiment",
+    "name": {
+      "en": "Business cycle & sentiment",
+      "de": "Konjunktur & Stimmung",
+      "fr": "Conjoncture & climat",
+      "it": "Congiuntura e clima"
+    }
+  },
+  "concept": {
+    "en": "Business cycle & sentiment / Leading barometer",
+    "leaf": {
+      "en": "Leading barometer",
+      "de": "Vorlaufendes Barometer",
+      "fr": "Baromètre avancé",
+      "it": "Barometro anticipatore"
+    }
+  },
   "canonical": true,
-  "description": "The headline Swiss leading indicator for the business cycle, published monthly near month-end. A single composite index built from a large basket of underlying predictors, designed to anticipate the year-over-year growth rate of Swiss GDP a few months ahead. Normalised so the long-run mean sits around 100; readings above 100 signal above-average expected growth, below 100 the reverse. Plain one-column time series, no dimensions, monthly back to 1991. Note: on API v2 the per-key ts endpoint serves every public key (the v1 HTTP 412 gate is gone), but the wider open KOF family is still most convenient as whole collections — see ch_kof_esi (R/source_kof.R::kof_set_fetch), which reads ogd_ch.kof.esi, ogd_ch.kof.globalbaro, ogd_ch.kof.bts_total.",
-  "fetched_utc": "2026-08-05 09:13:32"
+  "description": {
+    "en": "Switzerland's leading business-cycle indicator, published monthly by ETH Zurich. Around 100 is average; above signals faster growth ahead.",
+    "de": "Der führende Schweizer Konjunkturindikator, monatlich von der ETH Zürich publiziert. Rund 100 ist der Durchschnitt; darüber deutet auf stärkeres Wachstum hin.",
+    "fr": "L'indicateur avancé de la conjoncture suisse, publié mensuellement par l'EPF de Zurich. Environ 100 correspond à la moyenne ; au-dessus signale une croissance plus forte.",
+    "it": "L'indicatore anticipatore della congiuntura svizzera, pubblicato mensilmente dal PF di Zurigo. Circa 100 è la media; sopra segnala una crescita più forte."
+  },
+  "fetched_utc": "2026-08-05 13:12:05"
 }

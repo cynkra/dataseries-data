@@ -1,5 +1,5 @@
 {
-  "schema_version": "1.0",
+  "schema_version": "1.1",
   "id": "ch_fso_vacancies",
   "dim_order": [
     "Offene Stellen",
@@ -8,37 +8,56 @@
   "start": "1992-04-01",
   "end": "2026-01-01",
   "title": {
-    "en": "Job vacancies"
+    "en": "Job vacancies",
+    "de": "Offene Stellen",
+    "fr": "Postes vacants",
+    "it": "Posti vacanti"
   },
   "source": {
     "name": {
-      "en": "Swiss Federal Statistical Office (FSO)"
+      "en": "Swiss Federal Statistical Office (FSO)",
+      "de": "Bundesamt für Statistik (BFS)",
+      "fr": "Office fédéral de la statistique (OFS)",
+      "it": "Ufficio federale di statistica (UST)"
     },
-    "url": "https://www.pxweb.bfs.admin.ch/pxweb/en/px-x-0602000000_103"
+    "url": "https://www.pxweb.bfs.admin.ch/pxweb/en/px-x-0602000000_103",
+    "key": "fso"
   },
   "license": "fso",
   "frequency": "quarterly",
   "dimensions": {
     "Offene Stellen": {
       "label": {
-        "en": "Job vacancies"
+        "en": "Job vacancies",
+        "de": "Offene Stellen",
+        "fr": "Places vacantes",
+        "it": "Posti liberi"
       },
       "levels": {
         "1": {
           "label": {
-            "en": "Job vacancies - total"
+            "en": "Job vacancies - total",
+            "de": "Offene Stellen - Total",
+            "fr": "Places vacantes - total",
+            "it": "Posti liberi - totale"
           },
           "data": true
         },
         "2": {
           "label": {
-            "en": "Index (2nd quarter 2015 = 100)"
+            "en": "Index (2nd quarter 2015 = 100)",
+            "de": "Index (2. Quartal 2015 = 100)",
+            "fr": "Indice (2ème trimestre 2015 = 100)",
+            "it": "Indice (2° trimestre 2015 = 100)"
           },
           "data": true
         },
         "3": {
           "label": {
-            "en": "Rate (in %)"
+            "en": "Rate (in %)",
+            "de": "Quote (in %)",
+            "fr": "Taux (en %)",
+            "it": "Tasso (in %)"
           },
           "data": true
         }
@@ -46,126 +65,189 @@
     },
     "Wirtschaftsabteilung": {
       "label": {
-        "en": "Economic division"
+        "en": "Economic division",
+        "de": "Wirtschaftsabteilung",
+        "fr": "Division économique",
+        "it": "Divisione economica"
       },
       "levels": {
         "5-96": {
           "label": {
-            "en": "5-96 Total"
+            "en": "5-96 Total",
+            "de": "5-96 Total",
+            "fr": "5-96 Total",
+            "it": "5-96 Totale"
           },
           "data": true
         },
         "5-43": {
           "label": {
-            "en": "5-43 SECTOR II"
+            "en": "5-43 SECTOR II",
+            "de": "5-43 SEKTOR II",
+            "fr": "5-43 SECTEUR II",
+            "it": "5-43 SETTORE II"
           },
           "data": true
         },
         "10-33": {
           "label": {
-            "en": "10-33 Manufactury"
+            "en": "10-33 Manufactury",
+            "de": "10-33 Verarbeitendes Gewerbe/Herstellung von Waren",
+            "fr": "10-33 Industrie manufacturière",
+            "it": "10-33 Attività manifatturiere"
           },
           "data": true
         },
         "24-25": {
           "label": {
-            "en": "24-25 Manufacture of metal products"
+            "en": "24-25 Manufacture of metal products",
+            "de": "24-25 Herstellung von Metallerzeugnissen",
+            "fr": "24-25 Fabrication de produits métalliques",
+            "it": "24-25 Fabbricazione di prodotti in metallo"
           },
           "data": true
         },
         "26": {
           "label": {
-            "en": "26 Manufacture of computer, electronic and optical products, watches and clocks"
+            "en": "26 Manufacture of computer, electronic and optical products, watches and clocks",
+            "de": "26 Herstellung von Datenverarbeitungsgeräten und Uhren",
+            "fr": "26 Fabrication de produits électroniques, horlogerie",
+            "it": "26 Fabbricazione di prodotti di elettronica, orologeria"
           },
           "data": true
         },
         "28": {
           "label": {
-            "en": "28 Manufacture of machinery and equipment n.e.c."
+            "en": "28 Manufacture of machinery and equipment n.e.c.",
+            "de": "28 Maschinenbau",
+            "fr": "28 Fabrication de machines et équipements n.c.a",
+            "it": "28 Fabbricazione di macchinari e app. n.c.a"
           },
           "data": true
         },
         "41-43": {
           "label": {
-            "en": "41-43 Construction"
+            "en": "41-43 Construction",
+            "de": "41-43 Baugewerbe/Bau",
+            "fr": "41-43 Construction",
+            "it": "41-43 Costruzioni"
           },
           "data": true
         },
         "45-96": {
           "label": {
-            "en": "45-96 SECTOR III"
+            "en": "45-96 SECTOR III",
+            "de": "45-96 SEKTOR III",
+            "fr": "45-96 SECTEUR III",
+            "it": "45-96 SETTORE III"
           },
           "data": true
         },
         "45-47": {
           "label": {
-            "en": "45-47 Trade and repair of motor vehicles and motorcycles"
+            "en": "45-47 Trade and repair of motor vehicles and motorcycles",
+            "de": "45-47 Handel, Instandhaltung und Rep. von Kraftfahrzeugen",
+            "fr": "45-47 Commerce, réparation dautomobiles et de motocycles",
+            "it": "45-47 Commercio e riparazione di autoveicoli e motocicli"
           },
           "data": true
         },
         "49-53": {
           "label": {
-            "en": "49-53 Transport and stockage"
+            "en": "49-53 Transport and stockage",
+            "de": "49-53 Verkehr und Lagerei",
+            "fr": "49-53 Transport et entreposage",
+            "it": "49-53 Trasporto e magazzinaggio"
           },
           "data": true
         },
         "55-56": {
           "label": {
-            "en": "55-56 Hotels and gastronomy"
+            "en": "55-56 Hotels and gastronomy",
+            "de": "55-56 Gastgewerbe/Beherbergung und Gastronomie",
+            "fr": "55-56 Hébergement et restauration",
+            "it": "55-56 Servizi di alloggio e di ristorazione"
           },
           "data": true
         },
         "58-63": {
           "label": {
-            "en": "58-63 IT and communications"
+            "en": "58-63 IT and communications",
+            "de": "58-63 Information und Kommunikation",
+            "fr": "58-63 Information et communication",
+            "it": "58-63 Servizi di informazione e comunicazione"
           },
           "data": true
         },
         "62-63": {
           "label": {
-            "en": "62-63 IT and other information services"
+            "en": "62-63 IT and other information services",
+            "de": "62-63 Informationstechnologische und Informationsdienstl.",
+            "fr": "62-63 Activités informatiques et services dinformation",
+            "it": "62-63 Attività informatiche e altri servizi informativi"
           },
           "data": true
         },
         "64-66": {
           "label": {
-            "en": "64-66 Finance and assurance"
+            "en": "64-66 Finance and assurance",
+            "de": "64-66 Erbringung von Finanz- und Versicherungsdienstl.",
+            "fr": "64-66 Activités financières et dassurance",
+            "it": "64-66 Attività finanziarie e assicurative"
           },
           "data": true
         },
         "68-75": {
           "label": {
-            "en": "68-75 Real estate and scientific service activities"
+            "en": "68-75 Real estate and scientific service activities",
+            "de": "68-75 Grundstk- u. Wohn.wesen, freiberufl., wiss., techn. Dienstl.",
+            "fr": "68-75 Act. Immobilières et act. spécialisées",
+            "it": "68-75 Attività immob., prof., scientifiche e tecniche"
           },
           "data": true
         },
         "77+79-82": {
           "label": {
-            "en": "77+79-82 Administrative and support service activities (without 78)"
+            "en": "77+79-82 Administrative and support service activities (without 78)",
+            "de": "77+79-82 Erbringung von sonst. wirtschaftlichen Dienst. (ohne 78)",
+            "fr": "77+79-82 Activités de services administratifs (sans 78)",
+            "it": "77+79-82 Attività amministrative e di servizi di supporto (senza 78)"
           },
           "data": true
         },
         "84": {
           "label": {
-            "en": "84 Public administration"
+            "en": "84 Public administration",
+            "de": "84 Öffentliche Verwaltung",
+            "fr": "84 Administration publique",
+            "it": "84 Amministrazione pubblica"
           },
           "data": true
         },
         "85": {
           "label": {
-            "en": "85 Education"
+            "en": "85 Education",
+            "de": "85 Erziehung und Unterricht",
+            "fr": "85 Enseignement",
+            "it": "85 Istruzione"
           },
           "data": true
         },
         "86-88": {
           "label": {
-            "en": "86-88 Health and social work activities"
+            "en": "86-88 Health and social work activities",
+            "de": "86-88 Gesundheits- und Sozialwesen",
+            "fr": "86-88 Santé humaine et action sociale",
+            "it": "86-88 Sanità e assistenza sociale"
           },
           "data": true
         },
         "90-96": {
           "label": {
-            "en": "90-96 Arts and amusement"
+            "en": "90-96 Arts and amusement",
+            "de": "90-96 Kunst, Unterhaltung u. Erholung, sonstige Dienstl.",
+            "fr": "90-96 Arts, spectacles..., autres act. de services",
+            "it": "90-96 Att. artist., di divertim. e Altre att. di serv."
           },
           "data": true
         }
@@ -199,8 +281,24 @@
       }
     }
   },
-  "topic": "Labour",
-  "concept": "Labour / Job vacancies",
+  "topic": {
+    "key": "labour",
+    "name": {
+      "en": "Labour",
+      "de": "Arbeit",
+      "fr": "Travail",
+      "it": "Lavoro"
+    }
+  },
+  "concept": {
+    "en": "Labour / Job vacancies",
+    "leaf": {
+      "en": "Job vacancies",
+      "de": "Offene Stellen",
+      "fr": "Postes vacants",
+      "it": "Posti vacanti"
+    }
+  },
   "canonical": true,
   "split": "Wirtschaftsabteilung",
   "single_select": "Offene Stellen",
@@ -209,6 +307,11 @@
     "Wirtschaftsabteilung": "5-96",
     "Offene Stellen": "1"
   },
-  "description": "The FSO job-vacancies statistics, a leading indicator for the labour market: when firms post more openings, employment tends to follow. Quarterly back to 1992, by economic division. What makes this dataset distinctive is the Offene Stellen dimension, which carries three different units of the same concept in one table: the count of vacancies (1), an index rebased to 2015Q2 = 100 (2), and the vacancy rate in % of jobs (3). The mixed units are why the value span runs from 0.2 (a rate) to 127017 (a count) in the same column. The 20 NOGA divisions are a coarser cut than BESTA's 60 (e.g. one 68-75 aggregate instead of separate real-estate and professional-services codes). Pairs with ch_fso_besta (jobs) as the demand-side counterpart.",
-  "fetched_utc": "2026-08-05 09:13:32"
+  "description": {
+    "en": "Job vacancies posted by Swiss firms, by industry, as a count, an index and a rate. A leading signal: postings move before employment does.",
+    "de": "Von Schweizer Firmen ausgeschriebene offene Stellen, nach Branche, als Anzahl, Index und Quote. Ein Frühindikator: Ausschreibungen bewegen sich vor der Beschäftigung.",
+    "fr": "Postes vacants publiés par les entreprises suisses, par branche, en nombre, en indice et en taux. Un indicateur avancé : les annonces bougent avant l'emploi.",
+    "it": "Posti vacanti pubblicati dalle imprese svizzere, per ramo, come numero, indice e tasso. Un indicatore anticipatore: gli annunci si muovono prima dell'occupazione."
+  },
+  "fetched_utc": "2026-08-05 13:12:06"
 }

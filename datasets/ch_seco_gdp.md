@@ -1,10 +1,11 @@
 # Gross domestic product (GDP)
 
 - **id**: ch_seco_gdp
+- **title**: Gross domestic product (GDP) | de: Bruttoinlandprodukt (BIP) | fr: Produit intérieur brut (PIB) | it: Prodotto interno lordo (PIL)
 - **concept**: National accounts / GDP (output, expenditure, income)
 - **canonical**: yes
 - **featured**: GDP
-- **source**: State Secretariat for Economic Affairs (SECO)
+- **source**: seco
 - **license**: seco (free reuse, attribution required)
 - **frequency**: quarterly
 - **coverage**: 1980-01 .. 2025-10
@@ -12,32 +13,11 @@
 - **updated**: 2026-02-23
 
 ## What is special
-The Swiss quarterly national accounts, and the single richest dataset in the
-catalog. SECO publishes it **already in the swissdata format at source** (a tidy
-long CSV plus a JSON meta sidecar with full en/de/fr/it labels), so our fetcher is
-a passthrough rather than a scrape.
-
-Three things make it distinctive:
-- **Deep hierarchy.** The `structure` dimension is a 68-code tree covering all
-  three accounting views of GDP under one root (`gdp`): the **production** approach
-  (gross value added by NOGA industry, down to chem/pharma vs other manufacturing
-  and finance vs insurance), the **expenditure** approach (consumption, investment,
-  the trade balance, exports/imports of goods and services), and the **income**
-  approach (compensation of employees, operating surplus, GNI, disposable income).
-  `production`, `expenditure` and `income` are non-leaf grouping nodes carried as
-  `data: false`.
-- **Seasonal adjustment is a real dimension**, not a separate dataset. `seas_adj`
-  has four levels: raw (`na`), seasonally+calendar adjusted (`csa`), sports-event
-  adjusted (`nasa`), and seasonally+calendar+sports-event adjusted (`cssa`). The
-  sports-event correction (large international sporting bodies are domiciled in
-  Switzerland and book revenue in event years) is a Swiss-specific quirk.
-- **Canonical GDP for the catalog.** The SNB re-exports of the same series
-  (`gdppn`, `gdpap`) were dropped in favour of this one, which is the original and
-  carries the full breakdown and the native quarterly frequency. The FSO annual
-  expenditure table (`ch_fso_gdp_use`) is a redundant alternate.
+Swiss economic output each quarter from all three angles, production, spending and income, including a correction for sporting-body revenue.
 
 ## Access
-- **type**: SECO swissdata (long CSV + JSON meta sidecar, native format)
+- **type**: seco-swissdata — SECO swissdata (long CSV + JSON meta sidecar, native format)
+- **set**: `ch-seco-gdp`
 - **endpoint** (2026-06: SECO retired the old `/dam/...download` URLs — they now 502 — and serves the machine-readable files via `scheduler.swissdatas.ch`, linked from the new page `seco.admin.ch/gross-domestic-product`):
   - data: `https://scheduler.swissdatas.ch/scheduled/ch-seco-gdp.csv`
   - meta: `https://scheduler.swissdatas.ch/scheduled/ch-seco-gdp.json`
@@ -97,3 +77,12 @@ Three things make it distinctive:
 ## Provenance
 Script: `R/source_seco.R::seco_fetch`. Datasheet 2026-06-01; parser verified
 2026-06-01 (107,100 rows, 660 series, span 1980-01 .. 2025-10).
+
+## What is special (de)
+Schweizer Wirtschaftsleistung pro Quartal aus allen drei Blickwinkeln — Produktion, Verwendung und Einkommen — inklusive einer Korrektur für Erträge von Sportverbänden.
+
+## What is special (fr)
+Production économique suisse par trimestre sous les trois optiques — production, dépenses et revenus — avec une correction pour les recettes des fédérations sportives.
+
+## What is special (it)
+Produzione economica svizzera per trimestre nelle tre ottiche — produzione, spesa e redditi — con una correzione per i ricavi delle federazioni sportive.

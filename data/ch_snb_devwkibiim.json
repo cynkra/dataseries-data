@@ -1,5 +1,5 @@
 {
-  "schema_version": "1.0",
+  "schema_version": "1.1",
   "id": "ch_snb_devwkibiim",
   "dim_order": [
     "D0",
@@ -8,43 +8,60 @@
   "start": "1973-01-01",
   "end": "2026-06-01",
   "title": {
-    "en": "Bilateral exchange-rate indices"
+    "en": "Bilateral exchange-rate indices",
+    "de": "Bilaterale Wechselkursindizes",
+    "fr": "Indices de taux de change bilatéraux",
+    "it": "Indici dei tassi di cambio bilaterali"
   },
   "source": {
     "name": {
-      "en": "Swiss National Bank"
+      "en": "Swiss National Bank",
+      "de": "Schweizerische Nationalbank (SNB)",
+      "fr": "Banque nationale suisse (BNS)",
+      "it": "Banca nazionale svizzera (BNS)"
     },
-    "url": "https://data.snb.ch/en/topics/snb/cube/devwkibiim"
+    "url": "https://data.snb.ch/en/topics/snb/cube/devwkibiim",
+    "key": "snb"
   },
   "license": "snb",
   "frequency": "monthly",
   "dimensions": {
     "D0": {
       "label": {
-        "en": "Real/Nominal"
+        "en": "Real/Nominal",
+        "de": "Real/Nominal",
+        "fr": "Réel/Nominal"
       },
       "levels": {
         "N": {
           "label": {
-            "en": "Nominal"
+            "en": "Nominal",
+            "de": "Nominal",
+            "fr": "Nominal"
           },
           "data": true
         },
         "R": {
           "label": {
-            "en": "Real"
+            "en": "Real",
+            "de": "Real",
+            "fr": "Réel"
           },
           "data": false
         },
         "K": {
           "label": {
-            "en": "CPI-based"
+            "en": "CPI-based",
+            "de": "KPI basiert",
+            "fr": "Basé sur l’IPC"
           },
           "data": true
         },
         "P": {
           "label": {
-            "en": "PPI-based"
+            "en": "PPI-based",
+            "de": "PPI basiert",
+            "fr": "Basé sur l’IPP"
           },
           "data": true
         }
@@ -59,330 +76,440 @@
     },
     "D1": {
       "label": {
-        "en": "Countries"
+        "en": "Countries",
+        "de": "Länder",
+        "fr": "Pays"
       },
       "levels": {
         "EG": {
           "label": {
-            "en": "Egypt"
+            "en": "Egypt",
+            "de": "Ägypten",
+            "fr": "Egypte"
           },
           "data": true
         },
         "AR": {
           "label": {
-            "en": "Argentina"
+            "en": "Argentina",
+            "de": "Argentinien",
+            "fr": "Argentine"
           },
           "data": true
         },
         "AU": {
           "label": {
-            "en": "Australia"
+            "en": "Australia",
+            "de": "Australien",
+            "fr": "Australie"
           },
           "data": true
         },
         "BE": {
           "label": {
-            "en": "Belgium"
+            "en": "Belgium",
+            "de": "Belgien",
+            "fr": "Belgique"
           },
           "data": true
         },
         "BR": {
           "label": {
-            "en": "Brazil"
+            "en": "Brazil",
+            "de": "Brasilien",
+            "fr": "Brésil"
           },
           "data": true
         },
         "BG": {
           "label": {
-            "en": "Bulgaria"
+            "en": "Bulgaria",
+            "de": "Bulgarien",
+            "fr": "Bulgarie"
           },
           "data": true
         },
         "CL": {
           "label": {
-            "en": "Chile"
+            "en": "Chile",
+            "de": "Chile",
+            "fr": "Chili"
           },
           "data": true
         },
         "CN": {
           "label": {
-            "en": "China"
+            "en": "China",
+            "de": "China Volksrepublik",
+            "fr": "Chine"
           },
           "data": true
         },
         "DK": {
           "label": {
-            "en": "Denmark"
+            "en": "Denmark",
+            "de": "Dänemark",
+            "fr": "Danemark"
           },
           "data": true
         },
         "DE": {
           "label": {
-            "en": "Germany"
+            "en": "Germany",
+            "de": "Deutschland",
+            "fr": "Allemagne"
           },
           "data": true
         },
         "EE": {
           "label": {
-            "en": "Estonia"
+            "en": "Estonia",
+            "de": "Estland",
+            "fr": "Estonie"
           },
           "data": true
         },
         "FI": {
           "label": {
-            "en": "Finland"
+            "en": "Finland",
+            "de": "Finnland",
+            "fr": "Finlande"
           },
           "data": true
         },
         "FR": {
           "label": {
-            "en": "France"
+            "en": "France",
+            "de": "Frankreich",
+            "fr": "France"
           },
           "data": true
         },
         "GR": {
           "label": {
-            "en": "Greece"
+            "en": "Greece",
+            "de": "Griechenland",
+            "fr": "Grèce"
           },
           "data": true
         },
         "HK": {
           "label": {
-            "en": "Hong Kong"
+            "en": "Hong Kong",
+            "de": "Hongkong",
+            "fr": "Hong Kong"
           },
           "data": true
         },
         "IN": {
           "label": {
-            "en": "India"
+            "en": "India",
+            "de": "Indien",
+            "fr": "Inde"
           },
           "data": true
         },
         "IE": {
           "label": {
-            "en": "Ireland"
+            "en": "Ireland",
+            "de": "Irland",
+            "fr": "Irlande"
           },
           "data": true
         },
         "ILS": {
           "label": {
-            "en": "Israel"
+            "en": "Israel",
+            "de": "Israel",
+            "fr": "Israël"
           },
           "data": true
         },
         "IT": {
           "label": {
-            "en": "Italy"
+            "en": "Italy",
+            "de": "Italien",
+            "fr": "Italie"
           },
           "data": true
         },
         "JP": {
           "label": {
-            "en": "Japan"
+            "en": "Japan",
+            "de": "Japan",
+            "fr": "Japon"
           },
           "data": true
         },
         "JO": {
           "label": {
-            "en": "Jordan"
+            "en": "Jordan",
+            "de": "Jordanien",
+            "fr": "Jordanie"
           },
           "data": true
         },
         "CA": {
           "label": {
-            "en": "Canada"
+            "en": "Canada",
+            "de": "Kanada",
+            "fr": "Canada"
           },
           "data": true
         },
         "KR": {
           "label": {
-            "en": "South Korea"
+            "en": "South Korea",
+            "de": "Korea Republik (Süd-)",
+            "fr": "Corée du Sud"
           },
           "data": true
         },
         "HR": {
           "label": {
-            "en": "Croatia"
+            "en": "Croatia",
+            "de": "Kroatien",
+            "fr": "Croatie"
           },
           "data": true
         },
         "LV": {
           "label": {
-            "en": "Latvia"
+            "en": "Latvia",
+            "de": "Lettland",
+            "fr": "Lettonie"
           },
           "data": true
         },
         "LT": {
           "label": {
-            "en": "Lithuania"
+            "en": "Lithuania",
+            "de": "Litauen",
+            "fr": "Lituanie"
           },
           "data": true
         },
         "LU": {
           "label": {
-            "en": "Luxembourg"
+            "en": "Luxembourg",
+            "de": "Luxemburg",
+            "fr": "Luxembourg"
           },
           "data": true
         },
         "MY": {
           "label": {
-            "en": "Malaysia"
+            "en": "Malaysia",
+            "de": "Malaysia",
+            "fr": "Malaisie"
           },
           "data": true
         },
         "MT": {
           "label": {
-            "en": "Malta"
+            "en": "Malta",
+            "de": "Malta",
+            "fr": "Malte"
           },
           "data": true
         },
         "MX": {
           "label": {
-            "en": "Mexico"
+            "en": "Mexico",
+            "de": "Mexiko",
+            "fr": "Mexique"
           },
           "data": true
         },
         "NZ": {
           "label": {
-            "en": "New Zealand"
+            "en": "New Zealand",
+            "de": "Neuseeland",
+            "fr": "Nouvelle-Zélande"
           },
           "data": true
         },
         "NL": {
           "label": {
-            "en": "Netherlands"
+            "en": "Netherlands",
+            "de": "Niederlande",
+            "fr": "Pays-Bas"
           },
           "data": true
         },
         "NO": {
           "label": {
-            "en": "Norway"
+            "en": "Norway",
+            "de": "Norwegen",
+            "fr": "Norvège"
           },
           "data": true
         },
         "AT": {
           "label": {
-            "en": "Austria"
+            "en": "Austria",
+            "de": "Österreich",
+            "fr": "Autriche"
           },
           "data": true
         },
         "PE": {
           "label": {
-            "en": "Peru"
+            "en": "Peru",
+            "de": "Peru",
+            "fr": "Pérou"
           },
           "data": true
         },
         "PH": {
           "label": {
-            "en": "Philippines"
+            "en": "Philippines",
+            "de": "Philippinen",
+            "fr": "Philippines"
           },
           "data": true
         },
         "PL": {
           "label": {
-            "en": "Poland"
+            "en": "Poland",
+            "de": "Polen",
+            "fr": "Pologne"
           },
           "data": true
         },
         "PT": {
           "label": {
-            "en": "Portugal"
+            "en": "Portugal",
+            "de": "Portugal",
+            "fr": "Portugal"
           },
           "data": true
         },
         "RO": {
           "label": {
-            "en": "Romania"
+            "en": "Romania",
+            "de": "Rumänien",
+            "fr": "Roumanie"
           },
           "data": true
         },
         "RU": {
           "label": {
-            "en": "Russian Federation"
+            "en": "Russian Federation",
+            "de": "Russische Föderation",
+            "fr": "Russie (Fédération de)"
           },
           "data": true
         },
         "SA": {
           "label": {
-            "en": "Saudi Arabia"
+            "en": "Saudi Arabia",
+            "de": "Saudi-Arabien",
+            "fr": "Arabie Saoudite"
           },
           "data": true
         },
         "SE": {
           "label": {
-            "en": "Sweden"
+            "en": "Sweden",
+            "de": "Schweden",
+            "fr": "Suède"
           },
           "data": true
         },
         "SG": {
           "label": {
-            "en": "Singapore"
+            "en": "Singapore",
+            "de": "Singapur",
+            "fr": "Singapour"
           },
           "data": true
         },
         "SK": {
           "label": {
-            "en": "Slovakia"
+            "en": "Slovakia",
+            "de": "Slowakei",
+            "fr": "Slovaquie"
           },
           "data": true
         },
         "SI": {
           "label": {
-            "en": "Slovenia"
+            "en": "Slovenia",
+            "de": "Slowenien",
+            "fr": "Slovénie"
           },
           "data": true
         },
         "ES": {
           "label": {
-            "en": "Spain"
+            "en": "Spain",
+            "de": "Spanien",
+            "fr": "Espagne"
           },
           "data": true
         },
         "ZA": {
           "label": {
-            "en": "South Africa"
+            "en": "South Africa",
+            "de": "Südafrika",
+            "fr": "Afrique du Sud"
           },
           "data": true
         },
         "TH": {
           "label": {
-            "en": "Thailand"
+            "en": "Thailand",
+            "de": "Thailand",
+            "fr": "Thaïlande"
           },
           "data": true
         },
         "CZ": {
           "label": {
-            "en": "Czech Republic"
+            "en": "Czech Republic",
+            "de": "Tschechische Republik",
+            "fr": "République tchèque"
           },
           "data": true
         },
         "TR": {
           "label": {
-            "en": "Turkey"
+            "en": "Turkey",
+            "de": "Türkei",
+            "fr": "Turquie"
           },
           "data": true
         },
         "HU": {
           "label": {
-            "en": "Hungary"
+            "en": "Hungary",
+            "de": "Ungarn",
+            "fr": "Hongrie"
           },
           "data": true
         },
         "GB": {
           "label": {
-            "en": "United Kingdom"
+            "en": "United Kingdom",
+            "de": "Vereinigtes Königreich",
+            "fr": "Royaume-Uni"
           },
           "data": true
         },
         "US": {
           "label": {
-            "en": "United States of America"
+            "en": "United States of America",
+            "de": "Vereinigte Staaten von Amerika",
+            "fr": "États-Unis d’Amérique"
           },
           "data": true
         },
         "CY": {
           "label": {
-            "en": "Cyprus"
+            "en": "Cyprus",
+            "de": "Zypern",
+            "fr": "Chypre"
           },
           "data": true
         }
@@ -446,8 +573,24 @@
     }
   },
   "updated": "2026-07-07 09:00",
-  "topic": "Exchange rates",
-  "concept": "Exchange rates / Bilateral FX",
+  "topic": {
+    "key": "exchange-rates",
+    "name": {
+      "en": "Exchange rates",
+      "de": "Wechselkurse",
+      "fr": "Taux de change",
+      "it": "Tassi di cambio"
+    }
+  },
+  "concept": {
+    "en": "Exchange rates / Bilateral FX",
+    "leaf": {
+      "en": "Bilateral FX",
+      "de": "Bilaterale Wechselkurse",
+      "fr": "Change bilatéral",
+      "it": "Cambi bilaterali"
+    }
+  },
   "canonical": true,
   "split": "D1",
   "single_select": "D0",
@@ -456,6 +599,11 @@
     "D1": "US",
     "D0": "K"
   },
-  "description": "Bilateral exchange-rate indices (not levels) of the Swiss franc against ~54 partner currencies, the largest series count in this group at 324. The nominal/real split is itself nested: D0 offers N nominal and a non-data R real node that expands into two real measures, CPI-based (K) and PPI-based (P), so \"real\" is delivered as two distinct deflator variants rather than one. Each bilateral index is published both as the index (I) and as the year-on-year % change (V), which is why the series count is large (3 deflators x ~54 countries x 2 representations). It is the live, currently-updated companion to the discontinued country-level devlandm. Defaults to CPI-based, Austria, index.",
-  "fetched_utc": "2026-07-07 09:28:35"
+  "description": {
+    "en": "Swiss franc exchange-rate indices against about 54 currencies, nominal and inflation-adjusted, as index levels and as yearly changes.",
+    "de": "Frankenkurs-Indizes gegenüber rund 54 Währungen, nominal und teuerungsbereinigt, als Indexstände und als Jahresveränderungen.",
+    "fr": "Indices de cours du franc face à environ 54 monnaies, nominaux et corrigés de l'inflation, en niveaux d'indice et en variations annuelles.",
+    "it": "Indici del corso del franco rispetto a circa 54 valute, nominali e corretti per l'inflazione, come livelli d'indice e variazioni annue."
+  },
+  "fetched_utc": "2026-08-05 13:12:02"
 }

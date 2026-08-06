@@ -21,78 +21,44 @@
 if (!exists("%||%")) `%||%` <- function(a, b) if (is.null(a)) b else a
 
 # ---- datasheet `## Hierarchy` block -----------------------------------------
-# Grammar (under a `## Hierarchy` heading, until the next `## ` heading):
+# Grammar (syntax handled by ds_section()/ds_bullets() in R/datasheet.R):
 #   - an optional `dim: <name>` line targets a non-split dimension (default: split)
 #   - either a single `derive: <method>` line (algorithmic), or
 #   - an indented bullet tree, 2 spaces per level:
 #       - <code>                 a real level code (label comes from the data)
 #       - @<code>: <Label>       a synthetic grouping header (data = false)
-# Returns NULL (no block) or a list with $dim plus either $derive or
+#
+# A block may carry MORE THAN ONE directive — one dimension can need a tree and a
+# sibling line dimension another (e.g. an IIP cube split by component but also drawn
+# by currency, both with a "Total" to reparent). Returns NULL (no block, or a
+# prose-only block) or a list of specs, each $dim plus either $derive or
 # $tree (nested named list of codes) + $groups (named char: synthetic code -> label).
 read_hierarchy_block <- function(lines) {
-  h <- grep("^##\\s+Hierarchy\\s*$", lines)
-  if (!length(h)) return(NULL)
-  start <- h[1] + 1L
-  nxt <- grep("^##\\s", lines)
-  nxt <- nxt[nxt > h[1]]
-  end <- if (length(nxt)) nxt[1] - 1L else length(lines)
-  body <- lines[start:end]
-
-  # A block may carry MORE THAN ONE directive — one dimension can need a tree and a
-  # sibling line dimension another (e.g. an IIP cube split by component but also drawn
-  # by currency, both with a "Total" to reparent). A `dim:` line opens a new directive
-  # scoped to that dimension; anything before the first `dim:` is scoped to the split.
-  # Each directive is then a `derive:` line or an indented bullet tree. Returns a LIST
-  # of specs (possibly empty for a prose-only block); attach_hierarchy applies each.
-  specs <- list()
-  cur <- list(dim = NULL, derive = NULL, bullets = list(), groups = character(0))
-  flush <- function() {
-    if (!is.null(cur$derive) || length(cur$bullets)) specs[[length(specs) + 1L]] <<- cur
-  }
-  for (ln in body) {
-    if (!nzchar(trimws(ln))) next
-    m_dim <- regmatches(ln, regexec("^\\s*-?\\s*\\**dim\\**:\\s*(\\S+)", ln))[[1]]
-    if (length(m_dim) == 2) { flush(); cur <- list(dim = m_dim[2], derive = NULL, bullets = list(), groups = character(0)); next }
-    m_der <- regmatches(ln, regexec("^\\s*-?\\s*derive:\\s*(.+?)\\s*$", ln))[[1]]
-    if (length(m_der) == 2) { cur$derive <- m_der[2]; next }
-    m <- regmatches(ln, regexec("^( *)- (.+)$", ln))[[1]]   # tree bullet: indent sets depth
-    if (length(m) != 3) next
-    depth <- nchar(m[2]) %/% 2L
-    txt <- trimws(m[3])
-    if (startsWith(txt, "@")) {
-      kv <- regmatches(txt, regexec("^@(\\S+?):\\s*(.+)$", txt))[[1]]
-      if (length(kv) != 3)
-        stop(sprintf("hierarchy: malformed group line '%s' (want '@code: Label')", txt), call. = FALSE)
-      code <- kv[2]; cur$groups[[code]] <- kv[3]
-    } else code <- txt
-    cur$bullets[[length(cur$bullets) + 1L]] <- list(depth = depth, code = code)
-  }
-  flush()
-  if (!length(specs)) return(NULL)
+  specs <- ds_bullets(ds_section(lines, "Hierarchy"))
+  if (is.null(specs)) return(NULL)
   lapply(specs, function(s) {
     out <- list(dim = s$dim)
-    if (!is.null(s$derive)) out$derive <- s$derive
-    else { out$tree <- build_tree_from_bullets(s$bullets); out$groups <- s$groups }
+    if (!is.null(s$derive)) { out$derive <- s$derive; return(out) }
+    # Interpret the raw bullet text: "@code" declares a synthetic grouping header
+    # (its display text lives in the ## Labels block); the legacy "@code: Label"
+    # form still carries the text inline. Anything else is a real level code.
+    groups <- character(0)
+    items <- lapply(s$items, function(it) {
+      txt <- it$text
+      if (startsWith(txt, "@")) {
+        kv <- regmatches(txt, regexec("^@([^\\s:]+)(?::\\s*(.+))?$", txt, perl = TRUE))[[1]]
+        if (length(kv) < 2 || !nzchar(kv[2]))
+          stop(sprintf("hierarchy: malformed group line '%s' (want '@code' or '@code: Label')", txt), call. = FALSE)
+        groups[[kv[2]]] <<- if (length(kv) == 3 && nzchar(kv[3])) kv[3] else NA_character_
+        list(depth = it$depth, code = kv[2])
+      } else {
+        list(depth = it$depth, code = txt)
+      }
+    })
+    out$tree <- ds_tree(items)
+    out$groups <- groups
     out
   })
-}
-
-# Fold an ordered list of {depth, code} into a nested named list. A node's children
-# are the deeper-depth bullets that follow it before the depth returns to its level.
-build_tree_from_bullets <- function(bullets) {
-  # Recursive descent over the flat stream using an index cursor.
-  i <- 1L; n <- length(bullets)
-  parse_level <- function(depth) {
-    out <- list()
-    while (i <= n && bullets[[i]]$depth == depth) {
-      code <- bullets[[i]]$code
-      i <<- i + 1L
-      kids <- if (i <= n && bullets[[i]]$depth == depth + 1L) parse_level(depth + 1L) else list()
-      out[[code]] <- kids
-    }
-    out
-  }
-  parse_level(0L)
 }
 
 # ---- algorithmic derivers ---------------------------------------------------
@@ -166,10 +132,10 @@ assemble_tree <- function(codes, parent) {
 # overrides the source tree. Synthetic group codes are added to the dim's `levels` so
 # the front-end has a label for them; codes present in the levels but absent from the
 # declared tree are appended as top-level leaves so nothing vanishes.
-attach_hierarchy <- function(ds, datasheet_dir) {
-  f <- file.path(datasheet_dir, paste0(ds$id, ".md"))
-  if (!file.exists(f)) return(ds)
-  specs <- read_hierarchy_block(readLines(f, warn = FALSE))
+attach_hierarchy <- function(ds, datasheet_dir, lines = NULL) {
+  lines <- lines %||% ds_read(ds$id, datasheet_dir)
+  if (is.null(lines)) return(ds)
+  specs <- read_hierarchy_block(lines)
   if (is.null(specs)) return(ds)
   for (spec in specs) ds <- apply_hierarchy_spec(ds, spec)
   ds
@@ -198,9 +164,18 @@ apply_hierarchy_spec <- function(ds, spec) {
   } else {
     # A declared tree OVERRIDES a source-supplied hierarchy (you only write the block
     # when the source tree is missing or wrong — e.g. SNB ships the M1/M2/M3 aggregates
-    # flat, but they nest). Register synthetic group labels, then validate the codes.
-    for (g in names(spec$groups))
-      levels[[g]] <- list(label = list(en = spec$groups[[g]]), data = FALSE)
+    # flat, but they nest). Register synthetic group codes, then validate the codes.
+    # Bare "@code" groups (NA label) keep the label the ## Labels block already set;
+    # the legacy inline form still writes its text here.
+    for (g in names(spec$groups)) {
+      if (is.na(spec$groups[[g]])) {
+        lv <- levels[[g]] %||% list()
+        lv$data <- FALSE
+        levels[[g]] <- lv
+      } else {
+        levels[[g]] <- list(label = list(en = spec$groups[[g]]), data = FALSE)
+      }
+    }
     declared <- tree_codes(spec$tree)
     unknown <- setdiff(declared, c(codes, names(spec$groups)))
     if (length(unknown))

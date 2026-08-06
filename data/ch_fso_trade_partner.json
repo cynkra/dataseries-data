@@ -1,5 +1,5 @@
 {
-  "schema_version": "1.0",
+  "schema_version": "1.1",
   "id": "ch_fso_trade_partner",
   "dim_order": [
     "flow",
@@ -8,37 +8,52 @@
   ],
   "start": "1990-01-01",
   "end": "2025-01-01",
-  "title": {
-    "en": "Foreign trade by partner country"
-  },
   "source": {
     "name": {
-      "en": "Swiss Federal Statistical Office (FSO) / Federal Office for Customs and Border Security (FOCBS)"
+      "en": "Swiss Federal Statistical Office (FSO) / Federal Office for Customs and Border Security (FOCBS)",
+      "de": "Bundesamt für Statistik (BFS) / Bundesamt für Zoll und Grenzsicherheit (BAZG)",
+      "fr": "Office fédéral de la statistique (OFS) / Office fédéral de la douane et de la sécurité des frontières (OFDF)",
+      "it": "Ufficio federale di statistica (UST) / Ufficio federale della dogana e della sicurezza dei confini (UDSC)"
     },
-    "url": "https://www.bfs.admin.ch/asset/en/36664830"
+    "url": "https://www.bfs.admin.ch/asset/en/36664830",
+    "key": "fso-focbs"
   },
   "license": "fso",
   "frequency": "annual",
-  "topic": "External sector",
-  "units": {
-    "en": "CHF millions"
+  "topic": {
+    "key": "external-sector",
+    "name": {
+      "en": "External sector",
+      "de": "Aussenwirtschaft",
+      "fr": "Secteur extérieur",
+      "it": "Settore estero"
+    }
   },
   "updated": null,
   "dimensions": {
     "flow": {
       "label": {
-        "en": "Trade flow"
+        "en": "Trade flow",
+        "de": "Handelsrichtung",
+        "fr": "Flux commercial",
+        "it": "Flusso commerciale"
       },
       "levels": {
         "export": {
           "label": {
-            "en": "Exports"
+            "en": "Exports",
+            "de": "Exporte",
+            "fr": "Exportations",
+            "it": "Esportazioni"
           },
           "data": true
         },
         "import": {
           "label": {
-            "en": "Imports"
+            "en": "Imports",
+            "de": "Importe",
+            "fr": "Importations",
+            "it": "Importazioni"
           },
           "data": true
         }
@@ -46,7 +61,10 @@
     },
     "partner": {
       "label": {
-        "en": "Partner country / region"
+        "en": "Partner country / region",
+        "de": "Partnerland / Region",
+        "fr": "Pays partenaire / région",
+        "it": "Paese partner / regione"
       },
       "levels": {
         "Africa": {
@@ -342,26 +360,49 @@
     },
     "level": {
       "label": {
-        "en": "Aggregation level"
+        "en": "Aggregation level",
+        "de": "Aggregationsstufe",
+        "fr": "Niveau d'agrégation",
+        "it": "Livello di aggregazione"
       },
       "levels": {
         "group": {
           "label": {
-            "en": "Continent / economic area"
+            "en": "Continent / economic area",
+            "de": "Kontinent / Wirtschaftsraum",
+            "fr": "Continent / espace économique",
+            "it": "Continente / area economica"
           },
           "data": true
         },
         "country": {
           "label": {
-            "en": "Individual country"
+            "en": "Individual country",
+            "de": "Einzelnes Land",
+            "fr": "Pays individuel",
+            "it": "Singolo paese"
           },
           "data": true
         }
       }
     }
   },
-  "concept": "External sector / Foreign trade",
+  "concept": {
+    "en": "External sector / Foreign trade",
+    "leaf": {
+      "en": "Foreign trade",
+      "de": "Aussenhandel",
+      "fr": "Commerce extérieur",
+      "it": "Commercio estero"
+    }
+  },
   "canonical": true,
+  "title": {
+    "en": "Foreign trade by partner country",
+    "de": "Aussenhandel nach Partnerland",
+    "fr": "Commerce extérieur par pays partenaire",
+    "it": "Commercio estero per paese partner"
+  },
   "split": "partner",
   "single_select": "level",
   "default_transform": "level",
@@ -370,6 +411,17 @@
     "partner": "Total",
     "level": "group"
   },
-  "description": "Swiss foreign trade broken down by partner country and region, for both flows (exports and imports), in CHF millions, back to 1990. Covers the major trading partners (Germany, USA, China, …) plus the continent / economic-area aggregates (Europe, EU, Asia, North America, …) and the grand Total. This is the partner-country cut of the customs trade statistics, complementary to the SNB's trade-by-goods value series — the SNB cubes carry no partner-country dimension.",
-  "fetched_utc": "2026-08-05 09:13:33"
+  "description": {
+    "en": "Swiss exports and imports by country in CHF millions: Germany, the US, China and the rest, plus continent and economic-area totals.",
+    "de": "Schweizer Exporte und Importe nach Land in Mio. CHF: Deutschland, die USA, China und andere, dazu Kontinent- und Wirtschaftsraum-Totale.",
+    "fr": "Exportations et importations suisses par pays en millions de CHF : Allemagne, États-Unis, Chine et autres, plus les totaux par continent et espace économique.",
+    "it": "Esportazioni e importazioni svizzere per paese in milioni di CHF: Germania, Stati Uniti, Cina e altri, più i totali per continente e area economica."
+  },
+  "units": {
+    "en": "CHF millions",
+    "de": "Mio. CHF",
+    "fr": "Millions de CHF",
+    "it": "Milioni di CHF"
+  },
+  "fetched_utc": "2026-08-05 13:12:07"
 }

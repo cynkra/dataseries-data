@@ -1,27 +1,22 @@
 # Adecco Group Swiss Job Market Index
 
 - **id**: ch_adecco_sjmi
+- **title**: Adecco Group Swiss Job Market Index | de: Adecco Group Swiss Job Market Index | fr: Adecco Group Swiss Job Market Index | it: Adecco Group Swiss Job Market Index
 - **concept**: Labour / Job market
 - **canonical**: yes
-- **source**: University of Zurich (Stellenmarkt-Monitor Schweiz)
-- **license**: Stellenmarkt-Monitor Schweiz, UZH (free use, attribution required)
+- **source**: uzh-smm
+- **license**: uzh-smm (free use, attribution required)
 - **frequency**: quarterly
 - **coverage**: 2003 .. 2026
 - **series**: 5
 - **updated**: 2026 Q1
 
 ## What is special
-The canonical Swiss **labour-demand** index: it tracks the number of publicly
-advertised job openings, base Q1 2008 = 100. A genuine leading indicator of the
-labour market and one of the few **non-government providers** in the catalog —
-compiled by the Stellenmarkt-Monitor Schweiz at the University of Zurich and
-branded the Adecco Group Swiss Job Market Index. The headline decomposes by where
-the vacancy was advertised (internet job portals, company websites, press), which
-captures the long structural shift from print to online recruiting.
+Quarterly index of advertised job vacancies in Switzerland, from the University of Zurich. Split by where the job was posted: online, company site, press.
 
 ## Access
-- **type**: scraped DAM xlsx (CMS asset)
-- **page**: `https://www.stellenmarktmonitor.uzh.ch/de/indices/asjmi.html`
+- **type**: scraped
+- **url**: `https://www.stellenmarktmonitor.uzh.ch/de/indices/asjmi.html`
 - **call**: `adecco_fetch("ch_adecco_sjmi")`
 
 ## Parsing recipe
@@ -41,6 +36,16 @@ captures the long structural shift from print to online recruiting.
   `gesamt_sa` the seasonally adjusted headline, and the three publication channels
   `internet` / `company` / `press` nested under Total as a hierarchy.
 
+## Labels
+- **units**: Index, Q1 2008 = 100 | de: Index, Q1 2008 = 100 | fr: Indice, T1 2008 = 100 | it: Indice, T1 2008 = 100
+- dim: index
+  - **label**: Index | de: Index | fr: Indice | it: Indice
+  - gesamt: Total | de: Total | fr: Total | it: Totale
+  - gesamt_sa: Total, seasonally adjusted | de: Total, saisonbereinigt | fr: Total, corrigé des variations saisonnières | it: Totale, destagionalizzato
+  - internet: Internet job portals | de: Internet-Stellenportale | fr: Portails d'emploi en ligne | it: Portali di lavoro online
+  - company: Company websites | de: Unternehmens-Webseiten | fr: Sites web d'entreprises | it: Siti web aziendali
+  - press: Press (newspapers) | de: Presse (Zeitungen) | fr: Presse (journaux) | it: Stampa (giornali)
+
 ## Display
 - **split**: index
 - **single-select**:
@@ -58,3 +63,12 @@ captures the long structural shift from print to online recruiting.
 ## Provenance
 Script: `R/source_adecco.R::adecco_fetch` (wired in `R/pipeline.R`). Datasheet
 authored 2026-06-02; parser verified live 2026-06-02 (5 series, 2003-03 .. 2026-03).
+
+## What is special (de)
+Quartalsindex der ausgeschriebenen Stellen in der Schweiz, von der Universität Zürich. Aufgeteilt nach Publikationskanal: online, Firmenwebseite, Presse.
+
+## What is special (fr)
+Indice trimestriel des postes vacants publiés en Suisse, de l'Université de Zurich. Réparti selon le canal de publication : en ligne, site d'entreprise, presse.
+
+## What is special (it)
+Indice trimestrale dei posti vacanti pubblicati in Svizzera, dell'Università di Zurigo. Ripartito per canale di pubblicazione: online, sito aziendale, stampa.

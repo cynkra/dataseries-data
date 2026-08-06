@@ -1,10 +1,10 @@
 # Switzerland's external debt - Quarter
 
 - **id**: ch_snb_auverdeptq
-- **title**: External debt
+- **title**: External debt | de: Auslandschulden | fr: Dette extérieure | it: Debito estero
 - **concept**: External sector / International investment position
 - **canonical**: no (external-debt cut of the IIP; companion to canonical overview `auvekomq`)
-- **source**: Swiss National Bank
+- **source**: snb
 - **license**: snb (free reuse, attribution required)
 - **frequency**: quarterly
 - **coverage**: 1999-Q4 .. 2025-Q4
@@ -12,19 +12,11 @@
 - **updated**: 2025-Q4 (latest observation; PublishingDate in CSV header is the freshness signal)
 
 ## What is special
-Switzerland's gross external debt: the liabilities side of the external balance sheet,
-the IMF/SDDS external-debt presentation. It complements the `auvekomq` IIP overview
-and `auvercurrq` currency cut, focusing only on debt liabilities. Starts later than
-its companions (1999-Q4) because the standardized external-debt template post-dates
-the IIP series. The whole cube rides on a single `Overview` dimension whose hierarchy
-encodes two cross-classifications at once: sector (public, SNB, banks, other sectors,
-direct-investment loans) and maturity (short-term / long-term), each further split
-into debt securities vs other liabilities. So one flat dim id (`D0`) carries a
-sector x maturity x instrument tree expressed entirely as codes. Values are
-CHF-million stocks at end of quarter.
+Switzerland's gross external debt on the IMF standard, by borrowing sector and by whether it is short or long term.
 
 ## Access
-- **type**: SNB cube API
+- **type**: snb-cube — SNB cube API
+- **cube**: `auverdeptq`
 - **endpoint**: `GET https://data.snb.ch/api/cube/auverdeptq/data/json/en`
 - **call**: `snb_fetch("auverdeptq", title = "Switzerland's external debt - Quarter")`
 
@@ -63,3 +55,12 @@ CHF-million stocks at end of quarter.
 ## Provenance
 Script: `R/source_snb.R::snb_fetch` via `R/snb_cubes.tsv` (cube_id `auverdeptq`).
 Datasheet 2026-06-01; parser verified 2026-06-01 (3,785 rows, 38 series).
+
+## What is special (de)
+Die Bruttoauslandschulden der Schweiz nach IMF-Standard, nach Schuldnersektor und nach kurz- oder langfristiger Laufzeit.
+
+## What is special (fr)
+La dette extérieure brute de la Suisse selon le standard du FMI, par secteur emprunteur et selon l'échéance, courte ou longue.
+
+## What is special (it)
+Il debito estero lordo della Svizzera secondo lo standard FMI, per settore debitore e per scadenza, breve o lunga.

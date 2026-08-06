@@ -1,5 +1,5 @@
 {
-  "schema_version": "1.0",
+  "schema_version": "1.1",
   "id": "ch_fso_besta",
   "dim_order": [
     "Wirtschaftsabteilung"
@@ -7,379 +7,569 @@
   "start": "1991-07-01",
   "end": "2026-01-01",
   "title": {
-    "en": "Jobs by economic division"
+    "en": "Jobs by economic division",
+    "de": "Beschäftigte nach Wirtschaftsabteilung",
+    "fr": "Emplois par division économique",
+    "it": "Impieghi per divisione economica"
   },
   "source": {
     "name": {
-      "en": "Swiss Federal Statistical Office (FSO)"
+      "en": "Swiss Federal Statistical Office (FSO)",
+      "de": "Bundesamt für Statistik (BFS)",
+      "fr": "Office fédéral de la statistique (OFS)",
+      "it": "Ufficio federale di statistica (UST)"
     },
-    "url": "https://www.pxweb.bfs.admin.ch/pxweb/en/px-x-0602000000_101"
+    "url": "https://www.pxweb.bfs.admin.ch/pxweb/en/px-x-0602000000_101",
+    "key": "fso"
   },
   "license": "fso",
   "frequency": "quarterly",
   "dimensions": {
     "Wirtschaftsabteilung": {
       "label": {
-        "en": "Economic division"
+        "en": "Economic division",
+        "de": "Wirtschaftsabteilung",
+        "fr": "Division économique",
+        "it": "Divisione economica"
       },
       "levels": {
         "5-96": {
           "label": {
-            "en": "5-96 Total"
+            "en": "5-96 Total",
+            "de": "5-96 Total",
+            "fr": "5-96 Total",
+            "it": "5-96 Totale"
           },
           "data": true
         },
         "5-43": {
           "label": {
-            "en": "5-43 SECTOR II"
+            "en": "5-43 SECTOR II",
+            "de": "5-43 Sektor II",
+            "fr": "5-43 SECTEUR II",
+            "it": "5-43 SETTORE II"
           },
           "data": true
         },
         "5-9": {
           "label": {
-            "en": "5-9 Mining and quarrying"
+            "en": "5-9 Mining and quarrying",
+            "de": "5-9 Bergbau und Gewinnung von Steinen und Erden",
+            "fr": "5-9 Industries extractives",
+            "it": "5-9 Attività estrattive"
           },
           "data": true
         },
         "10-33": {
           "label": {
-            "en": "10-33 Manufactury"
+            "en": "10-33 Manufactury",
+            "de": "10-33 Verarbeitendes Gewerbe/Herstellung von Waren",
+            "fr": "10-33 Industrie manufacturière",
+            "it": "10-33 Attività manifatturiere"
           },
           "data": true
         },
         "10-12": {
           "label": {
-            "en": "10-12 Manufacture of food and tobacco products"
+            "en": "10-12 Manufacture of food and tobacco products",
+            "de": "10-12 Herstellung von Nahrungsmitteln und Tabakerz.",
+            "fr": "10-12 Industries alimentaires et du tabac",
+            "it": "10-12 Industrie alimentari e del tabacco"
           },
           "data": true
         },
         "13-15": {
           "label": {
-            "en": "13-15 Manufacture of textiles and apparel"
+            "en": "13-15 Manufacture of textiles and apparel",
+            "de": "13-15 Herstellung von Textilien und Bekleidung",
+            "fr": "13-15 Industries du textile et de lhabillement",
+            "it": "13-15 Fabbricazione di tessili e abbigliamento"
           },
           "data": true
         },
         "16-18": {
           "label": {
-            "en": "16-18 Manufacture of wood and paper products, and printing"
+            "en": "16-18 Manufacture of wood and paper products, and printing",
+            "de": "16-18 Herstellung von Holzwaren, Papier und Druckerz.",
+            "fr": "16-18 Industries du bois et du papier , imprimerie",
+            "it": "16-18 Industria del legno, fabbricazione della carta e stampa"
           },
           "data": true
         },
         "19-20": {
           "label": {
-            "en": "19-20 Manufacture of coke, chemicals and chemical products"
+            "en": "19-20 Manufacture of coke, chemicals and chemical products",
+            "de": "19-20 Kokerei, Mineralölverarb. u. Herstel. von chem. Erz.",
+            "fr": "19-20 Cokéfaction, raffinage et industrie chimique",
+            "it": "19-20 Fabbricazione di coke e industria chimica"
           },
           "data": true
         },
         "21": {
           "label": {
-            "en": "21 Manufacture of pharmaceutical products"
+            "en": "21 Manufacture of pharmaceutical products",
+            "de": "21 Herstellung von pharmazeutischen Erzeugnissen",
+            "fr": "21 Industrie pharmaceutique",
+            "it": "21 Industria farmaceutica"
           },
           "data": true
         },
         "22-23": {
           "label": {
-            "en": "22-23 Manufacture of rubber and plastics products"
+            "en": "22-23 Manufacture of rubber and plastics products",
+            "de": "22-23 Herstellung von Gummi- und Kunststoffwaren",
+            "fr": "22-23 Industries du caoutchouc et du plastique",
+            "it": "22-23 Fabbricazione di articoli in gomma e in materie plastiche"
           },
           "data": true
         },
         "24-25": {
           "label": {
-            "en": "24-25 Manufacture of metal products"
+            "en": "24-25 Manufacture of metal products",
+            "de": "24-25 Herstellung von Metallerzeugnissen",
+            "fr": "24-25 Fabrication de produits métalliques",
+            "it": "24-25 Fabbricazione di prodotti in metallo"
           },
           "data": true
         },
         "26": {
           "label": {
-            "en": "26 Manufacture of computer, electronic and optical products, watches and clocks"
+            "en": "26 Manufacture of computer, electronic and optical products, watches and clocks",
+            "de": "26 Herstellung von Datenverarbeitungsgeräten und Uhren",
+            "fr": "26 Fabrication de produits électroniques, horlogerie",
+            "it": "26 Fabbricazione di prodotti di elettronica, orologeria"
           },
           "data": true
         },
         "27": {
           "label": {
-            "en": "27 Manufacture of electrical equipment"
+            "en": "27 Manufacture of electrical equipment",
+            "de": "27 Herstellung von elektrischen Ausrüstungen",
+            "fr": "27 Fabrication déquipements électriques",
+            "it": "27 Fabbricazione di apparecchiature elettriche"
           },
           "data": true
         },
         "28": {
           "label": {
-            "en": "28 Manufacture of machinery and equipment n.e.c."
+            "en": "28 Manufacture of machinery and equipment n.e.c.",
+            "de": "28 Maschinenbau",
+            "fr": "28 Fabrication de machines et équipements n.c.a",
+            "it": "28 Fabbricazione di macchinari e app. n.c.a"
           },
           "data": true
         },
         "29-30": {
           "label": {
-            "en": "29-30 Manufacture of transport equipment"
+            "en": "29-30 Manufacture of transport equipment",
+            "de": "29-30 Fahrzeugbau",
+            "fr": "29-30 Fabrication de matériels de transport",
+            "it": "29-30 Fabbricazione di mezzi di trasporto"
           },
           "data": true
         },
         "31-33": {
           "label": {
-            "en": "31-33 Other manufacturing, repair and installation"
+            "en": "31-33 Other manufacturing, repair and installation",
+            "de": "31-33 Sonstige Herstellung von Waren, Rep. und Inst.",
+            "fr": "31-33 Autres industries manufacturières, rép. et inst.",
+            "it": "31-33 Altre attività manifatturiere, riparazione e installazione"
           },
           "data": true
         },
         "35": {
           "label": {
-            "en": "35 Electricity, gas, steam and air-conditioning supply"
+            "en": "35 Electricity, gas, steam and air-conditioning supply",
+            "de": "35 Energieversorgung",
+            "fr": "35 Production et distribution dénergie",
+            "it": "35 Fornitura di energia elettrica"
           },
           "data": true
         },
         "36-39": {
           "label": {
-            "en": "36-39 Water supply, waste management"
+            "en": "36-39 Water supply, waste management",
+            "de": "36-39 Wasserversorgung, Beseitigung von Umweltverschmutz.",
+            "fr": "36-39 Production et distr. deau, gestion des déchets",
+            "it": "36-39 Fornitura di acqua, trattamento dei rifiuti"
           },
           "data": true
         },
         "41-43": {
           "label": {
-            "en": "41-43 Construction"
+            "en": "41-43 Construction",
+            "de": "41-43 Baugewerbe/Bau",
+            "fr": "41-43 Construction",
+            "it": "41-43 Costruzioni"
           },
           "data": true
         },
         "41-42": {
           "label": {
-            "en": "41-42 Construction of buildings and Civil engineering"
+            "en": "41-42 Construction of buildings and Civil engineering",
+            "de": "41-42 Hoch- und Tiefbau",
+            "fr": "41-42 Construction de bâtiments et génie civil",
+            "it": "41-42 Costruzioni di edifici"
           },
           "data": true
         },
         "43": {
           "label": {
-            "en": "43 Specialised construction activities"
+            "en": "43 Specialised construction activities",
+            "de": "43 Sonstiges Ausbaugewerbe",
+            "fr": "43 Travaux de construction spécialisés",
+            "it": "43 Lavori di costruzione specializzati"
           },
           "data": true
         },
         "45-96": {
           "label": {
-            "en": "45-96 SECTOR III"
+            "en": "45-96 SECTOR III",
+            "de": "45-96 Sektor III",
+            "fr": "45-96 SECTEUR III",
+            "it": "45-96 SETTORE III"
           },
           "data": true
         },
         "45-47": {
           "label": {
-            "en": "45-47 Trade and repair of motor vehicles and motorcycles"
+            "en": "45-47 Trade and repair of motor vehicles and motorcycles",
+            "de": "45-47 Handel, Instandhaltung und Rep. von Kraftfahrzeugen",
+            "fr": "45-47 Commerce, réparation dautomobiles et de motocycles",
+            "it": "45-47 Commercio all'ingrosso e riparazione"
           },
           "data": true
         },
         "45": {
           "label": {
-            "en": "45 Trade and repair of motor vehicles and motorcycles"
+            "en": "45 Trade and repair of motor vehicles and motorcycles",
+            "de": "45 Handel und Reparatur von Motorfahrzeugen",
+            "fr": "45 Commerce et rép. dautomobiles et de motocycles",
+            "it": "45 Commercio e riparazione di autoveicoli e motocicli"
           },
           "data": true
         },
         "46": {
           "label": {
-            "en": "46 Wholesale trade"
+            "en": "46 Wholesale trade",
+            "de": "46 Grosshandel",
+            "fr": "46 Commerce de gros",
+            "it": "46 Commercio allingrosso"
           },
           "data": true
         },
         "47": {
           "label": {
-            "en": "47 Retail trade"
+            "en": "47 Retail trade",
+            "de": "47 Detailhandel",
+            "fr": "47 Commerce de détail",
+            "it": "47 Commercio al dettaglio"
           },
           "data": true
         },
         "49-53": {
           "label": {
-            "en": "49-53 Transport and stockage"
+            "en": "49-53 Transport and stockage",
+            "de": "49-53 Verkehr und Lagerei",
+            "fr": "49-53 Transport et entreposage",
+            "it": "49-53 Trasporto e magazzinaggio"
           },
           "data": true
         },
         "49": {
           "label": {
-            "en": "49 Land transport and transport via pipelines"
+            "en": "49 Land transport and transport via pipelines",
+            "de": "49 Landverkehr und Transport in Rohrfernleitungen",
+            "fr": "49 Transports terrestres et transport par conduites",
+            "it": "49 Trasporto terrestre e trasporto mediante condotte"
           },
           "data": true
         },
         "50-51": {
           "label": {
-            "en": "50-51 Water transport and Air transport"
+            "en": "50-51 Water transport and Air transport",
+            "de": "50-51 Schifffahrt und Luftfahrt",
+            "fr": "50-51 Transports par eau, transports aériens",
+            "it": "50-51 Trasporti marittimi e trasporto aereo"
           },
           "data": true
         },
         "52": {
           "label": {
-            "en": "52 Warehousing and support activities for transportation"
+            "en": "52 Warehousing and support activities for transportation",
+            "de": "52 Lagerei sowie Erbring. v. sonst. Dienstl. für den Verk.",
+            "fr": "52 Entreposage et services auxiliaires des transports",
+            "it": "52 Magazzinaggio e attività di supporto ai trasporti"
           },
           "data": true
         },
         "53": {
           "label": {
-            "en": "53 Postal and courier activities"
+            "en": "53 Postal and courier activities",
+            "de": "53 Post-, Kurier- und Expressdienste",
+            "fr": "53 Activités de poste et de courrier",
+            "it": "53 Servizi postali e attività di corriere"
           },
           "data": true
         },
         "55-56": {
           "label": {
-            "en": "55-56 Hotels and gastronomy"
+            "en": "55-56 Hotels and gastronomy",
+            "de": "55-56 Gastgewerbe/Beherbergung und Gastronomie",
+            "fr": "55-56 Hébergement et restauration",
+            "it": "55-56 Servizi di alloggio e di ristorazione"
           },
           "data": true
         },
         "55": {
           "label": {
-            "en": "55 Accommodation"
+            "en": "55 Accommodation",
+            "de": "55 Beherbergung",
+            "fr": "55 Hébergement",
+            "it": "55 Servizi di alloggio"
           },
           "data": true
         },
         "56": {
           "label": {
-            "en": "56 Food and beverage service activities"
+            "en": "56 Food and beverage service activities",
+            "de": "56 Gastronomie",
+            "fr": "56 Restauration",
+            "it": "56 Attività di servizi di ristorazione"
           },
           "data": true
         },
         "58-63": {
           "label": {
-            "en": "58-63 IT and communications"
+            "en": "58-63 IT and communications",
+            "de": "58-63 Information und Kommunikation",
+            "fr": "58-63 Information et communication",
+            "it": "58-63 Servizi di informazione e comunicazione"
           },
           "data": true
         },
         "58-60": {
           "label": {
-            "en": "58-60 Publishing, audiovisual and broadcasting activities"
+            "en": "58-60 Publishing, audiovisual and broadcasting activities",
+            "de": "58-60 Verlagswesen, audiovisuelle Medien und Rundfunk",
+            "fr": "58-60 Édition, audiovisuel et diffusion",
+            "it": "58-60 Editoria, audiovisivi e attività radiotelevisive"
           },
           "data": true
         },
         "61": {
           "label": {
-            "en": "61 Telecommunications"
+            "en": "61 Telecommunications",
+            "de": "61 Telekommunikation",
+            "fr": "61 Télécommunications",
+            "it": "61 Telecomunicazioni"
           },
           "data": true
         },
         "62-63": {
           "label": {
-            "en": "62-63 IT and other information services"
+            "en": "62-63 IT and other information services",
+            "de": "62-63 Informationstechnologische und Informationsdienstl.",
+            "fr": "62-63 Activités informatiques et services dinformation",
+            "it": "62-63 Attività informatiche e altri servizi informativi"
           },
           "data": true
         },
         "64-66": {
           "label": {
-            "en": "64-66 Finance and assurance"
+            "en": "64-66 Finance and assurance",
+            "de": "64-66 Erbringung von Finanz- und Versicherungsdienstl.",
+            "fr": "64-66 Activités financières et dassurance",
+            "it": "64-66 Attività finanziarie e assicurative"
           },
           "data": true
         },
         "64": {
           "label": {
-            "en": "64 Financial service activities"
+            "en": "64 Financial service activities",
+            "de": "64 Erbringung von Finanzdienstleistungen",
+            "fr": "64 Activités des services financiers",
+            "it": "64 Prestazione di servizi finanziari"
           },
           "data": true
         },
         "65": {
           "label": {
-            "en": "65 Insurance"
+            "en": "65 Insurance",
+            "de": "65 Versicherungen",
+            "fr": "65 Assurance",
+            "it": "65 Assicurazioni"
           },
           "data": true
         },
         "66": {
           "label": {
-            "en": "66 Activities auxiliary to financial services and insurance activities"
+            "en": "66 Activities auxiliary to financial services and insurance activities",
+            "de": "66 Mit Finanz- u. Versicherungsdienstl. verb. Tätigk.",
+            "fr": "66 Activités aux. de services financiers et dassurance",
+            "it": "66 Attività ausiliarie dei servizi finanziari e assicurazioni"
           },
           "data": true
         },
         "68": {
           "label": {
-            "en": "68 Real estate activities"
+            "en": "68 Real estate activities",
+            "de": "68 Grundstücks- und Wohnungswesen",
+            "fr": "68 Activités immobilières",
+            "it": "68 Attività immobiliari"
           },
           "data": true
         },
         "69-75": {
           "label": {
-            "en": "69-75 Professional, scientific and technical activities"
+            "en": "69-75 Professional, scientific and technical activities",
+            "de": "69-75 Erbringung von freiberufl., wissen. u. techn. Dienstl.",
+            "fr": "69-75 Activités spécialisées, scientifiques et techniques",
+            "it": "69-75 Attività professionali, scientifiche e tecniche"
           },
           "data": true
         },
         "69": {
           "label": {
-            "en": "69 Legal and accounting activities"
+            "en": "69 Legal and accounting activities",
+            "de": "69 Rechts- und Steuerberatung, Wirtschaftsprüfung",
+            "fr": "69 Activités juridiques et comptables",
+            "it": "69 Attività legali e contabilità"
           },
           "data": true
         },
         "70": {
           "label": {
-            "en": "70 Activities of head offices, management consultancy activities"
+            "en": "70 Activities of head offices, management consultancy activities",
+            "de": "70 Unternehmensverwaltung u. -führung, Unternehmensber.",
+            "fr": "70 Activités des sièges sociaux , conseil de gestion",
+            "it": "70 Attività di sedi centrali, consulenza gestionale"
           },
           "data": true
         },
         "71": {
           "label": {
-            "en": "71 Architectural and engineering activities"
+            "en": "71 Architectural and engineering activities",
+            "de": "71 Architektur- und Ingenieurbüros",
+            "fr": "71 Activités darchitecture et dingénierie",
+            "it": "71 Attività degli studi di architettura e dingegneria"
           },
           "data": true
         },
         "72": {
           "label": {
-            "en": "72 Scientific research and development"
+            "en": "72 Scientific research and development",
+            "de": "72 Forschung und Entwicklung",
+            "fr": "72 Recherche-développement scientifique",
+            "it": "72 Ricerca scientifica e sviluppo"
           },
           "data": true
         },
         "73-75": {
           "label": {
-            "en": "73-75 Other professional, scientific and technical activities"
+            "en": "73-75 Other professional, scientific and technical activities",
+            "de": "73-75 Sonstige freiberufl., wissen. und techn. Dienstl.",
+            "fr": "73-75 Autres activités spécialisées, scient. et techn.",
+            "it": "73-75 Altre attività professionali, scientifiche e tecniche"
           },
           "data": true
         },
         "77-82": {
           "label": {
-            "en": "77-82 Administrative and support service activities"
+            "en": "77-82 Administrative and support service activities",
+            "de": "77-82 Erbringung von sonstigen wirtschaftlichen Dienstl.",
+            "fr": "77-82 Activités de services administratifs et de soutien",
+            "it": "77-82 Attività amministrative e di servizi di supporto"
           },
           "data": true
         },
         "78": {
           "label": {
-            "en": "78 Employment activities"
+            "en": "78 Employment activities",
+            "de": "78 Vermittlung und Überlassung von Arbeitskräften",
+            "fr": "78 Activités liées à lemploi",
+            "it": "78 Attività di ricerca, selezione, fornitura di personale"
           },
           "data": true
         },
         "77+79-82": {
           "label": {
-            "en": "77+79-82 Administrative and support service activities (without 78)"
+            "en": "77+79-82 Administrative and support service activities (without 78)",
+            "de": "77+79-82 Erbringung von sonst. wirtschaftlichen Dienst. (ohne 78)",
+            "fr": "77+79-82 Activités de services administratifs (sans 78)",
+            "it": "77+79-82 Attività amministrative e di servizi di supporto (senza 78)"
           },
           "data": true
         },
         "84": {
           "label": {
-            "en": "84 Public administration"
+            "en": "84 Public administration",
+            "de": "84 Öffentliche Verwaltung",
+            "fr": "84 Administration publique",
+            "it": "84 Amministrazione pubblica"
           },
           "data": true
         },
         "85": {
           "label": {
-            "en": "85 Education"
+            "en": "85 Education",
+            "de": "85 Erziehung und Unterricht",
+            "fr": "85 Enseignement",
+            "it": "85 Istruzione"
           },
           "data": true
         },
         "86-88": {
           "label": {
-            "en": "86-88 Health and social work activities"
+            "en": "86-88 Health and social work activities",
+            "de": "86-88 Gesundheits- und Sozialwesen",
+            "fr": "86-88 Santé humaine et action sociale",
+            "it": "86-88 Sanità e assistenza sociale"
           },
           "data": true
         },
         "86": {
           "label": {
-            "en": "86 Human health activities"
+            "en": "86 Human health activities",
+            "de": "86 Gesundheitswesen",
+            "fr": "86 Activités pour la santé humaine",
+            "it": "86 Attività dei servizi sanitari"
           },
           "data": true
         },
         "87": {
           "label": {
-            "en": "87 Residential care activities"
+            "en": "87 Residential care activities",
+            "de": "87 Heime (ohne Erholungs- und Ferienheime)",
+            "fr": "87 Hébergement médico-social et social",
+            "it": "87 Servizi di assistenza residenziale"
           },
           "data": true
         },
         "88": {
           "label": {
-            "en": "88 Social work activities without accommodation"
+            "en": "88 Social work activities without accommodation",
+            "de": "88 Sozialwesen (ohne Heime)",
+            "fr": "88 Action sociale sans hébergement",
+            "it": "88 Assistenza sociale non residenziale"
           },
           "data": true
         },
         "90-93": {
           "label": {
-            "en": "90-93 Arts, entertainment and recreation"
+            "en": "90-93 Arts, entertainment and recreation",
+            "de": "90-93 Kunst, Unterhaltung und Erholung",
+            "fr": "90-93 Arts, spectacles et activités récréatives",
+            "it": "90-93 Attività artistiche, di intratt. e divertimento"
           },
           "data": true
         },
         "94-96": {
           "label": {
-            "en": "94-96 Other service activities"
+            "en": "94-96 Other service activities",
+            "de": "94-96 Erbringung von sonstigen Dienstleistungen",
+            "fr": "94-96 Autres activités de services",
+            "it": "94-96 Altre attività di servizi"
           },
           "data": true
         }
@@ -461,16 +651,42 @@
       }
     }
   },
-  "topic": "Labour",
-  "concept": "Labour / Employment / jobs",
+  "topic": {
+    "key": "labour",
+    "name": {
+      "en": "Labour",
+      "de": "Arbeit",
+      "fr": "Travail",
+      "it": "Lavoro"
+    }
+  },
+  "concept": {
+    "en": "Labour / Employment / jobs",
+    "leaf": {
+      "en": "Employment",
+      "de": "Beschäftigung",
+      "fr": "Emploi",
+      "it": "Occupazione"
+    }
+  },
   "canonical": true,
-  "featured": "Employment",
+  "featured": {
+    "en": "Employment",
+    "de": "Beschäftigung",
+    "fr": "Emploi",
+    "it": "Occupazione"
+  },
   "split": "Wirtschaftsabteilung",
   "single_select": [],
   "default_transform": "level",
   "default": {
     "Wirtschaftsabteilung": "5-96"
   },
-  "description": "BESTA, the FSO employment statistics: the number of jobs in Switzerland by economic division (NOGA), quarterly back to 1991. This is the canonical Swiss employment series. Its defining feature is the deep division hierarchy: 60 NOGA aggregates from the grand total 5-96 down through sectors (5-43 Sector II, 45-96 Sector III) to individual two-digit divisions (e.g. 21 Pharmaceuticals, 64 Financial services, 86 Human health). This lets you read the structural shift of the Swiss economy (manufacturing flat, health and business services up) off one table. CONCEPT-UNIVERSE flags an overlap with SNB ambeschkla (employees by activity); BESTA is chosen as canonical because it is the FSO authoritative jobs series with the finer NOGA breakdown.",
-  "fetched_utc": "2026-08-05 09:13:32"
+  "description": {
+    "en": "Number of jobs in Switzerland by industry, quarterly, down to two-digit divisions such as pharmaceuticals, financial services and health.",
+    "de": "Zahl der Stellen in der Schweiz nach Branche, vierteljährlich, bis auf zweistellige Abteilungen wie Pharma, Finanzdienstleistungen und Gesundheit.",
+    "fr": "Nombre d'emplois en Suisse par branche, trimestriel, jusqu'aux divisions à deux chiffres comme la pharma, la finance et la santé.",
+    "it": "Numero di posti di lavoro in Svizzera per ramo, trimestrale, fino alle divisioni a due cifre come farmaceutica, finanza e sanità."
+  },
+  "fetched_utc": "2026-08-05 13:12:06"
 }

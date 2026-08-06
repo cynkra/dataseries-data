@@ -1,11 +1,11 @@
 # Monetary aggregates M1, M2 and M3
 
 - **id**: ch_snb_snbmonagg
-- **title**: Monetary aggregates (M1–M3)
+- **title**: Monetary aggregates (M1–M3) | de: Geldmengen (M1–M3) | fr: Agrégats monétaires (M1–M3) | it: Aggregati monetari (M1–M3)
 - **concept**: Money & banking / Monetary aggregates
 - **canonical**: yes
 - **featured**: Money supply
-- **source**: Swiss National Bank (SNB)
+- **source**: snb
 - **license**: snb (free reuse, attribution required)
 - **frequency**: monthly
 - **coverage**: 1984-12 .. 2026-04
@@ -13,22 +13,11 @@
 - **updated**: 2026-04 (use API PublishingDate header for exact day)
 
 ## What is special
-The headline Swiss monetary aggregates, monthly from 1984. This is the canonical
-money-supply series. The source cube has two dimensions — `D0` level vs year-on-year
-change, `D1` the component or aggregate — but `D0` is dropped: its `VV` (year-on-year
-change) level is exactly the app's YoY % transform, derived from the `B` level, so
-keeping only `B` collapses `D0` away and leaves `D1` as the single dimension. The
-components nest into the aggregates by construction:
-currency in circulation + sight deposits + deposits in transaction accounts ->
-**M1**; M1 + savings deposits -> **M2**; M2 + time deposits -> **M3**. So the cube
-ships the building blocks (`B`, `S0`, `ET`, `S1`, `T`) and the three totals
-(`GM1`, `GM2`, `GM3`) side by side as CHF-million levels — 8 stored series. Compared
-with `snbmoba` (base money, the central bank's own liabilities), these aggregates
-measure money held by the public, which is why this is the canonical aggregate and
-the base is the alternate.
+Swiss money supply M1, M2 and M3 with the cash and deposits they are built from: money held by the public, not by the central bank.
 
 ## Access
-- **type**: SNB cube API
+- **type**: snb-cube — SNB cube API
+- **cube**: `snbmonagg`
 - **endpoint**: `https://data.snb.ch/api/cube/snbmonagg/data/json/en`
 - **call**: `snb_fetch("snbmonagg", title = "Monetary aggregates M1, M2 and M3")`
 
@@ -83,3 +72,12 @@ definitions of the money supply (European standard).
 ## Provenance
 Script: `R/source_snb.R::snb_fetch` (cube `snbmonagg`, title from
 `R/snb_cubes.tsv`, topic "Money and banking"). Datasheet authored 2026-06-01.
+
+## What is special (de)
+Die Schweizer Geldmengen M1, M2 und M3 samt Bargeld und Einlagen, aus denen sie bestehen: Geld in den Händen des Publikums, nicht der Notenbank.
+
+## What is special (fr)
+Les agrégats monétaires suisses M1, M2 et M3 avec les espèces et dépôts qui les composent : la monnaie détenue par le public, non par la banque centrale.
+
+## What is special (it)
+Gli aggregati monetari svizzeri M1, M2 e M3 con il contante e i depositi che li compongono: moneta detenuta dal pubblico, non dalla banca centrale.

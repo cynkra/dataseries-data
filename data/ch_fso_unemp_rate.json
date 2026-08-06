@@ -1,5 +1,5 @@
 {
-  "schema_version": "1.0",
+  "schema_version": "1.1",
   "id": "ch_fso_unemp_rate",
   "dim_order": [
     "origin",
@@ -7,40 +7,61 @@
   ],
   "start": "1991-01-01",
   "end": "2026-03-01",
-  "title": {
-    "en": "Unemployment rate (ILO)"
-  },
   "source": {
     "name": {
-      "en": "Swiss Federal Statistical Office (FSO)"
+      "en": "Swiss Federal Statistical Office (FSO)",
+      "de": "Bundesamt für Statistik (BFS)",
+      "fr": "Office fédéral de la statistique (OFS)",
+      "it": "Ufficio federale di statistica (UST)"
     },
-    "url": "https://www.bfs.admin.ch/asset/de/je-d-03.03.01.03"
+    "url": "https://www.bfs.admin.ch/asset/de/je-d-03.03.01.03",
+    "key": "fso"
   },
   "license": "fso",
   "frequency": "monthly",
-  "topic": "Labour",
+  "topic": {
+    "key": "labour",
+    "name": {
+      "en": "Labour",
+      "de": "Arbeit",
+      "fr": "Travail",
+      "it": "Lavoro"
+    }
+  },
   "updated": "2026-05-18",
   "dimensions": {
     "origin": {
       "label": {
-        "en": "Nationality"
+        "en": "Nationality",
+        "de": "Staatsangehörigkeit",
+        "fr": "Nationalité",
+        "it": "Nazionalità"
       },
       "levels": {
         "tot": {
           "label": {
-            "en": "Total"
+            "en": "Total",
+            "de": "Total",
+            "fr": "Total",
+            "it": "Totale"
           },
           "data": true
         },
         "ch": {
           "label": {
-            "en": "Swiss nationals"
+            "en": "Swiss nationals",
+            "de": "Schweizerinnen und Schweizer",
+            "fr": "Suisses",
+            "it": "Svizzeri"
           },
           "data": true
         },
         "ex": {
           "label": {
-            "en": "Foreign nationals"
+            "en": "Foreign nationals",
+            "de": "Ausländerinnen und Ausländer",
+            "fr": "Étrangers",
+            "it": "Stranieri"
           },
           "data": true
         }
@@ -48,32 +69,58 @@
     },
     "sex": {
       "label": {
-        "en": "Sex"
+        "en": "Sex",
+        "de": "Geschlecht",
+        "fr": "Sexe",
+        "it": "Sesso"
       },
       "levels": {
         "tot": {
           "label": {
-            "en": "Total"
+            "en": "Total",
+            "de": "Total",
+            "fr": "Total",
+            "it": "Totale"
           },
           "data": true
         },
         "men": {
           "label": {
-            "en": "Men"
+            "en": "Men",
+            "de": "Männer",
+            "fr": "Hommes",
+            "it": "Uomini"
           },
           "data": true
         },
         "wom": {
           "label": {
-            "en": "Women"
+            "en": "Women",
+            "de": "Frauen",
+            "fr": "Femmes",
+            "it": "Donne"
           },
           "data": true
         }
       }
     }
   },
-  "concept": "Labour / Unemployment",
+  "concept": {
+    "en": "Labour / Unemployment",
+    "leaf": {
+      "en": "Unemployment",
+      "de": "Arbeitslosigkeit",
+      "fr": "Chômage",
+      "it": "Disoccupazione"
+    }
+  },
   "canonical": false,
+  "title": {
+    "en": "Unemployment rate (ILO)",
+    "de": "Erwerbslosenquote (ILO)",
+    "fr": "Taux de chômage (BIT)",
+    "it": "Tasso di disoccupazione (ILO)"
+  },
   "split": "origin",
   "single_select": [],
   "default_transform": "level",
@@ -81,6 +128,11 @@
     "origin": "tot",
     "sex": "tot"
   },
-  "description": "The ILO unemployment rate (%), the internationally comparable definition. This is deliberately kept alongside the SNB/SECO registered unemployment series (ch_snb_amarbma): they measure different things (ILO survey-based vs registered at job centres) and should not be deduplicated into one. Monthly averages.",
-  "fetched_utc": "2026-08-05 09:13:32"
+  "description": {
+    "en": "Swiss unemployment on the international (ILO) survey definition. Different from registered unemployment at job centres; the two are not interchangeable.",
+    "de": "Schweizer Erwerbslosigkeit nach der internationalen ILO-Definition. Nicht dasselbe wie die bei den RAV registrierte Arbeitslosigkeit; die beiden sind nicht austauschbar.",
+    "fr": "Chômage suisse selon la définition internationale du BIT. À ne pas confondre avec le chômage inscrit auprès des offices régionaux ; les deux ne sont pas interchangeables.",
+    "it": "Disoccupazione svizzera secondo la definizione internazionale ILO. Da non confondere con la disoccupazione registrata presso gli uffici del lavoro; le due non sono intercambiabili."
+  },
+  "fetched_utc": "2026-08-05 13:12:07"
 }

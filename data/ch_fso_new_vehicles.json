@@ -1,101 +1,146 @@
 {
-  "schema_version": "1.0",
+  "schema_version": "1.1",
   "id": "ch_fso_new_vehicles",
   "dim_order": [
     "fuel"
   ],
   "start": "2005-01-01",
   "end": "2026-06-01",
-  "title": {
-    "en": "New car registrations by fuel"
-  },
   "source": {
     "name": {
-      "en": "Swiss Federal Statistical Office (FSO)"
+      "en": "Swiss Federal Statistical Office (FSO)",
+      "de": "Bundesamt für Statistik (BFS)",
+      "fr": "Office fédéral de la statistique (OFS)",
+      "it": "Ufficio federale di statistica (UST)"
     },
-    "url": "https://www.bfs.admin.ch/asset/en/px-x-1103020200_120"
+    "url": "https://www.bfs.admin.ch/asset/en/px-x-1103020200_120",
+    "key": "fso"
   },
   "license": "fso",
   "frequency": "monthly",
-  "topic": "Domestic economy",
-  "units": {
-    "en": "Number of new registrations"
+  "topic": {
+    "key": "domestic-economy",
+    "name": {
+      "en": "Domestic economy",
+      "de": "Binnenwirtschaft",
+      "fr": "Économie intérieure",
+      "it": "Economia interna"
+    }
   },
   "dimensions": {
     "fuel": {
       "label": {
-        "en": "Fuel"
+        "en": "Fuel",
+        "de": "Treibstoff",
+        "fr": "Carburant",
+        "it": "Carburante"
       },
       "levels": {
         "_T": {
           "label": {
-            "en": "Total"
+            "en": "Total",
+            "de": "Total",
+            "fr": "Total",
+            "it": "Totale"
           },
           "data": true
         },
         "PC": {
           "label": {
-            "en": "Petrol"
+            "en": "Petrol",
+            "de": "Benzin",
+            "fr": "Essence",
+            "it": "Benzina"
           },
           "data": true
         },
         "PH": {
           "label": {
-            "en": "Petrol hybrid (HEV)"
+            "en": "Petrol hybrid (HEV)",
+            "de": "Benzin-Hybrid (HEV)",
+            "fr": "Hybride essence (HEV)",
+            "it": "Ibrido benzina (HEV)"
           },
           "data": true
         },
         "DC": {
           "label": {
-            "en": "Diesel"
+            "en": "Diesel",
+            "de": "Diesel",
+            "fr": "Diesel",
+            "it": "Diesel"
           },
           "data": true
         },
         "DH": {
           "label": {
-            "en": "Diesel hybrid (HEV)"
+            "en": "Diesel hybrid (HEV)",
+            "de": "Diesel-Hybrid (HEV)",
+            "fr": "Hybride diesel (HEV)",
+            "it": "Ibrido diesel (HEV)"
           },
           "data": true
         },
         "HP": {
           "label": {
-            "en": "Plug-in hybrid (petrol)"
+            "en": "Plug-in hybrid (petrol)",
+            "de": "Plug-in-Hybrid (Benzin)",
+            "fr": "Hybride rechargeable (essence)",
+            "it": "Ibrido plug-in (benzina)"
           },
           "data": true
         },
         "HD": {
           "label": {
-            "en": "Plug-in hybrid (diesel)"
+            "en": "Plug-in hybrid (diesel)",
+            "de": "Plug-in-Hybrid (Diesel)",
+            "fr": "Hybride rechargeable (diesel)",
+            "it": "Ibrido plug-in (diesel)"
           },
           "data": true
         },
         "EL": {
           "label": {
-            "en": "Electric (BEV)"
+            "en": "Electric (BEV)",
+            "de": "Elektrisch (BEV)",
+            "fr": "Électrique (BEV)",
+            "it": "Elettrico (BEV)"
           },
           "data": true
         },
         "FC": {
           "label": {
-            "en": "Fuel cell (hydrogen)"
+            "en": "Fuel cell (hydrogen)",
+            "de": "Brennstoffzelle (Wasserstoff)",
+            "fr": "Pile à combustible (hydrogène)",
+            "it": "Cella a combustibile (idrogeno)"
           },
           "data": true
         },
         "GA": {
           "label": {
-            "en": "Gas"
+            "en": "Gas",
+            "de": "Gas",
+            "fr": "Gaz",
+            "it": "Gas"
           },
           "data": true
         },
         "_O": {
           "label": {
-            "en": "Other"
+            "en": "Other",
+            "de": "Andere",
+            "fr": "Autres",
+            "it": "Altri"
           },
           "data": true
         },
         "NM": {
           "label": {
-            "en": "No motor"
+            "en": "No motor",
+            "de": "Ohne Motor",
+            "fr": "Sans moteur",
+            "it": "Senza motore"
           },
           "data": true
         }
@@ -117,14 +162,39 @@
       }
     }
   },
-  "concept": "Domestic economy / New vehicle registrations",
+  "concept": {
+    "en": "Domestic economy / New vehicle registrations",
+    "leaf": {
+      "en": "New vehicle registrations",
+      "de": "Neuzulassungen von Fahrzeugen",
+      "fr": "Nouvelles immatriculations",
+      "it": "Nuove immatricolazioni"
+    }
+  },
   "canonical": true,
+  "title": {
+    "en": "New car registrations by fuel",
+    "de": "Neuzulassungen von Personenwagen nach Treibstoff",
+    "fr": "Nouvelles immatriculations de voitures par carburant",
+    "it": "Nuove immatricolazioni di automobili per carburante"
+  },
   "split": "fuel",
   "single_select": [],
   "default_transform": "level",
   "default": {
     "fuel": "_T"
   },
-  "description": "Monthly new registrations of passenger cars in Switzerland, split by fuel type — the cleanest read on the EV transition: petrol/diesel (incl. their HEV variants), plug-in hybrids, battery-electric (BEV), fuel cell, and gas. A high-frequency consumption + technology-shift indicator. As of spring 2026, BEVs are ~25% of new-car registrations.",
-  "fetched_utc": "2026-08-05 09:13:31"
+  "description": {
+    "en": "New cars registered in Switzerland each month by fuel: petrol, diesel, hybrid, plug-in and battery-electric. EVs were about 25% in spring 2026.",
+    "de": "Monatliche Neuzulassungen von Personenwagen in der Schweiz nach Treibstoff: Benzin, Diesel, Hybrid, Plug-in und Elektro. E-Autos lagen im Frühling 2026 bei rund 25%.",
+    "fr": "Nouvelles immatriculations mensuelles de voitures en Suisse par carburant : essence, diesel, hybride, hybride rechargeable et électrique. Les électriques étaient à environ 25% au printemps 2026.",
+    "it": "Nuove immatricolazioni mensili di automobili in Svizzera per carburante: benzina, diesel, ibrido, ibrido plug-in ed elettrico. Le elettriche erano circa il 25% nella primavera 2026."
+  },
+  "units": {
+    "en": "Number of new registrations",
+    "de": "Anzahl Neuzulassungen",
+    "fr": "Nombre de nouvelles immatriculations",
+    "it": "Numero di nuove immatricolazioni"
+  },
+  "fetched_utc": "2026-08-05 13:12:05"
 }

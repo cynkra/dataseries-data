@@ -1,10 +1,10 @@
 # Unemployment rate (ILO)
 
 - **id**: ch_fso_unemp_rate
-- **title**: Unemployment rate (ILO)
+- **title**: Unemployment rate (ILO) | de: Erwerbslosenquote (ILO) | fr: Taux de chômage (BIT) | it: Tasso di disoccupazione (ILO)
 - **concept**: Labour / Unemployment
 - **canonical**: no (alternate — ILO definition; the registered/SECO `ch_snb_amarbma` is canonical)
-- **source**: Swiss Federal Statistical Office (FSO)
+- **source**: fso
 - **license**: fso (free reuse, attribution required)
 - **frequency**: monthly
 - **coverage**: 1991-01 .. 2026-03
@@ -12,13 +12,10 @@
 - **updated**: 2026-05-18
 
 ## What is special
-The **ILO unemployment rate** (%), the internationally comparable definition. This
-is deliberately kept alongside the SNB/SECO **registered** unemployment series
-(`ch_snb_amarbma`): they measure different things (ILO survey-based vs registered
-at job centres) and should not be deduplicated into one. Monthly averages.
+Swiss unemployment on the international (ILO) survey definition. Different from registered unemployment at job centres; the two are not interchangeable.
 
 ## Access
-- **type**: FSO DAM Excel asset
+- **type**: fso-dam-excel — FSO DAM Excel asset
 - **order number**: je-d-03.03.01.03
 - **call**: `fso_excel_download("je-d-03.03.01.03")`
 
@@ -37,6 +34,18 @@ are modelled as marginal breakdowns (each breakdown row sets one dim and holds t
 other at total), giving 5 series:
 - `origin`: total / Swiss / foreign.
 - `sex`: total / men / women.
+
+## Labels
+- dim: origin
+  - **label**: Nationality | de: Staatsangehörigkeit | fr: Nationalité | it: Nazionalità
+  - tot: Total | de: Total | fr: Total | it: Totale
+  - ch: Swiss nationals | de: Schweizerinnen und Schweizer | fr: Suisses | it: Svizzeri
+  - ex: Foreign nationals | de: Ausländerinnen und Ausländer | fr: Étrangers | it: Stranieri
+- dim: sex
+  - **label**: Sex | de: Geschlecht | fr: Sexe | it: Sesso
+  - tot: Total | de: Total | fr: Total | it: Totale
+  - men: Men | de: Männer | fr: Hommes | it: Uomini
+  - wom: Women | de: Frauen | fr: Femmes | it: Donne
 
 ## Display
 - **split**: origin
@@ -58,3 +67,12 @@ already rates in %, so the transform stays at `level`.
 ## Provenance
 Script: `R/source_fso_excel_sets.R::fso_excel_ch_fso_unemp_rate`. Datasheet
 2026-06-01; parser verified 2026-06-01 (2,115 rows, 5 series, 0 NA values).
+
+## What is special (de)
+Schweizer Erwerbslosigkeit nach der internationalen ILO-Definition. Nicht dasselbe wie die bei den RAV registrierte Arbeitslosigkeit; die beiden sind nicht austauschbar.
+
+## What is special (fr)
+Chômage suisse selon la définition internationale du BIT. À ne pas confondre avec le chômage inscrit auprès des offices régionaux ; les deux ne sont pas interchangeables.
+
+## What is special (it)
+Disoccupazione svizzera secondo la definizione internazionale ILO. Da non confondere con la disoccupazione registrata presso gli uffici del lavoro; le due non sono intercambiabili.

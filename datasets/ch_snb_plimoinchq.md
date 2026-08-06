@@ -1,32 +1,21 @@
 # Real estate price indices – total for Switzerland – by quarter
 
 - **id**: ch_snb_plimoinchq
-- **title**: Real estate prices
+- **title**: Real estate prices | de: Immobilienpreise | fr: Prix de l'immobilier | it: Prezzi immobiliari
 - **concept**: Prices / Real estate prices
 - **canonical**: yes
-- **source**: Swiss National Bank (SNB)
+- **source**: snb
 - **license**: snb (free reuse, attribution required)
 - **frequency**: quarterly
 - **coverage**: 1970-Q1 .. 2026-Q1
 - **series**: 17
 
 ## What is special
-The Swiss real estate price index, quarterly back to **1970**, and the only real
-estate price series in the catalog (no FSO equivalent in the set). Its distinctive
-feature is a **second dimension keyed on the data provider**: the same property types
-are sourced from four different private/official providers, so the cube is really a
-matrix of property type x provider, letting users compare methodologies. The
-provider dimension nests provider -> price basis: **Swiss Federal Statistical Office**
-(transaction price), **Fahrländer Partner** (transaction price), **IAZI**
-(transaction price), and **Wüest Partner** (both **asking price** AP and
-**transaction price** TP). Not every property type exists for every provider, so the
-17 series are a sparse cross of the two dimensions, not the full 8 x 5 product.
-Property types span residential (privately owned apartments, single-family houses,
-apartment buildings) and rents/commercial (rental housing, office, industrial/
-commercial, retail).
+Swiss house and rent price indices from four providers side by side, covering apartments, houses, offices, retail and industrial space.
 
 ## Access
-- **type**: SNB cube API
+- **type**: snb-cube — SNB cube API
+- **cube**: `plimoinchq`
 - **endpoint**: `https://data.snb.ch/api/cube/plimoinchq/data/json/en`
 - **call**: `snb_fetch("plimoinchq", title = "Real estate price indices – total for Switzerland – by quarter")`
 
@@ -60,3 +49,12 @@ commercial, retail).
 ## Provenance
 Script: `R/source_snb.R::snb_fetch` (title/topic from `R/snb_cubes.tsv`). Datasheet
 authored 2026-06-01.
+
+## What is special (de)
+Schweizer Immobilien- und Mietpreisindizes von vier Anbietern nebeneinander, für Wohnungen, Häuser, Büro-, Verkaufs- und Industrieflächen.
+
+## What is special (fr)
+Indices suisses des prix de l'immobilier et des loyers de quatre fournisseurs côte à côte, pour appartements, maisons, bureaux, commerces et surfaces industrielles.
+
+## What is special (it)
+Indici svizzeri dei prezzi immobiliari e delle pigioni di quattro fornitori affiancati, per appartamenti, case, uffici, superfici commerciali e industriali.

@@ -1,9 +1,10 @@
 # Payment cards and ATMs
 
 - **id**: ch_snb_zavezaka
+- **title**: Payment cards and ATMs | de: Zahlungskarten und Geldautomaten | fr: Cartes de paiement et distributeurs | it: Carte di pagamento e bancomat
 - **concept**: Payment systems / Payments & cash
 - **canonical**: no (alternate for Payments & cash; the `zave*` family covers SIC, cards, ATMs and e-money, this cube is the card-and-ATM stock view)
-- **source**: Swiss National Bank (SNB)
+- **source**: snb
 - **license**: snb (free reuse, attribution required)
 - **frequency**: monthly
 - **coverage**: 2005-01 .. 2026-03
@@ -11,17 +12,11 @@
 - **updated**: 2026-03 (latest published period)
 
 ## What is special
-Monthly stock of the Swiss card landscape: number of credit cards, debit cards and
-e-money cards in circulation, plus the count of ATMs. It is a counts-only cube (no
-turnover), so it reads as the installed base behind the flow cube `zavezaluba`. The
-distinctive feature is the "of which with contactless payment function" subtotal
-(`DZ0`/`DZ1`/`DZ2`), which only begins in late 2014 once contactless rolled out, so
-those three series start 2014-12 while the card totals run back to 2005. The single
-`Total` ATM series (`T3`) sits in the same cube despite being a different unit
-(machines, not cards).
+How many credit, debit and prepaid cards are in circulation in Switzerland, plus the number of ATMs. Counts only, no spending.
 
 ## Access
-- **type**: SNB cube API
+- **type**: snb-cube — SNB cube API
+- **cube**: `zavezaka`
 - **endpoint**: `https://data.snb.ch/api/cube/zavezaka/data/json/en`
 - **call**: `snb_fetch("zavezaka", title = "Payment cards and ATMs")`
 
@@ -58,3 +53,12 @@ those three series start 2014-12 while the card totals run back to 2005. The sin
 ## Provenance
 Script: `R/source_snb.R::snb_fetch` (cube list + title from `R/snb_cubes.tsv`).
 Datasheet authored 2026-06-01; parser verified 2026-06-01 (1,309 data rows, 7 series).
+
+## What is special (de)
+Wie viele Kredit-, Debit- und Vorauszahlungskarten in der Schweiz im Umlauf sind, dazu die Zahl der Geldautomaten. Nur Bestände, keine Umsätze.
+
+## What is special (fr)
+Combien de cartes de crédit, de débit et prépayées circulent en Suisse, plus le nombre de distributeurs. Effectifs seulement, pas de dépenses.
+
+## What is special (it)
+Quante carte di credito, di debito e prepagate circolano in Svizzera, più il numero di bancomat. Solo consistenze, nessuna spesa.

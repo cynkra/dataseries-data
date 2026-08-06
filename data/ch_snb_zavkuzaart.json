@@ -1,5 +1,5 @@
 {
-  "schema_version": "1.0",
+  "schema_version": "1.1",
   "id": "ch_snb_zavkuzaart",
   "dim_order": [
     "D0",
@@ -9,37 +9,52 @@
   "start": "2012-03-01",
   "end": "2026-05-01",
   "title": {
-    "en": "Customer payments (outgoing)"
+    "en": "Customer payments (outgoing)",
+    "de": "Kundenzahlungen (ausgehend)",
+    "fr": "Paiements des clients (sortants)",
+    "it": "Pagamenti dei clienti (in uscita)"
   },
   "source": {
     "name": {
-      "en": "Swiss National Bank"
+      "en": "Swiss National Bank",
+      "de": "Schweizerische Nationalbank (SNB)",
+      "fr": "Banque nationale suisse (BNS)",
+      "it": "Banca nazionale svizzera (BNS)"
     },
-    "url": "https://data.snb.ch/en/topics/snb/cube/zavkuzaart"
+    "url": "https://data.snb.ch/en/topics/snb/cube/zavkuzaart",
+    "key": "snb"
   },
   "license": "snb",
   "frequency": "monthly",
   "dimensions": {
     "D0": {
       "label": {
-        "en": "Outgoing payments"
+        "en": "Outgoing payments",
+        "de": "Zahlungsausgänge",
+        "fr": "Paiements sortants"
       },
       "levels": {
         "T": {
           "label": {
-            "en": "Total"
+            "en": "Total",
+            "de": "Total",
+            "fr": "Total"
           },
           "data": true
         },
         "ZIB": {
           "label": {
-            "en": "Payments between resident banks"
+            "en": "Payments between resident banks",
+            "de": "Zahlungen zwischen Banken im Inland",
+            "fr": "Paiements entre banques résidentes"
           },
           "data": true
         },
         "ZAB": {
           "label": {
-            "en": "Payments involving a non-resident bank"
+            "en": "Payments involving a non-resident bank",
+            "de": "Zahlungen unter Beteiligung einer Bank mit Sitz im Ausland",
+            "fr": "Paiements impliquant une banque non résidente"
           },
           "data": true
         }
@@ -52,84 +67,112 @@
     },
     "D1": {
       "label": {
-        "en": "Type of order"
+        "en": "Type of order",
+        "de": "Art der Auftragserteilung",
+        "fr": "Type d’ordre"
       },
       "levels": {
         "T": {
           "label": {
-            "en": "Total"
+            "en": "Total",
+            "de": "Total",
+            "fr": "Total"
           },
           "data": true
         },
         "UEB": {
           "label": {
-            "en": "Transfers"
+            "en": "Transfers",
+            "de": "Überweisungen",
+            "fr": "Versements/virements"
           },
           "data": false
         },
         "UEB_T": {
           "label": {
-            "en": "Total"
+            "en": "Total",
+            "de": "Total",
+            "fr": "Total"
           },
           "data": true
         },
         "UEB_PBA": {
           "label": {
-            "en": "Paper-based"
+            "en": "Paper-based",
+            "de": "Papier-basiert",
+            "fr": "Base papier"
           },
           "data": false
         },
         "UEB_PBA_T": {
           "label": {
-            "en": "Total"
+            "en": "Total",
+            "de": "Total",
+            "fr": "Total"
           },
           "data": true
         },
         "UEB_NPB": {
           "label": {
-            "en": "Non-paper-based"
+            "en": "Non-paper-based",
+            "de": "Nicht-papier-basiert",
+            "fr": "Base électronique"
           },
           "data": false
         },
         "UEB_NPB_T": {
           "label": {
-            "en": "Total"
+            "en": "Total",
+            "de": "Total",
+            "fr": "Total"
           },
           "data": true
         },
         "UEB_NPB_EBA": {
           "label": {
-            "en": "eBanking"
+            "en": "eBanking",
+            "de": "E-Banking",
+            "fr": "E-banking"
           },
           "data": true
         },
         "UEB_NPB_DKA": {
           "label": {
-            "en": "Direct channels"
+            "en": "Direct channels",
+            "de": "Direktkanäle",
+            "fr": "Canaux directs"
           },
           "data": true
         },
         "UEB_NPB_DAA": {
           "label": {
-            "en": "Standing order"
+            "en": "Standing order",
+            "de": "Dauerauftrag",
+            "fr": "Ordre permanent"
           },
           "data": true
         },
         "UEB_NPB_U": {
           "label": {
-            "en": "Other transfer types"
+            "en": "Other transfer types",
+            "de": "Übrige Überweisungsarten",
+            "fr": "Autres versements/virements"
           },
           "data": true
         },
         "LAS": {
           "label": {
-            "en": "Direct debits"
+            "en": "Direct debits",
+            "de": "Lastschriften",
+            "fr": "Recouvrement direct"
           },
           "data": true
         },
         "UZE": {
           "label": {
-            "en": "Other outgoing payments"
+            "en": "Other outgoing payments",
+            "de": "Übrige Zahlungsausgänge",
+            "fr": "Autres paiements sortants"
           },
           "data": true
         }
@@ -156,24 +199,32 @@
     },
     "D2": {
       "label": {
-        "en": "Transactions and amount"
+        "en": "Transactions and amount",
+        "de": "Transaktionen und Betrag",
+        "fr": "Nombre de transactions et montant"
       },
       "levels": {
         "ATA": {
           "label": {
-            "en": "Transactions in thousands"
+            "en": "Transactions in thousands",
+            "de": "Transaktionen in Tausend",
+            "fr": "Nombre de transactions en milliers"
           },
           "data": true
         },
         "BET": {
           "label": {
-            "en": "Amount in CHF thousands"
+            "en": "Amount in CHF thousands",
+            "de": "Betrag in Tausend Franken",
+            "fr": "Montant en milliers de francs"
           },
           "data": true
         },
         "BPT": {
           "label": {
-            "en": "Amount per transaction in CHF"
+            "en": "Amount per transaction in CHF",
+            "de": "Betrag pro Transaktion in Franken",
+            "fr": "Montant par transaction, en francs"
           },
           "data": true
         }
@@ -186,8 +237,24 @@
     }
   },
   "updated": "2026-07-21 09:00",
-  "topic": "Payment systems",
-  "concept": "Payment systems / Payments & cash",
+  "topic": {
+    "key": "payment-systems",
+    "name": {
+      "en": "Payment systems",
+      "de": "Zahlungsverkehr",
+      "fr": "Systèmes de paiement",
+      "it": "Sistemi di pagamento"
+    }
+  },
+  "concept": {
+    "en": "Payment systems / Payments & cash",
+    "leaf": {
+      "en": "Payments & cash",
+      "de": "Zahlungsverkehr & Bargeld",
+      "fr": "Paiements & espèces",
+      "it": "Pagamenti e contante"
+    }
+  },
   "canonical": false,
   "split": "D1",
   "single_select": ["D0", "D2"],
@@ -197,6 +264,11 @@
     "D1": "T",
     "D2": "BET"
   },
-  "description": "Non-card retail payments: customer credit transfers, direct debits and other outgoing payments processed by banks. It is the cube that captures how Swiss customers actually send money, with a deep order-type hierarchy (D1) that distinguishes paper-based from non-paper-based transfers, then within non-paper-based splits eBanking, direct channels, standing orders and other types. This is where the migration away from paper payment slips is visible. It also separates whether a payment stays between resident banks or involves a non-resident bank (D0), giving a domestic-versus-cross-border read on the payment plumbing. History starts only 2012-03, later than the card cubes.",
-  "fetched_utc": "2026-07-21 09:18:22"
+  "description": {
+    "en": "How Swiss customers send money without a card: credit transfers, direct debits and standing orders, paper versus electronic.",
+    "de": "Wie Schweizer Kundinnen und Kunden ohne Karte Geld überweisen: Zahlungsaufträge, Lastschriften und Daueraufträge, papierbasiert oder elektronisch.",
+    "fr": "Comment la clientèle suisse transfère de l'argent sans carte : virements, prélèvements et ordres permanents, sur papier ou par voie électronique.",
+    "it": "Come la clientela svizzera trasferisce denaro senza carta: bonifici, addebiti diretti e ordini permanenti, su carta o in forma elettronica."
+  },
+  "fetched_utc": "2026-08-05 13:12:03"
 }

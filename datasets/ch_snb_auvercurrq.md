@@ -1,10 +1,10 @@
 # Switzerland's international investment position - Breakdown by currency - Quarter
 
 - **id**: ch_snb_auvercurrq
-- **title**: Investment position by currency
+- **title**: Investment position by currency | de: Auslandvermögen nach Währung | fr: Position extérieure par monnaie | it: Posizione sull'estero per valuta
 - **concept**: External sector / International investment position
 - **canonical**: no (currency cut of the IIP; companion to canonical overview `auvekomq`)
-- **source**: Swiss National Bank
+- **source**: snb
 - **license**: snb (free reuse, attribution required)
 - **frequency**: quarterly
 - **coverage**: 1985-Q1 .. 2025-Q4
@@ -12,18 +12,11 @@
 - **updated**: 2025-Q4 (latest observation; PublishingDate in CSV header is the freshness signal)
 
 ## What is special
-The currency-denomination cut of the same international investment position covered
-by `auvekomq`. Its value is the currency axis: it shows how much of Switzerland's
-foreign assets and liabilities are held in CHF, USD, EUR, other currencies and
-precious metals, which is what makes the IIP exposed to exchange-rate moves. Three
-dimensions cross currency by accounting entry by functional component, so you can ask
-e.g. "USD-denominated portfolio-investment liabilities" directly. Same 1985 start and
-CHF-million end-of-quarter stocks as the overview. Kept as a non-canonical companion,
-not a re-export: the currency breakdown is a genuinely different view, but the
-headline IIP story lives in `auvekomq`.
+Which currencies Switzerland's foreign assets and debts are held in, francs, dollars, euros or precious metals, and so how exposed they are.
 
 ## Access
-- **type**: SNB cube API
+- **type**: snb-cube — SNB cube API
+- **cube**: `auvercurrq`
 - **endpoint**: `GET https://data.snb.ch/api/cube/auvercurrq/data/json/en`
 - **call**: `snb_fetch("auvercurrq", title = "Switzerland's international investment position - Breakdown by currency - Quarter")`
 
@@ -68,3 +61,12 @@ currency breakdown (D0: CHF / USD / EUR / other currencies / precious metals).
 ## Provenance
 Script: `R/source_snb.R::snb_fetch` via `R/snb_cubes.tsv` (cube_id `auvercurrq`).
 Datasheet 2026-06-01; parser verified 2026-06-01 (13,794 rows, 94 series).
+
+## What is special (de)
+In welchen Währungen die Schweizer Auslandguthaben und -schulden gehalten werden — Franken, Dollar, Euro oder Edelmetalle — und wie exponiert sie damit sind.
+
+## What is special (fr)
+Dans quelles monnaies sont détenus les avoirs et engagements suisses à l'étranger — francs, dollars, euros ou métaux précieux — et donc leur exposition.
+
+## What is special (it)
+In quali valute sono detenuti gli attivi e i debiti svizzeri sull'estero — franchi, dollari, euro o metalli preziosi — e quindi quanto sono esposti.
