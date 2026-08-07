@@ -7,7 +7,7 @@
     "seas_adj"
   ],
   "start": "1972-10-01",
-  "end": "2026-04-01",
+  "end": "2026-07-01",
   "title": {
     "en": "Consumer confidence",
     "de": "Konsumentenstimmung",
@@ -274,7 +274,7 @@
       "it": "Deviazione standard"
     }
   },
-  "updated": "2026-05-23 16:49:08",
+  "updated": "2026-08-04 11:54:52",
   "notes": {
     "en": "Consumer Sentiment Survey. Seasonally and calender adjusted data as well as unadjusted data. The level of the historical data from 1972 to 2023 has been aligned with that of the current data from 2024. Further information can be found in the Methodology document.",
     "de": "Konsumententsimmungsindex. Saison- und kalenderbereinigte Daten sowie unbereinigte Daten. Das Niveau der historischen Daten 1972-2023 wurde an jenes der aktuellen Daten ab 2024 angeglichen. Weitere Informationen sind im Methodik-Dokument zu finden.",
@@ -320,5 +320,5 @@
     "fr": "Comment les ménages suisses voient l'économie, les prix, la sécurité de l'emploi, leurs propres finances et les achats importants. Brut et désaisonnalisé.",
     "it": "Come le economie domestiche svizzere vedono l'economia, i prezzi, la sicurezza del posto di lavoro, le proprie finanze e i grandi acquisti. Grezzo e destagionalizzato."
   },
-  "fetched_utc": "2026-08-06 09:23:00"
+  "fetched_utc": "2026-08-07 08:39:32"
 }

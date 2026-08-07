@@ -6,7 +6,7 @@
     "D1"
   ],
   "start": "1973-01-01",
-  "end": "2026-06-01",
+  "end": "2026-07-01",
   "title": {
     "en": "Bilateral exchange-rate indices",
     "de": "Bilaterale Wechselkursindizes",
@@ -572,7 +572,7 @@
       }
     }
   },
-  "updated": "2026-07-07 09:00",
+  "updated": "2026-08-07 09:00",
   "topic": {
     "key": "exchange-rates",
     "name": {
@@ -605,5 +605,5 @@
     "fr": "Indices de cours du franc face à environ 54 monnaies, nominaux et corrigés de l'inflation, en niveaux d'indice et en variations annuelles.",
     "it": "Indici del corso del franco rispetto a circa 54 valute, nominali e corretti per l'inflazione, come livelli d'indice e variazioni annue."
   },
-  "fetched_utc": "2026-08-05 13:12:02"
+  "fetched_utc": "2026-08-07 08:39:32"
 }

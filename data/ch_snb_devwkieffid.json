@@ -6,7 +6,7 @@
     "D1"
   ],
   "start": "1999-01-01",
-  "end": "2026-06-30",
+  "end": "2026-07-31",
   "title": {
     "en": "Effective exchange-rate index",
     "de": "Effektiver Wechselkursindex",
@@ -104,7 +104,7 @@
       }
     }
   },
-  "updated": "2026-07-07 09:00",
+  "updated": "2026-08-07 09:00",
   "topic": {
     "key": "exchange-rates",
     "name": {
@@ -137,5 +137,5 @@
     "fr": "L'indice du franc pondéré par les échanges, la mesure quotidienne de référence de la force du franc, globalement et face à la zone euro.",
     "it": "L'indice del franco ponderato per gli scambi, la misura giornaliera di riferimento della forza del franco, complessiva e verso l'area euro."
   },
-  "fetched_utc": "2026-08-05 13:12:02"
+  "fetched_utc": "2026-08-07 08:39:32"
 }
