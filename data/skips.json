@@ -1,5 +1,13 @@
 {
-  "ts": "2026-08-09T08:27:49Z",
+  "ts": "2026-08-10T08:53:30Z",
   "alert_after_days": 3,
-  "skips": []
+  "skips": [
+    {
+      "id": "ch_fso_new_vehicles",
+      "error": "HTTP 404 Not Found.",
+      "route": "alarm",
+      "escalated": false,
+      "consecutive_days": 1
+    }
+  ]
 }
