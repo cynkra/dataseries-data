@@ -1,7 +1,7 @@
 {
-  "ts": "2026-08-12T14:40:05Z",
+  "ts": "2026-08-13T08:46:40Z",
   "attempted": 70,
-  "ok": 31,
+  "ok": 32,
   "unchanged": [
     "ch_snb_amarbma",
     "ch_snb_ambeschkla",
@@ -42,10 +42,5 @@
     "ch_snb_zikrepro",
     "ch_snb_zimoma"
   ],
-  "skipped": [
-    {
-      "id": "ch_fso_new_vehicles",
-      "error": "HTTP 404 Not Found."
-    }
-  ]
+  "skipped": []
 }
