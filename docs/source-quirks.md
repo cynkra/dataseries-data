@@ -97,6 +97,15 @@ levels and %-change leaves on the same key (`ch_fso_gfcf_detail`: filter `UNIT_M
 - **German dimension codes as headers** (e.g. `Tourismusregion`): decide whether
   to keep the code or map to a semantic english slug. Labels are already in the
   meta either way.
+- **A DAM asset's observation frequency is not its publication cadence — read
+  `description.categorization.periodicity`.** Several FSO workbooks carry monthly
+  values but are republished quarterly (a whole quarter at once). `je-d-03.03.01.03`
+  (ILO unemployment rate) declares `QUARTERLY`, and its newest month is normally
+  ~5.5 months old just before the next release — enough to trip the *monthly*
+  staleness line in `R/health.R`. When a dataset goes red, check `periodicity` and
+  `bfs.embargo` on its order number before assuming the scraper broke:
+  `curl -s "https://dam-api.bfs.admin.ch/hub/api/dam/assets?orderNr=<ordernr>"`.
+  A cadence mismatch belongs in health.R's `OVERRIDE`, not in the `frequency` label.
 
 ## Meta gaps to fill where the source allows
 - **`updated`** — capture the source publish date. SNB: **done** via the `lastUpdate`

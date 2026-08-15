@@ -82,6 +82,12 @@ DEFAULT_PUB <- 120L
 #                 Eurostat's newest CH point is 2025-12).
 #   seco_wwa    : weekly nowcast, but SECO publishes the latest week with a ~2-3 week
 #                 lag (and revises), so the newest point is normally ~3 weeks old.
+#   unemp_rate  : monthly *values*, but the ELS-ILO workbook is published QUARTERLY
+#                 (DAM asset je-d-03.03.01.03 declares periodicity QUARTERLY), a
+#                 quarter's three months at once ~7 weeks after quarter end. So the
+#                 newest month ages from ~78d at release to ~170d just before the
+#                 next one -- past the monthly 165d line for the last weeks of every
+#                 cycle. 255d still trips if a whole quarterly release is missed.
 # All verified against the live source cadence -- not stale, just slow-published.
 OVERRIDE <- c(
   ch_snb_devwkieffid = 75L,
@@ -91,7 +97,8 @@ OVERRIDE <- c(
   ch_fso_gdp_region  = 2550L,
   ch_fso_pop_detail  = 1425L,
   ch_fso_hicp        = 315L,
-  ch_seco_wwa        = 53L
+  ch_seco_wwa        = 53L,
+  ch_fso_unemp_rate  = 255L
 )
 
 score <- function(id, end_chr, frequency, updated) {
