@@ -6,7 +6,7 @@
     "sex"
   ],
   "start": "1991-01-01",
-  "end": "2026-03-01",
+  "end": "2026-06-01",
   "source": {
     "name": {
       "en": "Swiss Federal Statistical Office (FSO)",
@@ -28,7 +28,7 @@
       "it": "Lavoro"
     }
   },
-  "updated": "2026-05-18",
+  "updated": "2026-08-18",
   "dimensions": {
     "origin": {
       "label": {
@@ -134,5 +134,5 @@
     "fr": "Chômage suisse selon la définition internationale du BIT. À ne pas confondre avec le chômage inscrit auprès des offices régionaux ; les deux ne sont pas interchangeables.",
     "it": "Disoccupazione svizzera secondo la definizione internazionale ILO. Da non confondere con la disoccupazione registrata presso gli uffici del lavoro; le due non sono intercambiabili."
   },
-  "fetched_utc": "2026-08-17 08:29:13"
+  "fetched_utc": "2026-08-18 08:25:49"
 }
