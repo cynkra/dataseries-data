@@ -7,7 +7,7 @@
     "INDICATOR_KE"
   ],
   "start": "1999-01-01",
-  "end": "2026-01-01",
+  "end": "2026-04-01",
   "title": {
     "en": "Industry & construction turnover",
     "de": "Umsätze Industrie und Bau",
@@ -239,5 +239,5 @@
     "fr": "Chiffre d'affaires et production de l'industrie et de la construction suisses par trimestre, par branche, y compris bâtiment, génie civil et travaux spécialisés.",
     "it": "Fatturato e produzione dell'industria e delle costruzioni svizzere per trimestre, per ramo, inclusi edilizia, genio civile e lavori specializzati."
   },
-  "fetched_utc": "2026-08-18 08:25:48"
+  "fetched_utc": "2026-08-19 11:42:02"
 }
