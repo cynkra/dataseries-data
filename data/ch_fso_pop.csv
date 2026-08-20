@@ -32,6 +32,7 @@ adjustments,2021-01-01,1168
 adjustments,2022-01-01,-112
 adjustments,2023-01-01,-447
 adjustments,2024-01-01,-335
+adjustments,2025-01-01,-585
 birth_surplus,1861-01-01,17300
 birth_surplus,1862-01-01,24800
 birth_surplus,1863-01-01,24800
@@ -195,6 +196,7 @@ birth_surplus,2021-01-01,18452
 birth_surplus,2022-01-01,7946
 birth_surplus,2023-01-01,8202
 birth_surplus,2024-01-01,6314
+birth_surplus,2025-01-01,6249
 deaths,1861-01-01,57520
 deaths,1862-01-01,51070
 deaths,1863-01-01,54360
@@ -358,6 +360,7 @@ deaths,2021-01-01,71192
 deaths,2022-01-01,74425
 deaths,2023-01-01,71822
 deaths,2024-01-01,71942
+deaths,2025-01-01,71904
 emigration,1981-01-01,97743
 emigration,1982-01-01,93193
 emigration,1983-01-01,91283
@@ -401,6 +404,7 @@ emigration,2021-01-01,116769
 emigration,2022-01-01,122123
 emigration,2023-01-01,123963
 emigration,2024-01-01,129786
+emigration,2025-01-01,133829
 immigration,1981-01-01,121420
 immigration,1982-01-01,114290
 immigration,1983-01-01,96500
@@ -444,6 +448,7 @@ immigration,2021-01-01,165640
 immigration,2022-01-01,190883
 immigration,2023-01-01,263081
 immigration,2024-01-01,212578
+immigration,2025-01-01,204261
 live_births,1861-01-01,74820
 live_births,1862-01-01,75870
 live_births,1863-01-01,79160
@@ -607,6 +612,7 @@ live_births,2021-01-01,89644
 live_births,2022-01-01,82371
 live_births,2023-01-01,80024
 live_births,2024-01-01,78256
+live_births,2025-01-01,78153
 migration_bal,1861-01-01,381
 migration_bal,1862-01-01,-3620
 migration_bal,1863-01-01,-3408
@@ -770,6 +776,7 @@ migration_bal,2021-01-01,48871
 migration_bal,2022-01-01,68760
 migration_bal,2023-01-01,139118
 migration_bal,2024-01-01,82792
+migration_bal,2025-01-01,70432
 naturalisation,1889-01-01,1247
 naturalisation,1890-01-01,1664
 naturalisation,1891-01-01,1732
@@ -905,6 +912,7 @@ naturalisation,2021-01-01,36994
 naturalisation,2022-01-01,41486
 naturalisation,2023-01-01,41201
 naturalisation,2024-01-01,39912
+naturalisation,2025-01-01,40672
 pop_stock_dec,1861-01-01,2533077
 pop_stock_dec,1862-01-01,2554257
 pop_stock_dec,1863-01-01,2575649
@@ -1068,6 +1076,7 @@ pop_stock_dec,2021-01-01,8738791
 pop_stock_dec,2022-01-01,8815385
 pop_stock_dec,2023-01-01,8962258
 pop_stock_dec,2024-01-01,9051029
+pop_stock_dec,2025-01-01,9127125
 pop_stock_jan,1861-01-01,2515396
 pop_stock_jan,1862-01-01,2533077
 pop_stock_jan,1863-01-01,2554257
@@ -1231,3 +1240,4 @@ pop_stock_jan,2021-01-01,8670300
 pop_stock_jan,2022-01-01,8738791
 pop_stock_jan,2023-01-01,8815385
 pop_stock_jan,2024-01-01,8962258
+pop_stock_jan,2025-01-01,9051029
