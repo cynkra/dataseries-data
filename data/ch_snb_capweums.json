@@ -148,7 +148,7 @@
       }
     }
   },
-  "updated": "2026-07-21 09:00",
+  "updated": "2026-08-21 09:00",
   "topic": {
     "key": "financial-markets",
     "name": {
@@ -180,5 +180,5 @@
     "fr": "Combien s'échange chaque mois à la bourse suisse, actions et obligations séparées en titres suisses et étrangers.",
     "it": "Quanto viene scambiato ogni mese alla borsa svizzera, con azioni e obbligazioni separate in titoli svizzeri ed esteri."
   },
-  "fetched_utc": "2026-08-05 13:12:02"
+  "fetched_utc": "2026-08-21 08:35:23"
 }

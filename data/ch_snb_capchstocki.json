@@ -5,7 +5,7 @@
     "D0"
   ],
   "start": "1989-01-03",
-  "end": "2026-07-15",
+  "end": "2026-08-14",
   "title": {
     "en": "Swiss stock indices",
     "de": "Schweizer Aktienindizes",
@@ -193,7 +193,7 @@
       }
     }
   },
-  "updated": "2026-07-21 09:00",
+  "updated": "2026-08-21 09:00",
   "topic": {
     "key": "financial-markets",
     "name": {
@@ -231,5 +231,5 @@
     "fr": "Niveaux quotidiens des indices boursiers suisses SPI et SMI, avec des sous-indices sectoriels. Le SPI inclut les dividendes réinvestis, le SMI non.",
     "it": "Livelli giornalieri degli indici azionari svizzeri SPI e SMI, con sottoindici settoriali. Lo SPI include i dividendi reinvestiti, lo SMI no."
   },
-  "fetched_utc": "2026-08-05 13:12:02"
+  "fetched_utc": "2026-08-21 08:35:23"
 }

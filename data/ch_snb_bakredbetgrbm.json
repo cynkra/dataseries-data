@@ -8,7 +8,7 @@
     "D3"
   ],
   "start": "2002-01-01",
-  "end": "2026-05-01",
+  "end": "2026-06-01",
   "title": {
     "en": "Corporate loans by company size",
     "de": "Unternehmenskredite nach Unternehmensgrösse",
@@ -236,7 +236,7 @@
       }
     }
   },
-  "updated": "2026-07-21 09:00",
+  "updated": "2026-08-21 09:00",
   "topic": {
     "key": "money-banking",
     "name": {
@@ -271,5 +271,5 @@
     "fr": "Combien les banques suisses prêtent aux entreprises selon leur taille, en crédit accordé et en montant effectivement utilisé, si bien que la marge est visible.",
     "it": "Quanto le banche svizzere prestano alle imprese per dimensione, come credito concesso e come importo effettivamente utilizzato, così il margine è visibile."
   },
-  "fetched_utc": "2026-08-05 13:12:01"
+  "fetched_utc": "2026-08-21 08:35:22"
 }

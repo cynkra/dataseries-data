@@ -5,7 +5,7 @@
     "D0"
   ],
   "start": "1950-01-01",
-  "end": "2026-06-01",
+  "end": "2026-07-01",
   "title": {
     "en": "Monetary base",
     "de": "Notenbankgeldmenge",
@@ -157,7 +157,7 @@
       }
     }
   },
-  "updated": "2026-07-21 09:00",
+  "updated": "2026-08-21 09:00",
   "topic": {
     "key": "money-banking",
     "name": {
@@ -189,5 +189,5 @@
     "fr": "La monnaie centrale en Suisse, montrée des deux côtés : comment elle est créée, et les billets en circulation plus les avoirs à vue des banques.",
     "it": "La moneta centrale in Svizzera, mostrata da entrambi i lati: come viene creata, e le banconote in circolazione più gli averi a vista delle banche."
   },
-  "fetched_utc": "2026-08-05 13:12:03"
+  "fetched_utc": "2026-08-21 08:35:23"
 }

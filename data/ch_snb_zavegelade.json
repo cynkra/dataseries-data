@@ -5,7 +5,7 @@
     "D0"
   ],
   "start": "2014-12-01",
-  "end": "2026-05-01",
+  "end": "2026-06-01",
   "title": {
     "en": "E-money",
     "de": "E-Geld",
@@ -113,7 +113,7 @@
       }
     }
   },
-  "updated": "2026-07-21 09:00",
+  "updated": "2026-08-21 09:00",
   "topic": {
     "key": "payment-systems",
     "name": {
@@ -145,5 +145,5 @@
     "fr": "Chargements et soldes en circulation sur les cartes suisses prépayées et à valeur stockée.",
     "it": "Ricariche e saldi in circolazione sulle carte svizzere prepagate e a valore memorizzato."
   },
-  "fetched_utc": "2026-08-05 13:12:03"
+  "fetched_utc": "2026-08-21 08:35:23"
 }

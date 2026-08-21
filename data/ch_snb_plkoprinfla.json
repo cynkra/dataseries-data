@@ -5,7 +5,7 @@
     "D0"
   ],
   "start": "1983-12-01",
-  "end": "2026-06-01",
+  "end": "2026-07-01",
   "title": {
     "en": "Core inflation",
     "de": "Kerninflation",
@@ -93,7 +93,7 @@
       }
     }
   },
-  "updated": "2026-07-21 09:00",
+  "updated": "2026-08-21 09:00",
   "topic": {
     "key": "prices",
     "name": {
@@ -125,5 +125,5 @@
     "fr": "Inflation suisse hors postes volatils, la mesure que suivent les banques centrales. Quatre définitions côte à côte, en taux annuels et non en niveaux d'indice.",
     "it": "Inflazione svizzera al netto delle voci volatili, la misura seguita dalle banche centrali. Quattro definizioni affiancate, come tassi annui e non livelli d'indice."
   },
-  "fetched_utc": "2026-08-05 13:12:02"
+  "fetched_utc": "2026-08-21 08:35:23"
 }

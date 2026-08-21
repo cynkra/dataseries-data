@@ -9,7 +9,7 @@
     "D4"
   ],
   "start": "2005-01-01",
-  "end": "2026-05-01",
+  "end": "2026-06-01",
   "title": {
     "en": "Payments and cash withdrawals",
     "de": "Zahlungen und Bargeldbezüge",
@@ -259,7 +259,7 @@
       }
     }
   },
-  "updated": "2026-07-21 09:00",
+  "updated": "2026-08-21 09:00",
   "topic": {
     "key": "payment-systems",
     "name": {
@@ -295,5 +295,5 @@
     "fr": "Pour quoi et où l'on paie avec des cartes suisses — en magasin ou en ligne, en Suisse ou à l'étranger — ainsi que les retraits aux distributeurs.",
     "it": "Per cosa e dove si paga con le carte svizzere — in negozio o online, in Svizzera o all'estero — nonché i prelievi ai bancomat."
   },
-  "fetched_utc": "2026-08-05 13:12:03"
+  "fetched_utc": "2026-08-21 08:35:23"
 }

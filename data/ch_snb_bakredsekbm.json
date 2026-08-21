@@ -8,7 +8,7 @@
     "D3"
   ],
   "start": "1985-06-01",
-  "end": "2026-05-01",
+  "end": "2026-06-01",
   "title": {
     "en": "Domestic loans by sector",
     "de": "Inlandkredite nach Sektor",
@@ -354,7 +354,7 @@
       }
     }
   },
-  "updated": "2026-07-21 09:00",
+  "updated": "2026-08-21 09:00",
   "topic": {
     "key": "money-banking",
     "name": {
@@ -389,5 +389,5 @@
     "fr": "À quelles branches les banques suisses prêtent : ménages, industrie, construction, commerce, finance, santé et le reste de l'économie.",
     "it": "A quali rami le banche svizzere concedono crediti: economie domestiche, industria, costruzioni, commercio, finanza, sanità e resto dell'economia."
   },
-  "fetched_utc": "2026-08-05 13:12:01"
+  "fetched_utc": "2026-08-21 08:35:23"
 }

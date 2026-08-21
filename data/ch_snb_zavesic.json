@@ -5,7 +5,7 @@
     "D0"
   ],
   "start": "1987-07-01",
-  "end": "2026-06-01",
+  "end": "2026-07-01",
   "title": {
     "en": "Interbank clearing (SIC)",
     "de": "Interbank-Clearing (SIC)",
@@ -253,7 +253,7 @@
       }
     }
   },
-  "updated": "2026-07-21 09:00",
+  "updated": "2026-08-21 09:00",
   "topic": {
     "key": "payment-systems",
     "name": {
@@ -285,5 +285,5 @@
     "fr": "Paiements interbancaires en francs réglés chaque mois via SIC : combien, pour quels montants, et répartis par taille de paiement.",
     "it": "Pagamenti interbancari in franchi regolati ogni mese tramite SIC: quanti, per quali importi, e ripartiti per dimensione del pagamento."
   },
-  "fetched_utc": "2026-08-05 13:12:03"
+  "fetched_utc": "2026-08-21 08:35:23"
 }

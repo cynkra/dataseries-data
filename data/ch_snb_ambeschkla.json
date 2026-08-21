@@ -251,7 +251,7 @@
       }
     }
   },
-  "updated": "2026-07-21 09:00",
+  "updated": "2026-08-21 09:00",
   "topic": {
     "key": "labour",
     "name": {
@@ -284,5 +284,5 @@
     "fr": "Salariés suisses par branche, répartis en temps plein, temps partiel et équivalents plein temps, si bien que l'intensité du temps partiel par secteur se lit directement.",
     "it": "Occupati svizzeri per ramo, ripartiti in tempo pieno, tempo parziale ed equivalenti a tempo pieno, così l'intensità del tempo parziale per settore è leggibile direttamente."
   },
-  "fetched_utc": "2026-08-05 13:12:00"
+  "fetched_utc": "2026-08-21 08:35:22"
 }

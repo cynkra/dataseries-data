@@ -5,7 +5,7 @@
     "D0"
   ],
   "start": "2005-01-01",
-  "end": "2026-05-01",
+  "end": "2026-06-01",
   "title": {
     "en": "Payment cards and ATMs",
     "de": "Zahlungskarten und Geldautomaten",
@@ -180,7 +180,7 @@
       }
     }
   },
-  "updated": "2026-07-21 09:00",
+  "updated": "2026-08-21 09:00",
   "topic": {
     "key": "payment-systems",
     "name": {
@@ -212,5 +212,5 @@
     "fr": "Combien de cartes de crédit, de débit et prépayées circulent en Suisse, plus le nombre de distributeurs. Effectifs seulement, pas de dépenses.",
     "it": "Quante carte di credito, di debito e prepagate circolano in Svizzera, più il numero di bancomat. Solo consistenze, nessuna spesa."
   },
-  "fetched_utc": "2026-08-05 13:12:03"
+  "fetched_utc": "2026-08-21 08:35:23"
 }

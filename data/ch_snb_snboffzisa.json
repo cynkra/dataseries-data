@@ -5,7 +5,7 @@
     "D0"
   ],
   "start": "2000-01-01",
-  "end": "2026-06-01",
+  "end": "2026-07-01",
   "title": {
     "en": "Official interest rates",
     "de": "Offizielle Zinssätze",
@@ -197,7 +197,7 @@
       }
     }
   },
-  "updated": "2026-07-21 09:00",
+  "updated": "2026-08-21 09:00",
   "topic": {
     "key": "interest-rates-yields",
     "name": {
@@ -229,5 +229,5 @@
     "fr": "Taux directeurs de la BNS, de la Fed, de la BCE, de la Banque d'Angleterre et de la Banque du Japon dans un même tableau, y compris l'ancienne marge cible Libor suisse.",
     "it": "Tassi di riferimento di BNS, Fed, BCE, Bank of England e Bank of Japan in un'unica tabella, incluso il precedente margine obiettivo Libor svizzero."
   },
-  "fetched_utc": "2026-08-05 13:12:03"
+  "fetched_utc": "2026-08-21 08:35:23"
 }

@@ -217,7 +217,7 @@
       }
     }
   },
-  "updated": "2026-07-21 09:00",
+  "updated": "2026-08-21 09:00",
   "topic": {
     "key": "prices",
     "name": {
@@ -250,5 +250,5 @@
     "fr": "Indices suisses des prix de l'immobilier et des loyers de quatre fournisseurs côte à côte, pour appartements, maisons, bureaux, commerces et surfaces industrielles.",
     "it": "Indici svizzeri dei prezzi immobiliari e delle pigioni di quattro fornitori affiancati, per appartamenti, case, uffici, superfici commerciali e industriali."
   },
-  "fetched_utc": "2026-08-05 13:12:02"
+  "fetched_utc": "2026-08-21 08:35:23"
 }

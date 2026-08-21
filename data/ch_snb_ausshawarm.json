@@ -7,7 +7,7 @@
     "D2"
   ],
   "start": "2012-01-01",
-  "end": "2026-05-01",
+  "end": "2026-06-01",
   "title": {
     "en": "Foreign trade by goods category",
     "de": "Aussenhandel nach Warengruppe",
@@ -412,7 +412,7 @@
       }
     }
   },
-  "updated": "2026-07-21 09:00",
+  "updated": "2026-08-21 09:00",
   "topic": {
     "key": "external-sector",
     "name": {
@@ -452,5 +452,5 @@
     "fr": "Ce que la Suisse exporte et importe chaque mois par groupe de marchandises, en millions de CHF et en variation réelle, corrigée de l'inflation.",
     "it": "Cosa la Svizzera esporta e importa ogni mese per gruppo di merci, in milioni di CHF e come variazione reale, corretta per l'inflazione."
   },
-  "fetched_utc": "2026-08-05 13:12:01"
+  "fetched_utc": "2026-08-21 08:35:22"
 }

@@ -3,7 +3,7 @@
   "id": "ch_snb_plkopr",
   "dim_order": [],
   "start": "1921-01-01",
-  "end": "2026-06-01",
+  "end": "2026-07-01",
   "title": {
     "en": "Consumer prices (CPI)",
     "de": "Konsumentenpreise (LIK)",
@@ -23,7 +23,7 @@
   "license": "snb",
   "frequency": "monthly",
   "dimensions": {},
-  "updated": "2026-07-21 09:00",
+  "updated": "2026-08-21 09:00",
   "topic": {
     "key": "prices",
     "name": {
@@ -58,5 +58,5 @@
     "it": "Inflazione svizzera, solo l'indice generale dei prezzi al consumo. Per la ripartizione nelle 595 posizioni del paniere come alimentari, pigioni e trasporti, si veda la serie dettagliata."
   },
   "default": [],
-  "fetched_utc": "2026-08-05 13:12:02"
+  "fetched_utc": "2026-08-21 08:35:23"
 }

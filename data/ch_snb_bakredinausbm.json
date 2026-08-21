@@ -8,7 +8,7 @@
     "D3"
   ],
   "start": "1985-06-01",
-  "end": "2026-05-01",
+  "end": "2026-06-01",
   "title": {
     "en": "Mortgage & other loans",
     "de": "Hypothekar- und übrige Kredite",
@@ -218,7 +218,7 @@
       }
     }
   },
-  "updated": "2026-07-21 09:00",
+  "updated": "2026-08-21 09:00",
   "topic": {
     "key": "money-banking",
     "name": {
@@ -253,5 +253,5 @@
     "fr": "Crédits bancaires suisses selon que l'emprunteur se trouve en Suisse ou à l'étranger, pour les hypothèques et les autres prêts.",
     "it": "Crediti bancari svizzeri a seconda che il debitore sia in Svizzera o all'estero, per ipoteche e altri prestiti."
   },
-  "fetched_utc": "2026-08-05 13:12:01"
+  "fetched_utc": "2026-08-21 08:35:22"
 }

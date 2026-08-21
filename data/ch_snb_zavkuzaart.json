@@ -7,7 +7,7 @@
     "D2"
   ],
   "start": "2012-03-01",
-  "end": "2026-05-01",
+  "end": "2026-06-01",
   "title": {
     "en": "Customer payments (outgoing)",
     "de": "Kundenzahlungen (ausgehend)",
@@ -236,7 +236,7 @@
       }
     }
   },
-  "updated": "2026-07-21 09:00",
+  "updated": "2026-08-21 09:00",
   "topic": {
     "key": "payment-systems",
     "name": {
@@ -270,5 +270,5 @@
     "fr": "Comment la clientèle suisse transfère de l'argent sans carte : virements, prélèvements et ordres permanents, sur papier ou par voie électronique.",
     "it": "Come la clientela svizzera trasferisce denaro senza carta: bonifici, addebiti diretti e ordini permanenti, su carta o in forma elettronica."
   },
-  "fetched_utc": "2026-08-05 13:12:03"
+  "fetched_utc": "2026-08-21 08:35:23"
 }
