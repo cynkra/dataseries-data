@@ -1,7 +1,7 @@
 {
-  "ts": "2026-08-23T08:24:44Z",
+  "ts": "2026-08-24T08:30:54Z",
   "attempted": 70,
-  "ok": 32,
+  "ok": 27,
   "unchanged": [
     "ch_snb_amarbma",
     "ch_snb_ambeschkla",
@@ -42,5 +42,26 @@
     "ch_snb_zikrepro",
     "ch_snb_zimoma"
   ],
-  "skipped": []
+  "skipped": [
+    {
+      "id": "ch_fso_hesta",
+      "error": "HTTP 400 Bad Request."
+    },
+    {
+      "id": "ch_fso_besta",
+      "error": "HTTP 400 Bad Request."
+    },
+    {
+      "id": "ch_fso_vacancies",
+      "error": "HTTP 400 Bad Request."
+    },
+    {
+      "id": "ch_fso_jobs_sex",
+      "error": "HTTP 400 Bad Request."
+    },
+    {
+      "id": "ch_fso_besta_outlook",
+      "error": "HTTP 400 Bad Request."
+    }
+  ]
 }
