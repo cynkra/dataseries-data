@@ -3217,7 +3217,7 @@
     "end": "2026-06-01",
     "n_series": 14,
     "updated": null,
-    "fetched": "2026-08-23 08:24:42",
+    "fetched": "2026-08-24 10:47:51",
     "load": "whole",
     "data": "ch_fso_hesta.csv",
     "meta": "ch_fso_hesta.json"
@@ -3270,7 +3270,7 @@
     "end": "2026-01-01",
     "n_series": 60,
     "updated": null,
-    "fetched": "2026-08-23 08:24:42",
+    "fetched": "2026-08-24 10:47:51",
     "load": "whole",
     "data": "ch_fso_besta.csv",
     "meta": "ch_fso_besta.json"
@@ -3318,7 +3318,7 @@
     "end": "2026-01-01",
     "n_series": 60,
     "updated": null,
-    "fetched": "2026-08-23 08:24:42",
+    "fetched": "2026-08-24 10:47:51",
     "load": "whole",
     "data": "ch_fso_vacancies.csv",
     "meta": "ch_fso_vacancies.json"
@@ -3366,7 +3366,7 @@
     "end": "2026-01-01",
     "n_series": 336,
     "updated": null,
-    "fetched": "2026-08-23 08:24:42",
+    "fetched": "2026-08-24 10:47:51",
     "load": "whole",
     "data": "ch_fso_jobs_sex.csv",
     "meta": "ch_fso_jobs_sex.json"
@@ -3414,7 +3414,7 @@
     "end": "2026-01-01",
     "n_series": 20,
     "updated": null,
-    "fetched": "2026-08-23 08:24:42",
+    "fetched": "2026-08-24 10:47:51",
     "load": "whole",
     "data": "ch_fso_besta_outlook.csv",
     "meta": "ch_fso_besta_outlook.json"

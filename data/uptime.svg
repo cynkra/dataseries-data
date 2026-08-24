@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1070" height="218" font-family="-apple-system,Segoe UI,Helvetica,Arial,sans-serif">
 <rect width="1070" height="218" fill="#ffffff"/>
 <text x="20" y="30" font-size="18" font-weight="600" fill="#1f2328">Uptime — last 90 days</text>
-<text x="20" y="50" font-size="12" fill="#656d76">Pipeline 100% · Run-through 70% · Recently updated 96.7% (30d) · generated 2026-08-24</text>
+<text x="20" y="50" font-size="12" fill="#656d76">Pipeline 100% · Run-through 73.3% · Recently updated 96.7% (30d) · generated 2026-08-24</text>
 <text x="138" y="86" font-size="13" fill="#1f2328" text-anchor="end">Pipeline</text>
 <rect x="150" y="70" width="8" height="22" rx="1.5" fill="#d0d7de"/>
 <rect x="160" y="70" width="8" height="22" rx="1.5" fill="#d0d7de"/>
@@ -183,7 +183,7 @@
 <rect x="1010" y="106" width="8" height="22" rx="1.5" fill="#2ea44f"/>
 <rect x="1020" y="106" width="8" height="22" rx="1.5" fill="#2ea44f"/>
 <rect x="1030" y="106" width="8" height="22" rx="1.5" fill="#2ea44f"/>
-<rect x="1040" y="106" width="8" height="22" rx="1.5" fill="#cf222e"/>
+<rect x="1040" y="106" width="8" height="22" rx="1.5" fill="#2ea44f"/>
 <text x="138" y="158" font-size="13" fill="#1f2328" text-anchor="end">Recently updated</text>
 <rect x="150" y="142" width="8" height="22" rx="1.5" fill="#d0d7de"/>
 <rect x="160" y="142" width="8" height="22" rx="1.5" fill="#d0d7de"/>
