@@ -6,7 +6,7 @@
     "asset"
   ],
   "start": "1995-01-01",
-  "end": "2024-01-01",
+  "end": "2025-01-01",
   "source": {
     "name": {
       "en": "Swiss Federal Statistical Office (FSO)",
@@ -19,7 +19,7 @@
   },
   "license": "fso",
   "frequency": "annual",
-  "updated": "2025-09-29",
+  "updated": "2026-08-25",
   "dimensions": {
     "sector": {
       "label": {
@@ -235,5 +235,5 @@
     "fr": "Millions de CHF, aux prix courants",
     "it": "Milioni di CHF, a prezzi correnti"
   },
-  "fetched_utc": "2026-08-24 08:30:53"
+  "fetched_utc": "2026-08-25 08:27:07"
 }
