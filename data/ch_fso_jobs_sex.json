@@ -8,7 +8,7 @@
     "Geschlecht"
   ],
   "start": "1995-07-01",
-  "end": "2026-01-01",
+  "end": "2026-04-01",
   "title": {
     "en": "Jobs by economic division and sex",
     "de": "Beschäftigte nach Wirtschaftsabteilung und Geschlecht",
@@ -294,5 +294,5 @@
     "fr": "Emplois suisses par région, secteur, temps plein ou partiel et sexe : les ventilations que la série principale ne publie qu'en total.",
     "it": "Posti di lavoro svizzeri per regione, settore, tempo pieno o parziale e sesso: le ripartizioni che la serie principale riporta solo come totale."
   },
-  "fetched_utc": "2026-08-26 08:27:15"
+  "fetched_utc": "2026-08-27 11:41:28"
 }

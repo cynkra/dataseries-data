@@ -5,7 +5,7 @@
     "Wirtschaftsabteilung"
   ],
   "start": "2004-01-01",
-  "end": "2026-01-01",
+  "end": "2026-04-01",
   "title": {
     "en": "Employment outlook",
     "de": "Beschäftigungsaussichten",
@@ -274,5 +274,5 @@
     "fr": "Intentions d'embauche des entreprises suisses pour les trois prochains mois, par branche. Au-dessus de 1.0 : embauches nettes ; en dessous : réductions.",
     "it": "Intenzioni di assunzione delle imprese svizzere per i prossimi tre mesi, per ramo. Sopra 1.0 assunzioni nette, sotto 1.0 riduzioni."
   },
-  "fetched_utc": "2026-08-26 08:27:15"
+  "fetched_utc": "2026-08-27 11:41:28"
 }
