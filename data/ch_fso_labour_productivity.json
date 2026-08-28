@@ -5,7 +5,7 @@
     "indicator"
   ],
   "start": "1991-01-01",
-  "end": "2024-01-01",
+  "end": "2025-01-01",
   "source": {
     "name": {
       "en": "Swiss Federal Statistical Office (FSO)",
@@ -18,7 +18,7 @@
   },
   "license": "fso",
   "frequency": "annual",
-  "updated": "2025-09-29",
+  "updated": "2026-08-28",
   "dimensions": {
     "indicator": {
       "label": {
@@ -101,5 +101,5 @@
     "fr": "Indice (1991 = 100), volumes chaînés (prix de l'année précédente)",
     "it": "Indice (1991 = 100), volumi concatenati (prezzi dell'anno precedente)"
   },
-  "fetched_utc": "2026-08-27 11:41:29"
+  "fetched_utc": "2026-08-28 12:06:47"
 }
