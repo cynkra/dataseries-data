@@ -1,7 +1,7 @@
 {
-  "ts": "2026-08-28T12:06:48Z",
+  "ts": "2026-08-29T08:31:03Z",
   "attempted": 70,
-  "ok": 32,
+  "ok": 31,
   "unchanged": [
     "ch_snb_amarbma",
     "ch_snb_ambeschkla",
@@ -42,5 +42,10 @@
     "ch_snb_zikrepro",
     "ch_snb_zimoma"
   ],
-  "skipped": []
+  "skipped": [
+    {
+      "id": "ch_fso_besta",
+      "error": "HTTP 400 Bad Request."
+    }
+  ]
 }
