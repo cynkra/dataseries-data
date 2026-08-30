@@ -78,6 +78,36 @@ by how clean they are to ingest:
    `mbannert` cube ids are retired. **Don't** sink time here for a cube that 400s — go
    to channel 1 (SDMX). The data is there.
 
+### The PX cubes are also DAM assets (`.px` masters)
+
+Every STAT-TAB cube is *also* a DAM asset, with the table id as its `orderNr` and
+the native `.px` file as its master. `R/source_fso_px.R::fso_px_fetch()` reads
+that instead of the json-stat API. Measured against the production route
+(`dev/compare_px_vs_pxweb.R`, 2026-08-30):
+
+- **2 requests instead of 7-18.** No 5000-cell cap, so no hand-written query, no
+  `chunk_by`/`chunk_size`, and no three extra GETs for de/fr/it labels.
+- **Full precision.** The `.px` header carries `DECIMALS 4` and `SHOWDECIMALS 0`;
+  the API serves the *shown* value, so everything we stored was rounded.
+- **`LAST-UPDATED`**, which the json-stat API does not expose — the reason five
+  datasheets say the publication date is "not published".
+- **Correct French.** PX-Web's json-stat emits latin1 bytes tagged as UTF-8, so
+  the typographic apostrophe in NOGA labels lands in `data/*.json` as a raw
+  `\x92` (`d\x92automobiles`). 20 such bytes across three datasets today. The
+  `.px` route decodes latin1 explicitly and gets `d’automobiles`.
+
+Two gotchas:
+
+- **`ELIMINATION` is implicit in PX-Web, explicit here.** A dimension a PX-Web
+  query does not mention is silently collapsed to its `ELIMINATION` level. The
+  `.px` is the whole cube, so that collapse must be asked for
+  (`eliminate = "Herkunftsland"` for hesta; without it the cube is 69x bigger).
+- **`lifecycleGroup=NON_CURRENT`** lists ~40 archived versions per cube, newest
+  first. Useful when FSO breaks a CURRENT master, but those are earlier
+  *vintages*: the newest archived besta differs from today's data in every cell
+  after 2018Q2 (median 0.32%, p95 2.8%), which is the revision window, not a
+  parse error.
+
 ### A fifth FSO channel: DAM masters that are already long CSVs
 Some DAM "cube" assets ship their master as a tidy, SDMX-style **long CSV** (one row
 per observation), not the row/column spreadsheets that need bespoke reshaping. For
