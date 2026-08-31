@@ -57,18 +57,37 @@ suppressPackageStartupMessages({
   )
 }
 
-# GET the master and decode. PX files are latin1 (CHARSET="ANSI"); reading them
-# as UTF-8 mangles every umlaut in the German dimension names, which are also the
-# stored column names, so the encoding is load-bearing.
+# GET the master and decode. The encoding is load-bearing: PX dimension names are
+# our stored column names, and level labels are published meta.
+#
+# The declared CODEPAGE is NOT trustworthy. Every FSO cube says
+# CHARSET="ANSI"; CODEPAGE="iso-8859-15", and both halves are wrong somewhere:
+#   - px-x-0602000000_103 is single-byte but contains 0x92, the CP1252 right
+#     single quote, which is undefined in ISO-8859-1 AND -15. Decoding by the
+#     declaration yields `d<0x92>automobiles`; that exact byte is sitting in
+#     data/ch_fso_{besta,besta_outlook,vacancies}.json today (20 of them),
+#     shipped there by the json-stat route, which trusts the same lie.
+#   - px-x-1503040100_103 and px-x-1604000000_102 are actually UTF-8 despite the
+#     same declaration. Force-decoding those as single-byte gives `AbschlÃ¼sse`.
+# So sniff instead: valid UTF-8 with at least one multi-byte sequence means
+# UTF-8; otherwise CP1252, the superset that covers the C1 characters FSO emits.
+# 8/24 sampled cubes carry C1 bytes and 2/15 are UTF-8, so both branches are live.
+.px_decode <- function(raw) {
+  has_high <- any(raw >= as.raw(0x80))
+  if (!has_high) return(rawToChar(raw))
+  if (!is.na(iconv(list(raw), "UTF-8", "UTF-8"))) return(iconv(list(raw), "UTF-8", "UTF-8"))
+  out <- iconv(list(raw), "WINDOWS-1252", "UTF-8")
+  if (is.na(out)) stop("PX master is neither UTF-8 nor CP1252")
+  out
+}
+
 .px_text <- function(url) {
   resp <- request(url) |>
     req_headers(`User-Agent` = "dataseries-data (+https://github.com/cynkra/dataseries-data)") |>
     req_timeout(180) |>
     .with_retry() |>
     req_perform()
-  txt <- rawToChar(resp_body_raw(resp))
-  Encoding(txt) <- "latin1"
-  enc2utf8(txt)
+  .px_decode(resp_body_raw(resp))
 }
 
 # ---- PX header parsing ----------------------------------------------------
@@ -89,24 +108,41 @@ suppressPackageStartupMessages({
   }, "")
 }
 
+.px_quoted <- function(s) {
+  out <- regmatches(s, gregexpr('"[^"]*"', s))[[1]]
+  if (!length(out)) return(character())
+  substr(out, 2L, nchar(out) - 1L)
+}
+
 # One header entry -> list(key, lang, args, value). `value` keeps quoted strings
 # as a character vector and leaves bare values (numbers, YES/NO) as-is.
+#
+# The split on `=` is scanned, not regexed: PX dimension names may contain
+# parentheses (px-x-0904010000_113 has `Kanton (-) / Gemeinde (......)`), so a
+# `\(([^)]*)\)` argument pattern truncates the name and every CODES/VALUES
+# lookup for that dimension then misses. Take the first `=` that is outside
+# quotes AND at paren depth 0.
 .px_entry <- function(txt) {
-  m <- regmatches(txt, regexec(
-    "^\\s*([A-Za-z0-9-]+)\\s*(\\[([a-z]{2})\\])?\\s*(\\(([^)]*)\\))?\\s*=\\s*(.*)$",
-    txt))[[1]]
-  if (!length(m)) return(NULL)
-  quoted <- function(s) {
-    out <- regmatches(s, gregexpr('"[^"]*"', s))[[1]]
-    if (!length(out)) return(character())
-    substr(out, 2L, nchar(out) - 1L)
+  ch <- strsplit(txt, "", fixed = TRUE)[[1]]
+  inq <- FALSE; depth <- 0L; eq <- NA_integer_
+  for (i in seq_along(ch)) {
+    c_ <- ch[i]
+    if (c_ == '"') inq <- !inq
+    else if (!inq && c_ == "(") depth <- depth + 1L
+    else if (!inq && c_ == ")") depth <- depth - 1L
+    else if (!inq && depth == 0L && c_ == "=") { eq <- i; break }
   }
-  val <- trimws(m[7])
+  if (is.na(eq)) return(NULL)
+  lhs <- paste(ch[seq_len(eq - 1L)], collapse = "")
+  val <- trimws(paste(ch[-seq_len(eq)], collapse = ""))
+
+  m <- regmatches(lhs, regexec("^\\s*([A-Za-z0-9-]+)\\s*(\\[([a-z]{2})\\])?\\s*(\\((.*)\\))?\\s*$", lhs))[[1]]
+  if (!length(m)) return(NULL)
   list(
     key   = m[2],
     lang  = if (nzchar(m[4])) m[4] else NA_character_,
-    args  = quoted(m[5]),
-    value = if (grepl('^"', val)) quoted(val) else trimws(val)
+    args  = .px_quoted(m[5]),
+    value = if (grepl('^"', val)) .px_quoted(val) else trimws(val)
   )
 }
 
@@ -235,7 +271,8 @@ fso_px_fetch <- function(dataset_id, table_id, title = NULL, select = NULL,
     dim_label <- setNames(list(d), deflang)
     # Same shape write_dataset()/drop_lang_echo() expect: levels[[code]]$label$<lang>.
     lev_label <- setNames(lapply(seq_along(cd), function(j) {
-      list(label = setNames(list(lb[j] %||% cd[j]), deflang))
+      lab <- if (j <= length(lb) && !is.na(lb[j])) lb[j] else cd[j]
+      list(label = setNames(list(lab), deflang))
     }), cd)
     for (L in names(names_by_lang)) {
       dn_L <- names_by_lang[[L]][i]

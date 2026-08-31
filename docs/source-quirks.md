@@ -96,7 +96,14 @@ that instead of the json-stat API. Measured against the production route
   `\x92` (`d\x92automobiles`). 20 such bytes across three datasets today. The
   `.px` route decodes latin1 explicitly and gets `d’automobiles`.
 
-Two gotchas:
+Three gotchas:
+
+- **The declared encoding is a lie, in both directions.** Every cube says
+  `CHARSET="ANSI"; CODEPAGE="iso-8859-15"`. Some are single-byte but carry CP1252
+  C1 bytes (`0x92`, the right single quote, undefined in 8859-1 and -15); others
+  are plain UTF-8. Sniff, do not trust the header: valid UTF-8 with a multi-byte
+  sequence means UTF-8, otherwise CP1252. 8 of 24 sampled cubes carry C1 bytes,
+  2 of 15 are UTF-8.
 
 - **`ELIMINATION` is implicit in PX-Web, explicit here.** A dimension a PX-Web
   query does not mention is silently collapsed to its `ELIMINATION` level. The
