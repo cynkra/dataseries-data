@@ -52,34 +52,34 @@ _Canonical series and labelled alternates per concept, grouped into the 12 overv
 ### Prices
 | Concept | Canonical | Alternates |
 |---|---|---|
-| Real estate prices | `ch_snb_plimoinchq` (SNB) | — |
 | Consumer prices | `ch_snb_plkopr` (SNB) ★ | `ch_fso_cpi` (FSO), `ch_fso_hicp` (Eurostat) |
-| Core inflation | `ch_snb_plkoprinfla` (SNB) | — |
-| Inflation forecast | `ch_snb_snbiprogq` (SNB) | — |
 | Producer & import prices | `ch_fso_ppi` (FSO) | — |
 | Construction prices | `ch_fso_construction_prices` (FSO) | — |
+| Real estate prices | `ch_snb_plimoinchq` (SNB) | — |
+| Core inflation | `ch_snb_plkoprinfla` (SNB) | — |
+| Inflation forecast | `ch_snb_snbiprogq` (SNB) | — |
 
 ### Labour
 | Concept | Canonical | Alternates |
 |---|---|---|
-| Unemployment | `ch_snb_amarbma` (SNB) ★ | `ch_fso_unemp_rate` (FSO) |
-| Employment / jobs | `ch_fso_besta` (FSO) ★ | `ch_snb_ambeschkla` (SNB), `ch_fso_jobs_sex` (FSO) |
 | Cross-border commuters | `ch_fso_cross_border_commuters` (FSO) | — |
 | Job market | `ch_adecco_sjmi` (University of Zurich (Stellenmarkt-Monitor Schweiz)) | — |
 | Job vacancies | `ch_fso_vacancies` (FSO) | — |
+| Employment / jobs | `ch_fso_besta` (FSO) ★ | `ch_fso_jobs_sex` (FSO), `ch_snb_ambeschkla` (SNB) |
 | Employment outlook | `ch_fso_besta_outlook` (FSO) | — |
 | Wages | `ch_fso_wage_idx` (FSO) | — |
+| Unemployment | `ch_snb_amarbma` (SNB) ★ | `ch_fso_unemp_rate` (FSO) |
 | Employment / employed persons | — | `ch_fso_ets` (FSO) |
 | Working time and working volume | `ch_fso_hours_worked` (FSO) | — |
 
 ### Business cycle & sentiment
 | Concept | Canonical | Alternates |
 |---|---|---|
-| Business cycle signals | `ch_snb_snbkosiq` (SNB) | — |
 | Consumer confidence | `ch_seco_concon` (SECO) ★ | — |
 | Leading barometer | `ch_kof_barometer` (KOF) | — |
 | Sentiment composite | `ch_kof_esi` (KOF) | — |
 | High-frequency activity tracker | `ch_seco_wwa` (SECO) | — |
+| Business cycle signals | `ch_snb_snbkosiq` (SNB) | — |
 
 ### Interest rates & yields
 | Concept | Canonical | Alternates |
@@ -103,7 +103,7 @@ _Canonical series and labelled alternates per concept, grouped into the 12 overv
 ### External sector
 | Concept | Canonical | Alternates |
 |---|---|---|
-| Foreign trade | `ch_snb_ausshawarm` (SNB) ★, `ch_fso_trade_partner` (FSO) | — |
+| Foreign trade | `ch_fso_trade_partner` (FSO), `ch_snb_ausshawarm` (SNB) ★ | — |
 | International investment position | `ch_snb_auvekomq` (SNB), `ch_snb_auversecq` (SNB) | `ch_snb_auvercurrq` (SNB), `ch_snb_auverdeptq` (SNB) |
 | Balance of payments | `ch_snb_bopcapbalq` (SNB), `ch_snb_bopcurrq` (SNB) | `ch_snb_bopoverq` (SNB), `ch_snb_bopservq` (SNB) |
 

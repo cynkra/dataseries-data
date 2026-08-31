@@ -47,8 +47,9 @@ the quirks a user or a maintainer must know.>
 
 ## Access
 - **type**: <slug — optional free prose>  (slug ∈ snb-cube | fso-dam-excel |
-  fso-dam-csv | fso-pxweb | fso-sdmx | seco-swissdata | kof-api | eurostat-sdmx |
-  scraped; the machine-readable family, parsed by `read_access()` in `R/io.R`)
+  fso-dam-csv | fso-dam-px | fso-pxweb | fso-sdmx | seco-swissdata | kof-api |
+  eurostat-sdmx | scraped; the machine-readable family, parsed by `read_access()`
+  in `R/io.R`)
 - **<identifier>**: <the family's canonical identifier line — `cube` |
   `order number` | `table id` | `flow` (agency/dataflow/version) | `set` |
   `key` | `dataflow` | `url`. PARSED, not prose: the pipeline fetches what is

@@ -14,7 +14,7 @@ root <- tryCatch(
   error = function(e) "R"
 )
 for (f in c("dates.R", "http.R", "datasheet.R", "io.R", "labels.R", "hierarchy.R", "source_snb.R", "source_kof.R",
-            "source_fso.R", "source_fso_excel.R", "source_fso_excel_sets.R",
+            "source_fso.R", "source_fso_px.R", "source_fso_excel.R", "source_fso_excel_sets.R",
             "source_fso_dam_csv.R", "source_fso_sdmx.R", "source_eurostat.R",
             "source_seco.R", "source_ffa.R", "source_adecco.R")) {
   source(file.path(root, f))
@@ -328,18 +328,26 @@ build <- function(only = NULL) {
                  "Tourism"))
 
   # FSO: jobs by economic division, quarterly (the BESTA employment headline).
-  # Full cube is 60 divisions x 10 levels x 3 sexes x 139 quarters (~250k cells),
-  # so we take the headline slice (all divisions, level/sex = Total) and chunk by
-  # quarter to stay under PX-Web's 5000-cell cap.
-  besta_query <- list(
-    list(code = "Wirtschaftsabteilung", selection = list(filter = "all", values = list("*"))),
-    list(code = "Beschäftigungsgrad", selection = list(filter = "item", values = list("TOT"))),
-    list(code = "Geschlecht", selection = list(filter = "item", values = list("TOT"))),
-    list(code = "Quartal", selection = list(filter = "all", values = list("*")))
-  )
+  #
+  # Fetched from the DAM asset hub, not PX-Web. On 2026-08-28 14:00Z FSO replaced
+  # this cube's master with its CSV export instead of the .px; PX-Web has served
+  # 400 on the API and 500 in its own UI ever since (issue #33). The CSV itself is
+  # a complete, current cube, so fso_px_fetch() reads it and takes the fr/it/en
+  # level labels from the newest archived .px vintage, whose NOGA codes are the
+  # same. When FSO re-uploads a real .px this call keeps working unchanged: the
+  # fetcher branches on what the master actually is.
+  #
+  # round_values keeps this dataset bit-identical to its PX-Web history while the
+  # other four fso-pxweb datasets are still on the json-stat route. The .px/CSV
+  # masters carry DECIMALS=4; PX-Web served SHOWDECIMALS=0. Precision is a
+  # separate decision for the whole group, not a side effect of this repair.
   add(.try_fetch("ch_fso_besta",
-                 fso_fetch("ch_fso_besta", "px-x-0602000000_101", besta_query,
-                           quarter_col = "Quartal", chunk_by = "Quartal", chunk_size = 40L),
+                 fso_px_fetch("ch_fso_besta", "px-x-0602000000_101",
+                              select = list(`Beschäftigungsgrad` = "TOT",
+                                            `Geschlecht` = "TOT"),
+                              quarter_col = "Quartal",
+                              label_lifecycle = "NON_CURRENT",
+                              round_values = TRUE),
                  "Labour"))
 
   # FSO labour depth: job vacancies (leading indicator) + jobs by sex.
