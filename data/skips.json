@@ -1,13 +1,5 @@
 {
-  "ts": "2026-08-30T14:23:53Z",
+  "ts": "2026-08-31T06:49:08Z",
   "alert_after_days": 3,
-  "skips": [
-    {
-      "id": "ch_fso_besta",
-      "error": "HTTP 400 Bad Request.",
-      "route": "alarm",
-      "escalated": false,
-      "consecutive_days": 3
-    }
-  ]
+  "skips": []
 }
