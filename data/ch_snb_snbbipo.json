@@ -5,7 +5,7 @@
     "D0"
   ],
   "start": "1996-12-01",
-  "end": "2026-06-01",
+  "end": "2026-07-01",
   "title": {
     "en": "SNB balance sheet",
     "de": "SNB-Bilanz",
@@ -309,7 +309,7 @@
       }
     }
   },
-  "updated": "2026-07-31 09:00",
+  "updated": "2026-08-31 09:00",
   "topic": {
     "key": "money-banking",
     "name": {
@@ -341,5 +341,5 @@
     "fr": "Ce que la Banque nationale suisse possède et doit chaque mois. Les placements en devises et l'or expliquent l'expansion après 2008.",
     "it": "Cosa la Banca nazionale svizzera possiede e deve ogni mese. Gli investimenti in valuta estera e l'oro spiegano l'espansione dopo il 2008."
   },
-  "fetched_utc": "2026-08-05 13:12:03"
+  "fetched_utc": "2026-08-31 08:37:35"
 }

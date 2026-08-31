@@ -1,5 +1,5 @@
 {
-  "checked": "2026-08-31 06:49 UTC",
+  "checked": "2026-08-31 08:37 UTC",
   "counts": {
     "green": 70,
     "red": 0,
@@ -7,6 +7,17 @@
     "total": 70
   },
   "datasets": [
+    {
+      "id": "ch_snb_snbbipo",
+      "title": "SNB balance sheet",
+      "source": "Swiss National Bank",
+      "frequency": "monthly",
+      "end": "2026-07-01",
+      "updated": "2026-08-31 09:00",
+      "age_days": 61,
+      "threshold_days": 165,
+      "status": "green"
+    },
     {
       "id": "ch_seco_gdp",
       "title": "Gross domestic product (GDP)",
@@ -621,17 +632,6 @@
       "updated": "2026-08-03 14:30",
       "age_days": 31,
       "threshold_days": 75,
-      "status": "green"
-    },
-    {
-      "id": "ch_snb_snbbipo",
-      "title": "SNB balance sheet",
-      "source": "Swiss National Bank",
-      "frequency": "monthly",
-      "end": "2026-06-01",
-      "updated": "2026-07-31 09:00",
-      "age_days": 91,
-      "threshold_days": 165,
       "status": "green"
     },
     {

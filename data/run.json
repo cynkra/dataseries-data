@@ -1,7 +1,7 @@
 {
-  "ts": "2026-08-31T06:49:08Z",
+  "ts": "2026-08-31T08:37:38Z",
   "attempted": 70,
-  "ok": 32,
+  "ok": 33,
   "unchanged": [
     "ch_snb_amarbma",
     "ch_snb_ambeschkla",
@@ -27,7 +27,6 @@
     "ch_snb_plkopr",
     "ch_snb_plkoprinfla",
     "ch_snb_rendeiduebd",
-    "ch_snb_snbbipo",
     "ch_snb_snbiprogq",
     "ch_snb_snbkosiq",
     "ch_snb_snbmoba",
