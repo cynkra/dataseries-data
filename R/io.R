@@ -88,6 +88,7 @@ DS_ACCESS_ID_KEYS <- list(
   "snb-cube"       = "cube",
   "fso-dam-excel"  = c("order number", "asset ids"),  # trade_partner pins asset ids
   "fso-dam-csv"    = "order number",
+  "fso-dam-px"     = "table id",       # PX cube pulled from DAM, not PX-Web
   "fso-pxweb"      = "table id",
   "fso-sdmx"       = "flow",            # compact agency/dataflow/version
   "seco-swissdata" = "set",

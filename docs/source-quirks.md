@@ -96,6 +96,9 @@ that instead of the json-stat API. Measured against the production route
   `\x92` (`d\x92automobiles`). 20 such bytes across three datasets today. The
   `.px` route decodes latin1 explicitly and gets `d’automobiles`.
 
+`ch_fso_besta` runs on this route today (see its datasheet); the other four
+`fso-pxweb` datasets are still on json-stat.
+
 Three gotchas:
 
 - **The declared encoding is a lie, in both directions.** Every cube says

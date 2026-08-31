@@ -7,7 +7,7 @@
       "error": "HTTP 400 Bad Request.",
       "route": "alarm",
       "escalated": false,
-      "consecutive_days": 2
+      "consecutive_days": 3
     }
   ]
 }

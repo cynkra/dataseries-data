@@ -173,6 +173,78 @@ suppressPackageStartupMessages({
   suppressWarnings(as.numeric(ifelse(grepl("^(\\.+|-)$", toks), NA, toks)))
 }
 
+
+# ---- CSV cube export (the broken-master fallback) -------------------------
+
+# Some DAM CUBE masters are the cube's *CSV export* rather than the .px. As of
+# 2026-08-31 exactly one of 765 is: px-x-0602000000_101, re-uploaded 2026-08-28
+# 14:00Z, which is what took PX-Web's copy of that table down (400 on the API,
+# 500 in the UI). The file itself is fine and carries the full current cube, so
+# it is a usable source while FSO's copy is broken.
+#
+# Layout is wide: one code row + one label row per HEADING dimension (each keyed
+# by the dimension name in column 1), then a row naming the STUB dimensions
+# (each occupying a code column and a label column), then the data rows.
+#
+#   Beschäftigungsgrad ;;;;TOT;;;1;;;...        <- heading codes, sparse
+#   Beschäftigungsgrad ;;;;...Total;;;Vollzeit  <- heading labels
+#   Geschlecht;;;;TOT;1;2;TOT;1;2;...           <- heading codes, dense
+#   Geschlecht;;;;...                           <- heading labels
+#   Wirtschaftsabteilung;Wirtschaftsabteilung;Quartal;Quartal;;;   <- stub names
+#   10-12 ;10-12 Herstellung ...;1991Q3 ;1991Q3 ;95335.9782;...    <- data
+#
+# The CSV has German labels only, so a caller that needs the fr/it/en level
+# labels has to source them elsewhere (see `label_lifecycle` in fso_px_fetch).
+.px_csv_cube <- function(txt) {
+  rows <- utils::read.table(text = txt, sep = ";", quote = "", comment.char = "",
+                            colClasses = "character", fill = TRUE,
+                            header = FALSE, blank.lines.skip = FALSE)
+  rows <- lapply(seq_len(nrow(rows)), function(i) trimws(as.character(rows[i, ])))
+
+  # First data row: the first row whose 5th field is numeric.
+  is_num <- vapply(rows, function(r) {
+    length(r) >= 5 && !is.na(suppressWarnings(as.numeric(r[5])))
+  }, TRUE)
+  first <- which(is_num)[1]
+  if (is.na(first)) stop("CSV cube: no data rows found")
+
+  stub_row <- rows[[first - 1L]]
+  hdr <- rows[seq(2L, first - 2L)]          # row 1 is the title
+  if (length(hdr) %% 2 != 0) stop("CSV cube: unpaired heading rows")
+
+  # STUB dims occupy (code, label) column pairs at the left of every data row.
+  stub_names <- stub_row[nzchar(stub_row)]
+  stub <- unique(stub_names)
+  n_stub_cols <- length(stub_names)
+  if (n_stub_cols != 2L * length(stub)) stop("CSV cube: unexpected stub layout")
+  stub_code_col <- seq(1L, n_stub_cols, by = 2L)
+
+  # HEADING dims: the code row of each pair, forward-filled across its span.
+  ffill <- function(x) { for (i in seq_along(x)) if (!nzchar(x[i]) && i > 1) x[i] <- x[i - 1L]; x }
+  head_dims <- vapply(hdr[seq(1L, length(hdr), by = 2L)], function(r) r[1], "")
+  head_codes <- lapply(hdr[seq(1L, length(hdr), by = 2L)], function(r) {
+    ffill(r[-seq_len(n_stub_cols)])
+  })
+  names(head_codes) <- head_dims
+
+  dat <- rows[first:length(rows)]
+  dat <- dat[vapply(dat, function(r) length(r) > n_stub_cols && nzchar(r[1]), TRUE)]
+  vcols <- seq(n_stub_cols + 1L, length(head_codes[[1]]) + n_stub_cols)
+
+  out <- lapply(seq_along(vcols), function(k) {
+    v <- suppressWarnings(as.numeric(vapply(dat, function(r) r[vcols[k]] %||% NA_character_, "")))
+    d <- as.data.frame(
+      lapply(stub_code_col, function(cc) vapply(dat, function(r) r[cc], "")),
+      stringsAsFactors = FALSE)
+    names(d) <- stub
+    for (hd in head_dims) d[[hd]] <- head_codes[[hd]][k]
+    d$value <- v
+    d[!is.na(d$value), , drop = FALSE]
+  })
+  data <- do.call(rbind, out)
+  list(data = data, dim_ids = c(stub, head_dims))
+}
+
 # ---- main entry point -----------------------------------------------------
 
 # Fetch one FSO PX cube from DAM and return the same shape fso_fetch() returns:
@@ -190,28 +262,66 @@ suppressPackageStartupMessages({
 #            that implicit collapse has to be asked for. ELIMINATION names the
 #            level by LABEL, not code, so it is resolved against VALUES.
 #   lifecycle "CURRENT" (live cube) or "NON_CURRENT" (newest archived version).
+#   label_lifecycle  when the CURRENT master is a CSV export (German only), pull
+#            the fr/it/en level labels from this lifecycle's .px instead. NOGA
+#            codes are stable across vintages, so the newest archived cube
+#            relabels the current data correctly.
+#   round_values  round to integers, i.e. reproduce PX-Web's SHOWDECIMALS=0
+#            output. Keeps a dataset bit-stable when only its ROUTE changes.
 fso_px_fetch <- function(dataset_id, table_id, title = NULL, select = NULL,
                          eliminate = character(), year_col = "Jahr",
                          month_col = "Monat", quarter_col = NULL,
-                         lifecycle = "CURRENT") {
+                         lifecycle = "CURRENT", label_lifecycle = NULL,
+                         round_values = FALSE) {
   asset <- .px_dam_asset(table_id, lifecycle)
   txt <- .px_text(asset$url)
-  if (!grepl("^\\s*CHARSET", txt)) {
-    stop(sprintf("DAM master for %s is not a PX file (got: %s)",
-                 table_id, substr(txt, 1, 40)))
-  }
+  is_px <- grepl("^\\s*CHARSET", txt)
 
-  parts <- strsplit(txt, "\nDATA=", fixed = TRUE)[[1]]
-  if (length(parts) < 2) stop(sprintf("no DATA block in PX file for %s", table_id))
-  entries <- .px_parse_header(parts[1])
-  vals <- .px_values(paste(parts[-1], collapse = "\nDATA="))
+  if (is_px) {
+    parts <- strsplit(txt, "\nDATA=", fixed = TRUE)[[1]]
+    if (length(parts) < 2) stop(sprintf("no DATA block in PX file for %s", table_id))
+    entries <- .px_parse_header(parts[1])
+    vals <- .px_values(paste(parts[-1], collapse = "\nDATA="))
+    dim_ids <- c(.px_get(entries, "STUB") %||% character(),
+                 .px_get(entries, "HEADING") %||% character())
+    if (!length(dim_ids)) stop(sprintf("no STUB/HEADING in PX file for %s", table_id))
+    csv_data <- NULL
+  } else {
+    # FSO uploaded the cube's CSV export in place of the .px. The file is a
+    # complete, current cube, so read it -- but it is German-only, so the
+    # multilingual labels come from a .px vintage the caller names.
+    if (is.null(label_lifecycle)) {
+      stop(sprintf("DAM master for %s is not a PX file (got: %s)",
+                   table_id, substr(txt, 1, 40)))
+    }
+    csv <- .px_csv_cube(txt)
+    csv_data <- csv$data
+    lab <- .px_dam_asset(table_id, label_lifecycle)
+    lparts <- strsplit(.px_text(lab$url), "\nDATA=", fixed = TRUE)[[1]]
+    entries <- .px_parse_header(lparts[1])
+    vals <- NULL
+
+    # The CSV export decorates dimension names ("Wirtschaftsabteilung (NOGA
+    # 2008)" vs the .px's "Wirtschaftsabteilung") and orders them differently.
+    # Match on the CODE SET instead, which is identical across the two, and
+    # adopt the .px name so the stored column names do not change.
+    px_dims <- c(.px_get(entries, "STUB") %||% character(),
+                 .px_get(entries, "HEADING") %||% character())
+    dim_ids <- vapply(csv$dim_ids, function(d) {
+      obs <- unique(csv_data[[d]])
+      score <- vapply(px_dims, function(pd) {
+        pc <- .px_get(entries, "CODES", arg = pd) %||% .px_get(entries, "VALUES", arg = pd)
+        length(intersect(obs, pc)) / max(1L, length(union(obs, pc)))
+      }, 0)
+      if (max(score) < 0.5) stop(sprintf("CSV dimension '%s' matches no .px dimension", d))
+      px_dims[which.max(score)]
+    }, "")
+    names(csv_data)[match(csv$dim_ids, names(csv_data))] <- unname(dim_ids)
+    dim_ids <- unname(dim_ids)
+  }
 
   langs <- .px_get(entries, "LANGUAGES")
   deflang <- .px_get(entries, "LANGUAGE")
-  stub <- .px_get(entries, "STUB") %||% character()
-  head <- .px_get(entries, "HEADING") %||% character()
-  dim_ids <- c(stub, head)
-  if (!length(dim_ids)) stop(sprintf("no STUB/HEADING in PX file for %s", table_id))
 
   # Codes + default-language labels, per dimension.
   codes <- lapply(dim_ids, function(d) {
@@ -224,19 +334,22 @@ fso_px_fetch <- function(dataset_id, table_id, title = NULL, select = NULL,
   })
   names(codes) <- dim_ids
 
-  n <- prod(vapply(codes, function(x) length(x$codes), 1L))
-  if (length(vals) != n) {
-    stop(sprintf("PX cell count mismatch for %s: header declares %d, DATA has %d",
-                 table_id, n, length(vals)))
+  if (is_px) {
+    n <- prod(vapply(codes, function(x) length(x$codes), 1L))
+    if (length(vals) != n) {
+      stop(sprintf("PX cell count mismatch for %s: header declares %d, DATA has %d",
+                   table_id, n, length(vals)))
+    }
+    # Row-major with the LAST dimension varying fastest.
+    grid <- expand.grid(lapply(rev(codes), function(x) x$codes),
+                        KEEP.OUT.ATTRS = FALSE, stringsAsFactors = FALSE)
+    grid <- grid[, rev(seq_along(grid)), drop = FALSE]
+    names(grid) <- dim_ids
+    grid$value <- vals
+    data <- grid[!is.na(grid$value), , drop = FALSE]
+  } else {
+    data <- csv_data[, c(dim_ids, "value"), drop = FALSE]
   }
-
-  # Row-major with the LAST dimension varying fastest.
-  grid <- expand.grid(lapply(rev(codes), function(x) x$codes),
-                      KEEP.OUT.ATTRS = FALSE, stringsAsFactors = FALSE)
-  grid <- grid[, rev(seq_along(grid)), drop = FALSE]
-  names(grid) <- dim_ids
-  grid$value <- vals
-  data <- grid[!is.na(grid$value), , drop = FALSE]
 
   # Dimensions PX-Web would have eliminated implicitly.
   for (dn in eliminate) {
@@ -253,6 +366,12 @@ fso_px_fetch <- function(dataset_id, table_id, title = NULL, select = NULL,
     if (!dn %in% names(data)) stop(sprintf("select: no dimension '%s' in %s", dn, table_id))
     data <- data[data[[dn]] %in% select[[dn]], , drop = FALSE]
   }
+
+  # PX-Web serves SHOWDECIMALS, not DECIMALS, so everything fetched through the
+  # json-stat route was rounded. Reproduce that when only the route is changing.
+  # PX-Web rounds half AWAY FROM ZERO; R's round() is half-to-even, which differs
+  # on exact .5 ties (1 cell in 8400 for besta: 61314.5 -> 61315, not 61314).
+  if (round_values) data$value <- sign(data$value) * floor(abs(data$value) + 0.5)
 
   # Localized labels. STUB[fr]/HEADING[fr] give the fr *names* of the same dims
   # in the same order, and VALUES[fr]("<fr name>") its level labels -- so the
@@ -296,8 +415,10 @@ fso_px_fetch <- function(dataset_id, table_id, title = NULL, select = NULL,
 
   # LAST-UPDATED is "YYYYMMDD HH:MM"; the embargo is the dissemination date. The
   # json-stat route had neither, so the datasheets say "not published".
-  lu <- .px_get(entries, "LAST-UPDATED")
-  updated <- if (!is.null(lu)) as.character(as.Date(substr(lu, 1, 8), "%Y%m%d")) else NA_character_
+  lu <- if (is_px) .px_get(entries, "LAST-UPDATED") else NULL
+  updated <- if (!is.null(lu)) as.character(as.Date(substr(lu, 1, 8), "%Y%m%d"))
+             else if (!is.na(asset$embargo)) substr(asset$embargo, 1, 10)
+             else NA_character_
 
   meta <- list(
     title = title %||% list(en = table_id),

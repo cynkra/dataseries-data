@@ -10,19 +10,25 @@
 - **frequency**: quarterly
 - **coverage**: 1991-07 .. 2026-01
 - **series**: 60
-- **updated**: not published (live PX-Web pull; latest observation 2026Q1)
+- **updated**: 2026-08-27 (from the cube's DAM embargo / PX `LAST-UPDATED`)
 
 ## What is special
 Number of jobs in Switzerland by industry, quarterly, down to two-digit divisions such as pharmaceuticals, financial services and health.
 
 ## Access
-- **type**: fso-pxweb — FSO PX-Web (json-stat2)
+- **type**: fso-dam-px — FSO PX cube via the DAM asset API
 - **table id**: `px-x-0602000000_101`
 - **endpoint / table id**: `px-x-0602000000_101` (node; real table at
   `.../px-x-0602000000_101/px-x-0602000000_101.px`)
-- **call**: `fso_fetch("ch_fso_besta", "px-x-0602000000_101", besta_query,
-  quarter_col = "Quartal", chunk_by = "Quartal", chunk_size = 40L)` with an
-  explicit query (not `fso_fetch_auto`).
+- **call**: `fso_px_fetch("ch_fso_besta", "px-x-0602000000_101", select = list(
+  Beschäftigungsgrad = "TOT", Geschlecht = "TOT"), quarter_col = "Quartal",
+  label_lifecycle = "NON_CURRENT", round_values = TRUE)`.
+- **why not PX-Web**: on 2026-08-28 14:00Z FSO replaced this cube's DAM master
+  with its CSV export instead of the `.px`. PX-Web has returned 400 on the API
+  and 500 in its own UI ever since. The CSV is a complete, current cube, so we
+  read that; `label_lifecycle` takes the fr/it/en level labels from the newest
+  archived `.px`, whose NOGA codes are identical. The fetcher branches on what
+  the master actually is, so a fixed `.px` upload needs no change here.
 
 ## Parsing recipe
 - The full cube is ~60 divisions x 10 employment-rate levels x 3 sexes x ~139
