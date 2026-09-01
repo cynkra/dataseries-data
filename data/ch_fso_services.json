@@ -7,7 +7,7 @@
     "INDICATOR_KE"
   ],
   "start": "2021-01-01",
-  "end": "2026-01-01",
+  "end": "2026-04-01",
   "title": {
     "en": "Services turnover",
     "de": "Umsätze Dienstleistungssektor",
@@ -219,5 +219,5 @@
     "fr": "Chiffre d'affaires du secteur suisse des services par trimestre, en complément du commerce de détail et de l'industrie. Base 2021 = 100, donc historique court.",
     "it": "Fatturato del settore svizzero dei servizi per trimestre, a completamento di commercio al dettaglio e industria. Base 2021 = 100, quindi storia breve."
   },
-  "fetched_utc": "2026-08-31 08:37:35"
+  "fetched_utc": "2026-09-01 08:35:26"
 }
