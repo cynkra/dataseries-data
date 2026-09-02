@@ -1,5 +1,207 @@
 [
   {
+    "id": "ch_snb_devkum",
+    "title": {
+      "en": "Bilateral exchange rates",
+      "de": "Bilaterale Wechselkurse",
+      "fr": "Taux de change bilatéraux",
+      "it": "Tassi di cambio bilaterali"
+    },
+    "concept": {
+      "en": "Exchange rates / Bilateral FX",
+      "leaf": {
+        "en": "Bilateral FX",
+        "de": "Bilaterale Wechselkurse",
+        "fr": "Change bilatéral",
+        "it": "Cambi bilaterali"
+      }
+    },
+    "canonical": true,
+    "featured": {
+      "en": "Exchange rates",
+      "de": "Wechselkurse",
+      "fr": "Taux de change",
+      "it": "Tassi di cambio"
+    },
+    "topic": {
+      "key": "exchange-rates",
+      "name": {
+        "en": "Exchange rates",
+        "de": "Wechselkurse",
+        "fr": "Taux de change",
+        "it": "Tassi di cambio"
+      }
+    },
+    "source": {
+      "key": "snb",
+      "name": {
+        "en": "Swiss National Bank",
+        "de": "Schweizerische Nationalbank (SNB)",
+        "fr": "Banque nationale suisse (BNS)",
+        "it": "Banca nazionale svizzera (BNS)"
+      }
+    },
+    "license": "snb",
+    "frequency": "monthly",
+    "start": "1914-01-01",
+    "end": "2026-08-01",
+    "n_series": 54,
+    "updated": "2026-09-01 14:30",
+    "fetched": "2026-09-02 08:38:14",
+    "load": "whole",
+    "data": "ch_snb_devkum.csv",
+    "meta": "ch_snb_devkum.json"
+  },
+  {
+    "id": "ch_snb_rendeiduebd",
+    "title": {
+      "en": "Bond yields (spot rates)",
+      "de": "Obligationenrenditen (Kassazinssätze)",
+      "fr": "Rendements obligataires (taux au comptant)",
+      "it": "Rendimenti obbligazionari (tassi a pronti)"
+    },
+    "concept": {
+      "en": "Interest rates & yields / Bond yields",
+      "leaf": {
+        "en": "Bond yields",
+        "de": "Obligationenrenditen",
+        "fr": "Rendements obligataires",
+        "it": "Rendimenti obbligazionari"
+      }
+    },
+    "canonical": true,
+    "featured": null,
+    "topic": {
+      "key": "interest-rates-yields",
+      "name": {
+        "en": "Interest rates & yields",
+        "de": "Zinsen & Renditen",
+        "fr": "Taux d'intérêt & rendements",
+        "it": "Tassi d'interesse e rendimenti"
+      }
+    },
+    "source": {
+      "key": "snb",
+      "name": {
+        "en": "Swiss National Bank",
+        "de": "Schweizerische Nationalbank (SNB)",
+        "fr": "Banque nationale suisse (BNS)",
+        "it": "Banca nazionale svizzera (BNS)"
+      }
+    },
+    "license": "snb",
+    "frequency": "daily",
+    "start": "1988-01-04",
+    "end": "2026-08-31",
+    "n_series": 48,
+    "updated": "2026-09-01 14:30",
+    "fetched": "2026-09-02 08:38:14",
+    "load": "whole",
+    "data": "ch_snb_rendeiduebd.csv",
+    "meta": "ch_snb_rendeiduebd.json"
+  },
+  {
+    "id": "ch_snb_zikrepro",
+    "title": {
+      "en": "Published interest rates",
+      "de": "Publizierte Zinssätze",
+      "fr": "Taux d'intérêt publiés",
+      "it": "Tassi d'interesse pubblicati"
+    },
+    "concept": {
+      "en": "Interest rates & yields / Money-market rates",
+      "leaf": {
+        "en": "Money-market rates",
+        "de": "Geldmarktsätze",
+        "fr": "Taux du marché monétaire",
+        "it": "Tassi del mercato monetario"
+      }
+    },
+    "canonical": false,
+    "featured": null,
+    "topic": {
+      "key": "interest-rates-yields",
+      "name": {
+        "en": "Interest rates & yields",
+        "de": "Zinsen & Renditen",
+        "fr": "Taux d'intérêt & rendements",
+        "it": "Tassi d'interesse e rendimenti"
+      }
+    },
+    "source": {
+      "key": "snb",
+      "name": {
+        "en": "Swiss National Bank",
+        "de": "Schweizerische Nationalbank (SNB)",
+        "fr": "Banque nationale suisse (BNS)",
+        "it": "Banca nazionale svizzera (BNS)"
+      }
+    },
+    "license": "snb",
+    "frequency": "monthly",
+    "start": "1933-01-01",
+    "end": "2026-07-01",
+    "n_series": 228,
+    "updated": "2026-09-01 14:30",
+    "fetched": "2026-09-02 08:38:15",
+    "load": "whole",
+    "data": "ch_snb_zikrepro.csv",
+    "meta": "ch_snb_zikrepro.json"
+  },
+  {
+    "id": "ch_snb_zimoma",
+    "title": {
+      "en": "Money market rates",
+      "de": "Geldmarktsätze",
+      "fr": "Taux du marché monétaire",
+      "it": "Tassi del mercato monetario"
+    },
+    "concept": {
+      "en": "Interest rates & yields / Money-market rates",
+      "leaf": {
+        "en": "Money-market rates",
+        "de": "Geldmarktsätze",
+        "fr": "Taux du marché monétaire",
+        "it": "Tassi del mercato monetario"
+      }
+    },
+    "canonical": true,
+    "featured": {
+      "en": "SARON",
+      "de": "SARON",
+      "fr": "SARON",
+      "it": "SARON"
+    },
+    "topic": {
+      "key": "interest-rates-yields",
+      "name": {
+        "en": "Interest rates & yields",
+        "de": "Zinsen & Renditen",
+        "fr": "Taux d'intérêt & rendements",
+        "it": "Tassi d'interesse e rendimenti"
+      }
+    },
+    "source": {
+      "key": "snb",
+      "name": {
+        "en": "Swiss National Bank",
+        "de": "Schweizerische Nationalbank (SNB)",
+        "fr": "Banque nationale suisse (BNS)",
+        "it": "Banca nazionale svizzera (BNS)"
+      }
+    },
+    "license": "snb",
+    "frequency": "monthly",
+    "start": "1972-01-01",
+    "end": "2026-08-01",
+    "n_series": 13,
+    "updated": "2026-09-01 14:30",
+    "fetched": "2026-09-02 08:38:15",
+    "load": "whole",
+    "data": "ch_snb_zimoma.csv",
+    "meta": "ch_snb_zimoma.json"
+  },
+  {
     "id": "ch_seco_gdp",
     "title": {
       "en": "Gross domestic product (GDP)",
@@ -47,7 +249,7 @@
     "end": "2026-01-01",
     "n_series": 660,
     "updated": "2026-02-23 16:51:17",
-    "fetched": "2026-09-01 08:35:25",
+    "fetched": "2026-09-02 08:38:15",
     "load": "whole",
     "data": "ch_seco_gdp.csv",
     "meta": "ch_seco_gdp.json"
@@ -100,7 +302,7 @@
     "end": "2026-07-01",
     "n_series": 39,
     "updated": "2026-08-04 11:54:52",
-    "fetched": "2026-09-01 08:35:25",
+    "fetched": "2026-09-02 08:38:15",
     "load": "whole",
     "data": "ch_seco_concon.csv",
     "meta": "ch_seco_concon.json"
@@ -153,7 +355,7 @@
     "end": "2026-07-01",
     "n_series": 171,
     "updated": null,
-    "fetched": "2026-09-01 08:35:25",
+    "fetched": "2026-09-02 08:38:15",
     "load": "whole",
     "data": "ch_fso_retail.csv",
     "meta": "ch_fso_retail.json"
@@ -201,7 +403,7 @@
     "end": "2026-04-01",
     "n_series": 87,
     "updated": null,
-    "fetched": "2026-09-01 08:35:25",
+    "fetched": "2026-09-02 08:38:15",
     "load": "whole",
     "data": "ch_fso_production.csv",
     "meta": "ch_fso_production.json"
@@ -249,7 +451,7 @@
     "end": "2026-04-01",
     "n_series": 66,
     "updated": null,
-    "fetched": "2026-09-01 08:35:26",
+    "fetched": "2026-09-02 08:38:15",
     "load": "whole",
     "data": "ch_fso_services.csv",
     "meta": "ch_fso_services.json"
@@ -297,7 +499,7 @@
     "end": "2026-07-01",
     "n_series": 12,
     "updated": null,
-    "fetched": "2026-09-01 08:35:26",
+    "fetched": "2026-09-02 08:38:15",
     "load": "whole",
     "data": "ch_fso_new_vehicles.csv",
     "meta": "ch_fso_new_vehicles.json"
@@ -345,7 +547,7 @@
     "end": "2025-01-01",
     "n_series": 2,
     "updated": null,
-    "fetched": "2026-09-01 08:35:26",
+    "fetched": "2026-09-02 08:38:15",
     "load": "whole",
     "data": "ch_fso_vacant_dwellings.csv",
     "meta": "ch_fso_vacant_dwellings.json"
@@ -393,7 +595,7 @@
     "end": "2026-04-01",
     "n_series": 27,
     "updated": null,
-    "fetched": "2026-09-01 08:35:26",
+    "fetched": "2026-09-02 08:38:15",
     "load": "whole",
     "data": "ch_fso_cross_border_commuters.csv",
     "meta": "ch_fso_cross_border_commuters.json"
@@ -441,7 +643,7 @@
     "end": "2024-01-01",
     "n_series": 9,
     "updated": null,
-    "fetched": "2026-09-01 08:35:26",
+    "fetched": "2026-09-02 08:38:15",
     "load": "whole",
     "data": "ch_fso_pop_detail.csv",
     "meta": "ch_fso_pop_detail.json"
@@ -489,7 +691,7 @@
     "end": "2025-01-01",
     "n_series": 249,
     "updated": "2025-03-18",
-    "fetched": "2026-09-01 08:35:26",
+    "fetched": "2026-09-02 08:38:15",
     "load": "whole",
     "data": "ch_ffa_finances.csv",
     "meta": "ch_ffa_finances.json"
@@ -537,7 +739,7 @@
     "end": "2026-08-01",
     "n_series": 1,
     "updated": null,
-    "fetched": "2026-09-01 08:35:26",
+    "fetched": "2026-09-02 08:38:15",
     "load": "whole",
     "data": "ch_kof_barometer.csv",
     "meta": "ch_kof_barometer.json"
@@ -585,7 +787,7 @@
     "end": "2026-08-01",
     "n_series": 2,
     "updated": null,
-    "fetched": "2026-09-01 08:35:26",
+    "fetched": "2026-09-02 08:38:15",
     "load": "whole",
     "data": "ch_kof_esi.csv",
     "meta": "ch_kof_esi.json"
@@ -633,7 +835,7 @@
     "end": "2026-06-01",
     "n_series": 4,
     "updated": null,
-    "fetched": "2026-09-01 08:35:26",
+    "fetched": "2026-09-02 08:38:15",
     "load": "whole",
     "data": "ch_adecco_sjmi.csv",
     "meta": "ch_adecco_sjmi.json"
@@ -681,7 +883,7 @@
     "end": "2026-06-01",
     "n_series": 14,
     "updated": null,
-    "fetched": "2026-09-01 08:35:26",
+    "fetched": "2026-09-02 08:38:15",
     "load": "whole",
     "data": "ch_fso_hesta.csv",
     "meta": "ch_fso_hesta.json"
@@ -734,7 +936,7 @@
     "end": "2026-04-01",
     "n_series": 60,
     "updated": "2026-08-27",
-    "fetched": "2026-09-01 08:35:26",
+    "fetched": "2026-09-02 08:38:16",
     "load": "whole",
     "data": "ch_fso_besta.csv",
     "meta": "ch_fso_besta.json"
@@ -782,7 +984,7 @@
     "end": "2026-04-01",
     "n_series": 60,
     "updated": null,
-    "fetched": "2026-09-01 08:35:26",
+    "fetched": "2026-09-02 08:38:16",
     "load": "whole",
     "data": "ch_fso_vacancies.csv",
     "meta": "ch_fso_vacancies.json"
@@ -830,7 +1032,7 @@
     "end": "2026-04-01",
     "n_series": 336,
     "updated": null,
-    "fetched": "2026-09-01 08:35:26",
+    "fetched": "2026-09-02 08:38:16",
     "load": "whole",
     "data": "ch_fso_jobs_sex.csv",
     "meta": "ch_fso_jobs_sex.json"
@@ -878,7 +1080,7 @@
     "end": "2026-04-01",
     "n_series": 20,
     "updated": null,
-    "fetched": "2026-09-01 08:35:26",
+    "fetched": "2026-09-02 08:38:16",
     "load": "whole",
     "data": "ch_fso_besta_outlook.csv",
     "meta": "ch_fso_besta_outlook.json"
@@ -926,7 +1128,7 @@
     "end": "2026-07-01",
     "n_series": 595,
     "updated": "2026-08-03",
-    "fetched": "2026-09-01 08:35:27",
+    "fetched": "2026-09-02 08:38:16",
     "load": "whole",
     "data": "ch_fso_cpi.csv",
     "meta": "ch_fso_cpi.json"
@@ -974,7 +1176,7 @@
     "end": "2026-07-01",
     "n_series": 7,
     "updated": "2026-08-13",
-    "fetched": "2026-09-01 08:35:27",
+    "fetched": "2026-09-02 08:38:16",
     "load": "whole",
     "data": "ch_fso_ppi.csv",
     "meta": "ch_fso_ppi.json"
@@ -1022,7 +1224,7 @@
     "end": "2025-01-01",
     "n_series": 12,
     "updated": "2026-04-21",
-    "fetched": "2026-09-01 08:35:27",
+    "fetched": "2026-09-02 08:38:16",
     "load": "whole",
     "data": "ch_fso_wage_idx.csv",
     "meta": "ch_fso_wage_idx.json"
@@ -1075,7 +1277,7 @@
     "end": "2025-01-01",
     "n_series": 10,
     "updated": "2026-08-20",
-    "fetched": "2026-09-01 08:35:27",
+    "fetched": "2026-09-02 08:38:16",
     "load": "whole",
     "data": "ch_fso_pop.csv",
     "meta": "ch_fso_pop.json"
@@ -1123,7 +1325,7 @@
     "end": "2026-06-01",
     "n_series": 5,
     "updated": "2026-08-18",
-    "fetched": "2026-09-01 08:35:27",
+    "fetched": "2026-09-02 08:38:16",
     "load": "whole",
     "data": "ch_fso_unemp_rate.csv",
     "meta": "ch_fso_unemp_rate.json"
@@ -1171,7 +1373,7 @@
     "end": "2025-01-01",
     "n_series": 3,
     "updated": "2026-08-28",
-    "fetched": "2026-09-01 08:35:27",
+    "fetched": "2026-09-02 08:38:16",
     "load": "whole",
     "data": "ch_fso_labour_productivity.csv",
     "meta": "ch_fso_labour_productivity.json"
@@ -1219,7 +1421,7 @@
     "end": "2026-01-01",
     "n_series": 69,
     "updated": "2026-06-16",
-    "fetched": "2026-09-01 08:35:27",
+    "fetched": "2026-09-02 08:38:16",
     "load": "whole",
     "data": "ch_fso_ets.csv",
     "meta": "ch_fso_ets.json"
@@ -1267,7 +1469,7 @@
     "end": "2025-01-01",
     "n_series": 37,
     "updated": "2026-08-25",
-    "fetched": "2026-09-01 08:35:27",
+    "fetched": "2026-09-02 08:38:16",
     "load": "whole",
     "data": "ch_fso_gfcf_detail.csv",
     "meta": "ch_fso_gfcf_detail.json"
@@ -1315,7 +1517,7 @@
     "end": "2025-01-01",
     "n_series": 45,
     "updated": "2026-05-21",
-    "fetched": "2026-09-01 08:35:27",
+    "fetched": "2026-09-02 08:38:16",
     "load": "whole",
     "data": "ch_fso_hours_worked.csv",
     "meta": "ch_fso_hours_worked.json"
@@ -1363,7 +1565,7 @@
     "end": "2022-01-01",
     "n_series": 34,
     "updated": "2024-10-28",
-    "fetched": "2026-09-01 08:35:27",
+    "fetched": "2026-09-02 08:38:16",
     "load": "whole",
     "data": "ch_fso_gdp_region.csv",
     "meta": "ch_fso_gdp_region.json"
@@ -1411,7 +1613,7 @@
     "end": "2026-04-01",
     "n_series": 3,
     "updated": "2026-06-18",
-    "fetched": "2026-09-01 08:35:27",
+    "fetched": "2026-09-02 08:38:16",
     "load": "whole",
     "data": "ch_fso_construction_prices.csv",
     "meta": "ch_fso_construction_prices.json"
@@ -1459,7 +1661,7 @@
     "end": "2025-01-01",
     "n_series": 66,
     "updated": null,
-    "fetched": "2026-09-01 08:35:27",
+    "fetched": "2026-09-02 08:38:17",
     "load": "whole",
     "data": "ch_fso_trade_partner.csv",
     "meta": "ch_fso_trade_partner.json"
@@ -1507,7 +1709,7 @@
     "end": "2025-12-01",
     "n_series": 13,
     "updated": "2026-02-06",
-    "fetched": "2026-09-01 08:35:27",
+    "fetched": "2026-09-02 08:38:17",
     "load": "whole",
     "data": "ch_fso_hicp.csv",
     "meta": "ch_fso_hicp.json"
@@ -1555,7 +1757,7 @@
     "end": "2026-08-10",
     "n_series": 2,
     "updated": null,
-    "fetched": "2026-09-01 08:35:27",
+    "fetched": "2026-09-02 08:38:17",
     "load": "whole",
     "data": "ch_seco_wwa.csv",
     "meta": "ch_seco_wwa.json"
@@ -2392,59 +2594,6 @@
     "meta": "ch_snb_capweums.json"
   },
   {
-    "id": "ch_snb_devkum",
-    "title": {
-      "en": "Bilateral exchange rates",
-      "de": "Bilaterale Wechselkurse",
-      "fr": "Taux de change bilatéraux",
-      "it": "Tassi di cambio bilaterali"
-    },
-    "concept": {
-      "en": "Exchange rates / Bilateral FX",
-      "leaf": {
-        "en": "Bilateral FX",
-        "de": "Bilaterale Wechselkurse",
-        "fr": "Change bilatéral",
-        "it": "Cambi bilaterali"
-      }
-    },
-    "canonical": true,
-    "featured": {
-      "en": "Exchange rates",
-      "de": "Wechselkurse",
-      "fr": "Taux de change",
-      "it": "Tassi di cambio"
-    },
-    "topic": {
-      "key": "exchange-rates",
-      "name": {
-        "en": "Exchange rates",
-        "de": "Wechselkurse",
-        "fr": "Taux de change",
-        "it": "Tassi di cambio"
-      }
-    },
-    "source": {
-      "key": "snb",
-      "name": {
-        "en": "Swiss National Bank",
-        "de": "Schweizerische Nationalbank (SNB)",
-        "fr": "Banque nationale suisse (BNS)",
-        "it": "Banca nazionale svizzera (BNS)"
-      }
-    },
-    "license": "snb",
-    "frequency": "monthly",
-    "start": "1914-01-01",
-    "end": "2026-07-01",
-    "n_series": 54,
-    "updated": "2026-08-03 14:30",
-    "fetched": "2026-08-05 13:12:02",
-    "load": "whole",
-    "data": "ch_snb_devkum.csv",
-    "meta": "ch_snb_devkum.json"
-  },
-  {
     "id": "ch_snb_devwkibiim",
     "title": {
       "en": "Bilateral exchange-rate indices",
@@ -2688,54 +2837,6 @@
     "load": "whole",
     "data": "ch_snb_plkoprinfla.csv",
     "meta": "ch_snb_plkoprinfla.json"
-  },
-  {
-    "id": "ch_snb_rendeiduebd",
-    "title": {
-      "en": "Bond yields (spot rates)",
-      "de": "Obligationenrenditen (Kassazinssätze)",
-      "fr": "Rendements obligataires (taux au comptant)",
-      "it": "Rendimenti obbligazionari (tassi a pronti)"
-    },
-    "concept": {
-      "en": "Interest rates & yields / Bond yields",
-      "leaf": {
-        "en": "Bond yields",
-        "de": "Obligationenrenditen",
-        "fr": "Rendements obligataires",
-        "it": "Rendimenti obbligazionari"
-      }
-    },
-    "canonical": true,
-    "featured": null,
-    "topic": {
-      "key": "interest-rates-yields",
-      "name": {
-        "en": "Interest rates & yields",
-        "de": "Zinsen & Renditen",
-        "fr": "Taux d'intérêt & rendements",
-        "it": "Tassi d'interesse e rendimenti"
-      }
-    },
-    "source": {
-      "key": "snb",
-      "name": {
-        "en": "Swiss National Bank",
-        "de": "Schweizerische Nationalbank (SNB)",
-        "fr": "Banque nationale suisse (BNS)",
-        "it": "Banca nazionale svizzera (BNS)"
-      }
-    },
-    "license": "snb",
-    "frequency": "daily",
-    "start": "1988-01-04",
-    "end": "2026-07-31",
-    "n_series": 48,
-    "updated": "2026-08-03 14:30",
-    "fetched": "2026-08-05 13:12:03",
-    "load": "whole",
-    "data": "ch_snb_rendeiduebd.csv",
-    "meta": "ch_snb_rendeiduebd.json"
   },
   {
     "id": "ch_snb_snbbipo",
@@ -3317,106 +3418,5 @@
     "load": "whole",
     "data": "ch_snb_zikredlauf.csv",
     "meta": "ch_snb_zikredlauf.json"
-  },
-  {
-    "id": "ch_snb_zikrepro",
-    "title": {
-      "en": "Published interest rates",
-      "de": "Publizierte Zinssätze",
-      "fr": "Taux d'intérêt publiés",
-      "it": "Tassi d'interesse pubblicati"
-    },
-    "concept": {
-      "en": "Interest rates & yields / Money-market rates",
-      "leaf": {
-        "en": "Money-market rates",
-        "de": "Geldmarktsätze",
-        "fr": "Taux du marché monétaire",
-        "it": "Tassi del mercato monetario"
-      }
-    },
-    "canonical": false,
-    "featured": null,
-    "topic": {
-      "key": "interest-rates-yields",
-      "name": {
-        "en": "Interest rates & yields",
-        "de": "Zinsen & Renditen",
-        "fr": "Taux d'intérêt & rendements",
-        "it": "Tassi d'interesse e rendimenti"
-      }
-    },
-    "source": {
-      "key": "snb",
-      "name": {
-        "en": "Swiss National Bank",
-        "de": "Schweizerische Nationalbank (SNB)",
-        "fr": "Banque nationale suisse (BNS)",
-        "it": "Banca nazionale svizzera (BNS)"
-      }
-    },
-    "license": "snb",
-    "frequency": "monthly",
-    "start": "1933-01-01",
-    "end": "2026-06-01",
-    "n_series": 228,
-    "updated": "2026-08-03 14:30",
-    "fetched": "2026-08-05 13:12:04",
-    "load": "whole",
-    "data": "ch_snb_zikrepro.csv",
-    "meta": "ch_snb_zikrepro.json"
-  },
-  {
-    "id": "ch_snb_zimoma",
-    "title": {
-      "en": "Money market rates",
-      "de": "Geldmarktsätze",
-      "fr": "Taux du marché monétaire",
-      "it": "Tassi del mercato monetario"
-    },
-    "concept": {
-      "en": "Interest rates & yields / Money-market rates",
-      "leaf": {
-        "en": "Money-market rates",
-        "de": "Geldmarktsätze",
-        "fr": "Taux du marché monétaire",
-        "it": "Tassi del mercato monetario"
-      }
-    },
-    "canonical": true,
-    "featured": {
-      "en": "SARON",
-      "de": "SARON",
-      "fr": "SARON",
-      "it": "SARON"
-    },
-    "topic": {
-      "key": "interest-rates-yields",
-      "name": {
-        "en": "Interest rates & yields",
-        "de": "Zinsen & Renditen",
-        "fr": "Taux d'intérêt & rendements",
-        "it": "Tassi d'interesse e rendimenti"
-      }
-    },
-    "source": {
-      "key": "snb",
-      "name": {
-        "en": "Swiss National Bank",
-        "de": "Schweizerische Nationalbank (SNB)",
-        "fr": "Banque nationale suisse (BNS)",
-        "it": "Banca nazionale svizzera (BNS)"
-      }
-    },
-    "license": "snb",
-    "frequency": "monthly",
-    "start": "1972-01-01",
-    "end": "2026-07-01",
-    "n_series": 13,
-    "updated": "2026-08-03 14:30",
-    "fetched": "2026-08-05 13:12:04",
-    "load": "whole",
-    "data": "ch_snb_zimoma.csv",
-    "meta": "ch_snb_zimoma.json"
   }
 ]

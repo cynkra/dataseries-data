@@ -6,7 +6,7 @@
     "D1"
   ],
   "start": "1988-01-04",
-  "end": "2026-07-31",
+  "end": "2026-08-31",
   "title": {
     "en": "Bond yields (spot rates)",
     "de": "Obligationenrenditen (Kassazinssätze)",
@@ -267,7 +267,7 @@
       }
     }
   },
-  "updated": "2026-08-03 14:30",
+  "updated": "2026-09-01 14:30",
   "topic": {
     "key": "interest-rates-yields",
     "name": {
@@ -299,5 +299,5 @@
     "fr": "Rendements des emprunts d'État suisses pour chaque échéance de 1 à 30 ans, plus cantons, banques et industrie par notation, si bien que les écarts sont visibles.",
     "it": "Rendimenti dei titoli di Stato svizzeri per ogni scadenza da 1 a 30 anni, più Cantoni, banche e industria per rating, così gli spread sono visibili."
   },
-  "fetched_utc": "2026-08-05 13:12:03"
+  "fetched_utc": "2026-09-02 08:38:14"
 }

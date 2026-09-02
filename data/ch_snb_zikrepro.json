@@ -6,7 +6,7 @@
     "D1"
   ],
   "start": "1933-01-01",
-  "end": "2026-06-01",
+  "end": "2026-07-01",
   "title": {
     "en": "Published interest rates",
     "de": "Publizierte Zinssätze",
@@ -828,7 +828,7 @@
       }
     }
   },
-  "updated": "2026-08-03 14:30",
+  "updated": "2026-09-01 14:30",
   "topic": {
     "key": "interest-rates-yields",
     "name": {
@@ -861,5 +861,5 @@
     "fr": "Taux d'intérêt sur les nouvelles affaires bancaires suisses : hypothèques, crédits à la consommation, épargne, prévoyance et dépôts à terme, donnés en distribution.",
     "it": "Tassi d'interesse sui nuovi affari bancari svizzeri: ipoteche, crediti al consumo, risparmio, previdenza e depositi a termine, indicati come distribuzione."
   },
-  "fetched_utc": "2026-08-05 13:12:04"
+  "fetched_utc": "2026-09-02 08:38:15"
 }

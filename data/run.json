@@ -1,7 +1,7 @@
 {
-  "ts": "2026-09-01T08:35:28Z",
+  "ts": "2026-09-02T08:38:17Z",
   "attempted": 70,
-  "ok": 32,
+  "ok": 36,
   "unchanged": [
     "ch_snb_amarbma",
     "ch_snb_ambeschkla",
@@ -20,13 +20,11 @@
     "ch_snb_bopservq",
     "ch_snb_capchstocki",
     "ch_snb_capweums",
-    "ch_snb_devkum",
     "ch_snb_devwkibiim",
     "ch_snb_devwkieffid",
     "ch_snb_plimoinchq",
     "ch_snb_plkopr",
     "ch_snb_plkoprinfla",
-    "ch_snb_rendeiduebd",
     "ch_snb_snbbipo",
     "ch_snb_snbiprogq",
     "ch_snb_snbkosiq",
@@ -38,9 +36,7 @@
     "ch_snb_zavezaka",
     "ch_snb_zavezaluba",
     "ch_snb_zavkuzaart",
-    "ch_snb_zikredlauf",
-    "ch_snb_zikrepro",
-    "ch_snb_zimoma"
+    "ch_snb_zikredlauf"
   ],
   "skipped": []
 }

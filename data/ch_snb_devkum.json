@@ -6,7 +6,7 @@
     "D1"
   ],
   "start": "1914-01-01",
-  "end": "2026-07-01",
+  "end": "2026-08-01",
   "title": {
     "en": "Bilateral exchange rates",
     "de": "Bilaterale Wechselkurse",
@@ -379,7 +379,7 @@
       }
     }
   },
-  "updated": "2026-08-03 14:30",
+  "updated": "2026-09-01 14:30",
   "topic": {
     "key": "exchange-rates",
     "name": {
@@ -418,5 +418,5 @@
     "fr": "Cours du franc suisse face aux principales monnaies, moyenne mensuelle et fin de mois. Cotés par unité, mais par 100 pour le yen, les couronnes et d'autres.",
     "it": "Corsi del franco svizzero rispetto alle principali valute, media mensile e fine mese. Quotati per unità, ma per 100 per yen, corone e altre."
   },
-  "fetched_utc": "2026-08-05 13:12:02"
+  "fetched_utc": "2026-09-02 08:38:14"
 }
