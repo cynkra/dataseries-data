@@ -7,7 +7,7 @@
     "seas_adj"
   ],
   "start": "1980-01-01",
-  "end": "2026-01-01",
+  "end": "2026-04-01",
   "title": {
     "en": "Gross domestic product (GDP)",
     "de": "Bruttoinlandprodukt (BIP)",
@@ -198,6 +198,15 @@
           },
           "data": true
         },
+        "transp": {
+          "label": {
+            "en": "Transportation and storage (noga 49-53)",
+            "de": "Verkehr und Lagerei (Noga 49-53)",
+            "fr": "Transports et entreposage (Noga 49-53)",
+            "it": "Trasporto e magazzinaggio (Noga 49-53)"
+          },
+          "data": true
+        },
         "transport": {
           "label": {
             "en": "Transportation and storage (noga 49-53)",
@@ -216,12 +225,30 @@
           },
           "data": true
         },
+        "com": {
+          "label": {
+            "en": "Information and communication (noga 58-63)",
+            "de": "Information und Kommunikation (Noga 58-63)",
+            "fr": "Information et communication (Noga 58-63)",
+            "it": "Servizi di informazione e comunicazione (Noga 58-63)"
+          },
+          "data": true
+        },
         "comm": {
           "label": {
             "en": "Information and communication (noga 58-63)",
             "de": "Information und Kommunikation (Noga 58-63)",
             "fr": "Information et communication (Noga 58-63)",
             "it": "Servizi di informazione e comunicazione (Noga 58-63)"
+          },
+          "data": false
+        },
+        "transp_com": {
+          "label": {
+            "en": "Transport, storage, information and communication (noga 49-53, 58-63)",
+            "de": "Verkehr und Lagerei, Information und Kommunikation (Noga 49-53, 58-63)",
+            "fr": "Transports et entreposage, information et communication (Noga 49-53, 58-63)",
+            "it": "Trasporto e magazzinaggio, informazione e comunicazione (Noga 49-53, 58-63)"
           },
           "data": false
         },
@@ -737,9 +764,9 @@
               "trade": {
                 "trade_retail": {}
               },
-              "transport": {},
+              "transp": {},
               "hotel": {},
-              "comm": {},
+              "com": {},
               "findl": {
                 "finance": {},
                 "insur": {}
@@ -890,7 +917,7 @@
       "it": "Punti percentuali"
     }
   },
-  "updated": "2026-02-23 16:51:17",
+  "updated": "2026-08-28 07:07:34",
   "notes": {
     "en": "Swiss quarterly national accounts data. Production, expenditure and income approach. Nominal and real values. Seasonally and calendar adjusted data as well as unadjusted data.",
     "de": "Daten der vierteljährlichen Volkswirtschaftlichen Gesamtrechnung der Schweiz. Produktions-, Ausgaben- und Einkommensseite des BIP. Saison- und kalenderbereinigte Daten sowie unbereinigte Daten.",
@@ -936,5 +963,5 @@
     "fr": "Production économique suisse par trimestre sous les trois optiques — production, dépenses et revenus — avec une correction pour les recettes des fédérations sportives.",
     "it": "Produzione economica svizzera per trimestre nelle tre ottiche — produzione, spesa e redditi — con una correzione per i ricavi delle federazioni sportive."
   },
-  "fetched_utc": "2026-09-02 08:38:15"
+  "fetched_utc": "2026-09-03 08:37:36"
 }
