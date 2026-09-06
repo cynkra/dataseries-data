@@ -47,7 +47,7 @@
     "end": "2026-04-01",
     "n_series": 660,
     "updated": "2026-08-28 07:07:34",
-    "fetched": "2026-09-05 08:28:52",
+    "fetched": "2026-09-06 08:29:21",
     "load": "whole",
     "data": "ch_seco_gdp.csv",
     "meta": "ch_seco_gdp.json"
@@ -100,7 +100,7 @@
     "end": "2026-07-01",
     "n_series": 39,
     "updated": "2026-08-04 11:54:52",
-    "fetched": "2026-09-05 08:28:52",
+    "fetched": "2026-09-06 08:29:21",
     "load": "whole",
     "data": "ch_seco_concon.csv",
     "meta": "ch_seco_concon.json"
@@ -153,7 +153,7 @@
     "end": "2026-07-01",
     "n_series": 171,
     "updated": null,
-    "fetched": "2026-09-05 08:28:52",
+    "fetched": "2026-09-06 08:29:21",
     "load": "whole",
     "data": "ch_fso_retail.csv",
     "meta": "ch_fso_retail.json"
@@ -201,7 +201,7 @@
     "end": "2026-04-01",
     "n_series": 87,
     "updated": null,
-    "fetched": "2026-09-05 08:28:52",
+    "fetched": "2026-09-06 08:29:21",
     "load": "whole",
     "data": "ch_fso_production.csv",
     "meta": "ch_fso_production.json"
@@ -249,7 +249,7 @@
     "end": "2026-04-01",
     "n_series": 66,
     "updated": null,
-    "fetched": "2026-09-05 08:28:52",
+    "fetched": "2026-09-06 08:29:21",
     "load": "whole",
     "data": "ch_fso_services.csv",
     "meta": "ch_fso_services.json"
@@ -297,7 +297,7 @@
     "end": "2026-07-01",
     "n_series": 12,
     "updated": null,
-    "fetched": "2026-09-05 08:28:52",
+    "fetched": "2026-09-06 08:29:21",
     "load": "whole",
     "data": "ch_fso_new_vehicles.csv",
     "meta": "ch_fso_new_vehicles.json"
@@ -345,7 +345,7 @@
     "end": "2025-01-01",
     "n_series": 2,
     "updated": null,
-    "fetched": "2026-09-05 08:28:52",
+    "fetched": "2026-09-06 08:29:21",
     "load": "whole",
     "data": "ch_fso_vacant_dwellings.csv",
     "meta": "ch_fso_vacant_dwellings.json"
@@ -393,7 +393,7 @@
     "end": "2026-04-01",
     "n_series": 27,
     "updated": null,
-    "fetched": "2026-09-05 08:28:52",
+    "fetched": "2026-09-06 08:29:22",
     "load": "whole",
     "data": "ch_fso_cross_border_commuters.csv",
     "meta": "ch_fso_cross_border_commuters.json"
@@ -441,7 +441,7 @@
     "end": "2024-01-01",
     "n_series": 9,
     "updated": null,
-    "fetched": "2026-09-05 08:28:52",
+    "fetched": "2026-09-06 08:29:22",
     "load": "whole",
     "data": "ch_fso_pop_detail.csv",
     "meta": "ch_fso_pop_detail.json"
@@ -489,7 +489,7 @@
     "end": "2025-01-01",
     "n_series": 249,
     "updated": "2025-03-18",
-    "fetched": "2026-09-05 08:28:52",
+    "fetched": "2026-09-06 08:29:22",
     "load": "whole",
     "data": "ch_ffa_finances.csv",
     "meta": "ch_ffa_finances.json"
@@ -537,7 +537,7 @@
     "end": "2026-08-01",
     "n_series": 1,
     "updated": null,
-    "fetched": "2026-09-05 08:28:53",
+    "fetched": "2026-09-06 08:29:22",
     "load": "whole",
     "data": "ch_kof_barometer.csv",
     "meta": "ch_kof_barometer.json"
@@ -585,7 +585,7 @@
     "end": "2026-08-01",
     "n_series": 2,
     "updated": null,
-    "fetched": "2026-09-05 08:28:53",
+    "fetched": "2026-09-06 08:29:22",
     "load": "whole",
     "data": "ch_kof_esi.csv",
     "meta": "ch_kof_esi.json"
@@ -633,7 +633,7 @@
     "end": "2026-06-01",
     "n_series": 4,
     "updated": null,
-    "fetched": "2026-09-05 08:28:53",
+    "fetched": "2026-09-06 08:29:22",
     "load": "whole",
     "data": "ch_adecco_sjmi.csv",
     "meta": "ch_adecco_sjmi.json"
@@ -681,7 +681,7 @@
     "end": "2026-07-01",
     "n_series": 14,
     "updated": null,
-    "fetched": "2026-09-05 08:28:53",
+    "fetched": "2026-09-06 08:29:22",
     "load": "whole",
     "data": "ch_fso_hesta.csv",
     "meta": "ch_fso_hesta.json"
@@ -734,7 +734,7 @@
     "end": "2026-04-01",
     "n_series": 60,
     "updated": "2026-08-27",
-    "fetched": "2026-09-05 08:28:53",
+    "fetched": "2026-09-06 08:29:22",
     "load": "whole",
     "data": "ch_fso_besta.csv",
     "meta": "ch_fso_besta.json"
@@ -782,7 +782,7 @@
     "end": "2026-04-01",
     "n_series": 60,
     "updated": null,
-    "fetched": "2026-09-05 08:28:53",
+    "fetched": "2026-09-06 08:29:22",
     "load": "whole",
     "data": "ch_fso_vacancies.csv",
     "meta": "ch_fso_vacancies.json"
@@ -830,7 +830,7 @@
     "end": "2026-04-01",
     "n_series": 336,
     "updated": null,
-    "fetched": "2026-09-05 08:28:53",
+    "fetched": "2026-09-06 08:29:22",
     "load": "whole",
     "data": "ch_fso_jobs_sex.csv",
     "meta": "ch_fso_jobs_sex.json"
@@ -878,7 +878,7 @@
     "end": "2026-04-01",
     "n_series": 20,
     "updated": null,
-    "fetched": "2026-09-05 08:28:53",
+    "fetched": "2026-09-06 08:29:22",
     "load": "whole",
     "data": "ch_fso_besta_outlook.csv",
     "meta": "ch_fso_besta_outlook.json"
@@ -926,7 +926,7 @@
     "end": "2026-08-01",
     "n_series": 595,
     "updated": "2026-09-03",
-    "fetched": "2026-09-05 08:28:53",
+    "fetched": "2026-09-06 08:29:22",
     "load": "whole",
     "data": "ch_fso_cpi.csv",
     "meta": "ch_fso_cpi.json"
@@ -974,7 +974,7 @@
     "end": "2026-07-01",
     "n_series": 7,
     "updated": "2026-08-13",
-    "fetched": "2026-09-05 08:28:53",
+    "fetched": "2026-09-06 08:29:23",
     "load": "whole",
     "data": "ch_fso_ppi.csv",
     "meta": "ch_fso_ppi.json"
@@ -1022,7 +1022,7 @@
     "end": "2025-01-01",
     "n_series": 12,
     "updated": "2026-04-21",
-    "fetched": "2026-09-05 08:28:53",
+    "fetched": "2026-09-06 08:29:23",
     "load": "whole",
     "data": "ch_fso_wage_idx.csv",
     "meta": "ch_fso_wage_idx.json"
@@ -1075,7 +1075,7 @@
     "end": "2025-01-01",
     "n_series": 10,
     "updated": "2026-08-20",
-    "fetched": "2026-09-05 08:28:53",
+    "fetched": "2026-09-06 08:29:23",
     "load": "whole",
     "data": "ch_fso_pop.csv",
     "meta": "ch_fso_pop.json"
@@ -1123,7 +1123,7 @@
     "end": "2026-06-01",
     "n_series": 5,
     "updated": "2026-08-18",
-    "fetched": "2026-09-05 08:28:53",
+    "fetched": "2026-09-06 08:29:23",
     "load": "whole",
     "data": "ch_fso_unemp_rate.csv",
     "meta": "ch_fso_unemp_rate.json"
@@ -1171,7 +1171,7 @@
     "end": "2025-01-01",
     "n_series": 3,
     "updated": "2026-08-28",
-    "fetched": "2026-09-05 08:28:54",
+    "fetched": "2026-09-06 08:29:23",
     "load": "whole",
     "data": "ch_fso_labour_productivity.csv",
     "meta": "ch_fso_labour_productivity.json"
@@ -1219,7 +1219,7 @@
     "end": "2026-01-01",
     "n_series": 69,
     "updated": "2026-06-16",
-    "fetched": "2026-09-05 08:28:54",
+    "fetched": "2026-09-06 08:29:23",
     "load": "whole",
     "data": "ch_fso_ets.csv",
     "meta": "ch_fso_ets.json"
@@ -1267,7 +1267,7 @@
     "end": "2025-01-01",
     "n_series": 37,
     "updated": "2026-08-25",
-    "fetched": "2026-09-05 08:28:54",
+    "fetched": "2026-09-06 08:29:23",
     "load": "whole",
     "data": "ch_fso_gfcf_detail.csv",
     "meta": "ch_fso_gfcf_detail.json"
@@ -1315,7 +1315,7 @@
     "end": "2025-01-01",
     "n_series": 45,
     "updated": "2026-05-21",
-    "fetched": "2026-09-05 08:28:54",
+    "fetched": "2026-09-06 08:29:23",
     "load": "whole",
     "data": "ch_fso_hours_worked.csv",
     "meta": "ch_fso_hours_worked.json"
@@ -1363,7 +1363,7 @@
     "end": "2022-01-01",
     "n_series": 34,
     "updated": "2024-10-28",
-    "fetched": "2026-09-05 08:28:54",
+    "fetched": "2026-09-06 08:29:23",
     "load": "whole",
     "data": "ch_fso_gdp_region.csv",
     "meta": "ch_fso_gdp_region.json"
@@ -1411,7 +1411,7 @@
     "end": "2026-04-01",
     "n_series": 3,
     "updated": "2026-06-18",
-    "fetched": "2026-09-05 08:28:54",
+    "fetched": "2026-09-06 08:29:23",
     "load": "whole",
     "data": "ch_fso_construction_prices.csv",
     "meta": "ch_fso_construction_prices.json"
@@ -1459,7 +1459,7 @@
     "end": "2025-01-01",
     "n_series": 66,
     "updated": null,
-    "fetched": "2026-09-05 08:28:54",
+    "fetched": "2026-09-06 08:29:23",
     "load": "whole",
     "data": "ch_fso_trade_partner.csv",
     "meta": "ch_fso_trade_partner.json"
@@ -1507,7 +1507,7 @@
     "end": "2025-12-01",
     "n_series": 13,
     "updated": "2026-02-06",
-    "fetched": "2026-09-05 08:28:54",
+    "fetched": "2026-09-06 08:29:23",
     "load": "whole",
     "data": "ch_fso_hicp.csv",
     "meta": "ch_fso_hicp.json"
@@ -1555,7 +1555,7 @@
     "end": "2026-08-10",
     "n_series": 2,
     "updated": null,
-    "fetched": "2026-09-05 08:28:54",
+    "fetched": "2026-09-06 08:29:23",
     "load": "whole",
     "data": "ch_seco_wwa.csv",
     "meta": "ch_seco_wwa.json"
