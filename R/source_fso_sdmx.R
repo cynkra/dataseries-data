@@ -179,6 +179,19 @@ sdmx_sliced <- function(agency, flow, version, key, dim_cols) {
   out[order(out$date), , drop = FALSE]
 }
 
+# The fuel dimension shared by both new-registration datasets: curated codes in
+# display order, nested under the Total. The labels live in each datasheet's
+# ## Labels block (attach_labels), not here.
+.ivs_fuel_dim <- function(data) {
+  fuel_codes <- c("_T", "PC", "PH", "DC", "DH", "HP", "HD", "EL", "FC", "GA", "_O", "NM")
+  fuel_codes <- fuel_codes[fuel_codes %in% unique(data$fuel)]
+  kids <- setdiff(fuel_codes, "_T")
+  list(
+    levels = setNames(lapply(fuel_codes, function(x) list()), fuel_codes),
+    hierarchy = list("_T" = setNames(lapply(kids, function(x) list()), kids))
+  )
+}
+
 # New registrations of passenger cars, national monthly, split by fuel (the
 # EV-transition overlay). Pinned: Switzerland total, owner total, NEW vehicles,
 # passenger cars. SDMX CH1.MFZ_IVS / DF_IVS_0_GENERAL_M.
@@ -189,21 +202,39 @@ fso_sdmx_new_vehicles <- function(dataset_id = "ch_fso_new_vehicles") {
   data <- data.frame(fuel = d$UV_RV_FUEL, date = d$date, value = d$value, stringsAsFactors = FALSE)
   data <- data[order(data$fuel, data$date), ]
 
-  # Curated fuel codes + display order; the labels live in the datasheet
-  # ## Labels block (attach_labels), not here.
-  fuel_codes <- c("_T", "PC", "PH", "DC", "DH", "HP", "HD", "EL", "FC", "GA", "_O", "NM")
-  fuel_codes <- fuel_codes[fuel_codes %in% unique(data$fuel)]
-  levels <- setNames(lapply(fuel_codes, function(x) list()), fuel_codes)
-  kids   <- setNames(lapply(setdiff(fuel_codes, "_T"), function(x) list()),
-                     setdiff(fuel_codes, "_T"))
+  meta <- list(
+    source = list(url = "https://www.bfs.admin.ch/asset/en/px-x-1103020200_120"),
+    license = "fso", frequency = "monthly", topic = "Mobility",
+    dimensions = list(fuel = .ivs_fuel_dim(data))
+  )
+  list(id = dataset_id, data = data, meta = meta)
+}
+
+# The same flow with the canton segment open: new passenger-car registrations by
+# canton and fuel, monthly. Canton codes are the BFS numbers 1..26 plus _T
+# (Switzerland). _U (canton unknown, a few thousand cars since 2005) is dropped,
+# so the cantons sum slightly below _T and _T is not declared as their parent.
+# maps.dataseries.org joins the canton codes to its boundary file.
+fso_sdmx_new_vehicles_canton <- function(dataset_id = "ch_fso_new_vehicles_canton") {
+  d <- sdmx_sliced("CH1.MFZ_IVS", "DF_IVS_0_GENERAL_M", "1.0.0", "._T.N.100..M",
+    c("UV_HGDE_KT", "UV_RV_OWNER_TYPE", "UV_RV_REGISTRATION_TYPE",
+      "UV_RV_VEHICLE_GROUP_AND_TYPE", "UV_RV_FUEL", "FREQ"))
+  data <- data.frame(canton = sub("^0+", "", d$UV_HGDE_KT), fuel = d$UV_RV_FUEL,
+                     date = d$date, value = d$value, stringsAsFactors = FALSE)
+  data <- data[data$canton != "_U", , drop = FALSE]
+  cantons <- intersect(c("_T", as.character(1:26)), unique(data$canton))
+  if (length(setdiff(as.character(1:26), cantons)))
+    stop("new_vehicles_canton: expected cantons 1..26, missing ",
+         paste(setdiff(as.character(1:26), cantons), collapse = ", "))
+  data <- data[order(match(data$canton, cantons), data$fuel, data$date), , drop = FALSE]
 
   meta <- list(
     source = list(url = "https://www.bfs.admin.ch/asset/en/px-x-1103020200_120"),
     license = "fso", frequency = "monthly", topic = "Mobility",
-    dimensions = list(fuel = list(
-      levels = levels,
-      hierarchy = list("_T" = kids)   # Total decomposes into the fuel types
-    ))
+    dimensions = list(
+      canton = list(levels = setNames(lapply(cantons, function(x) list()), cantons)),
+      fuel   = .ivs_fuel_dim(data)
+    )
   )
   list(id = dataset_id, data = data, meta = meta)
 }

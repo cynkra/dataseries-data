@@ -283,9 +283,11 @@ build <- function(only = NULL) {
                                 noga_keep = .SDMX_SERVICES_NOGA),
                  "Domestic economy"))
 
-  # FSO SDMX, sliced to the national total (cubes too large to pull whole):
-  # new car registrations by fuel (the EV-transition read) and vacant dwellings.
+  # FSO SDMX, pre-sliced keys (cubes too large to pull whole):
+  # new car registrations by fuel (national, and by canton for the maps) and
+  # vacant dwellings.
   add(.try_fetch("ch_fso_new_vehicles",     fso_sdmx_new_vehicles(),     "Mobility"))
+  add(.try_fetch("ch_fso_new_vehicles_canton", fso_sdmx_new_vehicles_canton(), "Mobility"))
   add(.try_fetch("ch_fso_vacant_dwellings", fso_sdmx_vacant_dwellings(), "Construction and housing"))
   # FSO SDMX, sliced national: foreign cross-border commuters by canton (quarterly,
   # model-based estimate) + permanent resident population by nationality x sex (annual).
