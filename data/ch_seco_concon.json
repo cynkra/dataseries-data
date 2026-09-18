@@ -24,7 +24,7 @@
     "url": "https://www.seco.admin.ch/de/konsumentenstimmung",
     "key": "seco"
   },
-  "license": "quarterly",
+  "license": "seco",
   "frequency": "quarterly",
   "dimensions": {
     "type": {

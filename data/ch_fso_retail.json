@@ -24,7 +24,7 @@
     "url": "https://www.bfs.admin.ch/asset/en/DF_KEU_M1",
     "key": "fso"
   },
-  "license": "monthly",
+  "license": "fso",
   "frequency": "monthly",
   "dimensions": {
     "NOGA": {

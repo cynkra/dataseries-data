@@ -96,7 +96,7 @@ See [`docs/concepts.md`](docs/concepts.md) for the concept tree and canonical/al
 | ID | Title | Source | Frequency | Coverage | License |
 |---|---|---|---|---|---|
 | `ch_snb_snbkosiq` | Business cycle signals | Swiss National Bank | quarterly | 2011-01-01..2026-04-01 | Swiss National Bank — terms of use (non-commercial) |
-| `ch_seco_concon` | Consumer confidence | State Secretariat for Economic Affairs (SECO) | quarterly | 1972-10-01..2026-07-01 | quarterly |
+| `ch_seco_concon` | Consumer confidence | State Secretariat for Economic Affairs (SECO) | quarterly | 1972-10-01..2026-07-01 | SECO open data — free use, attribution required |
 | `ch_seco_wwa` | Weekly economic activity (WEA) | State Secretariat for Economic Affairs (SECO) | weekly | 2005-01-03..2026-08-10 | SECO open data — free use, attribution required |
 | `ch_kof_barometer` | KOF Economic Barometer | KOF Swiss Economic Institute | monthly | 1991-01-01..2026-08-01 | KOF Swiss Economic Institute — CC BY 4.0 |
 | `ch_kof_esi` | KOF Economic Sentiment Index | KOF Swiss Economic Institute | monthly | 2007-04-01..2026-08-01 | KOF Swiss Economic Institute — CC BY 4.0 |
@@ -130,10 +130,10 @@ See [`docs/concepts.md`](docs/concepts.md) for the concept tree and canonical/al
 | ID | Title | Source | Frequency | Coverage | License |
 |---|---|---|---|---|---|
 | `ch_fso_hesta` | Hotel overnight stays | Swiss Federal Statistical Office (FSO) | monthly | 2005-01-01..2026-06-01 | FSO open data — free use, attribution required |
-| `ch_fso_production` | Industry & construction turnover | Swiss Federal Statistical Office (FSO) | quarterly | 1999-01-01..2026-04-01 | quarterly |
+| `ch_fso_production` | Industry & construction turnover | Swiss Federal Statistical Office (FSO) | quarterly | 1999-01-01..2026-04-01 | FSO open data — free use, attribution required |
 | `ch_fso_new_vehicles` | New car registrations by fuel | Swiss Federal Statistical Office (FSO) | monthly | 2005-01-01..2026-07-01 | FSO open data — free use, attribution required |
 | `ch_fso_new_vehicles_canton` | New car registrations by canton and fuel _(alt)_ | Swiss Federal Statistical Office (FSO) | monthly | 2005-01-01..2026-08-01 | FSO open data — free use, attribution required |
-| `ch_fso_retail` | Retail trade turnover | Swiss Federal Statistical Office (FSO) | monthly | 2000-01-01..2026-06-01 | monthly |
+| `ch_fso_retail` | Retail trade turnover | Swiss Federal Statistical Office (FSO) | monthly | 2000-01-01..2026-06-01 | FSO open data — free use, attribution required |
 | `ch_fso_services` | Services turnover | Swiss Federal Statistical Office (FSO) | quarterly | 2021-01-01..2026-01-01 | FSO open data — free use, attribution required |
 | `ch_fso_vacant_dwellings` | Vacant dwellings | Swiss Federal Statistical Office (FSO) | annual | 1995-01-01..2025-01-01 | FSO open data — free use, attribution required |
 
