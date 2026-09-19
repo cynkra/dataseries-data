@@ -6,7 +6,8 @@
 - **canonical**: yes
 
 - **source**: fso
-- **license**: fso - **frequency**: quarterly
+- **license**: fso
+- **frequency**: quarterly
 - **coverage**: 1999-Q1 .. 2026-Q1
 - **series**: see provenance
 - **updated**: 2026-Q1 (latest observation)

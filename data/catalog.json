@@ -94,7 +94,7 @@
         "it": "Segreteria di Stato dell'economia (SECO)"
       }
     },
-    "license": "quarterly",
+    "license": "seco",
     "frequency": "quarterly",
     "start": "1972-10-01",
     "end": "2026-07-01",
@@ -147,7 +147,7 @@
         "it": "Ufficio federale di statistica (UST)"
       }
     },
-    "license": "monthly",
+    "license": "fso",
     "frequency": "monthly",
     "start": "2000-01-01",
     "end": "2026-07-01",
@@ -195,7 +195,7 @@
         "it": "Ufficio federale di statistica (UST)"
       }
     },
-    "license": "quarterly",
+    "license": "fso",
     "frequency": "quarterly",
     "start": "1999-01-01",
     "end": "2026-04-01",

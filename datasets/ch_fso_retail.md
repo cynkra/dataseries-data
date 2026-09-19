@@ -7,7 +7,8 @@
 - **featured**: Retail trade
 
 - **source**: fso
-- **license**: fso - **frequency**: monthly
+- **license**: fso
+- **frequency**: monthly
 - **coverage**: 2000-01 .. 2026-04
 - **series**: see provenance
 - **updated**: 2026-05 (latest observation)

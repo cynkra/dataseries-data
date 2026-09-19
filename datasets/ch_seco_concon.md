@@ -7,7 +7,8 @@
 - **featured**: Consumer confidence
 
 - **source**: seco
-- **license**: seco - **frequency**: quarterly
+- **license**: seco
+- **frequency**: quarterly
 - **coverage**: 1972-Q4 .. 2026-Q2
 - **series**: 26
 - **updated**: 2026-05-05 (source publish date)
