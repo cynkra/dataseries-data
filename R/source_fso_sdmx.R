@@ -16,8 +16,12 @@
 #              from .../rest/dataflow/<agency>/<flow>/<version>?references=all and
 #              read the four enumerated codelists (CL_NOGA_KE, CL_INDICATOR_KE,
 #              CL_SEASONAL_ADJUST, CL_PRICES_RESULT_TYPE) to turn dimension codes
-#              into English labels, in the repo dimensions/levels meta shape so
-#              write_dataset() consumes the result unchanged.
+#              into labels, and the DSD concepts to name the dimensions, in the
+#              repo dimensions/levels meta shape so write_dataset() consumes the
+#              result unchanged. The codelist prints codes in front of the labels
+#              and the NOGA sections in capitals; tidy_level_labels() (R/labels.R)
+#              strips the codes and recases the sections, borrowing the casing of
+#              Eurostat's NACE Rev. 2 section names.
 #
 # get_text() in http.R sets no custom headers, so we build the httr2 requests here
 # with the right Accept header, reusing .with_retry() from http.R for backoff.
@@ -59,9 +63,10 @@ suppressPackageStartupMessages({
                   col_types = readr::cols(.default = readr::col_character()))
 }
 
-# GET the structure once per language and return a named list
-# codelist_id -> (code -> i18n label object). Only the four enumerated codelists
-# we publish are read; a failed non-en language skips that language.
+# GET the structure once per language and return list(codelists = codelist_id ->
+# (code -> i18n label object), concepts = DSD dimension id -> i18n name). Only the
+# four enumerated codelists we publish are read; a failed non-en language skips
+# that language.
 .sdmx_codelists <- function(agency, flow, version) {
   url <- sprintf("%s/dataflow/%s/%s/%s?references=all", .SDMX_BASE, agency, flow, version)
   read_one <- function(lang) {
@@ -78,6 +83,14 @@ suppressPackageStartupMessages({
       }
       out[[cl$id]] <- lbls
     }
+    # Dimension names: each DSD dimension points at a concept ("...Concept=X").
+    names_by_id <- list()
+    for (sch in doc$data$conceptSchemes) for (cc in sch$concepts)
+      names_by_id[[cc$id]] <- as.character(cc$name %||% cc$names[[lang]] %||% cc$id)
+    for (dd in doc$data$dataStructures[[1]]$dataStructureComponents$dimensionList$dimensions) {
+      nm <- names_by_id[[sub("^.*\\.", "", dd$conceptIdentity)]]
+      if (!is.null(nm)) out$.concepts[[dd$id]] <- nm
+    }
     out
   }
   base <- read_one("en")
@@ -90,23 +103,34 @@ suppressPackageStartupMessages({
       if (!is.null(v) && nzchar(v)) out[[clid]][[code]][[L]] <- v
     }
   }
-  out
+  list(concepts = out$.concepts, codelists = out[names(out) != ".concepts"])
+}
+
+# Proper-case NOGA section names (lang -> code -> label) from Eurostat's NACE
+# Rev. 2, the EU classification NOGA is built on. Eurostat has no Italian; a
+# language it cannot serve is simply absent (Italian is sentence-cased instead).
+.sdmx_noga_case_ref <- function() {
+  ref <- lapply(setNames(nm = c("en", "de", "fr")), .eurostat_nace_labels)
+  Filter(Negate(is.null), ref)
 }
 
 # Build the contract `dimensions` meta for a set of dimension columns, using the
 # codelist label maps. Only the codes actually present in `data` are emitted as
 # levels (write_dataset() then flags `$data` per level; here every level is real).
-.sdmx_dimensions <- function(data, dim_cols, codelists) {
+.sdmx_dimensions <- function(data, dim_cols, structure) {
+  codelists <- structure$codelists
+  noga_ref <- if ("NOGA" %in% dim_cols) .sdmx_noga_case_ref()
   setNames(lapply(dim_cols, function(d) {
     clid <- .SDMX_DIM_CODELISTS[[d]]
     lbls <- codelists[[clid]]
     present <- unique(as.character(data[[d]]))
-    list(
-      label = list(en = d),
+    dim <- list(
+      label = structure$concepts[[d]] %||% list(en = d),
       levels = setNames(lapply(present, function(code) {
         list(label = lbls[[code]] %||% list(en = code))
       }), present)
     )
+    tidy_level_labels(dim, case_ref = if (d == "NOGA") noga_ref)
   }), dim_cols)
 }
 
@@ -120,7 +144,7 @@ suppressPackageStartupMessages({
 fso_sdmx_fetch <- function(dataset_id, agency, flow, version, title = NULL,
                            noga_keep = NULL) {
   raw <- .sdmx_data(agency, flow, version)
-  codelists <- .sdmx_codelists(agency, flow, version)
+  structure <- .sdmx_codelists(agency, flow, version)
 
   dim_cols <- names(.SDMX_DIM_CODELISTS)  # NOGA, ADJUSTMENT, INDICATOR_KE, UNIT_MEASURE
   stopifnot(all(c(dim_cols, "TIME_PERIOD", "OBS_VALUE") %in% names(raw)))
@@ -152,7 +176,7 @@ fso_sdmx_fetch <- function(dataset_id, agency, flow, version, title = NULL,
     ),
     license = "fso",
     frequency = infer_frequency(periods),
-    dimensions = .sdmx_dimensions(data, dim_cols, codelists)
+    dimensions = .sdmx_dimensions(data, dim_cols, structure)
   )
 
   list(id = dataset_id, data = data, meta = meta)

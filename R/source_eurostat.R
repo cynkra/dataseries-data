@@ -42,6 +42,21 @@ suppressPackageStartupMessages({
   setNames(labs, codes)
 }
 
+# The ESTAT NACE Rev. 2 codelist in one language, as a code -> label list, or NULL
+# when Eurostat does not serve that language (it has no Italian) or is down. FSO
+# prints the NOGA sections in capitals; NACE carries the same section names in
+# proper case, so the FSO SDMX fetcher borrows their casing (tidy_level_labels).
+.eurostat_nace_labels <- function(lang) {
+  txt <- tryCatch(
+    .eurostat_get(sprintf("%s/codelist/ESTAT/NACE_R2/latest?format=TSV&lang=%s",
+                          .EUROSTAT_BASE, lang)),
+    error = function(e) NULL)
+  if (is.null(txt)) return(NULL)
+  parts <- strsplit(strsplit(txt, "\n", fixed = TRUE)[[1]], "\t", fixed = TRUE)
+  parts <- Filter(function(p) length(p) >= 2L, parts)
+  setNames(lapply(parts, function(p) trimws(p[2])), trimws(vapply(parts, `[`, "", 1L)))
+}
+
 # Fetch the Swiss HICP monthly index (unit I15 = 2015 = 100) for the all-items
 # aggregate CP00 plus the 12 main COICOP divisions CP01..CP12 = 13 series.
 # One SDMX-CSV GET per COICOP code (the dimension is keyed in the path); the CSV
