@@ -29,87 +29,90 @@
   "dimensions": {
     "NOGA": {
       "label": {
-        "en": "NOGA"
+        "en": "Branch / Product",
+        "de": "Branche / Warengruppe",
+        "fr": "Branche / Produit",
+        "it": "Ramo / Prodotto"
       },
       "levels": {
         "41": {
           "label": {
-            "en": "41 Building construction",
-            "de": "41 Hochbau",
-            "fr": "41 Bâtiment",
-            "it": "41 Edilizia"
+            "en": "Building construction",
+            "de": "Hochbau",
+            "fr": "Bâtiment",
+            "it": "Edilizia"
           },
           "data": true
         },
         "41_43": {
           "label": {
-            "en": "41_43 Construction of buildings and specialised construction activities",
-            "de": "41_43 Hochbau und Sonstiges Baugewerbe",
-            "fr": "41_43 Construction de bâtiments et travaux de construction spécialisés",
-            "it": "41_43 Construzioni di edifici e lavori di costruzione specializzati"
+            "en": "Construction of buildings and specialised construction activities",
+            "de": "Hochbau und Sonstiges Baugewerbe",
+            "fr": "Construction de bâtiments et travaux de construction spécialisés",
+            "it": "Construzioni di edifici e lavori di costruzione specializzati"
           },
           "data": true
         },
         "42": {
           "label": {
-            "en": "42 Civil engineering",
-            "de": "42 Tiefbau",
-            "fr": "42 Génie civil",
-            "it": "42 Genio civile"
+            "en": "Civil engineering",
+            "de": "Tiefbau",
+            "fr": "Génie civil",
+            "it": "Genio civile"
           },
           "data": true
         },
         "43": {
           "label": {
-            "en": "43 Specialised construction activities",
-            "de": "43 Sonstiges Baugewerbe",
-            "fr": "43 Travaux de construction spécialisés",
-            "it": "43 Lavori di costruzione specializzati"
+            "en": "Specialised construction activities",
+            "de": "Sonstiges Baugewerbe",
+            "fr": "Travaux de construction spécialisés",
+            "it": "Lavori di costruzione specializzati"
           },
           "data": true
         },
         "B": {
           "label": {
-            "en": "B MINING AND QUARRYING",
-            "de": "B BERGBAU UND GEWINNUNG VON STEINEN UND ERDEN",
-            "fr": "B INDUSTRIES EXTRACTIVES",
-            "it": "B ATTIVITÀ ESTRATTIVA"
+            "en": "Mining and quarrying",
+            "de": "Bergbau und Gewinnung von Steinen und Erden",
+            "fr": "Industries extractives",
+            "it": "Attività estrattiva"
           },
           "data": true
         },
         "B-E": {
           "label": {
-            "en": "B-E Industry",
-            "de": "B-E Industrie",
-            "fr": "B-E Industrie",
-            "it": "B-E Industria"
+            "en": "Industry",
+            "de": "Industrie",
+            "fr": "Industrie",
+            "it": "Industria"
           },
           "data": true
         },
         "C": {
           "label": {
-            "en": "C MANUFACTURING",
-            "de": "C VERARBEITENDES GEWERBE/HERSTELLUNG VON WAREN",
-            "fr": "C INDUSTRIE MANUFACTURIÈRE",
-            "it": "C ATTIVITÀ MANIFATTURIERE"
+            "en": "Manufacturing",
+            "de": "Verarbeitendes Gewerbe/Herstellung von Waren",
+            "fr": "Industrie manufacturière",
+            "it": "Attività manifatturiere"
           },
           "data": true
         },
         "D": {
           "label": {
-            "en": "D ELECTRICITY, GAS, STEAM AND AIR-CONDITIONING SUPPLY",
-            "de": "D ENERGIEVERSORGUNG",
-            "fr": "D PRODUCTION ET DISTRIBUTION D'ÉLECTRICITÉ, DE GAZ, DE VAPEUR ET D'AIR CONDITIONNÉ",
-            "it": "D FORNITURA DI ENERGIA ELETTRICA, GAS, VAPORE E ARIA CONDIZIONATA"
+            "en": "Electricity, gas, steam and air-conditioning supply",
+            "de": "Energieversorgung",
+            "fr": "Production et distribution d'électricité, de gaz, de vapeur et d'air conditionné",
+            "it": "Fornitura di energia elettrica, gas, vapore e aria condizionata"
           },
           "data": true
         },
         "F": {
           "label": {
-            "en": "F CONSTRUCTION",
-            "de": "F BAUGEWERBE/BAU",
-            "fr": "F CONSTRUCTION",
-            "it": "F COSTRUZIONI"
+            "en": "Construction",
+            "de": "Baugewerbe/Bau",
+            "fr": "Construction",
+            "it": "Costruzioni"
           },
           "data": true
         }
@@ -130,7 +133,10 @@
     },
     "ADJUSTMENT": {
       "label": {
-        "en": "ADJUSTMENT"
+        "en": "Adjustment",
+        "de": "Bereinigung",
+        "fr": "Ajustement",
+        "it": "Adattamento"
       },
       "levels": {
         "N": {
@@ -164,7 +170,10 @@
     },
     "INDICATOR_KE": {
       "label": {
-        "en": "INDICATOR_KE"
+        "en": "Indicator",
+        "de": "Indikator",
+        "fr": "Indicateur",
+        "it": "Indicatore"
       },
       "levels": {
         "PTOT": {
@@ -239,5 +248,5 @@
     "fr": "Chiffre d'affaires et production de l'industrie et de la construction suisses par trimestre, par branche, y compris bâtiment, génie civil et travaux spécialisés.",
     "it": "Fatturato e produzione dell'industria e delle costruzioni svizzere per trimestre, per ramo, inclusi edilizia, genio civile e lavori specializzati."
   },
-  "fetched_utc": "2026-09-19 08:30:20"
+  "fetched_utc": "2026-09-19 13:15:09"
 }

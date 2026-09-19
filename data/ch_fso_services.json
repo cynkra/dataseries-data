@@ -29,78 +29,81 @@
   "dimensions": {
     "NOGA": {
       "label": {
-        "en": "NOGA"
+        "en": "Branch / Product",
+        "de": "Branche / Warengruppe",
+        "fr": "Branche / Produit",
+        "it": "Ramo / Prodotto"
       },
       "levels": {
         "G": {
           "label": {
-            "en": "G WHOLESALE AND RETAIL TRADE; REPAIR OF MOTOR VEHICLES AND MOTORCYCLES",
-            "de": "G HANDEL; INSTANDHALTUNG UND REPARATUR VON MOTORFAHRZEUGE",
-            "fr": "G COMMERCE; RÉPARATION D'AUTOMOBILES ET DE MOTOCYCLES",
-            "it": "G COMMERCIO ALL'INGROSSO E AL DETTAGLIO; RIPARAZIONE DI AUTOVEICOLI E MOTOCICLI"
+            "en": "Wholesale and retail trade; repair of motor vehicles and motorcycles",
+            "de": "Handel; Instandhaltung und Reparatur von Motorfahrzeuge",
+            "fr": "Commerce; réparation d'automobiles et de motocycles",
+            "it": "Commercio all'ingrosso e al dettaglio; riparazione di autoveicoli e motocicli"
           },
           "data": true
         },
         "G-NxK": {
           "label": {
-            "en": "G-NxK Tertiary sector (except financial and insurance activities)",
-            "de": "G-NxK Tertiärer Sektor (ohne Erbringung von Finanz- und Versicherungsdienstleistungen)",
-            "fr": "G-NxK Secteur tertiaire (sans activités financières et d’assurance)",
-            "it": "G-NxK Settore terziario (senza attività finanziarie e assicurative)"
+            "en": "Tertiary sector (except financial and insurance activities)",
+            "de": "Tertiärer Sektor (ohne Erbringung von Finanz- und Versicherungsdienstleistungen)",
+            "fr": "Secteur tertiaire (sans activités financières et d’assurance)",
+            "it": "Settore terziario (senza attività finanziarie e assicurative)"
           },
           "data": true
         },
         "H": {
           "label": {
-            "en": "H TRANSPORTATION AND STORAGE",
-            "de": "H VERKEHR UND LAGEREI",
-            "fr": "H TRANSPORTS ET ENTREPOSAGE",
-            "it": "H TRASPORTO E MAGAZZINAGGIO"
+            "en": "Transportation and storage",
+            "de": "Verkehr und Lagerei",
+            "fr": "Transports et entreposage",
+            "it": "Trasporto e magazzinaggio"
           },
           "data": true
         },
         "I": {
           "label": {
-            "en": "I ACCOMMODATION AND FOOD SERVICE ACTIVITIES",
-            "de": "I GASTGEWERBE/BEHERBERGUNG UND GASTRONOMIE",
-            "fr": "I HÉBERGEMENT ET RESTAURATION",
-            "it": "I SERVIZI DI ALLOGGIO E DI RISTORAZIONE"
+            "en": "Accommodation and food service activities",
+            "de": "Gastgewerbe/Beherbergung und Gastronomie",
+            "fr": "Hébergement et restauration",
+            "it": "Servizi di alloggio e di ristorazione"
           },
           "data": true
         },
         "J": {
           "label": {
-            "en": "J INFORMATION AND COMMUNICATION",
-            "de": "J INFORMATION UND KOMMUNIKATION",
-            "fr": "J INFORMATION ET COMMUNICATION",
-            "it": "J SERVIZI DI INFORMAZIONE E COMUNICAZIONE"
+            "en": "Information and communication",
+            "de": "Information und Kommunikation",
+            "fr": "Information et communication",
+            "it": "Servizi di informazione e comunicazione"
           },
           "data": true
         },
         "L": {
           "label": {
-            "en": "L REAL ESTATE ACTIVITIES",
-            "de": "L GRUNDSTÜCKS- UND WOHNUNGSWESEN",
-            "fr": "L ACTIVITÉS IMMOBILIÈRES",
-            "it": "L ATTIVITÀ IMMOBILIARI"
+            "en": "Real estate activities",
+            "de": "Grundstücks- und Wohnungswesen",
+            "fr": "Activités immobilières",
+            "it": "Attività immobiliari"
           },
           "data": true
         },
         "M": {
           "label": {
-            "en": "M PROFESSIONAL, SCIENTIFIC AND TECHNICAL ACTIVITIES",
-            "de": "M ERBRINGUNG VON FREIBERUFLICHEN, WISSENSCHAFTLICHEN UND TECHNISCHEN DIENSTLEISTUNGEN",
-            "fr": "M ACTIVITÉS SPÉCIALISÉES, SCIENTIFIQUES ET TECHNIQUES",
-            "it": "M ATTIVITÀ PROFESSIONALI, SCIENTIFICHE E TECNICHE"
+            "en": "Professional, scientific and technical activities",
+            "de": "Erbringung von freiberuflichen, wissenschaftlichen und technischen Dienstleistungen",
+            "fr": "Activités spécialisées, scientifiques et techniques",
+            "it": "Attività professionali, scientifiche e tecniche"
           },
           "data": true
         },
         "N": {
           "label": {
-            "en": "N ADMINISTRATIVE AND SUPPORT SERVICE ACTIVITIES",
-            "de": "N ERBRINGUNG VON SONSTIGEN WIRTSCHAFTLICHEN DIENSTLEISTUNGEN",
-            "fr": "N ACTIVITÉS DE SERVICES ADMINISTRATIFS ET DE SOUTIEN",
-            "it": "N ATTIVITÀ AMMINISTRATIVE E DI SERVIZI DI SUPPORTO"
+            "en": "Administrative and support service activities",
+            "de": "Erbringung von sonstigen wirtschaftlichen Dienstleistungen",
+            "fr": "Activités de services administratifs et de soutien",
+            "it": "Attività amministrative e di servizi di supporto"
           },
           "data": true
         }
@@ -119,7 +122,10 @@
     },
     "ADJUSTMENT": {
       "label": {
-        "en": "ADJUSTMENT"
+        "en": "Adjustment",
+        "de": "Bereinigung",
+        "fr": "Ajustement",
+        "it": "Adattamento"
       },
       "levels": {
         "N": {
@@ -153,7 +159,10 @@
     },
     "INDICATOR_KE": {
       "label": {
-        "en": "INDICATOR_KE"
+        "en": "Indicator",
+        "de": "Indikator",
+        "fr": "Indicateur",
+        "it": "Indicatore"
       },
       "levels": {
         "UEXP": {
@@ -219,5 +228,5 @@
     "fr": "Chiffre d'affaires du secteur suisse des services par trimestre, en complément du commerce de détail et de l'industrie. Base 2021 = 100, donc historique court.",
     "it": "Fatturato del settore svizzero dei servizi per trimestre, a completamento di commercio al dettaglio e industria. Base 2021 = 100, quindi storia breve."
   },
-  "fetched_utc": "2026-09-19 08:30:20"
+  "fetched_utc": "2026-09-19 13:15:09"
 }
