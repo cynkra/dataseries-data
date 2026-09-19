@@ -119,7 +119,7 @@ _Canonical series and labelled alternates per concept, grouped into the 12 overv
 | Retail trade turnover | `ch_fso_retail` (FSO) ★ | — |
 | Industry & construction turnover | `ch_fso_production` (FSO) | — |
 | Services turnover | `ch_fso_services` (FSO) | — |
-| New vehicle registrations | `ch_fso_new_vehicles` (FSO) | — |
+| New vehicle registrations | `ch_fso_new_vehicles` (FSO) | `ch_fso_new_vehicles_canton` (FSO) |
 | Vacant dwellings | `ch_fso_vacant_dwellings` (FSO) | — |
 | Hotel overnight stays | `ch_fso_hesta` (FSO) | — |
 

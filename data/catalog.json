@@ -3418,5 +3418,53 @@
     "load": "whole",
     "data": "ch_snb_zimoma.csv",
     "meta": "ch_snb_zimoma.json"
+  },
+  {
+    "id": "ch_fso_new_vehicles_canton",
+    "title": {
+      "en": "New car registrations by canton and fuel",
+      "de": "Neuzulassungen von Personenwagen nach Kanton und Treibstoff",
+      "fr": "Nouvelles immatriculations de voitures par canton et carburant",
+      "it": "Nuove immatricolazioni di automobili per cantone e carburante"
+    },
+    "concept": {
+      "en": "Domestic economy / New vehicle registrations",
+      "leaf": {
+        "en": "New vehicle registrations",
+        "de": "Neuzulassungen von Fahrzeugen",
+        "fr": "Nouvelles immatriculations",
+        "it": "Nuove immatricolazioni"
+      }
+    },
+    "canonical": false,
+    "featured": null,
+    "topic": {
+      "key": "domestic-economy",
+      "name": {
+        "en": "Domestic economy",
+        "de": "Binnenwirtschaft",
+        "fr": "Économie intérieure",
+        "it": "Economia interna"
+      }
+    },
+    "source": {
+      "key": "fso",
+      "name": {
+        "en": "Swiss Federal Statistical Office (FSO)",
+        "de": "Bundesamt für Statistik (BFS)",
+        "fr": "Office fédéral de la statistique (OFS)",
+        "it": "Ufficio federale di statistica (UST)"
+      }
+    },
+    "license": "fso",
+    "frequency": "monthly",
+    "start": "2005-01-01",
+    "end": "2026-08-01",
+    "n_series": 324,
+    "updated": null,
+    "fetched": "2026-09-18 13:02:12",
+    "load": "whole",
+    "data": "ch_fso_new_vehicles_canton.csv",
+    "meta": "ch_fso_new_vehicles_canton.json"
   }
 ]

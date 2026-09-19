@@ -1,0 +1,455 @@
+{
+  "schema_version": "1.1",
+  "id": "ch_fso_new_vehicles_canton",
+  "dim_order": [
+    "canton",
+    "fuel"
+  ],
+  "start": "2005-01-01",
+  "end": "2026-08-01",
+  "source": {
+    "name": {
+      "en": "Swiss Federal Statistical Office (FSO)",
+      "de": "Bundesamt für Statistik (BFS)",
+      "fr": "Office fédéral de la statistique (OFS)",
+      "it": "Ufficio federale di statistica (UST)"
+    },
+    "url": "https://www.bfs.admin.ch/asset/en/px-x-1103020200_120",
+    "key": "fso"
+  },
+  "license": "fso",
+  "frequency": "monthly",
+  "topic": {
+    "key": "domestic-economy",
+    "name": {
+      "en": "Domestic economy",
+      "de": "Binnenwirtschaft",
+      "fr": "Économie intérieure",
+      "it": "Economia interna"
+    }
+  },
+  "dimensions": {
+    "canton": {
+      "label": {
+        "en": "Canton",
+        "de": "Kanton",
+        "fr": "Canton",
+        "it": "Cantone"
+      },
+      "levels": {
+        "_T": {
+          "label": {
+            "en": "Switzerland (total)",
+            "de": "Schweiz (Total)",
+            "fr": "Suisse (total)",
+            "it": "Svizzera (totale)"
+          },
+          "data": true
+        },
+        "1": {
+          "label": {
+            "en": "Zurich",
+            "de": "Zürich",
+            "fr": "Zurich",
+            "it": "Zurigo"
+          },
+          "data": true
+        },
+        "2": {
+          "label": {
+            "en": "Bern",
+            "de": "Bern",
+            "fr": "Berne",
+            "it": "Berna"
+          },
+          "data": true
+        },
+        "3": {
+          "label": {
+            "en": "Lucerne",
+            "de": "Luzern",
+            "fr": "Lucerne",
+            "it": "Lucerna"
+          },
+          "data": true
+        },
+        "4": {
+          "label": {
+            "en": "Uri",
+            "de": "Uri",
+            "fr": "Uri",
+            "it": "Uri"
+          },
+          "data": true
+        },
+        "5": {
+          "label": {
+            "en": "Schwyz",
+            "de": "Schwyz",
+            "fr": "Schwytz",
+            "it": "Svitto"
+          },
+          "data": true
+        },
+        "6": {
+          "label": {
+            "en": "Obwalden",
+            "de": "Obwalden",
+            "fr": "Obwald",
+            "it": "Obvaldo"
+          },
+          "data": true
+        },
+        "7": {
+          "label": {
+            "en": "Nidwalden",
+            "de": "Nidwalden",
+            "fr": "Nidwald",
+            "it": "Nidvaldo"
+          },
+          "data": true
+        },
+        "8": {
+          "label": {
+            "en": "Glarus",
+            "de": "Glarus",
+            "fr": "Glaris",
+            "it": "Glarona"
+          },
+          "data": true
+        },
+        "9": {
+          "label": {
+            "en": "Zug",
+            "de": "Zug",
+            "fr": "Zoug",
+            "it": "Zugo"
+          },
+          "data": true
+        },
+        "10": {
+          "label": {
+            "en": "Fribourg",
+            "de": "Freiburg",
+            "fr": "Fribourg",
+            "it": "Friburgo"
+          },
+          "data": true
+        },
+        "11": {
+          "label": {
+            "en": "Solothurn",
+            "de": "Solothurn",
+            "fr": "Soleure",
+            "it": "Soletta"
+          },
+          "data": true
+        },
+        "12": {
+          "label": {
+            "en": "Basel-Stadt",
+            "de": "Basel-Stadt",
+            "fr": "Bâle-Ville",
+            "it": "Basilea Città"
+          },
+          "data": true
+        },
+        "13": {
+          "label": {
+            "en": "Basel-Landschaft",
+            "de": "Basel-Landschaft",
+            "fr": "Bâle-Campagne",
+            "it": "Basilea Campagna"
+          },
+          "data": true
+        },
+        "14": {
+          "label": {
+            "en": "Schaffhausen",
+            "de": "Schaffhausen",
+            "fr": "Schaffhouse",
+            "it": "Sciaffusa"
+          },
+          "data": true
+        },
+        "15": {
+          "label": {
+            "en": "Appenzell A.Rh.",
+            "de": "Appenzell A.Rh.",
+            "fr": "Appenzell Rh.-Ext.",
+            "it": "Appenzello Esterno"
+          },
+          "data": true
+        },
+        "16": {
+          "label": {
+            "en": "Appenzell I.Rh.",
+            "de": "Appenzell I.Rh.",
+            "fr": "Appenzell Rh.-Int.",
+            "it": "Appenzello Interno"
+          },
+          "data": true
+        },
+        "17": {
+          "label": {
+            "en": "St. Gallen",
+            "de": "St. Gallen",
+            "fr": "Saint-Gall",
+            "it": "San Gallo"
+          },
+          "data": true
+        },
+        "18": {
+          "label": {
+            "en": "Grisons",
+            "de": "Graubünden",
+            "fr": "Grisons",
+            "it": "Grigioni"
+          },
+          "data": true
+        },
+        "19": {
+          "label": {
+            "en": "Aargau",
+            "de": "Aargau",
+            "fr": "Argovie",
+            "it": "Argovia"
+          },
+          "data": true
+        },
+        "20": {
+          "label": {
+            "en": "Thurgau",
+            "de": "Thurgau",
+            "fr": "Thurgovie",
+            "it": "Turgovia"
+          },
+          "data": true
+        },
+        "21": {
+          "label": {
+            "en": "Ticino",
+            "de": "Tessin",
+            "fr": "Tessin",
+            "it": "Ticino"
+          },
+          "data": true
+        },
+        "22": {
+          "label": {
+            "en": "Vaud",
+            "de": "Waadt",
+            "fr": "Vaud",
+            "it": "Vaud"
+          },
+          "data": true
+        },
+        "23": {
+          "label": {
+            "en": "Valais",
+            "de": "Wallis",
+            "fr": "Valais",
+            "it": "Vallese"
+          },
+          "data": true
+        },
+        "24": {
+          "label": {
+            "en": "Neuchatel",
+            "de": "Neuenburg",
+            "fr": "Neuchâtel",
+            "it": "Neuchâtel"
+          },
+          "data": true
+        },
+        "25": {
+          "label": {
+            "en": "Geneva",
+            "de": "Genf",
+            "fr": "Genève",
+            "it": "Ginevra"
+          },
+          "data": true
+        },
+        "26": {
+          "label": {
+            "en": "Jura",
+            "de": "Jura",
+            "fr": "Jura",
+            "it": "Giura"
+          },
+          "data": true
+        }
+      }
+    },
+    "fuel": {
+      "label": {
+        "en": "Fuel",
+        "de": "Treibstoff",
+        "fr": "Carburant",
+        "it": "Carburante"
+      },
+      "levels": {
+        "_T": {
+          "label": {
+            "en": "Total",
+            "de": "Total",
+            "fr": "Total",
+            "it": "Totale"
+          },
+          "data": true
+        },
+        "PC": {
+          "label": {
+            "en": "Petrol",
+            "de": "Benzin",
+            "fr": "Essence",
+            "it": "Benzina"
+          },
+          "data": true
+        },
+        "PH": {
+          "label": {
+            "en": "Petrol hybrid (HEV)",
+            "de": "Benzin-Hybrid (HEV)",
+            "fr": "Hybride essence (HEV)",
+            "it": "Ibrido benzina (HEV)"
+          },
+          "data": true
+        },
+        "DC": {
+          "label": {
+            "en": "Diesel",
+            "de": "Diesel",
+            "fr": "Diesel",
+            "it": "Diesel"
+          },
+          "data": true
+        },
+        "DH": {
+          "label": {
+            "en": "Diesel hybrid (HEV)",
+            "de": "Diesel-Hybrid (HEV)",
+            "fr": "Hybride diesel (HEV)",
+            "it": "Ibrido diesel (HEV)"
+          },
+          "data": true
+        },
+        "HP": {
+          "label": {
+            "en": "Plug-in hybrid (petrol)",
+            "de": "Plug-in-Hybrid (Benzin)",
+            "fr": "Hybride rechargeable (essence)",
+            "it": "Ibrido plug-in (benzina)"
+          },
+          "data": true
+        },
+        "HD": {
+          "label": {
+            "en": "Plug-in hybrid (diesel)",
+            "de": "Plug-in-Hybrid (Diesel)",
+            "fr": "Hybride rechargeable (diesel)",
+            "it": "Ibrido plug-in (diesel)"
+          },
+          "data": true
+        },
+        "EL": {
+          "label": {
+            "en": "Electric (BEV)",
+            "de": "Elektrisch (BEV)",
+            "fr": "Électrique (BEV)",
+            "it": "Elettrico (BEV)"
+          },
+          "data": true
+        },
+        "FC": {
+          "label": {
+            "en": "Fuel cell (hydrogen)",
+            "de": "Brennstoffzelle (Wasserstoff)",
+            "fr": "Pile à combustible (hydrogène)",
+            "it": "Cella a combustibile (idrogeno)"
+          },
+          "data": true
+        },
+        "GA": {
+          "label": {
+            "en": "Gas",
+            "de": "Gas",
+            "fr": "Gaz",
+            "it": "Gas"
+          },
+          "data": true
+        },
+        "_O": {
+          "label": {
+            "en": "Other",
+            "de": "Andere",
+            "fr": "Autres",
+            "it": "Altri"
+          },
+          "data": true
+        },
+        "NM": {
+          "label": {
+            "en": "No motor",
+            "de": "Ohne Motor",
+            "fr": "Sans moteur",
+            "it": "Senza motore"
+          },
+          "data": true
+        }
+      },
+      "hierarchy": {
+        "_T": {
+          "PC": [],
+          "PH": [],
+          "DC": [],
+          "DH": [],
+          "HP": [],
+          "HD": [],
+          "EL": [],
+          "FC": [],
+          "GA": [],
+          "_O": [],
+          "NM": []
+        }
+      }
+    }
+  },
+  "concept": {
+    "en": "Domestic economy / New vehicle registrations",
+    "leaf": {
+      "en": "New vehicle registrations",
+      "de": "Neuzulassungen von Fahrzeugen",
+      "fr": "Nouvelles immatriculations",
+      "it": "Nuove immatricolazioni"
+    }
+  },
+  "canonical": false,
+  "title": {
+    "en": "New car registrations by canton and fuel",
+    "de": "Neuzulassungen von Personenwagen nach Kanton und Treibstoff",
+    "fr": "Nouvelles immatriculations de voitures par canton et carburant",
+    "it": "Nuove immatricolazioni di automobili per cantone e carburante"
+  },
+  "split": "fuel",
+  "single_select": "canton",
+  "default_transform": "level",
+  "default": {
+    "canton": "_T",
+    "fuel": "_T"
+  },
+  "description": {
+    "en": "New cars registered each month in each of the 26 cantons, by fuel. The canton is the holder's address, so company and leasing fleets count where the company is domiciled, which lifts the EV share in a few cantons.",
+    "de": "Monatliche Neuzulassungen von Personenwagen in jedem der 26 Kantone, nach Treibstoff. Massgebend ist die Adresse des Halters, deshalb zählen Firmen- und Leasingflotten am Firmensitz, was den E-Auto-Anteil in einigen Kantonen erhöht.",
+    "fr": "Nouvelles immatriculations mensuelles de voitures dans chacun des 26 cantons, par carburant. C'est l'adresse du détenteur qui compte : les flottes d'entreprise et de leasing sont comptées au siège de l'entreprise, ce qui relève la part des électriques dans quelques cantons.",
+    "it": "Nuove immatricolazioni mensili di automobili in ciascuno dei 26 cantoni, per carburante. Conta l'indirizzo del detentore: le flotte aziendali e di leasing sono contate presso la sede dell'azienda, il che alza la quota di elettriche in alcuni cantoni."
+  },
+  "units": {
+    "en": "Number of new registrations",
+    "de": "Anzahl Neuzulassungen",
+    "fr": "Nombre de nouvelles immatriculations",
+    "it": "Numero di nuove immatricolazioni"
+  },
+  "fetched_utc": "2026-09-18 13:02:12"
+}
