@@ -52,6 +52,32 @@ check(identical(out$meta$dimensions$breakdown$label$en, "Breakdown"), "dim label
 check(identical(out$meta$units$en, "Index (1993 = 100)"), "dataset units set")
 check(!is.null(lv[["Budget/financial plans"]]), "unknown code is created (group headers)")
 
+# ---- tidy_label: code prefix + capitals -----------------------------------------
+check(identical(tidy_label("4711_472 Retail sale of food", "4711_472", "en"), "Retail sale of food"),
+      "code prefix stripped")
+check(identical(tidy_label("47 Retail trade", "4", "en"), "47 Retail trade"),
+      "prefix must be the whole code")
+check(identical(tidy_label("H TRANSPORTATION AND STORAGE", "H", "en"), "Transportation and storage"),
+      "en capitals -> sentence case")
+check(identical(tidy_label("D PRODUCTION D'ÉLECTRICITÉ, DE GAZ", "D", "fr"),
+                "Production d'électricité, de gaz"), "fr capitals, accents lowercased")
+check(identical(tidy_label("5-43 SECTOR II", "5-43", "en"), "Sector II"), "roman numeral kept")
+check(identical(tidy_label("G HANDEL; INSTANDHALTUNG", "G", "de"), "HANDEL; INSTANDHALTUNG"),
+      "de capitals without a reference stay")
+check(identical(tidy_label("M ERBRINGUNG VON FREIBERUFLICHEN DIENSTLEISTUNGEN", "M", "de",
+                           "Erbringung von freiberuflichen Dienstleistungen"),
+                "Erbringung von freiberuflichen Dienstleistungen"), "de casing from the reference")
+check(identical(tidy_label("G HANDEL; REPARATUR VON MOTORFAHRZEUGE", "G", "de",
+                           "Handel; Reparatur von Kraftfahrzeugen"),
+                "Handel; Reparatur von Motorfahrzeuge"), "de word missing from the reference is capitalised")
+check(identical(tidy_label("Retail  trade ", "47", "en"), "Retail trade"), "spaces squeezed")
+dim <- tidy_level_labels(list(levels = list(C = list(label = list(en = "C MANUFACTURING",
+                                                                 de = "C VERARBEITENDES GEWERBE"), data = TRUE))),
+                         case_ref = list(de = list(C = "Verarbeitendes Gewerbe")))
+check(identical(dim$levels$C$label, list(en = "Manufacturing", de = "Verarbeitendes Gewerbe")),
+      "tidy_level_labels applies per language")
+check(isTRUE(dim$levels$C$data), "tidy_level_labels keeps other level fields")
+
 # ---- corpus: every ## Labels block agrees with its sidecar ----------------------
 # The block is the source of truth; the sidecar is its generated cache. Until a
 # rebuild runs, the two must already agree on every en string — this catches a

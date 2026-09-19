@@ -50,7 +50,13 @@ by how clean they are to ingest:
    names. Pull data via `GET /rest/data/{agency},{flow},{version}/all` (Accept:
    `application/vnd.sdmx.data+csv`). **Caveat:** many cubes are huge (full
    canton×attribute key → tens of MB / millions of rows) — slice to the national
-   total key, same idea as `noga_keep`. Confirmed live flows for the long-deferred
+   total key, same idea as `noga_keep`. **Labels:** the NOGA codelists put the
+   code in front of every label and print the sections in capitals, in all four
+   languages (so do the i14y NOGA codelists). `tidy_level_labels()` in
+   `R/labels.R` strips the code and recases the sections, taking the casing from
+   Eurostat's NACE Rev. 2 codelist (en/de/fr, same section names). Dimension names
+   come from the DSD concepts ("Branche / Warengruppe"), not the dimension ids.
+   Confirmed live flows for the long-deferred
    "real-economy" set:
    - **New vehicle registrations** → agency `CH1.MFZ_IVS`, flow `DF_IVS_0_GENERAL_M`
      (monthly) / `DF_IVS_0_GENERAL` (annual). Dims: geography, owner type,
