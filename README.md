@@ -101,7 +101,7 @@ A hard workflow failure opens a rolling `etl-failure` issue.
 <!-- DATA-HEALTH:START -->
 **ETL health** (run 2026-09-20):
 - 🟢 **Pipeline** — our ETL ran to completion
-- 🔴 **Run-through (upstream)** — 1 source(s) not fetched (provider-side; data kept)
+- 🟢 **Run-through (upstream)** — all sources fetched
 - 🟢 **Recently updated** — 71 of 71 datasets fresh
 
 See [UPTIME.md](UPTIME.md) for the trend and [STATUS.md](STATUS.md) for the per-dataset board.

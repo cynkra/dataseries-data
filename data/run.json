@@ -1,7 +1,7 @@
 {
-  "ts": "2026-09-20T08:34:50Z",
+  "ts": "2026-09-20T10:37:05Z",
   "attempted": 71,
-  "ok": 32,
+  "ok": 33,
   "unchanged": [
     "ch_snb_amarbma",
     "ch_snb_ambeschkla",
@@ -42,10 +42,5 @@
     "ch_snb_zikrepro",
     "ch_snb_zimoma"
   ],
-  "skipped": [
-    {
-      "id": "ch_ffa_finances",
-      "error": "Failed to perform HTTP request.\nCaused by error in `curl::curl_fetch_memory()`:\n! Timeout was reached [www.data.finance.admin.ch]:\nSSL connection timeout"
-    }
-  ]
+  "skipped": []
 }
