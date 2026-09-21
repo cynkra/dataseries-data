@@ -5,7 +5,7 @@
     "D0"
   ],
   "start": "1993-01-01",
-  "end": "2026-06-01",
+  "end": "2026-08-01",
   "title": {
     "en": "Securities turnover",
     "de": "Effektenumsätze",
@@ -104,11 +104,35 @@
           },
           "data": true
         },
+        "D0_3": {
+          "label": {
+            "en": "Structured products",
+            "de": "Strukturierte Prudukte",
+            "fr": "Produits structurés"
+          },
+          "data": false
+        },
         "SPO": {
           "label": {
-            "en": "Structured products and options",
-            "de": "Strukturierte Produkte und Optionen",
-            "fr": "Produits structurés et options"
+            "en": "Structured products and warrants",
+            "de": "Strukturierte Produkte und Warrants",
+            "fr": "Produits structurés et warrants"
+          },
+          "data": true
+        },
+        "SPTH": {
+          "label": {
+            "en": "Structured products with extended trading hours",
+            "de": "Strukturierte Produkte mit erweiterten Handelszeiten",
+            "fr": "Produits structurés avec horaires de négoce prolongés"
+          },
+          "data": true
+        },
+        "T3": {
+          "label": {
+            "en": "Total",
+            "de": "Total",
+            "fr": "Total"
           },
           "data": true
         },
@@ -142,13 +166,17 @@
             "T1": []
           },
           "A": [],
-          "SPO": [],
+          "D0_3": {
+            "SPO": [],
+            "SPTH": [],
+            "T3": []
+          },
           "ISMIT": []
         }
       }
     }
   },
-  "updated": "2026-08-21 09:00",
+  "updated": "2026-09-21 09:00",
   "topic": {
     "key": "financial-markets",
     "name": {
@@ -180,5 +208,5 @@
     "fr": "Combien s'échange chaque mois à la bourse suisse, actions et obligations séparées en titres suisses et étrangers.",
     "it": "Quanto viene scambiato ogni mese alla borsa svizzera, con azioni e obbligazioni separate in titoli svizzeri ed esteri."
   },
-  "fetched_utc": "2026-08-21 08:35:23"
+  "fetched_utc": "2026-09-21 08:45:33"
 }

@@ -99,7 +99,7 @@ data current* — so a provider outage reddens only the middle one:
 A hard workflow failure opens a rolling `etl-failure` issue.
 
 <!-- DATA-HEALTH:START -->
-**ETL health** (run 2026-09-20):
+**ETL health** (run 2026-09-21):
 - 🟢 **Pipeline** — our ETL ran to completion
 - 🟢 **Run-through (upstream)** — all sources fetched
 - 🟢 **Recently updated** — 71 of 71 datasets fresh
