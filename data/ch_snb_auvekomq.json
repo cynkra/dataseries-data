@@ -6,7 +6,7 @@
     "D1"
   ],
   "start": "1985-01-01",
-  "end": "2026-01-01",
+  "end": "2026-04-01",
   "title": {
     "en": "International investment position",
     "de": "Auslandvermögen",
@@ -520,7 +520,7 @@
       }
     }
   },
-  "updated": "2026-06-23 09:00",
+  "updated": "2026-09-22 09:00",
   "topic": {
     "key": "external-sector",
     "name": {
@@ -553,5 +553,5 @@
     "fr": "Ce que la Suisse possède et doit à l'étranger, et la position nette, en stocks de fin de trimestre jusqu'aux réserves monétaires de la banque centrale.",
     "it": "Cosa la Svizzera possiede e deve all'estero, e la posizione netta, come stock di fine trimestre fino alle riserve monetarie della banca centrale."
   },
-  "fetched_utc": "2026-08-05 13:12:01"
+  "fetched_utc": "2026-09-22 08:39:05"
 }

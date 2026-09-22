@@ -7,7 +7,7 @@
     "D2"
   ],
   "start": "1985-01-01",
-  "end": "2026-01-01",
+  "end": "2026-04-01",
   "title": {
     "en": "Investment position by sector",
     "de": "Auslandvermögen nach Sektor",
@@ -189,7 +189,7 @@
       }
     }
   },
-  "updated": "2026-06-23 09:00",
+  "updated": "2026-09-22 09:00",
   "topic": {
     "key": "external-sector",
     "name": {
@@ -223,5 +223,5 @@
     "fr": "Qui détient les avoirs et engagements suisses à l'étranger — banque centrale, banques, État ou autres secteurs — et la position créditrice nette qui en résulte.",
     "it": "Chi detiene gli attivi e i debiti svizzeri sull'estero — banca centrale, banche, Stato o altri settori — e la posizione creditoria netta che ne risulta."
   },
-  "fetched_utc": "2026-08-05 13:12:01"
+  "fetched_utc": "2026-09-22 08:39:05"
 }

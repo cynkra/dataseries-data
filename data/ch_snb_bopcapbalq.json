@@ -6,7 +6,7 @@
     "D1"
   ],
   "start": "1985-01-01",
-  "end": "2026-01-01",
+  "end": "2026-04-01",
   "title": {
     "en": "Balance of payments: financial account",
     "de": "Zahlungsbilanz: Kapitalbilanz",
@@ -584,7 +584,7 @@
       }
     }
   },
-  "updated": "2026-06-23 09:00",
+  "updated": "2026-09-22 09:00",
   "topic": {
     "key": "external-sector",
     "name": {
@@ -617,5 +617,5 @@
     "fr": "Flux d'investissement transfrontaliers vers et depuis la Suisse : investissements directs, de portefeuille et autres, plus les réserves monétaires, par trimestre.",
     "it": "Flussi d'investimento transfrontalieri verso e dalla Svizzera: investimenti diretti, di portafoglio e altri, più le riserve monetarie, per trimestre."
   },
-  "fetched_utc": "2026-08-05 13:12:01"
+  "fetched_utc": "2026-09-22 08:39:05"
 }

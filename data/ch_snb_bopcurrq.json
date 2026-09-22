@@ -6,7 +6,7 @@
     "D1"
   ],
   "start": "1983-01-01",
-  "end": "2026-01-01",
+  "end": "2026-04-01",
   "title": {
     "en": "Balance of payments: current account",
     "de": "Zahlungsbilanz: Leistungsbilanz",
@@ -546,7 +546,7 @@
       }
     }
   },
-  "updated": "2026-06-23 09:00",
+  "updated": "2026-09-22 09:00",
   "topic": {
     "key": "external-sector",
     "name": {
@@ -579,5 +579,5 @@
     "fr": "Le compte courant suisse en détail — biens, services, revenus du travail et des investissements — et d'où vient l'excédent structurel.",
     "it": "Il conto corrente svizzero in dettaglio — beni, servizi, redditi da lavoro e da investimenti — e da dove proviene l'avanzo strutturale."
   },
-  "fetched_utc": "2026-08-05 13:12:02"
+  "fetched_utc": "2026-09-22 08:39:05"
 }

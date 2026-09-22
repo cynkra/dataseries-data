@@ -7,7 +7,7 @@
     "D2"
   ],
   "start": "1985-01-01",
-  "end": "2026-01-01",
+  "end": "2026-04-01",
   "title": {
     "en": "Investment position by currency",
     "de": "Auslandvermögen nach Währung",
@@ -198,7 +198,7 @@
       }
     }
   },
-  "updated": "2026-06-23 09:00",
+  "updated": "2026-09-22 09:00",
   "topic": {
     "key": "external-sector",
     "name": {
@@ -232,5 +232,5 @@
     "fr": "Dans quelles monnaies sont détenus les avoirs et engagements suisses à l'étranger — francs, dollars, euros ou métaux précieux — et donc leur exposition.",
     "it": "In quali valute sono detenuti gli attivi e i debiti svizzeri sull'estero — franchi, dollari, euro o metalli preziosi — e quindi quanto sono esposti."
   },
-  "fetched_utc": "2026-08-05 13:12:01"
+  "fetched_utc": "2026-09-22 08:39:05"
 }

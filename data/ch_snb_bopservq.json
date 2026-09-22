@@ -7,7 +7,7 @@
     "D2"
   ],
   "start": "2012-01-01",
-  "end": "2026-01-01",
+  "end": "2026-04-01",
   "title": {
     "en": "Balance of payments: services",
     "de": "Zahlungsbilanz: Dienstleistungen",
@@ -782,7 +782,7 @@
       }
     }
   },
-  "updated": "2026-06-23 09:00",
+  "updated": "2026-09-22 09:00",
   "topic": {
     "key": "external-sector",
     "name": {
@@ -816,5 +816,5 @@
     "fr": "Avec quels pays la Suisse échange des services — environ 50 partenaires plus les totaux régionaux — par type de service et par sens.",
     "it": "Con quali paesi la Svizzera scambia servizi — circa 50 partner più i totali regionali — per tipo di servizio e direzione."
   },
-  "fetched_utc": "2026-08-05 13:12:02"
+  "fetched_utc": "2026-09-22 08:39:05"
 }

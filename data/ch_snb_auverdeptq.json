@@ -5,7 +5,7 @@
     "D0"
   ],
   "start": "1999-10-01",
-  "end": "2026-01-01",
+  "end": "2026-04-01",
   "title": {
     "en": "External debt",
     "de": "Auslandschulden",
@@ -558,7 +558,7 @@
       }
     }
   },
-  "updated": "2026-06-23 09:00",
+  "updated": "2026-09-22 09:00",
   "topic": {
     "key": "external-sector",
     "name": {
@@ -590,5 +590,5 @@
     "fr": "La dette extérieure brute de la Suisse selon le standard du FMI, par secteur emprunteur et selon l'échéance, courte ou longue.",
     "it": "Il debito estero lordo della Svizzera secondo lo standard FMI, per settore debitore e per scadenza, breve o lunga."
   },
-  "fetched_utc": "2026-08-05 13:12:01"
+  "fetched_utc": "2026-09-22 08:39:05"
 }

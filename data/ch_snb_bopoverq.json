@@ -5,7 +5,7 @@
     "D0"
   ],
   "start": "1985-01-01",
-  "end": "2026-01-01",
+  "end": "2026-04-01",
   "title": {
     "en": "Balance of payments: overview",
     "de": "Zahlungsbilanz: Übersicht",
@@ -565,7 +565,7 @@
       }
     }
   },
-  "updated": "2026-06-23 09:00",
+  "updated": "2026-09-22 09:00",
   "topic": {
     "key": "external-sector",
     "name": {
@@ -597,5 +597,5 @@
     "fr": "La balance des paiements suisse sur une page : les quatre comptes, y compris la différence statistique qui boucle les comptes.",
     "it": "La bilancia dei pagamenti svizzera in una pagina: tutti e quattro i conti, inclusa la differenza statistica che chiude i conti."
   },
-  "fetched_utc": "2026-08-05 13:12:02"
+  "fetched_utc": "2026-09-22 08:39:05"
 }
