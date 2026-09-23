@@ -35,6 +35,11 @@ bund,fs,aktiven,Rechnung,2022-01-01,181414.42451593
 bund,fs,aktiven,Rechnung,2023-01-01,189452.79956791
 bund,fs,aktiven,Rechnung,2024-01-01,196920.64572099
 bund,fs,aktiven,Rechnung,2025-01-01,202624.72080136
+bund,fs,ausgaben,Budget/Finanzpläne,2027-01-01,96521.7997095794
+bund,fs,ausgaben,Budget/Finanzpläne,2028-01-01,100394.339386665
+bund,fs,ausgaben,Budget/Finanzpläne,2029-01-01,104525.387963145
+bund,fs,ausgaben,Budget/Finanzpläne,2030-01-01,107128.71460847
+bund,fs,ausgaben,Hochrechnung,2026-01-01,94930.3260964132
 bund,fs,ausgaben,Rechnung,1990-01-01,32637.39172276
 bund,fs,ausgaben,Rechnung,1991-01-01,36599.43303003
 bund,fs,ausgaben,Rechnung,1992-01-01,38936.17111768
@@ -71,6 +76,11 @@ bund,fs,ausgaben,Rechnung,2022-01-01,82374.80167727
 bund,fs,ausgaben,Rechnung,2023-01-01,82995.89717164
 bund,fs,ausgaben,Rechnung,2024-01-01,86385.41230348
 bund,fs,ausgaben,Rechnung,2025-01-01,89628.35429133
+bund,fs,ausgaben_ord,Budget/Finanzpläne,2027-01-01,96387.0697095794
+bund,fs,ausgaben_ord,Budget/Finanzpläne,2028-01-01,100263.941686665
+bund,fs,ausgaben_ord,Budget/Finanzpläne,2029-01-01,104402.744763145
+bund,fs,ausgaben_ord,Budget/Finanzpläne,2030-01-01,107012.15020847
+bund,fs,ausgaben_ord,Hochrechnung,2026-01-01,94809.7411964132
 bund,fs,ausgaben_ord,Rechnung,1990-01-01,32637.39172276
 bund,fs,ausgaben_ord,Rechnung,1991-01-01,36599.43303003
 bund,fs,ausgaben_ord,Rechnung,1992-01-01,38936.17111768
@@ -107,6 +117,11 @@ bund,fs,ausgaben_ord,Rechnung,2022-01-01,78058.80648733
 bund,fs,ausgaben_ord,Rechnung,2023-01-01,81598.14854215
 bund,fs,ausgaben_ord,Rechnung,2024-01-01,84965.75039288
 bund,fs,ausgaben_ord,Rechnung,2025-01-01,88541.89422145
+bund,fs,bruttoschuld_fs,Budget/Finanzpläne,2027-01-01,130665.677159241
+bund,fs,bruttoschuld_fs,Budget/Finanzpläne,2028-01-01,130246.949930291
+bund,fs,bruttoschuld_fs,Budget/Finanzpläne,2029-01-01,130265.862018707
+bund,fs,bruttoschuld_fs,Budget/Finanzpläne,2030-01-01,130329.248281405
+bund,fs,bruttoschuld_fs,Hochrechnung,2026-01-01,130353.071906532
 bund,fs,bruttoschuld_fs,Rechnung,1990-01-01,38769.41246061
 bund,fs,bruttoschuld_fs,Rechnung,1991-01-01,44145.21839946
 bund,fs,bruttoschuld_fs,Rechnung,1992-01-01,55525.37151497
@@ -179,6 +194,11 @@ bund,fs,eigenkapital,Rechnung,2022-01-01,3463.60494369
 bund,fs,eigenkapital,Rechnung,2023-01-01,2673.22106544
 bund,fs,eigenkapital,Rechnung,2024-01-01,6188.60567741
 bund,fs,eigenkapital,Rechnung,2025-01-01,12780.06540112
+bund,fs,einnahmen,Budget/Finanzpläne,2027-01-01,96075.2207771386
+bund,fs,einnahmen,Budget/Finanzpläne,2028-01-01,100813.066615615
+bund,fs,einnahmen,Budget/Finanzpläne,2029-01-01,104498.370693979
+bund,fs,einnahmen,Budget/Finanzpläne,2030-01-01,107038.162804615
+bund,fs,einnahmen,Hochrechnung,2026-01-01,95069.8825543454
 bund,fs,einnahmen,Rechnung,1990-01-01,31793.57861361
 bund,fs,einnahmen,Rechnung,1991-01-01,32644.22725425
 bund,fs,einnahmen,Rechnung,1992-01-01,33936.18822209
@@ -215,6 +235,11 @@ bund,fs,einnahmen,Rechnung,2022-01-01,79583.72846091
 bund,fs,einnahmen,Rechnung,2023-01-01,82086.23939837
 bund,fs,einnahmen,Rechnung,2024-01-01,86545.14721613
 bund,fs,einnahmen,Rechnung,2025-01-01,90161.80989351
+bund,fs,einnahmen_ord,Budget/Finanzpläne,2027-01-01,96044.7385771386
+bund,fs,einnahmen_ord,Budget/Finanzpläne,2028-01-01,100783.157215615
+bund,fs,einnahmen_ord,Budget/Finanzpläne,2029-01-01,104467.010293979
+bund,fs,einnahmen_ord,Budget/Finanzpläne,2030-01-01,107005.355904615
+bund,fs,einnahmen_ord,Hochrechnung,2026-01-01,95027.7588543454
 bund,fs,einnahmen_ord,Rechnung,1990-01-01,31789.62833661
 bund,fs,einnahmen_ord,Rechnung,1991-01-01,32626.84488125
 bund,fs,einnahmen_ord,Rechnung,1992-01-01,33931.40014309
@@ -287,6 +312,11 @@ bund,fs,fremdkapital,Rechnung,2022-01-01,177950.81957224
 bund,fs,fremdkapital,Rechnung,2023-01-01,186779.57850247
 bund,fs,fremdkapital,Rechnung,2024-01-01,190732.04004359
 bund,fs,fremdkapital,Rechnung,2025-01-01,189844.65540027
+bund,fs,nettoschulden_fs,Budget/Finanzpläne,2027-01-01,139564.037214249
+bund,fs,nettoschulden_fs,Budget/Finanzpläne,2028-01-01,139229.055431089
+bund,fs,nettoschulden_fs,Budget/Finanzpläne,2029-01-01,139252.02010988
+bund,fs,nettoschulden_fs,Budget/Finanzpläne,2030-01-01,139328.989143157
+bund,fs,nettoschulden_fs,Hochrechnung,2026-01-01,139184.445121674
 bund,fs,nettoschulden_fs,Rechnung,1990-01-01,30163.72152352
 bund,fs,nettoschulden_fs,Rechnung,1991-01-01,33552.41893803
 bund,fs,nettoschulden_fs,Rechnung,1992-01-01,37913.27745865
@@ -323,6 +353,11 @@ bund,fs,nettoschulden_fs,Rechnung,2022-01-01,139334.83787243
 bund,fs,nettoschulden_fs,Rechnung,2023-01-01,142733.90017876
 bund,fs,nettoschulden_fs,Rechnung,2024-01-01,141832.58452337
 bund,fs,nettoschulden_fs,Rechnung,2025-01-01,139296.09028802
+bund,fs,saldo,Budget/Finanzpläne,2027-01-01,-446.578932440825
+bund,fs,saldo,Budget/Finanzpläne,2028-01-01,418.727228950011
+bund,fs,saldo,Budget/Finanzpläne,2029-01-01,-27.0172691659827
+bund,fs,saldo,Budget/Finanzpläne,2030-01-01,-90.5518038549926
+bund,fs,saldo,Hochrechnung,2026-01-01,139.556457932224
 bund,fs,saldo,Rechnung,1990-01-01,-843.81310915
 bund,fs,saldo,Rechnung,1991-01-01,-3955.20577578
 bund,fs,saldo,Rechnung,1992-01-01,-4999.98289559
@@ -359,6 +394,11 @@ bund,fs,saldo,Rechnung,2022-01-01,-2791.07321635999
 bund,fs,saldo,Rechnung,2023-01-01,-909.657773269995
 bund,fs,saldo,Rechnung,2024-01-01,159.734912650005
 bund,fs,saldo,Rechnung,2025-01-01,533.455602180009
+bund,fs,saldo_ord,Budget/Finanzpläne,2027-01-01,-342.331132440813
+bund,fs,saldo_ord,Budget/Finanzpläne,2028-01-01,519.215528950008
+bund,fs,saldo_ord,Budget/Finanzpläne,2029-01-01,64.2655308340036
+bund,fs,saldo_ord,Budget/Finanzpläne,2030-01-01,-6.79430385500018
+bund,fs,saldo_ord,Hochrechnung,2026-01-01,218.017657932214
 bund,fs,saldo_ord,Rechnung,1990-01-01,-847.76338615
 bund,fs,saldo_ord,Rechnung,1991-01-01,-3972.58814878
 bund,fs,saldo_ord,Rechnung,1992-01-01,-5004.77097459
@@ -431,6 +471,11 @@ bund,gfs,aufwand,Rechnung,2022-01-01,81551.08894345
 bund,gfs,aufwand,Rechnung,2023-01-01,83608.22137136
 bund,gfs,aufwand,Rechnung,2024-01-01,88278.09117923
 bund,gfs,aufwand,Rechnung,2025-01-01,91422.85510587
+bund,gfs,ausgaben,Budget/Finanzpläne,2027-01-01,99734.2875916806
+bund,gfs,ausgaben,Budget/Finanzpläne,2028-01-01,103161.155080875
+bund,gfs,ausgaben,Budget/Finanzpläne,2029-01-01,106698.079902585
+bund,gfs,ausgaben,Budget/Finanzpläne,2030-01-01,109575.57467194
+bund,gfs,ausgaben,Hochrechnung,2026-01-01,97934.9279579656
 bund,gfs,ausgaben,Rechnung,1990-01-01,33505.71186785
 bund,gfs,ausgaben,Rechnung,1991-01-01,37335.65406827
 bund,gfs,ausgaben,Rechnung,1992-01-01,39661.83839878
@@ -467,6 +512,11 @@ bund,gfs,ausgaben,Rechnung,2022-01-01,83574.0911215
 bund,gfs,ausgaben,Rechnung,2023-01-01,86077.98729464
 bund,gfs,ausgaben,Rechnung,2024-01-01,90241.68662823
 bund,gfs,ausgaben,Rechnung,2025-01-01,93212.67425221
+bund,gfs,bruttoschuldenquote,Budget/Finanzpläne,2027-01-01,0.142067387508277
+bund,gfs,bruttoschuldenquote,Budget/Finanzpläne,2028-01-01,0.137865784983059
+bund,gfs,bruttoschuldenquote,Budget/Finanzpläne,2029-01-01,0.134134512206956
+bund,gfs,bruttoschuldenquote,Budget/Finanzpläne,2030-01-01,0.130566125974098
+bund,gfs,bruttoschuldenquote,Hochrechnung,2026-01-01,0.144241383791279
 bund,gfs,bruttoschuldenquote,Rechnung,1990-01-01,0.103450746533512
 bund,gfs,bruttoschuldenquote,Rechnung,1991-01-01,0.112783513407439
 bund,gfs,bruttoschuldenquote,Rechnung,1992-01-01,0.138967382325143
@@ -500,9 +550,14 @@ bund,gfs,bruttoschuldenquote,Rechnung,2019-01-01,0.132021440831868
 bund,gfs,bruttoschuldenquote,Rechnung,2020-01-01,0.145147389273482
 bund,gfs,bruttoschuldenquote,Rechnung,2021-01-01,0.140625980306103
 bund,gfs,bruttoschuldenquote,Rechnung,2022-01-01,0.145492336714593
-bund,gfs,bruttoschuldenquote,Rechnung,2023-01-01,0.153725495592797
-bund,gfs,bruttoschuldenquote,Rechnung,2024-01-01,0.153170569418028
-bund,gfs,bruttoschuldenquote,Rechnung,2025-01-01,0.149266871535803
+bund,gfs,bruttoschuldenquote,Rechnung,2023-01-01,0.15318019614562
+bund,gfs,bruttoschuldenquote,Rechnung,2024-01-01,0.151929610678464
+bund,gfs,bruttoschuldenquote,Rechnung,2025-01-01,0.146934108755129
+bund,gfs,defizit_ueberschuss,Budget/Finanzpläne,2027-01-01,-0.0010032110618199
+bund,gfs,defizit_ueberschuss,Budget/Finanzpläne,2028-01-01,5.46756058177954e-5
+bund,gfs,defizit_ueberschuss,Budget/Finanzpläne,2029-01-01,-5.67156772461422e-4
+bund,gfs,defizit_ueberschuss,Budget/Finanzpläne,2030-01-01,-6.10494586968833e-4
+bund,gfs,defizit_ueberschuss,Hochrechnung,2026-01-01,-0.0011648148377028
 bund,gfs,defizit_ueberschuss,Rechnung,1990-01-01,-0.00162508494839849
 bund,gfs,defizit_ueberschuss,Rechnung,1991-01-01,-0.00968877419647878
 bund,gfs,defizit_ueberschuss,Rechnung,1992-01-01,-0.0117669708409999
@@ -536,9 +591,14 @@ bund,gfs,defizit_ueberschuss,Rechnung,2019-01-01,0.0061745491071347
 bund,gfs,defizit_ueberschuss,Rechnung,2020-01-01,-0.0208668273629446
 bund,gfs,defizit_ueberschuss,Rechnung,2021-01-01,-0.0153504436646369
 bund,gfs,defizit_ueberschuss,Rechnung,2022-01-01,-0.00127715867366618
-bund,gfs,defizit_ueberschuss,Rechnung,2023-01-01,-0.00168888305874078
-bund,gfs,defizit_ueberschuss,Rechnung,2024-01-01,-0.001425322585054
-bund,gfs,defizit_ueberschuss,Rechnung,2025-01-01,-0.00117581017382912
+bund,gfs,defizit_ueberschuss,Rechnung,2023-01-01,-0.00168289220475311
+bund,gfs,defizit_ueberschuss,Rechnung,2024-01-01,-0.00141377489331829
+bund,gfs,defizit_ueberschuss,Rechnung,2025-01-01,-0.00115743445400312
+bund,gfs,einnahmenquote,Budget/Finanzpläne,2027-01-01,0.107433755639709
+bund,gfs,einnahmenquote,Budget/Finanzpläne,2028-01-01,0.109250273910391
+bund,gfs,einnahmenquote,Budget/Finanzpläne,2029-01-01,0.109299654680387
+bund,gfs,einnahmenquote,Budget/Finanzpläne,2030-01-01,0.109164237293702
+bund,gfs,einnahmenquote,Hochrechnung,2026-01-01,0.107204472694587
 bund,gfs,einnahmenquote,Rechnung,1990-01-01,0.0877802138651314
 bund,gfs,einnahmenquote,Rechnung,1991-01-01,0.085697462271563
 bund,gfs,einnahmenquote,Rechnung,1992-01-01,0.0874975943496231
@@ -572,9 +632,14 @@ bund,gfs,einnahmenquote,Rechnung,2019-01-01,0.107926652977857
 bund,gfs,einnahmenquote,Rechnung,2020-01-01,0.108384713175145
 bund,gfs,einnahmenquote,Rechnung,2021-01-01,0.105512684304078
 bund,gfs,einnahmenquote,Rechnung,2022-01-01,0.100679307395147
-bund,gfs,einnahmenquote,Rechnung,2023-01-01,0.101498648279768
-bund,gfs,einnahmenquote,Rechnung,2024-01-01,0.104249422439243
-bund,gfs,einnahmenquote,Rechnung,2025-01-01,0.106237496372532
+bund,gfs,einnahmenquote,Rechnung,2023-01-01,0.10113860938978
+bund,gfs,einnahmenquote,Rechnung,2024-01-01,0.103404813501886
+bund,gfs,einnahmenquote,Rechnung,2025-01-01,0.104577202464715
+bund,gfs,ertrag,Budget/Finanzpläne,2027-01-01,98811.5898844486
+bund,gfs,ertrag,Budget/Finanzpläne,2028-01-01,103212.809165275
+bund,gfs,ertrag,Budget/Finanzpläne,2029-01-01,106147.280822998
+bund,gfs,ertrag,Budget/Finanzpläne,2030-01-01,108966.187665885
+bund,gfs,ertrag,Hochrechnung,2026-01-01,96882.2675611645
 bund,gfs,ertrag,Rechnung,1990-01-01,32896.69172291
 bund,gfs,ertrag,Rechnung,1991-01-01,33543.31740483
 bund,gfs,ertrag,Rechnung,1992-01-01,34960.26442782
@@ -611,6 +676,11 @@ bund,gfs,ertrag,Rechnung,2022-01-01,82527.19944817
 bund,gfs,ertrag,Rechnung,2023-01-01,84669.13825458
 bund,gfs,ertrag,Rechnung,2024-01-01,89024.52245116
 bund,gfs,ertrag,Rechnung,2025-01-01,92192.31267654
+bund,gfs,fiskalertrag,Budget/Finanzpläne,2027-01-01,89738.2331084124
+bund,gfs,fiskalertrag,Budget/Finanzpläne,2028-01-01,94464.8894261362
+bund,gfs,fiskalertrag,Budget/Finanzpläne,2029-01-01,98064.7130005067
+bund,gfs,fiskalertrag,Budget/Finanzpläne,2030-01-01,100594.651083256
+bund,gfs,fiskalertrag,Hochrechnung,2026-01-01,87098.8890148732
 bund,gfs,fiskalertrag,Rechnung,1990-01-01,29730.51341497
 bund,gfs,fiskalertrag,Rechnung,1991-01-01,30300.81192021
 bund,gfs,fiskalertrag,Rechnung,1992-01-01,31556.10124234
@@ -647,6 +717,11 @@ bund,gfs,fiskalertrag,Rechnung,2022-01-01,73085.73933478
 bund,gfs,fiskalertrag,Rechnung,2023-01-01,76341.56064295
 bund,gfs,fiskalertrag,Rechnung,2024-01-01,80796.02727978
 bund,gfs,fiskalertrag,Rechnung,2025-01-01,83046.9891416
+bund,gfs,fiskalquote,Budget/Finanzpläne,2027-01-01,0.097568670017177
+bund,gfs,fiskalquote,Budget/Finanzpläne,2028-01-01,0.0999906419385819
+bund,gfs,fiskalquote,Budget/Finanzpläne,2029-01-01,0.100977049851704
+bund,gfs,fiskalquote,Budget/Finanzpläne,2030-01-01,0.100777485168161
+bund,gfs,fiskalquote,Hochrechnung,2026-01-01,0.0963787358014598
 bund,gfs,fiskalquote,Rechnung,1990-01-01,0.079331710552181
 bund,gfs,fiskalquote,Rechnung,1991-01-01,0.0774134130798886
 bund,gfs,fiskalquote,Rechnung,1992-01-01,0.0789777477644232
@@ -680,9 +755,14 @@ bund,gfs,fiskalquote,Rechnung,2019-01-01,0.0978051963916152
 bund,gfs,fiskalquote,Rechnung,2020-01-01,0.0972038953780626
 bund,gfs,fiskalquote,Rechnung,2021-01-01,0.0936992321424936
 bund,gfs,fiskalquote,Rechnung,2022-01-01,0.0891611694797556
-bund,gfs,fiskalquote,Rechnung,2023-01-01,0.0915158152375344
-bund,gfs,fiskalquote,Rechnung,2024-01-01,0.0946136968487905
-bund,gfs,fiskalquote,Rechnung,2025-01-01,0.0956989140584335
+bund,gfs,fiskalquote,Rechnung,2023-01-01,0.0911911877366468
+bund,gfs,fiskalquote,Rechnung,2024-01-01,0.0938471547223681
+bund,gfs,fiskalquote,Rechnung,2025-01-01,0.0942033185349966
+bund,gfs,fremdkapital,Budget/Finanzpläne,2027-01-01,192201.217112957
+bund,gfs,fremdkapital,Budget/Finanzpläne,2028-01-01,192159.893845437
+bund,gfs,fremdkapital,Budget/Finanzpläne,2029-01-01,192600.533109106
+bund,gfs,fremdkapital,Budget/Finanzpläne,2030-01-01,193088.04271395
+bund,gfs,fremdkapital,Hochrechnung,2026-01-01,191463.058947171
 bund,gfs,fremdkapital,Rechnung,1990-01-01,45686.31769074
 bund,gfs,fremdkapital,Rechnung,1991-01-01,50428.54959559
 bund,gfs,fremdkapital,Rechnung,1992-01-01,60111.24033694
@@ -719,6 +799,11 @@ bund,gfs,fremdkapital,Rechnung,2022-01-01,167428.70484327
 bund,gfs,fremdkapital,Rechnung,2023-01-01,183080.44113416
 bund,gfs,fremdkapital,Rechnung,2024-01-01,189711.19524946
 bund,gfs,fremdkapital,Rechnung,2025-01-01,189646.33061756
+bund,gfs,maastricht_schuld,Budget/Finanzpläne,2027-01-01,107690.315773736
+bund,gfs,maastricht_schuld,Budget/Finanzpläne,2028-01-01,107187.843098996
+bund,gfs,maastricht_schuld,Budget/Finanzpläne,2029-01-01,107204.053460495
+bund,gfs,maastricht_schuld,Budget/Finanzpläne,2030-01-01,107312.715625121
+bund,gfs,maastricht_schuld,Hochrechnung,2026-01-01,107422.368414271
 bund,gfs,maastricht_schuld,Rechnung,1990-01-01,36692.0976154
 bund,gfs,maastricht_schuld,Rechnung,1991-01-01,42612.24224688
 bund,gfs,maastricht_schuld,Rechnung,1992-01-01,53437.43373023
@@ -755,6 +840,11 @@ bund,gfs,maastricht_schuld,Rechnung,2022-01-01,104730.95754642
 bund,gfs,maastricht_schuld,Rechnung,2023-01-01,107628.33325808
 bund,gfs,maastricht_schuld,Rechnung,2024-01-01,107964.92161889
 bund,gfs,maastricht_schuld,Rechnung,2025-01-01,106615.23615162
+bund,gfs,nettoschuld,Budget/Finanzpläne,2027-01-01,133940.587435203
+bund,gfs,nettoschuld,Budget/Finanzpläne,2028-01-01,133888.933350803
+bund,gfs,nettoschuld,Budget/Finanzpläne,2029-01-01,134439.73243039
+bund,gfs,nettoschuld,Budget/Finanzpläne,2030-01-01,135049.119436445
+bund,gfs,nettoschuld,Hochrechnung,2026-01-01,133017.889727971
 bund,gfs,nettoschuld,Rechnung,1990-01-01,25359.6913661
 bund,gfs,nettoschuld,Rechnung,1991-01-01,28821.00149712
 bund,gfs,nettoschuld,Rechnung,1992-01-01,33014.44192645
@@ -791,6 +881,11 @@ bund,gfs,nettoschuld,Rechnung,2022-01-01,120672.90138544
 bund,gfs,nettoschuld,Rechnung,2023-01-01,130489.13139281
 bund,gfs,nettoschuld,Rechnung,2024-01-01,133794.94074419
 bund,gfs,nettoschuld,Rechnung,2025-01-01,131965.22933117
+bund,gfs,nettoschuldenquote,Budget/Finanzpläne,2027-01-01,0.145628062027746
+bund,gfs,nettoschuldenquote,Budget/Finanzpläne,2028-01-01,0.141720807334315
+bund,gfs,nettoschuldenquote,Budget/Finanzpläne,2029-01-01,0.138432338690504
+bund,gfs,nettoschuldenquote,Budget/Finanzpläne,2030-01-01,0.135294575650105
+bund,gfs,nettoschuldenquote,Hochrechnung,2026-01-01,0.147190121435081
 bund,gfs,nettoschuldenquote,Rechnung,1990-01-01,0.0676687841567878
 bund,gfs,nettoschuldenquote,Rechnung,1991-01-01,0.0736327495166729
 bund,gfs,nettoschuldenquote,Rechnung,1992-01-01,0.0826276429723172
@@ -824,9 +919,9 @@ bund,gfs,nettoschuldenquote,Rechnung,2019-01-01,0.142490928133957
 bund,gfs,nettoschuldenquote,Rechnung,2020-01-01,0.168839006540221
 bund,gfs,nettoschuldenquote,Rechnung,2021-01-01,0.169825985735339
 bund,gfs,nettoschuldenquote,Rechnung,2022-01-01,0.147215272226451
-bund,gfs,nettoschuldenquote,Rechnung,2023-01-01,0.156426186974389
-bund,gfs,nettoschuldenquote,Rechnung,2024-01-01,0.156676440533861
-bund,gfs,nettoschuldenquote,Rechnung,2025-01-01,0.152069680924037
+bund,gfs,nettoschuldenquote,Rechnung,2023-01-01,0.155871307557983
+bund,gfs,nettoschuldenquote,Rechnung,2024-01-01,0.155407077895183
+bund,gfs,nettoschuldenquote,Rechnung,2025-01-01,0.149693115460592
 bund,gfs,nettozugang_sachvermoegen,Rechnung,1990-01-01,595.59731031
 bund,gfs,nettozugang_sachvermoegen,Rechnung,1991-01-01,456.5305585
 bund,gfs,nettozugang_sachvermoegen,Rechnung,1992-01-01,271.66078116
@@ -863,6 +958,11 @@ bund,gfs,nettozugang_sachvermoegen,Rechnung,2022-01-01,2023.00217805
 bund,gfs,nettozugang_sachvermoegen,Rechnung,2023-01-01,2469.76592328
 bund,gfs,nettozugang_sachvermoegen,Rechnung,2024-01-01,1963.595449
 bund,gfs,nettozugang_sachvermoegen,Rechnung,2025-01-01,1789.81914634
+bund,gfs,saldo,Budget/Finanzpläne,2027-01-01,-922.697707232073
+bund,gfs,saldo,Budget/Finanzpläne,2028-01-01,51.6540843997936
+bund,gfs,saldo,Budget/Finanzpläne,2029-01-01,-550.799079586941
+bund,gfs,saldo,Budget/Finanzpläne,2030-01-01,-609.387006054691
+bund,gfs,saldo,Hochrechnung,2026-01-01,-1052.6603968011
 bund,gfs,saldo,Rechnung,1990-01-01,-609.020144939997
 bund,gfs,saldo,Rechnung,1991-01-01,-3792.33666344
 bund,gfs,saldo,Rechnung,1992-01-01,-4701.57397096
@@ -899,6 +999,11 @@ bund,gfs,saldo,Rechnung,2022-01-01,-1046.89167332998
 bund,gfs,saldo,Rechnung,2023-01-01,-1408.84904006001
 bund,gfs,saldo,Rechnung,2024-01-01,-1217.16417707001
 bund,gfs,saldo,Rechnung,2025-01-01,-1020.36157566999
+bund,gfs,schuldenquote,Budget/Finanzpläne,2027-01-01,0.117087227147425
+bund,gfs,schuldenquote,Budget/Finanzpläne,2028-01-01,0.113457828666184
+bund,gfs,schuldenquote,Budget/Finanzpläne,2029-01-01,0.110387811470261
+bund,gfs,schuldenquote,Budget/Finanzpläne,2030-01-01,0.107507760013154
+bund,gfs,schuldenquote,Hochrechnung,2026-01-01,0.118867555966164
 bund,gfs,schuldenquote,Rechnung,1990-01-01,0.0979077228485265
 bund,gfs,schuldenquote,Rechnung,1991-01-01,0.108867020461514
 bund,gfs,schuldenquote,Rechnung,1992-01-01,0.133741748700614
@@ -932,9 +1037,14 @@ bund,gfs,schuldenquote,Rechnung,2019-01-01,0.114467294162918
 bund,gfs,schuldenquote,Rechnung,2020-01-01,0.129474379411428
 bund,gfs,schuldenquote,Rechnung,2021-01-01,0.124148491808656
 bund,gfs,schuldenquote,Rechnung,2022-01-01,0.127766849464294
-bund,gfs,schuldenquote,Rechnung,2023-01-01,0.12902139513282
-bund,gfs,schuldenquote,Rechnung,2024-01-01,0.126428992962498
-bund,gfs,schuldenquote,Rechnung,2025-01-01,0.122857702937271
+bund,gfs,schuldenquote,Rechnung,2023-01-01,0.128563726772939
+bund,gfs,schuldenquote,Rechnung,2024-01-01,0.125404689375018
+bund,gfs,schuldenquote,Rechnung,2025-01-01,0.120937666201844
+bund,gfs,staatsquote,Budget/Finanzpläne,2027-01-01,0.108436966701528
+bund,gfs,staatsquote,Budget/Finanzpläne,2028-01-01,0.109195598304573
+bund,gfs,staatsquote,Budget/Finanzpläne,2029-01-01,0.109866811452849
+bund,gfs,staatsquote,Budget/Finanzpläne,2030-01-01,0.109774731880671
+bund,gfs,staatsquote,Hochrechnung,2026-01-01,0.108369287532289
 bund,gfs,staatsquote,Rechnung,1990-01-01,0.0894052988135298
 bund,gfs,staatsquote,Rechnung,1991-01-01,0.0953862364680418
 bund,gfs,staatsquote,Rechnung,1992-01-01,0.0992645651906231
@@ -968,9 +1078,9 @@ bund,gfs,staatsquote,Rechnung,2019-01-01,0.101752103870722
 bund,gfs,staatsquote,Rechnung,2020-01-01,0.129251540538089
 bund,gfs,staatsquote,Rechnung,2021-01-01,0.120863127968715
 bund,gfs,staatsquote,Rechnung,2022-01-01,0.101956466068813
-bund,gfs,staatsquote,Rechnung,2023-01-01,0.103187531338509
-bund,gfs,staatsquote,Rechnung,2024-01-01,0.105674745024297
-bund,gfs,staatsquote,Rechnung,2025-01-01,0.107413306546361
+bund,gfs,staatsquote,Rechnung,2023-01-01,0.102821501594533
+bund,gfs,staatsquote,Rechnung,2024-01-01,0.104818588395204
+bund,gfs,staatsquote,Rechnung,2025-01-01,0.105734636918718
 bund_ktn_gdn,fs,aktiven,Prognosen,2025-01-01,523224.86027993
 bund_ktn_gdn,fs,aktiven,Rechnung,2008-01-01,258695.83614034
 bund_ktn_gdn,fs,aktiven,Rechnung,2009-01-01,266494.29177953
@@ -990,6 +1100,11 @@ bund_ktn_gdn,fs,aktiven,Rechnung,2022-01-01,467667.70397797
 bund_ktn_gdn,fs,aktiven,Rechnung,2023-01-01,484313.69899729
 bund_ktn_gdn,fs,aktiven,Rechnung,2024-01-01,504618.54111025
 bund_ktn_gdn,fs,ausgaben,Prognosen,2025-01-01,217948.16086321
+bund_ktn_gdn,fs,ausgaben,Prognosen,2026-01-01,227146.952163132
+bund_ktn_gdn,fs,ausgaben,Prognosen,2027-01-01,230321.921919283
+bund_ktn_gdn,fs,ausgaben,Prognosen,2028-01-01,237637.884848934
+bund_ktn_gdn,fs,ausgaben,Prognosen,2029-01-01,246003.176012561
+bund_ktn_gdn,fs,ausgaben,Prognosen,2030-01-01,251906.782559861
 bund_ktn_gdn,fs,ausgaben,Rechnung,1990-01-01,87867.65488899
 bund_ktn_gdn,fs,ausgaben,Rechnung,1991-01-01,97518.77504765
 bund_ktn_gdn,fs,ausgaben,Rechnung,1992-01-01,104599.6861579
@@ -1026,6 +1141,11 @@ bund_ktn_gdn,fs,ausgaben,Rechnung,2022-01-01,197264.88983233
 bund_ktn_gdn,fs,ausgaben,Rechnung,2023-01-01,202037.18103732
 bund_ktn_gdn,fs,ausgaben,Rechnung,2024-01-01,211283.58392555
 bund_ktn_gdn,fs,ausgaben_ord,Prognosen,2025-01-01,216770.57870957
+bund_ktn_gdn,fs,ausgaben_ord,Prognosen,2026-01-01,226918.967263132
+bund_ktn_gdn,fs,ausgaben_ord,Prognosen,2027-01-01,230130.591919283
+bund_ktn_gdn,fs,ausgaben_ord,Prognosen,2028-01-01,237452.687148934
+bund_ktn_gdn,fs,ausgaben_ord,Prognosen,2029-01-01,245880.032812561
+bund_ktn_gdn,fs,ausgaben_ord,Prognosen,2030-01-01,251790.218159861
 bund_ktn_gdn,fs,ausgaben_ord,Rechnung,1990-01-01,87867.65488899
 bund_ktn_gdn,fs,ausgaben_ord,Rechnung,1991-01-01,97518.77504765
 bund_ktn_gdn,fs,ausgaben_ord,Rechnung,1992-01-01,104599.6861579
@@ -1062,6 +1182,11 @@ bund_ktn_gdn,fs,ausgaben_ord,Rechnung,2022-01-01,190513.11660958
 bund_ktn_gdn,fs,ausgaben_ord,Rechnung,2023-01-01,200775.49108842
 bund_ktn_gdn,fs,ausgaben_ord,Rechnung,2024-01-01,210162.26217606
 bund_ktn_gdn,fs,bruttoschuld_fs,Prognosen,2025-01-01,268982.95100497
+bund_ktn_gdn,fs,bruttoschuld_fs,Prognosen,2026-01-01,268810.72155831
+bund_ktn_gdn,fs,bruttoschuld_fs,Prognosen,2027-01-01,268558.693579594
+bund_ktn_gdn,fs,bruttoschuld_fs,Prognosen,2028-01-01,267887.0279656
+bund_ktn_gdn,fs,bruttoschuld_fs,Prognosen,2029-01-01,267669.23408402
+bund_ktn_gdn,fs,bruttoschuld_fs,Prognosen,2030-01-01,267538.866037419
 bund_ktn_gdn,fs,bruttoschuld_fs,Rechnung,1990-01-01,105413.28248916
 bund_ktn_gdn,fs,bruttoschuld_fs,Rechnung,1991-01-01,117389.10054284
 bund_ktn_gdn,fs,bruttoschuld_fs,Rechnung,1992-01-01,137890.87553088
@@ -1116,6 +1241,11 @@ bund_ktn_gdn,fs,eigenkapital,Rechnung,2022-01-01,123114.51244732
 bund_ktn_gdn,fs,eigenkapital,Rechnung,2023-01-01,128249.7033702
 bund_ktn_gdn,fs,eigenkapital,Rechnung,2024-01-01,137775.76132987
 bund_ktn_gdn,fs,einnahmen,Prognosen,2025-01-01,218853.57352397
+bund_ktn_gdn,fs,einnahmen,Prognosen,2026-01-01,228872.694629062
+bund_ktn_gdn,fs,einnahmen,Prognosen,2027-01-01,230974.718706563
+bund_ktn_gdn,fs,einnahmen,Prognosen,2028-01-01,238684.657445949
+bund_ktn_gdn,fs,einnahmen,Prognosen,2029-01-01,246591.090229597
+bund_ktn_gdn,fs,einnahmen,Prognosen,2030-01-01,252379.878236692
 bund_ktn_gdn,fs,einnahmen,Rechnung,1990-01-01,84286.63037506
 bund_ktn_gdn,fs,einnahmen,Rechnung,1991-01-01,87624.96384231
 bund_ktn_gdn,fs,einnahmen,Rechnung,1992-01-01,92460.58236012
@@ -1152,6 +1282,11 @@ bund_ktn_gdn,fs,einnahmen,Rechnung,2022-01-01,199407.3937505
 bund_ktn_gdn,fs,einnahmen,Rechnung,2023-01-01,200717.33042728
 bund_ktn_gdn,fs,einnahmen,Rechnung,2024-01-01,209283.11091843
 bund_ktn_gdn,fs,einnahmen_ord,Prognosen,2025-01-01,218765.00953262
+bund_ktn_gdn,fs,einnahmen_ord,Prognosen,2026-01-01,228829.853429062
+bund_ktn_gdn,fs,einnahmen_ord,Prognosen,2027-01-01,230943.779006563
+bund_ktn_gdn,fs,einnahmen_ord,Prognosen,2028-01-01,238654.300545949
+bund_ktn_gdn,fs,einnahmen_ord,Prognosen,2029-01-01,246559.291329597
+bund_ktn_gdn,fs,einnahmen_ord,Prognosen,2030-01-01,252347.071336692
 bund_ktn_gdn,fs,einnahmen_ord,Rechnung,1990-01-01,84282.68009806
 bund_ktn_gdn,fs,einnahmen_ord,Rechnung,1991-01-01,87607.58146931
 bund_ktn_gdn,fs,einnahmen_ord,Rechnung,1992-01-01,92455.79428112
@@ -1206,6 +1341,11 @@ bund_ktn_gdn,fs,fremdkapital,Rechnung,2022-01-01,344553.19153379
 bund_ktn_gdn,fs,fremdkapital,Rechnung,2023-01-01,356063.99562704
 bund_ktn_gdn,fs,fremdkapital,Rechnung,2024-01-01,366842.77978043
 bund_ktn_gdn,fs,nettoschulden_fs,Prognosen,2025-01-01,162420.37274665
+bund_ktn_gdn,fs,nettoschulden_fs,Prognosen,2026-01-01,160851.6612545
+bund_ktn_gdn,fs,nettoschulden_fs,Prognosen,2027-01-01,160190.582756231
+bund_ktn_gdn,fs,nettoschulden_fs,Prognosen,2028-01-01,159243.686798662
+bund_ktn_gdn,fs,nettoschulden_fs,Prognosen,2029-01-01,158664.776622285
+bund_ktn_gdn,fs,nettoschulden_fs,Prognosen,2030-01-01,158184.263191149
 bund_ktn_gdn,fs,nettoschulden_fs,Rechnung,1990-01-01,62511.94491027
 bund_ktn_gdn,fs,nettoschulden_fs,Rechnung,1991-01-01,70904.41904258
 bund_ktn_gdn,fs,nettoschulden_fs,Rechnung,1992-01-01,82314.36486671
@@ -1242,6 +1382,11 @@ bund_ktn_gdn,fs,nettoschulden_fs,Rechnung,2022-01-01,166372.79192105
 bund_ktn_gdn,fs,nettoschulden_fs,Rechnung,2023-01-01,168962.09041081
 bund_ktn_gdn,fs,nettoschulden_fs,Rechnung,2024-01-01,167835.8489934
 bund_ktn_gdn,fs,saldo,Prognosen,2025-01-01,905.412660760019
+bund_ktn_gdn,fs,saldo,Prognosen,2026-01-01,1725.74246592983
+bund_ktn_gdn,fs,saldo,Prognosen,2027-01-01,652.796787279833
+bund_ktn_gdn,fs,saldo,Prognosen,2028-01-01,1046.77259701508
+bund_ktn_gdn,fs,saldo,Prognosen,2029-01-01,587.914217036043
+bund_ktn_gdn,fs,saldo,Prognosen,2030-01-01,473.095676831203
 bund_ktn_gdn,fs,saldo,Rechnung,1990-01-01,-3581.02451393
 bund_ktn_gdn,fs,saldo,Rechnung,1991-01-01,-9893.81120534
 bund_ktn_gdn,fs,saldo,Rechnung,1992-01-01,-12139.10379778
@@ -1278,6 +1423,11 @@ bund_ktn_gdn,fs,saldo,Rechnung,2022-01-01,2142.50391817
 bund_ktn_gdn,fs,saldo,Rechnung,2023-01-01,-1319.85061003998
 bund_ktn_gdn,fs,saldo,Rechnung,2024-01-01,-2000.47300712002
 bund_ktn_gdn,fs,saldo_ord,Prognosen,2025-01-01,1994.43082305003
+bund_ktn_gdn,fs,saldo_ord,Prognosen,2026-01-01,1910.88616592978
+bund_ktn_gdn,fs,saldo_ord,Prognosen,2027-01-01,813.187087279861
+bund_ktn_gdn,fs,saldo_ord,Prognosen,2028-01-01,1201.61339701508
+bund_ktn_gdn,fs,saldo_ord,Prognosen,2029-01-01,679.258517035982
+bund_ktn_gdn,fs,saldo_ord,Prognosen,2030-01-01,556.85317683121
 bund_ktn_gdn,fs,saldo_ord,Rechnung,1990-01-01,-3584.97479093001
 bund_ktn_gdn,fs,saldo_ord,Rechnung,1991-01-01,-9911.19357834
 bund_ktn_gdn,fs,saldo_ord,Rechnung,1992-01-01,-12143.89187678
@@ -1350,6 +1500,11 @@ bund_ktn_gdn,gfs,aufwand,Rechnung,2022-01-01,199237.41362469
 bund_ktn_gdn,gfs,aufwand,Rechnung,2023-01-01,205454.23044071
 bund_ktn_gdn,gfs,aufwand,Rechnung,2024-01-01,215055.62851451
 bund_ktn_gdn,gfs,ausgaben,Prognosen,2025-01-01,225393.30235073
+bund_ktn_gdn,gfs,ausgaben,Prognosen,2026-01-01,233374.589238596
+bund_ktn_gdn,gfs,ausgaben,Prognosen,2027-01-01,237227.125767442
+bund_ktn_gdn,gfs,ausgaben,Prognosen,2028-01-01,244245.45323137
+bund_ktn_gdn,gfs,ausgaben,Prognosen,2029-01-01,252239.657990052
+bund_ktn_gdn,gfs,ausgaben,Prognosen,2030-01-01,258636.355646152
 bund_ktn_gdn,gfs,ausgaben,Rechnung,1990-01-01,84065.46145227
 bund_ktn_gdn,gfs,ausgaben,Rechnung,1991-01-01,93351.85147191
 bund_ktn_gdn,gfs,ausgaben,Rechnung,1992-01-01,99126.58824691
@@ -1386,6 +1541,11 @@ bund_ktn_gdn,gfs,ausgaben,Rechnung,2022-01-01,201327.84105871
 bund_ktn_gdn,gfs,ausgaben,Rechnung,2023-01-01,209107.6450678
 bund_ktn_gdn,gfs,ausgaben,Rechnung,2024-01-01,218430.09000499
 bund_ktn_gdn,gfs,ertrag,Prognosen,2025-01-01,224749.25901674
+bund_ktn_gdn,gfs,ertrag,Prognosen,2026-01-01,233984.614297034
+bund_ktn_gdn,gfs,ertrag,Prognosen,2027-01-01,237555.355197109
+bund_ktn_gdn,gfs,ertrag,Prognosen,2028-01-01,245060.091238982
+bund_ktn_gdn,gfs,ertrag,Prognosen,2029-01-01,252456.564756665
+bund_ktn_gdn,gfs,ertrag,Prognosen,2030-01-01,258711.574513329
 bund_ktn_gdn,gfs,ertrag,Rechnung,1990-01-01,81052.52128709
 bund_ktn_gdn,gfs,ertrag,Rechnung,1991-01-01,83958.86784449
 bund_ktn_gdn,gfs,ertrag,Rechnung,1992-01-01,87835.00999457
@@ -1458,6 +1618,11 @@ bund_ktn_gdn,gfs,nettozugang_sachvermoegen,Rechnung,2022-01-01,2090.42743403
 bund_ktn_gdn,gfs,nettozugang_sachvermoegen,Rechnung,2023-01-01,3653.41462709
 bund_ktn_gdn,gfs,nettozugang_sachvermoegen,Rechnung,2024-01-01,3374.46149047
 bund_ktn_gdn,gfs,saldo,Prognosen,2025-01-01,-644.043333990005
+bund_ktn_gdn,gfs,saldo,Prognosen,2026-01-01,610.025058438187
+bund_ktn_gdn,gfs,saldo,Prognosen,2027-01-01,328.229429666942
+bund_ktn_gdn,gfs,saldo,Prognosen,2028-01-01,814.638007611444
+bund_ktn_gdn,gfs,saldo,Prognosen,2029-01-01,216.906766612141
+bund_ktn_gdn,gfs,saldo,Prognosen,2030-01-01,75.2188671772019
 bund_ktn_gdn,gfs,saldo,Rechnung,1990-01-01,-3012.94016518
 bund_ktn_gdn,gfs,saldo,Rechnung,1991-01-01,-9392.98362741999
 bund_ktn_gdn,gfs,saldo,Rechnung,1992-01-01,-11291.57825234
@@ -1512,6 +1677,11 @@ gdn,fs,aktiven,Rechnung,2022-01-01,141592.73617708
 gdn,fs,aktiven,Rechnung,2023-01-01,147587.95148358
 gdn,fs,aktiven,Rechnung,2024-01-01,154861.14230156
 gdn,fs,ausgaben,Prognosen,2025-01-01,62110.13753859
+gdn,fs,ausgaben,Prognosen,2026-01-01,63130.8244966312
+gdn,fs,ausgaben,Prognosen,2027-01-01,64550.0958845813
+gdn,fs,ausgaben,Prognosen,2028-01-01,65794.2747733774
+gdn,fs,ausgaben,Prognosen,2029-01-01,67173.7295767962
+gdn,fs,ausgaben,Prognosen,2030-01-01,68629.5219588989
 gdn,fs,ausgaben,Rechnung,1990-01-01,30240.13834705
 gdn,fs,ausgaben,Rechnung,1991-01-01,33232.74903602
 gdn,fs,ausgaben,Rechnung,1992-01-01,35966.13104489
@@ -1548,6 +1718,11 @@ gdn,fs,ausgaben,Rechnung,2022-01-01,53693.4465178
 gdn,fs,ausgaben,Rechnung,2023-01-01,57406.53483412
 gdn,fs,ausgaben,Rechnung,2024-01-01,60855.58735799
 gdn,fs,ausgaben_ord,Prognosen,2025-01-01,62006.56885629
+gdn,fs,ausgaben_ord,Prognosen,2026-01-01,63130.8244966312
+gdn,fs,ausgaben_ord,Prognosen,2027-01-01,64550.0958845813
+gdn,fs,ausgaben_ord,Prognosen,2028-01-01,65794.2747733774
+gdn,fs,ausgaben_ord,Prognosen,2029-01-01,67173.7295767962
+gdn,fs,ausgaben_ord,Prognosen,2030-01-01,68629.5219588989
 gdn,fs,ausgaben_ord,Rechnung,1990-01-01,30240.13834705
 gdn,fs,ausgaben_ord,Rechnung,1991-01-01,33232.74903602
 gdn,fs,ausgaben_ord,Rechnung,1992-01-01,35966.13104489
@@ -1584,6 +1759,11 @@ gdn,fs,ausgaben_ord,Rechnung,2022-01-01,53620.70401064
 gdn,fs,ausgaben_ord,Rechnung,2023-01-01,57307.7486321
 gdn,fs,ausgaben_ord,Rechnung,2024-01-01,60821.97345403
 gdn,fs,bruttoschuld_fs,Prognosen,2025-01-01,64311.8846622
+gdn,fs,bruttoschuld_fs,Prognosen,2026-01-01,64636.3727668721
+gdn,fs,bruttoschuld_fs,Prognosen,2027-01-01,65199.9296409158
+gdn,fs,bruttoschuld_fs,Prognosen,2028-01-01,65713.3364155719
+gdn,fs,bruttoschuld_fs,Prognosen,2029-01-01,66246.138109022
+gdn,fs,bruttoschuld_fs,Prognosen,2030-01-01,66798.3351587688
 gdn,fs,bruttoschuld_fs,Rechnung,1990-01-01,37433.83057202
 gdn,fs,bruttoschuld_fs,Rechnung,1991-01-01,40067.11881859
 gdn,fs,bruttoschuld_fs,Rechnung,1992-01-01,44006.92796362
@@ -1638,6 +1818,11 @@ gdn,fs,eigenkapital,Rechnung,2022-01-01,73484.70098229
 gdn,fs,eigenkapital,Rechnung,2023-01-01,76862.37290297
 gdn,fs,eigenkapital,Rechnung,2024-01-01,80640.25203887
 gdn,fs,einnahmen,Prognosen,2025-01-01,60978.99851911
+gdn,fs,einnahmen,Prognosen,2026-01-01,62835.8353105657
+gdn,fs,einnahmen,Prognosen,2027-01-01,64037.7714536324
+gdn,fs,einnahmen,Prognosen,2028-01-01,65327.5413418719
+gdn,fs,einnahmen,Prognosen,2029-01-01,66689.3644009325
+gdn,fs,einnahmen,Prognosen,2030-01-01,68127.5246409472
 gdn,fs,einnahmen,Rechnung,1990-01-01,29414.49876034
 gdn,fs,einnahmen,Rechnung,1991-01-01,31079.81460552
 gdn,fs,einnahmen,Rechnung,1992-01-01,33331.61085271
@@ -1674,6 +1859,11 @@ gdn,fs,einnahmen,Rechnung,2022-01-01,54325.06349824
 gdn,fs,einnahmen,Rechnung,2023-01-01,56855.80300731
 gdn,fs,einnahmen,Rechnung,2024-01-01,59104.041928
 gdn,fs,einnahmen_ord,Prognosen,2025-01-01,60907.48298508
+gdn,fs,einnahmen_ord,Prognosen,2026-01-01,62835.8353105657
+gdn,fs,einnahmen_ord,Prognosen,2027-01-01,64037.7714536324
+gdn,fs,einnahmen_ord,Prognosen,2028-01-01,65327.5413418719
+gdn,fs,einnahmen_ord,Prognosen,2029-01-01,66689.3644009325
+gdn,fs,einnahmen_ord,Prognosen,2030-01-01,68127.5246409472
 gdn,fs,einnahmen_ord,Rechnung,1990-01-01,29414.49876034
 gdn,fs,einnahmen_ord,Rechnung,1991-01-01,31079.81460552
 gdn,fs,einnahmen_ord,Rechnung,1992-01-01,33331.61085271
@@ -1728,6 +1918,11 @@ gdn,fs,fremdkapital,Rechnung,2022-01-01,68108.03519793
 gdn,fs,fremdkapital,Rechnung,2023-01-01,70725.57858056
 gdn,fs,fremdkapital,Rechnung,2024-01-01,74220.89026273
 gdn,fs,nettoschulden_fs,Prognosen,2025-01-01,2372.10161144996
+gdn,fs,nettoschulden_fs,Prognosen,2026-01-01,2608.09296030239
+gdn,fs,nettoschulden_fs,Prognosen,2027-01-01,3017.95250506149
+gdn,fs,nettoschulden_fs,Prognosen,2028-01-01,3391.33925026589
+gdn,fs,nettoschulden_fs,Prognosen,2029-01-01,3778.83139095685
+gdn,fs,nettoschulden_fs,Prognosen,2030-01-01,4180.42924531815
 gdn,fs,nettoschulden_fs,Rechnung,1990-01-01,15917.6985241
 gdn,fs,nettoschulden_fs,Rechnung,1991-01-01,17692.24269209
 gdn,fs,nettoschulden_fs,Rechnung,1992-01-01,20209.92493596
@@ -1764,6 +1959,11 @@ gdn,fs,nettoschulden_fs,Rechnung,2022-01-01,2792.88845380999
 gdn,fs,nettoschulden_fs,Rechnung,2023-01-01,2874.78354160001
 gdn,fs,nettoschulden_fs,Rechnung,2024-01-01,3156.52426379002
 gdn,fs,saldo,Prognosen,2025-01-01,-1131.13901948
+gdn,fs,saldo,Prognosen,2026-01-01,-294.989186065533
+gdn,fs,saldo,Prognosen,2027-01-01,-512.32443094888
+gdn,fs,saldo,Prognosen,2028-01-01,-466.733431505498
+gdn,fs,saldo,Prognosen,2029-01-01,-484.365175863699
+gdn,fs,saldo,Prognosen,2030-01-01,-501.997317951624
 gdn,fs,saldo,Rechnung,1990-01-01,-825.63958671
 gdn,fs,saldo,Rechnung,1991-01-01,-2152.9344305
 gdn,fs,saldo,Rechnung,1992-01-01,-2634.52019218
@@ -1800,6 +2000,11 @@ gdn,fs,saldo,Rechnung,2022-01-01,631.616980439998
 gdn,fs,saldo,Rechnung,2023-01-01,-550.731826809999
 gdn,fs,saldo,Rechnung,2024-01-01,-1751.54542998999
 gdn,fs,saldo_ord,Prognosen,2025-01-01,-1099.08587121
+gdn,fs,saldo_ord,Prognosen,2026-01-01,-294.989186065533
+gdn,fs,saldo_ord,Prognosen,2027-01-01,-512.32443094888
+gdn,fs,saldo_ord,Prognosen,2028-01-01,-466.733431505498
+gdn,fs,saldo_ord,Prognosen,2029-01-01,-484.365175863699
+gdn,fs,saldo_ord,Prognosen,2030-01-01,-501.997317951624
 gdn,fs,saldo_ord,Rechnung,1990-01-01,-825.63958671
 gdn,fs,saldo_ord,Rechnung,1991-01-01,-2152.9344305
 gdn,fs,saldo_ord,Rechnung,1992-01-01,-2634.52019218
@@ -1872,6 +2077,11 @@ gdn,gfs,aufwand,Rechnung,2022-01-01,52635.00322013
 gdn,gfs,aufwand,Rechnung,2023-01-01,55734.7521768
 gdn,gfs,aufwand,Rechnung,2024-01-01,58684.39859208
 gdn,gfs,ausgaben,Prognosen,2025-01-01,61750.44590322
+gdn,gfs,ausgaben,Prognosen,2026-01-01,62797.420200064
+gdn,gfs,ausgaben,Prognosen,2027-01-01,64167.7604023614
+gdn,gfs,ausgaben,Prognosen,2028-01-01,65372.9120780062
+gdn,gfs,ausgaben,Prognosen,2029-01-01,66707.1392958002
+gdn,gfs,ausgaben,Prognosen,2030-01-01,68114.4622372067
 gdn,gfs,ausgaben,Rechnung,1990-01-01,26328.02481673
 gdn,gfs,ausgaben,Rechnung,1991-01-01,29376.51419174
 gdn,gfs,ausgaben,Rechnung,1992-01-01,31198.35407178
@@ -1907,7 +2117,12 @@ gdn,gfs,ausgaben,Rechnung,2021-01-01,51463.50884856
 gdn,gfs,ausgaben,Rechnung,2022-01-01,53365.70563369
 gdn,gfs,ausgaben,Rechnung,2023-01-01,57072.28631352
 gdn,gfs,ausgaben,Rechnung,2024-01-01,60480.90919689
-gdn,gfs,bruttoschuldenquote,Prognosen,2025-01-01,0.0741095804536616
+gdn,gfs,bruttoschuldenquote,Prognosen,2025-01-01,0.0729513859447604
+gdn,gfs,bruttoschuldenquote,Prognosen,2026-01-01,0.0715229776696607
+gdn,gfs,bruttoschuldenquote,Prognosen,2027-01-01,0.0708891873611151
+gdn,gfs,bruttoschuldenquote,Prognosen,2028-01-01,0.0695572580673668
+gdn,gfs,bruttoschuldenquote,Prognosen,2029-01-01,0.0682135233525131
+gdn,gfs,bruttoschuldenquote,Prognosen,2030-01-01,0.0669197433285906
 gdn,gfs,bruttoschuldenquote,Rechnung,1990-01-01,0.0998869333451728
 gdn,gfs,bruttoschuldenquote,Rechnung,1991-01-01,0.102364663633178
 gdn,gfs,bruttoschuldenquote,Rechnung,1992-01-01,0.110139336602667
@@ -1941,9 +2156,14 @@ gdn,gfs,bruttoschuldenquote,Rechnung,2019-01-01,0.0742687782694716
 gdn,gfs,bruttoschuldenquote,Rechnung,2020-01-01,0.0784175763521622
 gdn,gfs,bruttoschuldenquote,Rechnung,2021-01-01,0.0736805319504717
 gdn,gfs,bruttoschuldenquote,Rechnung,2022-01-01,0.0707331739215649
-gdn,gfs,bruttoschuldenquote,Rechnung,2023-01-01,0.0722578815213479
-gdn,gfs,bruttoschuldenquote,Rechnung,2024-01-01,0.0743883688080094
-gdn,gfs,defizit_ueberschuss,Prognosen,2025-01-01,-0.00127000945868382
+gdn,gfs,bruttoschuldenquote,Rechnung,2023-01-01,0.0720015663102904
+gdn,gfs,bruttoschuldenquote,Rechnung,2024-01-01,0.0737856884318444
+gdn,gfs,defizit_ueberschuss,Prognosen,2025-01-01,-0.00125016157974164
+gdn,gfs,defizit_ueberschuss,Prognosen,2026-01-01,-3.09906006469997e-4
+gdn,gfs,defizit_ueberschuss,Prognosen,2027-01-01,-5.28850872546919e-4
+gdn,gfs,defizit_ueberschuss,Prognosen,2028-01-01,-4.69043513142788e-4
+gdn,gfs,defizit_ueberschuss,Prognosen,2029-01-01,-4.73519769994551e-4
+gdn,gfs,defizit_ueberschuss,Prognosen,2030-01-01,-4.77469146223632e-4
 gdn,gfs,defizit_ueberschuss,Rechnung,1990-01-01,-0.00233839233828782
 gdn,gfs,defizit_ueberschuss,Rechnung,1991-01-01,-0.00568540276831105
 gdn,gfs,defizit_ueberschuss,Rechnung,1992-01-01,-0.00688700378881002
@@ -1977,9 +2197,14 @@ gdn,gfs,defizit_ueberschuss,Rechnung,2019-01-01,-8.54718321544828e-4
 gdn,gfs,defizit_ueberschuss,Rechnung,2020-01-01,-0.00181217069342892
 gdn,gfs,defizit_ueberschuss,Rechnung,2021-01-01,-2.6520254352012e-4
 gdn,gfs,defizit_ueberschuss,Rechnung,2022-01-01,7.86486619524741e-4
-gdn,gfs,defizit_ueberschuss,Rechnung,2023-01-01,-6.90467195110008e-4
-gdn,gfs,defizit_ueberschuss,Rechnung,2024-01-01,-0.00201227425412401
-gdn,gfs,einnahmenquote,Prognosen,2025-01-01,0.0698879057968138
+gdn,gfs,defizit_ueberschuss,Rechnung,2023-01-01,-6.88017950250946e-4
+gdn,gfs,defizit_ueberschuss,Rechnung,2024-01-01,-0.0019959711919134
+gdn,gfs,einnahmenquote,Prognosen,2025-01-01,0.0687956881882809
+gdn,gfs,einnahmenquote,Prognosen,2026-01-01,0.0691781900981969
+gdn,gfs,einnahmenquote,Prognosen,2027-01-01,0.0692381015575915
+gdn,gfs,einnahmenquote,Prognosen,2028-01-01,0.0687278769912258
+gdn,gfs,einnahmenquote,Prognosen,2029-01-01,0.0682146956342738
+gdn,gfs,einnahmenquote,Prognosen,2030-01-01,0.0677607933650313
 gdn,gfs,einnahmenquote,Rechnung,1990-01-01,0.0679142539923934
 gdn,gfs,einnahmenquote,Rechnung,1991-01-01,0.0693665870582579
 gdn,gfs,einnahmenquote,Rechnung,1992-01-01,0.0711953841343279
@@ -2013,9 +2238,14 @@ gdn,gfs,einnahmenquote,Rechnung,2019-01-01,0.0673098709794885
 gdn,gfs,einnahmenquote,Rechnung,2020-01-01,0.0696117620151516
 gdn,gfs,einnahmenquote,Rechnung,2021-01-01,0.0667202093159341
 gdn,gfs,einnahmenquote,Rechnung,2022-01-01,0.0658901411452973
-gdn,gfs,einnahmenquote,Rechnung,2023-01-01,0.0677259597873019
-gdn,gfs,einnahmenquote,Rechnung,2024-01-01,0.0688120298676436
+gdn,gfs,einnahmenquote,Rechnung,2023-01-01,0.0674857203378264
+gdn,gfs,einnahmenquote,Rechnung,2024-01-01,0.0682545279260116
 gdn,gfs,ertrag,Prognosen,2025-01-01,60648.33870835
+gdn,gfs,ertrag,Prognosen,2026-01-01,62517.3535584121
+gdn,gfs,ertrag,Prognosen,2027-01-01,63681.3527996766
+gdn,gfs,ertrag,Prognosen,2028-01-01,64929.7891742419
+gdn,gfs,ertrag,Prognosen,2029-01-01,66247.2765803339
+gdn,gfs,ertrag,Prognosen,2030-01-01,67637.8593324285
 gdn,gfs,ertrag,Rechnung,1990-01-01,25451.68414162
 gdn,gfs,ertrag,Rechnung,1991-01-01,27151.15926784
 gdn,gfs,ertrag,Rechnung,1992-01-01,28446.60443384
@@ -2052,6 +2282,11 @@ gdn,gfs,ertrag,Rechnung,2022-01-01,54010.39161527
 gdn,gfs,ertrag,Rechnung,2023-01-01,56496.30561433
 gdn,gfs,ertrag,Rechnung,2024-01-01,58762.51354229
 gdn,gfs,fiskalertrag,Prognosen,2025-01-01,37167.97605777
+gdn,gfs,fiskalertrag,Prognosen,2026-01-01,38154.7973810633
+gdn,gfs,fiskalertrag,Prognosen,2027-01-01,38944.8094543766
+gdn,gfs,fiskalertrag,Prognosen,2028-01-01,39825.4677624441
+gdn,gfs,fiskalertrag,Prognosen,2029-01-01,40694.5696281455
+gdn,gfs,fiskalertrag,Prognosen,2030-01-01,41559.2318489678
 gdn,gfs,fiskalertrag,Rechnung,1990-01-01,15059.36192446
 gdn,gfs,fiskalertrag,Rechnung,1991-01-01,15699.56104507
 gdn,gfs,fiskalertrag,Rechnung,1992-01-01,16279.14284843
@@ -2087,7 +2322,12 @@ gdn,gfs,fiskalertrag,Rechnung,2021-01-01,31981.00685991
 gdn,gfs,fiskalertrag,Rechnung,2022-01-01,33803.95273417
 gdn,gfs,fiskalertrag,Rechnung,2023-01-01,35016.92995042
 gdn,gfs,fiskalertrag,Rechnung,2024-01-01,36403.14492662
-gdn,gfs,fiskalquote,Prognosen,2025-01-01,0.0428303901591623
+gdn,gfs,fiskalquote,Prognosen,2025-01-01,0.0421610310507613
+gdn,gfs,fiskalquote,Prognosen,2026-01-01,0.0422199545590045
+gdn,gfs,fiskalquote,Prognosen,2027-01-01,0.0423430808799788
+gdn,gfs,fiskalquote,Prognosen,2028-01-01,0.0421550706433083
+gdn,gfs,fiskalquote,Prognosen,2029-01-01,0.0419031215235764
+gdn,gfs,fiskalquote,Prognosen,2030-01-01,0.0416347671189111
 gdn,gfs,fiskalquote,Rechnung,1990-01-01,0.0401837978583392
 gdn,gfs,fiskalquote,Rechnung,1991-01-01,0.0401097042401136
 gdn,gfs,fiskalquote,Rechnung,1992-01-01,0.0407429938138004
@@ -2121,9 +2361,14 @@ gdn,gfs,fiskalquote,Rechnung,2019-01-01,0.0419072239221609
 gdn,gfs,fiskalquote,Rechnung,2020-01-01,0.043421302057405
 gdn,gfs,fiskalquote,Rechnung,2021-01-01,0.0416267946768858
 gdn,gfs,fiskalquote,Rechnung,2022-01-01,0.0412392347159671
-gdn,gfs,fiskalquote,Rechnung,2023-01-01,0.0419771729126192
-gdn,gfs,fiskalquote,Rechnung,2024-01-01,0.0426287805773312
+gdn,gfs,fiskalquote,Rechnung,2023-01-01,0.0418282702917817
+gdn,gfs,fiskalquote,Rechnung,2024-01-01,0.0422834103275801
 gdn,gfs,fremdkapital,Prognosen,2025-01-01,70825.21215187
+gdn,gfs,fremdkapital,Prognosen,2026-01-01,71133.2854576871
+gdn,gfs,fremdkapital,Prognosen,2027-01-01,71668.3338206404
+gdn,gfs,fremdkapital,Prognosen,2028-01-01,72155.7690147812
+gdn,gfs,fremdkapital,Prognosen,2029-01-01,72661.6180017941
+gdn,gfs,fremdkapital,Prognosen,2030-01-01,73185.8811970501
 gdn,gfs,fremdkapital,Rechnung,1990-01-01,42274.56983576
 gdn,gfs,fremdkapital,Rechnung,1991-01-01,45268.50327574
 gdn,gfs,fremdkapital,Rechnung,1992-01-01,49432.14023098
@@ -2160,6 +2405,11 @@ gdn,gfs,fremdkapital,Rechnung,2022-01-01,63651.93372436
 gdn,gfs,fremdkapital,Rechnung,2023-01-01,66093.90821005
 gdn,gfs,fremdkapital,Rechnung,2024-01-01,70260.44067752
 gdn,gfs,maastricht_schuld,Prognosen,2025-01-01,52363.47162284
+gdn,gfs,maastricht_schuld,Prognosen,2026-01-01,52717.4586461186
+gdn,gfs,maastricht_schuld,Prognosen,2027-01-01,53332.2479632573
+gdn,gfs,maastricht_schuld,Prognosen,2028-01-01,53892.3280810639
+gdn,gfs,maastricht_schuld,Prognosen,2029-01-01,54473.5662921003
+gdn,gfs,maastricht_schuld,Prognosen,2030-01-01,55075.9630736423
 gdn,gfs,maastricht_schuld,Rechnung,1990-01-01,32765.71922562
 gdn,gfs,maastricht_schuld,Rechnung,1991-01-01,35086.47104608
 gdn,gfs,maastricht_schuld,Rechnung,1992-01-01,39239.31375676
@@ -2196,6 +2446,11 @@ gdn,gfs,maastricht_schuld,Rechnung,2022-01-01,47103.53284287
 gdn,gfs,maastricht_schuld,Rechnung,2023-01-01,48730.00729681
 gdn,gfs,maastricht_schuld,Rechnung,2024-01-01,51675.82173587
 gdn,gfs,nettoschuld,Prognosen,2025-01-01,31550.14058933
+gdn,gfs,nettoschuld,Prognosen,2026-01-01,31774.1939026515
+gdn,gfs,nettoschuld,Prognosen,2027-01-01,32163.3199847994
+gdn,gfs,nettoschuld,Prognosen,2028-01-01,32517.8183078108
+gdn,gfs,nettoschuld,Prognosen,2029-01-01,32885.7084801839
+gdn,gfs,nettoschuld,Prognosen,2030-01-01,33266.9908040064
 gdn,gfs,nettoschuld,Rechnung,1990-01-01,25697.31948315
 gdn,gfs,nettoschuld,Rechnung,1991-01-01,27970.89702401
 gdn,gfs,nettoschuld,Rechnung,1992-01-01,30955.54047139
@@ -2231,7 +2486,12 @@ gdn,gfs,nettoschuld,Rechnung,2021-01-01,29921.432764
 gdn,gfs,nettoschuld,Rechnung,2022-01-01,28723.73102577
 gdn,gfs,nettoschuld,Rechnung,2023-01-01,29738.80593867
 gdn,gfs,nettoschuld,Rechnung,2024-01-01,32261.87140882
-gdn,gfs,nettoschuldenquote,Prognosen,2025-01-01,0.0363566966605096
+gdn,gfs,nettoschuldenquote,Prognosen,2025-01-01,0.0357885093063751
+gdn,gfs,nettoschuldenquote,Prognosen,2026-01-01,0.0351595373268776
+gdn,gfs,nettoschuldenquote,Prognosen,2027-01-01,0.0349698478068161
+gdn,gfs,nettoschuldenquote,Prognosen,2028-01-01,0.0344199580054827
+gdn,gfs,nettoschuldenquote,Prognosen,2029-01-01,0.0338623519409572
+gdn,gfs,nettoschuldenquote,Prognosen,2030-01-01,0.0333274546532835
 gdn,gfs,nettoschuldenquote,Rechnung,1990-01-01,0.0685696974939453
 gdn,gfs,nettoschuldenquote,Rechnung,1991-01-01,0.0714608773928757
 gdn,gfs,nettoschuldenquote,Rechnung,1992-01-01,0.0774746806801518
@@ -2265,8 +2525,8 @@ gdn,gfs,nettoschuldenquote,Rechnung,2019-01-01,0.0396907683777943
 gdn,gfs,nettoschuldenquote,Rechnung,2020-01-01,0.0424786758104531
 gdn,gfs,nettoschuldenquote,Rechnung,2021-01-01,0.0389460326737436
 gdn,gfs,nettoschuldenquote,Rechnung,2022-01-01,0.0350416028268985
-gdn,gfs,nettoschuldenquote,Rechnung,2023-01-01,0.0356499270744152
-gdn,gfs,nettoschuldenquote,Rechnung,2024-01-01,0.0377792698975022
+gdn,gfs,nettoschuldenquote,Rechnung,2023-01-01,0.035523468639849
+gdn,gfs,nettoschuldenquote,Rechnung,2024-01-01,0.0374731894583434
 gdn,gfs,nettozugang_sachvermoegen,Prognosen,2025-01-01,1744.98890875
 gdn,gfs,nettozugang_sachvermoegen,Rechnung,1990-01-01,1687.2268951
 gdn,gfs,nettozugang_sachvermoegen,Rechnung,1991-01-01,1929.66700829
@@ -2304,6 +2564,11 @@ gdn,gfs,nettozugang_sachvermoegen,Rechnung,2022-01-01,730.70241356
 gdn,gfs,nettozugang_sachvermoegen,Rechnung,2023-01-01,1337.53413672
 gdn,gfs,nettozugang_sachvermoegen,Rechnung,2024-01-01,1796.51060481
 gdn,gfs,saldo,Prognosen,2025-01-01,-1102.10719486999
+gdn,gfs,saldo,Prognosen,2026-01-01,-280.066641651923
+gdn,gfs,saldo,Prognosen,2027-01-01,-486.407602684834
+gdn,gfs,saldo,Prognosen,2028-01-01,-443.122903764292
+gdn,gfs,saldo,Prognosen,2029-01-01,-459.862715466312
+gdn,gfs,saldo,Prognosen,2030-01-01,-476.602904778192
 gdn,gfs,saldo,Rechnung,1990-01-01,-876.340675109997
 gdn,gfs,saldo,Rechnung,1991-01-01,-2225.35492389999
 gdn,gfs,saldo,Rechnung,1992-01-01,-2751.74963794
@@ -2339,7 +2604,12 @@ gdn,gfs,saldo,Rechnung,2021-01-01,-203.749638409994
 gdn,gfs,saldo,Rechnung,2022-01-01,644.685981580005
 gdn,gfs,saldo,Rechnung,2023-01-01,-575.980699190004
 gdn,gfs,saldo,Rechnung,2024-01-01,-1718.39565459999
-gdn,gfs,schuldenquote,Prognosen,2025-01-01,0.0603408675309242
+gdn,gfs,schuldenquote,Prognosen,2025-01-01,0.0593978523227846
+gdn,gfs,schuldenquote,Prognosen,2026-01-01,0.0583341771226385
+gdn,gfs,schuldenquote,Prognosen,2027-01-01,0.0579859478235426
+gdn,gfs,schuldenquote,Prognosen,2028-01-01,0.057044776245716
+gdn,gfs,schuldenquote,Prognosen,2029-01-01,0.0560913283766922
+gdn,gfs,schuldenquote,Prognosen,2030-01-01,0.0551760654468834
 gdn,gfs,schuldenquote,Rechnung,1990-01-01,0.0874307321020591
 gdn,gfs,schuldenquote,Rechnung,1991-01-01,0.0896399569674276
 gdn,gfs,schuldenquote,Rechnung,1992-01-01,0.0982070820641291
@@ -2373,9 +2643,14 @@ gdn,gfs,schuldenquote,Rechnung,2019-01-01,0.0618327703264791
 gdn,gfs,schuldenquote,Rechnung,2020-01-01,0.0649481918531016
 gdn,gfs,schuldenquote,Rechnung,2021-01-01,0.0602397849285939
 gdn,gfs,schuldenquote,Rechnung,2022-01-01,0.0574640978270814
-gdn,gfs,schuldenquote,Rechnung,2023-01-01,0.058415970367124
-gdn,gfs,schuldenquote,Rechnung,2024-01-01,0.0605133779065561
-gdn,gfs,staatsquote,Prognosen,2025-01-01,0.0711579152554976
+gdn,gfs,schuldenquote,Rechnung,2023-01-01,0.0582087555767298
+gdn,gfs,schuldenquote,Rechnung,2024-01-01,0.0600231100603305
+gdn,gfs,staatsquote,Prognosen,2025-01-01,0.0700458497680225
+gdn,gfs,staatsquote,Prognosen,2026-01-01,0.0694880961046669
+gdn,gfs,staatsquote,Prognosen,2027-01-01,0.0697669524301384
+gdn,gfs,staatsquote,Prognosen,2028-01-01,0.0691969205043686
+gdn,gfs,staatsquote,Prognosen,2029-01-01,0.0686882154042684
+gdn,gfs,staatsquote,Prognosen,2030-01-01,0.0682382625112549
 gdn,gfs,staatsquote,Rechnung,1990-01-01,0.0702526463306812
 gdn,gfs,staatsquote,Rechnung,1991-01-01,0.0750519898265689
 gdn,gfs,staatsquote,Rechnung,1992-01-01,0.0780823879231379
@@ -2409,8 +2684,8 @@ gdn,gfs,staatsquote,Rechnung,2019-01-01,0.0681645893010333
 gdn,gfs,staatsquote,Rechnung,2020-01-01,0.0714239327085805
 gdn,gfs,staatsquote,Rechnung,2021-01-01,0.0669854118594543
 gdn,gfs,staatsquote,Rechnung,2022-01-01,0.0651036545257726
-gdn,gfs,staatsquote,Rechnung,2023-01-01,0.0684164269824119
-gdn,gfs,staatsquote,Rechnung,2024-01-01,0.0708243041217676
+gdn,gfs,staatsquote,Rechnung,2023-01-01,0.0681737382880774
+gdn,gfs,staatsquote,Rechnung,2024-01-01,0.070250499117925
 ktn,fs,aktiven,Rechnung,1990-01-01,41727.22105779
 ktn,fs,aktiven,Rechnung,1991-01-01,43619.05342251
 ktn,fs,aktiven,Rechnung,1992-01-01,46456.656415
@@ -2447,6 +2722,10 @@ ktn,fs,aktiven,Rechnung,2022-01-01,144660.54328496
 ktn,fs,aktiven,Rechnung,2023-01-01,147272.9479458
 ktn,fs,aktiven,Rechnung,2024-01-01,152836.7530877
 ktn,fs,aktiven,Vorhandene Daten,2025-01-01,160458.02632445
+ktn,fs,ausgaben,Prognosen,2027-01-01,121337.506294109
+ktn,fs,ausgaben,Prognosen,2028-01-01,124141.268435969
+ktn,fs,ausgaben,Prognosen,2029-01-01,126693.710919353
+ktn,fs,ausgaben,Prognosen,2030-01-01,129838.494525602
 ktn,fs,ausgaben,Rechnung,1990-01-01,41158.7613312
 ktn,fs,ausgaben,Rechnung,1991-01-01,45688.26664734
 ktn,fs,ausgaben,Rechnung,1992-01-01,48434.770166970004
@@ -2482,7 +2761,12 @@ ktn,fs,ausgaben,Rechnung,2021-01-01,101734.95920454
 ktn,fs,ausgaben,Rechnung,2022-01-01,102382.91496109
 ktn,fs,ausgaben,Rechnung,2023-01-01,104743.40683925
 ktn,fs,ausgaben,Rechnung,2024-01-01,109595.21194943
+ktn,fs,ausgaben,Umfrage Budget,2026-01-01,118893.967540749
 ktn,fs,ausgaben,Vorhandene Daten,2025-01-01,113729.54414305
+ktn,fs,ausgaben_ord,Prognosen,2027-01-01,121280.906294109
+ktn,fs,ausgaben_ord,Prognosen,2028-01-01,124086.468435969
+ktn,fs,ausgaben_ord,Prognosen,2029-01-01,126693.210919353
+ktn,fs,ausgaben_ord,Prognosen,2030-01-01,129838.494525602
 ktn,fs,ausgaben_ord,Rechnung,1990-01-01,41158.7613312
 ktn,fs,ausgaben_ord,Rechnung,1991-01-01,45688.26664734
 ktn,fs,ausgaben_ord,Rechnung,1992-01-01,48434.770166970004
@@ -2518,7 +2802,12 @@ ktn,fs,ausgaben_ord,Rechnung,2021-01-01,94813.35864071
 ktn,fs,ausgaben_ord,Rechnung,2022-01-01,98904.99501185
 ktn,fs,ausgaben_ord,Rechnung,2023-01-01,103620.06320832
 ktn,fs,ausgaben_ord,Rechnung,2024-01-01,108306.29776436
+ktn,fs,ausgaben_ord,Umfrage Budget,2026-01-01,118786.567540749
 ktn,fs,ausgaben_ord,Vorhandene Daten,2025-01-01,113703.68918352
+ktn,fs,bruttoschuld_fs,Prognosen,2027-01-01,72693.0867794371
+ktn,fs,bruttoschuld_fs,Prognosen,2028-01-01,71926.7416197377
+ktn,fs,bruttoschuld_fs,Prognosen,2029-01-01,71157.2339562917
+ktn,fs,bruttoschuld_fs,Prognosen,2030-01-01,70411.2825972452
 ktn,fs,bruttoschuld_fs,Rechnung,1990-01-01,29210.03945653
 ktn,fs,bruttoschuld_fs,Rechnung,1991-01-01,33176.76332479
 ktn,fs,bruttoschuld_fs,Rechnung,1992-01-01,38358.57605229
@@ -2554,6 +2843,7 @@ ktn,fs,bruttoschuld_fs,Rechnung,2021-01-01,71406.71502831
 ktn,fs,bruttoschuld_fs,Rechnung,2022-01-01,67152.75156269
 ktn,fs,bruttoschuld_fs,Rechnung,2023-01-01,67557.5882823
 ktn,fs,bruttoschuld_fs,Rechnung,2024-01-01,72153.44727858
+ktn,fs,bruttoschuld_fs,Umfrage Budget,2026-01-01,73821.2768849058
 ktn,fs,bruttoschuld_fs,Vorhandene Daten,2025-01-01,75138.09952075
 ktn,fs,eigenkapital,Rechnung,1990-01-01,6802.74921248
 ktn,fs,eigenkapital,Rechnung,1991-01-01,4998.71970687
@@ -2591,6 +2881,10 @@ ktn,fs,eigenkapital,Rechnung,2022-01-01,46166.20652134
 ktn,fs,eigenkapital,Rechnung,2023-01-01,48714.10940179
 ktn,fs,eigenkapital,Rechnung,2024-01-01,50946.90361359
 ktn,fs,eigenkapital,Vorhandene Daten,2025-01-01,54282.99024042
+ktn,fs,einnahmen,Prognosen,2027-01-01,122949.206444779
+ktn,fs,einnahmen,Prognosen,2028-01-01,125236.047235539
+ktn,fs,einnahmen,Prognosen,2029-01-01,127793.007581418
+ktn,fs,einnahmen,Prognosen,2030-01-01,130904.13932424
 ktn,fs,einnahmen,Rechnung,1990-01-01,39368.98878738
 ktn,fs,einnahmen,Rechnung,1991-01-01,41961.38525764
 ktn,fs,einnahmen,Rechnung,1992-01-01,44326.89178298
@@ -2626,7 +2920,12 @@ ktn,fs,einnahmen,Rechnung,2021-01-01,104772.5981401
 ktn,fs,einnahmen,Rechnung,2022-01-01,106684.87511509
 ktn,fs,einnahmen,Rechnung,2023-01-01,104883.94582932
 ktn,fs,einnahmen,Rechnung,2024-01-01,109186.54945967
+ktn,fs,einnahmen,Umfrage Budget,2026-01-01,120775.142734812
 ktn,fs,einnahmen,Vorhandene Daten,2025-01-01,115232.64022111
+ktn,fs,einnahmen_ord,Prognosen,2027-01-01,122948.748944779
+ktn,fs,einnahmen_ord,Prognosen,2028-01-01,125235.599735539
+ktn,fs,einnahmen_ord,Prognosen,2029-01-01,127792.569081418
+ktn,fs,einnahmen_ord,Prognosen,2030-01-01,130904.13932424
 ktn,fs,einnahmen_ord,Rechnung,1990-01-01,39368.98878738
 ktn,fs,einnahmen_ord,Rechnung,1991-01-01,41961.38525764
 ktn,fs,einnahmen_ord,Rechnung,1992-01-01,44326.89178298
@@ -2662,6 +2961,7 @@ ktn,fs,einnahmen_ord,Rechnung,2021-01-01,100091.30128271
 ktn,fs,einnahmen_ord,Rechnung,2022-01-01,104376.89091452
 ktn,fs,einnahmen_ord,Rechnung,2023-01-01,103687.73102708
 ktn,fs,einnahmen_ord,Rechnung,2024-01-01,107818.43721798
+ktn,fs,einnahmen_ord,Umfrage Budget,2026-01-01,120774.425234812
 ktn,fs,einnahmen_ord,Vorhandene Daten,2025-01-01,115225.53202954
 ktn,fs,fremdkapital,Rechnung,1990-01-01,34924.46986702
 ktn,fs,fremdkapital,Rechnung,1991-01-01,38620.33371664
@@ -2699,6 +2999,10 @@ ktn,fs,fremdkapital,Rechnung,2022-01-01,98494.33676362
 ktn,fs,fremdkapital,Rechnung,2023-01-01,98558.83854401
 ktn,fs,fremdkapital,Rechnung,2024-01-01,101889.84947411
 ktn,fs,fremdkapital,Vorhandene Daten,2025-01-01,105501.22682134
+ktn,fs,nettoschulden_fs,Prognosen,2027-01-01,17608.5930369206
+ktn,fs,nettoschulden_fs,Prognosen,2028-01-01,16623.292117307
+ktn,fs,nettoschulden_fs,Prognosen,2029-01-01,15633.9251214479
+ktn,fs,nettoschulden_fs,Prognosen,2030-01-01,14674.8448026739
 ktn,fs,nettoschulden_fs,Rechnung,1990-01-01,16430.52486265
 ktn,fs,nettoschulden_fs,Rechnung,1991-01-01,19659.75741246
 ktn,fs,nettoschulden_fs,Rechnung,1992-01-01,24191.1624721
@@ -2734,7 +3038,12 @@ ktn,fs,nettoschulden_fs,Rechnung,2021-01-01,28955.43373925
 ktn,fs,nettoschulden_fs,Rechnung,2022-01-01,24245.06559481
 ktn,fs,nettoschulden_fs,Rechnung,2023-01-01,23353.40669045
 ktn,fs,nettoschulden_fs,Rechnung,2024-01-01,22846.7402062401
+ktn,fs,nettoschulden_fs,Umfrage Budget,2026-01-01,19059.1231725232
 ktn,fs,nettoschulden_fs,Vorhandene Daten,2025-01-01,20752.18084718
+ktn,fs,saldo,Prognosen,2027-01-01,1611.70015066957
+ktn,fs,saldo,Prognosen,2028-01-01,1094.7787995706
+ktn,fs,saldo,Prognosen,2029-01-01,1099.29666206571
+ktn,fs,saldo,Prognosen,2030-01-01,1065.64479863783
 ktn,fs,saldo,Rechnung,1990-01-01,-1789.77254382
 ktn,fs,saldo,Rechnung,1991-01-01,-3726.88138970001
 ktn,fs,saldo,Rechnung,1992-01-01,-4107.87838398999
@@ -2770,7 +3079,12 @@ ktn,fs,saldo,Rechnung,2021-01-01,3037.63893556
 ktn,fs,saldo,Rechnung,2022-01-01,4301.960154
 ktn,fs,saldo,Rechnung,2023-01-01,140.538990069996
 ktn,fs,saldo,Rechnung,2024-01-01,-408.662489759998
+ktn,fs,saldo,Umfrage Budget,2026-01-01,1881.17519406311
 ktn,fs,saldo,Vorhandene Daten,2025-01-01,1503.09607806
+ktn,fs,saldo_ord,Prognosen,2027-01-01,1667.84265066957
+ktn,fs,saldo_ord,Prognosen,2028-01-01,1149.13129957061
+ktn,fs,saldo_ord,Prognosen,2029-01-01,1099.35816206571
+ktn,fs,saldo_ord,Prognosen,2030-01-01,1065.64479863783
 ktn,fs,saldo_ord,Rechnung,1990-01-01,-1789.77254382
 ktn,fs,saldo_ord,Rechnung,1991-01-01,-3726.88138970001
 ktn,fs,saldo_ord,Rechnung,1992-01-01,-4107.87838398999
@@ -2806,6 +3120,7 @@ ktn,fs,saldo_ord,Rechnung,2021-01-01,5277.94264200001
 ktn,fs,saldo_ord,Rechnung,2022-01-01,5471.89590267
 ktn,fs,saldo_ord,Rechnung,2023-01-01,67.66781875999
 ktn,fs,saldo_ord,Rechnung,2024-01-01,-487.860546380005
+ktn,fs,saldo_ord,Umfrage Budget,2026-01-01,1987.8576940631
 ktn,fs,saldo_ord,Vorhandene Daten,2025-01-01,1521.84284601999
 ktn,gfs,aufwand,Rechnung,1990-01-01,37834.74574343
 ktn,gfs,aufwand,Rechnung,1991-01-01,41782.79196793
@@ -2843,6 +3158,10 @@ ktn,gfs,aufwand,Rechnung,2022-01-01,106283.78069655
 ktn,gfs,aufwand,Rechnung,2023-01-01,109387.04726262
 ktn,gfs,aufwand,Rechnung,2024-01-01,113701.11884312
 ktn,gfs,aufwand,Vorhandene Daten,2025-01-01,117871.56358175
+ktn,gfs,ausgaben,Prognosen,2027-01-01,125544.013395969
+ktn,gfs,ausgaben,Prognosen,2028-01-01,128536.062766044
+ktn,gfs,ausgaben,Prognosen,2029-01-01,131356.250081609
+ktn,gfs,ausgaben,Prognosen,2030-01-01,134775.834237621
 ktn,gfs,ausgaben,Rechnung,1990-01-01,38887.43591748
 ktn,gfs,ausgaben,Rechnung,1991-01-01,43121.22899157
 ktn,gfs,ausgaben,Rechnung,1992-01-01,45443.72102212
@@ -2878,7 +3197,12 @@ ktn,gfs,ausgaben,Rechnung,2021-01-01,105269.64321863
 ktn,gfs,ausgaben,Rechnung,2022-01-01,105620.50353897
 ktn,gfs,ausgaben,Rechnung,2023-01-01,109233.16182971
 ktn,gfs,ausgaben,Rechnung,2024-01-01,113315.47427978
+ktn,gfs,ausgaben,Umfrage Budget,2026-01-01,122553.486585543
 ktn,gfs,ausgaben,Vorhandene Daten,2025-01-01,118116.97058018
+ktn,gfs,bruttoschuldenquote,Prognosen,2027-01-01,0.0790361872619489
+ktn,gfs,bruttoschuldenquote,Prognosen,2028-01-01,0.0761341183036227
+ktn,gfs,bruttoschuldenquote,Prognosen,2029-01-01,0.0732704694753625
+ktn,gfs,bruttoschuldenquote,Prognosen,2030-01-01,0.0705392574177946
 ktn,gfs,bruttoschuldenquote,Rechnung,1990-01-01,0.0779428986993685
 ktn,gfs,bruttoschuldenquote,Rechnung,1991-01-01,0.0847609790351079
 ktn,gfs,bruttoschuldenquote,Rechnung,1992-01-01,0.0960027958078498
@@ -2912,9 +3236,14 @@ ktn,gfs,bruttoschuldenquote,Rechnung,2019-01-01,0.0893341187251594
 ktn,gfs,bruttoschuldenquote,Rechnung,2020-01-01,0.100879236609053
 ktn,gfs,bruttoschuldenquote,Rechnung,2021-01-01,0.0929436861714466
 ktn,gfs,bruttoschuldenquote,Rechnung,2022-01-01,0.0819232030435743
-ktn,gfs,bruttoschuldenquote,Rechnung,2023-01-01,0.0809858708030923
-ktn,gfs,bruttoschuldenquote,Rechnung,2024-01-01,0.0844930699843853
-ktn,gfs,bruttoschuldenquote,Vorhandene Daten,2025-01-01,0.0865851321387441
+ktn,gfs,bruttoschuldenquote,Rechnung,2023-01-01,0.0806985954203863
+ktn,gfs,bruttoschuldenquote,Rechnung,2024-01-01,0.0838085232465351
+ktn,gfs,bruttoschuldenquote,Umfrage Budget,2026-01-01,0.0816864763935371
+ktn,gfs,bruttoschuldenquote,Vorhandene Daten,2025-01-01,0.0852319680271447
+ktn,gfs,defizit_ueberschuss,Prognosen,2027-01-01,0.00188893222035086
+ktn,gfs,defizit_ueberschuss,Prognosen,2028-01-01,0.00127665841360166
+ktn,gfs,defizit_ueberschuss,Prognosen,2029-01-01,0.00126402503056354
+ktn,gfs,defizit_ueberschuss,Prognosen,2030-01-01,0.0011633193131332
 ktn,gfs,defizit_ueberschuss,Rechnung,1990-01-01,-0.00407613150713764
 ktn,gfs,defizit_ueberschuss,Rechnung,1991-01-01,-0.00862329622145039
 ktn,gfs,defizit_ueberschuss,Rechnung,1992-01-01,-0.00960627882245863
@@ -2948,9 +3277,14 @@ ktn,gfs,defizit_ueberschuss,Rechnung,2019-01-01,0.00471767536776833
 ktn,gfs,defizit_ueberschuss,Rechnung,2020-01-01,-0.00528263790919154
 ktn,gfs,defizit_ueberschuss,Rechnung,2021-01-01,0.0037998270567479
 ktn,gfs,defizit_ueberschuss,Rechnung,2022-01-01,0.00595778165133593
-ktn,gfs,defizit_ueberschuss,Rechnung,2023-01-01,-1.50213580211923e-4
-ktn,gfs,defizit_ueberschuss,Rechnung,2024-01-01,7.73083932407827e-5
-ktn,gfs,defizit_ueberschuss,Vorhandene Daten,2025-01-01,0.001703658498118
+ktn,gfs,defizit_ueberschuss,Rechnung,2023-01-01,-1.49680738330801e-4
+ktn,gfs,defizit_ueberschuss,Rechnung,2024-01-01,7.66820553835928e-5
+ktn,gfs,defizit_ueberschuss,Umfrage Budget,2026-01-01,0.00214974029165904
+ktn,gfs,defizit_ueberschuss,Vorhandene Daten,2025-01-01,0.0016770334935574
+ktn,gfs,einnahmenquote,Prognosen,2027-01-01,0.138387746509074
+ktn,gfs,einnahmenquote,Prognosen,2028-01-01,0.137331477366035
+ktn,gfs,einnahmenquote,Prognosen,2029-01-01,0.136521307767474
+ktn,gfs,einnahmenquote,Prognosen,2030-01-01,0.136184113059582
 ktn,gfs,einnahmenquote,Rechnung,1990-01-01,0.0996895440889198
 ktn,gfs,einnahmenquote,Rechnung,1991-01-01,0.101544098673021
 ktn,gfs,einnahmenquote,Rechnung,1992-01-01,0.10412902417962
@@ -2984,9 +3318,14 @@ ktn,gfs,einnahmenquote,Rechnung,2019-01-01,0.132678566426344
 ktn,gfs,einnahmenquote,Rechnung,2020-01-01,0.141198916168001
 ktn,gfs,einnahmenquote,Rechnung,2021-01-01,0.140819835312463
 ktn,gfs,einnahmenquote,Rechnung,2022-01-01,0.134809835448564
-ktn,gfs,einnahmenquote,Rechnung,2023-01-01,0.130794998590304
-ktn,gfs,einnahmenquote,Rechnung,2024-01-01,0.132771901094671
-ktn,gfs,einnahmenquote,Vorhandene Daten,2025-01-01,0.137815345787849
+ktn,gfs,einnahmenquote,Rechnung,2023-01-01,0.130331038853829
+ktn,gfs,einnahmenquote,Rechnung,2024-01-01,0.131696208475272
+ktn,gfs,einnahmenquote,Umfrage Budget,2026-01-01,0.137760541287741
+ktn,gfs,einnahmenquote,Vorhandene Daten,2025-01-01,0.135661548994551
+ktn,gfs,ertrag,Prognosen,2027-01-01,127281.348135553
+ktn,gfs,ertrag,Prognosen,2028-01-01,129742.16959302
+ktn,gfs,ertrag,Prognosen,2029-01-01,132583.818643275
+ktn,gfs,ertrag,Prognosen,2030-01-01,135937.043015631
 ktn,gfs,ertrag,Rechnung,1990-01-01,37359.85657234
 ktn,gfs,ertrag,Rechnung,1991-01-01,39745.93695182
 ktn,gfs,ertrag,Rechnung,1992-01-01,41605.4663787
@@ -3022,7 +3361,12 @@ ktn,gfs,ertrag,Rechnung,2021-01-01,108188.9718893
 ktn,gfs,ertrag,Rechnung,2022-01-01,110504.11912324
 ktn,gfs,ertrag,Rechnung,2023-01-01,109107.85519158
 ktn,gfs,ertrag,Rechnung,2024-01-01,113381.49232217
+ktn,gfs,ertrag,Umfrage Budget,2026-01-01,124496.238682434
 ktn,gfs,ertrag,Vorhandene Daten,2025-01-01,119595.39601673
+ktn,gfs,fiskalertrag,Prognosen,2027-01-01,61989.0514793376
+ktn,gfs,fiskalertrag,Prognosen,2028-01-01,63663.807490767504
+ktn,gfs,fiskalertrag,Prognosen,2029-01-01,65237.7405019471
+ktn,gfs,fiskalertrag,Prognosen,2030-01-01,66857.102377581
 ktn,gfs,fiskalertrag,Rechnung,1990-01-01,21512.05350189
 ktn,gfs,fiskalertrag,Rechnung,1991-01-01,22061.37575505
 ktn,gfs,fiskalertrag,Rechnung,1992-01-01,22948.69277083
@@ -3058,7 +3402,12 @@ ktn,gfs,fiskalertrag,Rechnung,2021-01-01,51356.92585265
 ktn,gfs,fiskalertrag,Rechnung,2022-01-01,54173.30359626
 ktn,gfs,fiskalertrag,Rechnung,2023-01-01,55992.66943293
 ktn,gfs,fiskalertrag,Rechnung,2024-01-01,57444.83890941
+ktn,gfs,fiskalertrag,Umfrage Budget,2026-01-01,60358.4895311307
 ktn,gfs,fiskalertrag,Vorhandene Daten,2025-01-01,59003.26834295
+ktn,gfs,fiskalquote,Prognosen,2027-01-01,0.0673981323117705
+ktn,gfs,fiskalquote,Prognosen,2028-01-01,0.0673878413231369
+ktn,gfs,fiskalquote,Prognosen,2029-01-01,0.0671751782401442
+ktn,gfs,fiskalquote,Prognosen,2030-01-01,0.0669786173587547
 ktn,gfs,fiskalquote,Rechnung,1990-01-01,0.0574019014732407
 ktn,gfs,fiskalquote,Rechnung,1991-01-01,0.0563630571660434
 ktn,gfs,fiskalquote,Rechnung,1992-01-01,0.05743536108149
@@ -3092,9 +3441,14 @@ ktn,gfs,fiskalquote,Rechnung,2019-01-01,0.0681294136420864
 ktn,gfs,fiskalquote,Rechnung,2020-01-01,0.0707539945249343
 ktn,gfs,fiskalquote,Rechnung,2021-01-01,0.0668466823783523
 ktn,gfs,fiskalquote,Rechnung,2022-01-01,0.0660888861108616
-ktn,gfs,fiskalquote,Rechnung,2023-01-01,0.0671222168806104
-ktn,gfs,fiskalquote,Rechnung,2024-01-01,0.0672690076119955
-ktn,gfs,fiskalquote,Vorhandene Daten,2025-01-01,0.0679922145845765
+ktn,gfs,fiskalquote,Rechnung,2023-01-01,0.0668841190451332
+ktn,gfs,fiskalquote,Rechnung,2024-01-01,0.0667240069423818
+ktn,gfs,fiskalquote,Umfrage Budget,2026-01-01,0.066789312489424
+ktn,gfs,fiskalquote,Vorhandene Daten,2025-01-01,0.0669296230937351
+ktn,gfs,fremdkapital,Prognosen,2027-01-01,99622.354928595
+ktn,gfs,fremdkapital,Prognosen,2028-01-01,99863.5762939902
+ktn,gfs,fremdkapital,Prognosen,2029-01-01,100109.090006323
+ktn,gfs,fremdkapital,Prognosen,2030-01-01,100341.331761925
 ktn,gfs,fremdkapital,Rechnung,1990-01-01,35920.44575435
 ktn,gfs,fremdkapital,Rechnung,1991-01-01,40454.07723349
 ktn,gfs,fremdkapital,Rechnung,1992-01-01,46424.14103007
@@ -3130,7 +3484,12 @@ ktn,gfs,fremdkapital,Rechnung,2021-01-01,97593.81223998
 ktn,gfs,fremdkapital,Rechnung,2022-01-01,92741.28069403
 ktn,gfs,fremdkapital,Rechnung,2023-01-01,92080.89616692
 ktn,gfs,fremdkapital,Rechnung,2024-01-01,95353.16116397
+ktn,gfs,fremdkapital,Umfrage Budget,2026-01-01,99274.8879806783
 ktn,gfs,fremdkapital,Vorhandene Daten,2025-01-01,98886.3375613
+ktn,gfs,maastricht_schuld,Prognosen,2027-01-01,53862.9857124902
+ktn,gfs,maastricht_schuld,Prognosen,2028-01-01,53534.552072619
+ktn,gfs,maastricht_schuld,Prognosen,2029-01-01,53204.7630739993
+ktn,gfs,maastricht_schuld,Prognosen,2030-01-01,52885.069634408
 ktn,gfs,maastricht_schuld,Rechnung,1990-01-01,26690.48542962
 ktn,gfs,maastricht_schuld,Rechnung,1991-01-01,30421.42879842
 ktn,gfs,maastricht_schuld,Rechnung,1992-01-01,35019.50106468
@@ -3166,7 +3525,12 @@ ktn,gfs,maastricht_schuld,Rechnung,2021-01-01,55908.56782302
 ktn,gfs,maastricht_schuld,Rechnung,2022-01-01,51532.41830609
 ktn,gfs,maastricht_schuld,Rechnung,2023-01-01,50899.61763764
 ktn,gfs,maastricht_schuld,Rechnung,2024-01-01,53103.85238923
+ktn,gfs,maastricht_schuld,Umfrage Budget,2026-01-01,54346.4957576911
 ktn,gfs,maastricht_schuld,Vorhandene Daten,2025-01-01,54910.84831591
+ktn,gfs,nettoschuld,Prognosen,2027-01-01,21204.2345067724
+ktn,gfs,nettoschuld,Prognosen,2028-01-01,20118.7383624941
+ktn,gfs,nettoschuld,Prognosen,2029-01-01,19013.9266569952
+ktn,gfs,nettoschuld,Prognosen,2030-01-01,17968.8387567862
 ktn,gfs,nettoschuld,Rechnung,1990-01-01,20727.84707782
 ktn,gfs,nettoschuld,Rechnung,1991-01-01,24999.10803012
 ktn,gfs,nettoschuld,Rechnung,1992-01-01,29530.4862065
@@ -3202,7 +3566,12 @@ ktn,gfs,nettoschuld,Rechnung,2021-01-01,31202.17075772
 ktn,gfs,nettoschuld,Rechnung,2022-01-01,26043.89963852
 ktn,gfs,nettoschuld,Rechnung,2023-01-01,24973.43957603
 ktn,gfs,nettoschuld,Rechnung,2024-01-01,25992.56911479
+ktn,gfs,nettoschuld,Umfrage Budget,2026-01-01,22767.8357723979
 ktn,gfs,nettoschuld,Vorhandene Daten,2025-01-01,24516.3126596
+ktn,gfs,nettoschuldenquote,Prognosen,2027-01-01,0.0230544873449728
+ktn,gfs,nettoschuldenquote,Prognosen,2028-01-01,0.0212955900978758
+ktn,gfs,nettoschuldenquote,Prognosen,2029-01-01,0.0195786043845366
+ktn,gfs,nettoschuldenquote,Prognosen,2030-01-01,0.0180014977118649
 ktn,gfs,nettoschuldenquote,Rechnung,1990-01-01,0.0553093564781665
 ktn,gfs,nettoschuldenquote,Rechnung,1991-01-01,0.0638684627217418
 ktn,gfs,nettoschuldenquote,Rechnung,1992-01-01,0.0739080938125673
@@ -3236,9 +3605,10 @@ ktn,gfs,nettoschuldenquote,Rechnung,2019-01-01,0.0435269425471425
 ktn,gfs,nettoschuldenquote,Rechnung,2020-01-01,0.0486711692014162
 ktn,gfs,nettoschuldenquote,Rechnung,2021-01-01,0.0406130539070963
 ktn,gfs,nettoschuldenquote,Rechnung,2022-01-01,0.0317723343940886
-ktn,gfs,nettoschuldenquote,Rechnung,2023-01-01,0.0299373586659411
-ktn,gfs,nettoschuldenquote,Rechnung,2024-01-01,0.0304377967252287
-ktn,gfs,nettoschuldenquote,Vorhandene Daten,2025-01-01,0.0282512890893656
+ktn,gfs,nettoschuldenquote,Rechnung,2023-01-01,0.029831164016397
+ktn,gfs,nettoschuldenquote,Rechnung,2024-01-01,0.0301911955014898
+ktn,gfs,nettoschuldenquote,Umfrage Budget,2026-01-01,0.0251936075591533
+ktn,gfs,nettoschuldenquote,Vorhandene Daten,2025-01-01,0.0278097741368806
 ktn,gfs,nettozugang_sachvermoegen,Rechnung,1990-01-01,1052.69017405
 ktn,gfs,nettozugang_sachvermoegen,Rechnung,1991-01-01,1338.43702364
 ktn,gfs,nettozugang_sachvermoegen,Rechnung,1992-01-01,1302.13531214
@@ -3275,6 +3645,10 @@ ktn,gfs,nettozugang_sachvermoegen,Rechnung,2022-01-01,-663.27715758
 ktn,gfs,nettozugang_sachvermoegen,Rechnung,2023-01-01,-153.88543291
 ktn,gfs,nettozugang_sachvermoegen,Rechnung,2024-01-01,-385.64456334
 ktn,gfs,nettozugang_sachvermoegen,Vorhandene Daten,2025-01-01,245.40699843
+ktn,gfs,saldo,Prognosen,2027-01-01,1737.33473958386
+ktn,gfs,saldo,Prognosen,2028-01-01,1206.10682697591
+ktn,gfs,saldo,Prognosen,2029-01-01,1227.56856166539
+ktn,gfs,saldo,Prognosen,2030-01-01,1161.20877801007
 ktn,gfs,saldo,Rechnung,1990-01-01,-1527.57934514001
 ktn,gfs,saldo,Rechnung,1991-01-01,-3375.29203974999
 ktn,gfs,saldo,Rechnung,1992-01-01,-3838.25464342
@@ -3310,7 +3684,12 @@ ktn,gfs,saldo,Rechnung,2021-01-01,2919.32867067
 ktn,gfs,saldo,Rechnung,2022-01-01,4883.61558427
 ktn,gfs,saldo,Rechnung,2023-01-01,-125.306638130016
 ktn,gfs,saldo,Rechnung,2024-01-01,66.0180423900019
+ktn,gfs,saldo,Umfrage Budget,2026-01-01,1942.75209689123
 ktn,gfs,saldo,Vorhandene Daten,2025-01-01,1478.42543654999
+ktn,gfs,schuldenquote,Prognosen,2027-01-01,0.0585629970312979
+ktn,gfs,schuldenquote,Prognosen,2028-01-01,0.0566660720205594
+ktn,gfs,schuldenquote,Prognosen,2029-01-01,0.054784844098239
+ktn,gfs,schuldenquote,Prognosen,2030-01-01,0.0529811899868083
 ktn,gfs,schuldenquote,Rechnung,1990-01-01,0.071219821704581
 ktn,gfs,schuldenquote,Rechnung,1991-01-01,0.0777215686580911
 ktn,gfs,schuldenquote,Rechnung,1992-01-01,0.0876458501854253
@@ -3344,9 +3723,14 @@ ktn,gfs,schuldenquote,Rechnung,2019-01-01,0.07027800639277
 ktn,gfs,schuldenquote,Rechnung,2020-01-01,0.0801067824687352
 ktn,gfs,schuldenquote,Rechnung,2021-01-01,0.0727711445622118
 ktn,gfs,schuldenquote,Rechnung,2022-01-01,0.0628671300873662
-ktn,gfs,schuldenquote,Rechnung,2023-01-01,0.0610168296817177
-ktn,gfs,schuldenquote,Rechnung,2024-01-01,0.0621856291777717
-ktn,gfs,schuldenquote,Vorhandene Daten,2025-01-01,0.0632763283555051
+ktn,gfs,schuldenquote,Rechnung,2023-01-01,0.0608003890492408
+ktn,gfs,schuldenquote,Rechnung,2024-01-01,0.0616818130706913
+ktn,gfs,schuldenquote,Umfrage Budget,2026-01-01,0.0601367780416951
+ktn,gfs,schuldenquote,Vorhandene Daten,2025-01-01,0.0622874373700731
+ktn,gfs,staatsquote,Prognosen,2027-01-01,0.136498814288723
+ktn,gfs,staatsquote,Prognosen,2028-01-01,0.136054818952433
+ktn,gfs,staatsquote,Prognosen,2029-01-01,0.135257282736911
+ktn,gfs,staatsquote,Prognosen,2030-01-01,0.135020793746449
 ktn,gfs,staatsquote,Rechnung,1990-01-01,0.103765675596057
 ktn,gfs,staatsquote,Rechnung,1991-01-01,0.110167394894471
 ktn,gfs,staatsquote,Rechnung,1992-01-01,0.113735303002079
@@ -3380,9 +3764,10 @@ ktn,gfs,staatsquote,Rechnung,2019-01-01,0.127960891058575
 ktn,gfs,staatsquote,Rechnung,2020-01-01,0.146481554077192
 ktn,gfs,staatsquote,Rechnung,2021-01-01,0.137020008255715
 ktn,gfs,staatsquote,Rechnung,2022-01-01,0.128852053797228
-ktn,gfs,staatsquote,Rechnung,2023-01-01,0.130945212170516
-ktn,gfs,staatsquote,Rechnung,2024-01-01,0.13269459270143
-ktn,gfs,staatsquote,Vorhandene Daten,2025-01-01,0.136111687289731
+ktn,gfs,staatsquote,Rechnung,2023-01-01,0.13048071959216
+ktn,gfs,staatsquote,Rechnung,2024-01-01,0.131619526419888
+ktn,gfs,staatsquote,Umfrage Budget,2026-01-01,0.135610800996082
+ktn,gfs,staatsquote,Vorhandene Daten,2025-01-01,0.133984515500993
 staat,fs,aktiven,Prognosen,2025-01-01,582610.95899579
 staat,fs,aktiven,Rechnung,2008-01-01,282306.69857973
 staat,fs,aktiven,Rechnung,2009-01-01,290924.43201411
@@ -3402,6 +3787,11 @@ staat,fs,aktiven,Rechnung,2022-01-01,511593.94219993
 staat,fs,aktiven,Rechnung,2023-01-01,532118.70345064
 staat,fs,aktiven,Rechnung,2024-01-01,558123.32736123
 staat,fs,ausgaben,Prognosen,2025-01-01,273408.48389464
+staat,fs,ausgaben,Prognosen,2026-01-01,287484.659556934
+staat,fs,ausgaben,Prognosen,2027-01-01,292286.142172348
+staat,fs,ausgaben,Prognosen,2028-01-01,298866.048288213
+staat,fs,ausgaben,Prognosen,2029-01-01,309290.640514631
+staat,fs,ausgaben,Prognosen,2030-01-01,316489.657388765
 staat,fs,ausgaben,Rechnung,1990-01-01,106088.88765637
 staat,fs,ausgaben,Rechnung,1991-01-01,117888.98785385
 staat,fs,ausgaben,Rechnung,1992-01-01,128671.22151262
@@ -3438,6 +3828,11 @@ staat,fs,ausgaben,Rechnung,2022-01-01,245365.4318477
 staat,fs,ausgaben,Rechnung,2023-01-01,252189.33953763
 staat,fs,ausgaben,Rechnung,2024-01-01,262942.80719206
 staat,fs,ausgaben_ord,Prognosen,2025-01-01,272230.916559
+staat,fs,ausgaben_ord,Prognosen,2026-01-01,287256.674656934
+staat,fs,ausgaben_ord,Prognosen,2027-01-01,292094.812172348
+staat,fs,ausgaben_ord,Prognosen,2028-01-01,298680.850588213
+staat,fs,ausgaben_ord,Prognosen,2029-01-01,309167.497314631
+staat,fs,ausgaben_ord,Prognosen,2030-01-01,316373.092988765
 staat,fs,ausgaben_ord,Rechnung,1990-01-01,106088.88765637
 staat,fs,ausgaben_ord,Rechnung,1991-01-01,117888.98785385
 staat,fs,ausgaben_ord,Rechnung,1992-01-01,128671.22151262
@@ -3474,6 +3869,11 @@ staat,fs,ausgaben_ord,Rechnung,2022-01-01,238892.94252451
 staat,fs,ausgaben_ord,Rechnung,2023-01-01,250840.12819835
 staat,fs,ausgaben_ord,Rechnung,2024-01-01,261614.80642308
 staat,fs,bruttoschuld_fs,Prognosen,2025-01-01,262241.55730008
+staat,fs,bruttoschuld_fs,Prognosen,2026-01-01,262087.087347479
+staat,fs,bruttoschuld_fs,Prognosen,2027-01-01,261851.58877023
+staat,fs,bruttoschuld_fs,Prognosen,2028-01-01,261132.216545705
+staat,fs,bruttoschuld_fs,Prognosen,2029-01-01,260881.093831447
+staat,fs,bruttoschuld_fs,Prognosen,2030-01-01,260705.910477829
 staat,fs,bruttoschuld_fs,Rechnung,1990-01-01,105469.86447016
 staat,fs,bruttoschuld_fs,Rechnung,1991-01-01,117413.49661584
 staat,fs,bruttoschuld_fs,Rechnung,1992-01-01,137933.68331587999
@@ -3528,6 +3928,11 @@ staat,fs,eigenkapital,Rechnung,2022-01-01,169539.99423815
 staat,fs,eigenkapital,Rechnung,2023-01-01,180749.18886533
 staat,fs,eigenkapital,Rechnung,2024-01-01,197821.04574421
 staat,fs,einnahmen,Prognosen,2025-01-01,277380.23461938
+staat,fs,einnahmen,Prognosen,2026-01-01,288582.729908093
+staat,fs,einnahmen,Prognosen,2027-01-01,292354.741890701
+staat,fs,einnahmen,Prognosen,2028-01-01,301598.911098236
+staat,fs,einnahmen,Prognosen,2029-01-01,311056.492505164
+staat,fs,einnahmen,Prognosen,2030-01-01,318546.656212584
 staat,fs,einnahmen,Rechnung,1990-01-01,105286.66500789
 staat,fs,einnahmen,Rechnung,1991-01-01,110352.61836525
 staat,fs,einnahmen,Rechnung,1992-01-01,116215.3311783
@@ -3564,6 +3969,11 @@ staat,fs,einnahmen,Rechnung,2022-01-01,252805.4460443
 staat,fs,einnahmen,Rechnung,2023-01-01,255936.58161154
 staat,fs,einnahmen,Rechnung,2024-01-01,266196.57895999
 staat,fs,einnahmen_ord,Prognosen,2025-01-01,277291.67062803
+staat,fs,einnahmen_ord,Prognosen,2026-01-01,288539.888708093
+staat,fs,einnahmen_ord,Prognosen,2027-01-01,292323.802190701
+staat,fs,einnahmen_ord,Prognosen,2028-01-01,301568.554198236
+staat,fs,einnahmen_ord,Prognosen,2029-01-01,311024.693605164
+staat,fs,einnahmen_ord,Prognosen,2030-01-01,318513.849312584
 staat,fs,einnahmen_ord,Rechnung,1990-01-01,105282.71473089
 staat,fs,einnahmen_ord,Rechnung,1991-01-01,110335.23599225
 staat,fs,einnahmen_ord,Rechnung,1992-01-01,116210.5430993
@@ -3618,6 +4028,11 @@ staat,fs,fremdkapital,Rechnung,2022-01-01,342053.94796492
 staat,fs,fremdkapital,Rechnung,2023-01-01,351369.51458526
 staat,fs,fremdkapital,Rechnung,2024-01-01,360302.28161707
 staat,fs,nettoschulden_fs,Prognosen,2025-01-01,98960.63162235
+staat,fs,nettoschulden_fs,Prognosen,2026-01-01,98019.5922449704
+staat,fs,nettoschulden_fs,Prognosen,2027-01-01,97942.7108156292
+staat,fs,nettoschulden_fs,Prognosen,2028-01-01,95562.6381770028
+staat,fs,nettoschulden_fs,Prognosen,2029-01-01,93982.4808931534
+staat,fs,nettoschulden_fs,Prognosen,2030-01-01,92155.6497870779
 staat,fs,nettoschulden_fs,Rechnung,1990-01-01,45183.69231127
 staat,fs,nettoschulden_fs,Rechnung,1991-01-01,51826.90602458
 staat,fs,nettoschulden_fs,Rechnung,1992-01-01,63393.65383971
@@ -3654,6 +4069,11 @@ staat,fs,nettoschulden_fs,Rechnung,2022-01-01,119946.13158043
 staat,fs,nettoschulden_fs,Rechnung,2023-01-01,116462.66382466
 staat,fs,nettoschulden_fs,Rechnung,2024-01-01,107775.62579916
 staat,fs,saldo,Prognosen,2025-01-01,3971.75072473992
+staat,fs,saldo,Prognosen,2026-01-01,1098.07035115926
+staat,fs,saldo,Prognosen,2027-01-01,68.5997183522559
+staat,fs,saldo,Prognosen,2028-01-01,2732.86281002365
+staat,fs,saldo,Prognosen,2029-01-01,1765.85199053283
+staat,fs,saldo,Prognosen,2030-01-01,2056.99882381881
 staat,fs,saldo,Rechnung,1990-01-01,-802.222648480005
 staat,fs,saldo,Rechnung,1991-01-01,-7536.3694886
 staat,fs,saldo,Rechnung,1992-01-01,-12455.89033432
@@ -3690,6 +4110,11 @@ staat,fs,saldo,Rechnung,2022-01-01,7440.01419659998
 staat,fs,saldo,Rechnung,2023-01-01,3747.24207390999
 staat,fs,saldo,Rechnung,2024-01-01,3253.77176793001
 staat,fs,saldo_ord,Prognosen,2025-01-01,5060.75406902999
+staat,fs,saldo_ord,Prognosen,2026-01-01,1283.21405115922
+staat,fs,saldo_ord,Prognosen,2027-01-01,228.990018352284
+staat,fs,saldo_ord,Prognosen,2028-01-01,2887.70361002366
+staat,fs,saldo_ord,Prognosen,2029-01-01,1857.19629053277
+staat,fs,saldo_ord,Prognosen,2030-01-01,2140.75632381882
 staat,fs,saldo_ord,Rechnung,1990-01-01,-806.172925480001
 staat,fs,saldo_ord,Rechnung,1991-01-01,-7553.75186160002
 staat,fs,saldo_ord,Rechnung,1992-01-01,-12460.67841332
@@ -3762,6 +4187,11 @@ staat,gfs,aufwand,Rechnung,2022-01-01,247183.98152501
 staat,gfs,aufwand,Rechnung,2023-01-01,255482.91971981
 staat,gfs,aufwand,Rechnung,2024-01-01,266550.31322807
 staat,gfs,ausgaben,Prognosen,2025-01-01,280690.09492458
+staat,gfs,ausgaben,Prognosen,2026-01-01,293540.597330399
+staat,gfs,ausgaben,Prognosen,2027-01-01,299011.557843438
+staat,gfs,ausgaben,Prognosen,2028-01-01,305286.436962536
+staat,gfs,ausgaben,Prognosen,2029-01-01,315331.323737436
+staat,gfs,ausgaben,Prognosen,2030-01-01,323014.469715486
 staat,gfs,ausgaben,Rechnung,1990-01-01,102192.03866064
 staat,gfs,ausgaben,Rechnung,1991-01-01,113662.02142008
 staat,gfs,ausgaben,Rechnung,1992-01-01,123139.155877
@@ -3830,10 +4260,20 @@ staat,gfs,bip,Financial statements,2019-01-01,731800.768502889
 staat,gfs,bip,Financial statements,2020-01-01,709854.597899915
 staat,gfs,bip,Financial statements,2021-01-01,768279.352473616
 staat,gfs,bip,Financial statements,2022-01-01,819703.686719524
-staat,gfs,bip,Financial statements,2023-01-01,834189.811288915
-staat,gfs,bip,Financial statements,2024-01-01,853956.984778921
-staat,gfs,bip,Financial statements,2025-01-01,867794.477697957
-staat,gfs,bruttoschuldenquote,Prognosen,2025-01-01,0.302193162136433
+staat,gfs,bip,Financial statements,2023-01-01,837159.406931058
+staat,gfs,bip,Financial statements,2024-01-01,860932.092387907
+staat,gfs,bip,Financial statements,2025-01-01,881571.800580974
+staat,gfs,bip,Financial statements,2026-01-01,903714.790307034
+staat,gfs,bip,Financial statements,2027-01-01,919744.35126167
+staat,gfs,bip,Financial statements,2028-01-01,944737.30335845
+staat,gfs,bip,Financial statements,2029-01-01,971158.428024248
+staat,gfs,bip,Financial statements,2030-01-01,998185.764562399
+staat,gfs,bruttoschuldenquote,Prognosen,2025-01-01,0.297470446680869
+staat,gfs,bruttoschuldenquote,Prognosen,2026-01-01,0.290010842091492
+staat,gfs,bruttoschuldenquote,Prognosen,2027-01-01,0.284700404423285
+staat,gfs,bruttoschuldenquote,Prognosen,2028-01-01,0.276407225180381
+staat,gfs,bruttoschuldenquote,Prognosen,2029-01-01,0.268628769831294
+staat,gfs,bruttoschuldenquote,Prognosen,2030-01-01,0.261179752039563
 staat,gfs,bruttoschuldenquote,Rechnung,1990-01-01,0.281431559668642
 staat,gfs,bruttoschuldenquote,Rechnung,1991-01-01,0.299971483886665
 staat,gfs,bruttoschuldenquote,Rechnung,1992-01-01,0.345216652890026
@@ -3867,9 +4307,14 @@ staat,gfs,bruttoschuldenquote,Rechnung,2019-01-01,0.294073106094504
 staat,gfs,bruttoschuldenquote,Rechnung,2020-01-01,0.321075552727891
 staat,gfs,bruttoschuldenquote,Rechnung,2021-01-01,0.305878013653361
 staat,gfs,bruttoschuldenquote,Rechnung,2022-01-01,0.294449908126333
-staat,gfs,bruttoschuldenquote,Rechnung,2023-01-01,0.300845527752114
-staat,gfs,bruttoschuldenquote,Rechnung,2024-01-01,0.302861125236848
-staat,gfs,defizit_ueberschuss,Prognosen,2025-01-01,0.00236669565142682
+staat,gfs,bruttoschuldenquote,Rechnung,2023-01-01,0.299778359945392
+staat,gfs,bruttoschuldenquote,Rechnung,2024-01-01,0.300407402164165
+staat,gfs,defizit_ueberschuss,Prognosen,2025-01-01,0.00232970861289627
+staat,gfs,defizit_ueberschuss,Prognosen,2026-01-01,-7.34704706232279e-5
+staat,gfs,defizit_ueberschuss,Prognosen,2027-01-01,-3.33706116556807e-4
+staat,gfs,defizit_ueberschuss,Prognosen,2028-01-01,0.0025724292174572
+staat,gfs,defizit_ueberschuss,Prognosen,2029-01-01,0.00135590313667904
+staat,gfs,defizit_ueberschuss,Prognosen,2030-01-01,0.00158463090910069
 staat,gfs,defizit_ueberschuss,Rechnung,1990-01-01,-6.24765254513516e-4
 staat,gfs,defizit_ueberschuss,Rechnung,1991-01-01,-0.0179746111643162
 staat,gfs,defizit_ueberschuss,Rechnung,1992-01-01,-0.0290530981368769
@@ -3903,9 +4348,14 @@ staat,gfs,defizit_ueberschuss,Rechnung,2019-01-01,0.0112526685233968
 staat,gfs,defizit_ueberschuss,Rechnung,2020-01-01,-0.0263500151956855
 staat,gfs,defizit_ueberschuss,Rechnung,2021-01-01,-0.0111962972469124
 staat,gfs,defizit_ueberschuss,Rechnung,2022-01-01,0.0120213882283559
-staat,gfs,defizit_ueberschuss,Rechnung,2023-01-01,0.0033541695530742
-staat,gfs,defizit_ueberschuss,Rechnung,2024-01-01,0.00290415754878101
-staat,gfs,einnahmenquote,Prognosen,2025-01-01,0.325818967056957
+staat,gfs,defizit_ueberschuss,Rechnung,2023-01-01,0.0033422715475028
+staat,gfs,defizit_ueberschuss,Rechnung,2024-01-01,0.00288062861822389
+staat,gfs,einnahmenquote,Prognosen,2025-01-01,0.320727024338739
+staat,gfs,einnahmenquote,Prognosen,2026-01-01,0.324742058143963
+staat,gfs,einnahmenquote,Prognosen,2027-01-01,0.324769196046708
+staat,gfs,einnahmenquote,Prognosen,2028-01-01,0.325716689402032
+staat,gfs,einnahmenquote,Prognosen,2029-01-01,0.32605197191194
+staat,gfs,einnahmenquote,Prognosen,2030-01-01,0.325186190040826
 staat,gfs,einnahmenquote,Rechnung,1990-01-01,0.344790857992145
 staat,gfs,einnahmenquote,Rechnung,1991-01-01,0.272412492615536
 staat,gfs,einnahmenquote,Rechnung,1992-01-01,0.279136215811988
@@ -3939,9 +4389,14 @@ staat,gfs,einnahmenquote,Rechnung,2019-01-01,0.324329956435941
 staat,gfs,einnahmenquote,Rechnung,2020-01-01,0.335658819473329
 staat,gfs,einnahmenquote,Rechnung,2021-01-01,0.324048062414172
 staat,gfs,einnahmenquote,Rechnung,2022-01-01,0.316123501347439
-staat,gfs,einnahmenquote,Rechnung,2023-01-01,0.31399756487684
-staat,gfs,einnahmenquote,Rechnung,2024-01-01,0.318990776872552
+staat,gfs,einnahmenquote,Rechnung,2023-01-01,0.31288374379022
+staat,gfs,einnahmenquote,Rechnung,2024-01-01,0.316406374438687
 staat,gfs,ertrag,Prognosen,2025-01-01,282743.90034128
+staat,gfs,ertrag,Prognosen,2026-01-01,293474.200979446
+staat,gfs,ertrag,Prognosen,2027-01-01,298704.633527753
+staat,gfs,ertrag,Prognosen,2028-01-01,307716.706804517
+staat,gfs,ertrag,Prognosen,2029-01-01,316648.120496206
+staat,gfs,ertrag,Prognosen,2030-01-01,324596.225731035
 staat,gfs,ertrag,Rechnung,1990-01-01,101957.90036145
 staat,gfs,ertrag,Rechnung,1991-01-01,106626.47950867
 staat,gfs,ertrag,Rechnung,1992-01-01,111530.79108866
@@ -3978,6 +4433,11 @@ staat,gfs,ertrag,Rechnung,2022-01-01,259127.59951318
 staat,gfs,ertrag,Rechnung,2023-01-01,261933.56938979
 staat,gfs,ertrag,Rechnung,2024-01-01,272404.40199037
 staat,gfs,fiskalertrag,Prognosen,2025-01-01,235477.71101522
+staat,gfs,fiskalertrag,Prognosen,2026-01-01,243050.0371637
+staat,gfs,fiskalertrag,Prognosen,2027-01-01,249282.663003431
+staat,gfs,fiskalertrag,Prognosen,2028-01-01,258093.212040476
+staat,gfs,fiskalertrag,Prognosen,2029-01-01,265671.467527215
+staat,gfs,fiskalertrag,Prognosen,2030-01-01,272333.651578337
 staat,gfs,fiskalertrag,Rechnung,1990-01-01,86223.95272859
 staat,gfs,fiskalertrag,Rechnung,1991-01-01,89559.72297239
 staat,gfs,fiskalertrag,Rechnung,1992-01-01,93177.37611125
@@ -4013,7 +4473,12 @@ staat,gfs,fiskalertrag,Rechnung,2021-01-01,205829.18746068
 staat,gfs,fiskalertrag,Rechnung,2022-01-01,213236.33723811
 staat,gfs,fiskalertrag,Rechnung,2023-01-01,220841.52345596
 staat,gfs,fiskalertrag,Rechnung,2024-01-01,229825.90482698
-staat,gfs,fiskalquote,Prognosen,2025-01-01,0.271351935356726
+staat,gfs,fiskalquote,Prognosen,2025-01-01,0.267111210748841
+staat,gfs,fiskalquote,Prognosen,2026-01-01,0.268945512202058
+staat,gfs,fiskalquote,Prognosen,2027-01-01,0.271034731185328
+staat,gfs,fiskalquote,Prognosen,2028-01-01,0.273190453179925
+staat,gfs,fiskalquote,Prognosen,2029-01-01,0.27356140858264
+staat,gfs,fiskalquote,Prognosen,2030-01-01,0.272828626941727
 staat,gfs,fiskalquote,Rechnung,1990-01-01,0.230076540053465
 staat,gfs,fiskalquote,Rechnung,1991-01-01,0.228809836780571
 staat,gfs,fiskalquote,Rechnung,1992-01-01,0.233201790403414
@@ -4047,9 +4512,14 @@ staat,gfs,fiskalquote,Rechnung,2019-01-01,0.272174737036592
 staat,gfs,fiskalquote,Rechnung,2020-01-01,0.28029253903826
 staat,gfs,fiskalquote,Rechnung,2021-01-01,0.267909305121861
 staat,gfs,fiskalquote,Rechnung,2022-01-01,0.260138316678174
-staat,gfs,fiskalquote,Rechnung,2023-01-01,0.264737737703528
-staat,gfs,fiskalquote,Rechnung,2024-01-01,0.269130540441073
+staat,gfs,fiskalquote,Rechnung,2023-01-01,0.263798652475928
+staat,gfs,fiskalquote,Rechnung,2024-01-01,0.26695009613305
 staat,gfs,fremdkapital,Prognosen,2025-01-01,353240.37339501
+staat,gfs,fremdkapital,Prognosen,2026-01-01,355757.240337254
+staat,gfs,fremdkapital,Prognosen,2027-01-01,357402.741694249
+staat,gfs,fremdkapital,Prognosen,2028-01-01,358018.417581125
+staat,gfs,fremdkapital,Prognosen,2029-01-01,359160.358187036
+staat,gfs,fremdkapital,Prognosen,2030-01-01,360337.058201304
 staat,gfs,fremdkapital,Rechnung,1990-01-01,123961.45793585
 staat,gfs,fremdkapital,Rechnung,1991-01-01,136409.65898718
 staat,gfs,fremdkapital,Rechnung,1992-01-01,156042.41021999
@@ -4086,6 +4556,11 @@ staat,gfs,fremdkapital,Rechnung,2022-01-01,320917.28002239
 staat,gfs,fremdkapital,Rechnung,2023-01-01,336216.68203542
 staat,gfs,fremdkapital,Rechnung,2024-01-01,347852.34129549
 staat,gfs,maastricht_schuld,Prognosen,2025-01-01,206682.86482464
+staat,gfs,maastricht_schuld,Prognosen,2026-01-01,207281.043463485
+staat,gfs,maastricht_schuld,Prognosen,2027-01-01,207690.243319149
+staat,gfs,maastricht_schuld,Prognosen,2028-01-01,207390.632733111
+staat,gfs,maastricht_schuld,Prognosen,2029-01-01,207638.182932628
+staat,gfs,maastricht_schuld,Prognosen,2030-01-01,208002.50855466
 staat,gfs,maastricht_schuld,Rechnung,1990-01-01,96148.30227064
 staat,gfs,maastricht_schuld,Rechnung,1991-01-01,108276.02686274
 staat,gfs,maastricht_schuld,Rechnung,1992-01-01,127696.24855167
@@ -4122,6 +4597,11 @@ staat,gfs,maastricht_schuld,Rechnung,2022-01-01,201205.04423332
 staat,gfs,maastricht_schuld,Rechnung,2023-01-01,202760.63266531
 staat,gfs,maastricht_schuld,Rechnung,2024-01-01,204391.83460682
 staat,gfs,nettoschuld,Prognosen,2025-01-01,152874.28478709
+staat,gfs,nettoschuld,Prognosen,2026-01-01,153011.300878463
+staat,gfs,nettoschuld,Prognosen,2027-01-01,153331.161773033
+staat,gfs,nettoschuld,Prognosen,2028-01-01,151175.222808153
+staat,gfs,nettoschuld,Prognosen,2029-01-01,150054.193861279
+staat,gfs,nettoschuld,Prognosen,2030-01-01,148719.218714831
 staat,gfs,nettoschuld,Rechnung,1990-01-01,48592.25868507
 staat,gfs,nettoschuld,Rechnung,1991-01-01,56016.70282025
 staat,gfs,nettoschuld,Rechnung,1992-01-01,68098.69670234
@@ -4157,7 +4637,12 @@ staat,gfs,nettoschuld,Rechnung,2021-01-01,165159.01944119
 staat,gfs,nettoschuld,Rechnung,2022-01-01,147771.03156228
 staat,gfs,nettoschuld,Rechnung,2023-01-01,153779.24060528
 staat,gfs,nettoschuld,Rechnung,2024-01-01,157944.45550824
-staat,gfs,nettoschuldenquote,Prognosen,2025-01-01,0.176164159505402
+staat,gfs,nettoschuldenquote,Prognosen,2025-01-01,0.173411042284182
+staat,gfs,nettoschuldenquote,Prognosen,2026-01-01,0.169313706624717
+staat,gfs,nettoschuldenquote,Prognosen,2027-01-01,0.166710631669224
+staat,gfs,nettoschuldenquote,Prognosen,2028-01-01,0.160018263564633
+staat,gfs,nettoschuldenquote,Prognosen,2029-01-01,0.154510520149173
+staat,gfs,nettoschuldenquote,Prognosen,2030-01-01,0.148989520783267
 staat,gfs,nettoschuldenquote,Rechnung,1990-01-01,0.129661635750281
 staat,gfs,nettoschuldenquote,Rechnung,1991-01-01,0.143113133938997
 staat,gfs,nettoschuldenquote,Rechnung,1992-01-01,0.170435556976447
@@ -4191,8 +4676,8 @@ staat,gfs,nettoschuldenquote,Rechnung,2019-01-01,0.19128356485728
 staat,gfs,nettoschuldenquote,Rechnung,2020-01-01,0.220680545287567
 staat,gfs,nettoschuldenquote,Rechnung,2021-01-01,0.214972612383022
 staat,gfs,nettoschuldenquote,Rechnung,2022-01-01,0.18027371836482
-staat,gfs,nettoschuldenquote,Rechnung,2023-01-01,0.184345623171391
-staat,gfs,nettoschuldenquote,Rechnung,2024-01-01,0.18495598528201
+staat,gfs,nettoschuldenquote,Rechnung,2023-01-01,0.183691707137377
+staat,gfs,nettoschuldenquote,Rechnung,2024-01-01,0.183457507165473
 staat,gfs,nettozugang_sachvermoegen,Prognosen,2025-01-01,3780.39606244
 staat,gfs,nettozugang_sachvermoegen,Rechnung,1990-01-01,3334.50427365
 staat,gfs,nettozugang_sachvermoegen,Rechnung,1991-01-01,3728.58206669
@@ -4230,6 +4715,11 @@ staat,gfs,nettozugang_sachvermoegen,Rechnung,2022-01-01,2089.64173791
 staat,gfs,nettozugang_sachvermoegen,Rechnung,2023-01-01,3652.63560347
 staat,gfs,nettozugang_sachvermoegen,Rechnung,2024-01-01,3374.06313861
 staat,gfs,saldo,Prognosen,2025-01-01,2053.80541669996
+staat,gfs,saldo,Prognosen,2026-01-01,-66.3963509530295
+staat,gfs,saldo,Prognosen,2027-01-01,-306.924315684591
+staat,gfs,saldo,Prognosen,2028-01-01,2430.269841981
+staat,gfs,saldo,Prognosen,2029-01-01,1316.79675877036
+staat,gfs,saldo,Prognosen,2030-01-01,1581.75601554988
 staat,gfs,saldo,Rechnung,1990-01-01,-234.138299190003
 staat,gfs,saldo,Rechnung,1991-01-01,-7035.54191140999
 staat,gfs,saldo,Rechnung,1992-01-01,-11608.36478834
@@ -4265,7 +4755,12 @@ staat,gfs,saldo,Rechnung,2021-01-01,-8601.88399895997
 staat,gfs,saldo,Rechnung,2022-01-01,9853.97625027003
 staat,gfs,saldo,Rechnung,2023-01-01,2798.01406650999
 staat,gfs,saldo,Rechnung,2024-01-01,2480.02562367998
-staat,gfs,schuldenquote,Prognosen,2025-01-01,0.238170292778214
+staat,gfs,schuldenquote,Prognosen,2025-01-01,0.234448135351462
+staat,gfs,schuldenquote,Prognosen,2026-01-01,0.22936555391891
+staat,gfs,schuldenquote,Prognosen,2027-01-01,0.225813013185944
+staat,gfs,schuldenquote,Prognosen,2028-01-01,0.219522011035086
+staat,gfs,schuldenquote,Prognosen,2029-01-01,0.213804644989853
+staat,gfs,schuldenquote,Prognosen,2030-01-01,0.20838055995103
 staat,gfs,schuldenquote,Rechnung,1990-01-01,0.256558276655167
 staat,gfs,schuldenquote,Rechnung,1991-01-01,0.276626805124776
 staat,gfs,schuldenquote,Rechnung,1992-01-01,0.319594680950169
@@ -4299,9 +4794,14 @@ staat,gfs,schuldenquote,Rechnung,2019-01-01,0.246051920478052
 staat,gfs,schuldenquote,Rechnung,2020-01-01,0.271487910696624
 staat,gfs,schuldenquote,Rechnung,2021-01-01,0.256467853822502
 staat,gfs,schuldenquote,Rechnung,2022-01-01,0.245460704268085
-staat,gfs,schuldenquote,Rechnung,2023-01-01,0.243062945532771
-staat,gfs,schuldenquote,Rechnung,2024-01-01,0.239346756628186
-staat,gfs,staatsquote,Prognosen,2025-01-01,0.32345227140553
+staat,gfs,schuldenquote,Rechnung,2023-01-01,0.242200745744004
+staat,gfs,schuldenquote,Rechnung,2024-01-01,0.237407614856025
+staat,gfs,staatsquote,Prognosen,2025-01-01,0.318397315725843
+staat,gfs,staatsquote,Prognosen,2026-01-01,0.324815528614586
+staat,gfs,staatsquote,Prognosen,2027-01-01,0.325102902163265
+staat,gfs,staatsquote,Prognosen,2028-01-01,0.323144260184574
+staat,gfs,staatsquote,Prognosen,2029-01-01,0.324696068775261
+staat,gfs,staatsquote,Prognosen,2030-01-01,0.323601559131725
 staat,gfs,staatsquote,Rechnung,1990-01-01,0.272685140636726
 staat,gfs,staatsquote,Rechnung,1991-01-01,0.290387103779852
 staat,gfs,staatsquote,Rechnung,1992-01-01,0.308189313948865
@@ -4335,8 +4835,8 @@ staat,gfs,staatsquote,Rechnung,2019-01-01,0.313077287912544
 staat,gfs,staatsquote,Rechnung,2020-01-01,0.362008834669014
 staat,gfs,staatsquote,Rechnung,2021-01-01,0.335244359661084
 staat,gfs,staatsquote,Rechnung,2022-01-01,0.304102113119083
-staat,gfs,staatsquote,Rechnung,2023-01-01,0.310643395323766
-staat,gfs,staatsquote,Rechnung,2024-01-01,0.316086619323771
+staat,gfs,staatsquote,Rechnung,2023-01-01,0.309541472242718
+staat,gfs,staatsquote,Rechnung,2024-01-01,0.313525745820463
 sv,fs,aktiven,Rechnung,1990-01-01,23524.690591
 sv,fs,aktiven,Rechnung,1991-01-01,26246.061095
 sv,fs,aktiven,Rechnung,1992-01-01,26583.40487
@@ -4373,6 +4873,11 @@ sv,fs,aktiven,Rechnung,2022-01-01,47595.24266854
 sv,fs,aktiven,Rechnung,2023-01-01,53774.69182794
 sv,fs,aktiven,Rechnung,2024-01-01,61895.92222308
 sv,fs,aktiven,Rechnung,2025-01-01,67324.05427545
+sv,fs,ausgaben,Budget/Finanzpläne,2026-01-01,82812.4902342351
+sv,fs,ausgaben,Budget/Finanzpläne,2027-01-01,85130.8086128328
+sv,fs,ausgaben,Budget/Finanzpläne,2028-01-01,86368.8586869631
+sv,fs,ausgaben,Budget/Finanzpläne,2029-01-01,89713.3666376718
+sv,fs,ausgaben,Budget/Finanzpläne,2030-01-01,91665.383852423
 sv,fs,ausgaben,Rechnung,1990-01-01,24073.12949883
 sv,fs,ausgaben,Rechnung,1991-01-01,26729.28799694
 sv,fs,ausgaben,Rechnung,1992-01-01,31080.31048417
@@ -4409,6 +4914,11 @@ sv,fs,ausgaben,Rechnung,2022-01-01,67290.9876705
 sv,fs,ausgaben,Rechnung,2023-01-01,69173.30159206
 sv,fs,ausgaben,Rechnung,2024-01-01,72217.47436944
 sv,fs,ausgaben,Rechnung,2025-01-01,76395.38835829
+sv,fs,ausgaben_ord,Budget/Finanzpläne,2026-01-01,82812.4902342351
+sv,fs,ausgaben_ord,Budget/Finanzpläne,2027-01-01,85130.8086128328
+sv,fs,ausgaben_ord,Budget/Finanzpläne,2028-01-01,86368.8586869631
+sv,fs,ausgaben_ord,Budget/Finanzpläne,2029-01-01,89713.3666376718
+sv,fs,ausgaben_ord,Budget/Finanzpläne,2030-01-01,91665.383852423
 sv,fs,ausgaben_ord,Rechnung,1990-01-01,24073.12949883
 sv,fs,ausgaben_ord,Rechnung,1991-01-01,26729.28799694
 sv,fs,ausgaben_ord,Rechnung,1992-01-01,31080.31048417
@@ -4445,6 +4955,11 @@ sv,fs,ausgaben_ord,Rechnung,2022-01-01,66906.76330562
 sv,fs,ausgaben_ord,Rechnung,2023-01-01,69085.78020168
 sv,fs,ausgaben_ord,Rechnung,2024-01-01,72010.79534995
 sv,fs,ausgaben_ord,Rechnung,2025-01-01,76395.40317629
+sv,fs,bruttoschuld_fs,Budget/Finanzpläne,2026-01-01,1214.32134875898
+sv,fs,bruttoschuld_fs,Budget/Finanzpläne,2027-01-01,1230.85075022631
+sv,fs,bruttoschuld_fs,Budget/Finanzpläne,2028-01-01,1183.14413969484
+sv,fs,bruttoschuld_fs,Budget/Finanzpläne,2029-01-01,1149.81530701616
+sv,fs,bruttoschuld_fs,Budget/Finanzpläne,2030-01-01,1105
 sv,fs,bruttoschuld_fs,Rechnung,1990-01-01,56.581981
 sv,fs,bruttoschuld_fs,Rechnung,1991-01-01,24.396073
 sv,fs,bruttoschuld_fs,Rechnung,1992-01-01,716.792112
@@ -4517,6 +5032,11 @@ sv,fs,eigenkapital,Rechnung,2022-01-01,46425.48179083
 sv,fs,eigenkapital,Rechnung,2023-01-01,52499.48549513
 sv,fs,eigenkapital,Rechnung,2024-01-01,60045.28441434
 sv,fs,eigenkapital,Rechnung,2025-01-01,63572.64130835
+sv,fs,einnahmen,Budget/Finanzpläne,2026-01-01,82184.8181194645
+sv,fs,einnahmen,Budget/Finanzpläne,2027-01-01,84546.6115439052
+sv,fs,einnahmen,Budget/Finanzpläne,2028-01-01,88054.9488999717
+sv,fs,einnahmen,Budget/Finanzpläne,2029-01-01,90891.3044111686
+sv,fs,einnahmen,Budget/Finanzpläne,2030-01-01,93249.2869994106
 sv,fs,einnahmen,Rechnung,1990-01-01,26851.93136483
 sv,fs,einnahmen,Rechnung,1991-01-01,29086.72971294
 sv,fs,einnahmen,Rechnung,1992-01-01,30763.52394818
@@ -4553,6 +5073,11 @@ sv,fs,einnahmen,Rechnung,2022-01-01,72588.49794893
 sv,fs,einnahmen,Rechnung,2023-01-01,74240.39427601
 sv,fs,einnahmen,Rechnung,2024-01-01,77471.71914449
 sv,fs,einnahmen,Rechnung,2025-01-01,79461.72642227
+sv,fs,einnahmen_ord,Budget/Finanzpläne,2026-01-01,82184.8181194645
+sv,fs,einnahmen_ord,Budget/Finanzpläne,2027-01-01,84546.6115439052
+sv,fs,einnahmen_ord,Budget/Finanzpläne,2028-01-01,88054.9488999717
+sv,fs,einnahmen_ord,Budget/Finanzpläne,2029-01-01,90891.3044111686
+sv,fs,einnahmen_ord,Budget/Finanzpläne,2030-01-01,93249.2869994106
 sv,fs,einnahmen_ord,Rechnung,1990-01-01,26851.93136483
 sv,fs,einnahmen_ord,Rechnung,1991-01-01,29086.72971294
 sv,fs,einnahmen_ord,Rechnung,1992-01-01,30763.52394818
@@ -4625,6 +5150,11 @@ sv,fs,fremdkapital,Rechnung,2022-01-01,1169.76087771
 sv,fs,fremdkapital,Rechnung,2023-01-01,1275.20633281
 sv,fs,fremdkapital,Rechnung,2024-01-01,1850.63780874
 sv,fs,fremdkapital,Rechnung,2025-01-01,3751.4129671
+sv,fs,nettoschulden_fs,Budget/Finanzpläne,2026-01-01,-54894.1134499394
+sv,fs,nettoschulden_fs,Budget/Finanzpläne,2027-01-01,-54309.9163810119
+sv,fs,nettoschulden_fs,Budget/Finanzpläne,2028-01-01,-55743.0930620691
+sv,fs,nettoschulden_fs,Budget/Finanzpläne,2029-01-01,-56744.3401695414
+sv,fs,nettoschulden_fs,Budget/Finanzpläne,2030-01-01,-58090.6578444809
 sv,fs,nettoschulden_fs,Rechnung,1990-01-01,-17328.252599
 sv,fs,nettoschulden_fs,Rechnung,1991-01-01,-19077.513018
 sv,fs,nettoschulden_fs,Rechnung,1992-01-01,-18246.7267
@@ -4661,6 +5191,11 @@ sv,fs,nettoschulden_fs,Rechnung,2022-01-01,-42757.65589404
 sv,fs,nettoschulden_fs,Rechnung,2023-01-01,-46529.73921156
 sv,fs,nettoschulden_fs,Rechnung,2024-01-01,-51669.08722214
 sv,fs,nettoschulden_fs,Rechnung,2025-01-01,-55521.78556471
+sv,fs,saldo,Budget/Finanzpläne,2026-01-01,-627.672114770554
+sv,fs,saldo,Budget/Finanzpläne,2027-01-01,-584.197068927591
+sv,fs,saldo,Budget/Finanzpläne,2028-01-01,1686.09021300856
+sv,fs,saldo,Budget/Finanzpläne,2029-01-01,1177.93777349679
+sv,fs,saldo,Budget/Finanzpläne,2030-01-01,1583.90314698761
 sv,fs,saldo,Rechnung,1990-01-01,2778.80186599999
 sv,fs,saldo,Rechnung,1991-01-01,2357.441716
 sv,fs,saldo,Rechnung,1992-01-01,-316.786535989999
@@ -4697,6 +5232,11 @@ sv,fs,saldo,Rechnung,2022-01-01,5297.51027843001
 sv,fs,saldo,Rechnung,2023-01-01,5067.09268395
 sv,fs,saldo,Rechnung,2024-01-01,5254.24477505
 sv,fs,saldo,Rechnung,2025-01-01,3066.33806398
+sv,fs,saldo_ord,Budget/Finanzpläne,2026-01-01,-627.672114770554
+sv,fs,saldo_ord,Budget/Finanzpläne,2027-01-01,-584.197068927591
+sv,fs,saldo_ord,Budget/Finanzpläne,2028-01-01,1686.09021300856
+sv,fs,saldo_ord,Budget/Finanzpläne,2029-01-01,1177.93777349679
+sv,fs,saldo_ord,Budget/Finanzpläne,2030-01-01,1583.90314698761
 sv,fs,saldo_ord,Rechnung,1990-01-01,2778.80186599999
 sv,fs,saldo_ord,Rechnung,1991-01-01,2357.441716
 sv,fs,saldo_ord,Rechnung,1992-01-01,-316.786535989999
@@ -4769,6 +5309,11 @@ sv,gfs,aufwand,Rechnung,2022-01-01,67195.63050082
 sv,gfs,aufwand,Rechnung,2023-01-01,69048.74625022
 sv,gfs,aufwand,Rechnung,2024-01-01,72084.95535434
 sv,gfs,aufwand,Rechnung,2025-01-01,76219.46472446
+sv,gfs,ausgaben,Budget/Finanzpläne,2026-01-01,82627.6747886333
+sv,gfs,ausgaben,Budget/Finanzpläne,2027-01-01,84937.4878102553
+sv,gfs,ausgaben,Budget/Finanzpläne,2028-01-01,86166.9520907689
+sv,gfs,ausgaben,Budget/Finanzpläne,2029-01-01,89502.0685037733
+sv,gfs,ausgaben,Budget/Finanzpläne,2030-01-01,91444.7316580511
 sv,gfs,ausgaben,Rechnung,1990-01-01,23978.47394037
 sv,gfs,ausgaben,Rechnung,1991-01-01,26669.24513817
 sv,gfs,ausgaben,Rechnung,1992-01-01,31021.34276009
@@ -4805,6 +5350,11 @@ sv,gfs,ausgaben,Rechnung,2022-01-01,67194.8448047
 sv,gfs,ausgaben,Rechnung,2023-01-01,69047.9672266
 sv,gfs,ausgaben,Rechnung,2024-01-01,72084.55700248
 sv,gfs,ausgaben,Rechnung,2025-01-01,76219.64573338
+sv,gfs,bruttoschuldenquote,Budget/Finanzpläne,2026-01-01,0.001343699762119
+sv,gfs,bruttoschuldenquote,Budget/Finanzpläne,2027-01-01,0.00133825312277034
+sv,gfs,bruttoschuldenquote,Budget/Finanzpläne,2028-01-01,0.001252352516926
+sv,gfs,bruttoschuldenquote,Budget/Finanzpläne,2029-01-01,0.00118396265103252
+sv,gfs,bruttoschuldenquote,Budget/Finanzpläne,2030-01-01,0.00110700837382151
 sv,gfs,bruttoschuldenquote,Rechnung,1990-01-01,1.50981090588931e-4
 sv,gfs,bruttoschuldenquote,Rechnung,1991-01-01,6.23278109394974e-5
 sv,gfs,bruttoschuldenquote,Rechnung,1992-01-01,0.00179396770806108
@@ -4838,9 +5388,14 @@ sv,gfs,bruttoschuldenquote,Rechnung,2019-01-01,8.80142375755728e-4
 sv,gfs,bruttoschuldenquote,Rechnung,2020-01-01,0.00107079506326896
 sv,gfs,bruttoschuldenquote,Rechnung,2021-01-01,0.0010176076427706
 sv,gfs,bruttoschuldenquote,Rechnung,2022-01-01,7.77207554780693e-4
-sv,gfs,bruttoschuldenquote,Rechnung,2023-01-01,0.00103254965956625
-sv,gfs,bruttoschuldenquote,Rechnung,2024-01-01,6.35298112434142e-4
-sv,gfs,bruttoschuldenquote,Rechnung,2025-01-01,0.00137885396306529
+sv,gfs,bruttoschuldenquote,Rechnung,2023-01-01,0.00102888697006654
+sv,gfs,bruttoschuldenquote,Rechnung,2024-01-01,6.30151048296106e-4
+sv,gfs,bruttoschuldenquote,Rechnung,2025-01-01,0.00135730504754286
+sv,gfs,defizit_ueberschuss,Budget/Finanzpläne,2026-01-01,-7.4848991810944e-4
+sv,gfs,defizit_ueberschuss,Budget/Finanzpläne,2027-01-01,-6.9057640254083e-4
+sv,gfs,defizit_ueberschuss,Budget/Finanzpläne,2028-01-01,0.00171013871118047
+sv,gfs,defizit_ueberschuss,Budget/Finanzpläne,2029-01-01,0.00113255464857145
+sv,gfs,defizit_ueberschuss,Budget/Finanzpläne,2030-01-01,0.00150927532915992
 sv,gfs,defizit_ueberschuss,Rechnung,1990-01-01,0.00741484353931044
 sv,gfs,defizit_ueberschuss,Rechnung,1991-01-01,0.00602286202276717
 sv,gfs,defizit_ueberschuss,Rechnung,1992-01-01,-7.92844684558316e-4
@@ -4874,9 +5429,14 @@ sv,gfs,defizit_ueberschuss,Rechnung,2019-01-01,0.00121516236757886
 sv,gfs,defizit_ueberschuss,Rechnung,2020-01-01,0.00161162076703389
 sv,gfs,defizit_ueberschuss,Rechnung,2021-01-01,6.19521903208175e-4
 sv,gfs,defizit_ueberschuss,Rechnung,2022-01-01,0.00655427863123459
-sv,gfs,defizit_ueberschuss,Rechnung,2023-01-01,0.00588373338687314
-sv,gfs,defizit_ueberschuss,Rechnung,2024-01-01,0.00626444599470655
-sv,gfs,defizit_ueberschuss,Rechnung,2025-01-01,0.00310885678582182
+sv,gfs,defizit_ueberschuss,Rechnung,2023-01-01,0.00586286244057482
+sv,gfs,defizit_ueberschuss,Rechnung,2024-01-01,0.0062136926480604
+sv,gfs,defizit_ueberschuss,Rechnung,2025-01-01,0.00306027115308369
+sv,gfs,einnahmenquote,Budget/Finanzpläne,2026-01-01,0.0906826514938407
+sv,gfs,einnahmenquote,Budget/Finanzpläne,2027-01-01,0.0916584417716304
+sv,gfs,einnahmenquote,Budget/Finanzpläne,2028-01-01,0.0929174529396477
+sv,gfs,einnahmenquote,Budget/Finanzpläne,2029-01-01,0.0932926656264052
+sv,gfs,einnahmenquote,Budget/Finanzpläne,2030-01-01,0.0931202107928009
 sv,gfs,einnahmenquote,Rechnung,1990-01-01,0.0713980424692898
 sv,gfs,einnahmenquote,Rechnung,1991-01-01,0.0741582405679523
 sv,gfs,einnahmenquote,Rechnung,1992-01-01,0.0768465241653822
@@ -4910,9 +5470,14 @@ sv,gfs,einnahmenquote,Rechnung,2019-01-01,0.0884517017950829
 sv,gfs,einnahmenquote,Rechnung,2020-01-01,0.109227437976266
 sv,gfs,einnahmenquote,Rechnung,2021-01-01,0.0969183705209195
 sv,gfs,einnahmenquote,Rechnung,2022-01-01,0.0885288334531307
-sv,gfs,einnahmenquote,Rechnung,2023-01-01,0.0886562226838993
-sv,gfs,einnahmenquote,Rechnung,2024-01-01,0.0906768441451143
-sv,gfs,einnahmenquote,Rechnung,2025-01-01,0.0909403050056489
+sv,gfs,einnahmenquote,Rechnung,2023-01-01,0.0883417388109938
+sv,gfs,einnahmenquote,Rechnung,2024-01-01,0.0899421976484305
+sv,gfs,einnahmenquote,Rechnung,2025-01-01,0.0895190776656669
+sv,gfs,ertrag,Budget/Finanzpläne,2026-01-01,81951.2533792421
+sv,gfs,ertrag,Budget/Finanzpläne,2027-01-01,84302.3340649038
+sv,gfs,ertrag,Budget/Finanzpläne,2028-01-01,87782.5839251384
+sv,gfs,ertrag,Budget/Finanzpläne,2029-01-01,90601.9584959315
+sv,gfs,ertrag,Budget/Finanzpläne,2030-01-01,92951.2688064238
 sv,gfs,ertrag,Rechnung,1990-01-01,26757.27580637
 sv,gfs,ertrag,Rechnung,1991-01-01,29026.68685418
 sv,gfs,ertrag,Rechnung,1992-01-01,30704.55622409
@@ -4949,6 +5514,11 @@ sv,gfs,ertrag,Rechnung,2022-01-01,72567.41116251
 sv,gfs,ertrag,Rechnung,2023-01-01,73956.11767027
 sv,gfs,ertrag,Rechnung,2024-01-01,77434.12441543
 sv,gfs,ertrag,Rechnung,2025-01-01,78917.49448407
+sv,gfs,fiskalertrag,Budget/Finanzpläne,2026-01-01,57437.861236633
+sv,gfs,fiskalertrag,Budget/Finanzpläne,2027-01-01,58610.568961304
+sv,gfs,fiskalertrag,Budget/Finanzpläne,2028-01-01,60139.0473611278
+sv,gfs,fiskalertrag,Budget/Finanzpläne,2029-01-01,61674.4443966162
+sv,gfs,fiskalertrag,Budget/Finanzpläne,2030-01-01,63322.6662685322
 sv,gfs,fiskalertrag,Rechnung,1990-01-01,19922.02388727
 sv,gfs,fiskalertrag,Rechnung,1991-01-01,21497.97425206
 sv,gfs,fiskalertrag,Rechnung,1992-01-01,22393.43924965
@@ -4985,6 +5555,11 @@ sv,gfs,fiskalertrag,Rechnung,2022-01-01,52173.3415729
 sv,gfs,fiskalertrag,Rechnung,2023-01-01,53490.36342966
 sv,gfs,fiskalertrag,Rechnung,2024-01-01,55181.89371117
 sv,gfs,fiskalertrag,Rechnung,2025-01-01,56259.4774729
+sv,gfs,fiskalquote,Budget/Finanzpläne,2026-01-01,0.0635575093521693
+sv,gfs,fiskalquote,Budget/Finanzpläne,2027-01-01,0.0637248479764015
+sv,gfs,fiskalquote,Budget/Finanzpläne,2028-01-01,0.0636568992748982
+sv,gfs,fiskalquote,Budget/Finanzpläne,2029-01-01,0.0635060589672155
+sv,gfs,fiskalquote,Budget/Finanzpläne,2030-01-01,0.0634377572959003
 sv,gfs,fiskalquote,Rechnung,1990-01-01,0.0531591301697046
 sv,gfs,fiskalquote,Rechnung,1991-01-01,0.054923662294525
 sv,gfs,fiskalquote,Rechnung,1992-01-01,0.0560456877437006
@@ -5018,9 +5593,14 @@ sv,gfs,fiskalquote,Rechnung,2019-01-01,0.0643329030807299
 sv,gfs,fiskalquote,Rechnung,2020-01-01,0.0689133470778578
 sv,gfs,fiskalquote,Rechnung,2021-01-01,0.0657365959241295
 sv,gfs,fiskalquote,Rechnung,2022-01-01,0.0636490263715894
-sv,gfs,fiskalquote,Rechnung,2023-01-01,0.0641225326727637
-sv,gfs,fiskalquote,Rechnung,2024-01-01,0.0646190554029556
-sv,gfs,fiskalquote,Rechnung,2025-01-01,0.0648304165545538
+sv,gfs,fiskalquote,Rechnung,2023-01-01,0.0638950754023661
+sv,gfs,fiskalquote,Rechnung,2024-01-01,0.0640955241407204
+sv,gfs,fiskalquote,Rechnung,2025-01-01,0.0638172380693482
+sv,gfs,fremdkapital,Budget/Finanzpläne,2026-01-01,1823.96351130781
+sv,gfs,fremdkapital,Budget/Finanzpläne,2027-01-01,1848.79139164688
+sv,gfs,fremdkapital,Budget/Finanzpläne,2028-01-01,1777.13398650738
+sv,gfs,fremdkapital,Budget/Finanzpläne,2029-01-01,1727.07262940242
+sv,gfs,fremdkapital,Budget/Finanzpläne,2030-01-01,1659.75808796817
 sv,gfs,fremdkapital,Rechnung,1990-01-01,80.124655
 sv,gfs,fremdkapital,Rechnung,1991-01-01,258.52888236
 sv,gfs,fremdkapital,Rechnung,1992-01-01,748.872949
@@ -5057,6 +5637,11 @@ sv,gfs,fremdkapital,Rechnung,2022-01-01,764.36520731
 sv,gfs,fremdkapital,Rechnung,2023-01-01,931.12389888
 sv,gfs,fremdkapital,Rechnung,2024-01-01,918.68017664
 sv,gfs,fremdkapital,Rechnung,2025-01-01,1820.44862387
+sv,gfs,maastricht_schuld,Budget/Finanzpläne,2026-01-01,732.676204993611
+sv,gfs,maastricht_schuld,Budget/Finanzpläne,2027-01-01,742.649429256098
+sv,gfs,maastricht_schuld,Budget/Finanzpläne,2028-01-01,713.865040022533
+sv,gfs,maastricht_schuld,Budget/Finanzpläne,2029-01-01,693.755665622718
+sv,gfs,maastricht_schuld,Budget/Finanzpläne,2030-01-01,666.715781078334
 sv,gfs,maastricht_schuld,Rechnung,1991-01-01,155.88477136
 sv,gfs,maastricht_schuld,Rechnung,1992-01-01,673.984327
 sv,gfs,maastricht_schuld,Rechnung,1993-01-01,4100
@@ -5092,6 +5677,11 @@ sv,gfs,maastricht_schuld,Rechnung,2022-01-01,283.14739353
 sv,gfs,maastricht_schuld,Rechnung,2023-01-01,508.93272003
 sv,gfs,maastricht_schuld,Rechnung,2024-01-01,38.37483493
 sv,gfs,maastricht_schuld,Rechnung,2025-01-01,731.26429386
+sv,gfs,nettoschuld,Budget/Finanzpläne,2026-01-01,-34548.6185245579
+sv,gfs,nettoschuld,Budget/Finanzpläne,2027-01-01,-33976.9801537415
+sv,gfs,nettoschuld,Budget/Finanzpläne,2028-01-01,-35350.2672129556
+sv,gfs,nettoschuld,Budget/Finanzpläne,2029-01-01,-36285.1737062901
+sv,gfs,nettoschuld,Budget/Finanzpläne,2030-01-01,-37565.7302824069
 sv,gfs,nettoschuld,Rechnung,1990-01-01,-23192.599242
 sv,gfs,nettoschuld,Rechnung,1991-01-01,-25774.303731
 sv,gfs,nettoschuld,Rechnung,1992-01-01,-25401.771902
@@ -5128,6 +5718,11 @@ sv,gfs,nettoschuld,Rechnung,2022-01-01,-27669.50048745
 sv,gfs,nettoschuld,Rechnung,2023-01-01,-31422.13630223
 sv,gfs,nettoschuld,Rechnung,2024-01-01,-34104.92575956
 sv,gfs,nettoschuld,Rechnung,2025-01-01,-35157.39779301
+sv,gfs,nettoschuldenquote,Budget/Finanzpläne,2026-01-01,-0.0382295596963951
+sv,gfs,nettoschuldenquote,Budget/Finanzpläne,2027-01-01,-0.0369417655103108
+sv,gfs,nettoschuldenquote,Budget/Finanzpläne,2028-01-01,-0.0374180918730412
+sv,gfs,nettoschuldenquote,Budget/Finanzpläne,2029-01-01,-0.0373627748668255
+sv,gfs,nettoschuldenquote,Budget/Finanzpläne,2030-01-01,-0.0376340072319861
 sv,gfs,nettoschuldenquote,Rechnung,1990-01-01,-0.0618862023786188
 sv,gfs,nettoschuldenquote,Rechnung,1991-01-01,-0.0658489556922932
 sv,gfs,nettoschuldenquote,Rechnung,1992-01-01,-0.0635748604885894
@@ -5161,9 +5756,9 @@ sv,gfs,nettoschuldenquote,Rechnung,2019-01-01,-0.0344250742016139
 sv,gfs,nettoschuldenquote,Rechnung,2020-01-01,-0.0393083062645234
 sv,gfs,nettoschuldenquote,Rechnung,2021-01-01,-0.0344124599331568
 sv,gfs,nettoschuldenquote,Rechnung,2022-01-01,-0.033755491082618
-sv,gfs,nettoschuldenquote,Rechnung,2023-01-01,-0.0376678495433543
-sv,gfs,nettoschuldenquote,Rechnung,2024-01-01,-0.0399375218745817
-sv,gfs,nettoschuldenquote,Rechnung,2025-01-01,-0.0405135071685105
+sv,gfs,nettoschuldenquote,Rechnung,2023-01-01,-0.0375342330768526
+sv,gfs,nettoschuldenquote,Rechnung,2024-01-01,-0.0396139556895429
+sv,gfs,nettoschuldenquote,Rechnung,2025-01-01,-0.0398803566196656
 sv,gfs,nettozugang_sachvermoegen,Rechnung,1990-01-01,-1.01010581
 sv,gfs,nettozugang_sachvermoegen,Rechnung,1991-01-01,3.94747626
 sv,gfs,nettozugang_sachvermoegen,Rechnung,1992-01-01,3.11640305
@@ -5200,6 +5795,11 @@ sv,gfs,nettozugang_sachvermoegen,Rechnung,2022-01-01,-0.78569612
 sv,gfs,nettozugang_sachvermoegen,Rechnung,2023-01-01,-0.77902362
 sv,gfs,nettozugang_sachvermoegen,Rechnung,2024-01-01,-0.39835186
 sv,gfs,nettozugang_sachvermoegen,Rechnung,2025-01-01,0.18100892
+sv,gfs,saldo,Budget/Finanzpläne,2026-01-01,-676.421409391201
+sv,gfs,saldo,Budget/Finanzpläne,2027-01-01,-635.153745351534
+sv,gfs,saldo,Budget/Finanzpläne,2028-01-01,1615.63183436953
+sv,gfs,saldo,Budget/Finanzpläne,2029-01-01,1099.88999215821
+sv,gfs,saldo,Budget/Finanzpläne,2030-01-01,1506.53714837266
 sv,gfs,saldo,Rechnung,1990-01-01,2778.80186600001
 sv,gfs,saldo,Rechnung,1991-01-01,2357.44171601
 sv,gfs,saldo,Rechnung,1992-01-01,-316.786536
@@ -5236,6 +5836,11 @@ sv,gfs,saldo,Rechnung,2022-01-01,5372.56635780999
 sv,gfs,saldo,Rechnung,2023-01-01,4908.15044366999
 sv,gfs,saldo,Rechnung,2024-01-01,5349.56741295
 sv,gfs,saldo,Rechnung,2025-01-01,2697.84875069
+sv,gfs,schuldenquote,Budget/Finanzpläne,2026-01-01,8.10738313516687e-4
+sv,gfs,schuldenquote,Budget/Finanzpläne,2027-01-01,8.07452014505291e-4
+sv,gfs,schuldenquote,Budget/Finanzpläne,2028-01-01,7.55622793219672e-4
+sv,gfs,schuldenquote,Budget/Finanzpläne,2029-01-01,7.1435889923142e-4
+sv,gfs,schuldenquote,Budget/Finanzpläne,2030-01-01,6.67927558925487e-4
 sv,gfs,schuldenquote,Rechnung,1991-01-01,3.9825903774238e-4
 sv,gfs,schuldenquote,Rechnung,1992-01-01,0.00168682955369531
 sv,gfs,schuldenquote,Rechnung,1993-01-01,0.010041153884556
@@ -5268,9 +5873,14 @@ sv,gfs,schuldenquote,Rechnung,2019-01-01,2.3840235953416e-4
 sv,gfs,schuldenquote,Rechnung,2020-01-01,4.18279992928726e-4
 sv,gfs,schuldenquote,Rechnung,2021-01-01,3.80020188646195e-4
 sv,gfs,schuldenquote,Rechnung,2022-01-01,3.45426521946197e-4
-sv,gfs,schuldenquote,Rechnung,2023-01-01,6.10092227383649e-4
-sv,gfs,schuldenquote,Rechnung,2024-01-01,4.49376673696682e-5
-sv,gfs,schuldenquote,Rechnung,2025-01-01,8.42669909354416e-4
+sv,gfs,schuldenquote,Rechnung,2023-01-01,6.07928090894536e-4
+sv,gfs,schuldenquote,Rechnung,2024-01-01,4.45735909594942e-5
+sv,gfs,schuldenquote,Rechnung,2025-01-01,8.29500550469153e-4
+sv,gfs,staatsquote,Budget/Finanzpläne,2026-01-01,0.0914311414119502
+sv,gfs,staatsquote,Budget/Finanzpläne,2027-01-01,0.0923490181741712
+sv,gfs,staatsquote,Budget/Finanzpläne,2028-01-01,0.0912073142284672
+sv,gfs,staatsquote,Budget/Finanzpläne,2029-01-01,0.0921601109778338
+sv,gfs,staatsquote,Budget/Finanzpläne,2030-01-01,0.091610935463641
 sv,gfs,staatsquote,Rechnung,1990-01-01,0.0639831989299794
 sv,gfs,staatsquote,Rechnung,1991-01-01,0.0681353785451851
 sv,gfs,staatsquote,Rechnung,1992-01-01,0.0776393688499406
@@ -5304,6 +5914,6 @@ sv,gfs,staatsquote,Rechnung,2019-01-01,0.087236539427504
 sv,gfs,staatsquote,Rechnung,2020-01-01,0.107615817209232
 sv,gfs,staatsquote,Rechnung,2021-01-01,0.0962988486177113
 sv,gfs,staatsquote,Rechnung,2022-01-01,0.0819745548218961
-sv,gfs,staatsquote,Rechnung,2023-01-01,0.0827724892970262
-sv,gfs,staatsquote,Rechnung,2024-01-01,0.0844123981504078
-sv,gfs,staatsquote,Rechnung,2025-01-01,0.0878314482198271
+sv,gfs,staatsquote,Rechnung,2023-01-01,0.082478876370419
+sv,gfs,staatsquote,Rechnung,2024-01-01,0.0837285050003701
+sv,gfs,staatsquote,Rechnung,2025-01-01,0.0864588065125832
