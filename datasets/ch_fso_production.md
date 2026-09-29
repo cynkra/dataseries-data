@@ -1,8 +1,8 @@
-# Industry & construction turnover (quarterly)
+# Industry and construction turnover (quarterly)
 
 - **id**: ch_fso_production
-- **title**: Industry & construction turnover | de: Umsätze Industrie und Bau | fr: Chiffres d'affaires industrie et construction | it: Fatturato industria e costruzioni
-- **concept**: Domestic economy / Industry & construction turnover
+- **title**: Industry and construction turnover | de: Umsätze Industrie und Bau | fr: Chiffres d'affaires industrie et construction | it: Fatturato industria e costruzioni
+- **concept**: Domestic economy / Industry and construction turnover
 - **canonical**: yes
 
 - **source**: fso
@@ -21,7 +21,7 @@ Turnover and output of Swiss industry and construction each quarter, by branch, 
 - **endpoint / order number**: flow `DF_KEU_Q1` version `1.0.0`
   - data: `https://disseminate.stats.swiss/rest/data/CH1.KEU,DF_KEU_Q1,1.0.0/all?detail=dataonly` (Accept: `application/vnd.sdmx.data+csv`)
   - structure: `https://disseminate.stats.swiss/rest/dataflow/CH1.KEU/DF_KEU_Q1/1.0.0?references=all` (Accept: `application/vnd.sdmx.structure+json`)
-- **call**: `fso_sdmx_fetch("ch_fso_production", "CH1.KEU", "DF_KEU_Q1", "1.0.0", title = list(en = "Industry & construction turnover (quarterly)"), noga_keep = <B-E,B,C,D,F,41,42,43,41_43>)`
+- **call**: `fso_sdmx_fetch("ch_fso_production", "CH1.KEU", "DF_KEU_Q1", "1.0.0", title = list(en = "Industry and construction turnover (quarterly)"), noga_keep = <B-E,B,C,D,F,41,42,43,41_43>)`
 
 ## Parsing recipe
 SDMX-CSV: same shape as `ch_fso_retail` (dimension columns + `TIME_PERIOD` +

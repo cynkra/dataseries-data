@@ -33,7 +33,7 @@ jobs <- list(
   function() fso_sdmx_fetch("ch_fso_retail", "CH1.KEU", "DF_KEU_M1", "1.0.0",
                title = list(en = "Retail trade turnover (monthly)"), noga_keep = .SDMX_RETAIL_NOGA),
   function() fso_sdmx_fetch("ch_fso_production", "CH1.KEU", "DF_KEU_Q1", "1.0.0",
-               title = list(en = "Industry & construction turnover (quarterly)"), noga_keep = .SDMX_PRODUCTION_NOGA),
+               title = list(en = "Industry and construction turnover (quarterly)"), noga_keep = .SDMX_PRODUCTION_NOGA),
   function() fso_fetch("ch_fso_hesta", "px-x-1003020000_103", hesta_query,
                title = list(en = "Hotel sector: overnight stays by tourism region")),
   function() fso_fetch("ch_fso_besta", "px-x-0602000000_101", besta_query,

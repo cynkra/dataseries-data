@@ -2,7 +2,7 @@
 
 - **id**: ch_fso_pop
 - **title**: Resident population | de: Ständige Wohnbevölkerung | fr: Population résidante permanente | it: Popolazione residente permanente
-- **concept**: Population & demographics / Resident population
+- **concept**: Population and demographics / Resident population
 - **canonical**: yes
 - **featured**: Population
 - **source**: fso

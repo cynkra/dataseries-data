@@ -2,7 +2,7 @@
 
 - **id**: ch_snb_bakredbetgrbm
 - **title**: Corporate loans by company size | de: Unternehmenskredite nach Unternehmensgrösse | fr: Crédits aux entreprises par taille d'entreprise | it: Crediti alle imprese per dimensione dell'impresa
-- **concept**: Money & banking / Banking & credit
+- **concept**: Money and banking / Banking and credit
 - **canonical**: yes
 - **source**: snb
 - **license**: snb (free reuse, attribution required)

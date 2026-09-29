@@ -47,9 +47,9 @@
  {
   "key": "business-cycle-sentiment",
   "name": {
-   "en": "Business cycle & sentiment",
-   "de": "Konjunktur & Stimmung",
-   "fr": "Conjoncture & climat",
+   "en": "Business cycle and sentiment",
+   "de": "Konjunktur und Stimmung",
+   "fr": "Conjoncture et climat",
    "it": "Congiuntura e clima"
   },
   "blurb": {
@@ -62,9 +62,9 @@
  {
   "key": "interest-rates-yields",
   "name": {
-   "en": "Interest rates & yields",
-   "de": "Zinsen & Renditen",
-   "fr": "Taux d'intérêt & rendements",
+   "en": "Interest rates and yields",
+   "de": "Zinsen und Renditen",
+   "fr": "Taux d'intérêt et rendements",
    "it": "Tassi d'interesse e rendimenti"
   },
   "blurb": {
@@ -122,9 +122,9 @@
  {
   "key": "money-banking",
   "name": {
-   "en": "Money & banking",
-   "de": "Geld & Banken",
-   "fr": "Monnaie & banques",
+   "en": "Money and banking",
+   "de": "Geld und Banken",
+   "fr": "Monnaie et banques",
    "it": "Moneta e banche"
   },
   "blurb": {
@@ -152,9 +152,9 @@
  {
   "key": "population-demographics",
   "name": {
-   "en": "Population & demographics",
-   "de": "Bevölkerung & Demografie",
-   "fr": "Population & démographie",
+   "en": "Population and demographics",
+   "de": "Bevölkerung und Demografie",
+   "fr": "Population et démographie",
    "it": "Popolazione e demografia"
   },
   "blurb": {

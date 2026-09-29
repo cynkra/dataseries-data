@@ -12,7 +12,7 @@
 - **updated**: 2025 Q4 release (PublishingDate in CSV header)
 
 ## What is special
-Who holds Switzerland's foreign assets and debts, the central bank, banks, government or others, and the resulting net creditor position.
+Who holds Switzerland's foreign assets and debts (the central bank, banks, government or others), and the resulting net creditor position.
 
 ## Access
 - **type**: snb-cube — SNB cube API
@@ -66,10 +66,10 @@ Script: `R/source_snb.R::snb_fetch` (cube `auversecq`, title/topic from
 `R/snb_cubes.tsv`). Datasheet authored 2026-06-01.
 
 ## What is special (de)
-Wer die Schweizer Auslandguthaben und -schulden hält — Nationalbank, Banken, Staat oder übrige Sektoren — und die daraus folgende Nettogläubigerposition.
+Wer die Schweizer Auslandguthaben und -schulden hält (Nationalbank, Banken, Staat oder übrige Sektoren) und die daraus folgende Nettogläubigerposition.
 
 ## What is special (fr)
-Qui détient les avoirs et engagements suisses à l'étranger — banque centrale, banques, État ou autres secteurs — et la position créditrice nette qui en résulte.
+Qui détient les avoirs et engagements suisses à l'étranger (banque centrale, banques, État ou autres secteurs) et la position créditrice nette qui en résulte.
 
 ## What is special (it)
-Chi detiene gli attivi e i debiti svizzeri sull'estero — banca centrale, banche, Stato o altri settori — e la posizione creditoria netta che ne risulta.
+Chi detiene gli attivi e i debiti svizzeri sull'estero (banca centrale, banche, Stato o altri settori) e la posizione creditoria netta che ne risulta.

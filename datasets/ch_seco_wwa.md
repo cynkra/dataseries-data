@@ -2,7 +2,7 @@
 
 - **id**: ch_seco_wwa
 - **title**: Weekly economic activity (WEA) | de: Wöchentliche Wirtschaftsaktivität (WWA) | fr: Activité économique hebdomadaire (WEA) | it: Attività economica settimanale (WEA)
-- **concept**: Business cycle & sentiment / High-frequency activity tracker
+- **concept**: Business cycle and sentiment / High-frequency activity tracker
 - **canonical**: yes
 - **source**: seco
 - **license**: seco (free reuse, attribution required)

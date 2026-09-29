@@ -2,7 +2,7 @@
 
 - **id**: ch_snb_babilpobm
 - **title**: Bank balance sheets by currency | de: Bankbilanzen nach Währung | fr: Bilans bancaires par monnaie | it: Bilanci bancari per valuta
-- **concept**: Money & banking / Banking & credit
+- **concept**: Money and banking / Banking and credit
 - **canonical**: yes
 - **source**: snb
 - **license**: snb (free reuse, attribution required)

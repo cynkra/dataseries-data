@@ -2,7 +2,7 @@
 
 - **id**: ch_snb_snbmonagg
 - **title**: Monetary aggregates (M1–M3) | de: Geldmengen (M1–M3) | fr: Agrégats monétaires (M1–M3) | it: Aggregati monetari (M1–M3)
-- **concept**: Money & banking / Monetary aggregates
+- **concept**: Money and banking / Monetary aggregates
 - **canonical**: yes
 - **featured**: Money supply
 - **source**: snb

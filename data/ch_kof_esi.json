@@ -48,14 +48,14 @@
   "topic": {
     "key": "business-cycle-sentiment",
     "name": {
-      "en": "Business cycle & sentiment",
-      "de": "Konjunktur & Stimmung",
-      "fr": "Conjoncture & climat",
+      "en": "Business cycle and sentiment",
+      "de": "Konjunktur und Stimmung",
+      "fr": "Conjoncture et climat",
       "it": "Congiuntura e clima"
     }
   },
   "concept": {
-    "en": "Business cycle & sentiment / Sentiment composite",
+    "en": "Business cycle and sentiment / Sentiment composite",
     "leaf": {
       "en": "Sentiment composite",
       "de": "Stimmungsindikator",

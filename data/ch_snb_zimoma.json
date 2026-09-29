@@ -388,14 +388,14 @@
   "topic": {
     "key": "interest-rates-yields",
     "name": {
-      "en": "Interest rates & yields",
-      "de": "Zinsen & Renditen",
-      "fr": "Taux d'intérêt & rendements",
+      "en": "Interest rates and yields",
+      "de": "Zinsen und Renditen",
+      "fr": "Taux d'intérêt et rendements",
       "it": "Tassi d'interesse e rendimenti"
     }
   },
   "concept": {
-    "en": "Interest rates & yields / Money-market rates",
+    "en": "Interest rates and yields / Money-market rates",
     "leaf": {
       "en": "Money-market rates",
       "de": "Geldmarktsätze",

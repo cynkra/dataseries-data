@@ -12,7 +12,7 @@
 - **updated**: 2025-Q4 (latest observation; PublishingDate in CSV header is the freshness signal)
 
 ## What is special
-Which currencies Switzerland's foreign assets and debts are held in, francs, dollars, euros or precious metals, and so how exposed they are.
+Which currencies Switzerland's foreign assets and debts are held in (francs, dollars, euros or precious metals), and so how exposed they are.
 
 ## Access
 - **type**: snb-cube — SNB cube API
@@ -63,10 +63,10 @@ Script: `R/source_snb.R::snb_fetch` via `R/snb_cubes.tsv` (cube_id `auvercurrq`)
 Datasheet 2026-06-01; parser verified 2026-06-01 (13,794 rows, 94 series).
 
 ## What is special (de)
-In welchen Währungen die Schweizer Auslandguthaben und -schulden gehalten werden — Franken, Dollar, Euro oder Edelmetalle — und wie exponiert sie damit sind.
+In welchen Währungen die Schweizer Auslandguthaben und -schulden gehalten werden (Franken, Dollar, Euro oder Edelmetalle) und wie exponiert sie damit sind.
 
 ## What is special (fr)
-Dans quelles monnaies sont détenus les avoirs et engagements suisses à l'étranger — francs, dollars, euros ou métaux précieux — et donc leur exposition.
+Dans quelles monnaies sont détenus les avoirs et engagements suisses à l'étranger (francs, dollars, euros ou métaux précieux) et donc leur exposition.
 
 ## What is special (it)
-In quali valute sono detenuti gli attivi e i debiti svizzeri sull'estero — franchi, dollari, euro o metalli preziosi — e quindi quanto sono esposti.
+In quali valute sono detenuti gli attivi e i debiti svizzeri sull'estero (franchi, dollari, euro o metalli preziosi) e quindi quanto sono esposti.

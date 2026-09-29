@@ -7,10 +7,10 @@
    "fr": "Balance des paiements",
    "it": "Bilancia dei pagamenti"
   },
-  "Banking & credit": {
-   "en": "Banking & credit",
-   "de": "Banken & Kredit",
-   "fr": "Banques & crédit",
+  "Banking and credit": {
+   "en": "Banking and credit",
+   "de": "Banken und Kredit",
+   "fr": "Banques et crédit",
    "it": "Banche e credito"
   },
   "Bilateral FX": {
@@ -109,10 +109,10 @@
    "fr": "Nuitées hôtelières",
    "it": "Pernottamenti alberghieri"
   },
-  "Industry & construction turnover": {
-   "en": "Industry & construction turnover",
-   "de": "Umsätze Industrie & Bau",
-   "fr": "Chiffres d'affaires industrie & construction",
+  "Industry and construction turnover": {
+   "en": "Industry and construction turnover",
+   "de": "Umsätze Industrie und Bau",
+   "fr": "Chiffres d'affaires industrie et construction",
    "it": "Fatturato industria e costruzioni"
   },
   "Inflation forecast": {
@@ -175,22 +175,22 @@
    "fr": "Nouvelles immatriculations",
    "it": "Nuove immatricolazioni"
   },
-  "Payments & cash": {
-   "en": "Payments & cash",
-   "de": "Zahlungsverkehr & Bargeld",
-   "fr": "Paiements & espèces",
+  "Payments and cash": {
+   "en": "Payments and cash",
+   "de": "Zahlungsverkehr und Bargeld",
+   "fr": "Paiements et espèces",
    "it": "Pagamenti e contante"
   },
-  "Policy & official rates": {
-   "en": "Policy & official rates",
-   "de": "Leitzinsen & offizielle Zinssätze",
-   "fr": "Taux directeurs & officiels",
+  "Policy and official rates": {
+   "en": "Policy and official rates",
+   "de": "Leitzinsen und offizielle Zinssätze",
+   "fr": "Taux directeurs et officiels",
    "it": "Tassi di riferimento e ufficiali"
   },
-  "Producer & import prices": {
-   "en": "Producer & import prices",
-   "de": "Produzenten- & Importpreise",
-   "fr": "Prix à la production & à l'importation",
+  "Producer and import prices": {
+   "en": "Producer and import prices",
+   "de": "Produzenten- und Importpreise",
+   "fr": "Prix à la production et à l'importation",
    "it": "Prezzi alla produzione e all'importazione"
   },
   "Real estate prices": {

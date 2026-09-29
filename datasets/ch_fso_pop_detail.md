@@ -2,7 +2,7 @@
 
 - **id**: ch_fso_pop_detail
 - **title**: Resident population by nationality | de: Ständige Wohnbevölkerung nach Staatsangehörigkeit | fr: Population résidante permanente par nationalité | it: Popolazione residente permanente per nazionalità
-- **concept**: Population & demographics / Resident population by nationality
+- **concept**: Population and demographics / Resident population by nationality
 - **canonical**: no (the headline resident population is `ch_fso_pop`, the 1861– demographic balance; this is the recent nationality × sex stock detail)
 - **source**: fso
 - **license**: fso (free reuse, attribution required)

@@ -2,7 +2,7 @@
 
 - **id**: ch_snb_snbkosiq
 - **title**: Business cycle signals | de: Konjunktursignale | fr: Signaux conjoncturels | it: Segnali congiunturali
-- **concept**: Business cycle & sentiment / Business cycle signals
+- **concept**: Business cycle and sentiment / Business cycle signals
 - **canonical**: yes
 - **source**: snb
 - **license**: snb (free reuse, attribution required)

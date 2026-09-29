@@ -2,7 +2,7 @@
 
 - **id**: ch_seco_concon
 - **title**: Consumer confidence | de: Konsumentenstimmung | fr: Climat de consommation | it: Clima di consumo
-- **concept**: Business cycle & sentiment / Consumer confidence
+- **concept**: Business cycle and sentiment / Consumer confidence
 - **canonical**: yes
 - **featured**: Consumer confidence
 

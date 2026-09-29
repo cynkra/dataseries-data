@@ -2,8 +2,8 @@
 
 - **id**: ch_snb_zavegelade
 - **title**: E-money | de: E-Geld | fr: Monnaie électronique | it: Moneta elettronica
-- **concept**: Payment systems / Payments & cash
-- **canonical**: no (alternate within Payments & cash; one of several `ch_snb_zave*` payment series)
+- **concept**: Payment systems / Payments and cash
+- **canonical**: no (alternate within Payments and cash; one of several `ch_snb_zave*` payment series)
 - **source**: snb
 - **license**: snb (free reuse, attribution required)
 - **frequency**: monthly

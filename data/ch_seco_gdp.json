@@ -958,10 +958,10 @@
     "seas_adj": "cssa"
   },
   "description": {
-    "en": "Swiss economic output each quarter from all three angles, production, spending and income, including a correction for sporting-body revenue.",
-    "de": "Schweizer Wirtschaftsleistung pro Quartal aus allen drei Blickwinkeln — Produktion, Verwendung und Einkommen — inklusive einer Korrektur für Erträge von Sportverbänden.",
-    "fr": "Production économique suisse par trimestre sous les trois optiques — production, dépenses et revenus — avec une correction pour les recettes des fédérations sportives.",
-    "it": "Produzione economica svizzera per trimestre nelle tre ottiche — produzione, spesa e redditi — con una correzione per i ricavi delle federazioni sportive."
+    "en": "Swiss economic output each quarter from all three angles (production, spending and income), including a correction for sporting-body revenue.",
+    "de": "Schweizer Wirtschaftsleistung pro Quartal aus allen drei Blickwinkeln (Produktion, Verwendung und Einkommen), inklusive einer Korrektur für Erträge von Sportverbänden.",
+    "fr": "Production économique suisse par trimestre sous les trois optiques (production, dépenses et revenus), avec une correction pour les recettes des fédérations sportives.",
+    "it": "Produzione economica svizzera per trimestre nelle tre ottiche (produzione, spesa e redditi), con una correzione per i ricavi delle federazioni sportive."
   },
   "fetched_utc": "2026-09-29 08:37:02"
 }

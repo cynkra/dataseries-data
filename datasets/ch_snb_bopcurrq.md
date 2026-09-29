@@ -12,7 +12,7 @@
 - **updated**: 2025-Q4 (latest observation; SNB publishes ~3 months in arrears)
 
 ## What is special
-Switzerland's current account in detail, goods, services and income from work and investment, showing where the structural surplus comes from.
+Switzerland's current account in detail (goods, services and income from work and investment), showing where the structural surplus comes from.
 
 ## Access
 - **type**: snb-cube — SNB cube API
@@ -63,10 +63,10 @@ Script: `R/source_snb.R::snb_fetch` via `R/snb_cubes.tsv` (cube `bopcurrq`, topi
 (18,868 rows, 116 series).
 
 ## What is special (de)
-Die Schweizer Leistungsbilanz im Detail — Waren, Dienstleistungen sowie Arbeits- und Kapitaleinkommen — und woher der strukturelle Überschuss stammt.
+Die Schweizer Leistungsbilanz im Detail (Waren, Dienstleistungen sowie Arbeits- und Kapitaleinkommen) und woher der strukturelle Überschuss stammt.
 
 ## What is special (fr)
-Le compte courant suisse en détail — biens, services, revenus du travail et des investissements — et d'où vient l'excédent structurel.
+Le compte courant suisse en détail (biens, services, revenus du travail et des investissements) et d'où vient l'excédent structurel.
 
 ## What is special (it)
-Il conto corrente svizzero in dettaglio — beni, servizi, redditi da lavoro e da investimenti — e da dove proviene l'avanzo strutturale.
+Il conto corrente svizzero in dettaglio (beni, servizi, redditi da lavoro e da investimenti) e da dove proviene l'avanzo strutturale.

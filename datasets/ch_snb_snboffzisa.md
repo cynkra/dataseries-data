@@ -2,7 +2,7 @@
 
 - **id**: ch_snb_snboffzisa
 - **title**: Official interest rates | de: Offizielle Zinssätze | fr: Taux d'intérêt officiels | it: Tassi d'interesse ufficiali
-- **concept**: Interest rates & yields / Policy & official rates
+- **concept**: Interest rates and yields / Policy and official rates
 - **canonical**: yes
 - **source**: snb
 - **license**: snb (free reuse, attribution required)

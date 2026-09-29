@@ -2,7 +2,7 @@
 
 - **id**: ch_snb_snbbipo
 - **title**: SNB balance sheet | de: SNB-Bilanz | fr: Bilan de la BNS | it: Bilancio della BNS
-- **concept**: Money & banking / Monetary aggregates
+- **concept**: Money and banking / Monetary aggregates
 - **canonical**: no (supporting series under Monetary aggregates;
   `ch_snb_snbmonagg` is canonical)
 - **source**: snb

@@ -358,18 +358,18 @@
   "topic": {
     "key": "money-banking",
     "name": {
-      "en": "Money & banking",
-      "de": "Geld & Banken",
-      "fr": "Monnaie & banques",
+      "en": "Money and banking",
+      "de": "Geld und Banken",
+      "fr": "Monnaie et banques",
       "it": "Moneta e banche"
     }
   },
   "concept": {
-    "en": "Money & banking / Banking & credit",
+    "en": "Money and banking / Banking and credit",
     "leaf": {
-      "en": "Banking & credit",
-      "de": "Banken & Kredit",
-      "fr": "Banques & crédit",
+      "en": "Banking and credit",
+      "de": "Banken und Kredit",
+      "fr": "Banques et crédit",
       "it": "Banche e credito"
     }
   },

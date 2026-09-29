@@ -57,7 +57,7 @@ authored 2026-06-02; coverage verified live 2026-06-02 (1921-01 .. 2026-04).
 Schweizer Teuerung, nur der Gesamtindex der Konsumentenpreise. Für die Gliederung in 595 Warenkorbpositionen wie Nahrung, Miete und Verkehr siehe die Detailreihe.
 
 ## What is special (fr)
-Inflation suisse, uniquement l'indice global des prix à la consommation. Pour la ventilation en 595 positions du panier — alimentation, loyer, transports — voir la série détaillée.
+Inflation suisse, uniquement l'indice global des prix à la consommation. Pour la ventilation en 595 positions du panier telles que l'alimentation, le loyer et les transports, voir la série détaillée.
 
 ## What is special (it)
 Inflazione svizzera, solo l'indice generale dei prezzi al consumo. Per la ripartizione nelle 595 posizioni del paniere come alimentari, pigioni e trasporti, si veda la serie dettagliata.

@@ -574,10 +574,10 @@
     "D1": "S"
   },
   "description": {
-    "en": "Switzerland's current account in detail, goods, services and income from work and investment, showing where the structural surplus comes from.",
-    "de": "Die Schweizer Leistungsbilanz im Detail — Waren, Dienstleistungen sowie Arbeits- und Kapitaleinkommen — und woher der strukturelle Überschuss stammt.",
-    "fr": "Le compte courant suisse en détail — biens, services, revenus du travail et des investissements — et d'où vient l'excédent structurel.",
-    "it": "Il conto corrente svizzero in dettaglio — beni, servizi, redditi da lavoro e da investimenti — e da dove proviene l'avanzo strutturale."
+    "en": "Switzerland's current account in detail (goods, services and income from work and investment), showing where the structural surplus comes from.",
+    "de": "Die Schweizer Leistungsbilanz im Detail (Waren, Dienstleistungen sowie Arbeits- und Kapitaleinkommen) und woher der strukturelle Überschuss stammt.",
+    "fr": "Le compte courant suisse en détail (biens, services, revenus du travail et des investissements) et d'où vient l'excédent structurel.",
+    "it": "Il conto corrente svizzero in dettaglio (beni, servizi, redditi da lavoro e da investimenti) e da dove proviene l'avanzo strutturale."
   },
   "fetched_utc": "2026-09-22 08:39:05"
 }

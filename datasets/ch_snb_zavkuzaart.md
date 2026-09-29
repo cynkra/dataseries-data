@@ -2,8 +2,8 @@
 
 - **id**: ch_snb_zavkuzaart
 - **title**: Customer payments (outgoing) | de: Kundenzahlungen (ausgehend) | fr: Paiements des clients (sortants) | it: Pagamenti dei clienti (in uscita)
-- **concept**: Payment systems / Payments & cash
-- **canonical**: no (alternate for Payments & cash; the credit-transfer / direct-debit view of the `zave*` family, complementary to the card cubes)
+- **concept**: Payment systems / Payments and cash
+- **canonical**: no (alternate for Payments and cash; the credit-transfer / direct-debit view of the `zave*` family, complementary to the card cubes)
 - **source**: snb
 - **license**: snb (free reuse, attribution required)
 - **frequency**: monthly

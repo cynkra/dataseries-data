@@ -13,7 +13,7 @@
 - **updated**: 2026-02-23
 
 ## What is special
-Swiss economic output each quarter from all three angles, production, spending and income, including a correction for sporting-body revenue.
+Swiss economic output each quarter from all three angles (production, spending and income), including a correction for sporting-body revenue.
 
 ## Access
 - **type**: seco-swissdata — SECO swissdata (long CSV + JSON meta sidecar, native format)
@@ -79,10 +79,10 @@ Script: `R/source_seco.R::seco_fetch`. Datasheet 2026-06-01; parser verified
 2026-06-01 (107,100 rows, 660 series, span 1980-01 .. 2025-10).
 
 ## What is special (de)
-Schweizer Wirtschaftsleistung pro Quartal aus allen drei Blickwinkeln — Produktion, Verwendung und Einkommen — inklusive einer Korrektur für Erträge von Sportverbänden.
+Schweizer Wirtschaftsleistung pro Quartal aus allen drei Blickwinkeln (Produktion, Verwendung und Einkommen), inklusive einer Korrektur für Erträge von Sportverbänden.
 
 ## What is special (fr)
-Production économique suisse par trimestre sous les trois optiques — production, dépenses et revenus — avec une correction pour les recettes des fédérations sportives.
+Production économique suisse par trimestre sous les trois optiques (production, dépenses et revenus), avec une correction pour les recettes des fédérations sportives.
 
 ## What is special (it)
-Produzione economica svizzera per trimestre nelle tre ottiche — produzione, spesa e redditi — con una correzione per i ricavi delle federazioni sportive.
+Produzione economica svizzera per trimestre nelle tre ottiche (produzione, spesa e redditi), con una correzione per i ricavi delle federazioni sportive.

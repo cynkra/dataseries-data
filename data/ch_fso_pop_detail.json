@@ -22,9 +22,9 @@
   "topic": {
     "key": "population-demographics",
     "name": {
-      "en": "Population & demographics",
-      "de": "Bevölkerung & Demografie",
-      "fr": "Population & démographie",
+      "en": "Population and demographics",
+      "de": "Bevölkerung und Demografie",
+      "fr": "Population et démographie",
       "it": "Popolazione e demografia"
     }
   },
@@ -117,7 +117,7 @@
     }
   },
   "concept": {
-    "en": "Population & demographics / Resident population by nationality",
+    "en": "Population and demographics / Resident population by nationality",
     "leaf": {
       "en": "Resident population by nationality",
       "de": "Wohnbevölkerung nach Staatsangehörigkeit",

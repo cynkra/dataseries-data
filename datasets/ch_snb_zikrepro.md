@@ -2,7 +2,7 @@
 
 - **id**: ch_snb_zikrepro
 - **title**: Published interest rates | de: Publizierte Zinssätze | fr: Taux d'intérêt publiés | it: Tassi d'interesse pubblicati
-- **concept**: Interest rates & yields / Money-market rates
+- **concept**: Interest rates and yields / Money-market rates
 - **canonical**: no (alternate; one of the three money-market-rate cubes `zimoma` / `zikredlauf` / `zikrepro`, this one is the published retail rates with the deepest product tree)
 - **source**: snb
 - **license**: snb (free reuse, attribution required)

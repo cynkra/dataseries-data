@@ -2,7 +2,7 @@
 
 - **id**: ch_snb_bakredsekbm
 - **title**: Domestic loans by sector | de: Inlandkredite nach Sektor | fr: Crédits en Suisse par secteur | it: Crediti interni per settore
-- **concept**: Money & banking / Banking & credit
+- **concept**: Money and banking / Banking and credit
 - **canonical**: yes
 - **source**: snb
 - **license**: snb (free reuse, attribution required)

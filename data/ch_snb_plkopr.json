@@ -54,7 +54,7 @@
   "description": {
     "en": "Swiss inflation, the headline consumer price index only. For the breakdown into 595 basket items such as food, rent and transport, see the detailed series.",
     "de": "Schweizer Teuerung, nur der Gesamtindex der Konsumentenpreise. Für die Gliederung in 595 Warenkorbpositionen wie Nahrung, Miete und Verkehr siehe die Detailreihe.",
-    "fr": "Inflation suisse, uniquement l'indice global des prix à la consommation. Pour la ventilation en 595 positions du panier — alimentation, loyer, transports — voir la série détaillée.",
+    "fr": "Inflation suisse, uniquement l'indice global des prix à la consommation. Pour la ventilation en 595 positions du panier telles que l'alimentation, le loyer et les transports, voir la série détaillée.",
     "it": "Inflazione svizzera, solo l'indice generale dei prezzi al consumo. Per la ripartizione nelle 595 posizioni del paniere come alimentari, pigioni e trasporti, si veda la serie dettagliata."
   },
   "default": [],

@@ -53,7 +53,7 @@ _Canonical series and labelled alternates per concept, grouped into the 12 overv
 | Concept | Canonical | Alternates |
 |---|---|---|
 | Consumer prices | `ch_snb_plkopr` (SNB) ★ | `ch_fso_cpi` (FSO), `ch_fso_hicp` (Eurostat) |
-| Producer & import prices | `ch_fso_ppi` (FSO) | — |
+| Producer and import prices | `ch_fso_ppi` (FSO) | — |
 | Construction prices | `ch_fso_construction_prices` (FSO) | — |
 | Real estate prices | `ch_snb_plimoinchq` (SNB) | — |
 | Core inflation | `ch_snb_plkoprinfla` (SNB) | — |
@@ -72,7 +72,7 @@ _Canonical series and labelled alternates per concept, grouped into the 12 overv
 | Employment / employed persons | — | `ch_fso_ets` (FSO) |
 | Working time and working volume | `ch_fso_hours_worked` (FSO) | — |
 
-### Business cycle & sentiment
+### Business cycle and sentiment
 | Concept | Canonical | Alternates |
 |---|---|---|
 | Consumer confidence | `ch_seco_concon` (SECO) ★ | — |
@@ -81,11 +81,11 @@ _Canonical series and labelled alternates per concept, grouped into the 12 overv
 | High-frequency activity tracker | `ch_seco_wwa` (SECO) | — |
 | Business cycle signals | `ch_snb_snbkosiq` (SNB) | — |
 
-### Interest rates & yields
+### Interest rates and yields
 | Concept | Canonical | Alternates |
 |---|---|---|
 | Bond yields | `ch_snb_rendeiduebd` (SNB) | — |
-| Policy & official rates | `ch_snb_snboffzisa` (SNB) | — |
+| Policy and official rates | `ch_snb_snboffzisa` (SNB) | — |
 | Money-market rates | `ch_snb_zimoma` (SNB) ★ | `ch_snb_zikredlauf` (SNB), `ch_snb_zikrepro` (SNB) |
 
 ### Exchange rates
@@ -107,23 +107,23 @@ _Canonical series and labelled alternates per concept, grouped into the 12 overv
 | International investment position | `ch_snb_auvekomq` (SNB), `ch_snb_auversecq` (SNB) | `ch_snb_auvercurrq` (SNB), `ch_snb_auverdeptq` (SNB) |
 | Balance of payments | `ch_snb_bopcapbalq` (SNB), `ch_snb_bopcurrq` (SNB) | `ch_snb_bopoverq` (SNB), `ch_snb_bopservq` (SNB) |
 
-### Money & banking
+### Money and banking
 | Concept | Canonical | Alternates |
 |---|---|---|
-| Banking & credit | `ch_snb_babilpobm` (SNB), `ch_snb_bakredbetgrbm` (SNB), `ch_snb_bakredinausbm` (SNB), `ch_snb_bakredsekbm` (SNB) | — |
+| Banking and credit | `ch_snb_babilpobm` (SNB), `ch_snb_bakredbetgrbm` (SNB), `ch_snb_bakredinausbm` (SNB), `ch_snb_bakredsekbm` (SNB) | — |
 | Monetary aggregates | `ch_snb_snbmonagg` (SNB) ★ | `ch_snb_snbbipo` (SNB), `ch_snb_snbmoba` (SNB) |
 
 ### Domestic economy
 | Concept | Canonical | Alternates |
 |---|---|---|
 | Retail trade turnover | `ch_fso_retail` (FSO) ★ | — |
-| Industry & construction turnover | `ch_fso_production` (FSO) | — |
+| Industry and construction turnover | `ch_fso_production` (FSO) | — |
 | Services turnover | `ch_fso_services` (FSO) | — |
 | New vehicle registrations | `ch_fso_new_vehicles` (FSO) | `ch_fso_new_vehicles_canton` (FSO) |
 | Vacant dwellings | `ch_fso_vacant_dwellings` (FSO) | — |
 | Hotel overnight stays | `ch_fso_hesta` (FSO) | — |
 
-### Population & demographics
+### Population and demographics
 | Concept | Canonical | Alternates |
 |---|---|---|
 | Resident population by nationality | — | `ch_fso_pop_detail` (FSO) |
@@ -132,7 +132,7 @@ _Canonical series and labelled alternates per concept, grouped into the 12 overv
 ### Payment systems
 | Concept | Canonical | Alternates |
 |---|---|---|
-| Payments & cash | — | `ch_snb_zavegelade` (SNB), `ch_snb_zavesic` (SNB), `ch_snb_zavezaka` (SNB), `ch_snb_zavezaluba` (SNB), `ch_snb_zavkuzaart` (SNB) |
+| Payments and cash | — | `ch_snb_zavegelade` (SNB), `ch_snb_zavesic` (SNB), `ch_snb_zavezaka` (SNB), `ch_snb_zavezaluba` (SNB), `ch_snb_zavkuzaart` (SNB) |
 
 <!-- LEDGER:END -->
 

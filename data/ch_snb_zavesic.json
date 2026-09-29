@@ -264,11 +264,11 @@
     }
   },
   "concept": {
-    "en": "Payment systems / Payments & cash",
+    "en": "Payment systems / Payments and cash",
     "leaf": {
-      "en": "Payments & cash",
-      "de": "Zahlungsverkehr & Bargeld",
-      "fr": "Paiements & espèces",
+      "en": "Payments and cash",
+      "de": "Zahlungsverkehr und Bargeld",
+      "fr": "Paiements et espèces",
       "it": "Pagamenti e contante"
     }
   },

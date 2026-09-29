@@ -83,17 +83,17 @@
     }
   },
   "concept": {
-    "en": "Prices / Producer & import prices",
+    "en": "Prices / Producer and import prices",
     "leaf": {
-      "en": "Producer & import prices",
-      "de": "Produzenten- & Importpreise",
-      "fr": "Prix à la production & à l'importation",
+      "en": "Producer and import prices",
+      "de": "Produzenten- und Importpreise",
+      "fr": "Prix à la production et à l'importation",
       "it": "Prezzi alla produzione e all'importazione"
     }
   },
   "canonical": true,
   "title": {
-    "en": "Producer & import prices",
+    "en": "Producer and import prices",
     "de": "Produzenten- und Importpreise",
     "fr": "Prix à la production et à l'importation",
     "it": "Prezzi alla produzione e all'importazione"

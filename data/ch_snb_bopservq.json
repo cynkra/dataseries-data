@@ -811,10 +811,10 @@
     "D2": "S"
   },
   "description": {
-    "en": "Which countries Switzerland trades services with, around 50 partners plus regional totals, by service type and direction.",
-    "de": "Mit welchen Ländern die Schweiz Dienstleistungen handelt — rund 50 Partner plus Regionentotale — nach Dienstleistungsart und Richtung.",
-    "fr": "Avec quels pays la Suisse échange des services — environ 50 partenaires plus les totaux régionaux — par type de service et par sens.",
-    "it": "Con quali paesi la Svizzera scambia servizi — circa 50 partner più i totali regionali — per tipo di servizio e direzione."
+    "en": "Which countries Switzerland trades services with (around 50 partners plus regional totals), by service type and direction.",
+    "de": "Mit welchen Ländern die Schweiz Dienstleistungen handelt (rund 50 Partner plus Regionentotale), nach Dienstleistungsart und Richtung.",
+    "fr": "Avec quels pays la Suisse échange des services (environ 50 partenaires plus les totaux régionaux), par type de service et par sens.",
+    "it": "Con quali paesi la Svizzera scambia servizi (circa 50 partner più i totali regionali), per tipo di servizio e direzione."
   },
   "fetched_utc": "2026-09-22 08:39:05"
 }

@@ -284,14 +284,14 @@
   "topic": {
     "key": "business-cycle-sentiment",
     "name": {
-      "en": "Business cycle & sentiment",
-      "de": "Konjunktur & Stimmung",
-      "fr": "Conjoncture & climat",
+      "en": "Business cycle and sentiment",
+      "de": "Konjunktur und Stimmung",
+      "fr": "Conjoncture et climat",
       "it": "Congiuntura e clima"
     }
   },
   "concept": {
-    "en": "Business cycle & sentiment / Consumer confidence",
+    "en": "Business cycle and sentiment / Consumer confidence",
     "leaf": {
       "en": "Consumer confidence",
       "de": "Konsumentenstimmung",

@@ -25,7 +25,7 @@ titles <- list(
   ch_snb_plkoprinfla         = "Core inflation",
   ch_fso_cpi                 = "Consumer prices (detailed basket)",
   ch_fso_hicp                = "Harmonised CPI (HICP)",
-  ch_fso_ppi                 = "Producer & import prices",
+  ch_fso_ppi                 = "Producer and import prices",
   ch_snb_plimoinchq          = "Real estate prices",
   ch_fso_construction_prices = "Construction prices",
   ch_snb_snbiprogq           = "Inflation forecast (SNB)",
@@ -33,7 +33,7 @@ titles <- list(
   ch_fso_gdp_region          = "Regional GDP",
   ch_fso_gfcf_detail         = "Investment (GFCF) detail",
   ch_ffa_finances            = "Government finances",
-  # Interest rates & yields
+  # Interest rates and yields
   ch_snb_rendeiduebd         = "Bond yields (spot rates)",
   ch_snb_zikredlauf          = "New lending rates",
   ch_snb_zikrepro            = "Published interest rates",
@@ -52,15 +52,15 @@ titles <- list(
   ch_snb_bopcapbalq          = "Balance of payments: financial account",
   ch_snb_bopoverq            = "Balance of payments: overview",
   ch_snb_bopservq            = "Balance of payments: services",
-  # Money & banking
+  # Money and banking
   ch_snb_snbmonagg           = "Monetary aggregates (M1–M3)",
   ch_snb_snbbipo             = "SNB balance sheet",
   ch_snb_babilpobm           = "Bank balance sheets by currency",
   ch_snb_bakredbetgrbm       = "Corporate loans by company size",
-  ch_snb_bakredinausbm       = "Mortgage & other loans",
+  ch_snb_bakredinausbm       = "Mortgage and other loans",
   ch_snb_bakredsekbm         = "Domestic loans by sector",
   # Domestic economy
-  ch_fso_production          = "Industry & construction turnover",
+  ch_fso_production          = "Industry and construction turnover",
   ch_fso_retail              = "Retail trade turnover",
   ch_fso_services            = "Services turnover",
   ch_fso_hesta               = "Hotel overnight stays",
@@ -68,7 +68,7 @@ titles <- list(
   # Population
   ch_fso_pop                 = "Resident population",
   ch_fso_pop_detail          = "Resident population by nationality",
-  # Business cycle & sentiment
+  # Business cycle and sentiment
   ch_seco_concon             = "Consumer confidence",
   ch_seco_wwa                = "Weekly economic activity (WEA)",
   # Payment systems

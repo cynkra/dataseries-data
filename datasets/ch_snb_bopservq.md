@@ -12,7 +12,7 @@
 - **updated**: 2025-Q4 (latest observation; SNB publishes ~3 months in arrears)
 
 ## What is special
-Which countries Switzerland trades services with, around 50 partners plus regional totals, by service type and direction.
+Which countries Switzerland trades services with (around 50 partners plus regional totals), by service type and direction.
 
 ## Access
 - **type**: snb-cube — SNB cube API
@@ -62,10 +62,10 @@ Script: `R/source_snb.R::snb_fetch` via `R/snb_cubes.tsv` (cube `bopservq`, topi
 (98,280 rows, 1,755 series).
 
 ## What is special (de)
-Mit welchen Ländern die Schweiz Dienstleistungen handelt — rund 50 Partner plus Regionentotale — nach Dienstleistungsart und Richtung.
+Mit welchen Ländern die Schweiz Dienstleistungen handelt (rund 50 Partner plus Regionentotale), nach Dienstleistungsart und Richtung.
 
 ## What is special (fr)
-Avec quels pays la Suisse échange des services — environ 50 partenaires plus les totaux régionaux — par type de service et par sens.
+Avec quels pays la Suisse échange des services (environ 50 partenaires plus les totaux régionaux), par type de service et par sens.
 
 ## What is special (it)
-Con quali paesi la Svizzera scambia servizi — circa 50 partner più i totali regionali — per tipo di servizio e direzione.
+Con quali paesi la Svizzera scambia servizi (circa 50 partner più i totali regionali), per tipo di servizio e direzione.

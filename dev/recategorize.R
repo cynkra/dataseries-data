@@ -22,15 +22,15 @@ source(file.path(root, "R", "io.R"))   # read_datasheet_meta(), %||%
 
 # id -> new "Group / Leaf" concept (only the moved/renamed ones)
 concept_override <- list(
-  ch_kof_esi              = "Business cycle & sentiment / Sentiment composite",
-  ch_seco_wwa             = "Business cycle & sentiment / High-frequency activity tracker",
+  ch_kof_esi              = "Business cycle and sentiment / Sentiment composite",
+  ch_seco_wwa             = "Business cycle and sentiment / High-frequency activity tracker",
   ch_fso_hours_worked     = "Labour / Working time and working volume",
   ch_fso_hesta            = "Domestic economy / Hotel overnight stays",
   ch_fso_new_vehicles     = "Domestic economy / New vehicle registrations",
   ch_fso_vacant_dwellings = "Domestic economy / Vacant dwellings",
   ch_snb_snbiprogq        = "Prices / Inflation forecast",
   ch_ffa_finances         = "National accounts / Government finance",
-  ch_fso_pop_detail       = "Population & demographics / Resident population by nationality"
+  ch_fso_pop_detail       = "Population and demographics / Resident population by nationality"
 )
 
 # id -> new canonical field text (the headline-unemployment flip)

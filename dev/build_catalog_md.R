@@ -82,10 +82,10 @@ df <- df[order(df$group, df$leaf, !df$canon, df$id), ]
 
 # preferred group order (from docs/concepts.md); unknown groups appended.
 group_order <- c(
-  "National accounts", "Prices", "Labour", "Money & banking",
-  "Interest rates & yields", "Exchange rates", "External sector",
-  "Business cycle & sentiment", "Financial markets", "SNB policy & forecasts",
-  "Payment systems", "Tourism", "Population & demographics"
+  "National accounts", "Prices", "Labour", "Money and banking",
+  "Interest rates and yields", "Exchange rates", "External sector",
+  "Business cycle and sentiment", "Financial markets", "SNB policy & forecasts",
+  "Payment systems", "Tourism", "Population and demographics"
 )
 groups <- unique(df$group)
 groups <- c(intersect(group_order, groups), setdiff(groups, group_order))

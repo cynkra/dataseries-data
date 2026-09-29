@@ -2,8 +2,8 @@
 
 - **id**: ch_snb_zavezaluba
 - **title**: Payments and cash withdrawals | de: Zahlungen und Bargeldbezüge | fr: Paiements et retraits d'espèces | it: Pagamenti e prelievi di contante
-- **concept**: Payment systems / Payments & cash
-- **canonical**: no (alternate for Payments & cash; the flow cube of the `zave*` family, paired with the stock cube `zavezaka`)
+- **concept**: Payment systems / Payments and cash
+- **canonical**: no (alternate for Payments and cash; the flow cube of the `zave*` family, paired with the stock cube `zavezaka`)
 - **source**: snb
 - **license**: snb (free reuse, attribution required)
 - **frequency**: monthly
@@ -12,7 +12,7 @@
 - **updated**: 2026-03 (latest published period)
 
 ## What is special
-What Swiss card payments are spent on and where, in shops or online, at home or abroad, plus cash withdrawn at ATMs.
+What Swiss card payments are spent on and where (in shops or online, at home or abroad), plus cash withdrawn at ATMs.
 
 ## Access
 - **type**: snb-cube — SNB cube API
@@ -58,10 +58,10 @@ Script: `R/source_snb.R::snb_fetch` (cube list + title from `R/snb_cubes.tsv`).
 Datasheet authored 2026-06-01; parser verified 2026-06-01 (19,462 data rows, 113 series).
 
 ## What is special (de)
-Wofür und wo mit Schweizer Karten bezahlt wird — im Laden oder online, im In- oder Ausland — sowie Bargeldbezüge am Automaten.
+Wofür und wo mit Schweizer Karten bezahlt wird (im Laden oder online, im In- oder Ausland) sowie Bargeldbezüge am Automaten.
 
 ## What is special (fr)
-Pour quoi et où l'on paie avec des cartes suisses — en magasin ou en ligne, en Suisse ou à l'étranger — ainsi que les retraits aux distributeurs.
+Pour quoi et où l'on paie avec des cartes suisses (en magasin ou en ligne, en Suisse ou à l'étranger), ainsi que les retraits aux distributeurs.
 
 ## What is special (it)
-Per cosa e dove si paga con le carte svizzere — in negozio o online, in Svizzera o all'estero — nonché i prelievi ai bancomat.
+Per cosa e dove si paga con le carte svizzere (in negozio o online, in Svizzera o all'estero), nonché i prelievi ai bancomat.

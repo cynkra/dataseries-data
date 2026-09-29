@@ -2,7 +2,7 @@
 
 - **id**: ch_kof_esi
 - **title**: KOF Economic Sentiment Index | de: KOF Economic Sentiment Index | fr: KOF Economic Sentiment Index | it: KOF Economic Sentiment Index
-- **concept**: Business cycle & sentiment / Sentiment composite
+- **concept**: Business cycle and sentiment / Sentiment composite
 - **canonical**: yes
 - **source**: kof
 - **license**: kof (CC BY, attribution required)

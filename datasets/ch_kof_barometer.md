@@ -2,7 +2,7 @@
 
 - **id**: ch_kof_barometer
 - **title**: KOF Economic Barometer | de: KOF Konjunkturbarometer | fr: Baromètre conjoncturel KOF | it: Barometro congiunturale KOF
-- **concept**: Business cycle & sentiment / Leading barometer
+- **concept**: Business cycle and sentiment / Leading barometer
 - **canonical**: yes
 - **source**: kof
 - **license**: kof (CC BY, redistributable with attribution)

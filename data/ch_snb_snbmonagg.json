@@ -116,14 +116,14 @@
   "topic": {
     "key": "money-banking",
     "name": {
-      "en": "Money & banking",
-      "de": "Geld & Banken",
-      "fr": "Monnaie & banques",
+      "en": "Money and banking",
+      "de": "Geld und Banken",
+      "fr": "Monnaie et banques",
       "it": "Moneta e banche"
     }
   },
   "concept": {
-    "en": "Money & banking / Monetary aggregates",
+    "en": "Money and banking / Monetary aggregates",
     "leaf": {
       "en": "Monetary aggregates",
       "de": "Geldmengen",

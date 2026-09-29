@@ -201,18 +201,18 @@
   "topic": {
     "key": "interest-rates-yields",
     "name": {
-      "en": "Interest rates & yields",
-      "de": "Zinsen & Renditen",
-      "fr": "Taux d'intérêt & rendements",
+      "en": "Interest rates and yields",
+      "de": "Zinsen und Renditen",
+      "fr": "Taux d'intérêt et rendements",
       "it": "Tassi d'interesse e rendimenti"
     }
   },
   "concept": {
-    "en": "Interest rates & yields / Policy & official rates",
+    "en": "Interest rates and yields / Policy and official rates",
     "leaf": {
-      "en": "Policy & official rates",
-      "de": "Leitzinsen & offizielle Zinssätze",
-      "fr": "Taux directeurs & officiels",
+      "en": "Policy and official rates",
+      "de": "Leitzinsen und offizielle Zinssätze",
+      "fr": "Taux directeurs et officiels",
       "it": "Tassi di riferimento e ufficiali"
     }
   },

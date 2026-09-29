@@ -61,7 +61,7 @@
       "it": "Clima di consumo"
     },
     "concept": {
-      "en": "Business cycle & sentiment / Consumer confidence",
+      "en": "Business cycle and sentiment / Consumer confidence",
       "leaf": {
         "en": "Consumer confidence",
         "de": "Konsumentenstimmung",
@@ -79,9 +79,9 @@
     "topic": {
       "key": "business-cycle-sentiment",
       "name": {
-        "en": "Business cycle & sentiment",
-        "de": "Konjunktur & Stimmung",
-        "fr": "Conjoncture & climat",
+        "en": "Business cycle and sentiment",
+        "de": "Konjunktur und Stimmung",
+        "fr": "Conjoncture et climat",
         "it": "Congiuntura e clima"
       }
     },
@@ -161,17 +161,17 @@
   {
     "id": "ch_fso_production",
     "title": {
-      "en": "Industry & construction turnover",
+      "en": "Industry and construction turnover",
       "de": "Umsätze Industrie und Bau",
       "fr": "Chiffres d'affaires industrie et construction",
       "it": "Fatturato industria e costruzioni"
     },
     "concept": {
-      "en": "Domestic economy / Industry & construction turnover",
+      "en": "Domestic economy / Industry and construction turnover",
       "leaf": {
-        "en": "Industry & construction turnover",
-        "de": "Umsätze Industrie & Bau",
-        "fr": "Chiffres d'affaires industrie & construction",
+        "en": "Industry and construction turnover",
+        "de": "Umsätze Industrie und Bau",
+        "fr": "Chiffres d'affaires industrie et construction",
         "it": "Fatturato industria e costruzioni"
       }
     },
@@ -455,7 +455,7 @@
       "it": "Popolazione residente permanente per nazionalità"
     },
     "concept": {
-      "en": "Population & demographics / Resident population by nationality",
+      "en": "Population and demographics / Resident population by nationality",
       "leaf": {
         "en": "Resident population by nationality",
         "de": "Wohnbevölkerung nach Staatsangehörigkeit",
@@ -468,9 +468,9 @@
     "topic": {
       "key": "population-demographics",
       "name": {
-        "en": "Population & demographics",
-        "de": "Bevölkerung & Demografie",
-        "fr": "Population & démographie",
+        "en": "Population and demographics",
+        "de": "Bevölkerung und Demografie",
+        "fr": "Population et démographie",
         "it": "Popolazione e demografia"
       }
     },
@@ -551,7 +551,7 @@
       "it": "Barometro congiunturale KOF"
     },
     "concept": {
-      "en": "Business cycle & sentiment / Leading barometer",
+      "en": "Business cycle and sentiment / Leading barometer",
       "leaf": {
         "en": "Leading barometer",
         "de": "Vorlaufendes Barometer",
@@ -564,9 +564,9 @@
     "topic": {
       "key": "business-cycle-sentiment",
       "name": {
-        "en": "Business cycle & sentiment",
-        "de": "Konjunktur & Stimmung",
-        "fr": "Conjoncture & climat",
+        "en": "Business cycle and sentiment",
+        "de": "Konjunktur und Stimmung",
+        "fr": "Conjoncture et climat",
         "it": "Congiuntura e clima"
       }
     },
@@ -599,7 +599,7 @@
       "it": "KOF Economic Sentiment Index"
     },
     "concept": {
-      "en": "Business cycle & sentiment / Sentiment composite",
+      "en": "Business cycle and sentiment / Sentiment composite",
       "leaf": {
         "en": "Sentiment composite",
         "de": "Stimmungsindikator",
@@ -612,9 +612,9 @@
     "topic": {
       "key": "business-cycle-sentiment",
       "name": {
-        "en": "Business cycle & sentiment",
-        "de": "Konjunktur & Stimmung",
-        "fr": "Conjoncture & climat",
+        "en": "Business cycle and sentiment",
+        "de": "Konjunktur und Stimmung",
+        "fr": "Conjoncture et climat",
         "it": "Congiuntura e clima"
       }
     },
@@ -982,17 +982,17 @@
   {
     "id": "ch_fso_ppi",
     "title": {
-      "en": "Producer & import prices",
+      "en": "Producer and import prices",
       "de": "Produzenten- und Importpreise",
       "fr": "Prix à la production et à l'importation",
       "it": "Prezzi alla produzione e all'importazione"
     },
     "concept": {
-      "en": "Prices / Producer & import prices",
+      "en": "Prices / Producer and import prices",
       "leaf": {
-        "en": "Producer & import prices",
-        "de": "Produzenten- & Importpreise",
-        "fr": "Prix à la production & à l'importation",
+        "en": "Producer and import prices",
+        "de": "Produzenten- und Importpreise",
+        "fr": "Prix à la production et à l'importation",
         "it": "Prezzi alla produzione e all'importazione"
       }
     },
@@ -1084,7 +1084,7 @@
       "it": "Popolazione residente permanente"
     },
     "concept": {
-      "en": "Population & demographics / Resident population",
+      "en": "Population and demographics / Resident population",
       "leaf": {
         "en": "Resident population",
         "de": "Wohnbevölkerung",
@@ -1102,9 +1102,9 @@
     "topic": {
       "key": "population-demographics",
       "name": {
-        "en": "Population & demographics",
-        "de": "Bevölkerung & Demografie",
-        "fr": "Population & démographie",
+        "en": "Population and demographics",
+        "de": "Bevölkerung und Demografie",
+        "fr": "Population et démographie",
         "it": "Popolazione e demografia"
       }
     },
@@ -1569,7 +1569,7 @@
       "it": "Attività economica settimanale (WEA)"
     },
     "concept": {
-      "en": "Business cycle & sentiment / High-frequency activity tracker",
+      "en": "Business cycle and sentiment / High-frequency activity tracker",
       "leaf": {
         "en": "High-frequency activity tracker",
         "de": "Hochfrequenz-Aktivitätsindikator",
@@ -1582,9 +1582,9 @@
     "topic": {
       "key": "business-cycle-sentiment",
       "name": {
-        "en": "Business cycle & sentiment",
-        "de": "Konjunktur & Stimmung",
-        "fr": "Conjoncture & climat",
+        "en": "Business cycle and sentiment",
+        "de": "Konjunktur und Stimmung",
+        "fr": "Conjoncture et climat",
         "it": "Congiuntura e clima"
       }
     },
@@ -1963,11 +1963,11 @@
       "it": "Bilanci bancari per valuta"
     },
     "concept": {
-      "en": "Money & banking / Banking & credit",
+      "en": "Money and banking / Banking and credit",
       "leaf": {
-        "en": "Banking & credit",
-        "de": "Banken & Kredit",
-        "fr": "Banques & crédit",
+        "en": "Banking and credit",
+        "de": "Banken und Kredit",
+        "fr": "Banques et crédit",
         "it": "Banche e credito"
       }
     },
@@ -1976,9 +1976,9 @@
     "topic": {
       "key": "money-banking",
       "name": {
-        "en": "Money & banking",
-        "de": "Geld & Banken",
-        "fr": "Monnaie & banques",
+        "en": "Money and banking",
+        "de": "Geld und Banken",
+        "fr": "Monnaie et banques",
         "it": "Moneta e banche"
       }
     },
@@ -2011,11 +2011,11 @@
       "it": "Crediti alle imprese per dimensione dell'impresa"
     },
     "concept": {
-      "en": "Money & banking / Banking & credit",
+      "en": "Money and banking / Banking and credit",
       "leaf": {
-        "en": "Banking & credit",
-        "de": "Banken & Kredit",
-        "fr": "Banques & crédit",
+        "en": "Banking and credit",
+        "de": "Banken und Kredit",
+        "fr": "Banques et crédit",
         "it": "Banche e credito"
       }
     },
@@ -2024,9 +2024,9 @@
     "topic": {
       "key": "money-banking",
       "name": {
-        "en": "Money & banking",
-        "de": "Geld & Banken",
-        "fr": "Monnaie & banques",
+        "en": "Money and banking",
+        "de": "Geld und Banken",
+        "fr": "Monnaie et banques",
         "it": "Moneta e banche"
       }
     },
@@ -2053,17 +2053,17 @@
   {
     "id": "ch_snb_bakredinausbm",
     "title": {
-      "en": "Mortgage & other loans",
+      "en": "Mortgage and other loans",
       "de": "Hypothekar- und übrige Kredite",
       "fr": "Crédits hypothécaires et autres",
       "it": "Crediti ipotecari e altri crediti"
     },
     "concept": {
-      "en": "Money & banking / Banking & credit",
+      "en": "Money and banking / Banking and credit",
       "leaf": {
-        "en": "Banking & credit",
-        "de": "Banken & Kredit",
-        "fr": "Banques & crédit",
+        "en": "Banking and credit",
+        "de": "Banken und Kredit",
+        "fr": "Banques et crédit",
         "it": "Banche e credito"
       }
     },
@@ -2072,9 +2072,9 @@
     "topic": {
       "key": "money-banking",
       "name": {
-        "en": "Money & banking",
-        "de": "Geld & Banken",
-        "fr": "Monnaie & banques",
+        "en": "Money and banking",
+        "de": "Geld und Banken",
+        "fr": "Monnaie et banques",
         "it": "Moneta e banche"
       }
     },
@@ -2107,11 +2107,11 @@
       "it": "Crediti interni per settore"
     },
     "concept": {
-      "en": "Money & banking / Banking & credit",
+      "en": "Money and banking / Banking and credit",
       "leaf": {
-        "en": "Banking & credit",
-        "de": "Banken & Kredit",
-        "fr": "Banques & crédit",
+        "en": "Banking and credit",
+        "de": "Banken und Kredit",
+        "fr": "Banques et crédit",
         "it": "Banche e credito"
       }
     },
@@ -2120,9 +2120,9 @@
     "topic": {
       "key": "money-banking",
       "name": {
-        "en": "Money & banking",
-        "de": "Geld & Banken",
-        "fr": "Monnaie & banques",
+        "en": "Money and banking",
+        "de": "Geld und Banken",
+        "fr": "Monnaie et banques",
         "it": "Moneta e banche"
       }
     },
@@ -2746,7 +2746,7 @@
       "it": "Rendimenti obbligazionari (tassi a pronti)"
     },
     "concept": {
-      "en": "Interest rates & yields / Bond yields",
+      "en": "Interest rates and yields / Bond yields",
       "leaf": {
         "en": "Bond yields",
         "de": "Obligationenrenditen",
@@ -2759,9 +2759,9 @@
     "topic": {
       "key": "interest-rates-yields",
       "name": {
-        "en": "Interest rates & yields",
-        "de": "Zinsen & Renditen",
-        "fr": "Taux d'intérêt & rendements",
+        "en": "Interest rates and yields",
+        "de": "Zinsen und Renditen",
+        "fr": "Taux d'intérêt et rendements",
         "it": "Tassi d'interesse e rendimenti"
       }
     },
@@ -2794,7 +2794,7 @@
       "it": "Bilancio della BNS"
     },
     "concept": {
-      "en": "Money & banking / Monetary aggregates",
+      "en": "Money and banking / Monetary aggregates",
       "leaf": {
         "en": "Monetary aggregates",
         "de": "Geldmengen",
@@ -2807,9 +2807,9 @@
     "topic": {
       "key": "money-banking",
       "name": {
-        "en": "Money & banking",
-        "de": "Geld & Banken",
-        "fr": "Monnaie & banques",
+        "en": "Money and banking",
+        "de": "Geld und Banken",
+        "fr": "Monnaie et banques",
         "it": "Moneta e banche"
       }
     },
@@ -2890,7 +2890,7 @@
       "it": "Segnali congiunturali"
     },
     "concept": {
-      "en": "Business cycle & sentiment / Business cycle signals",
+      "en": "Business cycle and sentiment / Business cycle signals",
       "leaf": {
         "en": "Business cycle signals",
         "de": "Konjunktursignale",
@@ -2903,9 +2903,9 @@
     "topic": {
       "key": "business-cycle-sentiment",
       "name": {
-        "en": "Business cycle & sentiment",
-        "de": "Konjunktur & Stimmung",
-        "fr": "Conjoncture & climat",
+        "en": "Business cycle and sentiment",
+        "de": "Konjunktur und Stimmung",
+        "fr": "Conjoncture et climat",
         "it": "Congiuntura e clima"
       }
     },
@@ -2938,7 +2938,7 @@
       "it": "Base monetaria"
     },
     "concept": {
-      "en": "Money & banking / Monetary aggregates",
+      "en": "Money and banking / Monetary aggregates",
       "leaf": {
         "en": "Monetary aggregates",
         "de": "Geldmengen",
@@ -2951,9 +2951,9 @@
     "topic": {
       "key": "money-banking",
       "name": {
-        "en": "Money & banking",
-        "de": "Geld & Banken",
-        "fr": "Monnaie & banques",
+        "en": "Money and banking",
+        "de": "Geld und Banken",
+        "fr": "Monnaie et banques",
         "it": "Moneta e banche"
       }
     },
@@ -2986,7 +2986,7 @@
       "it": "Aggregati monetari (M1–M3)"
     },
     "concept": {
-      "en": "Money & banking / Monetary aggregates",
+      "en": "Money and banking / Monetary aggregates",
       "leaf": {
         "en": "Monetary aggregates",
         "de": "Geldmengen",
@@ -3004,9 +3004,9 @@
     "topic": {
       "key": "money-banking",
       "name": {
-        "en": "Money & banking",
-        "de": "Geld & Banken",
-        "fr": "Monnaie & banques",
+        "en": "Money and banking",
+        "de": "Geld und Banken",
+        "fr": "Monnaie et banques",
         "it": "Moneta e banche"
       }
     },
@@ -3039,11 +3039,11 @@
       "it": "Tassi d'interesse ufficiali"
     },
     "concept": {
-      "en": "Interest rates & yields / Policy & official rates",
+      "en": "Interest rates and yields / Policy and official rates",
       "leaf": {
-        "en": "Policy & official rates",
-        "de": "Leitzinsen & offizielle Zinssätze",
-        "fr": "Taux directeurs & officiels",
+        "en": "Policy and official rates",
+        "de": "Leitzinsen und offizielle Zinssätze",
+        "fr": "Taux directeurs et officiels",
         "it": "Tassi di riferimento e ufficiali"
       }
     },
@@ -3052,9 +3052,9 @@
     "topic": {
       "key": "interest-rates-yields",
       "name": {
-        "en": "Interest rates & yields",
-        "de": "Zinsen & Renditen",
-        "fr": "Taux d'intérêt & rendements",
+        "en": "Interest rates and yields",
+        "de": "Zinsen und Renditen",
+        "fr": "Taux d'intérêt et rendements",
         "it": "Tassi d'interesse e rendimenti"
       }
     },
@@ -3087,11 +3087,11 @@
       "it": "Moneta elettronica"
     },
     "concept": {
-      "en": "Payment systems / Payments & cash",
+      "en": "Payment systems / Payments and cash",
       "leaf": {
-        "en": "Payments & cash",
-        "de": "Zahlungsverkehr & Bargeld",
-        "fr": "Paiements & espèces",
+        "en": "Payments and cash",
+        "de": "Zahlungsverkehr und Bargeld",
+        "fr": "Paiements et espèces",
         "it": "Pagamenti e contante"
       }
     },
@@ -3135,11 +3135,11 @@
       "it": "Clearing interbancario (SIC)"
     },
     "concept": {
-      "en": "Payment systems / Payments & cash",
+      "en": "Payment systems / Payments and cash",
       "leaf": {
-        "en": "Payments & cash",
-        "de": "Zahlungsverkehr & Bargeld",
-        "fr": "Paiements & espèces",
+        "en": "Payments and cash",
+        "de": "Zahlungsverkehr und Bargeld",
+        "fr": "Paiements et espèces",
         "it": "Pagamenti e contante"
       }
     },
@@ -3183,11 +3183,11 @@
       "it": "Carte di pagamento e bancomat"
     },
     "concept": {
-      "en": "Payment systems / Payments & cash",
+      "en": "Payment systems / Payments and cash",
       "leaf": {
-        "en": "Payments & cash",
-        "de": "Zahlungsverkehr & Bargeld",
-        "fr": "Paiements & espèces",
+        "en": "Payments and cash",
+        "de": "Zahlungsverkehr und Bargeld",
+        "fr": "Paiements et espèces",
         "it": "Pagamenti e contante"
       }
     },
@@ -3231,11 +3231,11 @@
       "it": "Pagamenti e prelievi di contante"
     },
     "concept": {
-      "en": "Payment systems / Payments & cash",
+      "en": "Payment systems / Payments and cash",
       "leaf": {
-        "en": "Payments & cash",
-        "de": "Zahlungsverkehr & Bargeld",
-        "fr": "Paiements & espèces",
+        "en": "Payments and cash",
+        "de": "Zahlungsverkehr und Bargeld",
+        "fr": "Paiements et espèces",
         "it": "Pagamenti e contante"
       }
     },
@@ -3279,11 +3279,11 @@
       "it": "Pagamenti dei clienti (in uscita)"
     },
     "concept": {
-      "en": "Payment systems / Payments & cash",
+      "en": "Payment systems / Payments and cash",
       "leaf": {
-        "en": "Payments & cash",
-        "de": "Zahlungsverkehr & Bargeld",
-        "fr": "Paiements & espèces",
+        "en": "Payments and cash",
+        "de": "Zahlungsverkehr und Bargeld",
+        "fr": "Paiements et espèces",
         "it": "Pagamenti e contante"
       }
     },
@@ -3327,7 +3327,7 @@
       "it": "Tassi sui nuovi crediti"
     },
     "concept": {
-      "en": "Interest rates & yields / Money-market rates",
+      "en": "Interest rates and yields / Money-market rates",
       "leaf": {
         "en": "Money-market rates",
         "de": "Geldmarktsätze",
@@ -3340,9 +3340,9 @@
     "topic": {
       "key": "interest-rates-yields",
       "name": {
-        "en": "Interest rates & yields",
-        "de": "Zinsen & Renditen",
-        "fr": "Taux d'intérêt & rendements",
+        "en": "Interest rates and yields",
+        "de": "Zinsen und Renditen",
+        "fr": "Taux d'intérêt et rendements",
         "it": "Tassi d'interesse e rendimenti"
       }
     },
@@ -3375,7 +3375,7 @@
       "it": "Tassi d'interesse pubblicati"
     },
     "concept": {
-      "en": "Interest rates & yields / Money-market rates",
+      "en": "Interest rates and yields / Money-market rates",
       "leaf": {
         "en": "Money-market rates",
         "de": "Geldmarktsätze",
@@ -3388,9 +3388,9 @@
     "topic": {
       "key": "interest-rates-yields",
       "name": {
-        "en": "Interest rates & yields",
-        "de": "Zinsen & Renditen",
-        "fr": "Taux d'intérêt & rendements",
+        "en": "Interest rates and yields",
+        "de": "Zinsen und Renditen",
+        "fr": "Taux d'intérêt et rendements",
         "it": "Tassi d'interesse e rendimenti"
       }
     },
@@ -3423,7 +3423,7 @@
       "it": "Tassi del mercato monetario"
     },
     "concept": {
-      "en": "Interest rates & yields / Money-market rates",
+      "en": "Interest rates and yields / Money-market rates",
       "leaf": {
         "en": "Money-market rates",
         "de": "Geldmarktsätze",
@@ -3441,9 +3441,9 @@
     "topic": {
       "key": "interest-rates-yields",
       "name": {
-        "en": "Interest rates & yields",
-        "de": "Zinsen & Renditen",
-        "fr": "Taux d'intérêt & rendements",
+        "en": "Interest rates and yields",
+        "de": "Zinsen und Renditen",
+        "fr": "Taux d'intérêt et rendements",
         "it": "Tassi d'interesse e rendimenti"
       }
     },

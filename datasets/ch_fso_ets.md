@@ -101,7 +101,7 @@ set of lines), sex = exclusive single-select (Total / Men / Women); sector×sex 
 a clean 23×3 rectangle so every chip is populated.
 
 ## What is special (de)
-Wie viele Menschen in der Schweiz arbeiten, nach Sektor und Geschlecht — gezählt werden Personen statt Stellen, sodass der Frauen- und Männeranteil direkt ablesbar ist.
+Wie viele Menschen in der Schweiz arbeiten, nach Sektor und Geschlecht: Gezählt werden Personen statt Stellen, sodass der Frauen- und Männeranteil direkt ablesbar ist.
 
 ## What is special (fr)
 Combien de personnes travaillent en Suisse, par secteur et par sexe : on compte des personnes et non des emplois, si bien que la répartition hommes-femmes se lit directement.

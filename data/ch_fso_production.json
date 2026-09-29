@@ -9,7 +9,7 @@
   "start": "1999-01-01",
   "end": "2026-04-01",
   "title": {
-    "en": "Industry & construction turnover",
+    "en": "Industry and construction turnover",
     "de": "Umsätze Industrie und Bau",
     "fr": "Chiffres d'affaires industrie et construction",
     "it": "Fatturato industria e costruzioni"
@@ -225,11 +225,11 @@
     }
   },
   "concept": {
-    "en": "Domestic economy / Industry & construction turnover",
+    "en": "Domestic economy / Industry and construction turnover",
     "leaf": {
-      "en": "Industry & construction turnover",
-      "de": "Umsätze Industrie & Bau",
-      "fr": "Chiffres d'affaires industrie & construction",
+      "en": "Industry and construction turnover",
+      "de": "Umsätze Industrie und Bau",
+      "fr": "Chiffres d'affaires industrie et construction",
       "it": "Fatturato industria e costruzioni"
     }
   },
