@@ -36,7 +36,8 @@ budget / forecast.
   debt-decomposition codes (`debt_*`, `FBE_*`, `FS_SR*`, `GFS_*`, …).
 - The GDP reference row (`variable == "bip"`) carries `hh = NA` / `model = NA` in the
   source; it is reassigned to `level = staat`, `model = gfs` so it sits in the tree
-  as a real series rather than an orphan NA branch.
+  as a real series rather than an orphan NA branch. Its `source` is NA too; it is
+  published as `estimate = rechnung`.
 - NA values dropped; rows whose `level` or `model` is not in the published label
   maps are dropped.
 - The WAF in front of `data.finance.admin.ch` rejects bare programmatic requests, so
@@ -61,8 +62,14 @@ budget / forecast.
   `bruttoschuldenquote` Gross-debt ratio (Maastricht), `schuldenquote` Debt ratio,
   `nettoschuldenquote` Net-debt ratio.
 - `estimate` (`source`) — whether the year is a closed financial statement (actual),
-  provisional financial statement, survey financial statement / budget, budget /
-  financial plan, or a forecast. Lets the app separate realized from projected years.
+  a projection, a survey budget, a budget / financial plan, or a forecast. Lets the
+  app separate realized from projected years. The source gives text, not codes,
+  and switched it from English to German in August 2026; the fetcher maps both to
+  our own codes: `rechnung` (Rechnung / Financial statements), `hochrechnung`
+  (Hochrechnung), `umfrage_budget` (Umfrage Budget / Survey budget), `budget`
+  (Budget/Finanzpläne / Budget/financial plans), `prognose` (Prognosen /
+  Forecasts), `vorhanden` (Vorhandene Daten / Data available). An unknown text
+  stops the fetch.
 
 ## Labels
 - **units**: CHF million (levels) / share of GDP, 0-1 (ratios) | de: Mio. CHF (Niveaus) / Anteil am BIP, 0-1 (Quoten) | fr: Millions de CHF (niveaux) / part du PIB, 0-1 (quotes-parts) | it: Milioni di CHF (livelli) / quota del PIL, 0-1 (quote)
@@ -112,13 +119,12 @@ budget / forecast.
   - grp_ratio: Ratios (% of GDP) | de: Quoten (% des BIP) | fr: Quotes-parts (% du PIB) | it: Quote (% del PIL)
 - dim: estimate
   - **label**: Estimate type | de: Erhebungsart | fr: Type d'estimation | it: Tipo di stima
-  - `Financial statements`: Financial statements (actual) | de: Rechnung (Ist) | fr: Comptes (effectif) | it: Conti (effettivo)
-  - `Provisional financial statements`: Provisional financial statements | de: Provisorische Rechnung | fr: Comptes provisoires | it: Conti provvisori
-  - `Survey financial statements`: Survey financial statements | de: Erhebung Rechnung | fr: Enquête comptes | it: Rilevazione conti
-  - `Survey budget`: Survey budget | de: Erhebung Budget | fr: Enquête budget | it: Rilevazione preventivo
-  - `Budget/financial plans`: Budget / financial plans | de: Budget / Finanzpläne | fr: Budget / plans financiers | it: Preventivo / piani finanziari
-  - Forecasts: Forecasts | de: Prognosen | fr: Prévisions | it: Previsioni
-  - `Data available`: Data available | de: Daten verfügbar | fr: Données disponibles | it: Dati disponibili
+  - rechnung: Financial statements (actual) | de: Rechnung (Ist) | fr: Comptes (effectif) | it: Conti (effettivo)
+  - hochrechnung: Projection | de: Hochrechnung | fr: Extrapolation | it: Proiezione
+  - umfrage_budget: Survey budget | de: Umfrage Budget | fr: Enquête budget | it: Rilevazione preventivo
+  - budget: Budget / financial plans | de: Budget / Finanzpläne | fr: Budget / plans financiers | it: Preventivo / piani finanziari
+  - prognose: Forecasts | de: Prognosen | fr: Prévisions | it: Previsioni
+  - vorhanden: Data available | de: Vorhandene Daten | fr: Données disponibles | it: Dati disponibili
 
 ## Display
 - **split**: indicator

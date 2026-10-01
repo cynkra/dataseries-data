@@ -20,7 +20,9 @@
 #   indicator variable = the headline aggregate (revenue, expenditure, balance,
 #                    gross / net debt, and the GDP ratios)
 #   estimate  source = whether the year is an actual (financial statement),
-#                    provisional, budget/financial-plan, or forecast figure
+#                    projection, budget/financial-plan, or forecast figure. The
+#                    source gives text here, not a code; .FFA_ESTIMATE_SOURCE
+#                    maps it to our codes
 #
 # The WAF in front of data.finance.admin.ch rejects bare programmatic requests, so
 # we send browser-like headers (UA + Accept + Referer), reusing .with_retry().
@@ -49,10 +51,27 @@ suppressPackageStartupMessages({
   "einnahmen", "ausgaben", "saldo", "einnahmen_ord", "ausgaben_ord", "saldo_ord", "ertrag", "aufwand", "fiskalertrag", "bruttoschuld_fs", "nettoschulden_fs", "maastricht_schuld", "nettoschuld", "defizit_ueberschuss", "nettozugang_sachvermoegen", "aktiven", "fremdkapital", "eigenkapital", "bip", "fiskalquote", "einnahmenquote", "staatsquote", "bruttoschuldenquote", "schuldenquote", "nettoschuldenquote"
 )
 
-# Estimate-type codes (the source column values). Display labels live in the
-# datasheet ## Labels block.
-.FFA_ESTIMATE <- c(
-  "Financial statements", "Provisional financial statements", "Survey financial statements", "Survey budget", "Budget/financial plans", "Forecasts", "Data available"
+# Estimate-type codes. The source has no code for these, only text in its
+# `source` column, and that text changed language: English until 2026-08-26,
+# German since. We publish our own codes, in display order, and map both
+# variants onto them. "Provisional financial statements" and "Survey financial
+# statements" existed only in the English version and are not mapped. A text not
+# listed here stops the fetch, so a new estimate type shows up as a parse error
+# instead of a level without meta. Display labels live in the datasheet
+# ## Labels block.
+.FFA_ESTIMATE <- c("rechnung", "hochrechnung", "umfrage_budget", "budget", "prognose", "vorhanden")
+.FFA_ESTIMATE_SOURCE <- c(
+  "Rechnung"               = "rechnung",
+  "Financial statements"   = "rechnung",
+  "Hochrechnung"           = "hochrechnung",
+  "Umfrage Budget"         = "umfrage_budget",
+  "Survey budget"          = "umfrage_budget",
+  "Budget/Finanzpl\u00e4ne" = "budget",
+  "Budget/financial plans" = "budget",
+  "Prognosen"              = "prognose",
+  "Forecasts"              = "prognose",
+  "Vorhandene Daten"       = "vorhanden",
+  "Data available"         = "vorhanden"
 )
 
 # A browser-like GET (the WAF rejects bare clients) with the shared retry policy.
@@ -136,11 +155,21 @@ ffa_fetch <- function(dataset_id = "ch_ffa_finances") {
                              "staat", level),
       model = dplyr::if_else(indicator == "bip" & (is.na(model) | model == "NA"),
                              "gfs", model),
+      # The GDP row has no estimate type either; it has always been published
+      # as an actual.
       estimate = dplyr::if_else(is.na(estimate) | estimate == "NA",
-                                "Financial statements", estimate)
+                                "Rechnung", estimate)
     ) |>
-    dplyr::filter(level %in% .FFA_LEVELS, model %in% .FFA_MODELS) |>
-    dplyr::mutate(date = as.Date(to_iso(jahr))) |>
+    dplyr::filter(level %in% .FFA_LEVELS, model %in% .FFA_MODELS)
+
+  unknown <- setdiff(data$estimate, names(.FFA_ESTIMATE_SOURCE))
+  if (length(unknown))
+    stop(sprintf("ffa: unknown estimate type(s) in the source column: %s",
+                 paste(unknown, collapse = ", ")), call. = FALSE)
+
+  data <- data |>
+    dplyr::mutate(estimate = unname(.FFA_ESTIMATE_SOURCE[estimate]),
+                  date = as.Date(to_iso(jahr))) |>
     dplyr::select(level, model, indicator, estimate, date, value) |>
     dplyr::arrange(level, model, indicator, estimate, date)
 

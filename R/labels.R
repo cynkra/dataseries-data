@@ -35,8 +35,8 @@ read_labels_block <- function(lines) {
       txt <- it$text
       fm <- regmatches(txt, regexec("^\\*\\*(label|units)\\*\\*:\\s*(.*)$", txt))[[1]]
       if (length(fm) == 3) { out[[fm[2]]] <- ds_i18n(fm[3]); next }
-      # Codes are bare tokens (no spaces/colons); a code that IS a phrase — e.g. the
-      # FFA estimate codes ("Financial statements") — is written backtick-quoted.
+      # Codes are bare tokens (no spaces/colons); a code with spaces or colons is
+      # written backtick-quoted.
       m <- regmatches(txt, regexec("^`([^`]+)`:\\s*(.+)$", txt, perl = TRUE))[[1]]
       if (length(m) != 3)
         m <- regmatches(txt, regexec("^([^\\s:]+):\\s*(.+)$", txt, perl = TRUE))[[1]]

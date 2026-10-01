@@ -439,7 +439,7 @@
         "it": "Tipo di stima"
       },
       "levels": {
-        "Financial statements": {
+        "rechnung": {
           "label": {
             "en": "Financial statements (actual)",
             "de": "Rechnung (Ist)",
@@ -448,59 +448,50 @@
           },
           "data": true
         },
-        "Provisional financial statements": {
+        "hochrechnung": {
           "label": {
-            "en": "Provisional financial statements",
-            "de": "Provisorische Rechnung",
-            "fr": "Comptes provisoires",
-            "it": "Conti provvisori"
+            "en": "Projection",
+            "de": "Hochrechnung",
+            "fr": "Extrapolation",
+            "it": "Proiezione"
           },
-          "data": false
+          "data": true
         },
-        "Survey financial statements": {
-          "label": {
-            "en": "Survey financial statements",
-            "de": "Erhebung Rechnung",
-            "fr": "Enquête comptes",
-            "it": "Rilevazione conti"
-          },
-          "data": false
-        },
-        "Survey budget": {
+        "umfrage_budget": {
           "label": {
             "en": "Survey budget",
-            "de": "Erhebung Budget",
+            "de": "Umfrage Budget",
             "fr": "Enquête budget",
             "it": "Rilevazione preventivo"
           },
-          "data": false
+          "data": true
         },
-        "Budget/financial plans": {
+        "budget": {
           "label": {
             "en": "Budget / financial plans",
             "de": "Budget / Finanzpläne",
             "fr": "Budget / plans financiers",
             "it": "Preventivo / piani finanziari"
           },
-          "data": false
+          "data": true
         },
-        "Forecasts": {
+        "prognose": {
           "label": {
             "en": "Forecasts",
             "de": "Prognosen",
             "fr": "Prévisions",
             "it": "Previsioni"
           },
-          "data": false
+          "data": true
         },
-        "Data available": {
+        "vorhanden": {
           "label": {
             "en": "Data available",
-            "de": "Daten verfügbar",
+            "de": "Vorhandene Daten",
             "fr": "Données disponibles",
             "it": "Dati disponibili"
           },
-          "data": false
+          "data": true
         }
       }
     }
@@ -555,5 +546,5 @@
     "fr": "Millions de CHF (niveaux) / part du PIB, 0-1 (quotes-parts)",
     "it": "Milioni di CHF (livelli) / quota del PIL, 0-1 (quote)"
   },
-  "fetched_utc": "2026-10-01 08:39:02"
+  "fetched_utc": "2026-10-01 14:14:03"
 }

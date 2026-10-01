@@ -633,7 +633,7 @@
     "end": "2030-01-01",
     "n_series": 359,
     "updated": "2025-03-18",
-    "fetched": "2026-10-01 08:39:02",
+    "fetched": "2026-10-01 14:14:03",
     "load": "whole",
     "data": "ch_ffa_finances.csv",
     "meta": "ch_ffa_finances.json"
