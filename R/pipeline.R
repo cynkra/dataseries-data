@@ -190,8 +190,7 @@ load_dataset <- function(id, dir) {
   cp <- file.path(dir, paste0(id, ".csv"))
   if (!file.exists(jp) || !file.exists(cp)) return(NULL)
   meta <- tryCatch(jsonlite::fromJSON(jp, simplifyVector = FALSE), error = function(e) NULL)
-  data <- tryCatch(readr::read_csv(cp, show_col_types = FALSE, progress = FALSE),
-                   error = function(e) NULL)
+  data <- tryCatch(read_data_csv(cp), error = function(e) NULL)
   if (is.null(meta) || is.null(data)) return(NULL)
   if ("date" %in% names(data)) data$date <- as.Date(data$date)
   list(id = id, data = as.data.frame(data), meta = meta)

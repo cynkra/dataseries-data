@@ -12,6 +12,17 @@ suppressPackageStartupMessages({
 
 dim_cols <- function(data) setdiff(names(data), c("date", "value"))
 
+# Read a dataset CSV back with its dimension columns as text. Level codes are
+# strings in the contract; readr's type guessing turns an all-digit code column
+# (ch_fso_hesta Tourismusregion "8100", ch_fso_ppi base "2020") into a double and
+# would strip a leading zero ("01" -> 1). dev/build_parquet.R repeats this spec
+# because it runs standalone in the API image.
+read_data_csv <- function(path) {
+  readr::read_csv(path, show_col_types = FALSE, progress = FALSE,
+    col_types = readr::cols(date = readr::col_date(), value = readr::col_double(),
+                            .default = readr::col_character()))
+}
+
 # Read the curation fields from a dataset's datasheet (datasets/<id>.md), which is
 # the source of truth for curation. The catalog derives these fields from the
 # markdown rather than duplicating them in code. Returns an empty list if there is

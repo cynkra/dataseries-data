@@ -9,8 +9,12 @@ DATA_DIR <- if (length(args) >= 1) args[[1]] else "data"
 csvs <- list.files(DATA_DIR, pattern = "\\.csv$", full.names = TRUE)
 n <- 0L
 for (csv in csvs) {
-  # readr parses `date` -> Date and `value` -> double, matching write_dataset()
-  data <- readr::read_csv(csv, show_col_types = FALSE)
+  # Dimension columns as text, the same spec as read_data_csv() in R/io.R.
+  # Guessed, an all-digit code column became a double, the API sent 8100
+  # where the site selects "8100", and those datasets opened empty.
+  data <- readr::read_csv(csv, show_col_types = FALSE, progress = FALSE,
+    col_types = readr::cols(date = readr::col_date(), value = readr::col_double(),
+                            .default = readr::col_character()))
   pq <- sub("\\.csv$", ".parquet", csv)
   arrow::write_parquet(data, pq)
   n <- n + 1L
