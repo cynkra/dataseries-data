@@ -6,7 +6,7 @@
     "D1"
   ],
   "start": "2001-01-01",
-  "end": "2029-01-01",
+  "end": "2029-04-01",
   "title": {
     "en": "Inflation forecast (SNB)",
     "de": "Inflationsprognose (SNB)",
@@ -928,6 +928,14 @@
             "fr": "Juin 2026 (prévision avec taux directeur BNS à 0,00%)"
           },
           "data": true
+        },
+        "S2026POFFP": {
+          "label": {
+            "en": "September 2026 (Forecast with SNB policy rate at 0.00%)",
+            "de": "September 2026 (Prognose mit SNB-Leitzins 0,00%)",
+            "fr": "Septembre 2026 (prévision avec taux directeur BNS à 0,00%)"
+          },
+          "data": true
         }
       },
       "hierarchy": {
@@ -1064,7 +1072,8 @@
         },
         "2026": {
           "M2026POFFP": [],
-          "J2026POFFP": []
+          "J2026POFFP": [],
+          "S2026POFFP": []
         }
       }
     },
@@ -1098,7 +1107,7 @@
       }
     }
   },
-  "updated": "2026-06-24 15:00",
+  "updated": "2026-09-30 15:00",
   "topic": {
     "key": "prices",
     "name": {
@@ -1131,5 +1140,5 @@
     "fr": "La prévision d'inflation de la Banque nationale suisse, un profil par appréciation trimestrielle, à côté de l'inflation effectivement observée.",
     "it": "La previsione d'inflazione della Banca nazionale svizzera, un profilo per ogni valutazione trimestrale, accanto all'inflazione effettivamente osservata."
   },
-  "fetched_utc": "2026-08-05 13:12:03"
+  "fetched_utc": "2026-10-01 08:39:01"
 }

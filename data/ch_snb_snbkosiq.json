@@ -5,7 +5,7 @@
     "D0"
   ],
   "start": "2011-01-01",
-  "end": "2026-04-01",
+  "end": "2026-07-01",
   "title": {
     "en": "Business cycle signals",
     "de": "Konjunktursignale",
@@ -263,7 +263,7 @@
       }
     }
   },
-  "updated": "2026-06-24 15:00",
+  "updated": "2026-09-30 15:00",
   "topic": {
     "key": "business-cycle-sentiment",
     "name": {
@@ -295,5 +295,5 @@
     "fr": "Ce que les entreprises suisses rapportent chaque trimestre à la Banque nationale sur le chiffre d'affaires, les capacités, l'embauche, les marges, les prix et les salaires attendus.",
     "it": "Cosa le imprese svizzere riferiscono trimestralmente alla Banca nazionale su fatturato, capacità, assunzioni, margini, prezzi e attese salariali."
   },
-  "fetched_utc": "2026-08-05 13:12:03"
+  "fetched_utc": "2026-10-01 08:39:01"
 }

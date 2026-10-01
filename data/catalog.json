@@ -1,30 +1,30 @@
 [
   {
-    "id": "ch_snb_snbbipo",
+    "id": "ch_snb_snbiprogq",
     "title": {
-      "en": "SNB balance sheet",
-      "de": "SNB-Bilanz",
-      "fr": "Bilan de la BNS",
-      "it": "Bilancio della BNS"
+      "en": "Inflation forecast (SNB)",
+      "de": "Inflationsprognose (SNB)",
+      "fr": "Prévision d'inflation (BNS)",
+      "it": "Previsione d'inflazione (BNS)"
     },
     "concept": {
-      "en": "Money and banking / Monetary aggregates",
+      "en": "Prices / Inflation forecast",
       "leaf": {
-        "en": "Monetary aggregates",
-        "de": "Geldmengen",
-        "fr": "Agrégats monétaires",
-        "it": "Aggregati monetari"
+        "en": "Inflation forecast",
+        "de": "Inflationsprognose",
+        "fr": "Prévision d'inflation",
+        "it": "Previsione d'inflazione"
       }
     },
-    "canonical": false,
+    "canonical": true,
     "featured": null,
     "topic": {
-      "key": "money-banking",
+      "key": "prices",
       "name": {
-        "en": "Money and banking",
-        "de": "Geld und Banken",
-        "fr": "Monnaie et banques",
-        "it": "Moneta e banche"
+        "en": "Prices",
+        "de": "Preise",
+        "fr": "Prix",
+        "it": "Prezzi"
       }
     },
     "source": {
@@ -37,15 +37,63 @@
       }
     },
     "license": "snb",
-    "frequency": "monthly",
-    "start": "1996-12-01",
-    "end": "2026-08-01",
-    "n_series": 28,
-    "updated": "2026-09-30 09:00",
-    "fetched": "2026-09-30 08:38:19",
+    "frequency": "quarterly",
+    "start": "2001-01-01",
+    "end": "2029-04-01",
+    "n_series": 180,
+    "updated": "2026-09-30 15:00",
+    "fetched": "2026-10-01 08:39:01",
     "load": "whole",
-    "data": "ch_snb_snbbipo.csv",
-    "meta": "ch_snb_snbbipo.json"
+    "data": "ch_snb_snbiprogq.csv",
+    "meta": "ch_snb_snbiprogq.json"
+  },
+  {
+    "id": "ch_snb_snbkosiq",
+    "title": {
+      "en": "Business cycle signals",
+      "de": "Konjunktursignale",
+      "fr": "Signaux conjoncturels",
+      "it": "Segnali congiunturali"
+    },
+    "concept": {
+      "en": "Business cycle and sentiment / Business cycle signals",
+      "leaf": {
+        "en": "Business cycle signals",
+        "de": "Konjunktursignale",
+        "fr": "Signaux conjoncturels",
+        "it": "Segnali congiunturali"
+      }
+    },
+    "canonical": true,
+    "featured": null,
+    "topic": {
+      "key": "business-cycle-sentiment",
+      "name": {
+        "en": "Business cycle and sentiment",
+        "de": "Konjunktur und Stimmung",
+        "fr": "Conjoncture et climat",
+        "it": "Congiuntura e clima"
+      }
+    },
+    "source": {
+      "key": "snb",
+      "name": {
+        "en": "Swiss National Bank",
+        "de": "Schweizerische Nationalbank (SNB)",
+        "fr": "Banque nationale suisse (BNS)",
+        "it": "Banca nazionale svizzera (BNS)"
+      }
+    },
+    "license": "snb",
+    "frequency": "quarterly",
+    "start": "2011-01-01",
+    "end": "2026-07-01",
+    "n_series": 24,
+    "updated": "2026-09-30 15:00",
+    "fetched": "2026-10-01 08:39:01",
+    "load": "whole",
+    "data": "ch_snb_snbkosiq.csv",
+    "meta": "ch_snb_snbkosiq.json"
   },
   {
     "id": "ch_seco_gdp",
@@ -95,7 +143,7 @@
     "end": "2026-04-01",
     "n_series": 660,
     "updated": "2026-08-28 07:07:34",
-    "fetched": "2026-09-30 08:38:19",
+    "fetched": "2026-10-01 08:39:01",
     "load": "whole",
     "data": "ch_seco_gdp.csv",
     "meta": "ch_seco_gdp.json"
@@ -148,7 +196,7 @@
     "end": "2026-07-01",
     "n_series": 39,
     "updated": "2026-08-04 11:54:52",
-    "fetched": "2026-09-30 08:38:19",
+    "fetched": "2026-10-01 08:39:01",
     "load": "whole",
     "data": "ch_seco_concon.csv",
     "meta": "ch_seco_concon.json"
@@ -198,10 +246,10 @@
     "license": "fso",
     "frequency": "monthly",
     "start": "2000-01-01",
-    "end": "2026-07-01",
+    "end": "2026-08-01",
     "n_series": 171,
     "updated": null,
-    "fetched": "2026-09-30 08:38:19",
+    "fetched": "2026-10-01 08:39:01",
     "load": "whole",
     "data": "ch_fso_retail.csv",
     "meta": "ch_fso_retail.json"
@@ -249,7 +297,7 @@
     "end": "2026-04-01",
     "n_series": 87,
     "updated": null,
-    "fetched": "2026-09-30 08:38:19",
+    "fetched": "2026-10-01 08:39:01",
     "load": "whole",
     "data": "ch_fso_production.csv",
     "meta": "ch_fso_production.json"
@@ -297,7 +345,7 @@
     "end": "2026-04-01",
     "n_series": 66,
     "updated": null,
-    "fetched": "2026-09-30 08:38:19",
+    "fetched": "2026-10-01 08:39:01",
     "load": "whole",
     "data": "ch_fso_services.csv",
     "meta": "ch_fso_services.json"
@@ -345,7 +393,7 @@
     "end": "2026-08-01",
     "n_series": 12,
     "updated": null,
-    "fetched": "2026-09-30 08:38:19",
+    "fetched": "2026-10-01 08:39:01",
     "load": "whole",
     "data": "ch_fso_new_vehicles.csv",
     "meta": "ch_fso_new_vehicles.json"
@@ -393,7 +441,7 @@
     "end": "2026-08-01",
     "n_series": 324,
     "updated": null,
-    "fetched": "2026-09-30 08:38:19",
+    "fetched": "2026-10-01 08:39:02",
     "load": "whole",
     "data": "ch_fso_new_vehicles_canton.csv",
     "meta": "ch_fso_new_vehicles_canton.json"
@@ -441,7 +489,7 @@
     "end": "2025-01-01",
     "n_series": 2,
     "updated": null,
-    "fetched": "2026-09-30 08:38:20",
+    "fetched": "2026-10-01 08:39:02",
     "load": "whole",
     "data": "ch_fso_vacant_dwellings.csv",
     "meta": "ch_fso_vacant_dwellings.json"
@@ -489,7 +537,7 @@
     "end": "2026-04-01",
     "n_series": 27,
     "updated": null,
-    "fetched": "2026-09-30 08:38:20",
+    "fetched": "2026-10-01 08:39:02",
     "load": "whole",
     "data": "ch_fso_cross_border_commuters.csv",
     "meta": "ch_fso_cross_border_commuters.json"
@@ -537,7 +585,7 @@
     "end": "2024-01-01",
     "n_series": 9,
     "updated": null,
-    "fetched": "2026-09-30 08:38:20",
+    "fetched": "2026-10-01 08:39:02",
     "load": "whole",
     "data": "ch_fso_pop_detail.csv",
     "meta": "ch_fso_pop_detail.json"
@@ -585,7 +633,7 @@
     "end": "2030-01-01",
     "n_series": 359,
     "updated": "2025-03-18",
-    "fetched": "2026-09-30 08:38:20",
+    "fetched": "2026-10-01 08:39:02",
     "load": "whole",
     "data": "ch_ffa_finances.csv",
     "meta": "ch_ffa_finances.json"
@@ -633,7 +681,7 @@
     "end": "2026-09-01",
     "n_series": 1,
     "updated": null,
-    "fetched": "2026-09-30 08:38:20",
+    "fetched": "2026-10-01 08:39:02",
     "load": "whole",
     "data": "ch_kof_barometer.csv",
     "meta": "ch_kof_barometer.json"
@@ -681,7 +729,7 @@
     "end": "2026-08-01",
     "n_series": 2,
     "updated": null,
-    "fetched": "2026-09-30 08:38:20",
+    "fetched": "2026-10-01 08:39:02",
     "load": "whole",
     "data": "ch_kof_esi.csv",
     "meta": "ch_kof_esi.json"
@@ -729,7 +777,7 @@
     "end": "2026-06-01",
     "n_series": 4,
     "updated": null,
-    "fetched": "2026-09-30 08:38:20",
+    "fetched": "2026-10-01 08:39:02",
     "load": "whole",
     "data": "ch_adecco_sjmi.csv",
     "meta": "ch_adecco_sjmi.json"
@@ -777,7 +825,7 @@
     "end": "2026-07-01",
     "n_series": 14,
     "updated": null,
-    "fetched": "2026-09-30 08:38:20",
+    "fetched": "2026-10-01 08:39:02",
     "load": "whole",
     "data": "ch_fso_hesta.csv",
     "meta": "ch_fso_hesta.json"
@@ -830,7 +878,7 @@
     "end": "2026-04-01",
     "n_series": 60,
     "updated": "2026-08-27",
-    "fetched": "2026-09-30 08:38:20",
+    "fetched": "2026-10-01 08:39:02",
     "load": "whole",
     "data": "ch_fso_besta.csv",
     "meta": "ch_fso_besta.json"
@@ -878,7 +926,7 @@
     "end": "2026-04-01",
     "n_series": 60,
     "updated": null,
-    "fetched": "2026-09-30 08:38:20",
+    "fetched": "2026-10-01 08:39:02",
     "load": "whole",
     "data": "ch_fso_vacancies.csv",
     "meta": "ch_fso_vacancies.json"
@@ -926,7 +974,7 @@
     "end": "2026-04-01",
     "n_series": 336,
     "updated": null,
-    "fetched": "2026-09-30 08:38:20",
+    "fetched": "2026-10-01 08:39:02",
     "load": "whole",
     "data": "ch_fso_jobs_sex.csv",
     "meta": "ch_fso_jobs_sex.json"
@@ -974,7 +1022,7 @@
     "end": "2026-04-01",
     "n_series": 20,
     "updated": null,
-    "fetched": "2026-09-30 08:38:20",
+    "fetched": "2026-10-01 08:39:02",
     "load": "whole",
     "data": "ch_fso_besta_outlook.csv",
     "meta": "ch_fso_besta_outlook.json"
@@ -1019,10 +1067,10 @@
     "license": "fso",
     "frequency": "monthly",
     "start": "1982-12-01",
-    "end": "2026-08-01",
+    "end": "2026-09-01",
     "n_series": 595,
-    "updated": "2026-09-03",
-    "fetched": "2026-09-30 08:38:21",
+    "updated": "2026-10-01",
+    "fetched": "2026-10-01 08:39:03",
     "load": "whole",
     "data": "ch_fso_cpi.csv",
     "meta": "ch_fso_cpi.json"
@@ -1070,7 +1118,7 @@
     "end": "2026-08-01",
     "n_series": 7,
     "updated": "2026-09-14",
-    "fetched": "2026-09-30 08:38:21",
+    "fetched": "2026-10-01 08:39:03",
     "load": "whole",
     "data": "ch_fso_ppi.csv",
     "meta": "ch_fso_ppi.json"
@@ -1118,7 +1166,7 @@
     "end": "2025-01-01",
     "n_series": 12,
     "updated": "2026-04-21",
-    "fetched": "2026-09-30 08:38:21",
+    "fetched": "2026-10-01 08:39:03",
     "load": "whole",
     "data": "ch_fso_wage_idx.csv",
     "meta": "ch_fso_wage_idx.json"
@@ -1171,7 +1219,7 @@
     "end": "2025-01-01",
     "n_series": 10,
     "updated": "2026-08-20",
-    "fetched": "2026-09-30 08:38:21",
+    "fetched": "2026-10-01 08:39:03",
     "load": "whole",
     "data": "ch_fso_pop.csv",
     "meta": "ch_fso_pop.json"
@@ -1219,7 +1267,7 @@
     "end": "2026-06-01",
     "n_series": 5,
     "updated": "2026-08-18",
-    "fetched": "2026-09-30 08:38:21",
+    "fetched": "2026-10-01 08:39:03",
     "load": "whole",
     "data": "ch_fso_unemp_rate.csv",
     "meta": "ch_fso_unemp_rate.json"
@@ -1267,7 +1315,7 @@
     "end": "2025-01-01",
     "n_series": 3,
     "updated": "2026-08-28",
-    "fetched": "2026-09-30 08:38:21",
+    "fetched": "2026-10-01 08:39:03",
     "load": "whole",
     "data": "ch_fso_labour_productivity.csv",
     "meta": "ch_fso_labour_productivity.json"
@@ -1315,7 +1363,7 @@
     "end": "2026-04-01",
     "n_series": 69,
     "updated": "2026-09-15",
-    "fetched": "2026-09-30 08:38:21",
+    "fetched": "2026-10-01 08:39:03",
     "load": "whole",
     "data": "ch_fso_ets.csv",
     "meta": "ch_fso_ets.json"
@@ -1363,7 +1411,7 @@
     "end": "2025-01-01",
     "n_series": 37,
     "updated": "2026-08-25",
-    "fetched": "2026-09-30 08:38:21",
+    "fetched": "2026-10-01 08:39:03",
     "load": "whole",
     "data": "ch_fso_gfcf_detail.csv",
     "meta": "ch_fso_gfcf_detail.json"
@@ -1411,7 +1459,7 @@
     "end": "2025-01-01",
     "n_series": 45,
     "updated": "2026-05-21",
-    "fetched": "2026-09-30 08:38:21",
+    "fetched": "2026-10-01 08:39:03",
     "load": "whole",
     "data": "ch_fso_hours_worked.csv",
     "meta": "ch_fso_hours_worked.json"
@@ -1459,7 +1507,7 @@
     "end": "2022-01-01",
     "n_series": 34,
     "updated": "2024-10-28",
-    "fetched": "2026-09-30 08:38:21",
+    "fetched": "2026-10-01 08:39:03",
     "load": "whole",
     "data": "ch_fso_gdp_region.csv",
     "meta": "ch_fso_gdp_region.json"
@@ -1507,7 +1555,7 @@
     "end": "2026-04-01",
     "n_series": 3,
     "updated": "2026-06-18",
-    "fetched": "2026-09-30 08:38:21",
+    "fetched": "2026-10-01 08:39:03",
     "load": "whole",
     "data": "ch_fso_construction_prices.csv",
     "meta": "ch_fso_construction_prices.json"
@@ -1555,7 +1603,7 @@
     "end": "2025-01-01",
     "n_series": 66,
     "updated": null,
-    "fetched": "2026-09-30 08:38:21",
+    "fetched": "2026-10-01 08:39:04",
     "load": "whole",
     "data": "ch_fso_trade_partner.csv",
     "meta": "ch_fso_trade_partner.json"
@@ -1603,7 +1651,7 @@
     "end": "2025-12-01",
     "n_series": 13,
     "updated": "2026-02-06",
-    "fetched": "2026-09-30 08:38:22",
+    "fetched": "2026-10-01 08:39:04",
     "load": "whole",
     "data": "ch_fso_hicp.csv",
     "meta": "ch_fso_hicp.json"
@@ -1651,7 +1699,7 @@
     "end": "2026-09-07",
     "n_series": 2,
     "updated": null,
-    "fetched": "2026-09-30 08:38:22",
+    "fetched": "2026-10-01 08:39:04",
     "load": "whole",
     "data": "ch_seco_wwa.csv",
     "meta": "ch_seco_wwa.json"
@@ -2834,31 +2882,31 @@
     "meta": "ch_snb_rendeiduebd.json"
   },
   {
-    "id": "ch_snb_snbiprogq",
+    "id": "ch_snb_snbbipo",
     "title": {
-      "en": "Inflation forecast (SNB)",
-      "de": "Inflationsprognose (SNB)",
-      "fr": "Prévision d'inflation (BNS)",
-      "it": "Previsione d'inflazione (BNS)"
+      "en": "SNB balance sheet",
+      "de": "SNB-Bilanz",
+      "fr": "Bilan de la BNS",
+      "it": "Bilancio della BNS"
     },
     "concept": {
-      "en": "Prices / Inflation forecast",
+      "en": "Money and banking / Monetary aggregates",
       "leaf": {
-        "en": "Inflation forecast",
-        "de": "Inflationsprognose",
-        "fr": "Prévision d'inflation",
-        "it": "Previsione d'inflazione"
+        "en": "Monetary aggregates",
+        "de": "Geldmengen",
+        "fr": "Agrégats monétaires",
+        "it": "Aggregati monetari"
       }
     },
-    "canonical": true,
+    "canonical": false,
     "featured": null,
     "topic": {
-      "key": "prices",
+      "key": "money-banking",
       "name": {
-        "en": "Prices",
-        "de": "Preise",
-        "fr": "Prix",
-        "it": "Prezzi"
+        "en": "Money and banking",
+        "de": "Geld und Banken",
+        "fr": "Monnaie et banques",
+        "it": "Moneta e banche"
       }
     },
     "source": {
@@ -2871,63 +2919,15 @@
       }
     },
     "license": "snb",
-    "frequency": "quarterly",
-    "start": "2001-01-01",
-    "end": "2029-01-01",
-    "n_series": 178,
-    "updated": "2026-06-24 15:00",
-    "fetched": "2026-08-05 13:12:03",
+    "frequency": "monthly",
+    "start": "1996-12-01",
+    "end": "2026-08-01",
+    "n_series": 28,
+    "updated": "2026-09-30 09:00",
+    "fetched": "2026-09-30 08:38:19",
     "load": "whole",
-    "data": "ch_snb_snbiprogq.csv",
-    "meta": "ch_snb_snbiprogq.json"
-  },
-  {
-    "id": "ch_snb_snbkosiq",
-    "title": {
-      "en": "Business cycle signals",
-      "de": "Konjunktursignale",
-      "fr": "Signaux conjoncturels",
-      "it": "Segnali congiunturali"
-    },
-    "concept": {
-      "en": "Business cycle and sentiment / Business cycle signals",
-      "leaf": {
-        "en": "Business cycle signals",
-        "de": "Konjunktursignale",
-        "fr": "Signaux conjoncturels",
-        "it": "Segnali congiunturali"
-      }
-    },
-    "canonical": true,
-    "featured": null,
-    "topic": {
-      "key": "business-cycle-sentiment",
-      "name": {
-        "en": "Business cycle and sentiment",
-        "de": "Konjunktur und Stimmung",
-        "fr": "Conjoncture et climat",
-        "it": "Congiuntura e clima"
-      }
-    },
-    "source": {
-      "key": "snb",
-      "name": {
-        "en": "Swiss National Bank",
-        "de": "Schweizerische Nationalbank (SNB)",
-        "fr": "Banque nationale suisse (BNS)",
-        "it": "Banca nazionale svizzera (BNS)"
-      }
-    },
-    "license": "snb",
-    "frequency": "quarterly",
-    "start": "2011-01-01",
-    "end": "2026-04-01",
-    "n_series": 24,
-    "updated": "2026-06-24 15:00",
-    "fetched": "2026-08-05 13:12:03",
-    "load": "whole",
-    "data": "ch_snb_snbkosiq.csv",
-    "meta": "ch_snb_snbkosiq.json"
+    "data": "ch_snb_snbbipo.csv",
+    "meta": "ch_snb_snbbipo.json"
   },
   {
     "id": "ch_snb_snbmoba",
