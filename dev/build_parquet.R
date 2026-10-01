@@ -11,10 +11,12 @@ n <- 0L
 for (csv in csvs) {
   # Dimension columns as text, the same spec as read_data_csv() in R/io.R.
   # Guessed, an all-digit code column became a double, the API sent 8100
-  # where the site selects "8100", and those datasets opened empty.
-  data <- readr::read_csv(csv, show_col_types = FALSE, progress = FALSE,
-    col_types = readr::cols(date = readr::col_date(), value = readr::col_double(),
-                            .default = readr::col_character()))
+  # where the site selects "8100", and those datasets opened empty. No na
+  # strings for the codes: "NA" is a real SNB code and became a null.
+  data <- readr::read_csv(csv, show_col_types = FALSE, progress = FALSE, na = character(),
+                          col_types = readr::cols(.default = readr::col_character()))
+  if ("date" %in% names(data)) data$date <- readr::parse_date(data$date)
+  if ("value" %in% names(data)) data$value <- readr::parse_double(data$value, na = c("", "NA"))
   pq <- sub("\\.csv$", ".parquet", csv)
   arrow::write_parquet(data, pq)
   n <- n + 1L

@@ -3,7 +3,8 @@
 # strings. When that script let readr guess types, the all-digit code columns
 # (ch_fso_hesta, ch_fso_ppi, ch_fso_jobs_sex, ch_fso_vacancies) became doubles,
 # the API sent 8100 where the site selected "8100", and those datasets opened on
-# "No data for this selection".
+# "No data for this selection". Later, readr's default na = "NA" turned the SNB
+# code "NA" in ch_snb_bopcapbalq into a null, and the API rejected D0=NA.
 #
 # Builds the cache the way the deploy does, from a synthetic CSV plus every
 # data/*.csv, and checks each dim column comes back as the CSV's text.
@@ -17,7 +18,8 @@ problem <- function(...) { cat(sprintf(...), "\n"); fail_n <<- fail_n + 1L }
 
 tmp <- tempfile("parquet-codes-"); dir.create(tmp)
 on.exit(unlink(tmp, recursive = TRUE), add = TRUE)
-writeLines(c("region,date,value", "01,2020-01-01,1", "8100,2020-01-01,2", "100000,2020-01-01,3"),
+writeLines(c("region,date,value", "01,2020-01-01,1", "8100,2020-01-01,2", "100000,2020-01-01,3",
+             "NA,2020-01-01,4"),
            file.path(tmp, "synthetic.csv"))
 csvs <- list.files("data", pattern = "^ch_.*\\.csv$", full.names = TRUE)
 invisible(file.copy(csvs, tmp))
@@ -28,7 +30,8 @@ if (!identical(rc, 0L)) problem("dev/build_parquet.R exited with %s", rc)
 checked <- 0L
 for (csv in list.files(tmp, pattern = "\\.csv$", full.names = TRUE)) {
   id   <- sub("\\.csv$", "", basename(csv))
-  text <- readr::read_csv(csv, col_types = readr::cols(.default = "c"), progress = FALSE)
+  text <- readr::read_csv(csv, col_types = readr::cols(.default = "c"), na = character(),
+                          progress = FALSE)
   pq   <- arrow::read_parquet(sub("\\.csv$", ".parquet", csv))
   for (d in dim_cols(text)) {
     if (!is.character(pq[[d]])) {
@@ -44,7 +47,7 @@ for (csv in list.files(tmp, pattern = "\\.csv$", full.names = TRUE)) {
 
 # read_data_csv() is what the pipeline reloads an unchanged dataset with.
 syn <- read_data_csv(file.path(tmp, "synthetic.csv"))
-if (!identical(syn$region, c("01", "8100", "100000")))
+if (!identical(syn$region, c("01", "8100", "100000", "NA")))
   problem("read_data_csv: region read as %s", paste(syn$region, collapse = ", "))
 if (!inherits(syn$date, "Date") || !is.double(syn$value))
   problem("read_data_csv: date/value not Date/double")
