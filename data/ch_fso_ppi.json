@@ -5,7 +5,7 @@
     "base"
   ],
   "start": "1963-01-01",
-  "end": "2026-08-01",
+  "end": "2026-09-01",
   "source": {
     "name": {
       "en": "Swiss Federal Statistical Office (FSO)",
@@ -27,7 +27,7 @@
       "it": "Prezzi"
     }
   },
-  "updated": "2026-09-14",
+  "updated": "2026-10-15",
   "dimensions": {
     "base": {
       "label": {
@@ -110,5 +110,5 @@
     "fr": "Prix pratiqués par les producteurs suisses et payés par les importateurs, mensuel. Les sept séries sont le même indice rebasé sur les années 1963 à 2025.",
     "it": "Prezzi praticati dai produttori svizzeri e pagati dagli importatori, mensile. Le sette serie sono lo stesso indice ribasato sugli anni dal 1963 al 2025."
   },
-  "fetched_utc": "2026-10-14 08:36:02"
+  "fetched_utc": "2026-10-15 08:35:25"
 }
