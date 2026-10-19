@@ -150,5 +150,11 @@
     "fr": "Les agrégats monétaires suisses M1, M2 et M3 avec les espèces et dépôts qui les composent : la monnaie détenue par le public, non par la banque centrale.",
     "it": "Gli aggregati monetari svizzeri M1, M2 e M3 con il contante e i depositi che li compongono: moneta detenuta dal pubblico, non dalla banca centrale."
   },
-  "fetched_utc": "2026-09-21 08:45:34"
+  "fetched_utc": "2026-09-21 08:45:34",
+  "units": {
+    "en": "CHF millions",
+    "de": "Mio. CHF",
+    "fr": "Millions de CHF",
+    "it": "Milioni di CHF"
+  }
 }

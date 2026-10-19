@@ -47,6 +47,9 @@ Swiss jobs split by region, sector, full-time or part-time, and sex, the breakdo
   seasonally adjusted.
 - `Geschlecht` (Gender): `TOT` total, `1` man, `2` woman.
 
+## Labels
+- **units**: Number of jobs, or full-time equivalents | de: Anzahl Beschäftigte oder Vollzeitäquivalente | fr: Nombre d'emplois ou équivalents plein temps | it: Numero di impieghi o equivalenti a tempo pieno
+
 ## Display
 - **split**: Geschlecht
 - **single-select**: Beschäftigungsgrad

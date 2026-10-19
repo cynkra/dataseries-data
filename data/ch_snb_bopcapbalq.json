@@ -617,5 +617,11 @@
     "fr": "Flux d'investissement transfrontaliers vers et depuis la Suisse : investissements directs, de portefeuille et autres, plus les réserves monétaires, par trimestre.",
     "it": "Flussi d'investimento transfrontalieri verso e dalla Svizzera: investimenti diretti, di portafoglio e altri, più le riserve monetarie, per trimestre."
   },
-  "fetched_utc": "2026-09-22 08:39:05"
+  "fetched_utc": "2026-09-22 08:39:05",
+  "units": {
+    "en": "CHF millions",
+    "de": "Mio. CHF",
+    "fr": "Millions de CHF",
+    "it": "Milioni di CHF"
+  }
 }

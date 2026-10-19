@@ -35,6 +35,9 @@ The source's `D2` Index/Change dimension (`I` index, `V` day-on-day % change) is
 to the index: `V` is exactly the app's day-on-day % change transform, derived from `I`.
 Keeping only `I` collapses `D2` away.
 
+## Labels
+- **units**: Index, December 2000 = 100 | de: Index, Dezember 2000 = 100 | fr: Indice, décembre 2000 = 100 | it: Indice, dicembre 2000 = 100
+
 ## Display
 - **split**: D1
 - **single-select**: D0

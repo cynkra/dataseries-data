@@ -42,6 +42,9 @@ What the Swiss National Bank owns and owes each month. Foreign-currency investme
     `UT` other time liabilities, `VF` FX liabilities, `AIWFS` SDR counterpart, `SP`
     other liabilities, `RE` provisions and equity, `T1` total liabilities.
 
+## Labels
+- **units**: CHF millions | de: Mio. CHF | fr: Millions de CHF | it: Milioni di CHF
+
 ## Display
 - **split**: D0
 - **single-select**: (none; single dimension)

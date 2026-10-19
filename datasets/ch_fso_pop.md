@@ -38,6 +38,7 @@ How Switzerland's population changes each year: births, deaths, immigration, emi
   derivative the user can read straight off the stock series.
 
 ## Labels
+- **units**: Number of persons | de: Anzahl Personen | fr: Nombre de personnes | it: Numero di persone
 - dim: item
   - **label**: Demographic component | de: Demografische Komponente | fr: Composante démographique | it: Componente demografica
   - pop_stock_jan: Population on 1 January | de: Bevölkerung am 1. Januar | fr: Population au 1er janvier | it: Popolazione al 1° gennaio

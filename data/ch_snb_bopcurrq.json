@@ -579,5 +579,11 @@
     "fr": "Le compte courant suisse en détail (biens, services, revenus du travail et des investissements) et d'où vient l'excédent structurel.",
     "it": "Il conto corrente svizzero in dettaglio (beni, servizi, redditi da lavoro e da investimenti) e da dove proviene l'avanzo strutturale."
   },
-  "fetched_utc": "2026-09-22 08:39:05"
+  "fetched_utc": "2026-09-22 08:39:05",
+  "units": {
+    "en": "CHF millions",
+    "de": "Mio. CHF",
+    "fr": "Millions de CHF",
+    "it": "Milioni di CHF"
+  }
 }

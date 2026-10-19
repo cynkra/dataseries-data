@@ -33,6 +33,9 @@ How much is traded on the Swiss exchange each month, with shares and bonds split
   included in the SMI. Default `A`. Grouping nodes `D0_0` (Shares) and `D0_1` (Bond
   issues) are `data:false` and carry no observations.
 
+## Labels
+- **units**: CHF millions | de: Mio. CHF | fr: Millions de CHF | it: Milioni di CHF
+
 ## Display
 - **split**: D0
 - **single-select**: (none; single dimension)

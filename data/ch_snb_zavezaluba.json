@@ -295,5 +295,25 @@
     "fr": "Pour quoi et où l'on paie avec des cartes suisses (en magasin ou en ligne, en Suisse ou à l'étranger), ainsi que les retraits aux distributeurs.",
     "it": "Per cosa e dove si paga con le carte svizzere (in negozio o online, in Svizzera o all'estero), nonché i prelievi ai bancomat."
   },
-  "fetched_utc": "2026-09-21 08:45:34"
+  "fetched_utc": "2026-09-21 08:45:34",
+  "units": {
+    "TT": {
+      "en": "Thousands of transactions",
+      "de": "Tausend Transaktionen",
+      "fr": "Milliers de transactions",
+      "it": "Migliaia di transazioni"
+    },
+    "BMF": {
+      "en": "CHF millions",
+      "de": "Mio. CHF",
+      "fr": "Millions de CHF",
+      "it": "Milioni di CHF"
+    },
+    "BTF": {
+      "en": "CHF",
+      "de": "CHF",
+      "fr": "CHF",
+      "it": "CHF"
+    }
+  }
 }

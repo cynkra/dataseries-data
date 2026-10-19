@@ -313,5 +313,25 @@
     "fr": "Postes vacants publiés par les entreprises suisses, par branche, en nombre, en indice et en taux. Un indicateur avancé : les annonces bougent avant l'emploi.",
     "it": "Posti vacanti pubblicati dalle imprese svizzere, per ramo, come numero, indice e tasso. Un indicatore anticipatore: gli annunci si muovono prima dell'occupazione."
   },
-  "fetched_utc": "2026-10-19 15:53:57"
+  "fetched_utc": "2026-10-19 15:53:57",
+  "units": {
+    "1": {
+      "en": "Number of vacancies",
+      "de": "Anzahl offene Stellen",
+      "fr": "Nombre de places vacantes",
+      "it": "Numero di posti vacanti"
+    },
+    "2": {
+      "en": "Index",
+      "de": "Index",
+      "fr": "Indice",
+      "it": "Indice"
+    },
+    "3": {
+      "en": "Percent",
+      "de": "Prozent",
+      "fr": "Pour cent",
+      "it": "Percento"
+    }
+  }
 }

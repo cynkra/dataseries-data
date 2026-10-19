@@ -36,6 +36,9 @@ Swiss money supply M1, M2 and M3 with the cash and deposits they are built from:
   deposits; aggregates `GM1` M1, `GM2` M2, `GM3` M3. (The dropped `D0` dimension
   separated level from year-on-year change; only the level is kept — see above.)
 
+## Labels
+- **units**: CHF millions | de: Mio. CHF | fr: Millions de CHF | it: Milioni di CHF
+
 ## Display
 - **split**: D1
 - **single-select**:

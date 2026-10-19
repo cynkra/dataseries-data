@@ -6286,5 +6286,11 @@
     "de": "LIK, Teuerung, Inflation",
     "fr": "IPC, inflation, renchérissement",
     "it": "IPC, inflazione, rincaro"
+  },
+  "units": {
+    "en": "Index, December 2025 = 100",
+    "de": "Index, Dezember 2025 = 100",
+    "fr": "Indice, décembre 2025 = 100",
+    "it": "Indice, dicembre 2025 = 100"
   }
 }

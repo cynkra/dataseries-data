@@ -38,6 +38,9 @@ Swiss bank lending split by whether the borrower is at home or abroad, for mortg
   node `K` (other loans, non-data): `T2` total, `G` secured, `U` unsecured.
 - `D3` Utilisation and credit lines: `F` utilisation, `B` credit lines.
 
+## Labels
+- **units**: CHF millions | de: Mio. CHF | fr: Millions de CHF | it: Milioni di CHF
+
 ## Display
 - **split**: D1
 - **single-select**: D0, D2, D3

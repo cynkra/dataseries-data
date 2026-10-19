@@ -37,6 +37,9 @@ Swiss firms' hiring intentions for the next three months, by industry. Above 1.0
   default), `5-43` Sector II, `45-96` Sector III, plus the divisional breakdown
   (manufacturing, construction, trade, finance, health, …). Same coding as `ch_fso_besta`.
 
+## Labels
+- **units**: Index | de: Index | fr: Indice | it: Indice
+
 ## Display
 - **split**: Wirtschaftsabteilung
 - **single-select**:

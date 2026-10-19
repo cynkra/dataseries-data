@@ -39,6 +39,9 @@ What Switzerland owns abroad and owes abroad, and the net position, as end-of-qu
   reserve assets (`G` gold, `RIWF` IMF reserve position, `S1` SDRs, FX investments
   `W/BE`, `U` other).
 
+## Labels
+- **units**: CHF millions | de: Mio. CHF | fr: Millions de CHF | it: Milioni di CHF
+
 ## Display
 - **split**: D1
 - **single-select**: D0

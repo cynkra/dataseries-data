@@ -44,6 +44,9 @@ Switzerland's current account in detail (goods, services and income from work an
   memoria merchanting line.
 - `D1` Accounting entry: `E` Receipts, `A` Expenses, `S` Net. Default view `A,A`.
 
+## Labels
+- **units**: CHF millions | de: Mio. CHF | fr: Millions de CHF | it: Milioni di CHF
+
 ## Display
 - **split**: D0
 - **single-select**: D1

@@ -40,6 +40,11 @@ What Switzerland exports and imports by product group each month, in CHF million
   the latter under the non-data group `D2_1`. The nominal YoY %-change `N` is dropped
   (it equals the YoY of `WMF`, reproduced by the app's YoY toggle).
 
+## Labels
+- dim: D2
+  - **units** WMF: CHF millions | de: Mio. CHF | fr: Millions de CHF | it: Milioni di CHF
+  - **units** R: Percent change from a year earlier, real | de: Veränderung gegenüber Vorjahr in Prozent, real | fr: Variation sur un an en pour cent, réelle | it: Variazione su base annua in percento, reale
+
 ## Display
 - **split**: D1
 - **single-select**: D2

@@ -143,5 +143,11 @@
     "de": "Franken, Wechselkurs",
     "fr": "franc suisse, taux de change",
     "it": "franco svizzero, tasso di cambio"
+  },
+  "units": {
+    "en": "Index, December 2000 = 100",
+    "de": "Index, Dezember 2000 = 100",
+    "fr": "Indice, décembre 2000 = 100",
+    "it": "Indice, dicembre 2000 = 100"
   }
 }

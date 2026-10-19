@@ -40,6 +40,7 @@ Swiss inflation with the full shopping basket: 595 items from the total index do
   to `Item_E`).
 
 ## Labels
+- **units**: Index, December 2025 = 100 | de: Index, Dezember 2025 = 100 | fr: Indice, décembre 2025 = 100 | it: Indice, dicembre 2025 = 100
 - dim: item
   - **label**: CPI position | de: LIK-Position | fr: Position de l'IPC | it: Posizione dell'IPC
 

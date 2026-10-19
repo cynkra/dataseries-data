@@ -253,5 +253,11 @@
     "fr": "Crédits bancaires suisses selon que l'emprunteur se trouve en Suisse ou à l'étranger, pour les hypothèques et les autres prêts.",
     "it": "Crediti bancari svizzeri a seconda che il debitore sia in Svizzera o all'estero, per ipoteche e altri prestiti."
   },
-  "fetched_utc": "2026-09-21 08:45:33"
+  "fetched_utc": "2026-09-21 08:45:33",
+  "units": {
+    "en": "CHF millions",
+    "de": "Mio. CHF",
+    "fr": "Millions de CHF",
+    "it": "Milioni di CHF"
+  }
 }

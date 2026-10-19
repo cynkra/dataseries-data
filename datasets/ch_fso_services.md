@@ -32,6 +32,9 @@ Turnover of the Swiss services sector each quarter, completing the picture along
 - `ADJUSTMENT`: `N` raw, `W` calendar-adjusted, `Y` seasonally + calendar-adjusted.
 - `INDICATOR_KE`: `UTOT` total turnover, `UINL` domestic, `UEXP` foreign (nominal).
 
+## Labels
+- **units**: Index, 2021 = 100 | de: Index, 2021 = 100 | fr: Indice, 2021 = 100 | it: Indice, 2021 = 100
+
 ## Display
 - **split**: NOGA
 - **single-select**: ADJUSTMENT, INDICATOR_KE

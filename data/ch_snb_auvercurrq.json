@@ -232,5 +232,11 @@
     "fr": "Dans quelles monnaies sont détenus les avoirs et engagements suisses à l'étranger (francs, dollars, euros ou métaux précieux) et donc leur exposition.",
     "it": "In quali valute sono detenuti gli attivi e i debiti svizzeri sull'estero (franchi, dollari, euro o metalli preziosi) e quindi quanto sono esposti."
   },
-  "fetched_utc": "2026-09-22 08:39:05"
+  "fetched_utc": "2026-09-22 08:39:05",
+  "units": {
+    "en": "CHF millions",
+    "de": "Mio. CHF",
+    "fr": "Millions de CHF",
+    "it": "Milioni di CHF"
+  }
 }

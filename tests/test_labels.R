@@ -52,6 +52,37 @@ check(identical(out$meta$dimensions$breakdown$label$en, "Breakdown"), "dim label
 check(identical(out$meta$units$en, "Index (1993 = 100)"), "dataset units set")
 check(!is.null(lv[["Budget/financial plans"]]), "unknown code is created (group headers)")
 
+# ---- per-level units ------------------------------------------------------------
+ul <- c(
+  "## Labels",
+  "- dim: measure",
+  "  - **units** V: Number of dwellings | de: Anzahl Wohnungen",
+  "  - **units** `P C`: Percent | de: Prozent",
+  "  - V: Vacant dwellings"
+)
+s <- read_labels_block(ul)[[1]]
+check(identical(s$level_units$V, list(en = "Number of dwellings", de = "Anzahl Wohnungen")),
+      "per-level units parse")
+check(identical(s$level_units[["P C"]], list(en = "Percent", de = "Prozent")),
+      "per-level units with a backtick-quoted code")
+check(identical(s$levels$V, list(en = "Vacant dwellings")), "level label next to units")
+writeLines(ul, file.path(tmp, "u.md"))
+du <- list(id = "u", meta = list(dimensions = list(measure = list(levels = list(
+  V = list(data = TRUE), `P C` = list(data = TRUE))))))
+out <- attach_labels(du, tmp)
+check(identical(out$meta$units, list(V = list(en = "Number of dwellings", de = "Anzahl Wohnungen"),
+                                     `P C` = list(en = "Percent", de = "Prozent"))),
+      "per-level units land in meta$units keyed by code")
+check(is.null(out$meta$dimensions$measure$units), "per-level units do not touch dim$units")
+writeLines(c("## Labels", "- **units**: CHF | de: CHF", ul[-1]), file.path(tmp, "u2.md"))
+r <- tryCatch(attach_labels(modifyList(du, list(id = "u2")), tmp), error = function(e) "err")
+check(identical(r, "err"), "per-level units next to dataset-wide units is an error")
+s <- read_labels_block(c("## Labels", "- dim: `Offene Stellen`", "  - **units** 3: Percent"))[[1]]
+check(identical(s$dim, "Offene Stellen") && identical(s$level_units[["3"]], list(en = "Percent")),
+      "backtick-quoted dim name with a space")
+r <- tryCatch(read_labels_block(c("## Labels", "- **units** V: X")), error = function(e) "err")
+check(identical(r, "err"), "per-level units outside a dim scope is an error")
+
 # ---- tidy_label: code prefix + capitals -----------------------------------------
 check(identical(tidy_label("4711_472 Retail sale of food", "4711_472", "en"), "Retail sale of food"),
       "code prefix stripped")

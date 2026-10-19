@@ -8,8 +8,13 @@
 #
 #   ## Labels
 #   - **units**: <i18n>                 dataset-wide units line
-#   - dim: <dimension>
+#   - dim: <dimension>                  (backtick-quoted if it has spaces)
 #     - **label**: <i18n>               the dimension's own label
+#     - **units** <code>: <i18n>        per-level units: sets meta$units[[code]],
+#                                       for a dimension whose levels differ in
+#                                       unit (counts next to a rate). Give it to
+#                                       the data-bearing codes; the site looks up
+#                                       the selected code only, never its parent
 #     - <code>: <i18n>                  one level label (split on the FIRST ": "
 #                                       after the code token; labels may contain
 #                                       colons, codes may not)
@@ -23,18 +28,27 @@
 #
 # Spec: dataseries.org spec/multilingual/2-design.md §3.
 
-# Parse the ## Labels block into specs: list(dim=, label=, units=, levels=named
-# list of i18n lists). The dim=NULL spec (lines before the first `dim:`) may only
-# carry `units`. Returns NULL when there is no block / no directive content.
+# Parse the ## Labels block into specs: list(dim=, label=, units=, level_units=,
+# levels=named list of i18n lists). The dim=NULL spec (lines before the first
+# `dim:`) may only carry `units`. Returns NULL when there is no block / no directive content.
 read_labels_block <- function(lines) {
   specs <- ds_bullets(ds_section(lines, "Labels"))
   if (is.null(specs)) return(NULL)
   lapply(specs, function(s) {
-    out <- list(dim = s$dim, label = NULL, units = NULL, levels = list())
+    out <- list(dim = s$dim, label = NULL, units = NULL, level_units = list(),
+                levels = list())
     for (it in s$items) {
       txt <- it$text
       fm <- regmatches(txt, regexec("^\\*\\*(label|units)\\*\\*:\\s*(.*)$", txt))[[1]]
       if (length(fm) == 3) { out[[fm[2]]] <- ds_i18n(fm[3]); next }
+      um <- regmatches(txt, regexec("^\\*\\*units\\*\\*\\s+(?:`([^`]+)`|([^\\s:`]+)):\\s*(.+)$",
+                                    txt, perl = TRUE))[[1]]
+      if (length(um) == 4) {
+        if (is.null(s$dim))
+          stop(sprintf("labels: per-level units '%s' outside a 'dim:' scope", txt), call. = FALSE)
+        out$level_units[[paste0(um[2], um[3])]] <- ds_i18n(um[4])
+        next
+      }
       # Codes are bare tokens (no spaces/colons); a code with spaces or colons is
       # written backtick-quoted.
       m <- regmatches(txt, regexec("^`([^`]+)`:\\s*(.+)$", txt, perl = TRUE))[[1]]
@@ -80,6 +94,18 @@ attach_labels <- function(ds, datasheet_dir, lines = NULL) {
     dim <- ds$meta$dimensions[[s$dim]]
     if (!is.null(s$label)) dim <- .set_label_first(dim, s$label)
     if (!is.null(s$units)) dim$units <- s$units
+    if (length(s$level_units)) {
+      u <- ds$meta$units
+      if (!is.null(u) && all(names(u) %in% c("en", DS_I18N_LANGS)))
+        stop(sprintf("%s: per-level units on dim '%s' next to dataset-wide units", ds$id, s$dim),
+             call. = FALSE)
+      for (code in names(s$level_units)) {
+        if (is.null(dim$levels[[code]]))
+          warning(sprintf("%s: units for unknown code '%s' of dim '%s'", ds$id, code, s$dim))
+        u[[code]] <- s$level_units[[code]]
+      }
+      ds$meta$units <- u
+    }
     for (code in names(s$levels))
       dim$levels[[code]] <- .set_label_first(dim$levels[[code]], s$levels[[code]])
     ds$meta$dimensions[[s$dim]] <- dim

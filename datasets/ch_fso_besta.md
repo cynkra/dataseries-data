@@ -62,6 +62,9 @@ The source's `Beschäftigungsgrad` (Employment rate) and `Geschlecht` (Gender) c
 only ever carry `TOT` here, so both are dropped: a one-option picker is pure noise. That
 leaves `Wirtschaftsabteilung` as the single dimension.
 
+## Labels
+- **units**: Number of jobs | de: Anzahl Beschäftigte | fr: Nombre d'emplois | it: Numero di impieghi
+
 ## Display
 - **split**: Wirtschaftsabteilung
 - **single-select**:
