@@ -77,9 +77,6 @@ DEFAULT_PUB <- 120L
 #   pop_detail  : STATPOP year-end population stock, but dated year-start (2024-01-01 =
 #                 end-2024) and carries no SDMX publish date to rescue it; reference year
 #                 Y publishes ~Aug Y+1, so the latest point is normally ~1.5-2.5y old.
-#   hicp        : Eurostat serves the Swiss HICP with a long lag (CH is non-EU); the
-#                 latest period available is normally ~3-6 months old (verified live:
-#                 Eurostat's newest CH point is 2025-12).
 #   seco_wwa    : weekly nowcast, but SECO publishes the latest week with a ~2-3 week
 #                 lag (and revises), so the newest point is normally ~3 weeks old.
 #   unemp_rate  : monthly *values*, but the ELS-ILO workbook is published QUARTERLY
@@ -96,7 +93,6 @@ OVERRIDE <- c(
   ch_snb_capchstocki = 53L,
   ch_fso_gdp_region  = 2550L,
   ch_fso_pop_detail  = 1425L,
-  ch_fso_hicp        = 315L,
   ch_seco_wwa        = 53L,
   ch_fso_unemp_rate  = 255L
 )

@@ -195,6 +195,12 @@ levels and %-change leaves on the same key (`ch_fso_gfcf_detail`: filter `UNIT_M
   (e.g. HICP). `ec.europa.eu/eurostat/api/dissemination/sdmx/2.1/data/<flow>/<key>/?format=SDMX-CSV`,
   `geo=CH`. Separate host/module from FSO SDMX → `R/source_eurostat.R`. Provenance must
   say Eurostat, not FSO.
+  - **HICP moved to COICOP 2018 in 2026.** The old flow `prc_hicp_midx` (dimension
+    `coicop`, all-items `CP00`) froze at 2025-12; the live flow is `prc_hicp_minr`
+    (dimension `coicop18`, all-items `TOTAL`, 13 divisions). A frozen flow still
+    answers with its old data, so the only symptom is a stale board entry. Its
+    `LAST UPDATE` column stops moving (here 06/02/26), which tells a frozen flow
+    from a publication lag.
 - **BAZG Swiss-Impex monthly trade (by tariff × country, since 1988)** is the richer
   upgrade path for `ch_fso_trade_partner`, but its OGD ZIP/CSV endpoints **502'd from this
   build env** on every retry — annual FSO Excel (English assets) was used instead. Retry

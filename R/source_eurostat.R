@@ -29,11 +29,11 @@ suppressPackageStartupMessages({
     resp_body_string()
 }
 
-# Read the ESTAT COICOP codelist (TSV: "<code>\t<english label>") into a named
-# vector code -> label. Used to label the consumption-purpose divisions instead
-# of hardcoding the 13 strings, so a Eurostat label revision flows through.
+# Read the ESTAT COICOP 2018 codelist (TSV: "<code>\t<english label>") into a
+# named vector code -> label. Used to label the consumption-purpose divisions
+# instead of hardcoding the 13 strings, so a Eurostat label revision flows through.
 .eurostat_coicop_labels <- function() {
-  txt <- .eurostat_get(sprintf("%s/codelist/ESTAT/COICOP?format=TSV", .EUROSTAT_BASE))
+  txt <- .eurostat_get(sprintf("%s/codelist/ESTAT/COICOP18?format=TSV", .EUROSTAT_BASE))
   lines <- strsplit(txt, "\n", fixed = TRUE)[[1]]
   lines <- lines[nzchar(trimws(lines))]
   parts <- strsplit(lines, "\t", fixed = TRUE)
@@ -58,23 +58,28 @@ suppressPackageStartupMessages({
 }
 
 # Fetch the Swiss HICP monthly index (unit I15 = 2015 = 100) for the all-items
-# aggregate CP00 plus the 12 main COICOP divisions CP01..CP12 = 13 series.
+# aggregate plus the 13 COICOP 2018 divisions CP01..CP13 = 14 series.
+# Eurostat moved the HICP to COICOP 2018 with the January 2026 release: the old
+# COICOP 1999 flow prc_hicp_midx stops at 2025-12, prc_hicp_minr carries on with
+# the same all-items history back to 2004-12. The all-items code there is TOTAL;
+# we keep it as CP00 so the series id and the display default stay stable.
 # One SDMX-CSV GET per COICOP code (the dimension is keyed in the path); the CSV
-# carries DATAFLOW, LAST UPDATE, freq, unit, coicop, geo, TIME_PERIOD, OBS_VALUE,
+# carries DATAFLOW, LAST UPDATE, freq, unit, coicop18, geo, TIME_PERIOD, OBS_VALUE,
 # OBS_FLAG, CONF_STATUS. We keep coicop as the single dimension, map TIME_PERIOD
 # (YYYY-MM) to an ISO first-of-month date via R/dates.R, and label the divisions
-# from the ESTAT COICOP codelist.
+# from the ESTAT COICOP18 codelist.
 eurostat_hicp_fetch <- function(dataset_id = "ch_fso_hicp") {
-  coicop <- c("CP00", sprintf("CP%02d", 1:12))
-  labels <- .eurostat_coicop_labels()
+  coicop <- c("CP00", sprintf("CP%02d", 1:13))
+  labels <- c(CP00 = "All-items HICP", .eurostat_coicop_labels())
 
   frames <- lapply(coicop, function(cc) {
-    url <- sprintf("%s/data/prc_hicp_midx/M.I15.%s.CH/?format=SDMX-CSV", .EUROSTAT_BASE, cc)
+    key <- if (cc == "CP00") "TOTAL" else cc
+    url <- sprintf("%s/data/prc_hicp_minr/M.I15.%s.CH/?format=SDMX-CSV", .EUROSTAT_BASE, key)
     raw <- readr::read_csv(I(.eurostat_get(url)), show_col_types = FALSE,
                            col_types = readr::cols(.default = readr::col_character()))
     if (!nrow(raw)) return(NULL)
     data.frame(
-      coicop = as.character(raw$coicop),
+      coicop = cc,
       date   = as.Date(to_iso(as.character(raw$TIME_PERIOD))),
       value  = suppressWarnings(as.numeric(raw$OBS_VALUE)),
       last_update = as.character(raw$`LAST UPDATE`),
@@ -103,15 +108,15 @@ eurostat_hicp_fetch <- function(dataset_id = "ch_fso_hicp") {
   chk("2004-12-01", 96.90)
   chk("2025-12-01", 107.07)
 
-  present <- intersect(coicop, unique(data$coicop))  # keep canonical CP00..CP12 order
+  present <- intersect(coicop, unique(data$coicop))  # keep canonical CP00..CP13 order
   levels <- setNames(lapply(present, function(cc) {
     list(label = list(en = unname(labels[[cc]] %||% cc)))
   }), present)
-  # CP00 (all-items) is the parent; the 12 divisions are its children.
-  kids <- intersect(sprintf("CP%02d", 1:12), present)
+  # CP00 (all-items) is the parent; the 13 divisions are its children.
+  kids <- intersect(sprintf("CP%02d", 1:13), present)
 
   meta <- list(
-    source = list(url = "https://ec.europa.eu/eurostat/databrowser/view/prc_hicp_midx/default/table"),
+    source = list(url = "https://ec.europa.eu/eurostat/databrowser/view/prc_hicp_minr/default/table"),
     license = "eurostat",
     frequency = "monthly",
     updated = if (!is.na(upd)) as.character(upd) else NULL,
