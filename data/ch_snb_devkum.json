@@ -418,5 +418,175 @@
     "fr": "Cours du franc suisse face aux principales monnaies, moyenne mensuelle et fin de mois. Cotés par unité, mais par 100 pour le yen, les couronnes et d'autres.",
     "it": "Corsi del franco svizzero rispetto alle principali valute, media mensile e fine mese. Quotati per unità, ma per 100 per yen, corone e altre."
   },
-  "fetched_utc": "2026-10-02 08:39:18"
+  "fetched_utc": "2026-10-02 08:39:18",
+  "units": {
+    "EUR1": {
+      "en": "CHF per 1 EUR",
+      "de": "CHF je 1 EUR",
+      "fr": "CHF pour 1 EUR",
+      "it": "CHF per 1 EUR"
+    },
+    "GBP1": {
+      "en": "CHF per 1 GBP",
+      "de": "CHF je 1 GBP",
+      "fr": "CHF pour 1 GBP",
+      "it": "CHF per 1 GBP"
+    },
+    "DKK100": {
+      "en": "CHF per 100 DKK",
+      "de": "CHF je 100 DKK",
+      "fr": "CHF pour 100 DKK",
+      "it": "CHF per 100 DKK"
+    },
+    "NOK100": {
+      "en": "CHF per 100 NOK",
+      "de": "CHF je 100 NOK",
+      "fr": "CHF pour 100 NOK",
+      "it": "CHF per 100 NOK"
+    },
+    "CZK100": {
+      "en": "CHF per 100 CZK",
+      "de": "CHF je 100 CZK",
+      "fr": "CHF pour 100 CZK",
+      "it": "CHF per 100 CZK"
+    },
+    "HUF100": {
+      "en": "CHF per 100 HUF",
+      "de": "CHF je 100 HUF",
+      "fr": "CHF pour 100 HUF",
+      "it": "CHF per 100 HUF"
+    },
+    "PLN100": {
+      "en": "CHF per 100 PLN",
+      "de": "CHF je 100 PLN",
+      "fr": "CHF pour 100 PLN",
+      "it": "CHF per 100 PLN"
+    },
+    "RUB1": {
+      "en": "CHF per 1 RUB",
+      "de": "CHF je 1 RUB",
+      "fr": "CHF pour 1 RUB",
+      "it": "CHF per 1 RUB"
+    },
+    "SEK100": {
+      "en": "CHF per 100 SEK",
+      "de": "CHF je 100 SEK",
+      "fr": "CHF pour 100 SEK",
+      "it": "CHF per 100 SEK"
+    },
+    "TRY100": {
+      "en": "CHF per 100 TRY",
+      "de": "CHF je 100 TRY",
+      "fr": "CHF pour 100 TRY",
+      "it": "CHF per 100 TRY"
+    },
+    "USD1": {
+      "en": "CHF per 1 USD",
+      "de": "CHF je 1 USD",
+      "fr": "CHF pour 1 USD",
+      "it": "CHF per 1 USD"
+    },
+    "CAD1": {
+      "en": "CHF per 1 CAD",
+      "de": "CHF je 1 CAD",
+      "fr": "CHF pour 1 CAD",
+      "it": "CHF per 1 CAD"
+    },
+    "ARS1": {
+      "en": "CHF per 1 ARS",
+      "de": "CHF je 1 ARS",
+      "fr": "CHF pour 1 ARS",
+      "it": "CHF per 1 ARS"
+    },
+    "BRL100": {
+      "en": "CHF per 100 BRL",
+      "de": "CHF je 100 BRL",
+      "fr": "CHF pour 100 BRL",
+      "it": "CHF per 100 BRL"
+    },
+    "MXN100": {
+      "en": "CHF per 100 MXN",
+      "de": "CHF je 100 MXN",
+      "fr": "CHF pour 100 MXN",
+      "it": "CHF per 100 MXN"
+    },
+    "ZAR1": {
+      "en": "CHF per 1 ZAR",
+      "de": "CHF je 1 ZAR",
+      "fr": "CHF pour 1 ZAR",
+      "it": "CHF per 1 ZAR"
+    },
+    "JPY100": {
+      "en": "CHF per 100 JPY",
+      "de": "CHF je 100 JPY",
+      "fr": "CHF pour 100 JPY",
+      "it": "CHF per 100 JPY"
+    },
+    "AUD1": {
+      "en": "CHF per 1 AUD",
+      "de": "CHF je 1 AUD",
+      "fr": "CHF pour 1 AUD",
+      "it": "CHF per 1 AUD"
+    },
+    "CNY100": {
+      "en": "CHF per 100 CNY",
+      "de": "CHF je 100 CNY",
+      "fr": "CHF pour 100 CNY",
+      "it": "CHF per 100 CNY"
+    },
+    "HKD100": {
+      "en": "CHF per 100 HKD",
+      "de": "CHF je 100 HKD",
+      "fr": "CHF pour 100 HKD",
+      "it": "CHF per 100 HKD"
+    },
+    "KRW100": {
+      "en": "CHF per 100 KRW",
+      "de": "CHF je 100 KRW",
+      "fr": "CHF pour 100 KRW",
+      "it": "CHF per 100 KRW"
+    },
+    "MYR100": {
+      "en": "CHF per 100 MYR",
+      "de": "CHF je 100 MYR",
+      "fr": "CHF pour 100 MYR",
+      "it": "CHF per 100 MYR"
+    },
+    "NZD1": {
+      "en": "CHF per 1 NZD",
+      "de": "CHF je 1 NZD",
+      "fr": "CHF pour 1 NZD",
+      "it": "CHF per 1 NZD"
+    },
+    "SGD1": {
+      "en": "CHF per 1 SGD",
+      "de": "CHF je 1 SGD",
+      "fr": "CHF pour 1 SGD",
+      "it": "CHF per 1 SGD"
+    },
+    "THB100": {
+      "en": "CHF per 100 THB",
+      "de": "CHF je 100 THB",
+      "fr": "CHF pour 100 THB",
+      "it": "CHF per 100 THB"
+    },
+    "XDR1": {
+      "en": "CHF per 1 SDR",
+      "de": "CHF je 1 SZR",
+      "fr": "CHF pour 1 DTS",
+      "it": "CHF per 1 DSP"
+    },
+    "USD3M": {
+      "en": "CHF per 1 USD",
+      "de": "CHF je 1 USD",
+      "fr": "CHF pour 1 USD",
+      "it": "CHF per 1 USD"
+    },
+    "USD6M": {
+      "en": "CHF per 1 USD",
+      "de": "CHF je 1 USD",
+      "fr": "CHF pour 1 USD",
+      "it": "CHF per 1 USD"
+    }
+  }
 }

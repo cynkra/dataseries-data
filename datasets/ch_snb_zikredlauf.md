@@ -36,6 +36,14 @@ What Swiss banks charge on new loans and mortgages by maturity, as a full spread
   `75PQP` 75% quantile %, `AK` number of loan agreements.
 - Default item: `D0=FH, D1=L1015J, D2=25PQP`.
 
+## Labels
+- dim: D2
+  - **units** MP0: Percent | de: Prozent | fr: Pour cent | it: Percento
+  - **units** 25PQP: Percent | de: Prozent | fr: Pour cent | it: Percento
+  - **units** MP1: Percent | de: Prozent | fr: Pour cent | it: Percento
+  - **units** 75PQP: Percent | de: Prozent | fr: Pour cent | it: Percento
+  - **units** AK: Number of loan agreements | de: Anzahl Kreditverträge | fr: Nombre de contrats de crédit | it: Numero di contratti di credito
+
 ## Display
 - **split**: D1
 - **single-select**: D0, D2

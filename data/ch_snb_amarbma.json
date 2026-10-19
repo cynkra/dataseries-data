@@ -186,5 +186,61 @@
     "fr": "Personnes inscrites au chômage auprès des offices régionaux suisses, avec le taux de chômage, les places vacantes annoncées et le chômage partiel.",
     "it": "Persone iscritte alla disoccupazione presso gli uffici regionali svizzeri, con tasso di disoccupazione, posti vacanti annunciati e lavoro ridotto."
   },
-  "fetched_utc": "2026-09-21 08:45:32"
+  "fetched_utc": "2026-09-21 08:45:32",
+  "units": {
+    "K": {
+      "en": "Number of persons",
+      "de": "Anzahl Personen",
+      "fr": "Nombre de personnes",
+      "it": "Numero di persone"
+    },
+    "T0": {
+      "en": "Number of persons",
+      "de": "Anzahl Personen",
+      "fr": "Nombre de personnes",
+      "it": "Numero di persone"
+    },
+    "S0": {
+      "en": "Number of persons",
+      "de": "Anzahl Personen",
+      "fr": "Nombre de personnes",
+      "it": "Numero di persone"
+    },
+    "RS": {
+      "en": "Number of persons",
+      "de": "Anzahl Personen",
+      "fr": "Nombre de personnes",
+      "it": "Numero di persone"
+    },
+    "E": {
+      "en": "Number of persons",
+      "de": "Anzahl Personen",
+      "fr": "Nombre de personnes",
+      "it": "Numero di persone"
+    },
+    "T1": {
+      "en": "Percent",
+      "de": "Prozent",
+      "fr": "Pour cent",
+      "it": "Percento"
+    },
+    "S1": {
+      "en": "Percent",
+      "de": "Prozent",
+      "fr": "Pour cent",
+      "it": "Percento"
+    },
+    "T2": {
+      "en": "Number of vacancies",
+      "de": "Anzahl offene Stellen",
+      "fr": "Nombre de places vacantes",
+      "it": "Numero di posti vacanti"
+    },
+    "S2": {
+      "en": "Number of vacancies",
+      "de": "Anzahl offene Stellen",
+      "fr": "Nombre de places vacantes",
+      "it": "Numero di posti vacanti"
+    }
+  }
 }

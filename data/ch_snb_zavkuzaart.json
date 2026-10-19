@@ -270,5 +270,25 @@
     "fr": "Comment la clientèle suisse transfère de l'argent sans carte : virements, prélèvements et ordres permanents, sur papier ou par voie électronique.",
     "it": "Come la clientela svizzera trasferisce denaro senza carta: bonifici, addebiti diretti e ordini permanenti, su carta o in forma elettronica."
   },
-  "fetched_utc": "2026-09-21 08:45:34"
+  "fetched_utc": "2026-09-21 08:45:34",
+  "units": {
+    "ATA": {
+      "en": "Thousands of transactions",
+      "de": "Tausend Transaktionen",
+      "fr": "Milliers de transactions",
+      "it": "Migliaia di transazioni"
+    },
+    "BET": {
+      "en": "CHF thousands",
+      "de": "Tausend CHF",
+      "fr": "Milliers de CHF",
+      "it": "Migliaia di CHF"
+    },
+    "BPT": {
+      "en": "CHF",
+      "de": "CHF",
+      "fr": "CHF",
+      "it": "CHF"
+    }
+  }
 }

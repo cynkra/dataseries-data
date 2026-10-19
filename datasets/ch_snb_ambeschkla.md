@@ -38,6 +38,13 @@ Swiss employees by industry, split into full-time, part-time and full-time equiv
   services, `OV` public administration. `D1_0/D1_1/D1_2` are non-data sector
   groupings (secondary/tertiary), each with its own `T*` subtotal.
 
+## Labels
+- dim: D0
+  - **units** VT: Thousands of employees | de: Tausend Beschäftigte | fr: Milliers d'emplois | it: Migliaia di occupati
+  - **units** V: Thousands of employees | de: Tausend Beschäftigte | fr: Milliers d'emplois | it: Migliaia di occupati
+  - **units** T: Thousands of employees | de: Tausend Beschäftigte | fr: Milliers d'emplois | it: Migliaia di occupati
+  - **units** IV: Thousands of full-time equivalents | de: Tausend Vollzeitäquivalente | fr: Milliers d'équivalents plein temps | it: Migliaia di equivalenti a tempo pieno
+
 ## Display
 - **split**: D1
 - **single-select**:

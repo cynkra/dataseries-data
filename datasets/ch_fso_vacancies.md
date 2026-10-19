@@ -46,6 +46,12 @@ Job vacancies posted by Swiss firms, by industry, as a count, an index and a rat
   `10-33` Manufacturing, `41-43` Construction, `55-56` Hotels and gastronomy,
   `64-66` Finance, `68-75` Real estate and scientific services, `86-88` Health.
 
+## Labels
+- dim: `Offene Stellen`
+  - **units** 1: Number of vacancies | de: Anzahl offene Stellen | fr: Nombre de places vacantes | it: Numero di posti vacanti
+  - **units** 2: Index | de: Index | fr: Indice | it: Indice
+  - **units** 3: Percent | de: Prozent | fr: Pour cent | it: Percento
+
 ## Display
 - **split**: Wirtschaftsabteilung
 - **single-select**: Offene Stellen

@@ -37,6 +37,37 @@ Swiss franc exchange rates against the major currencies, monthly average and mon
   `DKK100`, `JPY100`, `XDR1` for the SDR, `USD3M`/`USD6M` USD forward rates).
   Defaults to `USD1`.
 
+## Labels
+- dim: D1
+  - **units** EUR1: CHF per 1 EUR | de: CHF je 1 EUR | fr: CHF pour 1 EUR | it: CHF per 1 EUR
+  - **units** GBP1: CHF per 1 GBP | de: CHF je 1 GBP | fr: CHF pour 1 GBP | it: CHF per 1 GBP
+  - **units** DKK100: CHF per 100 DKK | de: CHF je 100 DKK | fr: CHF pour 100 DKK | it: CHF per 100 DKK
+  - **units** NOK100: CHF per 100 NOK | de: CHF je 100 NOK | fr: CHF pour 100 NOK | it: CHF per 100 NOK
+  - **units** CZK100: CHF per 100 CZK | de: CHF je 100 CZK | fr: CHF pour 100 CZK | it: CHF per 100 CZK
+  - **units** HUF100: CHF per 100 HUF | de: CHF je 100 HUF | fr: CHF pour 100 HUF | it: CHF per 100 HUF
+  - **units** PLN100: CHF per 100 PLN | de: CHF je 100 PLN | fr: CHF pour 100 PLN | it: CHF per 100 PLN
+  - **units** RUB1: CHF per 1 RUB | de: CHF je 1 RUB | fr: CHF pour 1 RUB | it: CHF per 1 RUB
+  - **units** SEK100: CHF per 100 SEK | de: CHF je 100 SEK | fr: CHF pour 100 SEK | it: CHF per 100 SEK
+  - **units** TRY100: CHF per 100 TRY | de: CHF je 100 TRY | fr: CHF pour 100 TRY | it: CHF per 100 TRY
+  - **units** USD1: CHF per 1 USD | de: CHF je 1 USD | fr: CHF pour 1 USD | it: CHF per 1 USD
+  - **units** CAD1: CHF per 1 CAD | de: CHF je 1 CAD | fr: CHF pour 1 CAD | it: CHF per 1 CAD
+  - **units** ARS1: CHF per 1 ARS | de: CHF je 1 ARS | fr: CHF pour 1 ARS | it: CHF per 1 ARS
+  - **units** BRL100: CHF per 100 BRL | de: CHF je 100 BRL | fr: CHF pour 100 BRL | it: CHF per 100 BRL
+  - **units** MXN100: CHF per 100 MXN | de: CHF je 100 MXN | fr: CHF pour 100 MXN | it: CHF per 100 MXN
+  - **units** ZAR1: CHF per 1 ZAR | de: CHF je 1 ZAR | fr: CHF pour 1 ZAR | it: CHF per 1 ZAR
+  - **units** JPY100: CHF per 100 JPY | de: CHF je 100 JPY | fr: CHF pour 100 JPY | it: CHF per 100 JPY
+  - **units** AUD1: CHF per 1 AUD | de: CHF je 1 AUD | fr: CHF pour 1 AUD | it: CHF per 1 AUD
+  - **units** CNY100: CHF per 100 CNY | de: CHF je 100 CNY | fr: CHF pour 100 CNY | it: CHF per 100 CNY
+  - **units** HKD100: CHF per 100 HKD | de: CHF je 100 HKD | fr: CHF pour 100 HKD | it: CHF per 100 HKD
+  - **units** KRW100: CHF per 100 KRW | de: CHF je 100 KRW | fr: CHF pour 100 KRW | it: CHF per 100 KRW
+  - **units** MYR100: CHF per 100 MYR | de: CHF je 100 MYR | fr: CHF pour 100 MYR | it: CHF per 100 MYR
+  - **units** NZD1: CHF per 1 NZD | de: CHF je 1 NZD | fr: CHF pour 1 NZD | it: CHF per 1 NZD
+  - **units** SGD1: CHF per 1 SGD | de: CHF je 1 SGD | fr: CHF pour 1 SGD | it: CHF per 1 SGD
+  - **units** THB100: CHF per 100 THB | de: CHF je 100 THB | fr: CHF pour 100 THB | it: CHF per 100 THB
+  - **units** XDR1: CHF per 1 SDR | de: CHF je 1 SZR | fr: CHF pour 1 DTS | it: CHF per 1 DSP
+  - **units** USD3M: CHF per 1 USD | de: CHF je 1 USD | fr: CHF pour 1 USD | it: CHF per 1 USD
+  - **units** USD6M: CHF per 1 USD | de: CHF je 1 USD | fr: CHF pour 1 USD | it: CHF per 1 USD
+
 ## Display
 - **split**: D1
 - **single-select**: D0

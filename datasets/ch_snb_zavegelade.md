@@ -34,6 +34,13 @@ Top-ups and outstanding balances on Swiss prepaid and stored-value payment cards
     amount in CHF millions, `BTF` amount per transaction in CHF.
   - Float (domestic payment cards): `BMF1` amount in CHF millions.
 
+## Labels
+- dim: D0
+  - **units** TT: Thousands of transactions | de: Tausend Transaktionen | fr: Milliers de transactions | it: Migliaia di transazioni
+  - **units** BMF0: CHF millions | de: Mio. CHF | fr: Millions de CHF | it: Milioni di CHF
+  - **units** BTF: CHF | de: CHF | fr: CHF | it: CHF
+  - **units** BMF1: CHF millions | de: Mio. CHF | fr: Millions de CHF | it: Milioni di CHF
+
 ## Display
 - **split**: D0
 - **single-select**:

@@ -212,5 +212,49 @@
     "fr": "Combien de cartes de crédit, de débit et prépayées circulent en Suisse, plus le nombre de distributeurs. Effectifs seulement, pas de dépenses.",
     "it": "Quante carte di credito, di debito e prepagate circolano in Svizzera, più il numero di bancomat. Solo consistenze, nessuna spesa."
   },
-  "fetched_utc": "2026-09-21 08:45:34"
+  "fetched_utc": "2026-09-21 08:45:34",
+  "units": {
+    "T0": {
+      "en": "Number of cards",
+      "de": "Anzahl Karten",
+      "fr": "Nombre de cartes",
+      "it": "Numero di carte"
+    },
+    "DZ0": {
+      "en": "Number of cards",
+      "de": "Anzahl Karten",
+      "fr": "Nombre de cartes",
+      "it": "Numero di carte"
+    },
+    "T1": {
+      "en": "Number of cards",
+      "de": "Anzahl Karten",
+      "fr": "Nombre de cartes",
+      "it": "Numero di carte"
+    },
+    "DZ1": {
+      "en": "Number of cards",
+      "de": "Anzahl Karten",
+      "fr": "Nombre de cartes",
+      "it": "Numero di carte"
+    },
+    "T2": {
+      "en": "Number of cards",
+      "de": "Anzahl Karten",
+      "fr": "Nombre de cartes",
+      "it": "Numero di carte"
+    },
+    "DZ2": {
+      "en": "Number of cards",
+      "de": "Anzahl Karten",
+      "fr": "Nombre de cartes",
+      "it": "Numero di carte"
+    },
+    "T3": {
+      "en": "Number of ATMs",
+      "de": "Anzahl Geldautomaten",
+      "fr": "Nombre de distributeurs automatiques",
+      "it": "Numero di sportelli automatici"
+    }
+  }
 }

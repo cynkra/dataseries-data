@@ -34,6 +34,8 @@ How many Swiss homes stand empty, and the official vacancy rate, the standard me
 ## Labels
 - dim: measure
   - **label**: Measure | de: Messgrösse | fr: Mesure | it: Misura
+  - **units** PC: Percent | de: Prozent | fr: Pour cent | it: Percento
+  - **units** V: Number of dwellings | de: Anzahl Wohnungen | fr: Nombre de logements | it: Numero di abitazioni
   - PC: Vacancy rate (%) | de: Leerwohnungsziffer (%) | fr: Taux de logements vacants (%) | it: Tasso di abitazioni vuote (%)
   - V: Vacant dwellings (number) | de: Leerwohnungen (Anzahl) | fr: Logements vacants (nombre) | it: Abitazioni vuote (numero)
 
