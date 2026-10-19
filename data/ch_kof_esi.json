@@ -32,13 +32,15 @@
       "levels": {
         "ch.kof.esi.index": {
           "label": {
-            "en": "ch.kof.esi.index"
+            "en": "KOF Economic Sentiment Indicator for Switzerland, Pre-Brexit version",
+            "de": "KOF Economic Sentiment Indicator für die Schweiz, Vor-Brexit Version"
           },
           "data": true
         },
         "ch.kof.esi.index.v2018": {
           "label": {
-            "en": "ch.kof.esi.index.v2018"
+            "en": "KOF Economic Sentiment Indicator for Switzerland",
+            "de": "KOF Economic Sentiment Indicator für die Schweiz"
           },
           "data": true
         }
@@ -76,5 +78,5 @@
     "fr": "Comment les entreprises suisses jugent leur situation actuelle et attendue, à partir des enquêtes de l'EPF de Zurich. Deux versions méthodologiques coexistent.",
     "it": "Come le imprese svizzere valutano la situazione attuale e attesa, dai sondaggi del PF di Zurigo. Due versioni metodologiche coesistono."
   },
-  "fetched_utc": "2026-10-19 08:48:33"
+  "fetched_utc": "2026-10-19 15:53:57"
 }

@@ -101,6 +101,19 @@ attach_labels <- function(ds, datasheet_dir, lines = NULL) {
 # German, where it is most likely a noun. The first letter is then capitalised.
 # German without a reference is left in capitals: nouns vs adjectives cannot be
 # told apart mechanically.
+#
+# Other sources append or prepend codes of their own, which the fetcher removes by
+# naming patterns from LABEL_NOISE (`strip =`). Same opt-in rule: a pattern runs
+# only on the datasets whose fetcher asks for it.
+#   sna_code   trailing ESA/SNA transaction code: SECO "Domestic demand, P3_P5",
+#              "Final domestic demand P3_P51G", "...,D5r_D6r_D7r"
+#   noga_ref   trailing NOGA range in brackets: SECO "Construction (noga 41-43)"
+#   numbering  leading outline number: SECO "6.3 Consumer sentiment index"
+LABEL_NOISE <- c(
+  sna_code  = "[,\\s]+[A-Z][A-Za-z0-9]*[0-9][A-Za-z0-9_]*$",
+  noga_ref  = "\\s*\\((?i:noga)\\s+[0-9][0-9 ,\\-]*\\)$",
+  numbering = "^[0-9]+(\\.[0-9]+)*\\s+"
+)
 
 .ROMAN <- "^(I|II|III|IV|V|VI|VII|VIII|IX|X)$"
 
@@ -131,21 +144,30 @@ attach_labels <- function(ds, datasheet_dir, lines = NULL) {
   .upper_first(paste(out, collapse = " "))
 }
 
-# One label string: drop a leading "<code> ", squeeze spaces, recase capitals.
-tidy_label <- function(x, code, lang, ref = NULL) {
+# One label string: drop a leading "<code> ", squeeze spaces, remove the named
+# LABEL_NOISE patterns, recase capitals. A pattern that would leave nothing is
+# skipped.
+tidy_label <- function(x, code, lang, ref = NULL, strip = character()) {
   x <- gsub("\\s+", " ", trimws(x))
   if (startsWith(x, paste0(code, " "))) x <- substring(x, nchar(code) + 2L)
+  for (p in LABEL_NOISE[strip]) {
+    y <- trimws(sub(p, "", x, perl = TRUE))
+    if (nzchar(y)) x <- y
+  }
   if (.is_caps(x)) x <- .recase(x, lang, ref)
   x
 }
 
 # Every level label of one dimension. `case_ref`: optional lang -> (code -> label)
-# lookup in proper case.
-tidy_level_labels <- function(dim, case_ref = NULL) {
+# lookup in proper case. `strip`: names of LABEL_NOISE patterns to remove.
+tidy_level_labels <- function(dim, case_ref = NULL, strip = character()) {
+  bad <- setdiff(strip, names(LABEL_NOISE))
+  if (length(bad)) stop("tidy_level_labels: unknown strip pattern(s): ",
+                        paste(bad, collapse = ", "), call. = FALSE)
   for (code in names(dim$levels)) {
     lab <- dim$levels[[code]]$label
     for (L in names(lab))
-      lab[[L]] <- tidy_label(lab[[L]], code, L, case_ref[[L]][[code]])
+      lab[[L]] <- tidy_label(lab[[L]], code, L, case_ref[[L]][[code]], strip)
     dim$levels[[code]]$label <- lab
   }
   dim

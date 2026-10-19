@@ -45,6 +45,11 @@ Number of jobs in Switzerland by industry, quarterly, down to two-digit division
   (Q1->01, Q2->04, Q3->07, Q4->10), frequency quarterly.
 - Dimension **codes are German** even on `/en/` (`Wirtschaftsabteilung`,
   `Beschäftigungsgrad`, `Geschlecht`, `Quartal`); kept as stored column values.
+- Level labels: FSO prints the NOGA code in front of every
+  `Wirtschaftsabteilung` label ("5-96 Total") and the sectors in capitals
+  ("SECTOR II"). `tidy_dims = "Wirtschaftsabteilung"` runs
+  `R/labels.R::tidy_level_labels()` on that dimension: code dropped, capitals
+  recased ("Total", "Sector II"; German is already in proper case).
 
 ## Dimensions
 - `Wirtschaftsabteilung` (Economic division): 60 NOGA codes. `5-96` = total;

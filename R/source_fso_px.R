@@ -268,11 +268,13 @@ suppressPackageStartupMessages({
 #            relabels the current data correctly.
 #   round_values  round to integers, i.e. reproduce PX-Web's SHOWDECIMALS=0
 #            output. Keeps a dataset bit-stable when only its ROUTE changes.
+#   tidy_dims  dimensions whose level labels go through tidy_level_labels()
+#            (R/labels.R): NOGA code prefix dropped, capitals recased.
 fso_px_fetch <- function(dataset_id, table_id, title = NULL, select = NULL,
                          eliminate = character(), year_col = "Jahr",
                          month_col = "Monat", quarter_col = NULL,
                          lifecycle = "CURRENT", label_lifecycle = NULL,
-                         round_values = FALSE) {
+                         round_values = FALSE, tidy_dims = character()) {
   asset <- .px_dam_asset(table_id, lifecycle)
   txt <- .px_text(asset$url)
   is_px <- grepl("^\\s*CHARSET", txt)
@@ -407,6 +409,8 @@ fso_px_fetch <- function(dataset_id, table_id, title = NULL, select = NULL,
   data <- dated$data
   data <- data[!is.na(data$date), , drop = FALSE]
   for (t in dated$used) dimensions[[t]] <- NULL
+  for (d in intersect(tidy_dims, names(dimensions)))
+    dimensions[[d]] <- tidy_level_labels(dimensions[[d]])
   dim_out <- setdiff(dim_ids, dated$used)
 
   data <- data |>

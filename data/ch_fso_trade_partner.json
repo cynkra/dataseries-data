@@ -69,241 +69,361 @@
       "levels": {
         "Africa": {
           "label": {
-            "en": "Africa"
+            "en": "Africa",
+            "de": "Afrika",
+            "fr": "Afrique",
+            "it": "Africa"
           },
           "data": true
         },
         "Asia": {
           "label": {
-            "en": "Asia"
+            "en": "Asia",
+            "de": "Asien",
+            "fr": "Asie",
+            "it": "Asia"
           },
           "data": true
         },
         "Australia": {
           "label": {
-            "en": "Australia"
+            "en": "Australia",
+            "de": "Australien",
+            "fr": "Australie",
+            "it": "Australia"
           },
           "data": true
         },
         "Austria": {
           "label": {
-            "en": "Austria"
+            "en": "Austria",
+            "de": "Österreich",
+            "fr": "Autriche",
+            "it": "Austria"
           },
           "data": true
         },
         "Belgium": {
           "label": {
-            "en": "Belgium"
+            "en": "Belgium",
+            "de": "Belgien",
+            "fr": "Belgique",
+            "it": "Belgio"
           },
           "data": true
         },
         "Brazil": {
           "label": {
-            "en": "Brazil"
+            "en": "Brazil",
+            "de": "Brasilien",
+            "fr": "Brésil",
+            "it": "Brasile"
           },
           "data": true
         },
         "Canada": {
           "label": {
-            "en": "Canada"
+            "en": "Canada",
+            "de": "Kanada",
+            "fr": "Canada",
+            "it": "Canada"
           },
           "data": true
         },
         "Central and South America": {
           "label": {
-            "en": "Central and South America"
+            "en": "Central and South America",
+            "de": "Zentral- und Südamerika",
+            "fr": "Amérique centrale et du Sud",
+            "it": "America centrale e del Sud"
           },
           "data": true
         },
         "China": {
           "label": {
-            "en": "China"
+            "en": "China",
+            "de": "China",
+            "fr": "Chine",
+            "it": "Cina"
           },
           "data": true
         },
         "EU": {
           "label": {
-            "en": "EU"
+            "en": "EU",
+            "de": "EU",
+            "fr": "UE",
+            "it": "UE"
           },
           "data": true
         },
         "Europe": {
           "label": {
-            "en": "Europe"
+            "en": "Europe",
+            "de": "Europa",
+            "fr": "Europe",
+            "it": "Europa"
           },
           "data": true
         },
         "France": {
           "label": {
-            "en": "France"
+            "en": "France",
+            "de": "Frankreich",
+            "fr": "France",
+            "it": "Francia"
           },
           "data": true
         },
         "Germany": {
           "label": {
-            "en": "Germany"
+            "en": "Germany",
+            "de": "Deutschland",
+            "fr": "Allemagne",
+            "it": "Germania"
           },
           "data": true
         },
         "Hong Kong": {
           "label": {
-            "en": "Hong Kong"
+            "en": "Hong Kong",
+            "de": "Hongkong",
+            "fr": "Hong Kong",
+            "it": "Hongkong"
           },
           "data": true
         },
         "India": {
           "label": {
-            "en": "India"
+            "en": "India",
+            "de": "Indien",
+            "fr": "Inde",
+            "it": "India"
           },
           "data": true
         },
         "Italy": {
           "label": {
-            "en": "Italy"
+            "en": "Italy",
+            "de": "Italien",
+            "fr": "Italie",
+            "it": "Italia"
           },
           "data": true
         },
         "Japan": {
           "label": {
-            "en": "Japan"
+            "en": "Japan",
+            "de": "Japan",
+            "fr": "Japon",
+            "it": "Giappone"
           },
           "data": true
         },
         "Korea (South)": {
           "label": {
-            "en": "Korea (South)"
+            "en": "Korea (South)",
+            "de": "Korea (Süd)",
+            "fr": "Corée (Sud)",
+            "it": "Corea del Sud"
           },
           "data": true
         },
         "Netherlands": {
           "label": {
-            "en": "Netherlands"
+            "en": "Netherlands",
+            "de": "Niederlande",
+            "fr": "Pays-Bas",
+            "it": "Paesi Bassi"
           },
           "data": true
         },
         "North America": {
           "label": {
-            "en": "North America"
+            "en": "North America",
+            "de": "Nordamerika",
+            "fr": "Amérique du Nord",
+            "it": "America del Nord"
           },
           "data": true
         },
         "Oceania": {
           "label": {
-            "en": "Oceania"
+            "en": "Oceania",
+            "de": "Ozeanien",
+            "fr": "Océanie",
+            "it": "Oceania"
           },
           "data": true
         },
         "Poland": {
           "label": {
-            "en": "Poland"
+            "en": "Poland",
+            "de": "Polen",
+            "fr": "Pologne",
+            "it": "Polonia"
           },
           "data": true
         },
         "Russia": {
           "label": {
-            "en": "Russia"
+            "en": "Russia",
+            "de": "Russland",
+            "fr": "Russie",
+            "it": "Russia"
           },
           "data": true
         },
         "Saudi Arabia": {
           "label": {
-            "en": "Saudi Arabia"
+            "en": "Saudi Arabia",
+            "de": "Saubi-Arabien",
+            "fr": "Arabie saoudite",
+            "it": "Arabia Saudita"
           },
           "data": true
         },
         "Singapore": {
           "label": {
-            "en": "Singapore"
+            "en": "Singapore",
+            "de": "Singapur",
+            "fr": "Singapour",
+            "it": "Singapore"
           },
           "data": true
         },
         "Spain": {
           "label": {
-            "en": "Spain"
+            "en": "Spain",
+            "de": "Spanien",
+            "fr": "Espagne",
+            "it": "Spagna"
           },
           "data": true
         },
         "Taiwan": {
           "label": {
-            "en": "Taiwan"
+            "en": "Taiwan",
+            "de": "Taiwan",
+            "fr": "Taïwan",
+            "it": "Taiwan"
           },
           "data": true
         },
         "Thailand": {
           "label": {
-            "en": "Thailand"
+            "en": "Thailand",
+            "de": "Thailand",
+            "fr": "Thaïlande",
+            "it": "Tailandia"
           },
           "data": true
         },
         "Total": {
           "label": {
-            "en": "Total"
+            "en": "Total",
+            "de": "Total",
+            "fr": "Total",
+            "it": "Totale"
           },
           "data": true
         },
         "Türkiye": {
           "label": {
-            "en": "Türkiye"
+            "en": "Türkiye",
+            "de": "Türkiye",
+            "fr": "Türkiye",
+            "it": "Türkiye"
           },
           "data": true
         },
         "USA": {
           "label": {
-            "en": "USA"
+            "en": "USA",
+            "de": "USA",
+            "fr": "USA",
+            "it": "Stati Uniti d'America"
           },
           "data": true
         },
         "United Arab Emirates": {
           "label": {
-            "en": "United Arab Emirates"
+            "en": "United Arab Emirates",
+            "de": "Ver. Arabische Emirate",
+            "fr": "Emirats arabes unis",
+            "it": "Emirati Arabi Uniti"
           },
           "data": true
         },
         "United Kingdom": {
           "label": {
-            "en": "United Kingdom"
+            "en": "United Kingdom",
+            "de": "Ver. Königreich",
+            "fr": "Royaume-Uni",
+            "it": "Regno Unito"
           },
           "data": true
         },
         "Czech Republic": {
           "label": {
-            "en": "Czech Republic"
+            "en": "Czech Republic",
+            "de": "Tschechische R.",
+            "fr": "Tchèque, République",
+            "it": "Repubblica Ceca"
           },
           "data": true
         },
         "Ireland": {
           "label": {
-            "en": "Ireland"
+            "en": "Ireland",
+            "de": "Irland",
+            "fr": "Irlande",
+            "it": "Irlanda"
           },
           "data": true
         },
         "Mexico": {
           "label": {
-            "en": "Mexico"
+            "en": "Mexico",
+            "de": "Mexiko",
+            "fr": "Mexique",
+            "it": "Messico"
           },
           "data": true
         },
         "Peru": {
           "label": {
-            "en": "Peru"
+            "en": "Peru",
+            "de": "Peru",
+            "fr": "Pérou",
+            "it": "Perù"
           },
           "data": true
         },
         "South Africa": {
           "label": {
-            "en": "South Africa"
+            "en": "South Africa",
+            "de": "Südafrika",
+            "fr": "Afrique du Sud",
+            "it": "Sudafrica"
           },
           "data": true
         },
         "Sweden": {
           "label": {
-            "en": "Sweden"
+            "en": "Sweden",
+            "de": "Schweden",
+            "fr": "Suède",
+            "it": "Svezia"
           },
           "data": true
         },
         "Uzbekistan": {
           "label": {
-            "en": "Uzbekistan"
+            "en": "Uzbekistan",
+            "de": "Usbekistan",
+            "fr": "Ouzbékistan",
+            "it": "Uzbekistan"
           },
           "data": true
         }
@@ -423,5 +543,5 @@
     "fr": "Millions de CHF",
     "it": "Milioni di CHF"
   },
-  "fetched_utc": "2026-10-19 08:48:33"
+  "fetched_utc": "2026-10-19 15:53:57"
 }

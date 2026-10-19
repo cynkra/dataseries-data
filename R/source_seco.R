@@ -20,7 +20,10 @@ suppressPackageStartupMessages({
 #   labels$dimnames[[d]]      = {lang: dimension label}
 #   labels[[d]][[code]]       = {lang: level label}
 #   hierarchy[[d]]            = nested code tree
-.seco_dimensions <- function(meta) {
+# `strip`: LABEL_NOISE pattern names (R/labels.R) removed from every level label.
+# SECO prints SNA codes, NOGA ranges or its questionnaire numbering into the
+# labels; the datasheet says which.
+.seco_dimensions <- function(meta, strip = character()) {
   dim_order <- unlist(meta$dim_order)
   dimnames <- meta$labels$dimnames
   setNames(lapply(dim_order, function(d) {
@@ -32,13 +35,15 @@ suppressPackageStartupMessages({
       }), names(levels))
     )
     if (!is.null(meta$hierarchy[[d]])) out$hierarchy <- meta$hierarchy[[d]]
+    if (length(strip)) out <- tidy_level_labels(out, strip = strip)
     out
   }), dim_order)
 }
 
 seco_fetch <- function(id = "ch_seco_gdp",
                        data_url = "https://scheduler.swissdatas.ch/scheduled/ch-seco-gdp.csv",
-                       meta_url = "https://scheduler.swissdatas.ch/scheduled/ch-seco-gdp.json") {
+                       meta_url = "https://scheduler.swissdatas.ch/scheduled/ch-seco-gdp.json",
+                       strip = character()) {
 
   sm <- jsonlite::fromJSON(meta_url, simplifyVector = FALSE)
   dim_order <- unlist(sm$dim_order)
@@ -56,7 +61,7 @@ seco_fetch <- function(id = "ch_seco_gdp",
     source = list(name = sm$source_name, url = sm$source_url[[1]] %||% sm$source_url),
     license = "seco",
     frequency = infer_frequency(raw_periods),
-    dimensions = .seco_dimensions(sm),
+    dimensions = .seco_dimensions(sm, strip),
     # Canonical units shape (contract §2): keyed by the unit-bearing dimension's
     # LEVELS directly. SECO's native sidecar nests one dimension layer above that
     # ({type: {nom: …}}); lift it off when present (schema 1.1 normalisation).

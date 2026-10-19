@@ -78,6 +78,32 @@ check(identical(dim$levels$C$label, list(en = "Manufacturing", de = "Verarbeiten
       "tidy_level_labels applies per language")
 check(isTRUE(dim$levels$C$data), "tidy_level_labels keeps other level fields")
 
+# ---- tidy_label: LABEL_NOISE patterns (opt-in via strip=) ------------------------
+check(identical(tidy_label("Domestic demand, P3_P5", "demand_dom", "en", strip = "sna_code"),
+                "Domestic demand"), "sna_code: comma + code")
+check(identical(tidy_label("Changes in inventories, statistical discrepancy,  P52_YA0", "stocks", "en",
+                           strip = "sna_code"),
+                "Changes in inventories, statistical discrepancy"), "sna_code: double space")
+check(identical(tidy_label("Final domestic demand P3_P51G", "x", "en", strip = "sna_code"),
+                "Final domestic demand"), "sna_code: no comma")
+check(identical(tidy_label("Laufende Transfers aus der übrigen Welt,D5r_D6r_D7r", "x", "de",
+                           strip = "sna_code"),
+                "Laufende Transfers aus der übrigen Welt"), "sna_code: lowercase suffix letters")
+check(identical(tidy_label("Core inflation 1", "K1", "en", strip = "sna_code"), "Core inflation 1"),
+      "sna_code leaves a bare trailing number")
+check(identical(tidy_label("Other manufacturing (noga 10-18, 22-33)", "x", "en", strip = "noga_ref"),
+                "Other manufacturing"), "noga_ref")
+check(identical(tidy_label("6.3 Consumer sentiment index", "x", "en", strip = "numbering"),
+                "Consumer sentiment index"), "numbering")
+check(identical(tidy_label("2.2 Price outlook, 12 months", "x", "en", strip = "numbering"),
+                "Price outlook, 12 months"), "numbering keeps inner numbers")
+check(identical(tidy_label("6.3 Consumer sentiment index", "x", "en"), "6.3 Consumer sentiment index"),
+      "no strip unless asked")
+check(identical(tidy_label("B1GQ", "gdp", "en", strip = "sna_code"), "B1GQ"),
+      "a pattern that would empty the label is skipped")
+check(inherits(tryCatch(tidy_level_labels(list(levels = list()), strip = "nope"),
+                        error = function(e) e), "error"), "unknown strip pattern fails")
+
 # ---- corpus: every ## Labels block agrees with its sidecar ----------------------
 # The block is the source of truth; the sidecar is its generated cache. Until a
 # rebuild runs, the two must already agree on every en string — this catches a
