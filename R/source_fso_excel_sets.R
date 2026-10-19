@@ -543,6 +543,11 @@ fso_excel_ch_fso_unemp_rate <- function(path, pubdate) {
 # layout, and fail-loud (the year-header / value anchors) if the sheets are re-cut.
 # Each cleaned label keys a `partner` dimension; `flow` = export/import. Self-contained
 # (downloads both asset masters itself) because it pins asset ids, not an order number.
+#
+# Partner labels in de/fr/it come from the same tables in those languages (the
+# asset's `alternate` links). Each language sorts its rows alphabetically, so a row
+# is matched to its English partner by its full row of yearly values, within the
+# same flow; a row whose values match no English row, or more than one, is skipped.
 .TRADE_GROUPS <- c("Total", "Europe", "EU", "Asia", "North America",
                    "Central and South America", "Africa", "Oceania")
 
@@ -596,14 +601,56 @@ fso_excel_ch_fso_unemp_rate <- function(path, pubdate) {
   dplyr::bind_rows(rows)
 }
 
+# One string per partner: its yearly values in year order, the row's identity
+# across the language versions of one table.
+.trade_partner_keys <- function(long) {
+  long <- long[order(long$partner, long$year), ]
+  vapply(split(long$value, long$partner), function(v) paste(v, collapse = "|"), "")
+}
+
+# The `alternate` language versions of a DAM asset: named vector lang -> asset id.
+.dam_alternates <- function(asset_id) {
+  a <- jsonlite::fromJSON(get_text(sprintf(
+    "https://dam-api.bfs.admin.ch/hub/api/dam/assets/%s", asset_id)), simplifyVector = FALSE)
+  alt <- Filter(function(l) identical(l$rel, "alternate") && !is.null(l$hreflang), a$links)
+  stats::setNames(vapply(alt, function(l) sub(".*/", "", l$href), ""),
+                  vapply(alt, function(l) l$hreflang, ""))
+}
+
+# Partner labels in the other languages of one flow's table:
+# list(<lang> = c(<English partner> = <label>)).
+.trade_partner_i18n <- function(asset_id, en_long, flow_code,
+                                langs = c("de", "fr", "it")) {
+  en_keys <- .trade_partner_keys(en_long)
+  alts <- tryCatch(.dam_alternates(asset_id), error = function(e) character())
+  out <- list()
+  for (L in intersect(langs, names(alts))) {
+    path <- tempfile(fileext = ".xlsx")
+    long <- tryCatch({
+      download_binary(sprintf("https://dam-api.bfs.admin.ch/hub/api/dam/assets/%s/master",
+                              alts[[L]]), path)
+      .trade_partner_sheet(path, flow_code)
+    }, error = function(e) NULL)
+    if (is.null(long) || !nrow(long)) next
+    keys <- .trade_partner_keys(long)
+    hit <- match(en_keys, keys)
+    dup <- keys %in% keys[duplicated(keys)]
+    ok <- !is.na(hit) & !dup[hit] & !(en_keys %in% en_keys[duplicated(en_keys)])
+    out[[L]] <- stats::setNames(names(keys)[hit[ok]], names(en_keys)[ok])
+  }
+  out
+}
+
 fso_excel_ch_fso_trade_partner <- function(pubdate = NULL) {
   base <- "https://dam-api.bfs.admin.ch/hub/api/dam/assets/%s/master"
   ex_path <- tempfile(fileext = ".xlsx"); download_binary(sprintf(base, "36664830"), ex_path)
   im_path <- tempfile(fileext = ".xlsx"); download_binary(sprintf(base, "36664836"), im_path)
 
-  long <- dplyr::bind_rows(
-    .trade_partner_sheet(ex_path, "export"),
-    .trade_partner_sheet(im_path, "import"))
+  ex_long <- .trade_partner_sheet(ex_path, "export")
+  im_long <- .trade_partner_sheet(im_path, "import")
+  long <- dplyr::bind_rows(ex_long, im_long)
+  i18n <- list(.trade_partner_i18n("36664830", ex_long, "export"),
+               .trade_partner_i18n("36664836", im_long, "import"))
 
   data <- long %>%
     dplyr::filter(!is.na(value), !is.na(year)) %>%
@@ -630,8 +677,14 @@ fso_excel_ch_fso_trade_partner <- function(pubdate = NULL) {
   anchor("import", "Germany", 2024, 59891.6)
 
   partners <- data %>% dplyr::distinct(partner, level)
+  partner_label <- function(p) {
+    lab <- list(en = p)
+    for (tr in i18n) for (L in names(tr))
+      if (is.null(lab[[L]]) && !is.na(tr[[L]][p])) lab[[L]] <- unname(tr[[L]][p])
+    lab
+  }
   partner_levels <- stats::setNames(
-    lapply(partners$partner, function(p) list(label = list(en = p))),
+    lapply(partners$partner, function(p) list(label = partner_label(p))),
     partners$partner)
 
   meta <- list(

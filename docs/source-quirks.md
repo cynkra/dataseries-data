@@ -188,6 +188,8 @@ levels and %-change leaves on the same key (`ch_fso_gfcf_detail`: filter `UNIT_M
   - The v1 **HTTP 412 gate on per-key `ts` is gone** — under v2 any public key serves
     directly (verified `ch.kof.globalbaro.coincident`, `ch.kof.esi.index`). Collections
     remain the convenient route for whole families.
+  - Series names: `/v2/ts/metadata?keys=…&locale=<lang>` gives a `variable` name in
+    `en` and `de`; `fr` and `it` return `{}`. `kof_set_fetch` uses it for level labels.
   - The R client `kofdata` is discontinued along with v1; KOF's replacement is
     [`tsdbapi`](https://github.com/KOF-ch/tsdbapi-R) (we call the API directly).
   - The COVID-era **weekly WBI is genuinely discontinued** (not gated).
@@ -203,7 +205,10 @@ levels and %-change leaves on the same key (`ch_fso_gfcf_detail`: filter `UNIT_M
     from a publication lag.
 - **BAZG Swiss-Impex monthly trade (by tariff × country, since 1988)** is the richer
   upgrade path for `ch_fso_trade_partner`, but its OGD ZIP/CSV endpoints **502'd from this
-  build env** on every retry — annual FSO Excel (English assets) was used instead. Retry
+  build env** on every retry — annual FSO Excel (English assets) was used instead.
+  The partner names in de/fr/it come from the German/French/Italian versions of the
+  same two assets (the `alternate` links in the DAM asset JSON); their rows are
+  sorted per language, so they are matched by value, not by position. Retry
   the BAZG monthly channel later; if it works it supersedes the annual cut.
 
 ## SECO
@@ -223,6 +228,11 @@ levels and %-change leaves on the same key (`ch_fso_gfcf_detail`: filter `UNIT_M
     we take the quarterly.
   - WEA / weekly activity: `…/wwa.csv` + `…/ch-seco-wwa.json` — note the CSV kept the bare
     `wwa.csv` name while the JSON is `ch-seco-wwa.json` (the slugs are NOT uniform).
+- **Labels carry codes.** GDP `structure` labels end with the ESA transaction code
+  ("Domestic demand, P3_P5") or a NOGA range ("Construction (noga 41-43)"); consumer
+  sentiment labels start with the questionnaire number ("6.3 Consumer sentiment
+  index"). `seco_fetch(strip = …)` removes them with the `LABEL_NOISE` patterns in
+  `R/labels.R`, per dataset.
 - **If a SECO source 502s again, check the `scheduler.swissdatas.ch` link on the new SECO
   page before assuming an outage** — and watch for other `*.admin.ch` agencies moving to
   the same swissdata delivery. The `source_url` inside each JSON points back to the SECO
