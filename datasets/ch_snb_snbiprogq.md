@@ -38,6 +38,9 @@ The Swiss National Bank's inflation forecast, one path per quarterly policy meet
   `P` forecast. Both are populated, so each vintage pairs a forecast fan with the
   observed series.
 
+## Labels
+- **units**: Percent, change in consumer prices from a year earlier | de: Prozent, Veränderung der Konsumentenpreise gegenüber Vorjahr | fr: Pour cent, variation des prix à la consommation sur un an | it: Percento, variazione dei prezzi al consumo su base annua
+
 ## Display
 - **split**: D0
 - **single-select**: D1

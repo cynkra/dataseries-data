@@ -39,6 +39,9 @@ Interest rates on new Swiss banking business: mortgages, consumer credit, saving
   years.
 - Default item: `D0=M, D1=S1` (savings deposits, mean).
 
+## Labels
+- **units**: Percent | de: Prozent | fr: Pour cent | it: Percento
+
 ## Display
 - **split**: D1
 - **single-select**: D0

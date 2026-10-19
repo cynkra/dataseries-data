@@ -299,5 +299,11 @@
     "fr": "Rendements des emprunts d'État suisses pour chaque échéance de 1 à 30 ans, plus cantons, banques et industrie par notation, si bien que les écarts sont visibles.",
     "it": "Rendimenti dei titoli di Stato svizzeri per ogni scadenza da 1 a 30 anni, più Cantoni, banche e industria per rating, così gli spread sono visibili."
   },
-  "fetched_utc": "2026-10-02 08:39:18"
+  "fetched_utc": "2026-10-02 08:39:18",
+  "units": {
+    "en": "Percent",
+    "de": "Prozent",
+    "fr": "Pour cent",
+    "it": "Percento"
+  }
 }

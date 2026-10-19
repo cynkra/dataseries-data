@@ -36,6 +36,7 @@ other at total), giving 5 series:
 - `sex`: total / men / women.
 
 ## Labels
+- **units**: Percent of the labour force | de: Prozent der Erwerbspersonen | fr: Pour cent de la population active | it: Percento delle forze di lavoro
 - dim: origin
   - **label**: Nationality | de: Staatsangehörigkeit | fr: Nationalité | it: Nazionalità
   - tot: Total | de: Total | fr: Total | it: Totale

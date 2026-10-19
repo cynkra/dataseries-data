@@ -38,6 +38,9 @@ Policy interest rates of the SNB, Fed, ECB, Bank of England and Bank of Japan in
   - United Kingdom: `L0` Bank of England Bank Rate.
   - Japan: `L1` BoJ uncollateralised overnight call rate.
 
+## Labels
+- **units**: Percent | de: Prozent | fr: Pour cent | it: Percento
+
 ## Display
 - **split**: D0
 - **single-select**:

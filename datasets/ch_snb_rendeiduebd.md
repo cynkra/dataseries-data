@@ -41,6 +41,9 @@ Swiss government bond yields for every maturity from 1 to 30 years, plus cantons
 - `D1` (Maturity): `1J`..`10J` (1 to 10 years), plus `20J`, `30J`. Suffix `J` =
   Jahre (years). Default view is `CHF` x `10J`.
 
+## Labels
+- **units**: Percent | de: Prozent | fr: Pour cent | it: Percento
+
 ## Display
 - **split**: D0
 - **default**: D0=CHF, D1=10J

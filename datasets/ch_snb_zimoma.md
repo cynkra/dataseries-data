@@ -36,6 +36,9 @@ Money-market rates for Switzerland, the US, Japan, the UK and the euro area on o
   `EURIBOR` 3-month, `3M4` 3-month EUR LIBOR.
 - Default item: `D0=1TGT`.
 
+## Labels
+- **units**: Percent | de: Prozent | fr: Pour cent | it: Percento
+
 ## Display
 - **split**: D0
 - **single-select**: (none; this cube has a single dimension)
