@@ -28,6 +28,10 @@ How Swiss firms rate their current and expected business situation, from ETH Zur
   **wide** table (`date` + one column per series key). Pivot longer to
   `indicator, date, value`; filter NA (the collection is sparse — series start at
   different dates). `date` → ISO.
+- Level labels: the `variable` field of `GET .../v2/ts/metadata?keys=<keys>&locale=<lang>`,
+  one call per language. KOF answers `en` and `de` ("KOF Economic Sentiment
+  Indicator for Switzerland, Pre-Brexit version") and returns `{}` for `fr` and
+  `it`, so those labels are absent. A key without metadata keeps the key as label.
 
 ## Dimensions
 - `indicator`: `ch.kof.esi.index` (pre-Brexit version) and `ch.kof.esi.index.v2018`

@@ -55,7 +55,9 @@ kof_fetch <- function(key, title = NULL) {
 # wide table: a `date` column plus one column per KOF series key. Collections owned
 # by the `public` user are open (license CC BY). We pivot to the standard long
 # contract with one dimension (`indicator`) carrying the series keys. Level labels
-# are authored in the datasheet (the metadata API is English-only).
+# are the `variable` names from the metadata endpoint, one call per locale; KOF
+# answers en and de and returns `{}` for fr and it, so those stay absent. A key
+# the metadata does not name keeps the key as its label.
 kof_set_fetch <- function(set, title = NULL, dim_name = "indicator",
                           source_url = NULL) {
   url <- sprintf(
@@ -73,6 +75,12 @@ kof_set_fetch <- function(set, title = NULL, dim_name = "indicator",
     dplyr::arrange(.data[[dim_name]], date)
 
   keys <- sort(unique(data[[dim_name]]))
+  names_by_lang <- kof_variable_names(keys)
+  level_label <- function(k) {
+    lab <- Filter(Negate(is.null), lapply(names_by_lang, `[[`, k))
+    if (is.null(lab$en)) lab <- c(list(en = k), lab)
+    lab[c("en", setdiff(names(lab), "en"))]
+  }
   meta <- list(
     title = title %||% setNames(list(set), "en"),
     source = list(
@@ -82,11 +90,27 @@ kof_set_fetch <- function(set, title = NULL, dim_name = "indicator",
     frequency = infer_frequency(raw_periods),
     dimensions = setNames(list(list(
       label = list(en = dim_name),
-      levels = setNames(lapply(keys, function(k) list(label = list(en = k))), keys)
+      levels = setNames(lapply(keys, function(k) list(label = level_label(k))), keys)
     )), dim_name)
   )
   list(id = gsub("ogd_ch.kof.", "ch_kof_", set, fixed = TRUE),
        data = data, meta = meta)
+}
+
+# Series names per locale from /v2/ts/metadata: list(<lang> = list(<key> = name)).
+# A failed or empty locale is left out, never the dataset.
+kof_variable_names <- function(keys, langs = c("en", "de", "fr", "it")) {
+  out <- list()
+  for (L in langs) {
+    url <- sprintf("%s/ts/metadata?keys=%s&locale=%s&access_type=public",
+                   KOF_API, paste(keys, collapse = ","), L)
+    md <- tryCatch(jsonlite::fromJSON(get_text(url), simplifyVector = FALSE),
+                   error = function(e) NULL)
+    nm <- Filter(function(x) is.character(x) && nzchar(x),
+                 lapply(md, function(m) m$variable))
+    if (length(nm)) out[[L]] <- nm
+  }
+  out
 }
 
 `%||%` <- function(a, b) if (is.null(a)) b else a
