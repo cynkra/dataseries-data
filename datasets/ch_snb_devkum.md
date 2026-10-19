@@ -2,6 +2,7 @@
 
 - **id**: ch_snb_devkum
 - **title**: Bilateral exchange rates | de: Bilaterale Wechselkurse | fr: Taux de change bilatéraux | it: Tassi di cambio bilaterali
+- **keywords**: Swiss franc, CHF, euro, EUR, US dollar, USD, FX, forex | de: Franken, Wechselkurs, Devisenkurs | fr: franc suisse, taux de change | it: franco svizzero, tasso di cambio
 - **concept**: Exchange rates / Bilateral FX
 - **canonical**: yes
 - **featured**: Exchange rates

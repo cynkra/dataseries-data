@@ -2,6 +2,7 @@
 
 - **id**: ch_fso_besta
 - **title**: Jobs by economic division | de: Beschäftigte nach Wirtschaftsabteilung | fr: Emplois par division économique | it: Impieghi per divisione economica
+- **keywords**: employment | de: Beschäftigung | fr: emploi | it: occupazione
 - **concept**: Labour / Employment / jobs
 - **canonical**: yes
 - **featured**: Employment

@@ -1,10 +1,10 @@
 # Consumer Price Index (LIK) – national index, long history
 
 - **id**: ch_snb_plkopr
-- **title**: Consumer prices (CPI) | de: Konsumentenpreise (LIK) | fr: Prix à la consommation (IPC) | it: Prezzi al consumo (IPC)
+- **title**: Consumer prices since 1921 (CPI) | de: Konsumentenpreise seit 1921 (LIK) | fr: Prix à la consommation depuis 1921 (IPC) | it: Prezzi al consumo dal 1921 (IPC)
+- **keywords**: CPI, inflation | de: LIK, Teuerung, Inflation | fr: IPC, inflation | it: IPC, inflazione
 - **concept**: Prices / Consumer prices
-- **canonical**: yes
-- **featured**: Inflation
+- **canonical**: no (alternate for Consumer prices — the headline total back to 1921, republished by the SNB after the FSO release)
 - **source**: snb
 - **license**: snb (free reuse, attribution required)
 - **frequency**: monthly

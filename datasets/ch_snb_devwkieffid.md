@@ -2,6 +2,7 @@
 
 - **id**: ch_snb_devwkieffid
 - **title**: Effective exchange-rate index | de: Effektiver Wechselkursindex | fr: Indice de taux de change effectif | it: Indice del tasso di cambio effettivo
+- **keywords**: Swiss franc, CHF, FX, effective exchange rate | de: Franken, Wechselkurs | fr: franc suisse, taux de change | it: franco svizzero, tasso di cambio
 - **concept**: Exchange rates / Effective FX index
 - **canonical**: yes
 - **source**: snb

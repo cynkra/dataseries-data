@@ -137,5 +137,11 @@
     "fr": "L'indice du franc pondéré par les échanges, la mesure quotidienne de référence de la force du franc, globalement et face à la zone euro.",
     "it": "L'indice del franco ponderato per gli scambi, la misura giornaliera di riferimento della forza del franco, complessiva e verso l'area euro."
   },
-  "fetched_utc": "2026-10-07 08:40:14"
+  "fetched_utc": "2026-10-07 08:40:14",
+  "keywords": {
+    "en": "Swiss franc, CHF, FX, effective exchange rate",
+    "de": "Franken, Wechselkurs",
+    "fr": "franc suisse, taux de change",
+    "it": "franco svizzero, tasso di cambio"
+  }
 }

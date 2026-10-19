@@ -418,5 +418,11 @@
     "fr": "Cours du franc suisse face aux principales monnaies, moyenne mensuelle et fin de mois. Cotés par unité, mais par 100 pour le yen, les couronnes et d'autres.",
     "it": "Corsi del franco svizzero rispetto alle principali valute, media mensile e fine mese. Quotati per unità, ma per 100 per yen, corone e altre."
   },
-  "fetched_utc": "2026-10-02 08:39:18"
+  "fetched_utc": "2026-10-02 08:39:18",
+  "keywords": {
+    "en": "Swiss franc, CHF, euro, EUR, US dollar, USD, FX, forex",
+    "de": "Franken, Wechselkurs, Devisenkurs",
+    "fr": "franc suisse, taux de change",
+    "it": "franco svizzero, tasso di cambio"
+  }
 }

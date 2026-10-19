@@ -2,6 +2,7 @@
 
 - **id**: ch_snb_devwkibiim
 - **title**: Bilateral exchange-rate indices | de: Bilaterale Wechselkursindizes | fr: Indices de taux de change bilatéraux | it: Indici dei tassi di cambio bilaterali
+- **keywords**: Swiss franc, CHF, FX | de: Franken, Wechselkurs | fr: franc suisse, taux de change | it: franco svizzero, tasso di cambio
 - **concept**: Exchange rates / Bilateral FX
 - **canonical**: yes
 - **source**: snb

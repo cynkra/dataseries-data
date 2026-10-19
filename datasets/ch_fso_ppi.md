@@ -2,6 +2,7 @@
 
 - **id**: ch_fso_ppi
 - **title**: Producer and import prices | de: Produzenten- und Importpreise | fr: Prix à la production et à l'importation | it: Prezzi alla produzione e all'importazione
+- **keywords**: PPI | de: PPI, Produzentenpreise | fr: IPP | it: IPP
 - **concept**: Prices / Producer and import prices
 - **canonical**: yes
 - **source**: fso

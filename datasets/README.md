@@ -33,6 +33,8 @@ full edit→regenerate workflow.)
 - **canonical**: yes | no (alternate for <concept>)
 - **featured**: <optional homepage label, e.g. "Inflation"; omit for non-featured>
   <only the handful of homepage example datasets carry this; drives the landing chips>
+- **keywords**: <optional search words the title and labels lack: abbreviations, everyday names;
+  i18n, comma-separated, e.g. "CPI, inflation | de: LIK, Teuerung | fr: IPC">
 
 - **source**: <producer name>
 - **license**: <snb | kof | fso | seco>  (terms)

@@ -428,5 +428,11 @@
     "de": "Prozent",
     "fr": "Pour cent",
     "it": "Percento"
+  },
+  "keywords": {
+    "en": "SARON, interest rate",
+    "de": "Zins",
+    "fr": "taux d'intérêt",
+    "it": "tasso d'interesse"
   }
 }

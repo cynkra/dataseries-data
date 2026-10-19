@@ -1,9 +1,11 @@
 # Consumer Price Index (LIK)
 
 - **id**: ch_fso_cpi
-- **title**: Consumer prices (detailed basket) | de: Konsumentenpreise (detaillierter Warenkorb) | fr: Prix à la consommation (panier détaillé) | it: Prezzi al consumo (paniere dettagliato)
+- **title**: Consumer prices (CPI) | de: Konsumentenpreise (LIK) | fr: Prix à la consommation (IPC) | it: Prezzi al consumo (IPC)
+- **keywords**: CPI, inflation, cost of living | de: LIK, Teuerung, Inflation | fr: IPC, inflation, renchérissement | it: IPC, inflazione, rincaro
 - **concept**: Prices / Consumer prices
-- **canonical**: no (alternate for Consumer prices — the detailed basket breakdown)
+- **canonical**: yes
+- **featured**: Inflation
 - **source**: fso
 - **license**: fso (free reuse, attribution required)
 - **frequency**: monthly
