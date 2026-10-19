@@ -234,10 +234,10 @@
         },
         "45-47": {
           "label": {
+            "en": "Wholesale and retail trade, repair of motor vehicles",
             "de": "Handel, Instandhaltung und Rep. von Kraftfahrzeugen",
             "fr": "Commerce, réparation d’automobiles et de motocycles",
-            "it": "Commercio all'ingrosso e riparazione",
-            "en": "Trade and repair of motor vehicles and motorcycles"
+            "it": "Commercio all'ingrosso e riparazione"
           },
           "data": true
         },

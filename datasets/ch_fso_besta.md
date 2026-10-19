@@ -64,6 +64,8 @@ leaves `Wirtschaftsabteilung` as the single dimension.
 
 ## Labels
 - **units**: Number of jobs | de: Anzahl Beschäftigte | fr: Nombre d'emplois | it: Numero di impieghi
+- dim: Wirtschaftsabteilung
+  - 45-47: Wholesale and retail trade, repair of motor vehicles | de: Handel, Instandhaltung und Rep. von Kraftfahrzeugen | fr: Commerce, réparation d’automobiles et de motocycles | it: Commercio all'ingrosso e riparazione
 
 ## Display
 - **split**: Wirtschaftsabteilung
