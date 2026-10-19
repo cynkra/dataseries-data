@@ -39,6 +39,8 @@ How Swiss firms rate their current and expected business situation, from ETH Zur
 
 ## Labels
 - **units**: Index | de: Index | fr: Indice | it: Indice
+- dim: indicator
+  - **label**: Version | de: Version | fr: Version | it: Versione
 
 ## Display
 - **split**: indicator

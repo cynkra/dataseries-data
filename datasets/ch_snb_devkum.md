@@ -29,6 +29,11 @@ Swiss franc exchange rates against the major currencies, monthly average and mon
   codes in `dim_order` order; `.snb_key_codes` extracts them from the `{...}` block.
 - One long row per non-null observation: `D0`, `D1`, `date`, `value`. Dates are
   ISO month starts; values numeric.
+- Level labels: SNB appends the quotation unit to each currency ("Japan – JPY 100",
+  de/fr "JPY 100.-"). The fetcher removes it (`.SNB_LABEL_STRIP` in `R/pipeline.R`,
+  pattern `quote_unit` in `R/labels.R::LABEL_NOISE`); the unit is in the per-level
+  units ("CHF per 100 JPY"). The same rule moves the misplaced dash in the German
+  "Malaysia MYR – 100.-" to "Malaysia – MYR".
 - Non-data grouping nodes (`D1_0` Europe, `D1_1` America, ...) carry no key and never
   appear as rows; they survive only as `hierarchy` in the dimension tree.
 

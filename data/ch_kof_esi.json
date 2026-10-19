@@ -27,7 +27,10 @@
   "dimensions": {
     "indicator": {
       "label": {
-        "en": "indicator"
+        "en": "Version",
+        "de": "Version",
+        "fr": "Version",
+        "it": "Versione"
       },
       "levels": {
         "ch.kof.esi.index": {

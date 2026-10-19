@@ -64,7 +64,8 @@ snb_last_update <- function(cube_id) {
   if (length(m) == 6L) sprintf("%s-%s-%s %s:%s", m[2], m[3], m[4], m[5], m[6]) else ed
 }
 
-snb_fetch <- function(cube_id, title = NULL, langs = c("en", "de", "fr")) {
+snb_fetch <- function(cube_id, title = NULL, langs = c("en", "de", "fr"),
+                      strip = character()) {
   base <- "https://data.snb.ch/api/cube"
   dims_doc <- get_json(sprintf("%s/%s/dimensions/%s", base, cube_id, "en"))
   data_doc <- get_json(sprintf("%s/%s/data/json/%s", base, cube_id, "en"))
@@ -134,6 +135,8 @@ snb_fetch <- function(cube_id, title = NULL, langs = c("en", "de", "fr")) {
     )
     d <- list(label = lab_of(id), levels = levels)
     if (length(dim_trees[[id]]) > 0) d$hierarchy <- dim_trees[[id]]
+    # `strip`: LABEL_NOISE pattern names (R/labels.R), set per cube in pipeline.R.
+    if (length(strip)) d <- tidy_level_labels(d, strip = strip)
     d
   }), dim_ids)
 

@@ -135,10 +135,17 @@ attach_labels <- function(ds, datasheet_dir, lines = NULL) {
 #              "Final domestic demand P3_P51G", "...,D5r_D6r_D7r"
 #   noga_ref   trailing NOGA range in brackets: SECO "Construction (noga 41-43)"
 #   numbering  leading outline number: SECO "6.3 Consumer sentiment index"
-LABEL_NOISE <- c(
+#   quote_unit trailing quotation unit: SNB "Japan – JPY 100", "EUR 1.-"; the
+#              unit lives in the per-level units. Also moves a misplaced dash:
+#              "Malaysia MYR – 100.-" -> "Malaysia – MYR".
+# An entry is a pattern to remove, or a list of c(pattern, replacement) rules
+# applied in order.
+LABEL_NOISE <- list(
   sna_code  = "[,\\s]+[A-Z][A-Za-z0-9]*[0-9][A-Za-z0-9_]*$",
   noga_ref  = "\\s*\\((?i:noga)\\s+[0-9][0-9 ,\\-]*\\)$",
-  numbering = "^[0-9]+(\\.[0-9]+)*\\s+"
+  numbering = "^[0-9]+(\\.[0-9]+)*\\s+",
+  quote_unit = list(c("^(.+\\S)\\s+([A-Z]{3})\\s+–\\s+[0-9]+(\\.-)?$", "\\1 – \\2"),
+                    c("\\s+[0-9]+(\\.-)?$", ""))
 )
 
 .ROMAN <- "^(I|II|III|IV|V|VI|VII|VIII|IX|X)$"
@@ -176,9 +183,12 @@ LABEL_NOISE <- c(
 tidy_label <- function(x, code, lang, ref = NULL, strip = character()) {
   x <- gsub("\\s+", " ", trimws(x))
   if (startsWith(x, paste0(code, " "))) x <- substring(x, nchar(code) + 2L)
-  for (p in LABEL_NOISE[strip]) {
-    y <- trimws(sub(p, "", x, perl = TRUE))
-    if (nzchar(y)) x <- y
+  for (rules in LABEL_NOISE[strip]) {
+    if (is.character(rules)) rules <- list(c(rules, ""))
+    for (r in rules) {
+      y <- trimws(sub(r[1], r[2], x, perl = TRUE))
+      if (nzchar(y)) x <- y
+    }
   }
   if (.is_caps(x)) x <- .recase(x, lang, ref)
   x

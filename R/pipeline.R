@@ -26,6 +26,10 @@ for (f in c("dates.R", "http.R", "datasheet.R", "io.R", "labels.R", "hierarchy.R
 # sources are bounded separately in http.R (connecttimeout + max_seconds).
 options(timeout = 30)
 
+# Label cleanups per SNB cube (LABEL_NOISE names, R/labels.R). devkum: the
+# quotation unit ("JPY 100") moves out of the label into the per-level units.
+.SNB_LABEL_STRIP <- list(devkum = "quote_unit")
+
 # Curated NOGA slices of the CH1.KEU SDMX turnover flows (see datasheets):
 # retail = division 47; production = industry B-E (+ B/C/D) and construction F (41-43).
 .SDMX_RETAIL_NOGA <- c("47", "4711", "4711_472", "4719", "4719_474-479", "472",
@@ -250,7 +254,7 @@ build <- function(only = NULL) {
     add(.try_fetch_if_unchanged(
       paste0("ch_snb_", cube),
       local({ id <- cube; function() snb_last_update(id) }),
-      snb_fetch(cube), cu$topic))
+      snb_fetch(cube, strip = .SNB_LABEL_STRIP[[cube]] %||% character()), cu$topic))
   }
 
   # SECO: full GDP, swissdata format at source (rich multilingual + deep

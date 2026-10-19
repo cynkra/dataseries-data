@@ -132,6 +132,16 @@ check(identical(tidy_label("6.3 Consumer sentiment index", "x", "en"), "6.3 Cons
       "no strip unless asked")
 check(identical(tidy_label("B1GQ", "gdp", "en", strip = "sna_code"), "B1GQ"),
       "a pattern that would empty the label is skipped")
+check(identical(tidy_label("Japan – JPY 100", "JPY100", "en", strip = "quote_unit"), "Japan – JPY"),
+      "quote_unit: per 100")
+check(identical(tidy_label("Dänemark – DKK 100.-", "DKK100", "de", strip = "quote_unit"), "Dänemark – DKK"),
+      "quote_unit: de/fr form")
+check(identical(tidy_label("EUR 1", "EUR1", "en", strip = "quote_unit"), "EUR"), "quote_unit: per 1")
+check(identical(tidy_label("Malaysia MYR – 100.-", "MYR100", "de", strip = "quote_unit"), "Malaysia – MYR"),
+      "quote_unit: misplaced dash")
+check(identical(tidy_label("US Dollar 3-month forward rate (CHF per 1 USD)", "USD3M", "en",
+                           strip = "quote_unit"),
+                "US Dollar 3-month forward rate (CHF per 1 USD)"), "quote_unit leaves bracketed text")
 check(inherits(tryCatch(tidy_level_labels(list(levels = list()), strip = "nope"),
                         error = function(e) e), "error"), "unknown strip pattern fails")
 
