@@ -2,6 +2,7 @@
 
 - **id**: ch_snb_zimoma
 - **title**: Money market rates | de: Geldmarktsätze | fr: Taux du marché monétaire | it: Tassi del mercato monetario
+- **keywords**: SARON, interest rate | de: Zins | fr: taux d'intérêt | it: tasso d'interesse
 - **concept**: Interest rates and yields / Money-market rates
 - **canonical**: yes (the headline money-market-rate cube; `zikredlauf` and `zikrepro` are the lending/published-rate alternates under the same concept)
 - **featured**: SARON
@@ -35,6 +36,9 @@ Money-market rates for Switzerland, the US, Japan, the UK and the euro area on o
   JPY LIBOR. UK: `SONIA` 1-day, `3M3` 3-month GBP LIBOR. Euro area: `ESTR` 1-day,
   `EURIBOR` 3-month, `3M4` 3-month EUR LIBOR.
 - Default item: `D0=1TGT`.
+
+## Labels
+- **units**: Percent | de: Prozent | fr: Pour cent | it: Percento
 
 ## Display
 - **split**: D0

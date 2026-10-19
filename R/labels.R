@@ -8,8 +8,13 @@
 #
 #   ## Labels
 #   - **units**: <i18n>                 dataset-wide units line
-#   - dim: <dimension>
+#   - dim: <dimension>                  (backtick-quoted if it has spaces)
 #     - **label**: <i18n>               the dimension's own label
+#     - **units** <code>: <i18n>        per-level units: sets meta$units[[code]],
+#                                       for a dimension whose levels differ in
+#                                       unit (counts next to a rate). Give it to
+#                                       the data-bearing codes; the site looks up
+#                                       the selected code only, never its parent
 #     - <code>: <i18n>                  one level label (split on the FIRST ": "
 #                                       after the code token; labels may contain
 #                                       colons, codes may not)
@@ -23,18 +28,27 @@
 #
 # Spec: dataseries.org spec/multilingual/2-design.md §3.
 
-# Parse the ## Labels block into specs: list(dim=, label=, units=, levels=named
-# list of i18n lists). The dim=NULL spec (lines before the first `dim:`) may only
-# carry `units`. Returns NULL when there is no block / no directive content.
+# Parse the ## Labels block into specs: list(dim=, label=, units=, level_units=,
+# levels=named list of i18n lists). The dim=NULL spec (lines before the first
+# `dim:`) may only carry `units`. Returns NULL when there is no block / no directive content.
 read_labels_block <- function(lines) {
   specs <- ds_bullets(ds_section(lines, "Labels"))
   if (is.null(specs)) return(NULL)
   lapply(specs, function(s) {
-    out <- list(dim = s$dim, label = NULL, units = NULL, levels = list())
+    out <- list(dim = s$dim, label = NULL, units = NULL, level_units = list(),
+                levels = list())
     for (it in s$items) {
       txt <- it$text
       fm <- regmatches(txt, regexec("^\\*\\*(label|units)\\*\\*:\\s*(.*)$", txt))[[1]]
       if (length(fm) == 3) { out[[fm[2]]] <- ds_i18n(fm[3]); next }
+      um <- regmatches(txt, regexec("^\\*\\*units\\*\\*\\s+(?:`([^`]+)`|([^\\s:`]+)):\\s*(.+)$",
+                                    txt, perl = TRUE))[[1]]
+      if (length(um) == 4) {
+        if (is.null(s$dim))
+          stop(sprintf("labels: per-level units '%s' outside a 'dim:' scope", txt), call. = FALSE)
+        out$level_units[[paste0(um[2], um[3])]] <- ds_i18n(um[4])
+        next
+      }
       # Codes are bare tokens (no spaces/colons); a code with spaces or colons is
       # written backtick-quoted.
       m <- regmatches(txt, regexec("^`([^`]+)`:\\s*(.+)$", txt, perl = TRUE))[[1]]
@@ -80,6 +94,18 @@ attach_labels <- function(ds, datasheet_dir, lines = NULL) {
     dim <- ds$meta$dimensions[[s$dim]]
     if (!is.null(s$label)) dim <- .set_label_first(dim, s$label)
     if (!is.null(s$units)) dim$units <- s$units
+    if (length(s$level_units)) {
+      u <- ds$meta$units
+      if (!is.null(u) && all(names(u) %in% c("en", DS_I18N_LANGS)))
+        stop(sprintf("%s: per-level units on dim '%s' next to dataset-wide units", ds$id, s$dim),
+             call. = FALSE)
+      for (code in names(s$level_units)) {
+        if (is.null(dim$levels[[code]]))
+          warning(sprintf("%s: units for unknown code '%s' of dim '%s'", ds$id, code, s$dim))
+        u[[code]] <- s$level_units[[code]]
+      }
+      ds$meta$units <- u
+    }
     for (code in names(s$levels))
       dim$levels[[code]] <- .set_label_first(dim$levels[[code]], s$levels[[code]])
     ds$meta$dimensions[[s$dim]] <- dim
@@ -101,6 +127,26 @@ attach_labels <- function(ds, datasheet_dir, lines = NULL) {
 # German, where it is most likely a noun. The first letter is then capitalised.
 # German without a reference is left in capitals: nouns vs adjectives cannot be
 # told apart mechanically.
+#
+# Other sources append or prepend codes of their own, which the fetcher removes by
+# naming patterns from LABEL_NOISE (`strip =`). Same opt-in rule: a pattern runs
+# only on the datasets whose fetcher asks for it.
+#   sna_code   trailing ESA/SNA transaction code: SECO "Domestic demand, P3_P5",
+#              "Final domestic demand P3_P51G", "...,D5r_D6r_D7r"
+#   noga_ref   trailing NOGA range in brackets: SECO "Construction (noga 41-43)"
+#   numbering  leading outline number: SECO "6.3 Consumer sentiment index"
+#   quote_unit trailing quotation unit: SNB "Japan – JPY 100", "EUR 1.-"; the
+#              unit lives in the per-level units. Also moves a misplaced dash:
+#              "Malaysia MYR – 100.-" -> "Malaysia – MYR".
+# An entry is a pattern to remove, or a list of c(pattern, replacement) rules
+# applied in order.
+LABEL_NOISE <- list(
+  sna_code  = "[,\\s]+[A-Z][A-Za-z0-9]*[0-9][A-Za-z0-9_]*$",
+  noga_ref  = "\\s*\\((?i:noga)\\s+[0-9][0-9 ,\\-]*\\)$",
+  numbering = "^[0-9]+(\\.[0-9]+)*\\s+",
+  quote_unit = list(c("^(.+\\S)\\s+([A-Z]{3})\\s+–\\s+[0-9]+(\\.-)?$", "\\1 – \\2"),
+                    c("\\s+[0-9]+(\\.-)?$", ""))
+)
 
 .ROMAN <- "^(I|II|III|IV|V|VI|VII|VIII|IX|X)$"
 
@@ -131,21 +177,33 @@ attach_labels <- function(ds, datasheet_dir, lines = NULL) {
   .upper_first(paste(out, collapse = " "))
 }
 
-# One label string: drop a leading "<code> ", squeeze spaces, recase capitals.
-tidy_label <- function(x, code, lang, ref = NULL) {
+# One label string: drop a leading "<code> ", squeeze spaces, remove the named
+# LABEL_NOISE patterns, recase capitals. A pattern that would leave nothing is
+# skipped.
+tidy_label <- function(x, code, lang, ref = NULL, strip = character()) {
   x <- gsub("\\s+", " ", trimws(x))
   if (startsWith(x, paste0(code, " "))) x <- substring(x, nchar(code) + 2L)
+  for (rules in LABEL_NOISE[strip]) {
+    if (is.character(rules)) rules <- list(c(rules, ""))
+    for (r in rules) {
+      y <- trimws(sub(r[1], r[2], x, perl = TRUE))
+      if (nzchar(y)) x <- y
+    }
+  }
   if (.is_caps(x)) x <- .recase(x, lang, ref)
   x
 }
 
 # Every level label of one dimension. `case_ref`: optional lang -> (code -> label)
-# lookup in proper case.
-tidy_level_labels <- function(dim, case_ref = NULL) {
+# lookup in proper case. `strip`: names of LABEL_NOISE patterns to remove.
+tidy_level_labels <- function(dim, case_ref = NULL, strip = character()) {
+  bad <- setdiff(strip, names(LABEL_NOISE))
+  if (length(bad)) stop("tidy_level_labels: unknown strip pattern(s): ",
+                        paste(bad, collapse = ", "), call. = FALSE)
   for (code in names(dim$levels)) {
     lab <- dim$levels[[code]]$label
     for (L in names(lab))
-      lab[[L]] <- tidy_label(lab[[L]], code, L, case_ref[[L]][[code]])
+      lab[[L]] <- tidy_label(lab[[L]], code, L, case_ref[[L]][[code]], strip)
     dim$levels[[code]]$label <- lab
   }
   dim

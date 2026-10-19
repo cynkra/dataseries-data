@@ -125,6 +125,12 @@ Add a **`load` hint** per dataset so the website knows how to fetch it (see webs
   map), or per-level keyed by the unit-bearing dimension's level codes
   (`{nom: {en: …}, real: {en: …}}`). The former SECO nesting (`{type: {nom: …}}`)
   is retired. Disambiguation: shape 1 iff every key is a language code.
+  A datasheet writes shape 1 as a top-scope `- **units**: <i18n>` line in its
+  `## Labels` block, and shape 2 as `- **units** <code>: <i18n>` lines inside the
+  `- dim: <dim>` scope of the unit-bearing dimension (R/labels.R). The site takes
+  the unit of the first selected code, in `dim_order`, that has an entry, so
+  give units to data-bearing codes (not to `data: false` group headers), and the
+  keys must not also be codes of an earlier dimension in `dim_order`.
 
 ## 4. Shared `licenses.json` (BUILT, schema 1.1 — see above)
 

@@ -2,6 +2,7 @@
 
 - **id**: ch_fso_besta
 - **title**: Jobs by economic division | de: Beschäftigte nach Wirtschaftsabteilung | fr: Emplois par division économique | it: Impieghi per divisione economica
+- **keywords**: employment | de: Beschäftigung | fr: emploi | it: occupazione
 - **concept**: Labour / Employment / jobs
 - **canonical**: yes
 - **featured**: Employment
@@ -44,6 +45,11 @@ Number of jobs in Switzerland by industry, quarterly, down to two-digit division
   (Q1->01, Q2->04, Q3->07, Q4->10), frequency quarterly.
 - Dimension **codes are German** even on `/en/` (`Wirtschaftsabteilung`,
   `Beschäftigungsgrad`, `Geschlecht`, `Quartal`); kept as stored column values.
+- Level labels: FSO prints the NOGA code in front of every
+  `Wirtschaftsabteilung` label ("5-96 Total") and the sectors in capitals
+  ("SECTOR II"). `tidy_dims = "Wirtschaftsabteilung"` runs
+  `R/labels.R::tidy_level_labels()` on that dimension: code dropped, capitals
+  recased ("Total", "Sector II"; German is already in proper case).
 
 ## Dimensions
 - `Wirtschaftsabteilung` (Economic division): 60 NOGA codes. `5-96` = total;
@@ -55,6 +61,11 @@ Number of jobs in Switzerland by industry, quarterly, down to two-digit division
 The source's `Beschäftigungsgrad` (Employment rate) and `Geschlecht` (Gender) columns
 only ever carry `TOT` here, so both are dropped: a one-option picker is pure noise. That
 leaves `Wirtschaftsabteilung` as the single dimension.
+
+## Labels
+- **units**: Number of jobs | de: Anzahl Beschäftigte | fr: Nombre d'emplois | it: Numero di impieghi
+- dim: Wirtschaftsabteilung
+  - 45-47: Wholesale and retail trade, repair of motor vehicles | de: Handel, Instandhaltung und Rep. von Kraftfahrzeugen | fr: Commerce, réparation d’automobiles et de motocycles | it: Commercio all'ingrosso e riparazione
 
 ## Display
 - **split**: Wirtschaftsabteilung

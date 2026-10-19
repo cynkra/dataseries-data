@@ -2,6 +2,7 @@
 
 - **id**: ch_snb_devwkibiim
 - **title**: Bilateral exchange-rate indices | de: Bilaterale Wechselkursindizes | fr: Indices de taux de change bilatéraux | it: Indici dei tassi di cambio bilaterali
+- **keywords**: Swiss franc, CHF, FX | de: Franken, Wechselkurs | fr: franc suisse, taux de change | it: franco svizzero, tasso di cambio
 - **concept**: Exchange rates / Bilateral FX
 - **canonical**: yes
 - **source**: snb
@@ -35,6 +36,9 @@ Swiss franc exchange-rate indices against about 54 currencies, nominal and infla
 The source's `D2` Index/Change dimension (`I` index, `V` YoY % change) is reduced to the
 index: `V` is exactly the app's YoY % transform, derived from `I`, so storing it would
 duplicate a button. Keeping only `I` collapses `D2` away.
+
+## Labels
+- **units**: Index, December 2000 = 100 | de: Index, Dezember 2000 = 100 | fr: Indice, décembre 2000 = 100 | it: Indice, dicembre 2000 = 100
 
 ## Display
 - **split**: D1

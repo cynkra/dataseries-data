@@ -38,6 +38,12 @@ What Swiss card payments are spent on and where (in shops or online, at home or 
   millions, `BTF` amount per transaction in CHF.
 - Default item: `D0=BT, D1=D, D2=AZ, D3=II, D4=BMF`.
 
+## Labels
+- dim: D4
+  - **units** TT: Thousands of transactions | de: Tausend Transaktionen | fr: Milliers de transactions | it: Migliaia di transazioni
+  - **units** BMF: CHF millions | de: Mio. CHF | fr: Millions de CHF | it: Milioni di CHF
+  - **units** BTF: CHF | de: CHF | fr: CHF | it: CHF
+
 ## Display
 - **split**: D0
 - **single-select**: D1, D2, D3, D4

@@ -52,6 +52,37 @@ check(identical(out$meta$dimensions$breakdown$label$en, "Breakdown"), "dim label
 check(identical(out$meta$units$en, "Index (1993 = 100)"), "dataset units set")
 check(!is.null(lv[["Budget/financial plans"]]), "unknown code is created (group headers)")
 
+# ---- per-level units ------------------------------------------------------------
+ul <- c(
+  "## Labels",
+  "- dim: measure",
+  "  - **units** V: Number of dwellings | de: Anzahl Wohnungen",
+  "  - **units** `P C`: Percent | de: Prozent",
+  "  - V: Vacant dwellings"
+)
+s <- read_labels_block(ul)[[1]]
+check(identical(s$level_units$V, list(en = "Number of dwellings", de = "Anzahl Wohnungen")),
+      "per-level units parse")
+check(identical(s$level_units[["P C"]], list(en = "Percent", de = "Prozent")),
+      "per-level units with a backtick-quoted code")
+check(identical(s$levels$V, list(en = "Vacant dwellings")), "level label next to units")
+writeLines(ul, file.path(tmp, "u.md"))
+du <- list(id = "u", meta = list(dimensions = list(measure = list(levels = list(
+  V = list(data = TRUE), `P C` = list(data = TRUE))))))
+out <- attach_labels(du, tmp)
+check(identical(out$meta$units, list(V = list(en = "Number of dwellings", de = "Anzahl Wohnungen"),
+                                     `P C` = list(en = "Percent", de = "Prozent"))),
+      "per-level units land in meta$units keyed by code")
+check(is.null(out$meta$dimensions$measure$units), "per-level units do not touch dim$units")
+writeLines(c("## Labels", "- **units**: CHF | de: CHF", ul[-1]), file.path(tmp, "u2.md"))
+r <- tryCatch(attach_labels(modifyList(du, list(id = "u2")), tmp), error = function(e) "err")
+check(identical(r, "err"), "per-level units next to dataset-wide units is an error")
+s <- read_labels_block(c("## Labels", "- dim: `Offene Stellen`", "  - **units** 3: Percent"))[[1]]
+check(identical(s$dim, "Offene Stellen") && identical(s$level_units[["3"]], list(en = "Percent")),
+      "backtick-quoted dim name with a space")
+r <- tryCatch(read_labels_block(c("## Labels", "- **units** V: X")), error = function(e) "err")
+check(identical(r, "err"), "per-level units outside a dim scope is an error")
+
 # ---- tidy_label: code prefix + capitals -----------------------------------------
 check(identical(tidy_label("4711_472 Retail sale of food", "4711_472", "en"), "Retail sale of food"),
       "code prefix stripped")
@@ -77,6 +108,42 @@ dim <- tidy_level_labels(list(levels = list(C = list(label = list(en = "C MANUFA
 check(identical(dim$levels$C$label, list(en = "Manufacturing", de = "Verarbeitendes Gewerbe")),
       "tidy_level_labels applies per language")
 check(isTRUE(dim$levels$C$data), "tidy_level_labels keeps other level fields")
+
+# ---- tidy_label: LABEL_NOISE patterns (opt-in via strip=) ------------------------
+check(identical(tidy_label("Domestic demand, P3_P5", "demand_dom", "en", strip = "sna_code"),
+                "Domestic demand"), "sna_code: comma + code")
+check(identical(tidy_label("Changes in inventories, statistical discrepancy,  P52_YA0", "stocks", "en",
+                           strip = "sna_code"),
+                "Changes in inventories, statistical discrepancy"), "sna_code: double space")
+check(identical(tidy_label("Final domestic demand P3_P51G", "x", "en", strip = "sna_code"),
+                "Final domestic demand"), "sna_code: no comma")
+check(identical(tidy_label("Laufende Transfers aus der übrigen Welt,D5r_D6r_D7r", "x", "de",
+                           strip = "sna_code"),
+                "Laufende Transfers aus der übrigen Welt"), "sna_code: lowercase suffix letters")
+check(identical(tidy_label("Core inflation 1", "K1", "en", strip = "sna_code"), "Core inflation 1"),
+      "sna_code leaves a bare trailing number")
+check(identical(tidy_label("Other manufacturing (noga 10-18, 22-33)", "x", "en", strip = "noga_ref"),
+                "Other manufacturing"), "noga_ref")
+check(identical(tidy_label("6.3 Consumer sentiment index", "x", "en", strip = "numbering"),
+                "Consumer sentiment index"), "numbering")
+check(identical(tidy_label("2.2 Price outlook, 12 months", "x", "en", strip = "numbering"),
+                "Price outlook, 12 months"), "numbering keeps inner numbers")
+check(identical(tidy_label("6.3 Consumer sentiment index", "x", "en"), "6.3 Consumer sentiment index"),
+      "no strip unless asked")
+check(identical(tidy_label("B1GQ", "gdp", "en", strip = "sna_code"), "B1GQ"),
+      "a pattern that would empty the label is skipped")
+check(identical(tidy_label("Japan – JPY 100", "JPY100", "en", strip = "quote_unit"), "Japan – JPY"),
+      "quote_unit: per 100")
+check(identical(tidy_label("Dänemark – DKK 100.-", "DKK100", "de", strip = "quote_unit"), "Dänemark – DKK"),
+      "quote_unit: de/fr form")
+check(identical(tidy_label("EUR 1", "EUR1", "en", strip = "quote_unit"), "EUR"), "quote_unit: per 1")
+check(identical(tidy_label("Malaysia MYR – 100.-", "MYR100", "de", strip = "quote_unit"), "Malaysia – MYR"),
+      "quote_unit: misplaced dash")
+check(identical(tidy_label("US Dollar 3-month forward rate (CHF per 1 USD)", "USD3M", "en",
+                           strip = "quote_unit"),
+                "US Dollar 3-month forward rate (CHF per 1 USD)"), "quote_unit leaves bracketed text")
+check(inherits(tryCatch(tidy_level_labels(list(levels = list()), strip = "nope"),
+                        error = function(e) e), "error"), "unknown strip pattern fails")
 
 # ---- corpus: every ## Labels block agrees with its sidecar ----------------------
 # The block is the source of truth; the sidecar is its generated cache. Until a

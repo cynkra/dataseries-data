@@ -39,6 +39,9 @@ Who holds Switzerland's foreign assets and debts (the central bank, banks, gover
 - `D2` Component: `T` Total, `D1` Direct investment, `P` Portfolio investment,
   `D0` Derivatives, `UI` Other investment, `W` Reserve assets.
 
+## Labels
+- **units**: CHF millions | de: Mio. CHF | fr: Millions de CHF | it: Milioni di CHF
+
 ## Display
 - **split**: D1
 - **single-select**: D0

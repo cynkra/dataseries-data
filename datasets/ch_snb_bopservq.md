@@ -37,6 +37,9 @@ Which countries Switzerland trades services with (around 50 partners plus region
   other. Default `B`.
 - `D2` Accounting entry: `E` Receipts, `A` Expenses, `S` Net. Default `A`.
 
+## Labels
+- **units**: CHF millions | de: Mio. CHF | fr: Millions de CHF | it: Milioni di CHF
+
 ## Display
 - **split**: D0
 - **single-select**: D2

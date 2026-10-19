@@ -1,5 +1,5 @@
 {
-  "checked": "2026-10-19 08:48 UTC",
+  "checked": "2026-10-19 15:50 UTC",
   "counts": {
     "green": 71,
     "red": 0,
@@ -218,7 +218,7 @@
     },
     {
       "id": "ch_fso_cpi",
-      "title": "Consumer prices (detailed basket)",
+      "title": "Consumer prices (CPI)",
       "source": "Swiss Federal Statistical Office (FSO)",
       "frequency": "monthly",
       "end": "2026-09-01",
@@ -603,7 +603,7 @@
     },
     {
       "id": "ch_snb_plkopr",
-      "title": "Consumer prices (CPI)",
+      "title": "Consumer prices since 1921 (CPI)",
       "source": "Swiss National Bank",
       "frequency": "monthly",
       "end": "2026-08-01",

@@ -2,6 +2,7 @@
 
 - **id**: ch_fso_ppi
 - **title**: Producer and import prices | de: Produzenten- und Importpreise | fr: Prix à la production et à l'importation | it: Prezzi alla produzione e all'importazione
+- **keywords**: PPI | de: PPI, Produzentenpreise | fr: IPP | it: IPP
 - **concept**: Prices / Producer and import prices
 - **canonical**: yes
 - **source**: fso
@@ -35,6 +36,13 @@ Prices Swiss producers charge and importers pay, monthly. The seven series are t
 ## Labels
 - dim: base
   - **label**: Index base | de: Indexbasis | fr: Base de l'indice | it: Base dell'indice
+  - **units** 1963: Index, 1963 = 100 | de: Index, 1963 = 100 | fr: Indice, 1963 = 100 | it: Indice, 1963 = 100
+  - **units** 1993: Index, May 1993 = 100 | de: Index, Mai 1993 = 100 | fr: Indice, mai 1993 = 100 | it: Indice, maggio 1993 = 100
+  - **units** 2003: Index, May 2003 = 100 | de: Index, Mai 2003 = 100 | fr: Indice, mai 2003 = 100 | it: Indice, maggio 2003 = 100
+  - **units** 2010: Index, December 2010 = 100 | de: Index, Dezember 2010 = 100 | fr: Indice, décembre 2010 = 100 | it: Indice, dicembre 2010 = 100
+  - **units** 2015: Index, December 2015 = 100 | de: Index, Dezember 2015 = 100 | fr: Indice, décembre 2015 = 100 | it: Indice, dicembre 2015 = 100
+  - **units** 2020: Index, December 2020 = 100 | de: Index, Dezember 2020 = 100 | fr: Indice, décembre 2020 = 100 | it: Indice, dicembre 2020 = 100
+  - **units** 2025: Index, December 2025 = 100 | de: Index, Dezember 2025 = 100 | fr: Indice, décembre 2025 = 100 | it: Indice, dicembre 2025 = 100
 
 ## Display
 - **split**: base

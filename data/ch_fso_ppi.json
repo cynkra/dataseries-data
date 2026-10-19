@@ -110,5 +110,55 @@
     "fr": "Prix pratiqués par les producteurs suisses et payés par les importateurs, mensuel. Les sept séries sont le même indice rebasé sur les années 1963 à 2025.",
     "it": "Prezzi praticati dai produttori svizzeri e pagati dagli importatori, mensile. Le sette serie sono lo stesso indice ribasato sugli anni dal 1963 al 2025."
   },
-  "fetched_utc": "2026-10-19 08:48:33"
+  "fetched_utc": "2026-10-19 08:48:33",
+  "keywords": {
+    "en": "PPI",
+    "de": "PPI, Produzentenpreise",
+    "fr": "IPP",
+    "it": "IPP"
+  },
+  "units": {
+    "1963": {
+      "en": "Index, 1963 = 100",
+      "de": "Index, 1963 = 100",
+      "fr": "Indice, 1963 = 100",
+      "it": "Indice, 1963 = 100"
+    },
+    "1993": {
+      "en": "Index, May 1993 = 100",
+      "de": "Index, Mai 1993 = 100",
+      "fr": "Indice, mai 1993 = 100",
+      "it": "Indice, maggio 1993 = 100"
+    },
+    "2003": {
+      "en": "Index, May 2003 = 100",
+      "de": "Index, Mai 2003 = 100",
+      "fr": "Indice, mai 2003 = 100",
+      "it": "Indice, maggio 2003 = 100"
+    },
+    "2010": {
+      "en": "Index, December 2010 = 100",
+      "de": "Index, Dezember 2010 = 100",
+      "fr": "Indice, décembre 2010 = 100",
+      "it": "Indice, dicembre 2010 = 100"
+    },
+    "2015": {
+      "en": "Index, December 2015 = 100",
+      "de": "Index, Dezember 2015 = 100",
+      "fr": "Indice, décembre 2015 = 100",
+      "it": "Indice, dicembre 2015 = 100"
+    },
+    "2020": {
+      "en": "Index, December 2020 = 100",
+      "de": "Index, Dezember 2020 = 100",
+      "fr": "Indice, décembre 2020 = 100",
+      "it": "Indice, dicembre 2020 = 100"
+    },
+    "2025": {
+      "en": "Index, December 2025 = 100",
+      "de": "Index, Dezember 2025 = 100",
+      "fr": "Indice, décembre 2025 = 100",
+      "it": "Indice, dicembre 2025 = 100"
+    }
+  }
 }

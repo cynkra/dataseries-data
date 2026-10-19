@@ -36,6 +36,9 @@ Switzerland's leading business-cycle indicator, published monthly by ETH Zurich.
 ## Dimensions
 None. The dataset is a single undifferentiated series (`dim_order` empty).
 
+## Labels
+- **units**: Index | de: Index | fr: Indice | it: Indice
+
 ## Caveats / simplifications
 - The barometer is periodically re-based and re-estimated by KOF, so historical
   values can be revised across the whole back-series, not just recent months.

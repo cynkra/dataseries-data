@@ -40,6 +40,9 @@ How much Swiss banks lend to companies by company size, shown both as credit gra
 - `D3` Utilisation and credit lines: `F` utilisation (drawn), `B` credit lines
   (granted).
 
+## Labels
+- **units**: CHF millions | de: Mio. CHF | fr: Millions de CHF | it: Milioni di CHF
+
 ## Display
 - **split**: D1
 - **single-select**: D0, D2, D3

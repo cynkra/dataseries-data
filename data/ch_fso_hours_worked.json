@@ -200,5 +200,25 @@
     "fr": "Combien d'heures on travaille réellement en Suisse : volume total, heures par emploi et heures hebdomadaires usuelles, selon le sexe et le temps plein ou partiel.",
     "it": "Quante ore si lavora effettivamente in Svizzera: volume totale, ore per impiego e ore settimanali abituali, per sesso e per tempo pieno o parziale."
   },
-  "fetched_utc": "2026-10-19 08:48:33"
+  "fetched_utc": "2026-10-19 08:48:33",
+  "units": {
+    "weekly": {
+      "en": "Hours per week",
+      "de": "Stunden pro Woche",
+      "fr": "Heures par semaine",
+      "it": "Ore per settimana"
+    },
+    "annual": {
+      "en": "Hours per year",
+      "de": "Stunden pro Jahr",
+      "fr": "Heures par an",
+      "it": "Ore all'anno"
+    },
+    "volume": {
+      "en": "Hours",
+      "de": "Stunden",
+      "fr": "Heures",
+      "it": "Ore"
+    }
+  }
 }

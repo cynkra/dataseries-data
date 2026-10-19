@@ -47,6 +47,9 @@ The source's `Indikator` (Indicator) column only ever carries `2` (overnight sta
 here, so it is dropped — a one-option picker is pure noise. "Overnight stays" is implied
 by the dataset title. That leaves `Tourismusregion` as the single dimension.
 
+## Labels
+- **units**: Number of overnight stays | de: Anzahl Logiernächte | fr: Nombre de nuitées | it: Numero di pernottamenti
+
 ## Display
 - **split**: Tourismusregion
 - **single-select**:

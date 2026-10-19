@@ -1,9 +1,11 @@
 # Consumer Price Index (LIK)
 
 - **id**: ch_fso_cpi
-- **title**: Consumer prices (detailed basket) | de: Konsumentenpreise (detaillierter Warenkorb) | fr: Prix à la consommation (panier détaillé) | it: Prezzi al consumo (paniere dettagliato)
+- **title**: Consumer prices (CPI) | de: Konsumentenpreise (LIK) | fr: Prix à la consommation (IPC) | it: Prezzi al consumo (IPC)
+- **keywords**: CPI, inflation, cost of living | de: LIK, Teuerung, Inflation | fr: IPC, inflation, renchérissement | it: IPC, inflazione, rincaro
 - **concept**: Prices / Consumer prices
-- **canonical**: no (alternate for Consumer prices — the detailed basket breakdown)
+- **canonical**: yes
+- **featured**: Inflation
 - **source**: fso
 - **license**: fso (free reuse, attribution required)
 - **frequency**: monthly
@@ -38,6 +40,7 @@ Swiss inflation with the full shopping basket: 595 items from the total index do
   to `Item_E`).
 
 ## Labels
+- **units**: Index, December 2025 = 100 | de: Index, Dezember 2025 = 100 | fr: Indice, décembre 2025 = 100 | it: Indice, dicembre 2025 = 100
 - dim: item
   - **label**: CPI position | de: LIK-Position | fr: Position de l'IPC | it: Posizione dell'IPC
 

@@ -116,10 +116,12 @@ ds_bullets <- function(lines) {
   }
   for (ln in lines) {
     if (!nzchar(trimws(ln))) next
-    m_dim <- regmatches(ln, regexec("^\\s*-?\\s*\\**dim\\**:\\s*(\\S+)", ln))[[1]]
-    if (length(m_dim) == 2) {
+    # A dim name with spaces (PX-Web "Offene Stellen") is written backtick-quoted.
+    m_dim <- regmatches(ln, regexec("^\\s*-?\\s*\\**dim\\**:\\s*(?:`([^`]+)`|(\\S+))", ln,
+                                    perl = TRUE))[[1]]
+    if (length(m_dim) == 3) {
       flush()
-      cur <- list(dim = m_dim[2], derive = NULL, items = list())
+      cur <- list(dim = paste0(m_dim[2], m_dim[3]), derive = NULL, items = list())
       next
     }
     m_der <- regmatches(ln, regexec("^\\s*-?\\s*derive:\\s*(.+?)\\s*$", ln))[[1]]

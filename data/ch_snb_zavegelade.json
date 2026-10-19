@@ -145,5 +145,31 @@
     "fr": "Chargements et soldes en circulation sur les cartes suisses prépayées et à valeur stockée.",
     "it": "Ricariche e saldi in circolazione sulle carte svizzere prepagate e a valore memorizzato."
   },
-  "fetched_utc": "2026-09-21 08:45:34"
+  "fetched_utc": "2026-09-21 08:45:34",
+  "units": {
+    "TT": {
+      "en": "Thousands of transactions",
+      "de": "Tausend Transaktionen",
+      "fr": "Milliers de transactions",
+      "it": "Migliaia di transazioni"
+    },
+    "BMF0": {
+      "en": "CHF millions",
+      "de": "Mio. CHF",
+      "fr": "Millions de CHF",
+      "it": "Milioni di CHF"
+    },
+    "BTF": {
+      "en": "CHF",
+      "de": "CHF",
+      "fr": "CHF",
+      "it": "CHF"
+    },
+    "BMF1": {
+      "en": "CHF millions",
+      "de": "Mio. CHF",
+      "fr": "Millions de CHF",
+      "it": "Milioni di CHF"
+    }
+  }
 }

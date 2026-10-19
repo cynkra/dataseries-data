@@ -1140,5 +1140,11 @@
     "fr": "La prévision d'inflation de la Banque nationale suisse, un profil par appréciation trimestrielle, à côté de l'inflation effectivement observée.",
     "it": "La previsione d'inflazione della Banca nazionale svizzera, un profilo per ogni valutazione trimestrale, accanto all'inflazione effettivamente osservata."
   },
-  "fetched_utc": "2026-10-01 08:39:01"
+  "fetched_utc": "2026-10-01 08:39:01",
+  "units": {
+    "en": "Percent, change in consumer prices from a year earlier",
+    "de": "Prozent, Veränderung der Konsumentenpreise gegenüber Vorjahr",
+    "fr": "Pour cent, variation des prix à la consommation sur un an",
+    "it": "Percento, variazione dei prezzi al consumo su base annua"
+  }
 }

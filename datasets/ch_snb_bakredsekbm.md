@@ -43,6 +43,9 @@ Which industries Swiss banks lend to: households, manufacturing, construction, t
   health, etc., plus `SX1` non-classifiable loans. Several sections are grouped
   (e.g. `DE`, `JLMN`, `RS`).
 
+## Labels
+- **units**: CHF millions | de: Mio. CHF | fr: Millions de CHF | it: Milioni di CHF
+
 ## Display
 - **split**: D3
 - **single-select**: D0, D1, D2

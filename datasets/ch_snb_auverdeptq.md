@@ -38,6 +38,9 @@ Switzerland's gross external debt on the IMF standard, by borrowing sector and b
   `V0..V7`). `D0_5` direct-investment loans splits liabilities by counterparty:
   `GTA` subsidiaries, `GDA` direct investors, `GSA` fellow companies abroad.
 
+## Labels
+- **units**: CHF millions | de: Mio. CHF | fr: Millions de CHF | it: Milioni di CHF
+
 ## Display
 - **split**: D0
 - **single-select**:

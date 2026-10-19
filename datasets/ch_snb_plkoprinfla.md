@@ -31,6 +31,9 @@ Swiss inflation with volatile items stripped out, the measure central banks watc
   SFSO core inflation 1; `K2` SFSO core inflation 2; `TLK` headline national CPI
   inflation rate.
 
+## Labels
+- **units**: Percent, change from a year earlier | de: Prozent, Veränderung gegenüber Vorjahr | fr: Pour cent, variation sur un an | it: Percento, variazione su base annua
+
 ## Display
 - **split**: D0
 - **single-select**: n/a (single dimension)

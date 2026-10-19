@@ -231,5 +231,11 @@
     "fr": "Niveaux quotidiens des indices boursiers suisses SPI et SMI, avec des sous-indices sectoriels. Le SPI inclut les dividendes réinvestis, le SMI non.",
     "it": "Livelli giornalieri degli indici azionari svizzeri SPI e SMI, con sottoindici settoriali. Lo SPI include i dividendi reinvestiti, lo SMI no."
   },
-  "fetched_utc": "2026-09-21 08:45:33"
+  "fetched_utc": "2026-09-21 08:45:33",
+  "units": {
+    "en": "Index",
+    "de": "Index",
+    "fr": "Indice",
+    "it": "Indice"
+  }
 }

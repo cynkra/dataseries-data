@@ -36,6 +36,16 @@ How many credit, debit and prepaid cards are in circulation in Switzerland, plus
   of which contactless; `T1` debit cards total, `DZ1` contactless; `T2` e-money total,
   `DZ2` contactless; `T3` ATMs total. Default item `T0`.
 
+## Labels
+- dim: D0
+  - **units** T0: Number of cards | de: Anzahl Karten | fr: Nombre de cartes | it: Numero di carte
+  - **units** DZ0: Number of cards | de: Anzahl Karten | fr: Nombre de cartes | it: Numero di carte
+  - **units** T1: Number of cards | de: Anzahl Karten | fr: Nombre de cartes | it: Numero di carte
+  - **units** DZ1: Number of cards | de: Anzahl Karten | fr: Nombre de cartes | it: Numero di carte
+  - **units** T2: Number of cards | de: Anzahl Karten | fr: Nombre de cartes | it: Numero di carte
+  - **units** DZ2: Number of cards | de: Anzahl Karten | fr: Nombre de cartes | it: Numero di carte
+  - **units** T3: Number of ATMs | de: Anzahl Geldautomaten | fr: Nombre de distributeurs automatiques | it: Numero di sportelli automatici
+
 ## Display
 - **split**: D0
 - **single-select**: (none; D0 is the only dimension)

@@ -223,5 +223,11 @@
     "fr": "Qui détient les avoirs et engagements suisses à l'étranger (banque centrale, banques, État ou autres secteurs) et la position créditrice nette qui en résulte.",
     "it": "Chi detiene gli attivi e i debiti svizzeri sull'estero (banca centrale, banche, Stato o altri settori) e la posizione creditoria netta che ne risulta."
   },
-  "fetched_utc": "2026-09-22 08:39:05"
+  "fetched_utc": "2026-09-22 08:39:05",
+  "units": {
+    "en": "CHF millions",
+    "de": "Mio. CHF",
+    "fr": "Millions de CHF",
+    "it": "Milioni di CHF"
+  }
 }

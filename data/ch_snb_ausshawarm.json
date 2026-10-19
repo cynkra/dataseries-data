@@ -452,5 +452,19 @@
     "fr": "Ce que la Suisse exporte et importe chaque mois par groupe de marchandises, en millions de CHF et en variation réelle, corrigée de l'inflation.",
     "it": "Cosa la Svizzera esporta e importa ogni mese per gruppo di merci, in milioni di CHF e come variazione reale, corretta per l'inflazione."
   },
-  "fetched_utc": "2026-09-21 08:45:32"
+  "fetched_utc": "2026-09-21 08:45:32",
+  "units": {
+    "WMF": {
+      "en": "CHF millions",
+      "de": "Mio. CHF",
+      "fr": "Millions de CHF",
+      "it": "Milioni di CHF"
+    },
+    "R": {
+      "en": "Percent change from a year earlier, real",
+      "de": "Veränderung gegenüber Vorjahr in Prozent, real",
+      "fr": "Variation sur un an en pour cent, réelle",
+      "it": "Variazione su base annua in percento, reale"
+    }
+  }
 }

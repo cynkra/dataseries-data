@@ -934,10 +934,10 @@
   {
     "id": "ch_fso_cpi",
     "title": {
-      "en": "Consumer prices (detailed basket)",
-      "de": "Konsumentenpreise (detaillierter Warenkorb)",
-      "fr": "Prix à la consommation (panier détaillé)",
-      "it": "Prezzi al consumo (paniere dettagliato)"
+      "en": "Consumer prices (CPI)",
+      "de": "Konsumentenpreise (LIK)",
+      "fr": "Prix à la consommation (IPC)",
+      "it": "Prezzi al consumo (IPC)"
     },
     "concept": {
       "en": "Prices / Consumer prices",
@@ -948,8 +948,13 @@
         "it": "Prezzi al consumo"
       }
     },
-    "canonical": false,
-    "featured": null,
+    "canonical": true,
+    "featured": {
+      "en": "Inflation",
+      "de": "Teuerung",
+      "fr": "Inflation",
+      "it": "Inflazione"
+    },
     "topic": {
       "key": "prices",
       "name": {
@@ -2639,10 +2644,10 @@
   {
     "id": "ch_snb_plkopr",
     "title": {
-      "en": "Consumer prices (CPI)",
-      "de": "Konsumentenpreise (LIK)",
-      "fr": "Prix à la consommation (IPC)",
-      "it": "Prezzi al consumo (IPC)"
+      "en": "Consumer prices since 1921 (CPI)",
+      "de": "Konsumentenpreise seit 1921 (LIK)",
+      "fr": "Prix à la consommation depuis 1921 (IPC)",
+      "it": "Prezzi al consumo dal 1921 (IPC)"
     },
     "concept": {
       "en": "Prices / Consumer prices",
@@ -2653,13 +2658,8 @@
         "it": "Prezzi al consumo"
       }
     },
-    "canonical": true,
-    "featured": {
-      "en": "Inflation",
-      "de": "Teuerung",
-      "fr": "Inflation",
-      "it": "Inflazione"
-    },
+    "canonical": false,
+    "featured": null,
     "topic": {
       "key": "prices",
       "name": {

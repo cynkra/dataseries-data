@@ -40,6 +40,9 @@ How many hours the Swiss actually work: total volume, hours per job, and usual w
 ## Labels
 - dim: measure
   - **label**: Measure | de: Messgrösse | fr: Mesure | it: Misura
+  - **units** weekly: Hours per week | de: Stunden pro Woche | fr: Heures par semaine | it: Ore per settimana
+  - **units** annual: Hours per year | de: Stunden pro Jahr | fr: Heures par an | it: Ore all'anno
+  - **units** volume: Hours | de: Stunden | fr: Heures | it: Ore
   - weekly: Usual hours worked per week per job | de: Normalarbeitszeit pro Woche und Stelle | fr: Heures hebdomadaires habituelles par emploi | it: Ore settimanali abituali per impiego
   - annual: Annual hours worked per job | de: Jahresarbeitszeit pro Stelle | fr: Heures annuelles par emploi | it: Ore annue per impiego
   - volume: Annual volume of hours worked (total) | de: Jahresarbeitsvolumen (Total) | fr: Volume annuel d'heures travaillées (total) | it: Volume annuo di ore lavorate (totale)

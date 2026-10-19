@@ -295,5 +295,151 @@
     "fr": "Ce que les entreprises suisses rapportent chaque trimestre à la Banque nationale sur le chiffre d'affaires, les capacités, l'embauche, les marges, les prix et les salaires attendus.",
     "it": "Cosa le imprese svizzere riferiscono trimestralmente alla Banca nazionale su fatturato, capacità, assunzioni, margini, prezzi e attese salariali."
   },
-  "fetched_utc": "2026-10-01 08:39:01"
+  "fetched_utc": "2026-10-01 08:39:01",
+  "units": {
+    "UVJQ": {
+      "en": "Index",
+      "de": "Index",
+      "fr": "Indice",
+      "it": "Indice"
+    },
+    "UVQ": {
+      "en": "Index",
+      "de": "Index",
+      "fr": "Indice",
+      "it": "Indice"
+    },
+    "KA": {
+      "en": "Index",
+      "de": "Index",
+      "fr": "Indice",
+      "it": "Indice"
+    },
+    "BS": {
+      "en": "Index",
+      "de": "Index",
+      "fr": "Indice",
+      "it": "Indice"
+    },
+    "EML": {
+      "en": "Index",
+      "de": "Index",
+      "fr": "Indice",
+      "it": "Indice"
+    },
+    "ML": {
+      "en": "Index",
+      "de": "Index",
+      "fr": "Indice",
+      "it": "Indice"
+    },
+    "NM": {
+      "en": "Index",
+      "de": "Index",
+      "fr": "Indice",
+      "it": "Indice"
+    },
+    "KVK": {
+      "en": "Index",
+      "de": "Index",
+      "fr": "Indice",
+      "it": "Indice"
+    },
+    "LS": {
+      "en": "Index",
+      "de": "Index",
+      "fr": "Indice",
+      "it": "Indice"
+    },
+    "PK": {
+      "en": "Index",
+      "de": "Index",
+      "fr": "Indice",
+      "it": "Indice"
+    },
+    "RS": {
+      "en": "Index",
+      "de": "Index",
+      "fr": "Indice",
+      "it": "Indice"
+    },
+    "UERW": {
+      "en": "Index",
+      "de": "Index",
+      "fr": "Indice",
+      "it": "Indice"
+    },
+    "UEG": {
+      "en": "Index",
+      "de": "Index",
+      "fr": "Indice",
+      "it": "Indice"
+    },
+    "BERW": {
+      "en": "Index",
+      "de": "Index",
+      "fr": "Indice",
+      "it": "Indice"
+    },
+    "EPE": {
+      "en": "Index",
+      "de": "Index",
+      "fr": "Indice",
+      "it": "Indice"
+    },
+    "VPE": {
+      "en": "Index",
+      "de": "Index",
+      "fr": "Indice",
+      "it": "Indice"
+    },
+    "AI": {
+      "en": "Index",
+      "de": "Index",
+      "fr": "Indice",
+      "it": "Indice"
+    },
+    "BI": {
+      "en": "Index",
+      "de": "Index",
+      "fr": "Indice",
+      "it": "Indice"
+    },
+    "EPNV": {
+      "en": "Index",
+      "de": "Index",
+      "fr": "Indice",
+      "it": "Indice"
+    },
+    "F25": {
+      "en": "Index",
+      "de": "Index",
+      "fr": "Indice",
+      "it": "Indice"
+    },
+    "LELJ": {
+      "en": "Percent",
+      "de": "Prozent",
+      "fr": "Pour cent",
+      "it": "Percento"
+    },
+    "LEFJ": {
+      "en": "Percent",
+      "de": "Prozent",
+      "fr": "Pour cent",
+      "it": "Percento"
+    },
+    "IERWM": {
+      "en": "Percent",
+      "de": "Prozent",
+      "fr": "Pour cent",
+      "it": "Percento"
+    },
+    "IERWJ": {
+      "en": "Percent",
+      "de": "Prozent",
+      "fr": "Pour cent",
+      "it": "Percento"
+    }
+  }
 }

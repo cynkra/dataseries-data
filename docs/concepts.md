@@ -52,7 +52,7 @@ _Canonical series and labelled alternates per concept, grouped into the 12 overv
 ### Prices
 | Concept | Canonical | Alternates |
 |---|---|---|
-| Consumer prices | `ch_snb_plkopr` (SNB) ★ | `ch_fso_cpi` (FSO), `ch_fso_hicp` (Eurostat) |
+| Consumer prices | `ch_fso_cpi` (FSO) ★ | `ch_fso_hicp` (Eurostat), `ch_snb_plkopr` (SNB) |
 | Producer and import prices | `ch_fso_ppi` (FSO) | — |
 | Construction prices | `ch_fso_construction_prices` (FSO) | — |
 | Real estate prices | `ch_snb_plimoinchq` (SNB) | — |
@@ -64,8 +64,8 @@ _Canonical series and labelled alternates per concept, grouped into the 12 overv
 |---|---|---|
 | Cross-border commuters | `ch_fso_cross_border_commuters` (FSO) | — |
 | Job market | `ch_adecco_sjmi` (University of Zurich (Stellenmarkt-Monitor Schweiz)) | — |
-| Job vacancies | `ch_fso_vacancies` (FSO) | — |
 | Employment / jobs | `ch_fso_besta` (FSO) ★ | `ch_fso_jobs_sex` (FSO), `ch_snb_ambeschkla` (SNB) |
+| Job vacancies | `ch_fso_vacancies` (FSO) | — |
 | Employment outlook | `ch_fso_besta_outlook` (FSO) | — |
 | Wages | `ch_fso_wage_idx` (FSO) | — |
 | Unemployment | `ch_snb_amarbma` (SNB) ★ | `ch_fso_unemp_rate` (FSO) |
@@ -153,12 +153,13 @@ _Canonical series and labelled alternates per concept, grouped into the 12 overv
   labelled alternate (a different, survey-based definition). (Flipped 2026-06-03;
   the registered series is the one the public and press treat as *the* rate.)
 - Inflation: SNB `plkoprinfla` (core) alongside the headline CPI.
-- Consumer prices: SNB `plkopr` (canonical — headline total back to **1921**)
-  **and** FSO `ch_fso_cpi` (the detailed 443-position COICOP basket, but only back
-  to 1982). The long headline beats the detailed-but-short asset for the canonical
-  slot; the FSO breakdown is kept as the labelled alternate. (Reversed 2026-06-02:
-  `plkopr` was previously dropped as a "pure re-export" — that call missed the
-  ~61 extra years of headline history the SNB chain carries.)
+- Consumer prices: FSO `ch_fso_cpi` (canonical, the producer's index with the
+  detailed COICOP basket, back to 1982) **and** SNB `plkopr` (the headline total
+  back to **1921**, kept as the labelled alternate for its history). (Flipped
+  2026-10-19: the SNB republishes the FSO figure about a month later, so the
+  canonical, featured "Inflation" series was a month behind the producer.
+  Reversed 2026-06-02 before that: `plkopr` was once dropped as a "pure
+  re-export", which missed its ~61 extra years of history.)
 
 **Kept overview cubes (carry unique aggregates the detail cubes lack):**
 - `ch_snb_bopoverq` — capital account + statistical difference.

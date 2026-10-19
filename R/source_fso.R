@@ -117,7 +117,7 @@ suppressPackageStartupMessages({
 # stores the complete source, the site curates), detect the time dimension, and
 # size the time chunk so each call stays under the 5000-cell cap. Saves
 # hand-writing a query per sibling table.
-fso_fetch_auto <- function(dataset_id, table_id, title = NULL) {
+fso_fetch_auto <- function(dataset_id, table_id, title = NULL, tidy_dims = character()) {
   vars <- get_json(.fso_table_url(table_id))$variables
   codes <- vapply(vars, function(v) v$code, "")
   sizes <- setNames(vapply(vars, function(v) length(v$values), 0L), codes)
@@ -143,12 +143,13 @@ fso_fetch_auto <- function(dataset_id, table_id, title = NULL) {
   })
   fso_fetch(dataset_id, table_id, query, title = title,
             year_col = ycol, month_col = mcol, quarter_col = qcol,
-            chunk_by = chunk_by, chunk_size = chunk_size)
+            chunk_by = chunk_by, chunk_size = chunk_size, tidy_dims = tidy_dims)
 }
 
 fso_fetch <- function(dataset_id, table_id, query,
                       title = NULL, year_col = "Jahr", month_col = "Monat",
-                      quarter_col = NULL, chunk_by = NULL, chunk_size = 40L) {
+                      quarter_col = NULL, chunk_by = NULL, chunk_size = 40L,
+                      tidy_dims = character()) {
   if (is.null(chunk_by)) {
     queries <- list(query)
   } else {
@@ -189,6 +190,10 @@ fso_fetch <- function(dataset_id, table_id, query,
   # so three light metadata GETs localise every dim + level label. A failed
   # language GET skips that language, never the dataset.
   dimensions <- .fso_i18n_dims(table_id, dimensions)
+  # NOGA dims print the code in front of every label ("5-96 Total") and the
+  # sectors in capitals; tidy_level_labels() (R/labels.R) cleans the dims named.
+  for (d in intersect(tidy_dims, names(dimensions)))
+    dimensions[[d]] <- tidy_level_labels(dimensions[[d]])
 
   meta <- list(
     title = title %||% list(en = table_id),   # curated title = the datasheet's

@@ -37,6 +37,18 @@ People registered unemployed at Swiss job centres, with the unemployment rate, n
   (raw/SA), `RS` registered job seekers, `E` labour force. The `D0_1..D0_3` codes
   are non-data grouping nodes (`data: false`) and carry no observations.
 
+## Labels
+- dim: D0
+  - **units** K: Number of persons | de: Anzahl Personen | fr: Nombre de personnes | it: Numero di persone
+  - **units** T0: Number of persons | de: Anzahl Personen | fr: Nombre de personnes | it: Numero di persone
+  - **units** S0: Number of persons | de: Anzahl Personen | fr: Nombre de personnes | it: Numero di persone
+  - **units** RS: Number of persons | de: Anzahl Personen | fr: Nombre de personnes | it: Numero di persone
+  - **units** E: Number of persons | de: Anzahl Personen | fr: Nombre de personnes | it: Numero di persone
+  - **units** T1: Percent | de: Prozent | fr: Pour cent | it: Percento
+  - **units** S1: Percent | de: Prozent | fr: Pour cent | it: Percento
+  - **units** T2: Number of vacancies | de: Anzahl offene Stellen | fr: Nombre de places vacantes | it: Numero di posti vacanti
+  - **units** S2: Number of vacancies | de: Anzahl offene Stellen | fr: Nombre de places vacantes | it: Numero di posti vacanti
+
 ## Display
 - **split**: D0
 - **single-select**: (none; D0 is the only dimension)

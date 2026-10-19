@@ -45,6 +45,23 @@ Interbank payments settled in Swiss francs through SIC each month: how many, how
     - Turnover by band (CHF million): `149991`, `50009999991`, `1MM1`
       (same three bands).
 
+## Labels
+- dim: D0
+  - **units** T0: Number of transactions | de: Anzahl Transaktionen | fr: Nombre de transactions | it: Numero di transazioni
+  - **units** MT0: Number of transactions | de: Anzahl Transaktionen | fr: Nombre de transactions | it: Numero di transazioni
+  - **units** DA0: Number of transactions | de: Anzahl Transaktionen | fr: Nombre de transactions | it: Numero di transazioni
+  - **units** 149990: Number of transactions | de: Anzahl Transaktionen | fr: Nombre de transactions | it: Numero di transazioni
+  - **units** 50009999990: Number of transactions | de: Anzahl Transaktionen | fr: Nombre de transactions | it: Numero di transazioni
+  - **units** 1MM0: Number of transactions | de: Anzahl Transaktionen | fr: Nombre de transactions | it: Numero di transazioni
+  - **units** T1: CHF millions | de: Mio. CHF | fr: Millions de CHF | it: Milioni di CHF
+  - **units** MT1: CHF millions | de: Mio. CHF | fr: Millions de CHF | it: Milioni di CHF
+  - **units** DA1: CHF millions | de: Mio. CHF | fr: Millions de CHF | it: Milioni di CHF
+  - **units** 149991: CHF millions | de: Mio. CHF | fr: Millions de CHF | it: Milioni di CHF
+  - **units** 50009999991: CHF millions | de: Mio. CHF | fr: Millions de CHF | it: Milioni di CHF
+  - **units** 1MM1: CHF millions | de: Mio. CHF | fr: Millions de CHF | it: Milioni di CHF
+  - **units** MT2: Ratio | de: Verhältnis | fr: Rapport | it: Rapporto
+  - **units** DA2: Ratio | de: Verhältnis | fr: Rapport | it: Rapporto
+
 ## Display
 - **split**: D0
 - **single-select**: (none; D0 is the only dimension)

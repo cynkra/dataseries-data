@@ -285,5 +285,91 @@
     "fr": "Paiements interbancaires en francs réglés chaque mois via SIC : combien, pour quels montants, et répartis par taille de paiement.",
     "it": "Pagamenti interbancari in franchi regolati ogni mese tramite SIC: quanti, per quali importi, e ripartiti per dimensione del pagamento."
   },
-  "fetched_utc": "2026-09-21 08:45:34"
+  "fetched_utc": "2026-09-21 08:45:34",
+  "units": {
+    "T0": {
+      "en": "Number of transactions",
+      "de": "Anzahl Transaktionen",
+      "fr": "Nombre de transactions",
+      "it": "Numero di transazioni"
+    },
+    "MT0": {
+      "en": "Number of transactions",
+      "de": "Anzahl Transaktionen",
+      "fr": "Nombre de transactions",
+      "it": "Numero di transazioni"
+    },
+    "DA0": {
+      "en": "Number of transactions",
+      "de": "Anzahl Transaktionen",
+      "fr": "Nombre de transactions",
+      "it": "Numero di transazioni"
+    },
+    "149990": {
+      "en": "Number of transactions",
+      "de": "Anzahl Transaktionen",
+      "fr": "Nombre de transactions",
+      "it": "Numero di transazioni"
+    },
+    "50009999990": {
+      "en": "Number of transactions",
+      "de": "Anzahl Transaktionen",
+      "fr": "Nombre de transactions",
+      "it": "Numero di transazioni"
+    },
+    "1MM0": {
+      "en": "Number of transactions",
+      "de": "Anzahl Transaktionen",
+      "fr": "Nombre de transactions",
+      "it": "Numero di transazioni"
+    },
+    "T1": {
+      "en": "CHF millions",
+      "de": "Mio. CHF",
+      "fr": "Millions de CHF",
+      "it": "Milioni di CHF"
+    },
+    "MT1": {
+      "en": "CHF millions",
+      "de": "Mio. CHF",
+      "fr": "Millions de CHF",
+      "it": "Milioni di CHF"
+    },
+    "DA1": {
+      "en": "CHF millions",
+      "de": "Mio. CHF",
+      "fr": "Millions de CHF",
+      "it": "Milioni di CHF"
+    },
+    "149991": {
+      "en": "CHF millions",
+      "de": "Mio. CHF",
+      "fr": "Millions de CHF",
+      "it": "Milioni di CHF"
+    },
+    "50009999991": {
+      "en": "CHF millions",
+      "de": "Mio. CHF",
+      "fr": "Millions de CHF",
+      "it": "Milioni di CHF"
+    },
+    "1MM1": {
+      "en": "CHF millions",
+      "de": "Mio. CHF",
+      "fr": "Millions de CHF",
+      "it": "Milioni di CHF"
+    },
+    "MT2": {
+      "en": "Ratio",
+      "de": "Verhältnis",
+      "fr": "Rapport",
+      "it": "Rapporto"
+    },
+    "DA2": {
+      "en": "Ratio",
+      "de": "Verhältnis",
+      "fr": "Rapport",
+      "it": "Rapporto"
+    }
+  }
 }

@@ -26,6 +26,10 @@ for (f in c("dates.R", "http.R", "datasheet.R", "io.R", "labels.R", "hierarchy.R
 # sources are bounded separately in http.R (connecttimeout + max_seconds).
 options(timeout = 30)
 
+# Label cleanups per SNB cube (LABEL_NOISE names, R/labels.R). devkum: the
+# quotation unit ("JPY 100") moves out of the label into the per-level units.
+.SNB_LABEL_STRIP <- list(devkum = "quote_unit")
+
 # Curated NOGA slices of the CH1.KEU SDMX turnover flows (see datasheets):
 # retail = division 47; production = industry B-E (+ B/C/D) and construction F (41-43).
 .SDMX_RETAIL_NOGA <- c("47", "4711", "4711_472", "4719", "4719_474-479", "472",
@@ -250,12 +254,14 @@ build <- function(only = NULL) {
     add(.try_fetch_if_unchanged(
       paste0("ch_snb_", cube),
       local({ id <- cube; function() snb_last_update(id) }),
-      snb_fetch(cube), cu$topic))
+      snb_fetch(cube, strip = .SNB_LABEL_STRIP[[cube]] %||% character()), cu$topic))
   }
 
   # SECO: full GDP, swissdata format at source (rich multilingual + deep
   # production/expenditure/income hierarchy; the hardest UI case, ~107k rows).
-  add(.try_fetch("ch_seco_gdp", seco_fetch("ch_seco_gdp"), "National accounts"))
+  add(.try_fetch("ch_seco_gdp",
+                 seco_fetch("ch_seco_gdp", strip = c("sna_code", "noga_ref")),
+                 "National accounts"))
 
   # SECO: consumer sentiment survey, swissdata at source (back to 1972-Q4). This
   # is the TRUE producer — it replaces the retired SNB re-export ch_snb_concon —
@@ -263,7 +269,8 @@ build <- function(only = NULL) {
   add(.try_fetch("ch_seco_concon",
                  seco_fetch("ch_seco_concon",
                             data_url = "https://scheduler.swissdatas.ch/scheduled/ks-q.csv",
-                            meta_url = "https://scheduler.swissdatas.ch/scheduled/ch-seco-ks-q.json"),
+                            meta_url = "https://scheduler.swissdatas.ch/scheduled/ch-seco-ks-q.json",
+                            strip = "numbering"),
                  "Business surveys"))
 
   # FSO SDMX (CH1.KEU): turnover flows migrated off the dead PX-Web onto
@@ -348,13 +355,14 @@ build <- function(only = NULL) {
                                             `Geschlecht` = "TOT"),
                               quarter_col = "Quartal",
                               label_lifecycle = "NON_CURRENT",
-                              round_values = TRUE),
+                              round_values = TRUE,
+                              tidy_dims = "Wirtschaftsabteilung"),
                  "Labour"))
 
   # FSO labour depth: job vacancies (leading indicator) + jobs by sex.
   add(.try_fetch("ch_fso_vacancies",
                  fso_fetch_auto("ch_fso_vacancies", "px-x-0602000000_103",
-                                ),
+                                tidy_dims = "Wirtschaftsabteilung"),
                  "Labour"))
   add(.try_fetch("ch_fso_jobs_sex",
                  fso_fetch_auto("ch_fso_jobs_sex", "px-x-0602000000_102",
@@ -372,7 +380,8 @@ build <- function(only = NULL) {
   )
   add(.try_fetch("ch_fso_besta_outlook",
                  fso_fetch("ch_fso_besta_outlook", "px-x-0602000000_105", besta_outlook_query,
-                           quarter_col = "Quartal"),
+                           quarter_col = "Quartal",
+                           tidy_dims = "Wirtschaftsabteilung"),
                  "Labour"))
 
   # FSO Excel-asset datasets (not in PX-Web): the macro depth — CPI, producer/

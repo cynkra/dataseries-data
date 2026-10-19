@@ -26,11 +26,19 @@ Swiss firms' hiring intentions for the next three months, by industry. Above 1.0
   pinned dims are single-valued and drop out as degenerate, leaving
   `Wirtschaftsabteilung`. 1780 cells, under the 5000-cell cap (no chunking).
 - `Quartal` (`YYYYQn`) → first-of-quarter ISO via `quarter_col`.
+- Level labels: FSO prints the NOGA code in front of every
+  `Wirtschaftsabteilung` label ("5-96 Total") and the sectors in capitals
+  ("SECTOR II"). `tidy_dims = "Wirtschaftsabteilung"` runs
+  `R/labels.R::tidy_level_labels()` on that dimension: code dropped, capitals
+  recased ("Total", "Sector II"; German is already in proper case).
 
 ## Dimensions
 - `Wirtschaftsabteilung` (Economic division): 20 NOGA aggregates. `5-96` = Total (the
   default), `5-43` Sector II, `45-96` Sector III, plus the divisional breakdown
   (manufacturing, construction, trade, finance, health, …). Same coding as `ch_fso_besta`.
+
+## Labels
+- **units**: Index | de: Index | fr: Indice | it: Indice
 
 ## Display
 - **split**: Wirtschaftsabteilung

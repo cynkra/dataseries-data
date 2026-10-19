@@ -861,5 +861,11 @@
     "fr": "Taux d'intérêt sur les nouvelles affaires bancaires suisses : hypothèques, crédits à la consommation, épargne, prévoyance et dépôts à terme, donnés en distribution.",
     "it": "Tassi d'interesse sui nuovi affari bancari svizzeri: ipoteche, crediti al consumo, risparmio, previdenza e depositi a termine, indicati come distribuzione."
   },
-  "fetched_utc": "2026-10-02 08:39:19"
+  "fetched_utc": "2026-10-02 08:39:19",
+  "units": {
+    "en": "Percent",
+    "de": "Prozent",
+    "fr": "Pour cent",
+    "it": "Percento"
+  }
 }

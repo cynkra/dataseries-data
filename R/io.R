@@ -56,6 +56,11 @@ read_datasheet_meta <- function(id, datasheet_dir, lines = NULL) {
   # SNB/FSO cube name). Single source of truth, like `featured` — set it only where
   # the source title needs cleaning up. i18n: "En title | de: … | fr: …".
   if (!is.null(top$title)) out$title <- ds_i18n(top$title)
+  # Optional search words: abbreviations and everyday names a reader types that
+  # neither the title nor the labels contain ("CPI", "franc", "EUR"). The site's
+  # search and /resolve read them; the vocabulary lives here, not in their code.
+  # i18n, comma-separated: "CPI, LIK | de: LIK, Teuerung | fr: IPC".
+  if (!is.null(top$keywords)) out$keywords <- ds_i18n(top$keywords)
 
   # Display block: presentation decisions the app derives from the datasheet
   # instead of guessing with code heuristics.

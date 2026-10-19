@@ -816,5 +816,11 @@
     "fr": "Avec quels pays la Suisse échange des services (environ 50 partenaires plus les totaux régionaux), par type de service et par sens.",
     "it": "Con quali paesi la Svizzera scambia servizi (circa 50 partner più i totali regionali), per tipo di servizio e direzione."
   },
-  "fetched_utc": "2026-09-22 08:39:05"
+  "fetched_utc": "2026-09-22 08:39:05",
+  "units": {
+    "en": "CHF millions",
+    "de": "Mio. CHF",
+    "fr": "Millions de CHF",
+    "it": "Milioni di CHF"
+  }
 }

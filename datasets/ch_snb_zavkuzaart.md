@@ -38,6 +38,12 @@ How Swiss customers send money without a card: credit transfers, direct debits a
   thousands, `BPT` amount per transaction in CHF.
 - Default item: `D0=T, D1=T, D2=ATA`.
 
+## Labels
+- dim: D2
+  - **units** ATA: Thousands of transactions | de: Tausend Transaktionen | fr: Milliers de transactions | it: Migliaia di transazioni
+  - **units** BET: CHF thousands | de: Tausend CHF | fr: Milliers de CHF | it: Migliaia di CHF
+  - **units** BPT: CHF | de: CHF | fr: CHF | it: CHF
+
 ## Display
 - **split**: D1
 - **single-select**: D0, D2

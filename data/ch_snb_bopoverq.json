@@ -597,5 +597,11 @@
     "fr": "La balance des paiements suisse sur une page : les quatre comptes, y compris la différence statistique qui boucle les comptes.",
     "it": "La bilancia dei pagamenti svizzera in una pagina: tutti e quattro i conti, inclusa la differenza statistica che chiude i conti."
   },
-  "fetched_utc": "2026-09-22 08:39:05"
+  "fetched_utc": "2026-09-22 08:39:05",
+  "units": {
+    "en": "CHF millions",
+    "de": "Mio. CHF",
+    "fr": "Millions de CHF",
+    "it": "Milioni di CHF"
+  }
 }

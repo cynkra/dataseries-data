@@ -44,6 +44,33 @@ What Swiss companies tell the National Bank each quarter about turnover, capacit
   (%) with children `IERWM` (6-12 months) and `IERWJ` (3-5 years), `F25` sales
   prices vs year-back quarter.
 
+## Labels
+- dim: D0
+  - **units** UVJQ: Index | de: Index | fr: Indice | it: Indice
+  - **units** UVQ: Index | de: Index | fr: Indice | it: Indice
+  - **units** KA: Index | de: Index | fr: Indice | it: Indice
+  - **units** BS: Index | de: Index | fr: Indice | it: Indice
+  - **units** EML: Index | de: Index | fr: Indice | it: Indice
+  - **units** ML: Index | de: Index | fr: Indice | it: Indice
+  - **units** NM: Index | de: Index | fr: Indice | it: Indice
+  - **units** KVK: Index | de: Index | fr: Indice | it: Indice
+  - **units** LS: Index | de: Index | fr: Indice | it: Indice
+  - **units** PK: Index | de: Index | fr: Indice | it: Indice
+  - **units** RS: Index | de: Index | fr: Indice | it: Indice
+  - **units** UERW: Index | de: Index | fr: Indice | it: Indice
+  - **units** UEG: Index | de: Index | fr: Indice | it: Indice
+  - **units** BERW: Index | de: Index | fr: Indice | it: Indice
+  - **units** EPE: Index | de: Index | fr: Indice | it: Indice
+  - **units** VPE: Index | de: Index | fr: Indice | it: Indice
+  - **units** AI: Index | de: Index | fr: Indice | it: Indice
+  - **units** BI: Index | de: Index | fr: Indice | it: Indice
+  - **units** EPNV: Index | de: Index | fr: Indice | it: Indice
+  - **units** F25: Index | de: Index | fr: Indice | it: Indice
+  - **units** LELJ: Percent | de: Prozent | fr: Pour cent | it: Percento
+  - **units** LEFJ: Percent | de: Prozent | fr: Pour cent | it: Percento
+  - **units** IERWM: Percent | de: Prozent | fr: Pour cent | it: Percento
+  - **units** IERWJ: Percent | de: Prozent | fr: Pour cent | it: Percento
+
 ## Display
 - **split**: D0
 - **single-select**: (none; single dimension)

@@ -43,14 +43,22 @@ Swiss exports and imports by country in CHF millions: Germany, the US, China and
   6. parses each year cell as a number (European thousands `'` stripped, `,`→`.`),
      dropping `....` / blank → NA. Footnote-definition rows (a bare marker in col1
      and prose in col2) carry no numeric year cells and are skipped.
+- Partner labels in de/fr/it: each asset links its German, French and Italian
+  versions (`alternate` links in the DAM asset JSON; exports 36664835/36664832/36664833,
+  imports 36664831/36664829/36664834). Those sheets sort partners alphabetically
+  per language, so each row is matched to its English partner by its full row of
+  yearly values within the same flow, and a row matching zero or several English
+  rows is skipped. The German sheet's "Saubi-Arabien" and abbreviations such as
+  "Tschechische R." are FSO's text and kept as published.
 - European number formatting and trailing footnote markers are stripped. The 2013
   methodology break is **not** chained (see Caveats).
 
 ## Dimensions
 - `flow`: the trade direction — Exports / Imports.
 - `partner`: the partner country or region (40 levels: ~32 individual countries plus
-  the continent / economic-area aggregates and the grand Total). Labels are the
-  workbook's English names.
+  the continent / economic-area aggregates and the grand Total). Codes and English
+  labels are the workbook's English names; de/fr/it labels come from the same
+  tables in those languages (see Parsing recipe).
 - `level`: whether a `partner` is an individual `country` or a `group` (continent /
   economic area). Functionally determined by `partner`; surfaced as its own
   single-select so a user can hold the chart to either just the countries or just the

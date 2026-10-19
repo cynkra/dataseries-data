@@ -34,9 +34,14 @@ into the contract `dimensions` shape; there is no `hierarchy` in this source, so
 split/single-select/default below are declared here (the website derives them from
 this datasheet, not from a hierarchy heuristic).
 
+Level labels: SECO puts its questionnaire numbering in front of each item label
+("6.3 Consumer sentiment index", "3.2 Unemployment outlook") in all four languages.
+The fetcher removes it (`seco_fetch(strip = "numbering")`, pattern in
+`R/labels.R::LABEL_NOISE`).
+
 ## Dimensions
-- `structure` — survey item. `ks_i63_index_q` is the composite **6.3 Consumer
-  sentiment index** (headline); the remaining codes are the component balances
+- `structure` — survey item. `ks_i63_index_q` is the composite **Consumer
+  sentiment index** (SECO item 6.3, headline); the remaining codes are the component balances
   (`ks_i11_econ_hist_q` past economic situation, `ks_i12_econ_exp_q` economic outlook,
   `ks_i21_price_hist_q` / `ks_i22_price_exp_q` price situation/outlook,
   `ks_i31_job_secure_q` job security, `ks_i32_unemp_exp_q` unemployment outlook,

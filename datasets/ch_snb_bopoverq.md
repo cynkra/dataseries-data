@@ -37,6 +37,9 @@ Switzerland's balance of payments on one page: all four accounts including the s
   difference `SD`. Default view `A0` (current-account expenses). Grouping nodes
   (`D0_*`, `data:false`) carry no data.
 
+## Labels
+- **units**: CHF millions | de: Mio. CHF | fr: Millions de CHF | it: Milioni di CHF
+
 ## Display
 - **split**: D0
 - **single-select**: n/a (single-dimension cube; D0 is the only dimension)

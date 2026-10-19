@@ -6255,12 +6255,12 @@
       "it": "Prezzi al consumo"
     }
   },
-  "canonical": false,
+  "canonical": true,
   "title": {
-    "en": "Consumer prices (detailed basket)",
-    "de": "Konsumentenpreise (detaillierter Warenkorb)",
-    "fr": "Prix à la consommation (panier détaillé)",
-    "it": "Prezzi al consumo (paniere dettagliato)"
+    "en": "Consumer prices (CPI)",
+    "de": "Konsumentenpreise (LIK)",
+    "fr": "Prix à la consommation (IPC)",
+    "it": "Prezzi al consumo (IPC)"
   },
   "split": "item",
   "single_select": [],
@@ -6274,5 +6274,23 @@
     "fr": "Inflation suisse avec le panier complet : 595 positions, de l'indice total à l'alimentation, au logement et aux transports. Base décembre 2025 = 100.",
     "it": "Inflazione svizzera con il paniere completo: 595 posizioni, dall'indice totale ad alimentari, abitazione e trasporti. Base dicembre 2025 = 100."
   },
-  "fetched_utc": "2026-10-19 08:48:33"
+  "fetched_utc": "2026-10-19 08:48:33",
+  "featured": {
+    "en": "Inflation",
+    "de": "Teuerung",
+    "fr": "Inflation",
+    "it": "Inflazione"
+  },
+  "keywords": {
+    "en": "CPI, inflation, cost of living",
+    "de": "LIK, Teuerung, Inflation",
+    "fr": "IPC, inflation, renchérissement",
+    "it": "IPC, inflazione, rincaro"
+  },
+  "units": {
+    "en": "Index, December 2025 = 100",
+    "de": "Index, Dezember 2025 = 100",
+    "fr": "Indice, décembre 2025 = 100",
+    "it": "Indice, dicembre 2025 = 100"
+  }
 }

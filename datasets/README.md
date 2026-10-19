@@ -33,6 +33,8 @@ full edit→regenerate workflow.)
 - **canonical**: yes | no (alternate for <concept>)
 - **featured**: <optional homepage label, e.g. "Inflation"; omit for non-featured>
   <only the handful of homepage example datasets carry this; drives the landing chips>
+- **keywords**: <optional search words the title and labels lack: abbreviations, everyday names;
+  i18n, comma-separated, e.g. "CPI, inflation | de: LIK, Teuerung | fr: IPC">
 
 - **source**: <producer name>
 - **license**: <snb | kof | fso | seco>  (terms)
@@ -76,8 +78,10 @@ sparsely on top of the fetched meta by `attach_labels()` (R/labels.R); regenerat
 with `Rscript dev/rebuild_from_datasheets.R`; `tests/test_labels.R` fails if a
 block and its sidecar drift.>
 - **units**: <dataset-wide units, i18n>
-- dim: <dimension>
+- dim: <dimension>   (backtick-quote a name containing spaces)
   - **label**: <the dimension's own label, i18n>
+  - **units** <code>: <unit of that level, i18n>   (when the levels differ in unit;
+    instead of the dataset-wide line; data-bearing codes only)
   - <code>: <level label, i18n>   (backtick-quote a code containing spaces/colons)
 
 ## Display
