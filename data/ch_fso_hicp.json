@@ -5,7 +5,7 @@
     "coicop"
   ],
   "start": "2004-12-01",
-  "end": "2025-12-01",
+  "end": "2026-09-01",
   "source": {
     "name": {
       "en": "Eurostat",
@@ -13,12 +13,12 @@
       "fr": "Eurostat",
       "it": "Eurostat"
     },
-    "url": "https://ec.europa.eu/eurostat/databrowser/view/prc_hicp_midx/default/table",
+    "url": "https://ec.europa.eu/eurostat/databrowser/view/prc_hicp_minr/default/table",
     "key": "eurostat"
   },
   "license": "eurostat",
   "frequency": "monthly",
-  "updated": "2026-02-06",
+  "updated": "2026-10-16",
   "dimensions": {
     "coicop": {
       "label": {
@@ -78,31 +78,37 @@
         },
         "CP08": {
           "label": {
-            "en": "Communications"
+            "en": "Information and communication"
           },
           "data": true
         },
         "CP09": {
           "label": {
-            "en": "Recreation and culture"
+            "en": "Recreation, sport and culture"
           },
           "data": true
         },
         "CP10": {
           "label": {
-            "en": "Education"
+            "en": "Education services"
           },
           "data": true
         },
         "CP11": {
           "label": {
-            "en": "Restaurants and hotels"
+            "en": "Restaurants and accommodation services"
           },
           "data": true
         },
         "CP12": {
           "label": {
-            "en": "Miscellaneous goods and services"
+            "en": "Insurance and financial services"
+          },
+          "data": true
+        },
+        "CP13": {
+          "label": {
+            "en": "Personal care, social protection and miscellaneous goods and services"
           },
           "data": true
         }
@@ -120,7 +126,8 @@
           "CP09": [],
           "CP10": [],
           "CP11": [],
-          "CP12": []
+          "CP12": [],
+          "CP13": []
         }
       }
     }
@@ -168,5 +175,5 @@
     "fr": "Indice (2015 = 100)",
     "it": "Indice (2015 = 100)"
   },
-  "fetched_utc": "2026-10-19 08:41:59"
+  "fetched_utc": "2026-10-19 08:48:33"
 }

@@ -232,7 +232,7 @@ export,Canada,country,2003-01-01,1437.640006
 export,Canada,country,2004-01-01,1994.226685
 export,Canada,country,2005-01-01,2268.607321
 export,Canada,country,2006-01-01,2753.217703
-export,Canada,country,2007-01-01,2896.3312770000002
+export,Canada,country,2007-01-01,2896.3312769999998
 export,Canada,country,2008-01-01,2418.810198
 export,Canada,country,2009-01-01,2515.716911
 export,Canada,country,2010-01-01,2891.168925
@@ -296,9 +296,9 @@ export,China,country,1995-01-01,843.303586
 export,China,country,1996-01-01,887.745818
 export,China,country,1997-01-01,937.784877
 export,China,country,1998-01-01,809.097037
-export,China,country,1999-01-01,990.030713
+export,China,country,1999-01-01,990.0307130000001
 export,China,country,2000-01-01,1402.658194
-export,China,country,2001-01-01,1668.1578260000001
+export,China,country,2001-01-01,1668.1578259999999
 export,China,country,2002-01-01,2070.38983
 export,China,country,2003-01-01,2485.116911
 export,China,country,2004-01-01,3106.988814
@@ -689,7 +689,7 @@ export,North America,group,1992-01-01,8553.049504
 export,North America,group,1993-01-01,8948.412942
 export,North America,group,1994-01-01,9339.645652
 export,North America,group,1995-01-01,8988.932492
-export,North America,group,1996-01-01,9948.868176
+export,North America,group,1996-01-01,9948.868176000002
 export,North America,group,1997-01-01,12242.36013
 export,North America,group,1998-01-01,13242.156868
 export,North America,group,1999-01-01,15661.562651
@@ -939,7 +939,7 @@ export,Taiwan,country,1992-01-01,897
 export,Taiwan,country,1993-01-01,953.977248
 export,Taiwan,country,1994-01-01,975.227243
 export,Taiwan,country,1995-01-01,937.687829
-export,Taiwan,country,1996-01-01,930.513556
+export,Taiwan,country,1996-01-01,930.5135560000001
 export,Taiwan,country,1997-01-01,1084.995096
 export,Taiwan,country,1998-01-01,1223.207556
 export,Taiwan,country,1999-01-01,1328.056354
@@ -976,7 +976,7 @@ export,Thailand,country,1993-01-01,792.452834
 export,Thailand,country,1994-01-01,902.850826
 export,Thailand,country,1995-01-01,876.197309
 export,Thailand,country,1996-01-01,895.284532
-export,Thailand,country,1997-01-01,900.938045
+export,Thailand,country,1997-01-01,900.9380450000002
 export,Thailand,country,1998-01-01,576.790405
 export,Thailand,country,1999-01-01,586.812717
 export,Thailand,country,2000-01-01,753.004636
@@ -1223,7 +1223,7 @@ import,Africa,group,2024-01-01,17080.782981
 import,Africa,group,2025-01-01,22606.257968
 import,Asia,group,1990-01-01,9201.081597
 import,Asia,group,1991-01-01,9284.38542
-import,Asia,group,1992-01-01,9065.382479
+import,Asia,group,1992-01-01,9065.382479000002
 import,Asia,group,1993-01-01,8852.488247
 import,Asia,group,1994-01-01,8645.424612
 import,Asia,group,1995-01-01,8303.517827
