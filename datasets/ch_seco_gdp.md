@@ -35,6 +35,11 @@ Swiss economic output each quarter from all three angles (production, spending a
   live under `meta$units$type`. `updated` = `updated_utc`; `notes` = `details`.
 - No reshape, header rows, number-format cleanup, or date-serial decoding are
   needed; the source is already clean.
+- Level labels: SECO appends the ESA transaction code ("Domestic demand, P3_P5",
+  "Final domestic demand P3_P51G") and the NOGA range ("Construction (noga
+  41-43)") to the `structure` labels in all four languages. The fetcher removes
+  both (`seco_fetch(strip = c("sna_code", "noga_ref"))`, patterns in
+  `R/labels.R::LABEL_NOISE`); the codes stay in the SECO sidecar.
 
 ## Dimensions
 - `type`: valuation / measure. `nom` (Swiss Francs at current prices), `real`
@@ -44,8 +49,8 @@ Swiss economic output each quarter from all three angles (production, spending a
 - `structure`: section, 68 codes in a production/expenditure/income hierarchy under
   root `gdp`. Leaf codes carry data; `production`, `expenditure`, `income` are
   grouping nodes (`data: false`). This is the split / multi-select dimension (the
-  one with a `hierarchy`). NOGA industry ranges and ESA codes (B1GQ, P3, D1, etc.)
-  are embedded in the labels.
+  one with a `hierarchy`). SECO embeds NOGA industry ranges and ESA codes (B1GQ,
+  P3, D1, etc.) in the labels; the fetcher strips them (see Parsing recipe).
 - `seas_adj`: seasonal adjustment. `na` (raw), `csa` (seasonal+calendar), `nasa`
   (sports-event), `cssa` (seasonal+calendar+sports-event). Single-select.
 

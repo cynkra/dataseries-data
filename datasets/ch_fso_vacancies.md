@@ -36,6 +36,11 @@ Job vacancies posted by Swiss firms, by industry, as a count, an index and a rat
   and are dropped.
 - Dimension **codes are German** even on `/en/` (`Offene Stellen`,
   `Wirtschaftsabteilung`, `Quartal`); kept as stored column values.
+- Level labels: FSO prints the NOGA code in front of every
+  `Wirtschaftsabteilung` label ("5-96 Total") and the sectors in capitals
+  ("SECTOR II"). `tidy_dims = "Wirtschaftsabteilung"` runs
+  `R/labels.R::tidy_level_labels()` on that dimension: code dropped, capitals
+  recased ("Total", "Sector II"; German is already in proper case).
 
 ## Dimensions
 - `Offene Stellen` (Job vacancies, the unit/measure): `1` = count of vacancies,
