@@ -40,6 +40,9 @@ Cross-border investment flows in and out of Switzerland: direct, portfolio and o
   their children. Note repeated label "Total" appears under many parents with
   distinct codes (`T0`..`T8`, `T25`, `T55`, `T65`) keyed by position in the tree.
 
+## Labels
+- **units**: CHF millions | de: Mio. CHF | fr: Millions de CHF | it: Milioni di CHF
+
 ## Display
 - **split**: D1
 - **single-select**: D0

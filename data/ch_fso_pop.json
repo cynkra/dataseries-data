@@ -164,5 +164,11 @@
     "fr": "Comment la population suisse évolue chaque année : naissances, décès, immigration, émigration et naturalisations, avec l'effectif en fin d'année.",
     "it": "Come cambia ogni anno la popolazione svizzera: nascite, decessi, immigrazione, emigrazione e naturalizzazioni, con l'effettivo a fine anno."
   },
-  "fetched_utc": "2026-10-19 08:48:33"
+  "fetched_utc": "2026-10-19 08:48:33",
+  "units": {
+    "en": "Number of persons",
+    "de": "Anzahl Personen",
+    "fr": "Nombre de personnes",
+    "it": "Numero di persone"
+  }
 }

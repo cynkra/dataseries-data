@@ -271,5 +271,11 @@
     "fr": "Combien les banques suisses prêtent aux entreprises selon leur taille, en crédit accordé et en montant effectivement utilisé, si bien que la marge est visible.",
     "it": "Quanto le banche svizzere prestano alle imprese per dimensione, come credito concesso e come importo effettivamente utilizzato, così il margine è visibile."
   },
-  "fetched_utc": "2026-09-21 08:45:33"
+  "fetched_utc": "2026-09-21 08:45:33",
+  "units": {
+    "en": "CHF millions",
+    "de": "Mio. CHF",
+    "fr": "Millions de CHF",
+    "it": "Milioni di CHF"
+  }
 }

@@ -58,5 +58,11 @@
     "it": "Inflazione svizzera, solo l'indice generale dei prezzi al consumo. Per la ripartizione nelle 595 posizioni del paniere come alimentari, pigioni e trasporti, si veda la serie dettagliata."
   },
   "default": [],
-  "fetched_utc": "2026-09-21 08:45:33"
+  "fetched_utc": "2026-09-21 08:45:33",
+  "units": {
+    "en": "Index, December 2025 = 100",
+    "de": "Index, Dezember 2025 = 100",
+    "fr": "Indice, décembre 2025 = 100",
+    "it": "Indice, dicembre 2025 = 100"
+  }
 }

@@ -36,6 +36,9 @@ Daily levels of the SPI and SMI Swiss share indices, with sector sub-indices. Th
   shares, `IPS` bearer shares and participation certificates. Default `GDR`.
   Grouping nodes `D0_0` (SPI), `SIX`, `ICB` (`data:false`) carry no observations.
 
+## Labels
+- **units**: Index | de: Index | fr: Indice | it: Indice
+
 ## Display
 - **split**: D0
 - **single-select**: (none; single dimension)

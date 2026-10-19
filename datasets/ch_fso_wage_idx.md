@@ -50,6 +50,7 @@ YoY % transform, recomputed on the fly from the index, so storing it would just
 duplicate a button. Keeping only the index collapses the former `measure` dimension.
 
 ## Labels
+- **units**: Index, 1993 = 100 | de: Index, 1993 = 100 | fr: Indice, 1993 = 100 | it: Indice, 1993 = 100
 - dim: breakdown
   - **label**: Breakdown | de: Gliederung | fr: Ventilation | it: Suddivisione
   - tot: Total | de: Total | fr: Total | it: Totale

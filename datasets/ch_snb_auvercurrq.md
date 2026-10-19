@@ -35,6 +35,9 @@ Which currencies Switzerland's foreign assets and debts are held in (francs, dol
 - `D2` (Component): `T` total, `D0` direct investment, `P` portfolio investment,
   `D1` derivatives, `UI` other investment, `W` reserve assets.
 
+## Labels
+- **units**: CHF millions | de: Mio. CHF | fr: Millions de CHF | it: Milioni di CHF
+
 ## Display
 - **split**: D2
 - **single-select**: D1

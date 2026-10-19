@@ -40,6 +40,9 @@ Assets and liabilities of banks in Switzerland month by month, item by item, spl
 - `WAEHRUNG` Currency: `T` all currencies, `CHF`, `EUR`, `USD`.
 - `BANKENGRUPPE` Bank category: `A40` all banks, `G15` big banks.
 
+## Labels
+- **units**: CHF millions | de: Mio. CHF | fr: Millions de CHF | it: Milioni di CHF
+
 ## Display
 - **split**: D0
 - **single-select**: INLANDAUSLAND, BANKENGRUPPE

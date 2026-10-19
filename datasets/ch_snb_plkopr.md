@@ -33,6 +33,9 @@ Swiss inflation, the headline consumer price index only. For the breakdown into 
   December 2025 = 100; `VVP` year-on-year change in %) collapses once `VVP` is dropped
   as a redundant transform, leaving just the index level as a single series.
 
+## Labels
+- **units**: Index, December 2025 = 100 | de: Index, Dezember 2025 = 100 | fr: Indice, décembre 2025 = 100 | it: Indice, dicembre 2025 = 100
+
 ## Display
 - **split**: n/a (single series)
 - **single-select**: n/a

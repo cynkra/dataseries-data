@@ -189,5 +189,11 @@
     "fr": "La monnaie centrale en Suisse, montrée des deux côtés : comment elle est créée, et les billets en circulation plus les avoirs à vue des banques.",
     "it": "La moneta centrale in Svizzera, mostrata da entrambi i lati: come viene creata, e le banconote in circolazione più gli averi a vista delle banche."
   },
-  "fetched_utc": "2026-09-21 08:45:33"
+  "fetched_utc": "2026-09-21 08:45:33",
+  "units": {
+    "en": "CHF millions",
+    "de": "Mio. CHF",
+    "fr": "Millions de CHF",
+    "it": "Milioni di CHF"
+  }
 }

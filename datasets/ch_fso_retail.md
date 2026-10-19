@@ -46,6 +46,9 @@ change, `VARM-1` month-on-month change). We keep only the index `IX` and drop th
 change levels — they are exactly the app's YoY % and month-on-month transforms,
 recomputed from the index — which collapses `UNIT_MEASURE` away entirely.
 
+## Labels
+- **units**: Index, 2021 = 100 | de: Index, 2021 = 100 | fr: Indice, 2021 = 100 | it: Indice, 2021 = 100
+
 ## Display
 - **split**: NOGA
 - **single-select**: ADJUSTMENT, INDICATOR_KE

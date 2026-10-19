@@ -33,6 +33,9 @@ How Swiss firms rate their current and expected business situation, from ETH Zur
 - `indicator`: `ch.kof.esi.index` (pre-Brexit version) and `ch.kof.esi.index.v2018`
   (standard 2018 version, the default).
 
+## Labels
+- **units**: Index | de: Index | fr: Indice | it: Indice
+
 ## Display
 - **split**: indicator
 - **single-select**:

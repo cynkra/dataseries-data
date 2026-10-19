@@ -33,6 +33,9 @@ Swiss house and rent price indices from four providers side by side, covering ap
 - `D1` Data provider + price basis: `TP3` SFSO transaction, `TP1` Fahrländer
   transaction, `TP2` IAZI transaction, `AP`/`TP` Wüest Partner asking/transaction.
 
+## Labels
+- **units**: Index, Q1 2000 = 100 for most series | de: Index, 1. Quartal 2000 = 100 für die meisten Reihen | fr: Indice, 1er trimestre 2000 = 100 pour la plupart des séries | it: Indice, 1° trimestre 2000 = 100 per la maggior parte delle serie
+
 ## Display
 - **split**: D0
 - **single-select**: D1
