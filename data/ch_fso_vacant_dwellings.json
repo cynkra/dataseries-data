@@ -85,7 +85,6 @@
     "fr": "Combien de logements suisses sont vacants, et le taux de vacance officiel, la mesure de référence de la pénurie de logements. Environ 1.0% en 2025.",
     "it": "Quante abitazioni svizzere sono vuote, e il tasso di sfitto ufficiale, la misura di riferimento della penuria di alloggi. Circa l'1.0% nel 2025."
   },
-  "fetched_utc": "2026-10-19 08:48:33",
   "units": {
     "PC": {
       "en": "Percent",
@@ -99,5 +98,6 @@
       "fr": "Nombre de logements",
       "it": "Numero di abitazioni"
     }
-  }
+  },
+  "fetched_utc": "2026-10-20 08:35:02"
 }

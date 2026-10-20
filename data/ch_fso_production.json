@@ -248,11 +248,11 @@
     "fr": "Chiffre d'affaires et production de l'industrie et de la construction suisses par trimestre, par branche, y compris bâtiment, génie civil et travaux spécialisés.",
     "it": "Fatturato e produzione dell'industria e delle costruzioni svizzere per trimestre, per ramo, inclusi edilizia, genio civile e lavori specializzati."
   },
-  "fetched_utc": "2026-10-19 08:48:32",
   "units": {
     "en": "Index, 2021 = 100",
     "de": "Index, 2021 = 100",
     "fr": "Indice, 2021 = 100",
     "it": "Indice, 2021 = 100"
-  }
+  },
+  "fetched_utc": "2026-10-20 08:35:02"
 }

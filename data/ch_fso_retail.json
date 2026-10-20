@@ -345,11 +345,11 @@
     "fr": "Ce que vendent les commerces suisses chaque mois, l'indicateur de référence de la consommation. Brut, corrigé du calendrier et désaisonnalisé ; nominal ou réel.",
     "it": "Quanto vendono i negozi svizzeri ogni mese, l'indicatore di riferimento dei consumi. Grezzo, corretto per il calendario e destagionalizzato; nominale o reale."
   },
-  "fetched_utc": "2026-10-19 08:48:32",
   "units": {
     "en": "Index, 2021 = 100",
     "de": "Index, 2021 = 100",
     "fr": "Indice, 2021 = 100",
     "it": "Indice, 2021 = 100"
-  }
+  },
+  "fetched_utc": "2026-10-20 08:35:01"
 }

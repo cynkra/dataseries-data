@@ -98,6 +98,12 @@
     "fr": "Prix à la production et à l'importation",
     "it": "Prezzi alla produzione e all'importazione"
   },
+  "keywords": {
+    "en": "PPI",
+    "de": "PPI, Produzentenpreise",
+    "fr": "IPP",
+    "it": "IPP"
+  },
   "split": "base",
   "single_select": [],
   "default_transform": "yoy",
@@ -109,13 +115,6 @@
     "de": "Preise, die Schweizer Produzenten verlangen und Importeure zahlen, monatlich. Die sieben Reihen sind derselbe Index, neu basiert auf den Jahren 1963 bis 2025.",
     "fr": "Prix pratiqués par les producteurs suisses et payés par les importateurs, mensuel. Les sept séries sont le même indice rebasé sur les années 1963 à 2025.",
     "it": "Prezzi praticati dai produttori svizzeri e pagati dagli importatori, mensile. Le sette serie sono lo stesso indice ribasato sugli anni dal 1963 al 2025."
-  },
-  "fetched_utc": "2026-10-19 08:48:33",
-  "keywords": {
-    "en": "PPI",
-    "de": "PPI, Produzentenpreise",
-    "fr": "IPP",
-    "it": "IPP"
   },
   "units": {
     "1963": {
@@ -160,5 +159,6 @@
       "fr": "Indice, décembre 2025 = 100",
       "it": "Indice, dicembre 2025 = 100"
     }
-  }
+  },
+  "fetched_utc": "2026-10-20 08:35:03"
 }
