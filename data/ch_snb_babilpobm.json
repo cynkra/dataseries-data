@@ -8,7 +8,7 @@
     "BANKENGRUPPE"
   ],
   "start": "1987-12-01",
-  "end": "2026-07-01",
+  "end": "2026-08-01",
   "title": {
     "en": "Bank balance sheets by currency",
     "de": "Bankbilanzen nach Währung",
@@ -507,7 +507,7 @@
       }
     }
   },
-  "updated": "2026-09-21 09:00",
+  "updated": "2026-10-21 09:00",
   "topic": {
     "key": "money-banking",
     "name": {
@@ -542,11 +542,11 @@
     "fr": "Actifs et passifs des banques en Suisse mois par mois, poste par poste, par monnaie et par taille de banque.",
     "it": "Attivi e passivi delle banche in Svizzera mese per mese, voce per voce, per valuta e per dimensione della banca."
   },
-  "fetched_utc": "2026-09-21 08:45:33",
   "units": {
     "en": "CHF millions",
     "de": "Mio. CHF",
     "fr": "Millions de CHF",
     "it": "Milioni di CHF"
-  }
+  },
+  "fetched_utc": "2026-10-21 08:41:45"
 }

@@ -5,7 +5,7 @@
     "D0"
   ],
   "start": "1948-01-01",
-  "end": "2026-08-01",
+  "end": "2026-09-01",
   "title": {
     "en": "Registered unemployment",
     "de": "Registrierte Arbeitslosigkeit",
@@ -148,7 +148,7 @@
       }
     }
   },
-  "updated": "2026-09-21 09:00",
+  "updated": "2026-10-21 09:00",
   "topic": {
     "key": "labour",
     "name": {
@@ -186,7 +186,6 @@
     "fr": "Personnes inscrites au chômage auprès des offices régionaux suisses, avec le taux de chômage, les places vacantes annoncées et le chômage partiel.",
     "it": "Persone iscritte alla disoccupazione presso gli uffici regionali svizzeri, con tasso di disoccupazione, posti vacanti annunciati e lavoro ridotto."
   },
-  "fetched_utc": "2026-09-21 08:45:32",
   "units": {
     "K": {
       "en": "Number of persons",
@@ -242,5 +241,6 @@
       "fr": "Nombre de places vacantes",
       "it": "Numero di posti vacanti"
     }
-  }
+  },
+  "fetched_utc": "2026-10-21 08:41:44"
 }

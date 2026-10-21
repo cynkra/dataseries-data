@@ -3,7 +3,7 @@
   "id": "ch_snb_plkopr",
   "dim_order": [],
   "start": "1921-01-01",
-  "end": "2026-08-01",
+  "end": "2026-09-01",
   "title": {
     "en": "Consumer prices since 1921 (CPI)",
     "de": "Konsumentenpreise seit 1921 (LIK)",
@@ -23,7 +23,7 @@
   "license": "snb",
   "frequency": "monthly",
   "dimensions": {},
-  "updated": "2026-09-21 09:00",
+  "updated": "2026-10-21 09:00",
   "topic": {
     "key": "prices",
     "name": {
@@ -43,6 +43,12 @@
     }
   },
   "canonical": false,
+  "keywords": {
+    "en": "CPI, inflation",
+    "de": "LIK, Teuerung, Inflation",
+    "fr": "IPC, inflation",
+    "it": "IPC, inflazione"
+  },
   "single_select": [],
   "default_transform": "yoy",
   "description": {
@@ -52,17 +58,11 @@
     "it": "Inflazione svizzera, solo l'indice generale dei prezzi al consumo. Per la ripartizione nelle 595 posizioni del paniere come alimentari, pigioni e trasporti, si veda la serie dettagliata."
   },
   "default": [],
-  "fetched_utc": "2026-09-21 08:45:33",
-  "keywords": {
-    "en": "CPI, inflation",
-    "de": "LIK, Teuerung, Inflation",
-    "fr": "IPC, inflation",
-    "it": "IPC, inflazione"
-  },
   "units": {
     "en": "Index, December 2025 = 100",
     "de": "Index, Dezember 2025 = 100",
     "fr": "Indice, décembre 2025 = 100",
     "it": "Indice, dicembre 2025 = 100"
-  }
+  },
+  "fetched_utc": "2026-10-21 08:41:45"
 }
