@@ -25,10 +25,13 @@ Quarterly index of advertised job vacancies in Switzerland, from the University 
   `href` (a `/dam/...xlsx` path) rather than hardcoding it, so a new quarter is
   picked up automatically.
 - Sheet 1 is a wide table: row 1 the year (only stamped at Q1, so forward-filled),
-  row 3 the quarter (`I..IV` -> month 3/6/9/12). Each value column is one quarter,
-  mapped to a first-of-quarter ISO date.
+  row 3 the quarter (`I..IV` -> month 1/4/7/10). Each value column is one quarter,
+  mapped to a first-of-quarter ISO date. Row 2 is the survey month (the last month
+  of the quarter) and is not used.
 - Five labelled data rows map to the `index` levels; German source labels are
-  recoded to stable codes. Early years (2003-2008) carry only Q1, then the series
+  recoded to stable codes, matched ignoring case and whitespace (the source has
+  recapitalised "Saisonbereinigte Indexwerte" before). A row that is not found is
+  a warning, not a silent drop. Early years (2003-2008) carry only Q1, then the series
   becomes fully quarterly — handled transparently since each column is dated.
 
 ## Dimensions

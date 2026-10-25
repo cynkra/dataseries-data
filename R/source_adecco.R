@@ -11,7 +11,9 @@
 # name embeds the latest quarter, e.g. data_gesamtindex_export-2026_Q1.xlsx). We
 # scrape that href rather than hardcoding it, so a new quarter is picked up
 # automatically. The sheet is a wide table: row 1 years (sparse, forward-filled),
-# row 3 quarter (I..IV -> month 3/6/9/12), and one labelled data row per series.
+# row 3 quarter (I..IV -> month 1/4/7/10, the first month of the quarter as the
+# format contract requires; row 2 is the survey month, the last month of the
+# quarter, and is not used), and one labelled data row per series.
 
 suppressPackageStartupMessages(library(dplyr))
 
@@ -36,7 +38,7 @@ adecco_fetch <- function(dataset_id = "ch_adecco_sjmi", title = NULL) {
   # row 3. Each value column is one quarter -> first-of-quarter ISO date.
   year <- suppressWarnings(as.integer(m[1, ]))
   for (i in 2:length(year)) if (is.na(year[i])) year[i] <- year[i - 1]
-  month <- c(I = 3L, II = 6L, III = 9L, IV = 12L)[trimws(m[3, ])]
+  month <- c(I = 1L, II = 4L, III = 7L, IV = 10L)[trimws(m[3, ])]
   vcol  <- which(!is.na(month) & !is.na(year))
   dates <- as.Date(sprintf("%d-%02d-01", year[vcol], month[vcol]))
 
@@ -48,10 +50,17 @@ adecco_fetch <- function(dataset_id = "ch_adecco_sjmi", title = NULL) {
     "Unternehmens-Webseiten"              = "company",
     "Presse (Zeitungen und Anzeiger)"     = "press"
   )
-  labels <- trimws(m[, 1])
+  # Matched case- and whitespace-insensitively: the source once recapitalised
+  # "saisonbereinigte" and the seasonally adjusted series silently vanished.
+  norm <- function(x) tolower(gsub("\\s+", " ", trimws(x)))
+  labels <- norm(m[, 1])
   data <- dplyr::bind_rows(lapply(names(rowmap), function(lab) {
-    r <- which(labels == lab)
-    if (!length(r)) return(NULL)
+    r <- which(labels == norm(lab))
+    if (!length(r)) {
+      warning(sprintf("adecco: source row '%s' not found; series %s is missing",
+                      lab, rowmap[[lab]]), call. = FALSE)
+      return(NULL)
+    }
     dplyr::tibble(index = rowmap[[lab]], date = dates,
                   value = suppressWarnings(as.numeric(m[r[1], vcol])))
   }))
