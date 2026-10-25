@@ -18,6 +18,7 @@ adjustments,2006-01-01,-2845
 adjustments,2007-01-01,-4109
 adjustments,2008-01-01,-5263
 adjustments,2009-01-01,-6447
+adjustments,2010-01-01,-4470
 adjustments,2011-01-01,-2307
 adjustments,2012-01-01,-4720
 adjustments,2013-01-01,-4305
@@ -182,6 +183,7 @@ birth_surplus,2006-01-01,13088
 birth_surplus,2007-01-01,13405
 birth_surplus,2008-01-01,15458
 birth_surplus,2009-01-01,15810
+birth_surplus,2010-01-01,17737
 birth_surplus,2011-01-01,18717
 birth_surplus,2012-01-01,17991
 birth_surplus,2013-01-01,17770
@@ -346,6 +348,7 @@ deaths,2006-01-01,60283
 deaths,2007-01-01,61089
 deaths,2008-01-01,61233
 deaths,2009-01-01,62476
+deaths,2010-01-01,62553
 deaths,2011-01-01,62091
 deaths,2012-01-01,64173
 deaths,2013-01-01,64961
@@ -390,6 +393,7 @@ emigration,2006-01-01,88218
 emigration,2007-01-01,90175
 emigration,2008-01-01,86130
 emigration,2009-01-01,86036
+emigration,2010-01-01,96839
 emigration,2011-01-01,96494
 emigration,2012-01-01,103881
 emigration,2013-01-01,106196
@@ -434,6 +438,7 @@ immigration,2006-01-01,127586
 immigration,2007-01-01,165634
 immigration,2008-01-01,184297
 immigration,2009-01-01,160623
+immigration,2010-01-01,161778
 immigration,2011-01-01,164612
 immigration,2012-01-01,175008
 immigration,2013-01-01,193302
@@ -598,6 +603,7 @@ live_births,2006-01-01,73371
 live_births,2007-01-01,74494
 live_births,2008-01-01,76691
 live_births,2009-01-01,78286
+live_births,2010-01-01,80290
 live_births,2011-01-01,80808
 live_births,2012-01-01,82164
 live_births,2013-01-01,82731
@@ -762,6 +768,7 @@ migration_bal,2006-01-01,39368
 migration_bal,2007-01-01,75459
 migration_bal,2008-01-01,98167
 migration_bal,2009-01-01,74587
+migration_bal,2010-01-01,64939
 migration_bal,2011-01-01,68118
 migration_bal,2012-01-01,71127
 migration_bal,2013-01-01,87106
@@ -898,6 +905,7 @@ naturalisation,2006-01-01,46711
 naturalisation,2007-01-01,43889
 naturalisation,2008-01-01,44365
 naturalisation,2009-01-01,43440
+naturalisation,2010-01-01,39314
 naturalisation,2011-01-01,36012
 naturalisation,2012-01-01,33500
 naturalisation,2013-01-01,34061
@@ -1062,6 +1070,7 @@ pop_stock_dec,2006-01-01,7508739
 pop_stock_dec,2007-01-01,7593494
 pop_stock_dec,2008-01-01,7701856
 pop_stock_dec,2009-01-01,7785806
+pop_stock_dec,2010-01-01,7864012
 pop_stock_dec,2011-01-01,7954662
 pop_stock_dec,2012-01-01,8039060
 pop_stock_dec,2013-01-01,8139631
@@ -1226,6 +1235,7 @@ pop_stock_jan,2006-01-01,7459128
 pop_stock_jan,2007-01-01,7508739
 pop_stock_jan,2008-01-01,7593494
 pop_stock_jan,2009-01-01,7701856
+pop_stock_jan,2010-01-01,7785806
 pop_stock_jan,2011-01-01,7870134
 pop_stock_jan,2012-01-01,7954662
 pop_stock_jan,2013-01-01,8039060

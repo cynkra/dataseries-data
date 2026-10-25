@@ -1128,7 +1128,7 @@
     "end": "2025-01-01",
     "n_series": 10,
     "updated": "2026-08-20",
-    "fetched": "2026-10-25 08:30:46",
+    "fetched": "2026-10-25 18:31:16",
     "load": "whole",
     "data": "ch_fso_pop.csv",
     "meta": "ch_fso_pop.json"
