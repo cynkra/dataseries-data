@@ -264,16 +264,23 @@ fso_sdmx_new_vehicles_canton <- function(dataset_id = "ch_fso_new_vehicles_canto
 }
 
 # Vacant dwellings, national annual: count + the official vacancy rate
-# (Leerwohnungsziffer). SDMX CH1.LWZ / DF_LWZ_1, sliced to Switzerland total.
+# (Leerwohnungsziffer). SDMX CH1.LWZ / DF_LWZ_1 version 1.1.0, sliced to Switzerland
+# total. Version 1.0.0 stopped at the 2025 count; 1.1.0 carries 2026 (published
+# 2026-09-10). 1.1.0 renamed the measure codes (V -> OBS, PC -> RATE) and widened
+# the key to WOHN_ANZAHL.LEERWOHN_TYP.MEASURE_DIMENSION.FREQ with the same
+# national code 8100; we map them back so the series codes (V, PC) stay stable.
+# The rate has no value for 1995-96 (status O = missing): dropped by sdmx_sliced.
 fso_sdmx_vacant_dwellings <- function(dataset_id = "ch_fso_vacant_dwellings") {
-  d <- sdmx_sliced("CH1.LWZ", "DF_LWZ_1", "1.0.0", "8100._T._T.V+PC.A",
+  d <- sdmx_sliced("CH1.LWZ", "DF_LWZ_1", "1.1.0", "8100._T._T..A",
     c("GR_KT_GDE", "WOHN_ANZAHL", "LEERWOHN_TYP", "MEASURE_DIMENSION", "FREQ"))
-  data <- data.frame(measure = d$MEASURE_DIMENSION, date = d$date, value = d$value,
+  d <- d[d$MEASURE_DIMENSION %in% c("OBS", "RATE"), , drop = FALSE]
+  measure <- c(OBS = "V", RATE = "PC")[d$MEASURE_DIMENSION]
+  data <- data.frame(measure = unname(measure), date = d$date, value = d$value,
                      stringsAsFactors = FALSE)
   data <- data[order(data$measure, data$date), ]
 
   meta <- list(
-    source = list(url = "https://www.bfs.admin.ch/asset/en/px-x-0902020100_104"),
+    source = list(url = "https://www.bfs.admin.ch/asset/en/DF_LWZ_1"),
     license = "fso", frequency = "annual", topic = "Construction and housing",
     dimensions = list(measure = list(
       levels = list(
@@ -314,14 +321,17 @@ fso_sdmx_cross_border_commuters <- function(dataset_id = "ch_fso_cross_border_co
 }
 
 # Detailed permanent resident population by nationality x sex, annual (STATPOP).
-# SDMX CH1.STATPOP / DF_STATPOP_REGLING, DSD order
-# POPULATION_TYPE.REG_LING.NATIONALITY_CATEGORY.SEX.AGE.FREQ; sliced to permanent
+# SDMX CH1.STATPOP / DF_STATPOP_REGLING_PERM, DSD order
+# REG_LING.NATIONALITY_CATEGORY.SEX.AGE.FREQ; sliced to permanent
 # residents, all language regions, age total, annual. Concept-distinct from
 # ch_fso_pop (the 1861- demographic balance) — this is the recent nationality/sex
 # stock. Value = year-end stock.
+# Read from DF_STATPOP_REGLING_PERM (permanent residents only, no POPULATION_TYPE
+# dimension): DF_STATPOP_REGLING stops at 2024, REGLING_PERM carries 2025 and gives
+# identical values for 2010-2024.
 fso_sdmx_pop_detail <- function(dataset_id = "ch_fso_pop_detail") {
-  d <- sdmx_sliced("CH1.STATPOP", "DF_STATPOP_REGLING", "1.0.0", "1._T..._T.A",
-                   c("POPULATION_TYPE", "REG_LING", "NATIONALITY_CATEGORY", "SEX", "AGE", "FREQ"))
+  d <- sdmx_sliced("CH1.STATPOP", "DF_STATPOP_REGLING_PERM", "1.0.0", "_T..._T.A",
+                   c("REG_LING", "NATIONALITY_CATEGORY", "SEX", "AGE", "FREQ"))
   data <- data.frame(nationality = d$NATIONALITY_CATEGORY, sex = d$SEX,
                      date = d$date, value = d$value, stringsAsFactors = FALSE)
   data <- data[order(data$nationality, data$sex, data$date), , drop = FALSE]
@@ -336,7 +346,7 @@ fso_sdmx_pop_detail <- function(dataset_id = "ch_fso_pop_detail") {
   }
 
   meta <- list(
-    source = list(url = "https://www.bfs.admin.ch/asset/en/px-x-0102010000_101"),
+    source = list(url = "https://www.bfs.admin.ch/asset/en/DF_STATPOP_REGLING_PERM"),
     license = "fso", frequency = "annual", topic = "Population",
     dimensions = list(
       nationality = mk(unique(as.character(data$nationality))),

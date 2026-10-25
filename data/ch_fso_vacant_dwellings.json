@@ -5,7 +5,7 @@
     "measure"
   ],
   "start": "1995-01-01",
-  "end": "2025-01-01",
+  "end": "2026-01-01",
   "source": {
     "name": {
       "en": "Swiss Federal Statistical Office (FSO)",
@@ -13,7 +13,7 @@
       "fr": "Office fédéral de la statistique (OFS)",
       "it": "Ufficio federale di statistica (UST)"
     },
-    "url": "https://www.bfs.admin.ch/asset/en/px-x-0902020100_104",
+    "url": "https://www.bfs.admin.ch/asset/en/DF_LWZ_1",
     "key": "fso"
   },
   "license": "fso",
@@ -80,10 +80,10 @@
     "measure": "PC"
   },
   "description": {
-    "en": "How many Swiss homes stand empty, and the official vacancy rate, the standard measure of housing shortage. Down to about 1.0% by 2025.",
-    "de": "Wie viele Schweizer Wohnungen leer stehen, und die offizielle Leerwohnungsziffer, das Standardmass für Wohnungsknappheit. 2025 bei rund 1.0%.",
-    "fr": "Combien de logements suisses sont vacants, et le taux de vacance officiel, la mesure de référence de la pénurie de logements. Environ 1.0% en 2025.",
-    "it": "Quante abitazioni svizzere sono vuote, e il tasso di sfitto ufficiale, la misura di riferimento della penuria di alloggi. Circa l'1.0% nel 2025."
+    "en": "How many Swiss homes stand empty, and the official vacancy rate, the standard measure of housing shortage. Down to 0.93% in 2026.",
+    "de": "Wie viele Schweizer Wohnungen leer stehen, und die offizielle Leerwohnungsziffer, das Standardmass für Wohnungsknappheit. 2026 bei 0.93%.",
+    "fr": "Combien de logements suisses sont vacants, et le taux de vacance officiel, la mesure de référence de la pénurie de logements. 0.93% en 2026.",
+    "it": "Quante abitazioni svizzere sono vuote, e il tasso di sfitto ufficiale, la misura di riferimento della penuria di alloggi. 0.93% nel 2026."
   },
   "units": {
     "PC": {
@@ -99,5 +99,5 @@
       "it": "Numero di abitazioni"
     }
   },
-  "fetched_utc": "2026-10-25 08:30:45"
+  "fetched_utc": "2026-10-25 20:24:08"
 }

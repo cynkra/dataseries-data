@@ -60,8 +60,13 @@ def nvc(raw):
     return d[["canton", "fuel", "TIME_PERIOD", "OBS_VALUE"]]
 
 
+VAC_CODES = {"OBS": "V", "RATE": "PC"}
+
+
 def vac(raw):
-    return raw.rename(columns={"MEASURE_DIMENSION": "measure"})[["measure", "TIME_PERIOD", "OBS_VALUE"]]
+    d = raw[raw["MEASURE_DIMENSION"].isin(VAC_CODES)].copy()
+    d["measure"] = d["MEASURE_DIMENSION"].map(VAC_CODES)
+    return d[["measure", "TIME_PERIOD", "OBS_VALUE"]]
 
 
 def gg(raw):
@@ -84,14 +89,15 @@ DATASETS = {
         agency="CH1.MFZ_IVS", flow="DF_IVS_0_GENERAL_M", key="._T.N.100..M", norm=nvc,
         codelists={"fuel": "UV_RV_FUEL", "canton": "UV_HGDE_KT"}),
     "ch_fso_pop_detail": dict(
-        agency="CH1.STATPOP", flow="DF_STATPOP_REGLING", key="1._T..._T.A", norm=pop,
+        agency="CH1.STATPOP", flow="DF_STATPOP_REGLING_PERM", key="_T..._T.A", norm=pop,
         codelists={"nationality": "NATIONALITY_CATEGORY", "sex": "SEX"}),
     "ch_fso_production": keu("DF_KEU_Q1", PRODUCTION_NOGA, ["VARQ-4", "VARQ-1"]),
     "ch_fso_retail": keu("DF_KEU_M1", RETAIL_NOGA, ["VARM-12", "VARM-1"]),
     "ch_fso_services": keu("DF_KEU_Q1", SERVICES_NOGA, ["VARQ-4", "VARQ-1"]),
     "ch_fso_vacant_dwellings": dict(
-        agency="CH1.LWZ", flow="DF_LWZ_1", key="8100._T._T.V+PC.A", norm=vac,
-        codelists={"measure": "MEASURE_DIMENSION"}),
+        agency="CH1.LWZ", flow="DF_LWZ_1", version="1.1.0", key="8100._T._T..A", norm=vac,
+        codelists={"measure": "MEASURE_DIMENSION"},
+        recode={"measure": {v: k for k, v in VAC_CODES.items()}}),
 }
 
 _raw: dict[str, pd.DataFrame] = {}
@@ -180,7 +186,7 @@ def check_meta(ds_id, cfg, api, meta):
     """Levels vs data codes, level codes vs upstream codelists, label hygiene.
     Level labels are curated in the datasheets, so English wording that differs
     from the upstream codelist is only counted, not failed."""
-    url = f"{SDMX}/dataflow/{cfg['agency']}/{cfg['flow']}/1.0.0?references=all"
+    url = f"{SDMX}/dataflow/{cfg['agency']}/{cfg['flow']}/{cfg.get('version', '1.0.0')}?references=all"
     if url not in _struct:
         _struct[url] = codelist_labels(json.loads(sdmx_get(url, STRUCT_ACCEPT).content))
     cls, dim2cl = _struct[url]
@@ -193,7 +199,7 @@ def check_meta(ds_id, cfg, api, meta):
         src = cfg["codelists"].get(d, d)
         cl = cls.get(dim2cl.get(src, src), {})
         for code, ent in levels.items():
-            up_code = code
+            up_code = cfg.get("recode", {}).get(d, {}).get(code, code)
             if ds_id == "ch_fso_new_vehicles_canton" and d == "canton" and code.isdigit():
                 up_code = code.zfill(2) if code.zfill(2) in cl else code
             n_levels += 1
@@ -212,7 +218,7 @@ def check_meta(ds_id, cfg, api, meta):
 
 def check(ds_id):
     cfg = DATASETS[ds_id]
-    url = f"{SDMX}/data/{cfg['agency']},{cfg['flow']},1.0.0/{cfg['key']}?detail=dataonly"
+    url = f"{SDMX}/data/{cfg['agency']},{cfg['flow']},{cfg.get('version', '1.0.0')}/{cfg['key']}?detail=dataonly"
     if url not in _raw:
         _raw[url] = pd.read_csv(io.BytesIO(sdmx_get(url, CSV_ACCEPT).content),
                                 dtype=str, keep_default_na=False)
