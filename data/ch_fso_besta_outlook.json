@@ -109,7 +109,7 @@
           "label": {
             "en": "Trade and repair of motor vehicles and motorcycles",
             "de": "Handel, Instandhaltung und Rep. von Kraftfahrzeugen",
-            "fr": "Commerce, réparation dautomobiles et de motocycles",
+            "fr": "Commerce, réparation d’automobiles et de motocycles",
             "it": "Commercio all'ingrosso e riparazione"
           },
           "data": true
@@ -145,7 +145,7 @@
           "label": {
             "en": "IT and other information services",
             "de": "Informationstechnologische und Informationsdienstl.",
-            "fr": "Activités informatiques et services dinformation",
+            "fr": "Activités informatiques et services d’information",
             "it": "Attività informatiche e altri servizi informativi"
           },
           "data": true
@@ -154,7 +154,7 @@
           "label": {
             "en": "Finance and assurance",
             "de": "Erbringung von Finanz- und Versicherungsdienstl.",
-            "fr": "Activités financières et dassurance",
+            "fr": "Activités financières et d’assurance",
             "it": "Attività finanziarie e assicurative"
           },
           "data": true
@@ -280,5 +280,5 @@
     "fr": "Indice",
     "it": "Indice"
   },
-  "fetched_utc": "2026-10-25 08:30:46"
+  "fetched_utc": "2026-10-25 19:47:30"
 }

@@ -46,9 +46,14 @@ Cross-border investment flows in and out of Switzerland: direct, portfolio and o
 ## Display
 - **split**: D1
 - **single-select**: D0
-- **default**: D1=T0, D0=S
+- **default**: D1=KD, D0=S
 - **transform**: level
 - **seasonal adjustment**: n/a (SNB publishes raw values, no SA dimension)
+
+The default opens on the headline net financial account including derivatives
+(`D1=KD`, `D0=S` Net; 166 quarters, 1985Q1 .. 2026Q2). The total `T0` exists only for
+the gross entries `NA` and `NP`, never for the net `S`, so `T0` with `S` returns no rows.
+`S` is populated for just six components (`KD`, `P`, `D0`, `D2`, `UI`, `W1`).
 
 ## Hierarchy
 `T0 Total` is the sum of the financial-account components (direct/portfolio/other investment, reserve assets — IMF BPM6), shipped as their sibling. Nest them under it.

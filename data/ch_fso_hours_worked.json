@@ -32,10 +32,10 @@
       "levels": {
         "weekly": {
           "label": {
-            "en": "Usual hours worked per week per job",
-            "de": "Normalarbeitszeit pro Woche und Stelle",
-            "fr": "Heures hebdomadaires habituelles par emploi",
-            "it": "Ore settimanali abituali per impiego"
+            "en": "Actual hours worked per week per job",
+            "de": "Tatsächliche Wochenarbeitszeit pro Stelle",
+            "fr": "Heures hebdomadaires effectives par emploi",
+            "it": "Ore settimanali effettive per impiego"
           },
           "data": true
         },
@@ -195,10 +195,10 @@
     "worktime": "_T"
   },
   "description": {
-    "en": "How many hours the Swiss actually work: total volume, hours per job, and usual weekly hours, split by sex and by full-time or part-time.",
-    "de": "Wie viele Stunden in der Schweiz tatsächlich gearbeitet wird: Gesamtvolumen, Stunden pro Stelle und übliche Wochenstunden, nach Geschlecht sowie Voll- und Teilzeit.",
-    "fr": "Combien d'heures on travaille réellement en Suisse : volume total, heures par emploi et heures hebdomadaires usuelles, selon le sexe et le temps plein ou partiel.",
-    "it": "Quante ore si lavora effettivamente in Svizzera: volume totale, ore per impiego e ore settimanali abituali, per sesso e per tempo pieno o parziale."
+    "en": "How many hours the Swiss actually work: total volume, hours per job, and weekly hours, split by sex and by full-time or part-time.",
+    "de": "Wie viele Stunden in der Schweiz tatsächlich gearbeitet wird: Gesamtvolumen, Stunden pro Stelle und Wochenstunden, nach Geschlecht sowie Voll- und Teilzeit.",
+    "fr": "Combien d'heures on travaille réellement en Suisse : volume total, heures par emploi et heures hebdomadaires, selon le sexe et le temps plein ou partiel.",
+    "it": "Quante ore si lavora effettivamente in Svizzera: volume totale, ore per impiego e ore settimanali, per sesso e per tempo pieno o parziale."
   },
   "units": {
     "weekly": {

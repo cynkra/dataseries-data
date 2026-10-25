@@ -37,7 +37,17 @@ Central bank money in Switzerland, shown from both sides: how it is created, and
   - Seasonally adjusted: `N3` monetary base, `S1` seasonal factor.
 
 ## Labels
-- **units**: CHF millions | de: Mio. CHF | fr: Millions de CHF | it: Milioni di CHF
+- dim: D0
+  - **units** RF: CHF millions | de: Mio. CHF | fr: Millions de CHF | it: Milioni di CHF
+  - **units** W: CHF millions | de: Mio. CHF | fr: Millions de CHF | it: Milioni di CHF
+  - **units** G: CHF millions | de: Mio. CHF | fr: Millions de CHF | it: Milioni di CHF
+  - **units** S0: CHF millions | de: Mio. CHF | fr: Millions de CHF | it: Milioni di CHF
+  - **units** N0: CHF millions | de: Mio. CHF | fr: Millions de CHF | it: Milioni di CHF
+  - **units** N1: CHF millions | de: Mio. CHF | fr: Millions de CHF | it: Milioni di CHF
+  - **units** GB: CHF millions | de: Mio. CHF | fr: Millions de CHF | it: Milioni di CHF
+  - **units** N2: CHF millions | de: Mio. CHF | fr: Millions de CHF | it: Milioni di CHF
+  - **units** N3: CHF millions | de: Mio. CHF | fr: Millions de CHF | it: Milioni di CHF
+  - **units** S1: Factor | de: Faktor | fr: Coefficient | it: Fattore
 
 ## Display
 - **split**: D0

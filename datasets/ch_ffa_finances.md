@@ -55,12 +55,16 @@ budget / forecast.
   `einnahmen` Receipts, `ausgaben` Expenditure, `saldo` Balance, `*_ord` the ordinary
   (non-extraordinary) variants, `ertrag` Revenue / `aufwand` Expenses (GFS accrual),
   `fiskalertrag` Fiscal revenue (taxes), `bruttoschuld_fs` / `maastricht_schuld`
-  Gross debt, `nettoschulden_fs` / `nettoschuld` Net debt, `defizit_ueberschuss`
-  Deficit/surplus, `aktiven` / `fremdkapital` / `eigenkapital` balance-sheet items,
-  `bip` GDP. GDP **ratios** (share of GDP, 0–1 scale): `fiskalquote` Fiscal/tax ratio,
+  Gross debt, `nettoschulden_fs` / `nettoschuld` Net debt,
+  `aktiven` / `fremdkapital` / `eigenkapital` balance-sheet items, `bip` GDP. GDP
+  **ratios** (share of GDP, 0–1 scale): `fiskalquote` Fiscal/tax ratio,
   `einnahmenquote` Receipts ratio, `staatsquote` Expenditure ratio,
-  `bruttoschuldenquote` Gross-debt ratio (Maastricht), `schuldenquote` Debt ratio,
-  `nettoschuldenquote` Net-debt ratio.
+  `defizit_ueberschuss` Deficit/surplus (the GFS balance `saldo` divided by national
+  GDP `bip`, e.g. general government 2023 = 2,798 / 837,159 = 0.0033),
+  `bruttoschuldenquote` Gross-debt ratio on the financial-statistics basis (FS gross
+  debt `bruttoschuld_fs` over GDP, 2023: 250,962 / 837,159 = 0.2998),
+  `schuldenquote` Debt ratio on the Maastricht basis (`maastricht_schuld` over GDP,
+  2023: 202,761 / 837,159 = 0.2422), `nettoschuldenquote` Net-debt ratio.
 - `estimate` (`source`) — whether the year is a closed financial statement (actual),
   a projection, a survey budget, a budget / financial plan, or a forecast. Lets the
   app separate realized from projected years. The source gives text, not codes,
@@ -100,7 +104,7 @@ budget / forecast.
   - nettoschulden_fs: Net debt | de: Nettoschulden | fr: Dette nette | it: Debito netto
   - maastricht_schuld: Gross debt (Maastricht) | de: Bruttoschulden (Maastricht) | fr: Dette brute (Maastricht) | it: Debito lordo (Maastricht)
   - nettoschuld: Net debt | de: Nettoschulden | fr: Dette nette | it: Debito netto
-  - defizit_ueberschuss: Deficit / surplus | de: Defizit / Überschuss | fr: Déficit / excédent | it: Disavanzo / avanzo
+  - defizit_ueberschuss: Deficit / surplus (share of GDP) | de: Defizit / Überschuss (Anteil am BIP) | fr: Déficit / excédent (part du PIB) | it: Disavanzo / avanzo (quota del PIL)
   - nettozugang_sachvermoegen: Net acquisition of non-financial assets | de: Nettozugang an Sachvermögen | fr: Acquisition nette d'actifs non financiers | it: Acquisizione netta di attività non finanziarie
   - aktiven: Assets | de: Aktiven | fr: Actifs | it: Attivi
   - fremdkapital: Liabilities | de: Fremdkapital | fr: Capitaux de tiers | it: Capitale di terzi
@@ -109,8 +113,8 @@ budget / forecast.
   - fiskalquote: Fiscal ratio (tax-to-GDP) | de: Fiskalquote | fr: Quote-part fiscale | it: Quota fiscale
   - einnahmenquote: Receipts-to-GDP ratio | de: Einnahmenquote | fr: Quote-part des recettes | it: Quota delle entrate
   - staatsquote: Expenditure-to-GDP ratio | de: Staatsquote | fr: Quote-part de l'État | it: Quota statale
-  - bruttoschuldenquote: Gross-debt-to-GDP ratio (Maastricht) | de: Bruttoschuldenquote (Maastricht) | fr: Taux d'endettement brut (Maastricht) | it: Tasso d'indebitamento lordo (Maastricht)
-  - schuldenquote: Debt-to-GDP ratio | de: Schuldenquote | fr: Taux d'endettement | it: Tasso d'indebitamento
+  - bruttoschuldenquote: Gross-debt-to-GDP ratio (FS basis) | de: Bruttoschuldenquote (FS-Basis) | fr: Taux d'endettement brut (base SF) | it: Tasso d'indebitamento lordo (base SF)
+  - schuldenquote: Debt-to-GDP ratio (Maastricht) | de: Schuldenquote (Maastricht) | fr: Taux d'endettement (Maastricht) | it: Tasso d'indebitamento (Maastricht)
   - nettoschuldenquote: Net-debt-to-GDP ratio | de: Nettoschuldenquote | fr: Taux d'endettement net | it: Tasso d'indebitamento netto
   - grp_fs: Financing view (receipts, expenditure, balance) | de: Finanzierungssicht (Einnahmen, Ausgaben, Saldo) | fr: Optique du financement (recettes, dépenses, solde) | it: Ottica del finanziamento (entrate, uscite, saldo)
   - grp_gfs: Accrual view (revenue, expenses, balance) | de: Erfolgssicht (Ertrag, Aufwand, Saldo) | fr: Optique des résultats (revenus, charges, solde) | it: Ottica dei risultati (ricavi, oneri, saldo)
@@ -131,7 +135,7 @@ budget / forecast.
 - **single-select**: level, model, estimate
 - **default**: level=staat, model=gfs, indicator=bruttoschuldenquote
 - **transform**: level
-- **percent-levels**: fiskalquote, einnahmenquote, staatsquote, bruttoschuldenquote, schuldenquote, nettoschuldenquote
+- **percent-levels**: fiskalquote, einnahmenquote, staatsquote, defizit_ueberschuss, bruttoschuldenquote, schuldenquote, nettoschuldenquote
   <these indicator levels are a share of GDP on a 0–1 scale; the app renders them
   as a percentage (× 100, % axis) when they alone are plotted in the level view>
 - **seasonal adjustment**: n/a (annual data).
@@ -174,11 +178,11 @@ with GDP itself on its own.
 
 ## Caveats / simplifications
 - **Units are mixed by indicator**: level aggregates are in CHF million; the `*quote`
-  ratio indicators are a share of GDP on a 0–1 scale (e.g. 0.30 = 30 % of GDP). They
+  ratio indicators and `defizit_ueberschuss` are a share of GDP on a 0–1 scale (e.g. 0.30 = 30 % of GDP). They
   are kept in one dataset because they share every other dimension; the app should
   format ratios as percentages.
 - The same economic concept appears under both models with slightly different code
-  names (FS `saldo` vs GFS `saldo`/`defizit_ueberschuss`; FS `bruttoschuld_fs` vs GFS
+  names (FS `saldo` vs GFS `saldo`, whose ratio to GDP is `defizit_ueberschuss`; FS `bruttoschuld_fs` vs GFS
   `maastricht_schuld`). Both are kept; the `model` dimension disambiguates.
 - Coverage by indicator is uneven: the FS model carries `einnahmen`/`bruttoschuld_fs`,
   the GFS model carries the ratios and the Maastricht debt; not every (level × model ×

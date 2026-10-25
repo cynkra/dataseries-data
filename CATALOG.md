@@ -26,7 +26,7 @@ See [`docs/concepts.md`](docs/concepts.md) for the concept tree and canonical/al
 | `ch_fso_hicp` | Harmonised CPI (HICP) _(alt)_ | Eurostat | monthly | 2004-12-01..2025-12-01 | Eurostat, terms of use |
 | `ch_snb_plkoprinfla` | Core inflation | Swiss National Bank | monthly | 1983-12-01..2026-07-01 | Swiss National Bank, terms of use |
 | `ch_snb_snbiprogq` | Inflation forecast (SNB) | Swiss National Bank | quarterly | 2001-01-01..2029-01-01 | Swiss National Bank, terms of use |
-| `ch_fso_ppi` | Producer and import prices | Swiss Federal Statistical Office (FSO) | monthly | 1963-01-01..2026-08-01 | Swiss Federal Statistical Office (FSO), terms of use |
+| `ch_fso_ppi` | Producer prices | Swiss Federal Statistical Office (FSO) | monthly | 1963-01-01..2026-09-01 | Swiss Federal Statistical Office (FSO), terms of use |
 | `ch_snb_plimoinchq` | Real estate prices | Swiss National Bank | quarterly | 1970-01-01..2026-04-01 | Swiss National Bank, terms of use |
 
 ## Labour

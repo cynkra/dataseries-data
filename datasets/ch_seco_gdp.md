@@ -42,8 +42,8 @@ Swiss economic output each quarter from all three angles (production, spending a
   `R/labels.R::LABEL_NOISE`); the codes stay in the SECO sidecar.
 
 ## Dimensions
-- `type`: valuation / measure. `nom` (Swiss Francs at current prices), `real`
-  (Swiss Francs, chain-linked volumes, reference year 2020), `gc_q` (contribution
+- `type`: valuation / measure. `nom` (CHF millions at current prices), `real`
+  (CHF millions, chain-linked volumes, reference year 2020), `gc_q` (contribution
   to real q-o-q GDP growth, percentage points), `gc_y` (contribution to real y-o-y
   GDP growth, percentage points). Single-select.
 - `structure`: section, 68 codes in a production/expenditure/income hierarchy under
@@ -53,6 +53,11 @@ Swiss economic output each quarter from all three angles (production, spending a
   P3, D1, etc.) in the labels; the fetcher strips them (see Parsing recipe).
 - `seas_adj`: seasonal adjustment. `na` (raw), `csa` (seasonal+calendar), `nasa`
   (sports-event), `cssa` (seasonal+calendar+sports-event). Single-select.
+
+## Labels
+- dim: type
+  - **units** nom: CHF millions, at current prices | de: CHF Millionen, zu laufenden Preisen | fr: Millions de CHF, aux prix courants | it: Milioni di CHF, a prezzi correnti
+  - **units** real: CHF millions, chain-linked volumes, reference year 2020 | de: CHF Millionen, verkettete reale Werte, Referenzjahr 2020 | fr: Millions de CHF, valeurs réelles chaînées, année de référence 2020 | it: Milioni di CHF, valori concatenati, anno di riferimento 2020
 
 ## Display
 - **split**: structure

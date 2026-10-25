@@ -11,7 +11,7 @@
 - **series**: 45
 
 ## What is special
-How many hours the Swiss actually work: total volume, hours per job, and usual weekly hours, split by sex and by full-time or part-time.
+How many hours the Swiss actually work: total volume, hours per job, and weekly hours, split by sex and by full-time or part-time.
 
 ## Access
 - **type**: fso-dam-csv — FSO DAM asset, master is a long SDMX-style CSV (not xlsx)
@@ -27,11 +27,11 @@ How many hours the Swiss actually work: total volume, hours per job, and usual w
   EMP_STATUS == "_T" & REGION == "_T"`, leaving `SEX x WORKTIME`.
 - The three measures are **parallel columns, not rows** — pivot them into a `measure`
   dimension: `VALUE` → `volume` (annual volume of hours), `VALUE_Y` → `annual` (hours
-  per job per year), `VALUE_W` → `weekly` (usual hours per week per job).
+  per job per year), `VALUE_W` → `weekly` (actual hours per week per job).
 - `TIME_PERIOD` (year) → first-of-year ISO date.
 
 ## Dimensions
-- `measure`: `weekly` usual hours/week per job (the default), `annual` hours/year per
+- `measure`: `weekly` actual hours/week per job (the default), `annual` hours/year per
   job, `volume` annual volume of hours worked (total, ~8.1 bn hours).
 - `sex`: `_T` total, `M` men, `F` women.
 - `worktime`: `_T` total, `FT` full-time, `PT` part-time, `PT_I` part-time I (50-89%),
@@ -43,7 +43,7 @@ How many hours the Swiss actually work: total volume, hours per job, and usual w
   - **units** weekly: Hours per week | de: Stunden pro Woche | fr: Heures par semaine | it: Ore per settimana
   - **units** annual: Hours per year | de: Stunden pro Jahr | fr: Heures par an | it: Ore all'anno
   - **units** volume: Hours | de: Stunden | fr: Heures | it: Ore
-  - weekly: Usual hours worked per week per job | de: Normalarbeitszeit pro Woche und Stelle | fr: Heures hebdomadaires habituelles par emploi | it: Ore settimanali abituali per impiego
+  - weekly: Actual hours worked per week per job | de: Tatsächliche Wochenarbeitszeit pro Stelle | fr: Heures hebdomadaires effectives par emploi | it: Ore settimanali effettive per impiego
   - annual: Annual hours worked per job | de: Jahresarbeitszeit pro Stelle | fr: Heures annuelles par emploi | it: Ore annue per impiego
   - volume: Annual volume of hours worked (total) | de: Jahresarbeitsvolumen (Total) | fr: Volume annuel d'heures travaillées (total) | it: Volume annuo di ore lavorate (totale)
 - dim: sex
@@ -70,7 +70,7 @@ The three dimensions form a **complete cube** — every `sex × worktime × meas
 is populated for all 16 years (45 series × 16 = 720 rows, zero empty combos), so any
 chip the user clicks is non-empty. The chart lines are the working-time categories
 (Total / Full-time / Part-time / Part-time I / Part-time II). `measure` is an exclusive
-selector because its three levels are **different units** (usual weekly hours per job,
+selector because its three levels are **different units** (actual weekly hours per job,
 annual hours per job, absolute annual volume of hours) that must never overlay; `sex`
 is a Total / Men / Women radio. The default opens on the headline "~31 h/week" series
 (2024 = 30.94 h), Total sex, all working-time lines.
@@ -86,8 +86,10 @@ is a Total / Men / Women radio. The default opens on the headline "~31 h/week" s
 ## Caveats / simplifications
 - We keep only the **national totals** of nationality, economic branch (NOGA), sector,
   employment status and region; the source cube has all of those cuts if wanted later.
-- `weekly` is **usual** (contractual) hours, while `annual`/`volume` count hours
-  **actually** worked (net of absence, overtime); don't divide one by the other naively.
+- All three measures count hours **actually** worked (net of absence, overtime), not
+  contractual hours: `weekly` per job per week, `annual` per job per year, `volume`
+  in total. Don't divide one by the other naively (annual / weekly is about 46 weeks,
+  not 52).
 - Part-time bands `PT_I` + `PT_II` sum to `PT`; `FT` + `PT` = `_T` for the volume
   measure, but the per-job intensities (`weekly`/`annual`) are averages, not additive.
 
@@ -99,10 +101,10 @@ Display verified live 2026-06-03 (45/45 cube combos populated, default + spot-ch
 return 16 rows; all dim levels flag data:true; validate_dataset() passes).
 
 ## What is special (de)
-Wie viele Stunden in der Schweiz tatsächlich gearbeitet wird: Gesamtvolumen, Stunden pro Stelle und übliche Wochenstunden, nach Geschlecht sowie Voll- und Teilzeit.
+Wie viele Stunden in der Schweiz tatsächlich gearbeitet wird: Gesamtvolumen, Stunden pro Stelle und Wochenstunden, nach Geschlecht sowie Voll- und Teilzeit.
 
 ## What is special (fr)
-Combien d'heures on travaille réellement en Suisse : volume total, heures par emploi et heures hebdomadaires usuelles, selon le sexe et le temps plein ou partiel.
+Combien d'heures on travaille réellement en Suisse : volume total, heures par emploi et heures hebdomadaires, selon le sexe et le temps plein ou partiel.
 
 ## What is special (it)
-Quante ore si lavora effettivamente in Svizzera: volume totale, ore per impiego e ore settimanali abituali, per sesso e per tempo pieno o parziale.
+Quante ore si lavora effettivamente in Svizzera: volume totale, ore per impiego e ore settimanali, per sesso e per tempo pieno o parziale.

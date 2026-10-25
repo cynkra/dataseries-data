@@ -77,9 +77,72 @@ leaves `Wirtschaftsabteilung` as the single dimension.
 
 ## Hierarchy
 The NOGA division codes are contiguous ranges that nest by containment
-(`5-96` Total ⊃ `5-43` Sector II ⊃ `10-33` Manufacturing ⊃ divisions); the tree is
-derived from those ranges.
-- derive: noga-range
+(`5-96` Total ⊃ `5-43` Sector II ⊃ `10-33` Manufacturing ⊃ divisions). The tree is
+declared by hand because one code defeats the range derivation: `77+79-82` is the
+administrative and support services without 78 (employment activities), so it is part
+of `77-82`, next to `78` (154,149 + 253,451 = 407,600 against 407,599 for `77-82` in
+2025Q4, a rounding difference). A derived tree would place it beside `77-82`, and the
+children of `45-96` would then count those jobs twice.
+- 5-96
+  - 5-43
+    - 5-9
+    - 10-33
+      - 10-12
+      - 13-15
+      - 16-18
+      - 19-20
+      - 21
+      - 22-23
+      - 24-25
+      - 26
+      - 27
+      - 28
+      - 29-30
+      - 31-33
+    - 35
+    - 36-39
+    - 41-43
+      - 41-42
+      - 43
+  - 45-96
+    - 45-47
+      - 45
+      - 46
+      - 47
+    - 49-53
+      - 49
+      - 50-51
+      - 52
+      - 53
+    - 55-56
+      - 55
+      - 56
+    - 58-63
+      - 58-60
+      - 61
+      - 62-63
+    - 64-66
+      - 64
+      - 65
+      - 66
+    - 68
+    - 69-75
+      - 69
+      - 70
+      - 71
+      - 72
+      - 73-75
+    - 77-82
+      - 78
+      - 77+79-82
+    - 84
+    - 85
+    - 86-88
+      - 86
+      - 87
+      - 88
+    - 90-93
+    - 94-96
 
 ## Caveats / simplifications
 - Only the total-level, total-sex slice is captured. The full-time/part-time and

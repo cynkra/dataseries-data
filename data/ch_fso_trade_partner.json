@@ -444,10 +444,10 @@
             "Ireland": [],
             "Sweden": [],
             "Czech Republic": [],
-            "Russia": [],
-            "Türkiye": []
+            "Russia": []
           },
           "Asia": {
+            "Türkiye": [],
             "China": [],
             "Japan": [],
             "India": [],
@@ -462,10 +462,10 @@
           },
           "North America": {
             "USA": [],
-            "Canada": [],
-            "Mexico": []
+            "Canada": []
           },
           "Central and South America": {
+            "Mexico": [],
             "Brazil": [],
             "Peru": []
           },

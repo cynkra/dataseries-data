@@ -830,7 +830,7 @@
     "end": "2026-04-01",
     "n_series": 60,
     "updated": null,
-    "fetched": "2026-10-25 08:30:45",
+    "fetched": "2026-10-25 19:47:30",
     "load": "whole",
     "data": "ch_fso_vacancies.csv",
     "meta": "ch_fso_vacancies.json"
@@ -926,7 +926,7 @@
     "end": "2026-04-01",
     "n_series": 20,
     "updated": null,
-    "fetched": "2026-10-25 08:30:46",
+    "fetched": "2026-10-25 19:47:30",
     "load": "whole",
     "data": "ch_fso_besta_outlook.csv",
     "meta": "ch_fso_besta_outlook.json"
@@ -987,10 +987,10 @@
   {
     "id": "ch_fso_ppi",
     "title": {
-      "en": "Producer and import prices",
-      "de": "Produzenten- und Importpreise",
-      "fr": "Prix à la production et à l'importation",
-      "it": "Prezzi alla produzione e all'importazione"
+      "en": "Producer prices",
+      "de": "Produzentenpreise",
+      "fr": "Prix à la production",
+      "it": "Prezzi alla produzione"
     },
     "concept": {
       "en": "Prices / Producer and import prices",

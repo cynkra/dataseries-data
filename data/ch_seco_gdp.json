@@ -893,16 +893,16 @@
   },
   "units": {
     "nom": {
-      "en": "Swiss Francs, at current prices",
-      "de": "Schweizer Franken, zu laufenden Preisen",
-      "fr": "Francs suisses, aux prix courants",
-      "it": "Franchi, a prezzi correnti"
+      "en": "CHF millions, at current prices",
+      "de": "CHF Millionen, zu laufenden Preisen",
+      "fr": "Millions de CHF, aux prix courants",
+      "it": "Milioni di CHF, a prezzi correnti"
     },
     "real": {
-      "en": "Swiss Francs, chain-linked volumes, reference year 2020",
-      "de": "Schweizer Franken, verkettete reale Werte, Referenzjahr 2020",
-      "fr": "Francs suisses, valeurs réelles chainées, année de réference 2020",
-      "it": "Franchi svizzeri, valori concatenati, anno di referenza 2020"
+      "en": "CHF millions, chain-linked volumes, reference year 2020",
+      "de": "CHF Millionen, verkettete reale Werte, Referenzjahr 2020",
+      "fr": "Millions de CHF, valeurs réelles chaînées, année de référence 2020",
+      "it": "Milioni di CHF, valori concatenati, anno di riferimento 2020"
     },
     "gc_q": {
       "en": "Percentage points",

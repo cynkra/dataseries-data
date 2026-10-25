@@ -45,10 +45,10 @@
         },
         "2": {
           "label": {
-            "en": "Index (2nd quarter 2015 = 100)",
-            "de": "Index (2. Quartal 2015 = 100)",
-            "fr": "Indice (2ème trimestre 2015 = 100)",
-            "it": "Indice (2° trimestre 2015 = 100)"
+            "en": "Index (2021 = 100)",
+            "de": "Index (2021 = 100)",
+            "fr": "Indice (2021 = 100)",
+            "it": "Indice (2021 = 100)"
           },
           "data": true
         },
@@ -147,7 +147,7 @@
           "label": {
             "en": "Trade and repair of motor vehicles and motorcycles",
             "de": "Handel, Instandhaltung und Rep. von Kraftfahrzeugen",
-            "fr": "Commerce, réparation dautomobiles et de motocycles",
+            "fr": "Commerce, réparation d’automobiles et de motocycles",
             "it": "Commercio e riparazione di autoveicoli e motocicli"
           },
           "data": true
@@ -183,7 +183,7 @@
           "label": {
             "en": "IT and other information services",
             "de": "Informationstechnologische und Informationsdienstl.",
-            "fr": "Activités informatiques et services dinformation",
+            "fr": "Activités informatiques et services d’information",
             "it": "Attività informatiche e altri servizi informativi"
           },
           "data": true
@@ -192,7 +192,7 @@
           "label": {
             "en": "Finance and assurance",
             "de": "Erbringung von Finanz- und Versicherungsdienstl.",
-            "fr": "Activités financières et dassurance",
+            "fr": "Activités financières et d’assurance",
             "it": "Attività finanziarie e assicurative"
           },
           "data": true
@@ -333,5 +333,5 @@
       "it": "Percento"
     }
   },
-  "fetched_utc": "2026-10-25 08:30:45"
+  "fetched_utc": "2026-10-25 19:47:30"
 }

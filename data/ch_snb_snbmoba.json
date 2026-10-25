@@ -190,10 +190,66 @@
     "it": "La moneta centrale in Svizzera, mostrata da entrambi i lati: come viene creata, e le banconote in circolazione più gli averi a vista delle banche."
   },
   "units": {
-    "en": "CHF millions",
-    "de": "Mio. CHF",
-    "fr": "Millions de CHF",
-    "it": "Milioni di CHF"
+    "RF": {
+      "en": "CHF millions",
+      "de": "Mio. CHF",
+      "fr": "Millions de CHF",
+      "it": "Milioni di CHF"
+    },
+    "W": {
+      "en": "CHF millions",
+      "de": "Mio. CHF",
+      "fr": "Millions de CHF",
+      "it": "Milioni di CHF"
+    },
+    "G": {
+      "en": "CHF millions",
+      "de": "Mio. CHF",
+      "fr": "Millions de CHF",
+      "it": "Milioni di CHF"
+    },
+    "S0": {
+      "en": "CHF millions",
+      "de": "Mio. CHF",
+      "fr": "Millions de CHF",
+      "it": "Milioni di CHF"
+    },
+    "N0": {
+      "en": "CHF millions",
+      "de": "Mio. CHF",
+      "fr": "Millions de CHF",
+      "it": "Milioni di CHF"
+    },
+    "N1": {
+      "en": "CHF millions",
+      "de": "Mio. CHF",
+      "fr": "Millions de CHF",
+      "it": "Milioni di CHF"
+    },
+    "GB": {
+      "en": "CHF millions",
+      "de": "Mio. CHF",
+      "fr": "Millions de CHF",
+      "it": "Milioni di CHF"
+    },
+    "N2": {
+      "en": "CHF millions",
+      "de": "Mio. CHF",
+      "fr": "Millions de CHF",
+      "it": "Milioni di CHF"
+    },
+    "N3": {
+      "en": "CHF millions",
+      "de": "Mio. CHF",
+      "fr": "Millions de CHF",
+      "it": "Milioni di CHF"
+    },
+    "S1": {
+      "en": "Factor",
+      "de": "Faktor",
+      "fr": "Coefficient",
+      "it": "Fattore"
+    }
   },
   "fetched_utc": "2026-10-21 08:41:45"
 }

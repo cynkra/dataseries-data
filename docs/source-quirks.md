@@ -99,8 +99,9 @@ that instead of the json-stat API. Measured against the production route
   datasheets say the publication date is "not published".
 - **Correct French.** PX-Web's json-stat emits latin1 bytes tagged as UTF-8, so
   the typographic apostrophe in NOGA labels lands in `data/*.json` as a raw
-  `\x92` (`d\x92automobiles`). 20 such bytes across three datasets today. The
-  `.px` route decodes latin1 explicitly and gets `d’automobiles`.
+  `\x92` (`d\x92automobiles`). `.fso_fix_c1()` in `R/source_fso.R` maps these
+  C1 characters to their CP1252 characters (`d’automobiles`), the same reading
+  the `.px` route gets by decoding CP1252 explicitly.
 
 `ch_fso_besta` runs on this route today (see its datasheet); the other four
 `fso-pxweb` datasets are still on json-stat.
