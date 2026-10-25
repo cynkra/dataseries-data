@@ -49,9 +49,9 @@ Quarterly index of advertised job vacancies in Switzerland, from the University 
   - **units** press: Index points, contribution to the total (Q1 2008 total = 100) | de: Indexpunkte, Beitrag zum Total (Total Q1 2008 = 100) | fr: Points d'indice, contribution au total (total T1 2008 = 100) | it: Punti indice, contributo al totale (totale T1 2008 = 100)
   - gesamt: Total | de: Total | fr: Total | it: Totale
   - gesamt_sa: Total, seasonally adjusted | de: Total, saisonbereinigt | fr: Total, corrigé des variations saisonnières | it: Totale, destagionalizzato
-  - internet: Internet job portals (contribution to Total) | de: Internet-Stellenportale (Beitrag zum Total) | fr: Portails d'emploi en ligne (contribution au total) | it: Portali di lavoro online (contributo al totale)
-  - company: Company websites (contribution to Total) | de: Unternehmens-Webseiten (Beitrag zum Total) | fr: Sites web d'entreprises (contribution au total) | it: Siti web aziendali (contributo al totale)
-  - press: Press (newspapers) (contribution to Total) | de: Presse (Zeitungen) (Beitrag zum Total) | fr: Presse (journaux) (contribution au total) | it: Stampa (giornali) (contributo al totale)
+  - internet: Internet job portals (contribution to the index) | de: Internet-Stellenportale (Beitrag zum Index) | fr: Portails d'emploi en ligne (contribution à l'indice) | it: Portali di lavoro online (contributo all'indice)
+  - company: Company websites (contribution to the index) | de: Unternehmens-Webseiten (Beitrag zum Index) | fr: Sites web d'entreprises (contribution à l'indice) | it: Siti web aziendali (contributo all'indice)
+  - press: Press (newspapers) (contribution to the index) | de: Presse (Zeitungen) (Beitrag zum Index) | fr: Presse (journaux) (contribution à l'indice) | it: Stampa (giornali) (contributo all'indice)
 
 ## Display
 - **split**: index
