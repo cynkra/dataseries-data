@@ -40,6 +40,10 @@ that is a bug in the script — fix it, don't commit the collateral.
 - [`docs/format-contract.md`](docs/format-contract.md) — the data + meta contract clients depend on.
 - [`docs/concepts.md`](docs/concepts.md) · [`docs/principles.md`](docs/principles.md) — concept tree + curation principles.
 - [`dev/etl-reliability-log.md`](dev/etl-reliability-log.md) — ETL incident journal (timeouts, the admin.ch GitHub-runner IP block).
+- [`verify/lib.py`](verify/lib.py): the end-to-end checks, every value of every dataset against its
+  upstream source, and the published data against the live API and the R/Python packages. Weekly
+  via `.github/workflows/verify.yml`; run locally with `python verify/run.py [--only <check>]`
+  (deps in `verify/requirements.txt`). Failures open `data-verify` issues.
 
 ## Running the ETL (operational notes)
 
