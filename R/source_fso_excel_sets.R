@@ -387,8 +387,10 @@ fso_excel_ch_fso_pop <- function(path, pubdate) {
     hit
   }
 
-  # Identify data rows: column 1 holds a 4-digit year.
-  yr <- suppressWarnings(as.integer(raw[[1]]))
+  # Identify data rows: column 1 holds a 4-digit year, possibly followed by a
+  # footnote number ("2010 7"); a plain as.integer() dropped that whole year.
+  yr <- suppressWarnings(as.integer(
+    stringr::str_match(stringr::str_trim(as.character(raw[[1]])), "^(\\d{4})(\\s+\\d{1,2})?$")[, 2]))
   is_data <- !is.na(yr) & yr > 1800 & yr < 2100
   sub <- raw[is_data, , drop = FALSE]
   years <- yr[is_data]

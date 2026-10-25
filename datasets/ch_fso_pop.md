@@ -23,6 +23,10 @@ How Switzerland's population changes each year: births, deaths, immigration, emi
 ## Parsing recipe
 - Sheet `su-d-01.02.04.05`. Year in column 1; demographic components across the
   remaining columns, modelled as one dimension `item` with 11 levels.
+- A year cell can carry a footnote number after the year (`2010 7`); the parser
+  takes the 4-digit year. Footnote 7 says FSO's 2010 deaths and 31 December 2010
+  stock are not the official BEVNAT/STATPOP figures (the ESPOP-to-STATPOP switch);
+  the row is kept as FSO publishes it.
 - Older years record unavailable components as `...`; those cells are dropped, so
   coverage varies by component (population stocks / births / deaths / birth surplus
   / absolute change run the full 1861-2024 = 163 obs; immigration/emigration only
