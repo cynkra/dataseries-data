@@ -26,6 +26,7 @@
   },
   "license": "fso",
   "frequency": "quarterly",
+  "updated": "2026-10-01",
   "dimensions": {
     "NOGA": {
       "label": {
@@ -234,5 +235,5 @@
     "fr": "Indice, 2021 = 100",
     "it": "Indice, 2021 = 100"
   },
-  "fetched_utc": "2026-10-25 08:30:45"
+  "fetched_utc": "2026-10-25 21:10:37"
 }

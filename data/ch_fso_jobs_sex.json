@@ -27,6 +27,7 @@
   },
   "license": "fso",
   "frequency": "quarterly",
+  "updated": "2026-08-27",
   "dimensions": {
     "Grossregion": {
       "label": {
@@ -300,5 +301,5 @@
     "fr": "Nombre d'emplois ou équivalents plein temps",
     "it": "Numero di impieghi o equivalenti a tempo pieno"
   },
-  "fetched_utc": "2026-10-25 08:30:45"
+  "fetched_utc": "2026-10-25 21:10:37"
 }

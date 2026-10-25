@@ -19,6 +19,21 @@ suppressPackageStartupMessages({
   sprintf("https://www.pxweb.bfs.admin.ch/api/v1/en/%s/%s.px", table_id, table_id)
 }
 
+# The publisher's last-update date for a table, for meta `updated`. The PX-Web
+# listing of the table node ({table_id}, one level above {table_id}.px) carries
+# an `updated` timestamp; the table metadata itself does not. One small GET.
+# Any failure gives NA, so it never blocks the dataset.
+.fso_table_updated <- function(table_id) {
+  tryCatch({
+    entries <- get_json(sprintf("https://www.pxweb.bfs.admin.ch/api/v1/en/%s", table_id))
+    for (e in entries) {
+      if (identical(e$id, paste0(table_id, ".px")) && !is.null(e$updated))
+        return(substr(as.character(e$updated), 1, 10))
+    }
+    NA_character_
+  }, error = function(e) NA_character_)
+}
+
 # GET the table metadata and return the full ordered value-code vector for one
 # dimension. Used to expand a "select all" chunk dimension into explicit codes
 # so we can split a too-big cube into <5000-cell calls.
@@ -202,6 +217,7 @@ fso_fetch <- function(dataset_id, table_id, query,
     ),
     license = "fso",
     frequency = freq,
+    updated = .fso_table_updated(table_id),
     dimensions = dimensions
   )
 

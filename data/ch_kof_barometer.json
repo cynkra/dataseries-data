@@ -22,6 +22,7 @@
   },
   "license": "kof",
   "frequency": "monthly",
+  "updated": "2026-09-25",
   "dimensions": {},
   "topic": {
     "key": "business-cycle-sentiment",
@@ -54,5 +55,5 @@
     "fr": "Indice",
     "it": "Indice"
   },
-  "fetched_utc": "2026-10-25 08:30:45"
+  "fetched_utc": "2026-10-25 21:10:37"
 }

@@ -106,6 +106,32 @@ suppressPackageStartupMessages({
   list(concepts = out$.concepts, codelists = out[names(out) != ".concepts"])
 }
 
+# The date the publisher last released a flow, for meta `updated`. The flow's
+# structure carries no last-update annotation, but disseminate.stats.swiss
+# versions every release with an "Actual" content constraint (CR_A_* / CR_B_*,
+# alternating) whose validFrom is the release timestamp; the live one has no
+# validTo. One small GET per flow, `?references=contentconstraint`. The UTC
+# timestamp is turned into the Swiss calendar date. Any failure gives NA, so a
+# metadata outage never blocks the dataset.
+.sdmx_release_date <- function(agency, flow, version) {
+  tryCatch({
+    url <- sprintf("%s/dataflow/%s/%s/%s?references=contentconstraint",
+                   .SDMX_BASE, agency, flow, version)
+    doc <- jsonlite::fromJSON(
+      resp_body_string(.sdmx_get(url, "application/vnd.sdmx.structure+json")),
+      simplifyVector = FALSE)
+    from <- character()
+    for (cc in doc$data$contentConstraints) {
+      if (!identical(cc$type, "Actual") || is.null(cc$validFrom)) next
+      if (!is.null(cc$validTo)) next            # superseded release
+      from <- c(from, cc$validFrom)
+    }
+    if (!length(from)) return(NA_character_)
+    ts <- as.POSIXct(max(from), format = "%Y-%m-%dT%H:%M:%S", tz = "UTC")
+    as.character(as.Date(ts, tz = "Europe/Zurich"))
+  }, error = function(e) NA_character_)
+}
+
 # Proper-case NOGA section names (lang -> code -> label) from Eurostat's NACE
 # Rev. 2, the EU classification NOGA is built on. Eurostat has no Italian; a
 # language it cannot serve is simply absent (Italian is sentence-cased instead).
@@ -176,6 +202,7 @@ fso_sdmx_fetch <- function(dataset_id, agency, flow, version, title = NULL,
     ),
     license = "fso",
     frequency = infer_frequency(periods),
+    updated = .sdmx_release_date(agency, flow, version),
     dimensions = .sdmx_dimensions(data, dim_cols, structure)
   )
 
@@ -220,7 +247,8 @@ sdmx_sliced <- function(agency, flow, version, key, dim_cols) {
 # EV-transition overlay). Pinned: Switzerland total, owner total, NEW vehicles,
 # passenger cars. SDMX CH1.MFZ_IVS / DF_IVS_0_GENERAL_M.
 fso_sdmx_new_vehicles <- function(dataset_id = "ch_fso_new_vehicles") {
-  d <- sdmx_sliced("CH1.MFZ_IVS", "DF_IVS_0_GENERAL_M", "1.0.0", "_T._T.N.100..M",
+  flow <- c("CH1.MFZ_IVS", "DF_IVS_0_GENERAL_M", "1.0.0")   # agency, flow, version
+  d <- sdmx_sliced(flow[1], flow[2], flow[3], "_T._T.N.100..M",
     c("UV_HGDE_KT", "UV_RV_OWNER_TYPE", "UV_RV_REGISTRATION_TYPE",
       "UV_RV_VEHICLE_GROUP_AND_TYPE", "UV_RV_FUEL", "FREQ"))
   data <- data.frame(fuel = d$UV_RV_FUEL, date = d$date, value = d$value, stringsAsFactors = FALSE)
@@ -229,6 +257,7 @@ fso_sdmx_new_vehicles <- function(dataset_id = "ch_fso_new_vehicles") {
   meta <- list(
     source = list(url = "https://www.bfs.admin.ch/asset/en/px-x-1103020200_120"),
     license = "fso", frequency = "monthly", topic = "Mobility",
+    updated = .sdmx_release_date(flow[1], flow[2], flow[3]),
     dimensions = list(fuel = .ivs_fuel_dim(data))
   )
   list(id = dataset_id, data = data, meta = meta)
@@ -240,7 +269,8 @@ fso_sdmx_new_vehicles <- function(dataset_id = "ch_fso_new_vehicles") {
 # so the cantons sum slightly below _T and _T is not declared as their parent.
 # maps.dataseries.org joins the canton codes to its boundary file.
 fso_sdmx_new_vehicles_canton <- function(dataset_id = "ch_fso_new_vehicles_canton") {
-  d <- sdmx_sliced("CH1.MFZ_IVS", "DF_IVS_0_GENERAL_M", "1.0.0", "._T.N.100..M",
+  flow <- c("CH1.MFZ_IVS", "DF_IVS_0_GENERAL_M", "1.0.0")   # agency, flow, version
+  d <- sdmx_sliced(flow[1], flow[2], flow[3], "._T.N.100..M",
     c("UV_HGDE_KT", "UV_RV_OWNER_TYPE", "UV_RV_REGISTRATION_TYPE",
       "UV_RV_VEHICLE_GROUP_AND_TYPE", "UV_RV_FUEL", "FREQ"))
   data <- data.frame(canton = sub("^0+", "", d$UV_HGDE_KT), fuel = d$UV_RV_FUEL,
@@ -255,6 +285,7 @@ fso_sdmx_new_vehicles_canton <- function(dataset_id = "ch_fso_new_vehicles_canto
   meta <- list(
     source = list(url = "https://www.bfs.admin.ch/asset/en/px-x-1103020200_120"),
     license = "fso", frequency = "monthly", topic = "Mobility",
+    updated = .sdmx_release_date(flow[1], flow[2], flow[3]),
     dimensions = list(
       canton = list(levels = setNames(lapply(cantons, function(x) list()), cantons)),
       fuel   = .ivs_fuel_dim(data)
@@ -271,7 +302,8 @@ fso_sdmx_new_vehicles_canton <- function(dataset_id = "ch_fso_new_vehicles_canto
 # national code 8100; we map them back so the series codes (V, PC) stay stable.
 # The rate has no value for 1995-96 (status O = missing): dropped by sdmx_sliced.
 fso_sdmx_vacant_dwellings <- function(dataset_id = "ch_fso_vacant_dwellings") {
-  d <- sdmx_sliced("CH1.LWZ", "DF_LWZ_1", "1.1.0", "8100._T._T..A",
+  flow <- c("CH1.LWZ", "DF_LWZ_1", "1.1.0")   # agency, flow, version
+  d <- sdmx_sliced(flow[1], flow[2], flow[3], "8100._T._T..A",
     c("GR_KT_GDE", "WOHN_ANZAHL", "LEERWOHN_TYP", "MEASURE_DIMENSION", "FREQ"))
   d <- d[d$MEASURE_DIMENSION %in% c("OBS", "RATE"), , drop = FALSE]
   measure <- c(OBS = "V", RATE = "PC")[d$MEASURE_DIMENSION]
@@ -282,6 +314,7 @@ fso_sdmx_vacant_dwellings <- function(dataset_id = "ch_fso_vacant_dwellings") {
   meta <- list(
     source = list(url = "https://www.bfs.admin.ch/asset/en/DF_LWZ_1"),
     license = "fso", frequency = "annual", topic = "Construction and housing",
+    updated = .sdmx_release_date(flow[1], flow[2], flow[3]),
     dimensions = list(measure = list(
       levels = list(
         PC = list(),
@@ -297,7 +330,8 @@ fso_sdmx_vacant_dwellings <- function(dataset_id = "ch_fso_vacant_dwellings") {
 # national total over NOGA/country/sex, leaving the 26-canton breakdown (+ _T total).
 # Model-based estimate, so values are NON-integer; do not round.
 fso_sdmx_cross_border_commuters <- function(dataset_id = "ch_fso_cross_border_commuters") {
-  d <- sdmx_sliced("CH1.GGS", "DF_GGS_1", "1.0.0", "_T._T.Q._T.",
+  flow <- c("CH1.GGS", "DF_GGS_1", "1.0.0")   # agency, flow, version
+  d <- sdmx_sliced(flow[1], flow[2], flow[3], "_T._T.Q._T.",
                    c("NOGA", "CNTRY", "FREQ", "SEX", "WORK_CANTON"))
   data <- data.frame(canton = d$WORK_CANTON, date = d$date, value = d$value,
                      stringsAsFactors = FALSE)
@@ -312,6 +346,7 @@ fso_sdmx_cross_border_commuters <- function(dataset_id = "ch_fso_cross_border_co
   meta <- list(
     source = list(url = "https://www.bfs.admin.ch/asset/en/px-x-0302010000_101"),
     license = "fso", frequency = "quarterly", topic = "Labour",
+    updated = .sdmx_release_date(flow[1], flow[2], flow[3]),
     dimensions = list(canton = list(
       levels = levels,
       hierarchy = if (length(kids)) list("_T" = setNames(lapply(kids, function(x) list()), kids))
@@ -330,7 +365,8 @@ fso_sdmx_cross_border_commuters <- function(dataset_id = "ch_fso_cross_border_co
 # dimension): DF_STATPOP_REGLING stops at 2024, REGLING_PERM carries 2025 and gives
 # identical values for 2010-2024.
 fso_sdmx_pop_detail <- function(dataset_id = "ch_fso_pop_detail") {
-  d <- sdmx_sliced("CH1.STATPOP", "DF_STATPOP_REGLING_PERM", "1.0.0", "_T..._T.A",
+  flow <- c("CH1.STATPOP", "DF_STATPOP_REGLING_PERM", "1.0.0")   # agency, flow, version
+  d <- sdmx_sliced(flow[1], flow[2], flow[3], "_T..._T.A",
                    c("REG_LING", "NATIONALITY_CATEGORY", "SEX", "AGE", "FREQ"))
   data <- data.frame(nationality = d$NATIONALITY_CATEGORY, sex = d$SEX,
                      date = d$date, value = d$value, stringsAsFactors = FALSE)
@@ -348,6 +384,7 @@ fso_sdmx_pop_detail <- function(dataset_id = "ch_fso_pop_detail") {
   meta <- list(
     source = list(url = "https://www.bfs.admin.ch/asset/en/DF_STATPOP_REGLING_PERM"),
     license = "fso", frequency = "annual", topic = "Population",
+    updated = .sdmx_release_date(flow[1], flow[2], flow[3]),
     dimensions = list(
       nationality = mk(unique(as.character(data$nationality))),
       sex         = mk(unique(as.character(data$sex)))

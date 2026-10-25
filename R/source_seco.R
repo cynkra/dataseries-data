@@ -93,8 +93,15 @@ seco_fetch <- function(id = "ch_seco_gdp",
 # constant in the CSV, so we keep only `structure`; (structure, date) is already
 # unique. Values are scaled YoY GDP growth rates (a level, not a rate to be
 # re-differenced) -> transform=level.
+#
+# `updated` comes from the sidecar's `updated_utc`, as in seco_fetch(); a sidecar
+# that cannot be read leaves it empty and never blocks the dataset.
 seco_wwa_fetch <- function(id = "ch_seco_wwa",
-                           data_url = "https://scheduler.swissdatas.ch/scheduled/wwa.csv") {
+                           data_url = "https://scheduler.swissdatas.ch/scheduled/wwa.csv",
+                           meta_url = "https://scheduler.swissdatas.ch/scheduled/ch-seco-wwa.json") {
+
+  updated <- tryCatch(jsonlite::fromJSON(meta_url, simplifyVector = FALSE)$updated_utc,
+                      error = function(e) NULL)
 
   raw <- readr::read_csv(data_url, show_col_types = FALSE)
   raw_periods <- as.character(raw$date)
@@ -109,6 +116,7 @@ seco_wwa_fetch <- function(id = "ch_seco_wwa",
     source = list(url = "https://www.seco.admin.ch/wea"),
     license = "seco",
     frequency = infer_frequency(raw_periods),
+    updated = updated,
     # labels + units: datasheet ## Labels block
     dimensions = list(
       structure = list(

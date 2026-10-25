@@ -643,6 +643,18 @@ fso_excel_ch_fso_unemp_rate <- function(path, pubdate) {
   out
 }
 
+# Publication (embargo) date of one DAM asset, "YYYY-MM-DD", or NA when the asset
+# JSON cannot be read. One small GET.
+.dam_embargo <- function(asset_id) {
+  tryCatch({
+    a <- jsonlite::fromJSON(get_text(sprintf(
+      "https://dam-api.bfs.admin.ch/hub/api/dam/assets/%s", asset_id)),
+      simplifyVector = FALSE)
+    substr(a$bfs$embargo %||% NA_character_, 1, 10)
+  }, error = function(e) NA_character_)
+}
+
+# `updated` is the later of the two assets' publication dates.
 fso_excel_ch_fso_trade_partner <- function(pubdate = NULL) {
   base <- "https://dam-api.bfs.admin.ch/hub/api/dam/assets/%s/master"
   ex_path <- tempfile(fileext = ".xlsx"); download_binary(sprintf(base, "36664830"), ex_path)
@@ -678,6 +690,9 @@ fso_excel_ch_fso_trade_partner <- function(pubdate = NULL) {
   anchor("export", "USA",     2024, 65297.2)
   anchor("import", "Germany", 2024, 59891.6)
 
+  pub <- c(.dam_embargo("36664830"), .dam_embargo("36664836"))
+  updated <- if (all(is.na(pub))) as.character(pubdate %||% NA_character_) else max(pub, na.rm = TRUE)
+
   partners <- data %>% dplyr::distinct(partner, level)
   partner_label <- function(p) {
     lab <- list(en = p)
@@ -694,7 +709,7 @@ fso_excel_ch_fso_trade_partner <- function(pubdate = NULL) {
     license   = "fso",
     frequency = "annual",
     topic     = "External sector",
-    updated   = if (is.null(pubdate)) NA_character_ else as.character(pubdate),
+    updated   = updated,
     dimensions = list(
       flow = list(
         levels = list(export = list(), import = list())
