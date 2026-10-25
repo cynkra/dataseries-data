@@ -44,7 +44,7 @@ Job vacancies posted by Swiss firms, by industry, as a count, an index and a rat
 
 ## Dimensions
 - `Offene Stellen` (Job vacancies, the unit/measure): `1` = count of vacancies,
-  `2` = index (2015Q2 = 100), `3` = rate (in %). All three are kept, so values
+  `2` = index (2021 = 100), `3` = rate (in %). All three are kept, so values
   mix counts, index points and percentages.
 - `Wirtschaftsabteilung` (Economic division): 20 NOGA codes. `5-96` total;
   `5-43` Sector II, `45-96` Sector III; division/aggregate codes such as
@@ -56,6 +56,7 @@ Job vacancies posted by Swiss firms, by industry, as a count, an index and a rat
   - **units** 1: Number of vacancies | de: Anzahl offene Stellen | fr: Nombre de places vacantes | it: Numero di posti vacanti
   - **units** 2: Index | de: Index | fr: Indice | it: Indice
   - **units** 3: Percent | de: Prozent | fr: Pour cent | it: Percento
+  - 2: Index (2021 = 100) | de: Index (2021 = 100) | fr: Indice (2021 = 100) | it: Indice (2021 = 100)
 
 ## Display
 - **split**: Wirtschaftsabteilung
@@ -68,7 +69,7 @@ Job vacancies posted by Swiss firms, by industry, as a count, an index and a rat
 as lines, so it is the split; `Offene Stellen` is a unit/measure dimension (count / index
 / rate), so it is single-select rather than split. The headline default opens on the
 economy-wide total division (`5-96`) and the primary measure, the count of vacancies
-(`Offene Stellen=1`), not the 2015Q2-rebased index the most-observations guess picked.
+(`Offene Stellen=1`), not the 2021-rebased index the most-observations guess picked.
 Transform stays at `level`.
 
 ## Hierarchy

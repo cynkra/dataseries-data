@@ -87,8 +87,8 @@ Swiss exports and imports by country in CHF millions: Germany, the US, China and
 ## Hierarchy
 `Total` is the root; the continent aggregates (already present as series) head each
 branch, with the reported partner countries nested beneath and the `EU` aggregate under
-Europe. Transcontinental partners follow the Swiss trade-statistics convention (Russia
-and Türkiye under Europe).
+Europe. Transcontinental and borderline partners follow FSO's own tables: Russia under
+Europe, Türkiye under Asia, Mexico under Central and South America.
 - Total
   - Europe
     - EU
@@ -105,8 +105,8 @@ and Türkiye under Europe).
     - Sweden
     - Czech Republic
     - Russia
-    - Türkiye
   - Asia
+    - Türkiye
     - China
     - Japan
     - India
@@ -121,8 +121,8 @@ and Türkiye under Europe).
   - North America
     - USA
     - Canada
-    - Mexico
   - Central and South America
+    - Mexico
     - Brazil
     - Peru
   - Africa

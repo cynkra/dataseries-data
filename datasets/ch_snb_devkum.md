@@ -57,7 +57,7 @@ Swiss franc exchange rates against the major currencies, monthly average and mon
   - **units** TRY100: CHF per 100 TRY | de: CHF je 100 TRY | fr: CHF pour 100 TRY | it: CHF per 100 TRY
   - **units** USD1: CHF per 1 USD | de: CHF je 1 USD | fr: CHF pour 1 USD | it: CHF per 1 USD
   - **units** CAD1: CHF per 1 CAD | de: CHF je 1 CAD | fr: CHF pour 1 CAD | it: CHF per 1 CAD
-  - **units** ARS1: CHF per 1 ARS | de: CHF je 1 ARS | fr: CHF pour 1 ARS | it: CHF per 1 ARS
+  - **units** ARS1: CHF per 100 ARS until March 2018, per 1 ARS from April 2018 | de: CHF je 100 ARS bis März 2018, je 1 ARS ab April 2018 | fr: CHF pour 100 ARS jusqu'en mars 2018, pour 1 ARS dès avril 2018 | it: CHF per 100 ARS fino a marzo 2018, per 1 ARS da aprile 2018
   - **units** BRL100: CHF per 100 BRL | de: CHF je 100 BRL | fr: CHF pour 100 BRL | it: CHF per 100 BRL
   - **units** MXN100: CHF per 100 MXN | de: CHF je 100 MXN | fr: CHF pour 100 MXN | it: CHF per 100 MXN
   - **units** ZAR1: CHF per 1 ZAR | de: CHF je 1 ZAR | fr: CHF pour 1 ZAR | it: CHF per 1 ZAR
@@ -83,6 +83,11 @@ Swiss franc exchange rates against the major currencies, monthly average and mon
 
 ## Caveats / simplifications
 - Quote convention is CHF per stated unit; the unit (1 vs 100) differs per currency.
+- `ARS1` changes its quotation unit inside the series, as SNB publishes it: CHF per
+  100 ARS up to March 2018 (end of March 2018: 4.73) and CHF per 1 ARS from April 2018
+  (end of April 2018: 0.0482). The values are kept as published, so the series jumps by
+  a factor of 100 at the switch, and the April 2018 monthly average (1.1675) blends
+  both quotations.
 - SNB has no seasonal-adjustment toggle; raw rates only.
 - Coverage per currency varies widely; early history exists only for major pairs.
 

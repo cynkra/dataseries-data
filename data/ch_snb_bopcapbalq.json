@@ -608,7 +608,7 @@
   "single_select": "D0",
   "default_transform": "level",
   "default": {
-    "D1": "T0",
+    "D1": "KD",
     "D0": "S"
   },
   "description": {

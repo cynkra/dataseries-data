@@ -498,10 +498,10 @@
       "it": "CHF per 1 CAD"
     },
     "ARS1": {
-      "en": "CHF per 1 ARS",
-      "de": "CHF je 1 ARS",
-      "fr": "CHF pour 1 ARS",
-      "it": "CHF per 1 ARS"
+      "en": "CHF per 100 ARS until March 2018, per 1 ARS from April 2018",
+      "de": "CHF je 100 ARS bis März 2018, je 1 ARS ab April 2018",
+      "fr": "CHF pour 100 ARS jusqu'en mars 2018, pour 1 ARS dès avril 2018",
+      "it": "CHF per 100 ARS fino a marzo 2018, per 1 ARS da aprile 2018"
     },
     "BRL100": {
       "en": "CHF per 100 BRL",

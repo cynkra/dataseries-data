@@ -241,10 +241,10 @@
         },
         "defizit_ueberschuss": {
           "label": {
-            "en": "Deficit / surplus",
-            "de": "Defizit / Überschuss",
-            "fr": "Déficit / excédent",
-            "it": "Disavanzo / avanzo"
+            "en": "Deficit / surplus (share of GDP)",
+            "de": "Defizit / Überschuss (Anteil am BIP)",
+            "fr": "Déficit / excédent (part du PIB)",
+            "it": "Disavanzo / avanzo (quota del PIL)"
           },
           "data": true
         },
@@ -322,19 +322,19 @@
         },
         "bruttoschuldenquote": {
           "label": {
-            "en": "Gross-debt-to-GDP ratio (Maastricht)",
-            "de": "Bruttoschuldenquote (Maastricht)",
-            "fr": "Taux d'endettement brut (Maastricht)",
-            "it": "Tasso d'indebitamento lordo (Maastricht)"
+            "en": "Gross-debt-to-GDP ratio (FS basis)",
+            "de": "Bruttoschuldenquote (FS-Basis)",
+            "fr": "Taux d'endettement brut (base SF)",
+            "it": "Tasso d'indebitamento lordo (base SF)"
           },
           "data": true
         },
         "schuldenquote": {
           "label": {
-            "en": "Debt-to-GDP ratio",
-            "de": "Schuldenquote",
-            "fr": "Taux d'endettement",
-            "it": "Tasso d'indebitamento"
+            "en": "Debt-to-GDP ratio (Maastricht)",
+            "de": "Schuldenquote (Maastricht)",
+            "fr": "Taux d'endettement (Maastricht)",
+            "it": "Tasso d'indebitamento (Maastricht)"
           },
           "data": true
         },
@@ -528,7 +528,7 @@
   "split": "indicator",
   "single_select": ["level", "model", "estimate"],
   "default_transform": "level",
-  "percent_levels": ["fiskalquote", "einnahmenquote", "staatsquote", "bruttoschuldenquote", "schuldenquote", "nettoschuldenquote"],
+  "percent_levels": ["fiskalquote", "einnahmenquote", "staatsquote", "defizit_ueberschuss", "bruttoschuldenquote", "schuldenquote", "nettoschuldenquote"],
   "default": {
     "level": "staat",
     "model": "gfs",

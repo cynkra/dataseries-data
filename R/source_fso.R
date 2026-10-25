@@ -58,7 +58,7 @@ suppressPackageStartupMessages({
     ordered_codes[[d]] <- codes
     lbls <- cat_$label
     code_labels[[d]] <- setNames(
-      vapply(codes, function(c) lbls[[c]] %||% c, ""), codes
+      .fso_fix_c1(vapply(codes, function(c) lbls[[c]] %||% c, "")), codes
     )
   }
 
@@ -220,9 +220,9 @@ fso_fetch <- function(dataset_id, table_id, query,
     for (v in doc$variables) {
       d <- v$code
       if (is.null(dimensions[[d]])) next
-      if (!is.null(v$text) && nzchar(v$text)) dimensions[[d]]$label[[L]] <- v$text
+      if (!is.null(v$text) && nzchar(v$text)) dimensions[[d]]$label[[L]] <- .fso_fix_c1(v$text)
       codes <- unlist(v$values)
-      texts <- unlist(v$valueTexts)
+      texts <- .fso_fix_c1(unlist(v$valueTexts))
       for (i in seq_along(codes)) {
         if (i > length(texts) || !nzchar(texts[[i]])) next
         if (!is.null(dimensions[[d]]$levels[[codes[[i]]]]))
@@ -231,6 +231,23 @@ fso_fetch <- function(dataset_id, table_id, query,
     }
   }
   dimensions
+}
+
+# PX-Web sends some labels with C1 control characters (U+0080..U+009F) where FSO
+# meant the CP1252 character at that byte, e.g. U+0092 for the apostrophe in
+# "d'automobiles". Map each to its CP1252 character; bytes CP1252 leaves undefined
+# stay as they are.
+.fso_fix_c1 <- function(x) {
+  if (is.null(x)) return(x)
+  vapply(x, function(s) {
+    cp <- utf8ToInt(enc2utf8(s))
+    c1 <- which(cp >= 0x80 & cp <= 0x9f)
+    for (i in c1) {
+      ch <- iconv(rawToChar(as.raw(cp[i])), "WINDOWS-1252", "UTF-8")
+      if (!is.na(ch)) cp[i] <- utf8ToInt(ch)
+    }
+    if (length(c1)) intToUtf8(cp) else s
+  }, "", USE.NAMES = FALSE)
 }
 
 `%||%` <- function(a, b) if (is.null(a)) b else a
