@@ -480,10 +480,10 @@
       "it": "CHF per 100 SEK"
     },
     "TRY100": {
-      "en": "CHF per 100 TRY",
-      "de": "CHF je 100 TRY",
-      "fr": "CHF pour 100 TRY",
-      "it": "CHF per 100 TRY"
+      "en": "CHF per 100 TRY from January 2005, per 100 old lira (TRL) before",
+      "de": "CHF je 100 TRY ab Januar 2005, je 100 alte Lira (TRL) davor",
+      "fr": "CHF pour 100 TRY dès janvier 2005, pour 100 anciennes livres (TRL) avant",
+      "it": "CHF per 100 TRY da gennaio 2005, per 100 vecchie lire (TRL) prima"
     },
     "USD1": {
       "en": "CHF per 1 USD",

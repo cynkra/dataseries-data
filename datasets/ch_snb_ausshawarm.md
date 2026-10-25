@@ -57,11 +57,46 @@ What Switzerland exports and imports by product group each month, in CHF million
 
 ## Hierarchy
 SNB lists `GT Total` as a sibling of the goods groups; nest the groups (and the
-ungrouped goods C2652/C22/C17) under Total so the picker reads Total → category →
+ungrouped goods C22/C17) under Total so the picker reads Total → category →
 product. The category nodes (CHEM, ME, MET, NFG, FZ, EN, TB) carry no series of their
 own in the SNB cube — only `GT` and the individual goods are published — so they stay
-non-selectable grouping headers, now correctly placed under Total.
-- derive: under-root GT
+non-selectable grouping headers, now correctly placed under Total. Watches and clocks
+`C2652` are part of `C26` (computer, electronic and optical products, NACE 26.52), so
+they are nested under `C26`; SNB itself lists them at top level, which would make the
+goods children add up to more than the total (exports, March 2024: all goods incl.
+C2652 as a separate item exceed `GT`).
+- GT
+  - CHEM
+    - C21
+    - C20
+  - ME
+    - C26
+      - C2652
+    - C28
+    - C27
+  - MET
+    - C24
+    - C25
+  - NFG
+    - A01
+    - A03
+    - C10
+    - C11
+    - C12
+  - FZ
+    - C29
+    - C30
+  - EN
+    - B05
+    - B06
+    - C19
+    - D35
+  - TB
+    - C13
+    - C14
+    - C15
+  - C22
+  - C17
 
 ## Caveats / simplifications
 - Mixed semantics on `D2`: `WMF` is a CHF-million level, `R` is a real % change;

@@ -66,6 +66,15 @@ People registered unemployed at Swiss job centres, with the unemployment rate, n
 - Heterogeneous units within one dimension (persons, %, vacancy counts); no unit
   column, the meaning is encoded in the `D0` code.
 - Default series for previews is `E` (labour force).
+- Source quirks, values unchanged (all as in SNB's own cube): (1) before 2004 the
+  seasonally adjusted vacancies `S2` sit far above the raw `T2` (every month from
+  1960 to 2003 is 8% or more higher, typically around 60%, up to about 300% in the
+  1970s), whereas from 2004 on they stay within about -9% to +27%. (2) The seasonally
+  adjusted unemployment `S0` and rate `S1` break in 1970-1975: `S1` is about 0.003
+  where the rate is only published from the mid-1970s, and `S0` is 83 in June 1970
+  against 36 raw (`T0`), then follows the raw series closely from 1975. Use the
+  unadjusted `T0`, `T1` and `T2` for the early decades, and `S0`/`S1`/`S2` from
+  about 1976 (`S0`, `S1`) and 2004 (`S2`) on.
 
 ## Provenance
 Script: `R/source_snb.R::snb_fetch` via `R/snb_cubes.tsv` (cube_id `amarbma`).

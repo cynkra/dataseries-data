@@ -52,6 +52,10 @@ Swiss bank lending split by whether the borrower is at home or abroad, for mortg
 - `K` (other loans) is a grouping node (`data: false`); only `T2/G/U` carry data.
 - 90 stored series are the populated cross-products, not the full 5x3x6x2 grid.
 - Stock series at month end, CHF millions.
+- Bank-category breakdown ends 2023-05: SNB stopped publishing the cantonal (`AV2`), big
+  (`AV3`), regional and savings (`AV4`) and Raiffeisen (`AV10`) banks in `D0` after May
+  2023, so those series stop there. Only the all-banks series (`AV1`, banks in
+  Switzerland) continue to the latest month. Source change, values unchanged.
 
 ## Provenance
 Script: `R/source_snb.R::snb_fetch` (cube `bakredinausbm`, title/topic from

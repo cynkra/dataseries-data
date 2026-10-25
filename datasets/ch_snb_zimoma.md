@@ -4,7 +4,7 @@
 - **title**: Money market rates | de: Geldmarktsätze | fr: Taux du marché monétaire | it: Tassi del mercato monetario
 - **keywords**: SARON, interest rate | de: Zins | fr: taux d'intérêt | it: tasso d'interesse
 - **concept**: Interest rates and yields / Money-market rates
-- **canonical**: yes (the headline money-market-rate cube; `zikredlauf` and `zikrepro` are the lending/published-rate alternates under the same concept)
+- **canonical**: yes (the money-market-rate cube; the bank lending and deposit rate cubes `zikredlauf` and `zikrepro` are filed under Banking and credit)
 - **featured**: SARON
 - **source**: snb
 - **license**: snb (free reuse, attribution required)

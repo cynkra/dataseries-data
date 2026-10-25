@@ -443,7 +443,7 @@
         },
         "inv_fixed": {
           "label": {
-            "en": "Investment in fixed assets and software",
+            "en": "Equipment investment, incl. software",
             "de": "Ausrüstungsinvestitionen",
             "fr": "Investissements en biens d'équipement",
             "it": "Beni di equipaggiamento"
@@ -872,10 +872,10 @@
         },
         "nasa": {
           "label": {
-            "en": "Sports event adjusted",
-            "de": "Sportevent-bereinigt",
-            "fr": "Données corrigées des effets des événements sportifs",
-            "it": "Dati destagionalizzati, corretti per gli effetti degli eventi sportivi"
+            "en": "Sports event adjusted (not seasonally adjusted)",
+            "de": "Sportevent-bereinigt (nicht saisonbereinigt)",
+            "fr": "Données corrigées des effets des événements sportifs (non désaisonnalisées)",
+            "it": "Dati corretti per gli effetti degli eventi sportivi (non destagionalizzati)"
           },
           "data": true
         },

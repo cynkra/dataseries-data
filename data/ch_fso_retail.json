@@ -190,19 +190,19 @@
         },
         "47PxTreib": {
           "label": {
-            "en": "Total retail sector without fuel",
+            "en": "Total retail trade without fuel (by class of goods)",
             "de": "Total Detailhandel ohne Treibstoffe",
-            "fr": "Total du commerce de détail hors carburants",
-            "it": "Totale commercio al dettaglio senza carburante"
+            "fr": "Total du commerce de détail hors carburants (par groupes de marchandises)",
+            "it": "Totale commercio al dettaglio senza carburante (per gruppi di merci)"
           },
           "data": true
         },
         "47x473": {
           "label": {
-            "en": "Total retail trade except fuel",
+            "en": "Total retail trade without fuel stations (by industry)",
             "de": "Total Detailhandel ohne Tankstellen",
-            "fr": "Total du commerce de détail hors carburants",
-            "it": "Totale commercio al dettaglio senza carburante"
+            "fr": "Total du commerce de détail hors stations-service (par branche)",
+            "it": "Totale commercio al dettaglio senza distributori di carburante (per branca)"
           },
           "data": true
         }

@@ -12,7 +12,7 @@
 - **series**: 324
 
 ## What is special
-Swiss franc exchange-rate indices against about 54 currencies, nominal and inflation-adjusted, as index levels and as yearly changes.
+Swiss franc exchange-rate index levels against 54 partner currencies, nominal and inflation-adjusted (CPI- or PPI-based). Yearly changes are not stored; the YoY toggle derives them.
 
 ## Access
 - **type**: snb-cube — SNB cube API
@@ -58,10 +58,10 @@ Script: `R/source_snb.R::snb_fetch` (title/topic from `R/snb_cubes.tsv`). Datash
 authored 2026-06-01.
 
 ## What is special (de)
-Frankenkurs-Indizes gegenüber rund 54 Währungen, nominal und teuerungsbereinigt, als Indexstände und als Jahresveränderungen.
+Indexstände des Frankenkurses gegenüber 54 Partnerwährungen, nominal und teuerungsbereinigt (KPI- oder PPI-basiert). Jahresveränderungen werden nicht gespeichert; die YoY-Ansicht leitet sie ab.
 
 ## What is special (fr)
-Indices de cours du franc face à environ 54 monnaies, nominaux et corrigés de l'inflation, en niveaux d'indice et en variations annuelles.
+Niveaux d'indice du cours du franc face à 54 monnaies partenaires, nominaux et corrigés de l'inflation (base IPC ou IPP). Les variations annuelles ne sont pas stockées ; l'affichage en variation annuelle les déduit.
 
 ## What is special (it)
-Indici del corso del franco rispetto a circa 54 valute, nominali e corretti per l'inflazione, come livelli d'indice e variazioni annue.
+Livelli dell'indice del corso del franco rispetto a 54 valute partner, nominali e corretti per l'inflazione (base IPC o IPP). Le variazioni annue non sono memorizzate; la vista in variazione annua le deriva.

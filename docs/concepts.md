@@ -86,7 +86,7 @@ _Canonical series and labelled alternates per concept, grouped into the 12 overv
 |---|---|---|
 | Bond yields | `ch_snb_rendeiduebd` (SNB) | — |
 | Policy and official rates | `ch_snb_snboffzisa` (SNB) | — |
-| Money-market rates | `ch_snb_zimoma` (SNB) ★ | `ch_snb_zikredlauf` (SNB), `ch_snb_zikrepro` (SNB) |
+| Money-market rates | `ch_snb_zimoma` (SNB) ★ | — |
 
 ### Exchange rates
 | Concept | Canonical | Alternates |
@@ -110,7 +110,7 @@ _Canonical series and labelled alternates per concept, grouped into the 12 overv
 ### Money and banking
 | Concept | Canonical | Alternates |
 |---|---|---|
-| Banking and credit | `ch_snb_babilpobm` (SNB), `ch_snb_bakredbetgrbm` (SNB), `ch_snb_bakredinausbm` (SNB), `ch_snb_bakredsekbm` (SNB) | — |
+| Banking and credit | `ch_snb_babilpobm` (SNB), `ch_snb_bakredbetgrbm` (SNB), `ch_snb_bakredinausbm` (SNB), `ch_snb_bakredsekbm` (SNB) | `ch_snb_zikredlauf` (SNB), `ch_snb_zikrepro` (SNB) |
 | Monetary aggregates | `ch_snb_snbmonagg` (SNB) ★ | `ch_snb_snbbipo` (SNB), `ch_snb_snbmoba` (SNB) |
 
 ### Domestic economy

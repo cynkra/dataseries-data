@@ -830,21 +830,21 @@
   },
   "updated": "2026-10-01 14:30",
   "topic": {
-    "key": "interest-rates-yields",
+    "key": "money-banking",
     "name": {
-      "en": "Interest rates and yields",
-      "de": "Zinsen und Renditen",
-      "fr": "Taux d'intérêt et rendements",
-      "it": "Tassi d'interesse e rendimenti"
+      "en": "Money and banking",
+      "de": "Geld und Banken",
+      "fr": "Monnaie et banques",
+      "it": "Moneta e banche"
     }
   },
   "concept": {
-    "en": "Interest rates and yields / Money-market rates",
+    "en": "Money and banking / Banking and credit",
     "leaf": {
-      "en": "Money-market rates",
-      "de": "Geldmarktsätze",
-      "fr": "Taux du marché monétaire",
-      "it": "Tassi del mercato monetario"
+      "en": "Banking and credit",
+      "de": "Banken und Kredit",
+      "fr": "Banques et crédit",
+      "it": "Banche e credito"
     }
   },
   "canonical": false,

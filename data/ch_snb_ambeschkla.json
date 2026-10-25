@@ -69,9 +69,9 @@
       "hierarchy": {
         "VT": {
           "V": [],
-          "T": [],
-          "IV": []
-        }
+          "T": []
+        },
+        "IV": []
       }
     },
     "D1": {
@@ -147,9 +147,10 @@
         },
         "HIRK": {
           "label": {
-            "en": "Trading, maintenance and repair of motor vehicles",
+            "en": "Wholesale and retail trade; repair of motor vehicles",
             "de": "Handel, Instandhaltung und Reparatur von Kraftfahrzeugen",
-            "fr": "Commerce; réparation d’automobiles et de motocycles"
+            "fr": "Commerce; réparation d'automobiles et de motocycles",
+            "it": "Commercio all'ingrosso e al dettaglio; riparazione di autoveicoli e motocicli"
           },
           "data": true
         },

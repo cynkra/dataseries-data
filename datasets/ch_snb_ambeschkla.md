@@ -32,7 +32,7 @@ Swiss employees by industry, split into full-time, part-time and full-time equiv
 - `D0` (Employees): `VT` Total, `V` full-time, `T` part-time, `IV` in full-time
   equivalents (all leaf data codes).
 - `D1` (Economic activity): leaf sectors with codes such as `T0` overall total,
-  `VGHW` manufacturing, `BB` construction, `HIRK` motor-vehicle trade/repair,
+  `VGHW` manufacturing, `BB` construction, `HIRK` wholesale and retail trade incl. motor-vehicle repair (NOGA 45-47),
   `GBG` hospitality, `VL` transport/storage, `EF` financial services, `V`
   insurance, `GW` real estate, `EU` education, `GS` health/social, `ED` other
   services, `OV` public administration. `D1_0/D1_1/D1_2` are non-data sector
@@ -44,6 +44,8 @@ Swiss employees by industry, split into full-time, part-time and full-time equiv
   - **units** V: Thousands of employees | de: Tausend Beschäftigte | fr: Milliers d'emplois | it: Migliaia di occupati
   - **units** T: Thousands of employees | de: Tausend Beschäftigte | fr: Milliers d'emplois | it: Migliaia di occupati
   - **units** IV: Thousands of full-time equivalents | de: Tausend Vollzeitäquivalente | fr: Milliers d'équivalents plein temps | it: Migliaia di equivalenti a tempo pieno
+- dim: D1
+  - HIRK: Wholesale and retail trade; repair of motor vehicles | de: Handel, Instandhaltung und Reparatur von Kraftfahrzeugen | fr: Commerce; réparation d'automobiles et de motocycles | it: Commercio all'ingrosso e al dettaglio; riparazione di autoveicoli e motocicli
 
 ## Display
 - **split**: D1
@@ -53,9 +55,12 @@ Swiss employees by industry, split into full-time, part-time and full-time equiv
 - **seasonal adjustment**: n/a (no SA dimension or SA codes)
 
 ## Hierarchy
-The overview line dimension D0 carries a `VT Total` (employment level) shipped as a sibling of its sub-aggregates; nest them under it.
+The overview line dimension D0 carries a `VT Total` (employees) shipped as a sibling of its parts; nest the full-time (`V`) and part-time (`T`) employees under it (they sum to it). `IV` is the same employees counted in full-time equivalents, not a part of the total, so it stays a separate top-level node.
 - dim: D0
-- derive: under-root VT
+- VT
+  - V
+  - T
+- IV
 
 ## Caveats / simplifications
 - Code `V` is reused across dimensions (full-time in `D0`, insurance in `D1`); the

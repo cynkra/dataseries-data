@@ -838,10 +838,10 @@
   {
     "id": "ch_fso_jobs_sex",
     "title": {
-      "en": "Jobs by economic division and sex",
-      "de": "Beschäftigte nach Wirtschaftsabteilung und Geschlecht",
-      "fr": "Emplois par division économique et sexe",
-      "it": "Impieghi per divisione economica e sesso"
+      "en": "Jobs by region, sector and sex",
+      "de": "Beschäftigte nach Region, Sektor und Geschlecht",
+      "fr": "Emplois par région, secteur et sexe",
+      "it": "Impieghi per regione, settore e sesso"
     },
     "concept": {
       "en": "Labour / Employment / jobs",
@@ -3327,23 +3327,23 @@
       "it": "Tassi sui nuovi crediti"
     },
     "concept": {
-      "en": "Interest rates and yields / Money-market rates",
+      "en": "Money and banking / Banking and credit",
       "leaf": {
-        "en": "Money-market rates",
-        "de": "Geldmarktsätze",
-        "fr": "Taux du marché monétaire",
-        "it": "Tassi del mercato monetario"
+        "en": "Banking and credit",
+        "de": "Banken und Kredit",
+        "fr": "Banques et crédit",
+        "it": "Banche e credito"
       }
     },
     "canonical": false,
     "featured": null,
     "topic": {
-      "key": "interest-rates-yields",
+      "key": "money-banking",
       "name": {
-        "en": "Interest rates and yields",
-        "de": "Zinsen und Renditen",
-        "fr": "Taux d'intérêt et rendements",
-        "it": "Tassi d'interesse e rendimenti"
+        "en": "Money and banking",
+        "de": "Geld und Banken",
+        "fr": "Monnaie et banques",
+        "it": "Moneta e banche"
       }
     },
     "source": {
@@ -3375,23 +3375,23 @@
       "it": "Tassi d'interesse pubblicati"
     },
     "concept": {
-      "en": "Interest rates and yields / Money-market rates",
+      "en": "Money and banking / Banking and credit",
       "leaf": {
-        "en": "Money-market rates",
-        "de": "Geldmarktsätze",
-        "fr": "Taux du marché monétaire",
-        "it": "Tassi del mercato monetario"
+        "en": "Banking and credit",
+        "de": "Banken und Kredit",
+        "fr": "Banques et crédit",
+        "it": "Banche e credito"
       }
     },
     "canonical": false,
     "featured": null,
     "topic": {
-      "key": "interest-rates-yields",
+      "key": "money-banking",
       "name": {
-        "en": "Interest rates and yields",
-        "de": "Zinsen und Renditen",
-        "fr": "Taux d'intérêt et rendements",
-        "it": "Tassi d'interesse e rendimenti"
+        "en": "Money and banking",
+        "de": "Geld und Banken",
+        "fr": "Monnaie et banques",
+        "it": "Moneta e banche"
       }
     },
     "source": {

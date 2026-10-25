@@ -189,6 +189,16 @@ with GDP itself on its own.
   indicator) cell exists. `write_dataset()` flags which level codes actually occur.
 - Forecast / budget years (post the latest financial statement, ~2024+) are official
   FFA projections, not observations — flagged in `estimate`, not dropped.
+- Source quirks, values unchanged: (1) the GDP forecasts `bip` for 2026-2030 are tagged
+  `estimate = rechnung` (financial statement, actual) by FFA, although they are
+  projections; every other indicator marks those years as budget, hochrechnung or
+  prognose. Filtering on `estimate = rechnung` to get "actuals" therefore keeps five
+  forecast GDP years. (2) `staat` `gfs` `einnahmenquote` 1990 is 0.3448, against 0.2724
+  in 1991 (a 7 percentage point fall). That 1990 value equals the extended receipts
+  ratio (`einnahmenquote_erweitert`) that FFA publishes for 1990, which looks like a
+  copy error in the FFA file; treat the 1990 ratio as unreliable. (That second
+  indicator is not part of this dataset, so the equality can only be checked against
+  the FFA file.)
 - Deep sub-aggregates (debt decomposition, special-financing positions, COFOG
   function split) are **dropped**; they live in the FFA's "Detailed data" datasets and
   could seed further datasets later.

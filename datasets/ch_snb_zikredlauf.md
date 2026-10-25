@@ -2,8 +2,8 @@
 
 - **id**: ch_snb_zikredlauf
 - **title**: New lending rates | de: Zinssätze Neugeschäft | fr: Taux des nouveaux crédits | it: Tassi sui nuovi crediti
-- **concept**: Interest rates and yields / Money-market rates
-- **canonical**: no (alternate; one of the three money-market-rate cubes `zimoma` / `zikredlauf` / `zikrepro`, this one is the new-business lending-rate distribution)
+- **concept**: Money and banking / Banking and credit
+- **canonical**: no (alternate; bank lending and deposit rates, not money-market rates, so filed under banking and credit; this one is the new-business lending-rate distribution)
 - **source**: snb
 - **license**: snb (free reuse, attribution required)
 - **frequency**: monthly

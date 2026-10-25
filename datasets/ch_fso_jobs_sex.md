@@ -1,7 +1,7 @@
-# Jobs by economic division and sex
+# Jobs by region, sector and sex
 
 - **id**: ch_fso_jobs_sex
-- **title**: Jobs by economic division and sex | de: Beschäftigte nach Wirtschaftsabteilung und Geschlecht | fr: Emplois par division économique et sexe | it: Impieghi per divisione economica e sesso
+- **title**: Jobs by region, sector and sex | de: Beschäftigte nach Region, Sektor und Geschlecht | fr: Emplois par région, secteur et sexe | it: Impieghi per regione, settore e sesso
 - **concept**: Labour / Employment / jobs
 - **canonical**: no (alternate / breakdown of `ch_fso_besta`)
 - **source**: fso
@@ -12,7 +12,7 @@
 - **updated**: not published (live PX-Web pull; latest observation 2026Q1)
 
 ## What is special
-Swiss jobs split by region, sector, full-time or part-time, and sex, the breakdowns the headline employment series reports only as a total.
+Swiss jobs split by region, sector, full-time or part-time, and sex, the breakdowns the headline employment series reports only as a total. Sector detail stops at industry versus services; for economic divisions use `ch_fso_besta`.
 
 ## Access
 - **type**: fso-pxweb — FSO PX-Web (json-stat2)
@@ -78,10 +78,10 @@ Script: `R/source_fso.R::fso_fetch_auto` (auto-query; entry in `R/pipeline.R`).
 Datasheet authored 2026-06-01.
 
 ## What is special (de)
-Schweizer Stellen nach Region, Sektor, Voll- oder Teilzeit und Geschlecht: die Gliederungen, welche die Hauptreihe nur als Total ausweist.
+Schweizer Stellen nach Region, Sektor, Voll- oder Teilzeit und Geschlecht: die Gliederungen, welche die Hauptreihe nur als Total ausweist. Die Sektorgliederung endet bei Industrie und Dienstleistungen; für Wirtschaftsabteilungen siehe `ch_fso_besta`.
 
 ## What is special (fr)
-Emplois suisses par région, secteur, temps plein ou partiel et sexe : les ventilations que la série principale ne publie qu'en total.
+Emplois suisses par région, secteur, temps plein ou partiel et sexe : les ventilations que la série principale ne publie qu'en total. Le détail sectoriel s'arrête à l'industrie et aux services ; pour les divisions économiques, voir `ch_fso_besta`.
 
 ## What is special (it)
-Posti di lavoro svizzeri per regione, settore, tempo pieno o parziale e sesso: le ripartizioni che la serie principale riporta solo come totale.
+Posti di lavoro svizzeri per regione, settore, tempo pieno o parziale e sesso: le ripartizioni che la serie principale riporta solo come totale. Il dettaglio settoriale si ferma a industria e servizi; per le divisioni economiche si veda `ch_fso_besta`.

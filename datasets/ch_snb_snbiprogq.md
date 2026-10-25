@@ -44,15 +44,20 @@ The Swiss National Bank's inflation forecast, one path per quarterly policy meet
 ## Display
 - **split**: D0
 - **single-select**: D1
-- **default**: D0=D2025POFFP, D1=BI
+- **default**: D0=S2026POFFP, D1=BI
 - **transform**: level
 - **seasonal adjustment**: n/a
 - Opening on the observed-inflation path (`D1=BI`), which is the realised quarterly
   CPI series running back to 2001 and the broadest series in the cube, paired with a
-  recent assessment vintage (`D0=D2025POFFP`, December 2025). The vintage dimension is
+  recent assessment vintage (`D0=S2026POFFP`, September 2026). The vintage dimension is
   the split: each line is one assessment, so the user adds vintages to lay forecast
   fans against the observed path. Bare-year codes (`2004`, ...) are grouping headers
   (`data: false`), never a valid default.
+- **Needs updating each quarter.** The `default` line can only name a fixed code; the
+  Display grammar has no "latest" keyword. When SNB publishes a new assessment (the
+  next is December 2026, code `D2026POFFP`, then `M2027...`), change `D0=` in the
+  default to the newest `data: true` code of `D0` and run
+  `Rscript dev/rebuild_from_datasheets.R`; otherwise the page headline falls behind.
 
 ## Caveats / simplifications
 - Future-dated rows are expected: forecasts project beyond publication, so `end`

@@ -140,6 +140,14 @@ Europe, Türkiye under Asia, Mexico under Central and South America.
   smaller country-coverage changes in 2002 / 2012, noted in the workbook footnotes)
   means the series is **not chained / not made continuous** across the break. Pre- and
   post-2013 levels are not strictly comparable.
+- **`Total` includes gold since 2012**: the workbook's `Total` is the general total
+  ("Total 2", with gold and other precious metals) from 2012 on, and the business-cycle
+  total (excluding gold) before. The export Total jumps from 208,203 (2011) to 292,958
+  (2012) CHF mn for that reason, a break of definition, not trade. The 2002 break is
+  small. Because of the gold, this `Total` is far above the SNB total of the same
+  concept (`ch_snb_ausshawarm`, `GT`, which excludes gold: about 283,000 CHF mn
+  exports in 2024 against 393,834 here); do not compare or splice them. The partner
+  rows are not adjusted either, so the sum of the countries does not equal `Total`.
 - Partner set limited to the countries / regions the workbook breaks out; the residual
   (Total minus the listed partners) is not published as its own row.
 - Spot-checks match the workbook exactly: export Total 2024 = 393 833.5,

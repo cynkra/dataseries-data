@@ -60,6 +60,14 @@ How Swiss customers send money without a card: credit transfers, direct debits a
   across `D1` double-counts. Use a single level of the order-type tree at a time.
 - `BPT` (amount per transaction) is a ratio, not an additive flow.
 - Coverage begins 2012-03; there is no pre-2012 history in this cube.
+- Source quirk, values unchanged: from 2012-03 to 2021-12 the values are **quarterly
+  totals** dated on the quarter-end month (March, June, September, December), although
+  SNB tags the cube as monthly. From 2022-01 on they are true monthly values. The level
+  therefore drops by a factor of about 2.8 at the switch (total amount `BET`: 2,333.9
+  CHF million in 2021-12 against 772.3 in 2022-01; transactions `ATA`: 345,301 against
+  121,677 thousand). Do not read the drop as a fall in payments, and do not compare
+  monthly changes across 2021/2022; convert before comparing (one quarterly value is
+  roughly three monthly ones). Per-transaction amounts (`BPT`) are unaffected.
 
 ## Provenance
 Script: `R/source_snb.R::snb_fetch` (cube list + title from `R/snb_cubes.tsv`).
