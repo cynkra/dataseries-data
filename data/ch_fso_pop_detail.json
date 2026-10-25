@@ -6,7 +6,7 @@
     "sex"
   ],
   "start": "2010-01-01",
-  "end": "2024-01-01",
+  "end": "2025-01-01",
   "source": {
     "name": {
       "en": "Swiss Federal Statistical Office (FSO)",
@@ -14,7 +14,7 @@
       "fr": "Office fédéral de la statistique (OFS)",
       "it": "Ufficio federale di statistica (UST)"
     },
-    "url": "https://www.bfs.admin.ch/asset/en/px-x-0102010000_101",
+    "url": "https://www.bfs.admin.ch/asset/en/DF_STATPOP_REGLING_PERM",
     "key": "fso"
   },
   "license": "fso",
@@ -140,10 +140,10 @@
     "sex": "_T"
   },
   "description": {
-    "en": "Swiss and foreign residents by sex, year-end count from the population register. The foreign share was about 27.4% in 2024.",
-    "de": "Schweizer und ausländische Wohnbevölkerung nach Geschlecht, Jahresendbestand aus dem Bevölkerungsregister. Der Ausländeranteil lag 2024 bei rund 27.4%.",
-    "fr": "Population résidante suisse et étrangère par sexe, effectif de fin d'année tiré du registre. La part étrangère était d'environ 27.4% en 2024.",
-    "it": "Popolazione residente svizzera e straniera per sesso, effettivo di fine anno dal registro. La quota straniera era circa il 27.4% nel 2024."
+    "en": "Swiss and foreign residents by sex, year-end count from the population register. The foreign share was about 27.7% in 2025.",
+    "de": "Schweizer und ausländische Wohnbevölkerung nach Geschlecht, Jahresendbestand aus dem Bevölkerungsregister. Der Ausländeranteil lag 2025 bei rund 27.7%.",
+    "fr": "Population résidante suisse et étrangère par sexe, effectif de fin d'année tiré du registre. La part étrangère était d'environ 27.7% en 2025.",
+    "it": "Popolazione residente svizzera e straniera per sesso, effettivo di fine anno dal registro. La quota straniera era circa il 27.7% nel 2025."
   },
   "units": {
     "en": "Number of permanent residents (year-end stock)",
@@ -151,5 +151,5 @@
     "fr": "Population résidante permanente (état en fin d'année)",
     "it": "Popolazione residente permanente (stato a fine anno)"
   },
-  "fetched_utc": "2026-10-25 08:30:45"
+  "fetched_utc": "2026-10-25 20:24:08"
 }
