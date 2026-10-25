@@ -160,6 +160,20 @@ def compare(src: pd.DataFrame, api: pd.DataFrame, keys: list[str], *, rtol: floa
     return "ok", f"{n} cells match (latest {latest_api})", details
 
 
+def known_failure(v: dict) -> dict | None:
+    """The verify/known.json entry that covers this fail verdict, if every one of
+    its problems matches the entry; a new problem on the same dataset is not covered."""
+    path = ROOT / "verify" / "known.json"
+    if v.get("status") != "fail" or not path.exists():
+        return None
+    problems = [i.get("problem", "") for i in (v.get("details") or {}).get("issues", [])] or [v["summary"]]
+    for k in json.loads(path.read_text())["known"]:
+        if (k["dataset"], k["check"]) == (v["dataset"], v["check"]) and \
+                all(any(m in p for m in k["match"]) for p in problems):
+            return k
+    return None
+
+
 def only_arg(argv: list[str]) -> set[str] | None:
     """Parse an optional `--only id1,id2` from argv."""
     if "--only" in argv:

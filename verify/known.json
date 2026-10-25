@@ -1,0 +1,17 @@
+{
+  "_comment": "Failures we know about and have decided not to alert on. A fail verdict is known when every one of its problems contains one of `match`; it then shows in the run summary but opens no issue. Remove an entry once the check passes again.",
+  "known": [
+    {
+      "dataset": "ch_snb_bopcapbalq",
+      "check": "chain",
+      "match": ["dimension code \"NA\" is lost"],
+      "reason": "Fixed on main in cynkra/dataseries#7 and cynkra/dataseries-py#1; the released CRAN and PyPI packages keep the bug until the next release."
+    },
+    {
+      "dataset": "ch_fso_vacancies",
+      "check": "chain",
+      "match": ["R columns differ from API header"],
+      "reason": "The released R package renames \"Offene Stellen\"; fixed on main in cynkra/dataseries#7, not yet on CRAN."
+    }
+  ]
+}

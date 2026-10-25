@@ -84,9 +84,10 @@ def markdown(results: list[dict]) -> str:
     if bad:
         lines += ["| Status | Dataset | Check | Summary |", "| --- | --- | --- | --- |"]
         order = {s: i for i, s in enumerate(("fail", "error", "unreachable", "lag"))}
-        for v in sorted(bad, key=lambda v: (order.get(v["status"], 9), v["dataset"])):
+        for v in sorted(bad, key=lambda v: (order.get(v["status"], 9), bool(lib.known_failure(v)), v["dataset"])):
             summary = str(v["summary"]).replace("|", "\\|").replace("\n", " ")
-            lines.append(f"| {v['status']} | `{v['dataset']}` | {v['check']} | {summary} |")
+            status = f"{v['status']} (known, no issue)" if lib.known_failure(v) else v["status"]
+            lines.append(f"| {status} | `{v['dataset']}` | {v['check']} | {summary} |")
     else:
         lines.append("Everything matches.")
     return "\n".join(lines) + "\n"

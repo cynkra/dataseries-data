@@ -59,7 +59,11 @@ def body(v: dict, run_link: str) -> str:
 def main() -> None:
     results = json.loads((lib.OUT / "summary.json").read_text())
     verdicts = [v for r in results for v in r["verdicts"]]
-    failing = {(v["dataset"], v["check"]): v for v in verdicts if v["status"] in ("fail", "error")}
+    failing = {(v["dataset"], v["check"]): v for v in verdicts
+               if v["status"] in ("fail", "error") and not lib.known_failure(v)}
+    for v in verdicts:
+        if lib.known_failure(v):
+            print(f"issues: known, not filed: {v['dataset']} ({v['check']})")
     passing = {(v["dataset"], v["check"]) for v in verdicts if v["status"] in ("ok", "lag")}
     ran_cleanly = {r["check"] for r in results if not any(v["dataset"] == "*" for v in r["verdicts"])}
 
