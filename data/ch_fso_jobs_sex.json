@@ -10,10 +10,10 @@
   "start": "1995-07-01",
   "end": "2026-04-01",
   "title": {
-    "en": "Jobs by economic division and sex",
-    "de": "Beschäftigte nach Wirtschaftsabteilung und Geschlecht",
-    "fr": "Emplois par division économique et sexe",
-    "it": "Impieghi per divisione economica e sesso"
+    "en": "Jobs by region, sector and sex",
+    "de": "Beschäftigte nach Region, Sektor und Geschlecht",
+    "fr": "Emplois par région, secteur et sexe",
+    "it": "Impieghi per regione, settore e sesso"
   },
   "source": {
     "name": {
@@ -289,10 +289,10 @@
     "Beschäftigungsgrad": "TOT"
   },
   "description": {
-    "en": "Swiss jobs split by region, sector, full-time or part-time, and sex, the breakdowns the headline employment series reports only as a total.",
-    "de": "Schweizer Stellen nach Region, Sektor, Voll- oder Teilzeit und Geschlecht: die Gliederungen, welche die Hauptreihe nur als Total ausweist.",
-    "fr": "Emplois suisses par région, secteur, temps plein ou partiel et sexe : les ventilations que la série principale ne publie qu'en total.",
-    "it": "Posti di lavoro svizzeri per regione, settore, tempo pieno o parziale e sesso: le ripartizioni che la serie principale riporta solo come totale."
+    "en": "Swiss jobs split by region, sector, full-time or part-time, and sex, the breakdowns the headline employment series reports only as a total. Sector detail stops at industry versus services; for economic divisions use ch_fso_besta.",
+    "de": "Schweizer Stellen nach Region, Sektor, Voll- oder Teilzeit und Geschlecht: die Gliederungen, welche die Hauptreihe nur als Total ausweist. Die Sektorgliederung endet bei Industrie und Dienstleistungen; für Wirtschaftsabteilungen siehe ch_fso_besta.",
+    "fr": "Emplois suisses par région, secteur, temps plein ou partiel et sexe : les ventilations que la série principale ne publie qu'en total. Le détail sectoriel s'arrête à l'industrie et aux services ; pour les divisions économiques, voir ch_fso_besta.",
+    "it": "Posti di lavoro svizzeri per regione, settore, tempo pieno o parziale e sesso: le ripartizioni che la serie principale riporta solo come totale. Il dettaglio settoriale si ferma a industria e servizi; per le divisioni economiche si veda ch_fso_besta."
   },
   "units": {
     "en": "Number of jobs, or full-time equivalents",

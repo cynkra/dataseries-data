@@ -62,28 +62,28 @@
         },
         "internet": {
           "label": {
-            "en": "Internet job portals",
-            "de": "Internet-Stellenportale",
-            "fr": "Portails d'emploi en ligne",
-            "it": "Portali di lavoro online"
+            "en": "Internet job portals (contribution to Total)",
+            "de": "Internet-Stellenportale (Beitrag zum Total)",
+            "fr": "Portails d'emploi en ligne (contribution au total)",
+            "it": "Portali di lavoro online (contributo al totale)"
           },
           "data": true
         },
         "company": {
           "label": {
-            "en": "Company websites",
-            "de": "Unternehmens-Webseiten",
-            "fr": "Sites web d'entreprises",
-            "it": "Siti web aziendali"
+            "en": "Company websites (contribution to Total)",
+            "de": "Unternehmens-Webseiten (Beitrag zum Total)",
+            "fr": "Sites web d'entreprises (contribution au total)",
+            "it": "Siti web aziendali (contributo al totale)"
           },
           "data": true
         },
         "press": {
           "label": {
-            "en": "Press (newspapers)",
-            "de": "Presse (Zeitungen)",
-            "fr": "Presse (journaux)",
-            "it": "Stampa (giornali)"
+            "en": "Press (newspapers) (contribution to Total)",
+            "de": "Presse (Zeitungen) (Beitrag zum Total)",
+            "fr": "Presse (journaux) (contribution au total)",
+            "it": "Stampa (giornali) (contributo al totale)"
           },
           "data": true
         }
@@ -120,11 +120,37 @@
     "fr": "Indice trimestriel des postes vacants publiés en Suisse, de l'Université de Zurich. Réparti selon le canal de publication : en ligne, site d'entreprise, presse.",
     "it": "Indice trimestrale dei posti vacanti pubblicati in Svizzera, dell'Università di Zurigo. Ripartito per canale di pubblicazione: online, sito aziendale, stampa."
   },
+  "fetched_utc": "2026-10-25 18:31:16",
   "units": {
-    "en": "Index, Q1 2008 = 100",
-    "de": "Index, Q1 2008 = 100",
-    "fr": "Indice, T1 2008 = 100",
-    "it": "Indice, T1 2008 = 100"
-  },
-  "fetched_utc": "2026-10-25 18:31:16"
+    "gesamt": {
+      "en": "Index, Q1 2008 = 100",
+      "de": "Index, Q1 2008 = 100",
+      "fr": "Indice, T1 2008 = 100",
+      "it": "Indice, T1 2008 = 100"
+    },
+    "gesamt_sa": {
+      "en": "Index, Q1 2008 = 100",
+      "de": "Index, Q1 2008 = 100",
+      "fr": "Indice, T1 2008 = 100",
+      "it": "Indice, T1 2008 = 100"
+    },
+    "internet": {
+      "en": "Index points, contribution to the total (Q1 2008 total = 100)",
+      "de": "Indexpunkte, Beitrag zum Total (Total Q1 2008 = 100)",
+      "fr": "Points d'indice, contribution au total (total T1 2008 = 100)",
+      "it": "Punti indice, contributo al totale (totale T1 2008 = 100)"
+    },
+    "company": {
+      "en": "Index points, contribution to the total (Q1 2008 total = 100)",
+      "de": "Indexpunkte, Beitrag zum Total (Total Q1 2008 = 100)",
+      "fr": "Points d'indice, contribution au total (total T1 2008 = 100)",
+      "it": "Punti indice, contributo al totale (totale T1 2008 = 100)"
+    },
+    "press": {
+      "en": "Index points, contribution to the total (Q1 2008 total = 100)",
+      "de": "Indexpunkte, Beitrag zum Total (Total Q1 2008 = 100)",
+      "fr": "Points d'indice, contribution au total (total T1 2008 = 100)",
+      "it": "Punti indice, contributo al totale (totale T1 2008 = 100)"
+    }
+  }
 }

@@ -56,6 +56,10 @@ How much Swiss banks lend to companies by company size, shown both as credit gra
 - Source label typo preserved in dictionary: "50 to 249 employes".
 - Not every size x bank x loan-type x utilisation cell is populated; 150 stored
   series are the non-empty combinations.
+- Bank-category breakdown ends 2023-05: SNB stopped publishing the cantonal (`AV2`), big
+  (`AV3`), regional and savings (`AV4`) and Raiffeisen (`AV10`) banks in `D0` after May
+  2023, so those series stop there. Only the all-banks series (`AV1`, banks in
+  Switzerland) continue to the latest month. Source change, values unchanged.
 
 ## Provenance
 Script: `R/source_snb.R::snb_fetch` (cube `bakredbetgrbm`, title/topic from

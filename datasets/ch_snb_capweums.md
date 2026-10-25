@@ -44,12 +44,30 @@ How much is traded on the Swiss exchange each month, with shares and bonds split
 - **seasonal adjustment**: n/a (SNB cube, no SA dimension)
 
 ## Hierarchy
-`T2 Total` is the grand aggregate over the asset-class groups (shares, bond issues, investment funds, structured products), shipped as their sibling. Nest them under it (the shares/bonds domestic-foreign sub-splits are preserved).
-- derive: under-root T2
+`T2 Total` is the grand aggregate over the asset-class groups (shares, bond issues, investment funds, structured products), shipped as their sibling. Nest them under it (the shares/bonds domestic-foreign sub-splits are preserved). `ISMIT` (securities included in the SMI) is a subset of the domestic shares `IT0`, not an additional asset class, so it is nested under `IT0` and is not counted again in `T2`.
+- T2
+  - D0_0
+    - IT0
+      - ISMIT
+    - AT0
+    - T0
+  - D0_1
+    - IT1
+    - AT1
+    - T1
+  - A
+  - D0_3
+    - SPO
+    - SPTH
+    - T3
 
 ## Caveats / simplifications
 - `T2` is a roll-up total kept alongside its components; no frequency synthesis is
   performed.
+- Source error, values unchanged: `ISMIT` for 2024-12 is 4,518 CHF million, about ten
+  times too low (neighbouring months are 46,000 to 56,000, and the figure is 8% of
+  domestic share turnover `IT0` against a usual 70 to 90%). It is SNB's published value.
+  Expect a false dip in charts and growth rates around December 2024 and January 2025.
 
 ## Provenance
 Script: `R/source_snb.R::snb_fetch` via `R/snb_cubes.tsv` (cube `capweums`, topic

@@ -54,7 +54,7 @@ Swiss franc exchange rates against the major currencies, monthly average and mon
   - **units** PLN100: CHF per 100 PLN | de: CHF je 100 PLN | fr: CHF pour 100 PLN | it: CHF per 100 PLN
   - **units** RUB1: CHF per 1 RUB | de: CHF je 1 RUB | fr: CHF pour 1 RUB | it: CHF per 1 RUB
   - **units** SEK100: CHF per 100 SEK | de: CHF je 100 SEK | fr: CHF pour 100 SEK | it: CHF per 100 SEK
-  - **units** TRY100: CHF per 100 TRY | de: CHF je 100 TRY | fr: CHF pour 100 TRY | it: CHF per 100 TRY
+  - **units** TRY100: CHF per 100 TRY from January 2005, per 100 old lira (TRL) before | de: CHF je 100 TRY ab Januar 2005, je 100 alte Lira (TRL) davor | fr: CHF pour 100 TRY dès janvier 2005, pour 100 anciennes livres (TRL) avant | it: CHF per 100 TRY da gennaio 2005, per 100 vecchie lire (TRL) prima
   - **units** USD1: CHF per 1 USD | de: CHF je 1 USD | fr: CHF pour 1 USD | it: CHF per 1 USD
   - **units** CAD1: CHF per 1 CAD | de: CHF je 1 CAD | fr: CHF pour 1 CAD | it: CHF per 1 CAD
   - **units** ARS1: CHF per 100 ARS until March 2018, per 1 ARS from April 2018 | de: CHF je 100 ARS bis März 2018, je 1 ARS ab April 2018 | fr: CHF pour 100 ARS jusqu'en mars 2018, pour 1 ARS dès avril 2018 | it: CHF per 100 ARS fino a marzo 2018, per 1 ARS da aprile 2018
@@ -88,6 +88,13 @@ Swiss franc exchange rates against the major currencies, monthly average and mon
   (end of April 2018: 0.0482). The values are kept as published, so the series jumps by
   a factor of 100 at the switch, and the April 2018 monthly average (1.1675) blends
   both quotations.
+- `TRY100` also changes its quotation unit inside the series, as SNB publishes it: up to
+  December 2004 it is CHF per 100 old Turkish lira (TRL), from January 2005 CHF per 100
+  new lira (TRY; 1 TRY = 1,000,000 TRL). The monthly average falls from 0.00008 (December
+  2004) to 86.78 (January 2005), a break of a factor of about 1,000,000 that is
+  redenomination, not a price move. The old values carry only one or two significant
+  digits (0.00008, 0.00043), so growth rates computed from them are coarse. Use only
+  2005 onwards for rates of change.
 - SNB has no seasonal-adjustment toggle; raw rates only.
 - Coverage per currency varies widely; early history exists only for major pairs.
 

@@ -40,14 +40,18 @@ Quarterly index of advertised job vacancies in Switzerland, from the University 
   `internet` / `company` / `press` nested under Total as a hierarchy.
 
 ## Labels
-- **units**: Index, Q1 2008 = 100 | de: Index, Q1 2008 = 100 | fr: Indice, T1 2008 = 100 | it: Indice, T1 2008 = 100
 - dim: index
   - **label**: Index | de: Index | fr: Indice | it: Indice
+  - **units** gesamt: Index, Q1 2008 = 100 | de: Index, Q1 2008 = 100 | fr: Indice, T1 2008 = 100 | it: Indice, T1 2008 = 100
+  - **units** gesamt_sa: Index, Q1 2008 = 100 | de: Index, Q1 2008 = 100 | fr: Indice, T1 2008 = 100 | it: Indice, T1 2008 = 100
+  - **units** internet: Index points, contribution to the total (Q1 2008 total = 100) | de: Indexpunkte, Beitrag zum Total (Total Q1 2008 = 100) | fr: Points d'indice, contribution au total (total T1 2008 = 100) | it: Punti indice, contributo al totale (totale T1 2008 = 100)
+  - **units** company: Index points, contribution to the total (Q1 2008 total = 100) | de: Indexpunkte, Beitrag zum Total (Total Q1 2008 = 100) | fr: Points d'indice, contribution au total (total T1 2008 = 100) | it: Punti indice, contributo al totale (totale T1 2008 = 100)
+  - **units** press: Index points, contribution to the total (Q1 2008 total = 100) | de: Indexpunkte, Beitrag zum Total (Total Q1 2008 = 100) | fr: Points d'indice, contribution au total (total T1 2008 = 100) | it: Punti indice, contributo al totale (totale T1 2008 = 100)
   - gesamt: Total | de: Total | fr: Total | it: Totale
   - gesamt_sa: Total, seasonally adjusted | de: Total, saisonbereinigt | fr: Total, corrigé des variations saisonnières | it: Totale, destagionalizzato
-  - internet: Internet job portals | de: Internet-Stellenportale | fr: Portails d'emploi en ligne | it: Portali di lavoro online
-  - company: Company websites | de: Unternehmens-Webseiten | fr: Sites web d'entreprises | it: Siti web aziendali
-  - press: Press (newspapers) | de: Presse (Zeitungen) | fr: Presse (journaux) | it: Stampa (giornali)
+  - internet: Internet job portals (contribution to Total) | de: Internet-Stellenportale (Beitrag zum Total) | fr: Portails d'emploi en ligne (contribution au total) | it: Portali di lavoro online (contributo al totale)
+  - company: Company websites (contribution to Total) | de: Unternehmens-Webseiten (Beitrag zum Total) | fr: Sites web d'entreprises (contribution au total) | it: Siti web aziendali (contributo al totale)
+  - press: Press (newspapers) (contribution to Total) | de: Presse (Zeitungen) (Beitrag zum Total) | fr: Presse (journaux) (contribution au total) | it: Stampa (giornali) (contributo al totale)
 
 ## Display
 - **split**: index
@@ -62,6 +66,10 @@ Quarterly index of advertised job vacancies in Switzerland, from the University 
 - The seasonally adjusted series (`gesamt_sa`) exists only for the headline, not per
   channel, matching the source.
 - The base period label (Q1 2008 = 100) follows whatever the source publishes.
+- The three channel series (`internet`, `company`, `press`) are not indices on their own
+  base. They are each channel's contribution, in index points, to the Total: they add up
+  to `gesamt` (within rounding of 0.1), so in Q1 2008 they sum to 100. Do not read them
+  as "Q1 2008 = 100" indices or compare their growth rates with the Total's.
 
 ## Provenance
 Script: `R/source_adecco.R::adecco_fetch` (wired in `R/pipeline.R`). Datasheet

@@ -12,7 +12,7 @@
 - **updated**: 2026-03 (latest published period)
 
 ## What is special
-What Swiss card payments are spent on and where (in shops or online, at home or abroad), plus cash withdrawn at ATMs.
+Card payments and cash withdrawals by card type, card origin (Swiss or foreign cards) and place of transaction (in Switzerland or abroad), as transaction counts and CHF amounts. Foreign cards appear only for transactions in Switzerland. There is no breakdown by what the money is spent on.
 
 ## Access
 - **type**: snb-cube — SNB cube API
@@ -64,10 +64,10 @@ Script: `R/source_snb.R::snb_fetch` (cube list + title from `R/snb_cubes.tsv`).
 Datasheet authored 2026-06-01; parser verified 2026-06-01 (19,462 data rows, 113 series).
 
 ## What is special (de)
-Wofür und wo mit Schweizer Karten bezahlt wird (im Laden oder online, im In- oder Ausland) sowie Bargeldbezüge am Automaten.
+Kartenzahlungen und Bargeldbezüge nach Kartenart, Herkunft der Karte (Schweizer oder ausländische Karten) und Ort der Transaktion (in der Schweiz oder im Ausland), als Transaktionszahlen und Beträge in CHF. Ausländische Karten erscheinen nur für Transaktionen in der Schweiz. Eine Gliederung nach Verwendungszweck gibt es nicht.
 
 ## What is special (fr)
-Pour quoi et où l'on paie avec des cartes suisses (en magasin ou en ligne, en Suisse ou à l'étranger), ainsi que les retraits aux distributeurs.
+Paiements par carte et retraits d'espèces selon le type de carte, l'origine de la carte (suisse ou étrangère) et le lieu de la transaction (en Suisse ou à l'étranger), en nombre de transactions et en montants en CHF. Les cartes étrangères n'apparaissent que pour les transactions en Suisse. Il n'existe pas de ventilation selon l'objet de la dépense.
 
 ## What is special (it)
-Per cosa e dove si paga con le carte svizzere (in negozio o online, in Svizzera o all'estero), nonché i prelievi ai bancomat.
+Pagamenti con carta e prelievi di contante per tipo di carta, origine della carta (svizzera o estera) e luogo della transazione (in Svizzera o all'estero), come numero di transazioni e importi in CHF. Le carte estere compaiono solo per le transazioni in Svizzera. Non esiste una ripartizione per scopo di spesa.

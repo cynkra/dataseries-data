@@ -35,6 +35,12 @@ Swiss house and rent price indices from four providers side by side, covering ap
 
 ## Labels
 - **units**: Index, Q1 2000 = 100 for most series | de: Index, 1. Quartal 2000 = 100 für die meisten Reihen | fr: Indice, 1er trimestre 2000 = 100 pour la plupart des séries | it: Indice, 1° trimestre 2000 = 100 per la maggior parte delle serie
+- dim: D1
+  - TP3: Transaction price (SFSO) | de: Transaktionspreis (BFS) | fr: Prix de transaction (OFS) | it: Prezzo di transazione (UST)
+  - TP1: Transaction price (Fahrländer Partner) | de: Transaktionspreis (Fahrländer Partner) | fr: Prix de transaction (Fahrländer Partner) | it: Prezzo di transazione (Fahrländer Partner)
+  - TP2: Transaction price (IAZI) | de: Transaktionspreis (IAZI) | fr: Prix de transaction (CIFI) | it: Prezzo di transazione (IAZI)
+  - TP: Transaction price (Wüest Partner) | de: Transaktionspreis (Wüest Partner) | fr: Prix de transaction (Wüest Partner) | it: Prezzo di transazione (Wüest Partner)
+  - AP: Asking price (Wüest Partner) | de: Angebotspreis (Wüest Partner) | fr: Prix de l'offre (Wüest Partner) | it: Prezzo di offerta (Wüest Partner)
 
 ## Display
 - **split**: D0

@@ -58,6 +58,10 @@ Swiss economic output each quarter from all three angles (production, spending a
 - dim: type
   - **units** nom: CHF millions, at current prices | de: CHF Millionen, zu laufenden Preisen | fr: Millions de CHF, aux prix courants | it: Milioni di CHF, a prezzi correnti
   - **units** real: CHF millions, chain-linked volumes, reference year 2020 | de: CHF Millionen, verkettete reale Werte, Referenzjahr 2020 | fr: Millions de CHF, valeurs réelles chaînées, année de référence 2020 | it: Milioni di CHF, valori concatenati, anno di riferimento 2020
+- dim: structure
+  - inv_fixed: Equipment investment, incl. software | de: Ausrüstungsinvestitionen | fr: Investissements en biens d'équipement | it: Beni di equipaggiamento
+- dim: seas_adj
+  - nasa: Sports event adjusted (not seasonally adjusted) | de: Sportevent-bereinigt (nicht saisonbereinigt) | fr: Données corrigées des effets des événements sportifs (non désaisonnalisées) | it: Dati corretti per gli effetti degli eventi sportivi (non destagionalizzati)
 
 ## Display
 - **split**: structure

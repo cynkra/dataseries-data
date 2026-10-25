@@ -90,6 +90,11 @@ sub-position.
 - Sector breakdown limited to the four the workbook breaks out.
 - Spot-checks match raw values exactly (TOTAL nominal index 1994 = 101.45,
   2025 = 141.9).
+- Source quirk, values unchanged: in the FSO workbook the 2020 nominal index levels
+  repeat the 2019 growth rates. For the Total, the 2020 change computed from the
+  levels is +0.91%, the same as 2019 (+0.91%), so it is not FSO's published 2020 wage
+  growth. The YoY % transform for 2020 (and 2021, which compares against the 2020
+  level) is therefore unreliable; use FSO's own "variation in %" block for 2020.
 
 ## Provenance
 Script: `R/source_fso_excel_sets.R::fso_excel_ch_fso_wage_idx`. Datasheet 2026-06-01;

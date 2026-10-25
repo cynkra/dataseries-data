@@ -56,6 +56,9 @@ Assets and liabilities of banks in Switzerland month by month, item by item, spl
 - Equity and capital lines are signed (own shares and the non-eligible value
   adjustment are negative items by definition).
 - Stock series at month end, in CHF millions.
+- Bank-category breakdown ends 2023-05: the big-banks series (`BANKENGRUPPE` = `G15`)
+  stops after May 2023, and only the all-banks series (`A40`) continues to the latest
+  month. Source change, values unchanged.
 
 ## Provenance
 Script: `R/source_snb.R::snb_fetch` (cube `babilpobm`, title/topic from

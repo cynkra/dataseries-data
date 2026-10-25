@@ -48,6 +48,9 @@ recomputed from the index — which collapses `UNIT_MEASURE` away entirely.
 
 ## Labels
 - **units**: Index, 2021 = 100 | de: Index, 2021 = 100 | fr: Indice, 2021 = 100 | it: Indice, 2021 = 100
+- dim: NOGA
+  - 47PxTreib: Total retail trade without fuel (by class of goods) | de: Total Detailhandel ohne Treibstoffe | fr: Total du commerce de détail hors carburants (par groupes de marchandises) | it: Totale commercio al dettaglio senza carburante (per gruppi di merci)
+  - 47x473: Total retail trade without fuel stations (by industry) | de: Total Detailhandel ohne Tankstellen | fr: Total du commerce de détail hors stations-service (par branche) | it: Totale commercio al dettaglio senza distributori di carburante (per branca)
 
 ## Display
 - **split**: NOGA

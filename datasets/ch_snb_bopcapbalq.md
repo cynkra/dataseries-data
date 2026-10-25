@@ -56,8 +56,62 @@ the gross entries `NA` and `NP`, never for the net `S`, so `T0` with `S` returns
 `S` is populated for just six components (`KD`, `P`, `D0`, `D2`, `UI`, `W1`).
 
 ## Hierarchy
-`T0 Total` is the sum of the financial-account components (direct/portfolio/other investment, reserve assets — IMF BPM6), shipped as their sibling. Nest them under it.
-- derive: under-root T0
+`T0 Total` is the sum of the investment categories (direct, portfolio and other investment, reserve assets; IMF BPM6), shipped as their sibling; nest them under it (`T0 = T1 + T2 + T4 + T7`). `KD` (financial account including derivatives) is the total of the separate `D1_6` summary (`KD = D0 + P + D2 + UI + W1`, with derivatives `D2`, which the `T0` categories do not include), so `D1_6` stays its own branch beside `T0`, following the cube's own pattern of a group holding its total plus its components. `KD` and `D1_6` are not part of `T0`.
+- T0
+  - D1_1
+    - T1
+    - B0
+    - RE
+    - K0
+  - D1_2
+    - T2
+    - S0
+      - T25
+      - KFR
+      - LFR
+    - D1_2_2
+      - T3
+      - A
+      - K1
+  - D1_3
+    - T4
+    - D1_3_1
+      - T5
+      - N0
+      - B1
+        - T55
+        - FGB
+        - VGB
+        - VGK
+      - OH0
+      - US0
+    - D1_3_2
+      - T6
+      - N1
+      - B2
+        - T65
+        - FGK
+      - OH1
+      - US1
+    - UNA
+    - UNP
+  - D1_4
+    - T7
+    - G
+    - RIWF
+    - S1
+    - D1_4_4
+      - T8
+      - W0
+      - BE
+    - U
+- D1_6
+  - KD
+  - D0
+  - P
+  - D2
+  - UI
+  - W1
 
 ## Caveats / simplifications
 - The flatten step relies on the SNB code, not the label, to disambiguate the
