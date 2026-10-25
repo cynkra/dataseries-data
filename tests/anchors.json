@@ -1,0 +1,78 @@
+{
+  "_comment": "Known-good (date, dims, value) triples from official sources. The test reads data/*.csv and asserts these values match within tolerance. Only use revision-proof values: unadjusted/final figures, index base values, policy rates, population stocks. Never seasonally adjusted series (revised retroactively).",
+  "_tolerance": "1e-4 relative default; per-anchor 'tolerance' overrides (e.g. 0.01 = 1% for SA series)",
+  "anchors": [
+    {
+      "dataset": "ch_seco_gdp",
+      "note": "GDP Q1 2022, nominal, unadjusted,final, not subject to SA revision",
+      "dims": {"type": "nom", "structure": "gdp", "seas_adj": "na"},
+      "date": "2022-01-01",
+      "value": 199637.420511322
+    },
+    {
+      "dataset": "ch_seco_gdp",
+      "note": "GDP Q1 2021, nominal, unadjusted,final",
+      "dims": {"type": "nom", "structure": "gdp", "seas_adj": "na"},
+      "date": "2021-01-01",
+      "value": 181476.625477018
+    },
+    {
+      "dataset": "ch_fso_cpi",
+      "note": "CPI total, Dec 2020,base period anchor (Dec 2020 = 100)",
+      "dims": {"item": "100_100"},
+      "date": "2020-12-01",
+      "value": 93.5119
+    },
+    {
+      "dataset": "ch_fso_cpi",
+      "note": "CPI total, Jan 2024,published final",
+      "dims": {"item": "100_100"},
+      "date": "2024-01-01",
+      "value": 99.4841
+    },
+    {
+      "dataset": "ch_fso_pop",
+      "note": "Resident population stock end of 2022,final BFS figure",
+      "dims": {"item": "pop_stock_dec"},
+      "date": "2022-01-01",
+      "value": 8815385
+    },
+    {
+      "dataset": "ch_fso_pop",
+      "note": "Resident population stock end of 2023,final BFS figure",
+      "dims": {"item": "pop_stock_dec"},
+      "date": "2023-01-01",
+      "value": 8962258
+    },
+    {
+      "dataset": "ch_snb_plkopr",
+      "note": "CPI national index (SNB plkopr cube), Jul 2023,not revised",
+      "dims": {},
+      "date": "2023-07-01",
+      "value": 99.2804
+    },
+    {
+      "dataset": "ch_snb_plkopr",
+      "note": "CPI national index (SNB plkopr cube), Jun 2024,not revised",
+      "dims": {},
+      "date": "2024-06-01",
+      "value": 100.7418
+    },
+    {
+      "dataset": "ch_seco_gdp",
+      "note": "GDP Q1 2023, real, seasonally adjusted,subject to revision, 1% band",
+      "dims": {"type": "real", "structure": "gdp", "seas_adj": "csa"},
+      "date": "2023-01-01",
+      "value": 196711.873285378,
+      "tolerance": 0.01
+    },
+    {
+      "dataset": "ch_seco_gdp",
+      "note": "GDP Q1 2024, nominal, seasonally adjusted,subject to revision, 1% band",
+      "dims": {"type": "nom", "structure": "gdp", "seas_adj": "csa"},
+      "date": "2024-01-01",
+      "value": 210657.036891187,
+      "tolerance": 0.01
+    }
+  ]
+}
