@@ -24,6 +24,7 @@
   },
   "license": "fso",
   "frequency": "monthly",
+  "updated": "2026-10-05",
   "dimensions": {
     "Tourismusregion": {
       "label": {
@@ -216,5 +217,5 @@
     "fr": "Nombre de nuitées",
     "it": "Numero di pernottamenti"
   },
-  "fetched_utc": "2026-10-25 08:30:45"
+  "fetched_utc": "2026-10-25 21:10:37"
 }

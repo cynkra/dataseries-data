@@ -33,6 +33,7 @@
       "it": "Lavoro"
     }
   },
+  "updated": "2026-10-15",
   "dimensions": {
     "index": {
       "label": {
@@ -120,7 +121,6 @@
     "fr": "Indice trimestriel des postes vacants publiés en Suisse, de l'Université de Zurich. Réparti selon le canal de publication : en ligne, site d'entreprise, presse.",
     "it": "Indice trimestrale dei posti vacanti pubblicati in Svizzera, dell'Università di Zurigo. Ripartito per canale di pubblicazione: online, sito aziendale, stampa."
   },
-  "fetched_utc": "2026-10-25 18:31:16",
   "units": {
     "gesamt": {
       "en": "Index, Q1 2008 = 100",
@@ -152,5 +152,6 @@
       "fr": "Points d'indice, contribution au total (total T1 2008 = 100)",
       "it": "Punti indice, contributo al totale (totale T1 2008 = 100)"
     }
-  }
+  },
+  "fetched_utc": "2026-10-25 21:10:37"
 }

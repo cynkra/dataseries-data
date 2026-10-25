@@ -26,6 +26,19 @@ kof_read_csv <- function(url) {
   readr::read_csv(I(txt), show_col_types = FALSE)
 }
 
+# The publisher's release date for meta `updated`: the vintage date of the newest
+# vintage among the series behind `url`. A JSON read of the same series carries
+# `vintage_date` per series (the CSV does not); the newest across a collection's
+# series is used. One small GET. Any failure gives NA, so it never blocks the dataset.
+kof_vintage_date <- function(url) {
+  tryCatch({
+    doc <- jsonlite::fromJSON(get_text(url), simplifyVector = FALSE)
+    v <- vapply(doc, function(x) as.character(x$vintage_date %||% NA_character_), "")
+    v <- v[!is.na(v)]
+    if (length(v)) substr(max(v), 1, 10) else NA_character_
+  }, error = function(e) NA_character_)
+}
+
 kof_fetch <- function(key, title = NULL) {
   url <- sprintf("%s/ts?keys=%s&mime=csv&access_type=public", KOF_API, key)
   raw <- kof_read_csv(url)
@@ -45,6 +58,7 @@ kof_fetch <- function(key, title = NULL) {
     ),
     license = "kof",
     frequency = infer_frequency(raw_periods),
+    updated = kof_vintage_date(sprintf("%s/ts?keys=%s&mime=json&access_type=public", KOF_API, key)),
     dimensions = setNames(list(), character(0))
   )
 
@@ -88,6 +102,7 @@ kof_set_fetch <- function(set, title = NULL, dim_name = "indicator",
     ),
     license = "kof",
     frequency = infer_frequency(raw_periods),
+    updated = kof_vintage_date(sub("mime=csv", "mime=json", url, fixed = TRUE)),
     dimensions = setNames(list(list(
       label = list(en = dim_name),
       levels = setNames(lapply(keys, function(k) list(label = level_label(k))), keys)

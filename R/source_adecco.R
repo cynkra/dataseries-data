@@ -20,15 +20,34 @@ suppressPackageStartupMessages(library(dplyr))
 .ADECCO_PAGE <- "https://www.stellenmarktmonitor.uzh.ch/de/indices/asjmi.html"
 
 # Scrape the landing page for the current .xlsx export and return its absolute URL.
-adecco_xlsx_url <- function(page = .ADECCO_PAGE) {
-  html <- get_text(page)
+adecco_xlsx_url <- function(page = .ADECCO_PAGE, html = get_text(page)) {
   href <- regmatches(html, regexpr('/dam/[^"]+?\\.xlsx', html))
   if (!length(href)) stop("adecco: no .xlsx link found on ", page)
   paste0("https://www.stellenmarktmonitor.uzh.ch", href[1])
 }
 
+# Publication date of the current release, "YYYY-MM-DD" or NA. The landing page
+# opens its release text with a dateline ("Zuerich 15.10.2026:"); failing that,
+# the Last-Modified header of the .xlsx export. Never blocks the dataset.
+adecco_published <- function(html, xlsx_url) {
+  m <- regmatches(html, regexec("rich\\s+(\\d{1,2})\\.(\\d{1,2})\\.(20\\d{2})\\s*:", html))[[1]]
+  if (length(m) == 4L) {
+    d <- as.Date(sprintf("%s-%02d-%02d", m[4], as.integer(m[3]), as.integer(m[2])),
+                 format = "%Y-%m-%d")
+    if (!is.na(d)) return(as.character(d))
+  }
+  tryCatch({
+    lm <- httr2::resp_header(httr2::req_perform(
+      httr2::req_method(.with_retry(httr2::req_timeout(httr2::request(xlsx_url), 60)), "HEAD")),
+      "Last-Modified")
+    if (is.null(lm)) NA_character_
+    else as.character(as.Date(as.POSIXct(lm, format = "%a, %d %b %Y %H:%M:%S", tz = "GMT")))
+  }, error = function(e) NA_character_)
+}
+
 adecco_fetch <- function(dataset_id = "ch_adecco_sjmi", title = NULL) {
-  url    <- adecco_xlsx_url()
+  html   <- get_text(.ADECCO_PAGE)
+  url    <- adecco_xlsx_url(html = html)
   target <- tempfile(fileext = ".xlsx")
   download_binary(url, target)
 
@@ -75,6 +94,7 @@ adecco_fetch <- function(dataset_id = "ch_adecco_sjmi", title = NULL) {
     license   = "uzh-smm",
     frequency = "quarterly",
     topic     = "Labour",
+    updated   = adecco_published(html, url),
     dimensions = list(
       index = list(
         levels = list(
