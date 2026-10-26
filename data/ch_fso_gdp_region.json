@@ -4,8 +4,8 @@
   "dim_order": [
     "region"
   ],
-  "start": "2008-01-01",
-  "end": "2022-01-01",
+  "start": "2011-01-01",
+  "end": "2024-01-01",
   "source": {
     "name": {
       "en": "Swiss Federal Statistical Office (FSO)",
@@ -27,7 +27,7 @@
       "it": "Conti nazionali"
     }
   },
-  "updated": "2024-10-28",
+  "updated": "2026-10-26",
   "dimensions": {
     "region": {
       "label": {
@@ -321,5 +321,5 @@
     "fr": "Millions de CHF, aux prix courants",
     "it": "Milioni di CHF, a prezzi correnti"
   },
-  "fetched_utc": "2026-10-25 08:30:46"
+  "fetched_utc": "2026-10-26 08:48:01"
 }
