@@ -3,7 +3,7 @@
   "id": "ch_kof_barometer",
   "dim_order": [],
   "start": "1991-01-01",
-  "end": "2026-09-01",
+  "end": "2026-10-01",
   "title": {
     "en": "KOF Economic Barometer",
     "de": "KOF Konjunkturbarometer",
@@ -22,7 +22,7 @@
   },
   "license": "kof",
   "frequency": "monthly",
-  "updated": "2026-09-25",
+  "updated": "2026-10-27",
   "dimensions": {},
   "topic": {
     "key": "business-cycle-sentiment",
@@ -55,5 +55,5 @@
     "fr": "Indice",
     "it": "Indice"
   },
-  "fetched_utc": "2026-10-29 08:26:16"
+  "fetched_utc": "2026-10-30 08:26:07"
 }
