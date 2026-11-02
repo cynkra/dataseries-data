@@ -7,7 +7,7 @@
     "INDICATOR_KE"
   ],
   "start": "2000-01-01",
-  "end": "2026-08-01",
+  "end": "2026-09-01",
   "title": {
     "en": "Retail trade turnover",
     "de": "Detailhandelsumsätze",
@@ -352,5 +352,5 @@
     "fr": "Indice, 2021 = 100",
     "it": "Indice, 2021 = 100"
   },
-  "fetched_utc": "2026-11-01 08:21:20"
+  "fetched_utc": "2026-11-02 08:25:00"
 }
