@@ -6,7 +6,7 @@
     "D1"
   ],
   "start": "1914-01-01",
-  "end": "2026-09-01",
+  "end": "2026-10-01",
   "title": {
     "en": "Bilateral exchange rates",
     "de": "Bilaterale Wechselkurse",
@@ -379,7 +379,7 @@
       }
     }
   },
-  "updated": "2026-10-01 14:30",
+  "updated": "2026-11-02 14:30",
   "topic": {
     "key": "exchange-rates",
     "name": {
@@ -594,5 +594,5 @@
       "it": "CHF per 1 USD"
     }
   },
-  "fetched_utc": "2026-10-19 16:00:13"
+  "fetched_utc": "2026-11-03 08:28:10"
 }

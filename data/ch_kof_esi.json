@@ -36,15 +36,13 @@
       "levels": {
         "ch.kof.esi.index": {
           "label": {
-            "en": "KOF Economic Sentiment Indicator for Switzerland, Pre-Brexit version",
-            "de": "KOF Economic Sentiment Indicator für die Schweiz, Vor-Brexit Version"
+            "en": "ch.kof.esi.index"
           },
           "data": true
         },
         "ch.kof.esi.index.v2018": {
           "label": {
-            "en": "KOF Economic Sentiment Indicator for Switzerland",
-            "de": "KOF Economic Sentiment Indicator für die Schweiz"
+            "en": "ch.kof.esi.index.v2018"
           },
           "data": true
         }
@@ -88,5 +86,5 @@
     "fr": "Indice",
     "it": "Indice"
   },
-  "fetched_utc": "2026-11-02 08:25:01"
+  "fetched_utc": "2026-11-03 08:28:11"
 }

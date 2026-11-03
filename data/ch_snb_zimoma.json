@@ -5,7 +5,7 @@
     "D0"
   ],
   "start": "1972-01-01",
-  "end": "2026-09-01",
+  "end": "2026-10-01",
   "title": {
     "en": "Money market rates",
     "de": "Geldmarktsätze",
@@ -384,7 +384,7 @@
       }
     }
   },
-  "updated": "2026-10-01 14:30",
+  "updated": "2026-11-02 14:30",
   "topic": {
     "key": "interest-rates-yields",
     "name": {
@@ -410,6 +410,12 @@
     "fr": "SARON",
     "it": "SARON"
   },
+  "keywords": {
+    "en": "SARON, interest rate",
+    "de": "Zins",
+    "fr": "taux d'intérêt",
+    "it": "tasso d'interesse"
+  },
   "split": "D0",
   "single_select": [],
   "default_transform": "level",
@@ -422,17 +428,11 @@
     "fr": "Taux du marché monétaire pour la Suisse, les États-Unis, le Japon, le Royaume-Uni et la zone euro sur un même graphique, à travers le passage du Libor au SARON et au SOFR.",
     "it": "Tassi del mercato monetario per Svizzera, Stati Uniti, Giappone, Regno Unito e area euro in un unico grafico, attraverso il passaggio da Libor a SARON e SOFR."
   },
-  "fetched_utc": "2026-10-02 08:39:19",
   "units": {
     "en": "Percent",
     "de": "Prozent",
     "fr": "Pour cent",
     "it": "Percento"
   },
-  "keywords": {
-    "en": "SARON, interest rate",
-    "de": "Zins",
-    "fr": "taux d'intérêt",
-    "it": "tasso d'interesse"
-  }
+  "fetched_utc": "2026-11-03 08:28:10"
 }
