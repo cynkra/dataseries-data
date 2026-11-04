@@ -5,7 +5,7 @@
     "structure"
   ],
   "start": "2005-01-03",
-  "end": "2026-10-05",
+  "end": "2026-10-19",
   "source": {
     "name": {
       "en": "State Secretariat for Economic Affairs (SECO)",
@@ -18,7 +18,7 @@
   },
   "license": "seco",
   "frequency": "weekly",
-  "updated": "2026-10-20 06:22:29",
+  "updated": "2026-11-02 15:06:11",
   "dimensions": {
     "structure": {
       "label": {
@@ -93,5 +93,5 @@
     "fr": "Mis à l'échelle du taux de croissance du PIB réel corrigé des variations saisonnières, calendaires et des grands événements sportifs, par rapport au même trimestre de l'année précédente (pour cent)",
     "it": "Scalato al tasso di crescita del PIL reale destagionalizzato, corretto per gli effetti di calendario e dei grandi eventi sportivi, rispetto allo stesso trimestre dell'anno precedente (per cento)"
   },
-  "fetched_utc": "2026-11-03 08:28:12"
+  "fetched_utc": "2026-11-04 08:35:30"
 }
