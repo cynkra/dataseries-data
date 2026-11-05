@@ -18,7 +18,7 @@
   },
   "license": "eurostat",
   "frequency": "monthly",
-  "updated": "2026-10-16",
+  "updated": "2026-11-04",
   "dimensions": {
     "coicop": {
       "label": {
@@ -175,5 +175,5 @@
     "fr": "Indice (2015 = 100)",
     "it": "Indice (2015 = 100)"
   },
-  "fetched_utc": "2026-11-04 08:35:30"
+  "fetched_utc": "2026-11-05 08:25:40"
 }
