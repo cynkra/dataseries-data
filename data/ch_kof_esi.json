@@ -24,7 +24,7 @@
   },
   "license": "kof",
   "frequency": "monthly",
-  "updated": "2026-11-02",
+  "updated": "2026-11-05",
   "dimensions": {
     "indicator": {
       "label": {
@@ -88,5 +88,5 @@
     "fr": "Indice",
     "it": "Indice"
   },
-  "fetched_utc": "2026-11-05 08:25:38"
+  "fetched_utc": "2026-11-06 08:29:53"
 }

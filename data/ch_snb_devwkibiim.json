@@ -6,7 +6,7 @@
     "D1"
   ],
   "start": "1973-01-01",
-  "end": "2026-09-01",
+  "end": "2026-10-01",
   "title": {
     "en": "Bilateral exchange-rate indices",
     "de": "Bilaterale Wechselkursindizes",
@@ -572,7 +572,7 @@
       }
     }
   },
-  "updated": "2026-10-07 09:00",
+  "updated": "2026-11-06 09:00",
   "topic": {
     "key": "exchange-rates",
     "name": {
@@ -592,6 +592,12 @@
     }
   },
   "canonical": true,
+  "keywords": {
+    "en": "Swiss franc, CHF, FX",
+    "de": "Franken, Wechselkurs",
+    "fr": "franc suisse, taux de change",
+    "it": "franco svizzero, tasso di cambio"
+  },
   "split": "D1",
   "single_select": "D0",
   "default_transform": "level",
@@ -605,17 +611,11 @@
     "fr": "Niveaux d'indice du cours du franc face à 54 monnaies partenaires, nominaux et corrigés de l'inflation (base IPC ou IPP). Les variations annuelles ne sont pas stockées ; l'affichage en variation annuelle les déduit.",
     "it": "Livelli dell'indice del corso del franco rispetto a 54 valute partner, nominali e corretti per l'inflazione (base IPC o IPP). Le variazioni annue non sono memorizzate; la vista in variazione annua le deriva."
   },
-  "fetched_utc": "2026-10-07 08:40:14",
-  "keywords": {
-    "en": "Swiss franc, CHF, FX",
-    "de": "Franken, Wechselkurs",
-    "fr": "franc suisse, taux de change",
-    "it": "franco svizzero, tasso di cambio"
-  },
   "units": {
     "en": "Index, December 2000 = 100",
     "de": "Index, Dezember 2000 = 100",
     "fr": "Indice, décembre 2000 = 100",
     "it": "Indice, dicembre 2000 = 100"
-  }
+  },
+  "fetched_utc": "2026-11-06 08:29:52"
 }
