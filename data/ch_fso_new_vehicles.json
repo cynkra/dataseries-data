@@ -27,7 +27,7 @@
       "it": "Economia interna"
     }
   },
-  "updated": "2026-10-09",
+  "updated": "2026-11-10",
   "dimensions": {
     "fuel": {
       "label": {
@@ -197,5 +197,5 @@
     "fr": "Nombre de nouvelles immatriculations",
     "it": "Numero di nuove immatricolazioni"
   },
-  "fetched_utc": "2026-11-06 08:29:52"
+  "fetched_utc": "2026-11-07 08:23:51"
 }
