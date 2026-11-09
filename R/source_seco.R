@@ -43,12 +43,23 @@ suppressPackageStartupMessages({
 seco_fetch <- function(id = "ch_seco_gdp",
                        data_url = "https://scheduler.swissdatas.ch/scheduled/ch-seco-gdp.csv",
                        meta_url = "https://scheduler.swissdatas.ch/scheduled/ch-seco-gdp.json",
-                       strip = character()) {
+                       strip = character(),
+                       keep = NULL) {
 
   sm <- jsonlite::fromJSON(meta_url, simplifyVector = FALSE)
   dim_order <- unlist(sm$dim_order)
 
   raw <- readr::read_csv(data_url, show_col_types = FALSE)
+  # `keep`: regex on `structure` codes. SECO ships the monthly and quarterly
+  # consumer sentiment series in one file (codes end in _m / _q); keep one set
+  # and drop the others from the labels and hierarchy too.
+  if (!is.null(keep)) {
+    raw <- raw[grepl(keep, raw$structure), ]
+    keep_codes <- function(x) x[grepl(keep, names(x))]
+    sm$labels$structure <- keep_codes(sm$labels$structure)
+    if (!is.null(sm$hierarchy$structure))
+      sm$hierarchy$structure <- keep_codes(sm$hierarchy$structure)
+  }
   raw_periods <- as.character(raw$date)
   data <- raw |>
     dplyr::mutate(date = as.Date(to_iso(as.character(date))),
