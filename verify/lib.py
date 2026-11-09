@@ -23,6 +23,7 @@ import datetime as dt
 import io
 import json
 import os
+import re
 import tempfile
 import time
 import traceback
@@ -158,6 +159,46 @@ def compare(src: pd.DataFrame, api: pd.DataFrame, keys: list[str], *, rtol: floa
         return "lag", (f"{n} cells match; source has {len(ahead)} newer cells "
                        f"(source latest {latest_src}, API latest {latest_api})"), details
     return "ok", f"{n} cells match (latest {latest_api})", details
+
+
+def _unquote(s: str) -> str:
+    s = s.strip()
+    return s[1:-1] if len(s) > 1 and s[0] == s[-1] == "`" else s
+
+
+def curated_labels(dataset: str) -> dict[str, dict[str, dict[str, str]]]:
+    """Level labels a human set in the datasheet's ## Labels block, as
+    {dim: {code: {lang: label}}}. The pipeline applies them on top of the source
+    labels (R/labels.R::attach_labels), so a check compares the API against these
+    where present instead of against the upstream text."""
+    path = ROOT / "datasets" / f"{dataset}.md"
+    if not path.exists():
+        return {}
+    out: dict[str, dict[str, dict[str, str]]] = {}
+    in_block, dim = False, None
+    for line in path.read_text().splitlines():
+        if line.startswith("## "):
+            in_block = line.strip() == "## Labels"
+            dim = None
+            continue
+        if not in_block:
+            continue
+        m = re.match(r"- dim:\s*(.+)$", line)
+        if m:
+            dim = _unquote(m.group(1))
+            continue
+        m = re.match(r"  - (`[^`]+`|[^*\s][^:]*):\s*(.+)$", line)
+        if dim is None or not m:
+            continue
+        code = _unquote(m.group(1))
+        parts = m.group(2).split(" | ")
+        labels = {"en": parts[0].strip()}
+        for part in parts[1:]:
+            lm = re.match(r"([a-z]{2}):\s*(.*)$", part.strip())
+            if lm:
+                labels[lm.group(1)] = lm.group(2).strip()
+        out.setdefault(dim, {})[code] = labels
+    return out
 
 
 def known_failure(v: dict) -> dict | None:
