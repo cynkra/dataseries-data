@@ -163,7 +163,7 @@ def compare_cells(up: pd.DataFrame, api: pd.DataFrame, key: list[str]) -> dict:
 
 
 def label_problems(meta: dict, dim_names: dict, dim_items: dict, api_codes: dict,
-                   up_dims: list[str], dropped: dict, strip) -> list[str]:
+                   up_dims: list[str], dropped: dict, strip, curated: dict) -> list[str]:
     problems = []
     mdims = meta.get("dimensions", {}) or {}
     for dn in up_dims:
@@ -184,6 +184,7 @@ def label_problems(meta: dict, dim_names: dict, dim_items: dict, api_codes: dict
                 continue
             api_label = (levels[code].get("label") or {}).get("en")
             name = strip_label(name, strip) if strip else name
+            name = curated.get(dn, {}).get(code, {}).get("en", name)
             if name and api_label and name.strip() != api_label.strip():
                 problems.append(f"{dn} code {code!r} label: upstream {name!r} vs API {api_label!r}")
         for code in levels:
@@ -249,7 +250,7 @@ def check(ds_id: str):
 
     api_codes = {d: set(api_df[d]) for d in api_dims}
     problems += label_problems(meta, dim_names, dim_items, api_codes, keep, spec,
-                               LABEL_STRIP.get(ds_id))
+                               LABEL_STRIP.get(ds_id), lib.curated_labels(ds_id))
 
     edition = lu_doc.get("editionDate")
     edition_fmt = None

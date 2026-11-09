@@ -132,8 +132,22 @@ def to_date(df, timecfg):
 MOJIBAKE = re.compile(r"[\x80-\x9f�]|Ã[\x80-\xbf]|â€")
 
 
+def fix_c1(s):
+    """PX-Web sends some labels with C1 controls (U+0080..U+009F) where FSO meant the
+    CP1252 character at that byte, e.g. U+0092 for the apostrophe. Mirrors
+    R/source_fso.R::.fso_fix_c1; bytes CP1252 leaves undefined stay as they are."""
+    def one(c):
+        if "\x80" <= c <= "\x9f":
+            try:
+                return bytes([ord(c)]).decode("cp1252")
+            except UnicodeDecodeError:
+                return c
+        return c
+    return "".join(one(c) for c in s)
+
+
 def norm_label(s):
-    s = unicodedata.normalize("NFC", s or "").replace("’", "'").replace("`", "'")
+    s = unicodedata.normalize("NFC", fix_c1(s or "")).replace("’", "'").replace("`", "'")
     return re.sub(r"\s+", " ", s).strip().casefold()
 
 
@@ -144,7 +158,7 @@ def strip_noga(label, code):
     return s
 
 
-def check_labels(cfg, api_meta, dims_kept, label_docs):
+def check_labels(cfg, api_meta, dims_kept, label_docs, curated):
     issues, compared = [], 0
     for L, doc in label_docs.items():
         vmap = {v["code"]: v for v in doc["variables"]}
@@ -164,7 +178,7 @@ def check_labels(cfg, api_meta, dims_kept, label_docs):
                     issues.append(dict(lang=L, dim=d, code=code, kind="mojibake",
                                        api=apil, upstream=upl.get(code)))
                     continue
-                u = upl.get(code)
+                u = curated.get(d, {}).get(code, {}).get(L) or upl.get(code)
                 if u is None:
                     issues.append(dict(lang=L, dim=d, code=code, kind="code_not_upstream", api=apil))
                     continue
@@ -234,7 +248,8 @@ def check(ds_id):
     label_docs = {"en": meta}
     for lang in ("de", "fr", "it"):
         label_docs[lang] = px_meta(cfg["table"], lang)
-    n_labels, issues = check_labels(cfg, api_meta, dims_kept, label_docs)
+    n_labels, issues = check_labels(cfg, api_meta, dims_kept, label_docs,
+                                    lib.curated_labels(ds_id))
     for d in dims_kept:
         extra = sorted(set(api[d]) - set(vars_[d]["values"]))
         if extra:

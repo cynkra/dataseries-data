@@ -15,7 +15,10 @@ ORDER = "je-e-04.02.06.01"
 
 def parse_sheet(ws):
     """(label, year, value) for the 'In CHF million' block of one sheet."""
+    ws.reset_dimensions()  # the file's stored sheet size is wrong (A1)
     rows = list(ws.iter_rows(values_only=True))
+    width = max(map(len, rows))
+    rows = [tuple(r) + (None,) * (width - len(r)) for r in rows]
     hdr_i = next(i for i, r in enumerate(rows) if r[0] in ("Canton", "Region"))
     years = [int(str(c).strip().rstrip("p")) if c is not None else None for c in rows[hdr_i][1:]]
     start = next(i for i, r in enumerate(rows)
@@ -45,7 +48,9 @@ def check():
         "GDP per region": {levels[c]["label"]["en"]: c for c in regions | {"ch"}},
     }
 
-    wb = openpyxl.load_workbook(xlsx, data_only=True)
+    # read_only: FSO's file references a drawing it does not contain, which makes
+    # the full loader fail; the read-only loader skips drawings.
+    wb = openpyxl.load_workbook(xlsx, data_only=True, read_only=True)
     recs, problems = [], []
     for sheet, mapping in lab2code.items():
         for lab, yr, v in parse_sheet(wb[sheet]):

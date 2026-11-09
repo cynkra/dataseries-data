@@ -4,7 +4,7 @@
     {
       "dataset": "ch_snb_bopcapbalq",
       "check": "chain",
-      "match": ["dimension code \"NA\" is lost"],
+      "match": ["dimension code \"NA\" is lost", "dims=D0=NA"],
       "reason": "Fixed on main in cynkra/dataseries#7 and cynkra/dataseries-py#1; the released CRAN and PyPI packages keep the bug until the next release."
     },
     {
