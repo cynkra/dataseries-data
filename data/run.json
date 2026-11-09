@@ -1,7 +1,7 @@
 {
-  "ts": "2026-11-09T08:29:11Z",
+  "ts": "2026-11-09T10:37:00Z",
   "attempted": 71,
-  "ok": 32,
+  "ok": 33,
   "unchanged": [
     "ch_snb_amarbma",
     "ch_snb_ambeschkla",
@@ -42,10 +42,5 @@
     "ch_snb_zikrepro",
     "ch_snb_zimoma"
   ],
-  "skipped": [
-    {
-      "id": "ch_seco_concon",
-      "error": "cannot open the connection to 'https://scheduler.swissdatas.ch/scheduled/ch-seco-ks-q.json'"
-    }
-  ]
+  "skipped": []
 }

@@ -7,7 +7,7 @@
     "seas_adj"
   ],
   "start": "1972-10-01",
-  "end": "2026-07-01",
+  "end": "2026-10-01",
   "title": {
     "en": "Consumer confidence",
     "de": "Konsumentenstimmung",
@@ -171,15 +171,6 @@
           },
           "data": true
         },
-        "ks_i62_index_q": {
-          "label": {
-            "en": "Previous consumer sentiment index, 2009 - 2019 (incl. retropolation)",
-            "de": "Früherer Index der Konsumentenstimmung, 2009 - 2019 (inkl. Rückrechnung)",
-            "fr": "Précédent indice du climat de consommation, 2009 - 2019 (y compris rétropolation)",
-            "it": "Indice del clima di fiducia dei consumatori precedente, 2009 - 2019 (incl. retropolazione)"
-          },
-          "data": true
-        },
         "grp_prices": {
           "label": {
             "en": "Prices",
@@ -227,13 +218,12 @@
         "grp_saving": {
           "ks_i51_save_q": [],
           "ks_i53_save_exp_q": []
-        },
-        "ks_i62_index_q": []
+        }
       }
     },
     "seas_adj": {
       "label": {
-        "en": "Seasonal Adjustment",
+        "en": "Seasonal adjustment",
         "de": "Saisonbereinigung",
         "fr": "Désaisonnalisation",
         "it": "Destagionalizzazione"
@@ -274,12 +264,12 @@
       "it": "Deviazione standard"
     }
   },
-  "updated": "2026-08-04 11:54:52",
+  "updated": "2026-11-03 08:00:32",
   "notes": {
-    "en": "Consumer Sentiment Survey. Seasonally and calender adjusted data as well as unadjusted data. The level of the historical data from 1972 to 2023 has been aligned with that of the current data from 2024. Further information can be found in the Methodology document.",
-    "de": "Konsumententsimmungsindex. Saison- und kalenderbereinigte Daten sowie unbereinigte Daten. Das Niveau der historischen Daten 1972-2023 wurde an jenes der aktuellen Daten ab 2024 angeglichen. Weitere Informationen sind im Methodik-Dokument zu finden.",
-    "fr": "Indice du climat de consommation. Données corrigées des variations saisonnières et du calendrier ainsi que données non corrigées. Le niveau des données historiques collectées entre 1972 et 2023 a été adapté à celui des données actuelles, relevées depuis 2024. Vous trouverez de plus amples informations dans le document méthodologique.",
-    "it": "Indice del clima di fiducia dei consumatori. Dati destagionalizzati e corretti per gli effetti di calendario e dati non corretti. Il livello dei dati storici 1972-2023 è stato adeguato a quello dei dati attuali, rilevati a partire dal 2024. Per maggiori informazioni leggere il documento sulla metodologia impiegata."
+    "en": "Consumer Sentiment Survey. Further information can be found in the Methodology document.",
+    "de": "Konsumentenstimmungsindex. Weitere Informationen sind im Methodik-Dokument zu finden.",
+    "fr": "Indice du climat de consommation. Vous trouverez de plus amples informations dans le document méthodologique.",
+    "it": "Indice del clima di fiducia dei consumatori. Per maggiori informazioni leggere il documento sulla metodologia impiegata."
   },
   "topic": {
     "key": "business-cycle-sentiment",
@@ -320,5 +310,5 @@
     "fr": "Comment les ménages suisses voient l'économie, les prix, la sécurité de l'emploi, leurs propres finances et les achats importants. Brut et désaisonnalisé.",
     "it": "Come le economie domestiche svizzere vedono l'economia, i prezzi, la sicurezza del posto di lavoro, le proprie finanze e i grandi acquisti. Grezzo e destagionalizzato."
   },
-  "fetched_utc": "2026-11-05 08:25:38"
+  "fetched_utc": "2026-11-09 10:37:00"
 }

@@ -1,13 +1,5 @@
 {
-  "ts": "2026-11-09T08:29:11Z",
+  "ts": "2026-11-09T10:37:00Z",
   "alert_after_days": 3,
-  "skips": [
-    {
-      "id": "ch_seco_concon",
-      "error": "cannot open the connection to 'https://scheduler.swissdatas.ch/scheduled/ch-seco-ks-q.json'",
-      "route": "alarm",
-      "escalated": false,
-      "consecutive_days": 4
-    }
-  ]
+  "skips": []
 }
