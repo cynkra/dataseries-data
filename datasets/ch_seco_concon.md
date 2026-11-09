@@ -18,11 +18,11 @@ How Swiss households see the economy, prices, job security, their own finances a
 
 ## Access
 - **type**: seco-swissdata — SECO swissdata
-- **set**: `ks-q`
-- **endpoint** (2026-06: SECO retired the old `/dam/...download` URLs — they now 502 — and serves the machine-readable files via `scheduler.swissdatas.ch`, linked from the new page `seco.admin.ch/consumer-sentiment`. This is the long quarterly series since 1972 — `ks-q`; SECO also publishes a monthly `ks-m` and an experimental `ks-exp-m`):
-  - data: `https://scheduler.swissdatas.ch/scheduled/ks-q.csv`
-  - meta: `https://scheduler.swissdatas.ch/scheduled/ch-seco-ks-q.json`
-- **call**: `seco_fetch("ch_seco_concon", data_url = <ks-q.csv>, meta_url = <ch-seco-ks-q.json>)`
+- **set**: `ks-seco` (quarterly codes `*_q` only)
+- **endpoint** (2026-06: SECO retired the old `/dam/...download` URLs — they now 502 — and serves the machine-readable files via `scheduler.swissdatas.ch`, linked from the new page `seco.admin.ch/konsumentenstimmung`. 2026-11: the separate `ks-q` / `ks-m` files were replaced by one file holding the monthly (`*_m`, since 2023) and quarterly (`*_q`, since 1972) series; we keep the quarterly ones. SECO also publishes an experimental `ks-exp-seco`):
+  - data: `https://scheduler.swissdatas.ch/scheduled/ks-seco.csv`
+  - meta: `https://scheduler.swissdatas.ch/scheduled/ch-seco-ks.json`
+- **call**: `seco_fetch("ch_seco_concon", data_url = <ks-seco.csv>, meta_url = <ch-seco-ks.json>, strip = "numbering", keep = "_q$")`
 
 ## Parsing recipe
 SECO already publishes the swissdata long format, so the fetch is a passthrough
@@ -47,7 +47,7 @@ The fetcher removes it (`seco_fetch(strip = "numbering")`, pattern in
   `ks_i31_job_secure_q` job security, `ks_i32_unemp_exp_q` unemployment outlook,
   `ks_i41_fin_pos_hist_q` / `ks_i42_fin_pos_exp_q` financial situation past/future,
   `ks_i51_save_q` saving, `ks_i52_spend_q` major-purchase timing, `ks_i53_save_exp_q`
-  saving outlook, `ks_i62_index_q` the prior 6.2 index variant). All are data leaves.
+  saving outlook). All are data leaves.
 - `type` — `index` (index points) or `sd` (standard deviation).
 - `seas_adj` — `na` (raw) or `csa` (seasonally + calendar adjusted).
 
@@ -70,7 +70,7 @@ The headline **6.3 Consumer sentiment index** is the parent of the four sub-indi
 is actually computed from — expected economic development (1.2), past and expected
 financial situation (4.1, 4.2) and the right time for major purchases (5.2) — per the
 SECO methodology (BFS June-2024 survey publication). The remaining survey balances are
-grouped by theme; the retired 6.2 index variant sits on its own.
+grouped by theme.
 - ks_i63_index_q
   - ks_i12_econ_exp_q
   - ks_i41_fin_pos_hist_q
@@ -86,7 +86,6 @@ grouped by theme; the retired 6.2 index variant sits on its own.
 - @grp_saving
   - ks_i51_save_q
   - ks_i53_save_exp_q
-- ks_i62_index_q
 
 ## Caveats / simplifications
 - Producer attribution corrected: this is SECO's own publication, replacing the SNB
@@ -95,6 +94,8 @@ grouped by theme; the retired 6.2 index variant sits on its own.
 - Values are survey balances / index points, not levels; the composite
   `ks_i63_index_q` is the series most users want.
 - The pre-2024 history was re-based by SECO to align with the current methodology.
+- SECO dropped the old 6.2 index variant (`ks_i62_index_q`) when it merged the monthly
+  and quarterly files in 2026-11; it is no longer in the dataset.
 
 ## Provenance
 Script: `R/source_seco.R::seco_fetch` (wired in `R/pipeline.R`). Datasheet authored

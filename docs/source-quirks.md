@@ -224,9 +224,10 @@ levels and %-change leaves on the same key (`ch_fso_gfcf_detail`: filter `UNIT_M
   delivers the machine-readable files through **`scheduler.swissdatas.ch`**, linked from
   those pages. Current endpoints:
   - GDP: `scheduler.swissdatas.ch/scheduled/ch-seco-gdp.csv` + `…/ch-seco-gdp.json`
-  - Consumer sentiment (`ch_seco_concon`, long quarterly since 1972): `…/ks-q.csv` +
-    `…/ch-seco-ks-q.json`. SECO also serves monthly `ks-m` and experimental `ks-exp-m`;
-    we take the quarterly.
+  - Consumer sentiment (`ch_seco_concon`, long quarterly since 1972): `…/ks-seco.csv` +
+    `…/ch-seco-ks.json`. Since 2026-11 this one file holds both the monthly (`*_m`) and
+    the quarterly (`*_q`) series; the separate `ks-q` / `ks-m` files are gone (404). We
+    keep the quarterly codes (`keep = "_q$"`). Experimental: `ks-exp-seco.csv`.
   - WEA / weekly activity: `…/wwa.csv` + `…/ch-seco-wwa.json` — note the CSV kept the bare
     `wwa.csv` name while the JSON is `ch-seco-wwa.json` (the slugs are NOT uniform).
 - **Labels carry codes.** GDP `structure` labels end with the ESA transaction code

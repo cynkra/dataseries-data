@@ -268,9 +268,9 @@ build <- function(only = NULL) {
   # and adds the seasonally-adjusted track SECO publishes alongside the raw balances.
   add(.try_fetch("ch_seco_concon",
                  seco_fetch("ch_seco_concon",
-                            data_url = "https://scheduler.swissdatas.ch/scheduled/ks-q.csv",
-                            meta_url = "https://scheduler.swissdatas.ch/scheduled/ch-seco-ks-q.json",
-                            strip = "numbering"),
+                            data_url = "https://scheduler.swissdatas.ch/scheduled/ks-seco.csv",
+                            meta_url = "https://scheduler.swissdatas.ch/scheduled/ch-seco-ks.json",
+                            strip = "numbering", keep = "_q$"),
                  "Business surveys"))
 
   # FSO SDMX (CH1.KEU): turnover flows migrated off the dead PX-Web onto
