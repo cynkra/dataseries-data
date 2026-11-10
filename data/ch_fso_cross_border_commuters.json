@@ -5,7 +5,7 @@
     "canton"
   ],
   "start": "2002-07-01",
-  "end": "2026-04-01",
+  "end": "2026-07-01",
   "source": {
     "name": {
       "en": "Swiss Federal Statistical Office (FSO)",
@@ -27,7 +27,7 @@
       "it": "Lavoro"
     }
   },
-  "updated": "2026-08-06",
+  "updated": "2026-11-10",
   "dimensions": {
     "canton": {
       "label": {
@@ -347,5 +347,5 @@
     "fr": "Nombre de frontaliers (estimation)",
     "it": "Numero di frontalieri (stima)"
   },
-  "fetched_utc": "2026-11-09 08:29:07"
+  "fetched_utc": "2026-11-10 08:28:18"
 }
