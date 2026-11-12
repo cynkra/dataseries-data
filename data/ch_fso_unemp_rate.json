@@ -6,7 +6,7 @@
     "sex"
   ],
   "start": "1991-01-01",
-  "end": "2026-06-01",
+  "end": "2026-09-01",
   "source": {
     "name": {
       "en": "Swiss Federal Statistical Office (FSO)",
@@ -28,7 +28,7 @@
       "it": "Lavoro"
     }
   },
-  "updated": "2026-08-18",
+  "updated": "2026-11-12",
   "dimensions": {
     "origin": {
       "label": {
@@ -140,5 +140,5 @@
     "fr": "Pour cent de la population active",
     "it": "Percento delle forze di lavoro"
   },
-  "fetched_utc": "2026-11-11 08:23:39"
+  "fetched_utc": "2026-11-12 08:24:03"
 }
