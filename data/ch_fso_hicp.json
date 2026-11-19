@@ -5,7 +5,7 @@
     "coicop"
   ],
   "start": "2004-12-01",
-  "end": "2026-09-01",
+  "end": "2026-10-01",
   "source": {
     "name": {
       "en": "Eurostat",
@@ -18,7 +18,7 @@
   },
   "license": "eurostat",
   "frequency": "monthly",
-  "updated": "2026-11-04",
+  "updated": "2026-11-18",
   "dimensions": {
     "coicop": {
       "label": {
@@ -175,5 +175,5 @@
     "fr": "Indice (2015 = 100)",
     "it": "Indice (2015 = 100)"
   },
-  "fetched_utc": "2026-11-18 08:26:02"
+  "fetched_utc": "2026-11-19 08:23:56"
 }
