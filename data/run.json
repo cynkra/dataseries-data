@@ -1,7 +1,7 @@
 {
-  "ts": "2026-11-23T08:42:20Z",
+  "ts": "2026-11-23T10:40:55Z",
   "attempted": 71,
-  "ok": 53,
+  "ok": 54,
   "unchanged": [
     "ch_snb_auvekomq",
     "ch_snb_auvercurrq",
@@ -21,10 +21,5 @@
     "ch_snb_zikrepro",
     "ch_snb_zimoma"
   ],
-  "skipped": [
-    {
-      "id": "ch_snb_babilpobm",
-      "error": "Failed to perform HTTP request.\nCaused by error in `curl::curl_fetch_memory()`:\n! Timeout was reached [data.snb.ch]:\nOperation timed out after 60000 milliseconds with 9108216 out of 9215479 bytes received"
-    }
-  ]
+  "skipped": []
 }

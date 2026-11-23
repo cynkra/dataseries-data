@@ -1,5 +1,5 @@
 {
-  "checked": "2026-11-23 08:42 UTC",
+  "checked": "2026-11-23 10:40 UTC",
   "counts": {
     "green": 71,
     "red": 0,
@@ -782,9 +782,9 @@
       "title": "Bank balance sheets by currency",
       "source": "Swiss National Bank",
       "frequency": "monthly",
-      "end": "2026-08-01",
-      "updated": "2026-10-21 09:00",
-      "age_days": 114,
+      "end": "2026-09-01",
+      "updated": "2026-11-23 09:00",
+      "age_days": 83,
       "threshold_days": 165,
       "status": "green"
     }

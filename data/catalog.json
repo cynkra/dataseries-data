@@ -3459,10 +3459,10 @@
     "license": "snb",
     "frequency": "monthly",
     "start": "1987-12-01",
-    "end": "2026-08-01",
+    "end": "2026-09-01",
     "n_series": 872,
-    "updated": "2026-10-21 09:00",
-    "fetched": "2026-10-21 08:41:45",
+    "updated": "2026-11-23 09:00",
+    "fetched": "2026-11-23 10:40:55",
     "load": "whole",
     "data": "ch_snb_babilpobm.csv",
     "meta": "ch_snb_babilpobm.json"
