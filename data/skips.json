@@ -1,5 +1,13 @@
 {
-  "ts": "2026-11-22T08:22:09Z",
+  "ts": "2026-11-23T08:42:20Z",
   "alert_after_days": 3,
-  "skips": []
+  "skips": [
+    {
+      "id": "ch_snb_babilpobm",
+      "error": "Failed to perform HTTP request. Caused by error in `curl::curl_fetch_memory()`: ! Timeout was reached [data.snb.ch]: Operation timed out after 60000 milliseconds with 9108216 out of 9215479 bytes received",
+      "route": "outage",
+      "escalated": false,
+      "consecutive_days": 1
+    }
+  ]
 }

@@ -3,7 +3,7 @@
   "id": "ch_snb_plkopr",
   "dim_order": [],
   "start": "1921-01-01",
-  "end": "2026-09-01",
+  "end": "2026-10-01",
   "title": {
     "en": "Consumer prices since 1921 (CPI)",
     "de": "Konsumentenpreise seit 1921 (LIK)",
@@ -23,7 +23,7 @@
   "license": "snb",
   "frequency": "monthly",
   "dimensions": {},
-  "updated": "2026-10-21 09:00",
+  "updated": "2026-11-23 09:00",
   "topic": {
     "key": "prices",
     "name": {
@@ -64,5 +64,5 @@
     "fr": "Indice, décembre 2025 = 100",
     "it": "Indice, dicembre 2025 = 100"
   },
-  "fetched_utc": "2026-10-21 08:41:45"
+  "fetched_utc": "2026-11-23 08:42:16"
 }

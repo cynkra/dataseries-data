@@ -7,7 +7,7 @@
     "D2"
   ],
   "start": "2009-05-01",
-  "end": "2026-07-01",
+  "end": "2026-08-01",
   "title": {
     "en": "New lending rates",
     "de": "Zinssätze Neugeschäft",
@@ -223,7 +223,7 @@
       }
     }
   },
-  "updated": "2026-10-21 09:00",
+  "updated": "2026-11-23 09:00",
   "topic": {
     "key": "money-banking",
     "name": {
@@ -289,5 +289,5 @@
       "it": "Numero di contratti di credito"
     }
   },
-  "fetched_utc": "2026-10-21 08:41:45"
+  "fetched_utc": "2026-11-23 08:42:17"
 }

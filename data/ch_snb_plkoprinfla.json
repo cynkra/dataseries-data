@@ -5,7 +5,7 @@
     "D0"
   ],
   "start": "1983-12-01",
-  "end": "2026-09-01",
+  "end": "2026-10-01",
   "title": {
     "en": "Core inflation",
     "de": "Kerninflation",
@@ -93,7 +93,7 @@
       }
     }
   },
-  "updated": "2026-10-21 09:00",
+  "updated": "2026-11-23 09:00",
   "topic": {
     "key": "prices",
     "name": {
@@ -131,5 +131,5 @@
     "fr": "Pour cent, variation sur un an",
     "it": "Percento, variazione su base annua"
   },
-  "fetched_utc": "2026-10-21 08:41:45"
+  "fetched_utc": "2026-11-23 08:42:16"
 }

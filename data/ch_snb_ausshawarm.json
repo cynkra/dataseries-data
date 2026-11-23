@@ -7,7 +7,7 @@
     "D2"
   ],
   "start": "2012-01-01",
-  "end": "2026-08-01",
+  "end": "2026-09-01",
   "title": {
     "en": "Foreign trade by goods category",
     "de": "Aussenhandel nach Warengruppe",
@@ -413,7 +413,7 @@
       }
     }
   },
-  "updated": "2026-10-21 09:00",
+  "updated": "2026-11-23 09:00",
   "topic": {
     "key": "external-sector",
     "name": {
@@ -467,5 +467,5 @@
       "it": "Variazione su base annua in percento, reale"
     }
   },
-  "fetched_utc": "2026-10-21 08:41:44"
+  "fetched_utc": "2026-11-23 08:42:16"
 }

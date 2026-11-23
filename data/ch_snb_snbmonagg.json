@@ -5,7 +5,7 @@
     "D1"
   ],
   "start": "1984-12-01",
-  "end": "2026-09-01",
+  "end": "2026-10-01",
   "title": {
     "en": "Monetary aggregates (M1–M3)",
     "de": "Geldmengen (M1–M3)",
@@ -112,7 +112,7 @@
       }
     }
   },
-  "updated": "2026-10-21 09:00",
+  "updated": "2026-11-23 09:00",
   "topic": {
     "key": "money-banking",
     "name": {
@@ -156,5 +156,5 @@
     "fr": "Millions de CHF",
     "it": "Milioni di CHF"
   },
-  "fetched_utc": "2026-10-21 08:41:45"
+  "fetched_utc": "2026-11-23 08:42:16"
 }

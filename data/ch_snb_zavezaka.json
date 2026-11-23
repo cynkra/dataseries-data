@@ -5,7 +5,7 @@
     "D0"
   ],
   "start": "2005-01-01",
-  "end": "2026-08-01",
+  "end": "2026-09-01",
   "title": {
     "en": "Payment cards and ATMs",
     "de": "Zahlungskarten und Geldautomaten",
@@ -180,7 +180,7 @@
       }
     }
   },
-  "updated": "2026-10-21 09:00",
+  "updated": "2026-11-23 09:00",
   "topic": {
     "key": "payment-systems",
     "name": {
@@ -256,5 +256,5 @@
       "it": "Numero di sportelli automatici"
     }
   },
-  "fetched_utc": "2026-10-21 08:41:45"
+  "fetched_utc": "2026-11-23 08:42:17"
 }
