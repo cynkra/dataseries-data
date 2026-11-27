@@ -1,7 +1,7 @@
 {
-  "ts": "2026-11-26T08:26:54Z",
+  "ts": "2026-11-27T08:24:42Z",
   "attempted": 71,
-  "ok": 33,
+  "ok": 29,
   "unchanged": [
     "ch_snb_amarbma",
     "ch_snb_ambeschkla",
@@ -42,5 +42,22 @@
     "ch_snb_zikrepro",
     "ch_snb_zimoma"
   ],
-  "skipped": []
+  "skipped": [
+    {
+      "id": "ch_fso_besta",
+      "error": "no master link for PX table px-x-0602000000_101"
+    },
+    {
+      "id": "ch_fso_vacancies",
+      "error": "HTTP 400 Bad Request."
+    },
+    {
+      "id": "ch_fso_jobs_sex",
+      "error": "HTTP 400 Bad Request."
+    },
+    {
+      "id": "ch_fso_besta_outlook",
+      "error": "HTTP 400 Bad Request."
+    }
+  ]
 }
