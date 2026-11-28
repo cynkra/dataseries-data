@@ -1,5 +1,5 @@
 {
-  "ts": "2026-11-27T14:20:58Z",
+  "ts": "2026-11-28T08:21:28Z",
   "alert_after_days": 3,
   "skips": [
     {
@@ -7,28 +7,28 @@
       "error": "no master link for PX table px-x-0602000000_101",
       "route": "alarm",
       "escalated": false,
-      "consecutive_days": 1
+      "consecutive_days": 2
     },
     {
       "id": "ch_fso_vacancies",
       "error": "HTTP 400 Bad Request.",
       "route": "alarm",
       "escalated": false,
-      "consecutive_days": 1
+      "consecutive_days": 2
     },
     {
       "id": "ch_fso_jobs_sex",
       "error": "HTTP 400 Bad Request.",
       "route": "alarm",
       "escalated": false,
-      "consecutive_days": 1
+      "consecutive_days": 2
     },
     {
       "id": "ch_fso_besta_outlook",
       "error": "HTTP 400 Bad Request.",
       "route": "alarm",
       "escalated": false,
-      "consecutive_days": 1
+      "consecutive_days": 2
     }
   ]
 }
